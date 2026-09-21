@@ -1,0 +1,62 @@
+name: Build Windows Setup
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Install Inno Setup Tool
+        run: choco install innosetup -y
+
+      - name: Get Dependencies
+        run: flutter pub get
+
+      - name: Build Windows App
+        run: flutter build windows --release
+
+      - name: Create Setup.exe File
+        shell: powershell
+        run: |
+          $issContent = @"
+          [Setup]
+          AppName=Educational App
+          AppVersion=1.0.0
+          DefaultDirName={autopf}\EducationalApp
+          DefaultGroupName=Educational App
+          OutputDir=build\windows
+          OutputBaseFilename=EducationalApp_Setup
+          Compression=lzma
+          SolidCompression=yes
+
+          [Files]
+          Source: "build\windows\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+          [Icons]
+          Name: "{autoprograms}\Educational App"; Filename: "{app}\educational_app.exe"
+          Name: "{autodesktop}\Educational App"; Filename: "{app}\educational_app.exe"
+
+          [Run]
+          Filename: "{app}\educational_app.exe"; Description: "Launch Educational App"; Flags: nowait postinstall skipifsilent
+          "@
+          Set-Content -Path "build_installer.iss" -Value $issContent
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" build_installer.iss
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Windows-Setup-Installer
+          path: build/windows/EducationalApp_Setup.exe

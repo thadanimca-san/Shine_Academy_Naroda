@@ -1,0 +1,31 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7CongruenceChapter = ChapterModel(
+  standard: 7, subject: "Mathematics", chapterId: "cls7_math_congruence", chapterName: "Congruence of Triangles",
+  concepts: ["Congruence of plane figures and line segments.", "Congruence of triangles: SSS, SAS, ASA, RHS criteria.", "Congruent parts of matching triangles (CPCT)."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "cg1", question: "Two figures that have the exact same shape and size are called [ congruent / similar ] figures.", answer: "congruent"),
+    QuestionItem(id: "cg2", question: "Two line segments are congruent if they have the [ same length / same colour ].", answer: "same length"),
+    QuestionItem(id: "cg3", question: "Two angles are congruent if they have the [ same measure / same arm length ].", answer: "same measure"),
+    QuestionItem(id: "cg4", question: "The congruence criterion where all three sides of one triangle equal all three sides of another is called [ SSS / SAS ].", answer: "SSS"),
+    QuestionItem(id: "cg5", question: "The congruence criterion involving two sides and the included angle is called [ SAS / ASA ].", answer: "SAS"),
+    QuestionItem(id: "cg6", question: "The congruence criterion involving two angles and the included side is called [ ASA / SSS ].", answer: "ASA"),
+    QuestionItem(id: "cg7", question: "The congruence criterion for right triangles involving the hypotenuse and one side is called [ RHS / SAS ].", answer: "RHS"),
+    QuestionItem(id: "cg8", question: "In SAS, the angle used for congruence must be the [ included angle between the two given sides / any angle ].", answer: "included angle between the two given sides"),
+    QuestionItem(id: "cg9", question: "In ASA, the side used must be the [ side included between the two given angles / any side ].", answer: "side included between the two given angles"),
+    QuestionItem(id: "cg10", question: "Once two triangles are proven congruent, all their corresponding parts are equal — this is abbreviated as [ CPCT / CPST ].", answer: "CPCT"),
+    QuestionItem(id: "cg11", question: "In RHS congruence, the 'R' stands for [ right angle / rectangle ].", answer: "right angle"),
+    QuestionItem(id: "cg12", question: "In RHS congruence, the 'H' stands for [ hypotenuse / height ].", answer: "hypotenuse"),
+    QuestionItem(id: "cg13", question: "Two circles are congruent if they have equal [ radii / areas only ].", answer: "radii"),
+    QuestionItem(id: "cg14", question: "If triangle ABC ≅ triangle PQR, then side AB corresponds to side [ PQ / QR ].", answer: "PQ"),
+    QuestionItem(id: "cg15", question: "'SSA' (two sides and a non-included angle) is [ not / always ] a valid congruence criterion in general.", answer: "not"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "cgn1", question: "In triangle ABC ≅ triangle PQR, AB = 7 cm. Find the length of PQ.", given: ["Triangle ABC ≅ Triangle PQR", "AB = 7 cm"], solutionSteps: ["By CPCT, corresponding sides of congruent triangles are equal.", "AB corresponds to PQ.", "PQ = 7 cm"], numericAnswer: 7, unit: "cm"),
+    NumericalProblem(id: "cgn2", question: "In triangle ABC ≅ triangle DEF, angle A = 55°. Find angle D.", given: ["Triangle ABC ≅ Triangle DEF", "Angle A = 55°"], solutionSteps: ["By CPCT, corresponding angles of congruent triangles are equal.", "Angle A corresponds to angle D.", "Angle D = 55°"], numericAnswer: 55, unit: "°"),
+    NumericalProblem(id: "cgn3", question: "Two triangles are congruent by SAS with included angles 68° and (2x+10)°. Find x.", given: ["68° = (2x+10)°"], solutionSteps: ["For SAS congruence, the included angles must be equal.", "68 = 2x + 10", "2x = 58, x = 29"], numericAnswer: 29, unit: ""),
+    NumericalProblem(id: "cgn4", question: "In congruent triangles ABC and PQR (ABC ≅ PQR), BC = 9.5 cm. Find QR.", given: ["Triangle ABC ≅ Triangle PQR", "BC = 9.5 cm"], solutionSteps: ["By CPCT, BC corresponds to QR.", "QR = 9.5 cm"], numericAnswer: 9.5, unit: "cm"),
+    NumericalProblem(id: "cgn5", question: "Two right triangles are congruent by RHS. One has hypotenuse 25 cm and one leg 7 cm. Find the corresponding leg of the other triangle.", given: ["Hypotenuse = 25 cm", "One leg = 7 cm"], solutionSteps: ["First find the other leg using Pythagoras: leg² = 25² − 7² = 625 − 49 = 576, leg = 24 cm", "Since the triangles are congruent, the corresponding leg in the second triangle is also 24 cm"], numericAnswer: 24, unit: "cm"),
+    NumericalProblem(id: "cgn6", question: "In triangle ABC ≅ triangle XYZ, angle B = (3x)° and angle Y = 81°. Find x.", given: ["Angle B = (3x)°", "Angle Y = 81°"], solutionSteps: ["By CPCT, angle B = angle Y.", "3x = 81", "x = 27"], numericAnswer: 27, unit: ""),
+  ],
+);

@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8PlayingNumbersChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_playingnumbers", chapterName: "Playing with Numbers",
+  concepts: ["Numbers in general form.", "Divisibility tests and puzzles.", "Letter-based number puzzles and their logic."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "pn1", question: "A two-digit number 'ab' can be written in general form as [ 10a + b / a + b ].", answer: "10a + b"),
+    QuestionItem(id: "pn2", question: "A three-digit number 'abc' can be written in general form as [ 100a + 10b + c / a + b + c ].", answer: "100a + 10b + c"),
+    QuestionItem(id: "pn3", question: "A number is divisible by 2 if its last (units) digit is [ 0, 2, 4, 6 or 8 / 1, 3, 5, 7 or 9 ].", answer: "0, 2, 4, 6 or 8"),
+    QuestionItem(id: "pn4", question: "A number is divisible by 3 if the sum of its digits is divisible by [ 3 / 9 only ].", answer: "3"),
+    QuestionItem(id: "pn5", question: "A number is divisible by 9 if the sum of its digits is divisible by [ 9 / 3 only ].", answer: "9"),
+    QuestionItem(id: "pn6", question: "A number is divisible by 5 if its last digit is [ 0 or 5 / 0 only ].", answer: "0 or 5"),
+    QuestionItem(id: "pn7", question: "A number is divisible by 10 if its last digit is [ 0 / 5 ].", answer: "0"),
+    QuestionItem(id: "pn8", question: "A number is divisible by 4 if the number formed by its last two digits is divisible by [ 4 / 2 ].", answer: "4"),
+    QuestionItem(id: "pn9", question: "In alphametic (cryptarithm) puzzles like SEND + MORE = MONEY, each letter represents a [ unique digit / any digit ].", answer: "unique digit"),
+    QuestionItem(id: "pn10", question: "In such number puzzles, the leading digit of a number [ cannot be zero / can be zero ].", answer: "cannot be zero"),
+    QuestionItem(id: "pn11", question: "When a two-digit number is reversed and added to the original, the sum is always divisible by [ 11 / 9 ].", answer: "11"),
+    QuestionItem(id: "pn12", question: "When a two-digit number is reversed and the smaller is subtracted from the larger, the result is always divisible by [ 9 / 11 ].", answer: "9"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "pnn1", question: "Check whether 4536 is divisible by 9.", given: ["4536"], solutionSteps: ["Sum of digits = 4+5+3+6 = 18", "18 is divisible by 9, so 4536 is divisible by 9.", "4536 ÷ 9 = 504"], numericAnswer: 504, unit: ""),
+    NumericalProblem(id: "pnn2", question: "Check whether 2345 is divisible by 5.", given: ["2345"], solutionSteps: ["Last digit is 5.", "So 2345 is divisible by 5.", "2345 ÷ 5 = 469"], numericAnswer: 469, unit: ""),
+    NumericalProblem(id: "pnn3", question: "Find the sum of a two-digit number 'ab' and its reverse 'ba' if a=5 and b=3.", given: ["a = 5", "b = 3"], solutionSteps: ["Number = 10a+b = 53, Reverse = 10b+a = 35", "Sum = 53 + 35", "= 88"], numericAnswer: 88, unit: ""),
+    NumericalProblem(id: "pnn4", question: "Check whether 7,392 is divisible by 4.", given: ["7392"], solutionSteps: ["Check last two digits: 92", "92 ÷ 4 = 23 exactly, so 7392 is divisible by 4.", "7392 ÷ 4 = 1848"], numericAnswer: 1848, unit: ""),
+    NumericalProblem(id: "pnn5", question: "Find the difference between a two-digit number 'ab' (a=8,b=3) and its reverse 'ba'.", given: ["a = 8", "b = 3"], solutionSteps: ["Number = 83, Reverse = 38", "Difference = 83 − 38", "= 45 (which is 9 × 5, divisible by 9)"], numericAnswer: 45, unit: ""),
+    NumericalProblem(id: "pnn6", question: "Check whether 6,534 is divisible by 3.", given: ["6534"], solutionSteps: ["Sum of digits = 6+5+3+4 = 18", "18 is divisible by 3, so 6534 is divisible by 3.", "6534 ÷ 3 = 2178"], numericAnswer: 2178, unit: ""),
+    NumericalProblem(id: "pnn7", question: "In the number puzzle 2A + A2 = 66 (where A is a digit), find A.", given: ["2A + A2 = 66"], solutionSteps: ["2A = 20 + A, and A2 = 10A + 2", "(20+A) + (10A+2) = 66", "11A + 22 = 66, 11A = 44, A = 4"], numericAnswer: 4, unit: ""),
+    NumericalProblem(id: "pnn8", question: "Check whether 45,672 is divisible by 9. If yes, find the quotient.", given: ["45672"], solutionSteps: ["Sum of digits = 4+5+6+7+2 = 24", "24 is not divisible by 9, so 45672 is NOT divisible by 9.", "(Answer represents the digit sum, 24, for verification)"], numericAnswer: 24, unit: "(digit sum; not divisible by 9)"),
+  ],
+);

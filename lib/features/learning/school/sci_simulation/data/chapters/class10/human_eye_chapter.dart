@@ -1,0 +1,31 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10HumanEyeChapter = ChapterModel(
+  standard: 10, subject: "Physics", chapterId: "cls10_phys_humaneye", chapterName: "The Human Eye and the Colourful World",
+  concepts: ["Structure of the human eye and power of accommodation.", "Defects of vision and their correction.", "Refraction of light through a prism; atmospheric refraction and scattering."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "he10_1", question: "The transparent, curved part of the eye that provides most of its refractive power is the [ cornea / retina ].", answer: "cornea"),
+    QuestionItem(id: "he10_2", question: "The light-sensitive screen at the back of the eye where images form is the [ retina / iris ].", answer: "retina"),
+    QuestionItem(id: "he10_3", question: "The eye lens changes its focal length using ciliary muscles, a property called the [ power of accommodation / power of refraction ].", answer: "power of accommodation"),
+    QuestionItem(id: "he10_4", question: "The nearest point at which an object can be seen clearly by the eye without strain is called the [ near point / far point ].", answer: "near point"),
+    QuestionItem(id: "he10_5", question: "The defect of the eye in which distant objects cannot be seen clearly is called [ myopia (near-sightedness) / hypermetropia ].", answer: "myopia (near-sightedness)"),
+    QuestionItem(id: "he10_6", question: "Myopia is corrected using a [ concave lens / convex lens ].", answer: "concave lens"),
+    QuestionItem(id: "he10_7", question: "The defect of the eye in which nearby objects cannot be seen clearly is called [ hypermetropia (far-sightedness) / myopia ].", answer: "hypermetropia (far-sightedness)"),
+    QuestionItem(id: "he10_8", question: "Hypermetropia is corrected using a [ convex lens / concave lens ].", answer: "convex lens"),
+    QuestionItem(id: "he10_9", question: "The age-related defect where the eye's power of accommodation decreases is called [ presbyopia / astigmatism ].", answer: "presbyopia"),
+    QuestionItem(id: "he10_10", question: "A transparent, triangular glass object used to split light into its component colours is called a [ prism / lens ].", answer: "prism"),
+    QuestionItem(id: "he10_11", question: "The splitting of white light into its seven constituent colours is called [ dispersion / scattering ].", answer: "dispersion"),
+    QuestionItem(id: "he10_12", question: "The apparent twinkling of stars is caused by [ atmospheric refraction / dispersion ] of starlight.", answer: "atmospheric refraction"),
+    QuestionItem(id: "he10_13", question: "The blue colour of the clear sky is due to the [ scattering of sunlight / absorption of sunlight ] by atmospheric particles.", answer: "scattering of sunlight"),
+    QuestionItem(id: "he10_14", question: "The Sun appears reddish at sunrise and sunset because [ blue light is scattered away, leaving red light / red light is scattered more ].", answer: "blue light is scattered away, leaving red light"),
+    QuestionItem(id: "he10_15", question: "The scattering of light by very fine particles of comparable size to the wavelength of light is called [ Tyndall effect / dispersion ].", answer: "Tyndall effect"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "hen1", question: "A myopic person's far point is 80 cm. Find the focal length of the corrective concave lens needed (f = -far point).", given: ["Far point = 80 cm"], solutionSteps: ["For myopia correction, f = -far point (in same units)", "f = -80 cm", "= -0.8 m"], numericAnswer: -0.8, unit: "m"),
+    NumericalProblem(id: "hen2", question: "Find the power of the concave lens needed for a person with far point 50 cm.", given: ["Far point = 50 cm = 0.5 m"], solutionSteps: ["f = -0.5 m", "P = 1/f = 1/(-0.5)", "= -2 D"], numericAnswer: -2, unit: "D"),
+    NumericalProblem(id: "hen3", question: "A hypermetropic person's near point is 1 m instead of the normal 25 cm. Find the power of the convex lens needed using 1/f = 1/v − 1/u (v=25cm=0.25m, u=-1m).", given: ["v = 0.25 m", "u = -1 m"], solutionSteps: ["1/f = 1/v − 1/u = 1/0.25 − 1/(-1) = 4+1 = 5", "P = 1/f", "= 5 D"], numericAnswer: 5, unit: "D"),
+    NumericalProblem(id: "hen4", question: "Find the focal length of a corrective lens with power +2.5 D.", given: ["P = 2.5 D"], solutionSteps: ["f = 1/P", "= 1/2.5", "= 0.4 m"], numericAnswer: 0.4, unit: "m"),
+    NumericalProblem(id: "hen5", question: "A person's far point is 2 m. Find the power of the lens required to correct this myopia.", given: ["Far point = 2 m"], solutionSteps: ["f = -2 m", "P = 1/f", "= -0.5 D"], numericAnswer: -0.5, unit: "D"),
+    NumericalProblem(id: "hen6", question: "Find the near point correction power needed if a hypermetropic eye has near point 2 m instead of 25 cm (v=0.25m, u=-2m).", given: ["v = 0.25 m", "u = -2 m"], solutionSteps: ["1/f = 1/v − 1/u = 1/0.25 − 1/(-2) = 4+0.5 = 4.5", "P = 4.5 D"], numericAnswer: 4.5, unit: "D"),
+  ],
+);

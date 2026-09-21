@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8FactorisationChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_factorisation", chapterName: "Factorisation",
+  concepts: ["Factorisation by taking out common factors.", "Factorisation using identities.", "Division of algebraic expressions."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "fc1", question: "Writing an algebraic expression as a product of its factors is called [ factorisation / expansion ].", answer: "factorisation"),
+    QuestionItem(id: "fc2", question: "A common factor is a factor that is present in [ every term of the expression / only one term ].", answer: "every term of the expression"),
+    QuestionItem(id: "fc3", question: "Factorising by grouping involves rearranging terms so that they share [ common factors within groups / no common factors ].", answer: "common factors within groups"),
+    QuestionItem(id: "fc4", question: "a² − b² factorises as [ (a+b)(a−b) / (a−b)² ].", answer: "(a+b)(a−b)"),
+    QuestionItem(id: "fc5", question: "a² + 2ab + b² factorises as [ (a+b)² / (a−b)² ].", answer: "(a+b)²"),
+    QuestionItem(id: "fc6", question: "a² − 2ab + b² factorises as [ (a−b)² / (a+b)² ].", answer: "(a−b)²"),
+    QuestionItem(id: "fc7", question: "A factor form is different from a [ sum/difference form / product form ], since factors are multiplied.", answer: "sum/difference form"),
+    QuestionItem(id: "fc8", question: "Dividing a monomial by a monomial involves dividing their [ numerical coefficients and variable parts separately / only coefficients ].", answer: "numerical coefficients and variable parts separately"),
+    QuestionItem(id: "fc9", question: "To divide a polynomial by a monomial, we divide [ each term of the polynomial by the monomial / only the first term ].", answer: "each term of the polynomial by the monomial"),
+    QuestionItem(id: "fc10", question: "Factorisation is the reverse process of [ multiplication (expansion) / addition ].", answer: "multiplication (expansion)"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "fcn1", question: "Factorise and evaluate: 6x + 9 for x = 2 (factor out common term first).", given: ["6x + 9, x = 2"], solutionSteps: ["Factorise: 3(2x + 3)", "Substitute x=2: 3(4+3) = 3×7", "= 21"], numericAnswer: 21, unit: ""),
+    NumericalProblem(id: "fcn2", question: "Use factorisation to evaluate 47² − 43² using a² − b² = (a+b)(a−b).", given: ["a = 47, b = 43"], solutionSteps: ["(47+43)(47−43)", "= 90 × 4", "= 360"], numericAnswer: 360, unit: ""),
+    NumericalProblem(id: "fcn3", question: "Divide: 12x³ ÷ 4x.", given: ["12x³ ÷ 4x"], solutionSteps: ["Divide coefficients: 12/4 = 3", "Divide variables: x³/x = x²", "Result: 3x²"], numericAnswer: 3, unit: "x² (coefficient 3)"),
+    NumericalProblem(id: "fcn4", question: "Factorise x² + 7x + 12 and evaluate at x = 2.", given: ["x² + 7x + 12, x = 2"], solutionSteps: ["Factorise: (x+3)(x+4)", "Substitute x=2: (2+3)(2+4) = 5×6", "= 30"], numericAnswer: 30, unit: ""),
+    NumericalProblem(id: "fcn5", question: "Divide: 15x²y ÷ 3xy.", given: ["15x²y ÷ 3xy"], solutionSteps: ["Divide coefficients: 15/3 = 5", "Divide variables: x²/x = x, y/y = 1", "Result: 5x"], numericAnswer: 5, unit: "x"),
+    NumericalProblem(id: "fcn6", question: "Use factorisation to evaluate 995² using (1000−5)² = a² − 2ab + b².", given: ["995 = 1000 − 5"], solutionSteps: ["(1000−5)² = 1000² − 2(1000)(5) + 5²", "= 1000000 − 10000 + 25", "= 990025"], numericAnswer: 990025, unit: ""),
+    NumericalProblem(id: "fcn7", question: "Factorise x² − 81 and evaluate at x = 10.", given: ["x² − 81, x = 10"], solutionSteps: ["Factorise: (x+9)(x−9)", "Substitute x=10: (10+9)(10−9) = 19×1", "= 19"], numericAnswer: 19, unit: ""),
+    NumericalProblem(id: "fcn8", question: "Divide the polynomial 8x² + 12x by the monomial 4x.", given: ["(8x² + 12x) ÷ 4x"], solutionSteps: ["Divide each term: 8x²/4x = 2x, 12x/4x = 3", "Result: 2x + 3"], numericAnswer: 2, unit: "(coefficient of x; constant term is 3)"),
+    NumericalProblem(id: "fcn9", question: "Factorise 3x² − 27 and evaluate at x = 5.", given: ["3x² − 27, x = 5"], solutionSteps: ["Factor out 3: 3(x² − 9) = 3(x+3)(x−3)", "Substitute x=5: 3(5+3)(5−3) = 3×8×2", "= 48"], numericAnswer: 48, unit: ""),
+    NumericalProblem(id: "fcn10", question: "Find the common factor and simplify: (18a²b − 12ab²) ÷ 6ab.", given: ["(18a²b − 12ab²) ÷ 6ab"], solutionSteps: ["18a²b/6ab = 3a", "12ab²/6ab = 2b", "Result: 3a − 2b"], numericAnswer: 3, unit: "(coefficient of a; b coefficient is −2)"),
+  ],
+);

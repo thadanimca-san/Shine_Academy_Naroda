@@ -1,0 +1,31 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9StatisticsChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_statistics", chapterName: "Statistics",
+  concepts: ["Collection and presentation of data.", "Graphical representation: bar graph, histogram, frequency polygon.", "Measures of central tendency: mean, median, mode."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "st1", question: "Facts or figures collected for a specific purpose are called [ data / statistics only ].", answer: "data"),
+    QuestionItem(id: "st2", question: "Data collected by the investigator directly is called [ primary data / secondary data ].", answer: "primary data"),
+    QuestionItem(id: "st3", question: "Data collected from a source that already recorded it is called [ secondary data / primary data ].", answer: "secondary data"),
+    QuestionItem(id: "st4", question: "A graphical representation using rectangular bars of uniform width is called a [ bar graph / histogram ].", answer: "bar graph"),
+    QuestionItem(id: "st5", question: "A graphical representation of grouped/continuous data using adjacent rectangles is called a [ histogram / bar graph ].", answer: "histogram"),
+    QuestionItem(id: "st6", question: "A curve obtained by joining the midpoints of the tops of the rectangles of a histogram is called a [ frequency polygon / pie chart ].", answer: "frequency polygon"),
+    QuestionItem(id: "st7", question: "The average of a set of observations is called the [ mean / mode ].", answer: "mean"),
+    QuestionItem(id: "st8", question: "The middle value of data arranged in order is called the [ median / mean ].", answer: "median"),
+    QuestionItem(id: "st9", question: "The value that occurs most frequently in the data is called the [ mode / median ].", answer: "mode"),
+    QuestionItem(id: "st10", question: "Mean, median and mode are collectively called measures of [ central tendency / dispersion ].", answer: "central tendency"),
+    QuestionItem(id: "st11", question: "For an even number of observations, the median is the [ average of the two middle observations / middle observation ].", answer: "average of the two middle observations"),
+    QuestionItem(id: "st12", question: "The class mark of a class interval is the [ midpoint of the interval / range of the interval ].", answer: "midpoint of the interval"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "stn1", question: "Find the mean of: 10, 20, 30, 40, 50.", given: ["Data: 10,20,30,40,50"], solutionSteps: ["Sum = 150", "Number of observations = 5", "Mean = 150/5 = 30"], numericAnswer: 30, unit: ""),
+    NumericalProblem(id: "stn2", question: "Find the median of: 12, 5, 8, 19, 15.", given: ["Data: 12,5,8,19,15"], solutionSteps: ["Arrange: 5,8,12,15,19", "Middle value (3rd of 5) = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "stn3", question: "Find the mode of: 3, 5, 3, 8, 3, 9, 5.", given: ["Data: 3,5,3,8,3,9,5"], solutionSteps: ["3 appears 3 times, 5 appears 2 times, others once.", "Most frequent = 3"], numericAnswer: 3, unit: ""),
+    NumericalProblem(id: "stn4", question: "Find the mean of the marks: 45, 60, 55, 70, 40, 50.", given: ["Data: 45,60,55,70,40,50"], solutionSteps: ["Sum = 45+60+55+70+40+50 = 320", "Number of observations = 6", "Mean = 320/6 ≈ 53.33"], numericAnswer: 53.33, unit: ""),
+    NumericalProblem(id: "stn5", question: "Find the median of: 22, 18, 30, 25, 12, 20.", given: ["Data: 22,18,30,25,12,20"], solutionSteps: ["Arrange: 12,18,20,22,25,30", "Even count, median = average of 3rd and 4th = (20+22)/2", "= 21"], numericAnswer: 21, unit: ""),
+    NumericalProblem(id: "stn6", question: "Find the class mark of the interval 20-40.", given: ["Interval: 20-40"], solutionSteps: ["Class mark = (lower limit + upper limit)/2", "= (20+40)/2", "= 30"], numericAnswer: 30, unit: ""),
+    NumericalProblem(id: "stn7", question: "The mean of 5 numbers is 18. If four of them are 15, 20, 12, 22, find the fifth number.", given: ["Mean = 18", "n = 5", "Four numbers: 15,20,12,22"], solutionSteps: ["Sum of all 5 = 18 × 5 = 90", "Sum of four known = 15+20+12+22 = 69", "Fifth number = 90 − 69", "= 21"], numericAnswer: 21, unit: ""),
+    NumericalProblem(id: "stn8", question: "Find the mode of the data: 12, 15, 12, 18, 20, 12, 15.", given: ["Data: 12,15,12,18,20,12,15"], solutionSteps: ["12 appears 3 times, 15 appears 2 times, others once.", "Most frequent = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "stn9", question: "Find the mean of the first 10 natural numbers.", given: ["1,2,3,...,10"], solutionSteps: ["Sum = 10×11/2 = 55", "Mean = 55/10", "= 5.5"], numericAnswer: 5.5, unit: ""),
+  ],
+);

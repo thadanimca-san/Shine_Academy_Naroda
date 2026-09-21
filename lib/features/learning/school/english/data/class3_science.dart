@@ -1,0 +1,38 @@
+import '../models/dictionary_word.dart';
+
+const class3Science = DictionaryTopic(
+  id: 'class3_science',
+  title: 'Science (EVS)',
+  grade: 'Class 3',
+  wordIds: [
+    'DICT_ENG_LIVING THING',
+    'DICT_ENG_NON-LIVING THING',
+    'DICT_ENG_GROW',
+    'DICT_ENG_BREATHE',
+    'DICT_ENG_ROOT',
+    'DICT_ENG_STEM',
+    'DICT_ENG_BRANCH',
+    'DICT_ENG_FRUIT',
+    'DICT_ENG_HERB',
+    'DICT_ENG_SHRUB',
+    'DICT_ENG_SUNLIGHT',
+    'DICT_ENG_MAMMAL',
+    'DICT_ENG_REPTILE',
+    'DICT_ENG_SENSE ORGAN',
+    'DICT_ENG_TASTE',
+    'DICT_ENG_TOUCH',
+    'DICT_ENG_SMELL',
+    'DICT_ENG_WOOD',
+    'DICT_ENG_METAL',
+    'DICT_ENG_PLASTIC',
+    'DICT_ENG_GLASS',
+    'DICT_ENG_RUBBER',
+    'DICT_ENG_CLOTH',
+    'DICT_ENG_GERM',
+    'DICT_ENG_HYGIENE',
+    'DICT_ENG_FIRST AID',
+    'DICT_ENG_MEDICINE',
+    'DICT_ENG_EXERCISE',
+    'DICT_ENG_TEMPERATURE'
+  ],
+);

@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class6ColoursShapes = DictionaryTopic(
+  id: 'class6_colours_shapes',
+  title: 'Colours & Shapes',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_MAROON',
+    'DICT_ENG_TURQUOISE',
+    'DICT_ENG_LAVENDER',
+    'DICT_ENG_CRIMSON',
+    'DICT_ENG_OLIVE',
+    'DICT_ENG_SHADE',
+    'DICT_ENG_VIVID',
+    'DICT_ENG_FADED',
+    'DICT_ENG_TRANSPARENT',
+    'DICT_ENG_POLYGON',
+    'DICT_ENG_PENTAGON',
+    'DICT_ENG_HEXAGON',
+    'DICT_ENG_SPHERE',
+    'DICT_ENG_CYLINDER',
+    'DICT_ENG_CUBE',
+    'DICT_ENG_CONE',
+    'DICT_ENG_SYMMETRY',
+    'DICT_ENG_DIAGONAL',
+    'DICT_ENG_PERIMETER',
+    'DICT_ENG_GEOMETRIC',
+    'DICT_ENG_CURVED',
+    'DICT_ENG_VERTEX',
+    'DICT_ENG_PATTERN',
+    'DICT_ENG_CONTRAST',
+    'DICT_ENG_PASTEL',
+    'DICT_ENG_MONOCHROME',
+    'DICT_ENG_REFLECT',
+    'DICT_ENG_IDENTICAL'
+  ],
+);

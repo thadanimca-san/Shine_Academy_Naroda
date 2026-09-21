@@ -1,0 +1,38 @@
+import '../models/dictionary_word.dart';
+
+const class6Food = DictionaryTopic(
+  id: 'class6_food',
+  title: 'Food & Fruits',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_NUTRITIOUS',
+    'DICT_ENG_BALANCED_DIET',
+    'DICT_ENG_VITAMIN',
+    'DICT_ENG_PROTEIN',
+    'DICT_ENG_FIBRE',
+    'DICT_ENG_STALE',
+    'DICT_ENG_RIPE',
+    'DICT_ENG_POMEGRANATE',
+    'DICT_ENG_GUAVA',
+    'DICT_ENG_CUSTARD_APPLE',
+    'DICT_ENG_WATERMELON',
+    'DICT_ENG_JACKFRUIT',
+    'DICT_ENG_AUBERGINE',
+    'DICT_ENG_CAULIFLOWER',
+    'DICT_ENG_DRUMSTICK',
+    'DICT_ENG_LEGUME',
+    'DICT_ENG_FERMENT',
+    'DICT_ENG_MARINATE',
+    'DICT_ENG_GARNISH',
+    'DICT_ENG_SIMMER',
+    'DICT_ENG_ROAST',
+    'DICT_ENG_APPETITE',
+    'DICT_ENG_BEVERAGE',
+    'DICT_ENG_SNACK',
+    'DICT_ENG_CONFECTIONERY',
+    'DICT_ENG_STAPLE_FOOD',
+    'DICT_ENG_STALE-DATED',
+    'DICT_ENG_WHOLESOME',
+    'DICT_ENG_DEVOUR'
+  ],
+);

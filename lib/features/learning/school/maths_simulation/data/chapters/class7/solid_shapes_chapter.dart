@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7SolidShapesChapter = ChapterModel(
+  standard: 7, subject: "Mathematics", chapterId: "cls7_math_solidshapes", chapterName: "Visualising Solid Shapes",
+  concepts: ["2-D and 3-D shapes; faces, edges and vertices.", "Nets of solid shapes.", "Viewing 3-D shapes from different perspectives (top, front, side)."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "vs1", question: "Shapes that have only length and breadth, like a square or circle, are called [ 2-D (two-dimensional) shapes / 3-D shapes ].", answer: "2-D (two-dimensional) shapes"),
+    QuestionItem(id: "vs2", question: "Shapes that have length, breadth and height, like a cube or sphere, are called [ 3-D (three-dimensional) shapes / 2-D shapes ].", answer: "3-D (three-dimensional) shapes"),
+    QuestionItem(id: "vs3", question: "A flat surface of a solid shape is called a [ face / edge ].", answer: "face"),
+    QuestionItem(id: "vs4", question: "The line segment where two faces of a solid meet is called an [ edge / vertex ].", answer: "edge"),
+    QuestionItem(id: "vs5", question: "The point where three or more edges of a solid meet is called a [ vertex / face ].", answer: "vertex"),
+    QuestionItem(id: "vs6", question: "A cube has [ 6 faces, 12 edges and 8 vertices / 4 faces, 6 edges and 4 vertices ].", answer: "6 faces, 12 edges and 8 vertices"),
+    QuestionItem(id: "vs7", question: "A cuboid has [ 6 rectangular faces / 6 triangular faces ].", answer: "6 rectangular faces"),
+    QuestionItem(id: "vs8", question: "A pyramid with a triangular base is called a [ tetrahedron / cube ], having 4 faces.", answer: "tetrahedron"),
+    QuestionItem(id: "vs9", question: "A two-dimensional pattern that can be folded to form a three-dimensional shape is called its [ net / face ].", answer: "net"),
+    QuestionItem(id: "vs10", question: "For any polyhedron, Euler's formula states F + V − E = [ 2 / 1 ], where F, V, E are faces, vertices and edges.", answer: "2"),
+    QuestionItem(id: "vs11", question: "A solid shape with two parallel circular bases connected by a curved surface is called a [ cylinder / cone ].", answer: "cylinder"),
+    QuestionItem(id: "vs12", question: "A solid shape with one circular base and a single vertex (apex) is called a [ cone / cylinder ].", answer: "cone"),
+    QuestionItem(id: "vs13", question: "A solid where every point on the surface is equidistant from the centre is called a [ sphere / cylinder ].", answer: "sphere"),
+    QuestionItem(id: "vs14", question: "Drawing a 3-D object as it would appear when viewed from the top, front, and side is called a [ multi-view / net ] drawing.", answer: "multi-view"),
+    QuestionItem(id: "vs15", question: "A solid shape with flat polygon faces, straight edges, and sharp vertices is called a [ polyhedron / sphere ].", answer: "polyhedron"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "vsn1", question: "A polyhedron has 6 faces and 8 vertices. Using Euler's formula (F+V−E=2), find the number of edges.", given: ["F = 6", "V = 8"], solutionSteps: ["F + V − E = 2", "6 + 8 − E = 2", "14 − E = 2, E = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "vsn2", question: "A triangular prism has 5 faces and 9 edges. Using Euler's formula, find the number of vertices.", given: ["F = 5", "E = 9"], solutionSteps: ["F + V − E = 2", "5 + V − 9 = 2", "V − 4 = 2, V = 6"], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "vsn3", question: "How many faces does a cube have?", given: ["Cube"], solutionSteps: ["A cube has 6 identical square faces."], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "vsn4", question: "How many edges does a cube have?", given: ["Cube"], solutionSteps: ["A cube has 12 edges."], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "vsn5", question: "How many vertices does a triangular pyramid (tetrahedron) have?", given: ["Tetrahedron"], solutionSteps: ["A tetrahedron has 4 triangular faces meeting at 4 vertices."], numericAnswer: 4, unit: ""),
+    NumericalProblem(id: "vsn6", question: "A square pyramid has 5 vertices and 8 edges. Using Euler's formula, find the number of faces.", given: ["V = 5", "E = 8"], solutionSteps: ["F + V − E = 2", "F + 5 − 8 = 2", "F − 3 = 2, F = 5"], numericAnswer: 5, unit: ""),
+    NumericalProblem(id: "vsn7", question: "How many faces does a triangular prism have?", given: ["Triangular prism"], solutionSteps: ["It has 2 triangular faces and 3 rectangular faces.", "Total = 2 + 3 = 5"], numericAnswer: 5, unit: ""),
+  ],
+);

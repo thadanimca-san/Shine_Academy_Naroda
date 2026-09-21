@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10ChemicalReactionsChapter = ChapterModel(
+  standard: 10, subject: "Chemistry", chapterId: "cls10_chem_chemicalreactions", chapterName: "Chemical Reactions and Equations",
+  concepts: ["Balanced chemical equations.", "Types of chemical reactions: combination, decomposition, displacement, double displacement.", "Oxidation and reduction; corrosion and rancidity."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "cr1", question: "A chemical equation in which the number of atoms of each element is equal on both sides is called a [ balanced chemical equation / skeletal equation ].", answer: "balanced chemical equation"),
+    QuestionItem(id: "cr2", question: "A reaction in which two or more substances combine to form a single product is called a [ combination reaction / decomposition reaction ].", answer: "combination reaction"),
+    QuestionItem(id: "cr3", question: "A reaction in which a single compound breaks down into two or more simpler substances is called a [ decomposition reaction / combination reaction ].", answer: "decomposition reaction"),
+    QuestionItem(id: "cr4", question: "A reaction in which a more reactive element displaces a less reactive element from its compound is called a [ displacement reaction / double displacement reaction ].", answer: "displacement reaction"),
+    QuestionItem(id: "cr5", question: "A reaction in which two compounds exchange ions to form two new compounds is called a [ double displacement reaction / displacement reaction ].", answer: "double displacement reaction"),
+    QuestionItem(id: "cr6", question: "A reaction between an acid and a base to form salt and water is called a [ neutralisation reaction / redox reaction ].", answer: "neutralisation reaction"),
+    QuestionItem(id: "cr7", question: "The gain of oxygen or loss of hydrogen by a substance is called [ oxidation / reduction ].", answer: "oxidation"),
+    QuestionItem(id: "cr8", question: "The loss of oxygen or gain of hydrogen by a substance is called [ reduction / oxidation ].", answer: "reduction"),
+    QuestionItem(id: "cr9", question: "A reaction that releases heat energy is called an [ exothermic reaction / endothermic reaction ].", answer: "exothermic reaction"),
+    QuestionItem(id: "cr10", question: "A reaction that absorbs heat energy is called an [ endothermic reaction / exothermic reaction ].", answer: "endothermic reaction"),
+    QuestionItem(id: "cr11", question: "The white precipitate formed when silver nitrate reacts with sodium chloride is [ silver chloride / sodium nitrate ].", answer: "silver chloride"),
+    QuestionItem(id: "cr12", question: "The slow oxidation of metals like iron in the presence of moisture and air, forming rust, is called [ corrosion / rancidity ].", answer: "corrosion"),
+    QuestionItem(id: "cr13", question: "The oxidation of fats and oils in food, giving them a bad smell and taste, is called [ rancidity / corrosion ].", answer: "rancidity"),
+    QuestionItem(id: "cr14", question: "Rancidity can be prevented by adding [ antioxidants / catalysts ] to food.", answer: "antioxidants"),
+    QuestionItem(id: "cr15", question: "When quicklime reacts vigorously with water to form slaked lime, releasing heat, it is a [ combination reaction / decomposition reaction ].", answer: "combination reaction"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "crn1", question: "In the balanced equation N₂ + 3H₂ → 2NH₃, find the coefficient of H₂.", given: ["N₂ + xH₂ → 2NH₃"], solutionSteps: ["Balance hydrogen atoms: RHS has 2×3=6 H atoms.", "So x×2 = 6, x = 3"], numericAnswer: 3, unit: ""),
+    NumericalProblem(id: "crn2", question: "By the law of conservation of mass, if 10 g of reactant A reacts completely with 15 g of reactant B, find the total mass of products formed.", given: ["Mass A = 10 g", "Mass B = 15 g"], solutionSteps: ["By conservation of mass, total mass of products = total mass of reactants", "= 10+15", "= 25 g"], numericAnswer: 25, unit: "g"),
+    NumericalProblem(id: "crn3", question: "In the equation 2Mg + O₂ → 2MgO, if 48 g of Mg reacts completely with 32 g of O₂, find the mass of MgO formed.", given: ["Mass Mg = 48 g", "Mass O₂ = 32 g"], solutionSteps: ["By conservation of mass: mass of MgO = mass of Mg + mass of O₂", "= 48+32", "= 80 g"], numericAnswer: 80, unit: "g"),
+    NumericalProblem(id: "crn4", question: "In the balanced equation 2H₂ + O₂ → 2H₂O, find the coefficient of H₂O.", given: ["2H₂ + O₂ → xH₂O"], solutionSteps: ["Balance H atoms: LHS has 2×2=4 H atoms.", "RHS: x×2 = 4, x = 2"], numericAnswer: 2, unit: ""),
+    NumericalProblem(id: "crn5", question: "If 56 g of CaO reacts with 44 g of CO₂ in a reverse decomposition reaction, find the mass of CaCO₃ formed.", given: ["Mass CaO = 56 g", "Mass CO₂ = 44 g"], solutionSteps: ["By conservation of mass: mass of CaCO₃ = 56+44", "= 100 g"], numericAnswer: 100, unit: "g"),
+  ],
+);

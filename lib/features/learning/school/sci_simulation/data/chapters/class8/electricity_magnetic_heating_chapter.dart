@@ -1,0 +1,75 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8ElectricityMagneticHeatingChapter = ChapterModel(
+  standard: 8, subject: "Physics", chapterId: "cls8_phys_electricitymagneticheating", chapterName: "Electricity: Magnetic and Heating Effects",
+  imagePath: "assets/images/electricity_ch4.jpg",
+  concepts: [
+    "An electric current produces a magnetic field around the conductor it flows through (magnetic effect of electric current).",
+    "A current-carrying coil, especially with an iron core, behaves as an electromagnet with two poles.",
+    "Passing current through a conductor causes it to heat up (heating effect of electric current) due to resistance.",
+    "Cells and batteries (Voltaic cells, dry cells, rechargeable batteries) generate electricity through chemical reactions.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "em1", question: "The region around a magnet or current-carrying wire where its magnetic effect can be felt is called a [ magnetic field / electric field ].", answer: "magnetic field"),
+    QuestionItem(id: "em2", question: "The phenomenon where a current-carrying conductor produces a magnetic field around it is called the [ magnetic effect of electric current / heating effect of electric current ].", answer: "magnetic effect of electric current"),
+    QuestionItem(id: "em3", question: "[ Hans Christian Oersted / Alexander Fleming ] discovered in 1820 that electric current has a magnetic effect, by observing a compass needle deflect near a closed circuit.", answer: "Hans Christian Oersted"),
+    QuestionItem(id: "em4", question: "A current-carrying coil that behaves as a magnet is called an [ electromagnet / permanent magnet ].", answer: "electromagnet"),
+    QuestionItem(id: "em5", question: "Inserting an iron [ core / shell ] inside a current-carrying coil makes the electromagnet stronger.", answer: "core"),
+    QuestionItem(id: "em6", question: "The strength of an electromagnet can be increased by increasing the current or increasing the [ number of turns of the coil / length of the coil ].", answer: "number of turns of the coil"),
+    QuestionItem(id: "em7", question: "Reversing the direction of current flow through an electromagnet's coil [ reverses its poles / has no effect ].", answer: "reverses its poles"),
+    QuestionItem(id: "em8", question: "The warming of a conductor when electric current passes through it, due to resistance, is called the [ heating effect of electric current / magnetic effect of electric current ].", answer: "heating effect of electric current"),
+    QuestionItem(id: "em9", question: "[ Nichrome / Copper ] wire offers higher resistance than a copper wire of the same size, so it is used as the heating element in appliances like electric irons and heaters.", answer: "Nichrome"),
+    QuestionItem(id: "em10", question: "The heat generated in a wire depends on the material, thickness, length, and the [ duration of current flow / colour of the wire ].", answer: "duration of current flow"),
+    QuestionItem(id: "em11", question: "In a Voltaic (Galvanic) cell, the liquid that helps conduct electricity between the two electrodes is called the [ electrolyte / insulator ].", answer: "electrolyte"),
+    QuestionItem(id: "em12", question: "The Voltaic cell is named after [ Alessandro Volta / Luigi Galvani ], who showed that electricity was produced by the combination of metals and liquid, not by a frog's leg.", answer: "Alessandro Volta"),
+    QuestionItem(id: "em13", question: "A dry cell uses a thick moist paste as the electrolyte instead of a liquid, with a [ zinc container / copper rod ] as the negative terminal.", answer: "zinc container"),
+    QuestionItem(id: "em14", question: "Batteries that can be recharged and reused multiple times, such as those in mobile phones, are called [ rechargeable batteries / dry cells ].", answer: "rechargeable batteries"),
+    QuestionItem(id: "em15", question: "The most common type of rechargeable battery used today, found in most modern devices, is the [ lithium-ion (Li-ion) / lead-acid ] battery.", answer: "lithium-ion (Li-ion)"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. Magnetic Effect of Electric Current',
+      iconKey: 'joints',
+      points: [
+        'When electric current flows through a wire, a magnetic compass placed nearby deflects — this shows the wire has produced a magnetic field around it.',
+        'This is called the magnetic effect of electric current — the magnetic field disappears the moment current stops flowing.',
+        'Hans Christian Oersted (1820) discovered this link between electricity and magnetism by chance, while giving a class demonstration — his compass needle deflected whenever the circuit was opened/closed nearby.',
+        'This discovery connected two forces (electricity and magnetism) that scientists had earlier believed were unrelated.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Electromagnets',
+      iconKey: 'muscle',
+      points: [
+        'A current-carrying coil of wire behaves like a magnet — this is called an electromagnet. Inserting an iron core (like a nail) inside the coil makes it much stronger.',
+        'Just like a bar magnet, an electromagnet has two poles (North and South) — the pole depends on the direction of current flow.',
+        'Electromagnet strength increases with: (1) more current flowing through the coil, (2) more turns of wire in the coil, and (3) adding an iron core.',
+        'Reversing the direction of current reverses the electromagnet\'s poles. When current stops, the electromagnet completely loses its magnetism (unlike a permanent magnet).',
+        'Real-world use — lifting electromagnets: powerful electromagnets hung on cranes in factories/scrap yards. Switching current ON picks up iron/steel objects; switching OFF releases them instantly.',
+        'The Earth itself behaves like a giant magnet because moving liquid iron in its core generates electric currents, which create a magnetic field — this field helps migratory animals navigate and shields Earth from harmful particles from space.',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Heating Effect of Electric Current',
+      iconKey: 'plant_growth',
+      points: [
+        'Every conductor offers some resistance to the flow of current; this resistance converts some electrical energy into heat — called the heating effect of electric current.',
+        'Different materials offer different resistance: nichrome wire heats up much more than a copper wire of the same size, which is why it\'s used as the heating element in irons, room heaters, kettles, stoves, and hair dryers.',
+        'Heat generated depends on: the wire\'s material, its thickness, its length, and how long the current flows.',
+        'This effect is useful (heating appliances, incandescent lamps) but can also cause problems: energy loss in transmission wires, overheating damaging plugs/sockets, or even fires — so household circuits include safety devices, and wires/plugs must be rated for the correct current.',
+        'Industrial use: electric furnaces use the heating effect to melt and recycle scrap steel in steel manufacturing.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. How Cells & Batteries Generate Electricity',
+      iconKey: 'organelles',
+      points: [
+        'Voltaic (Galvanic) cell: two different metal electrodes dipped in an electrolyte (a weak acid or salt solution) — a chemical reaction between the metals and electrolyte produces electric current. Named after Alessandro Volta.',
+        'Luigi Galvani first noticed a dead frog\'s leg twitch when touched by two different metals; Volta proved the electricity came from the metals + liquid combination, not the frog — leading to the first battery.',
+        'A simple Voltaic cell can be made using lemons/lemon juice as the electrolyte with copper wire and iron nail electrodes — connecting several in series can light an LED.',
+        'Dry cells (everyday batteries): use a thick, moist paste (not liquid) as electrolyte; a zinc container acts as the negative terminal, a carbon rod as the positive terminal. Single-use — once used up, they must be disposed of (ideally via e-waste recycling, since they contain materials like lead, cadmium, or lithium).',
+        'Rechargeable batteries: can be recharged and reused many times (laptops, phones, vehicles, inverters), reducing waste — though they too wear out eventually. Lithium-ion (Li-ion) batteries are the most common type today.',
+      ],
+    ),
+  ],
+);

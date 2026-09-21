@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10AcidsBasesSaltsChapter = ChapterModel(
+  standard: 10, subject: "Chemistry", chapterId: "cls10_chem_acidsbasessalts", chapterName: "Acids, Bases and Salts",
+  concepts: ["Chemical properties of acids and bases; reaction with metals, carbonates.", "The pH scale and its importance.", "Common salts: preparation, properties and uses."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "ab10_1", question: "Acids release [ H+ ions (hydrogen ions) / OH- ions ] when dissolved in water.", answer: "H+ ions (hydrogen ions)"),
+    QuestionItem(id: "ab10_2", question: "Bases release [ OH- ions (hydroxide ions) / H+ ions ] when dissolved in water.", answer: "OH- ions (hydroxide ions)"),
+    QuestionItem(id: "ab10_3", question: "When a metal reacts with a dilute acid, it produces a salt and [ hydrogen gas / oxygen gas ].", answer: "hydrogen gas"),
+    QuestionItem(id: "ab10_4", question: "When a metal carbonate reacts with an acid, it produces salt, water and [ carbon dioxide gas / hydrogen gas ].", answer: "carbon dioxide gas"),
+    QuestionItem(id: "ab10_5", question: "The scale used to measure the strength of an acid or base, ranging from 0 to 14, is called the [ pH scale / Richter scale ].", answer: "pH scale"),
+    QuestionItem(id: "ab10_6", question: "A solution with pH less than 7 is [ acidic / basic ].", answer: "acidic"),
+    QuestionItem(id: "ab10_7", question: "A solution with pH greater than 7 is [ basic / acidic ].", answer: "basic"),
+    QuestionItem(id: "ab10_8", question: "A solution with pH exactly 7 is [ neutral / acidic ].", answer: "neutral"),
+    QuestionItem(id: "ab10_9", question: "The pH of human blood is normally maintained at around [ 7.4 / 5.5 ].", answer: "7.4"),
+    QuestionItem(id: "ab10_10", question: "Common salt (sodium chloride) is obtained industrially along with sodium hydroxide and chlorine gas by the [ chlor-alkali process / Haber process ].", answer: "chlor-alkali process"),
+    QuestionItem(id: "ab10_11", question: "Bleaching powder is prepared by the action of chlorine gas on [ dry slaked lime / water ].", answer: "dry slaked lime"),
+    QuestionItem(id: "ab10_12", question: "Baking soda (sodium hydrogen carbonate) is used in the preparation of baking powder along with [ tartaric acid / hydrochloric acid ].", answer: "tartaric acid"),
+    QuestionItem(id: "ab10_13", question: "Washing soda is chemically known as [ sodium carbonate / sodium bicarbonate ].", answer: "sodium carbonate"),
+    QuestionItem(id: "ab10_14", question: "Plaster of Paris is obtained by heating [ gypsum / limestone ] at a controlled temperature.", answer: "gypsum"),
+    QuestionItem(id: "ab10_15", question: "Salts formed from a strong acid and a strong base, like sodium chloride, are [ neutral salts / acidic salts ].", answer: "neutral salts"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "abn1", question: "A solution has pH 3. How many units below neutral (pH 7) is it?", given: ["pH = 3", "Neutral = 7"], solutionSteps: ["Difference = 7 − 3", "= 4 units (more acidic)"], numericAnswer: 4, unit: "pH units"),
+    NumericalProblem(id: "abn2", question: "A solution has pH 11. How many units above neutral (pH 7) is it?", given: ["pH = 11", "Neutral = 7"], solutionSteps: ["Difference = 11 − 7", "= 4 units (more basic)"], numericAnswer: 4, unit: "pH units"),
+    NumericalProblem(id: "abn3", question: "If lemon juice has pH 2 and milk has pH 6, find the difference in their pH values.", given: ["Lemon pH = 2", "Milk pH = 6"], solutionSteps: ["Difference = 6 − 2", "= 4"], numericAnswer: 4, unit: "pH units"),
+    NumericalProblem(id: "abn4", question: "Human blood has a normal pH of 7.4. Find how far this is from neutral (7).", given: ["Blood pH = 7.4", "Neutral = 7"], solutionSteps: ["Difference = 7.4 − 7", "= 0.4"], numericAnswer: 0.4, unit: "pH units"),
+    NumericalProblem(id: "abn5", question: "A soap solution has pH 9 and pure water has pH 7. Find the difference.", given: ["Soap pH = 9", "Water pH = 7"], solutionSteps: ["Difference = 9 − 7", "= 2"], numericAnswer: 2, unit: "pH units"),
+  ],
+);

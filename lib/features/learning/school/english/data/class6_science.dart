@@ -1,0 +1,33 @@
+import '../models/dictionary_word.dart';
+
+const class6Science = DictionaryTopic(
+  id: 'class6_science',
+  title: 'Science',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_CARBOHYDRATE',
+    'DICT_ENG_MINERAL',
+    'DICT_ENG_NUTRIENT',
+    'DICT_ENG_ROUGHAGE',
+    'DICT_ENG_DEFICIENCY_DISEASE',
+    'DICT_ENG_MALNUTRITION',
+    'DICT_ENG_FILTRATION',
+    'DICT_ENG_EVAPORATION',
+    'DICT_ENG_SIEVING',
+    'DICT_ENG_SEDIMENTATION',
+    'DICT_ENG_DECANTATION',
+    'DICT_ENG_WINNOWING',
+    'DICT_ENG_OMNIVORE',
+    'DICT_ENG_DECOMPOSER',
+    'DICT_ENG_ORGANISM',
+    'DICT_ENG_ADAPTATION',
+    'DICT_ENG_MOTION',
+    'DICT_ENG_DISTANCE',
+    'DICT_ENG_SPEED',
+    'DICT_ENG_UNIFORM_MOTION',
+    'DICT_ENG_PERIODIC_MOTION',
+    'DICT_ENG_CIRCUIT',
+    'DICT_ENG_OPAQUE',
+    'DICT_ENG_TRANSLUCENT'
+  ],
+);

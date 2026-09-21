@@ -1,0 +1,93 @@
+import '../../models/chapter_model.dart';
+final ChapterModel class9TissuesChapter = ChapterModel(
+  standard: 9, subject: "Biology", chapterId: "cls9_bio_tissues", chapterName: "Tissues",
+  concepts: ["Plant and animal tissues."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "t1", question: "A group of cells having a common origin and performing a similar function is called a [ tissue / organ ].", answer: "tissue"),
+    QuestionItem(id: "t2", question: "The tissue responsible for plant growth at the growing tips is [ meristematic / permanent ].", answer: "meristematic"),
+    QuestionItem(id: "t3", question: "Blood and bone are types of [ connective / muscular ] tissue.", answer: "connective"),
+    QuestionItem(id: "t4", question: "The tissue that connects muscle to bone is called a [ tendon / ligament ].", answer: "tendon"),
+    QuestionItem(id: "t5", question: "Tissue that connects bone to bone is called a [ ligament / tendon ].", answer: "ligament"),
+    QuestionItem(id: "t6", question: "The tissue present in the lining of kidney tubules and ducts of salivary glands is [ epithelial tissue / nervous tissue ].", answer: "epithelial tissue"),
+    QuestionItem(id: "t7", question: "Plant tissue that transports water and minerals is [ xylem / phloem ].", answer: "xylem"),
+    QuestionItem(id: "t8", question: "Plant tissue that transports food from leaves to other parts is [ phloem / xylem ].", answer: "phloem"),
+    QuestionItem(id: "t9", question: "Fleshy green stems contain chloroplasts and are called [ chlorenchyma / aerenchyma ].", answer: "chlorenchyma"),
+    QuestionItem(id: "t10", question: "The hard and gritty texture of pear fruit is due to [ sclereids / parenchyma ].", answer: "sclereids"),
+    QuestionItem(id: "t11", question: "Fat-storing tissue in animals is [ adipose tissue / areolar tissue ].", answer: "adipose tissue"),
+    QuestionItem(id: "t12", question: "Voluntary muscles are also known as [ skeletal muscles / cardiac muscles ].", answer: "skeletal muscles"),
+    QuestionItem(id: "t13", question: "The tissue found in the brain, spinal cord, and nerves is [ nervous tissue / muscular tissue ].", answer: "nervous tissue"),
+    QuestionItem(id: "t14", question: "Cardiac muscle tissue is found exclusively in the [ heart / lungs ].", answer: "heart"),
+    QuestionItem(id: "t15", question: "Cork cells possess a chemical substance called [ suberin / lignin ] that makes them impervious to gases and water.", answer: "suberin"),
+    QuestionItem(id: "t16", question: "The joint at the shoulder that allows movement in all directions is a [ ball and socket / hinge ] joint.", answer: "ball and socket"),
+    QuestionItem(id: "t17", question: "The joint at the elbow and knee, which bends in one direction only, is a [ hinge / pivot ] joint.", answer: "hinge"),
+    QuestionItem(id: "t18", question: "The joint connecting the skull to the backbone, allowing side-to-side head rotation, is a [ pivot / fixed ] joint.", answer: "pivot"),
+    QuestionItem(id: "t19", question: "The joints between the flat bones of the skull, which do not move at all, are [ fixed / hinge ] joints.", answer: "fixed"),
+    QuestionItem(id: "t20", question: "The process by which meristematic tissue becomes specialised permanent tissue is called [ differentiation / totipotency ].", answer: "differentiation"),
+    QuestionItem(id: "t21", question: "A mature plant cell's ability to dedifferentiate and regenerate a whole new plant is called [ totipotency / differentiation ].", answer: "totipotency"),
+    QuestionItem(id: "t22", question: "Bones, muscles, joints, cartilage, tendons and ligaments together form the [ musculoskeletal system / nervous system ].", answer: "musculoskeletal system"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. What Is a Tissue?',
+      iconKey: 'theory',
+      points: [
+        'Tissue = a group of similar cells performing a similar function. Tissues → organs → organ systems → organism.',
+        'Division of labour: different cells specialise in different jobs, making the whole body more efficient.',
+        'Plants are mostly fixed in place and have a rigid cell wall for support; animals move, so their cells stay flexible with no cell wall.',
+        'Plants make their own food (photosynthesis) so need tissues for that; animals digest outside food and need extra tissue for fast movement and coordination.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Plant Growth Tissues',
+      iconKey: 'plant_growth',
+      points: [
+        'Meristematic tissue: small, thin-walled, tightly packed, big nucleus, dense cytoplasm, no vacuole — divides continuously.',
+        'Apical meristem (root/shoot tips) → increases length. Lateral meristem (ring around stem) → increases girth, forms annual rings. Intercalary meristem (base of leaves/nodes) → regrowth after cutting/grazing.',
+        'Differentiation: meristematic cells lose the ability to divide and specialise into permanent tissue.',
+        'Totipotency: a mature, differentiated plant cell can dedifferentiate and regrow into a whole new plant (shown by F. C. Steward\'s carrot experiment).',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Permanent Plant Tissues',
+      iconKey: 'stomata',
+      points: [
+        'Epidermis: outer protective layer, covered by waxy cuticle; has stomata (pores) controlled by guard cells for gas exchange & transpiration.',
+        'Simple permanent tissue — parenchyma (thin walls, storage/photosynthesis), collenchyma (thick corners, flexible support), sclerenchyma (thick lignified walls, rigid, mostly dead).',
+        'Complex permanent tissue — xylem (dead cells, carries water & minerals UP only) and phloem (mostly living cells, carries food in ANY direction).',
+        'Three tissue systems: dermal (epidermis), ground (parenchyma/collenchyma/sclerenchyma), and vascular (xylem + phloem).',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Animal Tissues — Epithelial & Connective',
+      iconKey: 'animal_tissues',
+      points: [
+        'Epithelial tissue: tightly packed cells, little/no gap, sits on a basement membrane — covers the body and lines organs (skin, gut, blood vessels).',
+        'Types: squamous (flat, exchange), cuboidal (secretion/absorption), columnar (absorption), ciliated (sweeps mucus), glandular (secretes substances).',
+        'Connective tissue: cells loosely spaced in a matrix — blood (fluid matrix/plasma), bone (hard matrix), cartilage (flexible matrix), tendon (muscle↔bone), ligament (bone↔bone).',
+        'Blood is a connective tissue: RBCs carry oxygen, WBCs fight infection, platelets clot, plasma transports everything.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Muscular & Nervous Tissue',
+      iconKey: 'muscle',
+      points: [
+        'Skeletal (striated) muscle: long, unbranched, multinucleate, voluntary — attached to bones by tendons for movement.',
+        'Smooth muscle: spindle-shaped, single nucleus, no striations, involuntary — found in gut walls, blood vessels.',
+        'Cardiac muscle: branched, striated, involuntary, tireless — found only in the heart.',
+        'Nervous tissue: made of neurons (cell body + dendrites + axon), specialised to receive, process, and transmit electrical signals fast, over long distances.',
+      ],
+    ),
+    RevisionNote(
+      title: '6. Musculoskeletal System & Joints',
+      iconKey: 'joints',
+      points: [
+        'Musculoskeletal system = bones + muscles + joints + cartilage + tendons + ligaments, controlled by the nervous system.',
+        'Ball & socket joint (shoulder): moves in all directions. Hinge joint (elbow/knee): bends in one direction only.',
+        'Pivot joint (neck): allows side-to-side rotation. Fixed joint (skull): no movement, protects the brain.',
+        'Skeleton includes the skull, vertebral column (backbone, cushioned by cartilage discs), and the rib cage (12 pairs of ribs protecting heart & lungs, expands/contracts for breathing).',
+        'The adult human skeleton makes up roughly 12–15% of body weight.',
+      ],
+    ),
+  ],
+);

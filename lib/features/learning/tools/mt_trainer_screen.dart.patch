@@ -1,0 +1,56 @@
+--- lib/features/learning/tools/mt_trainer_screen.dart
++++ lib/features/learning/tools/mt_trainer_screen.dart
+@@ -2,6 +2,7 @@
+ import 'dart:math';
+ import 'package:flutter/material.dart';
++import '../../../core/services/trilingual_service.dart';
+ 
+ class MultiplicationTableView extends StatefulWidget {
+   const MultiplicationTableView({super.key});
+ 
+@@ -82,23 +83,31 @@
+ 
+     return LayoutBuilder(
+       builder: (context, constraints) {
+         final bool isNarrow = constraints.maxWidth < 600;
+ 
+         final controlPanel = _buildControlPanel(isNarrow);
+         final displayCard = _buildDisplayCard(product, constraints, isNarrow);
+ 
+-        if (isNarrow) {
+-          return Column(
+-            children: [
+-              controlPanel,
+-              Expanded(child: displayCard),
+-            ],
+-          );
+-        }
+-
+-        return Row(
+-          children: [
+-            controlPanel,
+-            Expanded(child: displayCard),
+-          ],
++        return Scaffold(
++          backgroundColor: const Color(0xFF111118),
++          appBar: AppBar(
++            title: Text(TrilingualService.instance.getUIText('Tables Practice')),
++            backgroundColor: const Color(0xFF181820),
++            iconTheme: const IconThemeData(color: Colors.white),
++            titleTextStyle: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
++          ),
++          body: isNarrow
++              ? Column(
++                  children: [
++                    controlPanel,
++                    Expanded(child: displayCard),
++                  ],
++                )
++              : Row(
++                  children: [
++                    controlPanel,
++                    Expanded(child: displayCard),
++                  ],
++                ),
+         );
+       },

@@ -1,0 +1,86 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8HealthChapter = ChapterModel(
+  standard: 8, subject: "Biology", chapterId: "cls8_bio_health", chapterName: "Health: The Ultimate Treasure",
+  imagePath: "assets/images/health_ch3.jpg",
+  concepts: [
+    "Health is a state of complete physical, mental, and social well-being, not merely the absence of disease.",
+    "Diseases are grouped into communicable (spread by pathogens) and non-communicable (linked to lifestyle/environment).",
+    "The body's immune system provides natural defence; vaccines provide acquired immunity.",
+    "Antibiotics treat bacterial infections but must be used carefully to avoid antibiotic resistance.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "h1", question: "According to the WHO, health is a state of complete physical, mental, and [ social well-being / medical treatment ], not merely the absence of disease.", answer: "social well-being"),
+    QuestionItem(id: "h2", question: "What we feel, like pain or tiredness, is called a [ symptom / sign ]; what can be seen or measured, like fever, is called a [ sign / symptom ].", answer: "symptom"),
+    QuestionItem(id: "h3", question: "Disease-causing organisms like bacteria, viruses, fungi, worms, and protozoa are called [ pathogens / vectors ].", answer: "pathogens"),
+    QuestionItem(id: "h4", question: "Diseases that spread from one person to another, caused by pathogens, are called [ communicable / non-communicable ] diseases.", answer: "communicable"),
+    QuestionItem(id: "h5", question: "Diseases like cancer, diabetes, and asthma, usually linked to lifestyle and not spread person to person, are called [ non-communicable / communicable ] diseases.", answer: "non-communicable"),
+    QuestionItem(id: "h6", question: "Insects like mosquitoes and houseflies that spread pathogens from one host to another are called [ vectors / parasites ].", answer: "vectors"),
+    QuestionItem(id: "h7", question: "Diseases caused by a lack of specific nutrients in the diet, such as scurvy or anaemia, are called [ deficiency diseases / chronic diseases ].", answer: "deficiency diseases"),
+    QuestionItem(id: "h8", question: "Diseases that persist for more than 3 months, like diabetes or asthma, are called [ chronic diseases / acute diseases ].", answer: "chronic diseases"),
+    QuestionItem(id: "h9", question: "The natural ability of the body to fight diseases is called [ immunity / vaccination ].", answer: "immunity"),
+    QuestionItem(id: "h10", question: "Protection developed after exposure to a pathogen or a vaccine is called [ acquired immunity / natural immunity ].", answer: "acquired immunity"),
+    QuestionItem(id: "h11", question: "English doctor [ Edward Jenner / Alexander Fleming ] discovered the first vaccine, for smallpox, after observing that milkmaids with cowpox did not catch smallpox.", answer: "Edward Jenner"),
+    QuestionItem(id: "h12", question: "The traditional Indian method of scratching skin with material from a smallpox sore to build immunity was called [ variolation / vaccination ].", answer: "variolation"),
+    QuestionItem(id: "h13", question: "[ Alexander Fleming / Edward Jenner ] discovered penicillin, the first antibiotic, after noticing a mould killed bacteria on a petri dish.", answer: "Alexander Fleming"),
+    QuestionItem(id: "h14", question: "Medicines that kill bacteria and treat bacterial infections are called [ antibiotics / vaccines ]; they do NOT work against [ viruses / bacteria ].", answer: "antibiotics"),
+    QuestionItem(id: "h15", question: "Overuse or incomplete doses of antibiotics can lead to [ antibiotic resistance / faster recovery ], where bacteria survive treatment.", answer: "antibiotic resistance"),
+    QuestionItem(id: "h16", question: "Organisms like intestinal worms that live in or on another living being and feed off it are called [ parasites / vectors ].", answer: "parasites"),
+    QuestionItem(id: "h17", question: "Vaccines are [ preventive, not curative / curative, not preventive ] — they protect before illness, but don't treat someone already sick.", answer: "preventive, not curative"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. What Does "Health" Really Mean?',
+      iconKey: 'theory',
+      points: [
+        'WHO defines health as "a state of complete physical, mental, and social well-being, and not merely the absence of disease."',
+        'A healthy person can perform tasks efficiently, cope with difficult situations, and adjust well with peer groups and society — not just be free of illness.',
+        'Ayurveda teaches that true health is a balance of body, mind, and surroundings — achieved through dinacharya (daily routine), ritucharya (seasonal routine), suitable diet, exercise, cleanliness, and a calm mind.',
+        'Health depends on both lifestyle (how we live — diet, exercise, sleep, screen time) and environment (surroundings — clean air, water, and living spaces).',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Diseases: Symptoms, Signs & Types',
+      iconKey: 'muscle',
+      points: [
+        'A disease affects the normal working of the body or mind. A symptom is what we feel (pain, tiredness); a sign is what can be seen or measured (fever, rash, high blood pressure).',
+        'Non-communicable diseases (e.g. cancer, diabetes, asthma, heart disease): NOT caused by pathogens, don\'t spread person to person, linked to lifestyle/diet/environment — today the leading cause of death in India.',
+        'Communicable diseases: caused by pathogens (bacteria, viruses, fungi, worms, protozoa), and CAN spread from person to person, e.g. typhoid, dengue, flu, chickenpox, COVID-19.',
+        'Deficiency diseases (e.g. scurvy, anaemia, goitre) are non-communicable, caused by lack of specific nutrients. Chronic diseases persist for over 3 months (e.g. diabetes, asthma).',
+      ],
+    ),
+    RevisionNote(
+      title: '3. How Communicable Diseases Spread',
+      iconKey: 'division',
+      points: [
+        'Pathogens spread through: air (coughing/sneezing), direct contact (shaking hands), indirect contact (sharing personal items), contaminated food/water, and vectors (insects like mosquitoes/houseflies carrying pathogens between hosts).',
+        'Some infectious diseases are caused by parasitic worms living in the digestive system, spread through contaminated food, water, soil, or contact with infected people/animals.',
+        'Prevention: keep surroundings clean, wash hands with soap, cover mouth/nose while coughing/sneezing, wear masks in crowded places, avoid sharing personal items, use mosquito nets/repellents, and rest when unwell.',
+        'Case study: a community sanitation campaign in Bhadrak, Odisha increased toilet use, reducing open defecation and cutting cases of diarrhoea/infections — showing how simple public health steps control disease spread.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Immunity & Vaccines',
+      iconKey: 'joints',
+      points: [
+        'Immunity is the body\'s natural ability to fight disease, managed by the immune system. Some people get sick less often even in the same environment because of stronger immunity.',
+        'Vaccines train the immune system to recognise and attack specific pathogens, giving acquired immunity — made from weakened/dead pathogens, harmless parts of a pathogen, or (newer vaccines) instructions for the body\'s own cells.',
+        'Edward Jenner (late 1700s) discovered the smallpox vaccine after observing that milkmaids infected with cowpox did not catch smallpox — leading to smallpox\'s eventual global eradication (1979) through mass vaccination.',
+        'India had a traditional method called variolation, performed by practitioners called teekedaars, long before modern vaccines — scratching skin with smallpox-sore material to build immunity.',
+        'Vaccines are preventive, not curative — they protect before illness strikes, but don\'t cure someone already sick. India is one of the world\'s largest vaccine producers.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Antibiotics & Antibiotic Resistance',
+      iconKey: 'plant_growth',
+      points: [
+        'Antibiotics are medicines that kill bacteria by targeting parts of bacterial cells different from human cells — they work ONLY against bacterial infections, not viruses or protozoa.',
+        'Alexander Fleming discovered penicillin (1928) after noticing a mould on a petri dish killed nearby bacteria — the first antibiotic.',
+        'Antibiotic resistance: overusing antibiotics, or not completing the full prescribed dose, lets some resistant bacteria survive and multiply — making future infections harder to treat.',
+        'Resistant bacteria can spread between animals, food products, soil, and humans, and between patients in hospitals — a growing global health threat.',
+        'Correct antibiotic use: take them only when prescribed by a doctor, at the correct dose, for the full duration — never for viral illnesses like a common cold.',
+        'Scientist Kamal Ranadive studied links between hormones, viruses, and cancer, and highlighted how tobacco, diet, and pollution raise cancer risk — improving cancer prevention and treatment in India.',
+      ],
+    ),
+  ],
+);

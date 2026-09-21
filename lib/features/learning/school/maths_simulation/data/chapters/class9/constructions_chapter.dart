@@ -1,0 +1,31 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9ConstructionsChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_constructions", chapterName: "Constructions",
+  concepts: ["Bisecting a line segment and an angle.", "Constructing angles of specific measures using a compass.", "Constructing triangles given specific conditions."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "con1", question: "The construction of the perpendicular bisector of a line segment uses arcs drawn from [ both endpoints with equal radius / one endpoint only ].", answer: "both endpoints with equal radius"),
+    QuestionItem(id: "con2", question: "To bisect an angle, we draw arcs from the vertex and then from the two points where the arc meets the [ arms of the angle / midpoint only ].", answer: "arms of the angle"),
+    QuestionItem(id: "con3", question: "A 60° angle can be constructed by first drawing an [ equilateral triangle-like arc construction / arbitrary arc ].", answer: "equilateral triangle-like arc construction"),
+    QuestionItem(id: "con4", question: "A 90° angle can be constructed by bisecting a [ straight angle (180°) / 60° angle ].", answer: "straight angle (180°)"),
+    QuestionItem(id: "con5", question: "A 30° angle can be constructed by bisecting a [ 60° angle / 90° angle ].", answer: "60° angle"),
+    QuestionItem(id: "con6", question: "A 45° angle can be constructed by bisecting a [ 90° angle / 60° angle ].", answer: "90° angle"),
+    QuestionItem(id: "con7", question: "A triangle can be constructed given its base, a base angle, and the sum of the [ other two sides / other two angles ].", answer: "other two sides"),
+    QuestionItem(id: "con8", question: "A triangle can be constructed given its base, a base angle, and the difference of the [ other two sides / other two angles ].", answer: "other two sides"),
+    QuestionItem(id: "con9", question: "A triangle can be constructed given its perimeter and [ its two base angles / one angle only ].", answer: "its two base angles"),
+    QuestionItem(id: "con10", question: "Geometric constructions rely only on an [ ungraduated ruler and compass / graduated ruler ].", answer: "ungraduated ruler and compass"),
+    QuestionItem(id: "con11", question: "A 15° angle can be constructed by bisecting a [ 30° angle / 45° angle ].", answer: "30° angle"),
+    QuestionItem(id: "con12", question: "In construction, an angle equal to a given angle can be copied using [ arcs of equal radius / a protractor only ].", answer: "arcs of equal radius"),
+    QuestionItem(id: "con13", question: "The perpendicular bisector of a segment passes through its [ midpoint / endpoint ].", answer: "midpoint"),
+    QuestionItem(id: "con14", question: "When constructing a triangle given base, one angle, and sum of other two sides, the third vertex is found using the [ perpendicular bisector of a constructed segment / angle bisector only ].", answer: "perpendicular bisector of a constructed segment"),
+    QuestionItem(id: "con15", question: "Every point on the bisector of an angle is [ equidistant from the two arms of the angle / equidistant from the vertex only ].", answer: "equidistant from the two arms of the angle"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "conn1", question: "Find the angle obtained by bisecting a 60° angle.", given: ["Original angle = 60°"], solutionSteps: ["Bisecting divides the angle into two equal halves.", "Each half = 60°/2", "= 30°"], numericAnswer: 30, unit: "°"),
+    NumericalProblem(id: "conn2", question: "Find the angle obtained by bisecting a 90° angle.", given: ["Original angle = 90°"], solutionSteps: ["Bisecting divides the angle into two equal halves.", "Each half = 90°/2", "= 45°"], numericAnswer: 45, unit: "°"),
+    NumericalProblem(id: "conn3", question: "To construct a 15° angle, a 60° angle is bisected twice. Find the result of the first bisection.", given: ["Original = 60°"], solutionSteps: ["First bisection: 60°/2 = 30°"], numericAnswer: 30, unit: "°"),
+    NumericalProblem(id: "conn4", question: "For a triangle constructed with base 8 cm, base angle 60°, and sum of other two sides 12 cm, find the length used for the auxiliary segment (base + sum of sides).", given: ["Base = 8 cm", "Sum of other sides = 12 cm"], solutionSteps: ["The auxiliary line drawn equals the sum of the two unknown sides = 12 cm", "(This 12 cm segment is drawn from the base angle vertex before bisecting.)"], numericAnswer: 12, unit: "cm"),
+    NumericalProblem(id: "conn5", question: "A perpendicular bisector is constructed for a 14 cm segment. Find the distance from the midpoint to either endpoint.", given: ["Segment = 14 cm"], solutionSteps: ["The perpendicular bisector passes through the midpoint.", "Distance to each endpoint = 14/2", "= 7 cm"], numericAnswer: 7, unit: "cm"),
+    NumericalProblem(id: "conn6", question: "Find the angle obtained by bisecting a 45° angle (used in constructing 22.5°).", given: ["Original angle = 45°"], solutionSteps: ["Bisecting divides the angle into two equal halves.", "Each half = 45°/2", "= 22.5°"], numericAnswer: 22.5, unit: "°"),
+  ],
+);

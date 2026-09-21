@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9EuclidsGeometryChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_euclidsgeometry", chapterName: "Introduction to Euclid's Geometry",
+  concepts: ["Euclid's definitions of point, line and plane.", "Euclid's five postulates.", "Equivalent versions of the fifth postulate."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "eg1", question: "Euclid's geometry is based on a small set of basic assumptions called [ postulates (axioms) / theorems ].", answer: "postulates (axioms)"),
+    QuestionItem(id: "eg2", question: "According to Euclid, a point is that which has [ no part / one dimension ].", answer: "no part"),
+    QuestionItem(id: "eg3", question: "According to Euclid, a line has [ length but no breadth / length and breadth ].", answer: "length but no breadth"),
+    QuestionItem(id: "eg4", question: "Euclid's first postulate states that a straight line may be drawn from [ any point to any other point / only fixed points ].", answer: "any point to any other point"),
+    QuestionItem(id: "eg5", question: "Euclid's second postulate allows extending a terminated line [ indefinitely / only by a fixed length ].", answer: "indefinitely"),
+    QuestionItem(id: "eg6", question: "Euclid's third postulate states that a circle can be drawn with any [ centre and radius / two centres ].", answer: "centre and radius"),
+    QuestionItem(id: "eg7", question: "Euclid's fourth postulate states that all right angles are [ equal to one another / different ].", answer: "equal to one another"),
+    QuestionItem(id: "eg8", question: "Statements that are proved using axioms and definitions are called [ theorems / postulates ].", answer: "theorems"),
+    QuestionItem(id: "eg9", question: "Euclid's fifth postulate is related to [ parallel lines / perpendicular lines ].", answer: "parallel lines"),
+    QuestionItem(id: "eg10", question: "Two distinct lines cannot have more than [ one point / two points ] in common.", answer: "one point"),
+    QuestionItem(id: "eg11", question: "A model system where basic facts are taken as self-evident truths and other results are logically derived is called an [ axiomatic system / experimental system ].", answer: "axiomatic system"),
+    QuestionItem(id: "eg12", question: "According to Euclid, things that are equal to the same thing are [ equal to one another / not comparable ].", answer: "equal to one another"),
+    QuestionItem(id: "eg13", question: "According to Euclid's axioms, the whole is [ greater than the part / equal to the part ].", answer: "greater than the part"),
+    QuestionItem(id: "eg14", question: "A flat surface which extends indefinitely in all directions is called a [ plane / line ] in Euclid's geometry.", answer: "plane"),
+    QuestionItem(id: "eg15", question: "Playfair's Axiom, an equivalent version of Euclid's fifth postulate, states that through a point not on a line, exactly [ one line can be drawn parallel to it / two lines can be drawn parallel to it ].", answer: "one line can be drawn parallel to it"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "egn1", question: "If AB = 7 cm and PQ = AB, and XY = PQ, find XY (using Euclid's axiom: things equal to the same thing are equal to one another).", given: ["AB = 7 cm", "PQ = AB", "XY = PQ"], solutionSteps: ["Since PQ = AB = 7 cm, and XY = PQ,", "XY = 7 cm"], numericAnswer: 7, unit: "cm"),
+    NumericalProblem(id: "egn2", question: "A whole line segment AC = 15 cm is divided at point B, with AB = 6 cm. Using the axiom 'the whole is greater than the part,' find BC.", given: ["AC = 15 cm", "AB = 6 cm"], solutionSteps: ["Since B lies on AC, AC = AB + BC", "15 = 6 + BC", "BC = 9 cm"], numericAnswer: 9, unit: "cm"),
+    NumericalProblem(id: "egn3", question: "If two line segments are each equal to a third segment of length 12 cm, using Euclid's axiom find their common length.", given: ["Third segment = 12 cm"], solutionSteps: ["Things equal to the same thing are equal to one another.", "So both segments equal 12 cm"], numericAnswer: 12, unit: "cm"),
+    NumericalProblem(id: "egn4", question: "Two points determine a unique line. If a third point C also lies on the line through A and B, and AB = 10 cm with BC = 4 cm (B between A and C), find AC.", given: ["AB = 10 cm", "BC = 4 cm"], solutionSteps: ["Since B is between A and C on the same line,", "AC = AB + BC = 10 + 4", "= 14 cm"], numericAnswer: 14, unit: "cm"),
+    NumericalProblem(id: "egn5", question: "If double of a segment PQ equals 18 cm, using Euclid's axiom 'halves of equals are equal', find PQ.", given: ["2 × PQ = 18 cm"], solutionSteps: ["Halves of equals are equal: PQ = 18/2", "= 9 cm"], numericAnswer: 9, unit: "cm"),
+  ],
+);

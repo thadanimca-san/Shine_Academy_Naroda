@@ -1,0 +1,36 @@
+import '../models/dictionary_word.dart';
+
+const class6Feelings = DictionaryTopic(
+  id: 'class6_feelings',
+  title: 'Feelings & Emotions',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_DELIGHTED',
+    'DICT_ENG_ECSTATIC',
+    'DICT_ENG_CONTENT',
+    'DICT_ENG_CONFIDENT',
+    'DICT_ENG_GRATEFUL',
+    'DICT_ENG_RELIEVED',
+    'DICT_ENG_MISERABLE',
+    'DICT_ENG_FURIOUS',
+    'DICT_ENG_ANXIOUS',
+    'DICT_ENG_JEALOUS',
+    'DICT_ENG_HUMILIATED',
+    'DICT_ENG_GLOOMY',
+    'DICT_ENG_FRUSTRATED',
+    'DICT_ENG_ASTONISHED',
+    'DICT_ENG_CURIOUS',
+    'DICT_ENG_NOSTALGIC',
+    'DICT_ENG_SYMPATHETIC',
+    'DICT_ENG_INDIFFERENT',
+    'DICT_ENG_DETERMINED',
+    'DICT_ENG_EMBARRASSED',
+    'DICT_ENG_COMPASSION',
+    'DICT_ENG_EMPATHY',
+    'DICT_ENG_TEMPERAMENT',
+    'DICT_ENG_MOOD',
+    'DICT_ENG_CONSOLE',
+    'DICT_ENG_OVERWHELMED',
+    'DICT_ENG_IRRITATED'
+  ],
+);

@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class6Weather = DictionaryTopic(
+  id: 'class6_weather',
+  title: 'Weather & Seasons',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_CLIMATE',
+    'DICT_ENG_HUMIDITY',
+    'DICT_ENG_TEMPERATURE',
+    'DICT_ENG_DROUGHT',
+    'DICT_ENG_DOWNPOUR',
+    'DICT_ENG_THUNDERSTORM',
+    'DICT_ENG_LIGHTNING',
+    'DICT_ENG_THUNDER',
+    'DICT_ENG_CYCLONE',
+    'DICT_ENG_HAILSTORM',
+    'DICT_ENG_DRIZZLE',
+    'DICT_ENG_MONSOON',
+    'DICT_ENG_SCORCHING',
+    'DICT_ENG_HUMID',
+    'DICT_ENG_CHILLY',
+    'DICT_ENG_FROST',
+    'DICT_ENG_MIST',
+    'DICT_ENG_GUST',
+    'DICT_ENG_BREEZE',
+    'DICT_ENG_FORECAST',
+    'DICT_ENG_RAINBOW',
+    'DICT_ENG_EVAPORATE',
+    'DICT_ENG_PRECIPITATION',
+    'DICT_ENG_SHELTER',
+    'DICT_ENG_FLOOD',
+    'DICT_ENG_HARVEST_SEASON',
+    'DICT_ENG_GLOOMY',
+    'DICT_ENG_REFRESHING'
+  ],
+);

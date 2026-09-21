@@ -1,0 +1,36 @@
+import '../models/dictionary_word.dart';
+
+const class6School = DictionaryTopic(
+  id: 'class6_school',
+  title: 'School & Classroom',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_CURRICULUM',
+    'DICT_ENG_SYLLABUS',
+    'DICT_ENG_TIMETABLE',
+    'DICT_ENG_ASSIGNMENT',
+    'DICT_ENG_REVISION',
+    'DICT_ENG_EVALUATE',
+    'DICT_ENG_DISCIPLINE',
+    'DICT_ENG_PUNCTUAL',
+    'DICT_ENG_DILIGENT',
+    'DICT_ENG_ATTENTIVE',
+    'DICT_ENG_PRINCIPAL',
+    'DICT_ENG_PEON',
+    'DICT_ENG_INVIGILATOR',
+    'DICT_ENG_CLASSMATE',
+    'DICT_ENG_AUDITORIUM',
+    'DICT_ENG_LABORATORY',
+    'DICT_ENG_STAFFROOM',
+    'DICT_ENG_CORRIDOR',
+    'DICT_ENG_PROTRACTOR',
+    'DICT_ENG_COMPASS',
+    'DICT_ENG_HIGHLIGHTER',
+    'DICT_ENG_STATIONERY',
+    'DICT_ENG_LITERACY',
+    'DICT_ENG_SCHOLARSHIP',
+    'DICT_ENG_EXTRACURRICULAR',
+    'DICT_ENG_COOPERATE',
+    'DICT_ENG_CONCENTRATE'
+  ],
+);

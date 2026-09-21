@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8LinearEquationsChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_linearequations", chapterName: "Linear Equations in One Variable",
+  concepts: ["Solving equations with variables on both sides.", "Reducing equations with fractional coefficients.", "Applications of linear equations to word problems."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "le1", question: "A linear equation in one variable has the highest power of the variable equal to [ 1 / 2 ].", answer: "1"),
+    QuestionItem(id: "le2", question: "When a linear equation has variables on both sides, we collect variable terms on [ one side / both sides ] and constants on the other.", answer: "one side"),
+    QuestionItem(id: "le3", question: "When a term crosses the equal sign, its operation gets [ reversed / unchanged ].", answer: "reversed"),
+    QuestionItem(id: "le4", question: "To remove fractions from an equation, we multiply both sides by the [ LCM of the denominators / smallest denominator only ].", answer: "LCM of the denominators"),
+    QuestionItem(id: "le5", question: "An equation remains balanced if we perform the [ same operation on both sides / different operations on each side ].", answer: "same operation on both sides"),
+    QuestionItem(id: "le6", question: "A linear equation has [ exactly one / infinitely many ] solutions (generally).", answer: "exactly one"),
+    QuestionItem(id: "le7", question: "In word problems, before forming an equation, we must first identify the [ unknown quantity / final answer ].", answer: "unknown quantity"),
+    QuestionItem(id: "le8", question: "The solution of an equation should be [ verified by substitution / assumed correct without checking ].", answer: "verified by substitution"),
+    QuestionItem(id: "le9", question: "Problems involving the ages of people, at different times, are commonly solved using [ linear equations / quadratic equations ].", answer: "linear equations"),
+    QuestionItem(id: "le10", question: "Cross-multiplication is used to solve equations that are expressed as a [ ratio of two expressions equal to a ratio / sum of two terms ].", answer: "ratio of two expressions equal to a ratio"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "len1", question: "Solve: 3x − 5 = 2x + 7.", given: ["3x − 5 = 2x + 7"], solutionSteps: ["Transpose 2x: 3x − 2x − 5 = 7", "x − 5 = 7", "x = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "len2", question: "Solve: (x/2) + 5 = 11.", given: ["x/2 + 5 = 11"], solutionSteps: ["Transpose 5: x/2 = 6", "Multiply both sides by 2: x = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "len3", question: "Solve: 2(x + 3) = 16.", given: ["2(x + 3) = 16"], solutionSteps: ["Divide both sides by 2: x + 3 = 8", "x = 5"], numericAnswer: 5, unit: ""),
+    NumericalProblem(id: "len4", question: "The sum of two consecutive numbers is 25. Find the smaller number.", given: ["x + (x+1) = 25"], solutionSteps: ["2x + 1 = 25", "2x = 24", "x = 12"], numericAnswer: 12, unit: ""),
+    NumericalProblem(id: "len5", question: "Solve: (2x−1)/3 = (x+2)/2.", given: ["(2x−1)/3 = (x+2)/2"], solutionSteps: ["Cross-multiply: 2(2x−1) = 3(x+2)", "4x − 2 = 3x + 6", "x = 8"], numericAnswer: 8, unit: ""),
+    NumericalProblem(id: "len6", question: "Solve: 5x + 2(x+3) = 27.", given: ["5x + 2(x+3) = 27"], solutionSteps: ["Expand: 5x + 2x + 6 = 27", "7x + 6 = 27", "7x = 21, x = 3"], numericAnswer: 3, unit: ""),
+    NumericalProblem(id: "len7", question: "A father's age is 3 times his son's age. After 5 years, sum of their ages will be 70. Find the son's present age.", given: ["Father = 3x", "Son = x", "(3x+5)+(x+5) = 70"], solutionSteps: ["4x + 10 = 70", "4x = 60", "x = 15 years"], numericAnswer: 15, unit: "years"),
+    NumericalProblem(id: "len8", question: "The perimeter of a rectangle is 40 cm. If the length is 4 cm more than the breadth, find the breadth.", given: ["2(l+b) = 40", "l = b+4"], solutionSteps: ["2(b+4+b) = 40", "2(2b+4) = 40, 2b+4 = 20", "2b = 16, b = 8 cm"], numericAnswer: 8, unit: "cm"),
+    NumericalProblem(id: "len9", question: "Solve: 7x − 3 = 4x + 15.", given: ["7x − 3 = 4x + 15"], solutionSteps: ["Transpose 4x: 3x − 3 = 15", "Transpose −3: 3x = 18", "x = 6"], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "len10", question: "One-third of a number plus 5 equals 12. Find the number.", given: ["x/3 + 5 = 12"], solutionSteps: ["Transpose 5: x/3 = 7", "x = 21"], numericAnswer: 21, unit: ""),
+    NumericalProblem(id: "len11", question: "A two-digit number has digits differing by 4 (tens digit x, units digit x−4). The sum of the number and its digit-reversed form is 88. Find x.", given: ["Number = 11x − 4", "Reversed = 11x − 40", "Sum = 88"], solutionSteps: ["(11x−4) + (11x−40) = 88", "22x − 44 = 88", "22x = 132, x = 6"], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "len12", question: "Solve: 3(x − 4) = 2(x + 5) − 1.", given: ["3(x − 4) = 2(x + 5) − 1"], solutionSteps: ["Expand: 3x − 12 = 2x + 10 − 1", "3x − 12 = 2x + 9", "x = 21"], numericAnswer: 21, unit: ""),
+  ],
+);

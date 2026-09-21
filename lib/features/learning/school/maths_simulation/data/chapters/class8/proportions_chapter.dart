@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8ProportionsChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_proportions", chapterName: "Direct and Inverse Proportions",
+  concepts: ["Direct proportion: when two quantities increase or decrease together at the same rate.", "Inverse proportion: when one quantity increases as the other decreases.", "Applications of proportion in real-life problems."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "pr1", question: "Two quantities are in [ direct proportion / inverse proportion ] if they increase or decrease together, keeping their ratio constant.", answer: "direct proportion"),
+    QuestionItem(id: "pr2", question: "For quantities in direct proportion, x/y remains [ constant / variable ].", answer: "constant"),
+    QuestionItem(id: "pr3", question: "Two quantities are in [ inverse proportion / direct proportion ] if an increase in one causes a proportional decrease in the other.", answer: "inverse proportion"),
+    QuestionItem(id: "pr4", question: "For quantities in inverse proportion, the product x × y remains [ constant / variable ].", answer: "constant"),
+    QuestionItem(id: "pr5", question: "The distance travelled at constant speed is [ directly proportional / inversely proportional ] to time.", answer: "directly proportional"),
+    QuestionItem(id: "pr6", question: "The time taken to complete a task with a fixed amount of work is [ inversely proportional / directly proportional ] to the number of workers.", answer: "inversely proportional"),
+    QuestionItem(id: "pr7", question: "The cost of a certain number of identical items is [ directly proportional / inversely proportional ] to the number of items.", answer: "directly proportional"),
+    QuestionItem(id: "pr8", question: "If speed increases while distance stays the same, the time taken [ decreases / increases ], showing inverse proportion.", answer: "decreases"),
+    QuestionItem(id: "pr9", question: "The graph of two quantities in direct proportion is a [ straight line through the origin / curve ].", answer: "straight line through the origin"),
+    QuestionItem(id: "pr10", question: "The graph of two quantities in inverse proportion is a [ smooth curve / straight line ].", answer: "smooth curve"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "prn1", question: "If 5 books cost ₹250, find the cost of 8 books (direct proportion).", given: ["5 books = ₹250"], solutionSteps: ["Cost per book = 250/5 = ₹50", "Cost of 8 books = 50 × 8", "= ₹400"], numericAnswer: 400, unit: "₹"),
+    NumericalProblem(id: "prn2", question: "6 workers can complete a task in 10 days. How many days will 4 workers take (inverse proportion)?", given: ["6 workers → 10 days"], solutionSteps: ["Workers × Days = constant: 6 × 10 = 60", "For 4 workers: Days = 60/4", "= 15 days"], numericAnswer: 15, unit: "days"),
+    NumericalProblem(id: "prn3", question: "A car travels 180 km in 3 hours. At the same speed, how far will it travel in 5 hours?", given: ["180 km in 3 hours"], solutionSteps: ["Speed = 180/3 = 60 km/h", "Distance in 5 hours = 60 × 5", "= 300 km"], numericAnswer: 300, unit: "km"),
+    NumericalProblem(id: "prn4", question: "12 taps can fill a tank in 20 minutes. How long will 8 taps take to fill the same tank (inverse proportion)?", given: ["12 taps → 20 minutes"], solutionSteps: ["Taps × Time = constant: 12 × 20 = 240", "For 8 taps: Time = 240/8", "= 30 minutes"], numericAnswer: 30, unit: "minutes"),
+    NumericalProblem(id: "prn5", question: "If the cost of 15 kg of rice is ₹900, find the cost of 24 kg (direct proportion).", given: ["15 kg = ₹900"], solutionSteps: ["Cost per kg = 900/15 = ₹60", "Cost of 24 kg = 60 × 24", "= ₹1440"], numericAnswer: 1440, unit: "₹"),
+    NumericalProblem(id: "prn6", question: "A map has a scale of 1 cm : 50 km. Find the actual distance for a map distance of 8 cm.", given: ["Scale: 1 cm = 50 km", "Map distance = 8 cm"], solutionSteps: ["Actual distance = 8 × 50", "= 400 km"], numericAnswer: 400, unit: "km"),
+    NumericalProblem(id: "prn7", question: "20 men can build a wall in 15 days. How many men are needed to build it in 10 days (inverse proportion)?", given: ["20 men → 15 days"], solutionSteps: ["Men × Days = constant: 20 × 15 = 300", "For 10 days: Men = 300/10", "= 30 men"], numericAnswer: 30, unit: "men"),
+    NumericalProblem(id: "prn8", question: "A worker earns ₹1800 for 6 days of work. Find her earnings for 15 days at the same rate.", given: ["6 days = ₹1800"], solutionSteps: ["Rate per day = 1800/6 = ₹300", "Earnings for 15 days = 300 × 15", "= ₹4500"], numericAnswer: 4500, unit: "₹"),
+    NumericalProblem(id: "prn9", question: "A vehicle covers a distance in 5 hours at 40 km/h. How long will it take at 50 km/h (inverse proportion)?", given: ["Speed 1 = 40 km/h, Time 1 = 5 h"], solutionSteps: ["Speed × Time = constant: 40 × 5 = 200", "At 50 km/h: Time = 200/50", "= 4 hours"], numericAnswer: 4, unit: "hours"),
+    NumericalProblem(id: "prn10", question: "If 250 g of sugar costs ₹15, find the cost of 2 kg of sugar.", given: ["250 g = ₹15", "Need cost of 2000 g"], solutionSteps: ["Cost per gram = 15/250 = ₹0.06", "Cost of 2000 g = 0.06 × 2000", "= ₹120"], numericAnswer: 120, unit: "₹"),
+  ],
+);

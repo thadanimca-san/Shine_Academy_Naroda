@@ -1,0 +1,87 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8ExploringForcesChapter = ChapterModel(
+  standard: 8, subject: "Physics", chapterId: "cls8_phys_exploringforces", chapterName: "Exploring Forces",
+  imagePath: "assets/images/forces_ch5.jpg",
+  concepts: [
+    "A force is a push or pull resulting from the interaction between two objects; SI unit is the newton (N).",
+    "Forces can be contact (muscular, friction) or non-contact (magnetic, electrostatic, gravitational).",
+    "Weight is the gravitational force pulling an object towards Earth; mass is the fixed amount of matter in it.",
+    "Buoyant force (upthrust) is the upward force a liquid exerts on an object placed in it, explaining floating and sinking.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "f1", question: "A push or pull applied on an object, resulting from its interaction with another object, is called a [ force / motion ].", answer: "force"),
+    QuestionItem(id: "f2", question: "The SI unit of force is the [ newton (N) / joule (J) ].", answer: "newton (N)"),
+    QuestionItem(id: "f3", question: "A force can change an object's speed, its direction of motion, or bring about a change in its [ shape / colour ].", answer: "shape"),
+    QuestionItem(id: "f4", question: "Forces that act only when there is physical contact between objects are called [ contact forces / non-contact forces ].", answer: "contact forces"),
+    QuestionItem(id: "f5", question: "The force resulting from the action of muscles in our body, used in walking, lifting, or running, is called [ muscular force / magnetic force ].", answer: "muscular force"),
+    QuestionItem(id: "f6", question: "The force that opposes the motion of an object over a surface it is in contact with is called [ friction / gravity ].", answer: "friction"),
+    QuestionItem(id: "f7", question: "Friction arises due to [ irregularities in the two surfaces in contact / the colour of the surfaces ]; rougher surfaces produce more friction.", answer: "irregularities in the two surfaces in contact"),
+    QuestionItem(id: "f8", question: "Forces whose effect can be felt even without objects touching are called [ non-contact forces / contact forces ].", answer: "non-contact forces"),
+    QuestionItem(id: "f9", question: "The force exerted by a magnet on another magnet or a magnetic material, without contact, is called [ magnetic force / electrostatic force ].", answer: "magnetic force"),
+    QuestionItem(id: "f10", question: "Electrical charges that build up on the surface of certain materials when rubbed together are called [ static charges / magnetic charges ].", answer: "static charges"),
+    QuestionItem(id: "f11", question: "The force exerted by a charged body on another charged or uncharged body is called [ electrostatic force / gravitational force ].", answer: "electrostatic force"),
+    QuestionItem(id: "f12", question: "Like (similar) charges [ repel / attract ] each other, while unlike (opposite) charges [ attract / repel ] each other.", answer: "repel"),
+    QuestionItem(id: "f13", question: "The force with which the Earth attracts objects towards itself is called [ gravitational force / buoyant force ], and it is always [ attractive / repulsive ].", answer: "gravitational force"),
+    QuestionItem(id: "f14", question: "The force with which the Earth pulls an object towards itself is called the [ weight / mass ] of the object, measured in the same unit as force.", answer: "weight"),
+    QuestionItem(id: "f15", question: "The amount of matter in an object is called its [ mass / weight ]; unlike weight, it does not change from place to place.", answer: "mass"),
+    QuestionItem(id: "f16", question: "A device with a stretching spring, used to measure the weight of an object, is called a [ spring balance / beam balance ].", answer: "spring balance"),
+    QuestionItem(id: "f17", question: "The upward force applied by a liquid on an object placed in it is called [ upthrust or buoyant force / gravitational force ].", answer: "upthrust or buoyant force"),
+    QuestionItem(id: "f18", question: "An object floats if the buoyant force on it [ equals / is less than ] the gravitational force pulling it down; it sinks if gravity is [ greater / less ] than the buoyant force.", answer: "equals"),
+    QuestionItem(id: "f19", question: "[ Archimedes / Isaac Newton ] discovered that an object immersed in a liquid experiences an upward force equal to the weight of the liquid it displaces.", answer: "Archimedes"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. What Is a Force?',
+      iconKey: 'muscle',
+      points: [
+        'A push or pull applied to an object is called a force. Force results from the interaction between at least two objects — at least two objects must interact for a force to come into play.',
+        'SI unit of force: the newton, symbol N (lowercase "n").',
+        'A force applied to an object can: make it move from rest, change its speed, change its direction of motion, and/or change its shape.',
+        'Whenever two objects interact, each experiences a force from the other — this force disappears the moment the interaction stops.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Contact Forces — Muscular Force & Friction',
+      iconKey: 'joints',
+      points: [
+        'Contact forces act only when objects are physically touching (directly, or indirectly via a stick/rope).',
+        'Muscular force: caused by the action of muscles contracting and elongating — used in walking, lifting, running, and even internal processes like digestion and heartbeat. Animals and birds use muscular force for movement and survival.',
+        'Friction (force of friction): the force that opposes motion when an object moves or tries to move over another surface. It always acts opposite to the direction of motion.',
+        'Friction arises from tiny irregularities in the two contacting surfaces, which lock into each other — rougher surfaces produce more friction. Friction acts in liquids and gases too, which is why aeroplanes, ships, and trains are streamlined to reduce it.',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Non-contact Forces — Magnetic & Electrostatic',
+      iconKey: 'organelles',
+      points: [
+        'Non-contact forces act even without objects touching — magnetic force, electrostatic force, and gravitational force.',
+        'Magnetic force: the force exerted by a magnet on another magnet or a magnetic material; like poles repel, unlike poles attract.',
+        'Electrostatic force: rubbing certain materials together builds up static charges on their surfaces. A charged object attracts uncharged light objects (like paper bits) even without touching them.',
+        'There are two kinds of static charge — positive and negative. Like charges repel each other; unlike charges attract each other.',
+        'When charges move, they form an electric current — the same current responsible for a lamp glowing, the heating effect, or the magnetic effect covered elsewhere.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Gravitational Force, Weight & Mass',
+      iconKey: 'plant_growth',
+      points: [
+        'Gravitational force (gravity): the force with which the Earth attracts objects towards itself. Unlike magnetic/electrostatic force, gravity is always attractive, never repulsive.',
+        'When an object falls or is thrown vertically, it undergoes vertical motion: thrown up, its speed decreases until it momentarily stops, then falls back down with increasing speed.',
+        'Weight = the force with which Earth pulls an object towards itself. Since it\'s a force, weight is measured in newtons (N), using a spring balance.',
+        'Mass = the amount of matter in an object, measured in grams/kilograms — mass stays the same everywhere, but weight changes with location (e.g. an object\'s weight on the Moon is about 1/6th its weight on Earth, though its mass is unchanged).',
+        'A spring balance works because the spring stretches proportionally to the weight (force) hung from it — heavier objects stretch it more.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Floating & Sinking — Buoyant Force',
+      iconKey: 'stomata',
+      points: [
+        'When an object is pushed into a liquid, the liquid pushes back with an upward force called upthrust or buoyant force.',
+        'An object experiences two opposing forces in a liquid: gravity (pulling it down) and buoyant force (pushing it up). If gravity is greater, the object sinks; if the two forces are equal, the object floats.',
+        'Archimedes\' Principle: an object fully or partially immersed in a liquid experiences an upward force equal to the weight of the liquid it displaces.',
+        'Buoyant force depends partly on the density of the liquid. Some rocks, like pumice (formed from cooling volcanic lava trapping gas bubbles), are porous and less dense than water, so they float.',
+      ],
+    ),
+  ],
+);

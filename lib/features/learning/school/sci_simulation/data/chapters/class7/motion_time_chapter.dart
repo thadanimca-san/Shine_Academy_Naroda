@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7MotionTimeChapter = ChapterModel(
+  standard: 7, subject: "Physics", chapterId: "cls7_phys_motiontime", chapterName: "Motion and Time",
+  concepts: ["Types of motion: uniform and non-uniform.", "Measurement of time and simple pendulum.", "Speed and distance-time graphs."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "mt1", question: "A motion in which an object covers equal distances in equal intervals of time is called [ uniform motion / non-uniform motion ].", answer: "uniform motion"),
+    QuestionItem(id: "mt2", question: "A motion in which an object covers unequal distances in equal intervals of time is called [ non-uniform motion / uniform motion ].", answer: "non-uniform motion"),
+    QuestionItem(id: "mt3", question: "A simple device consisting of a bob suspended by a thread, used to measure time, is called a [ simple pendulum / thermometer ].", answer: "simple pendulum"),
+    QuestionItem(id: "mt4", question: "One complete to-and-fro movement of a pendulum is called one [ oscillation / cycle only ].", answer: "oscillation"),
+    QuestionItem(id: "mt5", question: "The time taken by a pendulum to complete one oscillation is called its [ time period / frequency ].", answer: "time period"),
+    QuestionItem(id: "mt6", question: "The standard unit of time is the [ second / hour ].", answer: "second"),
+    QuestionItem(id: "mt7", question: "The distance covered by an object in unit time is called its [ speed / acceleration ].", answer: "speed"),
+    QuestionItem(id: "mt8", question: "Speed is calculated by dividing distance by [ time / mass ].", answer: "time"),
+    QuestionItem(id: "mt9", question: "The SI unit of speed is [ metre per second (m/s) / kilometre per hour only ].", answer: "metre per second (m/s)"),
+    QuestionItem(id: "mt10", question: "A graph showing how the distance travelled by an object changes with time is called a [ distance-time graph / speed graph ].", answer: "distance-time graph"),
+    QuestionItem(id: "mt11", question: "For an object at rest, the distance-time graph is a [ straight line parallel to the time axis / straight line with a slope ].", answer: "straight line parallel to the time axis"),
+    QuestionItem(id: "mt12", question: "For an object moving with uniform speed, the distance-time graph is a [ straight line / curved line ].", answer: "straight line"),
+    QuestionItem(id: "mt13", question: "Old mechanical clocks and watches used a coiled spring called a [ hairspring / pendulum ] to keep time.", answer: "hairspring"),
+    QuestionItem(id: "mt14", question: "Modern watches and clocks that keep time using tiny crystal oscillations are called [ quartz clocks / sundials ].", answer: "quartz clocks"),
+    QuestionItem(id: "mt15", question: "A device that uses the shadow of the Sun to indicate time is called a [ sundial / pendulum clock ].", answer: "sundial"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "mtn1", question: "A car covers 150 km in 3 hours. Find its speed.", given: ["Distance = 150 km", "Time = 3 h"], solutionSteps: ["Speed = distance/time", "= 150/3", "= 50 km/h"], numericAnswer: 50, unit: "km/h"),
+    NumericalProblem(id: "mtn2", question: "A cyclist travels at 12 m/s for 20 seconds. Find the distance covered.", given: ["Speed = 12 m/s", "Time = 20 s"], solutionSteps: ["Distance = speed × time", "= 12 × 20", "= 240 m"], numericAnswer: 240, unit: "m"),
+    NumericalProblem(id: "mtn3", question: "A pendulum completes 20 oscillations in 40 seconds. Find its time period.", given: ["Oscillations = 20", "Time = 40 s"], solutionSteps: ["Time period = total time/number of oscillations", "= 40/20", "= 2 s"], numericAnswer: 2, unit: "s"),
+    NumericalProblem(id: "mtn4", question: "A train covers 360 km in 4 hours. Find its speed in km/h.", given: ["Distance = 360 km", "Time = 4 h"], solutionSteps: ["Speed = distance/time", "= 360/4", "= 90 km/h"], numericAnswer: 90, unit: "km/h"),
+    NumericalProblem(id: "mtn5", question: "A walker moves at 5 km/h. How much distance does she cover in 2.5 hours?", given: ["Speed = 5 km/h", "Time = 2.5 h"], solutionSteps: ["Distance = speed × time", "= 5 × 2.5", "= 12.5 km"], numericAnswer: 12.5, unit: "km"),
+    NumericalProblem(id: "mtn6", question: "An object covers 100 m in 20 s. Find the time it would take to cover 250 m at the same speed.", given: ["Speed from 100m/20s", "New distance = 250 m"], solutionSteps: ["Speed = 100/20 = 5 m/s", "Time = distance/speed = 250/5", "= 50 s"], numericAnswer: 50, unit: "s"),
+    NumericalProblem(id: "mtn7", question: "A pendulum has a time period of 2.5 s. Find the number of oscillations it makes in 50 seconds.", given: ["Time period = 2.5 s", "Total time = 50 s"], solutionSteps: ["Number of oscillations = total time/time period", "= 50/2.5", "= 20"], numericAnswer: 20, unit: ""),
+  ],
+);

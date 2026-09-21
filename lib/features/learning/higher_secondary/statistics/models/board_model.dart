@@ -1,0 +1,1 @@
+enum Board { gseb, cbse }

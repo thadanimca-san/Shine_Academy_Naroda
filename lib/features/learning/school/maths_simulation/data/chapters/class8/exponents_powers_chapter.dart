@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8ExponentsPowersChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_exponentspowers", chapterName: "Exponents and Powers",
+  concepts: ["Powers with negative exponents.", "Laws of exponents.", "Using exponents to express numbers in standard form."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "ep8_1", question: "A negative exponent a⁻ⁿ is defined as [ 1/aⁿ / −aⁿ ], for a ≠ 0.", answer: "1/aⁿ"),
+    QuestionItem(id: "ep8_2", question: "aᵐ × aⁿ = [ aᵐ⁺ⁿ / aᵐⁿ ].", answer: "aᵐ⁺ⁿ"),
+    QuestionItem(id: "ep8_3", question: "aᵐ ÷ aⁿ = [ aᵐ⁻ⁿ / aᵐ⁺ⁿ ].", answer: "aᵐ⁻ⁿ"),
+    QuestionItem(id: "ep8_4", question: "(aᵐ)ⁿ = [ aᵐⁿ / aᵐ⁺ⁿ ].", answer: "aᵐⁿ"),
+    QuestionItem(id: "ep8_5", question: "aᵐ × bᵐ = [ (ab)ᵐ / (a+b)ᵐ ].", answer: "(ab)ᵐ"),
+    QuestionItem(id: "ep8_6", question: "a⁰ = [ 1 / 0 ], for any non-zero a.", answer: "1"),
+    QuestionItem(id: "ep8_7", question: "Writing a number as k × 10ⁿ, where 1 ≤ k < 10, is called its [ standard form / expanded form ].", answer: "standard form"),
+    QuestionItem(id: "ep8_8", question: "The distance from the Earth to the Sun, about 150,000,000 km, is written in standard form as [ 1.5 × 10⁸ km / 15 × 10⁷ km ].", answer: "1.5 × 10⁸ km"),
+    QuestionItem(id: "ep8_9", question: "Very small numbers, like the size of a bacterium, are conveniently expressed using [ negative exponents / positive exponents only ].", answer: "negative exponents"),
+    QuestionItem(id: "ep8_10", question: "(a/b)ⁿ = [ aⁿ/bⁿ / a/bⁿ ].", answer: "aⁿ/bⁿ"),
+    QuestionItem(id: "ep8_11", question: "10⁻³ is equal to [ 0.001 / 1000 ].", answer: "0.001"),
+    QuestionItem(id: "ep8_12", question: "Comparing very large or very small quantities is made easier using [ powers of 10 / decimals only ].", answer: "powers of 10"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "ep8n1", question: "Simplify: 3⁻² × 3⁵.", given: ["3⁻² × 3⁵"], solutionSteps: ["Add exponents: 3⁻²⁺⁵", "= 3³ = 27"], numericAnswer: 27, unit: ""),
+    NumericalProblem(id: "ep8n2", question: "Simplify: (2⁻¹)⁻³.", given: ["(2⁻¹)⁻³"], solutionSteps: ["Multiply exponents: 2⁻¹ˣ⁻³", "= 2³ = 8"], numericAnswer: 8, unit: ""),
+    NumericalProblem(id: "ep8n3", question: "Evaluate: 5⁰ + 2⁻² × 2⁴.", given: ["5⁰ + 2⁻² × 2⁴"], solutionSteps: ["5⁰ = 1", "2⁻² × 2⁴ = 2² = 4", "1 + 4 = 5"], numericAnswer: 5, unit: ""),
+    NumericalProblem(id: "ep8n4", question: "Find the value of 4⁻² (as a decimal).", given: ["4⁻²"], solutionSteps: ["4⁻² = 1/4²", "= 1/16 = 0.0625"], numericAnswer: 0.0625, unit: ""),
+    NumericalProblem(id: "ep8n5", question: "Simplify: (3² × 3⁴) ÷ 3⁵.", given: ["(3² × 3⁴) ÷ 3⁵"], solutionSteps: ["3² × 3⁴ = 3⁶", "3⁶ ÷ 3⁵ = 3¹", "= 3"], numericAnswer: 3, unit: ""),
+    NumericalProblem(id: "ep8n6", question: "Express 0.000045 in standard form and give the value of k (before ×10ⁿ).", given: ["0.000045"], solutionSteps: ["Move decimal to get a number between 1-10: 4.5", "0.000045 = 4.5 × 10⁻⁵", "k = 4.5"], numericAnswer: 4.5, unit: "(× 10⁻⁵)"),
+    NumericalProblem(id: "ep8n7", question: "Simplify: 2⁵ ÷ 2⁻²  .", given: ["2⁵ ÷ 2⁻²"], solutionSteps: ["Subtract exponents: 2⁵⁻⁽⁻²⁾ = 2⁷", "= 128"], numericAnswer: 128, unit: ""),
+    NumericalProblem(id: "ep8n8", question: "Find the value of (1/3)⁻² .", given: ["(1/3)⁻²"], solutionSteps: ["(1/3)⁻² = (3/1)² = 3²", "= 9"], numericAnswer: 9, unit: ""),
+    NumericalProblem(id: "ep8n9", question: "By what number should 5⁻³ be multiplied so that the product is 5⁻¹?", given: ["5⁻³ × x = 5⁻¹"], solutionSteps: ["x = 5⁻¹ ÷ 5⁻³ = 5⁻¹⁻⁽⁻³⁾ = 5²", "= 25"], numericAnswer: 25, unit: ""),
+    NumericalProblem(id: "ep8n10", question: "Simplify: (2⁻¹ × 3⁻¹)⁻¹.", given: ["(2⁻¹ × 3⁻¹)⁻¹"], solutionSteps: ["2⁻¹ × 3⁻¹ = (2×3)⁻¹ = 6⁻¹", "(6⁻¹)⁻¹ = 6¹", "= 6"], numericAnswer: 6, unit: ""),
+  ],
+);

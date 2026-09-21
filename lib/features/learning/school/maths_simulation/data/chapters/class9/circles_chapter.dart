@@ -1,0 +1,33 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9CirclesChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_circles", chapterName: "Circles",
+  concepts: ["Circles and related terms: chord, arc, sector, segment.", "Angle subtended by an arc/chord at the centre and circumference.", "Cyclic quadrilaterals."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "ci1", question: "A line segment joining any two points on a circle is called a [ chord / radius ].", answer: "chord"),
+    QuestionItem(id: "ci2", question: "The longest chord of a circle, passing through the centre, is called the [ diameter / radius ].", answer: "diameter"),
+    QuestionItem(id: "ci3", question: "A piece of a circle between two points is called an [ arc / sector ].", answer: "arc"),
+    QuestionItem(id: "ci4", question: "The region enclosed by an arc and the two radii joining its endpoints to the centre is called a [ sector / segment ].", answer: "sector"),
+    QuestionItem(id: "ci5", question: "The region between a chord and the corresponding arc is called a [ segment / sector ].", answer: "segment"),
+    QuestionItem(id: "ci6", question: "Equal chords of a circle subtend [ equal angles / different angles ] at the centre.", answer: "equal angles"),
+    QuestionItem(id: "ci7", question: "The perpendicular from the centre of a circle to a chord [ bisects the chord / does not bisect the chord ].", answer: "bisects the chord"),
+    QuestionItem(id: "ci8", question: "There is exactly [ one circle / no circle ] passing through three given non-collinear points.", answer: "one circle"),
+    QuestionItem(id: "ci9", question: "Equal chords of a circle are [ equidistant from the centre / at different distances from the centre ].", answer: "equidistant from the centre"),
+    QuestionItem(id: "ci10", question: "The angle subtended by an arc at the centre is [ double / half ] the angle subtended by it at any point on the remaining part of the circle.", answer: "double"),
+    QuestionItem(id: "ci11", question: "Angles in the same segment of a circle are [ equal / supplementary ].", answer: "equal"),
+    QuestionItem(id: "ci12", question: "The angle in a semicircle is a [ right angle / straight angle ].", answer: "right angle"),
+    QuestionItem(id: "ci13", question: "A quadrilateral whose all four vertices lie on a circle is called a [ cyclic quadrilateral / regular quadrilateral ].", answer: "cyclic quadrilateral"),
+    QuestionItem(id: "ci14", question: "The sum of opposite angles of a cyclic quadrilateral is [ 180° / 360° ].", answer: "180°"),
+    QuestionItem(id: "ci15", question: "If the sum of a pair of opposite angles of a quadrilateral is 180°, the quadrilateral is [ cyclic / a parallelogram ].", answer: "cyclic"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "cin1", question: "An arc subtends a 70° angle at the centre. Find the angle it subtends at a point on the remaining part of the circle.", given: ["Central angle = 70°"], solutionSteps: ["Angle at centre = 2 × angle at circumference", "70° = 2 × angle", "angle = 35°"], numericAnswer: 35, unit: "°"),
+    NumericalProblem(id: "cin2", question: "In a cyclic quadrilateral, one angle is 85°. Find its opposite angle.", given: ["One angle = 85°"], solutionSteps: ["Opposite angles of a cyclic quadrilateral are supplementary.", "Opposite angle = 180° − 85°", "= 95°"], numericAnswer: 95, unit: "°"),
+    NumericalProblem(id: "cin3", question: "A chord of length 16 cm is at a distance of 6 cm from the centre of a circle. Find the radius.", given: ["Chord = 16 cm", "Distance from centre = 6 cm"], solutionSteps: ["Perpendicular from centre bisects the chord: half chord = 8 cm", "radius² = 8² + 6² = 64+36 = 100", "radius = √100 = 10 cm"], numericAnswer: 10, unit: "cm"),
+    NumericalProblem(id: "cin4", question: "Two angles in the same segment of a circle: one is (3x)° and the other is 51°. Find x.", given: ["(3x)° = 51°"], solutionSteps: ["Angles in the same segment are equal.", "3x = 51", "x = 17"], numericAnswer: 17, unit: ""),
+    NumericalProblem(id: "cin5", question: "An arc subtends an angle of 120° at the centre. Find the angle subtended at the circumference (remaining part).", given: ["Central angle = 120°"], solutionSteps: ["Angle at centre = 2 × angle at circumference", "Angle at circumference = 120°/2", "= 60°"], numericAnswer: 60, unit: "°"),
+    NumericalProblem(id: "cin6", question: "In a cyclic quadrilateral ABCD, angle A = 3x and angle C = 2x. Find x (since A + C = 180°).", given: ["Angle A = 3x", "Angle C = 2x", "A + C = 180°"], solutionSteps: ["3x + 2x = 180°", "5x = 180°", "x = 36"], numericAnswer: 36, unit: ""),
+    NumericalProblem(id: "cin7", question: "A circle has radius 13 cm. A chord is at a distance of 5 cm from the centre. Find the length of the chord.", given: ["radius = 13 cm", "distance = 5 cm"], solutionSteps: ["half chord² = 13² − 5² = 169−25 = 144", "half chord = 12 cm", "Full chord = 24 cm"], numericAnswer: 24, unit: "cm"),
+    NumericalProblem(id: "cin8", question: "The angle in a semicircle is inscribed. If one of the other two angles of the right triangle formed is 35°, find the third angle.", given: ["Angle in semicircle = 90°", "One other angle = 35°"], solutionSteps: ["Sum of angles in a triangle = 180°", "Third angle = 180° − 90° − 35°", "= 55°"], numericAnswer: 55, unit: "°"),
+  ],
+);

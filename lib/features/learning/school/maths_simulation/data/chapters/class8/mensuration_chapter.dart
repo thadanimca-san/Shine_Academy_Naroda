@@ -1,0 +1,53 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8MensurationChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_mensuration", chapterName: "Mensuration",
+  concepts: ["Area of a trapezium and a general quadrilateral.", "Surface area of a cube, cuboid and cylinder.", "Volume of a cube, cuboid and cylinder."],
+  formulas: [
+    FormulaDerivation(formulaName: "Area of a Trapezium", expression: "A = ½ × (sum of parallel sides) × height", derivationSteps: [
+      "A trapezium can be split into a rectangle and one or two triangles, or duplicated and rotated to form a parallelogram.",
+      "Two congruent trapeziums placed together form a parallelogram with base = (a + b) and the same height h.",
+      "Area of that parallelogram = (a+b) × h, so area of one trapezium = ½ × (a+b) × h.",
+    ]),
+    FormulaDerivation(formulaName: "Volume of a Cuboid", expression: "V = length × breadth × height", derivationSteps: [
+      "A cuboid can be thought of as a stack of identical rectangular layers.",
+      "Each layer has area = length × breadth, and there are 'height' many unit layers stacked.",
+      "So volume = length × breadth × height.",
+    ]),
+    FormulaDerivation(formulaName: "Volume of a Cylinder", expression: "V = πr²h", derivationSteps: [
+      "A cylinder can be thought of as a stack of circular discs, each of area πr².",
+      "Stacking these discs to a height h gives the total volume.",
+      "So volume = base area × height = πr² × h.",
+    ]),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "mn1", question: "A quadrilateral with exactly one pair of parallel sides is called a [ trapezium / parallelogram ].", answer: "trapezium"),
+    QuestionItem(id: "mn2", question: "The area of a trapezium is ½ × (sum of parallel sides) × [ height / diagonal ].", answer: "height"),
+    QuestionItem(id: "mn3", question: "The area of a general quadrilateral can be found by splitting it into [ two triangles using a diagonal / four equal parts ].", answer: "two triangles using a diagonal"),
+    QuestionItem(id: "mn4", question: "The total area of all surfaces of a solid is called its [ surface area / volume ].", answer: "surface area"),
+    QuestionItem(id: "mn5", question: "The space occupied by a solid object is called its [ volume / surface area ].", answer: "volume"),
+    QuestionItem(id: "mn6", question: "The surface area of a cube with edge a is [ 6a² / a³ ].", answer: "6a²"),
+    QuestionItem(id: "mn7", question: "The volume of a cube with edge a is [ a³ / 6a² ].", answer: "a³"),
+    QuestionItem(id: "mn8", question: "The surface area of a cuboid with length l, breadth b, height h is [ 2(lb + bh + hl) / lbh ].", answer: "2(lb + bh + hl)"),
+    QuestionItem(id: "mn9", question: "The volume of a cuboid is length × breadth × [ height / area ].", answer: "height"),
+    QuestionItem(id: "mn10", question: "The curved surface area of a cylinder with radius r and height h is [ 2πrh / πr²h ].", answer: "2πrh"),
+    QuestionItem(id: "mn11", question: "The total surface area of a cylinder is 2πrh + [ 2πr² / πr² ].", answer: "2πr²"),
+    QuestionItem(id: "mn12", question: "The volume of a cylinder with radius r and height h is [ πr²h / 2πrh ].", answer: "πr²h"),
+    QuestionItem(id: "mn13", question: "Volume is measured in [ cubic units / square units ].", answer: "cubic units"),
+    QuestionItem(id: "mn14", question: "The amount of a substance a container can hold is called its [ capacity / mass ].", answer: "capacity"),
+    QuestionItem(id: "mn15", question: "1 cubic metre is equal to [ 1000 litres / 100 litres ] in capacity.", answer: "1000 litres"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "mnn1", question: "Find the area of a trapezium with parallel sides 8 cm and 12 cm, and height 5 cm.", given: ["a = 8 cm", "b = 12 cm", "h = 5 cm"], solutionSteps: ["Area = ½ × (a+b) × h", "= ½ × 20 × 5", "= 50 cm²"], numericAnswer: 50, unit: "cm²"),
+    NumericalProblem(id: "mnn2", question: "Find the volume of a cuboid with length 5 cm, breadth 4 cm, height 3 cm.", given: ["l = 5 cm", "b = 4 cm", "h = 3 cm"], solutionSteps: ["Volume = l × b × h", "= 5 × 4 × 3", "= 60 cm³"], numericAnswer: 60, unit: "cm³"),
+    NumericalProblem(id: "mnn3", question: "Find the volume of a cylinder with radius 7 cm and height 10 cm. (Take π = 22/7)", given: ["r = 7 cm", "h = 10 cm"], solutionSteps: ["Volume = πr²h", "= (22/7) × 49 × 10", "= 1540 cm³"], numericAnswer: 1540, unit: "cm³"),
+    NumericalProblem(id: "mnn4", question: "Find the surface area of a cube with edge 6 cm.", given: ["a = 6 cm"], solutionSteps: ["Surface area = 6a²", "= 6 × 36", "= 216 cm²"], numericAnswer: 216, unit: "cm²"),
+    NumericalProblem(id: "mnn5", question: "Find the volume of a cube with edge 5 cm.", given: ["a = 5 cm"], solutionSteps: ["Volume = a³", "= 5³", "= 125 cm³"], numericAnswer: 125, unit: "cm³"),
+    NumericalProblem(id: "mnn6", question: "Find the surface area of a cuboid with length 8 cm, breadth 5 cm, height 4 cm.", given: ["l = 8 cm", "b = 5 cm", "h = 4 cm"], solutionSteps: ["Surface area = 2(lb+bh+hl)", "= 2(40+20+32)", "= 2 × 92 = 184 cm²"], numericAnswer: 184, unit: "cm²"),
+    NumericalProblem(id: "mnn7", question: "Find the curved surface area of a cylinder with radius 14 cm and height 20 cm. (Take π = 22/7)", given: ["r = 14 cm", "h = 20 cm"], solutionSteps: ["CSA = 2πrh", "= 2 × 22/7 × 14 × 20", "= 1760 cm²"], numericAnswer: 1760, unit: "cm²"),
+    NumericalProblem(id: "mnn8", question: "Find the area of a quadrilateral field whose diagonal is 30 m, and the offsets from it are 10 m and 12 m.", given: ["Diagonal = 30 m", "Offset 1 = 10 m", "Offset 2 = 12 m"], solutionSteps: ["Area = ½ × diagonal × (offset1 + offset2)", "= ½ × 30 × 22", "= 330 m²"], numericAnswer: 330, unit: "m²"),
+    NumericalProblem(id: "mnn9", question: "Find the total surface area of a cylinder with radius 7 cm and height 10 cm. (Take π = 22/7)", given: ["r = 7 cm", "h = 10 cm"], solutionSteps: ["TSA = 2πr(h+r)", "= 2 × 22/7 × 7 × (10+7)", "= 44 × 17 = 748 cm²"], numericAnswer: 748, unit: "cm²"),
+    NumericalProblem(id: "mnn10", question: "A cuboid water tank is 3 m long, 2 m wide, and 1.5 m deep. Find its capacity in litres.", given: ["l = 3 m", "b = 2 m", "h = 1.5 m"], solutionSteps: ["Volume = l×b×h = 3×2×1.5 = 9 m³", "Capacity in litres = 9 × 1000", "= 9000 litres"], numericAnswer: 9000, unit: "litres"),
+    NumericalProblem(id: "mnn11", question: "Find the area of a trapezium with parallel sides 15 cm and 9 cm, and height 8 cm.", given: ["a = 15 cm", "b = 9 cm", "h = 8 cm"], solutionSteps: ["Area = ½ × (a+b) × h", "= ½ × 24 × 8", "= 96 cm²"], numericAnswer: 96, unit: "cm²"),
+    NumericalProblem(id: "mnn12", question: "The volume of a cuboid is 480 cm³. Its length is 10 cm and breadth is 8 cm. Find its height.", given: ["Volume = 480 cm³", "l = 10 cm", "b = 8 cm"], solutionSteps: ["Volume = l×b×h, so h = Volume/(l×b)", "= 480/(10×8)", "= 6 cm"], numericAnswer: 6, unit: "cm"),
+  ],
+);

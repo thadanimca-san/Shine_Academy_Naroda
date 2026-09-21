@@ -1,0 +1,43 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8QuadrilateralsChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_quadrilaterals", chapterName: "Understanding Quadrilaterals",
+  concepts: ["Classification of polygons; convex and concave polygons.", "Angle sum property of polygons.", "Properties of parallelograms, rhombus, rectangle, square and trapezium."],
+  formulas: [
+    FormulaDerivation(formulaName: "Angle Sum of a Polygon", expression: "Sum = (n − 2) × 180°", derivationSteps: [
+      "Any polygon with n sides can be divided into (n − 2) triangles by drawing diagonals from one vertex.",
+      "Each triangle has an angle sum of 180°.",
+      "So the total sum of interior angles of the polygon = (n − 2) × 180°.",
+    ]),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "qu1", question: "A simple closed figure made of line segments is called a [ polygon / circle ].", answer: "polygon"),
+    QuestionItem(id: "qu2", question: "A polygon in which no line segment joining two points passes outside it is called a [ convex polygon / concave polygon ].", answer: "convex polygon"),
+    QuestionItem(id: "qu3", question: "A polygon with at least one diagonal lying outside it is called a [ concave polygon / convex polygon ].", answer: "concave polygon"),
+    QuestionItem(id: "qu4", question: "A polygon with all sides and angles equal is called a [ regular polygon / irregular polygon ].", answer: "regular polygon"),
+    QuestionItem(id: "qu5", question: "The sum of the exterior angles of any polygon is always [ 360° / 180° ].", answer: "360°"),
+    QuestionItem(id: "qu6", question: "A quadrilateral in which both pairs of opposite sides are parallel is called a [ parallelogram / trapezium ].", answer: "parallelogram"),
+    QuestionItem(id: "qu7", question: "In a parallelogram, opposite sides are [ equal / unequal ] in length.", answer: "equal"),
+    QuestionItem(id: "qu8", question: "In a parallelogram, opposite angles are [ equal / supplementary ].", answer: "equal"),
+    QuestionItem(id: "qu9", question: "In a parallelogram, the diagonals [ bisect each other / are equal ].", answer: "bisect each other"),
+    QuestionItem(id: "qu10", question: "A parallelogram with all sides equal is called a [ rhombus / rectangle ].", answer: "rhombus"),
+    QuestionItem(id: "qu11", question: "A parallelogram with all angles equal to 90° is called a [ rectangle / rhombus ].", answer: "rectangle"),
+    QuestionItem(id: "qu12", question: "A quadrilateral with all sides equal and all angles 90° is called a [ square / rectangle ].", answer: "square"),
+    QuestionItem(id: "qu13", question: "A quadrilateral with exactly one pair of parallel sides is called a [ trapezium / parallelogram ].", answer: "trapezium"),
+    QuestionItem(id: "qu14", question: "In a rhombus, the diagonals [ bisect each other at right angles / are equal in length ].", answer: "bisect each other at right angles"),
+    QuestionItem(id: "qu15", question: "A quadrilateral with two pairs of consecutive equal sides (but opposite sides unequal) is called a [ kite / trapezium ].", answer: "kite"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "qun1", question: "Find the sum of interior angles of a hexagon (n = 6).", given: ["n = 6"], solutionSteps: ["Sum = (n − 2) × 180°", "= (6 − 2) × 180°", "= 4 × 180° = 720°"], numericAnswer: 720, unit: "°"),
+    NumericalProblem(id: "qun2", question: "Find the sum of interior angles of a pentagon (n = 5).", given: ["n = 5"], solutionSteps: ["Sum = (n − 2) × 180°", "= 3 × 180°", "= 540°"], numericAnswer: 540, unit: "°"),
+    NumericalProblem(id: "qun3", question: "Each exterior angle of a regular polygon is 45°. Find the number of sides.", given: ["Exterior angle = 45°"], solutionSteps: ["Sum of exterior angles = 360°", "Number of sides = 360° / 45°", "= 8"], numericAnswer: 8, unit: "sides"),
+    NumericalProblem(id: "qun4", question: "Three angles of a quadrilateral are 80°, 90° and 100°. Find the fourth angle.", given: ["Angles: 80°, 90°, 100°"], solutionSteps: ["Sum of angles of a quadrilateral = 360°", "Fourth angle = 360° − 80° − 90° − 100°", "= 90°"], numericAnswer: 90, unit: "°"),
+    NumericalProblem(id: "qun5", question: "Find the sum of interior angles of a regular decagon (n = 10).", given: ["n = 10"], solutionSteps: ["Sum = (n − 2) × 180°", "= 8 × 180°", "= 1440°"], numericAnswer: 1440, unit: "°"),
+    NumericalProblem(id: "qun6", question: "Find each interior angle of a regular hexagon.", given: ["n = 6", "Regular hexagon"], solutionSteps: ["Sum of interior angles = (6−2)×180° = 720°", "Each angle = 720°/6", "= 120°"], numericAnswer: 120, unit: "°"),
+    NumericalProblem(id: "qun7", question: "In a parallelogram, one angle is 65°. Find the adjacent angle.", given: ["One angle = 65°"], solutionSteps: ["Adjacent angles in a parallelogram are supplementary.", "Adjacent angle = 180° − 65°", "= 115°"], numericAnswer: 115, unit: "°"),
+    NumericalProblem(id: "qun8", question: "Find the number of sides of a regular polygon whose each interior angle is 150°.", given: ["Each interior angle = 150°"], solutionSteps: ["Each exterior angle = 180° − 150° = 30°", "Number of sides = 360°/30°", "= 12"], numericAnswer: 12, unit: "sides"),
+    NumericalProblem(id: "qun9", question: "In a rhombus, the diagonals are 16 cm and 12 cm. Find its area (Area = ½ × d1 × d2).", given: ["d1 = 16 cm", "d2 = 12 cm"], solutionSteps: ["Area = ½ × 16 × 12", "= ½ × 192", "= 96 cm²"], numericAnswer: 96, unit: "cm²"),
+    NumericalProblem(id: "qun10", question: "The angles of a quadrilateral are in the ratio 2:3:4:6. Find the largest angle.", given: ["Ratio = 2:3:4:6", "Sum = 360°"], solutionSteps: ["Total parts = 2+3+4+6 = 15", "1 part = 360°/15 = 24°", "Largest angle = 6 × 24° = 144°"], numericAnswer: 144, unit: "°"),
+    NumericalProblem(id: "qun11", question: "In a parallelogram PQRS, diagonal PR = 10 cm. Since diagonals bisect each other, find the length from P to the intersection point.", given: ["PR = 10 cm"], solutionSteps: ["Diagonals bisect each other, so the intersection point is the midpoint.", "Distance from P to midpoint = 10/2", "= 5 cm"], numericAnswer: 5, unit: "cm"),
+    NumericalProblem(id: "qun12", question: "A regular polygon has an exterior angle of 24°. Find the number of sides.", given: ["Exterior angle = 24°"], solutionSteps: ["Number of sides = 360°/24°", "= 15"], numericAnswer: 15, unit: "sides"),
+  ],
+);

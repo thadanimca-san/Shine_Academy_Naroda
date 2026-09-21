@@ -1,0 +1,36 @@
+import '../models/dictionary_word.dart';
+
+const class4Body = DictionaryTopic(
+  id: 'class4_body',
+  title: 'Body Parts',
+  grade: 'Class 4',
+  wordIds: [
+    'DICT_ENG_HEAD',
+    'DICT_ENG_HAIR',
+    'DICT_ENG_EYE',
+    'DICT_ENG_EAR',
+    'DICT_ENG_NOSE',
+    'DICT_ENG_MOUTH',
+    'DICT_ENG_TEETH',
+    'DICT_ENG_TONGUE',
+    'DICT_ENG_NECK',
+    'DICT_ENG_SHOULDER',
+    'DICT_ENG_CHEST',
+    'DICT_ENG_STOMACH',
+    'DICT_ENG_BACK',
+    'DICT_ENG_ARM',
+    'DICT_ENG_HAND',
+    'DICT_ENG_FINGER',
+    'DICT_ENG_THUMB',
+    'DICT_ENG_LEG',
+    'DICT_ENG_FOOT',
+    'DICT_ENG_TOE',
+    'DICT_ENG_KNEE',
+    'DICT_ENG_ELBOW',
+    'DICT_ENG_SKIN',
+    'DICT_ENG_HEART',
+    'DICT_ENG_BRAIN',
+    'DICT_ENG_STRONG',
+    'DICT_ENG_WEAK'
+  ],
+);

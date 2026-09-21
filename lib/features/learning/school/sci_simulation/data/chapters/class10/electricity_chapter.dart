@@ -1,0 +1,47 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10ElectricityChapter = ChapterModel(
+  standard: 10, subject: "Physics", chapterId: "cls10_phys_electricity", chapterName: "Electricity",
+  concepts: ["Electric current, potential difference, and Ohm's Law.", "Resistance, resistivity, and series/parallel combinations.", "Electric power and heating effect of current."],
+  formulas: [
+    FormulaDerivation(formulaName: "Ohm's Law", expression: "V = IR", derivationSteps: [
+      "Ohm's law states that the current I through a conductor is directly proportional to the potential difference V across it, at constant temperature.",
+      "So V ∝ I, which gives V = IR, where R is the constant of proportionality called resistance.",
+    ]),
+    FormulaDerivation(formulaName: "Electric Power", expression: "P = VI = I²R = V²/R", derivationSteps: [
+      "Electric power is the rate at which electrical energy is consumed: P = W/t.",
+      "Since work done W = VIt (charge × potential difference), P = VIt/t = VI.",
+      "Using Ohm's law V=IR, this can also be written as P = I²R or P = V²/R.",
+    ]),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "el1", question: "The rate of flow of electric charge through a conductor is called [ electric current / potential difference ].", answer: "electric current"),
+    QuestionItem(id: "el2", question: "The SI unit of electric current is the [ ampere / volt ].", answer: "ampere"),
+    QuestionItem(id: "el3", question: "The work done to move a unit charge between two points in a circuit is called [ potential difference (voltage) / current ].", answer: "potential difference (voltage)"),
+    QuestionItem(id: "el4", question: "The SI unit of potential difference is the [ volt / ampere ].", answer: "volt"),
+    QuestionItem(id: "el5", question: "Ohm's Law states that current through a conductor is directly proportional to the [ potential difference across it, at constant temperature / resistance ].", answer: "potential difference across it, at constant temperature"),
+    QuestionItem(id: "el6", question: "The property of a conductor that resists the flow of electric current is called its [ resistance / conductance ].", answer: "resistance"),
+    QuestionItem(id: "el7", question: "The SI unit of resistance is the [ ohm / volt ].", answer: "ohm"),
+    QuestionItem(id: "el8", question: "In a series circuit, the total resistance is [ the sum of individual resistances / less than the smallest resistance ].", answer: "the sum of individual resistances"),
+    QuestionItem(id: "el9", question: "In a parallel circuit, the reciprocal of the total resistance equals the [ sum of reciprocals of individual resistances / sum of individual resistances ].", answer: "sum of reciprocals of individual resistances"),
+    QuestionItem(id: "el10", question: "In a series circuit, the current through each component is [ the same / different ].", answer: "the same"),
+    QuestionItem(id: "el11", question: "In a parallel circuit, the potential difference across each component is [ the same / different ].", answer: "the same"),
+    QuestionItem(id: "el12", question: "The rate at which electrical energy is consumed or converted is called electric [ power / resistance ].", answer: "power"),
+    QuestionItem(id: "el13", question: "The SI unit of electric power is the [ watt / joule ].", answer: "watt"),
+    QuestionItem(id: "el14", question: "The commercial unit of electrical energy used for billing is the [ kilowatt hour (unit) / joule ].", answer: "kilowatt hour (unit)"),
+    QuestionItem(id: "el15", question: "The heating effect of electric current is used in devices like [ electric heaters and irons / motors only ].", answer: "electric heaters and irons"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "eln1", question: "Find the current through a 20 Ω resistor connected to a 10 V battery.", given: ["V = 10 V", "R = 20 Ω"], solutionSteps: ["I = V/R", "= 10/20", "= 0.5 A"], numericAnswer: 0.5, unit: "A"),
+    NumericalProblem(id: "eln2", question: "Find the resistance of a conductor if a current of 2 A flows through it when 12 V is applied.", given: ["I = 2 A", "V = 12 V"], solutionSteps: ["R = V/I", "= 12/2", "= 6 Ω"], numericAnswer: 6, unit: "Ω"),
+    NumericalProblem(id: "eln3", question: "Find the potential difference required to drive a current of 3 A through a 15 Ω resistor.", given: ["I = 3 A", "R = 15 Ω"], solutionSteps: ["V = IR", "= 3×15", "= 45 V"], numericAnswer: 45, unit: "V"),
+    NumericalProblem(id: "eln4", question: "Find the total resistance of three resistors 2 Ω, 3 Ω, 5 Ω connected in series.", given: ["R1=2, R2=3, R3=5"], solutionSteps: ["Series: R = R1+R2+R3", "= 2+3+5", "= 10 Ω"], numericAnswer: 10, unit: "Ω"),
+    NumericalProblem(id: "eln5", question: "Find the equivalent resistance of two 4 Ω resistors connected in parallel.", given: ["R1=4 Ω", "R2=4 Ω"], solutionSteps: ["1/R = 1/R1 + 1/R2 = 1/4+1/4 = 1/2", "R = 2 Ω"], numericAnswer: 2, unit: "Ω"),
+    NumericalProblem(id: "eln6", question: "Find the power consumed by an appliance drawing 5 A current at 220 V.", given: ["I = 5 A", "V = 220 V"], solutionSteps: ["P = VI", "= 220×5", "= 1100 W"], numericAnswer: 1100, unit: "W"),
+    NumericalProblem(id: "eln7", question: "Find the power dissipated in a 10 Ω resistor carrying a current of 2 A, using P=I²R.", given: ["I = 2 A", "R = 10 Ω"], solutionSteps: ["P = I²R", "= 4×10", "= 40 W"], numericAnswer: 40, unit: "W"),
+    NumericalProblem(id: "eln8", question: "A 100 W bulb is used for 5 hours daily. Find the energy consumed in kWh over 5 hours.", given: ["P = 100 W = 0.1 kW", "t = 5 h"], solutionSteps: ["Energy = P(kW) × t(h)", "= 0.1×5", "= 0.5 kWh"], numericAnswer: 0.5, unit: "kWh"),
+    NumericalProblem(id: "eln9", question: "Find the current drawn by a 2000 W heater connected to a 220 V supply.", given: ["P = 2000 W", "V = 220 V"], solutionSteps: ["P=VI, so I = P/V", "= 2000/220", "≈ 9.09 A"], numericAnswer: 9.09, unit: "A"),
+    NumericalProblem(id: "eln10", question: "Find the resistance of a bulb rated 60 W at 220 V, using R=V²/P.", given: ["P = 60 W", "V = 220 V"], solutionSteps: ["R = V²/P", "= 220²/60 = 48400/60", "≈ 806.67 Ω"], numericAnswer: 806.67, unit: "Ω"),
+    NumericalProblem(id: "eln11", question: "Two resistors of 6 Ω and 3 Ω are connected in parallel. Find the equivalent resistance.", given: ["R1=6 Ω", "R2=3 Ω"], solutionSteps: ["1/R = 1/6+1/3 = 1/6+2/6 = 3/6 = 1/2", "R = 2 Ω"], numericAnswer: 2, unit: "Ω"),
+    NumericalProblem(id: "eln12", question: "Find the amount of charge that flows through a circuit carrying 4 A of current for 30 seconds.", given: ["I = 4 A", "t = 30 s"], solutionSteps: ["Q = It", "= 4×30", "= 120 C"], numericAnswer: 120, unit: "C"),
+  ],
+);

@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8PracticalGeometryChapter = ChapterModel(
+  standard: 8, subject: "Mathematics", chapterId: "cls8_math_practicalgeometry", chapterName: "Practical Geometry",
+  concepts: ["Constructing a quadrilateral given four sides and a diagonal.", "Constructing a quadrilateral given two diagonals and three sides.", "Constructing special quadrilaterals like parallelograms and rhombuses."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "pg8_1", question: "A unique quadrilateral can be constructed if [ five independent measurements / three measurements ] are known.", answer: "five independent measurements"),
+    QuestionItem(id: "pg8_2", question: "A quadrilateral can be constructed given the lengths of all four sides and [ one diagonal / one angle ].", answer: "one diagonal"),
+    QuestionItem(id: "pg8_3", question: "Drawing a diagonal of a quadrilateral splits it into [ two triangles / four triangles ], making construction possible using SSS.", answer: "two triangles"),
+    QuestionItem(id: "pg8_4", question: "A quadrilateral can be constructed given two diagonals and [ three sides / one side ].", answer: "three sides"),
+    QuestionItem(id: "pg8_5", question: "A quadrilateral can be constructed given three sides and [ two included angles / no angles ].", answer: "two included angles"),
+    QuestionItem(id: "pg8_6", question: "To construct a parallelogram, it is enough to know [ two adjacent sides and one angle (or a diagonal) / any three measurements ].", answer: "two adjacent sides and one angle (or a diagonal)"),
+    QuestionItem(id: "pg8_7", question: "To construct a rhombus, since all sides are equal, we typically use [ one side and one diagonal / four different sides ].", answer: "one side and one diagonal"),
+    QuestionItem(id: "pg8_8", question: "Constructing a quadrilateral with four sides and one angle uses the given angle to fix the direction of [ two adjacent sides / all four sides ].", answer: "two adjacent sides"),
+    QuestionItem(id: "pg8_9", question: "A rough sketch before construction helps to [ plan the sequence of steps / replace the actual construction ].", answer: "plan the sequence of steps"),
+    QuestionItem(id: "pg8_10", question: "In quadrilateral construction, the compass is mainly used to mark [ given lengths as arcs / angles directly ].", answer: "given lengths as arcs"),
+    QuestionItem(id: "pg8_11", question: "The protractor is used in quadrilateral construction to draw [ angles of a given measure / arcs of a given radius ].", answer: "angles of a given measure"),
+    QuestionItem(id: "pg8_12", question: "When three sides and two included angles are given, we typically start construction from the [ middle side shared by both angles / any random side ].", answer: "middle side shared by both angles"),
+    QuestionItem(id: "pg8_13", question: "To construct a quadrilateral given two adjacent sides and three angles, we can find the fourth angle using the [ angle sum property (360°) / diagonal length ].", answer: "angle sum property (360°)"),
+    QuestionItem(id: "pg8_14", question: "A quadrilateral cannot generally be constructed with only its [ four side lengths and no angle or diagonal / four sides and a diagonal ], since it would not be rigid.", answer: "four side lengths and no angle or diagonal"),
+    QuestionItem(id: "pg8_15", question: "Accurate quadrilateral construction relies on precise use of the [ ruler, compass and protractor / freehand drawing ].", answer: "ruler, compass and protractor"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "pg8n1", question: "In constructing quadrilateral ABCD given three angles 80°, 100°, and 95°, find the fourth angle.", given: ["Angles: 80°, 100°, 95°"], solutionSteps: ["Sum of angles of a quadrilateral = 360°", "Fourth angle = 360° − 80° − 100° − 95°", "= 85°"], numericAnswer: 85, unit: "°"),
+    NumericalProblem(id: "pg8n2", question: "A quadrilateral is split into two triangles by a diagonal. If one triangle's angle sum check gives 180° and the quadrilateral's total is 360°, find the sum of angles in the other triangle.", given: ["Total quadrilateral angle sum = 360°", "One triangle = 180°"], solutionSteps: ["Since a diagonal splits a quadrilateral into two triangles,", "Other triangle's angle sum = 360° − 180°", "= 180°"], numericAnswer: 180, unit: "°"),
+    NumericalProblem(id: "pg8n3", question: "For constructing a rhombus with side 6 cm and one diagonal 8 cm, find the other diagonal using the property that diagonals bisect at right angles (half-diagonals form a right triangle with the side).", given: ["Side = 6 cm", "One diagonal = 8 cm (half = 4 cm)"], solutionSteps: ["Half of unknown diagonal: √(6² − 4²) = √(36−16) = √20 ≈ 4.47 cm", "Full diagonal ≈ 2 × 4.47", "≈ 8.94 cm"], numericAnswer: 8.94, unit: "cm"),
+    NumericalProblem(id: "pg8n4", question: "To construct a parallelogram with adjacent sides 7 cm and 5 cm and included angle 60°, what is the angle adjacent to the 60° angle (co-interior)?", given: ["One angle = 60°"], solutionSteps: ["Adjacent angles in a parallelogram are supplementary.", "Adjacent angle = 180° − 60°", "= 120°"], numericAnswer: 120, unit: "°"),
+    NumericalProblem(id: "pg8n5", question: "A quadrilateral has two given adjacent angles of 70° and 110°, and the other two are equal. Find each of the equal angles.", given: ["Angle 1 = 70°", "Angle 2 = 110°", "Remaining two angles are equal"], solutionSteps: ["Sum of remaining two angles = 360° − 70° − 110° = 180°", "Each equal angle = 180°/2", "= 90°"], numericAnswer: 90, unit: "°"),
+  ],
+);

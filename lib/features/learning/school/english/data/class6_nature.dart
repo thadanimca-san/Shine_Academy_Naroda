@@ -1,0 +1,36 @@
+import '../models/dictionary_word.dart';
+
+const class6Nature = DictionaryTopic(
+  id: 'class6_nature',
+  title: 'Nature & Plants',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_ECOSYSTEM',
+    'DICT_ENG_VEGETATION',
+    'DICT_ENG_PHOTOSYNTHESIS',
+    'DICT_ENG_POLLINATION',
+    'DICT_ENG_GERMINATE',
+    'DICT_ENG_SAPLING',
+    'DICT_ENG_SHRUB',
+    'DICT_ENG_CREEPER',
+    'DICT_ENG_ROOT',
+    'DICT_ENG_STEM',
+    'DICT_ENG_PETAL',
+    'DICT_ENG_FOLIAGE',
+    'DICT_ENG_GRASSLAND',
+    'DICT_ENG_VALLEY',
+    'DICT_ENG_PLATEAU',
+    'DICT_ENG_PEAK',
+    'DICT_ENG_DESERT',
+    'DICT_ENG_COAST',
+    'DICT_ENG_STREAM',
+    'DICT_ENG_POLLUTION',
+    'DICT_ENG_CONSERVATION',
+    'DICT_ENG_DEFORESTATION',
+    'DICT_ENG_WILDLIFE_SANCTUARY',
+    'DICT_ENG_RECYCLE',
+    'DICT_ENG_FRAGRANT',
+    'DICT_ENG_LUSH',
+    'DICT_ENG_SUSTAINABLE'
+  ],
+);

@@ -1,0 +1,48 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9SurfaceAreasVolumesChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_surfaceareasvolumes", chapterName: "Surface Areas and Volumes",
+  concepts: ["Surface area and volume of a cuboid and cube.", "Surface area and volume of a cylinder, cone and sphere."],
+  formulas: [
+    FormulaDerivation(formulaName: "Volume of a Cone", expression: "V = ⅓πr²h", derivationSteps: [
+      "A cone can be thought of as one-third of a cylinder with the same base radius and height.",
+      "The volume of a cylinder with radius r and height h is πr²h.",
+      "So the volume of a cone with the same base and height is ⅓ of that: V = ⅓πr²h.",
+    ]),
+    FormulaDerivation(formulaName: "Surface Area of a Sphere", expression: "A = 4πr²", derivationSteps: [
+      "A sphere's curved surface area was determined (historically, by Archimedes) to equal the curved surface area of a cylinder that exactly encloses it.",
+      "That enclosing cylinder has radius r and height 2r, giving curved surface area 2πr × 2r = 4πr².",
+      "So the surface area of a sphere of radius r is 4πr².",
+    ]),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "sv1", question: "The total surface area of a cuboid with dimensions l, b, h is [ 2(lb+bh+hl) / lbh ].", answer: "2(lb+bh+hl)"),
+    QuestionItem(id: "sv2", question: "The volume of a cuboid is [ l × b × h / 2(l+b+h) ].", answer: "l × b × h"),
+    QuestionItem(id: "sv3", question: "The total surface area of a cube with edge a is [ 6a² / a³ ].", answer: "6a²"),
+    QuestionItem(id: "sv4", question: "The volume of a cube with edge a is [ a³ / 6a² ].", answer: "a³"),
+    QuestionItem(id: "sv5", question: "The curved surface area of a cylinder with radius r and height h is [ 2πrh / πr²h ].", answer: "2πrh"),
+    QuestionItem(id: "sv6", question: "The volume of a cylinder with radius r and height h is [ πr²h / 2πrh ].", answer: "πr²h"),
+    QuestionItem(id: "sv7", question: "The curved surface area of a cone with radius r and slant height l is [ πrl / πr²l ].", answer: "πrl"),
+    QuestionItem(id: "sv8", question: "The slant height l of a cone relates to r and h by [ l² = r² + h² / l = r + h ].", answer: "l² = r² + h²"),
+    QuestionItem(id: "sv9", question: "The volume of a cone with radius r and height h is [ ⅓πr²h / πr²h ].", answer: "⅓πr²h"),
+    QuestionItem(id: "sv10", question: "The surface area of a sphere with radius r is [ 4πr² / πr² ].", answer: "4πr²"),
+    QuestionItem(id: "sv11", question: "The volume of a sphere with radius r is [ (4/3)πr³ / (1/3)πr³ ].", answer: "(4/3)πr³"),
+    QuestionItem(id: "sv12", question: "The curved surface area of a hemisphere with radius r is [ 2πr² / 4πr² ].", answer: "2πr²"),
+    QuestionItem(id: "sv13", question: "The total surface area of a hemisphere with radius r is [ 3πr² / 2πr² ].", answer: "3πr²"),
+    QuestionItem(id: "sv14", question: "The volume of a hemisphere with radius r is [ (2/3)πr³ / (4/3)πr³ ].", answer: "(2/3)πr³"),
+    QuestionItem(id: "sv15", question: "Volume is always measured in [ cubic units / square units ].", answer: "cubic units"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "svn1", question: "Find the volume of a cube with edge 5 cm.", given: ["a = 5 cm"], solutionSteps: ["Volume = a³", "= 5³", "= 125 cm³"], numericAnswer: 125, unit: "cm³"),
+    NumericalProblem(id: "svn2", question: "Find the volume of a cone with radius 3 cm and height 7 cm. (Take π = 22/7)", given: ["r = 3 cm", "h = 7 cm"], solutionSteps: ["V = (1/3)πr²h", "= (1/3) × (22/7) × 9 × 7", "= 66 cm³"], numericAnswer: 66, unit: "cm³"),
+    NumericalProblem(id: "svn3", question: "Find the surface area of a sphere with radius 7 cm. (Take π = 22/7)", given: ["r = 7 cm"], solutionSteps: ["A = 4πr²", "= 4 × (22/7) × 49", "= 616 cm²"], numericAnswer: 616, unit: "cm²"),
+    NumericalProblem(id: "svn4", question: "Find the volume of a sphere with radius 3 cm. (Take π = 22/7, round to nearest whole number)", given: ["r = 3 cm"], solutionSteps: ["V = (4/3)πr³", "= (4/3) × (22/7) × 27", "≈ 113 cm³"], numericAnswer: 113, unit: "cm³"),
+    NumericalProblem(id: "svn5", question: "Find the total surface area of a cuboid with length 8 cm, breadth 6 cm, height 4 cm.", given: ["l=8, b=6, h=4"], solutionSteps: ["TSA = 2(lb+bh+hl)", "= 2(48+24+32)", "= 2×104 = 208 cm²"], numericAnswer: 208, unit: "cm²"),
+    NumericalProblem(id: "svn6", question: "Find the curved surface area of a cylinder with radius 7 cm and height 15 cm. (Take π = 22/7)", given: ["r = 7 cm", "h = 15 cm"], solutionSteps: ["CSA = 2πrh", "= 2 × 22/7 × 7 × 15", "= 660 cm²"], numericAnswer: 660, unit: "cm²"),
+    NumericalProblem(id: "svn7", question: "A cone has radius 7 cm and slant height 25 cm. Find its curved surface area. (Take π = 22/7)", given: ["r = 7 cm", "l = 25 cm"], solutionSteps: ["CSA = πrl", "= 22/7 × 7 × 25", "= 550 cm²"], numericAnswer: 550, unit: "cm²"),
+    NumericalProblem(id: "svn8", question: "Find the volume of a hemisphere with radius 6 cm. (Take π = 22/7, round to 1 decimal)", given: ["r = 6 cm"], solutionSteps: ["V = (2/3)πr³", "= (2/3) × 22/7 × 216", "≈ 452.6 cm³"], numericAnswer: 452.6, unit: "cm³"),
+    NumericalProblem(id: "svn9", question: "Find the volume of a cuboid water tank 4 m long, 3 m wide, 2 m deep. Find its capacity in litres.", given: ["l=4m, b=3m, h=2m"], solutionSteps: ["Volume = l×b×h = 4×3×2 = 24 m³", "Capacity = 24 × 1000", "= 24000 litres"], numericAnswer: 24000, unit: "litres"),
+    NumericalProblem(id: "svn10", question: "Find the total surface area of a hemisphere with radius 14 cm. (Take π = 22/7)", given: ["r = 14 cm"], solutionSteps: ["TSA = 3πr²", "= 3 × 22/7 × 196", "= 1848 cm²"], numericAnswer: 1848, unit: "cm²"),
+    NumericalProblem(id: "svn11", question: "A cone has radius 6 cm and height 8 cm. Find its slant height using l² = r² + h².", given: ["r = 6 cm", "h = 8 cm"], solutionSteps: ["l² = 6² + 8²", "= 36 + 64 = 100", "l = √100 = 10 cm"], numericAnswer: 10, unit: "cm"),
+    NumericalProblem(id: "svn12", question: "Find the volume of a cylinder with radius 10 cm and height 21 cm. (Take π = 22/7)", given: ["r = 10 cm", "h = 21 cm"], solutionSteps: ["V = πr²h", "= 22/7 × 100 × 21", "= 6600 cm³"], numericAnswer: 6600, unit: "cm³"),
+  ],
+);

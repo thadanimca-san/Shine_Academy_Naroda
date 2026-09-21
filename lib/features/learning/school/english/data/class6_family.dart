@@ -1,0 +1,35 @@
+import '../models/dictionary_word.dart';
+
+const class6Family = DictionaryTopic(
+  id: 'class6_family',
+  title: 'Family & People',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_SIBLING',
+    'DICT_ENG_SPOUSE',
+    'DICT_ENG_OFFSPRING',
+    'DICT_ENG_GUARDIAN',
+    'DICT_ENG_ANCESTOR',
+    'DICT_ENG_DESCENDANT',
+    'DICT_ENG_NEPHEW',
+    'DICT_ENG_NIECE',
+    'DICT_ENG_IN-LAWS',
+    'DICT_ENG_WIDOW',
+    'DICT_ENG_NUCLEAR_FAMILY',
+    'DICT_ENG_JOINT_FAMILY',
+    'DICT_ENG_GENERATION',
+    'DICT_ENG_BOND',
+    'DICT_ENG_AFFECTION',
+    'DICT_ENG_RESPECT',
+    'DICT_ENG_OBEDIENT',
+    'DICT_ENG_ACQUAINTANCE',
+    'DICT_ENG_COMPANION',
+    'DICT_ENG_STRANGER',
+    'DICT_ENG_ORPHAN',
+    'DICT_ENG_INFANT',
+    'DICT_ENG_TEENAGER',
+    'DICT_ENG_HOUSEHOLD',
+    'DICT_ENG_HOSPITABLE',
+    'DICT_ENG_RELIABLE'
+  ],
+);

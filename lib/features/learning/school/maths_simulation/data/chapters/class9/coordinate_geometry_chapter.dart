@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9CoordinateGeometryChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_coordinategeometry", chapterName: "Coordinate Geometry",
+  concepts: ["The Cartesian plane, axes and quadrants.", "Plotting a point given its coordinates.", "Signs of coordinates in different quadrants."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "cg9_1", question: "The plane formed by two perpendicular number lines is called the [ Cartesian plane / number plane ].", answer: "Cartesian plane"),
+    QuestionItem(id: "cg9_2", question: "The horizontal number line in the Cartesian plane is called the [ x-axis / y-axis ].", answer: "x-axis"),
+    QuestionItem(id: "cg9_3", question: "The vertical number line in the Cartesian plane is called the [ y-axis / x-axis ].", answer: "y-axis"),
+    QuestionItem(id: "cg9_4", question: "The point of intersection of the x-axis and y-axis is called the [ origin / centre ].", answer: "origin"),
+    QuestionItem(id: "cg9_5", question: "The two axes divide the Cartesian plane into four [ quadrants / sections ].", answer: "quadrants"),
+    QuestionItem(id: "cg9_6", question: "In the first quadrant, both x and y coordinates are [ positive / negative ].", answer: "positive"),
+    QuestionItem(id: "cg9_7", question: "In the second quadrant, x is negative and y is [ positive / negative ].", answer: "positive"),
+    QuestionItem(id: "cg9_8", question: "In the third quadrant, both x and y coordinates are [ negative / positive ].", answer: "negative"),
+    QuestionItem(id: "cg9_9", question: "In the fourth quadrant, x is positive and y is [ negative / positive ].", answer: "negative"),
+    QuestionItem(id: "cg9_10", question: "The x-coordinate of a point is also called its [ abscissa / ordinate ].", answer: "abscissa"),
+    QuestionItem(id: "cg9_11", question: "The y-coordinate of a point is also called its [ ordinate / abscissa ].", answer: "ordinate"),
+    QuestionItem(id: "cg9_12", question: "The coordinates of the origin are [ (0, 0) / (1, 0) ].", answer: "(0, 0)"),
+    QuestionItem(id: "cg9_13", question: "Any point on the x-axis has its y-coordinate equal to [ 0 / 1 ].", answer: "0"),
+    QuestionItem(id: "cg9_14", question: "Any point on the y-axis has its x-coordinate equal to [ 0 / 1 ].", answer: "0"),
+    QuestionItem(id: "cg9_15", question: "A pair of numbers describing the exact position of a point in a plane is called an [ ordered pair / unordered pair ].", answer: "ordered pair"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "cg9n1", question: "In which quadrant does the point (4, -7) lie? (Give the quadrant number 1-4)", given: ["Point = (4, -7)"], solutionSteps: ["x is positive, y is negative.", "This is the fourth quadrant."], numericAnswer: 4, unit: "(quadrant)"),
+    NumericalProblem(id: "cg9n2", question: "In which quadrant does the point (-3, -8) lie? (Give the quadrant number 1-4)", given: ["Point = (-3, -8)"], solutionSteps: ["x is negative, y is negative.", "This is the third quadrant."], numericAnswer: 3, unit: "(quadrant)"),
+    NumericalProblem(id: "cg9n3", question: "Find the distance between points A(2, 5) and B(2, 9), which lie on the same vertical line.", given: ["A = (2,5)", "B = (2,9)"], solutionSteps: ["Since x-coordinates are equal, distance = difference in y-coordinates.", "Distance = 9 − 5", "= 4 units"], numericAnswer: 4, unit: "units"),
+    NumericalProblem(id: "cg9n4", question: "Find the distance between points P(-3, 4) and Q(7, 4), which lie on the same horizontal line.", given: ["P = (-3,4)", "Q = (7,4)"], solutionSteps: ["Since y-coordinates are equal, distance = difference in x-coordinates.", "Distance = 7 − (−3)", "= 10 units"], numericAnswer: 10, unit: "units"),
+    NumericalProblem(id: "cg9n5", question: "In which quadrant does the point (-6, 2) lie? (Give the quadrant number 1-4)", given: ["Point = (-6, 2)"], solutionSteps: ["x is negative, y is positive.", "This is the second quadrant."], numericAnswer: 2, unit: "(quadrant)"),
+    NumericalProblem(id: "cg9n6", question: "A point lies on the x-axis with x-coordinate 9. What is its y-coordinate?", given: ["Point on x-axis, x = 9"], solutionSteps: ["Any point on the x-axis has y-coordinate 0."], numericAnswer: 0, unit: ""),
+    NumericalProblem(id: "cg9n7", question: "A point lies on the y-axis with y-coordinate -5. What is its x-coordinate?", given: ["Point on y-axis, y = -5"], solutionSteps: ["Any point on the y-axis has x-coordinate 0."], numericAnswer: 0, unit: ""),
+  ],
+);

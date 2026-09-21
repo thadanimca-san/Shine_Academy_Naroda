@@ -1,0 +1,30 @@
+import '../../models/chapter_model.dart';
+final ChapterModel class9MatterChapter = ChapterModel(
+  standard: 9, subject: "Chemistry", chapterId: "cls9_chem_matter", chapterName: "Bonus: States of Matter",
+  concepts: ["Physical nature of matter.", "States of matter."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "mq1", question: "The SI unit of temperature is [ Kelvin / Celsius ].", answer: "Kelvin"),
+    QuestionItem(id: "mq2", question: "Solid changing directly into gas without changing into liquid state is [ sublimation / vaporization ].", answer: "sublimation"),
+    QuestionItem(id: "mq3", question: "Rate of evaporation increases with an [ increase / decrease ] in surface area.", answer: "increase"),
+    QuestionItem(id: "mq4", question: "Boiling point of water on the Celsius scale is [ 100°C / 0°C ].", answer: "100°C"),
+    QuestionItem(id: "mq5", question: "The intermixing of particles of two different types of matter on their own is called [ diffusion / osmosis ].", answer: "diffusion"),
+    QuestionItem(id: "mq6", question: "Compressed natural gas (CNG) is stored under [ high pressure / low pressure ].", answer: "high pressure"),
+    QuestionItem(id: "mq7", question: "Latent heat of vaporization is the heat energy required to change 1 kg of liquid to [ gas / solid ] at atmospheric pressure.", answer: "gas"),
+    QuestionItem(id: "mq8", question: "Dry ice is solid [ carbon dioxide / water ].", answer: "carbon dioxide"),
+    QuestionItem(id: "mq9", question: "Melting point of ice is [ 273.15 K / 373.15 K ].", answer: "273.15 K"),
+    QuestionItem(id: "mq10", question: "Matter is made up of tiny [ particles / blocks ].", answer: "particles"),
+    QuestionItem(id: "mq11", question: "The rate of diffusion is highest in [ gases / solids ].", answer: "gases"),
+    QuestionItem(id: "mq12", question: "The state of matter that has a fixed volume but no fixed shape is [ liquid / solid ].", answer: "liquid"),
+    QuestionItem(id: "mq13", question: "Evaporation causes [ cooling / heating ].", answer: "cooling"),
+    QuestionItem(id: "mq14", question: "Humidity in air [ decreases / increases ] the rate of evaporation.", answer: "decreases"),
+    QuestionItem(id: "mq15", question: "SI unit of pressure is [ Pascal / Joule ].", answer: "Pascal"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "mn1", question: "Convert 25°C to Kelvin.", given: ["T(°C) = 25"], solutionSteps: ["K = °C + 273", "= 25 + 273", "= 298 K"], numericAnswer: 298, unit: "K"),
+    NumericalProblem(id: "mn2", question: "Convert 373 K to Celsius.", given: ["T(K) = 373"], solutionSteps: ["°C = K − 273", "= 373 − 273", "= 100°C"], numericAnswer: 100, unit: "°C"),
+    NumericalProblem(id: "mn3", question: "Convert 0°C to Kelvin.", given: ["T(°C) = 0"], solutionSteps: ["K = °C + 273", "= 0 + 273", "= 273 K"], numericAnswer: 273, unit: "K"),
+    NumericalProblem(id: "mn4", question: "Convert -40°C to Kelvin.", given: ["T(°C) = -40"], solutionSteps: ["K = °C + 273", "= -40 + 273", "= 233 K"], numericAnswer: 233, unit: "K"),
+    NumericalProblem(id: "mn5", question: "Convert 300 K to Celsius.", given: ["T(K) = 300"], solutionSteps: ["°C = K − 273", "= 300 − 273", "= 27°C"], numericAnswer: 27, unit: "°C"),
+  ],
+);

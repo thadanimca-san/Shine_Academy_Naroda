@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10SourcesEnergyChapter = ChapterModel(
+  standard: 10, subject: "Physics", chapterId: "cls10_phys_sourcesenergy", chapterName: "Sources of Energy",
+  concepts: ["Conventional (fossil fuels, thermal, hydro) and non-conventional sources of energy.", "Solar energy and solar cells.", "Wind, tidal, geothermal and nuclear energy; environmental consequences."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "se1", question: "A good source of energy should provide a large amount of energy per unit [ mass or volume / time only ].", answer: "mass or volume"),
+    QuestionItem(id: "se2", question: "Sources of energy that have been used for a long time, like fossil fuels, are called [ conventional sources of energy / non-conventional sources ].", answer: "conventional sources of energy"),
+    QuestionItem(id: "se3", question: "Newer, often renewable sources of energy such as solar and wind are called [ non-conventional sources of energy / conventional sources ].", answer: "non-conventional sources of energy"),
+    QuestionItem(id: "se4", question: "A power plant that burns fossil fuels to convert heat energy into electrical energy is called a [ thermal power plant / hydro power plant ].", answer: "thermal power plant"),
+    QuestionItem(id: "se5", question: "A power plant that uses the potential energy of stored water to generate electricity is called a [ hydro power plant / thermal power plant ].", answer: "hydro power plant"),
+    QuestionItem(id: "se6", question: "The gaseous mixture produced from cow dung and other biological waste, used as fuel, is called [ biogas / natural gas ].", answer: "biogas"),
+    QuestionItem(id: "se7", question: "A device that converts solar energy directly into electricity is called a [ solar cell / solar cooker ].", answer: "solar cell"),
+    QuestionItem(id: "se8", question: "Solar cells are made mainly of the semiconductor [ silicon / carbon ].", answer: "silicon"),
+    QuestionItem(id: "se9", question: "Energy harnessed from the movement of air is called [ wind energy / tidal energy ].", answer: "wind energy"),
+    QuestionItem(id: "se10", question: "Energy harnessed from the rise and fall of sea levels is called [ tidal energy / wind energy ].", answer: "tidal energy"),
+    QuestionItem(id: "se11", question: "Energy obtained from the heat trapped inside the Earth is called [ geothermal energy / nuclear energy ].", answer: "geothermal energy"),
+    QuestionItem(id: "se12", question: "Energy released by splitting heavy atomic nuclei is called [ nuclear energy / geothermal energy ].", answer: "nuclear energy"),
+    QuestionItem(id: "se13", question: "The splitting of a heavy nucleus into lighter nuclei, releasing energy, is called [ nuclear fission / nuclear fusion ].", answer: "nuclear fission"),
+    QuestionItem(id: "se14", question: "The joining of light nuclei to form a heavier nucleus, as happens in the Sun, is called [ nuclear fusion / nuclear fission ].", answer: "nuclear fusion"),
+    QuestionItem(id: "se15", question: "A source of energy that can be replenished naturally and won't run out, like solar or wind, is called a [ renewable source of energy / non-renewable source ].", answer: "renewable source of energy"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "sen1", question: "A power plant produces 800 MJ of useful energy from 1000 MJ of input energy. Find its efficiency.", given: ["Output = 800 MJ", "Input = 1000 MJ"], solutionSteps: ["Efficiency = (output/input) × 100", "= (800/1000) × 100", "= 80%"], numericAnswer: 80, unit: "%"),
+    NumericalProblem(id: "sen2", question: "A solar panel rated 300 W operates for 6 hours daily. Find the energy produced per day in kWh.", given: ["Power = 300 W = 0.3 kW", "Time = 6 h"], solutionSteps: ["Energy = Power(kW) × Time(h)", "= 0.3×6", "= 1.8 kWh"], numericAnswer: 1.8, unit: "kWh"),
+    NumericalProblem(id: "sen3", question: "A wind turbine has 30% efficiency and receives 5000 J of wind energy. Find the useful electrical energy output.", given: ["Efficiency = 30%", "Input = 5000 J"], solutionSteps: ["Output = (efficiency/100) × input", "= 0.3 × 5000", "= 1500 J"], numericAnswer: 1500, unit: "J"),
+    NumericalProblem(id: "sen4", question: "A biogas plant converts 60% of the energy in 500 MJ of organic waste into usable biogas energy. Find the biogas energy produced.", given: ["Efficiency = 60%", "Input = 500 MJ"], solutionSteps: ["Output = 0.6 × 500", "= 300 MJ"], numericAnswer: 300, unit: "MJ"),
+    NumericalProblem(id: "sen5", question: "A hydroelectric plant with 90% efficiency receives 2000 MJ of potential energy from stored water. Find the electrical energy generated.", given: ["Efficiency = 90%", "Input = 2000 MJ"], solutionSteps: ["Output = 0.9 × 2000", "= 1800 MJ"], numericAnswer: 1800, unit: "MJ"),
+  ],
+);

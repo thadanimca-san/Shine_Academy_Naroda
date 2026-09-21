@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class6Occupations = DictionaryTopic(
+  id: 'class6_occupations',
+  title: 'Occupations',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_PROFESSION',
+    'DICT_ENG_CAREER',
+    'DICT_ENG_COLLEAGUE',
+    'DICT_ENG_SALARY',
+    'DICT_ENG_ENTREPRENEUR',
+    'DICT_ENG_APPRENTICE',
+    'DICT_ENG_SURGEON',
+    'DICT_ENG_PHARMACIST',
+    'DICT_ENG_VETERINARIAN',
+    'DICT_ENG_ARCHITECT',
+    'DICT_ENG_ELECTRICIAN',
+    'DICT_ENG_PLUMBER',
+    'DICT_ENG_BLACKSMITH',
+    'DICT_ENG_WEAVER',
+    'DICT_ENG_POTTER',
+    'DICT_ENG_JOURNALIST',
+    'DICT_ENG_DIPLOMAT',
+    'DICT_ENG_CIVIL_SERVANT',
+    'DICT_ENG_FIREFIGHTER',
+    'DICT_ENG_LIFEGUARD',
+    'DICT_ENG_RESEARCHER',
+    'DICT_ENG_ASTRONOMER',
+    'DICT_ENG_PROGRAMMER',
+    'DICT_ENG_PILOT',
+    'DICT_ENG_CHEF',
+    'DICT_ENG_TAILOR',
+    'DICT_ENG_AMBITION',
+    'DICT_ENG_QUALIFIED'
+  ],
+);

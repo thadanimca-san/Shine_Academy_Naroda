@@ -1,0 +1,24 @@
+import '../models/dictionary_word.dart';
+
+const class3Numbers = DictionaryTopic(
+  id: 'class3_numbers',
+  title: 'Numbers & Counting',
+  grade: 'Class 3',
+  wordIds: [
+    'DICT_ENG_ONE',
+    'DICT_ENG_TWO',
+    'DICT_ENG_THREE',
+    'DICT_ENG_FOUR',
+    'DICT_ENG_FIVE',
+    'DICT_ENG_SIX',
+    'DICT_ENG_SEVEN',
+    'DICT_ENG_EIGHT',
+    'DICT_ENG_NINE',
+    'DICT_ENG_TEN',
+    'DICT_ENG_TWENTY',
+    'DICT_ENG_HUNDRED',
+    'DICT_ENG_FIRST',
+    'DICT_ENG_COUNT',
+    'DICT_ENG_ZERO'
+  ],
+);

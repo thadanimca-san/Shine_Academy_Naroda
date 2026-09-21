@@ -1,0 +1,30 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7LightChapter = ChapterModel(
+  standard: 7, subject: "Physics", chapterId: "cls7_phys_light", chapterName: "Light",
+  concepts: ["Reflection of light and images formed by plane mirrors.", "Multiple images and kaleidoscopes.", "Dispersion of light and the human eye; the Braille system."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "l7_1", question: "An image that can be obtained on a screen is called a [ real image / virtual image ].", answer: "real image"),
+    QuestionItem(id: "l7_2", question: "An image that cannot be obtained on a screen is called a [ virtual image / real image ].", answer: "virtual image"),
+    QuestionItem(id: "l7_3", question: "The image formed by a plane mirror is always [ virtual and erect / real and inverted ].", answer: "virtual and erect"),
+    QuestionItem(id: "l7_4", question: "In the image formed by a plane mirror, the left side appears as the right side, an effect called [ lateral inversion / magnification ].", answer: "lateral inversion"),
+    QuestionItem(id: "l7_5", question: "A device with two or more mirrors arranged to form multiple images using coloured beads is called a [ kaleidoscope / periscope ].", answer: "kaleidoscope"),
+    QuestionItem(id: "l7_6", question: "A device using mirrors that allows us to see objects that are not in direct line of sight, used in submarines, is called a [ periscope / kaleidoscope ].", answer: "periscope"),
+    QuestionItem(id: "l7_7", question: "The splitting of white light into its seven constituent colours is called [ dispersion / reflection ].", answer: "dispersion"),
+    QuestionItem(id: "l7_8", question: "A rainbow is formed due to the dispersion of sunlight by [ tiny water droplets / dust particles ] in the atmosphere.", answer: "tiny water droplets"),
+    QuestionItem(id: "l7_9", question: "The transparent triangular glass object used to split white light into its component colours is called a [ prism / lens ].", answer: "prism"),
+    QuestionItem(id: "l7_10", question: "The seven colours of white light, in order, are violet, indigo, blue, green, yellow, orange and [ red / black ].", answer: "red"),
+    QuestionItem(id: "l7_11", question: "The light-sensitive screen at the back of the eye on which images form is called the [ retina / cornea ].", answer: "retina"),
+    QuestionItem(id: "l7_12", question: "The part of the eye that controls how much light enters through the pupil is the [ iris / lens ].", answer: "iris"),
+    QuestionItem(id: "l7_13", question: "People who cannot see are said to be [ visually impaired / hearing impaired ].", answer: "visually impaired"),
+    QuestionItem(id: "l7_14", question: "A system of raised dots that visually impaired people use to read by touch is called the [ Braille system / Morse code ].", answer: "Braille system"),
+    QuestionItem(id: "l7_15", question: "The Braille system was developed by [ Louis Braille / Thomas Edison ].", answer: "Louis Braille"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "l7n1", question: "A ray of light strikes a plane mirror at an angle of incidence of 35°. Find the angle of reflection.", given: ["Angle of incidence = 35°"], solutionSteps: ["By the law of reflection, angle of incidence = angle of reflection.", "Angle of reflection = 35°"], numericAnswer: 35, unit: "°"),
+    NumericalProblem(id: "l7n2", question: "A ray hits a mirror making an angle of 50° with the mirror's surface. Find the angle of incidence (measured from the normal).", given: ["Angle with surface = 50°"], solutionSteps: ["Angle of incidence = 90° − angle with surface", "= 90° − 50°", "= 40°"], numericAnswer: 40, unit: "°"),
+    NumericalProblem(id: "l7n3", question: "Two mirrors are inclined at 90° to each other. Find the number of images formed of an object placed between them (using n = 360/θ − 1).", given: ["θ = 90°"], solutionSteps: ["n = 360/θ − 1", "= 360/90 − 1", "= 4 − 1 = 3"], numericAnswer: 3, unit: "images"),
+    NumericalProblem(id: "l7n4", question: "Two mirrors are inclined at 60° to each other. Find the number of images formed (n = 360/θ − 1).", given: ["θ = 60°"], solutionSteps: ["n = 360/60 − 1", "= 6 − 1 = 5"], numericAnswer: 5, unit: "images"),
+    NumericalProblem(id: "l7n5", question: "If the angle of reflection is 42°, find the angle between the incident ray and the reflected ray.", given: ["Angle of reflection = 42°"], solutionSteps: ["Angle of incidence = angle of reflection = 42°", "Angle between incident and reflected ray = 42° + 42°", "= 84°"], numericAnswer: 84, unit: "°"),
+  ],
+);

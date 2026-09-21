@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class6Numbers = DictionaryTopic(
+  id: 'class6_numbers',
+  title: 'Numbers & Counting',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_QUANTITY',
+    'DICT_ENG_ESTIMATE',
+    'DICT_ENG_APPROXIMATELY',
+    'DICT_ENG_MULTIPLE',
+    'DICT_ENG_FACTOR',
+    'DICT_ENG_FRACTION',
+    'DICT_ENG_PERCENTAGE',
+    'DICT_ENG_DECIMAL',
+    'DICT_ENG_EVEN_NUMBER',
+    'DICT_ENG_ODD_NUMBER',
+    'DICT_ENG_PRIME_NUMBER',
+    'DICT_ENG_SUM',
+    'DICT_ENG_DIFFERENCE',
+    'DICT_ENG_PRODUCT',
+    'DICT_ENG_QUOTIENT',
+    'DICT_ENG_REMAINDER',
+    'DICT_ENG_ASCENDING_ORDER',
+    'DICT_ENG_DESCENDING_ORDER',
+    'DICT_ENG_THOUSAND',
+    'DICT_ENG_LAKH',
+    'DICT_ENG_CRORE',
+    'DICT_ENG_MILLION',
+    'DICT_ENG_INFINITE',
+    'DICT_ENG_NUMERAL',
+    'DICT_ENG_DIGIT',
+    'DICT_ENG_PLACE_VALUE',
+    'DICT_ENG_CALCULATE',
+    'DICT_ENG_MEASUREMENT'
+  ],
+);

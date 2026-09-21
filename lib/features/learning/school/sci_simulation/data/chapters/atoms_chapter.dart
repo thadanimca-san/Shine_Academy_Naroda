@@ -1,0 +1,141 @@
+import '../../models/chapter_model.dart';
+final ChapterModel class9AtomsChapter = ChapterModel(
+  standard: 9, subject: "Chemistry", chapterId: "cls9_chem_atoms", chapterName: "Atomic Foundations of Matter",
+  imagePath: "assets/images/../dictionary/atom.jpg",
+  concepts: ["Laws of chemical combination.", "Mole concept."],
+  formulas: [
+    FormulaDerivation(
+      formulaName: "Number of Moles",
+      expression: "n = mass / molar mass",
+      derivationSteps: [
+        "One mole of any substance is defined as the amount containing as many particles as there are atoms in exactly 12 g of carbon-12 (Avogadro's number, 6.022 × 10²³).",
+        "The mass of one mole of a substance equals its molar mass (in grams).",
+        "So the number of moles n in a given mass is: n = given mass / molar mass.",
+      ],
+    ),
+    FormulaDerivation(
+      formulaName: "Number of Particles",
+      expression: "N = n × Nₐ",
+      derivationSteps: [
+        "Each mole of a substance contains Avogadro's number (Nₐ = 6.022 × 10²³) of particles (atoms, molecules or ions).",
+        "For n moles, the total number of particles N = n × Nₐ.",
+      ],
+    ),
+    FormulaDerivation(
+      formulaName: "Molecular Mass",
+      expression: "M = Σ (atomic masses of constituent atoms)",
+      derivationSteps: [
+        "The molecular mass of a compound is the sum of the atomic masses of all atoms present in one molecule of it.",
+        "For example, for water (H₂O): M = 2 × (atomic mass of H) + 1 × (atomic mass of O) = 2(1) + 16 = 18 u.",
+      ],
+    ),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "aq1", question: "The law of conservation of mass was stated by [ Antoine Lavoisier / Joseph Proust ].", answer: "Antoine Lavoisier"),
+    QuestionItem(id: "aq2", question: "Atomic mass unit is abbreviated as [ amu / u ].", answer: "u"),
+    QuestionItem(id: "aq3", question: "Avogadro constant represents the number of particles in [ 1 mole / 1 gram ].", answer: "1 mole"),
+    QuestionItem(id: "aq4", question: "The chemical symbol for Sodium is [ Na / S ].", answer: "Na"),
+    QuestionItem(id: "aq5", question: "The law of constant proportions was given by [ Joseph Proust / Antoine Lavoisier ].", answer: "Joseph Proust"),
+    QuestionItem(id: "aq6", question: "The atomic mass of Oxygen is [ 16 u / 14 u ].", answer: "16 u"),
+    QuestionItem(id: "aq7", question: "The molecular mass of water (H2O) is [ 18 u / 20 u ].", answer: "18 u"),
+    QuestionItem(id: "aq8", question: "The number of atoms constituting a molecule is known as its [ atomicity / valency ].", answer: "atomicity"),
+    QuestionItem(id: "aq9", question: "A charged atom is called an [ ion / molecule ].", answer: "ion"),
+    QuestionItem(id: "aq10", question: "Value of Avogadro number is [ 6.022 x 10^23 / 6.022 x 10^22 ].", answer: "6.022 x 10^23"),
+    QuestionItem(id: "aq11", question: "Formula of carbon dioxide is [ CO2 / CO ].", answer: "CO2"),
+    QuestionItem(id: "aq12", question: "The combining capacity of an element is called its [ valency / atomic number ].", answer: "valency"),
+    QuestionItem(id: "aq13", question: "Polyatomic ion among the following is [ sulfate (SO4 2-) / chloride (Cl-) ].", answer: "sulfate (SO4 2-)"),
+    QuestionItem(id: "aq14", question: "Mass of 1 mole of a substance is called its [ molar mass / atomic mass ].", answer: "molar mass"),
+    QuestionItem(id: "aq15", question: "Chemical symbol for Iron is [ Fe / I ].", answer: "Fe"),
+  ],
+  numericalProblems: [
+    NumericalProblem(
+      id: "an1",
+      question: "Find the number of moles in 36 g of water. (Molar mass of H₂O = 18 g/mol)",
+      given: ["Mass = 36 g", "Molar mass = 18 g/mol"],
+      solutionSteps: ["Use moles = mass / molar mass", "moles = 36 / 18", "moles = 2 mol"],
+      numericAnswer: 2,
+      unit: "mol",
+    ),
+    NumericalProblem(
+      id: "an2",
+      question: "Find the mass of 0.5 mole of CO₂. (Molar mass of CO₂ = 44 g/mol)",
+      given: ["moles = 0.5 mol", "Molar mass = 44 g/mol"],
+      solutionSteps: ["Use mass = moles × molar mass", "mass = 0.5 × 44", "mass = 22 g"],
+      numericAnswer: 22,
+      unit: "g",
+    ),
+    NumericalProblem(
+      id: "an3",
+      question: "How many molecules are present in 2 moles of a substance? (Avogadro number = 6.022 × 10²³)",
+      given: ["moles = 2 mol", "Avogadro number = 6.022 × 10²³ /mol"],
+      solutionSteps: ["Use number of particles = moles × Avogadro number", "= 2 × 6.022 × 10²³", "= 1.2044 × 10²⁴ molecules"],
+      numericAnswer: 1.2044e24,
+      unit: "molecules",
+    ),
+    NumericalProblem(
+      id: "an4",
+      question: "Find the molecular mass of ammonia (NH₃). (Atomic masses: N = 14 u, H = 1 u)",
+      given: ["N = 14 u", "H = 1 u × 3"],
+      solutionSteps: ["Molecular mass = N + 3×H", "= 14 + (3 × 1)", "= 14 + 3", "= 17 u"],
+      numericAnswer: 17,
+      unit: "u",
+    ),
+    NumericalProblem(id: "an5", question: "Find the molecular mass of glucose (C₆H₁₂O₆). (C=12 u, H=1 u, O=16 u)", given: ["6 C, 12 H, 6 O"], solutionSteps: ["Mass = 6(12) + 12(1) + 6(16)", "= 72+12+96", "= 180 u"], numericAnswer: 180, unit: "u"),
+    NumericalProblem(id: "an6", question: "Find the number of moles in 8 g of oxygen gas (O₂). (Molar mass = 32 g/mol)", given: ["Mass=8 g", "Molar mass=32 g/mol"], solutionSteps: ["moles = mass/molar mass", "= 8/32", "= 0.25 mol"], numericAnswer: 0.25, unit: "mol"),
+    NumericalProblem(id: "an7", question: "Find the mass of 3 moles of NaCl. (Molar mass of NaCl = 58.5 g/mol)", given: ["moles=3", "Molar mass=58.5 g/mol"], solutionSteps: ["mass = moles × molar mass", "= 3 × 58.5", "= 175.5 g"], numericAnswer: 175.5, unit: "g"),
+    NumericalProblem(id: "an8", question: "Find the molecular mass of calcium carbonate (CaCO₃). (Ca=40 u, C=12 u, O=16 u)", given: ["1 Ca, 1 C, 3 O"], solutionSteps: ["Mass = 40 + 12 + 3(16)", "= 40+12+48", "= 100 u"], numericAnswer: 100, unit: "u"),
+    NumericalProblem(id: "an9", question: "How many moles are present in 3.011 × 10²³ molecules? (Avogadro number = 6.022×10²³)", given: ["N = 3.011×10²³"], solutionSteps: ["moles = N/Avogadro number", "= 3.011×10²³ / 6.022×10²³", "= 0.5 mol"], numericAnswer: 0.5, unit: "mol"),
+    NumericalProblem(id: "an10", question: "Find the number of moles in 5.6 g of nitrogen gas (N₂). (Molar mass = 28 g/mol)", given: ["Mass=5.6 g", "Molar mass=28 g/mol"], solutionSteps: ["moles = mass/molar mass", "= 5.6/28", "= 0.2 mol"], numericAnswer: 0.2, unit: "mol"),
+    NumericalProblem(id: "an11", question: "Find the mass of 2 moles of H₂SO₄. (Molar mass = 98 g/mol)", given: ["moles=2", "Molar mass=98 g/mol"], solutionSteps: ["mass = moles × molar mass", "= 2 × 98", "= 196 g"], numericAnswer: 196, unit: "g"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. Laws of Chemical Combination',
+      iconKey: 'theory',
+      points: [
+        'Law of conservation of mass (Lavoisier): mass can neither be created nor destroyed in a chemical reaction — total mass of reactants = total mass of products.',
+        'Law of constant (definite) proportions (Proust): in a given compound, the elements are always present in a fixed ratio by mass, regardless of the source or how it was prepared.',
+        'These two laws led John Dalton to propose that matter is made of tiny, indivisible particles called atoms — this became Dalton\'s Atomic Theory.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Atoms',
+      iconKey: 'organelles',
+      points: [
+        'An atom is the smallest particle of an element that can take part in a chemical reaction.',
+        'Atoms are extremely small and generally cannot exist independently (except noble gases).',
+        'Atomic mass is measured in atomic mass units (u), where 1 u = 1/12th the mass of a carbon-12 atom.',
+        'Elements are represented by chemical symbols (usually 1-2 letters), e.g. Na = Sodium, Fe = Iron, O = Oxygen.',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Molecules & Ions',
+      iconKey: 'division',
+      points: [
+        'A molecule is the smallest particle of an element or compound capable of independent existence, formed when two or more atoms bond together.',
+        'Atomicity = the number of atoms that make up a molecule (e.g. O₂ is diatomic, O₃/ozone is triatomic).',
+        'An ion is a charged particle — formed when an atom (or group of atoms) gains or loses electrons. A polyatomic ion is a charged group of atoms acting as one unit, e.g. sulfate (SO₄²⁻).',
+        'Molecular mass = sum of the atomic masses of all atoms in one molecule of a substance, e.g. water (H₂O) = 2(1) + 16 = 18 u.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Chemical Formulae & Valency',
+      iconKey: 'muscle',
+      points: [
+        'Valency = the combining capacity of an element — determines how many bonds/atoms it can combine with.',
+        'To write a chemical formula: criss-cross the valencies of the combining elements/ions (e.g. Na⁺ and Cl⁻ → NaCl).',
+        'Formula unit mass is used instead of molecular mass for ionic compounds (which don\'t form true molecules), e.g. NaCl.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. The Mole Concept',
+      iconKey: 'plant_growth',
+      points: [
+        'One mole = the amount of a substance containing as many particles as there are atoms in exactly 12 g of carbon-12 = Avogadro\'s number = 6.022 × 10²³ particles.',
+        'Molar mass = the mass of 1 mole of a substance, in grams — numerically equal to the atomic/molecular mass in u.',
+        'Number of moles (n) = given mass ÷ molar mass.',
+        'Number of particles = number of moles × Avogadro\'s number (6.022 × 10²³/mol).',
+      ],
+    ),
+  ],
+);

@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class6Sports = DictionaryTopic(
+  id: 'class6_sports',
+  title: 'Sports & Games',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_TOURNAMENT',
+    'DICT_ENG_CHAMPIONSHIP',
+    'DICT_ENG_REFEREE',
+    'DICT_ENG_SPECTATOR',
+    'DICT_ENG_OPPONENT',
+    'DICT_ENG_STRATEGY',
+    'DICT_ENG_STAMINA',
+    'DICT_ENG_ENDURANCE',
+    'DICT_ENG_FLEXIBILITY',
+    'DICT_ENG_QUALIFY',
+    'DICT_ENG_BADMINTON_RACKET',
+    'DICT_ENG_SHUTTLECOCK',
+    'DICT_ENG_JERSEY',
+    'DICT_ENG_HELMET',
+    'DICT_ENG_NET',
+    'DICT_ENG_STADIUM',
+    'DICT_ENG_GYMNASIUM',
+    'DICT_ENG_TRACK',
+    'DICT_ENG_COURT',
+    'DICT_ENG_KABADDI',
+    'DICT_ENG_KHO-KHO',
+    'DICT_ENG_CHESS',
+    'DICT_ENG_CARROM',
+    'DICT_ENG_DEDICATION',
+    'DICT_ENG_SPORTSMANSHIP',
+    'DICT_ENG_TRIUMPH',
+    'DICT_ENG_DEFEAT',
+    'DICT_ENG_AGILE'
+  ],
+);

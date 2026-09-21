@@ -1,0 +1,87 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8KeepingTimeSkiesChapter = ChapterModel(
+  standard: 8, subject: "Physics", chapterId: "cls8_phys_keepingtimeskies", chapterName: "Keeping Time with the Skies",
+  imagePath: "assets/images/time_ch11.jpg",
+  concepts: [
+    "The Moon shines by reflecting sunlight; its changing phases result from the changing relative positions of the Sun, Moon, and Earth.",
+    "A full cycle of Moon phases (about 29.5 days) forms the basis for a month; a mean solar day (24 hours) is the time from one solar noon to the next.",
+    "Calendars are built from natural cycles: lunar (Moon phases), solar (seasons/Earth's revolution), and luni-solar (a mix of both).",
+    "Many Indian festivals are tied to lunar, solar, or luni-solar calendar cycles, which is why their Gregorian calendar dates shift year to year.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "kt1", question: "The Moon does not emit its own light; it shines because it [ reflects sunlight / generates heat ].", answer: "reflects sunlight"),
+    QuestionItem(id: "kt2", question: "The changing shapes of the bright portion of the Moon, as seen from Earth, are called the [ phases of the Moon / eclipses ].", answer: "phases of the Moon"),
+    QuestionItem(id: "kt3", question: "The day when the Moon appears as a full bright circle is called [ full Moon day (Purnima) / new Moon day (Amavasya) ].", answer: "full Moon day (Purnima)"),
+    QuestionItem(id: "kt4", question: "The day when the Moon is not visible at all is called [ new Moon day (Amavasya) / full Moon day (Purnima) ].", answer: "new Moon day (Amavasya)"),
+    QuestionItem(id: "kt5", question: "The period when the bright part of the Moon increases (from new Moon to full Moon) is called the [ waxing period (Shukla Paksha) / waning period (Krishna Paksha) ].", answer: "waxing period (Shukla Paksha)"),
+    QuestionItem(id: "kt6", question: "The period when the bright part of the Moon decreases (from full Moon to new Moon) is called the [ waning period (Krishna Paksha) / waxing period (Shukla Paksha) ].", answer: "waning period (Krishna Paksha)"),
+    QuestionItem(id: "kt7", question: "The Moon phases occur due to the changing relative positions of the Sun, Moon, and Earth — [ NOT / because of ] Earth's shadow falling on the Moon.", answer: "NOT"),
+    QuestionItem(id: "kt8", question: "The average time the Sun takes to go from its highest position in the sky on one day to the next is called the [ mean solar day / sidereal year ], equal to 24 hours.", answer: "mean solar day"),
+    QuestionItem(id: "kt9", question: "The Moon takes about [ 29.5 days / 24 hours ] to cycle through all its phases, forming the basis of a month.", answer: "29.5 days"),
+    QuestionItem(id: "kt10", question: "The time Earth takes to complete one revolution around the Sun (about 365.25 days) defines a [ solar year / lunar year ].", answer: "solar year"),
+    QuestionItem(id: "kt11", question: "A calendar based primarily on the Moon's phases, with a lunar year of about 354 days, is called a [ lunar calendar / solar calendar ].", answer: "lunar calendar"),
+    QuestionItem(id: "kt12", question: "A calendar synchronised to the seasons/Earth's revolution around the Sun, like the Gregorian calendar, is called a [ solar calendar / lunar calendar ].", answer: "solar calendar"),
+    QuestionItem(id: "kt13", question: "The extra day added to February every four years to keep the solar calendar synced with Earth's slightly-more-than-365-day orbit is called a [ leap day / intercalary month ].", answer: "leap day"),
+    QuestionItem(id: "kt14", question: "A calendar that uses the Moon's phases for months but adds an extra month periodically (Adhika Maasa) to stay in sync with the seasons is called a [ luni-solar calendar / solar calendar ].", answer: "luni-solar calendar"),
+    QuestionItem(id: "kt15", question: "The Indian National Calendar begins its year on [ 22 March / 1 January ], the day after the spring equinox.", answer: "22 March"),
+    QuestionItem(id: "kt16", question: "[ Diwali / Eid-ul-Fitr ] falls on the new Moon of the month of Kartika.", answer: "Diwali"),
+    QuestionItem(id: "kt17", question: "Man-made objects launched to orbit the Earth, used for communication, navigation, and weather monitoring, are called [ artificial satellites / natural satellites ].", answer: "artificial satellites"),
+    QuestionItem(id: "kt18", question: "[ Vikram Sarabhai / Meghnad Saha ] is known as the Father of the Indian Space Programme.", answer: "Vikram Sarabhai"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. Why the Moon\'s Shape Seems to Change',
+      iconKey: 'plant_growth',
+      points: [
+        'The Moon does not produce its own light — it shines only because it reflects sunlight. Only the half of the Moon facing the Sun is illuminated at any moment.',
+        'The Moon revolves around the Earth, and only one half of the Moon always faces the Earth — but this Earth-facing half is not always the illuminated half.',
+        'What we see changes because the fraction of the illuminated half that faces Earth keeps changing as the Moon orbits — the Moon\'s actual shape never changes, only what we can see of its lit side.',
+        'IMPORTANT: Moon phases are NOT caused by Earth\'s shadow falling on the Moon — that\'s a common misconception. Earth\'s shadow on the Moon causes a lunar eclipse, a completely different, much rarer event.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Phases of the Moon',
+      iconKey: 'organelles',
+      points: [
+        'Full Moon (Purnima): entire illuminated half faces Earth — a full bright circle. New Moon (Amavasya): the illuminated half faces completely away from Earth — not visible at all.',
+        'Waxing period (Shukla Paksha): bright portion grows, from new Moon to full Moon, over about 2 weeks. Waning period (Krishna Paksha): bright portion shrinks, from full Moon to new Moon.',
+        'Gibbous phase: more than half the illuminated portion is visible. Crescent phase: less than half is visible.',
+        'A full cycle of phases takes about 29.5 days. On full Moon day, the Moon is opposite the Sun in the sky (rises as Sun sets); on new Moon day, the Moon is close to the Sun in the sky and not visible.',
+        'The Moon rises about 50 minutes later each day, because it moves ahead a little in its orbit while Earth completes one full rotation (24 hours) — Earth needs a bit more rotation to "catch up" to the Moon\'s new position.',
+      ],
+    ),
+    RevisionNote(
+      title: '3. How Calendars Came to Be',
+      iconKey: 'theory',
+      points: [
+        'Mean solar day: the average time for the Sun to return to its highest position in the sky — 24 hours, the basis for a "day".',
+        'Month: based on the Moon\'s roughly 29.5-day cycle of phases.',
+        'Solar year: about 365.25 days, based on Earth\'s revolution around the Sun and the resulting cycle of seasons.',
+        'Lunar calendars: use 12 lunar months (≈354 days total) — simple to track via Moon phases, but drift out of sync with the seasons over time, since 354 days is shorter than a solar year.',
+        'Solar calendars (like the Gregorian calendar we use daily): months adjusted to add up to 365 days, with a leap day added to February every 4 years (with additional century-based corrections) to stay synced with the seasons.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Luni-solar Calendars & the Indian National Calendar',
+      iconKey: 'muscle',
+      points: [
+        'Luni-solar calendars combine both systems: months follow the Moon\'s phases, but an extra "intercalary month" (Adhika Maasa) is added every 2-3 years to stay in sync with the solar year/seasons — used in many traditional Indian calendars.',
+        'Traditional Indian month names include Chaitra, Vaisakha, Jyeshtha, Ashadha, Shravana, Bhadrapada, Ashwin, Kartika, Margashirsha, Pausha, Magha, and Phalguna.',
+        'The Indian National Calendar (adopted 1957, following Surya Siddhanta principles) is a SOLAR calendar of 365 days, starting 22 March (day after the spring equinox), used alongside the Gregorian calendar for official purposes.',
+        'Astrophysicist Meghnad Saha chaired the Calendar Reform Committee (1952) that recommended India\'s Unified National Calendar.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Festivals, Astronomy & Artificial Satellites',
+      iconKey: 'stomata',
+      points: [
+        'Many Indian festivals are tied to Moon phases: Diwali falls on the new Moon of Kartika; Holi on the full Moon of Phalguna; Eid-ul-Fitr is celebrated after sighting the crescent Moon.',
+        'Because lunar/luni-solar calendar dates don\'t align exactly with the Gregorian solar calendar, these festivals fall on different Gregorian dates each year.',
+        'Festivals following a solar (sidereal) calendar, like Makar Sankranti, Pongal, and Bihu, occur on nearly the same Gregorian date every year.',
+        'Artificial satellites are human-made objects orbiting Earth (unlike the Moon, a natural satellite) — used for communication, navigation, weather monitoring, and disaster management.',
+        'ISRO (Indian Space Research Organisation) has launched satellites like Cartosat (Earth imaging) and AstroSat (space observation), plus missions like Chandrayaan (Moon) and Mangalyaan (Mars). Vikram Sarabhai is known as the Father of the Indian Space Programme.',
+      ],
+    ),
+  ],
+);

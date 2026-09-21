@@ -1,0 +1,36 @@
+import '../models/dictionary_word.dart';
+
+const class6Time = DictionaryTopic(
+  id: 'class6_time',
+  title: 'Time, Days & Months',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_CENTURY',
+    'DICT_ENG_DECADE',
+    'DICT_ENG_FORTNIGHT',
+    'DICT_ENG_ANNUAL',
+    'DICT_ENG_QUARTERLY',
+    'DICT_ENG_PUNCTUAL',
+    'DICT_ENG_DURATION',
+    'DICT_ENG_DEADLINE',
+    'DICT_ENG_PREVIOUS',
+    'DICT_ENG_SUBSEQUENT',
+    'DICT_ENG_SIMULTANEOUSLY',
+    'DICT_ENG_PUNCTUATION_OF_DATES',
+    'DICT_ENG_DAWN',
+    'DICT_ENG_DUSK',
+    'DICT_ENG_MIDNIGHT',
+    'DICT_ENG_NOON',
+    'DICT_ENG_TWILIGHT',
+    'DICT_ENG_LEAP_YEAR',
+    'DICT_ENG_CALENDAR',
+    'DICT_ENG_WEEKDAY',
+    'DICT_ENG_ANNIVERSARY',
+    'DICT_ENG_SEMESTER',
+    'DICT_ENG_ERA',
+    'DICT_ENG_CHRONOLOGICAL',
+    'DICT_ENG_PROMPT',
+    'DICT_ENG_OVERDUE',
+    'DICT_ENG_OCCASIONALLY'
+  ],
+);

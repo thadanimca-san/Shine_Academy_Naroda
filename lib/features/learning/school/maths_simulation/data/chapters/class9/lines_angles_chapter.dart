@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9LinesAnglesChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_linesangles", chapterName: "Lines and Angles",
+  concepts: ["Types of angles and pairs of angles.", "Parallel lines and a transversal.", "Angle sum property of a triangle."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "la9_1", question: "Two angles whose sum is 90° are called [ complementary angles / supplementary angles ].", answer: "complementary angles"),
+    QuestionItem(id: "la9_2", question: "Two angles whose sum is 180° are called [ supplementary angles / complementary angles ].", answer: "supplementary angles"),
+    QuestionItem(id: "la9_3", question: "If a ray stands on a line, the sum of the two adjacent angles formed is [ 180° / 90° ], called the linear pair axiom.", answer: "180°"),
+    QuestionItem(id: "la9_4", question: "When two lines intersect, the vertically opposite angles are [ equal / supplementary ].", answer: "equal"),
+    QuestionItem(id: "la9_5", question: "A line that intersects two or more given lines at distinct points is called a [ transversal / bisector ].", answer: "transversal"),
+    QuestionItem(id: "la9_6", question: "When a transversal intersects two parallel lines, each pair of corresponding angles is [ equal / supplementary ].", answer: "equal"),
+    QuestionItem(id: "la9_7", question: "When a transversal intersects two parallel lines, each pair of alternate interior angles is [ equal / supplementary ].", answer: "equal"),
+    QuestionItem(id: "la9_8", question: "When a transversal intersects two parallel lines, each pair of interior angles on the same side is [ supplementary / equal ].", answer: "supplementary"),
+    QuestionItem(id: "la9_9", question: "Lines that are parallel to the same line are [ parallel to each other / perpendicular to each other ].", answer: "parallel to each other"),
+    QuestionItem(id: "la9_10", question: "The sum of all three angles of a triangle is [ 180° / 360° ].", answer: "180°"),
+    QuestionItem(id: "la9_11", question: "If a side of a triangle is extended, the exterior angle formed equals the sum of the [ two interior opposite angles / adjacent angle only ].", answer: "two interior opposite angles"),
+    QuestionItem(id: "la9_12", question: "An angle greater than 180° but less than 360° is called a [ reflex angle / obtuse angle ].", answer: "reflex angle"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "la9n1", question: "Find the complement of a 42° angle.", given: ["Angle = 42°"], solutionSteps: ["Complement = 90° − 42°", "= 48°"], numericAnswer: 48, unit: "°"),
+    NumericalProblem(id: "la9n2", question: "Two angles of a triangle are 55° and 65°. Find the third.", given: ["Angle1 = 55°", "Angle2 = 65°"], solutionSteps: ["Third angle = 180° − 55° − 65°", "= 60°"], numericAnswer: 60, unit: "°"),
+    NumericalProblem(id: "la9n3", question: "An exterior angle of a triangle is 110°, and one interior opposite angle is 40°. Find the other interior opposite angle.", given: ["Exterior = 110°", "One angle = 40°"], solutionSteps: ["Exterior = sum of interior opposite angles", "Other = 110° − 40°", "= 70°"], numericAnswer: 70, unit: "°"),
+    NumericalProblem(id: "la9n4", question: "A transversal cuts two parallel lines. If one interior angle on the same side is 75°, find the co-interior angle.", given: ["One co-interior angle = 75°"], solutionSteps: ["Co-interior angles are supplementary.", "Other angle = 180° − 75°", "= 105°"], numericAnswer: 105, unit: "°"),
+    NumericalProblem(id: "la9n5", question: "Two angles on a straight line are in the ratio 5:4. Find the smaller angle.", given: ["Ratio = 5:4", "Sum = 180°"], solutionSteps: ["Total parts = 5+4 = 9", "1 part = 180°/9 = 20°", "Smaller angle = 4 × 20° = 80°"], numericAnswer: 80, unit: "°"),
+    NumericalProblem(id: "la9n6", question: "Find the value of x if angles (2x+15)° and (3x−5)° are vertically opposite.", given: ["(2x+15)° = (3x−5)°"], solutionSteps: ["2x + 15 = 3x − 5", "20 = x", "x = 20"], numericAnswer: 20, unit: ""),
+    NumericalProblem(id: "la9n7", question: "In triangle ABC, angle A = 90° and angle B = 35°. Find angle C.", given: ["Angle A = 90°", "Angle B = 35°"], solutionSteps: ["Sum of angles = 180°", "Angle C = 180° − 90° − 35°", "= 55°"], numericAnswer: 55, unit: "°"),
+    NumericalProblem(id: "la9n8", question: "A ray stands on a line forming two angles, one of which is 3 times the other. Find the smaller angle.", given: ["Angle1 + Angle2 = 180°", "Angle1 = 3 × Angle2"], solutionSteps: ["3x + x = 180°, 4x = 180°", "x = 45°"], numericAnswer: 45, unit: "°"),
+    NumericalProblem(id: "la9n9", question: "In a triangle, the angles are in the ratio 3:4:5. Find the largest angle.", given: ["Ratio = 3:4:5", "Sum = 180°"], solutionSteps: ["Total parts = 3+4+5 = 12", "1 part = 180°/12 = 15°", "Largest = 5 × 15° = 75°"], numericAnswer: 75, unit: "°"),
+    NumericalProblem(id: "la9n10", question: "Find the complement of a 27° angle.", given: ["Angle = 27°"], solutionSteps: ["Complement = 90° − 27°", "= 63°"], numericAnswer: 63, unit: "°"),
+  ],
+);

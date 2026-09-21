@@ -1,0 +1,86 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8NatureOfMatterChapter = ChapterModel(
+  standard: 8, subject: "Chemistry", chapterId: "cls8_chem_natureofmatter", chapterName: "Nature of Matter: Elements, Compounds, and Mixtures",
+  imagePath: "assets/images/elements_ch8.jpg",
+  concepts: [
+    "A mixture forms when two or more substances combine without reacting chemically; components keep their own properties.",
+    "A pure substance cannot be separated into other kinds of matter by physical processes; it can be an element or a compound.",
+    "Elements are the simplest substances, made of identical atoms, and cannot be broken into simpler substances.",
+    "Compounds form when elements combine chemically in a fixed ratio, producing a new substance with different properties.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "nm1", question: "When two or more substances are mixed and each retains its own properties, the result is called a [ mixture / compound ].", answer: "mixture"),
+    QuestionItem(id: "nm2", question: "The individual substances that make up a mixture are called its [ components / elements ].", answer: "components"),
+    QuestionItem(id: "nm3", question: "A mixture whose components are visible with the naked eye or a magnifying glass is called a [ non-uniform / uniform ] mixture.", answer: "non-uniform"),
+    QuestionItem(id: "nm4", question: "A mixture whose components are evenly distributed and cannot be distinguished, even under a microscope, is called a [ uniform / non-uniform ] mixture.", answer: "uniform"),
+    QuestionItem(id: "nm5", question: "A homogeneous mixture of two or more metals, like brass or bronze, is called an [ alloy / compound ].", answer: "alloy"),
+    QuestionItem(id: "nm6", question: "In science, a substance that has no other substance present in it is called a [ pure substance / mixture ].", answer: "pure substance"),
+    QuestionItem(id: "nm7", question: "A pure substance cannot be separated into other kinds of matter by any [ physical process / chemical reaction ].", answer: "physical process"),
+    QuestionItem(id: "nm8", question: "Substances that cannot be broken down into simpler substances, and are made of identical atoms, are called [ elements / compounds ].", answer: "elements"),
+    QuestionItem(id: "nm9", question: "Two or more atoms of an element combining to form a stable particle is called a [ molecule / mixture ].", answer: "molecule"),
+    QuestionItem(id: "nm10", question: "Elements with properties intermediate between metals and non-metals, like silicon and boron, are called [ metalloids / alloys ].", answer: "metalloids"),
+    QuestionItem(id: "nm11", question: "Substances formed when different elements combine chemically in a fixed ratio to form something entirely new are called [ compounds / mixtures ].", answer: "compounds"),
+    QuestionItem(id: "nm12", question: "In water, the ratio of hydrogen atoms to oxygen atoms is [ 2:1 / 1:1 ].", answer: "2:1"),
+    QuestionItem(id: "nm13", question: "The constituent elements of a compound [ cannot / can ] be separated by any physical method.", answer: "cannot"),
+    QuestionItem(id: "nm14", question: "When iron filings and sulfur powder are simply mixed (not heated), a magnet [ attracts the iron / has no effect ], showing the components have kept their own properties.", answer: "attracts the iron"),
+    QuestionItem(id: "nm15", question: "When iron filings and sulfur are heated together, they form iron sulfide, which is [ a compound, not attracted by a magnet / still a mixture, attracted by a magnet ].", answer: "a compound, not attracted by a magnet"),
+    QuestionItem(id: "nm16", question: "Natural, solid substances found in rocks, with a fixed chemical composition, are called [ minerals / alloys ].", answer: "minerals"),
+    QuestionItem(id: "nm17", question: "Minerals that are pure elements (not compounds), like gold, silver, or sulfur, are called [ native minerals / compound minerals ].", answer: "native minerals"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. Mixtures',
+      iconKey: 'theory',
+      points: [
+        'A mixture forms when two or more substances combine but each keeps its own properties — the components do NOT react chemically with each other.',
+        'Non-uniform mixtures: components are visible (with the eye or a magnifying glass), e.g. sprout salad, sand in water.',
+        'Uniform mixtures: components are evenly spread and cannot be seen separately, even under a microscope, e.g. sugar dissolved in water, air.',
+        'Alloys are uniform mixtures of two or more metals (or a metal and non-metal) — e.g. brass (copper + zinc), bronze (copper + tin), stainless steel (iron + nickel + chromium + carbon). Ancient Indian texts called such metal mixtures Mishraloha.',
+        'Mixtures can combine any states of matter: gas-gas (air), gas-liquid (soda water), solid-liquid (seawater), solid-solid (alloys), and more.',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Pure Substances',
+      iconKey: 'plant_growth',
+      points: [
+        '"Pure" in everyday language just means unadulterated (no cheap substances mixed in). In science, "pure" means something much stricter.',
+        'A pure substance cannot be separated into other kinds of matter by any physical process — it consists of only ONE type of constituent particle.',
+        'Even something that looks pure in daily life (like milk) can be scientifically impure if it\'s made of more than one substance.',
+        'A pure substance is either an element or a compound.',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Elements',
+      iconKey: 'organelles',
+      points: [
+        'Elements are the simplest substances — they cannot be broken down further into simpler substances by any chemical method. They are the building blocks of all matter.',
+        'Each element is made of identical atoms, different from the atoms of every other element. Examples: hydrogen, oxygen, gold, silver, sulfur, carbon.',
+        'Passing electric current through water splits it into hydrogen and oxygen gas — proving water is NOT an element, since it breaks into simpler substances.',
+        'Elements are classified as metals, non-metals, or metalloids (elements with in-between properties, like silicon and boron).',
+        '118 elements are known today; most are solids at room temperature. Only mercury (metal) and bromine (non-metal) are liquid at room temperature; 11 elements are gases.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Compounds',
+      iconKey: 'muscle',
+      points: [
+        'A compound forms when two or more different elements combine CHEMICALLY in a fixed ratio, creating a substance with entirely new properties, different from its constituent elements.',
+        'Water (H₂O): hydrogen (a fuel) + oxygen (supports combustion) combine to form water — which extinguishes fire! A striking example of how a compound\'s properties differ completely from its elements.',
+        'Common salt (sodium chloride): sodium (a reactive soft metal) + chlorine (a hazardous gas) combine 1:1 to form a harmless, taste-enhancing substance.',
+        'A compound\'s elements are held together so tightly that physical methods (like evaporation or filtering) CANNOT separate them — only a chemical reaction can.',
+        'The classic proof — Iron + Sulfur: simply mixing iron filings and sulfur powder gives a mixture (magnet still attracts the iron, acid still releases hydrogen gas from the iron). But HEATING them together forms iron sulfide, a compound: no longer magnetic, reacts with acid to give a different, foul-smelling gas (hydrogen sulfide) — proving a genuinely new substance formed.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Minerals & Real-World Uses',
+      iconKey: 'stomata',
+      points: [
+        'Most rocks are mixtures of minerals — natural, solid substances with a fixed chemical composition, e.g. quartz, calcite, mica, olivine.',
+        'Most minerals are compounds; a few "native minerals" are pure elements, like gold, silver, sulfur, and carbon.',
+        'Everyday materials come from all three categories: air (mixture) and water (compound) sustain life; iron and aluminium (elements) build bridges and vehicles; cement (made from calcite, quartz, and iron oxide minerals) and concrete (a mixture) construct buildings.',
+        'Traditional Indian Dhokra art uses molten brass or bronze (alloys/mixtures) poured into a wax-and-clay mould to create detailed metal figures.',
+      ],
+    ),
+  ],
+);

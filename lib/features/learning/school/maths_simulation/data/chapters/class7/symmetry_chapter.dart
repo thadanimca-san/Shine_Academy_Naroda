@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7SymmetryChapter = ChapterModel(
+  standard: 7, subject: "Mathematics", chapterId: "cls7_math_symmetry", chapterName: "Symmetry",
+  concepts: ["Lines of symmetry for regular polygons.", "Rotational symmetry and the angle of rotation.", "Figures with both line and rotational symmetry."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "sy1", question: "A figure has [ line symmetry / rotational symmetry ] if it can be folded along a line so both halves match exactly.", answer: "line symmetry"),
+    QuestionItem(id: "sy2", question: "The imaginary line along which a figure can be folded to get identical halves is called the [ line (axis) of symmetry / centre of rotation ].", answer: "line (axis) of symmetry"),
+    QuestionItem(id: "sy3", question: "A figure that looks exactly the same after being rotated by less than 360° about a point has [ rotational symmetry / no symmetry ].", answer: "rotational symmetry"),
+    QuestionItem(id: "sy4", question: "The fixed point about which a figure rotates is called the [ centre of rotation / line of symmetry ].", answer: "centre of rotation"),
+    QuestionItem(id: "sy5", question: "The number of times a figure matches itself in a full 360° rotation is called its [ order of rotational symmetry / angle of symmetry ].", answer: "order of rotational symmetry"),
+    QuestionItem(id: "sy6", question: "A regular polygon with n sides has [ n / n/2 ] lines of symmetry.", answer: "n"),
+    QuestionItem(id: "sy7", question: "An equilateral triangle has [ 3 / 1 ] lines of symmetry.", answer: "3"),
+    QuestionItem(id: "sy8", question: "A square has [ 4 / 2 ] lines of symmetry.", answer: "4"),
+    QuestionItem(id: "sy9", question: "A regular pentagon has [ 5 / 4 ] lines of symmetry.", answer: "5"),
+    QuestionItem(id: "sy10", question: "A circle has [ infinite / no ] lines of symmetry.", answer: "infinite"),
+    QuestionItem(id: "sy11", question: "The order of rotational symmetry of a square is [ 4 / 2 ].", answer: "4"),
+    QuestionItem(id: "sy12", question: "The order of rotational symmetry of an equilateral triangle is [ 3 / 1 ].", answer: "3"),
+    QuestionItem(id: "sy13", question: "A scalene triangle (all sides different) has [ no / three ] lines of symmetry.", answer: "no"),
+    QuestionItem(id: "sy14", question: "The English letter 'H' has [ both line and rotational symmetry / only line symmetry ].", answer: "both line and rotational symmetry"),
+    QuestionItem(id: "sy15", question: "A figure with rotational symmetry of order 1 has [ no real rotational symmetry / high symmetry ], since it only matches itself after a full 360° turn.", answer: "no real rotational symmetry"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "syn1", question: "Find the number of lines of symmetry in a regular hexagon.", given: ["Regular hexagon (n = 6 sides)"], solutionSteps: ["A regular polygon with n sides has n lines of symmetry.", "n = 6", "Lines of symmetry = 6"], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "syn2", question: "Find the angle of rotation for a square to look the same for the first time.", given: ["Square, order of rotational symmetry = 4"], solutionSteps: ["Angle of rotation = 360° ÷ order", "= 360° ÷ 4", "= 90°"], numericAnswer: 90, unit: "°"),
+    NumericalProblem(id: "syn3", question: "Find the angle of rotation for an equilateral triangle to look the same for the first time.", given: ["Equilateral triangle, order of rotational symmetry = 3"], solutionSteps: ["Angle of rotation = 360° ÷ order", "= 360° ÷ 3", "= 120°"], numericAnswer: 120, unit: "°"),
+    NumericalProblem(id: "syn4", question: "Find the number of lines of symmetry in a regular octagon (8 sides).", given: ["Regular octagon (n = 8 sides)"], solutionSteps: ["A regular polygon with n sides has n lines of symmetry.", "n = 8", "Lines of symmetry = 8"], numericAnswer: 8, unit: ""),
+    NumericalProblem(id: "syn5", question: "A figure has rotational symmetry of order 5. Find its angle of rotation.", given: ["Order of rotational symmetry = 5"], solutionSteps: ["Angle of rotation = 360° ÷ order", "= 360° ÷ 5", "= 72°"], numericAnswer: 72, unit: "°"),
+    NumericalProblem(id: "syn6", question: "A figure's smallest angle of rotational symmetry is 60°. Find its order of rotational symmetry.", given: ["Angle of rotation = 60°"], solutionSteps: ["Order = 360° ÷ angle of rotation", "= 360° ÷ 60°", "= 6"], numericAnswer: 6, unit: ""),
+    NumericalProblem(id: "syn7", question: "Find the number of lines of symmetry in a regular decagon (10 sides).", given: ["Regular decagon (n = 10 sides)"], solutionSteps: ["A regular polygon with n sides has n lines of symmetry.", "n = 10", "Lines of symmetry = 10"], numericAnswer: 10, unit: ""),
+  ],
+);

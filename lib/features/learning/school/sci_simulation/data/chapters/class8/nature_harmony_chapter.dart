@@ -1,0 +1,88 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class8NatureHarmonyChapter = ChapterModel(
+  standard: 8, subject: "Biology", chapterId: "cls8_bio_natureharmony", chapterName: "How Nature Works in Harmony",
+  imagePath: "assets/images/harmony_ch12.jpg",
+  concepts: [
+    "A habitat has biotic (living) and abiotic (non-living) components; these interact to form an ecosystem.",
+    "Organisms are producers, consumers (herbivore/carnivore/omnivore), or decomposers, linked by food chains that interconnect into food webs.",
+    "Relationships among organisms include mutualism, commensalism, and parasitism, alongside competition for shared resources.",
+    "Human activity (deforestation, pollution, overexploitation) disrupts the natural balance of ecosystems; conservation and sustainable farming help restore it.",
+  ],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "nh1", question: "A place that provides the right living conditions for an organism to live and grow is called its [ habitat / population ].", answer: "habitat"),
+    QuestionItem(id: "nh2", question: "The living beings in a habitat are called its [ biotic / abiotic ] components, and the non-living things are called its [ abiotic / biotic ] components.", answer: "biotic"),
+    QuestionItem(id: "nh3", question: "A group of organisms of the same kind living together in a habitat is called a [ population / community ].", answer: "population"),
+    QuestionItem(id: "nh4", question: "Different populations of various organisms sharing the same habitat together form a [ community / ecosystem ].", answer: "community"),
+    QuestionItem(id: "nh5", question: "The interaction between the biotic and abiotic components of a habitat forms an [ ecosystem / population ].", answer: "ecosystem"),
+    QuestionItem(id: "nh6", question: "Ecosystems based in water, like ponds, rivers, and lakes, are called [ aquatic / terrestrial ] ecosystems.", answer: "aquatic"),
+    QuestionItem(id: "nh7", question: "Ecosystems based on land, like forests, farms, and grasslands, are called [ terrestrial / aquatic ] ecosystems.", answer: "terrestrial"),
+    QuestionItem(id: "nh8", question: "Organisms that make their own food, like green plants, are called [ producers or autotrophs / consumers or heterotrophs ].", answer: "producers or autotrophs"),
+    QuestionItem(id: "nh9", question: "Organisms that cannot make their own food and depend on others for it are called [ consumers or heterotrophs / producers or autotrophs ].", answer: "consumers or heterotrophs"),
+    QuestionItem(id: "nh10", question: "Organisms that eat only plants are called [ herbivores / carnivores ]; those that eat only animals are called [ carnivores / herbivores ].", answer: "herbivores"),
+    QuestionItem(id: "nh11", question: "Organisms that eat both plants and animals, like crows and foxes, are called [ omnivores / herbivores ].", answer: "omnivores"),
+    QuestionItem(id: "nh12", question: "A simple sequence showing 'who eats whom' in an ecosystem is called a [ food chain / food web ].", answer: "food chain"),
+    QuestionItem(id: "nh13", question: "The interconnected network formed when multiple food chains overlap in an ecosystem is called a [ food web / trophic level ].", answer: "food web"),
+    QuestionItem(id: "nh14", question: "The specific position an organism occupies in a food chain (e.g. producer, herbivore, carnivore) is called its [ trophic level / habitat ].", answer: "trophic level"),
+    QuestionItem(id: "nh15", question: "Organisms like fungi and bacteria that break down dead plants and animals, recycling nutrients into the soil, are called [ decomposers or saprotrophs / producers ].", answer: "decomposers or saprotrophs"),
+    QuestionItem(id: "nh16", question: "A relationship where BOTH organisms benefit, such as bees and flowers, is called [ mutualism / parasitism ].", answer: "mutualism"),
+    QuestionItem(id: "nh17", question: "A relationship where one organism benefits and the other is unaffected, such as orchids growing on trees, is called [ commensalism / mutualism ].", answer: "commensalism"),
+    QuestionItem(id: "nh18", question: "A relationship where one organism benefits while the other is harmed, such as ticks on a dog, is called [ parasitism / commensalism ].", answer: "parasitism"),
+    QuestionItem(id: "nh19", question: "Growing the same crop repeatedly on the same land, which can reduce biodiversity and harm pollinators, is called [ monoculture / crop rotation ].", answer: "monoculture"),
+    QuestionItem(id: "nh20", question: "The mid-20th century period when tractors, synthetic fertilisers, and pesticides greatly increased India's food production is called the [ Green Revolution / Blue Revolution ].", answer: "Green Revolution"),
+  ],
+  revisionNotes: [
+    RevisionNote(
+      title: '1. Habitats & Their Components',
+      iconKey: 'plant_growth',
+      points: [
+        'A habitat is a place that provides the right living conditions for an organism — could be a pond, a forest, a farm, or even the bark of a tree.',
+        'Biotic components: all living beings in a habitat (plants, animals, microorganisms). Abiotic components: non-living things (air, water, soil, sunlight, temperature).',
+        'Different habitats offer different living conditions — this is why some organisms live on land and others in water, and why different organisms in the SAME habitat use resources differently (e.g. a nocturnal snake and a daytime rodent coexisting).',
+      ],
+    ),
+    RevisionNote(
+      title: '2. Population, Community & Ecosystem',
+      iconKey: 'organelles',
+      points: [
+        'Population: a group of the SAME kind of organism living together in a habitat (e.g. all the fish of one species in a pond).',
+        'Community: different populations of various organisms sharing the same habitat, interacting and depending on one another.',
+        'Ecosystem: formed by the interaction between the biotic community and the abiotic components of a habitat.',
+        'Hierarchy: Individual → Population → Community → Ecosystem.',
+        'Ecosystems are aquatic (ponds, rivers, lakes, oceans) or terrestrial (forests, grasslands, farms) — and can be natural or human-made (fish ponds, farms, parks).',
+      ],
+    ),
+    RevisionNote(
+      title: '3. Food Chains, Food Webs & Trophic Levels',
+      iconKey: 'muscle',
+      points: [
+        'Producers (autotrophs): make their own food via photosynthesis, e.g. green plants — form the base of every food chain.',
+        'Consumers (heterotrophs): cannot make their own food. Herbivores eat only plants; carnivores eat only animals; omnivores eat both.',
+        'Food chain: a simple sequence of "who eats whom", e.g. Grass → Grasshopper → Frog → Snake → Eagle.',
+        'Trophic level: an organism\'s specific position in a food chain (producers = 1st level, herbivores = 2nd, small carnivores = 3rd, and so on) — usually drawn as a pyramid, since fewer organisms exist at each higher level.',
+        'Food web: since most organisms are eaten by more than one type of predator, food chains interconnect into a larger network called a food web — a much more realistic picture of an ecosystem than a single chain.',
+      ],
+    ),
+    RevisionNote(
+      title: '4. Decomposers & Ecological Balance',
+      iconKey: 'stomata',
+      points: [
+        'Decomposers (saprotrophs), like fungi and bacteria, break down dead plants, animals, and waste into simpler substances — this process is called decomposition, and it recycles vital nutrients back into the soil.',
+        'A change to one part of an ecosystem cascades through the rest: e.g. plants dying in a polluted pond → less oxygen → fish die → fewer predators → insect population grows unchecked → pests spread to nearby farmland.',
+        'Species interactions: mutualism (both benefit, e.g. bees and flowers), commensalism (one benefits, other unaffected, e.g. orchids on tree branches), parasitism (one benefits, other harmed, e.g. ticks on a dog).',
+        'Competition for shared resources (food, water, space, sunlight) helps naturally control population sizes and keep an ecosystem balanced — removing this balance (e.g. banning frog-leg export after overharvesting caused pest outbreaks) shows how fragile these systems are.',
+      ],
+    ),
+    RevisionNote(
+      title: '5. Ecosystem Benefits & Human Impact',
+      iconKey: 'joints',
+      points: [
+        'Ecosystems provide humans with clean air, fertile soil, food, fibres, timber, medicines, and recreational/aesthetic value.',
+        'The Sundarbans (India-Bangladesh, largest mangrove forest in the world, a UNESCO World Heritage Site) protects coastal areas from storms/floods and absorbs CO₂ — but faces threats from logging, illegal hunting, and pollution.',
+        'The Green Revolution (mid-20th century): tractors, synthetic fertilisers, and pesticides boosted India\'s food production, solving a major food crisis — but overuse of these methods is now known to reduce soil fertility, harm beneficial microorganisms/pollinators, and increase pest resistance.',
+        'Monoculture (growing the same single crop repeatedly) reduces biodiversity and can harm long-term soil and ecosystem health; sustainable/organic farming aims to reduce chemical dependence.',
+        'Protected areas (national parks, wildlife sanctuaries, biosphere reserves, e.g. Jim Corbett, Manas, Nilgiri Biosphere Reserve) help conserve threatened habitats and endangered species for future generations.',
+      ],
+    ),
+  ],
+);

@@ -1,0 +1,38 @@
+import '../models/dictionary_word.dart';
+
+const class6Transport = DictionaryTopic(
+  id: 'class6_transport',
+  title: 'Transport & Vehicles',
+  grade: 'Class 6',
+  wordIds: [
+    'DICT_ENG_VEHICLE',
+    'DICT_ENG_PASSENGER',
+    'DICT_ENG_COMMUTE',
+    'DICT_ENG_FARE',
+    'DICT_ENG_SIGNAL',
+    'DICT_ENG_PEDESTRIAN',
+    'DICT_ENG_VESSEL',
+    'DICT_ENG_FERRY',
+    'DICT_ENG_SUBMARINE',
+    'DICT_ENG_AIRCRAFT',
+    'DICT_ENG_RUNWAY',
+    'DICT_ENG_COCKPIT',
+    'DICT_ENG_HELICOPTER',
+    'DICT_ENG_LOCOMOTIVE',
+    'DICT_ENG_PLATFORM',
+    'DICT_ENG_COMPARTMENT',
+    'DICT_ENG_METRO',
+    'DICT_ENG_VENDOR',
+    'DICT_ENG_ACCELERATE',
+    'DICT_ENG_BRAKE',
+    'DICT_ENG_PUNCTURE',
+    'DICT_ENG_CONGESTION',
+    'DICT_ENG_HIGHWAY',
+    'DICT_ENG_TOLL',
+    'DICT_ENG_LICENSE',
+    'DICT_ENG_MECHANIC',
+    'DICT_ENG_CARGO',
+    'DICT_ENG_CONVENIENT',
+    'DICT_ENG_PUNCTUALITY'
+  ],
+);

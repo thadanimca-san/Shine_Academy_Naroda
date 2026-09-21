@@ -1,0 +1,31 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class7PracticalGeometryChapter = ChapterModel(
+  standard: 7, subject: "Mathematics", chapterId: "cls7_math_practicalgeometry", chapterName: "Practical Geometry",
+  concepts: ["Constructing a line parallel to a given line through a point.", "Constructing triangles given SSS, SAS, ASA and RHS data.", "Using ruler and compass for accurate constructions."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "pg1", question: "To draw a line parallel to a given line through a point, we use the property that alternate angles made by a [ transversal / perpendicular ] are equal.", answer: "transversal"),
+    QuestionItem(id: "pg2", question: "A triangle can be constructed uniquely if the lengths of all [ three sides are known (SSS) / two sides only are known ].", answer: "three sides are known (SSS)"),
+    QuestionItem(id: "pg3", question: "A triangle can be constructed given two sides and the [ included angle between them (SAS) / any angle ].", answer: "included angle between them (SAS)"),
+    QuestionItem(id: "pg4", question: "A triangle can be constructed given two angles and the [ included side between them (ASA) / any side ].", answer: "included side between them (ASA)"),
+    QuestionItem(id: "pg5", question: "A right triangle can be constructed given the hypotenuse and [ one side (RHS) / one angle only ].", answer: "one side (RHS)"),
+    QuestionItem(id: "pg6", question: "The tool used to draw arcs and circles of a required radius in construction is the [ compass / protractor ].", answer: "compass"),
+    QuestionItem(id: "pg7", question: "The tool used to measure and draw angles of a specific size is the [ protractor / compass ].", answer: "protractor"),
+    QuestionItem(id: "pg8", question: "A triangle cannot be constructed if the sum of two given sides is [ less than or equal to the third side / greater than the third side ].", answer: "less than or equal to the third side"),
+    QuestionItem(id: "pg9", question: "In constructing a triangle with SSS data, we draw one side first, then use a [ compass to mark the other two sides from its endpoints / protractor only ].", answer: "compass to mark the other two sides from its endpoints"),
+    QuestionItem(id: "pg10", question: "For the ASA construction, if the given angles are not adjacent to the given side, we first find the [ third angle using the angle sum property / hypotenuse ].", answer: "third angle using the angle sum property"),
+    QuestionItem(id: "pg11", question: "A line drawn through a point parallel to a given line can also be constructed using [ corresponding angles / supplementary angles only ].", answer: "corresponding angles"),
+    QuestionItem(id: "pg12", question: "When constructing a triangle, drawing the base first as a straight line segment is usually the [ first step / last step ].", answer: "first step"),
+    QuestionItem(id: "pg13", question: "In an SAS construction, the included angle is drawn at one endpoint of the [ given side / hypotenuse only ] using a protractor.", answer: "given side"),
+    QuestionItem(id: "pg14", question: "Ruler and compass constructions aim to be more [ accurate than freehand sketches / decorative than freehand sketches ].", answer: "accurate than freehand sketches"),
+    QuestionItem(id: "pg15", question: "In RHS construction, 'H' refers to the [ hypotenuse, the longest side of a right triangle / height of the triangle ].", answer: "hypotenuse, the longest side of a right triangle"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "pgn1", question: "For an ASA construction, two angles of a triangle are 55° and 65°. Find the third angle needed to check the construction.", given: ["Angle 1 = 55°", "Angle 2 = 65°"], solutionSteps: ["Sum of angles in a triangle = 180°", "Third angle = 180° − 55° − 65°", "= 60°"], numericAnswer: 60, unit: "°"),
+    NumericalProblem(id: "pgn2", question: "Check if a triangle with sides 4 cm, 5 cm and 10 cm can be constructed. Give 1 if possible, 0 if not.", given: ["Sides: 4 cm, 5 cm, 10 cm"], solutionSteps: ["Check: 4 + 5 = 9, which is NOT greater than 10.", "The triangle inequality fails, so construction is not possible."], numericAnswer: 0, unit: "(0 = not possible)"),
+    NumericalProblem(id: "pgn3", question: "Check if a triangle with sides 6 cm, 7 cm and 8 cm can be constructed. Give 1 if possible, 0 if not.", given: ["Sides: 6 cm, 7 cm, 8 cm"], solutionSteps: ["Check all pairs: 6+7=13>8 ✓, 6+8=14>7 ✓, 7+8=15>6 ✓", "All conditions satisfied, construction is possible."], numericAnswer: 1, unit: "(1 = possible)"),
+    NumericalProblem(id: "pgn4", question: "For an SAS construction, a triangle has sides 6 cm and 8 cm with included angle 90°. Find the length of the third side (hypotenuse).", given: ["Two sides = 6 cm, 8 cm", "Included angle = 90°"], solutionSteps: ["Since the included angle is 90°, use Pythagoras: third side² = 6² + 8²", "= 36 + 64 = 100", "third side = √100 = 10 cm"], numericAnswer: 10, unit: "cm"),
+    NumericalProblem(id: "pgn5", question: "In constructing a right triangle by RHS, the hypotenuse is 15 cm and one leg is 9 cm. Find the other leg to verify the construction.", given: ["Hypotenuse = 15 cm", "One leg = 9 cm"], solutionSteps: ["other leg² = 15² − 9²", "= 225 − 81 = 144", "other leg = √144 = 12 cm"], numericAnswer: 12, unit: "cm"),
+    NumericalProblem(id: "pgn6", question: "For an ASA construction, two given angles are 40° and (2x)°, and the third angle is 80°. Find x.", given: ["Angle 1 = 40°", "Angle 3 = 80°", "Angle 2 = (2x)°"], solutionSteps: ["Sum of angles = 180°: 40 + 2x + 80 = 180", "2x = 60", "x = 30"], numericAnswer: 30, unit: ""),
+  ],
+);

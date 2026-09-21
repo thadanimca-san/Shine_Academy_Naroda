@@ -1,0 +1,32 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class9TrianglesChapter = ChapterModel(
+  standard: 9, subject: "Mathematics", chapterId: "cls9_math_triangles", chapterName: "Triangles",
+  concepts: ["Congruence criteria: SAS, ASA, SSS, RHS.", "Properties of a triangle: angles opposite equal sides.", "Inequalities in a triangle."],
+  formulas: [],
+  fillInTheBlanks: [
+    QuestionItem(id: "tr9_1", question: "Two figures are called congruent if they have the [ exact same shape and size / same shape only ].", answer: "exact same shape and size"),
+    QuestionItem(id: "tr9_2", question: "The SAS congruence rule requires two sides and the [ included angle / non-included angle ] to be equal.", answer: "included angle"),
+    QuestionItem(id: "tr9_3", question: "The ASA congruence rule requires two angles and the [ included side / non-included side ] to be equal.", answer: "included side"),
+    QuestionItem(id: "tr9_4", question: "In an isosceles triangle, the angles opposite the equal sides are [ equal / different ].", answer: "equal"),
+    QuestionItem(id: "tr9_5", question: "In a triangle, the side opposite the larger angle is [ longer / shorter ].", answer: "longer"),
+    QuestionItem(id: "tr9_6", question: "In a triangle, the angle opposite the longer side is [ larger / smaller ].", answer: "larger"),
+    QuestionItem(id: "tr9_7", question: "The sum of any two sides of a triangle is always [ greater than the third side / less than the third side ].", answer: "greater than the third side"),
+    QuestionItem(id: "tr9_8", question: "The RHS congruence rule applies specifically to [ right triangles / equilateral triangles ].", answer: "right triangles"),
+    QuestionItem(id: "tr9_9", question: "Once triangles are proved congruent, corresponding parts are equal — abbreviated [ CPCT / CPCTC only ].", answer: "CPCT"),
+    QuestionItem(id: "tr9_10", question: "A triangle in which all three sides are equal is called [ equilateral / scalene ].", answer: "equilateral"),
+    QuestionItem(id: "tr9_11", question: "All angles of an equilateral triangle measure [ 60° / 90° ] each.", answer: "60°"),
+    QuestionItem(id: "tr9_12", question: "SSS congruence requires all [ three corresponding sides / three corresponding angles ] to be equal.", answer: "three corresponding sides"),
+    QuestionItem(id: "tr9_13", question: "A triangle with two equal sides is called an [ isosceles triangle / scalene triangle ].", answer: "isosceles triangle"),
+    QuestionItem(id: "tr9_14", question: "A triangle with no equal sides is called a [ scalene triangle / isosceles triangle ].", answer: "scalene triangle"),
+    QuestionItem(id: "tr9_15", question: "The difference between the lengths of any two sides of a triangle is always [ less than the third side / greater than the third side ].", answer: "less than the third side"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "tr9n1", question: "In an isosceles triangle, the base angles are equal and the vertex angle is 40°. Find each base angle.", given: ["Vertex angle = 40°"], solutionSteps: ["Sum of base angles = 180° − 40° = 140°", "Each base angle = 140°/2", "= 70°"], numericAnswer: 70, unit: "°"),
+    NumericalProblem(id: "tr9n2", question: "In triangle ABC ≅ triangle DEF, AB = 8 cm. Find DE.", given: ["Triangle ABC ≅ Triangle DEF", "AB = 8 cm"], solutionSteps: ["By CPCT, AB corresponds to DE.", "DE = 8 cm"], numericAnswer: 8, unit: "cm"),
+    NumericalProblem(id: "tr9n3", question: "Check whether a triangle with sides 3 cm, 4 cm, 8 cm is valid (1 = yes, 0 = no).", given: ["Sides: 3 cm, 4 cm, 8 cm"], solutionSteps: ["Check: 3+4 = 7, which is NOT greater than 8.", "The triangle inequality fails."], numericAnswer: 0, unit: "(0 = invalid)"),
+    NumericalProblem(id: "tr9n4", question: "Two sides of a triangle are 12 cm and 7 cm. Find the maximum possible whole-number length of the third side (must be less than sum of other two).", given: ["Side 1 = 12 cm", "Side 2 = 7 cm"], solutionSteps: ["Third side must be less than 12+7=19 and greater than 12−7=5.", "Maximum whole-number length less than 19 is 18 cm."], numericAnswer: 18, unit: "cm"),
+    NumericalProblem(id: "tr9n5", question: "In triangle PQR, PQ = QR (isosceles), and angle P = 50°. Find angle R.", given: ["PQ = QR", "Angle P = 50°"], solutionSteps: ["Since PQ = QR, angles opposite them are equal: angle R = angle P", "Angle R = 50°"], numericAnswer: 50, unit: "°"),
+    NumericalProblem(id: "tr9n6", question: "In an equilateral triangle, find the measure of each angle.", given: ["Equilateral triangle"], solutionSteps: ["All three angles are equal and sum to 180°.", "Each angle = 180°/3", "= 60°"], numericAnswer: 60, unit: "°"),
+    NumericalProblem(id: "tr9n7", question: "In triangle ABC ≅ triangle XYZ by SAS, angle B = (4x)° and angle Y = 76°. Find x.", given: ["Angle B = (4x)°", "Angle Y = 76°"], solutionSteps: ["By CPCT, angle B = angle Y.", "4x = 76", "x = 19"], numericAnswer: 19, unit: ""),
+  ],
+);

@@ -1,0 +1,37 @@
+import '../models/dictionary_word.dart';
+
+const class5Family = DictionaryTopic(
+  id: 'class5_family',
+  title: 'Family & People',
+  grade: 'Class 5',
+  wordIds: [
+    'DICT_ENG_FATHER',
+    'DICT_ENG_MOTHER',
+    'DICT_ENG_PARENTS',
+    'DICT_ENG_BROTHER',
+    'DICT_ENG_SISTER',
+    'DICT_ENG_SIBLING',
+    'DICT_ENG_SON',
+    'DICT_ENG_DAUGHTER',
+    'DICT_ENG_GRANDFATHER',
+    'DICT_ENG_GRANDMOTHER',
+    'DICT_ENG_GRANDCHILDREN',
+    'DICT_ENG_UNCLE_FATHER',
+    'DICT_ENG_UNCLE_MOTHER',
+    'DICT_ENG_AUNT_FATHER',
+    'DICT_ENG_AUNT_MOTHER',
+    'DICT_ENG_COUSIN',
+    'DICT_ENG_NEPHEW',
+    'DICT_ENG_NIECE',
+    'DICT_ENG_HUSBAND',
+    'DICT_ENG_WIFE',
+    'DICT_ENG_TWINS',
+    'DICT_ENG_FAMILY',
+    'DICT_ENG_RELATIVE',
+    'DICT_ENG_NEIGHBOUR',
+    'DICT_ENG_GUARDIAN',
+    'DICT_ENG_ELDER',
+    'DICT_ENG_GENERATION',
+    'DICT_ENG_ANCESTOR'
+  ],
+);
