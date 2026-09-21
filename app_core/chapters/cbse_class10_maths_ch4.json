@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "id": "cbse_class10_maths_ch4",
+    "title": "Chapter 4: Quadratic Equations",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "quadratic_equations",
+      "roots",
+      "board_special"
+    ],
+    "learning_outcomes": [
+      "Identify quadratic equations in various forms.",
+      "Solve quadratic equations using factorization and quadratic formula.",
+      "Understand the nature of roots using the discriminant.",
+      "Apply quadratic equations to solve real-life word problems."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract algebraic concepts visual.",
+      "common_misconceptions": [
+        "Students confuse linear and quadratic equations.",
+        "Students struggle with signs when using the quadratic formula."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_01_HOOK",
+      "type": "theory",
+      "title": "A Carpet for the King",
+      "title_hi": "राजा के लिए एक कालीन",
+      "body": "• Imagine you are the royal weaver.\n• The King wants a rectangular carpet.\n• The area must be exactly 300 square meters.\n• The length should be 1 meter more than twice its breadth.\n• How would you find the exact dimensions?",
+      "body_hi": "• कल्पना कीजिए कि आप शाही बुनकर हैं।\n• राजा एक आयताकार कालीन चाहता है।\n• क्षेत्रफल ठीक 300 वर्ग मीटर होना चाहिए।\n• लंबाई इसकी चौड़ाई के दोगुने से 1 मीटर अधिक होनी चाहिए।\n• आप सटीक आयाम कैसे ज्ञात करेंगे?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_02_SOCRATIC",
+      "type": "socratic_question",
+      "question": "If we let the breadth be 'x' meters, what will be the length in terms of 'x'?",
+      "question_hi": "यदि हम चौड़ाई को 'x' मीटर मान लें, तो 'x' के पदों में लंबाई क्या होगी?",
+      "options": [
+        "x + 1",
+        "2x + 1",
+        "2x - 1",
+        "x²"
+      ],
+      "options_hi": [
+        "x + 1",
+        "2x + 1",
+        "2x - 1",
+        "x²"
+      ],
+      "correct_index": 1,
+      "explanation": "• Breadth = x meters.\n• Twice the breadth = 2x.\n• One meter more than twice = 2x + 1.",
+      "explanation_hi": "• चौड़ाई = x मीटर।\n• चौड़ाई का दोगुना = 2x।\n• दोगुने से एक मीटर अधिक = 2x + 1।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_03_DISCOVERY",
+      "type": "theory",
+      "title": "Building the Equation",
+      "title_hi": "समीकरण बनाना",
+      "body": "• We know Area = Length × Breadth.\n• Area = (2x + 1) × x.\n• Area = 2x² + x.\n• Since Area is 300, we write: 2x² + x = 300.\n• Rearranging: 2x² + x - 300 = 0.\n• When the highest power is 2, we call it a Quadratic Equation!",
+      "body_hi": "• हम जानते हैं कि क्षेत्रफल = लंबाई × चौड़ाई।\n• क्षेत्रफल = (2x + 1) × x।\n• क्षेत्रफल = 2x² + x।\n• चूँकि क्षेत्रफल 300 है, हम लिखते हैं: 2x² + x = 300।\n• पुनर्व्यवस्थित करने पर: 2x² + x - 300 = 0।\n• जब अधिकतम घात 2 होती है, तो हम इसे द्विघात समीकरण कहते हैं!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_04_REVEAL",
+      "type": "definition",
+      "title": "Quadratic Equation Standard Form",
+      "title_hi": "द्विघात समीकरण का मानक रूप",
+      "body": "• A quadratic equation in the variable x is of the form:\n• **ax² + bx + c = 0**\n• Here, a, b, and c are real numbers.\n• Condition: **a ≠ 0** (Because if a=0, the x² term disappears and it becomes a linear equation).",
+      "body_hi": "• चर x में एक द्विघात समीकरण निम्न रूप का होता है:\n• **ax² + bx + c = 0**\n• यहाँ a, b और c वास्तविक संख्याएँ हैं।\n• शर्त: **a ≠ 0** (क्योंकि यदि a=0 है, तो x² पद गायब हो जाता है और यह एक रैखिक समीकरण बन जाता है)।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_05_TEACHER_TIP",
+      "type": "teacher_tip",
+      "body": "• The word 'Quadratic' comes from the Latin word 'Quadratum', which means square.\n• This is because the highest power (degree) of the variable is a square (2).",
+      "body_hi": "• 'क्वाड्रेटिक' शब्द लैटिन शब्द 'क्वाड्रेटम' से आया है, जिसका अर्थ वर्ग होता है।\n• ऐसा इसलिए है क्योंकि चर की अधिकतम घात वर्ग (2) होती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_06_EXAMPLE_1",
+      "type": "worked_example",
+      "title": "Example 1: Represent Mathematically",
+      "title_hi": "उदाहरण 1: गणितीय रूप में निरूपित करें",
+      "body": "**Problem:**\nJohn and Jivanti have 45 marbles together. Both lose 5 marbles. The product of their remaining marbles is 124. Find the equation to solve for John's starting marbles.\n\n**Step-by-Step Solution:**\n1. Let John's initial marbles = x.\n2. Then Jivanti's initial marbles = 45 - x.\n3. After losing 5 marbles:\n   • John's remaining = x - 5\n   • Jivanti's remaining = (45 - x) - 5 = 40 - x\n4. Product of remaining marbles = 124.\n5. (x - 5)(40 - x) = 124\n6. 40x - x² - 200 + 5x = 124\n7. -x² + 45x - 200 = 124\n8. -x² + 45x - 324 = 0\n9. Final Equation: x² - 45x + 324 = 0",
+      "body_hi": "**समस्या:**\nजॉन और जीवंती के पास कुल 45 कंचे हैं। दोनों 5-5 कंचे खो देते हैं। उनके पास बचे कंचों का गुणनफल 124 है। जॉन के शुरुआती कंचों की संख्या ज्ञात करने के लिए समीकरण खोजें।\n\n**चरण-दर-चरण समाधान:**\n1. माना जॉन के शुरुआती कंचे = x\n2. तो जीवंती के शुरुआती कंचे = 45 - x\n3. 5 कंचे खोने के बाद:\n   • जॉन के पास बचे = x - 5\n   • जीवंती के पास बचे = (45 - x) - 5 = 40 - x\n4. बचे हुए कंचों का गुणनफल = 124\n5. (x - 5)(40 - x) = 124\n6. 40x - x² - 200 + 5x = 124\n7. -x² + 45x - 200 = 124\n8. -x² + 45x - 324 = 0\n9. अंतिम समीकरण: x² - 45x + 324 = 0"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_07_EXAMPLE_2",
+      "type": "worked_example",
+      "title": "Example 2: Checking Equations",
+      "title_hi": "उदाहरण 2: समीकरणों की जाँच करना",
+      "body": "**Problem:**\nCheck whether (x - 2)² + 1 = 2x - 3 is a quadratic equation.\n\n**Step-by-Step Solution:**\n1. Expand the LHS using (a - b)² = a² - 2ab + b²:\n   • (x - 2)² = x² - 4x + 4\n2. The equation becomes:\n   • x² - 4x + 4 + 1 = 2x - 3\n3. Simplify the LHS:\n   • x² - 4x + 5 = 2x - 3\n4. Bring all terms to the left side:\n   • x² - 4x - 2x + 5 + 3 = 0\n5. Final Equation:\n   • x² - 6x + 8 = 0\n6. Conclusion: It is of the form ax² + bx + c = 0. Therefore, it IS a quadratic equation.",
+      "body_hi": "**समस्या:**\nजांचें कि क्या (x - 2)² + 1 = 2x - 3 एक द्विघात समीकरण है।\n\n**चरण-दर-चरण समाधान:**\n1. (a - b)² = a² - 2ab + b² का उपयोग करके LHS का विस्तार करें:\n   • (x - 2)² = x² - 4x + 4\n2. समीकरण बन जाता है:\n   • x² - 4x + 4 + 1 = 2x - 3\n3. LHS को सरल बनाएं:\n   • x² - 4x + 5 = 2x - 3\n4. सभी पदों को बाईं ओर लाएं:\n   • x² - 4x - 2x + 5 + 3 = 0\n5. अंतिम समीकरण:\n   • x² - 6x + 8 = 0\n6. निष्कर्ष: यह ax² + bx + c = 0 के रूप में है। इसलिए, यह एक द्विघात समीकरण है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_08_EXERCISE_4_1_Q1",
+      "type": "worked_example",
+      "title": "Exercise 4.1: Question 1(iv)",
+      "title_hi": "प्रश्नावली 4.1: प्रश्न 1(iv)",
+      "body": "**Problem:**\nCheck whether (x - 3)(2x + 1) = x(x + 5) is a quadratic equation.\n\n**Step-by-Step Solution:**\n1. Expand the LHS:\n   • (x - 3)(2x + 1) = 2x² + x - 6x - 3 = 2x² - 5x - 3\n2. Expand the RHS:\n   • x(x + 5) = x² + 5x\n3. Combine into one equation:\n   • 2x² - 5x - 3 = x² + 5x\n4. Bring all terms to LHS:\n   • 2x² - x² - 5x - 5x - 3 = 0\n5. Final Equation:\n   • x² - 10x - 3 = 0\n6. Conclusion: The highest power is 2, so it IS a quadratic equation.",
+      "body_hi": "**समस्या:**\nजांचें कि क्या (x - 3)(2x + 1) = x(x + 5) एक द्विघात समीकरण है।\n\n**चरण-दर-चरण समाधान:**\n1. LHS का विस्तार करें:\n   • (x - 3)(2x + 1) = 2x² + x - 6x - 3 = 2x² - 5x - 3\n2. RHS का विस्तार करें:\n   • x(x + 5) = x² + 5x\n3. एक समीकरण में मिलाएं:\n   • 2x² - 5x - 3 = x² + 5x\n4. सभी पदों को LHS में लाएं:\n   • 2x² - x² - 5x - 5x - 3 = 0\n5. अंतिम समीकरण:\n   • x² - 10x - 3 = 0\n6. निष्कर्ष: अधिकतम घात 2 है, इसलिए यह एक द्विघात समीकरण है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_09_DISCOVERY_ROOTS",
+      "type": "theory",
+      "title": "What is a Root?",
+      "title_hi": "मूल (Root) क्या है?",
+      "body": "• Consider the equation: 2x² - 3x + 1 = 0.\n• What happens if we put x = 1?\n• LHS = 2(1)² - 3(1) + 1 = 2 - 3 + 1 = 0.\n• Since LHS = RHS, x = 1 satisfies the equation.\n• **Conclusion:** A real number 'α' is called a root if aα² + bα + c = 0.\n• A quadratic equation can have at most TWO real roots.",
+      "body_hi": "• समीकरण पर विचार करें: 2x² - 3x + 1 = 0.\n• यदि हम x = 1 रखें तो क्या होगा?\n• LHS = 2(1)² - 3(1) + 1 = 2 - 3 + 1 = 0.\n• चूंकि LHS = RHS, x = 1 समीकरण को संतुष्ट करता है।\n• **निष्कर्ष:** एक वास्तविक संख्या 'α' को मूल कहा जाता है यदि aα² + bα + c = 0 हो।\n• एक द्विघात समीकरण के अधिकतम दो वास्तविक मूल हो सकते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_10_REVEAL_FACTORISATION",
+      "type": "theory",
+      "title": "Solution by Factorisation",
+      "title_hi": "गुणनखंडन द्वारा समाधान",
+      "body": "• We can find roots by splitting the middle term.\n• For ax² + bx + c = 0, we find two numbers whose:\n  1. Sum equals 'b'\n  2. Product equals 'a × c'\n• Once split, we take common factors and form two linear brackets.\n• Equating each bracket to zero gives the two roots.",
+      "body_hi": "• हम मध्य पद को विभक्त करके मूल ज्ञात कर सकते हैं।\n• ax² + bx + c = 0 के लिए, हम दो ऐसी संख्याएँ खोजते हैं जिनका:\n  1. योग 'b' के बराबर हो\n  2. गुणनफल 'a × c' के बराबर हो\n• विभक्त होने के बाद, हम उभयनिष्ठ गुणनखंड लेते हैं और दो रैखिक कोष्ठक बनाते हैं।\n• प्रत्येक कोष्ठक को शून्य के बराबर करने पर दो मूल प्राप्त होते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_11_EXAMPLE_3",
+      "type": "worked_example",
+      "title": "Example 3: Splitting the Middle Term",
+      "title_hi": "उदाहरण 3: मध्य पद को विभक्त करना",
+      "body": "**Problem:**\nFind the roots of 2x² - 5x + 3 = 0 by factorisation.\n\n**Step-by-Step Solution:**\n1. Compare with ax² + bx + c = 0.\n   • a = 2, b = -5, c = 3\n2. Find product (a × c): 2 × 3 = 6.\n3. Find two numbers that multiply to 6 and add to -5.\n   • The numbers are -2 and -3.\n4. Split the middle term (-5x):\n   • 2x² - 2x - 3x + 3 = 0\n5. Take common factors from pairs:\n   • 2x(x - 1) - 3(x - 1) = 0\n6. Take (x - 1) common:\n   • (2x - 3)(x - 1) = 0\n7. Equate each factor to zero:\n   • 2x - 3 = 0 ⇒ x = 3/2\n   • x - 1 = 0 ⇒ x = 1\n8. Roots are 3/2 and 1.",
+      "body_hi": "**समस्या:**\nगुणनखंडन द्वारा 2x² - 5x + 3 = 0 के मूल ज्ञात कीजिए।\n\n**चरण-दर-चरण समाधान:**\n1. ax² + bx + c = 0 से तुलना करें।\n   • a = 2, b = -5, c = 3\n2. गुणनफल (a × c) ज्ञात करें: 2 × 3 = 6.\n3. दो ऐसी संख्याएँ खोजें जिनका गुणा 6 हो और योग -5 हो।\n   • संख्याएँ -2 और -3 हैं।\n4. मध्य पद (-5x) को विभक्त करें:\n   • 2x² - 2x - 3x + 3 = 0\n5. युग्मों से उभयनिष्ठ गुणनखंड लें:\n   • 2x(x - 1) - 3(x - 1) = 0\n6. (x - 1) को उभयनिष्ठ लें:\n   • (2x - 3)(x - 1) = 0\n7. प्रत्येक गुणनखंड को शून्य के बराबर करें:\n   • 2x - 3 = 0 ⇒ x = 3/2\n   • x - 1 = 0 ⇒ x = 1\n8. मूल 3/2 और 1 हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_12_EXERCISE_4_2_Q1",
+      "type": "worked_example",
+      "title": "Exercise 4.2: Question 1(iii)",
+      "title_hi": "प्रश्नावली 4.2: प्रश्न 1(iii)",
+      "body": "**Problem:**\nFind roots of √2x² + 7x + 5√2 = 0\n\n**Step-by-Step Solution:**\n1. Identify a, b, c:\n   • a = √2, b = 7, c = 5√2\n2. Product (a × c):\n   • √2 × 5√2 = 5 × 2 = 10\n3. Find two numbers multiplying to 10 and adding to 7:\n   • The numbers are 5 and 2.\n4. Split middle term (7x):\n   • √2x² + 2x + 5x + 5√2 = 0\n5. Take common factors:\n   • √2x(x + √2) + 5(x + √2) = 0\n6. Combine brackets:\n   • (√2x + 5)(x + √2) = 0\n7. Equate to zero:\n   • √2x + 5 = 0 ⇒ x = -5/√2\n   • x + √2 = 0 ⇒ x = -√2\n8. The roots are -5/√2 and -√2.",
+      "body_hi": "**समस्या:**\n√2x² + 7x + 5√2 = 0 के मूल ज्ञात कीजिए\n\n**चरण-दर-चरण समाधान:**\n1. a, b, c की पहचान करें:\n   • a = √2, b = 7, c = 5√2\n2. गुणनफल (a × c):\n   • √2 × 5√2 = 5 × 2 = 10\n3. 10 गुणा करने और 7 जोड़ने वाली दो संख्याएँ खोजें:\n   • संख्याएँ 5 और 2 हैं।\n4. मध्य पद (7x) को विभक्त करें:\n   • √2x² + 2x + 5x + 5√2 = 0\n5. उभयनिष्ठ गुणनखंड लें:\n   • √2x(x + √2) + 5(x + √2) = 0\n6. कोष्ठकों को मिलाएँ:\n   • (√2x + 5)(x + √2) = 0\n7. शून्य के बराबर करें:\n   • √2x + 5 = 0 ⇒ x = -5/√2\n   • x + √2 = 0 ⇒ x = -√2\n8. मूल -5/√2 और -√2 हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_13_DISCOVERY_NATURE",
+      "type": "socratic_question",
+      "question": "Can we find a real number whose square is negative? (e.g. x² = -4)",
+      "question_hi": "क्या हम कोई ऐसी वास्तविक संख्या खोज सकते हैं जिसका वर्ग ऋणात्मक हो? (जैसे x² = -4)",
+      "options": [
+        "Yes, -2",
+        "Yes, 2",
+        "No real number exists",
+        "Zero"
+      ],
+      "options_hi": [
+        "हाँ, -2",
+        "हाँ, 2",
+        "कोई वास्तविक संख्या मौजूद नहीं है",
+        "शून्य"
+      ],
+      "correct_index": 2,
+      "explanation": "• The square of a positive number is positive (2² = 4).\n• The square of a negative number is positive (-2² = 4).\n• So, no real number has a negative square!",
+      "explanation_hi": "• धनात्मक संख्या का वर्ग धनात्मक होता है (2² = 4)।\n• ऋणात्मक संख्या का वर्ग धनात्मक होता है (-2² = 4)।\n• इसलिए, किसी भी वास्तविक संख्या का वर्ग ऋणात्मक नहीं होता!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_14_REVEAL_DISCRIMINANT",
+      "type": "theory",
+      "title": "Nature of Roots and Discriminant",
+      "title_hi": "मूलों की प्रकृति और विविक्तकर (Discriminant)",
+      "body": "• The Quadratic Formula gives roots as: x = [-b ± √(b² - 4ac)] / 2a.\n• The value inside the square root, **b² - 4ac**, decides the nature of the roots. It is called the **Discriminant (D)**.\n\n**Rules:**\n1. If D > 0: Two distinct real roots.\n2. If D = 0: Two equal real roots.\n3. If D < 0: No real roots (since we can't take the square root of a negative number!).",
+      "body_hi": "• द्विघाती सूत्र मूलों को इस प्रकार देता है: x = [-b ± √(b² - 4ac)] / 2a.\n• वर्गमूल के अंदर का मान, **b² - 4ac**, मूलों की प्रकृति तय करता है। इसे **विविक्तकर (Discriminant - D)** कहा जाता है।\n\n**नियम:**\n1. यदि D > 0: दो भिन्न वास्तविक मूल।\n2. यदि D = 0: दो समान वास्तविक मूल।\n3. यदि D < 0: कोई वास्तविक मूल नहीं (चूंकि हम ऋणात्मक संख्या का वर्गमूल नहीं ले सकते!)।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_15_EXAMPLE_7",
+      "type": "worked_example",
+      "title": "Example 7: Using the Discriminant",
+      "title_hi": "उदाहरण 7: विविक्तकर का उपयोग करना",
+      "body": "**Problem:**\nFind the discriminant of 2x² - 4x + 3 = 0 and find the nature of its roots.\n\n**Step-by-Step Solution:**\n1. Compare with ax² + bx + c = 0:\n   • a = 2, b = -4, c = 3\n2. Calculate Discriminant (D) = b² - 4ac:\n   • D = (-4)² - 4(2)(3)\n   • D = 16 - 24\n   • D = -8\n3. Check the rule:\n   • Since D = -8, which is less than 0 (D < 0).\n4. Conclusion:\n   • The equation has NO real roots.",
+      "body_hi": "**समस्या:**\n2x² - 4x + 3 = 0 का विविक्तकर ज्ञात कीजिए और इसके मूलों की प्रकृति ज्ञात कीजिए।\n\n**चरण-दर-चरण समाधान:**\n1. ax² + bx + c = 0 से तुलना करें:\n   • a = 2, b = -4, c = 3\n2. विविक्तकर (D) = b² - 4ac की गणना करें:\n   • D = (-4)² - 4(2)(3)\n   • D = 16 - 24\n   • D = -8\n3. नियम की जाँच करें:\n   • चूँकि D = -8, जो 0 से कम है (D < 0)।\n4. निष्कर्ष:\n   • समीकरण का कोई वास्तविक मूल नहीं है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_16_EXERCISE_4_3_Q1",
+      "type": "worked_example",
+      "title": "Exercise 4.3: Question 1(i)",
+      "title_hi": "प्रश्नावली 4.3: प्रश्न 1(i)",
+      "body": "**Problem:**\nFind the nature of roots for 2x² - 3x + 5 = 0. If real roots exist, find them.\n\n**Step-by-Step Solution:**\n1. Identify coefficients:\n   • a = 2, b = -3, c = 5\n2. Find Discriminant (b² - 4ac):\n   • D = (-3)² - 4(2)(5)\n   • D = 9 - 40\n   • D = -31\n3. Conclusion on Nature:\n   • Since D < 0, there are NO real roots.\n4. Stop here (roots cannot be found as real numbers).",
+      "body_hi": "**समस्या:**\n2x² - 3x + 5 = 0 के लिए मूलों की प्रकृति ज्ञात कीजिए। यदि वास्तविक मूल मौजूद हैं, तो उन्हें खोजें।\n\n**चरण-दर-चरण समाधान:**\n1. गुणांकों की पहचान करें:\n   • a = 2, b = -3, c = 5\n2. विविक्तकर (b² - 4ac) ज्ञात करें:\n   • D = (-3)² - 4(2)(5)\n   • D = 9 - 40\n   • D = -31\n3. प्रकृति पर निष्कर्ष:\n   • चूँकि D < 0 है, इसलिए कोई वास्तविक मूल नहीं है।\n4. यहाँ रुकें (मूलों को वास्तविक संख्याओं के रूप में नहीं पाया जा सकता है)।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_17_EXERCISE_4_3_Q2",
+      "type": "worked_example",
+      "title": "Exercise 4.3: Question 2(i)",
+      "title_hi": "प्रश्नावली 4.3: प्रश्न 2(i)",
+      "body": "**Problem:**\nFind the value of 'k' so that 2x² + kx + 3 = 0 has two equal roots.\n\n**Step-by-Step Solution:**\n1. Identify coefficients:\n   • a = 2, b = k, c = 3\n2. Condition for equal roots:\n   • Discriminant D must be zero (b² - 4ac = 0).\n3. Substitute values:\n   • k² - 4(2)(3) = 0\n   • k² - 24 = 0\n4. Solve for k:\n   • k² = 24\n   • k = ±√24\n   • k = ±2√6\n5. Final Answer:\n   • The values of k are +2√6 and -2√6.",
+      "body_hi": "**समस्या:**\n'k' का मान ज्ञात कीजिए ताकि 2x² + kx + 3 = 0 के दो समान मूल हों।\n\n**चरण-दर-चरण समाधान:**\n1. गुणांकों की पहचान करें:\n   • a = 2, b = k, c = 3\n2. समान मूलों के लिए शर्त:\n   • विविक्तकर D शून्य होना चाहिए (b² - 4ac = 0)।\n3. मानों को प्रतिस्थापित करें:\n   • k² - 4(2)(3) = 0\n   • k² - 24 = 0\n4. k के लिए हल करें:\n   • k² = 24\n   • k = ±√24\n   • k = ±2√6\n5. अंतिम उत्तर:\n   • k के मान +2√6 और -2√6 हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_18_SUMMARY",
+      "type": "summary",
+      "title": "Chapter Summary",
+      "title_hi": "अध्याय का सारांश",
+      "body": "• **Standard Form:** ax² + bx + c = 0, where a ≠ 0.\n• **Roots:** Values of x that satisfy the equation. Can be found by factorisation or quadratic formula.\n• **Discriminant:** D = b² - 4ac.\n  • D > 0: Two distinct real roots.\n  • D = 0: Two equal real roots.\n  • D < 0: No real roots.",
+      "body_hi": "• **मानक रूप:** ax² + bx + c = 0, जहाँ a ≠ 0.\n• **मूल (Roots):** x के मान जो समीकरण को संतुष्ट करते हैं। गुणनखंडन या द्विघाती सूत्र द्वारा ज्ञात किया जा सकता है।\n• **विविक्तकर (Discriminant):** D = b² - 4ac.\n  • D > 0: दो भिन्न वास्तविक मूल।\n  • D = 0: दो समान वास्तविक मूल।\n  • D < 0: कोई वास्तविक मूल नहीं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_19_KNOWLEDGE_CHECK",
+      "type": "mcq",
+      "question": "What is the condition for a quadratic equation to have no real roots?",
+      "question_hi": "किसी द्विघात समीकरण के कोई वास्तविक मूल न होने की शर्त क्या है?",
+      "options": [
+        "b² - 4ac > 0",
+        "b² - 4ac = 0",
+        "b² - 4ac < 0",
+        "a = 0"
+      ],
+      "options_hi": [
+        "b² - 4ac > 0",
+        "b² - 4ac = 0",
+        "b² - 4ac < 0",
+        "a = 0"
+      ],
+      "correct_index": 2,
+      "explanation": "When the discriminant (b² - 4ac) is less than zero, the roots are not real numbers because we cannot take the square root of a negative number.",
+      "explanation_hi": "जब विविक्तकर (b² - 4ac) शून्य से कम होता है, तो मूल वास्तविक संख्याएँ नहीं होते क्योंकि हम ऋणात्मक संख्या का वर्गमूल नहीं ले सकते।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_101_MCQ",
+      "type": "mcq",
+      "question": "Which of the following is a quadratic equation?",
+      "question_hi": "निम्नलिखित में से कौन सा एक द्विघात समीकरण है?",
+      "options": [
+        "x² + 2x + 1 = (4 - x)² + 3",
+        "-2x² = (5 - x)(2x - 2/5)",
+        "(k + 1)x² + (3/2)x = 7, where k = -1",
+        "x³ - x² = (x - 1)³"
+      ],
+      "options_hi": [
+        "x² + 2x + 1 = (4 - x)² + 3",
+        "-2x² = (5 - x)(2x - 2/5)",
+        "(k + 1)x² + (3/2)x = 7, जहाँ k = -1",
+        "x³ - x² = (x - 1)³"
+      ],
+      "correct_index": 3,
+      "explanation": "Expanding x³ - x² = (x - 1)³, we get x³ - x² = x³ - 3x² + 3x - 1. Simplifying gives 2x² - 3x + 1 = 0, which is a quadratic equation.",
+      "explanation_hi": "x³ - x² = (x - 1)³ का विस्तार करने पर, हमें x³ - x² = x³ - 3x² + 3x - 1 प्राप्त होता है। सरल करने पर 2x² - 3x + 1 = 0 मिलता है, जो एक द्विघात समीकरण है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_102_MCQ",
+      "type": "mcq",
+      "question": "If 1/2 is a root of the equation x² + kx - 5/4 = 0, then the value of k is:",
+      "question_hi": "यदि 1/2 समीकरण x² + kx - 5/4 = 0 का एक मूल है, तो k का मान है:",
+      "options": [
+        "2",
+        "-2",
+        "1/4",
+        "1/2"
+      ],
+      "options_hi": [
+        "2",
+        "-2",
+        "1/4",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "Substitute x = 1/2 in the equation: (1/2)² + k(1/2) - 5/4 = 0 ⇒ 1/4 + k/2 - 5/4 = 0 ⇒ k/2 - 4/4 = 0 ⇒ k/2 - 1 = 0 ⇒ k = 2.",
+      "explanation_hi": "समीकरण में x = 1/2 रखें: (1/2)² + k(1/2) - 5/4 = 0 ⇒ 1/4 + k/2 - 5/4 = 0 ⇒ k/2 - 4/4 = 0 ⇒ k/2 - 1 = 0 ⇒ k = 2।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_103_MCQ",
+      "type": "mcq",
+      "question": "The quadratic equation 2x² - √5x + 1 = 0 has:",
+      "question_hi": "द्विघात समीकरण 2x² - √5x + 1 = 0 के हैं:",
+      "options": [
+        "Two distinct real roots",
+        "Two equal real roots",
+        "No real roots",
+        "More than 2 real roots"
+      ],
+      "options_hi": [
+        "दो भिन्न वास्तविक मूल",
+        "दो समान वास्तविक मूल",
+        "कोई वास्तविक मूल नहीं",
+        "2 से अधिक वास्तविक मूल"
+      ],
+      "correct_index": 2,
+      "explanation": "Calculate discriminant D = b² - 4ac = (-√5)² - 4(2)(1) = 5 - 8 = -3. Since D < 0, the equation has no real roots.",
+      "explanation_hi": "विविक्तकर (Discriminant) D = b² - 4ac = (-√5)² - 4(2)(1) = 5 - 8 = -3 की गणना करें। चूँकि D < 0, समीकरण का कोई वास्तविक मूल नहीं है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_104_MCQ",
+      "type": "mcq",
+      "question": "What is the maximum number of roots a quadratic equation can have?",
+      "question_hi": "एक द्विघात समीकरण के अधिकतम कितने मूल हो सकते हैं?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Infinite"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "अनंत"
+      ],
+      "correct_index": 1,
+      "explanation": "A quadratic equation (degree 2) can have at most two roots. They can be distinct, equal, or complex.",
+      "explanation_hi": "एक द्विघात समीकरण (घात 2) के अधिकतम दो मूल हो सकते हैं। वे भिन्न, समान या सम्मिश्र (complex) हो सकते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_105_MCQ",
+      "type": "mcq",
+      "question": "Which of the following equations has 2 as a root?",
+      "question_hi": "निम्नलिखित में से किस समीकरण का एक मूल 2 है?",
+      "options": [
+        "x² - 4x + 5 = 0",
+        "x² + 3x - 12 = 0",
+        "2x² - 7x + 6 = 0",
+        "3x² - 6x - 2 = 0"
+      ],
+      "options_hi": [
+        "x² - 4x + 5 = 0",
+        "x² + 3x - 12 = 0",
+        "2x² - 7x + 6 = 0",
+        "3x² - 6x - 2 = 0"
+      ],
+      "correct_index": 2,
+      "explanation": "Substitute x = 2 in 2x² - 7x + 6 = 0: 2(2)² - 7(2) + 6 = 2(4) - 14 + 6 = 8 - 14 + 6 = 0. Since it satisfies the equation, 2 is a root.",
+      "explanation_hi": "2x² - 7x + 6 = 0 में x = 2 रखें: 2(2)² - 7(2) + 6 = 2(4) - 14 + 6 = 8 - 14 + 6 = 0. क्योंकि यह समीकरण को संतुष्ट करता है, 2 एक मूल है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_106_MCQ",
+      "type": "mcq",
+      "question": "Values of k for which the quadratic equation 2x² - kx + k = 0 has equal roots is:",
+      "question_hi": "k के वे मान जिनके लिए द्विघात समीकरण 2x² - kx + k = 0 के समान मूल हैं, है:",
+      "options": [
+        "0 only",
+        "4",
+        "8 only",
+        "0, 8"
+      ],
+      "options_hi": [
+        "केवल 0",
+        "4",
+        "केवल 8",
+        "0, 8"
+      ],
+      "correct_index": 3,
+      "explanation": "For equal roots, D = 0 ⇒ b² - 4ac = 0 ⇒ (-k)² - 4(2)(k) = 0 ⇒ k² - 8k = 0 ⇒ k(k - 8) = 0. Therefore, k = 0 or k = 8.",
+      "explanation_hi": "समान मूलों के लिए, D = 0 ⇒ b² - 4ac = 0 ⇒ (-k)² - 4(2)(k) = 0 ⇒ k² - 8k = 0 ⇒ k(k - 8) = 0। इसलिए, k = 0 या k = 8।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_107_MCQ",
+      "type": "mcq",
+      "question": "If the discriminant of a quadratic equation is zero, then its roots are:",
+      "question_hi": "यदि किसी द्विघात समीकरण का विविक्तकर शून्य है, तो इसके मूल हैं:",
+      "options": [
+        "Real and distinct",
+        "Real and equal",
+        "Not real",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "वास्तविक और भिन्न",
+        "वास्तविक और समान",
+        "वास्तविक नहीं",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "correct_index": 1,
+      "explanation": "When the discriminant (b² - 4ac) is exactly equal to 0, the quadratic formula gives x = -b/2a, resulting in two real and equal roots.",
+      "explanation_hi": "जब विविक्तकर (b² - 4ac) ठीक 0 के बराबर होता है, तो द्विघात सूत्र x = -b/2a देता है, जिसके परिणामस्वरूप दो वास्तविक और समान मूल प्राप्त होते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_108_MCQ",
+      "type": "mcq",
+      "question": "The sum of the roots of the quadratic equation 3x² - 9x + 5 = 0 is:",
+      "question_hi": "द्विघात समीकरण 3x² - 9x + 5 = 0 के मूलों का योग है:",
+      "options": [
+        "3",
+        "-3",
+        "5/3",
+        "-5/3"
+      ],
+      "options_hi": [
+        "3",
+        "-3",
+        "5/3",
+        "-5/3"
+      ],
+      "correct_index": 0,
+      "explanation": "The sum of the roots of ax² + bx + c = 0 is given by -b/a. Here a = 3, b = -9. Sum = -(-9)/3 = 9/3 = 3.",
+      "explanation_hi": "ax² + bx + c = 0 के मूलों का योग -b/a द्वारा दिया जाता है। यहाँ a = 3, b = -9. योग = -(-9)/3 = 9/3 = 3।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_109_MCQ",
+      "type": "mcq",
+      "question": "If x = 1 is a common root of the equations ax² + ax + 3 = 0 and x² + x + b = 0, then ab equals:",
+      "question_hi": "यदि x = 1 समीकरणों ax² + ax + 3 = 0 और x² + x + b = 0 का एक उभयनिष्ठ (common) मूल है, तो ab बराबर है:",
+      "options": [
+        "3",
+        "3.5",
+        "6",
+        "-3"
+      ],
+      "options_hi": [
+        "3",
+        "3.5",
+        "6",
+        "-3"
+      ],
+      "correct_index": 0,
+      "explanation": "Put x = 1 in both equations. First: a(1)² + a(1) + 3 = 0 ⇒ 2a = -3 ⇒ a = -3/2. Second: 1² + 1 + b = 0 ⇒ 2 + b = 0 ⇒ b = -2. So, ab = (-3/2) × (-2) = 3.",
+      "explanation_hi": "दोनों समीकरणों में x = 1 रखें। पहला: a(1)² + a(1) + 3 = 0 ⇒ 2a = -3 ⇒ a = -3/2. दूसरा: 1² + 1 + b = 0 ⇒ 2 + b = 0 ⇒ b = -2. इसलिए, ab = (-3/2) × (-2) = 3।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH4_110_MCQ",
+      "type": "mcq",
+      "question": "The product of two consecutive positive integers is 306. To find the integers, this can be represented as:",
+      "question_hi": "दो क्रमागत धनात्मक पूर्णांकों का गुणनफल 306 है। पूर्णांक ज्ञात करने के लिए, इसे इस प्रकार निरूपित किया जा सकता है:",
+      "options": [
+        "x² + x - 306 = 0",
+        "x² - x - 306 = 0",
+        "x² + 2x - 306 = 0",
+        "x² - 2x - 306 = 0"
+      ],
+      "options_hi": [
+        "x² + x - 306 = 0",
+        "x² - x - 306 = 0",
+        "x² + 2x - 306 = 0",
+        "x² - 2x - 306 = 0"
+      ],
+      "correct_index": 0,
+      "explanation": "Let the consecutive integers be x and x + 1. Their product is x(x + 1) = 306 ⇒ x² + x - 306 = 0.",
+      "explanation_hi": "माना क्रमागत पूर्णांक x और x + 1 हैं। उनका गुणनफल x(x + 1) = 306 ⇒ x² + x - 306 = 0 है।"
+    }
+  ]
+}

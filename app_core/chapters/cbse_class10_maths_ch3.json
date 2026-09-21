@@ -1,0 +1,239 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_01",
+    "type": "theory",
+    "title": "The Mysterious Age Puzzle",
+    "title_hi": "उम्र की रहस्यमयी पहेली",
+    "body": "Imagine your father says: 'Seven years ago, I was seven times as old as you were then. Also, three years from now, I shall be three times as old as you will be.' Can you find out your present ages just by guessing? It seems like a magic trick!",
+    "body_hi": "कल्पना करें कि आपके पिता कहते हैं: 'सात साल पहले, मैं तुम्हारी उस समय की उम्र से सात गुना बड़ा था। और अब से तीन साल बाद, मैं तुम्हारी उस समय की उम्र से तीन गुना बड़ा हो जाऊंगा।' क्या आप सिर्फ अंदाजा लगाकर अपनी वर्तमान उम्र का पता लगा सकते हैं? यह एक जादू के खेल जैसा लगता है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_02",
+    "type": "socratic_question",
+    "question": "Why is guessing the ages in the puzzle difficult and unreliable?",
+    "question_hi": "पहेली में उम्र का अंदाजा लगाना मुश्किल और अविश्वसनीय क्यों है?",
+    "options": [
+      "Because numbers are magic",
+      "Because there are two unknown values changing together",
+      "Because time travel is not possible",
+      "Because the father is joking"
+    ],
+    "options_hi": [
+      "क्योंकि संख्याएँ जादू हैं",
+      "क्योंकि दो अज्ञात मान एक साथ बदल रहे हैं",
+      "क्योंकि समय यात्रा संभव नहीं है",
+      "क्योंकि पिता मजाक कर रहे हैं"
+    ],
+    "correct_index": 1,
+    "explanation": "When two unknown quantities depend on each other, guessing becomes nearly impossible. We need a mathematical tool to solve this!",
+    "explanation_hi": "जब दो अज्ञात राशियां एक-दूसरे पर निर्भर होती हैं, तो अंदाजा लगाना लगभग असंभव हो जाता है। हमें इसे हल करने के लिए एक गणितीय उपकरण की आवश्यकता है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_03",
+    "type": "theory",
+    "title": "Finding the Balance",
+    "title_hi": "संतुलन खोजना",
+    "body": "Think of an equation as a weighing scale. If you have two unknown weights, say an apple (x) and a mango (y), a single scale won't tell you both their weights. You need TWO different scales (equations) comparing them to find their exact weights. This is why we need a 'pair' of equations.",
+    "body_hi": "एक समीकरण को तराजू की तरह सोचें। यदि आपके पास दो अज्ञात वजन हैं, मान लें एक सेब (x) और एक आम (y), तो एक तराजू आपको दोनों के वजन नहीं बताएगा। आपको उनके सटीक वजन का पता लगाने के लिए उनकी तुलना करने वाले दो अलग-अलग तराजू (समीकरण) चाहिए। इसलिए हमें समीकरणों के 'जोड़े' की आवश्यकता होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_04",
+    "type": "theory",
+    "title": "Pair of Linear Equations in Two Variables",
+    "title_hi": "दो चरों वाले रैखिक समीकरणों का युग्म",
+    "body": "A pair of linear equations in two variables (x and y) is written in the general form:\n1) a₁x + b₁y + c₁ = 0\n2) a₂x + b₂y + c₂ = 0\nWhere a₁, b₁, c₁ and a₂, b₂, c₂ are real numbers, and a, b are not zero. The graph of a linear equation is always a straight line. Thus, a pair represents two lines on a graph.",
+    "body_hi": "दो चरों (x और y) में रैखिक समीकरणों की एक जोड़ी सामान्य रूप में लिखी जाती है:\n1) a₁x + b₁y + c₁ = 0\n2) a₂x + b₂y + c₂ = 0\nजहाँ a₁, b₁, c₁ और a₂, b₂, c₂ वास्तविक संख्याएँ हैं, और a, b शून्य नहीं हैं। एक रैखिक समीकरण का ग्राफ हमेशा एक सीधी रेखा होता है। इस प्रकार, एक जोड़ा ग्राफ पर दो रेखाओं को दर्शाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_05",
+    "type": "quiz",
+    "question": "Which of the following is a pair of linear equations in two variables?",
+    "question_hi": "निम्नलिखित में से कौन सा दो चरों वाले रैखिक समीकरणों का युग्म है?",
+    "options": [
+      "x + y = 5 and x² - y = 10",
+      "2x + 3y = 7 and 4x - y = 2",
+      "x = 5 and x = 7",
+      "3x² + y = 0 and x - y = 0"
+    ],
+    "options_hi": [
+      "x + y = 5 और x² - y = 10",
+      "2x + 3y = 7 और 4x - y = 2",
+      "x = 5 और x = 7",
+      "3x² + y = 0 और x - y = 0"
+    ],
+    "correct_index": 1,
+    "explanation": "Linear equations must have variables with a maximum power of 1. Only the second option has x and y with a power of 1 in both equations.",
+    "explanation_hi": "रैखिक समीकरणों में चरों की अधिकतम घात 1 होनी चाहिए। केवल दूसरे विकल्प में दोनों समीकरणों में x और y की घात 1 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_06",
+    "type": "theory",
+    "title": "Think About It: Lines Crossing",
+    "title_hi": "इस पर विचार करें: रेखाओं का काटना",
+    "body": "If a linear equation is a straight line, what happens when you draw TWO straight lines on the same paper? In how many ways can they interact? Can you imagine it?",
+    "body_hi": "यदि एक रैखिक समीकरण एक सीधी रेखा है, तो क्या होता है जब आप एक ही कागज पर दो सीधी रेखाएं खींचते हैं? वे कितने तरीकों से बातचीत कर सकती हैं? क्या आप इसकी कल्पना कर सकते हैं?"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_07",
+    "type": "theory",
+    "title": "The Three Possibilities",
+    "title_hi": "तीन संभावनाएँ",
+    "body": "Connecting to Coordinate Geometry, two lines on a plane can only do one of three things: \n1) They Intersect (cross at one point - exactly one solution). \n2) They are Parallel (never cross - no solution). \n3) They are Coincident (overlap completely - infinitely many solutions).",
+    "body_hi": "निर्देशांक ज्यामिति से जोड़ते हुए, एक समतल पर दो रेखाएँ केवल तीन में से एक काम कर सकती हैं:\n1) वे प्रतिच्छेद करती हैं (एक बिंदु पर काटती हैं - ठीक एक समाधान)।\n2) वे समानांतर हैं (कभी नहीं काटती हैं - कोई समाधान नहीं)।\n3) वे संपाती हैं (पूरी तरह से ओवरलैप करती हैं - असीमित रूप से कई समाधान)।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_08",
+    "type": "theory",
+    "title": "Solving without Graphing",
+    "title_hi": "ग्राफिंग के बिना हल करना",
+    "body": "Drawing graphs every time takes too long! Mathematicians developed 'Algebraic Methods' to solve these equations quickly: Substitution Method and Elimination Method.",
+    "body_hi": "हर बार ग्राफ बनाना बहुत लंबा समय लेता है! गणितज्ञों ने इन समीकरणों को जल्दी से हल करने के लिए 'बीजीय तरीके' विकसित किए: प्रतिस्थापन विधि और विलोपन विधि।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_09",
+    "type": "theory",
+    "title": "The Substitution Method",
+    "title_hi": "प्रतिस्थापन विधि",
+    "body": "In the Substitution Method, we find the value of one variable from one equation and 'substitute' (put) it into the other equation. It's like replacing a player in a game with a substitute player who is equally capable.",
+    "body_hi": "प्रतिस्थापन विधि में, हम एक समीकरण से एक चर का मान निकालते हैं और इसे दूसरे समीकरण में 'प्रतिस्थापित' (रखते) हैं। यह एक खेल में एक खिलाड़ी को एक स्थानापन्न खिलाड़ी के साथ बदलने जैसा है जो समान रूप से सक्षम है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_10",
+    "type": "quiz",
+    "question": "Solve using substitution: x + y = 14 and x - y = 4. What is the value of x?",
+    "question_hi": "प्रतिस्थापन का उपयोग करके हल करें: x + y = 14 और x - y = 4। x का मान क्या है?",
+    "options": [
+      "5",
+      "10",
+      "9",
+      "8"
+    ],
+    "options_hi": [
+      "5",
+      "10",
+      "9",
+      "8"
+    ],
+    "correct_index": 2,
+    "explanation": "From equation 2, x = y + 4. Substitute in eq 1: (y + 4) + y = 14 => 2y + 4 = 14 => 2y = 10 => y = 5. Then x = 5 + 4 = 9.",
+    "explanation_hi": "समीकरण 2 से, x = y + 4। समीकरण 1 में रखें: (y + 4) + y = 14 => 2y + 4 = 14 => 2y = 10 => y = 5। फिर x = 5 + 4 = 9।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_11",
+    "type": "theory",
+    "title": "Challenge Accomplished",
+    "title_hi": "चुनौती पूरी हुई",
+    "body": "You now have the mathematical tools to solve the 'Mysterious Age Puzzle' of the father and child. By writing two equations based on their past and future ages, you can find the exact answer like a detective!",
+    "body_hi": "अब आपके पास पिता और बच्चे की 'उम्र की रहस्यमयी पहेली' को हल करने के लिए गणितीय उपकरण हैं। उनके अतीत और भविष्य की उम्र के आधार पर दो समीकरण लिखकर, आप एक जासूस की तरह सटीक उत्तर पा सकते हैं!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "For what value of k will the pair of linear equations kx + 3y = k - 3 and 12x + ky = k have no solution?",
+    "question_hi": "k के किस मान के लिए रैखिक समीकरणों के युग्म kx + 3y = k - 3 और 12x + ky = k का कोई हल नहीं होगा?",
+    "options": [
+      "k = 6",
+      "k = -6",
+      "k = 0",
+      "k = ± 6"
+    ],
+    "options_hi": [
+      "k = 6",
+      "k = -6",
+      "k = 0",
+      "k = ± 6"
+    ],
+    "correct_index": 1,
+    "explanation": "Condition for no solution is a₁/a₂ = b₁/b₂ ≠ c₁/c₂. Here, k/12 = 3/k ≠ (k-3)/k. Solving k/12 = 3/k gives k² = 36, so k = 6 or -6. If k = 6, (k-3)/k = 3/6 = 1/2, and a₁/a₂ = 6/12 = 1/2, which gives infinitely many solutions. If k = -6, (k-3)/k = -9/-6 = 3/2, and a₁/a₂ = -6/12 = -1/2, satisfying the condition.",
+    "explanation_hi": "कोई हल न होने की शर्त a₁/a₂ = b₁/b₂ ≠ c₁/c₂ है। यहाँ, k/12 = 3/k ≠ (k-3)/k। k/12 = 3/k को हल करने पर k² = 36 मिलता है, इसलिए k = 6 या -6। यदि k = 6, (k-3)/k = 3/6 = 1/2, और a₁/a₂ = 6/12 = 1/2, जिससे अनंत हल मिलते हैं। यदि k = -6, (k-3)/k = -9/-6 = 3/2, और a₁/a₂ = -6/12 = -1/2, जो शर्त को पूरा करता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "A boat goes 30 km upstream and 44 km downstream in 10 hours. In 13 hours, it can go 40 km upstream and 55 km downstream. Determine the speed of the stream.",
+    "question_hi": "एक नाव 10 घंटे में 30 किमी धारा के प्रतिकूल और 44 किमी धारा के अनुकूल जाती है। 13 घंटे में, यह 40 किमी धारा के प्रतिकूल और 55 किमी धारा के अनुकूल जा सकती है। धारा की गति निर्धारित करें।",
+    "options": [
+      "3 km/hr",
+      "5 km/hr",
+      "8 km/hr",
+      "11 km/hr"
+    ],
+    "options_hi": [
+      "3 किमी/घंटा",
+      "5 किमी/घंटा",
+      "8 किमी/घंटा",
+      "11 किमी/घंटा"
+    ],
+    "correct_index": 0,
+    "explanation": "Let upstream speed be u and downstream be v. Equations: 30/u + 44/v = 10 and 40/u + 55/v = 13. Multiplying first by 4 and second by 3, we get 120/u + 176/v = 40 and 120/u + 165/v = 39. Subtracting gives 11/v = 1, so v = 11 km/hr. Substitute v to find u = 5 km/hr. Speed of stream = (v - u)/2 = (11 - 5)/2 = 3 km/hr.",
+    "explanation_hi": "मान लें धारा के प्रतिकूल गति u और अनुकूल गति v है। समीकरण: 30/u + 44/v = 10 और 40/u + 55/v = 13. पहले को 4 से और दूसरे को 3 से गुणा करने पर 120/u + 176/v = 40 और 120/u + 165/v = 39 मिलता है। घटाने पर 11/v = 1, इसलिए v = 11 किमी/घंटा। u खोजने के लिए v का मान रखें, u = 5 किमी/घंटा। धारा की गति = (v - u)/2 = (11 - 5)/2 = 3 किमी/घंटा।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "A two-digit number is 4 times the sum of its digits. If 18 is added to the number, its digits are reversed. Find the original number.",
+    "question_hi": "दो अंकों की एक संख्या उसके अंकों के योग की 4 गुनी है। यदि संख्या में 18 जोड़ दिया जाए, तो उसके अंक उलट जाते हैं। मूल संख्या ज्ञात कीजिए।",
+    "options": [
+      "42",
+      "24",
+      "36",
+      "48"
+    ],
+    "options_hi": [
+      "42",
+      "24",
+      "36",
+      "48"
+    ],
+    "correct_index": 1,
+    "explanation": "Let tens digit be x and units digit be y. Number = 10x + y. Given: 10x + y = 4(x + y) => 6x = 3y => y = 2x. Also, (10x + y) + 18 = 10y + x => 9y - 9x = 18 => y - x = 2. Substituting y = 2x into the second equation: 2x - x = 2 => x = 2. So y = 4. The number is 24.",
+    "explanation_hi": "मान लें दहाई का अंक x और इकाई का अंक y है। संख्या = 10x + y. दिया गया है: 10x + y = 4(x + y) => 6x = 3y => y = 2x. साथ ही, (10x + y) + 18 = 10y + x => 9y - 9x = 18 => y - x = 2. दूसरे समीकरण में y = 2x रखने पर: 2x - x = 2 => x = 2. इसलिए y = 4. संख्या 24 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "Solve for x and y: 152x - 378y = -74 and -378x + 152y = -604.",
+    "question_hi": "x और y के लिए हल करें: 152x - 378y = -74 और -378x + 152y = -604.",
+    "options": [
+      "x = 1, y = 2",
+      "x = 2, y = 1",
+      "x = -1, y = 3",
+      "x = 3, y = -1"
+    ],
+    "options_hi": [
+      "x = 1, y = 2",
+      "x = 2, y = 1",
+      "x = -1, y = 3",
+      "x = 3, y = -1"
+    ],
+    "correct_index": 1,
+    "explanation": "Adding both equations: -226x - 226y = -678, dividing by -226 gives x + y = 3. Subtracting the first from the second: -530x + 530y = -530, dividing by -530 gives x - y = 1. Adding x + y = 3 and x - y = 1 gives 2x = 4, so x = 2. Then y = 1.",
+    "explanation_hi": "दोनों समीकरणों को जोड़ने पर: -226x - 226y = -678, -226 से भाग देने पर x + y = 3 मिलता है। दूसरे से पहले को घटाने पर: -530x + 530y = -530, -530 से भाग देने पर x - y = 1 मिलता है। x + y = 3 और x - y = 1 को जोड़ने पर 2x = 4 मिलता है, इसलिए x = 2. तब y = 1."
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH3_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The area of a rectangle gets reduced by 9 square units if its length is reduced by 5 units and breadth is increased by 3 units. If we increase the length by 3 units and breadth by 2 units, the area increases by 67 square units. Find the length and breadth.",
+    "question_hi": "एक आयत का क्षेत्रफल 9 वर्ग इकाई कम हो जाता है यदि उसकी लंबाई 5 इकाई कम कर दी जाए और चौड़ाई 3 इकाई बढ़ा दी जाए। यदि हम लंबाई 3 इकाई और चौड़ाई 2 इकाई बढ़ाते हैं, तो क्षेत्रफल 67 वर्ग इकाई बढ़ जाता है। लंबाई और चौड़ाई ज्ञात कीजिए।",
+    "options": [
+      "Length = 15, Breadth = 8",
+      "Length = 17, Breadth = 9",
+      "Length = 19, Breadth = 7",
+      "Length = 21, Breadth = 10"
+    ],
+    "options_hi": [
+      "लंबाई = 15, चौड़ाई = 8",
+      "लंबाई = 17, चौड़ाई = 9",
+      "लंबाई = 19, चौड़ाई = 7",
+      "लंबाई = 21, चौड़ाई = 10"
+    ],
+    "correct_index": 1,
+    "explanation": "Let length be x and breadth be y. Area = xy. Eq 1: (x - 5)(y + 3) = xy - 9 => 3x - 5y = 6. Eq 2: (x + 3)(y + 2) = xy + 67 => 2x + 3y = 61. Multiply Eq 1 by 2 and Eq 2 by 3 to get 6x - 10y = 12 and 6x + 9y = 183. Subtracting gives 19y = 171 => y = 9. Substituting y=9 into 2x + 3y = 61 gives 2x + 27 = 61 => 2x = 34 => x = 17.",
+    "explanation_hi": "मान लें लंबाई x और चौड़ाई y है। क्षेत्रफल = xy. समीकरण 1: (x - 5)(y + 3) = xy - 9 => 3x - 5y = 6. समीकरण 2: (x + 3)(y + 2) = xy + 67 => 2x + 3y = 61. समीकरण 1 को 2 से और समीकरण 2 को 3 से गुणा करने पर 6x - 10y = 12 और 6x + 9y = 183 मिलता है। घटाने पर 19y = 171 => y = 9 मिलता है। y = 9 को 2x + 3y = 61 में रखने पर 2x + 27 = 61 => 2x = 34 => x = 17."
+  }
+]

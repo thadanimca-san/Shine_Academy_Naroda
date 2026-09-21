@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "id": "cbse_grade5_maths_ch11",
+    "title": "Chapter 11: Geometry Basics",
+    "subject": "Maths",
+    "grade": "Grade 5",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Identify and define fundamental geometric elements: points, lines, line segments, and rays.",
+      "Classify different types of angles based on their degrees (acute, right, obtuse, straight).",
+      "Understand properties of basic 2D shapes including polygons, triangles, and quadrilaterals.",
+      "Calculate perimeter and basic area concepts using standard spatial reasoning."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_POINT",
+      "DICT_GRADE_LINESEGMENT",
+      "DICT_GRADE_RAY",
+      "DICT_GRADE_ACUTEANGLE",
+      "DICT_GRADE_PERIMETER"
+    ],
+    "ai_context": {
+      "learning_goal": "To build a rock-solid spatial intuition by connecting abstract geometric definitions to everyday physical surroundings.",
+      "common_misconceptions": [
+        "Confusing a line segment with an infinite line.",
+        "Believing that the size of an angle changes if its arms are drawn longer.",
+        "Thinking perimeter and area measure the exact same attribute."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Invisible Blueprint of the World",
+      "body": "Imagine waking up one day to find that all straight edges, crisp corners, and neat shapes have melted away. Buildings look like lumpy clay mounds, soccer balls are shapeless blobs, and you cannot even draw a straight path on a map. Without geometry, the physical universe would lose its structure! From the hexagonal patterns in honeycombs to the rigid triangles supporting bridges, geometry is the invisible mathematical blueprint holding our reality together. Today, we step into the grand workshop of shapes, lines, and angles to uncover the hidden rules that architects, artists, and nature itself use every single day.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "According to the story, what role does geometry play in our physical world?",
+      "options": [
+        "It only matters for drawing abstract art on computers.",
+        "It serves as the structural blueprint holding our reality together.",
+        "It is purely a historical subject with no modern uses."
+      ],
+      "correct_index": 1,
+      "explanation": "Geometry provides the structural rules and shapes found in nature, architecture, and everyday objects.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Atomic Building Blocks of Geometry",
+      "body": "Every magnificent skyscraper, intricate map, and complex geometric figure begins with the absolute simplest entity in math: a [DICT_GRADE_POINT|point]. A point has no length, no width, and no thickness. It merely specifies an exact location in space, usually represented by a tiny dot and named with a capital letter, like Point A. When we place an infinite number of these points side by side in a straight path that extends forever in both directions, we get a line. But since we cannot draw something infinite on paper, we study manageable pieces of it. A [DICT_GRADE_LINESEGMENT|line segment] is a straight path that has two distinct endpoints; it has a fixed, measurable length. If we take a line segment and let it start firmly at one endpoint while stretching infinitely in only one direction, it becomes a [DICT_GRADE_RAY|ray]. Think of a flashlight beam: it starts at the bulb (endpoint) and shoots out endlessly into the night sky.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Try this! The Flashlight Beam Experiment",
+      "body": "Turn off your bedroom lights at night and switch on a torch or phone flashlight. Look closely at where the light leaves the glass—that is your starting point, your endpoint! Now watch the beam shoot across the room. Does it stop at the wall, or can you imagine it traveling forever? That is a real-world ray!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the key difference between a line segment and a ray?",
+      "back": "A line segment has TWO endpoints and a measurable length. A ray has ONE endpoint and extends infinitely in one direction.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Lines in Relationship: Parallel and Intersecting",
+      "body": "Lines do not exist in isolation; they interact with one another across space. When two straight lines meet or cross each other at a single common point, they are called intersecting lines. The spot where they cross is their point of intersection, like the center of a crisp letter 'X'. However, some lines never meet no matter how far you extend them in either direction. These are parallel lines. Think of the two metal rails of a railway track or the opposite vertical edges of a door frame. They maintain a perfectly constant, equal distance from one another from start to finish. If they ever converged or diverged, trains would derail and doors would jam!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which of these best describes parallel lines?",
+      "options": [
+        "Two lines that cross each other at a 90-degree angle.",
+        "Two lines that never meet and always stay the same distance apart.",
+        "A line that stops at two distinct endpoints."
+      ],
+      "correct_index": 1,
+      "explanation": "Parallel lines maintain an equal distance apart and never intersect, no matter how far they are extended.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The Universe of Angles",
+      "body": "When two rays share a common starting point called a vertex, they open up to form an angle. An angle measures the amount of turn or rotation between those two rays, which we measure in degrees (°). We classify angles based on how wide they open. An [DICT_GRADE_ACUTEANGLE|acute angle] is sharp and energetic, measuring less than 90 degrees—think of the tip of a freshly sharpened pencil. When the two rays meet squarely, forming an exact 'L' shape like the corner of a book, it is a right angle measuring precisely 90 degrees. If the angle opens wider than a right angle but less than a straight line, between 90 and 180 degrees, it is an obtuse angle, looking like a reclined lounge chair. Finally, when the rays point in exact opposite directions, they form a straight line, creating a straight angle of exactly 180 degrees.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Body Angles Activity",
+      "body": "Stand up and use your arms as the rays of an angle. Keep them together (0 degrees), open them slightly like a pizza slice (acute), make an 'L' shape with your body and arm (right angle), stretch wider like a resting hammock (obtuse), and spread your arms straight out to both sides (straight angle). Feel the geometry in your bones!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is the exact measurement of a right angle?",
+      "back": "Exactly 90 degrees.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "If an angle measures 125 degrees, how is it classified?",
+      "options": [
+        "Acute angle",
+        "Right angle",
+        "Obtuse angle"
+      ],
+      "correct_index": 2,
+      "explanation": "Any angle measuring greater than 90 degrees and less than 180 degrees is an obtuse angle.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 3: Entering the World of 2D Polygons",
+      "body": "When straight line segments connect end-to-end to close in a completely flat, two-dimensional space, they form a shape known as a polygon. The word comes from Greek: 'poly' meaning many, and 'gon' meaning angles or sides. A polygon must be closed (no gaps or leaks) and made entirely of straight line segments. The simplest possible polygon is the triangle, boasting 3 sides and 3 angles. Step up to 4 sides, and you enter the family of quadrilaterals, which includes squares, rectangles, rhombuses, and parallelograms. Polygons are named systematically by their number of sides: a 5-sided shape is a pentagon, a 6-sided shape is a hexagon, and an 8-sided stop sign is an octagon.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "flashcard",
+      "front": "What are the two absolute rules for a shape to be classified as a polygon?",
+      "back": "1. It must be a closed shape with no openings. 2. It must be made entirely of straight line segments (no curves).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Which of the following is NOT a polygon?",
+      "options": [
+        "A triangle",
+        "A circle",
+        "A hexagon"
+      ],
+      "correct_index": 1,
+      "explanation": "A circle is curved and not made of straight line segments, so it is not a polygon.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Special Focus: The Wonderful World of Triangles",
+      "body": "Triangles are the strongest shapes in engineering because their sides cannot be deformed without breaking. We can classify triangles into categories based on their sides and angles. By side length, an equilateral triangle has three equal sides and three equal 60-degree angles. An isosceles triangle has two equal sides and two equal base angles. A scalene triangle has all three sides of completely different lengths. By angle type, a right triangle contains one 90-degree right angle, an acute triangle has three acute angles, and an obtuse triangle contains one obtuse angle greater than 90 degrees.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "teacher_tip",
+      "title": "Toothpick Triangles",
+      "body": "Give students toothpicks or cotton swabs and miniature marshmallows. Have them build an equilateral triangle, an isosceles triangle, and a scalene triangle. Notice how rigid and stable the triangular structure is compared to a square or rectangle!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What do we call a triangle with all three sides of different lengths?",
+      "back": "A scalene triangle.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 4: Measuring Spaces – Perimeter",
+      "body": "Geometry is not just about looking at shapes; it is also about measuring them. When you want to walk all the way around the outer boundary of a sports field, a garden, or a picture frame, you are calculating its [DICT_GRADE_PERIMETER|perimeter]. The perimeter is simply the total distance around the outside edge of a 2D shape. To find the perimeter of any polygon, you take a stroll around the shape in your mind and add up the lengths of all its outer sides. For example, if a triangular garden has sides measuring 3 meters, 4 meters, and 5 meters, its perimeter is 3 + 4 + 5 = 12 meters. For special shapes like squares and rectangles, we can use shortcuts (like multiplying length and width) because opposite sides are equal.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "What is the perimeter of a regular square whose side length is 6 centimeters?",
+      "options": [
+        "12 cm",
+        "24 cm",
+        "36 cm"
+      ],
+      "correct_index": 1,
+      "explanation": "A square has 4 equal sides. 4 x 6 cm = 24 cm.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "The String Walk",
+      "body": "Take a piece of yarn or string and lay it out around a textbook cover. Cut the string to match the exact outer boundary. Then stretch the string out along a ruler. The length in centimeters is the perimeter of the book cover!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Circles: The Curvy Outsiders",
+      "body": "While polygons rule the world of straight lines, the circle reigns supreme in the realm of curves. A circle is the set of all points in a plane that are at an exact equal distance from a fixed center point. That fixed distance from the center to any point on the outer edge is called the radius. If you draw a straight line passing straight through the center from one side of the circle to the other, you get the diameter, which is always exactly twice as long as the radius. The total distance around the circular boundary has its own special name: the circumference.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "How is the diameter of a circle related to its radius?",
+      "back": "The diameter is always twice the length of the radius (Diameter = 2 × Radius).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "If the radius of a bicycle wheel is 5 inches, what is its diameter?",
+      "options": [
+        "5 inches",
+        "10 inches",
+        "25 inches"
+      ],
+      "correct_index": 1,
+      "explanation": "The diameter is twice the radius, so 2 × 5 = 10 inches.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Symmetry in Geometry",
+      "body": "Geometry is deeply tied to beauty and balance through symmetry. A shape has line symmetry if you can fold it along a straight line (called the line of symmetry or axis of symmetry) so that both halves match up perfectly, like identical twins. For instance, a human face has one vertical line of symmetry down the middle, while a regular star or a snowflake can have multiple lines of symmetry. If you place a mirror along the line of symmetry, the reflection completes the other half of the shape flawlessly.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Ink-Blot Symmetry Test",
+      "body": "Fold a piece of paper in half. Drop a few spots of water-based paint on one side of the crease, fold the paper firmly, press down, and open it back up. The crease in the middle is your line of symmetry for a beautiful symmetrical butterfly pattern!",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "flashcard",
+      "front": "What is the line of symmetry?",
+      "back": "An imaginary line where a figure can be folded into two matching, identical halves.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Putting It All Together: Geometry in Architecture",
+      "body": "When master architects design grand structures like the Egyptian pyramids, Roman colosseums, or modern suspension bridges, they combine everything we have learned. They use points and line segments to draft blueprints, parallel lines to ensure walls are straight, right angles to keep buildings stable, triangles to distribute weight evenly, and perimeters to calculate how much fencing or material they need to order. Geometry is not just a subject in a textbook; it is the universal language of design and engineering.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "Why do engineers use triangular shapes so heavily when building bridges and towers?",
+      "options": [
+        "Because triangles are the cheapest shape to manufacture.",
+        "Because triangles provide incredible structural rigidity and cannot easily be deformed.",
+        "Because triangles have no angles."
+      ],
+      "correct_index": 1,
+      "explanation": "Triangles are structurally rigid, making them ideal for bearing heavy loads without collapsing.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "flashcard",
+      "front": "What is the total distance around the outer boundary of any 2D polygon called?",
+      "back": "Perimeter",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "quiz",
+      "question": "Which angle type is larger than a right angle but smaller than a straight line?",
+      "options": [
+        "Acute angle",
+        "Obtuse angle",
+        "Zero angle"
+      ],
+      "correct_index": 1,
+      "explanation": "An obtuse angle measures between 90 and 180 degrees.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

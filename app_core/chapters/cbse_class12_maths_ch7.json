@@ -1,0 +1,515 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch7",
+    "title": "Chapter 7: Integrals",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_001",
+      "type": "hook",
+      "title": "The Art of Reversing Time: What is Integration?",
+      "title_hi": "समय को पलटने की कला: समाकलन क्या है?",
+      "title_gu": "સમયને ઉલટાવવાની કળા: સંકલન શું છે?",
+      "body": "If differentiation allows us to calculate the exact speed of a moving sports car at any given instant, how can we calculate the total distance traveled over a journey if we only know its varying speed at every second? Integration is the inverse operation of differentiation—a mathematical machine that reconstructs the whole from its microscopic parts.",
+      "body_hi": "यदि अवकलन हमें किसी भी क्षण स्पोर्ट्स कार की सटीक गति की गणना करने की अनुमति देता है, तो यदि हमें केवल हर सेकंड उसकी बदलती गति ज्ञात हो, तो हम यात्रा के दौरान तय की गई कुल दूरी की गणना कैसे कर सकते हैं? समाकलन, अवकलन की विपरीत प्रक्रिया है—एक गणितीय उपकरण जो सूक्ष्म भागों से पूरे चित्र का पुनर्निर्माण करता है।",
+      "body_gu": "જો વિકલન આપણને કોઈપણ ક્ષણે સ્પોર્ટ્સ કારની ચોક્કસ ઝડપની ગણતરી કરવાની મંજૂરી આપે છે, તો જો આપણે દરેક સેકન્ડે તેની બદલાતી ઝડપ જાણતા હોઈએ, તો આપણે સમગ્ર પ્રવાસ દરમિયાન કાપેલું કુલ અંતર કેવી રીતે શોધી શકીએ? સંકલન એ વિકલનની ઉલટી પ્રક્રિયા છે—એક એવું ગાણિતિક સાધન જે તેના સૂક્ષ્મ ભાગોમાંથી સમગ્રનું પુનઃનિર્માણ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_002",
+      "type": "socratic_question",
+      "title": "Reversing Differentiation",
+      "title_hi": "અવકલન ઉલટાવવું",
+      "title_gu": "વિકલન ઉલટાવવું",
+      "question": "If you know that the derivative of a function f(x) with respect to x is 2x, what was the original function f(x)? Is x^2 the only answer?",
+      "question_hi": "यदि आप जानते हैं कि x के सापेक्ष फ़ंक्शन f(x) का अवकलज 2x है, तो मूल फ़ंक्शन f(x) क्या था? क्या x^2 ही एकमात्र उत्तर है?",
+      "question_gu": "જો તમે જાણો છો કે x ના સાપેક્ષે વિધેય f(x) નું વિકલન 2x છે, તો મૂળ વિધેય f(x) શું હતું? શું x^2 એ જ માત્ર એકમાત્ર જવાબ છે?",
+      "prompt": "Think about the derivative of a constant number like 5, 10, or -100.",
+      "prompt_hi": "5, 10, या -100 जैसे किसी अचर संख्या के अवकलज (derivative) के बारे में सोचें।",
+      "prompt_gu": "5, 10, અથવા -100 જેવા અચળ પદના વિકલન વિશે વિચારો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_003",
+      "type": "discovery",
+      "title": "Unveiling the Constant of Integration (C)",
+      "title_hi": "समाकलन अचर (C) की खोज",
+      "title_gu": "સંકલન અચળાંક (C) ની શોધ",
+      "body": "Notice that d/dx(x^2) = 2x, d/dx(x^2 + 5) = 2x, and d/dx(x^2 - 99) = 2x. Since the derivative of any constant 'C' is zero, there are infinitely many functions whose derivative is 2x. Therefore, the general antiderivative of 2x is x^2 + C, where C is called the Constant of Integration.",
+      "body_hi": "ध्यान दें कि d/dx(x^2) = 2x, d/dx(x^2 + 5) = 2x, और d/dx(x^2 - 99) = 2x है। चूंकि किसी भी अचर 'C' का अवकलज शून्य होता है, इसलिए ऐसे अनंत फ़ंक्शन हैं जिनका अवकलज 2x है। इसलिए, 2x का सामान्य प्रतिअवकलज (antiderivative) x^2 + C है, जहाँ C को समाकलन अचर (Constant of Integration) कहा जाता है।",
+      "body_gu": "નોંધો કે d/dx(x^2) = 2x, d/dx(x^2 + 5) = 2x, અને d/dx(x^2 - 99) = 2x છે. કોઈપણ અચળ પદ 'C' નું વિકલન શૂન્ય હોવાથી, એવા અસંખ્ય વિધેયો છે જેનું વિકલન 2x થાય છે. તેથી, 2x નું સામાન્ય પ્રતિવિકલિત x^2 + C છે, જ્યાં C ને સંકલન અચળાંક કહેવામાં આવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_004",
+      "type": "theory",
+      "title": "Fundamental Concepts & Methods of Integration",
+      "title_hi": "मूलभूत अवधारणाएं और समाकलन की विधियां",
+      "title_gu": "મૂળભૂત ખ્યાલો અને સંકલનની પદ્ધતિઓ",
+      "body": "Integrals are broadly categorized into two types:\n\n1. INDEFINITE INTEGRALS: Represents a family of curves. Formula: ∫ f(x) dx = F(x) + C.\nKey standard formulas:\n• ∫ x^n dx = (x^(n+1))/(n+1) + C (for n ≠ -1)\n• ∫ (1/x) dx = log|x| + C\n• ∫ e^x dx = e^x + C\n• ∫ sin(x) dx = -cos(x) + C\n• ∫ cos(x) dx = sin(x) + C\n• ∫ sec^2(x) dx = tan(x) + C\n\n2. METHODS OF INTEGRATION:\n• Integration by Substitution: ∫ f(g(x))g'(x) dx = ∫ f(t) dt where t = g(x).\n• Integration using Partial Fractions: Resolving rational functions P(x)/Q(x) into simpler algebraic fractions.\n• Integration by Parts: ∫ u·v dx = u ∫ v dx - ∫ [ (du/dx) ∫ v dx ] dx (Rule: ILATE - Inverse, Logarithmic, Algebraic, Trigonometric, Exponential).\n\n3. DEFINITE INTEGRALS & PROPERTIES:\n∫[a to b] f(x) dx = F(b) - F(a).\nImportant Properties:\n• ∫[a to b] f(x) dx = ∫[a to b] f(a+b-x) dx\n• ∫[0 to a] f(x) dx = ∫[0 to a] f(a-x) dx\n• ∫[-a to a] f(x) dx = 2 ∫[0 to a] f(x) dx if f(x) is EVEN, and 0 if f(x) is ODD.",
+      "body_hi": "समाकलन को मुख्य रूप से दो प्रकारों में वर्गीकृत किया गया है:\n\n1. अनिश्चित समाकलन (Indefinite Integrals): यह वक्रों के एक कुल का प्रतिनिधित्व करता है। सूत्र: ∫ f(x) dx = F(x) + C.\nप्रमुख मानक सूत्र:\n• ∫ x^n dx = (x^(n+1))/(n+1) + C (n ≠ -1 के लिए)\n• ∫ (1/x) dx = log|x| + C\n• ∫ e^x dx = e^x + C\n• ∫ sin(x) dx = -cos(x) + C\n• ∫ cos(x) dx = sin(x) + C\n• ∫ sec^2(x) dx = tan(x) + C\n\n2. समाकलन की विधियाँ:\n• प्रतिस्थापन द्वारा समाकलन: ∫ f(g(x))g'(x) dx = ∫ f(t) dt जहाँ t = g(x)।\n• आंशिक भिन्नों द्वारा समाकलन: परिमेय फलनों P(x)/Q(x) को सरल बीजीय भिन्नों में विघटित करना।\n• खंडशः समाकलन (By Parts): ∫ u·v dx = u ∫ v dx - ∫ [ (du/dx) ∫ v dx ] dx (नियम: ILATE)।\n\n3. निश्चित समाकलन और गुणधर्म:\n∫[a से b] f(x) dx = F(b) - F(a).\nमहत्वपूर्ण गुणधर्म:\n• ∫[0 से a] f(x) dx = ∫[0 से a] f(a-x) dx\n• ∫[-a से a] f(x) dx = 2 ∫[0 से a] f(x) dx (यदि f सम फलन है) तथा 0 (यदि f विषम फलन है)।",
+      "body_gu": "સંકલનને મુખ્યત્વે બે પ્રકારમાં વર્ગીકૃત કરવામાં આવે છે:\n\n1. અનિશ્ચિત સંકલન (Indefinite Integrals): તે વક્રોના કુળનું પ્રતિનિધિત્વ કરે છે. સૂત્ર: ∫ f(x) dx = F(x) + C.\nમુખ્ય પ્રમાણિત સૂત્રો:\n• ∫ x^n dx = (x^(n+1))/(n+1) + C (n ≠ -1 માટે)\n• ∫ (1/x) dx = log|x| + C\n• ∫ e^x dx = e^x + C\n• ∫ sin(x) dx = -cos(x) + C\n• ∫ cos(x) dx = sin(x) + C\n• ∫ sec^2(x) dx = tan(x) + C\n\n2. સંકલનની પદ્ધતિઓ:\n• આદેશની રીતે સંકલન: ∫ f(g(x))g'(x) dx = ∫ f(t) dt જ્યાં t = g(x).\n• આંશિક અપૂર્ણાંકની રીતે સંકલન: સંમેય વિધેયો P(x)/Q(x) નું સરળ અપૂર્ણાંકોમાં વિભાજન.\n• ખંડશઃ સંકલન (By Parts): ∫ u·v dx = u ∫ v dx - ∫ [ (du/dx) ∫ v dx ] dx (નિયમ: ILATE).\n\n3. નિયત સંકલન અને ગુણધર્મો:\n∫[a થી b] f(x) dx = F(b) - F(a).\nમહત્વના ગુણધર્મો:\n• ∫[0 થી a] f(x) dx = ∫[0 થી a] f(a-x) dx\n• ∫[-a થી a] f(x) dx = 2 ∫[0 થી a] f(x) dx (જો f યુગ્મ વિધેય હોય) અને 0 (જો f અયુગ્મ વિધેય હોય)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_005",
+      "type": "knowledge_check",
+      "title": "Basic Integration Check",
+      "title_hi": "बुनियादी समाकलन जांच",
+      "title_gu": "મૂળભૂત સંકલન ચકાસણી",
+      "question": "What is the indefinite integral of f(x) = 3x^2 + 4x + 5 with respect to x?",
+      "question_hi": "x के सापेक्ष f(x) = 3x^2 + 4x + 5 का अनिश्चित समाकलन क्या है?",
+      "question_gu": "x ના સાપેક્ષે f(x) = 3x^2 + 4x + 5 નું અનિશ્ચિત સંકલન શું થશે?",
+      "options": [
+        "x^3 + 2x^2 + 5x + C",
+        "6x + 4 + C",
+        "x^3 + 4x^2 + 5x + C",
+        "3x^3 + 2x^2 + 5x + C"
+      ],
+      "options_hi": [
+        "x^3 + 2x^2 + 5x + C",
+        "6x + 4 + C",
+        "x^3 + 4x^2 + 5x + C",
+        "3x^3 + 2x^2 + 5x + C"
+      ],
+      "options_gu": [
+        "x^3 + 2x^2 + 5x + C",
+        "6x + 4 + C",
+        "x^3 + 4x^2 + 5x + C",
+        "3x^3 + 2x^2 + 5x + C"
+      ],
+      "correct_index": 0,
+      "explanation": "∫(3x^2 + 4x + 5) dx = 3(x^3/3) + 4(x^2/2) + 5x + C = x^3 + 2x^2 + 5x + C.",
+      "explanation_hi": "∫(3x^2 + 4x + 5) dx = 3(x^3/3) + 4(x^2/2) + 5x + C = x^3 + 2x^2 + 5x + C.",
+      "explanation_gu": "∫(3x^2 + 4x + 5) dx = 3(x^3/3) + 4(x^2/2) + 5x + C = x^3 + 2x^2 + 5x + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_006",
+      "type": "reflection",
+      "title": "Geometric Significance of Definite vs Indefinite Integrals",
+      "title_hi": "निश्चित बनाम अनिश्चित समाकलन का ज्यामितीय महत्व",
+      "title_gu": "નિયત વિરુદ્ધ અનિશ્ચિત સંકલનનું ભૌમિતિક મહત્વ",
+      "body": "Why does a definite integral result in a specific numerical value, whereas an indefinite integral results in a function containing 'C'? Geometrically, an indefinite integral represents a family of parallel curves shifted vertically along the y-axis, while a definite integral computes the exact net signed area under a curve between two specific boundaries x = a and x = b.",
+      "body_hi": "निश्चित समाकलन का परिणाम एक विशिष्ट संख्यात्मक मान क्यों होता है, जबकि अनिश्चित समाकलन का परिणाम 'C' युक्त एक फ़ंक्शन होता है? ज्यामितीय रूप से, एक अनिश्चित समाकलन y-अक्ष के अनुदिश लंबवत रूप से स्थानांतरित समांतर वक्रों के एक कुल का प्रतिनिधित्व करता है, जबकि एक निश्चित समाकलन दो विशिष्ट सीमाओं x = a और x = b के बीच वक्र के अंतर्गत सटीक क्षेत्रफल की गणना करता है।",
+      "body_gu": "શા માટે નિયત સંકલન ચોક્કસ સંખ્યાત્મક મૂલ્યમાં પરિણમે છે, જ્યારે અનિશ્ચિત સંકલન 'C' ધરાવતા વિધેયમાં પરિણમે છે? ભૌમિતિક રીતે, અનિશ્ચિત સંકલન એ y-અક્ષ પર શિફ્ટ થયેલા સમાંતર વક્રો દર્શાવે છે, જ્યારે નિયત સંકલન એ x = a અને x = b વચ્ચેના વક્ર હેઠળનું ચોક્કસ ક્ષેત્રફળ આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_007",
+      "type": "connection",
+      "title": "Real-World Applications of Integrals",
+      "title_hi": "समाकलन के वास्तविक-जीवन में अनुप्रयोग",
+      "title_gu": "સંકલનના વાસ્તવિક જીવનમાં ઉપયોગો",
+      "body": "1. Physics & Engineering: Calculating work done (∫ F dx), center of mass, electric potential, and rocket trajectories.\n2. Medicine: Estimating cardiac output and analyzing drug absorption rates over time.\n3. Economics & Finance: Calculating consumer/producer surplus and continuous compound interest accumulation.",
+      "body_hi": "1. भौतिकी और इंजीनियरिंग: किए गए कार्य (∫ F dx), द्रव्यमान केंद्र, विद्युत विभव और रॉकेट प्रक्षेपवक्र की गणना।\n2. चिकित्सा: कार्डिएक आउटपुट का अनुमान लगाना और समय के साथ दवा के अवशोषण की दर का विश्लेषण करना।\n3. अर्थशास्त्र: उपभोक्ता/उत्पादक अधिशेष की गणना।",
+      "body_gu": "1. ભૌતિક વિજ્ઞાન અને એન્જિનિયરિંગ: થયેલ કાર્ય (∫ F dx), દ્રવ્યમાન કેન્દ્ર અને વિજળીના સંભવિત મૂલ્યો. \n2. તબીબી ક્ષેત્ર: હૃદયના ધબકારા/કાર્ડિયાક આઉટપુટ અને દવાની અસરનો દર માપવો.\n3. અર્થશાસ્ત્ર: ગ્રાહક અને ઉત્પાદકનો સરપ્લસ શોધવો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Integration by Parts with Exponential & Trigonometric Functions",
+      "title_hi": "मास्टरी चुनौती: चरघातांकी और त्रिकोणमितीय फलनों का खंडशः समाकलन",
+      "title_gu": "માસ્ટરી ચેલેન્જ: ઘાતાંકીય અને ત્રિકોણમિતિય વિધેયોનું ખંડશઃ સંકલન",
+      "question": "Evaluate the integral: I = ∫ e^x sin(x) dx",
+      "question_hi": "समाकलन का मान ज्ञात कीजिए: I = ∫ e^x sin(x) dx",
+      "question_gu": "સંકલનનું મૂલ્ય શોધો: I = ∫ e^x sin(x) dx",
+      "options": [
+        "(e^x / 2) (sin x - cos x) + C",
+        "(e^x / 2) (sin x + cos x) + C",
+        "e^x (sin x - cos x) + C",
+        "(e^x / 2) (cos x - sin x) + C"
+      ],
+      "options_hi": [
+        "(e^x / 2) (sin x - cos x) + C",
+        "(e^x / 2) (sin x + cos x) + C",
+        "e^x (sin x - cos x) + C",
+        "(e^x / 2) (cos x - sin x) + C"
+      ],
+      "options_gu": [
+        "(e^x / 2) (sin x - cos x) + C",
+        "(e^x / 2) (sin x + cos x) + C",
+        "e^x (sin x - cos x) + C",
+        "(e^x / 2) (cos x - sin x) + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Using Integration by Parts twice:\nI = sin x · e^x - ∫ cos x · e^x dx\n= e^x sin x - [ cos x · e^x - ∫ (-sin x) e^x dx ]\n= e^x sin x - e^x cos x - I\n2I = e^x (sin x - cos x) => I = (e^x / 2)(sin x - cos x) + C.",
+      "explanation_hi": "दो बार खंडशः समाकलन लागू करने पर:\nI = sin x · e^x - ∫ cos x · e^x dx\n= e^x sin x - [ cos x · e^x - ∫ (-sin x) e^x dx ]\n= e^x sin x - e^x cos x - I\n2I = e^x (sin x - cos x) => I = (e^x / 2)(sin x - cos x) + C.",
+      "explanation_gu": "બે વાર ખંડશઃ સંકલનનો ઉપયોગ કરતા:\nI = sin x · e^x - ∫ cos x · e^x dx\n= e^x sin x - [ cos x · e^x - ∫ (-sin x) e^x dx ]\n= e^x sin x - e^x cos x - I\n2I = e^x (sin x - cos x) => I = (e^x / 2)(sin x - cos x) + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_009",
+      "type": "mcq",
+      "title": "Textbook Practice: Integration by Anti-derivative Inspection",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: प्रति-अवकलज द्वारा समाकलन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: પ્રતિવિકલિત દ્વારા સંકલન",
+      "question": "Find the anti-derivative of sin(2x) with respect to x using the method of inspection.",
+      "question_hi": "निरीक्षण विधि का उपयोग करके x के सापेक्ष sin(2x) का प्रतिअवकलज ज्ञात कीजिए।",
+      "question_gu": "નિરીક્ષણની રીતનો ઉપયોગ કરીને x ના સાપેક્ષે sin(2x) નું પ્રતિવિકલિત શોધો.",
+      "options": [
+        "- (1/2) cos(2x)",
+        "(1/2) cos(2x)",
+        "- 2 cos(2x)",
+        "2 cos(2x)"
+      ],
+      "options_hi": [
+        "- (1/2) cos(2x)",
+        "(1/2) cos(2x)",
+        "- 2 cos(2x)",
+        "2 cos(2x)"
+      ],
+      "options_gu": [
+        "- (1/2) cos(2x)",
+        "(1/2) cos(2x)",
+        "- 2 cos(2x)",
+        "2 cos(2x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Since d/dx [cos(2x)] = -2 sin(2x), we have sin(2x) = d/dx [-1/2 cos(2x)]. Thus, anti-derivative is -1/2 cos(2x).",
+      "explanation_hi": "चूंकि d/dx [cos(2x)] = -2 sin(2x), इसलिए sin(2x) = d/dx [-1/2 cos(2x)]। अतः प्रतिअवकलज -1/2 cos(2x) है।",
+      "explanation_gu": "કારણ કે d/dx [cos(2x)] = -2 sin(2x), તેથી sin(2x) = d/dx [-1/2 cos(2x)]. આમ, પ્રતિવિકલિત -1/2 cos(2x) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_010",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.1: Algebraic Integral",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.1: बीजीय समाकलन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.1: બીજગણિતીય સંકલન",
+      "question": "Evaluate: ∫ (4e^(3x) + 1) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ (4e^(3x) + 1) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ (4e^(3x) + 1) dx",
+      "options": [
+        "(4/3) e^(3x) + x + C",
+        "12 e^(3x) + x + C",
+        "(4/3) e^(3x) + C",
+        "4 e^(3x) + x + C"
+      ],
+      "options_hi": [
+        "(4/3) e^(3x) + x + C",
+        "12 e^(3x) + x + C",
+        "(4/3) e^(3x) + C",
+        "4 e^(3x) + x + C"
+      ],
+      "options_gu": [
+        "(4/3) e^(3x) + x + C",
+        "12 e^(3x) + x + C",
+        "(4/3) e^(3x) + C",
+        "4 e^(3x) + x + C"
+      ],
+      "correct_index": 0,
+      "explanation": "∫ (4e^(3x) + 1) dx = 4 ∫ e^(3x) dx + ∫ 1 dx = 4 · (e^(3x)/3) + x + C = (4/3)e^(3x) + x + C.",
+      "explanation_hi": "∫ (4e^(3x) + 1) dx = 4 ∫ e^(3x) dx + ∫ 1 dx = 4 · (e^(3x)/3) + x + C = (4/3)e^(3x) + x + C.",
+      "explanation_gu": "∫ (4e^(3x) + 1) dx = 4 ∫ e^(3x) dx + ∫ 1 dx = 4 · (e^(3x)/3) + x + C = (4/3)e^(3x) + x + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_011",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.1: Anti-derivative of Radical Function",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.1: करणी फलन का प्रतिअवकलज",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.1: વર્ગમૂળ વિધેયનું પ્રતિવિકલિત",
+      "question": "An anti-derivative of (√x + 1/√x) equals:",
+      "question_hi": "(√x + 1/√x) का एक प्रतिअवकलज किसके बराबर है?",
+      "question_gu": "(√x + 1/√x) નું પ્રતિવિકલિત નીચેનામાંથી કયું છે?",
+      "options": [
+        "(2/3) x^(3/2) + 2 x^(1/2) + C",
+        "(3/2) x^(3/2) + (1/2) x^(1/2) + C",
+        "(2/3) x^(3/2) + (1/2) x^(1/2) + C",
+        "(3/2) x^(3/2) + 2 x^(1/2) + C"
+      ],
+      "options_hi": [
+        "(2/3) x^(3/2) + 2 x^(1/2) + C",
+        "(3/2) x^(3/2) + (1/2) x^(1/2) + C",
+        "(2/3) x^(3/2) + (1/2) x^(1/2) + C",
+        "(3/2) x^(3/2) + 2 x^(1/2) + C"
+      ],
+      "options_gu": [
+        "(2/3) x^(3/2) + 2 x^(1/2) + C",
+        "(3/2) x^(3/2) + (1/2) x^(1/2) + C",
+        "(2/3) x^(3/2) + (1/2) x^(1/2) + C",
+        "(3/2) x^(3/2) + 2 x^(1/2) + C"
+      ],
+      "correct_index": 0,
+      "explanation": "∫ (x^(1/2) + x^(-1/2)) dx = [x^(3/2) / (3/2)] + [x^(1/2) / (1/2)] + C = (2/3)x^(3/2) + 2x^(1/2) + C.",
+      "explanation_hi": "∫ (x^(1/2) + x^(-1/2)) dx = [x^(3/2) / (3/2)] + [x^(1/2) / (1/2)] + C = (2/3)x^(3/2) + 2x^(1/2) + C.",
+      "explanation_gu": "∫ (x^(1/2) + x^(-1/2)) dx = [x^(3/2) / (3/2)] + [x^(1/2) / (1/2)] + C = (2/3)x^(3/2) + 2x^(1/2) + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_012",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.2: Integration by Substitution",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.2: प्रतिस्थापन द्वारा समाकलन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.2: આદેશની રીતે સંકલન",
+      "question": "Evaluate: ∫ (2x / (1 + x^2)) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ (2x / (1 + x^2)) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ (2x / (1 + x^2)) dx",
+      "options": [
+        "log|1 + x^2| + C",
+        "tan^(-1)(x) + C",
+        "2 log|1 + x^2| + C",
+        "1 / (1 + x^2)^2 + C"
+      ],
+      "options_hi": [
+        "log|1 + x^2| + C",
+        "tan^(-1)(x) + C",
+        "2 log|1 + x^2| + C",
+        "1 / (1 + x^2)^2 + C"
+      ],
+      "options_gu": [
+        "log|1 + x^2| + C",
+        "tan^(-1)(x) + C",
+        "2 log|1 + x^2| + C",
+        "1 / (1 + x^2)^2 + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Let 1 + x^2 = t ⇒ 2x dx = dt. Then ∫ dt / t = log|t| + C = log|1 + x^2| + C.",
+      "explanation_hi": "माना 1 + x^2 = t ⇒ 2x dx = dt. अतः ∫ dt / t = log|t| + C = log|1 + x^2| + C.",
+      "explanation_gu": "ધારો કે 1 + x^2 = t ⇒ 2x dx = dt. તેથી ∫ dt / t = log|t| + C = log|1 + x^2| + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_013",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.2: Logarithmic Form",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.2: लघुगणकीय रूप",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.2: લઘુગણકીય સ્વરૂપ",
+      "question": "Evaluate: ∫ ( (log x)^2 / x ) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ ( (log x)^2 / x ) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ ( (log x)^2 / x ) dx",
+      "options": [
+        "(1/3) (log x)^3 + C",
+        "(log x)^3 + C",
+        "2 log x + C",
+        "(1/2) (log x)^2 + C"
+      ],
+      "options_hi": [
+        "(1/3) (log x)^3 + C",
+        "(log x)^3 + C",
+        "2 log x + C",
+        "(1/2) (log x)^2 + C"
+      ],
+      "options_gu": [
+        "(1/3) (log x)^3 + C",
+        "(log x)^3 + C",
+        "2 log x + C",
+        "(1/2) (log x)^2 + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Put t = log x ⇒ dt = (1/x) dx. ∫ t^2 dt = (t^3 / 3) + C = (1/3)(log x)^3 + C.",
+      "explanation_hi": "माना t = log x ⇒ dt = (1/x) dx. ∫ t^2 dt = (t^3 / 3) + C = (1/3)(log x)^3 + C.",
+      "explanation_gu": "ધારો કે t = log x ⇒ dt = (1/x) dx. ∫ t^2 dt = (t^3 / 3) + C = (1/3)(log x)^3 + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_014",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.3: Trigonometric Identity Integration",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.3: त्रिकोणमितीय सर्वसमिका समाकलन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.3: ત્રિકોણમિતિય નિત્યસમ સંકલન",
+      "question": "Evaluate: ∫ sin^2(2x + 5) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ sin^2(2x + 5) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ sin^2(2x + 5) dx",
+      "options": [
+        "(x/2) - (1/8) sin(4x + 10) + C",
+        "(x/2) + (1/8) sin(4x + 10) + C",
+        "x - (1/4) sin(4x + 10) + C",
+        "(x/2) - (1/4) cos(4x + 10) + C"
+      ],
+      "options_hi": [
+        "(x/2) - (1/8) sin(4x + 10) + C",
+        "(x/2) + (1/8) sin(4x + 10) + C",
+        "x - (1/4) sin(4x + 10) + C",
+        "(x/2) - (1/4) cos(4x + 10) + C"
+      ],
+      "options_gu": [
+        "(x/2) - (1/8) sin(4x + 10) + C",
+        "(x/2) + (1/8) sin(4x + 10) + C",
+        "x - (1/4) sin(4x + 10) + C",
+        "(x/2) - (1/4) cos(4x + 10) + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Use sin^2(θ) = (1 - cos 2θ)/2. Here θ = 2x + 5 ⇒ sin^2(2x+5) = [1 - cos(4x+10)]/2. Integrating gives x/2 - (1/8)sin(4x+10) + C.",
+      "explanation_hi": "sin^2(θ) = (1 - cos 2θ)/2 का उपयोग करें। यहाँ θ = 2x + 5 ⇒ sin^2(2x+5) = [1 - cos(4x+10)]/2. समाकलन करने पर x/2 - (1/8)sin(4x+10) + C प्राप्त होता है।",
+      "explanation_gu": "sin^2(θ) = (1 - cos 2θ)/2 નો ઉપયોગ કરો. અહીં θ = 2x + 5 ⇒ sin^2(2x+5) = [1 - cos(4x+10)]/2. સંકલન કરવાથી x/2 - (1/8)sin(4x+10) + C મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_015",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.4: Standard Integrals Formula",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.4: मानक समाकलन सूत्र",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.4: પ્રમાણિત સંકલન સૂત્ર",
+      "question": "Evaluate: ∫ dx / (3x^2 + 13x - 10)",
+      "question_hi": "मान ज्ञात कीजिए: ∫ dx / (3x^2 + 13x - 10)",
+      "question_gu": "મૂલ્ય શોધો: ∫ dx / (3x^2 + 13x - 10)",
+      "options": [
+        "(1/17) log|(3x - 2) / (x + 5)| + C",
+        "(1/17) log|(x + 5) / (3x - 2)| + C",
+        "(1/34) log|(3x - 2) / (3x + 15)| + C",
+        "(1/17) log|3x^2 + 13x - 10| + C"
+      ],
+      "options_hi": [
+        "(1/17) log|(3x - 2) / (x + 5)| + C",
+        "(1/17) log|(x + 5) / (3x - 2)| + C",
+        "(1/34) log|(3x - 2) / (3x + 15)| + C",
+        "(1/17) log|3x^2 + 13x - 10| + C"
+      ],
+      "options_gu": [
+        "(1/17) log|(3x - 2) / (x + 5)| + C",
+        "(1/17) log|(x + 5) / (3x - 2)| + C",
+        "(1/34) log|(3x - 2) / (3x + 15)| + C",
+        "(1/17) log|3x^2 + 13x - 10| + C"
+      ],
+      "correct_index": 0,
+      "explanation": "3x^2 + 13x - 10 = (3x - 2)(x + 5). Using partial fractions: 1/((3x-2)(x+5)) = (3/17)/(3x-2) - (1/17)/(x+5). Integrating gives (1/17)log|(3x-2)/(x+5)| + C.",
+      "explanation_hi": "3x^2 + 13x - 10 = (3x - 2)(x + 5). आंशिक भिन्नों का उपयोग करने पर: 1/((3x-2)(x+5)) = (3/17)/(3x-2) - (1/17)/(x+5)। समाकलन करने पर (1/17)log|(3x-2)/(x+5)| + C प्राप्त होता है।",
+      "explanation_gu": "3x^2 + 13x - 10 = (3x - 2)(x + 5). આંશિક અપૂર્ણાંકનો ઉપયોગ કરીને: 1/((3x-2)(x+5)) = (3/17)/(3x-2) - (1/17)/(x+5). સંકલન કરતા (1/17)log|(3x-2)/(x+5)| + C મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_016",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.5: Partial Fractions",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.5: आंशिक भिन्न",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.5: આંશિક અપૂર્ણાંક",
+      "question": "Evaluate: ∫ ( x / ((x + 1)(x + 2)) ) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ ( x / ((x + 1)(x + 2)) ) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ ( x / ((x + 1)(x + 2)) ) dx",
+      "options": [
+        "log|(x + 2)^2 / (x + 1)| + C",
+        "log|(x + 1) / (x + 2)| + C",
+        "log|(x + 1)^2 / (x + 2)| + C",
+        "log|(x + 2) / (x + 1)| + C"
+      ],
+      "options_hi": [
+        "log|(x + 2)^2 / (x + 1)| + C",
+        "log|(x + 1) / (x + 2)| + C",
+        "log|(x + 1)^2 / (x + 2)| + C",
+        "log|(x + 2) / (x + 1)| + C"
+      ],
+      "options_gu": [
+        "log|(x + 2)^2 / (x + 1)| + C",
+        "log|(x + 1) / (x + 2)| + C",
+        "log|(x + 1)^2 / (x + 2)| + C",
+        "log|(x + 2) / (x + 1)| + C"
+      ],
+      "correct_index": 0,
+      "explanation": "x/((x+1)(x+2)) = -1/(x+1) + 2/(x+2). Integrating: -log|x+1| + 2log|x+2| + C = log|(x+2)^2 / (x+1)| + C.",
+      "explanation_hi": "x/((x+1)(x+2)) = -1/(x+1) + 2/(x+2). समाकलन करने पर: -log|x+1| + 2log|x+2| + C = log|(x+2)^2 / (x+1)| + C.",
+      "explanation_gu": "x/((x+1)(x+2)) = -1/(x+1) + 2/(x+2). સંકલન કરતા: -log|x+1| + 2log|x+2| + C = log|(x+2)^2 / (x+1)| + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_017",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.6: Integration by Parts - Special Form",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.6: खंडशः समाकलन - विशेष रूप",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.6: ખંડશઃ સંકલન - વિશિષ્ટ સ્વરૂપ",
+      "question": "Evaluate: ∫ e^x (sin x + cos x) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫ e^x (sin x + cos x) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫ e^x (sin x + cos x) dx",
+      "options": [
+        "e^x sin x + C",
+        "e^x cos x + C",
+        "-e^x cos x + C",
+        "e^x (sin x - cos x) + C"
+      ],
+      "options_hi": [
+        "e^x sin x + C",
+        "e^x cos x + C",
+        "-e^x cos x + C",
+        "e^x (sin x - cos x) + C"
+      ],
+      "options_gu": [
+        "e^x sin x + C",
+        "e^x cos x + C",
+        "-e^x cos x + C",
+        "e^x (sin x - cos x) + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Using the formula ∫ e^x [f(x) + f'(x)] dx = e^x f(x) + C. Here f(x) = sin x, so f'(x) = cos x. Answer is e^x sin x + C.",
+      "explanation_hi": "सूत्र ∫ e^x [f(x) + f'(x)] dx = e^x f(x) + C का उपयोग करने पर। यहाँ f(x) = sin x, इसलिए f'(x) = cos x। उत्तर e^x sin x + C है।",
+      "explanation_gu": "સૂત્ર ∫ e^x [f(x) + f'(x)] dx = e^x f(x) + C નો ઉપયોગ કરીને. અહીં f(x) = sin x, જેથી f'(x) = cos x. જવાબ e^x sin x + C છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_018",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.9: Definite Integration Evaluation",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.9: निश्चित समाकलन मूल्यांकन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.9: નિયત સંકલન મૂલ્યાંકન",
+      "question": "Evaluate the definite integral: ∫[2 to 3] (1 / x) dx",
+      "question_hi": "निश्चित समाकलन का मान ज्ञात कीजिए: ∫[2 से 3] (1 / x) dx",
+      "question_gu": "નિયત સંકલનનું મૂલ્ય શોધો: ∫[2 થી 3] (1 / x) dx",
+      "options": [
+        "log(3/2)",
+        "log(2/3)",
+        "log(5)",
+        "1 / 6"
+      ],
+      "options_hi": [
+        "log(3/2)",
+        "log(2/3)",
+        "log(5)",
+        "1 / 6"
+      ],
+      "options_gu": [
+        "log(3/2)",
+        "log(2/3)",
+        "log(5)",
+        "1 / 6"
+      ],
+      "correct_index": 0,
+      "explanation": "∫[2 to 3] (1/x) dx = [log|x|]₂³ = log(3) - log(2) = log(3/2).",
+      "explanation_hi": "∫[2 से 3] (1/x) dx = [log|x|]₂³ = log(3) - log(2) = log(3/2).",
+      "explanation_gu": "∫[2 થી 3] (1/x) dx = [log|x|]₂³ = log(3) - log(2) = log(3/2)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_019",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.11: Property of Definite Integrals",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 7.11: निश्चित समाकलन के गुणधर्म",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.11: નિયત સંકલનનો ગુણધર્મ",
+      "question": "Evaluate: ∫[0 to π/2] ( √sin x / (√sin x + √cos x) ) dx",
+      "question_hi": "मान ज्ञात कीजिए: ∫[0 से π/2] ( √sin x / (√sin x + √cos x) ) dx",
+      "question_gu": "મૂલ્ય શોધો: ∫[0 થી π/2] ( √sin x / (√sin x + √cos x) ) dx",
+      "options": [
+        "π / 4",
+        "π / 2",
+        "0",
+        "1"
+      ],
+      "options_hi": [
+        "π / 4",
+        "π / 2",
+        "0",
+        "1"
+      ],
+      "options_gu": [
+        "π / 4",
+        "π / 2",
+        "0",
+        "1"
+      ],
+      "correct_index": 0,
+      "explanation": "Using Property ∫[0 to a] f(x)dx = ∫[0 to a] f(a-x)dx, I + I = ∫[0 to π/2] 1 dx = π/2 ⇒ 2I = π/2 ⇒ I = π/4.",
+      "explanation_hi": "गुणधर्म ∫[0 से a] f(x)dx = ∫[0 से a] f(a-x)dx का उपयोग करने पर, I + I = ∫[0 से π/2] 1 dx = π/2 ⇒ 2I = π/2 ⇒ I = π/4.",
+      "explanation_gu": "ગુણધર્મ ∫[0 થી a] f(x)dx = ∫[0 થી a] f(a-x)dx નો ઉપયોગ કરીને, I + I = ∫[0 થી π/2] 1 dx = π/2 ⇒ 2I = π/2 ⇒ I = π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH7_020",
+      "type": "true_false",
+      "title": "Properties of Odd/Even Functions in Integrals",
+      "title_hi": "समाकलन में विषम/सम फलनों के गुणधर्म",
+      "title_gu": "સંકલનમાં અયુગ્મ/યુગ્મ વિધેયોના ગુણધર્મો",
+      "question": "The value of the definite integral ∫[-π/2 to π/2] sin^7(x) dx is equal to 0.",
+      "question_hi": "निश्चित समाकलन ∫[-π/2 से π/2] sin^7(x) dx का मान 0 के बराबर है।",
+      "question_gu": "નિયત સંકલન ∫[-π/2 થી π/2] sin^7(x) dx નું મૂલ્ય 0 બરાબર થાય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "f(x) = sin^7(x) is an ODD function because f(-x) = sin^7(-x) = -sin^7(x) = -f(x). The integral of an odd function from -a to a is always 0.",
+      "explanation_hi": "f(x) = sin^7(x) एक विषम (ODD) फलन है क्योंकि f(-x) = -f(x)। -a से a तक किसी विषम फलन का समाकलन हमेशा 0 होता है।",
+      "explanation_gu": "f(x) = sin^7(x) એ અયુગ્મ વિધેય છે કારણ કે f(-x) = -f(x). -a થી a સુધી અયુગ્મ વિધેયનું સંકલન હંમેશા 0 થાય છે."
+    }
+  ]
+}

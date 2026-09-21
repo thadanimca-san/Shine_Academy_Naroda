@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch5",
+    "title": "Chapter 5: Division",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand division as equal sharing and repeated subtraction",
+      "Master long division with and without remainders",
+      "Apply division properties and solve real-world word problems",
+      "Verify division answers using multiplication and remainders"
+    ],
+    "core_concepts": [
+      "DICT_MATH_DIVIDEND",
+      "DICT_MATH_DIVISOR",
+      "DICT_MATH_QUOTIENT",
+      "DICT_MATH_REMAINDER"
+    ],
+    "ai_context": {
+      "learning_goal": "Students will master the fundamental concepts of division, perform long division algorithms accurately, and understand how remainders function in practical scenarios.",
+      "common_misconceptions": [
+        "Confusing the divisor and the dividend in long division setups",
+        "Forgetting to bring down the next digit during long division",
+        "Treating the remainder as a separate unrelated number rather than what is left over"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Bakery Mystery",
+      "body": "Imagine you are the master baker at Shine Academy's pastry shop. Early this morning, your oven popped out 144 golden, chocolate-chip cookies. Eager customers are waiting in a long line outside, and you need to pack these cookies into 12 identical gift boxes so every single box gets the exact same sweet treat. How many cookies go into each box without leaving a single crumb behind? If you guess wrong, your boxes won't match, and the customers will grumble! This puzzle of fair sharing and equal splitting is the magical gateway to the world of division.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our bakery story, what operation should the master baker use to pack 144 cookies equally into 12 boxes?",
+      "options": [
+        "Addition",
+        "Multiplication",
+        "Division"
+      ],
+      "correct_index": 2,
+      "explanation": "Division is used when we need to split a total quantity into equal groups or shares.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Division?",
+      "body": "At its core, division is the opposite of multiplication. While multiplication combines groups to find a total, division takes a total and splits it into equal groups. Think of it as fair sharing. Every part of a division problem has a special mathematical name. The total amount you start with is called the [DICT_MATH_DIVIDEND|Dividend]. The number of groups you are splitting the total into (or the size of each group) is called the [DICT_MATH_DIVISOR|Divisor]. The result of your division—how many go into each group—is called the [DICT_MATH_QUOTIENT|Quotient]. Sometimes, things don't divide up evenly; whatever is left over at the end is called the [DICT_MATH_REMAINDER|Remainder]. Mastering these four terms is your first step toward mathematical mastery.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "front": "What do we call the number that is being divided?",
+      "back": "The Dividend!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What do we call the answer to a division problem?",
+      "back": "The Quotient!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "teacher_tip",
+      "title": "The Candy Jar Experiment",
+      "body": "Take 20 small items like counters, beans, or candies. Try dividing them into 4 equal cups. Count how many end up in each cup. That number is your quotient! Now try dividing those same 20 items into 6 cups. Notice how some items are left over? That leftover amount is your remainder.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "theory",
+      "title": "Concept 2: Division as Repeated Subtraction",
+      "body": "Long before you learned shortcuts, mathematicians understood division through [DICT_MATH_REMAINDER|Repeated Subtraction]. If you have 12 apples and you want to give 3 apples to each friend until you run out of apples, how many friends get apples? You can subtract 3 from 12 (leaving 9), subtract 3 again (leaving 6), subtract 3 again (leaving 3), and finally subtract 3 one last time (leaving 0). You subtracted the [DICT_MATH_DIVISOR|Divisor] 4 times! Therefore, 12 ÷ 3 = 4. This method proves that division is simply subtracting the same number over and over again until you reach zero.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "quiz",
+      "question": "If you subtract 5 from 20 four times until you reach 0, what division equation does this represent?",
+      "options": [
+        "20 ÷ 4 = 5",
+        "20 ÷ 5 = 4",
+        "20 - 5 = 15"
+      ],
+      "correct_index": 1,
+      "explanation": "Subtracting 5 four times means 20 is being split into groups of 5, which gives 4 groups (20 ÷ 5 = 4).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: The Magic of Multiplication Facts",
+      "body": "Division and multiplication are two sides of the exact same coin. They are inverse operations. If you know that 7 × 8 = 56, then you instantly know two division facts: 56 ÷ 8 = 7 and 56 ÷ 7 = 8. Because of this powerful relationship, mastering your multiplication tables is the ultimate shortcut for division. Whenever you face a division problem like 48 ÷ 6, ask yourself: 'What number multiplied by 6 gives me 48?' Your brain will quickly search its memory banks, find 8, and give you the correct [DICT_MATH_QUOTIENT|Quotient] instantly without needing any subtraction at all.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "Since 9 × 6 = 54, what is 54 ÷ 9?",
+      "options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplication and division are inverse operations. If 9 × 6 = 54, then 54 ÷ 9 must equal 6.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "teacher_tip",
+      "title": "Fact Family Triangles",
+      "body": "Draw a triangle. Put the total product (the dividend) at the top vertex, and the two factors (divisor and quotient) at the bottom two vertices. This visual trick helps students see how multiplication and division lock together seamlessly.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: Properties of Division",
+      "body": "Division has its own set of special rules and properties that never change. Rule 1: Dividing any number by 1 always gives you that exact same number back (e.g., 45 ÷ 1 = 45) because splitting something into 1 group leaves it whole. Rule 2: Dividing any non-zero number by itself always equals 1 (e.g., 45 ÷ 45 = 1) because you have 1 group containing all of it. Rule 3: Zero divided by any number is always zero (0 ÷ 15 = 0) because if you have nothing to share, everyone gets nothing. Rule 4 (CRITICAL WARNING): You can NEVER divide any number by zero! Dividing by zero is undefined in mathematics because it breaks the logic of the universe.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "quiz",
+      "question": "What happens when you divide any number by itself (except zero)?",
+      "options": [
+        "The answer is always 0",
+        "The answer is always 1",
+        "The answer is the number itself"
+      ],
+      "correct_index": 1,
+      "explanation": "Any number divided by itself equals 1, because you are placing the entire quantity into 1 single group.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "Is it possible to divide a number by zero?",
+      "back": "No! Division by zero is undefined and mathematically impossible.",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 5: Introduction to Long Division",
+      "body": "When numbers get too big to solve in your head using multiplication facts, we use a structured method called [DICT_MATH_DIVIDEND|Long Division]. We write this using the 'house' symbol (or division bracket). The [DICT_MATH_DIVIDEND|Dividend] goes safely inside the house, and the [DICT_MATH_DIVISOR|Divisor] stands guard outside to the left. The [DICT_MATH_QUOTIENT|Quotient] builds its home up on the roof of the house step by step. To conquer long division, we follow a famous repeating cycle of four steps: Divide, Multiply, Subtract, and Bring Down. Think of it as a rhythmic dance: DMSB (Does McDonald's Sell Burgers?). Let's explore how this dance works with multi-digit numbers.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "What are the 4 steps of the long division cycle?",
+      "back": "1. Divide\n2. Multiply\n3. Subtract\n4. Bring Down",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Step-by-Step Long Division Walkthrough",
+      "body": "Let's divide 84 by 4. First, set up the problem with 84 inside and 4 outside. Look at the leftmost digit of the dividend: 8 in the tens place. Ask: How many 4s fit into 8? Exactly 2. Write 2 on the roof above the 8. Next, multiply that 2 by the divisor 4 to get 8. Write that 8 directly under the tens digit. Now subtract: 8 minus 8 is 0. Next step: Bring down the next digit, which is 4 in the ones place. Now look at your new working number: 4. Ask: How many 4s fit into 4? Exactly 1. Write 1 on the roof next to the 2. Multiply 1 by 4 to get 4. Subtract 4 minus 4 to get 0. With no more digits to bring down and a remainder of 0, our rooftop quotient is 21! 84 ÷ 4 = 21.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "When performing long division on 84 ÷ 4, what number is placed on top of the roof first?",
+      "options": [
+        "1",
+        "2",
+        "4"
+      ],
+      "correct_index": 1,
+      "explanation": "We look at the tens digit (8) first. 8 ÷ 4 = 2, so 2 is written on the roof first.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "Lined Paper Alignment",
+      "body": "Always have students use squared graph paper for long division. Misaligned columns are the #1 reason students make arithmetic errors when bringing down digits.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 6: Dealing with Remainders",
+      "body": "Not every division problem works out perfectly to zero. When you reach the end of your digits and have a number left over that is smaller than your [DICT_MATH_DIVISOR|Divisor], that leftover amount is your [DICT_MATH_REMAINDER|Remainder]. For example, if you divide 17 by 5: 5 goes into 17 three times (since 5 × 3 = 15), leaving 2 left over. We write this as '3 R 2'. It is crucial to remember one golden rule of division: The [DICT_MATH_REMAINDER|Remainder] must ALWAYS be strictly smaller than the [DICT_MATH_DIVISOR|Divisor]. If your remainder is equal to or greater than your divisor, it means you didn't divide enough times and your quotient needs to be higher!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "If your divisor is 6, which of the following could potentially be a valid remainder?",
+      "options": [
+        "6",
+        "7",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "The remainder must always be smaller than the divisor. Since 4 is less than 6, it is a valid remainder. 6 and 7 are too large.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Concept 7: Verifying Your Answer",
+      "body": "How do you know if your division answer is correct without asking a teacher? You use a brilliant verification formula! To check any division problem, multiply your [DICT_MATH_QUOTIENT|Quotient] by your [DICT_MATH_DIVISOR|Divisor], and then add any [DICT_MATH_REMAINDER|Remainder] if you have one. If your calculation matches the original [DICT_MATH_DIVIDEND|Dividend], your answer is 100% correct! Formula: (Quotient × Divisor) + Remainder = Dividend. This self-checking habit transforms good students into independent mathematical thinkers who never have to guess on tests.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "You calculate 37 ÷ 5 = 7 R 2. How do you check if this is correct?",
+      "options": [
+        "(7 × 5) + 2",
+        "(7 × 2) + 5",
+        "(5 × 2) + 7"
+      ],
+      "correct_index": 0,
+      "explanation": "Multiply quotient (7) by divisor (5) to get 35, then add remainder (2) to get 37. (7 × 5) + 2 = 37.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Concept 8: Word Problems and Real-World Application",
+      "body": "Math is only as powerful as its real-world uses. Division word problems often hide key phrases like 'shared equally', 'split among', 'each gets', or 'how many groups'. When solving word problems involving remainders, you must pay special attention to the real-life context. Sometimes you must round your quotient UP (e.g., if 43 people need cars that hold 4 people each, you need 11 cars, not 10.75 or 10 R 3, because you can't leave 3 people behind!). Other times you must drop the remainder (e.g., if you have 43 rupees and notebooks cost 4 rupees each, you can buy 10 notebooks and have 3 rupees left over—you can't buy a fractional notebook with the remainder). Context is king!",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "38 children are going on a school trip. Each minibus can hold 8 children. How many minibuses are needed so every child gets a seat?",
+      "options": [
+        "4 minibuses",
+        "5 minibuses",
+        "4 minibuses with 6 children left out"
+      ],
+      "correct_index": 1,
+      "explanation": "38 ÷ 8 = 4 R 6. Since 4 buses only hold 32 children, you need a 5th bus to hold the remaining 6 children.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "flashcard",
+      "front": "What should you do with a remainder in a word problem asking 'How many vehicles are needed to transport everyone?'",
+      "back": "Round the quotient UP by 1 to make sure no one is left behind!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "teacher_tip",
+      "title": "Real World Scavenger Hunt",
+      "body": "Ask students to bring in real-life packaging labels (egg cartons, soda packs, cookie boxes) and write division word problems based on the items inside.",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Chapter Summary & Mastery Review",
+      "body": "Congratulations! You have journeyed through the fundamental pillars of division. You now know that division is equal sharing and [DICT_MATH_REMAINDER|Repeated Subtraction], operating as the exact inverse of multiplication. You understand the critical roles of the [DICT_MATH_DIVIDEND|Dividend], [DICT_MATH_DIVISOR|Divisor], [DICT_MATH_QUOTIENT|Quotient], and [DICT_MATH_REMAINDER|Remainder]. You can execute the steps of [DICT_MATH_DIVIDEND|Long Division] with confidence, handle remainders like a pro, verify your work using multiplication, and interpret remainders in complex word problems. Shine Academy is proud of your progress—keep practicing and numbers will always make sense!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

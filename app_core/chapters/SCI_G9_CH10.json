@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "id": "SCI_G9_CH10",
+    "title": "Work and Energy",
+    "subject": "Science",
+    "grade": "9",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Define work scientifically and calculate work done by a constant force.",
+      "Distinguish between positive, negative, and zero work.",
+      "Understand the concept of kinetic and potential energy with mathematical formulations.",
+      "Apply the Law of Conservation of Energy to mechanical systems."
+    ],
+    "core_concepts": [
+      "DICT_G9_WORK",
+      "DICT_G9_KINETIC_ENERGY",
+      "DICT_G9_POTENTIAL_ENERGY",
+      "DICT_G9_POWER"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the physics definitions of work and energy, moving away from colloquial usage to strict scientific formulas.",
+      "common_misconceptions": [
+        "Thinking that holding a heavy bag without moving involves scientific work because your muscles get tired.",
+        "Assuming energy can be destroyed rather than transformed."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "WK_B1",
+      "type": "hook",
+      "title": "The Tired Weightlifter's Paradox",
+      "body": "Imagine you are holding a massive 100-kilogram barbell over your head at the gym. Your muscles are shaking, sweat is pouring down your face, and you are exerting maximum physical effort. Scientifically speaking, have you done any work? In everyday life, absolutely! But in the realm of physics, you have done zero work on that barbell. Why? Because physics demands motion. To understand this strange paradox, we must journey into the precise, mathematical world of [DICT_G9_WORK|work] and [DICT_G9_KINETIC_ENERGY|energy], where everyday words take on strict, unyielding definitions.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B2",
+      "type": "quiz",
+      "question": "According to physics, when do you do 'work' on an object?",
+      "options": [
+        "Whenever you feel tired from pushing or holding it.",
+        "When you apply a force and the object moves in the direction of that force.",
+        "Only when you lift objects vertically against gravity."
+      ],
+      "correct_index": 1,
+      "explanation": "In physics, work requires both a force to be applied and a displacement of the object in the direction of the force.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B3",
+      "type": "theory",
+      "title": "Defining Work in Physics",
+      "body": "In everyday language, 'work' can be reading a book, thinking deeply, or carrying a heavy box across a room. In physics, [DICT_G9_WORK|work] has a very specific meaning. For work to be done, two conditions must be satisfied: first, a force must act on the object; second, the object must be displaced. Consider a constant force $F$ acting on an object, causing a displacement $s$ in the direction of the force. The work done, $W$, is defined as the product of the force and the displacement: $W = F \\times s$. The unit of work is the Newton-meter (N·m) or Joule (J), named after the renowned physicist James Prescott Joule. One Joule of work is defined as the amount of work done on an object when a force of 1 Newton displaces it by 1 meter along the line of action of the force.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "WK_B4",
+      "type": "teacher_tip",
+      "title": "Everyday Analogy: The Grocery Cart",
+      "body": "Think of pushing a shopping cart down an aisle. If you push it forward with a force of 10 Newtons and it moves 5 meters forward, you have performed $10 \\times 5 = 50$ Joules of work. If you stop pushing and it coasts, you are no longer doing work on it, even though it is still moving (inertia takes over).",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B5",
+      "type": "flashcard",
+      "front": "What is the SI unit of Work?",
+      "back": "The Joule (J), which is equivalent to 1 Newton-meter (N·m).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B6",
+      "type": "theory",
+      "title": "When is Work Positive, Negative, or Zero?",
+      "body": "Work is not just a scalar quantity; it can be positive, negative, or zero depending on the angle between the force vector and the displacement vector. Work is **positive** ($W > 0$) when the force acts in the direction of motion (e.g., accelerating a car by pressing the gas pedal). Work is **negative** ($W < 0$) when the force acts opposite to the direction of motion (e.g., applying brakes to stop a moving car; friction always does negative work relative to motion). Work is **zero** ($W = 0$) under three distinct scenarios: (1) when there is no displacement ($s = 0$), like holding a heavy boulder; (2) when there is no force acting ($F = 0$), like a puck gliding on frictionless ice at constant velocity; and (3) when the force is perpendicular to the displacement ($90^{\\circ}$ angle), such as a coolie carrying a suitcase on their head while walking horizontally—gravity pulls down, but displacement is forward!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B7",
+      "type": "quiz",
+      "question": "A satellite orbits Earth in a perfectly circular orbit at a constant speed. What is the work done by the gravitational force on the satellite during one complete orbit?",
+      "options": [
+        "Positive work because gravity keeps it moving.",
+        "Negative work because it opposes the forward motion.",
+        "Zero work because the gravitational force is perpendicular to the instantaneous displacement."
+      ],
+      "correct_index": 2,
+      "explanation": "Since the gravitational pull is directed toward the center of the Earth (perpendicular to the circular path's tangent velocity/displacement), the angle is 90 degrees, resulting in zero work.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B8",
+      "type": "theory",
+      "title": "Introduction to Energy: The Capacity to Do Work",
+      "body": "What allows a hammer to drive a nail into a wooden plank? What makes a speeding bullet lethal? What keeps our bodies warm and active? The answer is **energy**. In physics, energy is defined as the capacity or ability of a body to do work. When an object does work, it loses energy; when work is done on an object, its energy increases. Energy is a scalar quantity and shares the exact same SI unit as work: the **Joule (J)**. Energy manifests in many forms—mechanical, heat, light, chemical, electrical, and nuclear. In this chapter, we focus primarily on mechanical energy, which is the sum of [DICT_G9_KINETIC_ENERGY|kinetic energy] and [DICT_G9_POTENTIAL_ENERGY|potential energy].",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "WK_B9",
+      "type": "flashcard",
+      "front": "What is the relationship between work and energy?",
+      "back": "Energy is the capacity to do work. Doing work on an object transfers energy to it.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B10",
+      "type": "theory",
+      "title": "Kinetic Energy: The Energy of Motion",
+      "body": "Any object that is in motion possesses [DICT_G9_KINETIC_ENERGY|kinetic energy] (from the Greek word *kinesis*, meaning motion). A flowing river, a running cheetah, a falling coconut, and a spinning fan all possess kinetic energy. How do we calculate it? Let us derive the formula. Suppose an object of mass $m$ is at rest on a smooth surface. A constant force $F$ is applied to it, accelerating it with acceleration $a$ over a distance $s$, until it reaches a final velocity $v$. Using the third equation of motion ($v^2 - u^2 = 2as$, where initial velocity $u = 0$), we get $s = \\frac{v^2}{2a}$. Since $F = ma$, the work done $W = F \\times s = (ma) \\times \\left(\\frac{v^2}{2a}\\right) = \\frac{1}{2}mv^2$. Because this work is stored as the object's motion, the kinetic energy ($E_k$) is given by the famous equation: $E_k = \\frac{1}{2}mv^2$. Notice that doubling the mass doubles the kinetic energy, but doubling the velocity *quadruples* the kinetic energy because velocity is squared!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B11",
+      "type": "quiz",
+      "question": "If the speed of a moving car is tripled, what happens to its kinetic energy?",
+      "options": [
+        "It increases by 3 times.",
+        "It increases by 6 times.",
+        "It increases by 9 times."
+      ],
+      "correct_index": 2,
+      "explanation": "Kinetic energy is proportional to the square of the velocity ($v^2$). Tripling the speed means $(3v)^2 = 9v^2$, so the kinetic energy increases 9-fold.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B12",
+      "type": "teacher_tip",
+      "title": "Real-World Road Safety Insight",
+      "body": "Why do speed limits matter so much? Because kinetic energy scales quadratically with speed! A car traveling at 60 km/h has four times the kinetic energy (and requires four times the braking distance) as the same car traveling at 30 km/h. This is why small increases in speed dramatically increase accident severity.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B13",
+      "type": "theory",
+      "title": "Potential Energy: Stored Energy of Position or Configuration",
+      "body": "Not all energy is motion-based. Consider a stretched rubber band, a coiled spring in a mechanical clock, or water stored behind a massive hydroelectric dam. These objects are not moving fast, yet they possess hidden energy waiting to be unleashed. This is [DICT_G9_POTENTIAL_ENERGY|potential energy]—the energy stored within an object due to its position, state, or configuration. When you wind a toy car, you are doing work against internal elastic forces, storing elastic potential energy. When you lift a heavy textbook from the floor onto a high shelf, you are doing work against the gravitational pull of the Earth, storing gravitational potential energy.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "WK_B14",
+      "type": "flashcard",
+      "front": "What is Potential Energy?",
+      "back": "Energy stored in an object due to its position, state, or configuration.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B15",
+      "type": "theory",
+      "title": "Gravitational Potential Energy Formula",
+      "body": "Let us calculate the gravitational potential energy ($E_p$) of an object of mass $m$ raised to a height $h$ above the ground. To lift the object at a constant speed, we must apply an upward force equal in magnitude to its weight, which is $mg$ (where $g$ is the acceleration due to gravity). The vertical displacement is $h$. Therefore, the work done in lifting the object is $W = \\text{Force} \\times \\text{Displacement} = (mg) \\times h = mgh$. This work is not lost; it is stored in the object-Earth system as gravitational potential energy. Thus, $E_p = mgh$. Note that potential energy depends on a reference level (usually the ground, where $h = 0$). If the object falls, this stored potential energy converts directly into kinetic energy.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B16",
+      "type": "quiz",
+      "question": "A 2 kg ball is lifted to a height of 5 meters. Taking $g = 9.8 \\text{ m/s}^2$, what is its gravitational potential energy relative to the ground?",
+      "options": [
+        "49 Joules",
+        "98 Joules",
+        "196 Joules"
+      ],
+      "correct_index": 1,
+      "explanation": "Using $E_p = mgh$, we get $E_p = 2 \\times 9.8 \\times 5 = 98$ Joules.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B17",
+      "type": "theory",
+      "title": "Interconversion of Kinetic and Potential Energy",
+      "body": "Energy is a master shape-shifter. In many mechanical systems, kinetic energy and potential energy constantly transform into one another while the total mechanical energy remains constant. Imagine a child on a swing or a pendulum bob swinging back and forth. At the highest points of the swing, the bob momentarily stops; here, its velocity is zero, so its kinetic energy is zero, and its potential energy is at its absolute maximum. As the bob swings downward toward the center, it loses height (potential energy decreases) but gains speed (kinetic energy increases). At the lowest point of the swing, height is minimal, so potential energy is at its minimum, while velocity and kinetic energy reach their maximum. As it swings up the other side, kinetic energy converts back into potential energy.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B18",
+      "type": "teacher_tip",
+      "title": "Demonstrating Conservation with a Pendulum",
+      "body": "Hang a heavy key or small metal nut on a string from the ceiling to create a simple pendulum. Pull it to your nose and release it without pushing. Stand completely still and let it swing back and forth—it will return almost to your nose, but it will never hit you! Why? Because conservation of energy ensures it cannot gain more energy than you initially gave it.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B19",
+      "type": "flashcard",
+      "front": "At what point in a vertical pendulum's swing is kinetic energy maximum?",
+      "back": "At the lowest point (mean position) of the swing, where speed is highest.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B20",
+      "type": "theory",
+      "title": "The Law of Conservation of Energy",
+      "body": "One of the most fundamental and profound laws of all natural science is the **Law of Conservation of Energy**. It states that energy can neither be created nor destroyed; it can only be transformed from one form to another. The total energy of an isolated system remains constant. When an object falls freely from a height, its total mechanical energy ($E = E_k + E_p$) at any point during its fall is constant. If air resistance is negligible, the decrease in potential energy at any moment is exactly equal to the increase in kinetic energy. Even when friction brings a rolling ball to a stop on the ground, energy is not destroyed—it is converted into thermal energy (heat) and sound energy due to microscopic collisions between the surfaces. Across the entire universe, the grand ledger of energy always balances out to zero net change.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B21",
+      "type": "quiz",
+      "question": "An apple falls from a tree branch to the ground. As it falls, what happens to its total mechanical energy (ignoring air resistance)?",
+      "options": [
+        "It increases continuously.",
+        "It decreases continuously.",
+        "It remains constant throughout the fall."
+      ],
+      "correct_index": 2,
+      "explanation": "In the absence of non-conservative forces like air resistance, total mechanical energy (sum of kinetic and potential energy) is conserved and remains constant.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B22",
+      "type": "theory",
+      "title": "Power: The Rate of Doing Work",
+      "body": "Two students, Alex and Maya, both run up a flight of stairs to the third floor. Both have the same mass and climb the exact same vertical height, meaning both do the exact same amount of work against gravity. However, Alex reaches the top in 10 seconds, while Maya takes 30 seconds. Who is more 'powerful'? This introduces our final major physical quantity: [DICT_G9_POWER|power]. Power is defined as the **rate of doing work** or the rate of transfer of energy. If an amount of work $W$ is done in time $t$, the average power $P$ is given by $P = \\frac{W}{t}$. The SI unit of power is the **Watt (W)**, named after James Watt, the inventor of the steam engine. One Watt is equal to 1 Joule of work done per second (1 W = 1 J/s). Larger units of power are frequently used, such as the kilowatt (kW) where $1\\text{ kW} = 1000\\text{ W}$, and horsepower (hp), where $1\\text{ hp} \\approx 746\\text{ W}$.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "WK_B23",
+      "type": "flashcard",
+      "front": "What is Power?",
+      "back": "The rate at which work is done or energy is transferred ($P = W / t$). Measured in Watts (W).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "WK_B24",
+      "type": "quiz",
+      "question": "An electric motor does 1000 Joules of work in 5 seconds. What is the power output of the motor?",
+      "options": [
+        "5000 Watts",
+        "200 Watts",
+        "50 Watts"
+      ],
+      "correct_index": 1,
+      "explanation": "Power $P = \\frac{W}{t} = \\frac{1000 \\text{ J}}{5 \\text{ s}} = 200 \\text{ W}$ (Watts).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WK_B25",
+      "type": "theory",
+      "title": "Commercial Unit of Energy: The Kilowatt-Hour",
+      "body": "The Joule is a very small unit when measuring large amounts of electrical energy consumed in homes, industries, and cities. For commercial and domestic billing purposes, power companies use a much larger unit of energy called the **kilowatt-hour (kWh)**, commonly known as a 'unit' of electricity. One kilowatt-hour is the amount of electrical energy consumed by a device operating at a constant power of 1 kilowatt (1000 Watts) for a duration of 1 hour (3600 seconds). Let's calculate its value in Joules: $1 \\text{ kWh} = 1000 \\text{ W} \\times 3600 \\text{ s} = 3,600,000 \\text{ Joules} = 3.6 \\times 10^6 \\text{ J}$. When your electricity bill says you used 150 units this month, it means your household consumed $1.5 \\times 10^8$ Joules of energy!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "WK_B26",
+      "type": "quiz",
+      "question": "How many Joules are contained in 1 kilowatt-hour (kWh) of electrical energy?",
+      "options": [
+        "1,000 Joules",
+        "36,000 Joules",
+        "3,600,000 Joules"
+      ],
+      "correct_index": 2,
+      "explanation": "$1 \\text{ kW} = 1000 \\text{ J/s}$, and $1 \\text{ hour} = 3600 \\text{ s}$. Multiplying them gives $3,600,000 \\text{ J}$ or $3.6 \\times 10^6 \\text{ J}$.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    }
+  ]
+}

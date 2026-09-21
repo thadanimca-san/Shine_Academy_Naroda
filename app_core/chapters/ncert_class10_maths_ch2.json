@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch2",
+    "title": "Chapter 2: Polynomials",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "polynomials",
+      "zeros",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the geometrical meaning of the zeroes of a polynomial.",
+      "Find the zeroes of a quadratic polynomial.",
+      "Verify the relationship between zeroes and coefficients.",
+      "Solve CBSE/State Board HOTS questions related to Polynomials."
+    ],
+    "ai_context": {
+      "learning_goal": "Make algebraic expressions visual. Use the 'Socratic Discovery Arc' to connect algebraic equations with graphs before jumping to formulas.",
+      "common_misconceptions": [
+        "Students confuse the degree of a polynomial with the number of terms.",
+        "Students struggle with the relationship between zeros and coefficients."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you throw a ball in the air. The path it takes forms a beautiful curve called a parabola. Did you know you can predict exactly where the ball will land using just one equation? Welcome to the magic of **Polynomials (बहुपद / બહુપદીઓ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "A Polynomial Rollercoaster: The graph of a quadratic polynomial creates a curve that crosses the x-axis. The points where it crosses are the 'Zeroes'!",
+      "image_url": "assets/images/maths_ch2_parabola_curve.jpg",
+      "alt_text": "A glowing parabolic curve crossing the x-axis at two points, representing the zeroes of a polynomial."
+    },
+    {
+      "type": "theory",
+      "content": "**Degree of a Polynomial (बहुपद की घात / બહુપદીની ઘાત):**\nThe highest power of x in p(x) is called the degree of the polynomial.\n\n* Linear Polynomial (रैखिक बहुपद): Degree 1, e.g., 2x - 3\n* Quadratic Polynomial (द्विघात बहुपद): Degree 2, e.g., ax² + bx + c\n* Cubic Polynomial (त्रिघात बहुपद): Degree 3, e.g., ax³ + bx² + cx + d",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** The degree tells you the MAXIMUM number of zeroes a polynomial can have. A quadratic polynomial (degree 2) like ax² + bx + c can have at most 2 zeroes!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Visualizing Zeroes: Just look at the x-axis. The number of times the graph intersects the x-axis is exactly the number of zeroes (शून्यक / શૂન્યો) the polynomial has.",
+      "image_url": "assets/images/maths_ch2_graph_intersections.jpg",
+      "alt_text": "Different graphs intersecting the x-axis, illustrating 1, 2, and 3 zeroes."
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** Relationship between Zeroes and Coefficients\n\nFor a quadratic polynomial ax² + bx + c, if α and β are the zeroes:\n**Sum of zeroes (α + β) = -b/a**\n**Product of zeroes (α × β) = c/a**\n\n*Board Trick:* Often, questions will give you the sum and product and ask for the polynomial. Just use: x² - (α + β)x + αβ!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "memory_trick",
+      "content": "**The Zero Rule:**\nFinding a zero means setting p(x) = 0. Geometrically, this is where the height (y-value) is zero—which is exactly on the x-axis! So, if the graph doesn't touch the x-axis, there are no real zeroes.",
+      "difficulty": "Intermediate",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_1",
+      "type": "quiz",
+      "question": "The zeroes of the quadratic polynomial x² + 7x + 10 are:",
+      "question_hi": "द्विघात बहुपद x² + 7x + 10 के शून्यक हैं:",
+      "options": [
+        "2 and 5",
+        "-2 and 5",
+        "-2 and -5",
+        "2 and -5"
+      ],
+      "options_hi": [
+        "2 और 5",
+        "-2 और 5",
+        "-2 और -5",
+        "2 और -5"
+      ],
+      "correct_index": 2,
+      "explanation": "x² + 7x + 10 = x² + 5x + 2x + 10 = x(x+5) + 2(x+5) = (x+2)(x+5). Thus, zeroes are -2 and -5.",
+      "explanation_hi": "x² + 7x + 10 = x² + 5x + 2x + 10 = x(x+5) + 2(x+5) = (x+2)(x+5)। अतः शून्यक -2 और -5 हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_2",
+      "type": "quiz",
+      "question": "A quadratic polynomial whose zeroes are -3 and 4 is:",
+      "question_hi": "एक द्विघात बहुपद जिसके शून्यक -3 और 4 हैं, वह है:",
+      "options": [
+        "x² - x + 12",
+        "x² + x + 12",
+        "x² - x - 12",
+        "2x² + 2x - 24"
+      ],
+      "options_hi": [
+        "x² - x + 12",
+        "x² + x + 12",
+        "x² - x - 12",
+        "2x² + 2x - 24"
+      ],
+      "correct_index": 2,
+      "explanation": "Sum of zeroes = -3 + 4 = 1. Product = -3 × 4 = -12. Polynomial is k(x² - (sum)x + product) = k(x² - x - 12). For k=1, it is x² - x - 12.",
+      "explanation_hi": "शून्यकों का योग = -3 + 4 = 1. गुणनफल = -3 × 4 = -12. बहुपद है k(x² - (योग)x + गुणनफल) = k(x² - x - 12)। k=1 के लिए, यह x² - x - 12 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_3",
+      "type": "quiz",
+      "question": "If one zero of the quadratic polynomial x² + 3x + k is 2, then the value of k is:",
+      "question_hi": "यदि द्विघात बहुपद x² + 3x + k का एक शून्यक 2 है, तो k का मान है:",
+      "options": [
+        "10",
+        "-10",
+        "-7",
+        "-2"
+      ],
+      "options_hi": [
+        "10",
+        "-10",
+        "-7",
+        "-2"
+      ],
+      "correct_index": 1,
+      "explanation": "Substitute x = 2 in the polynomial and equate to 0: (2)² + 3(2) + k = 0 => 4 + 6 + k = 0 => k = -10.",
+      "explanation_hi": "बहुपद में x = 2 रखें और 0 के बराबर करें: (2)² + 3(2) + k = 0 => 4 + 6 + k = 0 => k = -10."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_4",
+      "type": "quiz",
+      "question": "The number of polynomials having zeroes as -2 and 5 is:",
+      "question_hi": "-2 और 5 शून्यक वाले बहुपदों की संख्या है:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "more than 3"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "3 से अधिक"
+      ],
+      "correct_index": 3,
+      "explanation": "There are infinitely many polynomials with given zeroes, in the form k(x - a)(x - b) where k is any non-zero real number.",
+      "explanation_hi": "दिए गए शून्यकों वाले अनंत बहुपद होते हैं, k(x - a)(x - b) के रूप में जहाँ k कोई शून्येतर वास्तविक संख्या है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_5",
+      "type": "quiz",
+      "question": "If the zeroes of the quadratic polynomial ax² + bx + c (c ≠ 0) are equal, then:",
+      "question_hi": "यदि द्विघात बहुपद ax² + bx + c (c ≠ 0) के शून्यक समान हैं, तो:",
+      "options": [
+        "c and a have opposite signs",
+        "c and b have opposite signs",
+        "c and a have the same sign",
+        "c and b have the same sign"
+      ],
+      "options_hi": [
+        "c और a के चिन्ह विपरीत हैं",
+        "c और b के चिन्ह विपरीत हैं",
+        "c और a के चिन्ह समान हैं",
+        "c और b के चिन्ह समान हैं"
+      ],
+      "correct_index": 2,
+      "explanation": "For equal zeroes, discriminant D = 0 => b² - 4ac = 0 => b² = 4ac. Since b² is always positive, ac must be positive, which means a and c have the same sign.",
+      "explanation_hi": "समान शून्यकों के लिए, विविक्तकर D = 0 => b² - 4ac = 0 => b² = 4ac। चूँकि b² हमेशा धनात्मक होता है, ac धनात्मक होना चाहिए, जिसका अर्थ है a और c के चिन्ह समान हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_6",
+      "type": "quiz",
+      "question": "The zeroes of the quadratic polynomial x² + 99x + 127 are:",
+      "question_hi": "द्विघात बहुपद x² + 99x + 127 के शून्यक हैं:",
+      "options": [
+        "both positive",
+        "both negative",
+        "one positive and one negative",
+        "both equal"
+      ],
+      "options_hi": [
+        "दोनों धनात्मक",
+        "दोनों ऋणात्मक",
+        "एक धनात्मक और एक ऋणात्मक",
+        "दोनों समान"
+      ],
+      "correct_index": 1,
+      "explanation": "Sum of zeroes is -99 and product is 127. If product is positive, both zeroes have the same sign. Since sum is negative, both zeroes must be negative.",
+      "explanation_hi": "शून्यकों का योग -99 और गुणनफल 127 है। यदि गुणनफल धनात्मक है, तो दोनों शून्यकों के चिन्ह समान होते हैं। चूँकि योग ऋणात्मक है, दोनों शून्यक ऋणात्मक होने चाहिए।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_7",
+      "type": "quiz",
+      "question": "If one of the zeroes of a quadratic polynomial of the form x² + ax + b is the negative of the other, then it:",
+      "question_hi": "यदि x² + ax + b रूप के एक द्विघात बहुपद का एक शून्यक दूसरे का ऋणात्मक है, तो यह:",
+      "options": [
+        "has no linear term and the constant term is negative",
+        "has no linear term and the constant term is positive",
+        "can have a linear term but the constant term is negative",
+        "can have a linear term but the constant term is positive"
+      ],
+      "options_hi": [
+        "रैखिक पद नहीं होता है और अचर पद ऋणात्मक होता है",
+        "रैखिक पद नहीं होता है और अचर पद धनात्मक होता है",
+        "रैखिक पद हो सकता है लेकिन अचर पद ऋणात्मक होता है",
+        "रैखिक पद हो सकता है लेकिन अचर पद धनात्मक होता है"
+      ],
+      "correct_index": 0,
+      "explanation": "Let zeroes be α and -α. Sum = 0 => -a = 0 => a = 0 (no linear term). Product = -α² = b. Since α² > 0, -α² is negative, so b is negative.",
+      "explanation_hi": "माना शून्यक α और -α हैं। योग = 0 => -a = 0 => a = 0 (रैखिक पद नहीं)। गुणनफल = -α² = b। चूँकि α² > 0, -α² ऋणात्मक है, इसलिए b ऋणात्मक है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_8",
+      "type": "quiz",
+      "question": "If α and β are the zeroes of the polynomial f(x) = x² - p(x + 1) - c, then (α + 1)(β + 1) is equal to:",
+      "question_hi": "यदि α और β बहुपद f(x) = x² - p(x + 1) - c के शून्यक हैं, तो (α + 1)(β + 1) किसके बराबर है:",
+      "options": [
+        "c - 1",
+        "1 - c",
+        "c",
+        "1 + c"
+      ],
+      "options_hi": [
+        "c - 1",
+        "1 - c",
+        "c",
+        "1 + c"
+      ],
+      "correct_index": 1,
+      "explanation": "f(x) = x² - px - (p+c). α+β = p, αβ = -(p+c). Then (α+1)(β+1) = αβ + α + β + 1 = -(p+c) + p + 1 = 1 - c.",
+      "explanation_hi": "f(x) = x² - px - (p+c). α+β = p, αβ = -(p+c). तब (α+1)(β+1) = αβ + α + β + 1 = -(p+c) + p + 1 = 1 - c."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_9",
+      "type": "quiz",
+      "question": "If the zeroes of the quadratic polynomial x² + (a+1)x + b are 2 and -3, then:",
+      "question_hi": "यदि द्विघात बहुपद x² + (a+1)x + b के शून्यक 2 और -3 हैं, तो:",
+      "options": [
+        "a = -7, b = -1",
+        "a = 5, b = -1",
+        "a = 2, b = -6",
+        "a = 0, b = -6"
+      ],
+      "options_hi": [
+        "a = -7, b = -1",
+        "a = 5, b = -1",
+        "a = 2, b = -6",
+        "a = 0, b = -6"
+      ],
+      "correct_index": 3,
+      "explanation": "Sum of zeroes = 2 + (-3) = -1. But sum = -(a+1) => -(a+1) = -1 => a = 0. Product = 2(-3) = -6. Product = b => b = -6.",
+      "explanation_hi": "शून्यकों का योग = 2 + (-3) = -1. लेकिन योग = -(a+1) => -(a+1) = -1 => a = 0. गुणनफल = 2(-3) = -6. गुणनफल = b => b = -6."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_10",
+      "type": "quiz",
+      "question": "A polynomial of degree n has:",
+      "question_hi": "n घात के एक बहुपद में होते हैं:",
+      "options": [
+        "only 1 zero",
+        "exactly n zeroes",
+        "at most n zeroes",
+        "more than n zeroes"
+      ],
+      "options_hi": [
+        "केवल 1 शून्यक",
+        "ठीक n शून्यक",
+        "अधिकतम n शून्यक",
+        "n से अधिक शून्यक"
+      ],
+      "correct_index": 2,
+      "explanation": "A polynomial of degree n can have at most n real zeroes.",
+      "explanation_hi": "n घात वाले एक बहुपद के अधिकतम n वास्तविक शून्यक हो सकते हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_11",
+      "type": "quiz",
+      "question": "If α and β are zeroes of x² - 4x + 1, then the value of 1/α + 1/β is:",
+      "question_hi": "यदि α और β, x² - 4x + 1 के शून्यक हैं, तो 1/α + 1/β का मान है:",
+      "options": [
+        "1",
+        "4",
+        "-4",
+        "-1"
+      ],
+      "options_hi": [
+        "1",
+        "4",
+        "-4",
+        "-1"
+      ],
+      "correct_index": 1,
+      "explanation": "α + β = 4 and αβ = 1. Therefore, 1/α + 1/β = (α + β) / (αβ) = 4 / 1 = 4.",
+      "explanation_hi": "α + β = 4 और αβ = 1. इसलिए, 1/α + 1/β = (α + β) / (αβ) = 4 / 1 = 4."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_12",
+      "type": "quiz",
+      "question": "What is the geometrical meaning of the zeroes of a polynomial p(x)?",
+      "question_hi": "बहुपद p(x) के शून्यकों का ज्यामितीय अर्थ क्या है?",
+      "options": [
+        "The points where graph intersects y-axis",
+        "The points where graph intersects x-axis",
+        "The highest point of the graph",
+        "The lowest point of the graph"
+      ],
+      "options_hi": [
+        "वे बिंदु जहाँ ग्राफ y-अक्ष को प्रतिच्छेद करता है",
+        "वे बिंदु जहाँ ग्राफ x-अक्ष को प्रतिच्छेद करता है",
+        "ग्राफ का उच्चतम बिंदु",
+        "ग्राफ का निम्नतम बिंदु"
+      ],
+      "correct_index": 1,
+      "explanation": "The zeroes of a polynomial p(x) are the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.",
+      "explanation_hi": "बहुपद p(x) के शून्यक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ y = p(x) का ग्राफ x-अक्ष को प्रतिच्छेद करता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_13",
+      "type": "quiz",
+      "question": "If the sum of the zeroes of the quadratic polynomial kx² + 2x + 3k is equal to their product, then k equals:",
+      "question_hi": "यदि द्विघात बहुपद kx² + 2x + 3k के शून्यकों का योग उनके गुणनफल के बराबर है, तो k बराबर है:",
+      "options": [
+        "1/3",
+        "-1/3",
+        "2/3",
+        "-2/3"
+      ],
+      "options_hi": [
+        "1/3",
+        "-1/3",
+        "2/3",
+        "-2/3"
+      ],
+      "correct_index": 3,
+      "explanation": "Sum of zeroes = -2/k. Product of zeroes = 3k/k = 3. Given -2/k = 3, so k = -2/3.",
+      "explanation_hi": "शून्यकों का योग = -2/k। शून्यकों का गुणनफल = 3k/k = 3। दिया गया है -2/k = 3, इसलिए k = -2/3।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_14",
+      "type": "quiz",
+      "question": "If one zero of the polynomial 3x² + 8x + k is the reciprocal of the other, then value of k is:",
+      "question_hi": "यदि बहुपद 3x² + 8x + k का एक शून्यक दूसरे का व्युत्क्रम है, तो k का मान है:",
+      "options": [
+        "3",
+        "-3",
+        "1/3",
+        "-1/3"
+      ],
+      "options_hi": [
+        "3",
+        "-3",
+        "1/3",
+        "-1/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Let zeroes be α and 1/α. Their product = α × (1/α) = 1. Also product of zeroes = k/3. Therefore, k/3 = 1 => k = 3.",
+      "explanation_hi": "माना शून्यक α और 1/α हैं। उनका गुणनफल = α × (1/α) = 1। शून्यकों का गुणनफल = k/3 भी है। इसलिए, k/3 = 1 => k = 3।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch2_15",
+      "type": "quiz",
+      "question": "The graph of a polynomial p(x) intersects the x-axis at exactly 3 distinct points. What can be the minimum degree of p(x)?",
+      "question_hi": "एक बहुपद p(x) का ग्राफ x-अक्ष को ठीक 3 अलग-अलग बिंदुओं पर प्रतिच्छेद करता है। p(x) की न्यूनतम घात क्या हो सकती है?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "Since the graph intersects the x-axis at 3 distinct points, it has exactly 3 real zeroes. Therefore, the minimum degree of the polynomial is 3 (a cubic polynomial).",
+      "explanation_hi": "चूँकि ग्राफ x-अक्ष को 3 अलग-अलग बिंदुओं पर प्रतिच्छेद करता है, इसके ठीक 3 वास्तविक शून्यक हैं। इसलिए, बहुपद की न्यूनतम घात 3 (एक त्रिघात बहुपद) है।"
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "metadata": {
+    "id": "NCERT_MATH_10_CH2_LEARN",
+    "title": "Chapter 2: Polynomials (NCERT Exercises)",
+    "subtitle": "Step-by-Step Concepts and Solutions",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT",
+    "curriculum": [
+      "Universal",
+      "CBSE",
+      "GSEB"
+    ],
+    "language": "English/Hindi (Bilingual)",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 120,
+    "version": "1.0.0",
+    "author": "Antigravity",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "polynomials",
+      "zeroes",
+      "coefficients",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the geometrical meaning of zeroes of a polynomial.",
+      "Identify the number of zeroes from a graph.",
+      "Establish the relationship between zeroes and coefficients of a quadratic polynomial.",
+      "Form a quadratic polynomial given its sum and product of zeroes."
+    ],
+    "ai_context": {
+      "learning_goal": "Provide detailed, understandable solutions to all NCERT Exercise 2.1 and 2.2 questions before the student takes the practice test.",
+      "common_misconceptions": [
+        "Students confuse the zeroes of a polynomial with the y-intercepts instead of x-intercepts.",
+        "Students forget the negative sign in the sum of zeroes formula (-b/a)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "CH2_HOOK_01",
+      "type": "hook",
+      "title": "The Trajectory of a Ball",
+      "title_hi": "एक गेंद का प्रक्षेपवक्र (Trajectory)",
+      "body": "When you throw a cricket ball into the air, it goes up, reaches a maximum height, and then comes down. The path it follows is a beautiful curve called a Parabola. Did you know that Mathematics can perfectly describe this curve using something called a 'Polynomial'?",
+      "body_hi": "जब आप एक क्रिकेट की गेंद को हवा में उछालते हैं, तो वह ऊपर जाती है, अधिकतम ऊंचाई तक पहुंचती है, और फिर नीचे आती है। जिस पथ का वह अनुसरण करती है वह एक सुंदर वक्र है जिसे परवलय (Parabola) कहा जाता है। क्या आप जानते हैं कि गणित 'बहुपद (Polynomial)' नामक किसी चीज़ का उपयोग करके इस वक्र का पूरी तरह से वर्णन कर सकता है?",
+      "body_gu": "જ્યારે તમે ક્રિકેટના બોલને હવામાં ફેંકો છો, ત્યારે તે ઉપર જાય છે, મહત્તમ ઊંચાઈ સુધી પહોંચે છે અને પછી નીચે આવે છે.તે જે પાથને અનુસરે છે તે એક સુંદર વળાંક છે જેને પેરાબોલા કહેવાય છે.શું તમે જાણો છો કે ગણિત 'બહુપદી' નામની કોઈ વસ્તુનો ઉપયોગ કરીને આ વળાંકને સંપૂર્ણ રીતે વર્ણવી શકે છે?",
+      "title_gu": "એક બોલનો માર્ગ"
+    },
+    {
+      "id": "CH2_SOCRATIC_01",
+      "type": "socratic",
+      "title": "Think About It!",
+      "title_hi": "इसके बारे में सोचें!",
+      "body": "If the ground is the x-axis, at how many points does the ball touch the ground after it leaves your hand?",
+      "body_hi": "यदि जमीन x-अक्ष है, तो आपके हाथ से निकलने के बाद गेंद कितने बिंदुओं पर जमीन को छूती है?",
+      "options": [
+        "0",
+        "1",
+        "2"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "2"
+      ],
+      "correct_index": 1,
+      "explanation": "It touches the ground exactly once when it lands! This point is called the 'Zero' of the trajectory polynomial.",
+      "explanation_hi": "यह ठीक एक बार जमीन को छूती है जब यह गिरती है! इस बिंदु को प्रक्षेपवक्र बहुपद का 'शून्य (Zero)' कहा जाता है।",
+      "body_gu": "જો જમીન એ x-અક્ષ હોય, તો તમારો હાથ છોડ્યા પછી બોલ જમીનને કેટલા બિંદુએ સ્પર્શે છે?",
+      "title_gu": "તે વિશે વિચારો!"
+    },
+    {
+      "id": "CH2_THEORY_01",
+      "type": "theory",
+      "title": "Degree of a Polynomial",
+      "title_hi": "बहुपद की घात (Degree)",
+      "body": "The highest power of the variable (x) in a polynomial p(x) is called its degree.\n\n• Linear Polynomial: Degree 1 (e.g., 2x - 3). Graph is a straight line.\n• Quadratic Polynomial: Degree 2 (e.g., x² + 5x + 6). Graph is a U-shaped parabola.\n• Cubic Polynomial: Degree 3 (e.g., x³ - 2x).",
+      "body_hi": "एक बहुपद p(x) में चर (x) की उच्चतम घात (power) को इसकी घात (degree) कहा जाता है।\n\n• रैखिक बहुपद (Linear): घात 1 (जैसे, 2x - 3)। ग्राफ एक सीधी रेखा है।\n• द्विघात बहुपद (Quadratic): घात 2 (जैसे, x² + 5x + 6)। ग्राफ U-आकार का परवलय है।\n• त्रिघात बहुपद (Cubic): घात 3 (जैसे, x³ - 2x)।",
+      "body_gu": "બહુપદી p(x) માં ચલ (x) ની સર્વોચ્ચ શક્તિ તેની ડિગ્રી કહેવાય છે.\n• રેખીય બહુપદી: ડિગ્રી 1 (દા.ત., 2x - 3).ગ્રાફ એક સીધી રેખા છે.\n• ચતુર્ભુજ બહુપદી: ડિગ્રી 2 (દા.ત., x² + 5x + 6).ગ્રાફ એ U-આકારનું પેરાબોલા છે.\n• ઘન બહુપદી: ડિગ્રી 3 (દા.ત., x³ - 2x).",
+      "title_gu": "બહુપદીની ડિગ્રી"
+    },
+    {
+      "id": "CH2_THEORY_02",
+      "type": "theory",
+      "title": "Geometrical Meaning of Zeroes",
+      "title_hi": "शून्यों का ज्यामितीय अर्थ",
+      "body": "The zeroes of a polynomial p(x) are the x-coordinates of the points where its graph intersects the x-axis.\n\nRule: A polynomial of degree 'n' can intersect the x-axis at a maximum of 'n' points. Thus, it has at most 'n' zeroes.",
+      "body_hi": "बहुपद p(x) के शून्य उन बिंदुओं के x-निर्देशांक होते हैं जहाँ इसका ग्राफ x-अक्ष को काटता है (प्रतिच्छेद करता है)।\n\nनियम: घात 'n' का बहुपद x-अक्ष को अधिकतम 'n' बिंदुओं पर काट सकता है। इस प्रकार, इसके अधिकतम 'n' शून्य होते हैं।",
+      "body_gu": "બહુપદી p(x) ના શૂન્ય એ બિંદુઓના x-કોઓર્ડિનેટ્સ છે જ્યાં તેનો ગ્રાફ x-અક્ષને છેદે છે.\nનિયમ: ડિગ્રી 'n' નો બહુપદી x-અક્ષને મહત્તમ 'n' બિંદુઓ પર છેદે છે.આમ, તેમાં વધુમાં વધુ 'એન' શૂન્ય છે.",
+      "title_gu": "શૂન્યનો ભૌમિતિક અર્થ"
+    },
+    {
+      "id": "CH2_EX2_1_INTRO",
+      "type": "theory",
+      "title": "Exercise 2.1: Finding Zeroes from Graphs",
+      "title_hi": "प्रश्नावली 2.1: ग्राफ से शून्य ज्ञात करना",
+      "body": "Let's apply our new knowledge! In the following questions, you will be given descriptions of graphs for y = p(x). Your goal is to find the number of zeroes of p(x).",
+      "body_hi": "आइए अपने नए ज्ञान को लागू करें! निम्नलिखित प्रश्नों में, आपको y = p(x) के ग्राफ का विवरण दिया जाएगा। आपका लक्ष्य p(x) के शून्यों की संख्या ज्ञात करना है।",
+      "body_gu": "ચાલો આપણા નવા જ્ઞાનનો ઉપયોગ કરીએ!નીચેના પ્રશ્નોમાં, તમને y = p(x) માટે આલેખનું વર્ણન આપવામાં આવશે.તમારું લક્ષ્ય p(x) ના શૂન્યની સંખ્યા શોધવાનું છે.",
+      "title_gu": "વ્યાયામ 2.1: ગ્રાફમાંથી શૂન્ય શોધવું"
+    },
+    {
+      "id": "CH2_Q2_1_1",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(i): A graph of y = p(x) is a straight horizontal line parallel to the x-axis, never touching it. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(i): y = p(x) का ग्राफ x-अक्ष के समानांतर एक सीधी क्षैतिज रेखा है, जो इसे कभी नहीं छूती है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Infinite"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "2",
+        "अनंत"
+      ],
+      "correct_index": 0,
+      "explanation": "Since the graph is parallel to the x-axis, it never intersects it. The number of zeroes is zero.",
+      "explanation_hi": "चूंकि ग्राफ x-अक्ष के समानांतर है, इसलिए यह इसे कभी प्रतिच्छेद नहीं करता है। शून्यों की संख्या शून्य है।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(in): y = p(x) નો ગ્રાફ એ x-અક્ષની સમાંતર સીધી આડી રેખા છે, તેને ક્યારેય સ્પર્શતી નથી.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_Q2_1_2",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(ii): A graph of y = p(x) is a curve that intersects the x-axis at exactly 1 point. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(ii): y = p(x) का ग्राफ एक वक्र है जो x-अक्ष को ठीक 1 बिंदु पर काटता है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 1,
+      "explanation": "The number of zeroes is 1 because the graph intersects the x-axis at only one point.",
+      "explanation_hi": "शून्यों की संख्या 1 है क्योंकि ग्राफ x-अक्ष को केवल एक बिंदु पर काटता है।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(ii): y = p(x) નો ગ્રાફ એ એક વળાંક છે જે x-અક્ષને બરાબર 1 બિંદુએ છેદે છે.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_Q2_1_3",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(iii): A graph of y = p(x) is a wave-like curve that intersects the x-axis at 3 distinct points. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(iii): y = p(x) का ग्राफ एक तरंग जैसा वक्र है जो x-अक्ष को 3 अलग-अलग बिंदुओं पर काटता है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "The number of zeroes is 3 because the graph intersects the x-axis at three points.",
+      "explanation_hi": "शून्यों की संख्या 3 है क्योंकि ग्राफ x-अक्ष को तीन बिंदुओं पर काटता है।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(iii): y = p(x) નો ગ્રાફ એ તરંગ જેવો વળાંક છે જે x-અક્ષને 3 અલગ-અલગ બિંદુઓ પર છેદે છે.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_Q2_1_4",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(iv): A graph of y = p(x) is a parabola (U-shape) that intersects the x-axis at 2 distinct points. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(iv): y = p(x) का ग्राफ एक परवलय (U-आकार) है जो x-अक्ष को 2 अलग-अलग बिंदुओं पर काटता है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 2,
+      "explanation": "The number of zeroes is 2 because the graph intersects the x-axis at two points.",
+      "explanation_hi": "शून्यों की संख्या 2 है क्योंकि ग्राफ x-अक्ष को दो बिंदुओं पर काटता है।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(iv): y = p(x) નો ગ્રાફ એ પેરાબોલા (U-આકાર) છે જે x-અક્ષને 2 અલગ-અલગ બિંદુઓ પર છેદે છે.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_Q2_1_5",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(v): A graph of y = p(x) intersects the x-axis at 4 distinct points. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(v): y = p(x) का ग्राफ x-अक्ष को 4 अलग-अलग बिंदुओं पर काटता है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "options_hi": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "explanation": "The number of zeroes is 4 because the graph intersects the x-axis at four points.",
+      "explanation_hi": "शून्यों की संख्या 4 है क्योंकि ग्राफ x-अक्ष को चार बिंदुओं पर काटता है।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(v): y = p(x) નો ગ્રાફ x-અક્ષને 4 વિશિષ્ટ બિંદુઓ પર છેદે છે.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_Q2_1_6",
+      "type": "quiz",
+      "question": "Exercise 2.1 - Q1(vi): A graph of y = p(x) intersects the x-axis at 1 point and touches it at 2 other points without crossing. How many zeroes does p(x) have?",
+      "question_hi": "प्रश्नावली 2.1 - Q1(vi): y = p(x) का ग्राफ x-अक्ष को 1 बिंदु पर काटता है और पार किए बिना 2 अन्य बिंदुओं पर छूता है। p(x) के कितने शून्य हैं?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "The number of zeroes is 3 because the graph meets the x-axis at three points in total (1 intersection + 2 touches).",
+      "explanation_hi": "शून्यों की संख्या 3 है क्योंकि ग्राफ कुल मिलाकर तीन बिंदुओं पर x-अक्ष से मिलता है (1 प्रतिच्छेदन + 2 स्पर्श)।",
+      "question_gu": "વ્યાયામ 2.1 - Q1(vi): y = p(x) નો આલેખ x-અક્ષને 1 બિંદુએ છેદે છે અને તેને ક્રોસ કર્યા વિના 2 અન્ય બિંદુઓને સ્પર્શે છે.p(x) પાસે કેટલા શૂન્ય છે?"
+    },
+    {
+      "id": "CH2_THEORY_03",
+      "type": "theory",
+      "title": "Relationship Between Zeroes and Coefficients",
+      "title_hi": "शून्यों और गुणांकों के बीच संबंध",
+      "body": "For a quadratic polynomial p(x) = ax² + bx + c (where a ≠ 0):\n\nIf α and β are the zeroes of the polynomial, then:\n1. Sum of zeroes (α + β) = -b/a = -(Coefficient of x) / (Coefficient of x²)\n2. Product of zeroes (αβ) = c/a = (Constant term) / (Coefficient of x²)",
+      "body_hi": "एक द्विघात बहुपद p(x) = ax² + bx + c (जहाँ a ≠ 0) के लिए:\n\nयदि α और β बहुपद के शून्य हैं, तो:\n1. शून्यों का योग (α + β) = -b/a = -(x का गुणांक) / (x² का गुणांक)\n2. शून्यों का गुणनफल (αβ) = c/a = (अचर पद) / (x² का गुणांक)",
+      "body_gu": "ચતુર્ભુજ બહુપદી માટે p(x) = ax² + bx + c (જ્યાં a ≠ 0):\nજો α અને β એ બહુપદીના શૂન્ય છે, તો પછી:\n1. શૂન્યનો સરવાળો (α + β) = -b/a = -(x નો ગુણાંક) / (x² નો ગુણાંક)\n2. શૂન્યનું ઉત્પાદન (αβ) = c/a = (સતત શબ્દ) / (x² નો ગુણાંક)",
+      "title_gu": "શૂન્ય અને ગુણાંક વચ્ચેનો સંબંધ"
+    },
+    {
+      "id": "CH2_EX2_2_INTRO",
+      "type": "theory",
+      "title": "Exercise 2.2: Finding Zeroes",
+      "title_hi": "प्रश्नावली 2.2: शून्य ज्ञात करना",
+      "body": "In the following questions, we will find the zeroes of quadratic polynomials by 'Splitting the Middle Term' and verify the relationship between zeroes and coefficients.",
+      "body_hi": "निम्नलिखित प्रश्नों में, हम 'मध्य पद को विभाजित (Splitting the middle term)' करके द्विघात बहुपदों के शून्य ज्ञात करेंगे और शून्यों और गुणांकों के बीच संबंध को सत्यापित करेंगे।",
+      "body_gu": "નીચેના પ્રશ્નોમાં, આપણે 'મધ્યમ અવધિનું વિભાજન' કરીને ચતુર્ભુજ બહુપદીના શૂન્ય શોધીશું અને શૂન્ય અને ગુણાંક વચ્ચેના સંબંધને ચકાસીશું.",
+      "title_gu": "વ્યાયામ 2.2: શૂન્ય શોધવું"
+    },
+    {
+      "id": "CH2_Q2_2_1_i",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(i): Find the zeroes of the quadratic polynomial: x² - 2x - 8.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(i): द्विघात बहुपद के शून्य ज्ञात कीजिए: x² - 2x - 8.",
+      "options": [
+        "-2, 4",
+        "2, -4",
+        "-2, -4",
+        "2, 4"
+      ],
+      "options_hi": [
+        "-2, 4",
+        "2, -4",
+        "-2, -4",
+        "2, 4"
+      ],
+      "correct_index": 0,
+      "explanation": "1. Split middle term: x² - 4x + 2x - 8\n2. Factorize: x(x - 4) + 2(x - 4) = (x - 4)(x + 2)\n3. Zeroes: x = 4 and x = -2.\n\nVerification:\nSum = 4 + (-2) = 2. Also -b/a = -(-2)/1 = 2.\nProduct = 4 * (-2) = -8. Also c/a = -8/1 = -8.",
+      "explanation_hi": "1. मध्य पद को विभाजित करें: x² - 4x + 2x - 8\n2. गुणनखंड करें: x(x - 4) + 2(x - 4) = (x - 4)(x + 2)\n3. शून्य: x = 4 और x = -2.\n\nसत्यापन:\nयोग = 4 + (-2) = 2. और -b/a = -(-2)/1 = 2.\nगुणनफल = 4 * (-2) = -8. और c/a = -8/1 = -8.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(i): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: x² - 2x - 8."
+    },
+    {
+      "id": "CH2_Q2_2_1_ii",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(ii): Find the zeroes of the quadratic polynomial: 4s² - 4s + 1.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(ii): द्विघात बहुपद के शून्य ज्ञात कीजिए: 4s² - 4s + 1.",
+      "options": [
+        "1, -1/2",
+        "-1/2, -1/2",
+        "1/2, 1/2",
+        "1/4, 1/4"
+      ],
+      "options_hi": [
+        "1, -1/2",
+        "-1/2, -1/2",
+        "1/2, 1/2",
+        "1/4, 1/4"
+      ],
+      "correct_index": 2,
+      "explanation": "1. It's a perfect square: (2s - 1)² = 0\n2. Zeroes: s = 1/2 and s = 1/2.\n\nVerification:\nSum = 1/2 + 1/2 = 1. Also -b/a = -(-4)/4 = 1.\nProduct = (1/2) * (1/2) = 1/4. Also c/a = 1/4.",
+      "explanation_hi": "1. यह एक पूर्ण वर्ग है: (2s - 1)² = 0\n2. शून्य: s = 1/2 और s = 1/2.\n\nसत्यापन:\nयोग = 1/2 + 1/2 = 1. और -b/a = -(-4)/4 = 1.\nगुणनफल = (1/2) * (1/2) = 1/4. और c/a = 1/4.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(ii): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: 4s² - 4s + 1."
+    },
+    {
+      "id": "CH2_Q2_2_1_iii",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(iii): Find the zeroes of the quadratic polynomial: 6x² - 3 - 7x.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(iii): द्विघात बहुपद के शून्य ज्ञात कीजिए: 6x² - 3 - 7x.",
+      "options": [
+        "3/2, -1/3",
+        "-3/2, 1/3",
+        "2/3, -1/2",
+        "3, -1"
+      ],
+      "options_hi": [
+        "3/2, -1/3",
+        "-3/2, 1/3",
+        "2/3, -1/2",
+        "3, -1"
+      ],
+      "correct_index": 0,
+      "explanation": "First, arrange in standard form: 6x² - 7x - 3.\n1. Split middle term: 6x² - 9x + 2x - 3\n2. Factorize: 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1)\n3. Zeroes: x = 3/2 and x = -1/3.\n\nVerification:\nSum = 3/2 - 1/3 = 7/6. Also -b/a = -(-7)/6 = 7/6.\nProduct = (3/2)*(-1/3) = -1/2. Also c/a = -3/6 = -1/2.",
+      "explanation_hi": "पहले, मानक रूप में व्यवस्थित करें: 6x² - 7x - 3.\n1. मध्य पद को विभाजित करें: 6x² - 9x + 2x - 3\n2. गुणनखंड करें: 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1)\n3. शून्य: x = 3/2 और x = -1/3.\n\nसत्यापन:\nयोग = 3/2 - 1/3 = 7/6. और -b/a = -(-7)/6 = 7/6.\nगुणनफल = (3/2)*(-1/3) = -1/2. और c/a = -3/6 = -1/2.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(iii): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: 6x² - 3 - 7x."
+    },
+    {
+      "id": "CH2_Q2_2_1_iv",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(iv): Find the zeroes of the quadratic polynomial: 4u² + 8u.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(iv): द्विघात बहुपद के शून्य ज्ञात कीजिए: 4u² + 8u.",
+      "options": [
+        "0, 2",
+        "0, -2",
+        "2, -2",
+        "4, 8"
+      ],
+      "options_hi": [
+        "0, 2",
+        "0, -2",
+        "2, -2",
+        "4, 8"
+      ],
+      "correct_index": 1,
+      "explanation": "1. Factorize directly: 4u(u + 2) = 0\n2. Zeroes: u = 0 and u = -2.\n\nVerification:\nSum = 0 + (-2) = -2. Also -b/a = -8/4 = -2.\nProduct = 0 * (-2) = 0. Also c/a = 0/4 = 0.",
+      "explanation_hi": "1. सीधे गुणनखंड करें: 4u(u + 2) = 0\n2. शून्य: u = 0 और u = -2.\n\nसत्यापन:\nयोग = 0 + (-2) = -2. और -b/a = -8/4 = -2.\nगुणनफल = 0 * (-2) = 0. और c/a = 0/4 = 0.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(iv): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: 4u² + 8u."
+    },
+    {
+      "id": "CH2_Q2_2_1_v",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(v): Find the zeroes of the quadratic polynomial: t² - 15.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(v): द्विघात बहुपद के शून्य ज्ञात कीजिए: t² - 15.",
+      "options": [
+        "15, -15",
+        "√15, -√15",
+        "5, -3",
+        "225, -225"
+      ],
+      "options_hi": [
+        "15, -15",
+        "√15, -√15",
+        "5, -3",
+        "225, -225"
+      ],
+      "correct_index": 1,
+      "explanation": "1. Use identity a² - b²: (t - √15)(t + √15) = 0\n2. Zeroes: t = √15 and t = -√15.\n\nVerification:\nSum = √15 - √15 = 0. Also -b/a = -0/1 = 0.\nProduct = (√15)*(-√15) = -15. Also c/a = -15/1 = -15.",
+      "explanation_hi": "1. सर्वसमिका a² - b² का उपयोग करें: (t - √15)(t + √15) = 0\n2. शून्य: t = √15 और t = -√15.\n\nसत्यापन:\nयोग = √15 - √15 = 0. और -b/a = -0/1 = 0.\nगुणनफल = (√15)*(-√15) = -15. और c/a = -15/1 = -15.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(v): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: t² - 15."
+    },
+    {
+      "id": "CH2_Q2_2_1_vi",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q1(vi): Find the zeroes of the quadratic polynomial: 3x² - x - 4.",
+      "question_hi": "प्रश्नावली 2.2 - Q1(vi): द्विघात बहुपद के शून्य ज्ञात कीजिए: 3x² - x - 4.",
+      "options": [
+        "4/3, -1",
+        "-4/3, 1",
+        "3/4, 1",
+        "4, -3"
+      ],
+      "options_hi": [
+        "4/3, -1",
+        "-4/3, 1",
+        "3/4, 1",
+        "4, -3"
+      ],
+      "correct_index": 0,
+      "explanation": "1. Split middle term: 3x² - 4x + 3x - 4\n2. Factorize: x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1)\n3. Zeroes: x = 4/3 and x = -1.\n\nVerification:\nSum = 4/3 - 1 = 1/3. Also -b/a = -(-1)/3 = 1/3.\nProduct = (4/3)*(-1) = -4/3. Also c/a = -4/3.",
+      "explanation_hi": "1. मध्य पद को विभाजित करें: 3x² - 4x + 3x - 4\n2. गुणनखंड करें: x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1)\n3. शून्य: x = 4/3 और x = -1.\n\nसत्यापन:\nयोग = 4/3 - 1 = 1/3. और -b/a = -(-1)/3 = 1/3.\nगुणनफल = (4/3)*(-1) = -4/3. और c/a = -4/3.",
+      "question_gu": "વ્યાયામ 2.2 - Q1(vi): ચતુર્ભુજ બહુપદીના શૂન્ય શોધો: 3x² - x - 4."
+    },
+    {
+      "id": "CH2_THEORY_04",
+      "type": "theory",
+      "title": "Creating a Polynomial from Zeroes",
+      "title_hi": "शून्यों से एक बहुपद बनाना",
+      "body": "If you are given the sum (S) and product (P) of the zeroes of a quadratic polynomial, you can form the polynomial directly using this formula:\n\np(x) = k[x² - (Sum of Zeroes)x + (Product of Zeroes)]\np(x) = k[x² - Sx + P]\n\nWhere 'k' is any non-zero real constant.",
+      "body_hi": "यदि आपको किसी द्विघात बहुपद के शून्यों का योग (S) और गुणनफल (P) दिया गया है, तो आप इस सूत्र का उपयोग करके सीधे बहुपद बना सकते हैं:\n\np(x) = k[x² - (शून्यों का योग)x + (शून्यों का गुणनफल)]\np(x) = k[x² - Sx + P]\n\nजहाँ 'k' कोई भी गैर-शून्य वास्तविक अचर (constant) है।",
+      "body_gu": "જો તમને ચતુર્ભુજ બહુપદીના શૂન્યનો સરવાળો (S) અને ઉત્પાદન (P) આપવામાં આવે, તો તમે આ સૂત્રનો ઉપયોગ કરીને સીધા જ બહુપદી બનાવી શકો છો:\np(x) = k[x² - (શૂન્યનો સરવાળો)x + (શૂન્યનું ઉત્પાદન)]\np(x) = k[x² - Sx + P]\nજ્યાં 'k' કોઈપણ બિન-શૂન્ય વાસ્તવિક સ્થિરાંક છે.",
+      "title_gu": "શૂન્યમાંથી બહુપદી બનાવવી"
+    },
+    {
+      "id": "CH2_Q2_2_2_i",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(i): Find a quadratic polynomial whose sum and product of zeroes are 1/4 and -1 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(i): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः 1/4 और -1 है।",
+      "options": [
+        "4x² - x - 4",
+        "4x² + x + 4",
+        "x² - 4x - 1",
+        "x² + (1/4)x - 1"
+      ],
+      "options_hi": [
+        "4x² - x - 4",
+        "4x² + x + 4",
+        "x² - 4x - 1",
+        "x² + (1/4)x - 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = 1/4, Product (P) = -1.\nPolynomial = k(x² - Sx + P)\n= k(x² - (1/4)x - 1)\nTake k = 4 to remove fractions:\n= 4x² - x - 4.",
+      "explanation_hi": "योग (S) = 1/4, गुणनफल (P) = -1.\nबहुपद = k(x² - Sx + P)\n= k(x² - (1/4)x - 1)\nभिन्नों को हटाने के लिए k = 4 लें:\n= 4x² - x - 4.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(i): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે 1/4 અને -1 છે."
+    },
+    {
+      "id": "CH2_Q2_2_2_ii",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(ii): Find a quadratic polynomial whose sum and product of zeroes are √2 and 1/3 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(ii): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः √2 और 1/3 है।",
+      "options": [
+        "3x² - 3√2x + 1",
+        "x² - √2x + 3",
+        "3x² + 3√2x - 1",
+        "x² + √2x + 1/3"
+      ],
+      "options_hi": [
+        "3x² - 3√2x + 1",
+        "x² - √2x + 3",
+        "3x² + 3√2x - 1",
+        "x² + √2x + 1/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = √2, Product (P) = 1/3.\nPolynomial = k(x² - Sx + P)\n= k(x² - √2x + 1/3)\nTake k = 3 to remove fractions:\n= 3x² - 3√2x + 1.",
+      "explanation_hi": "योग (S) = √2, गुणनफल (P) = 1/3.\nबहुपद = k(x² - Sx + P)\n= k(x² - √2x + 1/3)\nभिन्नों को हटाने के लिए k = 3 लें:\n= 3x² - 3√2x + 1.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(ii): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે √2 અને 1/3 છે."
+    },
+    {
+      "id": "CH2_Q2_2_2_iii",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(iii): Find a quadratic polynomial whose sum and product of zeroes are 0 and √5 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(iii): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः 0 और √5 है।",
+      "options": [
+        "x² + √5",
+        "x² - √5",
+        "x² + 5",
+        "x² + √5x"
+      ],
+      "options_hi": [
+        "x² + √5",
+        "x² - √5",
+        "x² + 5",
+        "x² + √5x"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = 0, Product (P) = √5.\nPolynomial = k(x² - Sx + P)\n= k(x² - 0x + √5)\nTake k = 1:\n= x² + √5.",
+      "explanation_hi": "योग (S) = 0, गुणनफल (P) = √5.\nबहुपद = k(x² - Sx + P)\n= k(x² - 0x + √5)\nk = 1 लें:\n= x² + √5.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(iii): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે 0 અને √5 છે."
+    },
+    {
+      "id": "CH2_Q2_2_2_iv",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(iv): Find a quadratic polynomial whose sum and product of zeroes are 1 and 1 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(iv): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः 1 और 1 है।",
+      "options": [
+        "x² - x + 1",
+        "x² + x + 1",
+        "x² - x - 1",
+        "x² - 2x + 1"
+      ],
+      "options_hi": [
+        "x² - x + 1",
+        "x² + x + 1",
+        "x² - x - 1",
+        "x² - 2x + 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = 1, Product (P) = 1.\nPolynomial = k(x² - Sx + P)\n= k(x² - 1x + 1)\nTake k = 1:\n= x² - x + 1.",
+      "explanation_hi": "योग (S) = 1, गुणनफल (P) = 1.\nबहुपद = k(x² - Sx + P)\n= k(x² - 1x + 1)\nk = 1 लें:\n= x² - x + 1.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(iv): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે 1 અને 1 છે."
+    },
+    {
+      "id": "CH2_Q2_2_2_v",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(v): Find a quadratic polynomial whose sum and product of zeroes are -1/4 and 1/4 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(v): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः -1/4 और 1/4 है।",
+      "options": [
+        "4x² + x + 1",
+        "4x² - x + 1",
+        "4x² + x - 1",
+        "x² + (1/4)x - 1/4"
+      ],
+      "options_hi": [
+        "4x² + x + 1",
+        "4x² - x + 1",
+        "4x² + x - 1",
+        "x² + (1/4)x - 1/4"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = -1/4, Product (P) = 1/4.\nPolynomial = k(x² - Sx + P)\n= k(x² - (-1/4)x + 1/4)\n= k(x² + x/4 + 1/4)\nTake k = 4 to remove fractions:\n= 4x² + x + 1.",
+      "explanation_hi": "योग (S) = -1/4, गुणनफल (P) = 1/4.\nबहुपद = k(x² - Sx + P)\n= k(x² - (-1/4)x + 1/4)\n= k(x² + x/4 + 1/4)\nभिन्नों को हटाने के लिए k = 4 लें:\n= 4x² + x + 1.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(v): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે -1/4 અને 1/4 છે."
+    },
+    {
+      "id": "CH2_Q2_2_2_vi",
+      "type": "quiz",
+      "question": "Exercise 2.2 - Q2(vi): Find a quadratic polynomial whose sum and product of zeroes are 4 and 1 respectively.",
+      "question_hi": "प्रश्नावली 2.2 - Q2(vi): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यों का योग और गुणनफल क्रमशः 4 और 1 है।",
+      "options": [
+        "x² - 4x + 1",
+        "x² + 4x + 1",
+        "x² - x + 4",
+        "4x² - x + 1"
+      ],
+      "options_hi": [
+        "x² - 4x + 1",
+        "x² + 4x + 1",
+        "x² - x + 4",
+        "4x² - x + 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum (S) = 4, Product (P) = 1.\nPolynomial = k(x² - Sx + P)\n= k(x² - 4x + 1)\nTake k = 1:\n= x² - 4x + 1.",
+      "explanation_hi": "योग (S) = 4, गुणनफल (P) = 1.\nबहुपद = k(x² - Sx + P)\n= k(x² - 4x + 1)\nk = 1 लें:\n= x² - 4x + 1.",
+      "question_gu": "વ્યાયામ 2.2 - Q2(vi): એક ચતુર્ભુજ બહુપદી શોધો જેનો સરવાળો અને શૂન્યનો ગુણાંક અનુક્રમે 4 અને 1 છે."
+    },
+    {
+      "id": "CH2_REFLECTION_01",
+      "type": "reflection",
+      "title": "Module Complete!",
+      "title_hi": "मॉड्यूल पूरा हुआ!",
+      "body": "Awesome work! You have completed all the exercises for Polynomials. Take a moment to reflect: Can you explain to a friend how to find a quadratic polynomial if they give you the sum and product of its zeroes? Now you're ready for the Mock Test!",
+      "body_hi": "बहुत बढ़िया काम! आपने बहुपद के लिए सभी अभ्यास पूरे कर लिए हैं। एक क्षण रुक कर सोचें: क्या आप किसी मित्र को यह समझा सकते हैं कि यदि वे आपको इसके शून्यों का योग और गुणनफल दें तो द्विघात बहुपद कैसे ज्ञात करें? अब आप मॉक टेस्ट के लिए तैयार हैं!",
+      "body_gu": "અદ્ભુત કામ!તમે બહુપદી માટેની બધી કસરતો પૂર્ણ કરી લીધી છે.પ્રતિબિંબિત કરવા માટે થોડો સમય કાઢો: શું તમે મિત્રને સમજાવી શકો છો કે કેવી રીતે ચતુર્ભુજ બહુપદી શોધવી જો તેઓ તમને તેના શૂન્યનો સરવાળો અને ઉત્પાદન આપે?હવે તમે મોક ટેસ્ટ માટે તૈયાર છો!",
+      "title_gu": "મોડ્યુલ પૂર્ણ!"
+    }
+  ]
+}

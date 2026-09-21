@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "id": "class11_science_maths_ch1",
+    "title": "Sets",
+    "subject": "Mathematics",
+    "grade": "11",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Introduction to Sets and Set Representation",
+      "Types of Sets and Cardinality",
+      "Venn Diagrams and Set Operations",
+      "Algebra of Sets and Laws of Set Theory",
+      "The Cartesian Product of Sets and Relations"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_2_1",
+      "type": "hook",
+      "title": "The Detective's Sorting Board",
+      "body": "Imagine you are a detective tracking a massive international syndicate. You have hundreds of suspects. Some are hackers, some are forgers, and some are both. Your whiteboards are a tangled mess of names and strings until you pick up a set of colored markers, draw overlapping circles, and suddenly, the invisible connections illuminate the entire case. In mathematics, Venn diagrams are those very detective boards—turning abstract logic into vivid, spatial geometry."
+    },
+    {
+      "id": "KOBJ_2_2",
+      "type": "socratic",
+      "question": "If Set A represents students who play football, and Set B represents students who play chess, where would you place a student who plays *both* football and chess?",
+      "options": [
+        "Inside Set A only, away from B",
+        "Inside Set B only, away from A",
+        "In the overlapping region where circles A and B intersect",
+        "Outside both circles entirely"
+      ],
+      "correct_index": 2,
+      "explanation": "The overlapping region (the intersection) represents elements that simultaneously belong to both sets, fulfilling the criteria for both A and B."
+    },
+    {
+      "id": "KOBJ_2_3",
+      "type": "theory",
+      "title": "Venn Diagrams and Set Operations: Deep Dive",
+      "body": "Venn diagrams, introduced by John Venn in the 1880s, are geometric visualizations that map out the relationships between mathematical sets. The universal set (U) is typically represented by a large rectangle, while subsets within it are portrayed as closed curves, usually circles. Set operations—namely Union, Intersection, Difference, and Complement—take on intuitive visual meanings when mapped onto these diagrams. The Union ($A \\cup B$) acts like an inclusive party, combining everything inside both circles. The Intersection ($A \\cap B$) is an exclusive VIP lounge, restricted only to the elements shared by both. The Relative Difference ($A - B$) acts as a subtraction tool, stripping away any part of A that overlaps with B. Finally, the Complement ($A'$) serves as an inverse lens, capturing everything in the universe *except* what lies within A. By mastering the shading and region-mapping of Venn diagrams, mathematicians can visually verify complex algebraic identities, such as De Morgan's Laws, proving that spatial intuition and rigorous logic are two sides of the same coin.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_2_4",
+      "type": "knowledge_check",
+      "question": "In a universal set U, if you shade the region representing $(A \\cup B)'$, what are you actually highlighting?",
+      "options": [
+        "Elements that belong to both A and B",
+        "Elements that belong to either A or B or both",
+        "Elements that belong to neither A nor B",
+        "Elements that belong to A but not to B"
+      ],
+      "correct_index": 2,
+      "explanation": "The union ($A \\cup B$) covers everything inside both sets. Taking its complement ($'$) means looking at everything in the universal set that lies outside of that combined area, which corresponds strictly to elements belonging to neither A nor B.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_ALG_1",
+      "type": "hook",
+      "title": "The Grand Logistics Puzzle",
+      "body": "Imagine you are the chief logistics officer for a massive global retailer. You have shipments arriving containing various products, and you need to merge inventories, filter out damaged goods, and organize warehouses efficiently. If you merge Warehouse A with Warehouse B, does the order of merging matter? If you group categories using shelving units, does the grouping structure change the final items stored? Just as ordinary numbers obey the laws of algebra (like $a + b = b + a$), collections of objects—sets—also obey a profound and elegant set of operational laws. Welcome to the algebra of sets."
+    },
+    {
+      "id": "KOBJ_ALG_2",
+      "type": "socratic",
+      "question": "In ordinary arithmetic, we know that $a \\times (b + c) = (a \\times b) + (a \\times c)$, which is the distributive property of multiplication over addition. If we translate this into the language of sets, what operation do you think plays the role of 'multiplication', and what operation plays the role of 'addition'?",
+      "options": [
+        "Multiplication = Union, Addition = Intersection",
+        "Multiplication = Intersection, Addition = Union",
+        "Multiplication = Complement, Addition = Subset",
+        "Multiplication = Empty Set, Addition = Universal Set"
+      ],
+      "correct_index": 1,
+      "explanation": "In set theory, intersection ($\\cap$) acts very similarly to logical AND (or multiplication), while union ($\\cup$) acts like logical OR (or addition). Thus, intersection distributes over union, much like multiplication distributes over addition in standard algebra."
+    },
+    {
+      "id": "KOBJ_ALG_3",
+      "type": "theory",
+      "title": "Algebra of Sets and Laws of Set Theory: Deep Dive",
+      "body": "The algebra of sets provides a formal axiomatic framework for manipulating sets using operations such as union, intersection, and complementation. Just as real numbers obey properties like commutativity, associativity, and distributivity, sets adhere to a parallel set of fundamental laws that govern their interactions. The **Idempotent Laws** state that the union or intersection of a set with itself yields the set itself ($A \\cup A = A$ and $A \\cap A = A$). The **Commutative Laws** guarantee that the order of operation does not matter for union and intersection ($A \\cup B = B \\cup A$ and $A \\cap B = B \\cap A$). Furthermore, the **Associative Laws** allow us to regroup operations when three or more sets are involved without changing the outcome: $(A \\cup B) \\cup C = A \\cup (B \\cup C)$ and $(A \\cap B) \\cap C = A \\cap (B \\cap C)$. One of the most powerful structural properties is the **Distributive Law**, where intersection distributes over union ($A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$) and union distributes over intersection ($A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)$). Finally, **De Morgan's Laws** form the bridge between complements, unions, and intersections, stating that the complement of a union is the intersection of the complements ($(A \\cup B)' = A' \\cap B'$), and the complement of an intersection is the union of the complements ($(A \\cap B)' = A' \\cup B'$). Mastering these laws allows mathematicians and computer scientists to simplify immensely complex logical expressions, database queries, and circuit designs with absolute mathematical rigor.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_ALG_4",
+      "type": "knowledge_check",
+      "question": "According to De Morgan's Laws, which of the following expressions is identically equal to the complement of the intersection of sets A and B, written as $(A \\cap B)'$?",
+      "options": [
+        "A' \\cap B'",
+        "A \\cup B'",
+        "A' \\cup B'",
+        "(A \\cup B)'"
+      ],
+      "correct_index": 2,
+      "explanation": "De Morgan's Second Law explicitly states that the complement of an intersection of two sets is equal to the union of their individual complements: $(A \\cap B)' = A' \\cup B'$. Think of it as 'breaking the bar' and flipping the intersection symbol to a union symbol.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    }
+  ]
+}

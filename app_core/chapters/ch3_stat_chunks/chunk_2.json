@@ -1,0 +1,292 @@
+[
+  {
+    "id": "KOBJ_STAT_CH3_2_EX_2",
+    "type": "worked_example",
+    "question": "Month | 1 | 2 | 3 | 4 | 5 | 6 \n--- | --- | --- | --- | --- | --- | ---\nNo. of laptops sold (hundred units) x | 5 | 7 | 5 | 12 | 8 | 3\nProfit lakh (₹) y | 8 | 9 | 10 | 15 | 10 | 6\n\nObtain the regression line of Y on X. Also find the error in estimating Y for X = 7.",
+    "question_hi": "महीना | 1 | 2 | 3 | 4 | 5 | 6\n--- | --- | --- | --- | --- | --- | ---\nबेचे गए लैपटॉप की संख्या (सैकड़ों में) x | 5 | 7 | 5 | 12 | 8 | 3\nलाभ (लाख ₹) y | 8 | 9 | 10 | 15 | 10 | 6\n\nY की X पर समाश्रयण रेखा (regression line) प्राप्त करें। इसके अलावा, X = 7 के लिए Y का अनुमान लगाने में त्रुटि (error) ज्ञात करें।",
+    "question_gu": "મહિનો | 1 | 2 | 3 | 4 | 5 | 6\n--- | --- | --- | --- | --- | --- | ---\nવેચાયેલા લેપટોપની સંખ્યા (સો એકમમાં) x | 5 | 7 | 5 | 12 | 8 | 3\nનફો (લાખ ₹) y | 8 | 9 | 10 | 15 | 10 | 6\n\nY ની X પરની નિયતસંબંધ રેખા મેળવો. વધુમાં, X = 7 માટે Y ના અનુમાનમાં રહેલી ત્રુટિ (error) પણ શોધો.",
+    "explanation": "**Table Calculation:**\n\nx | y | xy | x² \n--- | --- | --- | ---\n5 | 8 | 40 | 25\n7 | 9 | 63 | 49\n5 | 10 | 50 | 25\n12 | 15 | 180 | 144\n8 | 10 | 80 | 64\n3 | 6 | 18 | 9\n**Total: 40** | **Total: 58** | **Total: 431** | **Total: 316**\n\nMean:\nx̄ = 40/6 = 6.67, ȳ = 58/6 = 9.67\n\nRegression coefficient b:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (6(431) - (40)(58)) / (6(316) - (40)²)\nb = (2586 - 2320) / (1896 - 1600)\nb = 266 / 296 = 0.8986 ≈ 0.90\n\nConstant a:\na = ȳ - bx̄ = 9.67 - 0.90(6.67) = 9.67 - 6.003 = 3.667 ≈ 3.67\n\nRegression line of Y on X is ŷ = 3.67 + 0.90x\n\nFor X = 7:\nŷ = 3.67 + 0.90(7) = 3.67 + 6.30 = 9.97 lakh ₹\n\nObserved value for x = 7 is y = 9.\nError e = y - ŷ = 9 - 9.97 = -0.97 lakh ₹",
+    "explanation_hi": "**तालिका गणना (Table Calculation):**\n\nx | y | xy | x² \n--- | --- | --- | ---\n5 | 8 | 40 | 25\n7 | 9 | 63 | 49\n5 | 10 | 50 | 25\n12 | 15 | 180 | 144\n8 | 10 | 80 | 64\n3 | 6 | 18 | 9\n**कुल (Total): 40** | **कुल (Total): 58** | **कुल (Total): 431** | **कुल (Total): 316**\n\nमाध्य (Mean):\nx̄ = 40/6 = 6.67, ȳ = 58/6 = 9.67\n\nसमाश्रयण गुणांक (Regression coefficient) b:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (6(431) - (40)(58)) / (6(316) - (40)²)\nb = (2586 - 2320) / (1896 - 1600)\nb = 266 / 296 = 0.8986 ≈ 0.90\n\nस्थिरांक (Constant) a:\na = ȳ - bx̄ = 9.67 - 0.90(6.67) = 9.67 - 6.003 = 3.667 ≈ 3.67\n\nY की X पर समाश्रयण रेखा ŷ = 3.67 + 0.90x है।\n\nX = 7 के लिए:\nŷ = 3.67 + 0.90(7) = 3.67 + 6.30 = 9.97 लाख ₹\n\nx = 7 के लिए देखा गया मान (Observed value) y = 9 है।\nत्रुटि (Error) e = y - ŷ = 9 - 9.97 = -0.97 लाख ₹",
+    "explanation_gu": "**કોષ્ટક ગણતરી (Table Calculation):**\n\nx | y | xy | x² \n--- | --- | --- | ---\n5 | 8 | 40 | 25\n7 | 9 | 63 | 49\n5 | 10 | 50 | 25\n12 | 15 | 180 | 144\n8 | 10 | 80 | 64\n3 | 6 | 18 | 9\n**કુલ (Total): 40** | **કુલ (Total): 58** | **કુલ (Total): 431** | **કુલ (Total): 316**\n\nમધ્યક (Mean):\nx̄ = 40/6 = 6.67, ȳ = 58/6 = 9.67\n\nનિયતસંબંધાંક (Regression coefficient) b:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (6(431) - (40)(58)) / (6(316) - (40)²)\nb = (2586 - 2320) / (1896 - 1600)\nb = 266 / 296 = 0.8986 ≈ 0.90\n\nઅચળાંક (Constant) a:\na = ȳ - bx̄ = 9.67 - 0.90(6.67) = 9.67 - 6.003 = 3.667 ≈ 3.67\n\nY ની X પરની નિયતસંબંધ રેખા ŷ = 3.67 + 0.90x છે.\n\nX = 7 માટે:\nŷ = 3.67 + 0.90(7) = 3.67 + 6.30 = 9.97 લાખ ₹\n\nx = 7 માટે અવલોકિત કિંમત (Observed value) y = 9 છે.\nત્રુટિ (Error) e = y - ŷ = 9 - 9.97 = -0.97 લાખ ₹"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_EX_3",
+    "type": "worked_example",
+    "question": "Illustration 3: In order to study the relationship between the repairing time of accident damaged cars and the cost of repair, the following information is collected.\n\nRepairing time (man hours) x | 32 | 40 | 25 | 29 | 35 | 43\n--- | --- | --- | --- | --- | --- | ---\nRepairing cost (thousand ₹) y | 25 | 35 | 18 | 22 | 28 | 46\n\nObtain the regression line of Y (repairing cost) on X (repairing time). If the time taken to repair a car is 50 hours, find an estimate of the repairing cost.",
+    "question_hi": "उदाहरण 3: दुर्घटनाग्रस्त कारों के मरम्मत के समय और मरम्मत की लागत के बीच संबंध का अध्ययन करने के लिए निम्नलिखित जानकारी एकत्र की गई है।\n\nमरम्मत का समय (मानव घंटे) x | 32 | 40 | 25 | 29 | 35 | 43\n--- | --- | --- | --- | --- | --- | ---\nमरम्मत की लागत (हजार ₹) y | 25 | 35 | 18 | 22 | 28 | 46\n\nY (मरम्मत की लागत) की X (मरम्मत का समय) पर समाश्रयण रेखा (regression line) प्राप्त करें। यदि एक कार की मरम्मत में 50 घंटे लगते हैं, तो मरम्मत की लागत का अनुमान ज्ञात करें।",
+    "question_gu": "ઉદાહરણ 3: અકસ્માત પામેલી કારના રિપેરિંગ સમય અને રિપેરિંગ ખર્ચ વચ્ચેના સંબંધનો અભ્યાસ કરવા માટે નીચેની માહિતી એકઠી કરવામાં આવી છે.\n\nરિપેરિંગ સમય (માનવ કલાકો) x | 32 | 40 | 25 | 29 | 35 | 43\n--- | --- | --- | --- | --- | --- | ---\nરિપેરિંગ ખર્ચ (હજાર ₹) y | 25 | 35 | 18 | 22 | 28 | 46\n\nY (રિપેરિંગ ખર્ચ) ની X (રિપેરિંગ સમય) પરની નિયતસંબંધ રેખા મેળવો. જો કાર રિપેર કરવામાં 50 કલાકનો સમય લાગે, તો રિપેરિંગ ખર્ચનો અંદાજ મેળવો.",
+    "explanation": "Here, n = 6, x̄ = 204/6 = 34, ȳ = 174/6 = 29\n\n**Table Calculation:**\n\nx | y | x - x̄ | y - ȳ | (x - x̄)(y - ȳ) | (x - x̄)²\n--- | --- | --- | --- | --- | ---\n32 | 25 | -2 | -4 | 8 | 4\n40 | 35 | 6 | 6 | 36 | 36\n25 | 18 | -9 | -11 | 99 | 81\n29 | 22 | -5 | -7 | 35 | 25\n35 | 28 | 1 | -1 | -1 | 1\n43 | 46 | 9 | 17 | 153 | 81\n**Total: 204** | **Total: 174** | **0** | **0** | **330** | **228**\n\nRegression coefficient b:\nb = Σ(x - x̄)(y - ȳ) / Σ(x - x̄)²\nb = 330 / 228 = 1.4474 ≈ 1.45\n\nConstant a:\na = ȳ - bx̄ = 29 - 1.45(34) = 29 - 49.3 = -20.3\n\nRegression line of Y on X is ŷ = -20.3 + 1.45x\n\nPutting x = 50:\nŷ = -20.3 + 1.45(50) = -20.3 + 72.5 = 52.2\n\nWhen repairing time is 50 hours, estimated repairing cost is ₹ 52.2 thousand.",
+    "explanation_hi": "यहाँ, n = 6, x̄ = 204/6 = 34, ȳ = 174/6 = 29\n\n**तालिका गणना:**\n\nx | y | x - x̄ | y - ȳ | (x - x̄)(y - ȳ) | (x - x̄)²\n--- | --- | --- | --- | --- | ---\n32 | 25 | -2 | -4 | 8 | 4\n40 | 35 | 6 | 6 | 36 | 36\n25 | 18 | -9 | -11 | 99 | 81\n29 | 22 | -5 | -7 | 35 | 25\n35 | 28 | 1 | -1 | -1 | 1\n43 | 46 | 9 | 17 | 153 | 81\n**कुल: 204** | **कुल: 174** | **0** | **0** | **330** | **228**\n\nसमाश्रयण गुणांक b:\nb = Σ(x - x̄)(y - ȳ) / Σ(x - x̄)²\nb = 330 / 228 = 1.4474 ≈ 1.45\n\nस्थिरांक a:\na = ȳ - bx̄ = 29 - 1.45(34) = 29 - 49.3 = -20.3\n\nY की X पर समाश्रयण रेखा ŷ = -20.3 + 1.45x है।\n\nx = 50 रखने पर:\nŷ = -20.3 + 1.45(50) = -20.3 + 72.5 = 52.2\n\nजब मरम्मत का समय 50 घंटे है, तो अनुमानित मरम्मत लागत ₹ 52.2 हजार है।",
+    "explanation_gu": "અહીં, n = 6, x̄ = 204/6 = 34, ȳ = 174/6 = 29\n\n**કોષ્ટક ગણતરી:**\n\nx | y | x - x̄ | y - ȳ | (x - x̄)(y - ȳ) | (x - x̄)²\n--- | --- | --- | --- | --- | ---\n32 | 25 | -2 | -4 | 8 | 4\n40 | 35 | 6 | 6 | 36 | 36\n25 | 18 | -9 | -11 | 99 | 81\n29 | 22 | -5 | -7 | 35 | 25\n35 | 28 | 1 | -1 | -1 | 1\n43 | 46 | 9 | 17 | 153 | 81\n**કુલ: 204** | **કુલ: 174** | **0** | **0** | **330** | **228**\n\nનિયતસંબંધાંક b:\nb = Σ(x - x̄)(y - ȳ) / Σ(x - x̄)²\nb = 330 / 228 = 1.4474 ≈ 1.45\n\nઅચળાંક a:\na = ȳ - bx̄ = 29 - 1.45(34) = 29 - 49.3 = -20.3\n\nY ની X પરની નિયતસંબંધ રેખા ŷ = -20.3 + 1.45x છે.\n\nx = 50 મૂકતાં:\nŷ = -20.3 + 1.45(50) = -20.3 + 72.5 = 52.2\n\nજ્યારે રિપેરિંગ સમય 50 કલાક હોય, ત્યારે અંદાજિત રિપેરિંગ ખર્ચ ₹ 52.2 હજાર છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_PRACTICE_1",
+    "type": "practice_question",
+    "question": "Exercise 3.1, Q1: From the following data of price (in ₹) and demand (in hundred units) of a commodity, obtain the regression line of demand on price. Also estimate the demand when price is 20 ₹.\n\nPrice (₹) | 12 | 14 | 15 | 16 | 18 | 21\n--- | --- | --- | --- | --- | --- | ---\nDemand (hundred units) | 18 | 12 | 10 | 8 | 7 | 5",
+    "question_hi": "प्रश्नावली 3.1, प्रश्न 1: एक वस्तु की कीमत (₹ में) और मांग (सैकड़ों इकाइयों में) के निम्नलिखित आंकड़ों से, कीमत पर मांग की समाश्रयण रेखा (regression line) प्राप्त करें। इसके अलावा, जब कीमत 20 ₹ हो तो मांग का अनुमान लगाएं।\n\nकीमत (₹) | 12 | 14 | 15 | 16 | 18 | 21\n--- | --- | --- | --- | --- | --- | ---\nमांग (सैकड़ों इकाइयां) | 18 | 12 | 10 | 8 | 7 | 5",
+    "question_gu": "સ્વાધ્યાય 3.1, પ્રશ્ન 1: એક વસ્તુની કિંમત (₹ માં) અને માંગ (સો એકમોમાં) ની નીચેની માહિતી પરથી, કિંમત પર માંગની નિયતસંબંધ રેખા મેળવો. વધુમાં, જ્યારે કિંમત 20 ₹ હોય ત્યારે માંગનો અંદાજ મેળવો.\n\nકિંમત (₹) | 12 | 14 | 15 | 16 | 18 | 21\n--- | --- | --- | --- | --- | --- | ---\nમાંગ (સો એકમો) | 18 | 12 | 10 | 8 | 7 | 5",
+    "explanation": "Step 1: Calculate the mean of X (Price) and Y (Demand).\nStep 2: Use the appropriate formula to calculate the regression coefficient 'b' and constant 'a'.\nStep 3: Form the regression line equation ŷ = a + bx.\nStep 4: Substitute x = 20 in the equation to find the estimated demand.",
+    "explanation_hi": "चरण 1: X (कीमत) और Y (मांग) का माध्य (mean) ज्ञात करें।\nचरण 2: समाश्रयण गुणांक (regression coefficient) 'b' और स्थिरांक 'a' की गणना करने के लिए उपयुक्त सूत्र का उपयोग करें।\nचरण 3: समाश्रयण रेखा का समीकरण ŷ = a + bx बनाएं।\nचरण 4: अनुमानित मांग ज्ञात करने के लिए समीकरण में x = 20 रखें।",
+    "explanation_gu": "પગલું 1: X (કિંમત) અને Y (માંગ) નો મધ્યક (mean) શોધો.\nપગલું 2: નિયતસંબંધાંક (regression coefficient) 'b' અને અચળાંક 'a' ની ગણતરી કરવા માટે યોગ્ય સૂત્રનો ઉપયોગ કરો.\nપગલું 3: નિયતસંબંધ રેખાનું સમીકરણ ŷ = a + bx બનાવો.\nપગલું 4: અંદાજિત માંગ શોધવા માટે સમીકરણમાં x = 20 મૂકો."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_PRACTICE_2",
+    "type": "practice_question",
+    "question": "Exercise 3.1, Q2: To study the relationship between the time of usage of cars and its average annual maintenance cost, the following information is obtained:\n\nCar | 1 | 2 | 3 | 4 | 5 | 6\n--- | --- | --- | --- | --- | --- | ---\nTime of usage (years) x | 3 | 1 | 2 | 2 | 5 | 3\nAverage annual maintenance cost (thousand ₹) y | 10 | 5 | 8 | 7 | 13 | 8\n\nObtain the regression line of Y on X. Find an estimate of average annual maintenance cost when the usage time of a car is 5 years. Also find its error.",
+    "question_hi": "प्रश्नावली 3.1, प्रश्न 2: कारों के उपयोग के समय और उनकी औसत वार्षिक रखरखाव लागत के बीच संबंध का अध्ययन करने के लिए, निम्नलिखित जानकारी प्राप्त की गई है:\n\nकार | 1 | 2 | 3 | 4 | 5 | 6\n--- | --- | --- | --- | --- | --- | ---\nउपयोग का समय (वर्ष) x | 3 | 1 | 2 | 2 | 5 | 3\nऔसत वार्षिक रखरखाव लागत (हजार ₹) y | 10 | 5 | 8 | 7 | 13 | 8\n\nY की X पर समाश्रयण रेखा प्राप्त करें। जब कार का उपयोग समय 5 वर्ष हो तो औसत वार्षिक रखरखाव लागत का अनुमान लगाएं। इसके अलावा इसकी त्रुटि (error) ज्ञात करें।",
+    "question_gu": "સ્વાધ્યાય 3.1, પ્રશ્ન 2: કારના ઉપયોગના સમય અને તેના સરેરાશ વાર્ષિક જાળવણી ખર્ચ વચ્ચેના સંબંધનો અભ્યાસ કરવા માટે, નીચેની માહિતી મેળવવામાં આવી છે:\n\nકાર | 1 | 2 | 3 | 4 | 5 | 6\n--- | --- | --- | --- | --- | --- | ---\nઉપયોગનો સમય (વર્ષ) x | 3 | 1 | 2 | 2 | 5 | 3\nસરેરાશ વાર્ષિક જાળવણી ખર્ચ (હજાર ₹) y | 10 | 5 | 8 | 7 | 13 | 8\n\nY ની X પરની નિયતસંબંધ રેખા મેળવો. જ્યારે કારનો ઉપયોગ સમય 5 વર્ષ હોય ત્યારે સરેરાશ વાર્ષિક જાળવણી ખર્ચનો અંદાજ શોધો. તેની ત્રુટિ (error) પણ શોધો.",
+    "explanation": "Step 1: Compute the means of X (Time of usage) and Y (Maintenance cost).\nStep 2: Calculate the values of b and a using regression formulas.\nStep 3: Establish the regression line ŷ = a + bx.\nStep 4: Predict Y for X = 5.\nStep 5: Calculate Error (e = y - ŷ), where y is the observed value from the given data for X = 5.",
+    "explanation_hi": "चरण 1: X (उपयोग का समय) और Y (रखरखाव लागत) के माध्य की गणना करें।\nचरण 2: समाश्रयण सूत्रों का उपयोग करके b और a के मानों की गणना करें।\nचरण 3: समाश्रयण रेखा ŷ = a + bx स्थापित करें।\nचरण 4: X = 5 के लिए Y का अनुमान लगाएं।\nचरण 5: त्रुटि (e = y - ŷ) की गणना करें, जहां y, X = 5 के लिए दिए गए डेटा से देखा गया मान (observed value) है।",
+    "explanation_gu": "પગલું 1: X (ઉપયોગનો સમય) અને Y (જાળવણી ખર્ચ) ના મધ્યકની ગણતરી કરો.\nપગલું 2: નિયતસંબંધ સૂત્રોનો ઉપયોગ કરીને b અને a ના મૂલ્યોની ગણતરી કરો.\nપગલું 3: નિયતસંબંધ રેખા ŷ = a + bx સ્થાપિત કરો.\nપગલું 4: X = 5 માટે Y નું અનુમાન લગાવો.\nપગલું 5: ત્રુટિ (e = y - ŷ) ની ગણતરી કરો, જ્યાં y એ X = 5 માટે આપેલ માહિતીમાંથી અવલોકિત કિંમત (observed value) છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_PRACTICE_3",
+    "type": "practice_question",
+    "question": "Exercise 3.1, Q3: The information for a year regarding the average rainfall (in cm) and total production of crop (in tons) of five districts is given below:\n\nAverage rainfall (cm) | 25 | 32 | 38 | 29 | 31\n--- | --- | --- | --- | --- | ---\nCrop (tons) | 84 | 90 | 95 | 88 | 93\n\nFind the regression line of production of crop on rainfall and estimate the crop if average rainfall is 35 cm.",
+    "question_hi": "प्रश्नावली 3.1, प्रश्न 3: पांच जिलों की औसत वर्षा (सेमी में) और फसल के कुल उत्पादन (टन में) के संबंध में एक वर्ष की जानकारी नीचे दी गई है:\n\nऔसत वर्षा (सेमी) | 25 | 32 | 38 | 29 | 31\n--- | --- | --- | --- | --- | ---\nफसल (टन) | 84 | 90 | 95 | 88 | 93\n\nवर्षा पर फसल के उत्पादन की समाश्रयण रेखा (regression line) ज्ञात करें और यदि औसत वर्षा 35 सेमी है तो फसल का अनुमान लगाएं।",
+    "question_gu": "સ્વાધ્યાય 3.1, પ્રશ્ન 3: પાંચ જિલ્લાઓના સરેરાશ વરસાદ (સેમીમાં) અને પાકના કુલ ઉત્પાદન (ટનમાં) સંબંધિત એક વર્ષની માહિતી નીચે આપેલી છે:\n\nસરેરાશ વરસાદ (સેમી) | 25 | 32 | 38 | 29 | 31\n--- | --- | --- | --- | --- | ---\nપાક (ટન) | 84 | 90 | 95 | 88 | 93\n\nવરસાદ પર પાકના ઉત્પાદનની નિયતસંબંધ રેખા શોધો અને જો સરેરાશ વરસાદ 35 સેમી હોય તો પાકનો અંદાજ મેળવો.",
+    "explanation": "Step 1: Calculate the mean for rainfall (X) and crop (Y).\nStep 2: Since the values are relatively large, you can use the short-cut method (u, v) or direct formula.\nStep 3: Find regression coefficient b and constant a.\nStep 4: Find the regression equation ŷ = a + bx.\nStep 5: Substitute x = 35 to estimate the crop production.",
+    "explanation_hi": "चरण 1: वर्षा (X) और फसल (Y) के लिए माध्य की गणना करें।\nचरण 2: चूंकि मान अपेक्षाकृत बड़े हैं, इसलिए आप शॉर्ट-कट विधि (u, v) या प्रत्यक्ष सूत्र का उपयोग कर सकते हैं।\nचरण 3: समाश्रयण गुणांक b और स्थिरांक a ज्ञात करें।\nचरण 4: समाश्रयण समीकरण ŷ = a + bx ज्ञात करें।\nचरण 5: फसल उत्पादन का अनुमान लगाने के लिए x = 35 रखें।",
+    "explanation_gu": "પગલું 1: વરસાદ (X) અને પાક (Y) માટે મધ્યકની ગણતરી કરો.\nપગલું 2: કિંમતો પ્રમાણમાં મોટી હોવાથી, તમે ટૂંકી રીત (u, v) અથવા સીધા સૂત્રનો ઉપયોગ કરી શકો છો.\nપગલું 3: નિયતસંબંધાંક b અને અચળાંક a શોધો.\nપગલું 4: નિયતસંબંધ સમીકરણ ŷ = a + bx મેળવો.\nપગલું 5: પાકના ઉત્પાદનનો અંદાજ મેળવવા માટે x = 35 મૂકો."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_PRACTICE_4",
+    "type": "practice_question",
+    "question": "Exercise 3.1, Q4: The following data gives the experience of machine operators and their performance ratings.\n\nOperator | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n--- | --- | --- | --- | --- | --- | --- | --- | ---\nExperience (years) x | 12 | 5 | 10 | 3 | 18 | 4 | 12 | 16\nPerformance rating y | 83 | 75 | 80 | 78 | 89 | 68 | 88 | 87\n\nCalculate the regression line of performance ratings on the experience and estimate the performance rating of an operator having 7 years of experience.",
+    "question_hi": "प्रश्नावली 3.1, प्रश्न 4: निम्नलिखित डेटा मशीन ऑपरेटरों के अनुभव और उनके प्रदर्शन रेटिंग (performance rating) को दर्शाता है।\n\nऑपरेटर | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n--- | --- | --- | --- | --- | --- | --- | --- | ---\nअनुभव (वर्ष) x | 12 | 5 | 10 | 3 | 18 | 4 | 12 | 16\nप्रदर्शन रेटिंग y | 83 | 75 | 80 | 78 | 89 | 68 | 88 | 87\n\nअनुभव पर प्रदर्शन रेटिंग की समाश्रयण रेखा की गणना करें और 7 वर्ष का अनुभव रखने वाले ऑपरेटर की प्रदर्शन रेटिंग का अनुमान लगाएं।",
+    "question_gu": "સ્વાધ્યાય 3.1, પ્રશ્ન 4: નીચેની માહિતી મશીન ઓપરેટરોના અનુભવ અને તેમના પ્રદર્શન રેટિંગ (performance rating) દર્શાવે છે.\n\nઓપરેટર | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n--- | --- | --- | --- | --- | --- | --- | --- | ---\nઅનુભવ (વર્ષ) x | 12 | 5 | 10 | 3 | 18 | 4 | 12 | 16\nપ્રદર્શન રેટિંગ y | 83 | 75 | 80 | 78 | 89 | 68 | 88 | 87\n\nઅનુભવ પર પ્રદર્શન રેટિંગની નિયતસંબંધ રેખાની ગણતરી કરો અને 7 વર્ષનો અનુભવ ધરાવતા ઓપરેટરના પ્રદર્શન રેટિંગનો અંદાજ મેળવો.",
+    "explanation": "Step 1: Compute the means of X (Experience) and Y (Performance rating).\nStep 2: Depending on whether the means are integers or fractions, use the appropriate formula to find the regression coefficient 'b'.\nStep 3: Calculate the constant 'a' and formulate the regression line equation ŷ = a + bx.\nStep 4: Substitute x = 7 into the equation to get the estimated performance rating.",
+    "explanation_hi": "चरण 1: X (अनुभव) और Y (प्रदर्शन रेटिंग) के माध्य की गणना करें।\nचरण 2: इस आधार पर कि माध्य पूर्णांक हैं या भिन्न, समाश्रयण गुणांक 'b' ज्ञात करने के लिए उपयुक्त सूत्र का उपयोग करें।\nचरण 3: स्थिरांक 'a' की गणना करें और समाश्रयण रेखा समीकरण ŷ = a + bx तैयार करें।\nचरण 4: अनुमानित प्रदर्शन रेटिंग प्राप्त करने के लिए समीकरण में x = 7 रखें।",
+    "explanation_gu": "પગલું 1: X (અનુભવ) અને Y (પ્રદર્શન રેટિંગ) ના મધ્યકની ગણતરી કરો.\nપગલું 2: મધ્યક પૂર્ણાંક છે કે અપૂર્ણાંક તેના આધારે, નિયતસંબંધાંક 'b' શોધવા માટે યોગ્ય સૂત્રનો ઉપયોગ કરો.\nપગલું 3: અચળાંક 'a' ની ગણતરી કરો અને નિયતસંબંધ રેખા સમીકરણ ŷ = a + bx બનાવો.\nપગલું 4: અંદાજિત પ્રદર્શન રેટિંગ મેળવવા માટે સમીકરણમાં x = 7 મૂકો."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_HOOK_1",
+    "type": "hook",
+    "title": "The Magic of Prediction",
+    "title_hi": "भविष्यवाणी का जादू",
+    "title_gu": "આગાહીનો જાદુ",
+    "body": "Why do economists, planners, and businessmen rely heavily on mathematics? Because they want to look into the future! Predicting future demand or cost can save millions.",
+    "body_hi": "अर्थशास्त्री, योजनाकार और व्यापारी बड़े पैमाने पर गणित पर भरोसा क्यों करते हैं? क्योंकि वे भविष्य देखना चाहते हैं! भविष्य की मांग या लागत की भविष्यवाणी करने से लाखों बच सकते हैं।",
+    "body_gu": "અર્થશાસ્ત્રીઓ, આયોજકો અને વેપારીઓ ગણિત પર આટલો બધો આધાર કેમ રાખે છે? કારણ કે તેઓ ભવિષ્ય જોવા માંગે છે! ભવિષ્યની માંગ અથવા ખર્ચની આગાહી કરવાથી લાખોની બચત થઈ શકે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_SOCRATIC_1",
+    "type": "socratic_question",
+    "question": "Imagine you know the exact mathematical relationship between advertising budget and sales. If your boss asks you to estimate sales for next year's budget, what statistical tool will you use?",
+    "question_hi": "कल्पना करें कि आप विज्ञापन बजट और बिक्री के बीच सटीक गणितीय संबंध जानते हैं। यदि आपका बॉस आपसे अगले वर्ष के बजट के लिए बिक्री का अनुमान लगाने को कहता है, तो आप किस सांख्यिकीय टूल का उपयोग करेंगे?",
+    "question_gu": "કલ્પના કરો કે તમે જાહેરાત બજેટ અને વેચાણ વચ્ચેનો ચોક્કસ ગાણિતિક સંબંધ જાણો છો. જો તમારા બોસ તમને આવતા વર્ષના બજેટ માટે વેચાણનો અંદાજ લગાવવાનું કહે, તો તમે કયા આંકડાશાસ્ત્રીય સાધનનો ઉપયોગ કરશો?",
+    "options": [
+      "Probability",
+      "Regression Line",
+      "Index Numbers",
+      "Time Series"
+    ],
+    "options_hi": [
+      "प्रायिकता (Probability)",
+      "समाश्रयण रेखा (Regression Line)",
+      "सूचकांक (Index Numbers)",
+      "काल श्रेणी (Time Series)"
+    ],
+    "options_gu": [
+      "સંભાવના (Probability)",
+      "નિયતસંબંધ રેખા (Regression Line)",
+      "સૂચકાંક (Index Numbers)",
+      "સામયિક શ્રેણી (Time Series)"
+    ],
+    "correct_index": 1,
+    "explanation": "You would use the regression line! It allows you to enter the budget amount and directly gives you the estimated sales.",
+    "explanation_hi": "आप समाश्रयण रेखा (regression line) का उपयोग करेंगे! यह आपको बजट राशि दर्ज करने की अनुमति देता है और सीधे अनुमानित बिक्री देता।",
+    "explanation_gu": "તમે નિયતસંબંધ રેખા (regression line) નો ઉપયોગ કરશો! તે તમને બજેટની રકમ દાખલ કરવાની મંજૂરી આપે છે અને સીધું અંદાજિત વેચાણ આપે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_DISC_1",
+    "type": "discovery",
+    "title": "Bridging the Gap",
+    "title_hi": "अंतर पाटना",
+    "title_gu": "અંતર ઘટાડવું",
+    "body": "By creating a functional relationship between two variables, we can bridge the gap between knowns and unknowns. If we know the independent variable (like time), we can easily estimate the dependent variable (like maintenance cost) and also find out the potential error in our estimation.",
+    "body_hi": "दो चरों के बीच एक कार्यात्मक संबंध (functional relationship) बनाकर, हम ज्ञात और अज्ञात के बीच की दूरी को पाट सकते हैं। यदि हम स्वतंत्र चर (जैसे समय) को जानते हैं, तो हम आसानी से आश्रित चर (जैसे रखरखाव लागत) का अनुमान लगा सकते हैं और हमारे अनुमान में संभावित त्रुटि (error) का भी पता लगा सकते हैं।",
+    "body_gu": "બે ચલો વચ્ચે વિધેયાત્મક સંબંધ (functional relationship) બનાવીને, આપણે જ્ઞાત અને અજ્ઞાત વચ્ચેનું અંતર ઘટાડી શકીએ છીએ. જો આપણે નિરપેક્ષ ચલ (જેમ કે સમય) જાણીએ છીએ, તો આપણે સાપેક્ષ ચલ (જેમ કે જાળવણી ખર્ચ) નો સરળતાથી અંદાજ લગાવી શકીએ છીએ અને આપણા અનુમાનમાં સંભવિત ત્રુટિ (error) પણ શોધી શકીએ છીએ."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_REV_1",
+    "type": "reveal",
+    "title": "Utility of the Study of Regression",
+    "title_hi": "समाश्रयण के अध्ययन की उपयोगिता",
+    "title_gu": "નિયતસંબંધના અભ્યાસની ઉપયોગિતા",
+    "body": "The following are some utilities of regression:\n1. We can determine a functional relation between two correlated variables.\n2. Once the functional relation is established, it can be used to predict the unknown value of dependent variable Y on the basis of known value of independent variable X.\n3. We can determine the approximate change in the value of dependent variable Y for a unit change in the value of independent variable X.\n4. We can determine the error in the estimation of dependent variable obtained by a regression line.\nRegression is very useful for economists, planners, businessmen, administrators, researchers, etc.",
+    "body_hi": "समाश्रयण (Regression) की कुछ उपयोगिताएँ निम्नलिखित हैं:\n1. हम दो सहसंबद्ध चरों के बीच एक कार्यात्मक संबंध (functional relation) निर्धारित कर सकते हैं।\n2. एक बार कार्यात्मक संबंध स्थापित हो जाने के बाद, इसका उपयोग स्वतंत्र चर X के ज्ञात मान के आधार पर आश्रित चर Y के अज्ञात मान की भविष्यवाणी करने के लिए किया जा सकता है।\n3. हम स्वतंत्र चर X के मान में प्रति इकाई परिवर्तन के लिए आश्रित चर Y के मान में होने वाले अनुमानित परिवर्तन को निर्धारित कर सकते हैं।\n4. हम समाश्रयण रेखा द्वारा प्राप्त आश्रित चर के अनुमान में त्रुटि (error) निर्धारित कर सकते हैं।\nसमाश्रयण अर्थशास्त्रियों, योजनाकारों, व्यापारियों, प्रशासकों, शोधकर्ताओं आदि के लिए बहुत उपयोगी है।",
+    "body_gu": "નિયતસંબંધ (Regression) ની કેટલીક ઉપયોગિતાઓ નીચે મુજબ છે:\n1. આપણે બે સહસંબંધિત ચલો વચ્ચેનો વિધેયાત્મક સંબંધ (functional relation) નક્કી કરી શકીએ છીએ.\n2. એકવાર વિધેયાત્મક સંબંધ સ્થાપિત થઈ જાય પછી, તેનો ઉપયોગ નિરપેક્ષ ચલ X ની જાણીતી કિંમતના આધારે સાપેક્ષ ચલ Y ની અજ્ઞાત કિંમતની આગાહી કરવા માટે થઈ શકે છે.\n3. નિરપેક્ષ ચલ X ની કિંમતમાં એક એકમના ફેરફાર માટે સાપેક્ષ ચલ Y ની કિંમતમાં થતો અંદાજિત ફેરફાર આપણે નક્કી કરી શકીએ છીએ.\n4. આપણે નિયતસંબંધ રેખા દ્વારા મેળવેલા સાપેક્ષ ચલના અનુમાનમાં રહેલી ત્રુટિ (error) નક્કી કરી શકીએ છીએ.\nનિયતસંબંધ અર્થશાસ્ત્રીઓ, આયોજકો, વેપારીઓ, વહીવટકર્તાઓ, સંશોધકો વગેરે માટે ખૂબ જ ઉપયોગી છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_KC_1",
+    "type": "knowledge_check",
+    "question": "Which of the following is NOT a utility of regression?",
+    "question_hi": "निम्नलिखित में से कौन समाश्रयण (regression) की उपयोगिता नहीं है?",
+    "question_gu": "નીચેનામાંથી કઈ નિયતસંબંધ (regression) ની ઉપયોગિતા નથી?",
+    "options": [
+      "Finding a functional relation between variables",
+      "Predicting an unknown value",
+      "Determining the exact cause of a phenomenon",
+      "Finding error in estimation"
+    ],
+    "options_hi": [
+      "चरों के बीच एक कार्यात्मक संबंध खोजना",
+      "एक अज्ञात मान की भविष्यवाणी करना",
+      "किसी घटना का सटीक कारण (exact cause) निर्धारित करना",
+      "अनुमान में त्रुटि ज्ञात करना"
+    ],
+    "options_gu": [
+      "ચલો વચ્ચે વિધેયાત્મક સંબંધ શોધવો",
+      "અજ્ઞાત કિંમતની આગાહી કરવી",
+      "કોઈ ઘટનાનું ચોક્કસ કારણ (exact cause) નક્કી કરવું",
+      "અનુમાનમાં ત્રુટિ શોધવી"
+    ],
+    "correct_index": 2,
+    "explanation": "Regression helps in prediction and finding functional relations, but it does NOT determine the exact cause (causation) of a phenomenon.",
+    "explanation_hi": "समाश्रयण भविष्यवाणी करने और कार्यात्मक संबंधों को खोजने में मदद करता है, लेकिन यह किसी घटना का सटीक कारण (causation) निर्धारित नहीं करता है।",
+    "explanation_gu": "નિયતસંબંધ આગાહી કરવામાં અને વિધેયાત્મક સંબંધો શોધવામાં મદદ કરે છે, પરંતુ તે કોઈ ઘટનાનું ચોક્કસ કારણ (causation) નક્કી કરતું નથી."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_REFL_1",
+    "type": "reflection",
+    "title": "Think About It",
+    "title_hi": "इसके बारे में सोचें",
+    "title_gu": "આના પર વિચાર કરો",
+    "body": "Where have you seen predictions being used in daily life? How about the weather forecast predicting tomorrow's temperature based on today's humidity? Or Netflix predicting which movie you will like based on your past watch time?",
+    "body_hi": "आपने दैनिक जीवन में भविष्यवाणियों का उपयोग कहाँ देखा है? आज की नमी के आधार पर कल के तापमान की भविष्यवाणी करने वाले मौसम पूर्वानुमान के बारे में क्या खयाल है? या नेटफ्लिक्स आपके पिछले देखने के समय के आधार पर यह भविष्यवाणी करता है कि आपको कौन सी फिल्म पसंद आएगी?",
+    "body_gu": "તમે રોજિંદા જીવનમાં આગાહીઓનો ઉપયોગ ક્યાં જોયો છે? આજના ભેજના આધારે કાલના તાપમાનની આગાહી કરતા હવામાનની આગાહી વિશે શું વિચારો છો? અથવા નેટફ્લિક્સ તમારા ભૂતકાળના જોવાના સમયના આધારે આગાહી કરે છે કે તમને કઈ ફિલ્મ ગમશે?"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_CONN_1",
+    "type": "connection",
+    "title": "Connecting the Dots",
+    "title_hi": "कड़ियों को जोड़ना",
+    "title_gu": "કડીઓ જોડવી",
+    "body": "This concept directly connects with Correlation. While Correlation tells us the strength and direction of a relationship, Regression takes it a step further and gives us the mathematical formula to predict future values.",
+    "body_hi": "यह अवधारणा सीधे सहसंबंध (Correlation) से जुड़ती है। जबकि सहसंबंध हमें एक रिश्ते की ताकत और दिशा बताता है, समाश्रयण (Regression) इसे एक कदम आगे ले जाता है और हमें भविष्य के मूल्यों की भविष्यवाणी करने के लिए गणितीय सूत्र देता है।",
+    "body_gu": "આ ખ્યાલ સીધો સહસંબંધ (Correlation) સાથે જોડાય છે. જ્યારે સહસંબંધ આપણને સંબંધની મજબૂતાઈ અને દિશા જણાવે છે, ત્યારે નિયતસંબંધ (Regression) તેને એક ડગલું આગળ લઈ જાય છે અને ભવિષ્યના મૂલ્યોની આગાહી કરવા માટે આપણને ગાણિતિક સૂત્ર આપે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_MAST_1",
+    "type": "mastery",
+    "title": "Mini Challenge",
+    "title_hi": "मिनी चुनौती",
+    "title_gu": "મિની ચેલેન્જ",
+    "body": "Next time you read a news article predicting economic growth or election results, try to identify what their 'Independent Variable (X)' and 'Dependent Variable (Y)' might be!",
+    "body_hi": "अगली बार जब आप आर्थिक विकास या चुनाव परिणामों की भविष्यवाणी करने वाला कोई समाचार लेख पढ़ें, तो यह पहचानने का प्रयास करें कि उनका 'स्वतंत्र चर (X)' और 'आश्रित चर (Y)' क्या हो सकता है!",
+    "body_gu": "આગલી વખતે જ્યારે તમે આર્થિક વૃદ્ધિ અથવા ચૂંટણી પરિણામોની આગાહી કરતો કોઈ સમાચાર લેખ વાંચો, ત્યારે એ ઓળખવાનો પ્રયાસ કરો કે તેમનો 'નિરપેક્ષ ચલ (X)' અને 'સાપેક્ષ ચલ (Y)' શું હોઈ શકે!"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_HOOK_2",
+    "type": "hook",
+    "title": "Shrinking the Giants",
+    "title_hi": "विशालकाय को छोटा करना",
+    "title_gu": "વિશાળને નાનું બનાવવું",
+    "body": "Calculating x² and xy when x is 5000 and y is 3500 can give us enormous numbers, making manual calculations a nightmare prone to errors. Is there a shortcut to make these numbers smaller without changing our final regression answer?",
+    "body_hi": "जब x 5000 है और y 3500 है, तो x² और xy की गणना करने पर हमें बहुत बड़ी संख्याएँ मिल सकती हैं, जिससे मैनुअल गणना त्रुटियों से भरा एक दुःस्वप्न बन जाती है। क्या हमारे अंतिम समाश्रयण उत्तर को बदले बिना इन संख्याओं को छोटा करने का कोई शॉर्टकट है?",
+    "body_gu": "જ્યારે x 5000 હોય અને y 3500 હોય, ત્યારે x² અને xy ની ગણતરી કરવાથી આપણને ખૂબ મોટી સંખ્યાઓ મળી શકે છે, જેનાથી મેન્યુઅલ ગણતરી ભૂલોથી ભરેલું એક દુઃસ્વપ્ન બની જાય છે. શું આપણા અંતિમ નિયતસંબંધ જવાબને બદલ્યા વિના આ સંખ્યાઓને નાની કરવાનો કોઈ શોર્ટકટ છે?"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_SOCRATIC_2",
+    "type": "socratic_question",
+    "question": "In Correlation, we used the variables u and v (by changing origin and scale) to simplify large numbers. Do you think the Regression Coefficient (b) will remain exactly the same if we change the scale?",
+    "question_hi": "सहसंबंध (Correlation) में, हमने बड़ी संख्याओं को सरल बनाने के लिए u और v चरों (मूल बिंदु और पैमाने को बदलकर) का उपयोग किया था। क्या आपको लगता है कि यदि हम पैमाना (scale) बदलते हैं तो समाश्रयण गुणांक (b) बिल्कुल वैसा ही रहेगा?",
+    "question_gu": "સહસંબંધ (Correlation) માં, આપણે મોટી સંખ્યાઓને સરળ બનાવવા માટે u અને v ચલો (ઉગમબિંદુ અને સ્કેલ બદલીને) નો ઉપયોગ કર્યો હતો. શું તમને લાગે છે કે જો આપણે સ્કેલ (scale) બદલીએ તો નિયતસંબંધાંક (b) બરાબર એવો જ રહેશે?",
+    "options": [
+      "Yes, it remains the same",
+      "No, it changes if the scale is changed"
+    ],
+    "options_hi": [
+      "हां, यह वैसा ही रहता है",
+      "नहीं, यदि पैमाना बदला जाता है तो यह बदल जाता है"
+    ],
+    "options_gu": [
+      "હા, તે એવો જ રહે છે",
+      "ના, જો સ્કેલ બદલવામાં આવે તો તે બદલાઈ જાય છે"
+    ],
+    "correct_index": 1,
+    "explanation": "Unlike Correlation, Regression Coefficient is NOT independent of change of scale. It will change, and we have to adjust it in our formula!",
+    "explanation_hi": "सहसंबंध के विपरीत, समाश्रयण गुणांक पैमाने के परिवर्तन से स्वतंत्र नहीं है। यह बदल जाएगा, और हमें इसे अपने सूत्र में समायोजित करना होगा!",
+    "explanation_gu": "સહસંબંધથી વિપરીત, નિયતસંબંધાંક સ્કેલના ફેરફારથી સ્વતંત્ર નથી. તે બદલાઈ જશે, અને આપણે તેને આપણા સૂત્રમાં ગોઠવવો પડશે!"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_DISC_2",
+    "type": "discovery",
+    "title": "The Scale Catch",
+    "title_hi": "पैमाने का पेंच",
+    "title_gu": "સ્કેલની આંટીઘૂંટી",
+    "body": "We can subtract a constant (change of origin) and divide by a constant (change of scale) to create smaller variables u and v. But wait, while the correlation coefficient (r) ignores both, regression (b) only ignores the change of origin. If you divide by a scale factor, you must multiply it back at the end!",
+    "body_hi": "हम छोटे चर u और v बनाने के लिए एक स्थिरांक घटा सकते हैं (मूल बिंदु का परिवर्तन) और एक स्थिरांक से विभाजित कर सकते हैं (पैमाने का परिवर्तन)। लेकिन रुकिए, जबकि सहसंबंध गुणांक (r) दोनों को नजरअंदाज करता है, समाश्रयण (b) केवल मूल बिंदु के परिवर्तन को नजरअंदाज करता है। यदि आप पैमाने कारक से विभाजित करते हैं, तो आपको अंत में इसे वापस गुणा करना होगा!",
+    "body_gu": "આપણે નાના ચલો u અને v બનાવવા માટે અચળાંક બાદ કરી શકીએ છીએ (ઉગમબિંદુનો ફેરફાર) અને અચળાંક વડે ભાગી શકીએ છીએ (સ્કેલનો ફેરફાર). પરંતુ થોભો, જ્યારે સહસંબંધાંક (r) બંનેને અવગણે છે, ત્યારે નિયતસંબંધ (b) ફક્ત ઉગમબિંદુના ફેરફારને અવગણે છે. જો તમે સ્કેલ ફેક્ટરથી ભાગાકાર કરો છો, તો તમારે અંતે તેને પાછો ગુણાકાર કરવો પડશે!"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_REV_2",
+    "type": "reveal",
+    "title": "Short-cut Method for Regression Coefficient",
+    "title_hi": "समाश्रयण गुणांक के लिए शॉर्ट-कट विधि",
+    "title_gu": "નિયતસંબંધાંક માટે ટૂંકી રીત",
+    "body": "Property: The regression coefficient is independent of change of origin but **not** of change of scale.\nIf b_yx is a regression coefficient of a regression line of Y on X, the short-cut formulae are:\n\n1. **Change of Origin only:**\nIf u = x - A and v = y - B, then\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²]\n\n2. **Change of Origin and Scale:**\nIf u = (x - A) / c_x and v = (y - B) / c_y, then\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²] × (c_y / c_x)",
+    "body_hi": "गुण (Property): समाश्रयण गुणांक मूल बिंदु के परिवर्तन (change of origin) से स्वतंत्र है, लेकिन पैमाने के परिवर्तन (change of scale) से **नहीं**।\nयदि b_yx, Y की X पर समाश्रयण रेखा का समाश्रयण गुणांक है, तो शॉर्ट-कट सूत्र हैं:\n\n1. **केवल मूल बिंदु का परिवर्तन:**\nयदि u = x - A और v = y - B, तो\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²]\n\n2. **मूल बिंदु और पैमाने का परिवर्तन:**\nयदि u = (x - A) / c_x और v = (y - B) / c_y, तो\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²] × (c_y / c_x)",
+    "body_gu": "ગુણધર્મ (Property): નિયતસંબંધાંક ઉગમબિંદુના ફેરફારથી (change of origin) સ્વતંત્ર છે પરંતુ સ્કેલના ફેરફારથી (change of scale) **નહીં**.\nજો b_yx એ Y ની X પરની નિયતસંબંધ રેખાનો નિયતસંબંધાંક હોય, તો ટૂંકા સૂત્રો છે:\n\n1. **ફક્ત ઉગમબિંદુનો ફેરફાર:**\nજો u = x - A અને v = y - B, તો\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²]\n\n2. **ઉગમબિંદુ અને સ્કેલનો ફેરફાર:**\nજો u = (x - A) / c_x અને v = (y - B) / c_y, તો\nb = [nΣuv - (Σu)(Σv)] / [nΣu² - (Σu)²] × (c_y / c_x)"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_KC_2",
+    "type": "knowledge_check",
+    "question": "If u = (x - 50) / 10 and v = (y - 100) / 5, what must we multiply the calculated term by to get the correct regression coefficient b_yx?",
+    "question_hi": "यदि u = (x - 50) / 10 और v = (y - 100) / 5 है, तो सही समाश्रयण गुणांक b_yx प्राप्त करने के लिए हमें गणना किए गए पद (calculated term) को किससे गुणा करना होगा?",
+    "question_gu": "જો u = (x - 50) / 10 અને v = (y - 100) / 5 હોય, તો સાચો નિયતસંબંધાંક b_yx મેળવવા માટે આપણે ગણતરી કરેલા પદ (calculated term) ને શેના વડે ગુણાકાર કરવો જોઈએ?",
+    "options": [
+      "10 / 5",
+      "5 / 10",
+      "50 / 100",
+      "100 / 50"
+    ],
+    "options_hi": [
+      "10 / 5",
+      "5 / 10",
+      "50 / 100",
+      "100 / 50"
+    ],
+    "options_gu": [
+      "10 / 5",
+      "5 / 10",
+      "50 / 100",
+      "100 / 50"
+    ],
+    "correct_index": 1,
+    "explanation": "The formula says we must multiply by (c_y / c_x). Here c_y = 5 and c_x = 10, so we multiply by 5 / 10.",
+    "explanation_hi": "सूत्र कहता है कि हमें (c_y / c_x) से गुणा करना चाहिए। यहाँ c_y = 5 और c_x = 10 है, इसलिए हम 5 / 10 से गुणा करेंगे।",
+    "explanation_gu": "સૂત્ર કહે છે કે આપણે (c_y / c_x) વડે ગુણાકાર કરવો જોઈએ. અહીં c_y = 5 અને c_x = 10 છે, તેથી આપણે 5 / 10 વડે ગુણાકાર કરીશું."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_REFL_2",
+    "type": "reflection",
+    "title": "Explain it to a Friend",
+    "title_hi": "एक दोस्त को समझाएं",
+    "title_gu": "મિત્રને સમજાવો",
+    "body": "Can you explain in your own words why changing the origin (subtracting A and B) doesn't affect the slope of the line, but changing the scale (dividing by c_x and c_y) does?",
+    "body_hi": "क्या आप अपने शब्दों में समझा सकते हैं कि मूल बिंदु को बदलने (A और B को घटाने) से रेखा के ढलान (slope) पर कोई प्रभाव क्यों नहीं पड़ता है, लेकिन पैमाना बदलने (c_x और c_y से भाग देने) से पड़ता है?",
+    "body_gu": "શું તમે તમારા પોતાના શબ્દોમાં સમજાવી શકો છો કે ઉગમબિંદુ બદલવાથી (A અને B બાદ કરવાથી) રેખાના ઢાળ (slope) પર કોઈ અસર કેમ નથી થતી, પરંતુ સ્કેલ બદલવાથી (c_x અને c_y વડે ભાગવાથી) કેમ અસર થાય છે?"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_CONN_2",
+    "type": "connection",
+    "title": "Connecting the Formula",
+    "title_hi": "सूत्र को जोड़ना",
+    "title_gu": "સૂત્રને જોડવું",
+    "body": "Remember the basic formula: b = [nΣxy - (Σx)(Σy)] / [nΣx² - (Σx)²]. Notice how the Short-cut formula looks exactly the same, just replacing x with u and y with v (and adjusting for scale at the end). This symmetry makes it very easy to remember!",
+    "body_hi": "मूल सूत्र याद रखें: b = [nΣxy - (Σx)(Σy)] / [nΣx² - (Σx)²]। ध्यान दें कि कैसे शॉर्ट-कट सूत्र बिल्कुल वैसा ही दिखता है, बस x को u से और y को v से बदल दिया गया है (और अंत में पैमाने के लिए समायोजित किया गया है)। यह समरूपता (symmetry) इसे याद रखना बहुत आसान बनाती है!",
+    "body_gu": "મૂળ સૂત્ર યાદ રાખો: b = [nΣxy - (Σx)(Σy)] / [nΣx² - (Σx)²]. ધ્યાન આપો કે કેવી રીતે ટૂંકી રીતનું સૂત્ર બરાબર એવું જ દેખાય છે, ફક્ત x ને u વડે અને y ને v વડે બદલવામાં આવ્યા છે (અને અંતે સ્કેલ માટે ગોઠવવામાં આવ્યા છે). આ સપ્રમાણતા (symmetry) તેને યાદ રાખવામાં ખૂબ જ સરળ બનાવે છે!"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_2_MAST_2",
+    "type": "mastery",
+    "title": "Calculation Check",
+    "title_hi": "गणना जाँच",
+    "title_gu": "ગણતરીની ચકાસણી",
+    "body": "The true test of mastery is practice. When solving the next few exercises with large numbers, explicitly write down your 'c_x' and 'c_y' at the top of the page so you never forget to multiply them at the end!",
+    "body_hi": "महारत (mastery) की असली परीक्षा अभ्यास है। जब बड़ी संख्याओं के साथ अगले कुछ अभ्यास हल करें, तो पृष्ठ के शीर्ष पर स्पष्ट रूप से अपना 'c_x' और 'c_y' लिखें ताकि आप उन्हें अंत में गुणा करना कभी न भूलें!",
+    "body_gu": "મહારત (mastery) ની સાચી કસોટી પ્રેક્ટિસ છે. જ્યારે મોટી સંખ્યાઓ સાથે આગામી કેટલીક કસરતો ઉકેલતા હોવ, ત્યારે પૃષ્ઠની ટોચ પર સ્પષ્ટપણે તમારું 'c_x' અને 'c_y' લખો જેથી તમે તેમને અંતે ગુણાકાર કરવાનું ક્યારેય ભૂલશો નહીં!"
+  }
+]

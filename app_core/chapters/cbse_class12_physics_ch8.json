@@ -1,0 +1,518 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch8",
+    "title": "Chapter 8: Electromagnetic Waves",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_001",
+      "type": "hook",
+      "title": "Unseen Waves That Rule Our World",
+      "title_hi": "हमारे संसार पर राज करने वाली अदृश्य तरंगें",
+      "title_gu": "આપણા વિશ્વ પર શાસન કરતા અદ્રશ્ય તરંગો",
+      "body": "When you tune into a radio station, heat food in a microwave, or undergo an X-ray scan, you are using the exact same physical phenomenon: Electromagnetic Waves. How can sunlight travel through 150 million kilometers of pure vacuum where sound cannot travel at all?",
+      "body_hi": "जब आप रेडियो ट्यून करते हैं, माइक्रोवेव में खाना गर्म करते हैं, या एक्स-रे करवाते हैं, तो आप एक ही भौतिक परिघटना का उपयोग कर रहे होते हैं: विद्युत चुंबकीय तरंगें। सूर्य का प्रकाश 15 करोड़ किलोमीटर के निर्वात से होकर कैसे यात्रा कर सकता है, जहाँ ध्वनि बिलकुल नहीं चल सकती?",
+      "body_gu": "જ્યારે તમે રેડિયો ટ્યુન કરો છો, માઇક્રોવેવમાં ખોરાક ગરમ કરો છો, અથવા એક્સ-રે કરાવો છો, ત્યારે તમે એક જ ભૌતિક ઘટનાનો ઉપયોગ કરી રહ્યા છો: વિદ્યુતચુંબકીય તરંગો. સૂર્યપ્રકાશ 15 કરોડ કિલોમીટરના સંપૂર્ણ શૂન્યાવકાશમાંથી કેવી રીતે મુસાફરી કરી શકે છે જ્યાં અવાજ બિલકુલ મુસાફરી કરી શકતો નથી?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_002",
+      "type": "socratic_question",
+      "question": "Ampere's Circuital Law states that ∮ B·dl = μ0 * I. During the charging of a parallel plate capacitor, current flows through the connecting wires, but no charges cross the vacuum gap between the plates. Does Ampere's law fail in this gap?",
+      "question_hi": "एम्पीयर का परिपथीय नियम कहता है कि ∮ B·dl = μ0 * I। एक समांतर पट्टिका संधारित्र के आवेशन के दौरान, तारों में धारा बहती है, लेकिन प्लेटों के बीच के निर्वात में कोई आवेश नहीं गुजरता। क्या इस अंतराल में एम्पीयर का नियम विफल हो जाता है?",
+      "question_gu": "એમ્પિયરનો પરિપથ નિયમ દર્શાવે છે કે ∮ B·dl = μ0 * I. સમાંતર પ્લેટ કેપેસિટરના ચાર્જિંગ દરમિયાન, વાયરોમાંથી પ્રવાહ વહે છે, પરંતુ પ્લેટો વચ્ચેના શૂન્યાવકાશમાંથી કોઈ ચાર્જ પસાર થતો નથી. શું આ અવકાશમાં એમ્પિયરનો નિયમ નિષ્ફળ જાય છે?",
+      "options": [
+        "Yes, Ampere's law is completely invalid for time-varying phenomena.",
+        "No, Ampere's law applies unchanged because vacuum conducts electricity.",
+        "Yes, Ampere's law was incomplete and needed a missing current term representing time-varying electric fields.",
+        "No, magnetic fields do not exist between capacitor plates during charging."
+      ],
+      "options_hi": [
+        "हाँ, समय के साथ बदलने वाली परिघटनाओं के लिए एम्पीयर का नियम पूरी तरह से अमान्य है।",
+        "नहीं, एम्पीयर का नियम अपरिवर्तित लागू होता है क्योंकि निर्वात विद्युत का संचालन करता है।",
+        "हाँ, एम्पीयर का नियम अधूरा था और इसमें बदलते विद्युत क्षेत्र का प्रतिनिधित्व करने वाले एक गायब धारा पद की आवश्यकता थी।",
+        "नहीं, आवेशन के दौरान संधारित्र की प्लेटों के बीच कोई चुंबकीय क्षेत्र मौजूद नहीं होता है।"
+      ],
+      "options_gu": [
+        "હા, સમય સાથે બદલાતી ઘટનાઓ માટે એમ્પિયરનો નિયમ સંપૂર્ણપણે અમાન્ય છે.",
+        "ના, એમ્પિયરનો નિયમ અપરિવર્તિત રીતે લાગુ પડે છે કારણ કે શૂન્યાવકાશ વિદ્યુતનું વહન કરે છે.",
+        "હા, એમ્પિયરનો નિયમ અપૂર્ણ હતો અને બદલાતા વિદ્યુત ક્ષેત્રનું પ્રતિનિધિત્વ કરતા ગુમ થયેલ પ્રવાહ પદની જરૂર હતી.",
+        "ના, ચાર્જિંગ દરમિયાન કેપેસિટર પ્લેટો વચ્ચે કોઈ ચુંબકીય ક્ષેત્ર અસ્તિત્વમાં નથી."
+      ],
+      "correct_index": 2,
+      "explanation": "James Clerk Maxwell realized that a time-varying electric field between capacitor plates acts as a source of magnetic field. He introduced the 'Displacement Current' term to complete Ampere's Law.",
+      "explanation_hi": "जेम्स क्लर्क मैक्सवेल ने महसूस किया कि संधारित्र की प्लेटों के बीच समय के साथ बदलता विद्युत क्षेत्र चुंबकीय क्षेत्र के स्रोत के रूप में कार्य करता है। उन्होंने एम्पीयर के नियम को पूरा करने के लिए 'विस्थापन धारा' (Displacement Current) का पद पेश किया।",
+      "explanation_gu": "જેમ્સ ક્લાર્ક મેક્સવેલે અનુભવ્યું કે કેપેસિટર પ્લેટો વચ્ચે સમય સાથે બદલાતું વિદ્યુત ક્ષેત્ર ચુંબકીય ક્ષેત્રના સ્ત્રોત તરીકે કાર્ય કરે છે. તેમણે એમ્પિયરના નિયમને પૂર્ણ કરવા માટે 'સ્થાનાંતર પ્રવાહ' (Displacement Current) પદ રજૂ કર્યું."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_003",
+      "type": "discovery",
+      "title": "Discovery of Displacement Current",
+      "title_hi": "विस्थापन धारा की खोज",
+      "title_gu": "સ્થાનાંતર પ્રવાહની શોધ",
+      "body": "Maxwell defined Displacement Current (Id) as Id = ε0 * (dΦE / dt). By modifying Ampere's Law to ∮ B·dl = μ0 * (Ic + Id), he ensured continuity of total current across the circuit. This modification predicted that changing electric fields produce magnetic fields, mirroring Faraday's law where changing magnetic fields produce electric fields!",
+      "body_hi": "मैक्सवेल ने विस्थापन धारा (Id) को Id = ε0 * (dΦE / dt) के रूप में परिभाषित किया। एम्पीयर के नियम को ∮ B·dl = μ0 * (Ic + Id) के रूप में संशोधित करके, उन्होंने परिपथ में कुल धारा की निरंतरता सुनिश्चित की। इस संशोधन ने भविष्यवाणी की कि बदलते विद्युत क्षेत्र चुंबकीय क्षेत्र उत्पन्न करते हैं, जो फैराडे के नियम का सटीक दर्पण है!",
+      "body_gu": "મેક્સવેલે સ્થાનાંતર પ્રવાહ (Id) ને Id = ε0 * (dΦE / dt) તરીકે વ્યાખ્યાયિત કર્યો. એમ્પિયરના નિયમને ∮ B·dl = μ0 * (Ic + Id) માં સુધારીને, તેમણે પરિપથમાં કુલ પ્રવાહની સાતત્યતા સુનિશ્ચિત કરી. આ સુધારાએ ભવિષ્યવાણી કરી કે બદલાતા વિદ્યુત ક્ષેત્રો ચુંબકીય ક્ષેત્રો ઉત્પન્ન કરે છે, જે ફેરાડેના નિયમનું દર્પણ છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_004",
+      "type": "theory",
+      "title": "Maxwell's Equations & Electromagnetic Spectrum",
+      "title_hi": "मैक्सवेल के समीकरण और विद्युत चुंबकीय स्पेक्ट्रम",
+      "title_gu": "મેક્સવેલના સમીકરણો અને વિદ્યુતચુંબકીય વર્ણપટ",
+      "body": "Maxwell summarized electromagnetism into 4 master equations:\n1. Gauss's Law for Electricity: ∮ E·dA = Q / ε0\n2. Gauss's Law for Magnetism: ∮ B·dA = 0\n3. Faraday's Law: ∮ E·dl = -dΦB / dt\n4. Ampere-Maxwell Law: ∮ B·dl = μ0 Ic + μ0 ε0 (dΦE / dt)\n\nKey Properties of EM Waves:\n- Transverse nature: E and B oscillate perpendicular to each other and to the propagation direction.\n- Speed in vacuum: c = 1 / √(μ0 ε0) ≈ 3 × 10^8 m/s.\n- Amplitude ratio: E0 / B0 = c.\n- Spectrum (increasing frequency): Radio waves -> Microwaves -> Infrared -> Visible Light -> Ultraviolet -> X-rays -> Gamma rays.",
+      "body_hi": "मैक्सवेल ने विद्युत चुंबकत्व को 4 मुख्य समीकरणों में संक्षेपित किया:\n1. विद्युत के लिए गॉस का नियम: ∮ E·dA = Q / ε0\n2. चुंबकत्व के लिए गॉस का नियम: ∮ B·dA = 0\n3. फैराडे का नियम: ∮ E·dl = -dΦB / dt\n4. एम्पीयर-मैक्सवेल नियम: ∮ B·dl = μ0 Ic + μ0 ε0 (dΦE / dt)\n\nEM तरंगों के मुख्य गुण:\n- अनुप्रस्थ प्रकृति: E और B एक-दूसरे के और संचरण की दिशा के लंबवत दोलन करते हैं।\n- निर्वात में चाल: c = 1 / √(μ0 ε0) ≈ 3 × 10^8 m/s।\n- आयाम अनुपात: E0 / B0 = c।\n- स्पेक्ट्रम (बढ़ती आवृत्ति): रेडियो तरंगें -> माइक्रोवेव -> अवरक्त -> दृश्य प्रकाश -> पराबैंगनी -> एक्स-रे -> गामा किरणें।",
+      "body_gu": "મેક્સવેલે વિદ્યુતચુંબકત્વને 4 મુખ્ય સમીકરણોમાં સંક્ષિપ્ત કર્યું:\n1. વિદ્યુત માટે ગોસનો નિયમ: ∮ E·dA = Q / ε0\n2. ચુંબકત્વ માટે ગોસનો નિયમ: ∮ B·dA = 0\n3. ફેરાડેનો નિયમ: ∮ E·dl = -dΦB / dt\n4. એમ્પિયર-મેક્સવેલ નિયમ: ∮ B·dl = μ0 Ic + μ0 ε0 (dΦE / dt)\n\nEM તરંગોના મુખ્ય ગુણધર્મો:\n- લંબગત స్వભાવ: E અને B એકબીજાને અને પ્રસરણની દિશાને લંબરૂપે આંદોલન કરે છે.\n- શૂન્યાવકાશમાં ઝડપ: c = 1 / √(μ0 ε0) ≈ 3 × 10^8 m/s.\n- કંપવિસ્તાર ગુણોત્તર: E0 / B0 = c.\n- વર્ણપટ (વધતી આવૃત્તિ): રેડિયો તરંગો -> માઇક્રોવેવ -> ઇન્ફ્રારેડ -> દ્રશ્ય પ્રકાશ -> અલ્ટ્રાવાયોલેટ -> એક્સ-રે -> ગામા કિરણો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_005",
+      "type": "knowledge_check",
+      "question": "If the electric field amplitude E0 of an electromagnetic wave in vacuum is 300 V/m, what is the magnetic field amplitude B0?",
+      "question_hi": "यदि निर्वात में किसी विद्युत चुंबकीय तरंग का विद्युत क्षेत्र आयाम E0 = 300 V/m है, तो चुंबकीय क्षेत्र आयाम B0 क्या होगा?",
+      "question_gu": "જો શૂન્યાવકાશમાં વિદ્યુતચુંબકીય તરંગનો વિદ્યુત ક્ષેત્ર કંપવિસ્તાર E0 = 300 V/m હોય, તો ચુંબકીય ક્ષેત્ર કંપવિસ્તાર B0 શું હશે?",
+      "options": [
+        "1.0 × 10^-6 T",
+        "1.0 × 10^-8 T",
+        "9.0 × 10^10 T",
+        "3.0 × 10^-6 T"
+      ],
+      "options_hi": [
+        "1.0 × 10^-6 T",
+        "1.0 × 10^-8 T",
+        "9.0 × 10^10 T",
+        "3.0 × 10^-6 T"
+      ],
+      "options_gu": [
+        "1.0 × 10^-6 T",
+        "1.0 × 10^-8 T",
+        "9.0 × 10^10 T",
+        "3.0 × 10^-6 T"
+      ],
+      "correct_index": 0,
+      "explanation": "B0 = E0 / c = (300 V/m) / (3 × 10^8 m/s) = 1.0 × 10^-6 T.",
+      "explanation_hi": "B0 = E0 / c = (300 V/m) / (3 × 10^8 m/s) = 1.0 × 10^-6 T।",
+      "explanation_gu": "B0 = E0 / c = (300 V/m) / (3 × 10^8 m/s) = 1.0 × 10^-6 T."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_006",
+      "type": "reflection",
+      "title": "Unification of Physics",
+      "title_hi": "भौतिकी का एकीकरण",
+      "title_gu": "ભૌતિકશાસ્ત્રનું એકીકરણ",
+      "body": "Maxwell's electromagnetic theory unified Electricity, Magnetism, and Optics into a single framework. Light itself is an electromagnetic wave with wavelengths between 400 nm and 700 nm. This discovery led directly to Einstein's Special Theory of Relativity.",
+      "body_hi": "मैक्सवेल के विद्युत चुंबकीय सिद्धांत ने विद्युत, चुंबकत्व और प्रकाशिकी को एक ही ढांचे में एकीकृत किया। प्रकाश स्वयं 400 nm से 700 nm के बीच तरंगदैर्ध्य वाली एक विद्युत चुंबकीय तरंग है। इस खोज ने सीधे आइंस्टीन के विशिष्ट आपेक्षिकता सिद्धांत का मार्ग प्रशस्त किया।",
+      "body_gu": "મેક્સવેલના વિદ્યુતચુંબકીય સિદ્ધાંતે વિદ્યુત, ચુંબકત્વ અને પ્રકાશશાસ્ત્રને એક જ માળખામાં એકીકૃત કર્યા. પ્રકાશ પોતે 400 nm થી 700 nm વચ્ચેની તરંગલંબાઇ ધરાવતો વિદ્યુતચુંબકીય તરંગ છે. આ શોધથી સીધા આઇન્સ્ટાઇનના વિશિષ્ટ સાપેક્ષતા સિદ્ધાંતનો માર્ગ મોકળો થયો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_007",
+      "type": "connection",
+      "title": "Applications of EM Spectrum in Modern Life",
+      "title_hi": "आधुनिक जीवन में EM स्पेक्ट्रम के अनुप्रयोग",
+      "title_gu": "આધુનિક જીવનમાં EM વર્ણપટના ઉપયોગો",
+      "body": "1. Radio Waves: Telecommunication, Wi-Fi, Broadcasting.\n2. Microwaves: Radar navigation, Satellite links, Microwave Ovens.\n3. Infrared: Remote controls, Thermal cameras, Physiotherapy.\n4. Ultraviolet: Water purification, LASIK eye surgery, Sterilization.\n5. X-rays: Bone fracture diagnosis, Security scanners.\n6. Gamma Rays: Radiotherapy for cancer treatment, Nuclear research.",
+      "body_hi": "1. रेडियो तरंगें: दूरसंचार, वाई-फाई, प्रसारण।\n2. माइक्रोवेव: रडार नेविगेशन, सैटेलाइट लिंक, माइक्रोवेव ओवन।\n3. अवरक्त: रिमोट कंट्रोल, थर्मल कैमरा, फिजियोथेरेपी।\n4. पराबैंगनी: जल शोधन, लेसिक नेत्र शल्य चिकित्सा, बंध्याकरण।\n5. एक्स-रे: हड्डी के फ्रैक्चर का निदान, सुरक्षा स्कैनर।\n6. गामा किरणें: कैंसर के इलाज के लिए रेडियोथेरेपी, परमाणु अनुसंधान।",
+      "body_gu": "1. રેડિયો તરંગો: દૂરસંચાર, વાઇ-ફાઇ, બ્રોડકાસ્ટિંગ.\n2. માઇક્રોવેવ: રડાર નેવિગેશન, સેટેલાઇટ લિંક્સ, માઇક્રોવેવ ઓવન.\n3. ઇન્ફ્રારેડ: રિમોટ કંટ્રોલ, થર્મલ કેમેરા, ફિઝિયોથેરાપી.\n4. અલ્ટ્રાવાયોલેટ: વોટર પ્યુરિફિકેશન, લાસિક આંખની સર્જરી, જંતુરહિત કરવું.\n5. એક્સ-રે: હાડકાના ફ્રેક્ચર નિદાન, સુરક્ષા સ્કેનર્સ.\n6. ગામા કિરણો: કેન્સરની સારવાર માટે રેડિયોથેરાપી, અણુ સંશોધન."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_008",
+      "type": "mastery",
+      "question": "An EM wave traveling along +x direction has an electric field Ey = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) V/m. Which expression correctly gives the magnetic field vector Bz?",
+      "question_hi": "+x दिशा के अनुदिश संचरित एक EM तरंग का विद्युत क्षेत्र Ey = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) V/m है। कौन सा व्यंजक चुंबकीय क्षेत्र वैक्टर Bz को सही ढंग से व्यक्त करता है?",
+      "question_gu": "+x દિશામાં પ્રસરણ કરતા EM તરંગનો વિદ્યુત ક્ષેત્ર Ey = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) V/m છે. કયું સમીકરણ ચુંબકીય ક્ષેત્ર વેક્ટર Bz યોગ્ય રીતે દર્શાવે છે?",
+      "options": [
+        "Bz = 10^-7 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 10^-7 sin(1.5 × 10^7 x + 4.5 × 10^15 t) T",
+        "Bz = 9 × 10^9 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T"
+      ],
+      "options_hi": [
+        "Bz = 10^-7 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 10^-7 sin(1.5 × 10^7 x + 4.5 × 10^15 t) T",
+        "Bz = 9 × 10^9 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T"
+      ],
+      "options_gu": [
+        "Bz = 10^-7 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 10^-7 sin(1.5 × 10^7 x + 4.5 × 10^15 t) T",
+        "Bz = 9 × 10^9 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T",
+        "Bz = 30 sin(1.5 × 10^7 x - 4.5 × 10^15 t) T"
+      ],
+      "correct_index": 0,
+      "explanation": "B0 = E0 / c = 30 / (3 × 10^8) = 10^-7 T. Since the wave propagates in +x direction and E is along +y, B must oscillate along +z (since E × B points along +i).",
+      "explanation_hi": "B0 = E0 / c = 30 / (3 × 10^8) = 10^-7 T। चूँकि तरंग +x दिशा में संचरित होती है और E +y के अनुदिश है, B को +z के अनुदिश दोलन करना चाहिए।",
+      "explanation_gu": "B0 = E0 / c = 30 / (3 × 10^8) = 10^-7 T. વાય તરંગ +x દિશામાં પ્રસરણ કરે છે અને E +y દિશામાં છે, B +z દિશામાં આંદોલન કરવું જોઈએ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_009",
+      "type": "mcq",
+      "question": "NCERT Ex 8.1(a): A parallel plate capacitor with circular plates of radius R = 12 cm has capacitance C = 100 pF. It is connected to 230 V AC supply with angular frequency ω = 300 rad/s. What is the rms value of the conduction current?",
+      "question_hi": "NCERT Ex 8.1(a): त्रिज्या R = 12 cm की वृत्ताकार प्लेटों वाले एक समांतर पट्टिका संधारित्र की धारिता C = 100 pF है। यह 300 rad/s की कोणीय आवृत्ति वाली 230 V AC आपूर्ति से जुड़ा है। चालन धारा का rms मान क्या है?",
+      "question_gu": "NCERT Ex 8.1(a): ત્રિજ્યા R = 12 cm ની વર્તુળાકાર પ્લેટો ધરાવતા સમાંતર પ્લેટ કેપેસિટરની કેપેસિટન્સ C = 100 pF છે. તે 300 rad/s ની કોણીય આવૃત્તિ ધરાવતા 230 V AC સપ્લાય સાથે જોડાયેલ છે. વહન પ્રવાહનું rms મૂલ્ય શું છે?",
+      "options": [
+        "6.9 μA",
+        "6.9 mA",
+        "9.6 μA",
+        "2.3 μA"
+      ],
+      "options_hi": [
+        "6.9 μA",
+        "6.9 mA",
+        "9.6 μA",
+        "2.3 μA"
+      ],
+      "options_gu": [
+        "6.9 μA",
+        "6.9 mA",
+        "9.6 μA",
+        "2.3 μA"
+      ],
+      "correct_index": 0,
+      "explanation": "I_rms = V_rms * ω * C = 230 V * (300 rad/s) * (100 × 10^-12 F) = 6.9 × 10^-6 A = 6.9 μA.",
+      "explanation_hi": "I_rms = V_rms * ω * C = 230 V * (300 rad/s) * (100 × 10^-12 F) = 6.9 × 10^-6 A = 6.9 μA।",
+      "explanation_gu": "I_rms = V_rms * ω * C = 230 V * (300 rad/s) * (100 × 10^-12 F) = 6.9 × 10^-6 A = 6.9 μA."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_010",
+      "type": "true_false",
+      "question": "NCERT Ex 8.1(b): Is the conduction current Ic equal to the displacement current Id across the capacitor plates at every instant?",
+      "question_hi": "NCERT Ex 8.1(b): क्या प्रत्येक क्षण संधारित्र की प्लेटों के बीच चालन धारा Ic विस्थापन धारा Id के बराबर होती है?",
+      "question_gu": "NCERT Ex 8.1(b): શું દરેક ક્ષણે કેપેસિટર પ્લેટો વચ્ચે વહન પ્રવાહ Ic સ્થાનાંતર પ્રવાહ Id ની બરાબર હોય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Yes, by Maxwell's generalized Ampere's Law, Ic = Id at every instant across the capacitor region to maintain current continuity.",
+      "explanation_hi": "हाँ, मैक्सवेल के एम्पीयर नियम के अनुसार, धारा की निरंतरता बनाए रखने के लिए प्रत्येक क्षण Ic = Id होता है।",
+      "explanation_gu": "હા, મેક્સવેલના વિસ્તૃત એમ્પિયર નિયમ અનુસાર, પ્રવાહની સાતત્યતા જાળવવા માટે દરેક ક્ષણે Ic = Id થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_011",
+      "type": "mcq",
+      "question": "NCERT Ex 8.1(c): Determine the amplitude of magnetic field B0 at a point 3.0 cm from the central axis between the circular plates (R = 12 cm, I_rms = 6.9 μA).",
+      "question_hi": "NCERT Ex 8.1(c): वृत्ताकार प्लेटों (R = 12 cm, I_rms = 6.9 μA) के बीच केंद्रीय अक्ष से 3.0 cm की दूरी पर स्थित बिंदु पर चुंबकीय क्षेत्र का आयाम B0 ज्ञात कीजिए।",
+      "question_gu": "NCERT Ex 8.1(c): વર્તુળાકાર પ્લેટો (R = 12 cm, I_rms = 6.9 μA) વચ્ચેની કેન્દ્રીય અક્ષથી 3.0 cm ના અંતરે આવેલા બિંદુએ ચુંબકીય ક્ષેત્રનો કંપવિસ્તાર B0 શોધો.",
+      "options": [
+        "4.07 × 10^-11 T",
+        "2.88 × 10^-11 T",
+        "1.63 × 10^-10 T",
+        "5.75 × 10^-12 T"
+      ],
+      "options_hi": [
+        "4.07 × 10^-11 T",
+        "2.88 × 10^-11 T",
+        "1.63 × 10^-10 T",
+        "5.75 × 10^-12 T"
+      ],
+      "options_gu": [
+        "4.07 × 10^-11 T",
+        "2.88 × 10^-11 T",
+        "1.63 × 10^-10 T",
+        "5.75 × 10^-12 T"
+      ],
+      "correct_index": 0,
+      "explanation": "Peak current I0 = √2 * I_rms = 1.414 * 6.9 μA = 9.76 μA. B0 = (μ0 * r / (2 * π * R^2)) * I0 = (2 × 10^-7 * 0.03 / 0.0144) * 9.76 × 10^-6 = 4.07 × 10^-11 T.",
+      "explanation_hi": "शिखर धारा I0 = √2 * I_rms = 9.76 μA। B0 = (μ0 * r / (2 * π * R^2)) * I0 = 4.07 × 10^-11 T।",
+      "explanation_gu": "શિખર પ્રવાહ I0 = √2 * I_rms = 9.76 μA. B0 = (μ0 * r / (2 * π * R^2)) * I0 = 4.07 × 10^-11 T."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_012",
+      "type": "mcq",
+      "question": "NCERT Ex 8.2: A parallel plate capacitor C = 100 pF is connected to a 230 V AC supply with angular frequency 300 rad/s. What is the rms displacement current Id?",
+      "question_hi": "NCERT Ex 8.2: एक समांतर पट्टिका संधारित्र C = 100 pF, 300 rad/s कोणीय आवृत्ति वाली 230 V AC आपूर्ति से जुड़ा है। rms विस्थापन धारा Id क्या है?",
+      "question_gu": "NCERT Ex 8.2: સમાંતર પ્લેટ કેપેસિટર C = 100 pF, 300 rad/s કોણીય આવૃત્તિવાળા 230 V AC સપ્લાય સાથે જોડાયેલ છે. rms સ્થાનાંતર પ્રવાહ Id શું છે?",
+      "options": [
+        "6.9 μA",
+        "13.8 μA",
+        "3.45 μA",
+        "0 μA"
+      ],
+      "options_hi": [
+        "6.9 μA",
+        "13.8 μA",
+        "3.45 μA",
+        "0 μA"
+      ],
+      "options_gu": [
+        "6.9 μA",
+        "13.8 μA",
+        "3.45 μA",
+        "0 μA"
+      ],
+      "correct_index": 0,
+      "explanation": "Since displacement current equals conduction current, Id_rms = Ic_rms = V_rms * ω * C = 230 * 300 * 100 × 10^-12 = 6.9 μA.",
+      "explanation_hi": "विस्थापन धारा चालन धारा के बराबर होती है, इसलिए Id_rms = Ic_rms = 230 * 300 * 100 × 10^-12 = 6.9 μA।",
+      "explanation_gu": "સ્થાનાંતર પ્રવાહ વહન પ્રવાહ જેટલો જ હોવાથી, Id_rms = Ic_rms = 230 * 300 * 100 × 10^-12 = 6.9 μA."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_013",
+      "type": "mcq",
+      "question": "NCERT Ex 8.3: What is the wavelength of a radio wave having a frequency of 30 MHz in vacuum?",
+      "question_hi": "NCERT Ex 8.3: निर्वात में 30 MHz आवृत्ति वाली रेडियो तरंग की तरंगदैर्ध्य क्या है?",
+      "question_gu": "NCERT Ex 8.3: શૂન્યાવકાશમાં 30 MHz આવૃત્તિ ધરાવતા રેડિયો તરંગની તરંગલંબાઇ કેટલી હશે?",
+      "options": [
+        "10 m",
+        "1 m",
+        "100 m",
+        "0.1 m"
+      ],
+      "options_hi": [
+        "10 m",
+        "1 m",
+        "100 m",
+        "0.1 m"
+      ],
+      "options_gu": [
+        "10 m",
+        "1 m",
+        "100 m",
+        "0.1 m"
+      ],
+      "correct_index": 0,
+      "explanation": "λ = c / ν = (3 × 10^8 m/s) / (30 × 10^6 Hz) = 10 m.",
+      "explanation_hi": "λ = c / ν = (3 × 10^8 m/s) / (30 × 10^6 Hz) = 10 m।",
+      "explanation_gu": "λ = c / ν = (3 × 10^8 m/s) / (30 × 10^6 Hz) = 10 m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_014",
+      "type": "mcq",
+      "question": "NCERT Ex 8.4: A plane EM wave travels along +z direction in vacuum. If frequency is 30 MHz, what are the orientations of E and B and the wavelength λ?",
+      "question_hi": "NCERT Ex 8.4: एक समतल EM तरंग निर्वात में +z दिशा के अनुदिश संचरित होती है। यदि आवृत्ति 30 MHz है, तो E और B के विन्यास तथा तरंगदैर्ध्य λ क्या हैं?",
+      "question_gu": "NCERT Ex 8.4: એક સમતલ EM તરંગ શૂન્યાવકાશમાં +z દિશામાં પ્રસરણ કરે છે. જો આવૃત્તિ 30 MHz હોય, તો E અને B ના ઓરિએન્ટેશન અને તરંગલંબાઇ λ શું છે?",
+      "options": [
+        "E and B lie in xy plane, perpendicular to each other; λ = 10 m",
+        "E and B lie along z axis; λ = 10 m",
+        "E lies in xz plane, B in yz plane; λ = 1 m",
+        "E and B lie in xy plane, parallel to each other; λ = 100 m"
+      ],
+      "options_hi": [
+        "E और B xy तल में एक-दूसरे के लंबवत हैं; λ = 10 m",
+        "E और B z अक्ष के अनुदिश हैं; λ = 10 m",
+        "E xz तल में है, B yz तल में है; λ = 1 m",
+        "E और B xy तल में एक-दूसरे के समांतर हैं; λ = 100 m"
+      ],
+      "options_gu": [
+        "E અને B xy સમતલમાં એકબીજાને લંબરૂપે છે; λ = 10 m",
+        "E અને B z અક્ષ પર છે; λ = 10 m",
+        "E xz સમતલમાં છે, B yz સમતલમાં છે; λ = 1 m",
+        "E અને B xy સમતલમાં એકબીજાને સમાંતર છે; λ = 100 m"
+      ],
+      "correct_index": 0,
+      "explanation": "Since propagation is along +z, E and B must oscillate in the xy plane perpendicular to z and to each other. λ = c / ν = 3 × 10^8 / 30 × 10^6 = 10 m.",
+      "explanation_hi": "चूँकि संचरण +z के अनुदिश है, E और B को z के तथा एक-दूसरे के लंबवत xy तल में दोलन करना चाहिए। λ = 10 m।",
+      "explanation_gu": "પ્રસરણ +z દિશામાં હોવાથી, E અને B xy સમતલમાં લંબરૂપે આંદોલન કરશે. λ = 10 m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_015",
+      "type": "mcq",
+      "question": "NCERT Ex 8.5: A radio can tune in to any station in the 7.5 MHz to 12 MHz frequency band. What is the corresponding wavelength band?",
+      "question_hi": "NCERT Ex 8.5: एक रेडियो 7.5 MHz से 12 MHz आवृत्ति बैंड में किसी भी स्टेशन को ट्यून कर सकता है। संगत तरंगदैर्ध्य बैंड क्या है?",
+      "question_gu": "NCERT Ex 8.5: રેડિયો 7.5 MHz થી 12 MHz आवૃત્તિ બેન્ડમાં કોઈપણ સ્ટેશનને ટ્યુન કરી શકે છે. તેને સંગત તરંગલંબાઇ બેન્ડ કયો છે?",
+      "options": [
+        "25 m to 40 m",
+        "10 m to 20 m",
+        "7.5 m to 12 m",
+        "40 m to 60 m"
+      ],
+      "options_hi": [
+        "25 m से 40 m",
+        "10 m से 20 m",
+        "7.5 m से 12 m",
+        "40 m से 60 m"
+      ],
+      "options_gu": [
+        "25 m થી 40 m",
+        "10 m થી 20 m",
+        "7.5 m થી 12 m",
+        "40 m થી 60 m"
+      ],
+      "correct_index": 0,
+      "explanation": "λ1 = c / ν1 = (3 × 10^8) / (7.5 × 10^6) = 40 m. λ2 = c / ν2 = (3 × 10^8) / (12 × 10^6) = 25 m. Wavelength band is 25 m to 40 m.",
+      "explanation_hi": "λ1 = (3 × 10^8) / (7.5 × 10^6) = 40 m। λ2 = (3 × 10^8) / (12 × 10^6) = 25 m। तरंगदैर्ध्य बैंड 25 m से 40 m है।",
+      "explanation_gu": "λ1 = (3 × 10^8) / (7.5 × 10^6) = 40 m. λ2 = (3 × 10^8) / (12 × 10^6) = 25 m. તરંગલંબાઇ બેન્ડ 25 m થી 40 m છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_016",
+      "type": "mcq",
+      "question": "NCERT Ex 8.6: A charged particle oscillates about its equilibrium position with frequency 10^9 Hz. What is the frequency of the EM waves produced?",
+      "question_hi": "NCERT Ex 8.6: एक आवेशित कण 10^9 Hz की आवृत्ति से अपनी साम्यावस्था के चारों ओर दोलन करता है। उत्पादित EM तरंगों की आवृत्ति क्या है?",
+      "question_gu": "NCERT Ex 8.6: એક વિદ્યુતભારિત કણ 10^9 Hz ની આવૃત્તિ સાથે તેની સમતોલન સ્થિતિની આસપાસ આંદોલન કરે છે. ઉત્પન્ન થતા EM તરંગોની આવૃત્તિ શું હશે?",
+      "options": [
+        "10^9 Hz",
+        "2 × 10^9 Hz",
+        "5 × 10^8 Hz",
+        "10^18 Hz"
+      ],
+      "options_hi": [
+        "10^9 Hz",
+        "2 × 10^9 Hz",
+        "5 × 10^8 Hz",
+        "10^18 Hz"
+      ],
+      "options_gu": [
+        "10^9 Hz",
+        "2 × 10^9 Hz",
+        "5 × 10^8 Hz",
+        "10^18 Hz"
+      ],
+      "correct_index": 0,
+      "explanation": "An oscillating charge emits EM waves of frequency equal to its own frequency of oscillation, i.e., 10^9 Hz.",
+      "explanation_hi": "एक दोलन करता हुआ आवेश अपनी स्वयं की दोलन आवृत्ति के बराबर आवृत्ति की EM तरंगें उत्सर्जित करता है, अर्थात् 10^9 Hz।",
+      "explanation_gu": "આંદોલન કરતો ચાર્જ તેની પોતાની આંદોલન આવૃત્તિ જેટલી જ આવૃત્તિના EM તરંગો ઉત્સર્જિત કરે છે, એટલે કે 10^9 Hz."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_017",
+      "type": "mcq",
+      "question": "NCERT Ex 8.7: The amplitude of magnetic field part of a harmonic EM wave in vacuum is B0 = 510 nT. What is the amplitude of the electric field part?",
+      "question_hi": "NCERT Ex 8.7: निर्वात में एक आवर्ती EM तरंग के चुंबकीय क्षेत्र भाग का आयाम B0 = 510 nT है। विद्युत क्षेत्र भाग का आयाम क्या है?",
+      "question_gu": "NCERT Ex 8.7: શૂન્યાવકાશમાં હાર્મોનિક EM તરંગના ચુંબકીય ક્ષેત્ર ભાગનો કંપવિસ્તાર B0 = 510 nT છે. વિદ્યુત ક્ષેત્ર ભાગનો કંપવિસ્તાર કેટલો હશે?",
+      "options": [
+        "153 V/m",
+        "510 V/m",
+        "1.7 × 10^-15 V/m",
+        "300 V/m"
+      ],
+      "options_hi": [
+        "153 V/m",
+        "510 V/m",
+        "1.7 × 10^-15 V/m",
+        "300 V/m"
+      ],
+      "options_gu": [
+        "153 V/m",
+        "510 V/m",
+        "1.7 × 10^-15 V/m",
+        "300 V/m"
+      ],
+      "correct_index": 0,
+      "explanation": "E0 = c * B0 = (3 × 10^8 m/s) * (510 × 10^-9 T) = 153 V/m.",
+      "explanation_hi": "E0 = c * B0 = (3 × 10^8 m/s) * (510 × 10^-9 T) = 153 V/m।",
+      "explanation_gu": "E0 = c * B0 = (3 × 10^8 m/s) * (510 × 10^-9 T) = 153 V/m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_018",
+      "type": "mcq",
+      "question": "NCERT Ex 8.8: An EM wave has electric field amplitude E0 = 120 N/C and frequency ν = 50.0 MHz. What are the values of B0 and angular frequency ω?",
+      "question_hi": "NCERT Ex 8.8: एक EM तरंग का विद्युत क्षेत्र आयाम E0 = 120 N/C और आवृत्ति ν = 50.0 MHz है। B0 और कोणीय आवृत्ति ω के मान क्या हैं?",
+      "question_gu": "NCERT Ex 8.8: એક EM તરંગનો વિદ્યુત ક્ષેત્ર કંપવિસ્તાર E0 = 120 N/C અને આવૃત્તિ ν = 50.0 MHz છે. B0 અને કોણીય આવૃત્તિ ω ના મૂલ્યો શું છે?",
+      "options": [
+        "B0 = 400 nT, ω = 3.14 × 10^8 rad/s",
+        "B0 = 120 nT, ω = 1.57 × 10^8 rad/s",
+        "B0 = 400 nT, ω = 5.0 × 10^7 rad/s",
+        "B0 = 36 × 10^9 nT, ω = 3.14 × 10^8 rad/s"
+      ],
+      "options_hi": [
+        "B0 = 400 nT, ω = 3.14 × 10^8 rad/s",
+        "B0 = 120 nT, ω = 1.57 × 10^8 rad/s",
+        "B0 = 400 nT, ω = 5.0 × 10^7 rad/s",
+        "B0 = 36 × 10^9 nT, ω = 3.14 × 10^8 rad/s"
+      ],
+      "options_gu": [
+        "B0 = 400 nT, ω = 3.14 × 10^8 rad/s",
+        "B0 = 120 nT, ω = 1.57 × 10^8 rad/s",
+        "B0 = 400 nT, ω = 5.0 × 10^7 rad/s",
+        "B0 = 36 × 10^9 nT, ω = 3.14 × 10^8 rad/s"
+      ],
+      "correct_index": 0,
+      "explanation": "B0 = E0 / c = 120 / (3 × 10^8) = 4 × 10^-7 T = 400 nT. ω = 2 * π * ν = 2 * 3.1416 * 50 × 10^6 = 3.14 × 10^8 rad/s.",
+      "explanation_hi": "B0 = E0 / c = 120 / (3 × 10^8) = 400 nT। ω = 2 * π * ν = 3.14 × 10^8 rad/s।",
+      "explanation_gu": "B0 = E0 / c = 120 / (3 × 10^8) = 400 nT. ω = 2 * π * ν = 3.14 × 10^8 rad/s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_019",
+      "type": "mcq",
+      "question": "NCERT Ex 8.9: Which of the following correctly arranges these EM radiations in order of INCREASING wavelength?",
+      "question_hi": "NCERT Ex 8.9: निम्नलिखित में से कौन सा इन EM विकिरणों को बढ़ती तरंगदैर्ध्य के क्रम में सही ढंग से व्यवस्थित करता है?",
+      "question_gu": "NCERT Ex 8.9: નીચેનામાંથી કયું આ EM વિકિરણોને વધતી તરંગલંબાઇના ક્રમમાં યોગ્ય રીતે ગોઠવે છે?",
+      "options": [
+        "Gamma rays < X-rays < Ultraviolet < Microwaves",
+        "Microwaves < Ultraviolet < X-rays < Gamma rays",
+        "Ultraviolet < Gamma rays < X-rays < Microwaves",
+        "X-rays < Gamma rays < Microwaves < Ultraviolet"
+      ],
+      "options_hi": [
+        "गामा किरणें < एक्स-रे < पराबैंगनी < माइक्रोवेव",
+        "माइक्रोवेव < पराबैंगनी < एक्स-रे < गामा किरणें",
+        "पराबैंगनी < गामा किरणें < एक्स-रे < माइक्रोवेव",
+        "एक्स-रे < गामा किरणें < माइक्रोवेव < पराबैंगनी"
+      ],
+      "options_gu": [
+        "ગામા કિરણો < એક્સ-રે < અલ્ટ્રાવાયોલેટ < માઇક્રોવેવ",
+        "માઇક્રોવેવ < અલ્ટ્રાવાયોલેટ < એક્સ-રે < ગામા કિરણો",
+        "અલ્ટ્રાવાયોલેટ < ગામા કિરણો < એક્સ-રે < માઇક્રોવેવ",
+        "એક્સ-રે < ગામા કિરણો < માઇક્રોવેવ < અલ્ટ્રાવાયોલેટ"
+      ],
+      "correct_index": 0,
+      "explanation": "Gamma rays have the shortest wavelength (~10^-12 m), followed by X-rays (~10^-10 m), UV (~10^-8 m), and Microwaves (~10^-2 m).",
+      "explanation_hi": "गामा किरणों की तरंगदैर्ध्य सबसे कम (~10^-12 m) होती है, उसके बाद एक्स-रे (~10^-10 m), UV (~10^-8 m) और माइक्रोवेव (~10^-2 m) आते हैं।",
+      "explanation_gu": "ગામા કિરણો સૌથી નાની તરંગલંબાઇ (~10^-12 m) ધરાવે છે, ત્યાર પછી એક્સ-રે (~10^-10 m), UV (~10^-8 m), અને માઇક્રોવેવ (~10^-2 m) આવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_020",
+      "type": "mcq",
+      "question": "NCERT Ex 8.10: In a plane EM wave, the electric field oscillates sinusoidally at a frequency of 2.0 × 10^10 Hz and amplitude 48 V/m. What is the total average energy density of the wave?",
+      "question_hi": "NCERT Ex 8.10: एक समतल EM तरंग में, विद्युत क्षेत्र 2.0 × 10^10 Hz की आवृत्ति और 48 V/m के आयाम पर ज्यावक्रीय रूप से दोलन करता है। तरंग का कुल औसत ऊर्जा घनत्व क्या है?",
+      "question_gu": "NCERT Ex 8.10: એક સમતલ EM તરંગમાં, વિદ્યુત ક્ષેત્ર 2.0 × 10^10 Hz ની આવૃત્તિ અને 48 V/m કંપવિસ્તાર સાથે સાઇનુસોઇડલી આંદોલન કરે છે. તરંગની કુલ સરેરાશ ઉર્જા ઘનતા કેટલી છે?",
+      "options": [
+        "1.02 × 10^-8 J/m^3",
+        "2.04 × 10^-8 J/m^3",
+        "5.1 × 10^-9 J/m^3",
+        "8.85 × 10^-12 J/m^3"
+      ],
+      "options_hi": [
+        "1.02 × 10^-8 J/m^3",
+        "2.04 × 10^-8 J/m^3",
+        "5.1 × 10^-9 J/m^3",
+        "8.85 × 10^-12 J/m^3"
+      ],
+      "options_gu": [
+        "1.02 × 10^-8 J/m^3",
+        "2.04 × 10^-8 J/m^3",
+        "5.1 × 10^-9 J/m^3",
+        "8.85 × 10^-12 J/m^3"
+      ],
+      "correct_index": 0,
+      "explanation": "u_avg = ε0 * E_rms^2 = 1/2 * ε0 * E0^2 = 0.5 * (8.854 × 10^-12) * (48)^2 = 1.02 × 10^-8 J/m^3.",
+      "explanation_hi": "u_avg = 1/2 * ε0 * E0^2 = 0.5 * (8.854 × 10^-12) * (48)^2 = 1.02 × 10^-8 J/m^3।",
+      "explanation_gu": "u_avg = 1/2 * ε0 * E0^2 = 0.5 * (8.854 × 10^-12) * (48)^2 = 1.02 × 10^-8 J/m^3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH8_021",
+      "type": "mcq",
+      "question": "NCERT Ex 8.11: About 5% of the power of a 100 W bulb is converted to visible radiation. What is the average intensity of visible radiation at a distance of 1 m from the bulb?",
+      "question_hi": "NCERT Ex 8.11: 100 W के एक बल्ब की लगभग 5% शक्ति दृश्य विकिरण में परिवर्तित होती है। बल्ब से 1 m की दूरी पर दृश्य विकिरण की औसत तीव्रता क्या है?",
+      "question_gu": "NCERT Ex 8.11: 100 W ના બલ્બની લગભગ 5% ઉર્જા દ્રશ્ય વિકિરણમાં રૂપાંતરિત થાય છે. બલ્બથી 1 m ના અંતરે દ્રશ્ય વિકિરણની સરેરાશ તીવ્રતા કેટલી હશે?",
+      "options": [
+        "0.398 W/m^2",
+        "7.96 W/m^2",
+        "0.05 W/m^2",
+        "1.25 W/m^2"
+      ],
+      "options_hi": [
+        "0.398 W/m^2",
+        "7.96 W/m^2",
+        "0.05 W/m^2",
+        "1.25 W/m^2"
+      ],
+      "options_gu": [
+        "0.398 W/m^2",
+        "7.96 W/m^2",
+        "0.05 W/m^2",
+        "1.25 W/m^2"
+      ],
+      "correct_index": 0,
+      "explanation": "Visible Power P = 5% of 100 W = 5 W. Intensity I = P / (4 * π * r^2) = 5 / (4 * 3.1416 * 1^2) = 5 / 12.566 = 0.398 W/m^2.",
+      "explanation_hi": "दृश्य शक्ति P = 100 W का 5% = 5 W। तीव्रता I = P / (4 * π * r^2) = 5 / (4 * 3.1416 * 1^2) = 0.398 W/m^2।",
+      "explanation_gu": "દ્રશ્ય શક્તિ P = 100 W ના 5% = 5 W. તીવ્રતા I = P / (4 * π * r^2) = 5 / (4 * 3.1416 * 1^2) = 0.398 W/m^2."
+    }
+  ]
+}

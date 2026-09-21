@@ -1,0 +1,117 @@
+[
+  {
+    "id": "Q_TRI_001",
+    "chapter_id": "GSEB_MATHS_9_CH7",
+    "topic_id": "CONGRUENCE_CRITERIA",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["Congruence", "SSA"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "Which of the following is NOT a valid criterion for congruence of triangles?",
+    "options": ["SAS", "ASA", "SSA", "SSS"],
+    "answer": "SSA",
+    "explanation": "SAS, ASA, and SSS are valid congruence criteria. SSA (Side-Side-Angle) is not valid because it does not guarantee a uniquely defined triangle (the ambiguous case).",
+    "distractor_rationale": "SAS and SSS dictate unique triangles. SSA does not fix the third side or the remaining angles uniquely.",
+    "ai_context": {
+      "learning_goal": "Identify valid vs invalid triangle congruence criteria.",
+      "common_misconceptions": ["Believing that any combination of 3 matching parts ensures congruence (like SSA or AAA)."],
+      "hint": "Think about whether knowing two sides and a non-included angle can create more than one different triangle."
+    }
+  },
+  {
+    "id": "Q_TRI_002",
+    "chapter_id": "GSEB_MATHS_9_CH7",
+    "topic_id": "SAS_CRITERION",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["SAS", "Included Angle"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "High",
+    "question_text": "In triangles ABC and DEF, AB = FD and ∠A = ∠D. The two triangles will be congruent by the SAS axiom if:",
+    "options": ["BC = EF", "AC = DE", "AC = EF", "BC = DE"],
+    "answer": "AC = DE",
+    "explanation": "For the SAS criterion, the equal angles must be the included angles between the pairs of equal sides. The included angle between AB and AC is ∠A. For triangle DEF, the included angle for sides FD and DE is ∠D. Hence, the other pair of sides must be AC and DE.",
+    "distractor_rationale": "Choosing BC = EF or BC = DE means using a non-included side, which leads to the invalid SSA condition.",
+    "ai_context": {
+      "learning_goal": "Apply the SAS congruence rule by correctly identifying the included angle.",
+      "common_misconceptions": ["Assuming any two sides and one angle are sufficient for SAS, disregarding the 'included' requirement."],
+      "hint": "For SAS, the angle must be exactly between the two given sides. Which side forms ∠A along with AB?"
+    }
+  },
+  {
+    "id": "Q_TRI_003",
+    "chapter_id": "GSEB_MATHS_9_CH7",
+    "topic_id": "CONGRUENCE_NAMING",
+    "type": "mcq",
+    "difficulty": "Advanced",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Analyzing",
+    "keywords": ["CPCT", "Vertex Correspondence"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "Medium",
+    "question_text": "If AB = QR, BC = PR, and CA = PQ, then which of the following statements is true?",
+    "options": ["ΔABC ≅ ΔPQR", "ΔCBA ≅ ΔPRQ", "ΔBAC ≅ ΔRPQ", "ΔPQR ≅ ΔBCA"],
+    "answer": "ΔCBA ≅ ΔPRQ",
+    "explanation": "We map the vertices based on the given side equalities. AB corresponds to QR, BC corresponds to PR, and CA corresponds to PQ. From this, vertex A corresponds to Q, B corresponds to R, and C corresponds to P. Thus, ΔABC ≅ ΔQRP. Equivalently, reading the vertices in the order C, B, A, they correspond to P, R, Q, making ΔCBA ≅ ΔPRQ correct.",
+    "distractor_rationale": "Other options fail to match corresponding vertices correctly. Incorrect naming implies incorrect angle and side correspondences.",
+    "ai_context": {
+      "learning_goal": "Write congruence statements with correct vertex correspondence.",
+      "common_misconceptions": ["Thinking that the alphabetical order of the triangle name doesn't matter when stating congruence."],
+      "hint": "Find the vertex common to sides AB and BC. Which vertex is common to QR and PR? That gives you the corresponding vertex for B."
+    }
+  },
+  {
+    "id": "Q_TRI_004",
+    "chapter_id": "GSEB_MATHS_9_CH7",
+    "topic_id": "ISOSCELES_PROPERTIES",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["Isosceles Triangle", "Angles Opposite Equal Sides"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "In ΔABC, if BC = AB and ∠B = 80°, what is the measure of ∠A?",
+    "options": ["80°", "40°", "50°", "100°"],
+    "answer": "50°",
+    "explanation": "Since BC = AB, the angles opposite to these sides are equal, so ∠A = ∠C. The sum of angles in a triangle is 180°. Therefore, ∠A + ∠C + ∠B = 180° ⇒ 2∠A + 80° = 180° ⇒ 2∠A = 100° ⇒ ∠A = 50°.",
+    "distractor_rationale": "80° assumes the other two angles are equal to B. 40° might be a calculation error (180 - 100).",
+    "ai_context": {
+      "learning_goal": "Apply the theorem that angles opposite equal sides of an isosceles triangle are equal.",
+      "common_misconceptions": ["Assuming the base angles are always 60° or equating the wrong angles."],
+      "hint": "If two sides are equal, the angles opposite them are equal. Which angle is opposite to side BC? Which one is opposite to AB?"
+    }
+  },
+  {
+    "id": "Q_TRI_005",
+    "chapter_id": "GSEB_MATHS_9_CH7",
+    "topic_id": "TRIANGLE_INEQUALITIES",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["Triangle Inequality", "Side Lengths"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "Medium",
+    "question_text": "Which of the following sets of side lengths can form a triangle?",
+    "options": ["2 cm, 3 cm, 5 cm", "3 cm, 4 cm, 8 cm", "5 cm, 6 cm, 10 cm", "1 cm, 2 cm, 4 cm"],
+    "answer": "5 cm, 6 cm, 10 cm",
+    "explanation": "According to the Triangle Inequality Theorem, the sum of the lengths of any two sides must be strictly greater than the length of the third side. For 5, 6, 10: 5+6 > 10, which is true. For the others: 2+3 is not greater than 5; 3+4 is not greater than 8; 1+2 is not greater than 4.",
+    "distractor_rationale": "If the sum of two smaller sides is equal to or less than the longest side, the lines will not meet to form a triangle.",
+    "ai_context": {
+      "learning_goal": "Apply the triangle inequality theorem to determine if a triangle can be formed.",
+      "common_misconceptions": ["Believing that any three lengths can form a triangle.", "Thinking the sum of two sides can equal the third side."],
+      "hint": "Check if the sum of the two smallest numbers is strictly greater than the largest number."
+    }
+  }
+]

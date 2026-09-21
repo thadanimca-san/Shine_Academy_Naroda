@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch15",
+    "title": "Chapter 15: Probability",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "probability",
+      "coins",
+      "dice",
+      "cards",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the theoretical probability of an event.",
+      "Solve problems based on tossing coins and throwing dice.",
+      "Solve problems based on drawing cards from a well-shuffled deck.",
+      "Apply logic to real-world scenarios."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract probability feel real. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
+      "common_misconceptions": [
+        "Students think the probability of an event can be greater than 1.",
+        "Students get confused with the sample space of tossing 2 or 3 coins.",
+        "Students struggle with the composition of a standard deck of cards."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you are playing a board game with your friends. You need exactly a 6 on the dice to win. What are your chances? Is it pure luck, or is there a mathematical way to predict it? Welcome to the fascinating world of **Probability (प्रायिकता / સંભાવના)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "The Probability Scale: Probability always lies between 0 and 1. 0 means impossible, 1 means certain.",
+      "image_url": "assets/images/maths_ch15_probability_scale.jpg",
+      "alt_text": "A glowing scale from 0 to 1 showing Impossible, Unlikely, Even Chance, Likely, and Certain."
+    },
+    {
+      "type": "theory",
+      "content": "**Theoretical Probability (सैद्धांतिक प्रायिकता):**\nThe probability of an event E, written as P(E), is defined as:\nP(E) = (Number of outcomes favorable to E) / (Number of all possible outcomes of the experiment)\n\n*Example - Tossing a Coin (सिक्का उछालना):* When you toss a fair coin, possible outcomes are Head (H) or Tail (T). So, P(Head) = 1/2.",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** When tossing **2 coins**, the sample space is {HH, HT, TH, TT}. When tossing **3 coins**, it is {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}. A quick formula for total outcomes is **2ⁿ**, where n is the number of coins!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** Throwing Two Dice (दो पासे फेंकना)\n\nWhen you throw 2 dice, the total number of outcomes is **6 × 6 = 36**. \n*Board Trick:* They often ask for the sum of numbers on the two dice. Remember, the sum ranges from 2 (1+1) to 12 (6+6). Draw a 6x6 table in rough work if you get confused!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "diagram",
+      "content": "A standard deck of 52 playing cards (ताश के पत्ते).",
+      "image_url": "assets/images/maths_ch15_cards_deck.jpg",
+      "alt_text": "A visual breakdown of 52 cards into 4 suits: Spades, Hearts, Diamonds, Clubs."
+    },
+    {
+      "type": "memory_trick",
+      "content": "**The Card Deck Breakdown:**\nTotal 52 cards = 26 Red + 26 Black.\n4 Suits (13 cards each): Spades (♠ Black), Clubs (♣ Black), Hearts (♥ Red), Diamonds (♦ Red).\nEach suit has: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King.\n**Face Cards:** Jack, Queen, King. Total face cards = 3 × 4 = 12.",
+      "difficulty": "Intermediate",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_1",
+      "type": "quiz",
+      "question": "What is the probability of a sure event?",
+      "question_hi": "एक निश्चित घटना की प्रायिकता क्या होती है?",
+      "options": [
+        "0",
+        "1",
+        "0.5",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "0.5",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "correct_index": 1,
+      "explanation": "The probability of an event that is certain to happen is 1.",
+      "explanation_hi": "जो घटना निश्चित रूप से घटित होनी है, उसकी प्रायिकता 1 होती है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_2",
+      "type": "quiz",
+      "question": "Which of the following cannot be the probability of an event?",
+      "question_hi": "निम्नलिखित में से कौन किसी घटना की प्रायिकता नहीं हो सकती है?",
+      "options": [
+        "2/3",
+        "-1.5",
+        "15%",
+        "0.7"
+      ],
+      "options_hi": [
+        "2/3",
+        "-1.5",
+        "15%",
+        "0.7"
+      ],
+      "correct_index": 1,
+      "explanation": "Probability of an event cannot be negative. It always lies between 0 and 1.",
+      "explanation_hi": "किसी घटना की प्रायिकता ऋणात्मक (negative) नहीं हो सकती। यह हमेशा 0 और 1 के बीच होती है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_3",
+      "type": "quiz",
+      "question": "If P(E) = 0.05, what is the probability of 'not E'?",
+      "question_hi": "यदि P(E) = 0.05 है, तो 'E नहीं' की प्रायिकता क्या है?",
+      "options": [
+        "0.95",
+        "0.05",
+        "1.05",
+        "0.5"
+      ],
+      "options_hi": [
+        "0.95",
+        "0.05",
+        "1.05",
+        "0.5"
+      ],
+      "correct_index": 0,
+      "explanation": "P(not E) = 1 - P(E) = 1 - 0.05 = 0.95.",
+      "explanation_hi": "P(E नहीं) = 1 - P(E) = 1 - 0.05 = 0.95।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_4",
+      "type": "quiz",
+      "question": "A die is thrown once. What is the probability of getting a prime number?",
+      "question_hi": "एक पासे को एक बार फेंका जाता है। अभाज्य संख्या (prime number) प्राप्त करने की प्रायिकता क्या है?",
+      "options": [
+        "1/3",
+        "1/2",
+        "1/6",
+        "2/3"
+      ],
+      "options_hi": [
+        "1/3",
+        "1/2",
+        "1/6",
+        "2/3"
+      ],
+      "correct_index": 1,
+      "explanation": "Possible outcomes are 1, 2, 3, 4, 5, 6. Prime numbers are 2, 3, 5 (3 outcomes). Probability = 3/6 = 1/2.",
+      "explanation_hi": "संभव परिणाम 1, 2, 3, 4, 5, 6 हैं। अभाज्य संख्याएँ 2, 3, 5 (3 परिणाम) हैं। प्रायिकता = 3/6 = 1/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_5",
+      "type": "quiz",
+      "question": "Two coins are tossed simultaneously. What is the probability of getting exactly one head?",
+      "question_hi": "दो सिक्कों को एक साथ उछाला जाता है। ठीक एक चित (head) आने की प्रायिकता क्या है?",
+      "options": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "options_hi": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "correct_index": 1,
+      "explanation": "Sample space = {HH, HT, TH, TT}. Outcomes with exactly one head = {HT, TH}. Probability = 2/4 = 1/2.",
+      "explanation_hi": "प्रतिदर्श समष्टि (Sample space) = {HH, HT, TH, TT}। ठीक एक चित वाले परिणाम = {HT, TH}। प्रायिकता = 2/4 = 1/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_6",
+      "type": "quiz",
+      "question": "A card is drawn from a well-shuffled deck of 52 cards. What is the probability of getting a face card?",
+      "question_hi": "52 ताश के पत्तों की एक अच्छी तरह से फेंटी गई गड्डी में से एक पत्ता निकाला जाता है। फेस कार्ड (चित्र वाला पत्ता) प्राप्त करने की प्रायिकता क्या है?",
+      "options": [
+        "3/13",
+        "1/13",
+        "3/26",
+        "4/13"
+      ],
+      "options_hi": [
+        "3/13",
+        "1/13",
+        "3/26",
+        "4/13"
+      ],
+      "correct_index": 0,
+      "explanation": "There are 12 face cards (4 Jacks, 4 Queens, 4 Kings). Probability = 12/52 = 3/13.",
+      "explanation_hi": "गड्डी में 12 फेस कार्ड होते हैं (4 गुलाम, 4 बेगम, 4 बादशाह)। प्रायिकता = 12/52 = 3/13।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_7",
+      "type": "quiz",
+      "question": "A bag contains 3 red balls and 5 black balls. A ball is drawn at random. What is the probability of drawing a red ball?",
+      "question_hi": "एक थैले में 3 लाल गेंदें और 5 काली गेंदें हैं। यादृच्छया एक गेंद निकाली जाती है। लाल गेंद निकलने की प्रायिकता क्या है?",
+      "options": [
+        "3/5",
+        "5/8",
+        "3/8",
+        "1/8"
+      ],
+      "options_hi": [
+        "3/5",
+        "5/8",
+        "3/8",
+        "1/8"
+      ],
+      "correct_index": 2,
+      "explanation": "Total balls = 3 + 5 = 8. Red balls = 3. Probability = 3/8.",
+      "explanation_hi": "कुल गेंदें = 3 + 5 = 8. लाल गेंदें = 3. प्रायिकता = 3/8।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_8",
+      "type": "quiz",
+      "question": "The sum of the probabilities of all the elementary events of an experiment is:",
+      "question_hi": "किसी प्रयोग की सभी प्रारंभिक घटनाओं की प्रायिकताओं का योग होता है:",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "Depends on the experiment"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "-1",
+        "प्रयोग पर निर्भर करता है"
+      ],
+      "correct_index": 1,
+      "explanation": "The sum of probabilities of all elementary events is always 1.",
+      "explanation_hi": "सभी प्रारंभिक घटनाओं की प्रायिकताओं का योग हमेशा 1 होता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_9",
+      "type": "quiz",
+      "question": "Two dice are thrown simultaneously. What is the probability of getting a sum of 8?",
+      "question_hi": "दो पासों को एक साथ फेंका जाता है। योग 8 आने की प्रायिकता क्या है?",
+      "options": [
+        "5/36",
+        "1/6",
+        "1/12",
+        "7/36"
+      ],
+      "options_hi": [
+        "5/36",
+        "1/6",
+        "1/12",
+        "7/36"
+      ],
+      "correct_index": 0,
+      "explanation": "Favorable outcomes for sum 8: (2,6), (3,5), (4,4), (5,3), (6,2). Total = 5. Probability = 5/36.",
+      "explanation_hi": "योग 8 के लिए अनुकूल परिणाम: (2,6), (3,5), (4,4), (5,3), (6,2)। कुल = 5. प्रायिकता = 5/36।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_10",
+      "type": "quiz",
+      "question": "What is the probability of drawing a king of red colour from a standard deck of 52 cards?",
+      "question_hi": "52 ताश के पत्तों की गड्डी में से लाल रंग का बादशाह निकलने की प्रायिकता क्या है?",
+      "options": [
+        "1/26",
+        "1/13",
+        "1/52",
+        "3/26"
+      ],
+      "options_hi": [
+        "1/26",
+        "1/13",
+        "1/52",
+        "3/26"
+      ],
+      "correct_index": 0,
+      "explanation": "There are 2 red kings (King of Hearts and King of Diamonds). Probability = 2/52 = 1/26.",
+      "explanation_hi": "2 लाल बादशाह होते हैं (पान का बादशाह और ईंट का बादशाह)। प्रायिकता = 2/52 = 1/26।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_11",
+      "type": "quiz",
+      "question": "If three coins are tossed simultaneously, what is the probability of getting at least two heads?",
+      "question_hi": "यदि तीन सिक्कों को एक साथ उछाला जाता है, तो कम से कम दो चित (heads) आने की प्रायिकता क्या है?",
+      "options": [
+        "1/4",
+        "3/8",
+        "1/2",
+        "5/8"
+      ],
+      "options_hi": [
+        "1/4",
+        "3/8",
+        "1/2",
+        "5/8"
+      ],
+      "correct_index": 2,
+      "explanation": "Sample space has 8 outcomes. Outcomes with at least 2 heads: HHH, HHT, HTH, THH. Total = 4. Probability = 4/8 = 1/2.",
+      "explanation_hi": "प्रतिदर्श समष्टि में 8 परिणाम होते हैं। कम से कम 2 चित वाले परिणाम: HHH, HHT, HTH, THH। कुल = 4. प्रायिकता = 4/8 = 1/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_12",
+      "type": "quiz",
+      "question": "A number is chosen at random from numbers 1 to 20. Find the probability that it is a multiple of 3.",
+      "question_hi": "1 से 20 तक की संख्याओं में से यादृच्छया एक संख्या चुनी जाती है। इसके 3 का गुणज (multiple) होने की प्रायिकता ज्ञात कीजिए।",
+      "options": [
+        "3/20",
+        "1/4",
+        "3/10",
+        "1/5"
+      ],
+      "options_hi": [
+        "3/20",
+        "1/4",
+        "3/10",
+        "1/5"
+      ],
+      "correct_index": 2,
+      "explanation": "Multiples of 3 from 1 to 20 are 3, 6, 9, 12, 15, 18. Total = 6. Probability = 6/20 = 3/10.",
+      "explanation_hi": "1 से 20 तक 3 के गुणज 3, 6, 9, 12, 15, 18 हैं। कुल = 6. प्रायिकता = 6/20 = 3/10।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_13",
+      "type": "quiz",
+      "question": "The probability of an impossible event is:",
+      "question_hi": "एक असंभव घटना की प्रायिकता होती है:",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "Infinity"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "-1",
+        "अनंत (Infinity)"
+      ],
+      "correct_index": 0,
+      "explanation": "An event that cannot happen has 0 probability.",
+      "explanation_hi": "जो घटना घटित नहीं हो सकती, उसकी प्रायिकता 0 होती है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_14",
+      "type": "quiz",
+      "question": "A game of chance consists of spinning an arrow which comes to rest pointing at one of the numbers 1 to 8. What is the probability that it will point at a number greater than 2?",
+      "question_hi": "संयोग के एक खेल में एक तीर को घुमाया जाता है, जो 1 से 8 तक की किसी एक संख्या पर रुकता है। इसकी क्या प्रायिकता है कि यह 2 से बड़ी संख्या पर रुकेगा?",
+      "options": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "5/8"
+      ],
+      "options_hi": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "5/8"
+      ],
+      "correct_index": 2,
+      "explanation": "Numbers greater than 2 are 3, 4, 5, 6, 7, 8. Total = 6 numbers. Probability = 6/8 = 3/4.",
+      "explanation_hi": "2 से बड़ी संख्याएँ 3, 4, 5, 6, 7, 8 हैं। कुल = 6 संख्याएँ। प्रायिकता = 6/8 = 3/4।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch15_15",
+      "type": "quiz",
+      "question": "A card is drawn from a deck of 52 cards. What is the probability of getting a spade or an ace?",
+      "question_hi": "52 ताश के पत्तों की गड्डी में से एक पत्ता निकाला जाता है। हुकुम (spade) या इक्का (ace) प्राप्त करने की प्रायिकता क्या है?",
+      "options": [
+        "4/13",
+        "17/52",
+        "1/4",
+        "1/13"
+      ],
+      "options_hi": [
+        "4/13",
+        "17/52",
+        "1/4",
+        "1/13"
+      ],
+      "correct_index": 0,
+      "explanation": "There are 13 spades and 3 other aces (since Ace of spades is already counted). Total = 16. Probability = 16/52 = 4/13.",
+      "explanation_hi": "13 हुकुम के पत्ते हैं और 3 अन्य इक्के हैं (क्योंकि हुकुम का इक्का पहले ही गिना जा चुका है)। कुल = 16. प्रायिकता = 16/52 = 4/13।"
+    }
+  ]
+}

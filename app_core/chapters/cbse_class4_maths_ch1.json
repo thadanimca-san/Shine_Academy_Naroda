@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "id": "cbse_grade4_maths_ch1",
+    "title": "Chapter 1: Numbers and Numeration",
+    "subject": "Maths",
+    "grade": "Grade 4",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Read and write 5-digit and 6-digit numbers in figures and words.",
+      "Understand place value and face value of digits in large numbers.",
+      "Expand numbers based on place values.",
+      "Compare and order 5-digit and 6-digit numbers using symbols and place value rules.",
+      "Form the greatest and smallest numbers using a given set of digits."
+    ],
+    "core_concepts": [
+      "DICT_GRADE4_PLACEVALUE",
+      "DICT_GRADE4_PERIODS",
+      "DICT_GRADE4_EXPANDEDFORM",
+      "DICT_GRADE4_SUCCESSOR"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the reading, writing, structuring, and comparing of large numbers up to hundred thousands.",
+      "common_misconceptions": [
+        "Confusing place value with face value.",
+        "Forgetting placeholder zeros when writing numbers in standard form from word form.",
+        "Comparing multi-digit numbers by looking at the last digit rather than the leftmost highest place value."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Stargazer's Dilemma",
+      "body": "Imagine standing under a pitch-dark midnight sky far away from the glowing city lights. You look up and see thousands of shimmering stars. Astronomers tell us that our galaxy, the Milky Way, has over 100,000 million stars! When humanity moved from counting simple things like baskets of apples and fingers on two hands to measuring cities, populations, and distances across the universe, our old 3-digit and 4-digit numbers simply weren't enough. We needed a grander system to keep track of colossal quantities without getting lost. Welcome to the magnificent world of large numbers, where a single zero can change a village into a bustling continent!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why did humans need to invent larger numbers beyond simple 1-digit or 2-digit counts?",
+      "options": [
+        "Because small numbers are illegal in mathematics",
+        "To easily and accurately count and manage large quantities like populations and distances",
+        "To make mathematics harder for students to study"
+      ],
+      "correct_index": 1,
+      "explanation": "As human society grew, we needed to count large quantities like populations, money, and distances, requiring a robust system of numbers.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Reviewing 4-Digit Numbers and Stepping Up",
+      "body": "Before we journey into giant numbers, let us look back at what we already know. The greatest 3-digit number is 999. If we add 1 to 999, we get 1,000 (One Thousand), which is the smallest 4-digit number. Similarly, the greatest 4-digit number is 9,999. What happens when we add 1 to 9,999? We cross a massive threshold and enter the family of 5-digit numbers! 9,999 + 1 = 10,000. We read 10,000 as 'Ten Thousand'. This opens up an entirely new column on our [DICT_GRADE4_PLACEVALUE|place value chart].",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: The Next Threshold",
+      "front": "What number comes immediately after 9,999?",
+      "back": "10,000 (Ten Thousand), which is the smallest 5-digit number.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "Understanding Periods and the Indian Place Value System",
+      "body": "When numbers get longer, reading them digit by digit is confusing. To make reading easy, mathematicians group digits into [DICT_GRADE4_PERIODS|periods]. In the Indian Number System, we group digits from right to left using commas. The first period is the **Ones** period, which contains three places: Ones, Tens, and Hundreds. The next period is the **Thousands** period, which contains two places: Thousands and Ten Thousands. Beyond that is the **Lakhs** period (Lakhs, Ten Lakhs). Therefore, a 5-digit number has its places as: Ten Thousands, Thousands, Hundreds, Tens, and Ones.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "teacher_tip",
+      "title": "The Comma Rule in India",
+      "body": "Show students how commas act like breathing pauses when reading a story. In the Indian system, the first comma is placed after 3 digits from the right, and then after every 2 digits! Example: 4,56,789.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "In the Indian Number System, how many digits are grouped in the first period (Ones period) from the right?",
+      "options": [
+        "2 digits",
+        "3 digits",
+        "4 digits"
+      ],
+      "correct_index": 1,
+      "explanation": "The Ones period consists of the first 3 places from the right: Ones, Tens, and Hundreds.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Reading and Writing 5-Digit Numbers",
+      "body": "Let's read the number 45,672 using our place value houses. First, look at the Thousands period: we see '45', so we say 'Forty-five thousand'. Next, look at the Hundreds place: we see '6', so we say 'Six hundred'. Finally, look at the Tens and Ones together: '72', which is 'seventy-two'. Put it all together: **Forty-five thousand, six hundred seventy-two**. When writing number names, never use the word 'and' unnecessarily (e.g., write 'forty-five thousand six hundred seventy-two', not 'forty-five thousand and six hundred and seventy-two').",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Flashcard: Number Name Practice",
+      "front": "How do you write 80,405 in words?",
+      "back": "Eighty thousand, four hundred five",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Stepping into 6-Digit Numbers: Lakhs",
+      "body": "What happens when we reach the greatest 5-digit number, which is 99,999? If we add 1 to 99,999, we get 1,00,000 (One Lakh). This is a 6-digit number and the smallest number in the **Lakhs period**. On our place value chart, it sits proudly to the left of the Ten Thousands column. One lakh can be thought of as ten groups of ten thousand. In a city stadium holding one lakh people, every single seat is packed to capacity!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What is the smallest 6-digit number in the Indian system?",
+      "options": [
+        "10,000",
+        "1,00,000",
+        "10,00,000"
+      ],
+      "correct_index": 1,
+      "explanation": "1,00,000 (One Lakh) is the smallest 6-digit number, formed by adding 1 to 99,999.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Place Value vs. Face Value",
+      "body": "Every digit in a number has two identities: its **face value** and its [DICT_GRADE4_PLACEVALUE|place value]. The **face value** of a digit is the digit itself, no matter where it sits in the number (the face value of 7 is always 7). However, the **place value** depends entirely on the digit's position or home within the number. For example, in the number 3,45,678, the digit 4 is in the Ten Thousands place. Its place value is 4 × 10,000 = 40,000 (Forty thousand). Zero is special: the face value of 0 is 0, and its place value is always 0 regardless of where it appears.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Mirror Analogy",
+      "body": "Explain Face Value as looking in a mirror—you are always you, no matter what room you stand in. Place Value is like your seat in school—it changes depending on which row and desk you are assigned to!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "What is the place value of the digit 6 in the number 5,62,104?",
+      "options": [
+        "6",
+        "6,000",
+        "60,000"
+      ],
+      "correct_index": 2,
+      "explanation": "The digit 6 is in the Ten Thousands place, so its place value is 6 × 10,000 = 60,000.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Writing Numbers in [DICT_GRADE4_EXPANDEDFORM|Expanded Form]",
+      "body": "An expanded form is like taking apart a bicycle gear by gear to see every individual piece. Instead of writing a number as a single block, we write it as the sum of the place values of all its digits. For instance, consider the number 73,425. Let's break down each digit: 7 is in ten thousands (70,000), 3 is in thousands (3,000), 4 is in hundreds (400), 2 is in tens (20), and 5 is in ones (5). Therefore, the expanded form is: 70,000 + 3,000 + 400 + 20 + 5. This makes mathematical operations and comparisons wonderfully clear.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Flashcard: Expanded Form",
+      "front": "Write the expanded form of 4,05,210.",
+      "back": "4,00,000 + 5,000 + 200 + 10",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Standard Form (Compact Form) from Expanded Form",
+      "body": "Working backwards is just as exciting! If someone gives you an expanded form like 8,00,000 + 40,000 + 3,000 + 70 + 9, how do you put it back together into standard form? You look at the highest place value (Lakhs) and write down the digits place by place from left to right. Notice that there is no 'Hundreds' term in the example (no hundred is mentioned). This means we must put a placeholder zero (0) in the Hundreds place! Thus, the standard number is 8,43,079. Always watch out for missing place values to avoid writing the wrong number.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "What is the standard form of: 5,00,000 + 6,000 + 80 + 3?",
+      "options": [
+        "5,6,83",
+        "5,06,083",
+        "5,60,083"
+      ],
+      "correct_index": 1,
+      "explanation": "Lakhs=5, Ten Thousands=0, Thousands=6, Hundreds=0, Tens=8, Ones=3. Putting it together gives 5,06,083.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Comparing Numbers: Who is Greater?",
+      "body": "When comparing two large numbers, we follow strict rules. Rule 1: The number with more digits is always greater! For example, 99,999 has 5 digits, and 1,00,000 has 6 digits. Therefore, 1,00,000 > 99,999 without looking at any digits. Rule 2: If both numbers have the same number of digits, we compare the digits from left to right (starting with the highest place value). Whichever number has the larger digit at the first point of difference is the greater number. We use symbols like '>' (greater than), '<' (less than), and '=' (equal to).",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "The Hungry Crocodile Analogy",
+      "body": "Remind students that the inequality symbols '<' and '>' are like the mouth of a hungry crocodile that always opens wide to eat the larger number! (Example: 45,120 < 45,210).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Which comparison symbol correctly fills in the blank? 74,512 ___ 74,152",
+      "options": [
+        ">",
+        "<",
+        "="
+      ],
+      "correct_index": 0,
+      "explanation": "Comparing from left: Ten thousands (7=7), Thousands (4=4), but in the Hundreds place 5 > 1. Therefore, 74,512 is greater.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Ascending and Descending Order",
+      "body": "When we have a collection of four or five large numbers, organizing them helps us see patterns. **Ascending order** means arranging numbers from the smallest to the greatest (climbing up a staircase). **Descending order** means arranging numbers from the greatest to the smallest (walking down a staircase). To solve these problems efficiently, first sort the numbers by digit count, then compare leftmost digits just like we did when comparing two numbers.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "title": "Flashcard: Order Definitions",
+      "front": "What is the difference between Ascending and Descending order?",
+      "back": "Ascending = Smallest to Greatest. Descending = Greatest to Smallest.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Forming Greatest and Smallest Numbers",
+      "body": "What if you are given a set of random digits, such as {4, 1, 8, 0, 6}, and asked to form the greatest and smallest possible 5-digit numbers? To form the **greatest number**, arrange the given digits in descending order from left to right: 8, 6, 4, 1, 0 -> 86,410. To form the **smallest number**, arrange the digits in ascending order: 0, 1, 4, 6, 8. WAIT! Can a number start with 0? In standard notation, a 5-digit number cannot begin with 0 (because 01,468 is actually a 4-digit number, 1,468). Therefore, if 0 is present, we swap 0 with the smallest non-zero digit. So for {4, 1, 8, 0, 6}, the smallest 5-digit number is **10,468**!",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "The Zero Trap in Number Formation",
+      "body": "Emphasize the 'Zero Trap' to students: Zero is shy and cannot stand at the very front of a number, or it disappears in value. Always place the smallest non-zero digit first, and put zero in the second spot!",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "What is the smallest 5-digit number that can be formed using the digits 3, 0, 5, 2, 7 without repeating any digit?",
+      "options": [
+        "02,357",
+        "20,357",
+        "23,057"
+      ],
+      "correct_index": 1,
+      "explanation": "Arranging in ascending order gives 0, 2, 3, 5, 7. Since a number cannot start with 0, we put the next smallest digit (2) first, followed by 0: 20,357.",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Successor and Predecessor",
+      "body": "In mathematics, the [DICT_GRADE4_SUCCESSOR|successor] of a number is the number that comes immediately after it, which we find by adding 1 (+1). For example, the successor of 45,999 is 45,999 + 1 = 46,000. Conversely, the **predecessor** of a number is the number that comes immediately before it, found by subtracting 1 (-1). For example, the predecessor of 80,000 is 80,000 - 1 = 79,999. Finding predecessors across place value boundaries (like going from 1,00,000 down to 99,999) requires careful borrowing!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "flashcard",
+      "title": "Flashcard: Successor & Predecessor",
+      "front": "What is the successor of 99,999?",
+      "back": "1,00,000 (One Lakh)",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "quiz",
+      "question": "What is the predecessor of 50,000?",
+      "options": [
+        "49,999",
+        "50,001",
+        "49,000"
+      ],
+      "correct_index": 0,
+      "explanation": "The predecessor is found by subtracting 1 from the number: 50,000 - 1 = 49,999.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "theory",
+      "title": "Chapter Summary: Master of Numeration",
+      "body": "Look how far you've traveled! You began by understanding why humans needed to count beyond thousands. You unlocked the secrets of the Indian Place Value System, mastering 5-digit and 6-digit numbers up to lakhs. You discovered how face value and place value differ, how to expand numbers into their component parts, and how to safely navigate the 'Zero Trap' when forming greatest and smallest numbers. With these powerful mathematical tools, you are now fully equipped to conquer any large number challenge that comes your way!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

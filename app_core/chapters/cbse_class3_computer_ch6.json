@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "id": "cbse_class3_computer_ch6",
+    "title": "Chapter 6: Chapter 6 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand the foundational concepts of computer operations",
+      "Identify the role of hardware and software components",
+      "Explore logical thinking and basic problem-solving techniques"
+    ],
+    "core_concepts": [
+      "DICT_COMPUTER_HARDWARE",
+      "DICT_COMPUTER_SOFTWARE",
+      "DICT_ALGORITHM"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the core operational and logical layers of computers through deep conceptual understanding.",
+      "common_misconceptions": [
+        "Computers can think entirely on their own like humans.",
+        "Hardware and software are essentially the exact same thing."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Magic Box",
+      "body": "Imagine you walk into a dark room and find a mysterious black box with a screen that lights up the moment you tap your finger on a smooth glass pad. It plays music, displays colorful pictures, and even answers questions you type into it. To a little child, it looks like pure magic. But as young scientists and future engineers, we know that magic is actually science, logic, and brilliant engineering working together in harmony. How does this silent machine know exactly what you want it to do? Let us embark on a journey inside the machine to uncover its deepest secrets.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What makes a computer seem like it is performing magic?",
+      "options": [
+        "Hidden fairy dust inside the power supply",
+        "A combination of science, logic, and engineering working together",
+        "It guesses what you want randomly"
+      ],
+      "correct_index": 1,
+      "explanation": "Computers rely on precise science, logical instructions, and advanced engineering, not magic!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Body and Soul of a Machine",
+      "body": "Every computer system is divided into two distinct worlds: what you can touch and what you can only experience through actions. The physical parts that you can see and touch, such as the keyboard, mouse, and monitor, are known as [DICT_COMPUTER_HARDWARE|Computer Hardware]. Think of hardware as the skeleton, muscles, and hands of a human body. However, a body without a mind cannot do anything useful. This is where the intangible instructions come in. The programs and data that tell the hardware what to do are called [DICT_COMPUTER_SOFTWARE|Computer Software]. Software is like the thoughts and memories that guide the body. Without hardware, software has nowhere to run. Without software, hardware is just a heavy, useless piece of metal and plastic.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Body and Soul Analogy",
+      "body": "Ask students to look at a book. The paper and ink you can touch are the 'hardware', while the story, language, and meaning written on the pages are the 'software'.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is Computer Hardware?",
+      "back": "The physical, touchable parts of a computer system like the keyboard, mouse, and monitor.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Deep Dive into Hardware Components",
+      "body": "To truly understand computer hardware, we must look at how it categorizes tasks into input, processing, storage, and output. When you type your name using a keyboard, you are sending data into the system through input devices. The central processing unit (CPU), often called the brain of the computer, takes that data, calculates what to do with it, and sends the results to output devices like a monitor or printer so you can see or touch the final result. Meanwhile, memory and storage devices act like filing cabinets, holding onto information even when the computer is turned off. Every single piece of hardware has a specialized job, and they all communicate using blazing-fast electrical signals racing along microscopic pathways on circuit boards.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which component is considered the 'brain' of the computer?",
+      "options": [
+        "The Monitor",
+        "The Central Processing Unit (CPU)",
+        "The Keyboard"
+      ],
+      "correct_index": 1,
+      "explanation": "The CPU processes instructions and is widely known as the computer's brain.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The Invisible Magic of Software",
+      "body": "While hardware gives the computer its physical form, [DICT_COMPUTER_SOFTWARE|Computer Software] brings it to life. Software is essentially a set of step-by-step instructions written by human programmers. There are two main types of software: system software and application software. System software, like an operating system, manages the computer's internal hardware and lets everything run smoothly behind the scenes. Application software, on the other hand, is designed to help you perform specific tasks, such as painting a picture in a drawing program, writing a story in a word processor, or playing an educational math game. Without application software, a computer would turn on to a blank, boring screen with nothing fun or productive to do.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "App vs Operating System",
+      "body": "Compare the operating system to the principal of a school who keeps the building running, and applications to specific teachers who teach individual subjects like art or math.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is Computer Software?",
+      "back": "A collection of instructions, programs, and data that tell the computer hardware what tasks to perform.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: Thinking in Steps - Algorithms",
+      "body": "Computers are incredibly fast, but they are not smart on their own; they follow directions blindly. If you give a computer a messy or incorrect instruction, it will produce a messy or incorrect result. This is why programmers use an [DICT_ALGORITHM|Algorithm], which is a precise, step-by-step procedure or set of rules designed to solve a specific problem or complete a task. Imagine baking a cake: if you bake the cake before mixing the batter, disaster strikes! The steps must be in the exact right order. Computers rely entirely on algorithms to sort numbers, display graphics on your screen, and navigate websites on the internet without getting confused.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "What is an algorithm?",
+      "options": [
+        "A broken computer part",
+        "A step-by-step set of instructions to solve a problem",
+        "A type of computer screen"
+      ],
+      "correct_index": 1,
+      "explanation": "An algorithm is an ordered sequence of instructions used to solve problems or complete tasks.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "Robot Algorithm Game",
+      "body": "Have one student act as a 'robot' and another act as the 'programmer'. The programmer must write down step-by-step instructions for the robot to walk across the room and pick up a pencil. If a step is missing, the robot gets stuck!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Putting It All Together: Input, Process, Output",
+      "body": "Every single interaction you have with a digital device follows a universal rhythm known as the IPO cycle: Input, Processing, and Output. First, you provide [DICT_COMPUTER_HARDWARE|Hardware] input through a device like a microphone or keyboard. Second, the CPU processes that information using instructions provided by [DICT_COMPUTER_SOFTWARE|Computer Software]. Third, the computer delivers an output, such as sounding your voice through speakers or displaying a typed letter on the monitor. Understanding this three-step loop helps demystify how computers handle everything from simple calculations to complex video games.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "What does IPO stand for in computer science?",
+      "back": "Input, Processing, Output",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "In the IPO cycle, what happens during the Processing stage?",
+      "options": [
+        "The computer calculates and makes decisions based on instructions",
+        "You plug the computer into the wall outlet",
+        "You turn off the machine"
+      ],
+      "correct_index": 0,
+      "explanation": "Processing is where the CPU computes and evaluates the input data using software rules.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "The Evolution of Digital Thinking",
+      "body": "Computers have not always been small and portable. Decades ago, they filled entire rooms and required teams of scientists just to run a single program. Today, computers fit into our wrists, pockets, and classrooms. However, the fundamental principles remain identical. Whether it is a giant supercomputer forecasting the weather or a small tablet running a cartoon video, both depend on physical hardware, intelligent software, and strict logical algorithms to accomplish their daily miracles.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "teacher_tip",
+      "title": "History Discussion",
+      "body": "Ask students to imagine life without smartphones or computers. How would people research homework topics or send messages across the world?",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "True or False: Modern computers use completely different basic principles than older room-sized computers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "explanation": "False! While technology has gotten smaller and faster, the core principles of hardware, software, and algorithms remain the same.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Summary of Core Computer Concepts",
+      "body": "As we conclude our exploration of Chapter 6, remember that computers are powerful tools built on teamwork. Hardware provides the physical structure, software provides the creative instructions, and algorithms ensure everything happens in the correct logical sequence. By mastering these concepts, you are taking your first steps toward becoming a master creator of technology rather than just a passive consumer.",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

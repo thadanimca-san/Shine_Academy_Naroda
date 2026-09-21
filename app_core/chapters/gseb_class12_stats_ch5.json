@@ -1,0 +1,88 @@
+{
+  "chapter_id": "gseb_class12_stats_ch5",
+  "board": "CBSE",
+  "class": "Class 12",
+  "subject": "Statistics",
+  "title": "Probability",
+  "header_image_url": "https://img.freepik.com/free-vector/casino-concept-illustration_114360-1594.jpg",
+  "theory_sections": [
+    {
+      "section_title": "1. Random Experiment and Sample Space",
+      "content": "**Random Experiment:** An experiment whose all possible outcomes are known in advance, but it cannot be predicted with certainty which specific outcome will occur on a particular trial. (e.g., Tossing a coin, throwing a die).\n\n**Sample Space (U or S):** The set of all possible outcomes of a random experiment. \n- E.g., for tossing a coin, U = {H, T}\n- For throwing a die, U = {1, 2, 3, 4, 5, 6}"
+    },
+    {
+      "section_title": "2. Events and Types of Events",
+      "content": "An **Event** is any subset of the sample space.\n\n**Types of Events:**\n- **Impossible Event (Φ):** An event that can never happen. (e.g., getting a 7 on a standard die).\n- **Certain Event (U):** An event that is bound to happen.\n- **Mutually Exclusive Events:** Two events A and B are mutually exclusive if they cannot occur together (A ∩ B = Φ).\n- **Exhaustive Events:** Events whose union covers the entire sample space (A ∪ B = U).\n- **Complementary Event (A'):** The event that A does not occur. A' = U - A. Therefore, P(A) + P(A') = 1."
+    },
+    {
+      "section_title": "3. Mathematical Definition of Probability",
+      "content": "If a random experiment has 'n' mutually exclusive, exhaustive, and equally likely outcomes, and 'm' of these outcomes are favorable to an event A, then the probability of event A occurring is:\n\n`P(A) = m / n`\n\nWhere:\n- `m` = Number of favorable outcomes\n- `n` = Total number of possible outcomes\n\n**Properties:**\n1. The probability of any event lies between 0 and 1: `0 ≤ P(A) ≤ 1`\n2. Probability of an impossible event is 0: `P(Φ) = 0`\n3. Probability of a certain event is 1: `P(U) = 1`"
+    },
+    {
+      "section_title": "4. Addition Rule of Probability",
+      "content": "The addition rule is used to find the probability of occurrence of at least one of the events (A or B, represented as A ∪ B).\n\n**General Rule:**\n`P(A ∪ B) = P(A) + P(B) - P(A ∩ B)`\n\n**For Mutually Exclusive Events:**\nSince they cannot occur together, P(A ∩ B) = 0.\nTherefore, `P(A ∪ B) = P(A) + P(B)`"
+    },
+    {
+      "section_title": "5. Conditional Probability and Multiplication Rule",
+      "content": "**Conditional Probability (P(A|B)):**\nThe probability of event A occurring, given that event B has already occurred.\n`P(A|B) = P(A ∩ B) / P(B)`, where P(B) > 0.\n\n**Multiplication Rule:**\nThe probability of simultaneous occurrence of two events (A and B).\n`P(A ∩ B) = P(A) × P(B|A)`\n\n**Independent Events:**\nTwo events are independent if the occurrence of one does not affect the probability of the other. For independent events, P(B|A) = P(B).\nTherefore, for independent events: `P(A ∩ B) = P(A) × P(B)`"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Sample Space",
+      "meaning": "The set of all possible outcomes of a random experiment."
+    },
+    {
+      "term": "Mutually Exclusive Events",
+      "meaning": "Two or more events that cannot occur simultaneously."
+    },
+    {
+      "term": "Independent Events",
+      "meaning": "Events where the outcome of one does not affect the outcome of the other."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Illustration 1: Basic Probability",
+      "description": "**Data:** A bag contains 3 red, 4 blue, and 5 green balls. One ball is drawn at random. What is the probability that it is (a) red, (b) not blue?\n\n**Solution:**\nTotal number of balls (n) = 3 + 4 + 5 = 12.\n\n(a) Probability of drawing a red ball:\nFavorable outcomes for red (m) = 3\nP(Red) = m / n = 3 / 12 = **1/4**\n\n(b) Probability of drawing a ball that is not blue:\nFavorable outcomes (Red or Green) = 3 + 5 = 8\nP(Not Blue) = 8 / 12 = **2/3**\n*(Alternatively, 1 - P(Blue) = 1 - 4/12 = 8/12 = 2/3)*"
+    },
+    {
+      "title": "Illustration 2: Addition Rule",
+      "description": "**Data:** For two events A and B, P(A) = 0.5, P(B) = 0.4, and P(A ∩ B) = 0.2. Find P(A ∪ B).\n\n**Solution:**\nUsing the addition rule formula:\nP(A ∪ B) = P(A) + P(B) - P(A ∩ B)\nP(A ∪ B) = 0.5 + 0.4 - 0.2\nP(A ∪ B) = 0.9 - 0.2 = **0.7**"
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What is the probability of a certain event?",
+      "options": ["0", "0.5", "1", "Infinity"],
+      "correct_answer": "1",
+      "explanation": "A certain event is an event that is bound to happen, so its probability is always 1."
+    },
+    {
+      "question": "If events A and B are mutually exclusive, what is P(A ∩ B)?",
+      "options": ["P(A) × P(B)", "0", "1", "P(A) + P(B)"],
+      "correct_answer": "0",
+      "explanation": "Mutually exclusive events cannot occur together, meaning their intersection is an impossible event (Φ). Hence, P(A ∩ B) = 0."
+    },
+    {
+      "question": "If P(A) = 0.3, what is the probability of its complementary event, P(A')?",
+      "options": ["0.3", "0.7", "1.0", "0.0"],
+      "correct_answer": "0.7",
+      "explanation": "P(A) + P(A') = 1. Therefore, P(A') = 1 - 0.3 = 0.7."
+    }
+  ],
+  "previous_year_questions": [
+    {
+      "year": "March 2023",
+      "question": "Define mutually exclusive events.",
+      "marks": 1,
+      "answer_hint": "Two events A and B are called mutually exclusive if they cannot occur at the same time, i.e., A ∩ B = Φ."
+    },
+    {
+      "year": "July 2022",
+      "question": "State the multiplication rule of probability for two independent events.",
+      "marks": 1,
+      "answer_hint": "For two independent events A and B, P(A ∩ B) = P(A) × P(B)."
+    }
+  ]
+}

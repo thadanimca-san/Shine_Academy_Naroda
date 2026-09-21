@@ -1,0 +1,564 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch9",
+    "title": "Chapter 9: Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_001",
+      "type": "hook",
+      "title": "The Mirage in the Desert & Fiber Optic Miracle",
+      "title_hi": "रेगिस्तान का मरीचिका और फाइबर ऑप्टिक का चमत्कार",
+      "title_gu": "રણમાં મૃગજળ અને ફાઇબર ઓપ્ટિકનો ચમત્કાર",
+      "body": "How can light bend so sharply inside a thin glass fiber that internet data travels around the globe at light speed without leaking out? And why do travelers in a hot desert see illusions of water bodies on dry sand?",
+      "body_hi": "एक पतले कांच के फाइबर के अंदर प्रकाश इतना तीखा कैसे मुड़ सकता है कि इंटरनेट डेटा बिना बाहर निकले प्रकाश की गति से दुनिया भर में यात्रा करता है? और गर्म रेगिस्तान में यात्रियों को सूखी रेत पर पानी का भ्रम क्यों दिखाई देता है?",
+      "body_gu": "પાતળા કાચના ફાઇબરની અંદર પ્રકાશ એટલો તીવ્રતાથી કેવી રીતે વળી શકે છે કે ઇન્ટરનેટ ડેટા લીક થયા વગર પ્રકાશની ઝડપે સમગ્ર વિશ્વમાં મુસાફરી કરે છે? અને ગરમ રણમાં મુસાફરોને સુકી રેતી પર પાણીની ભ્રમણા કેમ દેખાય છે?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_002",
+      "type": "socratic_question",
+      "title": "Bending Light",
+      "title_hi": "प्रकाश का मुड़ना",
+      "title_gu": "પ્રકાશનું વાંકું વળવું",
+      "question": "When light passes from water to air at a very steep angle, what happens to the refracted ray as the angle of incidence increases beyond a critical limit?",
+      "question_hi": "जब प्रकाश पानी से हवा में बहुत तीव्र कोण पर गुजरता है, तो आपतन कोण एक क्रांतिक सीमा से अधिक होने पर अपवर्तित किरण का क्या होता है?",
+      "question_gu": "જ્યારે પ્રકાશ પાણીમાંથી હવામાં ખૂબ જ તીવ્ર ખૂણે પસાર થાય છે, ત્યારે આપાતકોણ ચોક્કસ ક્રાંતિક કોણ કરતાં વધી જાય ત્યારે વક્રીભૂત કિરણનું શું થાય છે?",
+      "options": [
+        "It speeds up and escapes along the surface",
+        "It completely reflects back into the water without any transmission",
+        "It stops moving altogether",
+        "It splits into rainbow colors inside the air"
+      ],
+      "options_hi": [
+        "यह तेज हो जाता है और सतह के साथ निकल जाता है",
+        "यह बिना किसी संचरण के पानी में पूरी तरह से वापस परावर्तित हो जाता है",
+        "यह पूरी तरह से रुक जाता है",
+        "यह हवा के अंदर इंद्रधनुष के रंगों में विभाजित हो जाता है"
+      ],
+      "options_gu": [
+        "તે ઝડપી બને છે અને સપાટી સાથે બહાર નીકળી જાય છે",
+        "તે પારગમન વિના સંપૂર્ણપણે પાણીમાં પાછું પરાવર્તિત થાય છે",
+        "તે બિલકુલ ગતિ કરવાનું બંધ કરી દે છે",
+        "તે હવાની અંદર મેઘધનુષ્યના રંગોમાં વિભાજિત થાય છે"
+      ],
+      "correct_index": 1,
+      "explanation": "When light travels from a denser medium to a rarer medium and the angle of incidence exceeds the critical angle, total internal reflection occurs, trapping 100% of the light inside the denser medium.",
+      "explanation_hi": "जब प्रकाश सघन माध्यम से विरल माध्यम में जाता है और आपतन कोण क्रांतिक कोण से अधिक हो जाता है, तो पूर्ण आंतरिक परावर्तन होता है, जिससे 100% प्रकाश सघन माध्यम के अंदर ही रुक जाता है।",
+      "explanation_gu": "જ્યારે પ્રકાશ ઘટ્ટ માધ્યમમાંથી પાતળા માધ્યમમાં પ્રવેશે છે અને આપાતકોણ ક્રાંતિક કોણ કરતાં વધી જાય છે, ત્યારે પૂર્ણ આંતરિક પરાવર્તન થાય છે, જે 100% પ્રકાશને ઘટ્ટ માધ્યમમાં જ જાળવી રાખે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_003",
+      "type": "discovery",
+      "title": "Exploring Refraction & Optical Principles",
+      "title_hi": "अपवर्तन और प्रकाशिकी सिद्धांतों की खोज",
+      "title_gu": "વક્રીભવન અને પ્રકાશીય સિદ્ધાંતોની શોધ",
+      "body": "Ray optics assumes light travels in straight lines (rays) in homogeneous media. Key phenomena include Reflection (law of reflection: i = r), Refraction (Snell's Law: n1 sin i = n2 sin r), Total Internal Reflection (when i > ic, where sin ic = n2/n1), and dispersion through prisms.",
+      "body_hi": "किरण प्रकाशिकी यह मानती है कि प्रकाश समांगी माध्यम में सीधी रेखाओं (किरणों) में चलता है। प्रमुख घटनाओं में परावर्तन (परावर्तन का नियम: i = r), अपवर्तन (स्नेल का नियम: n1 sin i = n2 sin r), पूर्ण आंतरिक परावर्तन (जब i > ic, जहाँ sin ic = n2/n1), और प्रिज्म के माध्यम से विक्षेपण शामिल हैं।",
+      "body_gu": "કિરણ પ્રકાશાશાસ્ત્ર માને છે કે પ્રકાશ સમાન માધ્યમમાં સીધી રેખાઓ (કિરણો) માં ગતિ કરે છે. મુખ્ય ઘટનાઓમાં પરાવર્તન (પરાવર્તનનો નિયમ: i = r), વક્રીભવન (સ્નેલનો નિયમ: n1 sin i = n2 sin r), પૂર્ણ આંતરિક પરાવર્તન (જ્યારે i > ic, જ્યાં sin ic = n2/n1), અને પ્રિઝમ દ્વારા વિખેરણ શામેલ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_004",
+      "type": "theory",
+      "title": "Fundamental Laws of Ray Optics and Refraction",
+      "title_hi": "किरण प्रकाशिकी और अपवर्तन के मूल नियम",
+      "title_gu": "કિરણ પ્રકાશશાસ્ત્ર અને વક્રીભવનના મૂળભૂત નિયમો",
+      "body": "1. **Mirror Formula**: 1/f = 1/v + 1/u, Magnification m = -v/u.\n2. **Refraction at Curved Surface**: (n2/v) - (n1/u) = (n2 - n1)/R.\n3. **Lens Maker's Formula**: 1/f = (n21 - 1) * (1/R1 - 1/R2).\n4. **Lens Formula**: 1/f = 1/v - 1/u, Magnification m = v/u.\n5. **Power of Lens**: P = 1/f (in meters), measured in Dioptres (D).\n6. **Prism Formula**: n = sin((A + Dm)/2) / sin(A/2), where A is prism angle and Dm is minimum deviation.",
+      "body_hi": "1. **दर्पण सूत्र**: 1/f = 1/v + 1/u, आवर्धन m = -v/u।\n2. **वक्र पृष्ठ पर अपवर्तन**: (n2/v) - (n1/u) = (n2 - n1)/R।\n3. **लेंस निर्माता सूत्र**: 1/f = (n21 - 1) * (1/R1 - 1/R2)।\n4. **लेंस सूत्र**: 1/f = 1/v - 1/u, आवर्धन m = v/u।\n5. **लेंस की क्षमता**: P = 1/f (मीटर में), डायोप्टर (D) में मापा जाता है।\n6. **प्रिज्म सूत्र**: n = sin((A + Dm)/2) / sin(A/2), जहाँ A प्रिज्म कोण है और Dm न्यूनतम विचलन है।",
+      "body_gu": "1. **અરીસાનું સૂત્ર**: 1/f = 1/v + 1/u, મોટવણી m = -v/u.\n2. **વક્ર સપાટી પર વક્રીભવન**: (n2/v) - (n1/u) = (n2 - n1)/R.\n3. **લેન્સ બનાવવાનું સૂત્ર (લેન્સ મેકર્સ ફોર્મ્યુલા)**: 1/f = (n21 - 1) * (1/R1 - 1/R2).\n4. **લેન્સનું સૂત્ર**: 1/f = 1/v - 1/u, મોટવણી m = v/u.\n5. **લેન્સનો પાવર**: P = 1/f (મીટરમાં), ડાયોપ્ટર (D) માં માપવામાં આવે છે.\n6. **પ્રિઝમનું સૂત્ર**: n = sin((A + Dm)/2) / sin(A/2), જ્યાં A પ્રિઝમ કોણ છે અને Dm ન્યૂનતમ વિચલન છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_005",
+      "type": "knowledge_check",
+      "title": "Check Point: Lens Maker's Formula",
+      "title_hi": "जाँच बिंदु: लेंस निर्माता का सूत्र",
+      "title_gu": "ચકાસણી બિંદુ: લેન્સ મેકર્સ ફોર્મ્યુલા",
+      "question": "A biconvex lens has radii of curvature 20 cm each. If the refractive index of glass is 1.5, what is its focal length in air?",
+      "question_hi": "एक द्वियोंत्तल लेंस की वक्रता त्रिज्या 20 सेमी है। यदि कांच का अपवर्तनांक 1.5 है, तो हवा में इसकी फोकस दूरी क्या है?",
+      "question_gu": "એક દ્વિ-બહિર્ગોળ લેન્સની વક્રતા ત્રિજ્યા 20 cm છે. જો કાચનો વક્રીભવનાંક 1.5 હોય, તો હવામાં તેની કેન્દ્રલંબાઈ કેટલી હશે?",
+      "options": [
+        "10 cm",
+        "20 cm",
+        "40 cm",
+        "15 cm"
+      ],
+      "options_hi": [
+        "10 सेमी",
+        "20 सेमी",
+        "40 सेमी",
+        "15 सेमी"
+      ],
+      "options_gu": [
+        "10 cm",
+        "20 cm",
+        "40 cm",
+        "15 cm"
+      ],
+      "correct_index": 1,
+      "explanation": "1/f = (1.5 - 1)(1/20 - 1/(-20)) = 0.5 * (2/20) = 1/20. Thus, f = 20 cm.",
+      "explanation_hi": "1/f = (1.5 - 1)(1/20 - 1/(-20)) = 0.5 * (2/20) = 1/20। इसलिए, f = 20 सेमी।",
+      "explanation_gu": "1/f = (1.5 - 1)(1/20 - 1/(-20)) = 0.5 * (2/20) = 1/20. તેથી, f = 20 cm."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_006",
+      "type": "theory",
+      "title": "Optical Instruments: Compound Microscope & Telescope",
+      "title_hi": "प्रकाशिक उपकरण: संयुक्त सूक्ष्मदर्शी और दूरदर्शी",
+      "title_gu": "પ્રકાશીય ઉપકરણો: સંયુક્ત સૂક્ષ્મદર્શક અને ટેલિસ્કોપ",
+      "body": "1. **Compound Microscope**: Consists of an objective (short focal length fo) and eyepiece (fe). Magnification for image at D: m = -(L/fo) * (1 + D/fe).\n2. **Astronomical Telescope**: Consists of an objective (large aperture and large focal length fo) and eyepiece (small fe). Normal adjustment magnification: m = -fo / fe, Tube length L = fo + fe.",
+      "body_hi": "1. **संयुक्त सूक्ष्मदर्शी**: इसमें एक अभिदृश्यक (छोटी फोकस दूरी fo) और नेत्रिका (fe) होती है। स्पष्ट दृष्टि की न्यूनतम दूरी D पर प्रतिबिंब के लिए आवर्धन: m = -(L/fo) * (1 + D/fe)।\n2. **खगोलीय दूरदर्शी**: इसमें एक अभिदृश्यक (बड़ा द्वारक और बड़ी फोकस दूरी fo) और नेत्रिका (छोटी fe) होती है। सामान्य समायोजन आवर्धन: m = -fo / fe, नली की लंबाई L = fo + fe।",
+      "body_gu": "1. **સંયુક્ત સૂક્ષ્મદર્શક (Compound Microscope)**: એક ઓબ્જેક્ટિવ (નાની કેન્દ્રલંબાઈ fo) અને આઇપીસ (fe) ધરાવે છે. D પર પ્રતિબિંબ માટે મોટવણી: m = -(L/fo) * (1 + D/fe).\n2. **ખગોળીય ટેલિસ્કોપ (Astronomical Telescope)**: એક ઓબ્જેક્ટિવ (મોટું દર્પણમુખ અને મોટી કેન્દ્રલંબાઈ fo) અને આઇપીસ (નાની fe) ધરાવે છે. સામાન્ય ગોઠવણ માટે મોટવણી: m = -fo / fe, ટ્યુબ લંબાઈ L = fo + fe."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_007",
+      "type": "knowledge_check",
+      "title": "Check Point: Telescope Magnification",
+      "title_hi": "जाँच बिंदु: दूरदर्शी आवर्धन",
+      "title_gu": "ચકાસણી બિંદુ: ટેલિસ્કોપ મોટવણી",
+      "question": "An astronomical telescope has an objective focal length of 140 cm and eyepiece focal length of 5 cm. What is its magnifying power in normal adjustment?",
+      "question_hi": "एक खगोलीय दूरदर्शी के अभिदृश्यक की फोकस दूरी 140 सेमी और नेत्रिका की फोकस दूरी 5 सेमी है। सामान्य समायोजन में इसकी आवर्धन क्षमता क्या है?",
+      "question_gu": "એક ખગોળીય ટેલિસ્કોપના ઓબ્જેક્ટિવની કેન્દ્રલંબાઈ 140 cm અને આઇપીસની કેન્દ્રલંબાઈ 5 cm છે. સમાન ગોઠવણમાં તેની મોટવણી શક્તિ કેટલી હશે?",
+      "options": [
+        "28",
+        "700",
+        "145",
+        "135"
+      ],
+      "options_hi": [
+        "28",
+        "700",
+        "145",
+        "135"
+      ],
+      "options_gu": [
+        "28",
+        "700",
+        "145",
+        "135"
+      ],
+      "correct_index": 0,
+      "explanation": "Magnifying power m = fo / fe = 140 / 5 = 28.",
+      "explanation_hi": "आवर्धन क्षमता m = fo / fe = 140 / 5 = 28।",
+      "explanation_gu": "મોટવણી શક્તિ m = fo / fe = 140 / 5 = 28."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_008",
+      "type": "theory",
+      "title": "Combination of Thin Lenses & Power",
+      "title_hi": "पतले लेंसों का संयोजन और क्षमता",
+      "title_gu": "પાતળા લેન્સનું સંયોજન અને પાવર",
+      "body": "When two thin lenses of focal length f1 and f2 are placed in contact, equivalent focal length F is given by 1/F = 1/f1 + 1/f2, and net power P = P1 + P2. Total magnification m = m1 * m2.",
+      "body_hi": "जब f1 और f2 फोकस दूरी के दो पतले लेंस संपर्क में रखे जाते हैं, तो तुल्य फोकस दूरी F को 1/F = 1/f1 + 1/f2 द्वारा दर्शाया जाता है, और कुल क्षमता P = P1 + P2 होती है। कुल आवर्धन m = m1 * m2।",
+      "body_gu": "જ્યારે f1 અને f2 કેન્દ્રલંબાઈ વાળા બે પાતળા લેન્સ સંપર્કમાં મૂકવામાં આવે છે, ત્યારે સમતુલ્ય કેન્દ્રલંબાઈ F એ 1/F = 1/f1 + 1/f2 દ્વારા આપવામાં આવે છે, અને કુલ પાવર P = P1 + P2 થાય છે. કુલ મોટવણી m = m1 * m2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_009",
+      "type": "reflection",
+      "title": "Reflecting on Lens Aberrations & Telescope Design",
+      "title_hi": "लेंस विपथन और दूरदर्शी डिजाइन पर विचार",
+      "title_gu": "લેન્સ વિપથન અને ટેલિસ્કોપ ડિઝાઇન પર વિચાર",
+      "body": "Refraction-based lenses suffer from chromatic aberration because light of different colors refracts differently. Reflecting telescopes (like Cassegrain) use parabolic mirrors, completely eliminating chromatic aberration and reducing mechanical weight.",
+      "body_hi": "अपवर्तन आधारित लेंस वर्ण विपथन से ग्रस्त होते हैं क्योंकि विभिन्न रंगों का प्रकाश अलग-अलग अपवर्तित होता है। परावर्ती दूरदर्शी (जैसे कैसग्रेन) परवलयिक दर्पणों का उपयोग करते हैं, जो वर्ण विपथन को पूरी तरह से समाप्त करते हैं और यांत्रिक भार को कम करते हैं।",
+      "body_gu": "વક્રીભવન-આધારિત લેન્સ ક્રોમેટિક એબરેશન (વર્ણ વિપથન) થી પીડાય છે કારણ કે વિવિધ રંગોનો પ્રકાશ જુદી જુદી રીતે વક્રીભૂત થાય છે. પરાવર્તક ટેલિસ્કોપ (જેમ કે કેસેગ્રેઇન) પેરાબોલિક અરીસાનો ઉપયોગ કરે છે, જે ક્રોમેટિક એબરેશનને સંપૂર્ણપણે દૂર કરે છે અને વજન ઘટાડે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_010",
+      "type": "connection",
+      "title": "Real-World Application: Endoscopy & Fiber Optics",
+      "title_hi": "वास्तविक दुनिया का अनुप्रयोग: एंडोस्कोपी और फाइबर ऑप्टिक्स",
+      "title_gu": "વાસ્તવિક દુનિયાની એપ્લિકેશન: એન્ડોસ્કોપી અને ફાઇબર ઓપ્ટિક્સ",
+      "body": "Optical fibers use Total Internal Reflection (TIR) with a high-index core and low-index cladding. In medicine, endoscopes use optical fiber bundles to project internal body organs onto external screens cleanly without thermal damage.",
+      "body_hi": "ऑप्टिकल फाइबर उच्च अपवर्तनांक कोर और निम्न अपवर्तनांक क्लैडिंग के साथ पूर्ण आंतरिक परावर्तन (TIR) का उपयोग करते हैं। चिकित्सा में, एंडोस्कोप बिना तापीय क्षति के शरीर के आंतरिक अंगों को बाहरी स्क्रीन पर देखने के लिए ऑप्टिकल फाइबर बंडलों का उपयोग करते हैं।",
+      "body_gu": "ઓપ્ટિકલ ફાઇબર ઉચ્ચ વક્રીભવનાંક કોર અને નીચા વક્રીભવનાંક ક્લેડિંગ સાથે પૂર્ણ આંતરિક પરાવર્તન (TIR) નો ઉપયોગ કરે છે. દવામાં, એન્ડોસ્કોપ ઉષ્મીય નુકસાન પહોંચાડ્યા વિના શરીરના આંતરિક અંગોને બહારની સ્ક્રીન પર જોવા માટે ઓપ્ટિકલ ફાઇબર બંડલનો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_011",
+      "type": "mastery",
+      "title": "Summary of Core Ray Optics Principles",
+      "title_hi": "मुख्य किरण प्रकाशिकी सिद्धांतों का सारांश",
+      "title_gu": "મુખ્ય કિરણ પ્રકાશશાસ્ત્ર સિદ્ધાંતોનો સારાંશ",
+      "body": "You have mastered the foundations of Ray Optics: Cartesian sign conventions, Mirror and Lens formulas, Refraction at spherical surfaces, Prism deviation, TIR applications, and Optical Instruments design.",
+      "body_hi": "आपने किरण प्रकाशिकी की नींव में महारत हासिल कर ली है: कार्टेशियन चिह्न परिपाटी, दर्पण और लेंस सूत्र, गोलीय पृष्ठों पर अपवर्तन, प्रिज्म विचलन, TIR अनुप्रयोग, और प्रकाशिक उपकरणों का डिज़ाइन।",
+      "body_gu": "તમે કિરણ પ્રકાશશાસ્ત્રના પાયામાં મહારત મેળવી લીધી છે: કાર્ટેઝિયન સંજ્ઞા પ્રણાલી, અરીસા અને લેન્સના સૂત્રો, ગોળાકાર સપાટીઓ પર વક્રીભવન, પ્રિઝમ વિચલન, TIR ના ઉપયોગો અને પ્રકાશીય સાધનોની ડિઝાઇન."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_012",
+      "type": "mcq",
+      "title": "NCERT 9.1: Concave Mirror Image Position",
+      "title_hi": "NCERT 9.1: अवतल दर्पण प्रतिबिंब स्थिति",
+      "title_gu": "NCERT 9.1: અંતર્ગોળ અરીસાની પ્રતિબિંબ સ્થિતિ",
+      "question": "A small candle 2.5 cm in size is placed at 27 cm in front of a concave mirror of radius of curvature 36 cm. At what distance from the mirror should a screen be placed to obtain a sharp image?",
+      "question_hi": "2.5 सेमी आकार की एक छोटी मोमबत्ती 36 सेमी वक्रता त्रिज्या वाले अवतल दर्पण के सामने 27 सेमी की दूरी पर रखी गई है। स्पष्ट प्रतिबिंब प्राप्त करने के लिए दर्पण से कितनी दूरी पर पर्दा रखा जाना चाहिए?",
+      "question_gu": "2.5 cm કદની નાની મીણબત્તી 36 cm વક્રતા ત્રિજ્યા ધરાવતા અંતર્ગોળ અરીસા સામે 27 cm અંતરે મુકેલ છે. સ્પષ્ટ પ્રતિબિંબ મેળવવા માટે અરીસાથી કેટલા અંતરે સ્ક્રીન રાખવી જોઈએ?",
+      "options": [
+        "-54 cm",
+        "-36 cm",
+        "-27 cm",
+        "-18 cm"
+      ],
+      "options_hi": [
+        "-54 सेमी",
+        "-36 सेमी",
+        "-27 सेमी",
+        "-18 सेमी"
+      ],
+      "options_gu": [
+        "-54 cm",
+        "-36 cm",
+        "-27 cm",
+        "-18 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "f = R/2 = -18 cm. u = -27 cm. Using mirror formula 1/v + 1/u = 1/f => 1/v = 1/(-18) - 1/(-27) = -1/54 => v = -54 cm.",
+      "explanation_hi": "f = R/2 = -18 सेमी। u = -27 सेमी। दर्पण सूत्र 1/v + 1/u = 1/f का उपयोग करने पर => 1/v = 1/(-18) - 1/(-27) = -1/54 => v = -54 सेमी।",
+      "explanation_gu": "f = R/2 = -18 cm. u = -27 cm. અરીસાના સૂત્ર 1/v + 1/u = 1/f નો ઉપયોગ કરતા => 1/v = 1/(-18) - 1/(-27) = -1/54 => v = -54 cm."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_013",
+      "type": "mcq",
+      "title": "NCERT 9.1: Concave Mirror Image Height",
+      "title_hi": "NCERT 9.1: अवतल दर्पण प्रतिबिंब ऊंचाई",
+      "title_gu": "NCERT 9.1: અંતર્ગોળ અરીસાની પ્રતિબિંબ ઊંચાઈ",
+      "question": "In NCERT 9.1 (u = -27 cm, v = -54 cm, object height = 2.5 cm), what is the height and nature of the image formed?",
+      "question_hi": "NCERT 9.1 में (u = -27 सेमी, v = -54 सेमी, वस्तु की ऊंचाई = 2.5 सेमी), बने प्रतिबिंब की ऊंचाई और प्रकृति क्या है?",
+      "question_gu": "NCERT 9.1 માં (u = -27 cm, v = -54 cm, વસ્તુ ઊંચાઈ = 2.5 cm), પ્રતિબિંબની ઊંચાઈ અને પ્રકાર શું છે?",
+      "options": [
+        "-5.0 cm, Real and Inverted",
+        "+5.0 cm, Virtual and Erect",
+        "-2.5 cm, Real and Inverted",
+        "+2.5 cm, Virtual and Erect"
+      ],
+      "options_hi": [
+        "-5.0 सेमी, वास्तविक और उल्टा",
+        "+5.0 सेमी, आभासी और सीधा",
+        "-2.5 सेमी, वास्तविक और उल्टा",
+        "+2.5 सेमी, आभासी और सीधा"
+      ],
+      "options_gu": [
+        "-5.0 cm, વાસ્તવિક અને ઉલટું",
+        "+5.0 cm, આભાસી અને ચત્તું",
+        "-2.5 cm, વાસ્તવિક અને ઉલટું",
+        "+2.5 cm, આભાસી અને ચત્તું"
+      ],
+      "correct_index": 0,
+      "explanation": "Magnification m = -v/u = -(-54)/(-27) = -2. Image height h' = m * h = -2 * 2.5 cm = -5.0 cm. Negative sign indicates real and inverted image.",
+      "explanation_hi": "आवर्धन m = -v/u = -(-54)/(-27) = -2। प्रतिबिंब की ऊंचाई h' = m * h = -2 * 2.5 सेमी = -5.0 सेमी। ऋणात्मक चिह्न वास्तविक और उल्टे प्रतिबिंब को दर्शाता है।",
+      "explanation_gu": "મોટવણી m = -v/u = -(-54)/(-27) = -2. પ્રતિબિંબ ઊંચાઈ h' = m * h = -2 * 2.5 cm = -5.0 cm. ઋણ નિશાની દર્શાવે છે કે પ્રતિબિંબ વાસ્તવિક અને ઉલટું છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_014",
+      "type": "mcq",
+      "title": "NCERT 9.2: Convex Mirror Image Location",
+      "title_hi": "NCERT 9.2: उत्तल दर्पण प्रतिबिंब की स्थिति",
+      "title_gu": "NCERT 9.2: બહિર્ગોળ અરીસાના પ્રતિબિંબનું સ્થાન",
+      "question": "A 4.5 cm needle is placed 12 cm away from a convex mirror of focal length 15 cm. Give the location of the image.",
+      "question_hi": "4.5 सेमी लंबी एक सुई 15 सेमी फोकस दूरी वाले उत्तल दर्पण से 12 सेमी की दूरी पर रखी है। प्रतिबिंब की स्थिति बताइए।",
+      "question_gu": "4.5 cm ની સોય 15 cm કેન્દ્રલંબાઈ વાળા બહિર્ગોળ અરીસાથી 12 cm દૂર મૂકેલી છે. પ્રતિબિંબનું સ્થાન જણાવો.",
+      "options": [
+        "+6.67 cm behind mirror",
+        "-6.67 cm in front of mirror",
+        "+8.57 cm behind mirror",
+        "-8.57 cm in front of mirror"
+      ],
+      "options_hi": [
+        "दर्पण के पीछे +6.67 सेमी",
+        "दर्पण के आगे -6.67 सेमी",
+        "दर्पण के पीछे +8.57 सेमी",
+        "दर्पण के आगे -8.57 सेमी"
+      ],
+      "options_gu": [
+        "અરીસાની પાછળ +6.67 cm",
+        "અરીસાની આગળ -6.67 cm",
+        "અરીસાની પાછળ +8.57 cm",
+        "અરીસાની આગળ -8.57 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "u = -12 cm, f = +15 cm. 1/v = 1/f - 1/u = 1/15 - 1/(-12) = 1/15 + 1/12 = 9/60 = 3/20. Thus v = 20/3 = +6.67 cm (virtual image behind the mirror).",
+      "explanation_hi": "u = -12 सेमी, f = +15 सेमी। 1/v = 1/f - 1/u = 1/15 - 1/(-12) = 1/15 + 1/12 = 9/60 = 3/20। इसलिए v = 20/3 = +6.67 सेमी (दर्पण के पीछे आभासी प्रतिबिंब)।",
+      "explanation_gu": "u = -12 cm, f = +15 cm. 1/v = 1/f - 1/u = 1/15 - 1/(-12) = 1/15 + 1/12 = 9/60 = 3/20. તેથી v = 20/3 = +6.67 cm (અરીસાની પાછળ આભાસી પ્રતિબિંબ)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_015",
+      "type": "mcq",
+      "title": "NCERT 9.3: Apparent Depth and Refractive Index",
+      "title_hi": "NCERT 9.3: आभासी गहराई और अपवर्तनांक",
+      "title_gu": "NCERT 9.3: આભાસી ઊંડાઈ અને વક્રીભવનાંક",
+      "question": "A tank is filled with water to a height of 12.5 cm. The apparent depth of a needle lying at the bottom of the tank is measured by a microscope to be 9.4 cm. What is the refractive index of water?",
+      "question_hi": "एक टैंक में 12.5 सेमी की ऊंचाई तक पानी भरा है। टैंक के पैंदे में पड़ी सुई की आभासी गहराई सूक्ष्मदर्शी द्वारा 9.4 सेमी मापी जाती है। पानी का अपवर्तनांक क्या है?",
+      "question_gu": "એક ટાંકી 12.5 cm ની ઊંચાઈ સુધી પાણીથી ભરેલી છે. ટાંકીના તળિયે પડેલી સોયની આભાસી ઊંડાઈ માઇક્રોસ્કોપ વડે માપતા 9.4 cm મળે છે. પાણીનો વક્રીભવનાંક કેટલો હશે?",
+      "options": [
+        "1.33",
+        "1.50",
+        "1.25",
+        "1.41"
+      ],
+      "options_hi": [
+        "1.33",
+        "1.50",
+        "1.25",
+        "1.41"
+      ],
+      "options_gu": [
+        "1.33",
+        "1.50",
+        "1.25",
+        "1.41"
+      ],
+      "correct_index": 0,
+      "explanation": "Refractive index n = Real Depth / Apparent Depth = 12.5 / 9.4 ≈ 1.33.",
+      "explanation_hi": "अपवर्तनांक n = वास्तविक गहराई / आभासी गहराई = 12.5 / 9.4 ≈ 1.33।",
+      "explanation_gu": "વક્રીભવનાંક n = વાસ્તવિક ઊંડાઈ / આભાસી ઊંડાઈ = 12.5 / 9.4 ≈ 1.33."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_016",
+      "type": "mcq",
+      "title": "NCERT 9.3: Shift in Microscope Focus",
+      "title_hi": "NCERT 9.3: सूक्ष्मदर्शी फोकस में विस्थापन",
+      "title_gu": "NCERT 9.3: માઇક્રોસ્કોપ ફોકસમાં સ્થાનાંતર",
+      "question": "If water is replaced by a liquid of refractive index 1.63 up to the same height (12.5 cm) in NCERT 9.3, by what distance must the microscope be moved to focus on the needle again?",
+      "question_hi": "यदि NCERT 9.3 में पानी को उसी ऊंचाई (12.5 सेमी) तक 1.63 अपवर्तनांक वाले द्रव से बदल दिया जाए, तो सुई पर पुनः फोकस करने के लिए सूक्ष्मदर्शी को कितनी दूरी पर खिसकाना होगा?",
+      "question_gu": "જો NCERT 9.3 માં પાણીને બદલે 1.63 વક્રીભવનાંક ધરાવતું પ્રવાહી તેટલી જ ઊંચાઈ (12.5 cm) સુધી ભરવામાં આવે, તો સોય પર ફરીથી ફોકસ કરવા માટે માઇક્રોસ્કોપને કેટલું ખસેડવું પડશે?",
+      "options": [
+        "1.73 cm upward",
+        "1.73 cm downward",
+        "0.87 cm upward",
+        "0.87 cm downward"
+      ],
+      "options_hi": [
+        "1.73 सेमी ऊपर",
+        "1.73 सेमी नीचे",
+        "0.87 सेमी ऊपर",
+        "0.87 सेमी नीचे"
+      ],
+      "options_gu": [
+        "1.73 cm ઉપરની તરફ",
+        "1.73 cm નીચેની તરફ",
+        "0.87 cm ઉપરની તરફ",
+        "0.87 cm નીચેની તરફ"
+      ],
+      "correct_index": 0,
+      "explanation": "New apparent depth = 12.5 / 1.63 = 7.67 cm. Previous apparent depth was 9.4 cm. Difference = 9.4 - 7.67 = 1.73 cm. So microscope must be moved 1.73 cm up.",
+      "explanation_hi": "नई आभासी गहराई = 12.5 / 1.63 = 7.67 सेमी। पिछली आभासी गहराई 9.4 सेमी थी। अंतर = 9.4 - 7.67 = 1.73 सेमी। अतः सूक्ष्मदर्शी को 1.73 सेमी ऊपर खिसकाना होगा।",
+      "explanation_gu": "નવી આભાસી ઊંડાઈ = 12.5 / 1.63 = 7.67 cm. અગાઉની આભાસી ઊંડાઈ 9.4 cm હતી. તફાવત = 9.4 - 7.67 = 1.73 cm. તેથી માઇક્રોસ્કોપને 1.73 cm ઉપર ખસેડવું પડશે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_017",
+      "type": "mcq",
+      "title": "NCERT 9.5: Light Emerging Area at Water Surface",
+      "title_hi": "NCERT 9.5: पानी की सतह पर प्रकाश निर्गत क्षेत्रफल",
+      "title_gu": "NCERT 9.5: પાણીની સપાટી પર પ્રકાશ બહાર નીકળતું ક્ષેત્રફળ",
+      "question": "A small bulb is placed at the bottom of a tank containing water to a depth of 80 cm. What is the area of the surface of water through which light from the bulb can emerge out? (n of water = 4/3)",
+      "question_hi": "80 सेमी गहराई वाले पानी से भरे टैंक के पैंदे में एक छोटा बल्ब रखा गया है। पानी की सतह का वह क्षेत्रफल क्या है जिससे बल्ब से प्रकाश बाहर निकल सकता है? (पानी का n = 4/3)",
+      "question_gu": "80 cm ઊંડાઈ ધરાવતી પાણીની ટાંકીના તળિયે એક નાનો બલ્બ મૂકેલો છે. પાણીની સપાટીના તે વિસ્તારનું ક્ષેત્રફળ કેટલું હશે જેમાંથી બલ્બમાંથી આવતો પ્રકાશ બહાર નીકળી શકે? (પાણીનો n = 4/3)",
+      "options": [
+        "2.61 m²",
+        "5.22 m²",
+        "1.30 m²",
+        "3.14 m²"
+      ],
+      "options_hi": [
+        "2.61 मीटर²",
+        "5.22 मीटर²",
+        "1.30 मीटर²",
+        "3.14 मीटर²"
+      ],
+      "options_gu": [
+        "2.61 m²",
+        "5.22 m²",
+        "1.30 m²",
+        "3.14 m²"
+      ],
+      "correct_index": 0,
+      "explanation": "Critical angle ic is given by sin ic = 1/n = 3/4. Radius r = h * tan ic = h * (sin ic / sqrt(1 - sin^2 ic)) = 0.8 * (3/sqrt(7)) m. Area A = pi * r^2 = pi * (0.64 * 9 / 7) ≈ 2.61 m².",
+      "explanation_hi": "क्रांतिक कोण ic का मान sin ic = 1/n = 3/4 है। त्रिज्या r = h * tan ic = 0.8 * (3/sqrt(7)) मीटर। क्षेत्रफल A = pi * r^2 ≈ 2.61 मीटर²।",
+      "explanation_gu": "ક્રાંતિક કોણ ic માટે sin ic = 1/n = 3/4. ત્રિજ્યા r = h * tan ic = 0.8 * (3/sqrt(7)) m. ક્ષેત્રફળ A = pi * r^2 ≈ 2.61 m²."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_018",
+      "type": "mcq",
+      "title": "NCERT 9.6: Refractive Index of Prism",
+      "title_hi": "NCERT 9.6: प्रिज्म का अपवर्तनांक",
+      "title_gu": "NCERT 9.6: પ્રિઝમનો વક્રીભવનાંક",
+      "question": "A prism is made of glass of unknown refractive index. A parallel beam of light is incident on a face of the prism. The angle of minimum deviation is measured to be 40°. If the refracting angle of the prism is 60°, what is the refractive index of the glass?",
+      "question_hi": "अज्ञात अपवर्तनांक के कांच से एक प्रिज्म बनाया गया है। प्रकाश की एक समानांतर किरण प्रिज्म के फलक पर आपतित होती है। न्यूनतम विचलन कोण 40° मापा जाता है। यदि प्रिज्म का अपवर्तन कोण 60° है, तो कांच का अपवर्तनांक क्या है?",
+      "question_gu": "અજ્ઞાત વક્રીભવનાંક ધરાવતા કાચમાંથી એક પ્રિઝમ બનાવેલ છે. પ્રકાશનું સમાંતર કિરણ પ્રિઝમના ફેસ પર આપાત થાય છે. ન્યૂનતમ વિચલન કોણ 40° માપવામાં આવે છે. જો પ્રિઝમનો વક્રીભવન કોણ 60° હોય, તો કાચનો વક્રીભવનાંક કેટલો હશે?",
+      "options": [
+        "1.532",
+        "1.414",
+        "1.600",
+        "1.333"
+      ],
+      "options_hi": [
+        "1.532",
+        "1.414",
+        "1.600",
+        "1.333"
+      ],
+      "options_gu": [
+        "1.532",
+        "1.414",
+        "1.600",
+        "1.333"
+      ],
+      "correct_index": 0,
+      "explanation": "n = sin((A + Dm)/2) / sin(A/2) = sin((60° + 40°)/2) / sin(30°) = sin(50°) / 0.5 = 0.7660 / 0.5 = 1.532.",
+      "explanation_hi": "n = sin((A + Dm)/2) / sin(A/2) = sin(50°) / sin(30°) = 0.7660 / 0.5 = 1.532।",
+      "explanation_gu": "n = sin((A + Dm)/2) / sin(A/2) = sin(50°) / sin(30°) = 0.7660 / 0.5 = 1.532."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_019",
+      "type": "mcq",
+      "title": "NCERT 9.7: Double Convex Lens Radius of Curvature",
+      "title_hi": "NCERT 9.7: द्वियोंत्तल लेंस की वक्रता त्रिज्या",
+      "title_gu": "NCERT 9.7: દ્વિ-બહિર્ગોળ લેન્સની વક્રતા ત્રિજ્યા",
+      "question": "Double-convex lenses are to be manufactured from a glass of refractive index 1.55, with both faces of the same radius of curvature. What is the radius of curvature required if the focal length is to be 20 cm?",
+      "question_hi": "1.55 अपवर्तनांक वाले कांच से दोनों फलकों की समान वक्रता त्रिज्या वाले द्वियोंत्तल लेंस बनाए जाने हैं। यदि फोकस दूरी 20 सेमी होनी है, तो आवश्यक वक्रता त्रिज्या क्या है?",
+      "question_gu": "1.55 વક્રીભવનાંક વાળા કાચમાંથી બંને સપાટીઓની સમાન વક્રતા ત્રિજ્યા ધરાવતા દ્વિ-બહિર્ગોળ લેન્સ બનાવવાના છે. જો કેન્દ્રલંબાઈ 20 cm રાખવી હોય તો જરૂરી વક્રતા ત્રિજ્યા કેટલી હોવી જોઈએ?",
+      "options": [
+        "22 cm",
+        "11 cm",
+        "20 cm",
+        "10 cm"
+      ],
+      "options_hi": [
+        "22 सेमी",
+        "11 सेमी",
+        "20 सेमी",
+        "10 सेमी"
+      ],
+      "options_gu": [
+        "22 cm",
+        "11 cm",
+        "20 cm",
+        "10 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "1/f = (n - 1)(2/R) => 1/20 = (1.55 - 1)(2/R) = 0.55 * 2 / R = 1.1 / R => R = 22 cm.",
+      "explanation_hi": "1/f = (n - 1)(2/R) => 1/20 = (1.55 - 1)(2/R) = 1.1 / R => R = 22 सेमी।",
+      "explanation_gu": "1/f = (n - 1)(2/R) => 1/20 = (1.55 - 1)(2/R) = 1.1 / R => R = 22 cm."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_020",
+      "type": "mcq",
+      "title": "NCERT 9.8: Converging Beam Intercepted by Convex Lens",
+      "title_hi": "NCERT 9.8: उत्तल लेंस द्वारा अभिसारी किरण पुंज",
+      "title_gu": "NCERT 9.8: બહિર્ગોળ લેન્સ દ્વારા અભિસારિત કિરણપુંજ",
+      "question": "A beam of light converges at a point P. Now a convex lens of focal length 20 cm is placed in the path of the beam 12 cm from P. At what point does the beam converge?",
+      "question_hi": "प्रकाश की एक किरण पुंज एक बिंदु P पर अभिसरित होती है। अब 20 सेमी फोकस दूरी वाले एक उत्तल लेंस को P से 12 सेमी दूरी पर किरण के मार्ग में रखा जाता है। अब किरण पुंज किस बिंदु पर अभिसरित होती है?",
+      "question_gu": "પ્રકાશનું એક કિરણપુંજ બિંદુ P પર અભિસારિત થાય છે. હવે 20 cm કેન્દ્રલંબાઈ ધરાવતા બહિર્ગોળ લેન્સને P થી 12 cm ના અંતરે કિરણપુંજના માર્ગમાં મૂકવામાં આવે છે. કિરણપુંજ હવે કયા બિંદુએ અભિસારિત થશે?",
+      "options": [
+        "7.5 cm behind the lens",
+        "15 cm behind the lens",
+        "30 cm behind the lens",
+        "10 cm behind the lens"
+      ],
+      "options_hi": [
+        "लेंस के पीछे 7.5 सेमी",
+        "लेंस के पीछे 15 सेमी",
+        "लेंस के पीछे 30 सेमी",
+        "लेंस के पीछे 10 सेमी"
+      ],
+      "options_gu": [
+        "લેન્સની પાછળ 7.5 cm",
+        "લેન્સની પાછળ 15 cm",
+        "લેન્સની પાછળ 30 cm",
+        "લેન્સની પાછળ 10 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "Here virtual object u = +12 cm, f = +20 cm. Lens formula: 1/v - 1/u = 1/f => 1/v = 1/20 + 1/12 = 8/60 = 2/15 => v = +7.5 cm behind the lens.",
+      "explanation_hi": "यहाँ आभासी वस्तु u = +12 सेमी, f = +20 सेमी। लेंस सूत्र: 1/v - 1/u = 1/f => 1/v = 1/20 + 1/12 = 8/60 = 2/15 => v = +7.5 सेमी लेंस के पीछे।",
+      "explanation_gu": "અહીં આભાસી વસ્તુ u = +12 cm, f = +20 cm. લેન્સનું સૂત્ર: 1/v - 1/u = 1/f => 1/v = 1/20 + 1/12 = 8/60 = 2/15 => v = +7.5 cm લેન્સની પાછળ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_021",
+      "type": "mcq",
+      "title": "NCERT 9.8: Converging Beam Intercepted by Concave Lens",
+      "title_hi": "NCERT 9.8: अवतल लेंस द्वारा अभिसारी किरण पुंज",
+      "title_gu": "NCERT 9.8: અંતર્ગોળ લેન્સ દ્વારા અભિસારિત કિરણપુંજ",
+      "question": "If a concave lens of focal length 16 cm is placed in the path of the converging beam 12 cm from P (from NCERT 9.8), at what point does the beam converge?",
+      "question_hi": "यदि P से 12 सेमी दूरी पर अभिसारी किरण पुंज के मार्ग में 16 सेमी फोकस दूरी का एक अवतल लेंस रखा जाए (NCERT 9.8 से), तो किरण पुंज किस बिंदु पर अभिसरित होती है?",
+      "question_gu": "જો 16 cm કેન્દ્રલંબાઈ ધરાવતા અંતર્ગોળ લેન્સને P થી 12 cm ના અંતરે (NCERT 9.8 મુજબ) મૂકવામાં આવે, તો કિરણપુંજ કયા બિંદુએ અભિસારિત થશે?",
+      "options": [
+        "48 cm behind the lens",
+        "24 cm behind the lens",
+        "36 cm behind the lens",
+        "12 cm behind the lens"
+      ],
+      "options_hi": [
+        "लेंस के पीछे 48 सेमी",
+        "लेंस के पीछे 24 सेमी",
+        "लेंस के पीछे 36 सेमी",
+        "लेंस के पीछे 12 सेमी"
+      ],
+      "options_gu": [
+        "લેન્સની પાછળ 48 cm",
+        "લેન્સની પાછળ 24 cm",
+        "લેન્સની પાછળ 36 cm",
+        "લેન્સની પાછળ 12 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "Virtual object u = +12 cm, f = -16 cm. 1/v - 1/u = 1/f => 1/v = 1/(-16) + 1/12 = (-3 + 4)/48 = 1/48 => v = +48 cm behind the lens.",
+      "explanation_hi": "आभासी वस्तु u = +12 सेमी, f = -16 सेमी। 1/v - 1/u = 1/f => 1/v = -1/16 + 1/12 = 1/48 => v = +48 सेमी लेंस के पीछे।",
+      "explanation_gu": "આભાસી વસ્તુ u = +12 cm, f = -16 cm. 1/v - 1/u = 1/f => 1/v = -1/16 + 1/12 = 1/48 => v = +48 cm લેન્સની પાછળ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_022",
+      "type": "mcq",
+      "title": "NCERT 9.10: Focal Length of Lens Combination",
+      "title_hi": "NCERT 9.10: लेंस संयोजन की फोकस दूरी",
+      "title_gu": "NCERT 9.10: લેન્સ સંયોજનની કેન્દ્રલંબાઈ",
+      "question": "What is the focal length of a combination of a convex lens of focal length 30 cm in contact with a concave lens of focal length 20 cm?",
+      "question_hi": "30 सेमी फोकस दूरी वाले उत्तल लेंस तथा 20 सेमी फोकस दूरी वाले अवतल लेंस के संपर्क संयोजन की फोकस दूरी क्या है?",
+      "question_gu": "30 cm કેન્દ્રલંબાઈ વાળા બહિર્ગોળ લેન્સ અને 20 cm કેન્દ્રલંબાઈ વાળા અંતર્ગોળ લેન્સના સંપર્કમાં રહેલા સંયોજનની કેન્દ્રલંબાઈ કેટલી હશે?",
+      "options": [
+        "-60 cm (Diverging)",
+        "+60 cm (Converging)",
+        "-12 cm (Diverging)",
+        "+12 cm (Converging)"
+      ],
+      "options_hi": [
+        "-60 सेमी (अपसारी)",
+        "+60 सेमी (अभिसारी)",
+        "-12 सेमी (अपसारी)",
+        "+12 सेमी (अभिसारी)"
+      ],
+      "options_gu": [
+        "-60 cm (અપસારી)",
+        "+60 cm (અભિસારી)",
+        "-12 cm (અપસારી)",
+        "+12 cm (અભિસારી)"
+      ],
+      "correct_index": 0,
+      "explanation": "f1 = +30 cm, f2 = -20 cm. 1/F = 1/f1 + 1/f2 = 1/30 - 1/20 = -1/60 => F = -60 cm. The system behaves as a diverging lens.",
+      "explanation_hi": "f1 = +30 सेमी, f2 = -20 सेमी। 1/F = 1/30 - 1/20 = -1/60 => F = -60 सेमी। यह निकाय अपसारी लेंस की तरह व्यवहार करता है।",
+      "explanation_gu": "f1 = +30 cm, f2 = -20 cm. 1/F = 1/30 - 1/20 = -1/60 => F = -60 cm. આ સિસ્ટમ અપસારી લેન્સ તરીકે વર્તે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH9_023",
+      "type": "true_false",
+      "title": "NCERT Conceptual: Refractive Index and Wavelength",
+      "title_hi": "NCERT अवधारणात्मक: अपवर्तनांक और तरंगदैर्ध्य",
+      "title_gu": "NCERT સૈદ્ધાંતિક: વક્રીભવનાંક અને તરંગલંબાઈ",
+      "question": "State True or False: The refractive index of glass is independent of the wavelength of incident light.",
+      "question_hi": "सत्य या असत्य बताएं: कांच का अपवर्तनांक आपतित प्रकाश की तरंगदैर्ध्य पर निर्भर नहीं करता है।",
+      "question_gu": "સત્ય કે અસત્ય જણાવો: કાચનો વક્રીભવનાંક આપાત પ્રકાશની તરંગલંબાઈ પર આધાર રાખતો નથી.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સત્ય",
+        "અસત્ય"
+      ],
+      "correct_index": 1,
+      "explanation": "False. Refractive index depends on wavelength according to Cauchy's relation n = A + B/lambda^2. Shorter wavelengths (violet) experience higher refractive index than longer wavelengths (red).",
+      "explanation_hi": "असत्य। अपवर्तनांक कॉची के संबंध n = A + B/lambda^2 के अनुसार तरंगदैर्ध्य पर निर्भर करता है। छोटी तरंगदैर्ध्य (बैंगनी) को लंबी तरंगदैर्ध्य (लाल) की तुलना में अधिक अपवर्तनांक का अनुभव होता है।",
+      "explanation_gu": "અસત્ય. વક્રીભવનાંક કોચીના સંબંધ n = A + B/lambda^2 મુજબ તરંગલંબાઈ પર આધાર રાખે છે. નાની તરંગલંબાઈ (વાયોલેટ) મોટી તરંગલંબાઈ (લાલ) કરતાં વધુ વક્રીભવનાંક અનુભવે છે."
+    }
+  ]
+}

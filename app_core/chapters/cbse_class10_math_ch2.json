@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "id": "cbse_class10_math_ch2",
+    "title": "Chapter 2: Polynomials",
+    "subject": "Mathematics",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the geometric meaning of zeroes of a polynomial",
+      "Establish the relationship between zeroes and coefficients of quadratic polynomials",
+      "Apply the division algorithm for polynomials"
+    ],
+    "core_concepts": [
+      "DICT_MATH_POLYNOMIAL",
+      "DICT_MATH_ZERO",
+      "DICT_MATH_DEGREE"
+    ],
+    "ai_context": {
+      "learning_goal": "Master polynomial classification, graphical interpretation of zeroes, coefficient relationships, and algebraic division.",
+      "common_misconceptions": [
+        "Confusing the zeroes of a polynomial with its coefficients",
+        "Believing a polynomial of degree n can have more than n real zeroes",
+        "Ignoring signs when applying division algorithms or factorization"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Archery Mystery",
+      "body": "Imagine you are an archer designing a robotic bow and arrow for a medieval tournament. When you release the arrow, it doesn't travel in a straight flat line; it arcs gracefully through the air, climbs to a peak, and then gravity pulls it down to strike the target. To program the robot's targeting computer, engineers cannot just guess the path. They use a mathematical curve that starts with a squared term—a parabola. Long before computers, ancient architects used these exact mathematical curves to design soaring domes and aqueducts. The secret language behind these shapes, and the engine of modern graphics and physics engines, is the [DICT_MATH_POLYNOMIAL|polynomial]. Let us unlock how these expressions work.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our hook, what shape does a standard quadratic trajectory resemble?",
+      "options": [
+        "A straight vertical line",
+        "A parabola or curve",
+        "A perfect circle"
+      ],
+      "correct_index": 1,
+      "explanation": "Objects thrown in the air travel along a parabolic curve governed by quadratic terms.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is a Polynomial?",
+      "body": "At its core, a [DICT_MATH_POLYNOMIAL|polynomial] is an algebraic expression consisting of variables and coefficients, involving only the operations of addition, subtraction, multiplication, and non-negative integer exponentiation of variables. For example, $2x^2 - 3x + 5$ is a polynomial in variable $x$. The highest power of the variable in a polynomial is called its [DICT_MATH_DEGREE|degree]. If the degree is 1, it is linear; if 2, quadratic; if 3, cubic. Crucially, a variable inside a polynomial can never have a fractional or negative exponent (like $\\sqrt{x}$ or $x^{-1}$), nor can it reside in a denominator. Understanding this strict definition ensures we know precisely what mathematical tools we are allowed to use.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: Degree Identification",
+      "body": "What is the degree of the polynomial $p(x) = 5x^3 - 2x^7 + x - 9$?",
+      "options": [
+        "3",
+        "7",
+        "5"
+      ],
+      "correct_index": 1,
+      "explanation": "The degree is the highest power of the variable present, which is 7 in the term $-2x^7$.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Visualizing Expressions",
+      "body": "Ask students to write down three algebraic expressions. Have them test each against the rule: Are any exponents negative? Are any variables under square roots? If yes, it's not a polynomial!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Geometric Meaning of Zeroes",
+      "body": "What does it mean to find a [DICT_MATH_ZERO|zero] of a polynomial? Algebraically, it is the input value $x$ that makes the entire polynomial evaluate to zero ($p(x) = 0$). Geometrically, if we plot $y = p(x)$ on a Cartesian coordinate plane, the zeroes of the polynomial are precisely the $x$-coordinates of the points where the graph intersects the horizontal $x$-axis. For a linear polynomial $ax + b$, the graph is a straight line that crosses the $x$-axis exactly once, meaning it has one zero. For a quadratic polynomial, the graph is a parabola that can intersect the $x$-axis at two points, one point, or zero points. Thus, a polynomial of degree $n$ can have at most $n$ zeroes.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If the graph of a polynomial intersects the x-axis at exactly 3 distinct points, what is the minimum possible degree of that polynomial?",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 2,
+      "explanation": "Since the graph crosses the x-axis 3 times, there are 3 distinct real zeroes, implying the degree must be at least 3.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Deep Dive: Graphical Behavior of Quadratics",
+      "body": "Let us examine quadratic polynomials of the form $p(x) = ax^2 + bx + c$ where $a \\neq 0$. The graph of this polynomial is a parabola. If $a > 0$, the parabola opens upwards (shaped like a smile), and if $a < 0$, it opens downwards (shaped like a frown). Depending on the discriminant ($b^2 - 4ac$), the parabola may cut the $x$-axis in two distinct places (two distinct zeroes), touch the $x$-axis at one tangent point (two equal zeroes), or miss the $x$-axis entirely (no real zeroes). This visual link between algebra and geometry is one of the most powerful bridges in mathematics.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Flashcard: Parabola Opening",
+      "body": "In the quadratic polynomial $p(x) = -3x^2 + 5x - 2$, does the parabola open upwards or downwards?",
+      "options": [
+        "Upwards",
+        "Downwards",
+        "It is a straight line"
+      ],
+      "correct_index": 1,
+      "explanation": "Since the leading coefficient $a = -3$ is negative, the parabola opens downwards.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "Graphing Calculator Demo",
+      "body": "Use an online graphing tool like Desmos. Type in $y = x^2 - 4$ and drag the constant term. Watch how the parabola shifts up and down, changing the number of x-intercepts!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: Relationship Between Zeroes and Coefficients (Quadratic)",
+      "body": "There is a profound hidden symmetry between the coefficients of a polynomial and its zeroes. Let $\\alpha$ and $\\beta$ be the zeroes of the quadratic polynomial $p(x) = ax^2 + bx + c$. By factoring, we know $p(x) = a(x - \\alpha)(x - \\beta) = a[x^2 - (\\alpha + \\beta)x + \\alpha\\beta]$. If we expand and compare coefficients with $ax^2 + bx + c$, we discover two fundamental relations: 1) The sum of the zeroes, $\\alpha + \\beta = -b / a$ (negative coefficient of $x$ divided by coefficient of $x^2$). 2) The product of the zeroes, $\\alpha\\beta = c / a$ (constant term divided by coefficient of $x^2$). This allows us to construct a polynomial instantly if we know its roots, without tedious expansion.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "For the polynomial $2x^2 - 8x + 6$, what is the sum of its zeroes?",
+      "options": [
+        "-4",
+        "4",
+        "3"
+      ],
+      "correct_index": 1,
+      "explanation": "Sum of zeroes = -b/a = -(-8)/2 = 8/2 = 4.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Example Application: Finding a Polynomial",
+      "body": "Suppose you are given that the sum of the zeroes of a quadratic polynomial is $-3$ and their product is $2$. Can you find the polynomial? Using our coefficient relationships, we know the form is $x^2 - (\\text{sum})x + (\\text{product})$. Substituting the values gives $x^2 - (-3)x + 2$, which simplifies to $x^2 + 3x + 2$. More generally, any polynomial of the form $k(x^2 + 3x + 2)$ where $k$ is a non-zero real number will share these exact same zeroes. This scaling factor $k$ represents vertical stretching or compression.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "title": "Flashcard: Product of Zeroes",
+      "body": "If the zeroes of $3x^2 - 5x + K$ have a product of $4$, what is the value of $K/3$?",
+      "options": [
+        "4",
+        "5/3",
+        "12"
+      ],
+      "correct_index": 0,
+      "explanation": "Product of zeroes is $c/a = K/3$. We are given that this product equals 4.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "teacher_tip",
+      "title": "The Sum-Product Riddle",
+      "body": "Give students two numbers (e.g., sum is 7, product is 12) and ask them to find the numbers (3 and 4). Then show them how this mental trick is identical to factoring $x^2 - 7x + 12$.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 4: Cubic Polynomials and Coefficient Relations",
+      "body": "The beauty of algebraic symmetry does not stop at quadratics. For a cubic polynomial $p(x) = ax^3 + bx^2 + cx + d$ with zeroes $\\alpha$, $\\beta$, and $\\gamma$, the relationships expand into a trio of elegant formulas: 1) Sum of zeroes: $\\alpha + \\beta + \\gamma = -b / a$. 2) Sum of products taken two at a time: $\\alpha\\beta + \\beta\\gamma + \\gamma\\alpha = c / a$. 3) Product of all three zeroes: $\\alpha\\beta\\gamma = -d / a$. Notice the alternating signs: negative, positive, negative. This pattern extends infinitely to polynomials of any degree $n$, governed historically by Vieta's Formulas.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "In a cubic polynomial $ax^3 + bx^2 + cx + d$, what is the formula for the product of all three zeroes ($\\alpha\\beta\\gamma$)?",
+      "options": [
+        "-d/a",
+        "c/a",
+        "-b/a"
+      ],
+      "correct_index": 0,
+      "explanation": "The product of the three zeroes of a cubic polynomial is given by -d/a.",
+      "bloom": "Understand",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 5: Division Algorithm for Polynomials",
+      "body": "Just as you learned long division with integers in primary school, polynomials can also be divided. If we have two polynomials $p(x)$ and $g(x)$ where $g(x) \\neq 0$, we can find polynomials $q(x)$ (the quotient) and $r(x)$ (the remainder) such that: $p(x) = g(x) \\cdot q(x) + r(x)$, where $r(x) = 0$ or the degree of $r(x)$ is strictly less than the degree of $g(x)$. This is known as the Division Algorithm for Polynomials. When the remainder $r(x) = 0$, we say that $g(x)$ is a exact factor of $p(x)$. This technique is essential for breaking down complex high-degree polynomials into simpler linear and quadratic factors.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "title": "Flashcard: Remainder Degree",
+      "body": "When dividing a polynomial by a divisor of degree 2, what is the maximum possible degree of the remainder polynomial?",
+      "options": [
+        "Degree 2",
+        "Degree 1",
+        "Degree 3"
+      ],
+      "correct_index": 1,
+      "explanation": "The remainder's degree must always be strictly less than the divisor's degree. Thus, for a degree 2 divisor, the remainder is at most degree 1.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "The 'Matching Leading Term' Strategy",
+      "body": "When teaching polynomial long division, emphasize that students only need to focus on matching the highest power (leading term) of the dividend with the leading term of the divisor at each step.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Step-by-Step Polynomial Division",
+      "body": "Let us walk through dividing $3x^2 + x + 1$ by $x + 1$. Step 1: Divide the leading term of the dividend ($3x^2$) by the leading term of the divisor ($x$), giving $3x$. Step 2: Multiply $3x$ by $(x + 1)$ to get $3x^2 + 3x$. Step 3: Subtract this from the dividend, yielding $(3x^2 + x) - (3x^2 + 3x) = -2x$. Bring down the $+ 1$. Step 4: Divide $-2x$ by $x$ to get $-2$. Step 5: Multiply $-2$ by $(x + 1)$ to get $-2x - 2$. Step 6: Subtract to find the remainder: $( -2x + 1 ) - (-2x - 2) = 3$. Thus, quotient is $3x - 2$ and remainder is $3$.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "If a polynomial $p(x)$ is divided by $(x - c)$ and the remainder is 0, what can we definitively conclude about $(x - c)$?",
+      "options": [
+        "It is a factor of p(x)",
+        "It is the quotient of p(x)",
+        "It has a degree of zero"
+      ],
+      "correct_index": 0,
+      "explanation": "A remainder of 0 means the divisor divides the polynomial evenly, making it a factor.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Summary and Synthesis",
+      "body": "Polynomials are the versatile building blocks of algebra. We began with their basic definitions and degrees, journeyed through graphical interpretations where zeroes represent $x$-intercepts, unlocked the elegant coefficient relationships for both quadratic and cubic polynomials via Vieta's formulas, and finally mastered algebraic polynomial division. These concepts form the bedrock for calculus, advanced physics modeling, and computer graphics transformations.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "What is the maximum number of zeroes a polynomial of degree 5 can have?",
+      "options": [
+        "3",
+        "5",
+        "Infinite"
+      ],
+      "correct_index": 1,
+      "explanation": "The fundamental theorem of algebra states that a polynomial of degree n can have at most n real zeroes.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "title": "Flashcard: Quadratic Coefficient Check",
+      "body": "If the sum of zeroes of $ax^2 + 5x + 6$ is $-5/2$, what is the value of $a$?",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 1,
+      "explanation": "Sum of zeroes = -b/a = -5/a. We are given this equals -5/2. Therefore, a = 2.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    }
+  ]
+}

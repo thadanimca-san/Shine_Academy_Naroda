@@ -1,0 +1,531 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch2",
+    "title": "Chapter 2: Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_001",
+      "type": "hook",
+      "title": "Why Doesn't Lightning Instantly Empty the Sky?",
+      "title_hi": "आकाश से बिजली गिरते समय पूरा आवेश एक साथ खत्म क्यों नहीं होता?",
+      "title_gu": "આકાશમાંથી વીજળી પડે ત્યારે બધો ચાર્જ એકસાથે કેમ ખાલી થતો નથી?",
+      "body": "Have you ever wondered how storm clouds store massive electrical potential before discharging in a blinding flash? Nature acts like a giant capacitor, storing electrostatic energy in the atmosphere until the breakdown field of air is reached!",
+      "body_hi": "क्या आपने कभी सोचा है कि तूफान के बादल एक अंधेरे भरे फ्लैश में डिस्चार्ज होने से पहले विशाल विद्युत विभव कैसे जमा करते हैं? प्रकृति एक विशाल संधारित्र (कैपेसिटर) की तरह काम करती है, जब तक कि हवा का ब्रेकडाउन क्षेत्र न पहुँच जाए!",
+      "body_gu": "શું તમે ક્યારેય વિચાર્યું છે કે વાવાઝોડાના વાદળો વિજળીના ચમકારામાં ડિસ્ચાર્જ થતાં પહેલાં કેવી રીતે વિશાળ ઇલેક્ટ્રોસ્ટેટિક ક્ષમતા સંગ્રહિત કરે છે? હવા ક્ષેત્રની મર્યાદા વટાવે ત્યાં સુધી કુદરત એક વિશાળ કેપેસિટર તરીકે કામ કરે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_002",
+      "type": "socratic_question",
+      "title": "Work and Electrostatic Force",
+      "title_hi": "कार्य और स्थिरवैद्युत बल",
+      "title_gu": "કાર્ય અને સ્થિર-વિદ્યુત બળ",
+      "question": "If you move a positive test charge against a conservative electric field produced by a positive source charge without acceleration, what happens to the work done by you?",
+      "question_hi": "यदि आप किसी धनात्मक परीक्षण आवेश को बिना त्वरण के धनात्मक स्रोत आवेश द्वारा उत्पन्न स्थिरवैद्युत क्षेत्र के विरुद्ध ले जाते हैं, तो आपके द्वारा किए गए कार्य का क्या होता है?",
+      "question_gu": "જો તમે ત્વરણ વગર ધન સ્ત્રોત ચાર્જ દ્વારા બનાવેલ વિદ્યુતક્ષેત્રની વિરુદ્ધ ધન ટેસ્ટ ચાર્જ ગતિ કરાવો, તો તમારા દ્વારા થયેલા કાર્યનું શું થાય છે?",
+      "options": [
+        "It is dissipated completely as heat.",
+        "It is stored as electrostatic potential energy of the system.",
+        "It vanishes into space without any effect.",
+        "It increases the mass of the test charge."
+      ],
+      "options_hi": [
+        "यह पूरी तरह से ऊष्मा के रूप में नष्ट हो जाता है।",
+        "यह निकाय की स्थिरवैद्युत स्थितिज ऊर्जा के रूप में संचित हो जाता है।",
+        "यह बिना किसी प्रभाव के शून्य हो जाता है।",
+        "यह परीक्षण आवेश का द्रव्यमान बढ़ा देता है।"
+      ],
+      "options_gu": [
+        "તે ગરમી તરીકે સંપૂર્ણપણે નષ્ટ થઈ જાય છે.",
+        "તે પ્રણાલીની સ્થિર-વિદ્યુત સ્થિતિ-ઊર્જા તરીકે સંગ્રહિત થાય છે.",
+        "તે કોઈ અસરો વિના અદૃશ્ય થઈ જાય છે.",
+        "તે ટેસ્ટ ચાર્જનું દળ વધારે છે."
+      ],
+      "correct_index": 1,
+      "explanation": "Since electrostatic force is conservative, the work done by an external agent against the electric field gets stored as potential energy ($U$).",
+      "explanation_hi": "चूँकि स्थिरवैद्युत बल एक संरक्षी बल है, इसलिए विद्युत क्षेत्र के विरुद्ध बाहरी कारक द्वारा किया गया कार्य स्थितिज ऊर्जा ($U$) के रूप में संचित होता है।",
+      "explanation_gu": "સ્થિર-વિદ્યુત બળ સંરક્ષી હોવાથી, વિદ્યુતક્ષેત્ર સામે બાહ્ય બળ દ્વારા થતું કાર્ય સ્થિતિ-ઊર્જા ($U$) તરીકે સંગ્રહિત થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_003",
+      "type": "discovery",
+      "title": "Defining Electrostatic Potential",
+      "title_hi": "स्थिरवैद्युत विभव की परिभाषा",
+      "title_gu": "સ્થિર-વિદ્યુત સ્થિતિમાનની વ્યાખ્યા",
+      "body": "Electrostatic potential ($V$) at any point in an electric field is defined as the work done per unit positive charge in bringing it from infinity to that point without acceleration.\n\n$$V = \\frac{W}{q_0}$$",
+      "body_hi": "विद्युत क्षेत्र में किसी बिंदु पर स्थिरवैद्युत विभव ($V$) को एकांक धनात्मक परीक्षण आवेश को अनंत से उस बिंदु तक बिना त्वरण के लाने में किए गए कार्य के रूप में परिभाषित किया जाता है।\n\n$$V = \\frac{W}{q_0}$$",
+      "body_gu": "વિદ્યુતક્ષેત્રના કોઈપણ બિંદુએ સ્થિર-વિદ્યુત સ્થિતિમાન ($V$) ને એકમ ધન ચાર્જને અનંત અંતરેથી તે બિંદુ સુધી ત્વરણ વગર લાવવા માટે કરવા પડતા કાર્ય તરીકે વ્યાખ્યાયિત કરવામાં આવે છે.\n\n$$V = \\frac{W}{q_0}$$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_004",
+      "type": "theory",
+      "title": "Core Theoretical Principles",
+      "title_hi": "मुख्य सैद्धांतिक सिद्धांत",
+      "title_gu": "મુખ્ય સૈદ્ધાંતિક સિદ્ધાંતો",
+      "body": "1. Point Charge Potential: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$\n2. Dipole Potential: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{p \\cos\\theta}{r^2}$\n3. Relation with Field: $E = -\\frac{dV}{dr}$\n4. Capacitance of Parallel Plate Capacitor: $C = \\frac{\\varepsilon_0 A}{d}$ (or $C = \\frac{K \\varepsilon_0 A}{d}$ with dielectric $K$)\n5. Stored Energy: $U = \\frac{1}{2} C V^2 = \\frac{Q^2}{2C} = \\frac{1}{2} Q V$",
+      "body_hi": "1. बिंदु आवेश का विभव: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$\n2. द्विध्रुव का विभव: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{p \\cos\\theta}{r^2}$\n3. क्षेत्र के साथ संबंध: $E = -\\frac{dV}{dr}$\n4. समानांतर पट्टिका संधारित्र की धारिता: $C = \\frac{\\varepsilon_0 A}{d}$ (परावैद्युतांक $K$ के साथ $C = \\frac{K \\varepsilon_0 A}{d}$)\n5. संचित ऊर्जा: $U = \\frac{1}{2} C V^2 = \\frac{Q^2}{2C} = \\frac{1}{2} Q V$",
+      "body_gu": "1. બિંદુ ચાર્જનું સ્થિતિમાન: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$\n2. ડાઇપોલનું સ્થિતિમાન: $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{p \\cos\\theta}{r^2}$\n3. વિદ્યુતક્ષેત્ર સાથે સંબંધ: $E = -\\frac{dV}{dr}$\n4. સમાંતર પ્લેટ કેપેસિટરનું કેપેસિટન્સ: $C = \\frac{\\varepsilon_0 A}{d}$ (ડાઇઇલેક્ટ્રિક $K$ સાથે $C = \\frac{K \\varepsilon_0 A}{d}$)\n5. સંગ્રહિત ઊર્જા: $U = \\frac{1}{2} C V^2 = \\frac{Q^2}{2C} = \\frac{1}{2} Q V$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_005",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "Potential on Dipole Equator",
+      "title_hi": "द्विध्रुव के निरक्ष पर विभव",
+      "title_gu": "ડાઇપોલના વિષુવવૃત્ત પર સ્થિતિમાન",
+      "question": "What is the electrostatic potential at any point on the equatorial plane of an electric dipole?",
+      "question_hi": "किसी विद्युत द्विध्रुव के निरक्षीय तल (equatorial plane) पर किसी बिंदु पर स्थिरवैद्युत विभव क्या होता है?",
+      "question_gu": "ઇલેક્ટ્રિક ડાઇપોલના વિષુવવૃત્તીય સમતલ પરના કોઈપણ બિંદુએ સ્થિર-વિદ્યુત સ્થિતિમાન કેટલું હોય છે?",
+      "options": [
+        "Maximum positive value",
+        "Zero",
+        "Infinite",
+        "Depends on distance as 1/r^3"
+      ],
+      "options_hi": [
+        "अधिकतम धनात्मक मान",
+        "शून्य",
+        "अनंत",
+        "दूरी पर 1/r^3 के रूप में निर्भर करता है"
+      ],
+      "options_gu": [
+        "મહત્તમ ધન મૂલ્ય",
+        "શૂન્ય",
+        "અનંત",
+        "અંતર પર 1/r^3 તરીકે આધાર રાખે છે"
+      ],
+      "correct_index": 1,
+      "explanation": "On the equatorial line, $\\theta = 90^\\circ$, hence $\\cos(90^\\circ) = 0$, making $V = 0$. Equal distances from $+q$ and $-q$ cancel out potential.",
+      "explanation_hi": "निरक्षीय रेखा पर $\\theta = 90^\\circ$ होता है, इसलिए $\\cos(90^\\circ) = 0$, जिससे $V = 0$ हो जाता है।",
+      "explanation_gu": "વિષુવવૃત્તીય રેખા પર $\\theta = 90^\\circ$ હોવાથી $\\cos(90^\\circ) = 0$ થાય છે, તેથી $V = 0$ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_006",
+      "type": "reflection",
+      "title": "Equipotential Surfaces Insight",
+      "title_hi": "समविभव पृष्ठ का विचार",
+      "title_gu": "સમસ્થિતિમાન પૃષ્ઠોનો ખ્યાલ",
+      "body": "Notice that work done $W = q\\Delta V$. On an equipotential surface, $\\Delta V = 0$, which implies $W = 0$. Since $W = \\vec{F} \\cdot \\vec{dr} = q \\vec{E} \\cdot \\vec{dr} = 0$, electric field lines MUST always be perpendicular to equipotential surfaces!",
+      "body_hi": "ध्यान दें कि किया गया कार्य $W = q\\Delta V$ होता है। समविभव पृष्ठ पर $\\Delta V = 0$ होता है, जिसका अर्थ है $W = 0$। चूंकि $W = q \\vec{E} \\cdot \\vec{dr} = 0$, इसलिए विद्युत क्षेत्र रेखाएं हमेशा समविभव पृष्ठ के लंबवत होनी चाहिए!",
+      "body_gu": "ધ્યાન આપો કે થયેલું કાર્ય $W = q\\Delta V$ છે. સમસ્થિતિમાન પૃષ્ઠ પર $\\Delta V = 0$ હોવાથી $W = 0$ થાય છે. આથી વિદ્યુતક્ષેત્રની રેખાઓ હંમેશા સમસ્થિતિમાન પૃષ્ઠને લંબ હોવી જ જોઈએ!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_007",
+      "type": "connection",
+      "title": "Capacitors in Modern Technology",
+      "title_hi": "आधुनिक तकनीक में संधारित्र",
+      "title_gu": "આધુનિક ટેકનોલોજીમાં કેપેસિટર્સ",
+      "body": "Every smartphone touchscreen uses capacitive sensing. When your finger (a conductor) touches the glass screen, it changes the local capacitance, which the controller registers as a precise touch location!",
+      "body_hi": "हर स्मार्टफोन टचस्क्रीन कैपेसिटिव सेंसिंग का उपयोग करती है। जब आपकी उंगली (एक चालक) स्क्रीन को छूती है, तो स्थानीय धारिता (capacitance) बदल जाती है, जिसे टच लोकेशन के रूप में पहचाना जाता है!",
+      "body_gu": "દરેક સ્માર્ટફોન ટચસ્ક્રીન કેપેસિટિવ સેન્સિંગનો ઉપયોગ કરે છે. જ્યારે તમારી આંગળી સ્ક્રીનને સ્પર્શે છે, ત્યારે સ્થાનિક કેપેસિટન્સ બદલાય છે, જે સ્પર્શ સ્થાન તરીકે ઓળખાય છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_008",
+      "type": "mastery",
+      "title": "Dielectric Insertion Effects Summary",
+      "title_hi": "परावैद्युत डालने के प्रभावों का सारांश",
+      "title_gu": "ડાઇઇલેક્ટ્રિક દાખલ કરવાની અસરોનો સારાંશ",
+      "body": "When dielectric ($K$) is inserted:\n- Battery Connected: Potential $V$ constant, $C' = KC$, Charge $Q' = KQ$, Energy $U' = KU$.\n- Battery Disconnected: Charge $Q$ constant, $C' = KC$, Potential $V' = V/K$, Energy $U' = U/K$.",
+      "body_hi": "जब परावैद्युत ($K$) डाला जाता है:\n- बैटरी जुड़ी हो: विभव $V$ नियत, $C' = KC$, आवेश $Q' = KQ$, ऊर्जा $U' = KU$।\n- बैटरी हटी हो: आवेश $Q$ नियत, $C' = KC$, विभव $V' = V/K$, ऊर्जा $U' = U/K$।",
+      "body_gu": "જ્યારે ડાઇઇલેક્ટ્રિક ($K$) ઉમેરવામાં આવે છે:\n- બેટરી જોડાયેલી હોય: સ્થિતિમાન $V$ અચળ, $C' = KC$, ચાર્જ $Q' = KQ$, ઊર્જા $U' = KU$.\n- બેટરી દૂર કરી હોય: ચાર્જ $Q$ અચળ, $C' = KC$, સ્થિતિમાન $V' = V/K$, ઊર્જા $U' = U/K$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_009",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.1 - Zero Potential Point",
+      "title_hi": "NCERT अभ्यास 2.1 - शून्य विभव बिंदु",
+      "title_gu": "NCERT સ્વાધ્યાય 2.1 - શૂન્ય સ્થિતિમાન બિંદુ",
+      "question": "Two charges $5 \\times 10^{-8}\\text{ C}$ and $-3 \\times 10^{-8}\\text{ C}$ are located $16\\text{ cm}$ apart. At what distance from $5 \\times 10^{-8}\\text{ C}$ between the two charges is the electric potential zero?",
+      "question_hi": "दो आवेश $5 \\times 10^{-8}\\text{ C}$ और $-3 \\times 10^{-8}\\text{ C}$ एक दूसरे से $16\\text{ cm}$ की दूरी पर हैं। दोनों आवेशों को जोड़ने वाली रेखा पर $5 \\times 10^{-8}\\text{ C}$ आवेश से किस दूरी पर विद्युत विभव शून्य होगा?",
+      "question_gu": "બે ચાર્જ $5 \\times 10^{-8}\\text{ C}$ અને $-3 \\times 10^{-8}\\text{ C}$ એકબીજાથી $16\\text{ cm}$ ના અંતરે આવેલા છે. બે ચાર્જ વચ્ચે $5 \\times 10^{-8}\\text{ C}$ થી કેટલા અંતરે વિદ્યુત સ્થિતિમાન શૂન્ય થશે?",
+      "options": [
+        "10 cm",
+        "8 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "options_hi": [
+        "10 cm",
+        "8 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "options_gu": [
+        "10 cm",
+        "8 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "$V = \\frac{k q_1}{x} + \\frac{k q_2}{16-x} = 0 \\implies \\frac{5 \\times 10^{-8}}{x} = \\frac{3 \\times 10^{-8}}{16-x} \\implies 5(16-x) = 3x \\implies 80 = 8x \\implies x = 10\\text{ cm}$.",
+      "explanation_hi": "$V = \\frac{k q_1}{x} + \\frac{k q_2}{16-x} = 0 \\implies \\frac{5}{x} = \\frac{3}{16-x} \\implies 80 - 5x = 3x \\implies x = 10\\text{ cm}$।",
+      "explanation_gu": "$V = \\frac{k q_1}{x} + \\frac{k q_2}{16-x} = 0 \\implies \\frac{5}{x} = \\frac{3}{16-x} \\implies 80 - 5x = 3x \\implies x = 10\\text{ cm}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_010",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.2 - Hexagon Potential",
+      "title_hi": "NCERT अभ्यास 2.2 - षट्भुज का विभव",
+      "title_gu": "NCERT સ્વાધ્યાય 2.2 - ષટ્કોણનું સ્થિતિમાન",
+      "question": "A regular hexagon of side $10\\text{ cm}$ has a charge $5\\,\\mu\\text{C}$ at each of its vertices. Calculate the potential at the centre of the hexagon.",
+      "question_hi": "$10\\text{ cm}$ भुजा वाले एक नियमित षट्भुज के प्रत्येक शीर्ष पर $5\\,\\mu\\text{C}$ का आवेश है। षट्भुज के केंद्र पर विभव की गणना कीजिए।",
+      "question_gu": "$10\\text{ cm}$ બાજુ ધરાવતા નિયમિત ષટ્કોણના દરેક શિરોબિંદુ પર $5\\,\\mu\\text{C}$ નો ચાર્જ છે. ષટ્કોણના કેન્દ્ર પર સ્થિતિમાન ગણો.",
+      "options": [
+        "2.7 x 10^6 V",
+        "1.5 x 10^6 V",
+        "3.2 x 10^6 V",
+        "5.4 x 10^5 V"
+      ],
+      "options_hi": [
+        "2.7 x 10^6 V",
+        "1.5 x 10^6 V",
+        "3.2 x 10^6 V",
+        "5.4 x 10^5 V"
+      ],
+      "options_gu": [
+        "2.7 x 10^6 V",
+        "1.5 x 10^6 V",
+        "3.2 x 10^6 V",
+        "5.4 x 10^5 V"
+      ],
+      "correct_index": 0,
+      "explanation": "In a regular hexagon, distance $r$ from center to vertex equals side length = $0.1\\text{ m}$. $V = 6 \\times \\frac{9 \\times 10^9 \\times 5 \\times 10^{-6}}{0.1} = 2.7 \\times 10^6\\text{ V}$.",
+      "explanation_hi": "षट्भुज के केंद्र से शीर्ष की दूरी $r = 0.1\\text{ m}$ होती है। $V = 6 \\times \\frac{9 \\times 10^9 \\times 5 \\times 10^{-6}}{0.1} = 2.7 \\times 10^6\\text{ V}$।",
+      "explanation_gu": "ષટ્કોણના કેન્દ્રથી શિરોબિંદુનું અંતર $r = 0.1\\text{ m}$ થાય છે. $V = 6 \\times \\frac{9 \\times 10^9 \\times 5 \\times 10^{-6}}{0.1} = 2.7 \\times 10^6\\text{ V}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_011",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.3a - Equipotential Surface Geometry",
+      "title_hi": "NCERT अभ्यास 2.3a - समविभव पृष्ठ की ज्यामिति",
+      "title_gu": "NCERT સ્વાધ્યાય 2.3a - સમસ્થિતિમાન પૃષ્ઠની ભૂમિતિ",
+      "question": "Two charges $2\\,\\mu\\text{C}$ and $-2\\,\\mu\\text{C}$ are placed at points A and B $6\\text{ cm}$ apart. Identify the equipotential surface of the system.",
+      "question_hi": "दो आवेश $2\\,\\mu\\text{C}$ और $-2\\,\\mu\\text{C}$ बिंदु A और B पर $6\\text{ cm}$ की दूरी पर स्थित हैं। निकाय के समविभव पृष्ठ की पहचान कीजिए।",
+      "question_gu": "બે ચાર્જ $2\\,\\mu\\text{C}$ અને $-2\\,\\mu\\text{C}$ બિંદુ A અને B પર $6\\text{ cm}$ ના અંતરે મૂકેલા છે. આ સિસ્ટમના સમસ્થિતિમાન પૃષ્ઠને ઓળખો.",
+      "options": [
+        "A plane perpendicular to AB line segment passing through its midpoint",
+        "A spherical surface around point A with radius 6 cm",
+        "A cylindrical surface coaxial with AB",
+        "Concentric spherical surfaces around point B"
+      ],
+      "options_hi": [
+        "रेखाखंड AB के लंबवत और उसके मध्य बिंदु से गुजरने वाला समतल",
+        "बिंदु A के चारों ओर 6 cm त्रिज्या वाला गोलाकार पृष्ठ",
+        "AB के साथ समाक्षीय बेलनाकार पृष्ठ",
+        "बिंदु B के चारों ओर संकेंद्रित गोलाकार पृष्ठ"
+      ],
+      "options_gu": [
+        "રેખાખંડ AB ને લંબ અને તેના મધ્યબિંદુમાંથી પસાર થતું સમતલ",
+        "બિંદુ A ની આસપાસ 6 cm ત્રિજ્યાવાળું ગોળાકાર પૃષ્ઠ",
+        "AB સાથે સમઅક્ષીય નળાકાર પૃષ્ઠ",
+        "બિંદુ B ની આસપાસ સમકેન્દ્રી ગોળાકાર પૃષ્ઠો"
+      ],
+      "correct_index": 0,
+      "explanation": "The equipotential surface where $V = 0$ is the equatorial plane, which is normal to the line AB and passes through its midpoint.",
+      "explanation_hi": "वह समविभव पृष्ठ जहाँ $V = 0$ है, निरक्षीय समतल है जो रेखा AB के लंबवत है और उसके मध्य बिंदु से गुजरता है।",
+      "explanation_gu": "જે સમસ્થિતિમાન પૃષ્ઠ પર $V = 0$ હોય તે વિષુવવૃત્તીય સમતલ છે જે AB ને લંબ અને મધ્યબિંદુમાંથી પસાર થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_012",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.3b - Field Direction on Surface",
+      "title_hi": "NCERT अभ्यास 2.3b - पृष्ठ पर क्षेत्र की दिशा",
+      "title_gu": "NCERT સ્વાધ્યાય 2.3b - પૃષ્ઠ પર ક્ષેત્રની દિશા",
+      "question": "What is the direction of the electric field at every point on the equipotential surface between two equal and opposite charges?",
+      "question_hi": "दो बराबर और विपरीत आवेशों के बीच समविभव पृष्ठ के प्रत्येक बिंदु पर विद्युत क्षेत्र की दिशा क्या होती है?",
+      "question_gu": "બે સમાન અને વિરુદ્ધ ચાર્જ વચ્ચેના સમસ્થિતિમાન પૃષ્ઠના દરેક બિંદુ પર વિદ્યુતક્ષેત્રની દિશા શું હોય છે?",
+      "options": [
+        "Normal to the surface, directed from positive to negative charge",
+        "Parallel to the plane towards the positive charge",
+        "Tangential to the surface in a circular loop",
+        "Zero at all points on the surface"
+      ],
+      "options_hi": [
+        "पृष्ठ के लंबवत, धनात्मक से ऋणात्मक आवेश की ओर",
+        "धनात्मक आवेश की ओर समतल के समानांतर",
+        "एक वृत्ताकार लूप में पृष्ठ के स्पर्शरेखीय",
+        "पृष्ठ पर सभी बिंदुओं पर शून्य"
+      ],
+      "options_gu": [
+        "પૃષ્ઠને લંબ, ધનથી રણ ચાર્જ તરફની દિશામાં",
+        "ધન ચાર્જ તરફ સમતલને સમાંતર",
+        "પૃષ્ઠને સ્પર્શકની દિશામાં",
+        "પૃષ્ઠ પરના તમામ બિંદુઓ પર શૂન્ય"
+      ],
+      "correct_index": 0,
+      "explanation": "Electric field lines are always normal to equipotential surfaces and point from positive charge to negative charge.",
+      "explanation_hi": "विद्युत क्षेत्र रेखाएं हमेशा समविभव पृष्ठों के लंबवत होती हैं और धनात्मक से ऋणात्मक आवेश की ओर दिष्ट होती हैं।",
+      "explanation_gu": "વિદ્યુતક્ષેત્રની રેખાઓ હંમેશા સમસ્થિતિમાન પૃષ્ઠોને લંબ હોય છે અને ધનથી રણ ચાર્જ તરફ હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_013",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.4 - Field Inside Spherical Conductor",
+      "title_hi": "NCERT अभ्यास 2.4 - गोलीय चालक के अंदर क्षेत्र",
+      "title_gu": "NCERT સ્વાધ્યાય 2.4 - ગોળાકાર વાહકની અંદર ક્ષેત્ર",
+      "question": "A spherical conductor of radius $12\\text{ cm}$ has a charge of $1.6 \\times 10^{-7}\\text{ C}$ distributed uniformly on its surface. What is the electric field inside the sphere?",
+      "question_hi": "$12\\text{ cm}$ त्रिज्या वाले एक गोलीय चालक की सतह पर $1.6 \\times 10^{-7}\\text{ C}$ का आवेश समान रूप से वितरित है। गोले के अंदर विद्युत क्षेत्र क्या है?",
+      "question_gu": "$12\\text{ cm}$ ત્રિજ્યા ધરાવતા ગોળાકાર વાહકની સપાટી પર $1.6 \\times 10^{-7}\\text{ C}$ નો ચાર્જ સમાન રીતે પથરાયેલો છે. ગોળાની અંદર વિદ્યુતક્ષેત્ર કેટલું હશે?",
+      "options": [
+        "Zero",
+        "1.0 x 10^5 N/C",
+        "4.4 x 10^4 N/C",
+        "1.6 x 10^-7 N/C"
+      ],
+      "options_hi": [
+        "शून्य",
+        "1.0 x 10^5 N/C",
+        "4.4 x 10^4 N/C",
+        "1.6 x 10^-7 N/C"
+      ],
+      "options_gu": [
+        "શૂન્ય",
+        "1.0 x 10^5 N/C",
+        "4.4 x 10^4 N/C",
+        "1.6 x 10^-7 N/C"
+      ],
+      "correct_index": 0,
+      "explanation": "Inside a charged spherical conductor, electrostatic field is strictly zero as charges reside entirely on the outer surface.",
+      "explanation_hi": "एक आवेशित गोलीय चालक के अंदर, स्थिरवैद्युत क्षेत्र पूरी तरह से शून्य होता है क्योंकि आवेश पूरी तरह से बाहरी सतह पर रहता है।",
+      "explanation_gu": "ચાર્જ થયેલ ગોળાકાર વાહકની અંદર, સ્થિર-વિદ્યુત ક્ષેત્ર સંપૂર્ણપણે શૂન્ય હોય છે કારણ કે બધો ચાર્જ બહારની સપાટી પર જ રહે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_014",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.5 - Dielectric and Plate Separation",
+      "title_hi": "NCERT अभ्यास 2.5 - परावैद्युत और प्लेट की दूरी",
+      "title_gu": "NCERT સ્વાધ્યાય 2.5 - ડાઇઇલેક્ટ્રિક અને પ્લેટ વચ્ચેનું અંતર",
+      "question": "A parallel plate capacitor with air has capacitance $8\\text{ pF}$. What will be the capacitance if distance between plates is halved and space filled with substance of dielectric constant $K=6$?",
+      "question_hi": "वायु वाले समानांतर पट्टिका संधारित्र की धारिता $8\\text{ pF}$ है। यदि प्लेटों के बीच की दूरी आधी कर दी जाए और परावैद्युतांक $K=6$ वाला पदार्थ भर दिया जाए तो धारिता क्या होगी?",
+      "question_gu": "હવા ધરાવતા સમાંતર પ્લેટ કેપેસિટરનું કેપેસિટન્સ $8\\text{ pF}$ છે. જો પ્લેટો વચ્ચેનું અંતર અડધું કરવામાં આવે અને ડાઇઇલેક્ટ્રિક અચળાંક $K=6$ ધરાવતો પદાર્થ ભરવામાં આવે તો નવું કેપેસિટન્સ કેટલું થશે?",
+      "options": [
+        "96 pF",
+        "48 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "options_hi": [
+        "96 pF",
+        "48 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "options_gu": [
+        "96 pF",
+        "48 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "correct_index": 0,
+      "explanation": "$C' = \\frac{K \\varepsilon_0 A}{d/2} = 2 K C_0 = 2 \\times 6 \\times 8\\text{ pF} = 96\\text{ pF}$.",
+      "explanation_hi": "$C' = \\frac{K \\varepsilon_0 A}{d/2} = 2 K C_0 = 2 \\times 6 \\times 8\\text{ pF} = 96\\text{ pF}$।",
+      "explanation_gu": "$C' = \\frac{K \\varepsilon_0 A}{d/2} = 2 K C_0 = 2 \\times 6 \\times 8\\text{ pF} = 96\\text{ pF}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_015",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.6 - Series Combination",
+      "title_hi": "NCERT अभ्यास 2.6 - श्रेणीक्रम संयोजन",
+      "title_gu": "NCERT સ્વાધ્યાય 2.6 - શ્રેણી જોડાણ",
+      "question": "Three capacitors each of capacitance $9\\text{ pF}$ are connected in series. What is the total capacitance of the combination?",
+      "question_hi": "प्रत्येक $9\\text{ pF}$ धारिता वाले तीन संधारित्र श्रेणीक्रम में जोड़े गए हैं। संयोजन की कुल धारिता क्या है?",
+      "question_gu": "દરેક $9\\text{ pF}$ કેપેસિટન્સ ધરાવતા ત્રણ કેપેસિટર્સ શ્રેણીમાં જોડાયેલા છે. આ જોડાણનું કુલ કેપેસિટન્સ કેટલું થશે?",
+      "options": [
+        "3 pF",
+        "27 pF",
+        "9 pF",
+        "1 pF"
+      ],
+      "options_hi": [
+        "3 pF",
+        "27 pF",
+        "9 pF",
+        "1 pF"
+      ],
+      "options_gu": [
+        "3 pF",
+        "27 pF",
+        "9 pF",
+        "1 pF"
+      ],
+      "correct_index": 0,
+      "explanation": "In series: $\\frac{1}{C_{eq}} = \\frac{1}{9} + \\frac{1}{9} + \\frac{1}{9} = \\frac{3}{9} = \\frac{1}{3} \\implies C_{eq} = 3\\text{ pF}$.",
+      "explanation_hi": "श्रेणीक्रम में: $\\frac{1}{C_{eq}} = \\frac{1}{9} + \\frac{1}{9} + \\frac{1}{9} = \\frac{3}{9} \\implies C_{eq} = 3\\text{ pF}$।",
+      "explanation_gu": "શ્રેણી જોડાણમાં: $\\frac{1}{C_{eq}} = \\frac{1}{9} + \\frac{1}{9} + \\frac{1}{9} = \\frac{3}{9} \\implies C_{eq} = 3\\text{ pF}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_016",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.7 - Parallel Combination",
+      "title_hi": "NCERT अभ्यास 2.7 - समांतर क्रम संयोजन",
+      "title_gu": "NCERT સ્વાધ્યાય 2.7 - સમાંતર જોડાણ",
+      "question": "Three capacitors of capacitances $2\\text{ pF}, 3\\text{ pF}$ and $4\\text{ pF}$ are connected in parallel. What is the total capacitance of the combination?",
+      "question_hi": "$2\\text{ pF}, 3\\text{ pF}$ और $4\\text{ pF}$ धारिता वाले तीन संधारित्र समांतर क्रम में जोड़े गए हैं। संयोजन की कुल धारिता क्या है?",
+      "question_gu": "$2\\text{ pF}, 3\\text{ pF}$ અને $4\\text{ pF}$ કેપેસિટન્સ ધરાવતા ત્રણ કેપેસિટર્સ સમાંતરમાં જોડાયેલા છે. જોડાણનું કુલ કેપેસિટન્સ કેટલું હશે?",
+      "options": [
+        "9 pF",
+        "0.92 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "options_hi": [
+        "9 pF",
+        "0.92 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "options_gu": [
+        "9 pF",
+        "0.92 pF",
+        "24 pF",
+        "12 pF"
+      ],
+      "correct_index": 0,
+      "explanation": "In parallel combination, total capacitance $C_{eq} = C_1 + C_2 + C_3 = 2 + 3 + 4 = 9\\text{ pF}$.",
+      "explanation_hi": "समांतर क्रम में: $C_{eq} = C_1 + C_2 + C_3 = 2 + 3 + 4 = 9\\text{ pF}$।",
+      "explanation_gu": "સમાંતર જોડાણમાં: $C_{eq} = C_1 + C_2 + C_3 = 2 + 3 + 4 = 9\\text{ pF}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_017",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.8 - Capacitor Area & Distance",
+      "title_hi": "NCERT अभ्यास 2.8 - संधारित्र क्षेत्रफल और दूरी",
+      "title_gu": "NCERT સ્વાધ્યાય 2.8 - કેપેસિટર ક્ષેત્રફળ અને અંતર",
+      "question": "In a parallel plate capacitor with air between plates, each plate has area $6 \\times 10^{-3}\\text{ m}^2$ and separation distance $3\\text{ mm}$. Calculate capacitance.",
+      "question_hi": "वायु वाले समानांतर पट्टिका संधारित्र में प्रत्येक प्लेट का क्षेत्रफल $6 \\times 10^{-3}\\text{ m}^2$ और उनके बीच की दूरी $3\\text{ mm}$ है। धारिता ज्ञात कीजिए।",
+      "question_gu": "હવા ધરાવતા સમાંતર પ્લેટ કેપેસિટરમાં દરેક પ્લેટનું ક્ષેત્રફળ $6 \\times 10^{-3}\\text{ m}^2$ અને પ્લેટો વચ્ચેનું અંતર $3\\text{ mm}$ છે. કેપેસિટન્સ ગણો.",
+      "options": [
+        "17.71 pF",
+        "8.85 pF",
+        "35.4 pF",
+        "100 pF"
+      ],
+      "options_hi": [
+        "17.71 pF",
+        "8.85 pF",
+        "35.4 pF",
+        "100 pF"
+      ],
+      "options_gu": [
+        "17.71 pF",
+        "8.85 pF",
+        "35.4 pF",
+        "100 pF"
+      ],
+      "correct_index": 0,
+      "explanation": "$C = \\frac{\\varepsilon_0 A}{d} = \\frac{8.854 \\times 10^{-12} \\times 6 \\times 10^{-3}}{3 \\times 10^{-3}} = 17.71 \\times 10^{-12}\\text{ F} = 17.71\\text{ pF}$.",
+      "explanation_hi": "$C = \\frac{8.854 \\times 10^{-12} \\times 6 \\times 10^{-3}}{3 \\times 10^{-3}} = 17.71\\text{ pF}$।",
+      "explanation_gu": "$C = \\frac{8.854 \\times 10^{-12} \\times 6 \\times 10^{-3}}{3 \\times 10^{-3}} = 17.71\\text{ pF}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_018",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.9 - Mica Insertion with Supply Connected",
+      "title_hi": "NCERT अभ्यास 2.9 - आपूर्ति जुड़ी होने पर अभ्रक डालना",
+      "title_gu": "NCERT સ્વાધ્યાય 2.9 - સપ્લાય ચાલુ હોય ત્યારે માઇકા દાખલ કરવું",
+      "question": "In the capacitor of Exercise 2.8 ($C = 17.71\\text{ pF}$), if a $3\\text{ mm}$ thick mica sheet ($K=6$) is inserted while $100\\text{ V}$ supply remains connected, what is the new charge on plates?",
+      "question_hi": "अभ्यास 2.8 के संधारित्र में यदि $100\\text{ V}$ की आपूर्ति जुड़ी रहते हुए $3\\text{ mm}$ मोटी अभ्रक की शीट ($K=6$) डाली जाती है, तो प्लेटों पर नया आवेश क्या होगा?",
+      "question_gu": "સ્વાધ્યાય 2.8 ના કેપેસિટરમાં $100\\text{ V}$ સપ્લાય જોડાયેલ રહે ત્યારે $3\\text{ mm}$ જાડી માઇકા પ્લેટ ($K=6$) દાખલ કરવામાં આવે તો પ્લેટો પર નવો ચાર્જ કેટલો હશે?",
+      "options": [
+        "10.63 nC",
+        "1.77 nC",
+        "0.29 nC",
+        "60 nC"
+      ],
+      "options_hi": [
+        "10.63 nC",
+        "1.77 nC",
+        "0.29 nC",
+        "60 nC"
+      ],
+      "options_gu": [
+        "10.63 nC",
+        "1.77 nC",
+        "0.29 nC",
+        "60 nC"
+      ],
+      "correct_index": 0,
+      "explanation": "$Q' = C' V = (K C_0) V = 6 \\times 17.71 \\times 10^{-12} \\times 100 = 10.63 \\times 10^{-9}\\text{ C} = 10.63\\text{ nC}$.",
+      "explanation_hi": "$Q' = K C_0 V = 6 \\times 17.71 \\times 10^{-12} \\times 100 = 10.63\\text{ nC}$।",
+      "explanation_gu": "$Q' = K C_0 V = 6 \\times 17.71 \\times 10^{-12} \\times 100 = 10.63\\text{ nC}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_019",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.10 - Energy Stored in Capacitor",
+      "title_hi": "NCERT अभ्यास 2.10 - संधारित्र में संचित ऊर्जा",
+      "title_gu": "NCERT સ્વાધ્યાય 2.10 - કેપેસિટરમાં સંગ્રહિત ઊર્જા",
+      "question": "A $12\\text{ pF}$ capacitor is connected to a $50\\text{ V}$ battery. How much electrostatic energy is stored in the capacitor?",
+      "question_hi": "एक $12\\text{ pF}$ का संधारित्र $50\\text{ V}$ की बैटरी से जोड़ा गया है। संधारित्र में कितनी स्थिरवैद्युत ऊर्जा संचित होगी?",
+      "question_gu": "$12\\text{ pF}$ નો કેપેસિટર $50\\text{ V}$ ની બેટરી સાથે જોડાયેલ છે. કેપેસિટરમાં કેટલી સ્થિર-વિદ્યુત ઊર્જા સંગ્રહિત થશે?",
+      "options": [
+        "1.5 x 10^-8 J",
+        "3.0 x 10^-8 J",
+        "1.5 x 10^-6 J",
+        "6.0 x 10^-8 J"
+      ],
+      "options_hi": [
+        "1.5 x 10^-8 J",
+        "3.0 x 10^-8 J",
+        "1.5 x 10^-6 J",
+        "6.0 x 10^-8 J"
+      ],
+      "options_gu": [
+        "1.5 x 10^-8 J",
+        "3.0 x 10^-8 J",
+        "1.5 x 10^-6 J",
+        "6.0 x 10^-8 J"
+      ],
+      "correct_index": 0,
+      "explanation": "$U = \\frac{1}{2} C V^2 = \\frac{1}{2} \\times 12 \\times 10^{-12} \\times 50^2 = 6 \\times 10^{-12} \\times 2500 = 1.5 \\times 10^{-8}\\text{ J}$.",
+      "explanation_hi": "$U = \\frac{1}{2} C V^2 = 0.5 \\times 12 \\times 10^{-12} \\times 2500 = 1.5 \\times 10^{-8}\\text{ J}$।",
+      "explanation_gu": "$U = \\frac{1}{2} C V^2 = 0.5 \\times 12 \\times 10^{-12} \\times 2500 = 1.5 \\times 10^{-8}\\text{ J}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH2_020",
+      "type": "knowledge_check",
+      "subtype": "mcq",
+      "title": "NCERT Exercise 2.11 - Energy Loss in Sharing Charge",
+      "title_hi": "NCERT अभ्यास 2.11 - आवेश साझा करने में ऊर्जा हानि",
+      "title_gu": "NCERT સ્વાધ્યાય 2.11 - ચાર્જ વહેંચણીમાં ઊર્જાનો વ્યય",
+      "question": "A $600\\text{ pF}$ capacitor is charged by a $200\\text{ V}$ supply. It is then disconnected and connected to another uncharged $600\\text{ pF}$ capacitor. How much electrostatic energy is lost?",
+      "question_hi": "एक $600\\text{ pF}$ के संधारित्र को $200\\text{ V}$ की आपूर्ति द्वारा आवेशित किया जाता है। फिर इसे हटाकर अन्य अनावेशित $600\\text{ pF}$ संधारित्र से जोड़ा जाता है। कितनी स्थिरवैद्युत ऊर्जा की हानि होती है?",
+      "question_gu": "$600\\text{ pF}$ ના કેપેસિટરને $200\\text{ V}$ સપ્લાય દ્વારા ચાર્જ કરવામાં આવે છે. પછી તેને અનચાર્જ્ડ $600\\text{ pF}$ કેપેસિટર સાથે જોડવામાં આવે છે. કેટલી સ્થિર-વિદ્યુત ઊર્જા વેડફાશે?",
+      "options": [
+        "6.0 x 10^-6 J",
+        "1.2 x 10^-5 J",
+        "3.0 x 10^-6 J",
+        "Zero"
+      ],
+      "options_hi": [
+        "6.0 x 10^-6 J",
+        "1.2 x 10^-5 J",
+        "3.0 x 10^-6 J",
+        "शून्य"
+      ],
+      "options_gu": [
+        "6.0 x 10^-6 J",
+        "1.2 x 10^-5 J",
+        "3.0 x 10^-6 J",
+        "શૂન્ય"
+      ],
+      "correct_index": 0,
+      "explanation": "Initial energy $U_i = \\frac{1}{2} C V^2 = 1.2 \\times 10^{-5}\\text{ J}$. Common potential $V' = 100\\text{ V}$. Final energy $U_f = 2 \\times \\frac{1}{2} C (V')^2 = 6.0 \\times 10^{-6}\\text{ J}$. Energy loss $\\Delta U = U_i - U_f = 6.0 \\times 10^{-6}\\text{ J}$.",
+      "explanation_hi": "प्रारंभिक ऊर्जा $U_i = 1.2 \\times 10^{-5}\\text{ J}$। उभयनिष्ठ विभव $V' = 100\\text{ V}$। अंतिम ऊर्जा $U_f = 6.0 \\times 10^{-6}\\text{ J}$। ऊर्जा हानि = $6.0 \\times 10^{-6}\\text{ J}$।",
+      "explanation_gu": "પ્રારંભિક ઊર્જા $U_i = 1.2 \\times 10^{-5}\\text{ J}$. સામાન્ય સ્થિતિમાન $V' = 100\\text{ V}$. અંતિમ ઊર્જા $U_f = 6.0 \\times 10^{-6}\\text{ J}$. ઊર્જા વ્યય = $6.0 \\times 10^{-6}\\text{ J}$."
+    }
+  ]
+}

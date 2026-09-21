@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch6",
+    "title": "Chapter 6: Fractions",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the meaning of a fraction as a part of a whole",
+      "Identify and convert proper, improper, and mixed fractions",
+      "Find equivalent fractions using multiplication and division",
+      "Add and subtract like and unlike fractions with confidence"
+    ],
+    "core_concepts": [
+      "DICT_MATH_FRACTION",
+      "DICT_MATH_NUMERATOR",
+      "DICT_MATH_DENOMINATOR",
+      "DICT_MATH_EQUIVALENT",
+      "DICT_MATH_MIXED"
+    ],
+    "ai_context": {
+      "learning_goal": "Master fraction concepts from basic parts-of-a-whole to operations on unlike fractions.",
+      "common_misconceptions": [
+        "Thinking a larger denominator makes the overall fraction larger.",
+        "Adding numerators and denominators straight across during addition."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Birthday Pizza Mystery",
+      "body": "Imagine it is your birthday, and your absolute favorite pizza arrives at the door, sliced into exactly 8 equal wedges. Suddenly, 4 hungry friends show up at your doorstep! If you want to share the pizza fairly so that everyone gets the exact same amount, how do you describe each person's share? Whole numbers like 1, 2, or 3 simply won't cut it anymore because you are dealing with pieces smaller than a whole. Welcome to the fascinating world of fractions, where we slice, share, and measure the spaces in between whole numbers!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If a pizza is cut into 8 equal slices and you eat 2 slices, what part of the whole pizza have you eaten?",
+      "options": [
+        "2 whole pizzas",
+        "2 out of 8 equal parts",
+        "8 out of 2 parts"
+      ],
+      "correct_index": 1,
+      "explanation": "You have eaten 2 parts out of a total of 8 equal parts, which is written as the fraction 2/8.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is a Fraction?",
+      "body": "At its core, a [DICT_MATH_FRACTION|fraction] represents a part of a whole or, more broadly, any number of equal parts. When we look at any fraction, it consists of two distinct numbers stacked on top of each other, separated by a line called a fraction bar. The top number is called the [DICT_MATH_NUMERATOR|numerator], and it tells us how many specific parts we are talking about or have taken. The bottom number is called the [DICT_MATH_DENOMINATOR|denominator], and it tells us the total number of equal parts that make up the complete whole. For instance, in the fraction 3/4, the denominator 4 tells us that a chocolate bar was broken into 4 equal pieces, while the numerator 3 tells us that we currently hold 3 of those pieces in our hands.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Paper Folding Experiment",
+      "body": "Take a rectangular sheet of paper. Fold it neatly in half, then fold it in half again. Unfold it and count the crease lines! You will see 4 equal sections. Color 1 section. You have visually created the fraction 1/4.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does the denominator of a fraction tell you?",
+      "back": "The total number of equal parts that make up the whole.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Proper, Improper, and Mixed Fractions",
+      "body": "Fractions come in different personalities based on the relationship between their numerator and denominator. A proper fraction is one where the numerator is smaller than the denominator, such as 3/5 or 7/10. Proper fractions are always strictly less than one whole. However, what happens when you have more slices than a single whole can hold? If you and your friends eat 5 slices of a pizza that was cut into 4 slices per whole, you have 5/4. This is called an improper fraction because the numerator is greater than or equal to the denominator. Improper fractions can also be written as a [DICT_MATH_MIXED|mixed fraction], which combines a whole number and a proper fraction, such as 1 1/4 (one whole pizza and one-fourth of another).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which of the following is an example of an improper fraction?",
+      "options": [
+        "3/4",
+        "7/5",
+        "1/2"
+      ],
+      "correct_index": 1,
+      "explanation": "In 7/5, the numerator (7) is larger than the denominator (5), making it an improper fraction.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "flashcard",
+      "front": "What is a mixed fraction?",
+      "back": "A number consisting of a whole number combined with a proper fraction (e.g., 2 1/3).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Converting Improper Fractions to Mixed Fractions",
+      "body": "To convert an improper fraction like 11/4 into a mixed fraction, we use division. Think of the fraction bar as a division symbol. We divide the numerator (11) by the denominator (4). 4 goes into 11 two times (4 x 2 = 8), with a remainder of 3. The whole number quotient becomes our big whole number (2). The remainder becomes our new numerator (3), and the denominator stays exactly the same (4). Thus, 11/4 equals 2 3/4. This method allows us to easily visualize how many complete wholes we have and what leftover fraction remains.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "The 'Multiply and Add' Trick",
+      "body": "To convert a mixed fraction back to an improper fraction (like 2 3/4), multiply the whole number by the denominator (2 x 4 = 8), then add the numerator (8 + 3 = 11). Put that over the original denominator to get 11/4!",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "Convert the mixed fraction 1 2/3 into an improper fraction.",
+      "options": [
+        "5/3",
+        "3/5",
+        "2/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Multiply whole 1 by denominator 3 (gives 3), add numerator 2 (gives 5), keeping denominator 3 to get 5/3.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 3: Equivalent Fractions",
+      "body": "Did you know that 1/2 of a cake is the exact same amount as 2/4 or 4/8 of the same cake? These are known as [DICT_MATH_EQUIVALENT|equivalent fractions]. They look different because they use different numbers, but they represent the exact same physical quantity or value. To find equivalent fractions, we can multiply or divide both the numerator and the denominator by the exact same non-zero number. Because multiplying both parts by the same number is mathematically equivalent to multiplying by 1, the overall value of the fraction does not change. For example, if we take 1/3 and multiply both top and bottom by 2, we get 2/6. Both 1/3 and 2/6 represent the exact same point on a number line.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Golden Rule of Fractions",
+      "body": "Whatever you do to the numerator, you MUST do to the denominator! If you multiply the top by 3, you must multiply the bottom by 3. Breaking this rule changes the value of your number.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Which fraction is equivalent to 2/5?",
+      "options": [
+        "4/10",
+        "3/10",
+        "2/10"
+      ],
+      "correct_index": 0,
+      "explanation": "Multiplying both the numerator (2) and denominator (5) by 2 gives 4/10.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "How do you check if two fractions are equivalent using cross-multiplication?",
+      "back": "Multiply the numerator of the first by the denominator of the second, and vice versa. If products are equal, the fractions are equivalent.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Simplifying Fractions to Lowest Terms",
+      "body": "When working with fractions, mathematicians love keeping numbers as clean and simple as possible. Simplifying a fraction means reducing it to its lowest terms so that the numerator and denominator have no common factors other than 1. To simplify 8/12, we look for the greatest common divisor (GCD) of 8 and 12, which is 4. We then divide both the numerator and the denominator by 4: 8 ÷ 4 = 2, and 12 ÷ 4 = 3. Thus, 8/12 simplifies cleanly to 2/3. A fraction in its simplest form is much easier to read, compare, and calculate with in advanced math problems.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What is the simplest form of the fraction 15/20?",
+      "options": [
+        "3/4",
+        "5/6",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "Dividing both 15 and 20 by their greatest common factor, which is 5, yields 3/4.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 4: Comparing and Ordering Fractions",
+      "body": "How do we know whether 3/7 or 5/7 is larger? When fractions share the same denominator, comparing them is remarkably straightforward. We simply look at their numerators! Since 5 is greater than 3, 5/7 is greater than 3/7. Think of it this way: if a pizza is cut into 7 equal slices, having 5 slices gives you more than having 3 slices. However, what happens when denominators are different, such as comparing 1/2 and 1/3? Here, we cannot compare them directly until we find a common denominator. By converting both fractions so they share the same bottom number, we can instantly see which quantity is larger.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Butterfly Method for Quick Comparison",
+      "body": "To compare two fractions like 2/3 and 3/4, cross-multiply! 2 x 4 = 8 (above the 2/3), and 3 x 3 = 9 (above the 3/4). Since 9 is bigger than 8, 3/4 is the larger fraction!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "Which is greater: 4/9 or 7/9?",
+      "options": [
+        "4/9",
+        "7/9",
+        "They are equal"
+      ],
+      "correct_index": 1,
+      "explanation": "Since both fractions have the same denominator (9), we compare numerators 4 and 7. 7 is larger, so 7/9 is greater.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 5: Adding and Subtracting Like Fractions",
+      "body": "Addition and subtraction with fractions become wonderfully easy when the denominators are identical. These are called like fractions. To add like fractions, you simply add the numerators together while keeping the denominator completely unchanged. For example, 2/9 + 4/9 = (2 + 4)/9 = 6/9. Notice that we do not add 9 + 9 to get 18 on the bottom! Why? Because the denominator simply labels the size of the pieces. If you have 2 slices of a 9-slice pizza and add 4 more slices of the same 9-slice pizza, the individual slice size hasn't changed—you just have 6 slices total.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "When adding like fractions, what do you do to the denominator?",
+      "back": "Keep it exactly the same! Only add the numerators.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Calculate: 7/12 - 3/12 =",
+      "options": [
+        "4/12",
+        "4/0",
+        "10/12"
+      ],
+      "correct_index": 0,
+      "explanation": "Subtract the numerators (7 - 3 = 4) and keep the denominator (12), giving 4/12 (which simplifies to 1/3).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Concept 6: Adding and Subtracting Unlike Fractions",
+      "body": "What happens when denominators are different, such as 1/2 + 1/4? You cannot add halves and quarters directly anymore than you can add apples and oranges, because the slice sizes are different! To solve this, we must first find a common denominator. For 2 and 4, the least common multiple is 4. We convert 1/2 into an equivalent fraction with 4 in the denominator by multiplying top and bottom by 2, giving us 2/4. Now we can add: 2/4 + 1/4 = 3/4! Mastering this technique unlocks the full power of fraction arithmetic.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "LCD Detective Work",
+      "body": "When finding a common denominator for unlike fractions, always check if the smaller denominator divides evenly into the larger one. If it does, use the larger denominator as your common denominator!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "What is 1/3 + 1/6?",
+      "options": [
+        "2/9",
+        "1/2",
+        "2/6"
+      ],
+      "correct_index": 1,
+      "explanation": "Convert 1/3 to 2/6. Then add 2/6 + 1/6 = 3/6, which simplifies to 1/2.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "What is the first step when adding two fractions with different denominators?",
+      "back": "Find a common denominator by converting them into equivalent fractions.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Real-World Applications of Fractions",
+      "body": "Fractions are not just abstract classroom exercises; they govern our everyday lives. From baking recipes that call for 3/4 cup of flour and clocks that divide hours into quarters (15 minutes = 1/4 hour), to financial transactions, construction measurements, and computer programming, fractions are everywhere. Whenever you share food, calculate discounts during a sale, or measure ingredients for a science experiment, you are utilizing fraction mathematics. Understanding how parts relate to wholes gives you a powerful lens for interpreting the physical world around you.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "quiz",
+      "question": "If a recipe calls for 1 1/2 cups of sugar and you want to double it, how much sugar do you need?",
+      "options": [
+        "2 cups",
+        "3 cups",
+        "2 1/2 cups"
+      ],
+      "correct_index": 1,
+      "explanation": "1 1/2 is equal to 3/2. Multiplying by 2 gives 3 wholes (3 cups of sugar).",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    }
+  ]
+}

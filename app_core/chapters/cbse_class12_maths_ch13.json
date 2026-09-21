@@ -1,0 +1,861 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch13",
+    "title": "Chapter 13: Probability",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_001",
+      "type": "hook",
+      "title": "The Diagnostic Paradox",
+      "title_hi": "नैदानिक विरोधाभास (The Diagnostic Paradox)",
+      "title_gu": "નિદાન નુ નિદાન વિરોધાભાસ (The Diagnostic Paradox)",
+      "body": "Imagine a rare disease affects 1 in 1,000 people. A test for this disease is 99% accurate. If you test positive, what is the chance you actually have the disease? Most people intuitively guess 99%, but the real probability is actually around 9%! How can knowing a condition occurred drastically alter probability? Welcome to Conditional Probability and Bayes' Theorem.",
+      "body_hi": "कल्पना कीजिए कि 1,000 में से 1 व्यक्ति को एक दुर्लभ बीमारी होती है। इस बीमारी का परीक्षण 99% सटीक है। यदि आपका परीक्षण सकारात्मक (Positive) आता है, तो वास्तव में बीमारी होने की क्या संभावना है? अधिकांश लोग सहज रूप से 99% का अनुमान लगाते हैं, लेकिन वास्तविक प्रायिकता वास्तव में लगभग 9% है! किसी शर्त या जानकारी के पता चलने से प्रायिकता इतनी नाटकीय रूप से कैसे बदल जाती है? सप्रतिबंध प्रायिकता और बेज़ प्रमेय में आपका स्वागत है।",
+      "body_gu": "કલ્પના કરો કે 1,000 માંથી 1 વ્યક્તિને એક વિરલ રોગ થાય છે. આ રોગનું પરીક્ષણ 99% સચોટ છે. જો તમારો રિપોર્ટ પોઝિટિવ આવે, તો તમને ખરેખર આ રોગ થવાની સંભાવના કેટલી? મોટાભાગના લોકો 99% અનુમાન લગાવે છે, પરંતુ વાસ્તવિક સંભાવના માત્ર 9% ની આસપાસ છે! પરિસ્થિતિની જાણ થવાથી સંભાવના કેવી રીતે બદલાય છે? સપ્રતિબંધ સંભાવના અને બેઝ પ્રમેયમાં આપનું સ્વાગત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_002",
+      "type": "socratic_question",
+      "question": "A family has two children. You are informed that at least one of the children is a girl. What is the probability that both children are girls? (Assume boys and girls are equally likely)",
+      "question_hi": "एक परिवार में दो बच्चे हैं। आपको सूचित किया जाता है कि कम से कम एक बच्चा लड़की है। दोनों बच्चों के लड़की होने की प्रायिकता क्या है? (मान लें कि लड़के और लड़की होने की संभावना समान है)",
+      "question_gu": "એક પરિવારમાં બે બાળકો છે. તમને જણાવવામાં આવે છે કે ઓછામાં ઓછું એક બાળક છોકરી છે. બંને બાળકો છોકરીઓ હોય તેની સંભાવના કેટલી? (ધારો કે છોકરો અને છોકરી થવાની શક્યતા સરખી છે)",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "2/3"
+      ],
+      "options_hi": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "2/3"
+      ],
+      "options_gu": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "2/3"
+      ],
+      "correct_index": 1,
+      "explanation": "Sample space S = {BB, BG, GB, GG}. Event 'at least one girl' B = {BG, GB, GG} (3 outcomes). Event 'both girls' A = {GG} (1 outcome). P(A|B) = n(A ∩ B) / n(B) = 1/3.",
+      "explanation_hi": "प्रतिदर्श समष्टि S = {BB, BG, GB, GG}। घटना 'कम से कम एक लड़की' B = {BG, GB, GG} (3 परिणाम)। घटना 'दोनों लड़कियां' A = {GG} (1 परिणाम)। P(A|B) = n(A ∩ B) / n(B) = 1/3।",
+      "explanation_gu": "નિદર્શ અવકાશ S = {BB, BG, GB, GG}. ઘટના 'ઓછામાં ઓછી એક છોકરી' B = {BG, GB, GG} (3 પરિણામો). ઘટના 'બંને છોકરીઓ' A = {GG} (1 પરિણામ). P(A|B) = n(A ∩ B) / n(B) = 1/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_003",
+      "type": "discovery",
+      "title": "Shrinking Sample Space",
+      "title_hi": "प्रतिदर्श समष्टि का सिकुड़ना (Shrinking Sample Space)",
+      "title_gu": "નિદર્શ અવકાશનું સંકોચન (Shrinking Sample Space)",
+      "body": "Notice what happened in the Socratic question: when additional information ('at least one girl') is given, the original sample space of 4 outcomes S = {BB, BG, GB, GG} shrinks to a new sample space B = {BG, GB, GG}. Conditional probability is simply calculating the probability of an event within this new reduced sample space!",
+      "body_hi": "ध्यान दें कि सुकराती प्रश्न में क्या हुआ: जब अतिरिक्त जानकारी ('कम से कम एक लड़की') दी जाती है, तो 4 परिणामों का मूल प्रतिदर्श समष्टि S = {BB, BG, GB, GG} घटकर एक नया प्रतिदर्श समष्टि B = {BG, GB, GG} बन जाता है। सप्रतिबंध प्रायिकता केवल इस नए घटे हुए प्रतिदर्श समष्टि के भीतर किसी घटना की प्रायिकता की गणना करना है!",
+      "body_gu": "સૂકરાતી પ્રશ્નમાં શું થયું તે નોંધો: જ્યારે વધારાની માહિતી ('ઓછામાં ઓછી એક છોકરી') આપવામાં આવે છે, ત્યારે 4 પરિણામોનો મૂળ નિદર્શ અવકાશ S = {BB, BG, GB, GG} ઘટીને નવો નિદર્શ અવકાશ B = {BG, GB, GG} બની જાય છે. સપ્રતિબંધ સંભાવના એ આ નવા ઘટેલા નિદર્શ અવકાશમાં ઘટનાની સંભાવના ગણવા સિવાય કંઈ નથી!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_004",
+      "type": "theory",
+      "title": "Conditional Probability: Concept and Formulas",
+      "title_hi": "सप्रतिबंध प्रायिकता: अवधारणा और सूत्र",
+      "title_gu": "સપ્રતિબંધ સંભાવના: ખ્યાલ અને સૂત્રો",
+      "body": "If A and B are two events associated with the same sample space S, then the conditional probability of event A given that event B has occurred is denoted by P(A|B) and given by:\n\n$$P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad \\text{where } P(B) \\neq 0$$\n\nProperties:\n1. $0 \\le P(A|B) \\le 1$\n2. $P(S|B) = P(B|B) = 1$\n3. $P((A \\cup B)|F) = P(A|F) + P(B|F) - P((A \\cap B)|F)$\n4. $P(E'|F) = 1 - P(E|F)$",
+      "body_hi": "यदि A और B एक ही प्रतिदर्श समष्टि S से संबद्ध दो घटनाएं हैं, तो घटना B के घटित होने की स्थिति में घटना A की सप्रतिबंध प्रायिकता को P(A|B) द्वारा निरूपित किया जाता है:\n\n$$P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad \\text{जहाँ } P(B) \\neq 0$$\n\nगुण धर्म:\n1. $0 \\le P(A|B) \\le 1$\n2. $P(S|B) = P(B|B) = 1$\n3. $P((A \\cup B)|F) = P(A|F) + P(B|F) - P((A \\cap B)|F)$\n4. $P(E'|F) = 1 - P(E|F)$",
+      "body_gu": "જો A અને B એ એક જ નિદર્શ અવકાશ S સાથે સંકળાયેલી બે ઘટનાઓ હોય, તો ઘટના B બની ચૂકી છે તે આપેલ હોય ત્યારે ઘટના A ની સપ્રતિબંધ સંભાવનાને P(A|B) વડે દર્શાવાય છે:\n\n$$P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad \\text{જ્યાં } P(B) \\neq 0$$\n\nગુણધર્મો:\n1. $0 \\le P(A|B) \\le 1$\n2. $P(S|B) = P(B|B) = 1$\n3. $P((A \\cup B)|F) = P(A|F) + P(B|F) - P((A \\cap B)|F)$\n4. $P(E'|F) = 1 - P(E|F)$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_005",
+      "type": "knowledge_check",
+      "question": "If P(A) = 0.6, P(B) = 0.3, and P(A ∩ B) = 0.2, evaluate P(A|B).",
+      "question_hi": "यदि P(A) = 0.6, P(B) = 0.3, और P(A ∩ B) = 0.2 है, तो P(A|B) का मान ज्ञात कीजिए।",
+      "question_gu": "જો P(A) = 0.6, P(B) = 0.3, અને P(A ∩ B) = 0.2 હોય, તો P(A|B) શોધો.",
+      "options": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "3/5"
+      ],
+      "options_hi": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "3/5"
+      ],
+      "options_gu": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "3/5"
+      ],
+      "correct_index": 1,
+      "explanation": "P(A|B) = P(A ∩ B) / P(B) = 0.2 / 0.3 = 2/3.",
+      "explanation_hi": "P(A|B) = P(A ∩ B) / P(B) = 0.2 / 0.3 = 2/3।",
+      "explanation_gu": "P(A|B) = P(A ∩ B) / P(B) = 0.2 / 0.3 = 2/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_006",
+      "type": "reflection",
+      "title": "Is Order Important in Conditionals?",
+      "title_hi": "क्या सप्रतिबंध में क्रम महत्वपूर्ण है?",
+      "title_gu": "શું સપ્રતિબંધમાં ક્રમ મહત્વપૂર્ણ છે?",
+      "body": "Is P(A|B) equal to P(B|A)? Generally, NO! \n\n$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ whereas $P(B|A) = \\frac{P(A \\cap B)}{P(A)}$. \n\nThey are equal only when $P(A) = P(B)$. For example, probability of having a cough given you have COVID is very high, but probability of having COVID given you have a cough is much lower!",
+      "body_hi": "क्या P(A|B) का मान P(B|A) के बराबर होता है? सामान्यतः, नहीं! \n\n$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ जबकि $P(B|A) = \\frac{P(A \\cap B)}{P(A)}$। \n\nवे केवल तभी बराबर होते हैं जब $P(A) = P(B)$ हो। उदाहरण के लिए, यदि आपको COVID है तो खांसी होने की प्रायिकता बहुत अधिक है, लेकिन यदि आपको खांसी है तो COVID होने की प्रायिकता काफी कम है!",
+      "body_gu": "શું P(A|B) એ P(B|A) જેટલું જ છે? સામાન્ય રીતે, ના! \n\n$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ જ્યારે $P(B|A) = \\frac{P(A \\cap B)}{P(A)}$. \n\nતેઓ માત્ર ત્યારે જ સમાન હોય જ્યારે $P(A) = P(B)$ હોય. ઉદાહરણ તરીકે, જો તમને કોવિડ હોય તો ઉધરસ હોવાની સંભાવના ખૂબ ઊંચી છે, પરંતુ તમને ઉધરસ હોય તો કોવિડ હોવાની સંભાવના ખૂબ ઓછી છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_007",
+      "type": "connection",
+      "title": "Spam Filters and AI Machine Learning",
+      "title_hi": "स्पैम फ़िल्टर और एआई मशीन लर्निंग",
+      "title_gu": "સ્પામ ફિલ્ટર્સ અને AI મશીન લર્નિંગ",
+      "body": "Every time your email inbox detects spam, it uses Naive Bayes classification based on conditional probability! It calculates: $P(\\text{Spam} | \\text{Words like \"Free\", \"Winner\"}) = \\frac{P(\\text{Words} | \\text{Spam}) \\cdot P(\\text{Spam})}{P(\\text{Words})}$. Modern AI prediction models rely heavily on continuous conditional probability updates.",
+      "body_hi": "हर बार जब आपका ईमेल इनबॉक्स स्पैम का पता लगाता है, तो यह सप्रतिबंध प्रायिकता पर आधारित नेईव बेज़ (Naive Bayes) वर्गीकरण का उपयोग करता है! यह गणना करता है: $P(\\text{स्पैम} | \\text{\"मुफ्त\", \"विजेता\" जैसे शब्द}) = \\frac{P(\\text{शब्द} | \\text{स्पैम}) \\cdot P(\\text{स्पैम})}{P(\\text{शब्द})}$। आधुनिक AI भविष्यवाणी मॉडल सप्रतिबंध प्रायिकता अपडेट्स पर अत्यधिक निर्भर करते हैं।",
+      "body_gu": "જ્યારે તમારું ઈમેલ ઈનબોક્સ સ્પામ શોધી કાઢે છે, ત્યારે તે સપ્રતિબંધ સંભાવના પર આધારિત નાઈવ બેઝ (Naive Bayes) વર્ગીકરણનો ઉપયોગ કરે છે! આજના AI મોડેલો સતત સપ્રતિબંધ સંભાવનાના અપડેટ્સ પર આધાર રાખે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Die Throw Condition",
+      "title_hi": "मास्टरी चुनौती: पासा फेंकने की शर्त",
+      "title_gu": "માસ્ટરી ચેલેન્જ: પાસો ફેંકવાની શરત",
+      "body": "A die is thrown twice and the sum of the numbers appearing is observed to be 6. What is the conditional probability that the number 4 has appeared at least once?\n\nLet A = Event number 4 appears at least once = {(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(1,4),(2,4),(3,4),(5,4),(6,4)} (11 outcomes).\nLet B = Sum is 6 = {(1,5), (2,4), (3,3), (4,2), (5,1)} (5 outcomes).\n\nA ∩ B = {(2,4), (4,2)} (2 outcomes).\n\nP(A|B) = n(A ∩ B) / n(B) = 2/5.",
+      "body_hi": "एक पासे को दो बार फेंका जाता है और प्रकट होने वाली संख्याओं का योग 6 पाया जाता है। संख्या 4 के कम से कम एक बार प्रकट होने की सप्रतिबंध प्रायिकता क्या है?\n\nमान लें A = घटना कि संख्या 4 कम से कम एक बार आए = {(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(1,4),(2,4),(3,4),(5,4),(6,4)} (11 परिणाम)।\nमान लें B = योग 6 होना = {(1,5), (2,4), (3,3), (4,2), (5,1)} (5 परिणाम)।\n\nA ∩ B = {(2,4), (4,2)} (2 परिणाम)।\n\nP(A|B) = n(A ∩ B) / n(B) = 2/5।",
+      "body_gu": "એક પાસાને બે વાર ફેંકવામાં આવે છે અને મળતા અંકોનો સરવાળો 6 માલૂમ પડે છે. સંખ્યા 4 ઓછામાં ઓછી એક વાર આવી હોય તેની સપ્રતિબંધ સંભાવના શોધો.\n\nધારો કે A = ઘટના 4 ઓછામાં ઓછી એક વાર આવે = {(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(1,4),(2,4),(3,4),(5,4),(6,4)} (11 પરિણામો).\nધારો કે B = સરવાળો 6 થાય = {(1,5), (2,4), (3,3), (4,2), (5,1)} (5 પરિણામો).\n\nA ∩ B = {(2,4), (4,2)} (2 પરિણામો).\n\nP(A|B) = n(A ∩ B) / n(B) = 2/5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_009",
+      "type": "hook",
+      "title": "Bayes' Theorem & Reversing Causality",
+      "title_hi": "बेज़ प्रमेय और कारण-प्रभाव का उलटना",
+      "title_gu": "બેઝ પ્રમેય અને કારણ-અસરનું ઉલટાવવું",
+      "body": "If event E causes event A, finding P(A|E) is easy: what is the chance of getting a symptom given a disease? But doctors need the REVERSE: given a symptom A, what is the probability of disease E? Thomas Bayes discovered a revolutionary mathematical bridge to invert conditional probabilities!",
+      "body_hi": "यदि घटना E के कारण घटना A होती है, तो P(A|E) खोजना आसान है: बीमारी होने पर लक्षण दिखने की क्या संभावना है? लेकिन डॉक्टरों को इसके उल्टे की आवश्यकता होती है: लक्षण A दिए जाने पर, बीमारी E होने की क्या प्रायिकता है? थॉमस बेज़ ने सप्रतिबंध प्रायिकताओं को उलटने के लिए एक क्रांतिकारी गणितीय सेतु की खोज की!",
+      "body_gu": "જો ઘટના E ને લીધે ઘટના A થતી હોય, તો P(A|E) શોધવું સરળ છે. પરંતુ ડોકટરોને આનાથી ઉલટું જોઈએ છે: લક્ષણ A આપેલ હોય, તો રોગ E હોવાની સંભાવના કેટલી? થૉમસ બેઝે સપ્રતિબંધ સંભાવનાઓને ઉલટાવવા માટે એક ક્રાંતિકારી પ્રમેય આપ્યો!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_010",
+      "type": "theory",
+      "title": "Bayes' Theorem & Theorem of Total Probability",
+      "title_hi": "बेज़ प्रमेय और संपूर्ण प्रायिकता का प्रमेय",
+      "title_gu": "બેઝ પ્રમેય અને સંતતિ/સંપૂર્ણ સંભાવનાનું પ્રમેય",
+      "body": "1. **Partition of Sample Space**: $E_1, E_2, ..., E_n$ form a partition of S if they are pairwise disjoint ($E_i \\cap E_j = \\emptyset$) and exhaustive ($\\bigcup E_i = S$) with $P(E_i) > 0$.\n\n2. **Theorem of Total Probability**:\n$$P(A) = \\sum_{i=1}^n P(E_i) \\cdot P(A|E_i)$$\n\n3. **Bayes' Theorem**:\n$$P(E_i|A) = \\frac{P(E_i) \\cdot P(A|E_i)}{\\sum_{k=1}^n P(E_k) \\cdot P(A|E_k)}$$",
+      "body_hi": "1. **प्रतिदर्श समष्टि का विभाजन**: $E_1, E_2, ..., E_n$ प्रतिदर्श समष्टि S का विभाजन बनाते हैं यदि वे परस्पर अपवर्जी ($E_i \\cap E_j = \\emptyset$) और निश्शेष ($\\bigcup E_i = S$) हैं और $P(E_i) > 0$ है।\n\n2. **संपूर्ण प्रायिकता का प्रमेय**:\n$$P(A) = \\sum_{i=1}^n P(E_i) \\cdot P(A|E_i)$$\n\n3. **बेज़ प्रमेय**:\n$$P(E_i|A) = \\frac{P(E_i) \\cdot P(A|E_i)}{\\sum_{k=1}^n P(E_k) \\cdot P(A|E_k)}$$",
+      "body_gu": "1. **નિદર્શ અવકાશનું વિભાજન**: $E_1, E_2, ..., E_n$ એ S નું વિભાજન કરે છે જો તેઓ પરસ્પર નિવારક ($E_i \\cap E_j = \\emptyset$) અને પરસ્પર નિઃશેષ ($\\bigcup E_i = S$) હોય.\n\n2. **સંપૂર્ણ સંભાવનાનું પ્રમેય**:\n$$P(A) = \\sum_{i=1}^n P(E_i) \\cdot P(A|E_i)$$\n\n3. **બેઝ પ્રમેય**:\n$$P(E_i|A) = \\frac{P(E_i) \\cdot P(A|E_i)}{\\sum_{k=1}^n P(E_k) \\cdot P(A|E_k)}$$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_011",
+      "type": "mcq",
+      "question": "Given P(E) = 0.6, P(F) = 0.3, and P(E ∩ F) = 0.2. Find P(F|E). (CBSE Ex 13.1 Q1)",
+      "question_hi": "दिया गया है P(E) = 0.6, P(F) = 0.3, और P(E ∩ F) = 0.2। P(F|E) का मान ज्ञात कीजिए। (CBSE Ex 13.1 Q1)",
+      "question_gu": "આપેલ છે P(E) = 0.6, P(F) = 0.3, અને P(E ∩ F) = 0.2. P(F|E) શોધો. (CBSE Ex 13.1 Q1)",
+      "options": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "2/5"
+      ],
+      "options_hi": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "2/5"
+      ],
+      "options_gu": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "2/5"
+      ],
+      "correct_index": 0,
+      "explanation": "P(F|E) = P(E ∩ F) / P(E) = 0.2 / 0.6 = 1/3.",
+      "explanation_hi": "P(F|E) = P(E ∩ F) / P(E) = 0.2 / 0.6 = 1/3।",
+      "explanation_gu": "P(F|E) = P(E ∩ F) / P(E) = 0.2 / 0.6 = 1/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_012",
+      "type": "mcq",
+      "question": "Compute P(A|B), if P(B) = 0.5 and P(A ∩ B) = 0.32. (CBSE Ex 13.1 Q2)",
+      "question_hi": "P(A|B) परिकलित कीजिए, यदि P(B) = 0.5 और P(A ∩ B) = 0.32 है। (CBSE Ex 13.1 Q2)",
+      "question_gu": "જો P(B) = 0.5 અને P(A ∩ B) = 0.32 હોય, તો P(A|B) શોધો. (CBSE Ex 13.1 Q2)",
+      "options": [
+        "0.16",
+        "0.64",
+        "0.32",
+        "0.80"
+      ],
+      "options_hi": [
+        "0.16",
+        "0.64",
+        "0.32",
+        "0.80"
+      ],
+      "options_gu": [
+        "0.16",
+        "0.64",
+        "0.32",
+        "0.80"
+      ],
+      "correct_index": 1,
+      "explanation": "P(A|B) = P(A ∩ B) / P(B) = 0.32 / 0.5 = 0.64.",
+      "explanation_hi": "P(A|B) = P(A ∩ B) / P(B) = 0.32 / 0.5 = 0.64।",
+      "explanation_gu": "P(A|B) = P(A ∩ B) / P(B) = 0.32 / 0.5 = 0.64."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_013",
+      "type": "mcq",
+      "question": "If P(A) = 0.8, P(B) = 0.5, and P(B|A) = 0.4, find P(A ∩ B). (CBSE Ex 13.1 Q3)",
+      "question_hi": "यदि P(A) = 0.8, P(B) = 0.5, और P(B|A) = 0.4 है, तो P(A ∩ B) ज्ञात कीजिए। (CBSE Ex 13.1 Q3)",
+      "question_gu": "જો P(A) = 0.8, P(B) = 0.5, અને P(B|A) = 0.4 હોય, તો P(A ∩ B) શોધો. (CBSE Ex 13.1 Q3)",
+      "options": [
+        "0.20",
+        "0.32",
+        "0.40",
+        "0.16"
+      ],
+      "options_hi": [
+        "0.20",
+        "0.32",
+        "0.40",
+        "0.16"
+      ],
+      "options_gu": [
+        "0.20",
+        "0.32",
+        "0.40",
+        "0.16"
+      ],
+      "correct_index": 1,
+      "explanation": "P(B|A) = P(A ∩ B) / P(A) => P(A ∩ B) = P(B|A) * P(A) = 0.4 * 0.8 = 0.32.",
+      "explanation_hi": "P(B|A) = P(A ∩ B) / P(A) => P(A ∩ B) = P(B|A) * P(A) = 0.4 * 0.8 = 0.32।",
+      "explanation_gu": "P(B|A) = P(A ∩ B) / P(A) => P(A ∩ B) = P(B|A) * P(A) = 0.4 * 0.8 = 0.32."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_014",
+      "type": "mcq",
+      "question": "If 2 P(A) = P(B) = 5/13 and P(A|B) = 2/5, evaluate P(A ∪ B). (CBSE Ex 13.1 Q4)",
+      "question_hi": "यदि 2 P(A) = P(B) = 5/13 और P(A|B) = 2/5 है, तो P(A ∪ B) का मान ज्ञात कीजिए। (CBSE Ex 13.1 Q4)",
+      "question_gu": "જો 2 P(A) = P(B) = 5/13 અને P(A|B) = 2/5 હોય, તો P(A ∪ B) ની કિંમત શોધો. (CBSE Ex 13.1 Q4)",
+      "options": [
+        "11/26",
+        "13/26",
+        "15/26",
+        "17/26"
+      ],
+      "options_hi": [
+        "11/26",
+        "13/26",
+        "15/26",
+        "17/26"
+      ],
+      "options_gu": [
+        "11/26",
+        "13/26",
+        "15/26",
+        "17/26"
+      ],
+      "correct_index": 0,
+      "explanation": "P(B) = 5/13, P(A) = 5/26. P(A ∩ B) = P(A|B)*P(B) = (2/5)*(5/13) = 2/13. P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 5/26 + 5/13 - 2/13 = (5 + 10 - 4)/26 = 11/26.",
+      "explanation_hi": "P(B) = 5/13, P(A) = 5/26. P(A ∩ B) = P(A|B)*P(B) = (2/5)*(5/13) = 2/13. P(A ∪ B) = 5/26 + 5/13 - 2/13 = 11/26।",
+      "explanation_gu": "P(B) = 5/13, P(A) = 5/26. P(A ∩ B) = P(A|B)*P(B) = 2/13. P(A ∪ B) = 5/26 + 5/13 - 2/13 = 11/26."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_015",
+      "type": "mcq",
+      "question": "If P(A) = 6/11, P(B) = 5/11, and P(A ∪ B) = 7/11, find P(A|B). (CBSE Ex 13.1 Q5)",
+      "question_hi": "यदि P(A) = 6/11, P(B) = 5/11, और P(A ∪ B) = 7/11 है, तो P(A|B) ज्ञात कीजिए। (CBSE Ex 13.1 Q5)",
+      "question_gu": "જો P(A) = 6/11, P(B) = 5/11, અને P(A ∪ B) = 7/11 હોય, તો P(A|B) શોધો. (CBSE Ex 13.1 Q5)",
+      "options": [
+        "4/5",
+        "2/5",
+        "3/5",
+        "1/5"
+      ],
+      "options_hi": [
+        "4/5",
+        "2/5",
+        "3/5",
+        "1/5"
+      ],
+      "options_gu": [
+        "4/5",
+        "2/5",
+        "3/5",
+        "1/5"
+      ],
+      "correct_index": 0,
+      "explanation": "P(A ∩ B) = P(A) + P(B) - P(A ∪ B) = 6/11 + 5/11 - 7/11 = 4/11. P(A|B) = P(A ∩ B)/P(B) = (4/11)/(5/11) = 4/5.",
+      "explanation_hi": "P(A ∩ B) = 6/11 + 5/11 - 7/11 = 4/11. P(A|B) = (4/11)/(5/11) = 4/5।",
+      "explanation_gu": "P(A ∩ B) = 6/11 + 5/11 - 7/11 = 4/11. P(A|B) = (4/11)/(5/11) = 4/5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_016",
+      "type": "mcq",
+      "question": "A coin is tossed three times. E: head on third toss, F: heads on first two tosses. Determine P(E|F). (CBSE Ex 13.1 Q6)",
+      "question_hi": "एक सिक्के को तीन बार उछाला जाता है। E: तीसरी उछाल पर चित, F: पहली दो उछालों पर चित। P(E|F) ज्ञात कीजिए। (CBSE Ex 13.1 Q6)",
+      "question_gu": "એક સિક્કાને ત્રણ વખત ઉછાળવામાં આવે છે. E: ત્રીજી વખત હેડ મળે, F: પ્રથમ બે વખત હેડ મળે. P(E|F) શોધો. (CBSE Ex 13.1 Q6)",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "3/4"
+      ],
+      "options_hi": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "3/4"
+      ],
+      "options_gu": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "3/4"
+      ],
+      "correct_index": 0,
+      "explanation": "S = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}. E = {HHH, HTH, THH, TTH}, F = {HHH, HHT}. E ∩ F = {HHH}. P(E|F) = n(E ∩ F) / n(F) = 1/2.",
+      "explanation_hi": "S में 8 परिणाम हैं। E = {HHH, HTH, THH, TTH}, F = {HHH, HHT}। E ∩ F = {HHH}। P(E|F) = 1/2।",
+      "explanation_gu": "S માં 8 પરિણામો છે. F = {HHH, HHT}, E ∩ F = {HHH}. P(E|F) = 1/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_017",
+      "type": "mcq",
+      "question": "Two coins tossed once. E: tail on one coin, F: one coin shows head. Determine P(E|F). (CBSE Ex 13.1 Q7)",
+      "question_hi": "दो सिक्कों को एक बार उछाला जाता है। E: एक सिक्के पर पट (Tail), F: एक सिक्के पर चित (Head)। P(E|F) ज्ञात कीजिए। (CBSE Ex 13.1 Q7)",
+      "question_gu": "બે સિક્કાઓને એક વાર ઉછાળવામાં આવે છે. E: એક સિક્કા પર ટેલ, F: એક સિક્કા પર હેડ. P(E|F) શોધો. (CBSE Ex 13.1 Q7)",
+      "options": [
+        "1",
+        "1/2",
+        "1/4",
+        "0"
+      ],
+      "options_hi": [
+        "1",
+        "1/2",
+        "1/4",
+        "0"
+      ],
+      "options_gu": [
+        "1",
+        "1/2",
+        "1/4",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "S = {HH, HT, TH, TT}. E = {HT, TH, TT}, F = {HT, TH}. E ∩ F = {HT, TH}. P(E|F) = n(E ∩ F)/n(F) = 2/2 = 1.",
+      "explanation_hi": "E और F दोनों में {HT, TH} शामिल हैं, इसलिए E ∩ F = F। P(E|F) = 1।",
+      "explanation_gu": "E અને F બંનેમાં {HT, TH} છે, તેથી E ∩ F = F. P(E|F) = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_018",
+      "type": "mcq",
+      "question": "Mother, father and son line up at random for a family picture. E: son on one end, F: father in middle. Find P(E|F). (CBSE Ex 13.1 Q9)",
+      "question_hi": "माता, पिता और पुत्र एक पारिवारिक चित्र के लिए यादृच्छिक रूप से एक पंक्ति में खड़े होते हैं। E: पुत्र एक सिरे पर, F: पिता मध्य में। P(E|F) ज्ञात कीजिए। (CBSE Ex 13.1 Q9)",
+      "question_gu": "માતા, પિતા અને પુત્ર એક લાઈનમાં યાદચ્છિક રીતે ઊભા રહે છે. E: પુત્ર એક છેડે, F: પિતા વચ્ચે. P(E|F) શોધો. (CBSE Ex 13.1 Q9)",
+      "options": [
+        "1",
+        "1/2",
+        "1/3",
+        "2/3"
+      ],
+      "options_hi": [
+        "1",
+        "1/2",
+        "1/3",
+        "2/3"
+      ],
+      "options_gu": [
+        "1",
+        "1/2",
+        "1/3",
+        "2/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Total arrangements = 3! = 6. F = {MFS, SFM} (2 outcomes). In both these outcomes, son is at one end! So E ∩ F = F. P(E|F) = 2/2 = 1.",
+      "explanation_hi": "कुल व्यवस्थाएँ = 6। F = {MFS, SFM}। दोनों में पुत्र एक सिरे पर है, अतः E ∩ F = F। P(E|F) = 1।",
+      "explanation_gu": "કુલ વ્યવસ્થા = 6. F = {MFS, SFM}. બંનેમાં પુત્ર છેડે છે, તેથી E ∩ F = F. P(E|F) = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_019",
+      "type": "mcq",
+      "question": "If P(A) = 1/2, P(B) = 0, then P(A|B) is: (CBSE Ex 13.1 Q16)",
+      "question_hi": "यदि P(A) = 1/2, P(B) = 0 है, तो P(A|B) है: (CBSE Ex 13.1 Q16)",
+      "question_gu": "જો P(A) = 1/2, P(B) = 0 હોય, તો P(A|B) = _____ : (CBSE Ex 13.1 Q16)",
+      "options": [
+        "0",
+        "1/2",
+        "Not defined",
+        "1"
+      ],
+      "options_hi": [
+        "0",
+        "1/2",
+        "परिभाषित नहीं (Not defined)",
+        "1"
+      ],
+      "options_gu": [
+        "0",
+        "1/2",
+        "વ્યાખ્યાયિત નથી (Not defined)",
+        "1"
+      ],
+      "correct_index": 2,
+      "explanation": "P(A|B) = P(A ∩ B) / P(B). Division by P(B) = 0 is undefined.",
+      "explanation_hi": "P(A|B) = P(A ∩ B) / P(B)। P(B) = 0 से विभाजन परिभाषित नहीं है।",
+      "explanation_gu": "P(A|B) = P(A ∩ B) / P(B). P(B) = 0 વડે ભાગાકાર વ્યાખ્યાયિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_020",
+      "type": "mcq",
+      "question": "If A and B are events such that P(A|B) = P(B|A), then: (CBSE Ex 13.1 Q17)",
+      "question_hi": "यदि A और B ऐसी घटनाएं हैं कि P(A|B) = P(B|A), तो: (CBSE Ex 13.1 Q17)",
+      "question_gu": "જો A અને B એવી ઘટનાઓ હોય કે P(A|B) = P(B|A), તો: (CBSE Ex 13.1 Q17)",
+      "options": [
+        "A ⊂ B",
+        "A = B",
+        "A ∩ B = ∅",
+        "P(A) = P(B)"
+      ],
+      "options_hi": [
+        "A ⊂ B",
+        "A = B",
+        "A ∩ B = ∅",
+        "P(A) = P(B)"
+      ],
+      "options_gu": [
+        "A ⊂ B",
+        "A = B",
+        "A ∩ B = ∅",
+        "P(A) = P(B)"
+      ],
+      "correct_index": 3,
+      "explanation": "P(A ∩ B)/P(B) = P(A ∩ B)/P(A) implies P(A) = P(B).",
+      "explanation_hi": "P(A ∩ B)/P(B) = P(A ∩ B)/P(A) से यह निष्कर्ष निकलता है कि P(A) = P(B) है।",
+      "explanation_gu": "P(A ∩ B)/P(B) = P(A ∩ B)/P(A) પરથી P(A) = P(B) મળે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_021",
+      "type": "mcq",
+      "question": "If P(A) = 3/5 and P(B) = 1/5, find P(A ∩ B) if A and B are independent events. (CBSE Ex 13.2 Q1)",
+      "question_hi": "यदि P(A) = 3/5 और P(B) = 1/5 है, तो P(A ∩ B) ज्ञात कीजिए यदि A और B स्वतंत्र घटनाएं हैं। (CBSE Ex 13.2 Q1)",
+      "question_gu": "જો A અને B સ્વતંત્ર ઘટનાઓ હોય અને P(A) = 3/5, P(B) = 1/5 હોય, તો P(A ∩ B) શોધો. (CBSE Ex 13.2 Q1)",
+      "options": [
+        "3/25",
+        "4/25",
+        "1/25",
+        "2/25"
+      ],
+      "options_hi": [
+        "3/25",
+        "4/25",
+        "1/25",
+        "2/25"
+      ],
+      "options_gu": [
+        "3/25",
+        "4/25",
+        "1/25",
+        "2/25"
+      ],
+      "correct_index": 0,
+      "explanation": "For independent events, P(A ∩ B) = P(A) * P(B) = (3/5) * (1/5) = 3/25.",
+      "explanation_hi": "स्वतंत्र घटनाओं के लिए, P(A ∩ B) = P(A) * P(B) = (3/5) * (1/5) = 3/25।",
+      "explanation_gu": "સ્વતંત્ર ઘટનાઓ માટે, P(A ∩ B) = P(A) * P(B) = (3/5) * (1/5) = 3/25."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_022",
+      "type": "mcq",
+      "question": "Two cards are drawn at random and without replacement from a pack of 52 playing cards. Find the probability that both cards are black. (CBSE Ex 13.2 Q2)",
+      "question_hi": "52 पत्तों की ताश की गड्डी में से बिना प्रतिस्थापन के दो पत्ते यादृच्छिक रूप से निकाले जाते हैं। दोनों पत्तों के काले होने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.2 Q2)",
+      "question_gu": "52 પત્તાની ગડ્ડીમાંથી પુનરાવર્તન વગર યાદચ્છિક રીતે 2 પત્તા ખેંચવામાં આવે છે. બંને પત્તા કાળા રંગના હોય તેની સંભાવના શોધો. (CBSE Ex 13.2 Q2)",
+      "options": [
+        "25/102",
+        "26/102",
+        "25/51",
+        "1/4"
+      ],
+      "options_hi": [
+        "25/102",
+        "26/102",
+        "25/51",
+        "1/4"
+      ],
+      "options_gu": [
+        "25/102",
+        "26/102",
+        "25/51",
+        "1/4"
+      ],
+      "correct_index": 0,
+      "explanation": "Probability = (26/52) * (25/51) = (1/2) * (25/51) = 25/102.",
+      "explanation_hi": "प्रायिकता = (26/52) * (25/51) = (1/2) * (25/51) = 25/102।",
+      "explanation_gu": "સંભાવના = (26/52) * (25/51) = (1/2) * (25/51) = 25/102."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_023",
+      "type": "mcq",
+      "question": "A box of oranges is inspected by examining 3 randomly selected oranges drawn without replacement. If all 3 are good, the box is approved. Find probability a box with 15 oranges (12 good, 3 bad) is approved. (CBSE Ex 13.2 Q3)",
+      "question_hi": "संतरे के एक डिब्बे का निरीक्षण बिना प्रतिस्थापन के तीन संतरों को निकालकर किया जाता है। यदि तीनों अच्छे हैं तो डिब्बे को स्वीकृत किया जाता है। 15 संतरों (12 अच्छे, 3 खराब) वाले डिब्बे के स्वीकृत होने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.2 Q3)",
+      "question_gu": "નારંગીના એક બોક્સનું નિરીક્ષણ 3 નારંગીઓને વગર પુનરાવર્તને પસંદ કરીને કરાય છે. જો ત્રણેય સારી હોય તો બોક્સ મંજૂર થાય છે. 15 નારંગી (12 સારી, 3 ખરાબ) ધરાવતું બોક્સ મંજૂર થવાની સંભાવના શોધો. (CBSE Ex 13.2 Q3)",
+      "options": [
+        "44/91",
+        "12/15",
+        "4/5",
+        "24/91"
+      ],
+      "options_hi": [
+        "44/91",
+        "12/15",
+        "4/5",
+        "24/91"
+      ],
+      "options_gu": [
+        "44/91",
+        "12/15",
+        "4/5",
+        "24/91"
+      ],
+      "correct_index": 0,
+      "explanation": "P(Approved) = (12/15) * (11/14) * (10/13) = (4/5) * (11/14) * (10/13) = 44/91.",
+      "explanation_hi": "P(स्वीकृत) = (12/15) * (11/14) * (10/13) = 44/91।",
+      "explanation_gu": "P(મંજૂર) = (12/15) * (11/14) * (10/13) = 44/91."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_024",
+      "type": "mcq",
+      "question": "Given P(A) = 1/2, P(A ∪ B) = 3/5, and P(B) = p. Find p if A and B are mutually exclusive. (CBSE Ex 13.2 Q7)",
+      "question_hi": "दिया गया है P(A) = 1/2, P(A ∪ B) = 3/5, और P(B) = p। p का मान ज्ञात कीजिए यदि A और B परस्पर अपवर्जी हैं। (CBSE Ex 13.2 Q7)",
+      "question_gu": "આપેલ છે P(A) = 1/2, P(A ∪ B) = 3/5, અને P(B) = p. જો A અને B પરસ્પર નિવારક હોય તો p શોધો. (CBSE Ex 13.2 Q7)",
+      "options": [
+        "1/10",
+        "1/5",
+        "3/10",
+        "1/2"
+      ],
+      "options_hi": [
+        "1/10",
+        "1/5",
+        "3/10",
+        "1/2"
+      ],
+      "options_gu": [
+        "1/10",
+        "1/5",
+        "3/10",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "For mutually exclusive events, P(A ∪ B) = P(A) + P(B) => 3/5 = 1/2 + p => p = 3/5 - 1/2 = 1/10.",
+      "explanation_hi": "परस्पर अपवर्जी घटनाओं के लिए, P(A ∪ B) = P(A) + P(B) => 3/5 = 1/2 + p => p = 1/10।",
+      "explanation_gu": "પરસ્પર નિવારક ઘટનાઓ માટે, P(A ∪ B) = P(A) + P(B) => 3/5 = 1/2 + p => p = 1/10."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_025",
+      "type": "mcq",
+      "question": "Given P(A) = 1/2, P(A ∪ B) = 3/5, and P(B) = p. Find p if A and B are independent events. (CBSE Ex 13.2 Q7 Part 2)",
+      "question_hi": "दिया गया है P(A) = 1/2, P(A ∪ B) = 3/5, और P(B) = p। p का मान ज्ञात कीजिए यदि A और B स्वतंत्र हैं। (CBSE Ex 13.2 Q7 भाग 2)",
+      "question_gu": "આપેલ છે P(A) = 1/2, P(A ∪ B) = 3/5, અને P(B) = p. જો A અને B સ્વતંત્ર હોય તો p શોધો. (CBSE Ex 13.2 Q7 ભાગ 2)",
+      "options": [
+        "1/5",
+        "2/5",
+        "1/10",
+        "3/10"
+      ],
+      "options_hi": [
+        "1/5",
+        "2/5",
+        "1/10",
+        "3/10"
+      ],
+      "options_gu": [
+        "1/5",
+        "2/5",
+        "1/10",
+        "3/10"
+      ],
+      "correct_index": 1,
+      "explanation": "P(A ∪ B) = P(A) + P(B) - P(A)P(B) => 3/5 = 1/2 + p - (1/2)p => 1/10 = p/2 => p = 2/5.",
+      "explanation_hi": "P(A ∪ B) = P(A) + P(B) - P(A)P(B) => 3/5 = 1/2 + p/2 => p/2 = 1/10 => p = 2/5।",
+      "explanation_gu": "P(A ∪ B) = P(A) + P(B) - P(A)P(B) => 3/5 = 1/2 + p/2 => p/2 = 1/10 => p = 2/5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_026",
+      "type": "mcq",
+      "question": "Two fair dice are thrown. Let A = {odd number on first die}, B = {odd number on second die}. Are A and B independent? (CBSE Ex 13.2 Q10)",
+      "question_hi": "दो निष्पक्ष पासे फेंके जाते हैं। मान लें A = {पहले पासे पर विषम संख्या}, B = {दूसरे पासे पर विषम संख्या}। क्या A और B स्वतंत्र हैं? (CBSE Ex 13.2 Q10)",
+      "question_gu": "બે પાસા ફેંકવામાં આવે છે. A = {પ્રથમ પાસા પર અયુગ્મ સંખ્યા}, B = {બીજા પાસા પર અયુગ્મ સંખ્યા}. શું A અને B સ્વતંત્ર છે? (CBSE Ex 13.2 Q10)",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined",
+        "Only if sum is odd"
+      ],
+      "options_hi": [
+        "हाँ (Yes)",
+        "नहीं (No)",
+        "निर्धारित नहीं किया जा सकता",
+        "केवल यदि योग विषम हो"
+      ],
+      "options_gu": [
+        "હા (Yes)",
+        "ના (No)",
+        "નક્કી કરી શકાય નહીં",
+        "માત્ર જો સરવાળો અયુગ્મ હોય"
+      ],
+      "correct_index": 0,
+      "explanation": "P(A) = 1/2, P(B) = 1/2, P(A ∩ B) = 9/36 = 1/4. Since P(A ∩ B) = P(A)*P(B), A and B are independent.",
+      "explanation_hi": "P(A) = 1/2, P(B) = 1/2, P(A ∩ B) = 1/4। चूंकि P(A ∩ B) = P(A)*P(B), घटनाएं स्वतंत्र हैं।",
+      "explanation_gu": "P(A) = 1/2, P(B) = 1/2, P(A ∩ B) = 1/4. P(A ∩ B) = P(A)*P(B) હોવાથી A અને B સ્વતંત્ર છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_027",
+      "type": "mcq",
+      "question": "Probability of solving a specific problem independently by A and B are 1/2 and 1/3 respectively. Find probability that the problem is solved. (CBSE Ex 13.2 Q11/14)",
+      "question_hi": "A और B द्वारा किसी विशिष्ट समस्या को स्वतंत्र रूप से हल करने की प्रायिकताएं क्रमशः 1/2 और 1/3 हैं। समस्या के हल होने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.2 Q11/14)",
+      "question_gu": "A અને B દ્વારા સ્વતંત્ર રીતે ઉકેલ લાવવાની સંભાવના અનુક્રમે 1/2 અને 1/3 છે. કોયડો ઉકેલાય તેની સંભાવના શોધો. (CBSE Ex 13.2 Q11/14)",
+      "options": [
+        "2/3",
+        "1/6",
+        "5/6",
+        "1/3"
+      ],
+      "options_hi": [
+        "2/3",
+        "1/6",
+        "5/6",
+        "1/3"
+      ],
+      "options_gu": [
+        "2/3",
+        "1/6",
+        "5/6",
+        "1/3"
+      ],
+      "correct_index": 0,
+      "explanation": "P(Solved) = 1 - P(Neither solves) = 1 - (1 - 1/2)(1 - 1/3) = 1 - (1/2)*(2/3) = 1 - 1/3 = 2/3.",
+      "explanation_hi": "P(हल होना) = 1 - P(कोई हल न करे) = 1 - (1/2)*(2/3) = 1 - 1/3 = 2/3।",
+      "explanation_gu": "P(ઉકેલાય) = 1 - P(કોઈ ના ઉકેલે) = 1 - (1/2)*(2/3) = 1 - 1/3 = 2/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_028",
+      "type": "mcq",
+      "question": "Bag I contains 3 red and 4 black balls, Bag II contains 5 red and 6 black balls. One ball is drawn at random from one of the bags and is found to be red. Find the probability that it was drawn from Bag II. (CBSE Ex 13.3 Q2)",
+      "question_hi": "थैले I में 3 लाल और 4 काली गेंदे हैं, थैले II में 5 लाल और 6 काली गेंदे हैं। किसी एक थैले में से यादृच्छिक रूप से एक गेंद निकाली जाती है जो लाल पाई जाती है। इसके थैले II से निकाले जाने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.3 Q2)",
+      "question_gu": "થેલી I માં 3 લાલ અને 4 કાળી દડા છે, થેલી II માં 5 લાલ અને 6 કાળી દડા છે. એક દડો ખેંચતા તે લાલ મળે છે. તે થેલી II માંથી ખેંચાયો હોય તેની સંભાવના શોધો. (CBSE Ex 13.3 Q2)",
+      "options": [
+        "35/68",
+        "33/68",
+        "5/11",
+        "3/7"
+      ],
+      "options_hi": [
+        "35/68",
+        "33/68",
+        "5/11",
+        "3/7"
+      ],
+      "options_gu": [
+        "35/68",
+        "33/68",
+        "5/11",
+        "3/7"
+      ],
+      "correct_index": 0,
+      "explanation": "P(E1)=P(E2)=1/2. P(R|E1)=3/7, P(R|E2)=5/11. P(E2|R) = [(1/2)(5/11)] / [(1/2)(3/7) + (1/2)(5/11)] = (5/11) / (3/7 + 5/11) = (5/11) / (68/77) = 35/68.",
+      "explanation_hi": "बेज़ प्रमेय द्वारा: P(E2|R) = (5/11) / (3/7 + 5/11) = 35/68।",
+      "explanation_gu": "બેઝના પ્રમેય દ્વારા: P(E2|R) = (5/11) / (3/7 + 5/11) = 35/68."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_029",
+      "type": "mcq",
+      "question": "Of the students in a college, 60% reside in hostel and 40% are day scholars. Previous results show 30% hostelers and 20% day scholars get A grade. A student chosen at random has A grade. Find probability student is hosteler. (CBSE Ex 13.3 Q3)",
+      "question_hi": "एक कॉलेज के छात्रों में से 60% छात्रवास में रहते हैं और 40% छात्रावास में नहीं रहते। पिछले परिणाम दर्शाते हैं कि हॉस्टल में रहने वाले 30% और बाहर रहने वाले 20% छात्रों को A-ग्रेड मिलता है। एक छात्र चुना जाता है जिसे A-ग्रेड मिला है। उसके हॉस्टल में रहने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.3 Q3)",
+      "question_gu": "કોલેજના 60% વિદ્યાર્થીઓ હોસ્ટેલમાં રહે છે અને 40% ડે સ્કોલર છે. અગાઉના પરિણામો દર્શાવે છે કે હોસ્ટેલરના 30% અને ડે સ્કોલરના 20% ને A ગ્રેડ મળે છે. પસંદ કરેલ વિદ્યાર્થી A ગ્રેડ ધરાવે છે, તે હોસ્ટેલર હોવાની સંભાવના શોધો. (CBSE Ex 13.3 Q3)",
+      "options": [
+        "9/13",
+        "4/13",
+        "3/5",
+        "2/5"
+      ],
+      "options_hi": [
+        "9/13",
+        "4/13",
+        "3/5",
+        "2/5"
+      ],
+      "options_gu": [
+        "9/13",
+        "4/13",
+        "3/5",
+        "2/5"
+      ],
+      "correct_index": 0,
+      "explanation": "P(H) = 0.6, P(D) = 0.4. P(A|H) = 0.3, P(A|D) = 0.2. P(H|A) = (0.6*0.3)/(0.6*0.3 + 0.4*0.2) = 0.18 / (0.18 + 0.08) = 0.18 / 0.26 = 9/13.",
+      "explanation_hi": "P(H|A) = (0.6*0.3) / (0.6*0.3 + 0.4*0.2) = 0.18 / 0.26 = 9/13।",
+      "explanation_gu": "P(H|A) = (0.6*0.3) / (0.6*0.3 + 0.4*0.2) = 0.18 / 0.26 = 9/13."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_030",
+      "type": "mcq",
+      "question": "A doctor visits a patient. From past experience, probabilities of coming by train, bus, scooter or car are 3/10, 1/5, 1/10, 2/5. Probabilities of being late are 1/4, 1/3, 1/12, and 0 respectively. If he arrives late, find probability he came by train. (CBSE Ex 13.3 Q8)",
+      "question_hi": "एक डॉक्टर मरीज को देखने आता है। पिछले अनुभव से ट्रेन, बस, स्कूटर या कार द्वारा आने की प्रायिकताएँ क्रमशः 3/10, 1/5, 1/10, 2/5 हैं। उनके देर से आने की प्रायिकताएँ 1/4, 1/3, 1/12 और 0 हैं। यदि वह देर से पहुँचता है, तो उसके ट्रेन से आने की प्रायिकता ज्ञात कीजिए। (CBSE Ex 13.3 Q8)",
+      "question_gu": "એક ડૉક્ટર દર્દી પાસે આવે છે. ટ્રેન, બસ, સ્કૂટર અથવા કાર દ્વારા આવવાની સંભાવનાઓ અનુક્રમે 3/10, 1/5, 1/10, 2/5 છે. મોડા આવવાની સંભાવના અનુક્રમે 1/4, 1/3, 1/12 અને 0 છે. જો તે મોડા પહોંચે, તો તે ટ્રેન દ્વારા આવ્યા હોય તેની સંભાવના શોધો. (CBSE Ex 13.3 Q8)",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "options_hi": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "options_gu": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "correct_index": 0,
+      "explanation": "P(Train|Late) = (3/10 * 1/4) / [(3/10 * 1/4) + (1/5 * 1/3) + (1/10 * 1/12) + 0] = (3/40) / [3/40 + 1/15 + 1/120] = (3/40) / [(9 + 8 + 1)/120] = (3/40) / (18/120) = (3/40) / (3/20) = 1/2.",
+      "explanation_hi": "गणना करने पर अंश = 3/40, हर = 18/120 = 3/20। प्रायिकता = (3/40) / (3/20) = 1/2।",
+      "explanation_gu": "ગણતરી કરતા અંશ = 3/40, છેદ = 18/120 = 3/20. સંભાવના = (3/40) / (3/20) = 1/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_031",
+      "type": "mcq",
+      "question": "If A and B are two events such that A ⊂ B and P(B) ≠ 0, then which of the following is correct? (CBSE Ex 13.3 Q13)",
+      "question_hi": "यदि A और B दो घटनाएं इस प्रकार हैं कि A ⊂ B और P(B) ≠ 0, तो निम्नलिखित में से कौन सा सही है? (CBSE Ex 13.3 Q13)",
+      "question_gu": "જો A ⊂ B અને P(B) ≠ 0 હોય, તો નીચેનામાંથી કયું સાચું છે? (CBSE Ex 13.3 Q13)",
+      "options": [
+        "P(A|B) = P(B)/P(A)",
+        "P(A|B) ≥ P(A)",
+        "P(A|B) < P(A)",
+        "None of these"
+      ],
+      "options_hi": [
+        "P(A|B) = P(B)/P(A)",
+        "P(A|B) ≥ P(A)",
+        "P(A|B) < P(A)",
+        "इनमें से कोई नहीं"
+      ],
+      "options_gu": [
+        "P(A|B) = P(B)/P(A)",
+        "P(A|B) ≥ P(A)",
+        "P(A|B) < P(A)",
+        "આમાંથી કોઈ નહીં"
+      ],
+      "correct_index": 1,
+      "explanation": "Since A ⊂ B, A ∩ B = A. So P(A|B) = P(A ∩ B)/P(B) = P(A)/P(B). Since P(B) ≤ 1, P(A)/P(B) ≥ P(A). Thus P(A|B) ≥ P(A).",
+      "explanation_hi": "चूंकि A ⊂ B है, A ∩ B = A। P(A|B) = P(A)/P(B)। P(B) ≤ 1 होने के कारण P(A)/P(B) ≥ P(A) है।",
+      "explanation_gu": "A ⊂ B હોવાથી, A ∩ B = A. P(A|B) = P(A)/P(B). P(B) ≤ 1 હોવાથી, P(A|B) ≥ P(A)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_032",
+      "type": "true_false",
+      "question": "If A and B are independent events, then P(A' ∩ B') = (1 - P(A))(1 - P(B)). (True/False)",
+      "question_hi": "यदि A और B स्वतंत्र घटनाएं हैं, तो P(A' ∩ B') = (1 - P(A))(1 - P(B)) होता है। (सत्य/असत्य)",
+      "question_gu": "જો A અને B સ્વતંત્ર ઘટનાઓ હોય, તો P(A' ∩ B') = (1 - P(A))(1 - P(B)) થાય. (સત્ય/અસત્ય)",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य (True)",
+        "असत्य (False)"
+      ],
+      "options_gu": [
+        "સત્ય (True)",
+        "અસત્ય (False)"
+      ],
+      "correct_index": 0,
+      "explanation": "If A and B are independent, their complements A' and B' are also independent. Hence P(A' ∩ B') = P(A') * P(B') = (1 - P(A))(1 - P(B)).",
+      "explanation_hi": "यदि A और B स्वतंत्र हैं, तो उनके पूरक A' और B' भी स्वतंत्र होते हैं।",
+      "explanation_gu": "જો A અને B સ્વતંત્ર હોય, તો તેના પૂરક A' અને B' પણ સ્વતંત્ર થાય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_033",
+      "type": "mcq",
+      "question": "Let X denote the number of heads obtained in 2 tosses of a fair coin. Find the probability distribution mean E(X).",
+      "question_hi": "माना X एक निष्पक्ष सिक्के की 2 उछाला में चितों की संख्या को निरूपित करता है। प्रायिकता बंटन का माध्य E(X) ज्ञात कीजिए।",
+      "question_gu": "ધારો કે X એ સિક્કાને 2 વાર ફેંકતા મળતી હેડ્સની સંખ્યા દર્શાવે છે. સંભાવના વિતરણનો મધ્યક E(X) શોધો.",
+      "options": [
+        "1.0",
+        "0.5",
+        "1.5",
+        "2.0"
+      ],
+      "options_hi": [
+        "1.0",
+        "0.5",
+        "1.5",
+        "2.0"
+      ],
+      "options_gu": [
+        "1.0",
+        "0.5",
+        "1.5",
+        "2.0"
+      ],
+      "correct_index": 0,
+      "explanation": "X takes values 0, 1, 2 with probabilities 1/4, 2/4, 1/4. E(X) = 0*(1/4) + 1*(2/4) + 2*(1/4) = 4/4 = 1.0.",
+      "explanation_hi": "X के मान 0, 1, 2 की प्रायिकताएं 1/4, 2/4, 1/4 हैं। E(X) = 0 + 2/4 + 2/4 = 1.0।",
+      "explanation_gu": "X ના મૂલ્યો 0, 1, 2 માટે સંભાવનાઓ 1/4, 2/4, 1/4 છે. E(X) = 1.0."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_034",
+      "type": "mcq",
+      "question": "A pair of dice is thrown 4 times. If getting a double is considered a success, find the probability of getting two successes.",
+      "question_hi": "पासे के एक जोड़े को 4 बार फेंका जाता है। यदि द्विक (doublet) प्राप्त करना एक सफलता माना जाता है, तो दो सफलताओं की प्रायिकता ज्ञात कीजिए।",
+      "question_gu": "પાસાની જોડીને 4 વખત ફેંકવામાં આવે છે. જો ડબલેટ મળવું સફળતા માનવામાં આવે, તો બે સફળતાઓ મળવાની સંભાવના શોધો.",
+      "options": [
+        "25/216",
+        "19/144",
+        "25/144",
+        "1/36"
+      ],
+      "options_hi": [
+        "25/216",
+        "19/144",
+        "25/144",
+        "1/36"
+      ],
+      "options_gu": [
+        "25/216",
+        "19/144",
+        "25/144",
+        "1/36"
+      ],
+      "correct_index": 0,
+      "explanation": "p = 6/36 = 1/6, q = 5/6. n = 4, k = 2. P(X=2) = 4C2 * (1/6)^2 * (5/6)^2 = 6 * (1/36) * (25/36) = 25/216.",
+      "explanation_hi": "p = 1/6, q = 5/6। n = 4, k = 2। P(X=2) = 4C2 * (1/6)^2 * (5/6)^2 = 25/216।",
+      "explanation_gu": "p = 1/6, q = 5/6. n = 4, k = 2. P(X=2) = 4C2 * (1/6)^2 * (5/6)^2 = 25/216."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH13_035",
+      "type": "true_false",
+      "question": "If A and B are any two events such that P(A) + P(B) - P(A and B) = P(A), then P(B|A) must equal 1.",
+      "question_hi": "यदि A और B कोई दो ऐसी घटनाएं हैं कि P(A) + P(B) - P(A और B) = P(A), तो P(B|A) का मान 1 होना चाहिए।",
+      "question_gu": "જો A અને B એવી બે ઘટનાઓ હોય કે P(A) + P(B) - P(A અને B) = P(A), તો P(B|A) ની કિંમત 1 જ હોવી જોઈએ.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य (True)",
+        "असत्य (False)"
+      ],
+      "options_gu": [
+        "સત્ય (True)",
+        "અસત્ય (False)"
+      ],
+      "correct_index": 1,
+      "explanation": "P(A) + P(B) - P(A ∩ B) = P(A) implies P(B) = P(A ∩ B). Then P(B|A) = P(A ∩ B)/P(A) = P(B)/P(A), which is not necessarily 1 unless P(A) = P(B). So False.",
+      "explanation_hi": "P(B) = P(A ∩ B) मिलता है। तो P(B|A) = P(B)/P(A) होगा, जो हमेशा 1 के बराबर होना आवश्यक नहीं है। इसलिए यह असत्य है।",
+      "explanation_gu": "P(B) = P(A ∩ B) મળે. આથી P(B|A) = P(B)/P(A) થાય, જે 1 હોવું જરૂરી નથી. તેથી વિધાન અસત્ય છે."
+    }
+  ]
+}

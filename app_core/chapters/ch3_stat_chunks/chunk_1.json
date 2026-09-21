@@ -1,0 +1,160 @@
+[
+  {
+    "id": "KOBJ_STAT_CH3_1_001",
+    "type": "theory",
+    "title": "3.1 Introduction: The Need for Regression",
+    "title_hi": "3.1 परिचय: प्रतिगमन की आवश्यकता",
+    "title_gu": "3.1 પરિચય: નિયતસંબંધની જરૂરિયાત",
+    "body": "In the previous chapter, we studied correlation, which tells us if two variables are related (like advertisement cost and sales). But correlation cannot help us *predict* the expected sale for a specific advertisement cost. To make such predictions, we need Regression.",
+    "body_hi": "पिछले अध्याय में, हमने सहसंबंध का अध्ययन किया, जो हमें बताता है कि क्या दो चर संबंधित हैं (जैसे विज्ञापन लागत और बिक्री)। लेकिन सहसंबंध हमें किसी विशिष्ट विज्ञापन लागत के लिए अपेक्षित बिक्री की *भविष्यवाणी* करने में मदद नहीं कर सकता है। ऐसी भविष्यवाणियां करने के लिए, हमें प्रतिगमन (Regression) की आवश्यकता होती है।",
+    "body_gu": "અગાઉના પ્રકરણમાં, આપણે સહસંબંધનો અભ્યાસ કર્યો, જે આપણને જણાવે છે કે શું બે ચલો સંબંધિત છે (જેમ કે જાહેરાત ખર્ચ અને વેચાણ). પરંતુ સહસંબંધ આપણને કોઈ ચોક્કસ જાહેરાત ખર્ચ માટે અપેક્ષિત વેચાણની *આગાહી* કરવામાં મદદ કરી શકતો નથી. આવી આગાહીઓ કરવા માટે, આપણને નિયતસંબંધ (Regression) ની જરૂર છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_002",
+    "type": "history",
+    "title": "Origin of Regression",
+    "title_hi": "प्रतिगमन की उत्पत्ति",
+    "title_gu": "નિયતસંબંધનો ઉદ્ભવ",
+    "body": "The literal meaning of regression is 'to avert' or 'return to the mean value'. It was first used by statistician Sir Francis Galton while studying human inheritance (heights of fathers and sons). He found that tall fathers had tall sons, but the average height of the sons was less than the fathers, showing a 'regressive tendency' towards the average.",
+    "body_hi": "प्रतिगमन का शाब्दिक अर्थ है 'पीछे हटना' या 'माध्य मूल्य पर लौटना'। इसका उपयोग पहली बार सांख्यिकीविद् सर फ्रांसिस गाल्टन ने मानव आनुवंशिकता (पिता और पुत्रों की ऊंचाई) का अध्ययन करते समय किया था। उन्होंने पाया कि लंबे पिताओं के लंबे पुत्र होते हैं, लेकिन पुत्रों की औसत ऊंचाई पिताओं की तुलना में कम थी, जो औसत की ओर एक 'प्रतिगामी प्रवृत्ति' (regressive tendency) को दर्शाता है।",
+    "body_gu": "નિયતસંબંધનો શાબ્દિક અર્થ 'પાછા ફરવું' અથવા 'મધ્યક મૂલ્ય પર પાછા ફરવું' છે. આનો ઉપયોગ સૌપ્રથમ આંકડાશાસ્ત્રી સર ફ્રાન્સિસ ગાલ્ટને માનવ આનુવંશિકતા (પિતા અને પુત્રોની ઊંચાઈ) નો અભ્યાસ કરતી વખતે કર્યો હતો. તેમણે જોયું કે ઊંચા પિતાને ઊંચા પુત્રો હોય છે, પરંતુ પુત્રોની સરેરાશ ઊંચાઈ પિતા કરતા ઓછી હતી, જે સરેરાશ તરફ 'પશ્ચાદવર્તી વૃત્તિ' (regressive tendency) દર્શાવે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_003",
+    "type": "mcq",
+    "question": "Which statistician first used the term 'Regression'?",
+    "question_hi": "किस सांख्यिकीविद् ने पहली बार 'प्रतिगमन' (Regression) शब्द का प्रयोग किया था?",
+    "question_gu": "કયા આંકડાશાસ્ત્રીએ સૌપ્રથમ 'નિયતસંબંધ' (Regression) શબ્દનો પ્રયોગ કર્યો હતો?",
+    "options": [
+      "Karl Pearson",
+      "Sir Francis Galton",
+      "Spearman",
+      "Fisher"
+    ],
+    "options_hi": [
+      "कार्ल पियर्सन",
+      "सर फ्रांसिस गाल्टन",
+      "स्पीयरमैन",
+      "फिशर"
+    ],
+    "options_gu": [
+      "કાર્લ પિયર્સન",
+      "સર ફ્રાન્સિસ ગાલ્ટન",
+      "સ્પીયરમેન",
+      "ફિશર"
+    ],
+    "correct_index": 1,
+    "explanation": "Sir Francis Galton first used it during his study of human inheritance.",
+    "explanation_hi": "सर फ्रांसिस गाल्टन ने पहली बार मानव आनुवंशिकता के अपने अध्ययन के दौरान इसका इस्तेमाल किया था।",
+    "explanation_gu": "સર ફ્રાન્સિસ ગાલ્ટને સૌપ્રથમ માનવ આનુવંશિકતાના તેમના અભ્યાસ દરમિયાન આનો ઉપયોગ કર્યો હતો."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_004",
+    "type": "definition",
+    "title": "3.2 Linear Regression Model",
+    "title_hi": "3.2 रैखिक प्रतिगमन मॉडल",
+    "title_gu": "3.2 સુરેખ નિયતસંબંધ મોડેલ",
+    "body": "A statistical model which describes the cause and effect relationship between two variables is called a regression model. The independent (causal) variable is X, and the dependent (effect) variable is Y. \nLinear Regression Model: Y = α + βX + u\nWhere 'u' is the disturbance variable (error) because real-world relations are rarely perfectly linear.",
+    "body_hi": "एक सांख्यिकीय मॉडल जो दो चरों के बीच कारण और प्रभाव संबंध का वर्णन करता है, उसे प्रतिगमन मॉडल कहा जाता है। स्वतंत्र (कारण) चर X है, और आश्रित (प्रभाव) चर Y है।\nरैखिक प्रतिगमन मॉडल: Y = α + βX + u\nजहाँ 'u' विक्षोभ चर (त्रुटि) है क्योंकि वास्तविक दुनिया के संबंध शायद ही कभी पूरी तरह से रैखिक होते हैं।",
+    "body_gu": "એક આંકડાકીય મોડેલ જે બે ચલો વચ્ચે કારણ અને અસર સંબંધનું વર્ણન કરે છે તેને નિયતસંબંધ મોડેલ કહેવામાં આવે છે. સ્વતંત્ર (કારણ) ચલ X છે, અને આધારિત (અસર) ચલ Y છે.\nસુરેખ નિયતસંબંધ મોડેલ: Y = α + βX + u\nજ્યાં 'u' એ ખલેલ ચલ (ભૂલ) છે કારણ કે વાસ્તવિક દુનિયાના સંબંધો ભાગ્યે જ સંપૂર્ણ રીતે સુરેખ હોય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_005",
+    "type": "theory",
+    "title": "Meaning of Error (u)",
+    "title_hi": "त्रुटि (u) का अर्थ",
+    "title_gu": "ભૂલ (u) નો અર્થ",
+    "body": "In natural sciences like physics, perfect linear relations exist (u = 0). But in business and economics, relationships (like ad spend vs. sales) are affected by many other unseen factors. These other factors cause an error or disturbance, denoted by 'u'.",
+    "body_hi": "भौतिकी जैसे प्राकृतिक विज्ञानों में, पूर्ण रैखिक संबंध मौजूद होते हैं (u = 0)। लेकिन व्यापार और अर्थशास्त्र में, संबंध (जैसे विज्ञापन खर्च बनाम बिक्री) कई अन्य अदृश्य कारकों से प्रभावित होते हैं। ये अन्य कारक एक त्रुटि या विक्षोभ का कारण बनते हैं, जिसे 'u' द्वारा दर्शाया जाता है।",
+    "body_gu": "ભૌતિકશાસ્ત્ર જેવા કુદરતી વિજ્ઞાનમાં, સંપૂર્ણ સુરેખ સંબંધો અસ્તિત્વમાં છે (u = 0). પરંતુ વ્યવસાય અને અર્થશાસ્ત્રમાં, સંબંધો (જેમ કે જાહેરાત ખર્ચ વિરુદ્ધ વેચાણ) ઘણા અન્ય અદ્રશ્ય પરિબળોથી પ્રભાવિત થાય છે. આ અન્ય પરિબળો ભૂલ અથવા ખલેલનું કારણ બને છે, જેને 'u' દ્વારા દર્શાવવામાં આવે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_006",
+    "type": "mcq",
+    "question": "In the regression model Y = α + βX + u, what does 'u' represent?",
+    "question_hi": "प्रतिगमन मॉडल Y = α + βX + u में, 'u' क्या दर्शाता है?",
+    "question_gu": "નિયતસંબંધ મોડેલ Y = α + βX + u માં, 'u' શું દર્શાવે છે?",
+    "options": [
+      "Independent Variable",
+      "Dependent Variable",
+      "Disturbance Variable (Error)",
+      "Constant"
+    ],
+    "options_hi": [
+      "स्वतंत्र चर",
+      "आश्रित चर",
+      "विक्षोभ चर (त्रुटि)",
+      "स्थिरांक"
+    ],
+    "options_gu": [
+      "સ્વતંત્ર ચલ",
+      "આધારિત ચલ",
+      "ખલેલ ચલ (ભૂલ)",
+      "અચળાંક"
+    ],
+    "correct_index": 2,
+    "explanation": "'u' represents the disturbance or error in the estimation.",
+    "explanation_hi": "'u' अनुमान में विक्षोभ या त्रुटि को दर्शाता है।",
+    "explanation_gu": "'u' અંદાજમાં ખલેલ અથવા ભૂલ દર્શાવે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_007",
+    "type": "theory",
+    "title": "3.3 Fitting of Regression Line",
+    "title_hi": "3.3 प्रतिगमन रेखा का आसंजन (Fitting)",
+    "title_gu": "3.3 નિયતસંબંધ રેખાનું અન્વાયોજન (Fitting)",
+    "body": "Obtaining a line that expresses the relation between two correlated variables is called fitting of a regression line. There are two main methods:\n1. Method of Scatter Diagram\n2. Method of Least Squares",
+    "body_hi": "दो सहसंबंधित चरों के बीच संबंध व्यक्त करने वाली रेखा प्राप्त करने को प्रतिगमन रेखा का आसंजन कहा जाता है। इसके दो मुख्य तरीके हैं:\n1. प्रकीर्ण आरेख की विधि (Scatter Diagram)\n2. न्यूनतम वर्गों की विधि (Least Squares)",
+    "body_gu": "બે સહસંબંધિત ચલો વચ્ચેનો સંબંધ વ્યક્ત કરતી રેખા મેળવવાની પ્રક્રિયાને નિયતસંબંધ રેખાનું અન્વાયોજન કહેવામાં આવે છે. આની બે મુખ્ય પદ્ધતિઓ છે:\n1. વિકીર્ણ આકૃતિની રીત (Scatter Diagram)\n2. ન્યૂનતમ વર્ગોની રીત (Least Squares)"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_008",
+    "type": "theory",
+    "title": "Method of Scatter Diagram",
+    "title_hi": "प्रकीर्ण आरेख की विधि",
+    "title_gu": "વિકીર્ણ આકૃતિની રીત",
+    "body": "In this method, we plot the points on a graph and draw a line that passes as close as possible to all points. While it is fast and easy, it is 'subjective'. Different people might draw slightly different lines, leading to different predictions.",
+    "body_hi": "इस विधि में, हम ग्राफ पर बिंदुओं को प्लॉट करते हैं और एक ऐसी रेखा खींचते हैं जो सभी बिंदुओं के यथासंभव करीब से गुजरती है। हालांकि यह तेज और आसान है, यह 'व्यक्तिपरक' (subjective) है। अलग-अलग लोग थोड़ी अलग रेखाएँ खींच सकते हैं, जिससे अलग-अलग भविष्यवाणियाँ हो सकती हैं।",
+    "body_gu": "આ પદ્ધતિમાં, આપણે આલેખ પર બિંદુઓ પ્લોટ કરીએ છીએ અને એવી રેખા દોરીએ છીએ જે તમામ બિંદુઓની શક્ય તેટલી નજીકથી પસાર થાય છે. જોકે તે ઝડપી અને સરળ છે, તે 'વ્યક્તિલક્ષી' (subjective) છે. જુદા જુદા લોકો થોડી અલગ રેખાઓ દોરી શકે છે, જે અલગ અલગ આગાહીઓ તરફ દોરી જાય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_009",
+    "type": "theory",
+    "title": "Method of Least Squares",
+    "title_hi": "न्यूनतम वर्गों की विधि",
+    "title_gu": "ન્યૂનતમ વર્ગોની રીત",
+    "body": "This is the mathematical way to find the 'Line of Best Fit'. The regression line of Y on X is represented by: ŷ = a + bx\nWhere 'ŷ' (y-hat) is the estimated value of Y. The constants 'a' (intercept) and 'b' (regression coefficient or slope) are calculated so that the sum of the squares of errors (Σe²) is minimized.",
+    "body_hi": "यह 'सर्वश्रेष्ठ फिट की रेखा' (Line of Best Fit) खोजने का गणितीय तरीका है। X पर Y की प्रतिगमन रेखा को दर्शाया गया है: ŷ = a + bx\nजहाँ 'ŷ' (y-hat) Y का अनुमानित मूल्य है। स्थिरांक 'a' (अंतःखंड) और 'b' (प्रतिगमन गुणांक या ढलान) की गणना इस तरह की जाती है कि त्रुटियों के वर्गों का योग (Σe²) न्यूनतम हो।",
+    "body_gu": "આ 'શ્રેષ્ઠ અન્વાયોજિત રેખા' (Line of Best Fit) શોધવાની ગાણિતિક રીત છે. X પર Y ની નિયતસંબંધ રેખા દર્શાવવામાં આવે છે: ŷ = a + bx\nજ્યાં 'ŷ' (y-hat) એ Y ની અંદાજિત કિંમત છે. અચળાંકો 'a' (આંતરછેદ) અને 'b' (નિયતસંબંધ ગુણાંક અથવા ઢાળ) ની ગણતરી એવી રીતે કરવામાં આવે છે કે ભૂલોના વર્ગોનો સરવાળો (Σe²) ન્યૂનતમ થાય."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_010",
+    "type": "formula",
+    "title": "Formulas for Method of Least Squares",
+    "title_hi": "न्यूनतम वर्गों की विधि के लिए सूत्र",
+    "title_gu": "ન્યૂનતમ વર્ગોની રીત માટેના સૂત્રો",
+    "body": "To find the constants for the regression line ŷ = a + bx:\n\n1. Regression Coefficient (b):\n   b = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\n\n2. Intercept (a):\n   a = ȳ - bx̄",
+    "body_hi": "प्रतिगमन रेखा ŷ = a + bx के लिए स्थिरांक खोजने के लिए:\n\n1. प्रतिगमन गुणांक (b):\n   b = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\n\n2. अंतःखंड (a):\n   a = ȳ - bx̄",
+    "body_gu": "નિયતસંબંધ રેખા ŷ = a + bx માટે અચળાંકો શોધવા:\n\n1. નિયતસંબંધ ગુણાંક (b):\n   b = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\n\n2. આંતરછેદ (a):\n   a = ȳ - bx̄"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_011",
+    "type": "theory",
+    "title": "Interpretation of Regression Coefficient (b)",
+    "title_hi": "प्रतिगमन गुणांक (b) की व्याख्या",
+    "title_gu": "નિયતસંબંધ ગુણાંક (b) નું અર્થઘટન",
+    "body": "The regression coefficient 'b' represents the estimated change in the value of Y for a one-unit change in X. \n- If b > 0: An increase in X causes an estimated increase in Y.\n- If b < 0: An increase in X causes an estimated decrease in Y.",
+    "body_hi": "प्रतिगमन गुणांक 'b' X में एक इकाई परिवर्तन के लिए Y के मान में अनुमानित परिवर्तन को दर्शाता है।\n- यदि b > 0: X में वृद्धि से Y में अनुमानित वृद्धि होती है।\n- यदि b < 0: X में वृद्धि से Y में अनुमानित कमी होती है।",
+    "body_gu": "નિયતસંબંધ ગુણાંક 'b' X માં એક-એકમ ફેરફાર માટે Y ની કિંમતમાં અંદાજિત ફેરફાર દર્શાવે છે.\n- જો b > 0: X માં વધારો થવાથી Y માં અંદાજિત વધારો થાય છે.\n- જો b < 0: X માં વધારો થવાથી Y માં અંદાજિત ઘટાડો થાય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_1_012",
+    "type": "worked_example",
+    "title": "Illustration 1: Car Maintenance Cost",
+    "title_hi": "उदाहरण 1: कार रखरखाव लागत",
+    "title_gu": "ઉદાહરણ 1: કાર જાળવણી ખર્ચ",
+    "body": "**Question:** The life of cars (in years) and their average annual maintenance cost (in thousand ₹) are given below. Obtain the regression line and estimate the maintenance cost if the car's life is 10 years.\n\n| Life (X) | Cost (Y) |\n|---|---|\n| 2 | 10 |\n| 4 | 20 |\n| 6 | 25 |\n| 8 | 30 |\n\n**Solution:**\nWe create a table with X, Y, XY, and X².\nΣX = 20, ΣY = 85, ΣXY = 490, ΣX² = 120, n = 4.\n\nCalculate b:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (4*490 - 20*85) / (4*120 - 20²)\nb = (1960 - 1700) / (480 - 400)\nb = 260 / 80 = 3.25\n\nCalculate a:\na = ȳ - bx̄\nx̄ = 20/4 = 5, ȳ = 85/4 = 21.25\na = 21.25 - 3.25 * 5 = 21.25 - 16.25 = 5\n\nRegression Line (ŷ) = 5 + 3.25x\nIf life is 10 years (X = 10):\nŷ = 5 + 3.25(10) = 37.5\nEstimated maintenance cost is ₹37,500.",
+    "body_hi": "**प्रश्न:** कारों का जीवन (वर्षों में) और उनकी औसत वार्षिक रखरखाव लागत (हजार ₹ में) नीचे दी गई है। प्रतिगमन रेखा प्राप्त करें और यदि कार का जीवन 10 वर्ष है तो रखरखाव लागत का अनुमान लगाएं।\n\n| जीवन (X) | लागत (Y) |\n|---|---|\n| 2 | 10 |\n| 4 | 20 |\n| 6 | 25 |\n| 8 | 30 |\n\n**समाधान:**\nहम X, Y, XY, और X² के साथ एक तालिका बनाते हैं।\nΣX = 20, ΣY = 85, ΣXY = 490, ΣX² = 120, n = 4.\n\nb की गणना करें:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (4*490 - 20*85) / (4*120 - 20²)\nb = (1960 - 1700) / (480 - 400)\nb = 260 / 80 = 3.25\n\na की गणना करें:\na = ȳ - bx̄\nx̄ = 20/4 = 5, ȳ = 85/4 = 21.25\na = 21.25 - 3.25 * 5 = 21.25 - 16.25 = 5\n\nप्रतिगमन रेखा (ŷ) = 5 + 3.25x\nयदि जीवन 10 वर्ष है (X = 10):\nŷ = 5 + 3.25(10) = 37.5\nअनुमानित रखरखाव लागत ₹37,500 है।",
+    "body_gu": "**પ્રશ્ન:** કારનું આયુષ્ય (વર્ષોમાં) અને તેમનો સરેરાશ વાર્ષિક જાળવણી ખર્ચ (હજાર ₹ માં) નીચે આપેલ છે. નિયતસંબંધ રેખા મેળવો અને જો કારનું આયુષ્ય 10 વર્ષ હોય તો જાળવણી ખર્ચનો અંદાજ કાઢો.\n\n| આયુષ્ય (X) | ખર્ચ (Y) |\n|---|---|\n| 2 | 10 |\n| 4 | 20 |\n| 6 | 25 |\n| 8 | 30 |\n\n**ઉકેલ:**\nઆપણે X, Y, XY, અને X² સાથે એક કોષ્ટક બનાવીએ છીએ.\nΣX = 20, ΣY = 85, ΣXY = 490, ΣX² = 120, n = 4.\n\nb ની ગણતરી કરો:\nb = (nΣxy - (Σx)(Σy)) / (nΣx² - (Σx)²)\nb = (4*490 - 20*85) / (4*120 - 20²)\nb = (1960 - 1700) / (480 - 400)\nb = 260 / 80 = 3.25\n\na ની ગણતરી કરો:\na = ȳ - bx̄\nx̄ = 20/4 = 5, ȳ = 85/4 = 21.25\na = 21.25 - 3.25 * 5 = 21.25 - 16.25 = 5\n\nનિયતસંબંધ રેખા (ŷ) = 5 + 3.25x\nજો આયુષ્ય 10 વર્ષ હોય (X = 10):\nŷ = 5 + 3.25(10) = 37.5\nઅંદાજિત જાળવણી ખર્ચ ₹37,500 છે."
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "chapter_id": 1102,
+  "board": "NCERT",
+  "class": 11,
+  "subject": "Physics",
+  "chapter_name_en": "Chapter 2: Units and Measurements",
+  
+  "introduction": {
+    "heading": "Units of Measurement",
+    "details_en": "Measurement of any physical quantity involves comparison with a certain basic, arbitrarily chosen, internationally accepted reference standard called unit. The result of a measurement of a physical quantity is expressed by a number (or numerical measure) accompanied by a unit."
+  },
+
+  "key_definitions": [
+    {
+      "term": "Fundamental and Derived Units",
+      "explanation_en": "The units for the fundamental or base quantities are called fundamental or base units. The units of all other physical quantities can be expressed as combinations of the base units, known as derived units."
+    },
+    {
+      "term": "International System of Units (SI)",
+      "explanation_en": "The internationally accepted system of units is Système Internationale d’ Unites (French for International System of Units) or SI. It uses decimal system and contains 7 base units (meter, kilogram, second, ampere, kelvin, mole, candela)."
+    },
+    {
+      "term": "Errors in Measurement",
+      "explanation_en": "The measuring process is essentially a process of comparison. In spite of our best efforts, the measured value of a quantity is always somewhat different from its actual value, or true value. This difference is called an error."
+    }
+  ],
+
+  "practical_examples": [
+    {
+      "example_no": 1,
+      "title": "Dimensional Analysis",
+      "problem": "Check the dimensional consistency of the equation v = v0 + at.",
+      "solution": "Dimensions of LHS: [v] = [L T^-1]\nDimensions of RHS: [v0] = [L T^-1], and [at] = [L T^-2] * [T] = [L T^-1].\nSince each term on both sides has the same dimension, the equation is dimensionally consistent."
+    },
+    {
+      "example_no": 2,
+      "title": "Percentage Error Calculation",
+      "problem": "The resistance R = V/I, where V = (100 ± 5)V and I = (10 ± 0.2)A. Find the percentage error in R.",
+      "solution": "The percentage error in V is 5% and in I is (0.2/10)*100 = 2%.\nThe total percentage error in R is the sum of percentage errors of V and I, which is 5% + 2% = 7%."
+    }
+  ],
+
+  "exercises": [
+    {
+      "q_no": 1,
+      "question": "Which of the following is NOT a fundamental SI unit?",
+      "options": ["Ampere", "Candela", "Newton", "Mole"],
+      "correct_answer": "Newton",
+      "hint": "Newton is a derived unit of force (kg·m/s²)."
+    }
+  ],
+
+  "previous_years_questions": [
+    {
+      "year": 2020,
+      "question_type": "NEET Level",
+      "question": "If energy (E), velocity (V) and time (T) are chosen as the fundamental quantities, the dimensional formula of surface tension will be:",
+      "solution": "Surface tension (S) = Force / Length = Energy / Area = E * L^-2. Velocity V = L * T^-1 => L = V * T. Therefore, S = E * (V*T)^-2 = E V^-2 T^-2."
+    }
+  ]
+}

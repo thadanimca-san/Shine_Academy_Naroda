@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "id": "cbse_class3_maths_ch5",
+    "title": "Chapter 5: Division",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand division as equal sharing and equal grouping.",
+      "Relate division to repeated subtraction.",
+      "Use the division symbol (÷) and understand its relationship with multiplication.",
+      "Solve single-digit division problems accurately."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_DIVISION",
+      "DICT_GRADE_SHARING",
+      "DICT_GRADE_REMAINDER"
+    ],
+    "ai_context": {
+      "learning_goal": "To master the fundamental concept of division as splitting quantities equally and understand its inverse relationship with multiplication.",
+      "common_misconceptions": [
+        "Confusing the dividend and the divisor.",
+        "Believing division can be done in any order like multiplication.",
+        "Thinking a remainder can be larger than the divisor."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Bakery Mystery",
+      "body": "Imagine you are the head baker at Shine Bakery, and you just pulled 12 warm, delicious chocolate chip cookies out of the oven. Your best friends—Maya, Leo, Sam, and Zoe—are sitting at the table eagerly waiting. You want to be completely fair. If you give all the cookies to Maya, the others will be sad. If you give 5 to Leo and 1 to someone else, it is unfair. How do you make sure that everyone gets the exact same number of cookies without a single crumb left over? This everyday puzzle is the exact heartbeat of what we call [DICT_GRADE_DIVISION|Division]. Let's step into the bakery and discover the magic of sharing equally!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In the bakery story, why must the 12 cookies be shared carefully among the 4 friends?",
+      "options": [
+        "To make sure some friends get more chocolate chips than others",
+        "To ensure everyone gets an equal share with no unfairness",
+        "Because the oven can only bake 4 cookies at a time"
+      ],
+      "correct_index": 1,
+      "explanation": "Division is all about fairness—sharing a total quantity into equal groups so that everyone gets the same amount.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Sharing Equally?",
+      "body": "At its core, [DICT_GRADE_DIVISION|Division] is the mathematical process of [DICT_GRADE_SHARING|equal sharing] and equal grouping. When you have a total amount—known in mathematics as the dividend—and you want to split it into equal parts, you are dividing. Think of it as the opposite of packing things together. If you have 12 cookies and 4 friends, you hand out 1 cookie to each friend at a time. Friend 1 gets 1, Friend 2 gets 1, Friend 3 gets 1, Friend 4 gets 1. That's 4 cookies gone. You have 8 left. You repeat the process: give 1 more to each. Now everyone has 2, and 8 cookies are gone. You have 4 left. Give 1 more to each. Now everyone has 3 cookies, and you have 0 left! Each friend ends up with 3 cookies. We write this mathematically as 12 ÷ 4 = 3.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Hands-On Bakery Experiment",
+      "body": "Grab 12 small items from around your room—like pencils, blocks, or coins. Pretend they are magic crystals. Try to share them equally among 3 piles (representing 3 kingdoms). Count how many go into each kingdom. Did you end up with 4 crystals in each? That's 12 ÷ 3 = 4!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does dividing a total amount into equal parts represent?",
+      "back": "Equal sharing or equal grouping, ensuring every group has the exact same quantity.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Division as Repeated Subtraction",
+      "body": "Just like multiplication is fast addition, division is fast subtraction! We call this [DICT_GRADE_REMAINDER|repeated subtraction]. Imagine you have 15 flowers and you want to put 3 flowers in every vase. Instead of guessing, you can keep subtracting 3 from 15 until you reach zero. Let's trace it: Step 1: 15 - 3 = 12 (1st vase filled). Step 2: 12 - 3 = 9 (2nd vase filled). Step 3: 9 - 3 = 6 (3rd vase filled). Step 4: 6 - 3 = 3 (4th vase filled). Step 5: 3 - 3 = 0 (5th vase filled). How many times did we subtract 3? Exactly 5 times! That means you filled 5 vases. Therefore, 15 ÷ 3 = 5. Repeated subtraction helps us see how many times a smaller group can fit inside a larger total.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If you have 10 apples and give 2 apples away in each round of subtraction, how many subtraction steps does it take to reach 0?",
+      "options": [
+        "3 steps",
+        "5 steps",
+        "10 steps"
+      ],
+      "correct_index": 1,
+      "explanation": "10 - 2 = 8 (1), 8 - 2 = 6 (2), 6 - 2 = 4 (3), 4 - 2 = 2 (4), 2 - 2 = 0 (5). It takes 5 steps, so 10 ÷ 2 = 5.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Anatomy of a Division Sentence",
+      "body": "Every mathematical sentence has a structure, and division is no exception. Let's look at the equation: 20 ÷ 4 = 5. The first number, 20, is the **Dividend**. This is the total amount of items you are starting with before sharing. The symbol in the middle (÷) is the **Division Sign**, which tells us to split or share. The next number, 4, is the **Divisor**. The divisor tells us either how many equal groups we are making or how many items go into each group. Finally, the number after the equals sign is the **Quotient**. The quotient is your final answer—it tells you the size of each group or how many groups were made. Master these four words (Dividend, Divisor, Quotient, and Division Sign), and you will speak the fluent language of arithmetic!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "What is the answer to a division problem called?",
+      "back": "The Quotient.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "The Division Symbol Story",
+      "body": "Did you know the division sign (÷) actually represents a fraction? The top dot represents the numerator (the total number or dividend), and the bottom dot represents the denominator (the divisor). When people wrote fractions inline, they used a dash with dots above and below to hold the numbers!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: The Magic Key - Multiplication and Division",
+      "body": "Here is a wonderful secret of mathematics: multiplication and division are best friends! They are inverse operations, which means they undo each other. If multiplication is putting groups together, division is taking them apart. Let's look at a multiplication fact we already know: 4 × 3 = 12. If you take that exact same group relationship and look at it backwards, you get division facts! If 4 groups of 3 make 12, then taking 12 and dividing it into 4 groups gives us 3 (12 ÷ 4 = 3). Or, if you divide 12 into groups of 3, you get 4 groups (12 ÷ 3 = 4). This means if you know your multiplication tables, you automatically know your division facts! Whenever you get stuck on a division problem like 18 ÷ 2, just ask yourself: '2 times what number equals 18?' Since 2 × 9 = 18, you immediately know 18 ÷ 2 = 9.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "If you know that 5 × 6 = 30, what is the value of 30 ÷ 5?",
+      "options": [
+        "5",
+        "6",
+        "30"
+      ],
+      "correct_index": 1,
+      "explanation": "Because multiplication and division are inverse operations, if 5 × 6 = 30, then 30 ÷ 5 must equal 6.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "flashcard",
+      "front": "What do we call operations like multiplication and division that undo each other?",
+      "back": "Inverse operations.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Concept 4: Dealing with Leftovers - The Remainder",
+      "body": "Sometimes, the world isn't divided into perfectly even pieces. What happens when you try to share fairly, but there are leftover items that won't fit equally? Meet the [DICT_GRADE_REMAINDER|Remainder]! Imagine you have 13 stickers and 4 friends. You distribute them equally: each friend gets 3 stickers (4 × 3 = 12). But wait! You started with 13, and you handed out 12. You have 1 sticker left over in your hand. Because 1 sticker cannot be split into 4 equal pieces without cutting it up, that leftover sticker is called the remainder. We write this as: 13 ÷ 4 = 3 with a remainder of 1 (or R1). Whenever the dividend is not a multiple of the divisor, a remainder will always appear.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "You have 17 marbles and want to share them equally among 5 friends. How many marbles will each friend get, and how many are left over?",
+      "options": [
+        "3 each, remainder 2",
+        "4 each, remainder 1",
+        "3 each, remainder 0"
+      ],
+      "correct_index": 0,
+      "explanation": "5 × 3 = 15. To get to 17 from 15, you need 2 more. So each friend gets 3 marbles, and 2 are left over (Remainder 2).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "teacher_tip",
+      "title": "The Golden Rule of Remainders",
+      "body": "Always check your remainder! The remainder must ALWAYS be smaller than your divisor. If your divisor is 4 and your remainder is 5, it means you could have given one more item to each group!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Special Rules of Division: Dividing by 1 and Self",
+      "body": "Numbers have special behaviors when divided by 1 or by themselves. Rule 1: Any number divided by 1 gives the number itself. For example, if you have 8 candies and you give them to just 1 person, that person gets all 8 candies! So 8 ÷ 1 = 8. Rule 2: Any non-zero number divided by itself equals 1. If you have 8 candies and you share them equally among 8 friends, everyone gets exactly 1 candy. So 8 ÷ 8 = 1. These two golden rules are wonderful shortcuts when solving complex word problems.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "flashcard",
+      "front": "What is 15 ÷ 1?",
+      "back": "15 (Any number divided by 1 is the number itself.)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "What is 15 ÷ 15?",
+      "back": "1 (Any number divided by itself equals 1.)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "The Mystery of Zero in Division",
+      "body": "Zero behaves very uniquely in division, and you have to be careful! Case A: Zero divided by any number is zero. If you have 0 cookies and you want to share them among 4 friends, everyone gets 0 cookies. So 0 ÷ 4 = 0. Case B: Dividing by zero is impossible! Can you divide 12 cookies among 0 friends? No, because if there are no friends, there is no one to share with! In mathematics, dividing by zero is undefined and considered a mathematical trap. Always remember: zero divided by a number is zero, but you can never divide a number by zero.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "What is the answer to 0 ÷ 9?",
+      "options": [
+        "9",
+        "0",
+        "Impossible / Undefined"
+      ],
+      "correct_index": 1,
+      "explanation": "If you have zero items and share them among 9 groups, each group gets zero items.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Real-World Word Problems: Step-by-Step",
+      "body": "Math isn't just numbers on a page; it's a tool to solve real-life mysteries. Let's look at a word problem: 'Teacher Sarah has 24 colored pencils. She wants to distribute them equally into 6 pencil boxes on her desk. How many colored pencils will go into each box?' Step 1: Identify the total amount (Dividend) = 24. Step 2: Identify the number of groups (Divisor) = 6. Step 3: Set up the equation: 24 ÷ 6 = ?. Step 4: Use multiplication knowledge—what number multiplied by 6 gives 24? Since 4 × 6 = 24, the answer is 4! Step 5: Write the final unit: 4 colored pencils per box. By breaking problems down this way, you can conquer any division challenge thrown your way.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "A farmer has 35 carrots and wants to put them into bags of 7 carrots each. How many bags does the farmer need?",
+      "options": [
+        "5 bags",
+        "6 bags",
+        "7 bags"
+      ],
+      "correct_index": 0,
+      "explanation": "The total is 35, and each group has 7. 35 ÷ 7 = 5, because 5 × 7 = 35.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Drawing Arrays for Division",
+      "body": "When solving division problems, draw dots in rows and columns! If you need to solve 20 ÷ 5, draw rows of 5 dots until you reach a total of 20. Count how many rows you drew. That row count is your quotient!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "front": "In the problem 24 ÷ 6 = 4, what is the number 24 called?",
+      "back": "The Dividend.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Summary: Master Checklist for Division",
+      "body": "You have traveled a long way through Shine Bakery and explored the wonderful universe of division! Let's review your master checklist: 1. Division means equal sharing and equal grouping. 2. It can be performed using repeated subtraction. 3. The parts of a division equation are the dividend, divisor, and quotient. 4. Multiplication and division are inverse operations—use your multiplication tables to check your division! 5. Leftovers are called remainders, and they must always be smaller than the divisor. Armed with these tools, you are now ready to tackle any division challenge with confidence and precision!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "True or False: A remainder can be larger than or equal to the divisor.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "explanation": "False! The remainder must always be strictly smaller than the divisor; otherwise, another group could have been formed.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "id": "SCI_C7_CH3",
+    "title": "Heat",
+    "subject": "Science",
+    "grade": "7",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand heat as a form of energy and its distinction from temperature.",
+      "Explore the three modes of heat transfer: conduction, convection, and radiation.",
+      "Investigate how different materials react to heat through expansion and contraction.",
+      "Analyze weather patterns and everyday appliances through the lens of thermal physics."
+    ],
+    "core_concepts": [
+      "DICT_C7_HEAT",
+      "DICT_C7_TEMPERATURE",
+      "DICT_C7_CONDUCTION",
+      "DICT_C7_CONVECTION",
+      "DICT_C7_RADIATION"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the principles of thermal energy, how it moves through matter, and how it affects our physical world.",
+      "common_misconceptions": [
+        "Heat and temperature are the same thing.",
+        "Woolen clothes create heat on their own.",
+        "Cold is a substance that flows into objects, rather than the absence of heat."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Morning Bench",
+      "body": "Imagine stepping outside on a crisp autumn morning. You walk down to your school garden and notice two benches side by side: one made of cold steel and the other made of polished wood. When you touch the steel bench, it instantly feels freezing cold against your bare hands. But when you touch the wooden bench right next to it, it feels surprisingly neutral and mild. You check both with a thermometer, and to your utter astonishment, both benches display the exact same temperature! How can two objects at the exact same temperature feel so radically different? The secret lies in the invisible, ceaseless dance of energy that rules our universe.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on the morning bench story, why did the steel bench feel colder than the wooden bench even though they were at the same temperature?",
+      "options": [
+        "The steel bench actually had a lower temperature.",
+        "Steel transfers heat away from your hand much faster than wood.",
+        "Wood generates its own heat while steel absorbs moisture."
+      ],
+      "correct_index": 1,
+      "explanation": "Steel is a better thermal conductor than wood, meaning it draws heat away from your skin rapidly, creating the sensation of cold.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "What is [DICT_C7_HEAT|Heat]?",
+      "body": "At the microscopic level, everything in our universe is made of tiny building blocks called atoms and molecules. These particles are never truly at rest; they vibrate, collide, and race around continuously. [DICT_C7_HEAT|Heat] is formally defined as the total kinetic energy possessed by the atoms and molecules making up a substance. When you heat an object, you are actually transferring energy to it, causing its microscopic particles to jiggle and move faster and collide with greater force. Think of it like a crowded room of energetic dancers; the more frantically everyone is moving and bumping into one another, the more thermal energy is present in the room. This form of energy is always on the move, flowing naturally from regions of higher energy to regions of lower energy.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: Heat Definition",
+      "body": "What is heat in terms of microscopic particles?",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "[DICT_C7_TEMPERATURE|Temperature] vs. Heat",
+      "body": "One of the most common traps in science is confusing [DICT_C7_TEMPERATURE|temperature] with heat. While heat is the *total* amount of kinetic energy in a body, temperature is a measure of the *average* kinetic energy of those particles. To understand the difference, imagine a boiling cup of tea versus a massive, lukewarm swimming pool. The cup of tea has a very high temperature—its molecules are zooming around intensely—but because it contains relatively few water molecules, its total heat energy is quite low. Conversely, the swimming pool has a much lower temperature, but because it contains trillions upon trillions of molecules, its *total* thermal energy is immense! Temperature simply tells us how hot or cold something is and dictates the direction in which heat will flow.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "quiz",
+      "question": "Which of the following has a higher temperature, but a lower total heat energy?",
+      "options": [
+        "A lukewarm Olympic-sized swimming pool",
+        "A tiny spark from a glowing campfire",
+        "A massive iceberg floating in the ocean"
+      ],
+      "correct_index": 1,
+      "explanation": "A tiny spark has extremely fast-moving particles (high temperature), but because there are so few particles, its total heat energy is very small.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "teacher_tip",
+      "title": "The Hot Water Cup Analogy",
+      "body": "Ask students to imagine filling a small bucket and a large bathtub with water from the same hot tap. Both are at the same temperature, but which takes longer to cool down? The bathtub holds more total heat energy because of its sheer volume!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Measuring Temperature with Thermometers",
+      "body": "Because our skin is notoriously unreliable at measuring exact temperatures (as proven by our morning bench mystery), scientists invented the thermometer. Most common liquid-in-glass thermometers rely on a fascinating physical property: thermal expansion. Inside the glass bulb is a liquid—traditionally mercury, but nowadays usually colored alcohol—which expands and takes up more volume when its temperature rises. As the liquid warms up, it has nowhere to go except up the narrow capillary tube. We calibrate this movement against standard scales. The two most widely used scales are Celsius (°C), where water freezes at 0°C and boils at 100°C, and Fahrenheit (°F). Scientists also use the Kelvin (K) scale, which starts at absolute zero, the theoretical point where all molecular motion ceases completely.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Flashcard: Celsius Scale Benchmarks",
+      "body": "On the Celsius scale, at what temperature does pure water freeze and boil at standard atmospheric pressure?",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "How Heat Travels: An Introduction",
+      "body": "Heat never stays put if there is a temperature difference available. It is a restless traveler that moves from hotter objects to cooler objects until thermal equilibrium is reached—meaning both objects arrive at the exact same temperature. Nature uses three distinct methods to transport thermal energy across space and matter: [DICT_C7_CONDUCTION|conduction], [DICT_C7_CONVECTION|convection], and [DICT_C7_RADIATION|radiation]. Each method operates under different physical rules, depending on whether the energy is moving through solid metals, swirling fluids, or across the absolute emptiness of a vacuum.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Method 1: [DICT_C7_CONDUCTION|Conduction] in Solids",
+      "body": "[DICT_C7_CONDUCTION|Conduction] is the process by which heat is transferred from the hotter end to the colder end of an object through direct physical contact. Imagine holding a metal spoon with one end resting in a steaming pot of soup. The soup molecules collide with the atoms at the spoon's tip, making them vibrate faster. These vibrating atoms bump into their neighboring atoms, passing the vibrational energy along the length of the spoon like a row of falling dominoes. Substances that allow heat to pass through them easily are called conductors (such as copper, aluminum, and iron), which is why cooking pots are made of metal. Conversely, materials that conduct heat poorly are called insulators (such as wood, plastic, air, and wool), which is why we use wooden handles on cooking utensils and wear fluffy woolen sweaters in winter to trap our body heat.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "Why do frying pans often have plastic or wooden handles while the main body is made of metal?",
+      "options": [
+        "Metal is cheaper to manufacture for the base, while plastic looks prettier.",
+        "Metal conducts heat quickly to cook food, while plastic acts as an insulator to protect your hands.",
+        "Plastic generates coldness to balance the heat of the metal."
+      ],
+      "correct_index": 1,
+      "explanation": "Metals are excellent thermal conductors for cooking, whereas plastics and woods are poor conductors (insulators) that prevent burns.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Ice Cube Race",
+      "body": "Place an ice cube on a plastic plate and another identical ice cube on an aluminum baking sheet. Ask students which melts faster and why. The aluminum conducts heat from the room air into the ice much faster than plastic!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Conduction in Liquids and Gases",
+      "body": "While conduction is the primary mode of heat transfer in solids, liquids and gases are actually very poor conductors of heat—they act almost like thermal insulators! If you hold a test tube of water near the top and heat the bottom, the water at the top will take a surprisingly long time to get hot purely through conduction. This happens because the molecules in liquids and gases are spaced much farther apart than in solids, making it far more difficult for atomic 'dominoes' to collide and pass vibrational energy efficiently. Because conduction is so inefficient in fluids, nature relies on an entirely different mechanism to heat them up.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Method 2: [DICT_C7_CONVECTION|Convection] in Fluids",
+      "body": "[DICT_C7_CONVECTION|Convection] is the transfer of heat through the actual physical movement of fluid (liquid or gas) particles from one place to another. When you heat a pot of water from the bottom, the water molecules right above the flame absorb heat, expand, and become less dense than the cooler water surrounding them. Because hot, less-dense fluid floats, this warm water rises upward toward the surface. As it rises, cooler, denser water from the top rushes downward to take its place near the bottom, where it is then heated in turn. This creates a continuous circular loop called a convection current. Convection currents are responsible for boiling water, heating rooms with radiators, and driving massive global weather systems.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Flashcard: Convection Current Direction",
+      "body": "In a boiling pot of water, does warm water rise or sink, and why?",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Sea Breezes and Land Breezes",
+      "body": "Convection currents do not just happen in kitchen pots; they shape the climate of our entire planet! Consider coastal regions during a sunny day. Land absorbs heat from the sun much faster than the ocean water does. The air directly above the warm land gets heated, becomes less dense, and rises into the sky. To fill that vacant space, cooler, denser air rushes in from over the sea. This refreshing daytime phenomenon is known as a sea breeze. At night, the exact opposite happens: the land cools down much faster than the ocean, so the air over the warmer sea rises, and a land breeze blows from the shore out toward the water. This daily cycle has guided sailors for thousands of years.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "During a hot summer afternoon at the beach, which direction does the wind typically blow?",
+      "options": [
+        "From the land out toward the sea",
+        "From the sea in toward the land",
+        "Straight down from the clouds"
+      ],
+      "correct_index": 1,
+      "explanation": "Air over land heats up and rises, drawing cooler air in from the sea, creating a refreshing sea breeze.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Method 3: [DICT_C7_RADIATION|Radiation] across Space",
+      "body": "Conduction requires physical touch; convection requires moving fluids. But how does heat from the Sun travel across 150 million kilometers of freezing, empty space where there is no air or matter at all? The answer is [DICT_C7_RADIATION|radiation]. Thermal radiation is the transfer of heat energy in the form of electromagnetic waves (specifically infrared waves) that can travel effortlessly through a vacuum. All objects with a temperature above absolute zero emit thermal radiation. When these invisible waves strike an object, they are absorbed and converted back into kinetic energy, warming the object up. This is why you can feel the intense heat of a campfire even when the surrounding air is chilly, or why your face warms up instantly when stepping out into direct sunlight.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "title": "Flashcard: Radiation Medium",
+      "body": "Does radiation require a medium like air or solid matter to travel?",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Absorption and Reflection of Radiation",
+      "body": "Not all surfaces interact with thermal radiation in the same way. The color and texture of an object play a massive role in how it absorbs or reflects heat waves. Dark-colored surfaces—especially matte black ones—are exceptional absorbers of radiant heat. They catch infrared waves and convert them into thermal energy very efficiently. On the other hand, light-colored and shiny or polished surfaces act like mirrors for radiant heat, reflecting most of the incoming waves away. This is why we prefer wearing light-colored cotton clothes during scorching summer days to stay cool, and why solar water heaters and roof insulation often feature reflective metallic layers.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "Why are houses in hot desert climates frequently painted in bright white or light pastel colors?",
+      "options": [
+        "White paint is much cheaper than dark paint.",
+        "Light colors reflect radiant heat from the sun, keeping the inside of the house cooler.",
+        "White paint absorbs moisture from the desert air."
+      ],
+      "correct_index": 1,
+      "explanation": "Light colors reflect solar radiation, preventing the building from absorbing excess heat from the sun.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "teacher_tip",
+      "title": "The Tin Can Experiment",
+      "body": "Wrap one identical tin can in black paper and another in shiny aluminum foil, fill both with lukewarm water, and place them under a bright lamp. Have students measure the temperature after 15 minutes to see how color impacts radiant heat absorption!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Thermal Expansion and Contraction",
+      "body": "Heat does more than just change temperatures and flow through space; it physically alters the dimensions of matter. When most solids, liquids, and gases are heated, their particles vibrate and push slightly further apart from one another, causing the entire material to expand. This phenomenon is known as thermal expansion. Conversely, when materials cool down, their particles lose energy, settle closer together, and the material contracts. While this change in size can be minuscule, engineers must account for it meticulously. For instance, long steel railway tracks are laid with small gaps between them so that on blistering summer days, the metal has room to expand without buckling and derailing trains.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "title": "Flashcard: Thermal Expansion",
+      "body": "What happens to the volume of most substances when their temperature increases?",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Real-World Engineering Marvels",
+      "body": "Thermal expansion and contraction dictate how we build our modern infrastructure. Bridge designers use special mechanical fixtures called expansion joints, which look like giant metal combs that interlock. As steel bridges bake in the summer sun or freeze in winter snow, these joints slide back and forth to absorb the structural movement without snapping. Similarly, power lines are never strung taut between utility poles during warm weather; workers leave them slightly slack so that when winter arrives and the metal contracts in the cold, the wires will not snap under immense tension. Understanding heat is quite literally what keeps our bridges standing and our power grids connected!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "Why do engineers leave small gaps between sections of railway tracks?",
+      "options": [
+        "To allow rainwater to drain away quickly",
+        "To allow the metal tracks room to expand during hot weather without buckling",
+        "To reduce the rattling sound of passing trains"
+      ],
+      "correct_index": 1,
+      "explanation": "Railway tracks expand when heated by the sun; gaps provide necessary clearance so they don't warp or buckle.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "The Strange Exception: Water",
+      "body": "Water is one of the most eccentric and miraculous substances in the universe because it disobeys normal thermal expansion rules in a very narrow temperature band. When water cools down from room temperature, it contracts just like any other liquid—until it reaches 4°C. However, as water cools further from 4°C down to freezing point (0°C), it actually begins to expand again! This means water reaches its maximum density at exactly 4°C. Because ice is less dense than liquid water, ice floats on top of ponds and lakes during freezing winters. This strange anomaly is critical for life on Earth; if ice sank, lakes would freeze solid from the bottom up, destroying all aquatic ecosystems.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "quiz",
+      "question": "At what temperature does liquid water reach its maximum density?",
+      "options": [
+        "0°C",
+        "4°C",
+        "100°C"
+      ],
+      "correct_index": 1,
+      "explanation": "Water is densest at 4°C. As it cools further to form ice, it expands, which is why ice floats.",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "theory",
+      "title": "Clothing and Insulation in Daily Life",
+      "body": "When winter arrives, we bundle up in thick jackets, wool scarves, and fluffy quilts. A common misconception is that woolen clothes produce heat. In reality, wool fibers are poor conductors of heat (insulators) and, more importantly, they trap countless tiny pockets of stationary air between them. Air is an exceptional thermal insulator when it cannot move around to form convection currents. By trapping a layer of warm air right next to our skin, our winter clothes prevent our body heat from escaping into the chilly environment outside. Animals like polar bears, penguins, and seals use the exact same strategy, relying on thick layers of blubber or trapped fur and feathers to survive sub-zero polar temperatures.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_31",
+      "type": "quiz",
+      "question": "How do woolen sweaters keep you warm in cold weather?",
+      "options": [
+        "They generate continuous chemical heat to warm your body.",
+        "They trap pockets of air that act as thermal insulators, preventing your body heat from escaping.",
+        "They absorb coldness from the air and destroy it."
+      ],
+      "correct_index": 1,
+      "explanation": "Wool traps air, which is a poor conductor of heat, thus creating an insulating barrier that retains your body heat.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_32",
+      "type": "theory",
+      "title": "Conclusion: The Thermal Universe",
+      "body": "From the microscopic jiggling of atoms to global ocean currents and the blazing radiation of distant stars, heat is the master engine of change in our cosmos. By understanding how thermal energy moves through conduction, convection, and radiation, and how matter responds through expansion and contraction, we unlock the secrets behind everyday phenomena—from why our morning steel bench felt freezing to how engineers design safe bridges and how Earth maintains life-sustaining climates. Thermal physics is not just a chapter in a textbook; it is the study of how our universe lives, breathes, and evolves.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

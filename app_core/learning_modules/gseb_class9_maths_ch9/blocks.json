@@ -1,0 +1,302 @@
+[
+  {
+    "id": "KOBJ_CIRCLE_001",
+    "type": "definition",
+    "content": "A circle is the collection of all points in a plane, which are at a fixed distance from a fixed point in the plane. The fixed point is called the centre of the circle and the fixed distance is called the radius of the circle.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_GEOMETRY_POINT", "KOBJ_GEOMETRY_PLANE"],
+      "prerequisites": ["KOBJ_GEOMETRY_BASICS"],
+      "next_topics": ["KOBJ_CIRCLE_002"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Remember"
+    },
+    "ai_context": {
+      "learning_goal": "Define a circle and identify its centre and radius.",
+      "common_misconceptions": ["Thinking of a circle as the interior region rather than just the boundary."],
+      "tutor_hint": "Imagine tying a string to a peg and walking around it keeping the string tight. The path you walk is the circle."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_002",
+    "type": "theory",
+    "content": "A circle divides the plane on which it lies into three parts: 1. Inside the circle, which is also called the interior of the circle. 2. The circle itself. 3. Outside the circle, which is also called the exterior of the circle. The circle and its interior make up the circular region.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_001"],
+      "prerequisites": ["KOBJ_CIRCLE_001"],
+      "next_topics": ["KOBJ_CIRCLE_003"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Understand the three regions a circle creates on a plane.",
+      "common_misconceptions": ["Failing to distinguish between the circle (boundary) and the circular region (disk)."],
+      "tutor_hint": "If you throw a dart, it can land inside, on the line, or outside. These are the three regions."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_003",
+    "type": "definition",
+    "content": "If you take two points P and Q on a circle, then the line segment PQ is called a chord of the circle. The chord, which passes through the centre of the circle, is called a diameter of the circle.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_DIAMETER"],
+      "prerequisites": ["KOBJ_CIRCLE_001"],
+      "next_topics": ["KOBJ_CIRCLE_004"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Remember"
+    },
+    "ai_context": {
+      "learning_goal": "Identify chords and the diameter of a circle.",
+      "common_misconceptions": ["Thinking a diameter is not a chord."],
+      "tutor_hint": "A diameter is just a special chord—the longest one, which goes right through the centre."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_004",
+    "type": "formula",
+    "content": "The diameter is the longest chord and all diameters have the same length, which is equal to two times the radius. Formula: d = 2r",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_003"],
+      "prerequisites": ["KOBJ_CIRCLE_003"],
+      "next_topics": ["KOBJ_CIRCLE_005"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Relate the length of the diameter to the radius.",
+      "common_misconceptions": ["Mixing up the radius and diameter when using formulas."],
+      "tutor_hint": "Radius is from centre to edge, diameter is from edge to edge through the centre. So, two radii make a diameter."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_005",
+    "type": "theory",
+    "content": "A piece of a circle between two points is called an arc. The longer one is called the major arc and the shorter one is called the minor arc. The region between a chord and either of its arcs is called a segment of the circular region.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_SEGMENT"],
+      "prerequisites": ["KOBJ_CIRCLE_003"],
+      "next_topics": ["KOBJ_CIRCLE_006"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Differentiate between an arc and a segment.",
+      "common_misconceptions": ["Using 'arc' and 'segment' interchangeably."],
+      "tutor_hint": "An arc is a curved line (part of the boundary). A segment is an area (like a slice cut straight off the side)."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_006",
+    "type": "theory",
+    "content": "The region between an arc and the two radii, joining the centre to the end points of the arc is called a sector. Like segments, you find the minor sector and the major sector.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_005"],
+      "prerequisites": ["KOBJ_CIRCLE_005"],
+      "next_topics": ["KOBJ_CIRCLE_007"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Differentiate between a sector and a segment.",
+      "common_misconceptions": ["Confusing sector and segment."],
+      "tutor_hint": "A sector looks like a slice of pizza. A segment looks like the crust cut off."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_007",
+    "type": "common_mistakes",
+    "content": "Students often confuse 'Sector' and 'Segment'. \n\n1. **Sector** is formed by two radii and an arc (looks like a pie slice). \n2. **Segment** is formed by a chord and an arc. \nRemember: **S**ector has **R**adii, **S**egment has a **C**hord.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_006", "KOBJ_CIRCLE_005"],
+      "prerequisites": ["KOBJ_CIRCLE_006"],
+      "next_topics": ["KOBJ_CIRCLE_008"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Analyze"
+    },
+    "ai_context": {
+      "learning_goal": "Prevent the common mistake of confusing sectors and segments.",
+      "common_misconceptions": ["Thinking a segment includes the centre of the circle."],
+      "tutor_hint": "Ask the student to draw a sector and a segment side-by-side to highlight the difference."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_008",
+    "type": "theory",
+    "content": "Theorem: Equal chords of a circle subtend equal angles at the centre. Conversely, if the angles subtended by the chords of a circle at the centre are equal, then the chords are equal.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_TRIANGLE_CONGRUENCE"],
+      "prerequisites": ["KOBJ_CIRCLE_003"],
+      "next_topics": ["KOBJ_CIRCLE_009"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 10,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Understand the relationship between chord length and the angle it subtends at the centre.",
+      "common_misconceptions": ["Believing that longer chords subtend smaller angles."],
+      "tutor_hint": "Think about pulling the endpoints of a chord further apart; the angle at the centre has to open up wider, right?"
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_009",
+    "type": "theory",
+    "content": "Theorem: The perpendicular from the centre of a circle to a chord bisects the chord. Conversely, the line drawn through the centre of a circle to bisect a chord is perpendicular to the chord.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_PYTHAGORAS_THEOREM"],
+      "prerequisites": ["KOBJ_CIRCLE_008"],
+      "next_topics": ["KOBJ_CIRCLE_010"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 10,
+      "bloom": "Apply"
+    },
+    "ai_context": {
+      "learning_goal": "Apply the perpendicular from centre theorem.",
+      "common_misconceptions": ["Assuming any line from the centre to the chord bisects it, even if it's not perpendicular."],
+      "tutor_hint": "This theorem creates two right-angled triangles! That means you can almost always use the Pythagorean theorem here."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_010",
+    "type": "worked_example",
+    "content": "Question: A chord of length 24 cm is at a distance of 5 cm from the centre of the circle. Find the radius of the circle.\n\nSolution: \n1. Let the chord be AB = 24 cm.\n2. The perpendicular distance from centre O to AB is OM = 5 cm.\n3. We know the perpendicular from the centre bisects the chord. So, AM = MB = 24 / 2 = 12 cm.\n4. In the right-angled triangle OMA, by Pythagoras theorem: \n   OA² = OM² + AM²\n   OA² = 5² + 12²\n   OA² = 25 + 144 = 169\n5. OA = √169 = 13 cm. \nThe radius of the circle is 13 cm.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_009"],
+      "prerequisites": ["KOBJ_CIRCLE_009"],
+      "next_topics": ["KOBJ_CIRCLE_011"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 10,
+      "bloom": "Apply"
+    },
+    "ai_context": {
+      "learning_goal": "Solve problems finding radius, distance, or chord length using the perpendicular theorem.",
+      "common_misconceptions": ["Forgetting to divide the chord length by 2."],
+      "tutor_hint": "Walk me through drawing the triangle. What are the lengths of the two legs?"
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_011",
+    "type": "theory",
+    "content": "Theorem: The angle subtended by an arc at the centre is double the angle subtended by it at any remaining part of the circle.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_012"],
+      "prerequisites": ["KOBJ_CIRCLE_005"],
+      "next_topics": ["KOBJ_CIRCLE_012"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 10,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Relate angles subtended by arcs at the centre vs. the circumference.",
+      "common_misconceptions": ["Thinking the angle at the circumference is double the angle at the centre."],
+      "tutor_hint": "The centre is closer to the arc, so the angle opens up wider (double) compared to being far away on the circumference."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_012",
+    "type": "theory",
+    "content": "Theorem: Angles in the same segment of a circle are equal.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_011"],
+      "prerequisites": ["KOBJ_CIRCLE_011"],
+      "next_topics": ["KOBJ_CIRCLE_013"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    },
+    "ai_context": {
+      "learning_goal": "Recognize that angles subtended by the same arc at any point on the remaining part of the circle are equal.",
+      "common_misconceptions": ["Applying this to angles in different segments."],
+      "tutor_hint": "If they 'stand' on the same two points (the ends of the chord/arc) and 'touch' the same side of the circle, they are equal."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_013",
+    "type": "definition",
+    "content": "A quadrilateral ABCD is called cyclic if all the four vertices of it lie on a circle.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_QUADRILATERAL"],
+      "prerequisites": ["KOBJ_CIRCLE_001"],
+      "next_topics": ["KOBJ_CIRCLE_014"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    },
+    "ai_context": {
+      "learning_goal": "Define a cyclic quadrilateral.",
+      "common_misconceptions": ["Thinking any quadrilateral drawn inside a circle is cyclic, even if vertices don't touch the circle."],
+      "tutor_hint": "Every single corner (vertex) must touch the circle's boundary for it to be cyclic."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_014",
+    "type": "theory",
+    "content": "Theorem: The sum of either pair of opposite angles of a cyclic quadrilateral is 180 degrees. Conversely, if the sum of a pair of opposite angles of a quadrilateral is 180 degrees, the quadrilateral is cyclic.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_013"],
+      "prerequisites": ["KOBJ_CIRCLE_013"],
+      "next_topics": ["KOBJ_CIRCLE_015"]
+    },
+    "universal_block_metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 10,
+      "bloom": "Apply"
+    },
+    "ai_context": {
+      "learning_goal": "Apply the property of opposite angles in a cyclic quadrilateral.",
+      "common_misconceptions": ["Thinking opposite angles are equal instead of supplementary.", "Thinking adjacent angles sum to 180 (which is for parallelograms)."],
+      "tutor_hint": "Cyclic = Circle. The opposite angles 'balance' each other out to a straight line (180 degrees)."
+    }
+  },
+  {
+    "id": "KOBJ_CIRCLE_015",
+    "type": "worked_example",
+    "content": "Question: In a cyclic quadrilateral PQRS, angle P is 85 degrees and angle Q is 65 degrees. Find the measures of angle R and angle S.\n\nSolution:\n1. Since PQRS is a cyclic quadrilateral, the sum of opposite angles is 180 degrees.\n2. Angle P and Angle R are opposite angles. So, Angle P + Angle R = 180°.\n   85° + Angle R = 180°\n   Angle R = 180° - 85° = 95°.\n3. Similarly, Angle Q and Angle S are opposite angles. So, Angle Q + Angle S = 180°.\n   65° + Angle S = 180°\n   Angle S = 180° - 65° = 115°.\nTherefore, Angle R is 95° and Angle S is 115°.",
+    "knowledge_graph_links": {
+      "related_topics": ["KOBJ_CIRCLE_014"],
+      "prerequisites": ["KOBJ_CIRCLE_014"],
+      "next_topics": []
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 8,
+      "bloom": "Apply"
+    },
+    "ai_context": {
+      "learning_goal": "Solve for missing angles in a cyclic quadrilateral.",
+      "common_misconceptions": ["Subtracting from 360 instead of 180."],
+      "tutor_hint": "Always pair up the opposite corners first. P goes with R, and Q goes with S."
+    }
+  }
+]

@@ -1,0 +1,324 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch9",
+    "title": "Chapter 9: Time",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Read and interpret time to the exact minute using analog and digital clocks.",
+      "Convert between different units of time such as hours, minutes, and seconds.",
+      "Add and subtract units of time to solve real-world duration problems.",
+      "Interpret and convert between the 12-hour and 24-hour clock formats.",
+      "Read, calculate, and construct simple calendar dates and elapsed time schedules."
+    ],
+    "core_concepts": [
+      "DICT_MATH_ANALOG_CLOCK",
+      "DICT_MATH_ELAPSED_TIME",
+      "DICT_MATH_24_HOUR_FORMAT",
+      "DICT_MATH_TIME_CONVERSION"
+    ],
+    "ai_context": {
+      "learning_goal": "To master the reading of time, conversion of time units, calculation of durations, and transition between 12-hour and 24-hour schedules with complete mathematical fluency.",
+      "common_misconceptions": [
+        "Students often treat time like the base-10 decimal system, assuming 1 hour equals 100 minutes instead of base-60.",
+        "Confusing the AM and PM designations, or struggling to convert times past 12:00 PM into the 24-hour format.",
+        "Incorrectly borrowing across hours and minutes during subtraction of time intervals (e.g., borrowing 10 minutes instead of 60 minutes)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Invisible River",
+      "body": "Imagine you are holding an ice cream cone on a scorching hot afternoon. Within minutes, drops begin to melt down the waffle cone. You can't see, touch, or grab the force making it melt, yet you know it is marching forward relentlessly. That invisible river is time. Long before digital screens, glowing smartphones, or even mechanical gears existed, ancient humans looked up at the sun casting shadows on sundials, listening to the steady drip of water clocks. Today, time is the invisible framework that coordinates our entire planet—from launching rockets into orbit to making sure you catch the school bus at exactly the right second. Welcome to the masterclass on mastering the fourth dimension: Time!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our opening hook, why is time compared to an 'invisible river'?",
+      "options": [
+        "Because it flows backward like a river during thunderstorms.",
+        "Because we cannot physically touch or see it, yet it flows forward continuously and changes everything in its path.",
+        "Because time only exists near oceans and rivers."
+      ],
+      "correct_index": 1,
+      "explanation": "Time is intangible (you cannot touch or see it), but it is relentless and constant, driving change forward just like a flowing river.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Reading the Anatomy of a Clock",
+      "body": "At the heart of measuring short durations is the [DICT_MATH_ANALOG_CLOCK|analog clock]. Unlike standard numbers that grow by tens and hundreds, time operates on a base-60 system called the sexagesimal system, inherited from ancient Babylonians. A standard clock face is a circle containing 360 degrees, neatly divided into 12 major hourly intervals. This means the space between each consecutive number represents 30 degrees of rotation ($360 \\div 12 = 30$). The clock relies on three primary hands working in harmony: the short hour hand, the long minute hand, and the slender second hand that sweeps rapidly around the dial. Every time the minute hand ticks past one small subdivision, exactly one minute has passed. Because there are 60 subdivisions around the circle, when the minute hand completes a full trip of 360 degrees, exactly 60 minutes—or 1 hour—have elapsed.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Skip-Counting Secret",
+      "body": "Struggling to read minutes on an analog clock? Teach your brain to skip-count by 5s! Each number on the clock face represents a block of 5 minutes (1 = 5, 2 = 10, 3 = 15, all the way to 12 = 60). If the minute hand points at the 7, just multiply 7 by 5 to get 35 minutes!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "How many degrees does the minute hand travel in one complete 60-minute revolution around the clock face?",
+      "back": "360 degrees (a full circle).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "quiz",
+      "question": "If the short hour hand is pointing exactly at 4 and the long minute hand is resting on the 6, what time is it?",
+      "options": [
+        "6:20",
+        "4:30",
+        "4:06"
+      ],
+      "correct_index": 1,
+      "explanation": "The hour hand is at 4, and the minute hand is at 6. Since each number represents 5 minutes ($6 \\times 5 = 30$), the time is 4:30.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "theory",
+      "title": "Concept 2: Unlocking [DICT_MATH_TIME_CONVERSION|Time Conversion]",
+      "body": "Converting units of time requires breaking free from the decimal mindset. In standard math, when you shift units, you multiply or divide by powers of 10. In time, our conversion factors are based on 60 and 24. Let us commit the foundational conversion ladder to memory: 1 minute = 60 seconds; 1 hour = 60 minutes; 1 day = 24 hours; 1 week = 7 days; 1 year = 365 days (or 366 days in a leap year). When converting a larger unit to a smaller unit (such as hours to minutes), we multiply by the conversion factor because it takes many small units to make a single large one. For example, to convert 4 hours into minutes, we multiply by 60: $4 \\times 60 = 240$ minutes. Conversely, when converting a smaller unit to a larger unit (such as seconds to minutes), we divide by the conversion factor. To find out how many minutes are in 180 seconds, we divide by 60: $180 \\div 60 = 3$ minutes.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "quiz",
+      "question": "Convert 3 hours and 15 minutes entirely into minutes.",
+      "options": [
+        "195 minutes",
+        "180 minutes",
+        "315 minutes"
+      ],
+      "correct_index": 0,
+      "explanation": "First, convert 3 hours to minutes: $3 \\times 60 = 180$ minutes. Then, add the remaining 15 minutes: $180 + 15 = 195$ minutes.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The Big Multiplication Shortcut",
+      "body": "When converting hours to minutes, don't panic over big numbers. Multiply the hours by 6 by adding a zero at the end! For example, 7 hours $\\times$ 60 = (7 $\\times$ 6) with a zero = 420 minutes.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "How many total seconds are in exactly 2 minutes?",
+      "back": "120 seconds ($2 \\times 60$).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: Calculating [DICT_MATH_ELAPSED_TIME|Elapsed Time]",
+      "body": "Elapsed time is the amount of time that passes from the beginning of an event to its end. If your soccer practice starts at 3:15 PM and ends at 5:45 PM, how long were you on the field? To solve elapsed time problems accurately, seasoned mathematicians use the 'Timeline Jump Method' or break the calculation into two distinct steps: hours first, then minutes. Let us calculate the soccer practice duration. Step 1: Jump by full hours from the start time closer to the end time. From 3:15 PM to 4:15 PM is 1 hour. From 4:15 PM to 5:15 PM is another hour (Total hours jumped = 2 hours). Step 2: Now look at the remaining minutes. We are at 5:15 PM, but practice ends at 5:45 PM. The difference between 15 minutes and 45 minutes is 30 minutes. Combining our jumps, the total elapsed time is 2 hours and 30 minutes. Always handle hours and minutes in separate columns when adding or subtracting to avoid mixing up the base-60 boundary.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "A movie starts at 2:20 PM and finishes at 4:50 PM. What is the total duration of the movie?",
+      "options": [
+        "2 hours and 10 minutes",
+        "2 hours and 30 minutes",
+        "3 hours and 30 minutes"
+      ],
+      "correct_index": 1,
+      "explanation": "Jump from 2:20 PM to 4:20 PM (2 hours). Then jump from 4:20 PM to 4:50 PM (30 minutes). Total elapsed time is 2 hours and 30 minutes.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Column Addition Trap",
+      "body": "When adding time like 2 hours 45 mins + 1 hour 30 mins, you get 3 hours 75 mins. Since 75 minutes is greater than 60, you must carry over 60 minutes as 1 hour! It becomes 4 hours and 15 mins.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "If an experiment begins at 10:15 AM and ends at 11:05 AM, how many minutes long is the experiment?",
+      "back": "50 minutes (10:15 to 11:00 is 45 mins, plus 5 more mins to 11:05).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 4: Mastering the [DICT_MATH_24_HOUR_FORMAT|24-Hour Clock Format]",
+      "body": "In everyday life, we use the 12-hour clock, dividing the day into two equal halves of 12 hours each: AM (Ante Meridiem, meaning 'before midday') and PM (Post Meridiem, meaning 'after midday'). However, aviation, military operations, railways, and digital computers prefer the [DICT_MATH_24_HOUR_FORMAT|24-hour clock format] to eliminate any confusion between morning and night. The 24-hour clock runs continuously from 00:00 (midnight) to 23:59. Reading and converting these formats follows a strict rulebook. From 1:00 AM to 12:59 PM, times look nearly identical, though morning hours use a leading zero (e.g., 9:00 AM becomes 09:00 hours). But the moment the clock strikes 1:00 PM, everything changes! Because 12 hours have already passed in the day, we simply add 12 to the hour value. For example, 1:00 PM becomes $1 + 12 = 13:00$ hours. 4:30 PM becomes $4 + 12 = 16:30$ hours. To convert back from 24-hour format to 12-hour format when the hour is 13 or greater, we subtract 12 and label it PM.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "Convert 18:45 in 24-hour format into standard 12-hour AM/PM time.",
+      "options": [
+        "6:45 AM",
+        "8:45 PM",
+        "6:45 PM"
+      ],
+      "correct_index": 2,
+      "explanation": "Since 18 is greater than 12, subtract 12 from 18 ($18 - 12 = 6$). The minutes remain 45, making it 6:45 PM.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What does 'AM' stand for in the 12-hour time system?",
+      "back": "Ante Meridiem (Latin for 'before midday').",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "teacher_tip",
+      "title": "The Airport Rule",
+      "body": "Airlines never use AM or PM on tickets to avoid catastrophic scheduling errors across time zones. If your flight departs at 14:15, remember: subtract 12 to know it's 2:15 PM in the afternoon!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Concept 5: Calendars, Leap Years, and Date Math",
+      "body": "While clocks measure hours, minutes, and seconds within a single day, calendars scale up to track the majestic journey of Earth orbiting around the Sun. One complete revolution around the sun takes approximately 365 days and 6 hours. To prevent our calendars from drifting out of sync with the seasons, those extra 6 hours accumulate over four years ($6 \\times 4 = 24$ hours), creating an extra day—February 29th. This special year is called a leap year, containing 366 days. When performing date calculations, remember that months have varying lengths: January, March, May, July, August, October, and December have 31 days; April, June, September, and November have 30 days; and February typically has 28 days (or 29 during a leap year). When counting days between two dates, always be careful to verify whether the starting date or ending date is inclusive depending on the context of the problem.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "Which of the following years is a leap year?",
+      "options": [
+        "2019",
+        "2021",
+        "2024"
+      ],
+      "correct_index": 2,
+      "explanation": "Leap years occur every 4 years and are divisible by 4. 2024 is divisible by 4 ($2024 \\div 4 = 506$), making it a leap year.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "How many days are in the month of September?",
+      "back": "30 days.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Concept 6: Subtracting Time and Borrowing Across Units",
+      "body": "Sometimes solving time word problems requires subtraction where the starting minutes are greater than the ending minutes. For example, suppose you need to subtract 2 hours and 45 minutes from 5 hours and 15 minutes. In column form: \n\n  5 hrs  15 mins\n- 2 hrs  45 mins\n\nNotice that you cannot subtract 45 minutes from 15 minutes directly! Just like standard subtraction where you borrow 1 ten from the tens column, here you must borrow 1 hour from the hours column. But remember our golden rule: 1 hour = 60 minutes! When you borrow 1 hour from 5 hours, the 5 becomes 4 hours, and you add that 60 minutes to the existing 15 minutes ($60 + 15 = 75$ minutes). Now your problem looks like this: \n\n  4 hrs  75 mins\n- 2 hrs  45 mins\n\nSubtracting the minutes gives $75 - 45 = 30$ minutes. Subtracting the hours gives $4 - 2 = 2$ hours. The final answer is 2 hours and 30 minutes. Mastering this borrowing technique is the hallmark of a true time master!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Subtract 1 hour 50 minutes from 4 hours 20 minutes.",
+      "options": [
+        "2 hours 30 minutes",
+        "3 hours 10 minutes",
+        "2 hours 10 minutes"
+      ],
+      "correct_index": 0,
+      "explanation": "Borrow 1 hour (60 mins) and add to 20 mins to get 80 mins. Hours become 3. Now subtract: $(3 \\text{ hrs } 80 \\text{ mins}) - (1 \\text{ hr } 50 \\text{ mins}) = 2 \\text{ hours } 30 \\text{ minutes}$.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "The Knuckle Trick for Month Lengths",
+      "body": "Make a fist and look at your knuckles. Start counting months across your knuckles and valleys: knuckle = 31 days, valley = 30 days (except February). Index knuckle is January (31), valley is February (28/29), middle knuckle is March (31), and so on!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "front": "When borrowing 1 hour in time subtraction, how many minutes do you add to the minute column?",
+      "back": "60 minutes.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "If a train journey takes 450 minutes, how many hours and minutes is that?",
+      "options": [
+        "6 hours 30 minutes",
+        "7 hours 30 minutes",
+        "8 hours"
+      ],
+      "correct_index": 1,
+      "explanation": "Divide 450 by 60. $60 \\times 7 = 420$. $450 - 420 = 30$ remainder. So it equals 7 hours and 30 minutes.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Chapter Summary: The Chronometry Masterclass",
+      "body": "Congratulations on completing Shine Academy's comprehensive expedition into Chapter 9: Time! We have journeyed from the physical geometry of the [DICT_MATH_ANALOG_CLOCK|analog clock] to the rigorous mathematics of [DICT_MATH_TIME_CONVERSION|time conversion] across seconds, minutes, hours, and days. We tackled [DICT_MATH_ELAPSED_TIME|elapsed time] challenges using timeline jumps, conquered international schedules using the [DICT_MATH_24_HOUR_FORMAT|24-hour clock format], and mastered advanced column subtraction with base-60 borrowing. Time is the one resource in the universe that cannot be saved, stored, or manufactured—it can only be spent wisely. With these mathematical tools in your arsenal, you are ready to navigate any schedule, plan any expedition, and solve any time puzzle thrown your way!",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    }
+  ]
+}

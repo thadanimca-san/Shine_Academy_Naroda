@@ -1,0 +1,596 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch7",
+    "title": "Chapter 7: Alternating Current",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_001",
+      "type": "hook",
+      "title": "The War of Currents: Why AC Rules the World",
+      "title_hi": "धाराओं का युद्ध: क्यों प्रत्यावर्ती धारा (AC) पूरे विश्व पर राज करती है",
+      "title_gu": "પ્રવાહોનું યુદ્ધ: શા માટે એસી (AC) સમગ્ર વિશ્વ પર રાજ કરે છે",
+      "body": "In the late 19th century, Thomas Edison fought fiercely to power cities with Direct Current (DC), while Nikola Tesla advocated for Alternating Current (AC). Tesla won. Today, every household power socket supplies AC voltage. Why did AC conquer global power grids, and how do changing electrical fields enable high-voltage long-distance transmission with almost zero power loss?",
+      "body_hi": "19वीं सदी के अंत में, थॉमस एडिसन ने शहरों को दिष्ट धारा (DC) से रोशन करने के लिए कड़ा संघर्ष किया, जबकि निकोला टेस्ला ने प्रत्यावर्ती धारा (AC) की वकालत की। टेस्ला की जीत हुई। आज हर घर के सॉकेट में AC वोल्टेज ही आता है। AC ने वैश्विक पावर ग्रिड पर विजय क्यों प्राप्त की, और बदलते विद्युत क्षेत्र न्यूनतम ऊर्जा हानि के साथ लंबी दूरी तक बिजली कैसे पहुँचाते हैं?",
+      "body_gu": "19મી સદીના અંતમાં, થૉમસ એડિસને શહેરોને ડાયરેક્ટ કરન્ટ (DC) થી પ્રકાશિત કરવા સખત લડત આપી, જ્યારે નિકોલા ટેસ્લાએ અલ્ટરનેટિંગ કરન્ટ (AC) ની હિમાયત કરી. ટેસ્લાનો વિજય થયો. આજે દરેક ઘરના પાવર સોકેટમાં AC વોલ્ટેજ આવે છે. AC એ વૈશ્વિક પાવર ગ્રીડ પર કેમ વિજય મેળવ્યો, અને બદલાતા વિદ્યુત ક્ષેત્રો લઘુત્તમ ઊર્જા વ્યય સાથે લાંબા અંતર સુધી વીજળી કેવી રીતે પહોંચાડે છે?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_002",
+      "type": "socratic_question",
+      "title": "Probing Power Losses",
+      "title_hi": "ऊर्जा हानि का अन्वेषण",
+      "title_gu": "ઊર્જા વ્યયની તપાસ",
+      "question": "If you need to transmit 1 MegaWatt of power over 100 kilometers using wires with resistance R, heat loss is given by P_loss = I^2 * R. How can you drastically reduce this heat loss without changing the thickness of the transmission wires?",
+      "question_hi": "यदि आपको R प्रतिरोध वाले तारों के माध्यम से 100 किलोमीटर दूर 1 मेगावाट शक्ति संचारित करनी है, तो ऊष्मा हानि P_loss = I^2 * R द्वारा दी जाती है। तारों की मोटाई बदले बिना आप इस ऊष्मा हानि को अत्यधिक कैसे कम कर सकते हैं?",
+      "question_gu": "જો તમારે R અવરોધ ધરાવતા વાયરો દ્વારા 100 કિલોમીટર દૂર 1 મેગાવોટ પાવર ટ્રાન્સમિટ કરવો હોય, તો ઉષ્મા વ્યય P_loss = I^2 * R દ્વારા મળે છે. વાયરની જાડાઈ બદલ્યા વગર તમે આ ઉષ્મા વ્યયને ખૂબ જ કેવી રીતે ઘટાડી શકો?",
+      "options": [
+        "Increase current (I) to push power faster",
+        "Step up the voltage (V) to lower current (I) since P = V * I",
+        "Use direct current at very low voltages",
+        "Add extra resistors along the transmission line"
+      ],
+      "options_hi": [
+        "शक्ति को तेज़ी से भेजने के लिए धारा (I) बढ़ाएं",
+        "वोल्टेज (V) को बढ़ाएं (Step up) ताकि धारा (I) कम हो जाए क्योंकि P = V * I",
+        "बहुत कम वोल्टेज पर दिष्ट धारा का उपयोग करें",
+        "ट्रांसमिशन लाइन में अतिरिक्त प्रतिरोधक जोड़ें"
+      ],
+      "options_gu": [
+        "પાવર ઝડપથી મોકલવા માટે પ્રવાહ (I) વધારો",
+        "વોલ્ટેજ (V) વધારો (Step up) જેથી પ્રવાહ (I) ઘટે કારણ કે P = V * I",
+        "ખૂબ નીચા વોલ્ટેજ પર ડાયરેક્ટ કરન્ટનો ઉપયોગ કરો",
+        "ટ્રાન્સમિશન લાઈનમાં વધારાના અવરોધો ઉમેરો"
+      ],
+      "correct_index": 1,
+      "explanation": "Transmitted power P = V * I. By stepping up voltage V using a transformer, the current I drops proportionally. Since power loss depends on I^2 * R, reducing current by a factor of 10 reduces power loss by a factor of 100!",
+      "explanation_hi": "प्रसारित शक्ति P = V * I होती है। ट्रांसफॉर्मर द्वारा वोल्टेज V को बढ़ाकर, धारा I को आनुपातिक रूप से घटाया जाता है। चूँकि शक्ति हानि I^2 * R पर निर्भर करती है, धारा को 10 गुना कम करने से शक्ति हानि 100 गुना कम हो जाती है!",
+      "explanation_gu": "ટ્રાન્સમિટ થયેલ પાવર P = V * I છે. ટ્રાન્સફોર્મર વડે વોલ્ટેજ V વધારીને, પ્રવાહ I પ્રમાણસર ઘટાડી શકાય છે. કારણ કે પાવર વ્યય I^2 * R પર આધાર રાખે છે, પ્રવાહને 10 ગણો ઘટાડવાથી પાવર વ્યય 100 ગણો ઘટી જાય છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_003",
+      "type": "discovery",
+      "title": "Interactive Thought Experiment: Phase and Opposition",
+      "title_hi": "इंटरैक्टिव विचार प्रयोग: कला (Phase) और विरोध",
+      "title_gu": "ઇન્ટરેક્ટિવ વિચાર પ્રયોગ: ફેઝ અને વિરોધ",
+      "body": "Imagine driving AC current through three distinct elements: a pure Resistor (R), a pure Inductor (L), and a pure Capacitor (C).\n\n1. Resistor R simply converts electrical energy to heat: Voltage and Current stay in phase (phi = 0).\n2. Inductor L opposes changes in current via self-induction: Voltage LEADS Current by pi/2 rad (90 degrees).\n3. Capacitor C opposes voltage build-up by storing charge: Current LEADS Voltage by pi/2 rad (90 degrees).\n\nWhen all three are in series (LCR circuit), their opposing effects partially cancel out! Inductive Reactance (X_L = w*L) and Capacitive Reactance (X_C = 1/(w*C)) act in opposite directions in vector space.",
+      "body_hi": "तीन अलग-अलग घटकों के माध्यम से AC धारा प्रवाहित करने की कल्पना करें: एक शुद्ध प्रतिरोधक (R), एक शुद्ध प्रेरकत्व (L), और एक शुद्ध संधारित्र (C)।\n\n1. प्रतिरोधक R केवल विद्युत ऊर्जा को ऊष्मा में बदलता है: वोल्टेज और धारा समान कला (Phase) में रहते हैं (phi = 0)।\n2. प्रेरकत्व L स्व-प्रेरण द्वारा धारा परिवर्तन का विरोध करता है: वोल्टेज, धारा से pi/2 rad (90 अंश) आगे (LEADS) रहता है।\n3. संधारित्र C आवेश संग्रहीत करके वोल्टेज वृद्धि का विरोध करता है: धारा, वोल्टेज से pi/2 rad (90 अंश) आगे रहती है।\n\nजब तीनों श्रेणीक्रम (Series LCR) में होते हैं, तो उनके विरोधी प्रभाव आंशिक रूप से एक-दूसरे को निरस्त कर देते हैं! प्रेरकीय प्रतिघात (X_L = w*L) और धारितीय प्रतिघात (X_C = 1/(w*C)) सदिश क्षेत्र में विपरीत दिशाओं में कार्य करते हैं।",
+      "body_gu": "ત્રણ અલગ-અલગ ઘટકોમાંથી AC પ્રવાહ પસાર થવાની કલ્પના કરો: શુદ્ધ અવરોધક (R), શુદ્ધ ઇન્ડક્ટર (L), અને શુદ્ધ કેપેસિટર (C).\n\n1. અવરોધક R માત્ર વિદ્યુત ઊર્જાનું ઉષ્મામાં રૂપાંતર કરે છે: વોલ્ટેજ અને પ્રવાહ સમાન ફેઝમાં રહે છે (phi = 0).\n2. ઇન્ડક્ટર L સ્વ-પ્રેરણ દ્વારા પ્રવાહના ફેરફારનો વિરોધ કરે છે: વોલ્ટેજ, પ્રવાહ કરતાં pi/2 rad (90 ડિગ્રી) આગળ (LEADS) રહે છે.\n3. કેપેસિટર C ચાર્જ સંગ્રહિત કરીને વોલ્ટેજ વધારાનો વિરોધ કરે છે: પ્રવાહ, વોલ્ટેજ કરતાં pi/2 rad (90 ડિગ્રી) આગળ રહે છે.\n\nજ્યારે ત્રણેય શ્રેણીમાં (LCR સર્કિટ) હોય, ત્યારે તેમની વિરોધી અસરો અંશતઃ નાબૂદ થાય છે! ઇન્ડક્ટિવ રિએક્ટન્સ (X_L = w*L) અને કેપેસિટિવ રિએક્ટન્સ (X_C = 1/(w*C)) વેક્ટર અવકાશમાં વિરુદ્ધ દિશામાં કાર્ય કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_004",
+      "type": "theory",
+      "title": "Core Physics: AC Parameters & Pure Components",
+      "title_hi": "मूल भौतिकी: AC मापदंड एवं शुद्ध घटक",
+      "title_gu": "મૂળ ભૌતિક વિજ્ઞાન: AC પેરામીટર્સ અને શુદ્ધ ઘટકો",
+      "body": "### 1. Alternating Voltage & RMS Values\nAn alternating voltage is represented as v = v_m * sin(w * t), where v_m is peak voltage and w = 2*pi*f is angular frequency.\nSince the average current over a full cycle is zero, we measure thermal effectiveness using Root Mean Square (RMS) values:\n- V_rms = v_m / sqrt(2) ≈ 0.707 * v_m\n- I_rms = i_m / sqrt(2) ≈ 0.707 * i_m\n\n### 2. AC Applied to Pure Components\n- **Pure Resistor (R):** i = (v_m / R) * sin(w * t). Current and Voltage are IN PHASE.\n- **Pure Inductor (L):** i = i_m * sin(w * t - pi/2), where Inductive Reactance X_L = w * L. Current Lags Voltage by pi/2 (90°).\n- **Pure Capacitor (C):** i = i_m * sin(w * t + pi/2), where Capacitive Reactance X_C = 1 / (w * C). Current Leads Voltage by pi/2 (90°).",
+      "body_hi": "### 1. प्रत्यावर्ती वोल्टेज एवं RMS मान\nप्रत्यावर्ती वोल्टेज को v = v_m * sin(w * t) के रूप में दर्शाया जाता है, जहाँ v_m शिखर वोल्टेज और w = 2*pi*f कोणीय आवृत्ति है।\nचूँकि एक पूर्ण चक्र में औसत धारा शून्य होती है, हम तापीय प्रभावशीलता को वर्ग माध्य मूल (RMS) मानों से मापते हैं:\n- V_rms = v_m / sqrt(2) ≈ 0.707 * v_m\n- I_rms = i_m / sqrt(2) ≈ 0.707 * i_m\n\n### 2. शुद्ध घटकों पर AC लागू करना\n- **शुद्ध प्रतिरोधक (R):** i = (v_m / R) * sin(w * t)। धारा और वोल्टेज समान कला (IN PHASE) में हैं।\n- **शुद्ध प्रेरक (L):** i = i_m * sin(w * t - pi/2), जहाँ प्रेरणिक प्रतिघात X_L = w * L है। धारा, वोल्टेज से pi/2 (90°) पीछे (Lags) रहती है।\n- **शुद्ध संधारित्र (C):** i = i_m * sin(w * t + pi/2), जहाँ धारितीय प्रतिघात X_C = 1 / (w * C) है। धारा, वोल्टेज से pi/2 (90°) आगे (Leads) रहती है।",
+      "body_gu": "### 1. અલ્ટરનેટિંગ વોલ્ટેજ અને RMS મૂલ્યો\nઅલ્ટરનેટિંગ વોલ્ટેજને v = v_m * sin(w * t) તરીકે દર્શાવાય છે, જ્યાં v_m પીક વોલ્ટેજ અને w = 2*pi*f કોણીય આવૃત્તિ છે.\nએક પૂર્ણ ચક્ર પર સરેરાશ પ્રવાહ શૂન્ય હોવાથી, આપણે રુટ મીન સ્ક્વેર (RMS) મૂલ્યોનો ઉપયોગ કરીએ છીએ:\n- V_rms = v_m / sqrt(2) ≈ 0.707 * v_m\n- I_rms = i_m / sqrt(2) ≈ 0.707 * i_m\n\n### 2. શુદ્ધ ઘટકો પર લાગુ કરેલ AC\n- **શુદ્ધ અવરોધક (R):** i = (v_m / R) * sin(w * t). વોલ્ટેજ અને પ્રવાહ સમાન ફેઝમાં છે.\n- **શુદ્ધ ઇન્ડક્ટર (L):** i = i_m * sin(w * t - pi/2), જ્યાં ઇન્ડક્ટિવ રિએક્ટન્સ X_L = w * L છે. પ્રવાહ વોલ્ટેજ કરતાં pi/2 (90°) પાછળ રહે છે.\n- **શુદ્ધ કેપેસિટર (C):** i = i_m * sin(w * t + pi/2), જ્યાં કેપેસિટિવ રિએક્ટન્સ X_C = 1 / (w * C) છે. પ્રવાહ વોલ્ટેજ કરતાં pi/2 (90°) આગળ રહે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_005",
+      "type": "knowledge_check",
+      "title": "Check Point 1: Reactance and Peak Values",
+      "title_hi": "ज्ञान जाँच 1: प्रतिघात एवं शिखर मान",
+      "title_gu": "જ્ઞાન ચકાસણી 1: રિએક્ટન્સ અને પીક મૂલ્યો",
+      "question": "An AC voltage source given by v = 282.8 sin(100*pi*t) Volts is connected across a pure 50 Ohm resistor. What are the RMS voltage and RMS current in the circuit?",
+      "question_hi": "v = 282.8 sin(100*pi*t) वोल्ट द्वारा दिया गया एक AC वोल्टेज स्रोत 50 ओम् के शुद्ध प्रतिरोधक से जुड़ा है। परिपथ में RMS वोल्टेज और RMS धारा क्या हैं?",
+      "question_gu": "v = 282.8 sin(100*pi*t) વોલ્ટ દર્શાવતો એક AC વોલ્ટેજ સ્ત્રોત 50 ઓહમના શુદ્ધ અવરોધક સાથે જોડાયેલ છે. પરિપથમાં RMS વોલ્ટેજ અને RMS પ્રવાહ કેટલો હશે?",
+      "options": [
+        "V_rms = 282.8 V, I_rms = 5.65 A",
+        "V_rms = 200 V, I_rms = 4.0 A",
+        "V_rms = 141.4 V, I_rms = 2.83 A",
+        "V_rms = 200 V, I_rms = 5.65 A"
+      ],
+      "options_hi": [
+        "V_rms = 282.8 V, I_rms = 5.65 A",
+        "V_rms = 200 V, I_rms = 4.0 A",
+        "V_rms = 141.4 V, I_rms = 2.83 A",
+        "V_rms = 200 V, I_rms = 5.65 A"
+      ],
+      "options_gu": [
+        "V_rms = 282.8 V, I_rms = 5.65 A",
+        "V_rms = 200 V, I_rms = 4.0 A",
+        "V_rms = 141.4 V, I_rms = 2.83 A",
+        "V_rms = 200 V, I_rms = 5.65 A"
+      ],
+      "correct_index": 1,
+      "explanation": "v_m = 282.8 V. Thus V_rms = v_m / sqrt(2) = 282.8 / 1.414 = 200 V. Then I_rms = V_rms / R = 200 / 50 = 4.0 A.",
+      "explanation_hi": "v_m = 282.8 V। इसलिए V_rms = v_m / sqrt(2) = 282.8 / 1.414 = 200 V। फिर I_rms = V_rms / R = 200 / 50 = 4.0 A।",
+      "explanation_gu": "v_m = 282.8 V. તેથી V_rms = v_m / sqrt(2) = 282.8 / 1.414 = 200 V. તેથી I_rms = V_rms / R = 200 / 50 = 4.0 A."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_006",
+      "type": "theory",
+      "title": "Series LCR Circuit & Impedance Diagram",
+      "title_hi": "श्रेणी LCR परिपथ एवं प्रतिबाधा आरेख",
+      "title_gu": "શ્રેણી LCR પરિપથ અને ઇમ્પિડન્સ ડાયાગ્રામ",
+      "body": "### Series LCR Circuit Analysis\nWhen a resistor (R), inductor (L), and capacitor (C) are connected in series to an AC source v = v_m * sin(w * t):\n\n1. **Total Impedance (Z):**\n   Z = sqrt( R^2 + (X_L - X_C)^2 )\n   where X_L = w*L and X_C = 1/(w*C).\n\n2. **Peak & RMS Current:**\n   i_m = v_m / Z  and  I_rms = V_rms / Z\n\n3. **Phase Angle (phi):**\n   tan(phi) = (X_L - X_C) / R\n   - If X_L > X_C: Circuit is **Inductive** (voltage leads current by phi).\n   - If X_C > X_L: Circuit is **Capacitive** (current leads voltage by phi).\n   - If X_L = X_C: Circuit is **Purely Resistive** (Resonance).",
+      "body_hi": "### श्रेणी LCR परिपथ विश्लेषण\nजब एक प्रतिरोधक (R), प्रेरक (L), और संधारित्र (C) श्रेणीक्रम में एक AC स्रोत v = v_m * sin(w * t) से जुड़े होते हैं:\n\n1. **कुल प्रतिबाधा (Z):**\n   Z = sqrt( R^2 + (X_L - X_C)^2 )\n   जहाँ X_L = w*L और X_C = 1/(w*C)।\n\n2. **शिखर एवं RMS धारा:**\n   i_m = v_m / Z और I_rms = V_rms / Z\n\n3. **कला कोण (phi):**\n   tan(phi) = (X_L - X_C) / R\n   - यदि X_L > X_C: परिपथ **प्रेरणिक** (Inductive) है (वोल्टेज, धारा से phi आगे है)।\n   - यदि X_C > X_L: परिपथ **धारितीय** (Capacitive) है (धारा, वोल्टेज से phi आगे है)।\n   - यदि X_L = X_C: परिपथ **शुद्ध प्रतिरोधी** है (अनुनाद - Resonance)।",
+      "body_gu": "### શ્રેણી LCR પરિપથ વિશ્લેષણ\nજ્યારે અવરોધક (R), ઇન્ડક્ટર (L), અને કેપેસિટર (C) શ્રેણીમાં AC સ્ત્રોત v = v_m * sin(w * t) સાથે જોડાયેલા હોય:\n\n1. **કુલ ઇમ્પિડન્સ (Z):**\n   Z = sqrt( R^2 + (X_L - X_C)^2 )\n   જ્યાં X_L = w*L અને X_C = 1/(w*C).\n\n2. **પીક અને RMS પ્રવાહ:**\n   i_m = v_m / Z અને I_rms = V_rms / Z\n\n3. **ફેઝ એંગલ (phi):**\n   tan(phi) = (X_L - X_C) / R\n   - જો X_L > X_C: પરિપથ **ઇન્ડક્ટિવ** છે.\n   - જો X_C > X_L: પરિપથ **કેપેસિટિવ** છે.\n   - જો X_L = X_C: પરિપથ **શુદ્ધ અવરોધક** છે (અનુનાદ - Resonance)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_007",
+      "type": "knowledge_check",
+      "title": "Check Point 2: Calculating LCR Impedance",
+      "title_hi": "ज्ञान जाँच 2: LCR प्रतिबाधा की गणना",
+      "title_gu": "જ્ઞાન ચકાસણી 2: LCR ઇમ્પિડન્સની ગણતરી",
+      "question": "A series LCR circuit has R = 30 Ohm, X_L = 80 Ohm, and X_C = 40 Ohm. What is the total impedance Z and the nature of the circuit?",
+      "question_hi": "एक श्रेणी LCR परिपथ में R = 30 ओम्, X_L = 80 ओम्, और X_C = 40 ओम् है। कुल प्रतिबाधा Z और परिपथ की प्रकृति क्या है?",
+      "question_gu": "એક શ્રેણી LCR પરિપથમાં R = 30 ઓહમ, X_L = 80 ઓહમ, અને X_C = 40 ઓહમ છે. કુલ ઇમ્પિડન્સ Z અને પરિપથનો પ્રકાર શું છે?",
+      "options": [
+        "Z = 50 Ohm, Inductive",
+        "Z = 50 Ohm, Capacitive",
+        "Z = 150 Ohm, Inductive",
+        "Z = 70 Ohm, Resistive"
+      ],
+      "options_hi": [
+        "Z = 50 Ohm, प्रेरणिक (Inductive)",
+        "Z = 50 Ohm, धारितीय (Capacitive)",
+        "Z = 150 Ohm, प्रेरणिक (Inductive)",
+        "Z = 70 Ohm, प्रतिरोधी (Resistive)"
+      ],
+      "options_gu": [
+        "Z = 50 Ohm, ઇન્ડક્ટિવ",
+        "Z = 50 Ohm, કેપેસિટિવ",
+        "Z = 150 Ohm, ઇન્ડક્ટિવ",
+        "Z = 70 Ohm, અવરોધક"
+      ],
+      "correct_index": 0,
+      "explanation": "Z = sqrt( R^2 + (X_L - X_C)^2 ) = sqrt( 30^2 + (80 - 40)^2 ) = sqrt( 900 + 1600 ) = sqrt(2500) = 50 Ohm. Since X_L > X_C, the circuit is Inductive.",
+      "explanation_hi": "Z = sqrt( R^2 + (X_L - X_C)^2 ) = sqrt( 30^2 + (80 - 40)^2 ) = sqrt( 900 + 1600 ) = sqrt(2500) = 50 ओम्। चूँकि X_L > X_C, परिपथ प्रेरणिक (Inductive) है।",
+      "explanation_gu": "Z = sqrt( R^2 + (X_L - X_C)^2 ) = sqrt( 30^2 + (80 - 40)^2 ) = sqrt( 900 + 1600 ) = sqrt(2500) = 50 ઓહમ. X_L > X_C હોવાથી, પરિપથ ઇન્ડક્ટિવ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_008",
+      "type": "theory",
+      "title": "Resonance, Quality Factor & Power Factor",
+      "title_hi": "अनुनाद, गुणता कारक (Q-factor) एवं शक्ति गुणांक",
+      "title_gu": "અનુનાદ, ક્વાલિટી ફેક્ટર (Q-factor) અને પાવર ફેક્ટર",
+      "body": "### 1. Resonance in Series LCR Circuit\nResonance occurs when the driving angular frequency w_0 makes X_L = X_C:\n- w_0 * L = 1 / (w_0 * C)  =>  w_0 = 1 / sqrt(L * C)\n- Resonant Frequency f_0 = 1 / (2 * pi * sqrt(L * C))\nAt resonance, Impedance Z = R (minimum), and Current I_rms = V_rms / R (maximum).\n\n### 2. Quality Factor (Q-Factor)\nQ measures the sharpness of resonance:\nQ = w_0 * L / R = 1 / (w_0 * C * R) = (1 / R) * sqrt(L / C)\nHigh Q value means sharper tuning and better selectivity (used in radio receivers).\n\n### 3. Power in AC Circuits & Power Factor\nAverage Power P_avg = V_rms * I_rms * cos(phi)\n- **cos(phi) = R / Z** is the **Power Factor**.\n- For pure L or C: phi = pi/2, cos(phi) = 0 => P_avg = 0 (Wattless Current).\n- At Resonance: phi = 0, cos(phi) = 1 => Maximum power dissipated.",
+      "body_hi": "### 1. श्रेणी LCR परिपथ में अनुनाद (Resonance)\nअनुनाद तब होता है जब कोणीय आवृत्ति w_0 ऐसा मान लेती है कि X_L = X_C हो जाए:\n- w_0 * L = 1 / (w_0 * C)  =>  w_0 = 1 / sqrt(L * C)\n- अनुनादी आवृत्ति f_0 = 1 / (2 * pi * sqrt(L * C))\nअनुनाद पर, प्रतिबाधा Z = R (न्यूनतम), और धारा I_rms = V_rms / R (अधिकतम) होती है।\n\n### 2. गुणता कारक (Quality Factor - Q)\nQ अनुनाद की तीक्ष्णता को मापता है:\nQ = w_0 * L / R = (1 / R) * sqrt(L / C)\nउच्च Q मान का अर्थ है तीक्ष्ण ट्यूनिंग और बेहतर चयनात्मकता (रेडियो रिसीवर में प्रयुक्त)।\n\n### 3. AC परिपथों में शक्ति एवं शक्ति गुणांक\nऔसत शक्ति P_avg = V_rms * I_rms * cos(phi)\n- **cos(phi) = R / Z** **शक्ति गुणांक (Power Factor)** कहलाता है।\n- शुद्ध L या C के लिए: phi = pi/2, cos(phi) = 0 => P_avg = 0 (वाटहीन धारा - Wattless Current)।\n- अनुनाद पर: phi = 0, cos(phi) = 1 => अधिकतम शक्ति क्षय।",
+      "body_gu": "### 1. શ્રેણી LCR પરિપથમાં અનુનાદ (Resonance)\nજ્યારે આવૃત્તિ w_0 એવી થાય કે X_L = X_C બને ત્યારે અનુનાદ થાય છે:\n- w_0 * L = 1 / (w_0 * C)  =>  w_0 = 1 / sqrt(L * C)\n- અનુનાદી આવૃત્તિ f_0 = 1 / (2 * pi * sqrt(L * C))\nઅનુનાદ વખતે, ઇમ્પિડન્સ Z = R (ન્યૂનતમ), અને પ્રવાહ I_rms = V_rms / R (મહત્તમ) થાય છે.\n\n### 2. ક્વાલિટી ફેક્ટર (Q-Factor)\nQ એ અનુનાદની તીવ્રતા દર્શાવે છે:\nQ = w_0 * L / R = (1 / R) * sqrt(L / C)\nઉચ્ચ Q મૂલ્ય એટલે તીવ્ર ટ્યુનિંગ (રેડિયો રિસીવરમાં વપરાય છે).\n\n### 3. AC પરિપથમાં પાવર અને પાવર ફેક્ટર\nસરેરાશ પાવર P_avg = V_rms * I_rms * cos(phi)\n- **cos(phi) = R / Z** એ **પાવર ફેક્ટર** છે.\n- શુદ્ધ L અથવા C માટે: phi = pi/2, cos(phi) = 0 => P_avg = 0 (વોટલેસ કરન્ટ).\n- અનુનાદ વખતે: phi = 0, cos(phi) = 1 => મહત્તમ પાવર વ્યય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_009",
+      "type": "knowledge_check",
+      "title": "Check Point 3: Power Factor & Wattless Current",
+      "title_hi": "ज्ञान जाँच 3: शक्ति गुणांक एवं वाटहीन धारा",
+      "title_gu": "જ્ઞાન ચકાસણી 3: પાવર ફેક્ટર અને વોટલેસ કરન્ટ",
+      "question": "Under what condition is the power factor of a series LCR circuit equal to unity (1)?",
+      "question_hi": "किस स्थिति के तहत श्रेणी LCR परिपथ का शक्ति गुणांक इकाई (1) के बराबर होता है?",
+      "question_gu": "કઈ પરિસ્થિતિમાં શ્રેણી LCR પરિપથનો પાવર ફેક્ટર 1 (એકમ) થાય છે?",
+      "options": [
+        "When inductive reactance X_L is much greater than X_C",
+        "When capacitive reactance X_C is much greater than X_L",
+        "At resonance, when X_L = X_C",
+        "When resistance R is reduced to zero"
+      ],
+      "options_hi": [
+        "जब प्रेरणिक प्रतिघात X_L, X_C से बहुत बड़ा हो",
+        "जब धारितीय प्रतिघात X_C, X_L से बहुत बड़ा हो",
+        "अनुनाद पर, जब X_L = X_C हो",
+        "जब प्रतिरोध R घटकर शून्य हो जाए"
+      ],
+      "options_gu": [
+        "જ્યારે ઇન્ડક્ટિવ રિએક્ટન્સ X_L, X_C કરતાં ખૂબ મોટો હોય",
+        "જ્યારે કેપેસિટિવ રિએક્ટન્સ X_C, X_L કરતાં ખૂબ મોટો હોય",
+        "અનુનાદ વખતે, જ્યારે X_L = X_C હોય",
+        "જ્યારે અવરોધ R શૂન્ય થાય"
+      ],
+      "correct_index": 2,
+      "explanation": "At resonance, X_L = X_C, so Z = sqrt(R^2 + 0) = R. The power factor cos(phi) = R / Z = R / R = 1.",
+      "explanation_hi": "अनुनाद पर, X_L = X_C, इसलिए Z = sqrt(R^2 + 0) = R। शक्ति गुणांक cos(phi) = R / Z = R / R = 1।",
+      "explanation_gu": "અનુનાદ વખતે, X_L = X_C, તેથી Z = sqrt(R^2 + 0) = R. પાવર ફેક્ટર cos(phi) = R / Z = R / R = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_010",
+      "type": "theory",
+      "title": "Transformers & LC Oscillations",
+      "title_hi": "ट्रांसफॉर्मर एवं LC दोलन",
+      "title_gu": "ટ્રાન્સફોર્મર અને LC દોલનો",
+      "body": "### 1. Transformers\nA transformer steps up or steps down AC voltage based on Faraday's Law of Electromagnetic Induction:\n- **Transformation Ratio:** V_s / V_p = N_s / N_p = I_p / I_s\n- **Step-Up Transformer:** N_s > N_p => V_s > V_p and I_s < I_p\n- **Step-Down Transformer:** N_s < N_p => V_s < V_p and I_s > I_p\n- **Efficiency (eta):** eta = Power Output / Power Input = (V_s * I_s) / (V_p * I_p)\n- **Energy Losses:** Joule heating (I^2*R), Eddy currents (mitigated by laminated core), Hysteresis loss (mitigated by soft iron core), Flux leakage.\n\n### 2. LC Oscillations\nWhen a charged capacitor (C) is connected across an inductor (L), charge oscillates harmonically between electric energy (U_E = q^2 / 2C) and magnetic energy (U_B = L*i^2 / 2) with frequency w = 1 / sqrt(L * C).",
+      "body_hi": "### 1. ट्रांसफॉर्मर (Transformers)\nट्रांसफॉर्मर फैराडे के विद्युत चुम्बकीय प्रेरण के नियम के आधार पर AC वोल्टेज को बढ़ाता (Step up) या घटाता (Step down) है:\n- **रूपांतरण अनुपात:** V_s / V_p = N_s / N_p = I_p / I_s\n- **उच्चायी (Step-Up) ट्रांसफॉर्मर:** N_s > N_p => V_s > V_p और I_s < I_p\n- **अपचायी (Step-Down) ट्रांसफॉर्मर:** N_s < N_p => V_s < V_p और I_s > I_p\n- **दक्षता (eta):** eta = आउटपुट शक्ति / इनपुट शक्ति = (V_s * I_s) / (V_p * I_p)\n- **ऊर्जा हानि:** जूल ऊष्मा (I^2*R), भंवर धाराएं (पटलित क्रोड द्वारा कम), शैथिल्य हानि (नर्म लोहे द्वारा कम), फ्लक्स क्षरण।\n\n### 2. LC दोलन (LC Oscillations)\nजब एक आवेशित संधारित्र (C) एक प्रेरक (L) से जोड़ा जाता है, तो आवेश विद्युत ऊर्जा (U_E = q^2 / 2C) और चुम्बकीय ऊर्जा (U_B = L*i^2 / 2) के बीच कोणीय आवृत्ति w = 1 / sqrt(L * C) से सरल आवर्त दोलन करता है।",
+      "body_gu": "### 1. ટ્રાન્સફોર્મર (Transformers)\nટ્રાન્સફોર્મર ફેરાડેના વિદ્યુતચુંબકીય પ્રેરણના નિયમ પર આધારિત AC વોલ્ટેજ વધારે છે કે ઘટાડે છે:\n- **ટ્રાન્સફોર્મેશન રેશિયો:** V_s / V_p = N_s / N_p = I_p / I_s\n- **સ્ટેપ-અપ ટ્રાન્સફોર્મર:** N_s > N_p => V_s > V_p અને I_s < I_p\n- **સ્ટેપ-ડાઉન ટ્રાન્સફોર્મર:** N_s < N_p => V_s < V_p અને I_s > I_p\n- **કાર્યક્ષમતા (eta):** eta = આઉટપુટ પાવર / ઇનપુટ પાવર = (V_s * I_s) / (V_p * I_p)\n- **ઊર્જા વ્યય:** જૂલ ઉષ્મા, એડી પ્રવાહો (લેમિનેટેડ કોર વડે ઘટે), હિસ્ટરેસિસ વ્યય, ફ્લક્સ લીકેજ.\n\n### 2. LC દોલનો (LC Oscillations)\nજ્યારે ચાર્જ થયેલ કેપેસિટર (C) ઇન્ડક્ટર (L) સાથે જોડાય છે, ત્યારે વિદ્યુત ઊર્જા (U_E = q^2 / 2C) અને ચુંબકીય ઊર્જા (U_B = L*i^2 / 2) વચ્ચે w = 1 / sqrt(L * C) આવૃત્તિ સાથે દોલનો થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_011",
+      "type": "reflection",
+      "title": "Reflective Thinking: Grid Efficiency",
+      "title_hi": "चिंतनशील विचार: ग्रिड दक्षता",
+      "title_gu": "વિચારાત્મક ચિંતન: ગ્રીડ કાર્યક્ષમતા",
+      "body": "Consider why power plants generate AC voltage around 11,000 V, step it up to 400,000 V for cross-country transmission, and then step it down in substations to 220 V for domestic use. How does the square relation in I^2*R loss make high-voltage AC transmission essential for modern civilization?",
+      "body_hi": "विचार करें कि पावर प्लांट लगभग 11,000 V पर AC वोल्टेज उत्पन्न करते हैं, लंबी दूरी के संचारण के लिए इसे 400,000 V तक बढ़ाते हैं, और फिर घरेलू उपयोग के लिए सबस्टेशनों में इसे घटाकर 220 V करते हैं। I^2*R हानि में वर्ग का संबंध उच्च-वोल्टेज AC ट्रांसमिशन को आधुनिक सभ्यता के लिए अनिवार्य कैसे बनाता है?",
+      "body_gu": "વિચારો કે શા માટે પાવર પ્લાન્ટ્સ લગભગ 11,000 V પર AC ઉત્પન્ન કરે છે, લાંબા અંતર માટે તેને 400,000 V સુધી સ્ટેપ-અપ કરે છે, અને ઘરમાં વાપરવા માટે 220 V સુધી સ્ટેપ-ડાઉન કરે છે? I^2*R વ્યયમાં વર્ગનો સંબંધ ઉચ્ચ વોલ્ટેજ AC ટ્રાન્સમિશનને શા માટે અનિવાર્ય બનાવે છે?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_012",
+      "type": "connection",
+      "title": "Real-World Applications: Radio Tuning & Wireless Charging",
+      "title_hi": "वास्तविक दुनिया के अनुप्रयोग: रेडियो ट्यूनिंग एवं वायरलेस चार्जिंग",
+      "title_gu": "વાસ્તવિક દુનિયાના ઉપયોગો: રેડિયો ટ્યુનિંગ અને વાયરલેસ ચાર્જિંગ",
+      "body": "1. **Radio Tuning:** When you turn a dial to select an FM radio station (e.g. 93.5 MHz), you vary a variable capacitor in an internal LCR circuit until its natural resonant frequency matches 93.5 MHz. Current at that exact frequency surges, enabling clear reception!\n2. **Wireless Smartphone Charging:** Qi wireless chargers use inductive coupling between a coil in the charging pad and a coil inside your phone, resonant at the same frequency for maximum power transfer without wires.",
+      "body_hi": "1. **रेडियो ट्यूनिंग:** जब आप किसी FM रेडियो स्टेशन (जैसे 93.5 MHz) को चुनने के लिए डायल घुमाते हैं, तो आप एक आंतरिक LCR परिपथ में परिवर्ती संधारित्र को बदलते हैं ताकि इसकी स्वाभाविक अनुनादी आवृत्ति 93.5 MHz से मेल खाए। उस सटीक आवृत्ति पर धारा बढ़ जाती है, जिससे स्पष्ट सिग्नल मिलता है!\n2. **वायरलेस स्मार्टफोन चार्जिंग:** Qi वायरलेस चार्जर चार्जिंग पैड में लगे कॉइल और फोन के अंदर लगे कॉइल के बीच प्रेरणिक युग्मन का उपयोग करते हैं, जो बिना तारों के अधिकतम शक्ति हस्तांतरण के लिए समान आवृत्ति पर अनुनादित होते हैं।",
+      "body_gu": "1. **રેડિયો ટ્યુનિંગ:** જ્યારે તમે FM રેડિયો સ્ટેશન (જેમ કે 93.5 MHz) પસંદ કરવા માટે ડાયલ ફેરવો છો, ત્યારે તમે LCR પરિપથમાં ચલ કેપેસિટર બદલો છો જેથી તેની અનુનાદી આવૃત્તિ 93.5 MHz થાય. તે આવૃત્તિ પર પ્રવાહ વધે છે અને સ્પષ્ટ અવાજ સંભળાય છે!\n2. **વાયરલેસ સ્માર્ટફોન ચાર્જિંગ:** Qi વાયરલેસ ચાર્જર ચાર્જિંગ પેડ અને ફોનના કોઇલ વચ્ચે ઇન્ડક્ટિવ કપલિંગનો ઉપયોગ કરે છે, જે મહત્તમ પાવર ટ્રાન્સફર માટે સમાન આવૃત્તિ પર અનુનાદ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_013",
+      "type": "mastery",
+      "title": "Mastery Challenge: Comprehensive LCR & Power Calculation",
+      "title_hi": "मास्टरी चुनौती: व्यापक LCR एवं शक्ति गणना",
+      "title_gu": "માસ્ટરી પડકાર: સર્વગ્રાહી LCR અને પાવર ગણતરી",
+      "question": "A series LCR circuit with R = 20 Ohm, L = 1.5 H, and C = 35 uF is connected to a variable-frequency 200 V AC supply. What is the average power transferred to the circuit per cycle at resonance?",
+      "question_hi": "R = 20 ओम्, L = 1.5 H, और C = 35 uF वाला एक श्रेणी LCR परिपथ परिवर्तनशील-आवृत्ति वाले 200 V AC आपूर्ति से जुड़ा है। अनुनाद पर प्रति चक्र परिपथ में स्थानांतरित औसत शक्ति क्या है?",
+      "question_gu": "R = 20 ઓહમ, L = 1.5 H, અને C = 35 uF ધરાવતો શ્રેણી LCR પરિપથ 200 V ચલ-આવૃત્તિ AC સ્ત્રોત સાથે જોડાયેલ છે. અનુનાદ વખતે પરિપથમાં ટ્રાન્સફર થતો સરેરાશ પાવર કેટલો હશે?",
+      "options": [
+        "1000 W",
+        "2000 W",
+        "4000 W",
+        "500 W"
+      ],
+      "options_hi": [
+        "1000 W",
+        "2000 W",
+        "4000 W",
+        "500 W"
+      ],
+      "options_gu": [
+        "1000 W",
+        "2000 W",
+        "4000 W",
+        "500 W"
+      ],
+      "correct_index": 1,
+      "explanation": "At resonance, X_L = X_C, so Z = R = 20 Ohm. RMS current I_rms = V_rms / R = 200 / 20 = 10 A. Average power P_avg = (I_rms)^2 * R = (10)^2 * 20 = 100 * 20 = 2000 W.",
+      "explanation_hi": "अनुनाद पर, X_L = X_C, इसलिए Z = R = 20 ओम्। RMS धारा I_rms = V_rms / R = 200 / 20 = 10 A। औसत शक्ति P_avg = (I_rms)^2 * R = (10)^2 * 20 = 100 * 20 = 2000 W।",
+      "explanation_gu": "અનુનાદ વખતે, X_L = X_C, તેથી Z = R = 20 ઓહમ. RMS પ્રવાહ I_rms = V_rms / R = 200 / 20 = 10 A. સરેરાશ પાવર P_avg = (I_rms)^2 * R = (10)^2 * 20 = 100 * 20 = 2000 W."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_014",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.1: Resistor AC Circuit",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.1: प्रतिरोधक AC परिपथ",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.1: અવરોધક AC પરિપથ",
+      "question": "A 100 Ohm resistor is connected to a 220 V, 50 Hz AC supply. (a) What is the RMS value of current in the circuit? (b) What is the net power consumed over a full cycle?",
+      "question_hi": "एक 100 ओम् का प्रतिरोधक 220 V, 50 Hz AC आपूर्ति से जुड़ा है। (a) परिपथ में धारा का RMS मान क्या है? (b) एक पूर्ण चक्र में उपभुक्त शुद्ध शक्ति क्या है?",
+      "question_gu": "એક 100 ઓહમનો અવરોધક 220 V, 50 Hz AC સપ્લાય સાથે જોડાયેલ છે. (a) પરિપથમાં પ્રવાહનું RMS મૂલ્ય શું છે? (b) પૂર્ણ ચક્ર દરમિયાન વપરાતો ચોખ્ખો પાવર કેટલો છે?",
+      "options": [
+        "(a) 2.2 A, (b) 484 W",
+        "(a) 3.11 A, (b) 968 W",
+        "(a) 2.2 A, (b) 220 W",
+        "(a) 1.55 A, (b) 484 W"
+      ],
+      "options_hi": [
+        "(a) 2.2 A, (b) 484 W",
+        "(a) 3.11 A, (b) 968 W",
+        "(a) 2.2 A, (b) 220 W",
+        "(a) 1.55 A, (b) 484 W"
+      ],
+      "options_gu": [
+        "(a) 2.2 A, (b) 484 W",
+        "(a) 3.11 A, (b) 968 W",
+        "(a) 2.2 A, (b) 220 W",
+        "(a) 1.55 A, (b) 484 W"
+      ],
+      "correct_index": 0,
+      "explanation": "(a) I_rms = V_rms / R = 220 / 100 = 2.2 A.\n(b) P_net = V_rms * I_rms = 220 * 2.2 = 484 W.",
+      "explanation_hi": "(a) I_rms = V_rms / R = 220 / 100 = 2.2 A.\n(b) P_net = V_rms * I_rms = 220 * 2.2 = 484 W.",
+      "explanation_gu": "(a) I_rms = V_rms / R = 220 / 100 = 2.2 A.\n(b) P_net = V_rms * I_rms = 220 * 2.2 = 484 W."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_015",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.2: Peak Voltage and Current",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.2: शिखर वोल्टेज एवं धारा",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.2: પીક વોલ્ટેજ અને પ્રવાહ",
+      "question": "(a) The peak voltage of an AC supply is 300 V. What is the RMS voltage? (b) The RMS value of current in an AC circuit is 10 A. What is the peak current?",
+      "question_hi": "(a) एक AC आपूर्ति की शिखर वोल्टेज 300 V है। RMS वोल्टेज क्या है? (b) AC परिपथ में धारा का RMS मान 10 A है। शिखर धारा क्या है?",
+      "question_gu": "(a) AC સપ્લાયનો પીક વોલ્ટેજ 300 V છે. RMS વોલ્ટેજ કેટલો? (b) AC પરિપથમાં પ્રવાહનું RMS મૂલ્ય 10 A છે. પીક પ્રવાહ કેટલો?",
+      "options": [
+        "(a) 212.1 V, (b) 14.14 A",
+        "(a) 424.2 V, (b) 7.07 A",
+        "(a) 212.1 V, (b) 7.07 A",
+        "(a) 300 V, (b) 10 A"
+      ],
+      "options_hi": [
+        "(a) 212.1 V, (b) 14.14 A",
+        "(a) 424.2 V, (b) 7.07 A",
+        "(a) 212.1 V, (b) 7.07 A",
+        "(a) 300 V, (b) 10 A"
+      ],
+      "options_gu": [
+        "(a) 212.1 V, (b) 14.14 A",
+        "(a) 424.2 V, (b) 7.07 A",
+        "(a) 212.1 V, (b) 7.07 A",
+        "(a) 300 V, (b) 10 A"
+      ],
+      "correct_index": 0,
+      "explanation": "(a) V_rms = v_m / sqrt(2) = 300 / 1.414 = 212.1 V.\n(b) i_m = I_rms * sqrt(2) = 10 * 1.414 = 14.14 A.",
+      "explanation_hi": "(a) V_rms = v_m / sqrt(2) = 300 / 1.414 = 212.1 V.\n(b) i_m = I_rms * sqrt(2) = 10 * 1.414 = 14.14 A.",
+      "explanation_gu": "(a) V_rms = v_m / sqrt(2) = 300 / 1.414 = 212.1 V.\n(b) i_m = I_rms * sqrt(2) = 10 * 1.414 = 14.14 A."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_016",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.3: Pure Inductor Current",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.3: शुद्ध प्रेरक धारा",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.3: શુદ્ધ ઇન્ડક્ટર પ્રવાહ",
+      "question": "A 44 mH inductor is connected to 220 V, 50 Hz AC supply. Determine the RMS value of the current in the circuit.",
+      "question_hi": "एक 44 mH का प्रेरक 220 V, 50 Hz AC आपूर्ति से जुड़ा है। परिपथ में धारा का RMS मान ज्ञात कीजिए।",
+      "question_gu": "એક 44 mH નો ઇન્ડક્ટર 220 V, 50 Hz AC સપ્લાય સાથે જોડાયેલ છે. પરિપથમાં પ્રવાહનું RMS મૂલ્ય શોધો.",
+      "options": [
+        "15.9 A",
+        "22.5 A",
+        "10.0 A",
+        "31.8 A"
+      ],
+      "options_hi": [
+        "15.9 A",
+        "22.5 A",
+        "10.0 A",
+        "31.8 A"
+      ],
+      "options_gu": [
+        "15.9 A",
+        "22.5 A",
+        "10.0 A",
+        "31.8 A"
+      ],
+      "correct_index": 0,
+      "explanation": "X_L = 2*pi*f*L = 2 * (22/7) * 50 * (44 * 10^-3) = 13.83 Ohm. RMS current I_rms = V_rms / X_L = 220 / 13.83 = 15.9 A.",
+      "explanation_hi": "X_L = 2*pi*f*L = 2 * (22/7) * 50 * (44 * 10^-3) = 13.83 ओम्। RMS धारा I_rms = V_rms / X_L = 220 / 13.83 = 15.9 A।",
+      "explanation_gu": "X_L = 2*pi*f*L = 2 * (22/7) * 50 * (44 * 10^-3) = 13.83 ઓહમ. RMS પ્રવાહ I_rms = V_rms / X_L = 220 / 13.83 = 15.9 A."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_017",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.4: Pure Capacitor Current",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.4: शुद्ध संधारित्र धारा",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.4: શુદ્ધ કેપેસિટર પ્રવાહ",
+      "question": "A 60 uF capacitor is connected to a 110 V, 60 Hz AC supply. Determine the RMS value of the current in the circuit.",
+      "question_hi": "एक 60 uF का संधारित्र 110 V, 60 Hz AC आपूर्ति से जुड़ा है। परिपथ में धारा का RMS मान ज्ञात कीजिए।",
+      "question_gu": "એક 60 uF નો કેપેસિટર 110 V, 60 Hz AC સપ્લાય સાથે જોડાયેલ છે. પરિપથમાં પ્રવાહનું RMS મૂલ્ય શોધો.",
+      "options": [
+        "2.49 A",
+        "1.25 A",
+        "4.98 A",
+        "3.50 A"
+      ],
+      "options_hi": [
+        "2.49 A",
+        "1.25 A",
+        "4.98 A",
+        "3.50 A"
+      ],
+      "options_gu": [
+        "2.49 A",
+        "1.25 A",
+        "4.98 A",
+        "3.50 A"
+      ],
+      "correct_index": 0,
+      "explanation": "X_C = 1 / (2*pi*f*C) = 1 / (2 * pi * 60 * 60 * 10^-6) = 10^6 / (7200*pi) ≈ 44.21 Ohm. I_rms = V_rms / X_C = 110 / 44.21 = 2.49 A.",
+      "explanation_hi": "X_C = 1 / (2*pi*f*C) = 1 / (2 * pi * 60 * 60 * 10^-6) = 10^6 / (7200*pi) ≈ 44.21 ओम्। I_rms = V_rms / X_C = 110 / 44.21 = 2.49 A।",
+      "explanation_gu": "X_C = 1 / (2*pi*f*C) = 1 / (2 * pi * 60 * 60 * 10^-6) = 10^6 / (7200*pi) ≈ 44.21 ઓહમ. I_rms = V_rms / X_C = 110 / 44.21 = 2.49 A."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_018",
+      "type": "true_false",
+      "title": "Textbook Exercise 7.5: Power in Reactive Elements",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.5: प्रतिक्रियाशील घटकों में शक्ति",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.5: રિએક્ટિવ ઘટકોમાં પાવર",
+      "question": "Is the net power absorbed over a complete cycle by a pure inductor or a pure capacitor in an AC circuit equal to ZERO?",
+      "question_hi": "क्या एक AC परिपथ में शुद्ध प्रेरक या शुद्ध संधारित्र द्वारा एक पूर्ण चक्र में अवशोषित शुद्ध शक्ति शून्य के बराबर होती है?",
+      "question_gu": "શું AC પરિપથમાં શુદ્ધ ઇન્ડક્ટર અથવા શુદ્ધ કેપેસિટર દ્વારા પૂર્ણ ચક્ર દરમિયાન શોષાતો ચોખ્ખો પાવર શૂન્ય હોય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य (True)",
+        "असत्य (False)"
+      ],
+      "options_gu": [
+        "સાચું (True)",
+        "ખોટું (False)"
+      ],
+      "correct_index": 0,
+      "explanation": "True. For pure L or pure C, phase angle phi = pi/2 (90 degrees). Average power P_avg = V_rms * I_rms * cos(pi/2) = 0.",
+      "explanation_hi": "सत्य। शुद्ध L या शुद्ध C के लिए, कला कोण phi = pi/2 (90 डिग्री) होता है। औसत शक्ति P_avg = V_rms * I_rms * cos(pi/2) = 0 होती है।",
+      "explanation_gu": "સાચું. શુદ્ધ L અથવા શુદ્ધ C માટે, ફેઝ એંગલ phi = pi/2 (90 ડિગ્રી) છે. સરેરાશ પાવર P_avg = V_rms * I_rms * cos(pi/2) = 0 થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_019",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.6: Resonant Frequency and Q-Factor",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.6: अनुनादी आवृत्ति एवं Q-गुणक",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.6: અનુનાદી આવૃત્તિ અને Q-ફેક્ટર",
+      "question": "A series LCR circuit has L = 2.0 H, C = 32 uF, and R = 10 Ohm. Determine the resonant frequency w_r and the Q-factor of the circuit.",
+      "question_hi": "एक श्रेणी LCR परिपथ में L = 2.0 H, C = 32 uF, और R = 10 ओम् है। अनुनादी आवृत्ति w_r और परिपथ का Q-गुणक ज्ञात कीजिए।",
+      "question_gu": "એક શ્રેણી LCR પરિપથ માટે L = 2.0 H, C = 32 uF, અને R = 10 ઓહમ છે. અનુનાદી આવૃત્તિ w_r અને Q-ફેક્ટર શોધો.",
+      "options": [
+        "w_r = 125 rad/s, Q = 25",
+        "w_r = 250 rad/s, Q = 50",
+        "w_r = 100 rad/s, Q = 10",
+        "w_r = 125 rad/s, Q = 12.5"
+      ],
+      "options_hi": [
+        "w_r = 125 rad/s, Q = 25",
+        "w_r = 250 rad/s, Q = 50",
+        "w_r = 100 rad/s, Q = 10",
+        "w_r = 125 rad/s, Q = 12.5"
+      ],
+      "options_gu": [
+        "w_r = 125 rad/s, Q = 25",
+        "w_r = 250 rad/s, Q = 50",
+        "w_r = 100 rad/s, Q = 10",
+        "w_r = 125 rad/s, Q = 12.5"
+      ],
+      "correct_index": 0,
+      "explanation": "w_r = 1 / sqrt(L*C) = 1 / sqrt(2.0 * 32 * 10^-6) = 1 / sqrt(64 * 10^-6) = 1 / (8 * 10^-3) = 125 rad/s.\nQ = w_r * L / R = (125 * 2.0) / 10 = 250 / 10 = 25.",
+      "explanation_hi": "w_r = 1 / sqrt(L*C) = 1 / sqrt(2.0 * 32 * 10^-6) = 1 / sqrt(64 * 10^-6) = 1 / (8 * 10^-3) = 125 rad/s.\nQ = w_r * L / R = (125 * 2.0) / 10 = 250 / 10 = 25.",
+      "explanation_gu": "w_r = 1 / sqrt(L*C) = 1 / sqrt(2.0 * 32 * 10^-6) = 1 / sqrt(64 * 10^-6) = 1 / (8 * 10^-3) = 125 rad/s.\nQ = w_r * L / R = (125 * 2.0) / 10 = 250 / 10 = 25."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_020",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.7: LC Circuit Free Oscillations Frequency",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.7: LC परिपथ की मुक्त दोलन आवृत्ति",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.7: LC પરિપથની મુક્ત દોલન આવૃત્તિ",
+      "question": "A 30 uF charged capacitor is connected to a 27 mH inductor. What is the angular frequency of free oscillations of the circuit?",
+      "question_hi": "एक 30 uF का आवेशित संधारित्र 27 mH के प्रेरक से जुड़ा है। परिपथ के मुक्त दोलनों की कोणीय आवृत्ति क्या है?",
+      "question_gu": "એક 30 uF ચાર્જ થયેલ કેપેસિટર 27 mH ના ઇન્ડક્ટર સાથે જોડાયેલ છે. પરિપથના મુક્ત દોલનોની કોણીય આવૃત્તિ કેટલી હશે?",
+      "options": [
+        "1.11 x 10^3 rad/s",
+        "2.22 x 10^3 rad/s",
+        "5.55 x 10^2 rad/s",
+        "1.11 x 10^4 rad/s"
+      ],
+      "options_hi": [
+        "1.11 x 10^3 rad/s",
+        "2.22 x 10^3 rad/s",
+        "5.55 x 10^2 rad/s",
+        "1.11 x 10^4 rad/s"
+      ],
+      "options_gu": [
+        "1.11 x 10^3 rad/s",
+        "2.22 x 10^3 rad/s",
+        "5.55 x 10^2 rad/s",
+        "1.11 x 10^4 rad/s"
+      ],
+      "correct_index": 0,
+      "explanation": "w = 1 / sqrt(L*C) = 1 / sqrt(27 * 10^-3 * 30 * 10^-6) = 1 / sqrt(810 * 10^-9) = 1 / sqrt(81 * 10^-8) = 1 / (9 * 10^-4) = 1111 rad/s ≈ 1.11 x 10^3 rad/s.",
+      "explanation_hi": "w = 1 / sqrt(L*C) = 1 / sqrt(27 * 10^-3 * 30 * 10^-6) = 1 / sqrt(810 * 10^-9) = 1 / sqrt(81 * 10^-8) = 1 / (9 * 10^-4) = 1111 rad/s ≈ 1.11 x 10^3 rad/s.",
+      "explanation_gu": "w = 1 / sqrt(L*C) = 1 / sqrt(27 * 10^-3 * 30 * 10^-6) = 1 / sqrt(810 * 10^-9) = 1 / sqrt(81 * 10^-8) = 1 / (9 * 10^-4) = 1111 rad/s ≈ 1.11 x 10^3 rad/s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_021",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.8: LC Circuit Stored Energy",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.8: LC परिपथ की संचित ऊर्जा",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.8: LC પરિપથની સંગ્રહિત ઊર્જા",
+      "question": "Suppose the initial charge on a 10 uF capacitor is 6 mC and it is connected to a 20 mH inductor. What is the total energy stored in the circuit initially?",
+      "question_hi": "मान लीजिए कि 10 uF के संधारित्र पर प्रारंभिक आवेश 6 mC है और यह 20 mH के प्रेरक से जुड़ा है। प्रारंभ में परिपथ में संचित कुल ऊर्जा कितनी है?",
+      "question_gu": "ધારો કે 10 uF ના કેપેસિટર પર પ્રારંભિક ચાર્જ 6 mC છે અને તે 20 mH ના ઇન્ડક્ટર સાથે જોડાયેલ છે. પ્રારંભમાં પરિપથમાં સંગ્રહિત કુલ ઊર્જા કેટલી હશે?",
+      "options": [
+        "1.8 Joules",
+        "3.6 Joules",
+        "0.9 Joules",
+        "18 Joules"
+      ],
+      "options_hi": [
+        "1.8 जूल",
+        "3.6 जूल",
+        "0.9 जूल",
+        "18 जूल"
+      ],
+      "options_gu": [
+        "1.8 જૂલ",
+        "3.6 જૂલ",
+        "0.9 જૂલ",
+        "18 જૂલ"
+      ],
+      "correct_index": 0,
+      "explanation": "Total initial energy U = Q_0^2 / (2 * C) = (6 * 10^-3)^2 / (2 * 10 * 10^-6) = (36 * 10^-6) / (2 * 10^-5) = 1.8 Joules.",
+      "explanation_hi": "प्रारंभिक कुल ऊर्जा U = Q_0^2 / (2 * C) = (6 * 10^-3)^2 / (2 * 10 * 10^-6) = (36 * 10^-6) / (2 * 10^-5) = 1.8 जूल।",
+      "explanation_gu": "પ્રારંભિક કુલ ઊર્જા U = Q_0^2 / (2 * C) = (6 * 10^-3)^2 / (2 * 10 * 10^-6) = (36 * 10^-6) / (2 * 10^-5) = 1.8 જૂલ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_022",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.9: Power at Resonance",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.9: अनुनाद पर शक्ति",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.9: અનુનાદ વખતે પાવર",
+      "question": "A series LCR circuit with R = 20 Ohm, L = 1.5 H, C = 35 uF is connected to a variable frequency 200 V AC supply. What is the average power transferred to the circuit per cycle at resonant frequency?",
+      "question_hi": "R = 20 ओम्, L = 1.5 H, C = 35 uF वाला एक श्रेणी LCR परिपथ परिवर्तनशील आवृत्ति वाले 200 V AC आपूर्ति से जुड़ा है। अनुनादी आवृत्ति पर परिपथ में स्थानांतरित औसत शक्ति क्या है?",
+      "question_gu": "R = 20 ઓહમ, L = 1.5 H, C = 35 uF ધરાવતો શ્રેણી LCR પરિપથ 200 V AC સ્ત્રોત સાથે જોડાયેલ છે. અનુનાદી આવૃત્તિ પર પરિપથમાં ટ્રાન્સફર થતો સરેરાશ પાવર કેટલો હશે?",
+      "options": [
+        "2000 W",
+        "1000 W",
+        "4000 W",
+        "2200 W"
+      ],
+      "options_hi": [
+        "2000 W",
+        "1000 W",
+        "4000 W",
+        "2200 W"
+      ],
+      "options_gu": [
+        "2000 W",
+        "1000 W",
+        "4000 W",
+        "2200 W"
+      ],
+      "correct_index": 0,
+      "explanation": "At resonance, Z = R = 20 Ohm. Current I_rms = V_rms / R = 200 / 20 = 10 A. Power transferred P = (I_rms)^2 * R = 10^2 * 20 = 2000 W.",
+      "explanation_hi": "अनुनाद पर, Z = R = 20 ओम्। धारा I_rms = V_rms / R = 200 / 20 = 10 A। स्थानांतरित शक्ति P = (I_rms)^2 * R = 10^2 * 20 = 2000 W।",
+      "explanation_gu": "અનુનાદ વખતે, Z = R = 20 ઓહમ. પ્રવાહ I_rms = V_rms / R = 200 / 20 = 10 A. ટ્રાન્સફર થતો પાવર P = (I_rms)^2 * R = 10^2 * 20 = 2000 W."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_023",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.10: Radio Tuning Capacitance Range",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.10: रेडियो ट्यूनिंग धारिता परास",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.10: રેડિયો ટ્યુનિંગ કેપેસિટન્સ રેન્જ",
+      "question": "A radio can tune over the Medium Wave (MW) broadcast band from 800 kHz to 1200 kHz. If its LC circuit has an effective inductance of 200 uH, what must be the range of its variable capacitor?",
+      "question_hi": "एक रेडियो 800 kHz से 1200 kHz तक मीडियम वेव (MW) प्रसारण बैंड को ट्यून कर सकता है। यदि इसके LC परिपथ में 200 uH का प्रभावी प्रेरकत्व है, तो इसके परिवर्ती संधारित्र की परास (range) क्या होनी चाहिए?",
+      "question_gu": "રેડિયો 800 kHz થી 1200 kHz ના મીડિયમ વેવ (MW) બ્રોડકાસ્ટ બેન્ડ પર ટ્યુન કરી શકે છે. જો તેના LC પરિપથમાં 200 uH નું ઇન્ડક્ટન્સ હોય, તો ચલ કેપેસિટરની રેન્જ કેટલી હોવી જોઈએ?",
+      "options": [
+        "88 pF to 198 pF",
+        "44 pF to 99 pF",
+        "100 pF to 300 pF",
+        "120 pF to 240 pF"
+      ],
+      "options_hi": [
+        "88 pF से 198 pF",
+        "44 pF से 99 pF",
+        "100 pF से 300 pF",
+        "120 pF से 240 pF"
+      ],
+      "options_gu": [
+        "88 pF થી 198 pF",
+        "44 pF થી 99 pF",
+        "100 pF થી 300 pF",
+        "120 pF થી 240 pF"
+      ],
+      "correct_index": 0,
+      "explanation": "C = 1 / (4 * pi^2 * f^2 * L).\nFor f_1 = 800 kHz: C_1 ≈ 198 pF.\nFor f_2 = 1200 kHz: C_2 ≈ 88 pF.\nHence capacitance range is 88 pF to 198 pF.",
+      "explanation_hi": "C = 1 / (4 * pi^2 * f^2 * L)।\nf_1 = 800 kHz के लिए: C_1 ≈ 198 pF।\nf_2 = 1200 kHz के लिए: C_2 ≈ 88 pF।\nइसलिए धारिता परास 88 pF से 198 pF है।",
+      "explanation_gu": "C = 1 / (4 * pi^2 * f^2 * L).\nf_1 = 800 kHz માટે: C_1 ≈ 198 pF.\nf_2 = 1200 kHz માટે: C_2 ≈ 88 pF.\nતેથી કેપેસિટન્સ રેન્જ 88 pF થી 198 pF છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH7_024",
+      "type": "mcq",
+      "title": "Textbook Exercise 7.11: Step-Down Transformer Efficiency",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 7.11: अपचायी ट्रांसफॉर्मर दक्षता",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 7.11: સ્ટેપ-ડાઉન ટ્રાન્સફોર્મર કાર્યક્ષમતા",
+      "question": "A step-down transformer operates on a 2200 V line to supply 220 V at 50 Hz. If the secondary load draws 10 A current and the efficiency is 90%, what is the primary current?",
+      "question_hi": "एक अपचायी ट्रांसफॉर्मर 220 V आपूर्ति देने के लिए 2200 V लाइन पर कार्य करता है। यदि द्वितीयक लोड 10 A धारा लेता है और दक्षता 90% है, तो प्राथमिक धारा क्या है?",
+      "question_gu": "એક સ્ટેપ-ડાઉન ટ્રાન્સફોર્મર 2200 V લાઈન પર કામ કરી 220 V પૂરો પાડે છે. જો સેકન્ડરી લોડ 10 A પ્રવાહ ખેંચે છે અને કાર્યક્ષમતા 90% હોય, તો પ્રાઇમરી પ્રવાહ કેટલો હશે?",
+      "options": [
+        "1.11 A",
+        "1.00 A",
+        "0.90 A",
+        "2.22 A"
+      ],
+      "options_hi": [
+        "1.11 A",
+        "1.00 A",
+        "0.90 A",
+        "2.22 A"
+      ],
+      "options_gu": [
+        "1.11 A",
+        "1.00 A",
+        "0.90 A",
+        "2.22 A"
+      ],
+      "correct_index": 0,
+      "explanation": "Power Output P_s = V_s * I_s = 220 * 10 = 2200 W.\nEfficiency eta = 0.90 => Power Input P_p = P_s / 0.90 = 2200 / 0.90 = 2444.4 W.\nPrimary Current I_p = P_p / V_p = 2444.4 / 2200 ≈ 1.11 A.",
+      "explanation_hi": "आउटपुट शक्ति P_s = V_s * I_s = 220 * 10 = 2200 W।\nदक्षता eta = 0.90 => इनपुट शक्ति P_p = P_s / 0.90 = 2200 / 0.90 = 2444.4 W।\nप्राथमिक धारा I_p = P_p / V_p = 2444.4 / 2200 ≈ 1.11 A।",
+      "explanation_gu": "આઉટપુટ પાવર P_s = V_s * I_s = 220 * 10 = 2200 W.\nકાર્યક્ષમતા eta = 0.90 => ઇનપુટ પાવર P_p = P_s / 0.90 = 2200 / 0.90 = 2444.4 W.\nપ્રાઇમરી પ્રવાહ I_p = P_p / V_p = 2444.4 / 2200 ≈ 1.11 A."
+    }
+  ]
+}

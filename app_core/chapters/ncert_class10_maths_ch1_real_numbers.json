@@ -1,0 +1,57 @@
+{
+  "chapter_id": 102,
+  "board": "NCERT",
+  "class": 10,
+  "subject": "Mathematics",
+  "chapter_name_en": "Chapter 1: Real Numbers",
+  "introduction": {
+    "heading": "Introduction to Real Numbers",
+    "details_en": "In earlier classes, you have explored the number line and various types of numbers. In this chapter, we continue our discussion by delving into two very important properties of positive integers: Euclid’s division algorithm and the Fundamental Theorem of Arithmetic."
+  },
+  "key_definitions": [
+    {
+      "term": "Euclid’s Division Lemma",
+      "explanation_en": "Given positive integers a and b, there exist unique integers q and r satisfying a = bq + r, where 0 <= r < b."
+    },
+    {
+      "term": "Fundamental Theorem of Arithmetic",
+      "explanation_en": "Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur."
+    }
+  ],
+  "practical_examples": [
+    {
+      "example_no": 1,
+      "title": "Finding HCF using Euclid's Division Algorithm",
+      "problem": "Use Euclid's algorithm to find the HCF of 4052 and 12576.",
+      "solution": "Step 1: 12576 = 4052 * 3 + 420\nStep 2: 4052 = 420 * 9 + 272\nStep 3: 420 = 272 * 1 + 148\nStep 4: 272 = 148 * 1 + 124\nStep 5: 148 = 124 * 1 + 24\nStep 6: 124 = 24 * 5 + 4\nStep 7: 24 = 4 * 6 + 0\nThe remainder is now zero, so our procedure stops. Since the divisor at this stage is 4, the HCF of 12576 and 4052 is 4."
+    },
+    {
+      "example_no": 2,
+      "title": "Prime Factorisation",
+      "problem": "Express 140 as a product of its prime factors.",
+      "solution": "140 = 2 * 70\n70 = 2 * 35\n35 = 5 * 7\nTherefore, 140 = 2 * 2 * 5 * 7 = 2^2 * 5 * 7."
+    }
+  ],
+  "exercises": [
+    {
+      "q_no": 1,
+      "question": "The decimal expansion of the rational number 14587/1250 will terminate after how many decimal places?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "4",
+      "hint": "Factorize the denominator 1250 into 2^m * 5^n and take the max of m and n."
+    }
+  ],
+  "previous_years_questions": [
+    {
+      "year": 2021,
+      "question_type": "Section A (2 Marks)",
+      "question": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+      "solution": "We know that HCF * LCM = Product of two numbers.\n9 * LCM = 306 * 657\nLCM = (306 * 657) / 9 = 22338."
+    }
+  ]
+}

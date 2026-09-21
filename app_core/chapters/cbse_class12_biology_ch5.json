@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "id": "cbse_class12_biology_ch5",
+    "title": "Chapter 5: Molecular Basis of Inheritance",
+    "subject": "Biology",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_001",
+      "type": "hook",
+      "title": "The Chemical Secret Behind Life's Blueprint",
+      "title_hi": "जीवन के ब्लूप्रिंट का रासायनिक रहस्य",
+      "title_gu": "જીવનના બ્લૂપ્રિન્ટ પાછળનું રાસાયણિક રહસ્ય",
+      "body": "Imagine a microscopic instruction manual written inside every single cell of your body containing 3 billion letters of information. If stretched out, the DNA from just one human cell would measure about 2 meters long, yet fits inside a cell nucleus barely 6 micrometers in diameter! How does nature encode, pack, and faithfully copy this immense library of life?",
+      "body_hi": "कल्पना कीजिए कि आपके शरीर की प्रत्येक कोशिका के भीतर 3 अरब अक्षरों की एक सूक्ष्म निर्देश पुस्तिका लिखी है। यदि इसे फैलाया जाए, तो केवल एक मानव कोशिका का DNA लगभग 2 मीटर लंबा होगा, फिर भी यह केवल 6 माइक्रोमीटर व्यास वाले कोशिका केंद्रक के अंदर समा जाता है! प्रकृति जीवन के इस विशाल पुस्तकालय को कैसे कूटबद्ध, पैक और सटीक रूप से कॉपी करती है?",
+      "body_gu": "તમારા શરીરના દરેક કોષની અંદર 3 અબજ અક્ષરોની માહિતી ધરાવતી એક સૂક્ષ્મ સૂચના પુસ્તિકા લખેલી છે તેની કલ્પના કરો. જો તેને લંબાવવામાં આવે, તો માત્ર એક માનવ કોષમાંથી ડીએનએ (DNA) લગભગ 2 મીટર લાંબુ થશે, છતાં તે માત્ર 6 માઇક્રોમીટર વ્યાસ ધરાવતા કોષકેન્દ્રની અંદર સમાઈ જાય છે! પ્રકૃતિ જીવનના આ વિશાળ પુસ્તકાલયને કેવી રીતે કોડ, પેક અને ચોકસાઈથી કૉપિ કરે છે?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_002",
+      "type": "socratic_question",
+      "question": "Both DNA and RNA are nucleic acids, but why did nature choose DNA as the primary genetic material for most living organisms, while RNA serves mostly as a messenger or catalyst?",
+      "question_hi": "DNA और RNA दोनों न्यूक्लिक अम्ल हैं, लेकिन प्रकृति ने अधिकांश जीवों के लिए प्राथमिक आनुवंशिक पदार्थ के रूप में DNA को ही क्यों चुना, जबकि RNA मुख्य रूप से एक संदेशवाहक या उत्प्रेरक के रूप में कार्य करता है?",
+      "question_gu": "DNA અને RNA બંને ન્યુક્લિક એસિડ છે, પરંતુ પ્રકૃતિએ મોટાભાગના સજીવો માટે પ્રાથમિક આનુવંશિક દ્રવ્ય તરીકે DNA ની જ પસંદગી કેમ કરી, જ્યારે RNA મુખ્યત્વે સંદેશવાહક અથવા ઉદ્દીપક તરીકે કાર્ય કરે છે?",
+      "options": [
+        "DNA is single-stranded making it easier to mutate",
+        "DNA double-strand structure, presence of thymine, and 2'-deoxyribose sugar make it chemically more stable and capable of self-repair",
+        "RNA cannot carry genetic information at all",
+        "RNA is larger in size than DNA"
+      ],
+      "options_hi": [
+        "DNA एक एकल-स्ट्रैंडेड है जो इसे उत्परिवर्तित करना आसान बनाता है",
+        "DNA की द्वि-स्ट्रैंड संरचना, थायमीन की उपस्थिति, और 2'-डीऑक्सीराइबोज़ शर्करा इसे रासायनिक रूप से अधिक स्थिर और स्व-मरम्मत योग्य बनाती है",
+        "RNA आनुवंशिक जानकारी बिल्कुल नहीं ले जा सकता",
+        "RNA का आकार DNA से बड़ा होता है"
+      ],
+      "options_gu": [
+        "DNA એકવડી શૃંખલા ધરાવે છે જેથી તેમાં વિકૃતિ સરળતાથી આવે છે",
+        "DNA ની બેવડી શૃંખલા રચના, થાઇમિનની હાજરી અને 2'-ડીઓક્સીરાઇબોઝ શર્કરા તેને રાસાયણિક રીતે વધુ સ્થિર અને સ્વ-સમારકામ માટે સક્ષમ બનાવે છે",
+        "RNA આનુવંશિક માહિતી ધરાવી શકતું નથી",
+        "RNA નું કદ DNA કરતાં મોટું હોય છે"
+      ],
+      "correct_index": 1,
+      "explanation": "DNA is chemically less reactive and structurally more stable than RNA due to 2'-deoxyribose (lacking 2'-OH), presence of Thymine instead of Uracil, and complementary double-stranded helical structure.",
+      "explanation_hi": "DNA रासायनिक रूप से कम क्रियाशील और संरचनात्मक रूप से RNA की तुलना में अधिक स्थिर है क्योंकि इसमें 2'-डीऑक्सीराइबोज़ (2'-OH की अनुपस्थिति), यूरेसिल के स्थान पर थायमीन और पूरक द्वि-स्ट्रैंडेड कुंडलित संरचना होती है।",
+      "explanation_gu": "DNA 2'-ડીઓક્સીરાઇબોઝ (2'-OH નો અભાવ), યુરેસિલને બદલે થાઇમિનની હાજરી અને પૂરક બેવડી શૃંખલા ધરાવતી હેલિકલ રચનાને કારણે RNA ની સરખામણીમાં રાસાયણિક રીતે ઓછું સક્રિય અને વધુ સ્થિર છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_003",
+      "type": "discovery",
+      "title": "Unveiling Genetic Material: From Griffith to Hershey & Chase",
+      "title_hi": "आनुवंशिक पदार्थ की खोज: ग्रिफिथ से हर्षे एवं चेज तक",
+      "title_gu": "આનુવંશિક દ્રવ્યની શોધ: ગ્રીફિથથી હર્ષી અને ચેઝ સુધી",
+      "body": "Frederick Griffith (1928) discovered the 'Transforming Principle' using Streptococcus pneumoniae (heat-killed S strain transformed live R strain into virulent S strain). In 1944, Avery, MacLeod, and McCarty showed that DNase enzyme destroyed transformation, proving DNA was the transforming substance. Finally, Alfred Hershey and Martha Chase (1950) unequivocally proved DNA is the genetic material using bacteriophages labeled with radioactive Phosphorus (32P in DNA) and Sulfur (35S in protein coat).",
+      "body_hi": "फ्रेडरिक ग्रिफिथ (1928) ने स्ट्रैपटोकोकस न्यूमोनी का उपयोग करके 'रूपांतरी सिद्धांत' की खोज की (ताप-मृत S स्ट्रेन ने जीवित R स्ट्रेन को उग्र S स्ट्रेन में रूपांतरित कर दिया)। 1944 में, एवेरी, मैकलियोड और मैकार्टी ने दिखाया कि DNase एंजाइम ने रूपांतरण को नष्ट कर दिया, जिससे साबित हुआ कि DNA ही रूपांतरित पदार्थ था। अंततः, अल्फ्रेड हर्षे और मार्था चेज (1950) ने रेडियोधर्मी फास्फोरस (DNA में 32P) और सल्फर (प्रोटीन आवरण में 35S) से चिह्नित जीवाणुभौजी का उपयोग करके स्पष्ट रूप से साबित किया कि DNA ही आनुवंशिक पदार्थ है।",
+      "body_gu": "ફ્રેડરિક ગ્રીફિથ (1928) એ સ્ટ્રેપ્ટોકોકસ ન્યુમોનીનો ઉપયોગ કરીને 'રૂપાંતરણીય સિદ્ધાંત' શોધી કાઢ્યો (ગરમીથી મરેલા S સ્ટ્રેઇને જીવંત R સ્ટ્રેઇનને ઝેરી S સ્ટ્રેઇનમાં રૂપાંતરિત કર્યા). 1944 માં, એવરી, મેક્લિઓડ અને મેકકાર્ટીએ દર્શાવ્યું કે DNase ઉત્સેચકે રૂપાંતરણને નષ્ટ કર્યું, જેથી સાબિત થયું કે DNA રૂપાંતરિત પદાર્થ હતો. અંતે, આલ્ફ્રેડ હર્ષી અને માર્થા ચેઝ (1950) એ રેડિયોએક્ટિવ ફોસ્ફરસ (DNA માં 32P) અને સલ્ફર (પ્રોટીન આવરણમાં 35S) થી લેબલ કરેલ બેક્ટેરિયોફેજનો ઉપયોગ કરીને સ્પષ્ટપણે સાબિત કર્યું કે DNA એ આનુવંશિક દ્રવ્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_004",
+      "type": "theory",
+      "title": "Core Concepts of Molecular Basis of Inheritance",
+      "title_hi": "वंशगति के आणविक आधार की मुख्य अवधारणाएं",
+      "title_gu": "આનુવંશિકતાના આણ્વીય આધારના મુખ્ય ખ્યાલો",
+      "body": "Key Concepts:\n1. DNA Structure & Packaging: Watson-Crick double helix model (pitch = 3.4 nm, 10 bp/turn). Eukaryotic DNA wraps around positively charged histone octamer forming Nucleosomes ('beads-on-string').\n2. Replication: Semi-conservative model (proven by Meselson & Stahl using 15N/14N isotope density gradient). DNA Polymerase synthesizes 5'->3'. Continuous synthesis on leading strand, discontinuous (Okazaki fragments) on lagging strand connected by DNA Ligase.\n3. Transcription: DNA -> mRNA by RNA Polymerase. Transcription unit has Promoter, Structural Gene, and Terminator. Eukaryotic pre-mRNA undergoes Splicing (introns removed, exons joined), 5'-Capping, and 3'-Polyadenylation.\n4. Genetic Code & Translation: Triplet code, degenerate, unambiguous, universal. AUG codes for Methionine (initiator). Translation occurs on ribosomes in 5'->3' direction.\n5. Regulation (Lac Operon): Jacob & Monod model. Inducer (Lactose) binds repressor protein, freeing the operator and allowing transcription of z, y, a genes.\n6. HGP & DNA Fingerprinting: Human Genome has 3x10^9 bp, ~30,000 genes. DNA Fingerprinting uses VNTRs analyzed via Southern blotting for forensic identification.",
+      "body_hi": "मुख्य अवधारणाएँ:\n1. DNA संरचना एवं पैकेजिंग: वाटसन-क्रिक डबल हेलिक्स मॉडल (पिच = 3.4 nm, 10 bp/मोड़)। यूकेरियोटिक DNA धनात्मक रूप से आवेशित हिस्टोन ऑक्टामर के चारों ओर लपेटकर न्यूक्लियोसोम ('धागे पर मनके') बनाता है।\n2. प्रतिकृतियन: अर्ध-संरक्षी मॉडल (मेसेल्सन और स्टाल द्वारा 15N/14N आइसोटोप घनत्व प्रवणता से सिद्ध)। DNA पॉलीमरेज़ 5'->3' दिशा में संश्लेषण करता है।\n3. अनुलेखन: DNA -> mRNA (RNA पॉलीमरेज़ द्वारा)। यूकेरियोटिक पूर्व-mRNA स्प्लाइसिंग (इंट्रॉन हटाना, एग्ज़ॉन जोड़ना), 5'-कैपिंग और 3'-पॉलीएडेनिलेशन से गुजरता है।\n4. आनुवंशिक कूट एवं स्थानांतरण: ट्रिपलेट कोड, अपह्रसित, असंदिग्ध, सार्वभौमिक। AUG मेथियोनिन के लिए कूटबद्ध करता है।\n5. जीन अभिव्यक्ति का नियमन (लैक्स ओपेरॉन): प्रेरक (लैक्टोज़) दमनकारी प्रोटीन से जुड़ता है, जिससे संरचनात्मक जीन (z, y, a) का अनुलेखन होता है।\n6. HGP और DNA फिंगरप्रिंटिंग: मानव जीनोम में 3x10^9 क्षार युग्म हैं। DNA फिंगरप्रिंटिंग फॉरेंसिक पहचान के लिए VNTRs का उपयोग करती है।",
+      "body_gu": "મુખ્ય ખ્યાલો:\n1. DNA રચના અને પેકેજિંગ: વોટ્સન-ક્રિક બેવડી હેલિક્સ રચના (પીચ = 3.4 nm, 10 bp/વળાંક). યુકેરીયોટિક DNA ધન વીજભારિત હિસ્ટોન ઓક્ટોમરની આસપાસ વીંટળાઈને ન્યુક્લિયોસોમ ('દોરી પર મણકા') બનાવે છે.\n2. સ્વયંજનન: અર્ધ-સંરક્ષી મોડેલ (મેસેલ્સન અને સ્ટેહલ દ્વારા 15N/14N સમસ્થાનિક ઘનતા ઢાળથી સાબિત). DNA પોલિમરેઝ 5'->3' દિશામાં સંશ્લેષણ કરે છે.\n3. પ્રત્યાંકન: DNA -> mRNA (RNA પોલિમરેઝ દ્વારા). યુકેરીયોટિક pre-mRNA સ્પ્લાઇસિંગ (ઇન્ટ્રોન દૂર કરવા, એક્ઝોન જોડવા), 5'-કેપિંગ અને 3'-પોલીએડીનાયલેશનમાંથી પસાર થાય છે.\n4. આનુવંશિક સંકેત અને ભાષાંતર: ત્રિપલ સંકેત, અવનત, અસંદિગ્ધ, સાર્વત્રિક. AUG મેથિઓનિન માટે કોડ કરે છે.\n5. જનીન અભિવ્યક્તિનું નિયમન (લેક ઓપેરોન): પ્રેરક (લેક્ટોઝ) નિરોધક પ્રોટીન સાથે જોડાય છે, જેનાથી z, y, a જનીનોનું પ્રત્યાંકન થાય છે.\n6. HGP અને DNA ફિંગરપ્રિન્ટિંગ: માનવ જીનોમ 3x10^9 બેઇઝ પેર ધરાવે છે. DNA ફિંગરપ્રિન્ટિંગ ફોરેન્સિક ઓળખ માટે VNTRs નો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_005",
+      "type": "knowledge_check",
+      "question": "According to Chargaff's rules, which of the following relationships is ALWAYS true for double-stranded DNA?",
+      "question_hi": "चारगाफ के नियमों के अनुसार, द्वि-स्ट्रैंडेड DNA के लिए निम्नलिखित में से कौन सा संबंध हमेशा सत्य होता है?",
+      "question_gu": "ચાર્ગાફના નિયમો અનુસાર, બેવડી શૃંખલા વાળા DNA માટે નીચેનામાંથી કયો સંબંધ હંમેશા સાચો હોય છે?",
+      "options": [
+        "A + T = G + C",
+        "A / T = 1 and G / C = 1 (A+G = T+C)",
+        "A = G and T = C",
+        "A / G = 1"
+      ],
+      "options_hi": [
+        "A + T = G + C",
+        "A / T = 1 एवं G / C = 1 (A+G = T+C)",
+        "A = G एवं T = C",
+        "A / G = 1"
+      ],
+      "options_gu": [
+        "A + T = G + C",
+        "A / T = 1 અને G / C = 1 (A+G = T+C)",
+        "A = G અને T = C",
+        "A / G = 1"
+      ],
+      "correct_index": 1,
+      "explanation": "Erwin Chargaff stated that in double-stranded DNA, Adenine equals Thymine (A=T) and Guanine equals Cytosine (G=C). Thus A/T = 1, G/C = 1, and purines (A+G) equal pyrimidines (T+C).",
+      "explanation_hi": "इरविन चारगाफ ने कहा कि द्वि-स्ट्रैंडेड DNA में, एडेनिन थायमीन के बराबर (A=T) और गुआनीन साइटोसिन के बराबर (G=C) होता है। इसलिए A/T = 1, G/C = 1, और प्यूरीन (A+G) = पिरीमिडीन (T+C) होते हैं।",
+      "explanation_gu": "ઇરવિન ચાર્ગાફે જણાવ્યું હતું કે બેવડી શૃંખલા વાળા DNA માં, એડેનાઇન થાઇમિનની બરાબર (A=T) અને ગ્વાનાઇન સાયટોસિનની બરાબર (G=C) હોય છે. તેથી A/T = 1, G/C = 1 અને પ્યુરિન (A+G) = પિરિમિડિન (T+C) થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_006",
+      "type": "reflection",
+      "title": "Why Gene Regulation Matters",
+      "title_hi": "जीन नियमन क्यों महत्वपूर्ण है",
+      "title_gu": "જનીન નિયમન શા માટે મહત્વનું છે",
+      "body": "Every cell in your body contains the exact same genome, yet a neuron looks and functions completely differently from a liver cell or red blood cell. How does selective expression of genes allow cellular differentiation and energy conservation in organisms?",
+      "body_hi": "आपके शरीर की प्रत्येक कोशिका में बिल्कुल समान जीनोम होता है, फिर भी एक न्यूरॉन यकृत कोशिका या लाल रक्त कोशिका से पूरी तरह से अलग दिखता और कार्य करता है। जीन की चुनिंदा अभिव्यक्ति जीवों में कोशिकीय विभेदन और ऊर्जा संरक्षण की अनुमति कैसे देती है?",
+      "body_gu": "તમારા શરીરના દરેક કોષમાં સમાન જીનોમ હોય છે, છતાં ન્યુરોન યકૃતના કોષ અથવા રક્તકણ કરતાં તદ્દન અલગ દેખાય છે અને કાર્ય કરે છે. જનીનોની પસંદગીયુક્ત અભિવ્યક્તિ સજીવોમાં કોષીય વિભેદન અને ઉર્જા બચતની મંજૂરી કેવી રીતે આપે છે?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_007",
+      "type": "connection",
+      "title": "Real-World Application: DNA Fingerprinting & Forensic Science",
+      "title_hi": "वास्तविक दुनिया का अनुप्रयोग: DNA फिंगरप्रिंटिंग और फोरेंसिक विज्ञान",
+      "title_gu": "વાસ્તવિક દુનિયાની એપ્લિકેશન: DNA ફિંગરપ્રિન્ટિંગ અને ફોરેન્સિક વિજ્ઞાન",
+      "body": "DNA Fingerprinting technique developed by Alec Jeffreys relies on Short Tandem Repeats (STRs) and VNTRs. Because no two individuals (except monozygotic twins) share identical VNTR patterns, it is used extensively in crime scene investigations, paternity disputes, and biodiversity conservation.",
+      "body_hi": "एलेक जेफ्रीज़ द्वारा विकसित DNA फिंगरप्रिंटिंग तकनीक शॉर्ट टेंडेम रिपीट (STRs) और VNTRs पर निर्भर करती है। चूंकि किन्हीं दो व्यक्तियों (समरूप जुड़वा बच्चों को छोड़कर) का VNTR पैटर्न समान नहीं होता, इसलिए इसका उपयोग अपराध स्थल की जांच, पितृत्व विवादों और जैव विविधता संरक्षण में व्यापक रूप से किया जाता है।",
+      "body_gu": "એલેક જેફ્રીસ દ્વારા વિકસાવવામાં આવેલી DNA ફિંગરપ્રિન્ટિંગ તકનીક શોર્ટ ટેન્ડમ રિપીટ્સ (STRs) અને VNTRs પર આધારિત છે. કારણ કે સમરૂપ જોડડિયા સિવાય કોઈપણ બે વ્યક્તિઓ સમાન VNTR પેટર્ન ધરાવતા નથી, તેનો ઉપયોગ ગુનાના સ્થળની તપાસ, પિતૃત્વ વિવાદો અને જૈવવિવિધતા સંરક્ષણમાં વ્યાપકપણે થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Molecular Genetics",
+      "title_hi": "मास्टरी चुनौती: आणविक आनुवंशिकी",
+      "title_gu": "માસ્ટરી ચેલેન્જ: આણ્વીય જનીનવિદ્યા",
+      "question": "During transcription in eukaryotic cells, which enzyme synthesizes precursor of mRNA (hnRNA), and what processing steps convert it into mature mRNA?",
+      "question_hi": "यूकेरियोटिक कोशिकाओं में अनुलेखन के दौरान, कौन सा एंजाइम mRNA (hnRNA) के अग्रदूत का संश्लेषण करता है, और कौन से प्रसंस्करण चरण इसे परिपक्व mRNA में परिवर्तित करते हैं?",
+      "question_gu": "યુકેરીયોટિક કોષોમાં પ્રત્યાંકન દરમિયાન, કયો ઉત્સેચક mRNA ના પુરોગામી (hnRNA) નું સંશ્લેષણ કરે છે, અને કયા પ્રક્રિયાત્મક તબક્કા તેને પરિપક્વ mRNA માં રૂપાંતરિત કરે છે?",
+      "options": [
+        "RNA Polymerase I; Splicing only",
+        "RNA Polymerase II; Capping at 5' end, Tailing (Polyadenylation) at 3' end, and Splicing of introns",
+        "RNA Polymerase III; Recombination and Ligation",
+        "DNA Polymerase III; Capping and Tailing"
+      ],
+      "options_hi": [
+        "RNA पॉलीमरेज़ I; केवल स्प्लाइसिंग",
+        "RNA पॉलीमरेज़ II; 5' सिरे पर कैपिंग, 3' सिरे पर टेलिंग (पॉलीएडेनिलेशन) और इंट्रॉन की स्प्लाइसिंग",
+        "RNA पॉलीमरेज़ III; पुनर्योजन और लाइगेशन",
+        "DNA पॉलीमरेज़ III; कैपिंग और टेलिंग"
+      ],
+      "options_gu": [
+        "RNA પોલિમરેઝ I; માત્ર સ્પ્લાઇસિંગ",
+        "RNA પોલિમરેઝ II; 5' છેડા પર કેપિંગ, 3' છેડા પર ટેલિંગ (પોલીએડીનાયલેશન) અને ઇન્ટ્રોનનું સ્પ્લાઇસિંગ",
+        "RNA પોલિમરેઝ III; પુનઃસંયોજન અને લાઇગેશન",
+        "DNA પોલિમરેઝ III; કેપિંગ અને ટેલિંગ"
+      ],
+      "correct_index": 1,
+      "explanation": "RNA Polymerase II transcribes heterogeneous nuclear RNA (hnRNA). It undergoes 5'-capping (methyl guanosine triphosphate), 3'-polyadenylation (200-300 adenylate residues), and splicing to remove non-coding introns, forming mature mRNA.",
+      "explanation_hi": "RNA पॉलीमरेज़ II विषम केंद्रकीय RNA (hnRNA) को अनुलेखित करता है। यह 5'-कैपिंग, 3'-पॉलीएडेनिलेशन और स्प्लाइसिंग (इंट्रॉन हटाना) से गुजरकर परिपक्व mRNA बनाता है।",
+      "explanation_gu": "RNA પોલિમરેઝ II વિષમાંગી ન્યુક્લિયર RNA (hnRNA) નું પ્રત્યાંકન કરે છે. તે 5'-કેપિંગ, 3'-પોલીએડીનાયલેશન અને સ્પ્લાઇસિંગ (ઇન્ટ્રોન દૂર કરવા) માંથી પસાર થઈને પરિપક્વ mRNA બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_009",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q1: Nitrogenous Bases vs Nucleosides",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q1: नाइट्रोजन क्षार बनाम न्यूक्लियोसाइड",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q1: નાઇટ્રોજન બેઇઝ વિ ન્યુક્લિઓસાઇડ",
+      "question": "Group the following compounds correctly into Nitrogenous Bases and Nucleosides: Adenine, Cytidine, Thymine, Guanosine, Uracil, Cytosine.",
+      "question_hi": "निम्नलिखित यौगिकों को नाइट्रोजन क्षार और न्यूक्लियोसाइड में सही ढंग से समूहित करें: एडेनिन, साइटिडिन, थायमीन, गुआनोसिन, यूरेसिल, साइटोसिन।",
+      "question_gu": "નીચેના સંયોજનોને નાઇટ્રોજન બેઇઝ અને ન્યુક્લિઓસાઇડમાં યોગ્ય રીતે વર્ગીકૃત કરો: એડેનાઇન, સાયટીડીન, થાઇમિન, ગ્વાનોસીન, યુરેસિલ, સાયટોસિન.",
+      "options": [
+        "Bases: Cytidine, Guanosine | Nucleosides: Adenine, Thymine, Uracil, Cytosine",
+        "Bases: Adenine, Thymine, Uracil, Cytosine | Nucleosides: Cytidine, Guanosine",
+        "Bases: Adenine, Guanosine | Nucleosides: Cytidine, Thymine, Uracil, Cytosine",
+        "Bases: Uracil, Cytosine, Cytidine | Nucleosides: Adenine, Thymine, Guanosine"
+      ],
+      "options_hi": [
+        "क्षार: साइटिडिन, गुआनोसिन | न्यूक्लियोसाइड: एडेनिन, थायमीन, यूरेसिल, साइटोसिन",
+        "क्षार: एडेनिन, थायमीन, यूरेसिल, साइटोसिन | न्यूक्लियोसाइड: साइटिडिन, गुआनोसिन",
+        "क्षार: एडेनिन, गुआनोसिन | न्यूक्लियोसाइड: साइटिडिन, थायमीन, यूरेसिल, साइटोसिन",
+        "क्षार: यूरेसिल, साइटोसिन, साइटिडिन | न्यूक्लियोसाइड: एडेनिन, थायमीन, गुआनोसिन"
+      ],
+      "options_gu": [
+        "બેઇઝ: સાયટીડીન, ગ્વાનોસીન | ન્યુક્લિઓસાઇડ: એડેનાઇન, થાઇમિન, યુરેસિલ, સાયટોસિન",
+        "બેઇઝ: એડેનાઇન, થાઇમિન, યુરેસિલ, સાયટોસિન | ન્યુક્લિઓસાઇડ: સાયટીડીન, ગ્વાનોસીન",
+        "બેઇઝ: એડેનાઇન, ગ્વાનોસીન | ન્યુક્લિઓસાઇડ: સાયટીડીન, થાઇમિન, યુરેસિલ, સાયટોસિન",
+        "બેઇઝ: યુરેસિલ, સાયટોસિન, સાયટીડીન | ન્યુક્લિઓસાઇડ: એડેનાઇન, થાઇમિન, ગ્વાનોસીન"
+      ],
+      "correct_index": 1,
+      "explanation": "Adenine, Thymine, Uracil, and Cytosine are nitrogenous bases. Cytidine and Guanosine are nucleosides (nitrogenous base attached to a pentose sugar).",
+      "explanation_hi": "एडेनिन, थायमीन, यूरेसिल और साइटोसिन नाइट्रोजन क्षार हैं। साइटिडिन और गुआनोसिन न्यूक्लियोसाइड हैं (पेन्टोज़ शर्करा से जुड़ा नाइट्रोजन क्षार)।",
+      "explanation_gu": "એડેનાઇન, થાઇમિન, યુરેસિલ અને સાયટોસિન નાઇટ્રોજન બેઇઝ છે. સાયટીડીન અને ગ્વાનોસીન ન્યુક્લિઓસાઇડ છે (પેન્ટોઝ શર્કરા સાથે જોડાયેલ નાઇટ્રોજન બેઇઝ)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_010",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q2: Chargaff's Calculation",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q2: चारगाफ की गणना",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q2: ચાર્ગાફની ગણતરી",
+      "question": "If a double stranded DNA has 20 per cent of Cytosine, calculate the percentage of Adenine in the DNA.",
+      "question_hi": "यदि किसी द्वि-स्ट्रैंडेड DNA में 20 प्रतिशत साइटोसिन है, तो DNA में एडेनिन के प्रतिशत की गणना करें।",
+      "question_gu": "જો બેવડી શૃંખલા વાળા DNA માં 20 ટકા સાયટોસિન હોય, તો DNA માં એડેનાઇનની ટકાવારી ગણો.",
+      "options": [
+        "20%",
+        "30%",
+        "40%",
+        "60%"
+      ],
+      "options_hi": [
+        "20%",
+        "30%",
+        "40%",
+        "60%"
+      ],
+      "options_gu": [
+        "20%",
+        "30%",
+        "40%",
+        "60%"
+      ],
+      "correct_index": 1,
+      "explanation": "According to Chargaff's Rule, %C = %G. If C = 20%, then G = 20%, so G + C = 40%. The remaining 60% is shared equally by A and T (%A = %T). Thus %A = 60% / 2 = 30%.",
+      "explanation_hi": "चारगाफ के नियम के अनुसार, %C = %G। यदि C = 20%, तो G = 20%, अत: G + C = 40%। शेष 60% A और T द्वारा समान रूप से साझा किया जाता है। इसलिए %A = 60% / 2 = 30%।",
+      "explanation_gu": "ચાર્ગાફના નિયમ મુજબ, %C = %G. જો C = 20%, તો G = 20%, તેથી G + C = 40%. બાકીના 60% A અને T દ્વારા સમાન રીતે વહેંચાય છે. તેથી %A = 60% / 2 = 30%."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_011",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q3: Complementary DNA Sequence",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q3: पूरक DNA अनुक्रम",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q3: પૂરક DNA ક્રમ",
+      "question": "If the sequence of one strand of DNA is 5'-ATGCATGCATGCATGCATGCATGC-3', what is the sequence of the complementary strand in 5'->3' direction?",
+      "question_hi": "यदि DNA के एक स्ट्रैंड का अनुक्रम 5'-ATGCATGCATGCATGCATGCATGC-3' है, तो 5'->3' दिशा में पूरक स्ट्रैंड का अनुक्रम क्या होगा?",
+      "question_gu": "જો DNA ની એક શૃંખલાનો ક્રમ 5'-ATGCATGCATGCATGCATGCATGC-3' હોય, તો 5'->3' દિશામાં પૂરક શૃંખલાનો ક્રમ શું હશે?",
+      "options": [
+        "5'-TACGTACGTACGTACGTACGTACG-3'",
+        "5'-GCATGCATGCATGCATGCATGCAT-3'",
+        "5'-ATGCATGCATGCATGCATGCATGC-3'",
+        "5'-CGTACGTACGTACGTACGTACGTA-3'"
+      ],
+      "options_hi": [
+        "5'-TACGTACGTACGTACGTACGTACG-3'",
+        "5'-GCATGCATGCATGCATGCATGCAT-3'",
+        "5'-ATGCATGCATGCATGCATGCATGC-3'",
+        "5'-CGTACGTACGTACGTACGTACGTA-3'"
+      ],
+      "options_gu": [
+        "5'-TACGTACGTACGTACGTACGTACG-3'",
+        "5'-GCATGCATGCATGCATGCATGCAT-3'",
+        "5'-ATGCATGCATGCATGCATGCATGC-3'",
+        "5'-CGTACGTACGTACGTACGTACGTA-3'"
+      ],
+      "correct_index": 1,
+      "explanation": "Given strand (5'->3'): ATGCATGCATGCATGCATGCATGC. Complementary strand in 3'->5': TACGTACGTACGTACGTACGTACG. Reversing to write in 5'->3' direction gives: 5'-GCATGCATGCATGCATGCATGCAT-3'.",
+      "explanation_hi": "दिया गया स्ट्रैंड (5'->3'): ATGCATGCATGCATGCATGCATGC। 3'->5' में पूरक स्ट्रैंड: TACGTACGTACGTACGTACGTACG। इसे 5'->3' दिशा में लिखने पर: 5'-GCATGCATGCATGCATGCATGCAT-3' प्राप्त होता है।",
+      "explanation_gu": "આપેલ શૃંખલા (5'->3'): ATGCATGCATGCATGCATGCATGC. 3'->5' માં પૂરક શૃંખલા: TACGTACGTACGTACGTACGTACG. તેને 5'->3' દિશામાં લખતાં: 5'-GCATGCATGCATGCATGCATGCAT-3' મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_012",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q4: Coding Strand to mRNA Sequence",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q4: कोडिंग स्ट्रैंड से mRNA अनुक्रम",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q4: કોડિંગ શૃંખલામાંથી mRNA ક્રમ",
+      "question": "If the sequence of the coding strand of DNA is 5'-ATGCATGCATGCATGCATGCATGC-3', write down the sequence of mRNA.",
+      "question_hi": "यदि DNA के कोडिंग स्ट्रैंड का अनुक्रम 5'-ATGCATGCATGCATGCATGCATGC-3' है, तो mRNA का अनुक्रम लिखें।",
+      "question_gu": "જો DNA ની કોડિંગ શૃંખલાનો ક્રમ 5'-ATGCATGCATGCATGCATGCATGC-3' હોય, તો mRNA નો ક્રમ લખો.",
+      "options": [
+        "5'-UACGUACGUACGUACGUACGUACG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'",
+        "5'-GCAUGCAUGCAUGCAUGCAUGCAU-3'"
+      ],
+      "options_hi": [
+        "5'-UACGUACGUACGUACGUACGUACG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'",
+        "5'-GCAUGCAUGCAUGCAUGCAUGCAU-3'"
+      ],
+      "options_gu": [
+        "5'-UACGUACGUACGUACGUACGUACG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGG-3'",
+        "5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'",
+        "5'-GCAUGCAUGCAUGCAUGCAUGCAU-3'"
+      ],
+      "correct_index": 2,
+      "explanation": "The mRNA sequence is identical to the coding strand of DNA in the 5'->3' direction, except Thymine (T) is replaced by Uracil (U). Thus mRNA is 5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'.",
+      "explanation_hi": "mRNA का अनुक्रम 5'->3' दिशा में DNA के कोडिंग स्ट्रैंड के समान होता है, केवल थायमीन (T) के स्थान पर यूरेसिल (U) आ जाता है। अत: mRNA: 5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'।",
+      "explanation_gu": "mRNA નો ક્રમ 5'->3' દિશામાં DNA ની કોડિંગ શૃંખલા સમાન જ હોય છે, માત્ર થાઇમિન (T) ની જગ્યાએ યુરેસિલ (U) આવે છે. તેથી mRNA: 5'-AUGCAUGCAUGCAUGCAUGCAUGC-3'."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_013",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q5: Semi-Conservative Replication Hypothesis",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q5: अर्ध-संरक्षी प्रतिकृतियन की परिकल्पना",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q5: અર્ધ-સંરક્ષી સ્વયંજનનની પરિકલ્પના",
+      "question": "Which feature of the DNA double helix model directly led Watson and Crick to propose the semi-conservative mode of DNA replication?",
+      "question_hi": "DNA डबल हेलिक्स मॉडल की किस विशेषता ने वाटसन और क्रिक को सीधे DNA प्रतिकृतियन के अर्ध-संरक्षी मॉडल का प्रस्ताव देने के लिए प्रेरित किया?",
+      "question_gu": "DNA ની બેવડી હેલિક્સ રચનાની કઈ લાક્ષણિકતાએ વોટ્સન અને ક્રિકને DNA ના અર્ધ-સંરક્ષી સ્વયંજનન મોડેલની રજૂઆત કરવા માટે સીધી પ્રેરણા આપી?",
+      "options": [
+        "Antiparallel orientation of strands",
+        "Complementary base pairing between purines and pyrimidines",
+        "Presence of phosphodiester bonds",
+        "Uniform width of the helix"
+      ],
+      "options_hi": [
+        "स्ट्रैंड्स का प्रतिसमानांतर ओरिएंटेशन",
+        "प्यूरीन और पिरीमिडीन के बीच पूरक क्षार युग्मन",
+        "फॉस्फोडिएस्टर बंधों की उपस्थिति",
+        "हेलिक्स की एकसमान चौड़ाई"
+      ],
+      "options_gu": [
+        "શૃંખલાઓનું પ્રતિ-સમાંતર ગોઠવણ",
+        "પ્યુરિન અને પિરિમિડિન વચ્ચે પૂરક બેઇઝ જોડાણ",
+        "ફોસ્ફોડાયએસ્ટર બંધોની હાજરી",
+        "હેલિક્સની એકસમાન પહોળાઈ"
+      ],
+      "correct_index": 1,
+      "explanation": "Complementary base pairing (A pairs with T, G pairs with C) implied that each strand could act as a template to synthesize a new complementary strand, resulting in semi-conservative replication.",
+      "explanation_hi": "पूरक क्षार युग्मन (A के साथ T, G के साथ C) का तात्पर्य था कि प्रत्येक स्ट्रैंड एक नई पूरक स्ट्रैंड को संश्लेषित करने के लिए टेम्पलेट के रूप में कार्य कर सकता है, जिसके परिणामस्वरूप अर्ध-संरक्षी प्रतिकृतियन होता है।",
+      "explanation_gu": "પૂરક બેઇઝ જોડાણ (A સાથે T, G સાથે C) એ દર્શાવે છે કે દરેક શૃંખલા નવી પૂરક શૃંખલાનું સંશ્લેષણ કરવા માટે ટેમ્પલેટ તરીકે વર્તી શકે છે, જે અર્ધ-સંરક્ષી સ્વયંજનનમાં પરિણમે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_014",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q6: Types of Nucleic Acid Polymerases",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q6: न्यूक्लिक अम्ल पॉलीमरेज़ के प्रकार",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q6: ન્યુક્લિક એસિડ પોલિમરેઝના પ્રકારો",
+      "question": "Which polymerase uses an RNA template to synthesize DNA, such as in retroviruses like HIV?",
+      "question_hi": "कौन सा पॉलीमरेज़ HIV जैसे रिट्रोवायरस की तरह DNA का संश्लेषण करने के लिए RNA टेम्पलेट का उपयोग करता है?",
+      "question_gu": "HIV જેવા રેટ્રોવાયરસની જેમ DNA નું સંશ્લેષણ કરવા માટે કયો પોલિમરેઝ RNA ટેમ્પલેટનો ઉપયોગ કરે છે?",
+      "options": [
+        "DNA-dependent DNA Polymerase",
+        "DNA-dependent RNA Polymerase",
+        "RNA-dependent DNA Polymerase (Reverse Transcriptase)",
+        "RNA-dependent RNA Polymerase"
+      ],
+      "options_hi": [
+        "DNA-निर्भर DNA पॉलीमरेज़",
+        "DNA-निर्भर RNA पॉलीमरेज़",
+        "RNA-निर्भर DNA पॉलीमरेज़ (रिवर्स ट्रांसक्रिप्टेज़)",
+        "RNA-निर्भर RNA पॉलीमरेज़"
+      ],
+      "options_gu": [
+        "DNA-આધારિત DNA પોલિમરેઝ",
+        "DNA-આધારિત RNA પોલિમરેઝ",
+        "RNA-આધારિત DNA પોલિમરેઝ (રિવર્સ ટ્રાન્સક્રિપ્ટેઝ)",
+        "RNA-આધારિત RNA પોલિમરેઝ"
+      ],
+      "correct_index": 2,
+      "explanation": "RNA-dependent DNA polymerase (Reverse Transcriptase) uses RNA as a template to synthesize complementary DNA (cDNA).",
+      "explanation_hi": "RNA-निर्भर DNA पॉलीमरेज़ (रिवर्स ट्रांसक्रिप्टेज़) पूरक DNA (cDNA) के संश्लेषण के लिए टेम्पलेट के रूप में RNA का उपयोग करता है।",
+      "explanation_gu": "RNA-આધારિત DNA પોલિમરેઝ (રિવર્સ ટ્રાન્સક્રિપ્ટેઝ) પૂરક DNA (cDNA) ના સંશ્લેષણ માટે ટેમ્પલેટ તરીકે RNA નો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_015",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q7: Hershey-Chase Radioisotope Labelling",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q7: हर्षे-चेज रेडियोआइसोटोप लेबलिंग",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q7: હર્ષી-ચેઝ રેડિયોઆઇસોટોપ લેબલિંગ",
+      "question": "In the Hershey-Chase experiment, why was radioactive Phosphorus (32P) used to label DNA and radioactive Sulfur (35S) used to label proteins?",
+      "question_hi": "हर्षे-चेज प्रयोग में, DNA को लेबल करने के लिए रेडियोधर्मी फास्फोरस (32P) और प्रोटीन को लेबल करने के लिए रेडियोधर्मी सल्फर (35S) का उपयोग क्यों किया गया था?",
+      "question_gu": "હર્ષી-ચેઝ પ્રયોગમાં, DNA ને લેબલ કરવા માટે રેડિયોએક્ટિવ ફોસ્ફરસ (32P) અને પ્રોટીનને લેબલ કરવા માટે રેડિયોએક્ટિવ સલ્ફર (35S) નો ઉપયોગ શા માટે કરવામાં આવ્યો હતો?",
+      "options": [
+        "DNA contains Sulfur but no Phosphorus; Protein contains Phosphorus but no Sulfur",
+        "DNA contains Phosphorus but no Sulfur; Protein contains Sulfur (in amino acids like Cys, Met) but no Phosphorus",
+        "Both DNA and Protein contain equal amounts of Phosphorus and Sulfur",
+        "Phosphorus degrades viral protein while Sulfur degrades DNA"
+      ],
+      "options_hi": [
+        "DNA में सल्फर होता है लेकिन फास्फोरस नहीं; प्रोटीन में फास्फोरस होता है लेकिन सल्फर नहीं",
+        "DNA में फास्फोरस होता है लेकिन सल्फर नहीं; प्रोटीन में सल्फर होता है (सिस्टीन, मेथियोनिन जैसे अमीनो अम्ल में) लेकिन फास्फोरस नहीं",
+        "DNA और प्रोटीन दोनों में फास्फोरस और सल्फर की समान मात्रा होती है",
+        "फास्फोरस वायरल प्रोटीन को नीचा दिखाता है जबकि सल्फर DNA को नीचा दिखाता है"
+      ],
+      "options_gu": [
+        "DNA માં સલ્ફર હોય છે પણ ફોસ્ફરસ નથી; પ્રોટીનમાં ફોસ્ફરસ હોય છે પણ સલ્ફર નથી",
+        "DNA માં ફોસ્ફરસ હોય છે પણ સલ્ફર નથી; પ્રોટીનમાં સલ્ફર હોય છે (સિસ્ટીન, મેથિઓનિન જેવા એસિડમાં) પણ ફોસ્ફરસ નથી",
+        "DNA અને પ્રોટીન બંનેમાં ફોસ્ફરસ અને સલ્ફરનું સમાન પ્રમાણ હોય છે",
+        "ફોસ્ફરસ વાઇરલ પ્રોટીનનું વિઘટન કરે છે જ્યારે સલ્ફર DNA નું વિઘટન કરે છે"
+      ],
+      "correct_index": 1,
+      "explanation": "DNA contains phosphorus (in sugar-phosphate backbone) but lacks sulfur. Proteins contain sulfur (in methionine/cysteine) but lack phosphorus. This selective isotope labeling enabled unambiguous tracking of the genetic material injected into bacteria.",
+      "explanation_hi": "DNA में फास्फोरस होता है (शर्करा-फास्फेट बैकबोन में) लेकिन सल्फर नहीं होता। प्रोटीन में सल्फर होता है (मेथियोनिन/सिस्टीन में) लेकिन फास्फोरस नहीं होता। इस लेबलिंग से आनुवंशिक पदार्थ की पहचान हुई।",
+      "explanation_gu": "DNA માં ફોસ્ફરસ (શર્કરા-ફોસ્ફેટ બેકબોનમાં) હોય છે પરંતુ સલ્ફર હોતો નથી. પ્રોટીનમાં સલ્ફર હોય છે પરંતુ ફોસ્ફરસ હોતો નથી. આ લેબલિંગથી આનુવંશિક દ્રવ્યની સ્પષ્ટ ઓળખ થઈ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_016",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q8: Differences in Nucleic Acids & DNA Types",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q8: न्यूक्लिक अम्ल और DNA के प्रकारों में अंतर",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q8: ન્યુક્લિક એસિડ અને DNA ના પ્રકારો વચ્ચેનો તફાવત",
+      "question": "Which of the following statements correctly differentiates mRNA from tRNA?",
+      "question_hi": "निम्नलिखित में से कौन सा कथन mRNA को tRNA से सही ढंग से अलग करता है?",
+      "question_gu": "નીચેનામાંથી કયું વિધાન mRNA ને tRNA થી યોગ્ય રીતે અલગ પાડે છે?",
+      "options": [
+        "mRNA carries the genetic code from DNA to ribosome; tRNA brings specific amino acids to the ribosome during translation and acts as an adaptor",
+        "tRNA carries genetic code; mRNA acts as an enzyme",
+        "mRNA is clover-leaf shaped; tRNA is linear",
+        "tRNA is synthesized in cytoplasm; mRNA in mitochondria only"
+      ],
+      "options_hi": [
+        "mRNA DNA से राइबोसोम तक आनुवंशिक कूट ले जाता है; tRNA स्थानांतरण के दौरान राइबोसोम में विशिष्ट अमीनो अम्ल लाता है और एडाप्टर के रूप में कार्य करता है",
+        "tRNA आनुवंशिक कूट ले जाता है; mRNA एंजाइम के रूप में कार्य करता है",
+        "mRNA क्लोवर-लीफ के आकार का है; tRNA रेखीय है",
+        "tRNA कोशिका द्रव्य में संश्लेषित होता है; mRNA केवल माइटोकॉन्ड्रिया में"
+      ],
+      "options_gu": [
+        "mRNA DNA માંથી આનુવંશિક સંકેતો રાઇબોઝોમ સુધી લઈ જાય છે; tRNA ભાષાંતર દરમિયાન રાઇબોઝોમ પર વિશિષ્ટ એમિનો એસિડ લાવે છે અને એડેપ્ટર તરીકે વર્તે છે",
+        "tRNA આનુવંશિક સંકેતો લઈ જાય છે; mRNA ઉત્સેચક તરીકે વર્તે છે",
+        "mRNA ક્લોવર-લીફ આકારનું છે; tRNA રેખીય છે",
+        "tRNA કોષરસમાં સંશ્લેષિત થાય છે; mRNA માત્ર કણાભસૂત્રમાં"
+      ],
+      "correct_index": 0,
+      "explanation": "mRNA (messenger RNA) carries codons transcribed from DNA. tRNA (transfer RNA) acts as an adaptor molecule reading codons via anticodon loop and transferring corresponding amino acids to the polypeptide chain.",
+      "explanation_hi": "mRNA DNA से अनुलेखित कोडॉन ले जाता है। tRNA एडाप्टर अणु के रूप में कार्य करता है, एंटीकोडॉन लूप के माध्यम से कोडॉन पढ़ता है और पॉलीपेप्टाइड श्रृंखला में संबंधित अमीनो अम्ल स्थानांतरित करता है।",
+      "explanation_gu": "mRNA DNA માંથી પ્રત્યાંકિત સંકેતો લઈ જાય છે. tRNA એડેપ્ટર અણુ તરીકે કાર્ય કરે છે, જે એન્ટીકોડોન લૂપ દ્વારા કોડોન વાંચે છે અને પોલિપેપ્ટાઇડ શૃંખલામાં અનુકૂળ એમિનો એસિડ ઉમેરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_017",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q9: Essential Roles of Ribosomes in Translation",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q9: स्थानांतरण में राइबोसोम की आवश्यक भूमिकाएँ",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q9: ભાષાંતરમાં રાઇબોઝોમની આવશ્યક ભૂમિકાઓ",
+      "question": "What are the two essential roles of the ribosome during translation (protein synthesis)?",
+      "question_hi": "स्थानांतरण (प्रोटीन संश्लेषण) के दौरान राइबोसोम की दो आवश्यक भूमिकाएं क्या हैं?",
+      "question_gu": "ભાષાંતર (પ્રોટીન સંશ્લેષણ) દરમિયાન રાઇબોઝોમની બે આવશ્યક ભૂમિકાઓ કઈ છે?",
+      "options": [
+        "Acts as a cellular site for protein synthesis AND acts as a catalyst (peptidyl transferase / 23S rRNA enzyme)",
+        "Replicates DNA AND transcribes mRNA",
+        "Unwinds DNA double helix AND adds methyl caps to pre-mRNA",
+        "Synthesizes amino acids AND proofreads DNA replication"
+      ],
+      "options_hi": [
+        "प्रोटीन संश्लेषण के लिए कोशिकीय स्थल के रूप में कार्य करता है और एक उत्प्रेरक (पेप्टिडाइल ट्रांसफ़ेरेज़ / 23S rRNA एंजाइम) के रूप में कार्य करता है",
+        "DNA का प्रतिकृतियन करता है और mRNA का अनुलेखन करता है",
+        "DNA डबल हेलिक्स को खोलता है और pre-mRNA में मिथाइल कैप जोड़ता है",
+        "अमीनो अम्ल का संश्लेषण करता है और DNA प्रतिकृतियन का प्रूफ़रीड करता है"
+      ],
+      "options_gu": [
+        "પ્રોટીન સંશ્લેષણ માટે કોષીય સ્થાન તરીકે કાર્ય કરે છે અને ઉદ્દીપક (પેપ્ટીડાઇલ ટ્રાન્સફરેઝ / 23S rRNA ઉત્સેચક) તરીકે કાર્ય કરે છે",
+        "DNA નું સ્વયંજનન કરે છે અને mRNA નું પ્રત્યાંકન કરે છે",
+        "DNA બેવડી શૃંખલાને ખોલે છે અને pre-mRNA માં મિથાઇલ કેપ ઉમેરે છે",
+        "એમિનો એસિડનું સંશ્લેષણ કરે છે અને DNA સ્વયંજનનની ચકાસણી કરે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Ribosomes act as structural sites bringing mRNA and aminoacyl-tRNAs together, and also provide ribozyme activity (23S rRNA in bacteria acts as peptidyl transferase enzyme forming peptide bonds).",
+      "explanation_hi": "राइबोसोम mRNA और अमीनोएसिल-tRNA को एक साथ लाने के लिए संरचनात्मक स्थल प्रदान करते हैं, और राइबोज़ाइम गतिविधि (जीवाणुओं में 23S rRNA पेप्टिडाइल ट्रांसफ़ेरेज़ एंजाइम) भी प्रदान करते हैं।",
+      "explanation_gu": "રાઇબોઝોમ mRNA અને એમિનોએસાઇલ-tRNA ને સાથે લાવવા માટે સ્થાન પૂરું પાડે છે, અને રાઇબોઝાઇમ પ્રવૃત્તિ (બેક્ટેરિયામાં 23S rRNA પેપ્ટીડાઇલ ટ્રાન્સફરેઝ ઉત્સેચક) પણ પૂરી પાડે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_018",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q10: Regulation and Shutdown of Lac Operon",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q10: लैक्स ओपेरॉन का नियमन एवं बंद होना",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q10: લેક ઓપેરોનનું નિયમન અને બંધ થવું",
+      "question": "When lactose is added to E. coli culture medium, lac operon is induced. Why does lac operon shut down after some time?",
+      "question_hi": "जब E. coli संवर्धन माध्यम में लैक्टोज़ मिलाया जाता है, तो लैक्स ओपेरॉन प्रेरित होता है। कुछ समय बाद लैक्स ओपेरॉन बंद क्यों हो जाता है?",
+      "question_gu": "જ્યારે E. coli સંવર્ધન માધ્યમમાં લેક્ટોઝ ઉમેરવામાં આવે છે, ત્યારે લેક ઓપેરોન પ્રેરિત થાય છે. થોડા સમય પછી લેક ઓપેરોન શા માટે બંધ થઈ જાય છે?",
+      "options": [
+        "Lactose is completely metabolized into glucose and galactose; without inducer, active repressor binds operator and stops transcription",
+        "RNA polymerase gets degraded permanently by beta-galactosidase",
+        "Glucose binds to operator and represses the operon permanently",
+        "E. coli cells die due to over-accumulation of galactose"
+      ],
+      "options_hi": [
+        "लैक्टोज़ पूरी तरह से ग्लूकोज और गैलेक्टोज़ में चयापचयित हो जाता है; प्रेरक के बिना, सक्रिय दमनकारी ऑपरेटर से जुड़ता है और अनुलेखन को रोकता है",
+        "RNA पॉलीमरेज़ बीटा-गैलेक्टोसिडेज़ द्वारा स्थायी रूप से नष्ट हो जाता है",
+        "ग्लूकोज ऑपरेटर से जुड़ता है और ओपेरॉन को स्थायी रूप से दबा देता है",
+        "गैलेक्टोज़ के अत्यधिक संचय के कारण E. coli कोशिकाएँ मर जाती हैं"
+      ],
+      "options_gu": [
+        "લેક્ટોઝનું ગ્લુકોઝ અને ગેલેક્ટોઝમાં સંપૂર્ણ ચયાપચય થઈ જાય છે; પ્રેરકના અભાવે, સક્રિય નિરોધક ઓપરેટર સાથે જોડાય છે અને પ્રત્યાંકન અટકાવે છે",
+        "RNA પોલિમરેઝ બીટા-ગેલેક્ટોસિડેઝ દ્વારા કાયમી ધોરણે વિઘટિત થઈ જાય છે",
+        "ગ્લુકોઝ ઓપરેટર સાથે જોડાય છે અને ઓપેરોનને કાયમી ધોરણે નિષ્ક્રિય કરે છે",
+        "ગેલેક્ટોઝના અતિશય સંચયને કારણે E. coli કોષો મૃત્યુ પામે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Lac operon enzymes (beta-galactosidase, permease, transacetylase) consume lactose. Once all lactose is converted into glucose and galactose, no inducer remains to bind the lac repressor. The repressor binds back to the operator, shutting down transcription.",
+      "explanation_hi": "लैक्स ओपेरॉन एंजाइम (बीटा-गैलेक्टोसिडेज़, परमिएज़, ट्रांसएसेटिलेज़) लैक्टोज़ की खपत करते हैं। जब सारा लैक्टोज़ ग्लूकोज और गैलेक्टोज़ में परिवर्तित हो जाता है, तो दमनकारी फिर से ऑपरेटर से जुड़ जाता है और अनुलेखन बंद कर देता है।",
+      "explanation_gu": "લેક ઓપેરોન ઉત્સેચકો (બીટા-ગેલેક્ટોસિડેઝ, પરમીએઝ, ટ્રાન્સએસેટાઇલેઝ) લેક્ટોઝનો વપરાશ કરે છે. જ્યારે તમામ લેક્ટોઝ ગ્લુકોઝ અને ગેલેક્ટોઝમાં રૂપાંતરિત થઈ જાય છે, ત્યારે નિરોધક ફરીથી ઓપરેટર સાથે જોડાઈને પ્રત્યાંકન બંધ કરી દે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_019",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q11: Functions of Promoter, tRNA, and Exons",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q11: प्रोमोर्टर, tRNA और एग्ज़ॉन के कार्य",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q11: પ્રમોટર, tRNA અને એક્ઝોનના કાર્યો",
+      "question": "Which statement correctly describes the function of Promoter, tRNA, and Exons in eukaryotic molecular genetics?",
+      "question_hi": "कौन सा कथन यूकेरियोटिक आणविक आनुवंशिकी में प्रोमोर्टर, tRNA और एग्ज़ॉन के कार्य का सही वर्णन करता है?",
+      "question_gu": "કયું વિધાન યુકેરીયોટિક આણ્વીય જનીનવિદ્યામાં પ્રમોટર, tRNA અને એક્ઝોનના કાર્યનું સાચું વર્ણન કરે છે?",
+      "options": [
+        "Promoter binds RNA polymerase to initiate transcription; tRNA acts as adapter delivering amino acids; Exons are coding sequences retained in mature mRNA",
+        "Promoter terminates transcription; tRNA replicates DNA; Exons are non-coding sequences removed during splicing",
+        "Promoter synthesizes lipids; tRNA binds operator; Exons encode ribosomal proteins only",
+        "Promoter splices pre-mRNA; tRNA transcribes DNA; Exons store energy"
+      ],
+      "options_hi": [
+        "प्रमोटर अनुलेखन शुरू करने के लिए RNA पॉलीमरेज़ से जुड़ता है; tRNA अमीनो अम्ल देने वाले एडाप्टर के रूप में कार्य करता है; एग्ज़ॉन परिपक्व mRNA में बने रहने वाले कोडिंग अनुक्रम हैं",
+        "प्रमोटर अनुलेखन समाप्त करता है; tRNA DNA का प्रतिकृतियन करता है; एग्ज़ॉन नॉन-कोडिंग अनुक्रम हैं जिन्हें स्प्लाइसिंग के दौरान हटा दिया जाता है",
+        "प्रमोटर लिपिड का संश्लेषण करता है; tRNA ऑपरेटर से जुड़ता है; एग्ज़ॉन केवल राइबोसोमल प्रोटीन को कूटबद्ध करते हैं",
+        "प्रमोटर pre-mRNA को स्प्लाइस करता है; tRNA DNA को अनुलेखित करता है; एग्ज़ॉन ऊर्जा का भंडारण करते हैं"
+      ],
+      "options_gu": [
+        "પ્રમોટર પ્રત્યાંકન શરૂ કરવા માટે RNA પોલિમરેઝ સાથે જોડાય છે; tRNA એમિનો એસિડ લાવતા એડેપ્ટર તરીકે વર્તે છે; એક્ઝોન પરિપક્વ mRNA માં જળવાઈ રહેતા કોડિંગ ક્રમ છે",
+        "પ્રમોટર પ્રત્યાંકન સમાપ્ત કરે છે; tRNA DNA નું સ્વયંજનન કરે છે; એક્ઝોન નોન-કોડિંગ ક્રમ છે જેને સ્પ્લાઇસિંગ દરમિયાન દૂર કરવામાં આવે છે",
+        "પ્રમોટર લિપિડનું સંશ્લેષણ કરે છે; tRNA ઓપરેટર સાથે જોડાય છે; એક્ઝોન માત્ર રાઇબોઝોમલ પ્રોટીનનું કોડિંગ કરે છે",
+        "પ્રમોટર pre-mRNA નું સ્પ્લાઇસિંગ કરે છે; tRNA DNA નું પ્રત્યાંકન કરે છે; એક્ઝોન ઉર્જાનો સંગ્રહ કરે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Promoter provides binding site for RNA Polymerase. tRNA acts as an adapter delivering amino acids during translation. Exons are coding sequences retained in mature mRNA after splicing out introns.",
+      "explanation_hi": "प्रमोटर RNA पॉलीमरेज़ के लिए बाइंडिंग साइट प्रदान करता है। tRNA एडाप्टर के रूप में कार्य करता है। एग्ज़ॉन परिपक्व mRNA में बने रहने वाले कोडिंग अनुक्रम हैं।",
+      "explanation_gu": "પ્રમોટર RNA પોલિમરેઝ માટે જોડાણ સ્થાન પૂરું પાડે છે. tRNA એડેપ્ટર તરીકે કાર્ય કરે છે. એક્ઝોન પરિપક્વ mRNA માં જળવાઈ રહેતા કોડિંગ ક્રમ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_020",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q12: Human Genome Project as a Mega Project",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q12: मेगा प्रोजेक्ट के रूप में मानव जीनोम परियोजना",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q12: મેગા પ્રોજેક્ટ તરીકે હ્યુમન જીનોમ પ્રોજેક્ટ",
+      "question": "Why is the Human Genome Project (HGP) considered a 'Mega Project'?",
+      "question_hi": "मानव जीनोम परियोजना (HGP) को 'मेगा प्रोजेक्ट' क्यों माना जाता है?",
+      "question_gu": "હ્યુમન જીનોમ પ્રોજેક્ટ (HGP) ને શા માટે 'મેગા પ્રોજેક્ટ' ગણવામાં આવે છે?",
+      "options": [
+        "It aimed to sequence all 3 x 10^9 base pairs, costing ~$9 billion over 13 years, requiring massive computational tools (Bioinformatics) and international collaboration",
+        "It was completed in only 1 month by a single scientist",
+        "It studied only 100 base pairs of bacterial DNA",
+        "It required no financial investment or biological technology"
+      ],
+      "options_hi": [
+        "इसका उद्देश्य 13 वर्षों में ~$9 बिलियन की लागत से सभी 3 x 10^9 क्षार युग्मों का अनुक्रमण करना था, जिसके लिए बड़े पैमाने पर कम्प्यूटेशनल टूल (बायोइनफॉरमैटिक्स) और अंतर्राष्ट्रीय सहयोग की आवश्यकता थी",
+        "यह केवल 1 महीने में एक एकल वैज्ञानिक द्वारा पूरा किया गया था",
+        "इसने बैक्टीरियल DNA के केवल 100 क्षार युग्मों का अध्ययन किया",
+        "इसमें किसी वित्तीय निवेश या जैविक तकनीक की आवश्यकता नहीं थी"
+      ],
+      "options_gu": [
+        "તેનો ઉદ્દેશ્ય 13 વર્ષમાં ~$9 અબજના ખર્ચે તમામ 3 x 10^9 બેઇઝ પેરનો ક્રમ નક્કી કરવાનો હતો, જેના માટે મોટા પાયે કોમ્પ્યુટેશનલ ટૂલ્સ (બાયોઇન્ફોર્મેટિક્સ) અને આંતરરાષ્ટ્રીય સહયોગની જરૂર હતી",
+        "તે માત્ર 1 મહિનામાં એક જ વૈજ્ઞાનિક દ્વારા પૂર્ણ કરવામાં આવ્યો હતો",
+        "તેણે માત્ર બેક્ટેરિયાના DNA ના 100 બેઇઝ પેરનો અભ્યાસ કર્યો હતો",
+        "તેમાં કોઈ નાણાકીય રોકાણ કે જૈવિક તકનીકની જરૂર નહોતી"
+      ],
+      "correct_index": 0,
+      "explanation": "HGP was a 13-year mega project (1990-2003) involving sequencing ~3 billion base pairs of human DNA at an estimated cost of US $9 billion, necessitating the emergence of Bioinformatics for data storage and analysis.",
+      "explanation_hi": "HGP एक 13 साल का मेगा प्रोजेक्ट (1990-2003) था जिसमें मानव DNA के ~3 बिलियन क्षार युग्मों का अनुक्रमण शामिल था, जिसकी अनुमानित लागत 9 बिलियन अमेरिकी डॉलर थी, और इसके लिए बायोइनफॉरमैटिक्स का विकास आवश्यक था।",
+      "explanation_gu": "HGP એ 13 વર્ષનો મેગા પ્રોજેક્ટ (1990-2003) હતો જેમાં માનવ DNA ના ~3 અબજ બેઇઝ પેરનું સીક્વેન્સિંગ સામેલ હતું, જેનો અંદાજિત ખર્ચ 9 અબજ યુએસ ડોલર હતો, જેના કારણે ડેટા સંગ્રહ માટે બાયોઇન્ફોર્મેટિક્સનો વિકાસ થયો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_021",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q13: DNA Fingerprinting & VNTRs",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q13: DNA फिंगरप्रिंटिंग और VNTRs",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q13: DNA ફિંગરપ્રિન્ટિંગ અને VNTRs",
+      "question": "What principle forms the foundation of DNA Fingerprinting?",
+      "question_hi": "DNA फिंगरप्रिंटिंग की नींव कौन सा सिद्धांत बनाता है?",
+      "question_gu": "DNA ફિંગરપ્રિન્ટિંગનો પાયો કયો સિદ્ધાંત બનાવે છે?",
+      "options": [
+        "High degree of polymorphism in repetitive DNA sequences known as VNTRs (Variable Number of Tandem Repeats)",
+        "Equal number of ribosomes in all individuals",
+        "Same exact sequence of exons in every living species",
+        "Synthesis of cDNA using reverse transcriptase in all blood cells"
+      ],
+      "options_hi": [
+        "VNTRs (वेरिएबल नंबर ऑफ टेंडेम रिपीट) के रूप में जाने जाने वाले दोहरावदार DNA अनुक्रमों में उच्च स्तर की बहुरूपता (Polymorphism)",
+        "सभी व्यक्तियों में राइबोसोम की समान संख्या",
+        "प्रत्येक जीवित प्रजाति में एग्ज़ॉन का बिल्कुल समान अनुक्रम",
+        "सभी रक्त कोशिकाओं में रिवर्स ट्रांसक्रिप्टेज़ का उपयोग करके cDNA का संश्लेषण"
+      ],
+      "options_gu": [
+        "VNTRs (વેરિયેબલ નંબર ઓફ ટેન્ડમ રિપીટ્સ) તરીકે ઓળખાતા પુનરાવર્તિત DNA ક્રમોમાં ઉચ્ચ સ્તરની બહુરરૂપતા (Polymorphism)",
+        "તમામ વ્યક્તિઓમાં રાઇબોઝોમની સમાન સંખ્યા",
+        "દરેક જીવંત જાતિમાં એક્ઝોનનો બિલકુલ સમાન ક્રમ",
+        "તમામ રક્તકણોમાં રિવર્સ ટ્રાન્સક્રિપ્ટેઝનો ઉપયોગ કરીને cDNA નું સંશ્લેષણ"
+      ],
+      "correct_index": 0,
+      "explanation": "DNA fingerprinting identifies individuals based on high polymorphism in satellite DNA (VNTRs), which varies in repeat number from person to person and is inherited from parents.",
+      "explanation_hi": "DNA फिंगरप्रिंटिंग सैटेलाइट DNA (VNTRs) में उच्च बहुरूपता के आधार पर व्यक्तियों की पहचान करती है, जो व्यक्ति से व्यक्ति में भिन्न होती है और माता-पिता से वंशानुगत होती है।",
+      "explanation_gu": "DNA ફિંગરપ્રિન્ટિંગ સેટેલાઇટ DNA (VNTRs) માં ઉચ્ચ બહુરરૂપતાના આધારે વ્યક્તિઓની ઓળખ કરે છે, જે વ્યક્તિ-વ્યક્તિમાં ભિન્ન હોય છે અને માતાપિતા તરફથી વારસામાં મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH5_022",
+      "type": "knowledge_check",
+      "title": "Textbook Exercise Q14: Polymorphism and Bioinformatics",
+      "title_hi": "पाठ्यपुस्तक अभ्यास Q14: बहुरूपता एवं जैव सूचना विज्ञान",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય Q14: બહુરરૂપતા અને બાયોઇન્ફોર્મેટિક્સ",
+      "question": "Which statement accurately defines DNA Polymorphism and Bioinformatics?",
+      "question_hi": "कौन सा कथन DNA बहुरूपता और जैव सूचना विज्ञान (Bioinformatics) को सटीक रूप से परिभाषित करता है?",
+      "question_gu": "કયું વિધાન DNA બહુરરૂપતા (Polymorphism) અને બાયોઇન્ફોર્મેટિક્સને ચોકસાઈથી વ્યાખ્યાયિત કરે છે?",
+      "options": [
+        "DNA Polymorphism is genetic variation at a locus with frequency > 0.01; Bioinformatics is computational branch managing biological data",
+        "DNA Polymorphism is destruction of DNA by enzymes; Bioinformatics is chemical synthesis of proteins in lab",
+        "DNA Polymorphism occurs only in prokaryotes; Bioinformatics is study of marine fossils",
+        "DNA Polymorphism means having identical genomes; Bioinformatics is manual record keeping"
+      ],
+      "options_hi": [
+        "DNA बहुरूपता 0.01 से अधिक आवृत्ति के साथ एक स्थान पर आनुवंशिक भिन्नता है; जैव सूचना विज्ञान जैविक डेटा का प्रबंधन करने वाली कम्प्यूटेशनल शाखा है",
+        "DNA बहुरूपता एंजाइमों द्वारा DNA का विनाश है; जैव सूचना विज्ञान प्रयोगशाला में प्रोटीन का रासायनिक संश्लेषण है",
+        "DNA बहुरूपता केवल प्रोकैरियोट्स में होती है; जैव सूचना विज्ञान समुद्री जीवाश्मों का अध्ययन है",
+        "DNA बहुरूपता का अर्थ समान जीनोम होना है; जैव सूचना विज्ञान मैनुअल रिकॉर्ड रखना है"
+      ],
+      "options_gu": [
+        "DNA બહુરરૂપતા એ 0.01 થી વધુ આવૃત્તિ સાથે એક ચોક્કસ સ્થાને આનુવંશિક ભિન્નતા છે; બાયોઇન્ફોર્મેટિક્સ એ જૈવિક ડેટાનું સંચાલન કરતી કોમ્પ્યુટેશનલ શાખા છે",
+        "DNA બહુરરૂપતા એ ઉત્સેચકો દ્વારા DNA નો નાશ છે; બાયોઇન્ફોર્મેટિક્સ એ પ્રયોગશાળામાં પ્રોટીનનું રાસાયણિક સંશ્લેષણ છે",
+        "DNA બહુરરૂપતા માત્ર પ્રોકેરીયોટ્સમાં થાય છે; બાયોઇન્ફોર્મેટિક્સ એ દરિયાઈ અશ્મિઓનો અભ્યાસ છે",
+        "DNA બહુરરૂપતા એટલે સમાન જીનોમ હોવું; બાયોઇન્ફોર્મેટિક્સ એ મેન્યુઅલ રેકોર્ડ રાખવો છે"
+      ],
+      "correct_index": 0,
+      "explanation": "DNA Polymorphism arises due to mutations that accumulate in non-coding DNA sequences with a population frequency >0.01. Bioinformatics combines biology, computer science, and statistics to store, analyze, and interpret vast genomic sequence data.",
+      "explanation_hi": "DNA बहुरूपता उत्परिवर्तन के कारण होती है जो 0.01 से अधिक जनसंख्या आवृत्ति के साथ नॉन-कोडिंग DNA में जमा होती है। जैव सूचना विज्ञान जैविक डेटा को संग्रहीत और विश्लेषित करने के लिए कंप्यूटर विज्ञान का उपयोग करता है।",
+      "explanation_gu": "DNA બહુરરૂપતા વિકૃતિઓને કારણે થાય છે જે 0.01 થી વધુ વસ્તી આવૃત્તિ સાથે નોન-કોડિંગ DNA માં એકઠી થાય છે. બાયોઇન્ફોર્મેટિક્સ જૈવિક ડેટાનો સંગ્રહ અને વિશ્લેષણ કરવા માટે કોમ્પ્યુટર સાયન્સનો ઉપયોગ કરે છે."
+    }
+  ]
+}

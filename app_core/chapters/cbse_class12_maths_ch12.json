@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch12",
+    "title": "Chapter 12: Linear Programming",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_001",
+      "type": "hook",
+      "title": "Optimizing Resources in Real Life",
+      "title_hi": "वास्तविक जीवन में संसाधनों का अनुकूलन",
+      "title_gu": "વાસ્તવિક જીવનમાં સંસાધનોનું અનુકૂલન",
+      "body": "Imagine you are managing a furniture factory that produces tables and chairs with limited wood and labor hours. How do you decide the exact production numbers to maximize profit? Linear Programming Problem (LPP) provides the mathematical framework to optimize profits or minimize costs under strict real-world constraints.",
+      "body_hi": "कल्पना कीजिए कि आप एक फर्नीचर कारखाने का प्रबंधन कर रहे हैं जो सीमित लकड़ी और श्रम घंटों के साथ टेबल और कुर्सियाँ बनाता है। अधिकतम लाभ कमाने के लिए आप उत्पादन की सटीक संख्या का निर्णय कैसे लेंगे? रैखिक प्रोग्रामन समस्या (LPP) सीमित संसाधनों के तहत लाभ को अधिकतम या लागत को न्यूनतम करने के लिए सटीक गणितीय ढांचा प्रदान करती है।",
+      "body_gu": "કલ્પના કરો કે તમે એક ફર્નિચર ફેક્ટરીનું સંચાલન કરી રહ્યા છો જે મર્યાદિત લાકડા અને શ્રમના કલાકો સાથે ટેબલ અને ખુરશીઓ બનાવે છે. મહત્તમ નફો મેળવવા માટે તમે ઉત્પાદનની ચોક્કસ સંખ્યા કેવી રીતે નક્કી કરશો? લીનિયર પ્રોગ્રામિંગ પ્રોબ્લેમ (LPP) મર્યાદિત સંસાધનો હેઠળ નફો મહત્તમ અથવા ખર્ચ લઘુત્તમ કરવા માટે ચોક્કસ ગણિતીય માળખું પૂરું પાડે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_002",
+      "type": "socratic_question",
+      "title": "Finding the Optimal Point",
+      "title_hi": "अनुकूलतम बिंदु की खोज",
+      "title_gu": "અનુકૂળતમ બિંદુની શોધ",
+      "question": "If profit is represented by Z = 30x + 20y, and the feasible region formed by inequalities is a bounded polygon, where is the maximum or minimum value of Z guaranteed to occur?",
+      "question_hi": "यदि लाभ Z = 30x + 20y द्वारा व्यक्त किया गया है, और असमिकाओं द्वारा निर्मित सुसंगत क्षेत्र एक परिबद्ध बहुभुज है, तो Z का अधिकतम या न्यूनतम मान अनिवार्य रूप से कहाँ स्थित होगा?",
+      "question_gu": "જો નફો Z = 30x + 20y દ્વારા દર્શાવવામાં આવે છે, અને અસમતાઓ દ્વારા બનેલ શક્ય પ્રદેશ એક સીમિત બહુકોણ છે, તો Z નું મહત્તમ અથવા લઘુત્તમ મૂલ્ય ચોક્કસપણે ક્યાં આવેલું હશે?",
+      "options": [
+        "At the origin (0,0) only",
+        "At any random interior point of the feasible region",
+        "At one or more corner points (vertices) of the feasible region",
+        "Outside the boundary of the feasible region"
+      ],
+      "options_hi": [
+        "केवल मूल बिंदु (0,0) पर",
+        "सुसंगत क्षेत्र के किसी भी आंतरिक बिंदु पर",
+        "सुसंगत क्षेत्र के एक या अधिक कोणीय बिंदुओं (शीर्षों) पर",
+        "सुसंगत क्षेत्र की सीमा के बाहर"
+      ],
+      "options_gu": [
+        "માત્ર ઉદ્ગમબિંદુ (0,0) પર",
+        "શક્ય પ્રદેશના કોઈપણ યાદચ્છિક આંતરિક બિંદુ પર",
+        "શક્ય પ્રદેશના એક અથવા વધુ શિરોબિંદુઓ (ખૂણાના બિંદુઓ) પર",
+        "શક્ય પ્રદેશની સીમાની બહાર"
+      ],
+      "correct_index": 2,
+      "explanation": "According to the Corner Point Theorem, the maximum or minimum value of an objective function Z in a bounded feasible region always occurs at a corner point (vertex) of the region.",
+      "explanation_hi": "कोणीय बिंदु प्रमेय (Corner Point Theorem) के अनुसार, परिबद्ध सुसंगत क्षेत्र में उद्देश्य फलन Z का अधिकतम या न्यूनतम मान हमेशा क्षेत्र के किसी कोणीय बिंदु (शीर्ष) पर ही प्राप्त होता है।",
+      "explanation_gu": "ખૂણાના બિંદુના પ્રમેય (Corner Point Theorem) મુજબ, સીમિત શક્ય પ્રદેશમાં હેતુલક્ષી વિધેય Z નું મહત્તમ અથવા લઘુત્તમ મૂલ્ય હંમેશા પ્રદેશના કોઈ શિરોબિંદુ (ખૂણાના બિંદુ) પર જ મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_003",
+      "type": "discovery",
+      "title": "Visualizing Feasible Regions",
+      "title_hi": "सुसंगत क्षेत्रों का दृश्यीकरण",
+      "title_gu": "શક્ય પ્રદેશોનું વિઝ્યુઅલાઈઝેશન",
+      "body": "When we plot system inequalities such as x + y <= 50 and 3x + y <= 90 with non-negativity constraints x >= 0, y >= 0 on the Cartesian plane, the intersection of all shaded half-planes creates a geometric region called the 'Feasible Region'. Every point in this region satisfies all given constraints simultaneously.",
+      "body_hi": "जब हम कार्तीय तल पर ऋणेतर प्रतिबंधों x >= 0, y >= 0 के साथ x + y <= 50 और 3x + y <= 90 जैसी असमिकाओं को आलेखित करते हैं, तो सभी छायांकित अर्ध-तलों का प्रतिच्छेदन क्षेत्र एक ज्यामितीय क्षेत्र बनाता है जिसे 'सुसंगत क्षेत्र' (Feasible Region) कहते हैं। इस क्षेत्र का प्रत्येक बिंदु सभी दिए गए प्रतिबंधों को एक साथ संतुष्ट करता है।",
+      "body_gu": "જ્યારે આપણે કાર્ટેઝિયન સમતલ પર અનૃણ મર્યાદાઓ x >= 0, y >= 0 સાથે x + y <= 50 અને 3x + y <= 90 જેવી અસમતાઓને આલેખિત કરીએ છીએ, ત્યારે બધા છાયાંકિત અર્ધ-સમતલોનો છેદપ્રદેશ એક ભૌમિતિક પ્રદેશ બનાવે છે જેને 'શક્ય પ્રદેશ' (Feasible Region) કહેવામાં આવે છે. આ પ્રદેશનું દરેક બિંદુ આપેલ તમામ મર્યાદાઓનું એકસાથે પાલન કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_004",
+      "type": "theory",
+      "title": "Mathematical Formulation of LPP",
+      "title_hi": "रैखिक प्रोग्रामन समस्या का गणितीय सूत्रीकरण",
+      "title_gu": "લીનિયર પ્રોગ્રામિંગ પ્રોબ્લેમનું ગણિતીય સૂત્રીકરણ",
+      "body": "A Linear Programming Problem consists of:\n1. Decision Variables: Non-negative variables x and y (x >= 0, y >= 0).\n2. Objective Function: A linear function Z = ax + by which needs to be maximized or minimized.\n3. Linear Constraints: Linear inequalities or equations representing resource limitations (e.g., a1*x + b1*y <= c1).\n4. Feasible Region: The common region determined by all constraints including non-negativity conditions.",
+      "body_hi": "एक रैखिक प्रोग्रामन समस्या में निम्नलिखित घटक होते हैं:\n1. निर्णय चर: ऋणेतर चर x और y (x >= 0, y >= 0)।\n2. उद्देश्य फलन: एक रैखिक फलन Z = ax + by जिसे अधिकतम या न्यूनतम करना होता है।\n3. रैखिक प्रतिबंध: संसाधनों की सीमाओं को दर्शाने वाली रैखिक असमिकाएँ (जैसे, a1*x + b1*y <= c1)।\n4. सुसंगत क्षेत्र: ऋणेतर शर्तों सहित सभी प्रतिबंधों द्वारा निर्धारित उभयनिष्ठ क्षेत्र।",
+      "body_gu": "લીનિયર પ્રોગ્રામિંગ પ્રોબ્લેમમાં નીચેના ઘટકો શામેલ છે:\n1. નિર્ણય ચલો: અનૃણ ચલો x અને y (x >= 0, y >= 0).\n2. હેતુલક્ષી વિધેય: એક સુરેખ વિધેય Z = ax + by જેને મહત્તમ અથવા લઘુત્તમ કરવાનું હોય છે.\n3. સુરેખ મર્યાદાઓ: સંસાધનોની મર્યાદા દર્શાવતી સુરેખ અસમતાઓ (દા.ત., a1*x + b1*y <= c1).\n4. શક્ય પ્રદેશ: અનૃણ શરતો સહિત તમામ મર્યાદાઓ દ્વારા નિર્ધારિત સામાન્ય પ્રદેશ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_005",
+      "type": "knowledge_check",
+      "title": "Identifying Decision Variables",
+      "title_hi": "निर्णय चरों की पहचान",
+      "title_gu": "નિર્ણય ચલોની ઓળખ",
+      "question": "In a Linear Programming Problem, why are decision variables always restricted to non-negative values (x >= 0, y >= 0)?",
+      "question_hi": "रैखिक प्रोग्रामन समस्या में, निर्णय चरों को हमेशा ऋणेतर मानों (x >= 0, y >= 0) तक क्यों सीमित रखा जाता है?",
+      "question_gu": "લીનિયર પ્રોગ્રામિંગ પ્રોબ્લેમમાં, નિર્ણય ચલોને હંમેશા અનૃણ મૂલ્યો (x >= 0, y >= 0) સુધી જ કેમ મર્યાદિત રાખવામાં આવે છે?",
+      "options": [
+        "Physical quantities like items, time, or distance cannot be negative",
+        "Negative values make calculating derivatives impossible",
+        "It is a convention only for 2D graphs",
+        "To keep the objective function linear"
+      ],
+      "options_hi": [
+        "वस्तुओं, समय या दूरी जैसी भौतिक मात्राएँ ऋणात्मक नहीं हो सकतीं",
+        "ऋणात्मक मानों के कारण अवकलन की गणना करना असंभव हो जाता है",
+        "यह केवल 2D आलेखों के लिए एक परंपरा है",
+        "उद्देश्य फलन को रैखिक बनाए रखने के लिए"
+      ],
+      "options_gu": [
+        "વસ્તુઓ, સમય અથવા અંતર જેવા ભૌતિક જથ્થા ઋણ હોઈ શકતા નથી",
+        "ઋણ મૂલ્યો વિકલનની ગણતરી અશક્ય બનાવે છે",
+        "તે માત્ર 2D આલેખ માટેની પરંપરા છે",
+        "હેતુલક્ષી વિધેયને સુરેખ રાખવા માટે"
+      ],
+      "correct_index": 0,
+      "explanation": "Decision variables represent physical quantities like number of units produced, hours worked, or ingredients used, which cannot take negative values in real life.",
+      "explanation_hi": "निर्णय चर भौतिक मात्राओं जैसे उत्पादित इकाइयों की संख्या, काम के घंटे या प्रयुक्त सामग्री को दर्शाते हैं, जो वास्तविक जीवन में ऋणात्मक नहीं हो सकते।",
+      "explanation_gu": "નિર્ણય ચલો ભૌતિક જથ્થા જેવા કે ઉત્પાદિત એકમોની સંખ્યા, કામ કરેલા કલાકો અથવા વપરાયેલી સામગ્રી દર્શાવે છે, જે વાસ્તવિક જીવનમાં ઋણ હોઈ શકતા નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_006",
+      "type": "theory",
+      "title": "Corner Point Theorem & Solution Algorithm",
+      "title_hi": "कोणीय बिंदु प्रमेय और समाधान विधि",
+      "title_gu": "ખૂણાના બિંદુનું પ્રમેય અને ઉકેલ પદ્ધતિ",
+      "body": "Theorem 1: Let R be the feasible region for an LPP and let Z = ax + by be the objective function. If Z has an optimal value (maximum or minimum), it must occur at a corner point (vertex) of R.\nTheorem 2: If R is bounded, then Z has both a maximum and a minimum value on R, occurring at corner points.\n\nAlgorithm:\n1. Graph all constraints and identify the feasible region R.\n2. Find all corner points (vertices) of R.\n3. Evaluate Z = ax + by at each corner point.\n4. Identify the maximum/minimum value. (If R is unbounded, verify if ax + by > M or ax + by < m shares points with R).",
+      "body_hi": "प्रमेय 1: माना R एक LPP का सुसंगत क्षेत्र है और Z = ax + by उद्देश्य फलन है। यदि Z का कोई अनुकूलतम मान (अधिकतम या न्यूनतम) है, तो यह R के किसी कोणीय बिंदु (शीर्ष) पर ही होगा।\nप्रमेय 2: यदि R परिबद्ध (bounded) है, तो R पर Z के अधिकतम और न्यूनतम दोनों मान अस्तित्व में होते हैं और कोणीय बिंदुओं पर मिलते हैं।\n\nकार्यविधि:\n1. सभी प्रतिबंधों का आलेख खींचें और सुसंगत क्षेत्र R की पहचान करें।\n2. R के सभी कोणीय बिंदुओं (शीर्षों) के निर्देशांक ज्ञात करें।\n3. प्रत्येक कोणीय बिंदु पर Z = ax + by का मान परिकलित करें।\n4. अधिकतम/न्यूनतम मान की पहचान करें। (यदि R अपरिबद्ध है, तो जांचें कि ax + by > M या ax + by < m का R के साथ कोई उभयनिष्ठ बिंदु है या नहीं)।",
+      "body_gu": "પ્રમેય 1: ધારો કે R એ LPP માટેનો શક્ય પ્રદેશ છે અને Z = ax + by હેતુલક્ષી વિધેય છે. જો Z નું અનુકૂળતમ મૂલ્ય (મહત્તમ અથવા લઘુત્તમ) હોય, તો તે R ના શિરોબિંદુ (ખૂણાના બિંદુ) પર જ હોવું જોઈએ.\nપ્રમેય 2: જો R સીમિત (bounded) હોય, તો Z નું મહત્તમ અને લઘુત્તમ બંને મૂલ્ય R પર અસ્તિત્વ ધરાવે છે અને ખૂણાના બિંદુઓ પર મળે છે.\n\nરીત:\n1. તમામ મર્યાદાઓનો આલેખ દોરો અને શક્ય પ્રદેશ R ઓળખો.\n2. R ના તમામ શિરોબિંદુઓ (ખૂણાના બિંદુઓ) શોધો.\n3. દરેક ખૂણાના બિંદુ પર Z = ax + by ની કિંમત ગણો.\n4. મહત્તમ/લઘુત્તમ મૂલ્ય નક્કી કરો. (જો R અસીમિત હોય, તો ચકાસો કે ax + by > M કે ax + by < m નો R સાથે કોઈ સામાન્ય બિંદુ છે કે નહીં)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_007",
+      "type": "knowledge_check",
+      "title": "Multiple Optimal Solutions Condition",
+      "title_hi": "अनेक अनुकूलतम समाधानों की शर्त",
+      "title_gu": "અનેક અનુકૂળતમ ઉકેલોની શરત",
+      "question": "If the objective function Z = ax + by achieves its maximum value at two adjacent corner points A and B of a bounded feasible region, what can be concluded?",
+      "question_hi": "यदि उद्देश्य फलन Z = ax + by एक परिबद्ध सुसंगत क्षेत्र के दो आसन्न कोणीय बिंदुओं A और B पर अपना अधिकतम मान प्राप्त करता है, तो क्या निष्कर्ष निकाला जा सकता है?",
+      "question_gu": "જો હેતુલક્ષી વિધેય Z = ax + by એક સીમિત શક્ય પ્રદેશના બે પાસપાસેના શિરોબિંદુઓ A અને B પર તેનું મહત્તમ મૂલ્ય પ્રાપ્ત કરે છે, તો શું તારણ કાઢી શકાય?",
+      "options": [
+        "Maximum occurs only at points A and B, nowhere else",
+        "Z achieves maximum value at every point on the line segment AB",
+        "The problem has no solution",
+        "The feasible region becomes unbounded"
+      ],
+      "options_hi": [
+        "अधिकतम मान केवल बिंदु A और B पर मिलता है, कहीं और नहीं",
+        "Z रेखाखंड AB के प्रत्येक बिंदु पर अधिकतम मान प्राप्त करता है",
+        "समस्या का कोई हल नहीं है",
+        "सुसंगत क्षेत्र अपरिबद्ध हो जाता है"
+      ],
+      "options_gu": [
+        "મહત્તમ મૂલ્ય માત્ર બિંદુ A અને B પર જ મળે છે, બીજા ક્યાંય નહીં",
+        "Z રેખાખંડ AB ના દરેક બિંદુ પર મહત્તમ મૂલ્ય પ્રાપ્ત કરે છે",
+        "સમસ્યાનો કોઈ ઉકેલ નથી",
+        "શક્ય પ્રદેશ અસીમિત બની જાય છે"
+      ],
+      "correct_index": 1,
+      "explanation": "If two adjacent corner points give the same optimal value of Z, then every point on the line segment joining these two points gives the same optimal value (infinitely many optimal solutions).",
+      "explanation_hi": "यदि दो आसन्न कोणीय बिंदु Z का समान अनुकूलतम मान देते हैं, तो इन दोनों बिंदुओं को जोड़ने वाले रेखाखंड पर स्थित प्रत्येक बिंदु वही अनुकूलतम मान देता है (अनंत अनुकूलतम समाधान)।",
+      "explanation_gu": "જો બે પાસપાસેના શિરોબિંદુઓ Z નું સમાન અનુકૂળતમ મૂલ્ય આપે, તો આ બે બિંદુઓને જોડતા રેખાખંડ પરનું દરેક બિંદુ સમાન અનુકૂળતમ મૂલ્ય આપે છે (અનંત અનુકૂળતમ ઉકેલો)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_008",
+      "type": "reflection",
+      "title": "Unbounded Regions Strategy",
+      "title_hi": "अपरिबद्ध क्षेत्रों के लिए रणनीति",
+      "title_gu": "અસીમિત પ્રદેશો માટેની વ્યૂહરચના",
+      "prompt": "Why must we draw the open half-plane ax + by > M when testing for maximum in an unbounded feasible region? Think about whether points outside the corner set could yield even higher values.",
+      "prompt_hi": "अपरिबद्ध सुसंगत क्षेत्र में अधिकतम मान का परीक्षण करते समय हमें खुला अर्ध-तल ax + by > M क्यों खींचना पड़ता है? विचार करें कि क्या कोणीय बिंदुओं के समूह के बाहर के बिंदु और भी उच्च मान दे सकते हैं।",
+      "prompt_gu": "અસીમિત શક્ય પ્રદેશમાં મહત્તમ મૂલ્યનું પરીક્ષણ કરતી વખતે આપણે ખુલ્લું અર્ધ-સમતલ ax + by > M શા માટે દોરવું પડે છે? વિચારો કે શું ખૂણાના બિંદુઓના જૂથની બહારના બિંદુઓ વધુ ઊંચી કિંમત આપી શકે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_009",
+      "type": "connection",
+      "title": "Real-World Applications of LPP",
+      "title_hi": "LPP के वास्तविक दुनिया के अनुप्रयोग",
+      "title_gu": "LPP ના વાસ્તવિક દુનિયાના ઉપયોગો",
+      "body": "Linear Programming is extensively used across industries:\n1. Diet Problems: Minimizing cost while satisfying minimum nutritional requirements.\n2. Manufacturing Problems: Maximizing profit given restrictions on labor hours and raw materials.\n3. Transportation Problems: Minimizing transit cost between multiple factories and distribution centers.",
+      "body_hi": "रैखिक प्रोग्रामन का उपयोग उद्योगों में व्यापक रूप से किया जाता है:\n1. आहार संबंधी समस्याएँ: न्यूनतम पोषण संबंधी आवश्यकताओं को पूरा करते हुए लागत को कम करना।\n2. निर्माण संबंधी समस्याएँ: श्रम घंटों और कच्चे माल के प्रतिबंधों के तहत लाभ को अधिकतम करना।\n3. परिवहन संबंधी समस्याएँ: कारखानों और वितरण केंद्रों के बीच परिवहन लागत को न्यूनतम करना।",
+      "body_gu": "લીનિયર પ્રોગ્રામિંગનો ઉપયોગ ઉદ્યોગોમાં વ્યાપકપણે થાય છે:\n1. આહાર સંબંધી સમસ્યાઓ: ન્યૂનતમ પોષક તત્વોની જરૂરિયાતો પૂરી કરીને ખર્ચ લઘુત્તમ કરવો.\n2. ઉત્પાદન સંબંધી સમસ્યાઓ: શ્રમના કલાકો અને કાચા માલની મર્યાદાઓ હેઠળ નફો મહત્તમ કરવો.\n3. પરિવહન સંબંધી સમસ્યાઓ: ફેક્ટરીઓ અને વિતરણ કેન્દ્રો વચ્ચે પરિવહન ખર્ચ લઘુત્તમ કરવો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_010",
+      "type": "mastery",
+      "title": "Mastery Standard Summary",
+      "title_hi": "मास्टरी मानक सारांश",
+      "title_gu": "માસ્ટરી માનક સારાંશ",
+      "summary": "To solve any standard CBSE Class 12 LPP problem:\n1. Formulate objective function Z = ax + by and constraint inequalities.\n2. Plot equations on graph paper, shadow the valid region for each constraint, and identify the feasible region.\n3. Identify all vertices (corner points) of the feasible region.\n4. Create a table of corner points and corresponding Z values.\n5. Select optimal Z (Max or Min) and verify unbounded condition if necessary.",
+      "summary_hi": "किसी भी मानक CBSE कक्षा 12 LPP समस्या को हल करने के लिए:\n1. उद्देश्य फलन Z = ax + by और प्रतिबंध असमिकाएँ निर्मित करें।\n2. आलेख पर समीकरणों को आलेखित करें, प्रत्येक प्रतिबंध के लिए सुसंगत क्षेत्र छायांकित करें और उभयनिष्ठ क्षेत्र पहचानें।\n3. सुसंगत क्षेत्र के सभी शीर्षों (कोणीय बिंदुओं) की पहचान करें।\n4. कोणीय बिंदुओं और उनके Z मानों की एक तालिका बनाएँ।\n5. अनुकूलतम Z (अधिकतम या न्यूनतम) चुनें और यदि क्षेत्र अपरिबद्ध है तो उसकी जाँच करें।",
+      "summary_gu": "કોઈપણ પ્રમાણભૂત CBSE ધોરણ 12 LPP પ્રશ્ન ઉકેલવા માટે:\n1. હેતુલક્ષી વિધેય Z = ax + by અને મર્યાદા અસમતાઓ બનાવો.\n2. આલેખ પર સમીકરણો દોરો, દરેક મર્યાદા માટે માન્ય પ્રદેશ છાયાંકિત કરો અને શક્ય પ્રદેશ ઓળખો.\n3. શક્ય પ્રદેશના તમામ શિરોબિંદુઓ (ખૂણાના બિંદુઓ) ઓળખો.\n4. ખૂણાના બિંદુઓ અને તેને અનુરૂપ Z ના મૂલ્યોનું કોષ્ટક બનાવો.\n5. અનુકૂળતમ Z (મહત્તમ અથવા લઘુત્તમ) પસંદ કરો અને જો પ્રદેશ અસીમિત હોય તો ચકાસણી કરો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_011",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q1",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 1",
+      "question": "Maximize Z = 3x + 4y subject to constraints: x + y <= 4, x >= 0, y >= 0. What is the maximum value of Z?",
+      "question_hi": "प्रतिबंधों x + y <= 4, x >= 0, y >= 0 के अंतर्गत Z = 3x + 4y का अधिकतम मान ज्ञात कीजिए।",
+      "question_gu": "મર્યાદાઓ x + y <= 4, x >= 0, y >= 0 ને આધીન Z = 3x + 4y ની મહત્તમ કિંમત શોધો.",
+      "options": [
+        "12",
+        "16",
+        "0",
+        "7"
+      ],
+      "options_hi": [
+        "12",
+        "16",
+        "0",
+        "7"
+      ],
+      "options_gu": [
+        "12",
+        "16",
+        "0",
+        "7"
+      ],
+      "correct_index": 1,
+      "explanation": "Corner points of the feasible region are (0,0), (4,0), and (0,4). Z at (0,0) = 0, Z at (4,0) = 12, Z at (0,4) = 16. Maximum value of Z is 16 at (0,4).",
+      "explanation_hi": "सुसंगत क्षेत्र के कोणीय बिंदु (0,0), (4,0), और (0,4) हैं। (0,0) पर Z = 0, (4,0) पर Z = 12, (0,4) पर Z = 16 है। बिंदु (0,4) पर Z का अधिकतम मान 16 है।",
+      "explanation_gu": "શક્ય પ્રદેશના ખૂણાના બિંદુઓ (0,0), (4,0), અને (0,4) છે. (0,0) આગળ Z = 0, (4,0) આગળ Z = 12, (0,4) આગળ Z = 16. બિંદુ (0,4) આગળ Z ની મહત્તમ કિંમત 16 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_012",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q2",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 2",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 2",
+      "question": "Minimize Z = -3x + 4y subject to x + 2y <= 8, 3x + 2y <= 12, x >= 0, y >= 0. What is the minimum value of Z?",
+      "question_hi": "प्रतिबंधों x + 2y <= 8, 3x + 2y <= 12, x >= 0, y >= 0 के अंतर्गत Z = -3x + 4y का न्यूनतम मान ज्ञात कीजिए।",
+      "question_gu": "મર્યાદાઓ x + 2y <= 8, 3x + 2y <= 12, x >= 0, y >= 0 ને આધીન Z = -3x + 4y ની લઘુત્તમ કિંમત શોધો.",
+      "options": [
+        "-12",
+        "16",
+        "0",
+        "-6"
+      ],
+      "options_hi": [
+        "-12",
+        "16",
+        "0",
+        "-6"
+      ],
+      "options_gu": [
+        "-12",
+        "16",
+        "0",
+        "-6"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points are (0,0), (4,0), (2,3), and (0,4). Z values are 0, -12, 6, 16. The minimum value is -12 at point (4,0).",
+      "explanation_hi": "कोणीय बिंदु (0,0), (4,0), (2,3), और (0,4) हैं। Z के मान 0, -12, 6, 16 हैं। बिंदु (4,0) पर न्यूनतम मान -12 है।",
+      "explanation_gu": "ખૂણાના બિંદુઓ (0,0), (4,0), (2,3), અને (0,4) છે. Z ના મૂલ્યો 0, -12, 6, 16 છે. બિંદુ (4,0) આગળ લઘુત્તમ કિંમત -12 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_013",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q3",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 3",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 3",
+      "question": "Maximize Z = 5x + 3y subject to 3x + 5y <= 15, 5x + 2y <= 10, x >= 0, y >= 0. What is the maximum value of Z?",
+      "question_hi": "प्रतिबंधों 3x + 5y <= 15, 5x + 2y <= 10, x >= 0, y >= 0 के अंतर्गत Z = 5x + 3y का अधिकतम मान क्या है?",
+      "question_gu": "મર્યાદાઓ 3x + 5y <= 15, 5x + 2y <= 10, x >= 0, y >= 0 ને આધીન Z = 5x + 3y ની મહત્તમ કિંમત શું છે?",
+      "options": [
+        "235/19",
+        "10",
+        "9",
+        "12"
+      ],
+      "options_hi": [
+        "235/19",
+        "10",
+        "9",
+        "12"
+      ],
+      "options_gu": [
+        "235/19",
+        "10",
+        "9",
+        "12"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points are (0,0), (2,0), (20/19, 45/19), (0,3). Z values: Z(0,0)=0, Z(2,0)=10, Z(20/19, 45/19)=235/19 (~12.37), Z(0,3)=9. Maximum is 235/19.",
+      "explanation_hi": "कोणीय बिंदु (0,0), (2,0), (20/19, 45/19), (0,3) हैं। Z मान: Z(0,0)=0, Z(2,0)=10, Z(20/19, 45/19)=235/19 (~12.37), Z(0,3)=9। अधिकतम मान 235/19 है।",
+      "explanation_gu": "ખૂણાના બિંદુઓ (0,0), (2,0), (20/19, 45/19), (0,3) છે. Z ની કિંમતો: Z(0,0)=0, Z(2,0)=10, Z(20/19, 45/19)=235/19 (~12.37), Z(0,3)=9. મહત્તમ કિંમત 235/19 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_014",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q4",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 4",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 4",
+      "question": "Minimize Z = 3x + 5y subject to x + 3y >= 3, x + y >= 2, x >= 0, y >= 0. What is the minimum value of Z?",
+      "question_hi": "प्रतिबंधों x + 3y >= 3, x + y >= 2, x >= 0, y >= 0 के अंतर्गत Z = 3x + 5y का न्यूनतम मान क्या है?",
+      "question_gu": "મર્યાદાઓ x + 3y >= 3, x + y >= 2, x >= 0, y >= 0 ને આધીન Z = 3x + 5y ની લઘુત્તમ કિંમત શું છે?",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "3"
+      ],
+      "options_hi": [
+        "7",
+        "5",
+        "6",
+        "3"
+      ],
+      "options_gu": [
+        "7",
+        "5",
+        "6",
+        "3"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points of the unbounded region are (0,2), (3/2, 1/2), and (3,0). Z(0,2) = 10, Z(3/2, 1/2) = 7, Z(3,0) = 9. Since 3x + 5y < 7 has no common points with the feasible region, minimum is 7.",
+      "explanation_hi": "अपरिबद्ध क्षेत्र के कोणीय बिंदु (0,2), (3/2, 1/2), और (3,0) हैं। Z(0,2) = 10, Z(3/2, 1/2) = 7, Z(3,0) = 9। चूँकि 3x + 5y < 7 का सुसंगत क्षेत्र के साथ कोई उभयनिष्ठ बिंदु नहीं है, न्यूनतम मान 7 है।",
+      "explanation_gu": "અસીમિત પ્રદેશના ખૂણાના બિંદુઓ (0,2), (3/2, 1/2), અને (3,0) છે. Z(0,2) = 10, Z(3/2, 1/2) = 7, Z(3,0) = 9. કારણ કે 3x + 5y < 7 નો શક્ય પ્રદેશ સાથે કોઈ સામાન્ય બિંદુ નથી, લઘુત્તમ કિંમત 7 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_015",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q5",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 5",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 5",
+      "question": "Maximize Z = 3x + 2y subject to x + 2y <= 10, 3x + y <= 15, x, y >= 0. What is the maximum value of Z?",
+      "question_hi": "प्रतिबंधों x + 2y <= 10, 3x + y <= 15, x, y >= 0 के अंतर्गत Z = 3x + 2y का अधिकतम मान क्या है?",
+      "question_gu": "મર્યાદાઓ x + 2y <= 10, 3x + y <= 15, x, y >= 0 ને આધીન Z = 3x + 2y ની મહત્તમ કિંમત શું છે?",
+      "options": [
+        "18",
+        "15",
+        "10",
+        "20"
+      ],
+      "options_hi": [
+        "18",
+        "15",
+        "10",
+        "20"
+      ],
+      "options_gu": [
+        "18",
+        "15",
+        "10",
+        "20"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points are (0,0), (5,0), (4,3), and (0,5). Z values are 0, 15, 18, 10. Maximum value is 18 at (4,3).",
+      "explanation_hi": "कोणीय बिंदु (0,0), (5,0), (4,3), और (0,5) हैं। Z के मान 0, 15, 18, 10 हैं। बिंदु (4,3) पर अधिकतम मान 18 है।",
+      "explanation_gu": "ખૂણાના બિંદુઓ (0,0), (5,0), (4,3), અને (0,5) છે. Z ના મૂલ્યો 0, 15, 18, 10 છે. બિંદુ (4,3) આગળ મહત્તમ કિંમત 18 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_016",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q6",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 6",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 6",
+      "question": "Minimize Z = x + 2y subject to 2x + y >= 3, x + 2y >= 6, x, y >= 0. What is the minimum value of Z?",
+      "question_hi": "प्रतिबंधों 2x + y >= 3, x + 2y >= 6, x, y >= 0 के अंतर्गत Z = x + 2y का न्यूनतम मान क्या है?",
+      "question_gu": "મર્યાદાઓ 2x + y >= 3, x + 2y >= 6, x, y >= 0 ને આધીન Z = x + 2y ની લઘુત્તમ કિંમત શું છે?",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "12"
+      ],
+      "options_hi": [
+        "6",
+        "3",
+        "0",
+        "12"
+      ],
+      "options_gu": [
+        "6",
+        "3",
+        "0",
+        "12"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points of the unbounded region are (6,0) and (0,3). Z(6,0) = 6 and Z(0,3) = 6. Minimum value is 6, occurring at all points on the line segment connecting (6,0) and (0,3).",
+      "explanation_hi": "अपरिबद्ध क्षेत्र के कोणीय बिंदु (6,0) और (0,3) हैं। Z(6,0) = 6 और Z(0,3) = 6। न्यूनतम मान 6 है, जो (6,0) और (0,3) को जोड़ने वाले रेखाखंड के सभी बिंदुओं पर प्राप्त होता है।",
+      "explanation_gu": "અસીમિત પ્રદેશના ખૂણાના બિંદુઓ (6,0) અને (0,3) છે. Z(6,0) = 6 અને Z(0,3) = 6. લઘુત્તમ કિંમત 6 છે, જે (6,0) અને (0,3) ને જોડતા રેખાખંડના તમામ બિંદુઓ પર મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_017",
+      "type": "mcq",
+      "title": "Textbook Exercise 12.1 Q7",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 12.1 प्रश्न 7",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 12.1 પ્રશ્ન 7",
+      "question": "For Z = 5x + 10y subject to x + 2y <= 120, x + y >= 60, x - 2y >= 0, x, y >= 0, what are the minimum and maximum values of Z respectively?",
+      "question_hi": "प्रतिबंधों x + 2y <= 120, x + y >= 60, x - 2y >= 0, x, y >= 0 के अंतर्गत Z = 5x + 10y के क्रमशः न्यूनतम और अधिकतम मान क्या हैं?",
+      "question_gu": "મર્યાદાઓ x + 2y <= 120, x + y >= 60, x - 2y >= 0, x, y >= 0 ને આધીન Z = 5x + 10y ના લઘુત્તમ અને મહત્તમ મૂલ્યો અનુક્રમે કયા છે?",
+      "options": [
+        "Min = 300, Max = 600",
+        "Min = 150, Max = 600",
+        "Min = 300, Max = 1200",
+        "Min = 0, Max = 600"
+      ],
+      "options_hi": [
+        "न्यूनतम = 300, अधिकतम = 600",
+        "न्यूनतम = 150, अधिकतम = 600",
+        "न्यूनतम = 300, अधिकतम = 1200",
+        "न्यूनतम = 0, अधिकतम = 600"
+      ],
+      "options_gu": [
+        "લઘુત્તમ = 300, મહત્તમ = 600",
+        "લઘુત્તમ = 150, મહત્તમ = 600",
+        "લઘુત્તમ = 300, મહત્તમ = 1200",
+        "લઘુત્તમ = 0, મહત્તમ = 600"
+      ],
+      "correct_index": 0,
+      "explanation": "Corner points are (60,0), (120,0), (60,30), (40,20). Z values are Z(60,0)=300, Z(120,0)=600, Z(60,30)=600, Z(40,20)=300. Thus Minimum is 300 and Maximum is 600 (at multiple points).",
+      "explanation_hi": "कोणीय बिंदु (60,0), (120,0), (60,30), (40,20) हैं। Z मान हैं Z(60,0)=300, Z(120,0)=600, Z(60,30)=600, Z(40,20)=300। अतः न्यूनतम 300 और अधिकतम 600 है।",
+      "explanation_gu": "ખૂણાના બિંદુઓ (60,0), (120,0), (60,30), (40,20) છે. Z ની કિંમતો Z(60,0)=300, Z(120,0)=600, Z(60,30)=600, Z(40,20)=300 છે. આમ લઘુત્તમ 300 અને મહત્તમ 600 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_018",
+      "type": "mcq",
+      "title": "Textbook Miscellaneous MCQ 1",
+      "title_hi": "पाठ्यपुस्तक विविध बहुविकल्पीय प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક પ્રકીર્ણ એમસીક્યુ 1",
+      "question": "The feasible region for an LPP is shown to be bounded. If corner points are (0,2), (3,0), (6,0), (6,8), and (0,5), and Z = 4x + 6y, what is the maximum value of Z?",
+      "question_hi": "एक LPP के लिए सुसंगत क्षेत्र परिबद्ध है। यदि कोणीय बिंदु (0,2), (3,0), (6,0), (6,8), और (0,5) हैं, और Z = 4x + 6y है, तो Z का अधिकतम मान क्या है?",
+      "question_gu": "એક LPP માટેનો શક્ય પ્રદેશ સીમિત છે. જો ખૂણાના બિંદુઓ (0,2), (3,0), (6,0), (6,8), અને (0,5) હોય, અને Z = 4x + 6y હોય, તો Z ની મહત્તમ કિંમત શું છે?",
+      "options": [
+        "72",
+        "30",
+        "24",
+        "12"
+      ],
+      "options_hi": [
+        "72",
+        "30",
+        "24",
+        "12"
+      ],
+      "options_gu": [
+        "72",
+        "30",
+        "24",
+        "12"
+      ],
+      "correct_index": 0,
+      "explanation": "Evaluating Z = 4x + 6y at each vertex: Z(0,2)=12, Z(3,0)=12, Z(6,0)=24, Z(6,8)=4(6)+6(8)=24+48=72, Z(0,5)=30. Maximum value is 72 at (6,8).",
+      "explanation_hi": "प्रत्येक शीर्ष पर Z = 4x + 6y का मान: Z(0,2)=12, Z(3,0)=12, Z(6,0)=24, Z(6,8)=72, Z(0,5)=30। बिंदु (6,8) पर अधिकतम मान 72 है।",
+      "explanation_gu": "દરેક શિરોબિંદુ આગળ Z = 4x + 6y ગણતા: Z(0,2)=12, Z(3,0)=12, Z(6,0)=24, Z(6,8)=72, Z(0,5)=30. બિંદુ (6,8) આગળ મહત્તમ કિંમત 72 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_019",
+      "type": "mcq",
+      "title": "Textbook Miscellaneous MCQ 2",
+      "title_hi": "पाठ्यपुस्तक विविध बहुविकल्पीय प्रश्न 2",
+      "title_gu": "પાઠ્યપુસ્તક પ્રકીર્ણ એમસીક્યુ 2",
+      "question": "If the corner points of the feasible region for an LPP are (0,3), (1,1), and (3,0), and Z = px + qy where p, q > 0, what condition on p and q makes the minimum of Z occur at both (3,0) and (1,1)?",
+      "question_hi": "यदि LPP के सुसंगत क्षेत्र के कोणीय बिंदु (0,3), (1,1), और (3,0) हैं, तथा Z = px + qy (जहाँ p, q > 0) है, तो p और q पर कौन सी शर्त Z का न्यूनतम मान (3,0) और (1,1) दोनों पर प्रदान करती है?",
+      "question_gu": "જો LPP ના શક્ય પ્રદેશના ખૂણાના બિંદુઓ (0,3), (1,1), અને (3,0) હોય, અને Z = px + qy જ્યાં p, q > 0 હોય, તો p અને q પરની કઈ શરતથી Z ની લઘુત્તમ કિંમત (3,0) અને (1,1) બંને આગળ મળે?",
+      "options": [
+        "p = 2q",
+        "p = q/2",
+        "p = 3q",
+        "p = q"
+      ],
+      "options_hi": [
+        "p = 2q",
+        "p = q/2",
+        "p = 3q",
+        "p = q"
+      ],
+      "options_gu": [
+        "p = 2q",
+        "p = q/2",
+        "p = 3q",
+        "p = q"
+      ],
+      "correct_index": 1,
+      "explanation": "Setting Z(3,0) = Z(1,1) gives 3p + 0q = p + q => 2p = q => p = q/2.",
+      "explanation_hi": "Z(3,0) = Z(1,1) रखने पर: 3p + 0q = p + q => 2p = q => p = q/2।",
+      "explanation_gu": "Z(3,0) = Z(1,1) મૂકતા: 3p + 0q = p + q => 2p = q => p = q/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH12_020",
+      "type": "mcq",
+      "title": "Textbook Miscellaneous MCQ 3",
+      "title_hi": "पाठ्यपुस्तक विविध बहुविकल्पीय प्रश्न 3",
+      "title_gu": "પાઠ્યપુસ્તક પ્રકીર્ણ એમસીક્યુ 3",
+      "question": "Which of the following statements about linear programming feasible regions is ALWAYS TRUE?",
+      "question_hi": "रैखिक प्रोग्रामन के सुसंगत क्षेत्रों के बारे में निम्नलिखित में से कौन सा कथन हमेशा सत्य होता है?",
+      "question_gu": "લીનિયર પ્રોગ્રામિંગના શક્ય પ્રદેશો વિશે નીચેનામાંથી કયું વિધાન હંમેશા સત્ય છે?",
+      "options": [
+        "The feasible region is always a convex polygon or convex set",
+        "The feasible region can have concave cutouts",
+        "The maximum value always exists even if the region is unbounded",
+        "Decision variables can take negative values if profit is negative"
+      ],
+      "options_hi": [
+        "सुसंगत क्षेत्र हमेशा एक उत्तल बहुभुज या उत्तल समुच्चय होता है",
+        "सुसंगत क्षेत्र में अवतल कटआउट हो सकते हैं",
+        "यदि क्षेत्र अपरिबद्ध है तो भी अधिकतम मान हमेशा अस्तित्व में रहता है",
+        "यदि लाभ ऋणात्मक है तो निर्णय चर ऋणात्मक मान ले सकते हैं"
+      ],
+      "options_gu": [
+        "શક્ય પ્રદેશ હંમેશા બહિર્મુખ બહુકોણ અથવા બહિર્મુખ ગણ હોય છે",
+        "શક્ય પ્રદેશમાં અંતર્મુખ કટઆઉટ હોઈ શકે છે",
+        "જો પ્રદેશ અસીમિત હોય તો પણ મહત્તમ કિંમત હંમેશા અસ્તિત્વ ધરાવે છે",
+        "જો નફો ઋણ હોય તો નિર્ણય ચલો ઋણ મૂલ્યો લઈ શકે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "The feasible region formed by linear inequalities is always a convex set (or convex polygon when bounded), meaning the line segment connecting any two points in the region lies entirely inside the region.",
+      "explanation_hi": "रैखिक असमिकाओं द्वारा निर्मित सुसंगत क्षेत्र हमेशा एक उत्तल समुच्चय (या परिबद्ध होने पर उत्तल बहुभुज) होता है, जिसका अर्थ है कि क्षेत्र में किन्हीं दो बिंदुओं को जोड़ने वाला रेखाखंड पूरी तरह से क्षेत्र के अंदर स्थित होता है।",
+      "explanation_gu": "સુરેખ અસમતાઓ દ્વારા બનેલ શક્ય પ્રદેશ હંમેશા બહિર્મુખ ગણ (અથવા સીમિત હોય ત્યારે બહિર્મુખ બહુકોણ) હોય છે, જેનો અર્થ એ થાય છે કે પ્રદેશમાંના કોઈપણ બે બિંદુઓને જોડતો રેખાખંડ સંપૂર્ણપણે પ્રદેશની અંદર જ આવેલો હોય છે."
+    }
+  ]
+}

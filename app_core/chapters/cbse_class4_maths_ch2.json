@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "id": "cbse_class4_maths_ch2",
+    "title": "Chapter 2: Addition",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Master addition of 4-digit and 5-digit numbers with and without regrouping",
+      "Understand and apply the properties of addition in practical problems",
+      "Solve complex word problems involving multi-step addition"
+    ],
+    "core_concepts": [
+      "DICT_MATH_ADDITION",
+      "DICT_MATH_CARRYOVER",
+      "DICT_MATH_COMMUTATIVE"
+    ],
+    "ai_context": {
+      "learning_goal": "Students will deeply understand the mechanics of place value alignment and carrying over digits during large number addition.",
+      "common_misconceptions": [
+        "Aligning numbers to the left instead of the right (place value alignment error).",
+        "Forgetting to add the carried-over digit to the next column."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Library Mystery",
+      "body": "Imagine walking into the Grand Alexandria Library, where millions of ancient scrolls and books are scattered across endless wooden floors. Maya, the young head librarian, has just received a massive shipment of 3,452 new history books and 4,189 science books. To fit them onto the shelves, she needs to know the exact total number of new books instantly. If she miscounts by even a single digit, the entire cataloging system collapses! How can Maya combine these enormous numbers quickly and accurately without losing her mind? Welcome to the wonderful world of [DICT_MATH_ADDITION|Addition], where numbers join forces to create something much greater.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why did Maya need to find the total of 3,452 and 4,189 books?",
+      "options": [
+        "To sell them at a bookstore",
+        "To fit them onto the library shelves correctly and keep the cataloging system organized",
+        "To throw them away in the recycling bin"
+      ],
+      "correct_index": 1,
+      "explanation": "Maya needed to know the exact total so she could arrange the new books properly on the library shelves without breaking the cataloging system.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Anatomy of Addition and Place Value Alignment",
+      "body": "At its core, [DICT_MATH_ADDITION|Addition] is the mathematical process of combining two or more quantities into a single total, known as the sum. When dealing with small numbers like 3 + 2, we can easily use our fingers. But what happens when we step into the realm of thousands? When adding multi-digit numbers, the golden rule is absolute alignment based on place value. You must always stack your numbers vertically so that the Ones align with Ones, Tens with Tens, Hundreds with Hundreds, and Thousands with Thousands. If your columns are crooked, your final answer will be completely wrong. Think of it like stacking building blocks: you cannot place a roof block where the foundation block belongs! Always start your calculation from the rightmost column (the Ones place) and work your way to the left.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Grid Paper Trick",
+      "body": "When practicing multi-digit addition, always use squared math grid paper. Put one digit in each box. This physical boundary trains your brain to keep columns straight and prevents place-value alignment errors!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "Which column do you always start adding from: the left or the right?",
+      "back": "Always start from the right (the Ones place) and move towards the left.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Addition Without Regrouping (Simple Addition)",
+      "body": "When each individual column's sum is less than 10, addition is straightforward. This is called addition without regrouping. Let us help Maya add 2,314 history books and 1,243 science books. First, set up your columns: Thousands, Hundreds, Tens, and Ones. Step 1: Add the Ones column: 4 + 3 = 7. Step 2: Add the Tens column: 1 + 4 = 5. Step 3: Add the Hundreds column: 3 + 2 = 5. Step 4: Add the Thousands column: 2 + 1 = 3. Put it all together, and you get 3,557 books! Notice how no single column exceeded 9. Because each column's result fit comfortably into a single digit space, no extra steps were required. This is the cleanest form of addition, acting as the bedrock for all advanced mathematics.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "What is the sum of 4,321 and 2,132?",
+      "options": [
+        "6,453",
+        "6,553",
+        "5,453"
+      ],
+      "correct_index": 0,
+      "explanation": "Add column by column from right to left: 1+2=3 (Ones), 2+3=5 (Tens), 3+1=4 (Hundreds), 4+2=6 (Thousands). Total is 6,453.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Visualizing Columns with Abacus",
+      "body": "Encourage students to use an abacus bead frame. Moving beads up for each column visually reinforces that 10 beads in the Ones rod trade for 1 bead in the Tens rod.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: The Magic of Regrouping (Carrying Over)",
+      "body": "What happens when the sum of a column is 10 or greater? This is where [DICT_MATH_CARRYOVER|Regrouping] (or carrying over) comes into play. Numbers in our decimal system love to group in tens. If you have 10 ones, they instantly bundle up to form 1 single Ten. Let us return to Maya's library. Suppose she adds 3,456 books and 2,187 books. Let us start with the Ones column: 6 + 7 = 13. Can you write '13' in the Ones place? Absolutely not! Each place value can only hold one single digit (0 through 9). Therefore, we write down the 3 in the Ones column and 'carry over' (regroup) the 1 representing the ten to the top of the Tens column. Now, when you add the Tens column, you must include that extra 1! 5 + 8 = 13, plus the 1 we carried over gives us 14. We write down 4 and carry over the 1 to the Hundreds column. This elegant dance of carrying over ensures that every place value holds exactly what it is supposed to.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What does 'Regrouping' mean in addition?",
+      "back": "It means bundling 10 units of a lower place value into 1 unit of the next higher place value when the sum reaches 10 or more.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "When you add the Ones column and get 14, what do you write in the answer space and what do you carry over?",
+      "options": [
+        "Write 14 in the Ones place and carry nothing",
+        "Write 4 in the Ones place and carry 1 to the Tens place",
+        "Write 1 in the Ones place and carry 4 to the Tens place"
+      ],
+      "correct_index": 1,
+      "explanation": "You write the digit in the right position (4) in the Ones column and carry the left digit (1) over to the next column on the left (Tens).",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: Step-by-Step Walkthrough with Carry Over",
+      "body": "Let us complete Maya's full calculation: 3,456 + 2,187. Set them up vertically. 1) Ones column: 6 + 7 = 13. Write 3, carry 1 over the Tens column. 2) Tens column: 5 + 8 = 13. Now add the carried 1: 13 + 1 = 14. Write 4, carry 1 over the Hundreds column. 3) Hundreds column: 4 + 1 = 5. Add the carried 1: 5 + 1 = 6. Write 6. No carry needed here! 4) Thousands column: 3 + 2 = 5. Write 5. The final sum is 5,643 books. Notice how vital it is to cross out or tick your carried digits once you add them, so you never accidentally add a carry twice or forget it entirely!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Circle Method for Carries",
+      "body": "Have students draw a small circle around every carried digit at the top of a column. When they add that column, they must touch the circled number with their pencil and then cross it out. This cuts calculation errors by 80%!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Calculate: 5,678 + 1,453. What is the correct sum?",
+      "options": [
+        "7,121",
+        "7,131",
+        "6,031"
+      ],
+      "correct_index": 1,
+      "explanation": "Ones: 8+3=11 (write 1, carry 1). Tens: 7+5=12 + 1 = 13 (write 3, carry 1). Hundreds: 6+4=10 + 1 = 11 (write 1, carry 1). Thousands: 5+1=6 + 1 = 7. Total: 7,131.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 5: Properties of Addition - The Commutative Property",
+      "body": "Mathematics is full of beautiful, predictable laws. One of the most fundamental is the [DICT_MATH_COMMUTATIVE|Commutative Property] of addition. This property states that changing the order of the addends does not change the final sum. For example, if Maya counts 400 history books first and 200 science books second, her total is 600. If she counts 200 science books first and 400 history books second, her total is still 600. Mathematically: A + B = B + A. Imagine two friends walking toward each other on a path; no matter who starts first, the total distance between them when they meet remains identical. This property is an incredible mental shortcut when checking your work or rearranging numbers to make mental math easier.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "State the Commutative Property of Addition in formula form.",
+      "back": "A + B = B + A (Changing the order of addends does not change the sum).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "According to the Commutative Property, 1,250 + 3,420 is equal to which of the following?",
+      "options": [
+        "3,420 - 1,250",
+        "3,420 + 1,250",
+        "1,250 × 3,420"
+      ],
+      "correct_index": 1,
+      "explanation": "The commutative property allows us to swap the two numbers around: 1,250 + 3,420 = 3,420 + 1,250.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 6: The Associative Property and the Identity Property",
+      "body": "Beyond commutativity, addition has two other superhero properties. First, the Associative Property deals with grouping. When you are adding three or more numbers (like A + B + C), it does not matter how you group them with parentheses. (A + B) + C is always equal to A + (B + C). This allows us to cluster numbers that make friendly sums (like numbers ending in 0 or 5). Second, we have the Identity Property of Addition, often called the Zero Property. Any number plus zero equals that exact same number: A + 0 = A. Zero is the identity element because it preserves the identity of the number. If Maya has 5,000 books and receives 0 new books, she still has 5,000 books. Understanding these laws transforms arithmetic from a rigid set of rules into a flexible toolbox.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "Friendly Numbers Game",
+      "body": "Give students problems like 47 + 25 + 13. Show them how using the associative property to group 47 + 13 first (making 60, a 'friendly number') makes adding 25 much easier (60 + 25 = 85).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "front": "What is the sum of any number and zero? What is this rule called?",
+      "back": "The number itself (e.g., 45 + 0 = 45). This is called the Identity Property of Addition.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 7: Word Problems and Real-World Application",
+      "body": "Math is never just numbers on a page; it is the language we use to describe our universe. Word problems translate real-life scenarios into mathematical equations. To conquer any addition word problem, follow the 4-step detective method: 1) Read carefully and identify what you are asked to find. 2) Circle the given numbers and key phrases that signal addition (words like 'total', 'altogether', 'combined', 'sum', 'plus'). 3) Set up your vertical addition equation with proper place value alignment. 4) Solve with care and check if your answer makes logical sense. For instance, if Maya's library has 2,000 books and gets 1,500 more, an answer of 50 makes no sense because the total must be larger than the starting numbers!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "Which of the following phrases usually indicates that you need to use addition?",
+      "options": [
+        "How many are left over?",
+        "What is the total combined amount?",
+        "How much greater is A than B?"
+      ],
+      "correct_index": 1,
+      "explanation": "Phrases like 'total combined amount' signal that parts are being put together, which is the definition of addition.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Concept 8: Multi-Step Addition Word Problems",
+      "body": "Real life is rarely a single calculation. Often, we encounter multi-step problems. Let us look at a grand library scenario. On Monday, Maya cataloged 1,234 books. On Tuesday, she cataloged 456 more books than on Monday. On Wednesday, she cataloged 890 books. How many total books did she catalog across all three days? Step 1: Find Tuesday's amount by adding Monday's amount to the extra amount: 1,234 + 456 = 1,690 books on Tuesday. Step 2: Now add all three days together: Monday (1,234) + Tuesday (1,690) + Wednesday (890). Let us stack them: 1,234 + 1,690 = 2,924. Then 2,924 + 890 = 3,814 books total! Breaking complex problems into bite-sized milestones ensures you never get overwhelmed.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Underline and Highlight Strategy",
+      "body": "Teach students to underline numbers in blue and circle operational keywords in red. In multi-step problems, have them write a mini-goal for Step 1 before calculating anything.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "If a baker bakes 2,100 cookies in the morning, and 500 more cookies in the afternoon than in the morning, how many cookies did he bake in total for both sessions?",
+      "options": [
+        "2,600",
+        "4,700",
+        "5,200"
+      ],
+      "correct_index": 1,
+      "explanation": "Morning = 2,100. Afternoon = 2,100 + 500 = 2,600. Total for both sessions = Morning + Afternoon = 2,100 + 2,600 = 4,700 cookies.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "flashcard",
+      "front": "What is the very first thing you should do when tackling a multi-step word problem?",
+      "back": "Read the entire problem carefully to break it down into sequential goals and identify what the final question is asking.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Concept 9: Mental Math Strategies for Addition",
+      "body": "While pen and paper are wonderful, developing mental math agility is like having a superpower. One fantastic strategy is 'Compensation'. If you need to add 4,523 + 199, adding 199 vertically with carrying can take time. Instead, notice that 199 is very close to 200! Add 200 to 4,523 to get 4,723, and then simply subtract 1 because you added one extra. Your result is 4,722. Another strategy is 'Left-to-Right Addition', where you add the thousands first, then hundreds, tens, and ones. For instance, 3,400 + 2,300: think 3,000 + 2,000 = 5,000, and 400 + 300 = 700, giving 5,700 instantly. Practicing these mental tricks builds deep numerical fluency.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "Using the compensation strategy, what is the easiest way to mentally calculate 3,450 + 298?",
+      "options": [
+        "Add 300 to 3,450 to get 3,750, then subtract 2 to get 3,748",
+        "Add 298 to 3,000 and ignore the rest",
+        "Carry over 9 from the tens column"
+      ],
+      "correct_index": 0,
+      "explanation": "Since 298 is 2 less than 300, you add 300 to make it easy (3,750) and then subtract 2 to adjust for the over-addition, yielding 3,748.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "teacher_tip",
+      "title": "The Math Detective Audit",
+      "body": "Have students swap their completed addition problems with a partner. Their job is to act as a 'Math Auditor'—checking place value alignment, verifying every carried digit circle, and confirming the final sum.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "theory",
+      "title": "Chapter Summary: Master Builder of Numbers",
+      "body": "Look how far you have traveled! You started with Maya's library mystery and unlocked the true mechanics of [DICT_MATH_ADDITION|Addition]. You have mastered place-value alignment, executed addition without regrouping, conquered the art of [DICT_MATH_CARRYOVER|Regrouping] when columns exceed 9, and explored the wonderful laws of mathematics like the [DICT_MATH_COMMUTATIVE|Commutative Property] and Identity Property. You have even tackled complex multi-step word problems and sharpened your mental math agility. Addition is not just a school subject; it is the fundamental engine of growth, combining individual parts to build a magnificent whole. Keep practicing, stay curious, and continue building your mathematical universe!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

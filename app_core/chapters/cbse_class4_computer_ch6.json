@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "id": "cbse_class4_computer_ch6",
+    "title": "Chapter 6: Chapter 6 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand core computer concepts and terminology",
+      "Identify the relationship between [DICT_GRADE_TERM_HW|hardware] and [DICT_GRADE_TERM_SW|software]",
+      "Recognize safe digital habits and basic logic flow"
+    ],
+    "core_concepts": [
+      "DICT_GRADE_TERM_HW",
+      "DICT_GRADE_TERM_SW",
+      "DICT_GRADE_TERM_ALGO"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the fundamental pillars of computer operations, hardware, software, and logical problem solving.",
+      "common_misconceptions": [
+        "Thinking software can be touched physically like a screen or mouse.",
+        "Believing computers can think entirely on their own without human instructions."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Invisible Mind",
+      "body": "Imagine walking into a magical workshop where musical instruments play themselves, paintings draw themselves on blank canvases, and clocks tell stories. But when you look closely, there is no person hiding inside! Instead, you see a complex arrangement of gears, wires, and glowing panels. This is very much like a computer. To the user, it performs wonderful tricks, games, and homework tasks instantly. But how does it know what to do? Why does a screen light up when you press a tiny plastic key? Today, we unlock the secret workshop inside every computer and discover the hidden teamwork between physical parts and magical instructions.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our workshop story, what makes the computer perform tasks if there is no person hiding inside?",
+      "options": [
+        "Magic spells cast by the factory workers",
+        "A hidden teamwork between physical parts and instructions",
+        "The computer just guesses what you want randomly"
+      ],
+      "correct_index": 1,
+      "explanation": "Correct! A computer relies on a precise combination of physical components and instructions to work its 'magic'.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Body of the Machine - Hardware",
+      "body": "Every computer system is built upon a solid foundation known as [DICT_GRADE_TERM_HW|hardware]. Hardware refers to all the physical parts of a computer that you can actually see and touch. Think of hardware like the skeleton, muscles, and hands of a human being. Without a body, a human cannot interact with the world. Similarly, without hardware, digital information has nowhere to live. Hardware is divided into several categories: input devices (like keyboards and mice that let you talk to the computer), output devices (like monitors and speakers that let the computer talk back to you), and the central processing unit, or CPU, which acts as the ultimate brain of the machine, performing millions of calculations every single second.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "question": "What is computer hardware?",
+      "options": [
+        "The physical parts of a computer you can see and touch",
+        "The games and apps downloaded from the internet",
+        "The electric current running through the wall socket"
+      ],
+      "correct_index": 0,
+      "explanation": "Hardware represents the physical, tangible components of any computer system.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Hardware Hunt",
+      "body": "Look around your study desk right now. Touch your keyboard, tap your mouse, and look at your screen. Count how many distinct pieces of hardware you can identify within 30 seconds!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Soul of the Machine - Software",
+      "body": "While hardware gives the computer its body, [DICT_GRADE_TERM_SW|software] gives it a mind and personality. Software is a set of instructions, data, or programs used to operate computers and execute specific tasks. You cannot physically touch software because it consists of lines of code written by programmers. Imagine buying a brand-new piano: the keys, strings, and wooden frame are the hardware. But the sheet music and the skill to play a beautiful melody represent the software. Without software, a computer is just an expensive paperweight that cannot do anything useful.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Why is software compared to sheet music in the piano analogy?",
+      "options": [
+        "Because software is made of paper and ink",
+        "Because software provides the instructions/melody that make the hardware useful",
+        "Because you can play software on a musical instrument"
+      ],
+      "correct_index": 1,
+      "explanation": "Just as sheet music tells the piano player what notes to hit, software tells the computer hardware what operations to perform.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "System Software vs. Application Software",
+      "body": "Software is generally split into two main families. First, we have System Software, which manages the computer's internal hardware and provides a platform for other programs to run on. The most famous example is your Operating System (like Windows, macOS, or Linux). Second, we have Application Software, which is designed to help users perform specific productive or entertaining tasks. Examples include drawing programs, word processors, web browsers, and video games. System software keeps the engine running smoothly, while application software lets you drive the car to exciting destinations!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "question": "Which of these is an example of Application Software?",
+      "options": [
+        "Windows Operating System",
+        "A drawing and painting program",
+        "Computer motherboard"
+      ],
+      "correct_index": 1,
+      "explanation": "A drawing program is designed for a specific user task, making it application software.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Concept 3: The Recipe for Logic - Algorithms",
+      "body": "Have you ever followed a recipe to bake a cake? You need flour, sugar, eggs, and a step-by-step procedure: mix ingredients, pour into a pan, bake at 350 degrees for 30 minutes. In computer science, this step-by-step set of instructions is called an [DICT_GRADE_TERM_ALGO|algorithm]. An algorithm is a precise sequence of logical steps designed to solve a specific problem or complete a task. Computers cannot guess or improvise; they strictly follow algorithms given to them by humans. If an algorithm has a flaw or a missing step, the computer will make a mistake, often called a bug.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What happens if an algorithm has a mistake or missing step?",
+      "options": [
+        "The computer fixes it automatically using artificial intelligence",
+        "The computer makes a mistake or produces an error (a bug)",
+        "The computer turns off immediately to protect itself"
+      ],
+      "correct_index": 1,
+      "explanation": "Computers follow instructions blindly. If the algorithm is flawed, the output will also be flawed.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "teacher_tip",
+      "title": "Daily Life Algorithm",
+      "body": "Write down an algorithm for brushing your teeth in the morning. Notice how specific each step must be: 1. Pick up toothbrush, 2. Remove cap from toothpaste tube, 3. Squeeze paste onto bristles...",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Flowcharts: Drawing Your Logic",
+      "body": "To make algorithms easier to understand and share with others, computer scientists use diagrams called flowcharts. Flowcharts use standardized geometric shapes to represent different actions. An oval shape marks the START and END of a process. A rectangle represents a process or action step (like 'Add 5 to score'). A diamond shape represents a decision point (like 'Is score greater than 10?'), which splits the path into 'Yes' or 'No' directions. By mapping out problems visually, programmers can spot errors before writing any actual computer code.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "question": "In a flowchart, what shape is typically used for a decision point?",
+      "options": [
+        "Rectangle",
+        "Diamond",
+        "Circle"
+      ],
+      "correct_index": 1,
+      "explanation": "Diamonds represent questions or decisions that branch into different paths.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 4: Information Processing Cycle",
+      "body": "How does a computer actually turn raw facts into useful knowledge? It follows a continuous four-step cycle known as the Information Processing Cycle. Step 1 is Input: gathering raw data from the user through keyboard, mouse, or microphone. Step 2 is Processing: the CPU manipulates, calculates, and organizes that data according to software instructions. Step 3 is Storage: saving the results either temporarily in fast memory (RAM) or permanently on a hard drive. Step 4 is Output: displaying the final result on the monitor or printing it on paper. This cycle happens millions of times every day without us even noticing!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "Which step in the Information Processing Cycle involves the CPU calculating and organizing data?",
+      "options": [
+        "Input",
+        "Processing",
+        "Output"
+      ],
+      "correct_index": 1,
+      "explanation": "Processing is where the CPU analyzes and transforms raw input into meaningful data.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "Human Processing Cycle Analogy",
+      "body": "Think of your brain as a computer processor. Your eyes see a math problem on the board (Input), your brain calculates the answer (Processing), you store the formula in your memory (Storage), and you speak the answer out loud (Output).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Data vs. Information: What's the Difference?",
+      "body": "In everyday speech, people use 'data' and 'information' as if they mean the exact same thing, but in computer science, they are quite different. Data refers to raw, unorganized facts, numbers, or symbols that have no context yet (for example: the numbers '12', '5', and '2023'). Information is data that has been processed, structured, and organized into a meaningful context that humans can understand (for example: 'Your birthday is December 5, 2023'). Computers take raw data as input and turn it into valuable information as output.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "question": "What is raw, unorganized facts without context called?",
+      "options": [
+        "Information",
+        "Data",
+        "Hardware"
+      ],
+      "correct_index": 1,
+      "explanation": "Data represents raw, unprocessed facts before they are organized into meaningful information.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Memory Marvels: RAM vs. Storage",
+      "body": "Computers have two main types of memory areas, and they serve very different purposes. Random Access Memory, commonly called RAM, is the computer's short-term workspace. When you open a game or document, it loads into RAM so the CPU can access it instantly. However, when you turn off the computer, everything in RAM vanishes completely! On the other hand, long-term storage devices like Hard Disk Drives (HDDs) or Solid State Drives (SSDs) keep your files safe and permanent even when the power is completely shut off. Think of RAM as your desk workspace where you keep current papers, and storage as your filing cabinet in the corner.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "What happens to data stored in RAM when the computer is turned off?",
+      "options": [
+        "It is saved permanently forever",
+        "It vanishes completely because RAM is temporary workspace",
+        "It is automatically sent to the printer"
+      ],
+      "correct_index": 1,
+      "explanation": "RAM is volatile memory, meaning it loses all its data when power is disconnected.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Networking Basics: Connecting the Digital World",
+      "body": "A single computer is powerful, but when you connect multiple computers together, magic multiplies. A computer network is a collection of computers and devices connected together to share information, hardware resources (like a shared printer), and communication services. When computers in a single room or school connect, it is called a Local Area Network (LAN). When millions of networks around the entire globe link together, they form the Internet—the biggest network in human history. Through cables, Wi-Fi waves, and satellite signals, information can travel across oceans in less than a second!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "question": "What do we call a network of computers confined to a single room, school, or building?",
+      "options": [
+        "LAN (Local Area Network)",
+        "The Global Internet",
+        "RAM Storage"
+      ],
+      "correct_index": 0,
+      "explanation": "LAN stands for Local Area Network, connecting devices in a localized area.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Digital Citizenship and Safety",
+      "body": "As we explore these amazing computer concepts, we must also remember how to be responsible digital citizens. Using computers safely means protecting your personal information, never sharing your passwords with strangers, treating others with kindness in online chats, and taking regular breaks to rest your eyes and stretch your body. Technology is a powerful tool designed to help us learn, create, and connect, but true computer mastery includes knowing how to balance screen time with the physical world around us.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Which of the following is a safe practice when using computers and the internet?",
+      "options": [
+        "Sharing your secret passwords with online gaming friends",
+        "Keeping your personal information private and treating others with respect",
+        "Staring at the screen continuously for 10 hours without a break"
+      ],
+      "correct_index": 1,
+      "explanation": "Protecting personal info and practicing online kindness are core pillars of good digital citizenship.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "teacher_tip",
+      "title": "Final Reflection",
+      "body": "Congratulations on completing Chapter 6 Concepts! Take a moment to explain to a friend or family member the difference between hardware and software using the piano or workshop analogy.",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

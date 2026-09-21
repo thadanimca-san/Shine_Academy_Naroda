@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "id": "class12_science_maths_ch10",
+    "title": "Vector Algebra",
+    "subject": "Mathematics",
+    "grade": "12",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Introduction to Vectors and Scalars",
+      "Addition and Multiplication of Vectors by a Scalar",
+      "Product of Two Vectors (Dot and Cross Products)",
+      "Scalar Triple Product and Vector Triple Product",
+      "Line and Plane Equations in Vector Form"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_0_1",
+      "type": "hook",
+      "title": "The Pilot's Dilemma in a Blind Windstorm",
+      "body": "Imagine you are flying a high-tech cargo drone over the Sahara Desert. Your flight computer reports your airspeed is precisely 300 kilometers per hour due north. You set the autopilot, sit back, and expect to land at your northern destination in exactly one hour, 300 kilometers away. But one hour later, your drone is nowhere near its target; instead, it has drifted 100 kilometers to the east and is running dangerously low on fuel! What went wrong? Your computer told you the speed, but it completely ignored an invisible, powerful force sweeping across the desert: the wind. This dramatic gap in navigation reveals why pure numbers alone cannot describe our physical universe. We need a mathematical language that captures both how much and *which way*."
+    },
+    {
+      "id": "KOBJ_0_2",
+      "type": "socratic",
+      "question": "If an airplane flies at 500 km/h and encounters a crosswind blowing from the west at 100 km/h, which of the following quantities is sufficient to describe the airplane's movement relative to the ground?",
+      "options": [
+        "Only the speed of the airplane (500 km/h)",
+        "Only the speed of the wind (100 km/h)",
+        "Both the magnitudes and the specific directions of both the airplane's velocity and the wind's velocity",
+        "The total distance between the origin and the destination"
+      ],
+      "correct_index": 2,
+      "explanation": "To find the resultant motion or position of an object affected by multiple directional influences, knowing just the magnitudes (speeds) is useless. We must combine both magnitude and direction, which is the foundational domain of vectors.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_0_3",
+      "type": "theory",
+      "title": "Introduction to Vectors and Scalars: Deep Dive",
+      "body": "In the study of physics and mathematics, quantities are broadly categorized into two fundamental classes: scalars and vectors. A scalar quantity is fully described by a single real number along with an appropriate unit of measurement; it possesses magnitude only and has no associated direction in space. Examples of scalars include temperature (e.g., 25°C), mass (e.g., 70 kg), time (e.g., 3600 seconds), and electric charge. Conversely, a vector quantity requires both a magnitude (how much) and a direction (which way) to be completely specified. Geometric visualization represents a vector as a directed line segment, or an arrow, where the length of the segment corresponds to the magnitude and the arrowhead points in the specified direction. The starting point of the arrow is called the initial point (or tail), and the ending point is the terminal point (or head). Algebraically, a vector can be denoted in boldface (like $\\mathbf{a}$) or with an arrow over its symbol (like $\\vec{AB}$), signifying movement or displacement from point $A$ to point $B$. Understanding the distinction between these two types of quantities is the absolute bedrock of vector algebra, enabling us to model multidimensional phenomena ranging from simple mechanical forces and velocities to complex electromagnetic fields in higher-level engineering and physics.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_0_4",
+      "type": "knowledge_check",
+      "question": "Which of the following physical quantities is strictly classified as a scalar?",
+      "options": [
+        "Acceleration due to gravity at sea level",
+        "The kinetic energy of a moving vehicle",
+        "The weight of an object resting on a table",
+        "The magnetic field strength at a specific point in space"
+      ],
+      "correct_index": 1,
+      "explanation": "Kinetic energy ($KE = \\frac{1}{2}mv^2$) depends on mass and the square of speed, both of which are scalar quantities, making energy itself a scalar. Acceleration, weight (force due to gravity), and magnetic field are all vector quantities because they possess inherent directional properties.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_VEC_01",
+      "type": "hook",
+      "title": "The Pilot's Dilemma in a Windstorm",
+      "body": "Imagine you are piloting a small aircraft trying to fly due east at 100 knots. Suddenly, a fierce wind erupts from the north, pushing your plane southward at 30 knots. If you just point your nose east, you won't reach your destination; you'll drift off course. To figure out where you actually end up, or how to adjust your heading, you cannot simply add numbers like ordinary quantities. You have to combine quantities that possess both magnitude and direction. This exact challenge is solved by the geometric addition of vectors and scaling them up or down when engine power changes!"
+    },
+    {
+      "id": "KOBJ_VEC_02",
+      "type": "socratic",
+      "question": "If vector $\\vec{a}$ represents a displacement of 3 steps right and 4 steps up, what happens to the path if we multiply $\\vec{a}$ by the scalar $2$?",
+      "options": [
+        "The direction reverses and the length becomes 5 steps",
+        "The direction stays the same, but both the horizontal and vertical components are doubled",
+        "Only the vertical component is doubled while the horizontal stays the same",
+        "The vector turns into a scalar number equal to 10"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplying a vector by a positive scalar stretches or shrinks its magnitude without altering its line of action (direction). Thus, 2$\\vec{a}$ becomes 6 steps right and 8 steps up."
+    },
+    {
+      "id": "KOBJ_VEC_03",
+      "type": "theory",
+      "title": "Addition and Multiplication of Vectors by a Scalar: Deep Dive",
+      "body": "Vector addition and scalar multiplication form the fundamental algebraic backbone of vector spaces. Geometrically, vector addition is executed using the Triangle Law or the Parallelogram Law. If we have two vectors $\\vec{a}$ and $\\vec{b}$, placing the initial point of $\\vec{b}$ at the terminal point of $\\vec{a}$ creates a resultant vector $\\vec{a} + \\vec{b}$ that spans from the start of $\\vec{a}$ to the end of $\\vec{b}$. In components, if $\\vec{a} = \\langle a_1, a_2, a_3 \\rangle$ and $\\vec{b} = \\langle b_1, b_2, b_3 \\rangle$, their sum is simply calculated by adding corresponding components: $\\vec{a} + \\vec{b} = \\langle a_1+b_1, a_2+b_2, a_3+b_3 \\rangle$. This operation is both commutative ($\\vec{a} + \\vec{b} = \\vec{b} + \\vec{a}$) and associative, mirroring real-number arithmetic while retaining spatial meaning. Multiplication of a vector by a scalar $k$ scales its length by $|k|$ and either preserves its direction (if $k > 0$) or reverses it (if $k < 0$). Component-wise, $k\\vec{a} = \\langle ka_1, ka_2, ka_3 \\rangle$. These two algebraic operations allow physicists and mathematicians to resolve forces, model velocities, and construct linear combinations that span entire multi-dimensional coordinate systems.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_VEC_04",
+      "type": "knowledge_check",
+      "question": "Given vectors $\\vec{p} = \\langle 1, -2, 3 \\rangle$ and $\\q = \\langle -2, 5, 1 \\rangle$, what is the resulting vector for $3\\vec{p} - 2\\vec{q}$?",
+      "options": [
+        "\\langle 7, -16, 7 \\rangle",
+        "\\langle -1, 4, 7 \\rangle",
+        "\\langle 5, -16, 7 \\rangle",
+        "\\langle 1, 4, 11 \\rangle"
+      ],
+      "correct_index": 0,
+      "explanation": "First, compute $3\\vec{p} = 3\\langle 1, -2, 3 \\rangle = \\langle 3, -6, 9 \\rangle$. Next, compute $2\\vec{q} = 2\\langle -2, 5, 1 \\rangle = \\langle -4, 10, 2 \\rangle$. Subtracting them gives $\\langle 3 - (-4), -6 - 10, 9 - 2 \\rangle = \\langle 7, -16, 7 \\rangle$.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_VEC_1",
+      "type": "hook",
+      "title": "The Physics of Force and Work",
+      "body": "Imagine you are pulling a heavy crate across a frictionless warehouse floor. You pull with a rope at a certain upward angle relative to the ground. Physics tells us that only the portion of your pulling force acting *along* the direction of the floor's surface actually contributes to moving the crate. If you pull straight up, the crate doesn't move forward at all, no matter how hard you strain! How do we mathematically capture this interaction between two directions? In vector algebra, this brings us to the profound concept of multiplying vectors—specifically, asking how much one vector 'cooperates' with another."
+    },
+    {
+      "id": "KOBJ_VEC_2",
+      "type": "socratic",
+      "question": "If you multiply two vectors together geometrically, what kind of mathematical output do you intuitively expect the result to be?",
+      "options": [
+        "Always another vector pointing in a new direction in 3D space.",
+        "Always a simple scalar number representing a magnitude.",
+        "It could result in either a scalar number or a vector, depending on *how* you multiply them.",
+        "It always results in zero unless the vectors are parallel."
+      ],
+      "correct_index": 2,
+      "explanation": "Spot on! Vector multiplication isn't a one-size-fits-all operation. Depending on whether we project one vector onto another (the Dot Product, yielding a scalar) or calculate an orthogonal area (the Cross Product, yielding a vector), the output changes entirely."
+    },
+    {
+      "id": "KOBJ_VEC_3",
+      "type": "theory",
+      "title": "Product of Two Vectors (Dot and Cross Products): Deep Dive",
+      "body": "The product of two vectors is not a singular operation, because vectors possess both magnitude and direction, opening up multiple avenues for combination. The first major avenue is the **Scalar Product** (or **Dot Product**), denoted as $\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta$. The dot product measures the extent to which two vectors point in the same direction. Geometrically, it multiplies the magnitude of one vector by the scalar projection of the second vector onto the first. Because of this projection, the dot product collapses directional data into a single scalar value. Crucially, if two vectors are perpendicular (orthogonal), $\\cos(90^\\circ) = 0$, meaning their dot product is zero—a powerful test for perpendicularity in multidimensional space. Conversely, the second major avenue is the **Vector Product** (or **Cross Product**), denoted as $\\vec{a} \\times \\vec{b}$. Unlike the dot product, the cross product produces a *new vector* whose magnitude is given by $|\\vec{a}||\\vec{b}|\\sin\\theta$. Geometrically, this magnitude represents the area of the parallelogram spanned by the two vectors. Furthermore, the direction of this resultant vector is strictly perpendicular to both $\\vec{a}$ and $\\vec{b}$, determined uniquely by the Right-Hand Rule. This makes the cross product indispensable in physics and engineering for calculating torque, angular momentum, and magnetic forces, where rotational dynamics and perpendicular axes dictate system behavior.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_VEC_4",
+      "type": "knowledge_check",
+      "question": "Given two non-zero vectors $\\vec{a}$ and $\\vec{b}$, if both their dot product ($\\vec{a} \\cdot \\vec{b}$) and their cross product ($|\\vec{a} \\times \\vec{b}$__) are equal to zero simultaneously, what must be true?",
+      "options": [
+        "The vectors are perpendicular to each other.",
+        "At least one of the vectors must be a zero vector.",
+        "The vectors must point in completely opposite directions (antiparallel).",
+        "The magnitude of both vectors must equal 1."
+      ],
+      "correct_index": 1,
+      "explanation": "For the dot product to be zero, $\\cos\\theta = 0$ (meaning $\\theta = 90^\\circ$), but for the cross product magnitude to be zero, $\\sin\\theta = 0$ (meaning $\\theta = 0^\\circ$ or $180^\\circ$). Since an angle cannot simultaneously be $90^\\circ$ and $0^\\circ$, this mathematical impossibility can only be resolved if the magnitude of at least one vector is zero, making the angle undefined or trivial."
+    }
+  ]
+}

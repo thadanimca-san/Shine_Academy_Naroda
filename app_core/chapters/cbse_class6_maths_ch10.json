@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_ch10",
+    "title": "Chapter 10: Mensuration",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the concept of perimeter and calculate it for any regular or irregular closed figure.",
+      "Comprehend the meaning of area and compute the area of rectangles and squares using standard formulas.",
+      "Apply mensuration concepts to solve real-world geometry and spatial reasoning problems."
+    ],
+    "core_concepts": [
+      "DICT_MATH_PERIMETER",
+      "DICT_MATH_AREA",
+      "DICT_MATH_MENSURATION"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the measurement of boundaries and internal regions of 2D shapes.",
+      "common_misconceptions": [
+        "Confusing perimeter with area by multiplying side lengths when trying to find the distance around a shape.",
+        "Forgetting that units for area must be squared (e.g., cm² or m²)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Farmer's Fencing Dilemma",
+      "body": "Imagine you are a farmer who just inherited a wonderful plot of land. You want to protect your precious crops from wandering wild rabbits by putting up a strong fence. But before you can buy the wire, you need to know exactly how much fencing material to purchase. Later, you also need to know how much fertilizer to buy to cover the ground inside. How do you measure the outside edge versus the inside surface? Welcome to the fascinating world of [DICT_MATH_MENSURATION|Mensuration], the branch of mathematics that deals with the study of geometric shapes, their areas, and their boundary lengths!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If you want to put lace around the edge of a tablecloth, what property of the tablecloth are you dealing with?",
+      "options": [
+        "Area",
+        "Perimeter",
+        "Volume"
+      ],
+      "correct_index": 1,
+      "explanation": "Putting lace around the edge means measuring the total boundary length, which is the perimeter.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Unraveling the Perimeter",
+      "body": "The word 'perimeter' comes from two Greek words: 'peri' meaning around, and 'metron' meaning measure. In simple terms, [DICT_MATH_PERIMETER|Perimeter] is the total distance covered along the boundary of a closed geometric figure when you take a complete walk around it. Imagine walking along the edge of a football field, a rectangular garden, or a triangular park. Every single step you take adds to the total boundary length. To find the perimeter of any polygon (a closed shape made of straight line segments), you simply add up the lengths of all its outer sides. There are no magical shortcuts needed for weird shapes—just addition of all outer boundaries!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Ant Walk Analogy",
+      "body": "Picture a tiny ant starting at one corner of a triangular garden book page. If the ant walks all the way around the three sides and returns to its starting point, the total distance walked by the ant is the exact perimeter of the shape. Try walking your finger around your desk top and adding up the lengths of all four sides!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does 'perimeter' mean?",
+      "back": "The total distance around the boundary of a closed figure.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Perimeter of Regular Polygons",
+      "body": "While you can always find the perimeter of any shape by adding every single side together, math gives us wonderful shortcuts when shapes are regular. A regular polygon is a closed figure where all sides are equal in length and all angles are equal. For example, an equilateral triangle has 3 equal sides. If one side is 's', its perimeter is s + s + s, which simplifies to 3 × s. Similarly, a regular pentagon has 5 equal sides, so its perimeter is 5 × s. This algebraic elegance saves us time when dealing with symmetrical, beautiful geometric figures.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "What is the perimeter of a regular hexagon (6 equal sides) where each side measures 4 cm?",
+      "options": [
+        "18 cm",
+        "24 cm",
+        "30 cm"
+      ],
+      "correct_index": 1,
+      "explanation": "A regular hexagon has 6 equal sides. 6 × 4 cm = 24 cm.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "The Special Case: Perimeter of Rectangles and Squares",
+      "body": "Rectangles and squares are the most common shapes in our man-made world—from smartphone screens to doors and books. A rectangle has opposite sides equal: two lengths (l) and two widths (w). Therefore, its perimeter is l + l + w + w, which can be neatly written as 2 × (l + w). A square is an even more special rectangle where all four sides are equal to side 's'. Thus, the perimeter of a square is s + s + s + s, or simply 4 × s. Memorizing these two formulas will make solving architectural and layout problems lightning fast!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "What is the formula for the perimeter of a rectangle?",
+      "back": "2 × (length + width) or 2(l + w)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "Classroom Floor Tile Hunt",
+      "body": "Ask students to measure a square classroom floor tile using a ruler. If one side is 30 cm, challenge them to calculate the perimeter using the formula 4 × s. They will immediately see how abstract formulas map onto real-world objects.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Stepping Inside: The Concept of Area",
+      "body": "Now that we have mastered walking around the outside edges, let's step inside the boundary. What about the surface space enclosed by the figure? This is where [DICT_MATH_AREA|Area] comes into play. Area is the measure of the amount of surface enclosed within a closed boundary. Imagine painting a wall, carpeting a room, or tiling a kitchen floor—you are not just measuring the outer frame; you are covering every square inch of the flat surface. Area is measured in square units (like square centimeters, cm², or square meters, m²) because we measure how many unit squares fit inside the region.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "Which unit is appropriate for expressing the area of a textbook cover?",
+      "options": [
+        "cm",
+        "cm²",
+        "cm³"
+      ],
+      "correct_index": 1,
+      "explanation": "Area is always measured in square units, such as square centimeters (cm²).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Area of a Rectangle",
+      "body": "How do we calculate the area of a rectangle without counting tiny unit squares one by one? Let's visualize a grid. If a rectangle is 5 units long and 3 units wide, we can think of it as a grid containing 3 rows of 5 unit squares each. To find the total number of squares, we simply multiply the number of rows by the number of units in each row: 5 × 3 = 15 square units. Hence, the universal formula for the area of a rectangle is Length multiplied by Width (Area = l × w). This powerful relationship bridges geometry with simple multiplication.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "What is the formula for the area of a rectangle?",
+      "back": "Length × Width (l × w)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Area of a Square",
+      "body": "Since a square is just a special rectangle where the length and the width are exactly the same value (let's call it side 's'), finding its area follows the exact same logic. Instead of length times width, we multiply side by side. Therefore, the area of a square is Side × Side (Area = s²). If you have a chessboard where each side is 8 cm long, the total surface area is 8 cm × 8 cm = 64 cm². Notice how units are multiplied too: cm × cm becomes cm²!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "Find the area of a square garden plot whose side is 9 meters.",
+      "options": [
+        "36 m",
+        "81 m²",
+        "18 m²"
+      ],
+      "correct_index": 1,
+      "explanation": "Area of a square = side × side = 9 m × 9 m = 81 m².",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "Graph Paper Magic",
+      "body": "Give students a sheet of 1 cm graph paper. Have them draw a rectangle measuring 4 cm by 3 cm. Let them count the individual 1 cm squares inside. They will visually verify that 4 × 3 = 12 squares, proving the area formula firsthand.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Perimeter vs. Area: Spotting the Difference",
+      "body": "Students often mix up perimeter and area because both involve calculation on 2D shapes. Let's make the distinction crystal clear. Perimeter is 1-dimensional in nature—it measures length around the outside (units like cm or m). Area is 2-dimensional—it measures the flat surface coverage on the inside (units like cm² or m²). Imagine building a swimming pool: the tiles at the bottom of the pool represent the area, while the safety railing built around the edge of the pool represents the perimeter. They are completely different measurements telling us different things about the same object.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "If you buy carpet for your bedroom floor, which measurement do you need?",
+      "options": [
+        "Perimeter",
+        "Area",
+        "Height"
+      ],
+      "correct_index": 1,
+      "explanation": "Carpet covers the entire floor surface, which requires calculating the area.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Solving Complex Composite Shapes",
+      "body": "Real-world shapes are rarely simple standalone rectangles. Architects design L-shaped rooms, T-shaped swimming pools, and irregular garden plots. How do we find the perimeter and area of such composite figures? For perimeter, we simply trace the outer boundary and sum all visible side lengths, being careful not to miss any recessed corners. For area, we use the strategy of 'divide and conquer': split the complex shape into non-overlapping simpler rectangles or squares, calculate the area of each individual piece, and then add them all together!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "What is the strategy to find the area of a composite (irregular) shape?",
+      "back": "Split the shape into smaller, simple rectangles/squares, find their individual areas, and add them together.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "teacher_tip",
+      "title": "The Room Blueprint Challenge",
+      "body": "Draw an L-shaped room on the board with dimensions. Show students how drawing a single dotted line splits the L-shape into two easy rectangles. Emphasize that complex problems become simple when broken into bite-sized pieces.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Units and Conversions in Mensuration",
+      "body": "In mensuration, working with mixed units can lead to disaster if you aren't careful. Always ensure that all dimensions are in the same unit before applying formulas! For instance, if one side of a rectangle is given in meters and the other in centimeters, convert them both to centimeters or both to meters first. Remember also that when converting linear units, 1 m = 100 cm. However, when converting square units for area, 1 m² = 1 m × 1 m = 100 cm × 100 cm = 10,000 cm²! Keeping track of units is the mark of a true mathematical expert.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "How many square centimeters are equal to 1 square meter (1 m²)?",
+      "options": [
+        "100 cm²",
+        "1,000 cm²",
+        "10,000 cm²"
+      ],
+      "correct_index": 2,
+      "explanation": "Since 1 m = 100 cm, 1 m² = 100 cm × 100 cm = 10,000 cm².",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Practical Applications: Cost and Estimation",
+      "body": "Why do engineers, carpenters, and tailors care so much about mensuration? Because materials cost money! Suppose you want to tile a rectangular hall that is 10 m long and 6 m wide. First, you calculate the area: 10 × 6 = 60 m². If each square meter of flooring tile costs $15, you can easily calculate the total estimated cost by multiplying the total area by the unit price: 60 × $15 = $900. Mensuration empowers us to make smart financial decisions, plan construction projects accurately, and avoid wasting valuable resources.",
+      "bloom": "Create",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "A park is 20 m long and 10 m wide. What is the cost of fencing it at $5 per meter of perimeter?",
+      "options": [
+        "$300",
+        "$600",
+        "$150"
+      ],
+      "correct_index": 0,
+      "explanation": "Perimeter = 2 × (20 + 10) = 60 meters. Cost = 60 m × $5 = $300.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "To find the cost of fencing a field, do you calculate perimeter or area?",
+      "back": "Perimeter (because fencing goes around the outer boundary).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Summary of Key Formulas",
+      "body": "Let's review our ultimate toolkit for Chapter 10:\n1. Perimeter of any polygon = Sum of all outer sides.\n2. Perimeter of a rectangle = 2 × (length + width).\n3. Perimeter of a square = 4 × side.\n4. Area of a rectangle = length × width.\n5. Area of a square = side × side.\nKeep these formulas close to your heart, and you will be able to conquer any geometry puzzle thrown your way!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

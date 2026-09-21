@@ -1,0 +1,172 @@
+[
+  {
+    "id": "KOBJ_STAT_CH2_9_HOOK",
+    "type": "hook",
+    "title": "A Tie in the Race!",
+    "title_hi": "दौड़ में टाई!",
+    "title_gu": "દોડમાં ટાઈ!",
+    "body": "Have you ever seen a race where two athletes cross the finish line at exactly the same time? Or an exam where two students get the exact same marks? Who gets the 1st rank and who gets the 2nd?",
+    "body_hi": "क्या आपने कभी ऐसी दौड़ देखी है जहाँ दो एथलीट एक ही समय पर फिनिश लाइन पार करते हैं? या कोई परीक्षा जहाँ दो छात्रों को बिल्कुल समान अंक मिलते हैं? पहला स्थान किसे मिलता है और दूसरा किसे?",
+    "body_gu": "શું તમે ક્યારેય એવી દોડ જોઈ છે જ્યાં બે રમતવીરો એક જ સમયે ફિનિશ લાઇન પાર કરે છે? અથવા એવી પરીક્ષા જ્યાં બે વિદ્યાર્થીઓને બરાબર સમાન ગુણ મળે છે? પહેલો ક્રમ કોને મળે છે અને બીજો કોને?"
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_SOCRATIC",
+    "type": "socratic",
+    "title": "Sharing the Ranks",
+    "title_hi": "रैंक साझा करना",
+    "title_gu": "ક્રમ વહેંચવા",
+    "body": "If two students score 90 marks and deserve the 2nd and 3rd ranks, how should we assign the ranks so that it's fair to both?",
+    "body_hi": "यदि दो छात्र 90 अंक प्राप्त करते हैं और वे दूसरे और तीसरे रैंक के हकदार हैं, तो हमें रैंक कैसे आवंटित करनी चाहिए ताकि यह दोनों के लिए उचित हो?",
+    "body_gu": "જો બે વિદ્યાર્થીઓ 90 ગુણ મેળવે છે અને તેઓ બીજા અને ત્રીજા ક્રમ માટે લાયક છે, તો આપણે ક્રમ કેવી રીતે આપવો જોઈએ જેથી તે બંને માટે યોગ્ય હોય?",
+    "question": "What rank should each student get?",
+    "question_hi": "प्रत्येक छात्र को क्या रैंक मिलनी चाहिए?",
+    "question_gu": "દરેક વિદ્યાર્થીને કયો ક્રમ મળવો જોઈએ?",
+    "options": [
+      "Rank 2 to both",
+      "Rank 3 to both",
+      "Average of 2 and 3, which is 2.5 to both",
+      "Rank 1 to both"
+    ],
+    "options_hi": [
+      "दोनों को रैंक 2",
+      "दोनों को रैंक 3",
+      "2 और 3 का औसत, जो कि 2.5 है, दोनों को",
+      "दोनों को रैंक 1"
+    ],
+    "options_gu": [
+      "બંનેને ક્રમ 2",
+      "બંનેને ક્રમ 3",
+      "2 અને 3 ની સરેરાશ, જે બંને માટે 2.5 છે",
+      "બંનેને ક્રમ 1"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_DISCOVERY",
+    "type": "discovery",
+    "title": "The Average Strategy",
+    "title_hi": "औसत रणनीति",
+    "title_gu": "સરેરાશ વ્યૂહરચના",
+    "body": "When a tie happens, we take the positions they would have occupied and average them out. If three people share the 4th, 5th, and 6th places, they all get the rank of (4+5+6)/3 = 5! This is called assigning an average rank.",
+    "body_hi": "जब टाई होती है, तो हम उन स्थानों को लेते हैं जिन पर वे होते और उनका औसत निकालते हैं। यदि तीन लोग चौथे, पांचवें और छठे स्थान को साझा करते हैं, तो उन सभी को (4+5+6)/3 = 5 की रैंक मिलती है! इसे औसत रैंक आवंटित करना कहा जाता है।",
+    "body_gu": "જ્યારે ટાઈ થાય છે, ત્યારે આપણે એ સ્થાનો લઈએ છીએ જે તેઓએ રોક્યા હોત અને તેમની સરેરાશ કાઢીએ છીએ. જો ત્રણ લોકો ચોથા, પાંચમા અને છઠ્ઠા સ્થાનો વહેંચે છે, તો તેઓ બધાને (4+5+6)/3 = 5 નો ક્રમ મળે છે! આને સરેરાશ ક્રમ આપવો કહેવાય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_REVEAL",
+    "type": "theory",
+    "title": "Tie in Observations & Correction Factor",
+    "title_hi": "अवलोकनों में टाई और सुधार कारक",
+    "title_gu": "અવલોકનોમાં ટાઈ અને સુધારણા પરિબળ",
+    "body": "When values of some observations are equal, it is called a tie. In such cases, the average of the corresponding ranks is assigned to each of the repeated observations. However, because of this averaging, we must introduce a **Correction Factor (CF)** to Spearman's rank correlation formula.\n\nThe Correction Factor is calculated by adding the term `(m^3 - m) / 12` for each repeated observation, where `m` is the number of times the observation is repeated.\n\nCF = Σ [(m^3 - m) / 12]\n\nThe corrected formula for Rank Correlation Coefficient becomes:\n`r = 1 - (6[Σd^2 + CF]) / (n(n^2 - 1))`",
+    "body_hi": "जब कुछ अवलोकनों के मान समान होते हैं, तो इसे टाई कहा जाता है। ऐसे मामलों में, संबंधित रैंकों का औसत प्रत्येक दोहराए गए अवलोकन को सौंपा जाता है। हालांकि, इस औसत के कारण, हमें स्पीयरमैन के रैंक सहसंबंध सूत्र में एक **सुधार कारक (CF)** पेश करना होगा।\n\nसुधार कारक की गणना प्रत्येक दोहराए गए अवलोकन के लिए पद `(m^3 - m) / 12` जोड़कर की जाती है, जहाँ `m` उस अवलोकन की पुनरावृत्ति की संख्या है।\n\nCF = Σ [(m^3 - m) / 12]\n\nरैंक सहसंबंध गुणांक के लिए संशोधित सूत्र बन जाता है:\n`r = 1 - (6[Σd^2 + CF]) / (n(n^2 - 1))`",
+    "body_gu": "જ્યારે કેટલાક અવલોકનોના મૂલ્યો સમાન હોય છે, ત્યારે તેને ટાઈ કહેવામાં આવે છે. આવા કિસ્સાઓમાં, સંબંધિત ક્રમોની સરેરાશ દરેક પુનરાવર્તિત અવલોકનને સોંપવામાં આવે છે. જોકે, આ સરેરાશને લીધે, આપણે સ્પીયરમેનના ક્રમ સહસંબંધ સૂત્રમાં એક **સુધારણા પરિબળ (CF)** દાખલ કરવું આવશ્યક છે.\n\nસુધારણા પરિબળની ગણતરી દરેક પુનરાવર્તિત અવલોકન માટે પદ `(m^3 - m) / 12` ઉમેરીને કરવામાં આવે છે, જ્યાં `m` એ અવલોકનનું પુનરાવર્તન થવાની સંખ્યા છે.\n\nCF = Σ [(m^3 - m) / 12]\n\nક્રમ સહસંબંધ ગુણાંક માટેનું સુધારેલું સૂત્ર બને છે:\n`r = 1 - (6[Σd^2 + CF]) / (n(n^2 - 1))`"
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_KNOWLEDGE_CHECK",
+    "type": "mcq",
+    "question": "What is the formula for the term added to the Correction Factor (CF) for each repeated observation group, where 'm' is the number of times it repeats?",
+    "question_hi": "प्रत्येक दोहराए गए अवलोकन समूह के लिए सुधार कारक (CF) में जोड़े जाने वाले पद का सूत्र क्या है, जहाँ 'm' इसके दोहराए जाने की संख्या है?",
+    "question_gu": "દરેક પુનરાવર્તિત અવલોકન જૂથ માટે સુધારણા પરિબળ (CF) માં ઉમેરવામાં આવતા પદનું સૂત્ર શું છે, જ્યાં 'm' તેના પુનરાવર્તનની સંખ્યા છે?",
+    "options": [
+      "(m^2 - m) / 12",
+      "(m^3 - m) / 12",
+      "(m^3 - 1) / 12",
+      "(m^2 - 1) / 12"
+    ],
+    "options_hi": [
+      "(m^2 - m) / 12",
+      "(m^3 - m) / 12",
+      "(m^3 - 1) / 12",
+      "(m^2 - 1) / 12"
+    ],
+    "options_gu": [
+      "(m^2 - m) / 12",
+      "(m^3 - m) / 12",
+      "(m^3 - 1) / 12",
+      "(m^2 - 1) / 12"
+    ],
+    "correct_index": 1,
+    "explanation": "The correct term is (m^3 - m) / 12, which is added for every group of repeated observations.",
+    "explanation_hi": "सही पद (m^3 - m) / 12 है, जिसे दोहराए गए अवलोकनों के प्रत्येक समूह के लिए जोड़ा जाता है।",
+    "explanation_gu": "સાચું પદ (m^3 - m) / 12 છે, જે પુનરાવર્તિત અવલોકનોના દરેક જૂથ માટે ઉમેરવામાં આવે છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_REFLECTION",
+    "type": "reflection",
+    "title": "Think and Connect",
+    "title_hi": "सोचें और जोड़ें",
+    "title_gu": "વિચારો અને જોડો",
+    "body": "If an observation is repeated 2 times, what is the value of its contribution to the CF? Try calculating `(2^3 - 2) / 12`. It is `(8 - 2) / 12 = 6/12 = 0.5`. Every pair of tied values adds exactly 0.5 to the Correction Factor!",
+    "body_hi": "यदि एक अवलोकन को 2 बार दोहराया जाता है, तो CF में इसके योगदान का मान क्या है? `(2^3 - 2) / 12` की गणना करने का प्रयास करें। यह `(8 - 2) / 12 = 6/12 = 0.5` है। जुड़े हुए मानों की प्रत्येक जोड़ी सुधार कारक में ठीक 0.5 जोड़ती है!",
+    "body_gu": "જો કોઈ અવલોકન 2 વખત પુનરાવર્તિત થાય છે, તો CF માં તેના યોગદાનનું મૂલ્ય શું છે? `(2^3 - 2) / 12` ની ગણતરી કરવાનો પ્રયાસ કરો. તે `(8 - 2) / 12 = 6/12 = 0.5` છે. જોડાયેલા મૂલ્યોની દરેક જોડી સુધારણા પરિબળમાં બરાબર 0.5 ઉમેરે છે!"
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_MASTERY_1",
+    "type": "worked_example",
+    "title": "Illustration 21",
+    "title_hi": "उदाहरण 21",
+    "title_gu": "ઉદાહરણ 21",
+    "body": "Calculate the rank correlation coefficient using the given data where X and Y are given, and Y has tied ranks.\n\n| x | 25 | 38 | 30 | 28 | 34 | 40 | 36 |\n|---|---|---|---|---|---|---|---|\n| y | 65 | 75 | 68 | 70 | 72 | 79 | 75 |",
+    "body_hi": "दिए गए डेटा का उपयोग करके रैंक सहसंबंध गुणांक की गणना करें जहां X और Y दिए गए हैं, और Y में रैंक टाई हैं।\n\n| x | 25 | 38 | 30 | 28 | 34 | 40 | 36 |\n|---|---|---|---|---|---|---|---|\n| y | 65 | 75 | 68 | 70 | 72 | 79 | 75 |",
+    "body_gu": "આપેલ ડેટાનો ઉપયોગ કરીને ક્રમ સહસંબંધ ગુણાંકની ગણતરી કરો જ્યાં X અને Y આપવામાં આવ્યા છે, અને Y માં ક્રમ ટાઈ છે.\n\n| x | 25 | 38 | 30 | 28 | 34 | 40 | 36 |\n|---|---|---|---|---|---|---|---|\n| y | 65 | 75 | 68 | 70 | 72 | 79 | 75 |",
+    "steps": [
+      "**Step 1: Assign Ranks**\nIn Y, the observation 75 is repeated twice (m=2). It gets the average of 2nd and 3rd rank, i.e., 2.5.",
+      "**Step 2: Calculate d and d^2**\nΣd^2 is calculated to be 2.5.",
+      "**Step 3: Calculate CF**\nFor observation 75 repeated twice: m=2.\nCF = (2^3 - 2) / 12 = 6/12 = 0.5",
+      "**Step 4: Apply Formula**\nr = 1 - 6(Σd^2 + CF) / (n(n^2 - 1))\nr = 1 - 6(2.5 + 0.5) / (7(49 - 1))\nr = 1 - 18 / 336 = 1 - 0.0536 = 0.9464 ≈ 0.95"
+    ],
+    "steps_hi": [
+      "**चरण 1: रैंक असाइन करें**\nY में, अवलोकन 75 दो बार दोहराया गया है (m=2)। इसे 2 और 3 रैंक का औसत मिलता है, अर्थात 2.5।",
+      "**चरण 2: d और d^2 की गणना करें**\nΣd^2 की गणना 2.5 की गई है।",
+      "**चरण 3: CF की गणना करें**\nअवलोकन 75 के लिए जो दो बार दोहराया गया है: m=2.\nCF = (2^3 - 2) / 12 = 6/12 = 0.5",
+      "**चरण 4: सूत्र लागू करें**\nr = 1 - 6(Σd^2 + CF) / (n(n^2 - 1))\nr = 1 - 6(2.5 + 0.5) / (7(49 - 1))\nr = 1 - 18 / 336 = 1 - 0.0536 = 0.9464 ≈ 0.95"
+    ],
+    "steps_gu": [
+      "**પગલું 1: ક્રમ આપો**\nY માં, અવલોકન 75 બે વાર પુનરાવર્તિત થાય છે (m=2). તેને 2જા અને 3જા ક્રમની સરેરાશ મળે છે, એટલે કે 2.5.",
+      "**પગલું 2: d અને d^2 ની ગણતરી કરો**\nΣd^2 ની ગણતરી 2.5 કરવામાં આવી છે.",
+      "**પગલું 3: CF ની ગણતરી કરો**\nઅવલોકન 75 માટે જે બે વાર પુનરાવર્તિત થાય છે: m=2.\nCF = (2^3 - 2) / 12 = 6/12 = 0.5",
+      "**પગલું 4: સૂત્ર લાગુ કરો**\nr = 1 - 6(Σd^2 + CF) / (n(n^2 - 1))\nr = 1 - 6(2.5 + 0.5) / (7(49 - 1))\nr = 1 - 18 / 336 = 1 - 0.0536 = 0.9464 ≈ 0.95"
+    ]
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_MASTERY_2",
+    "type": "worked_example",
+    "title": "Illustration 22",
+    "title_hi": "उदाहरण 22",
+    "title_gu": "ઉદાહરણ 22",
+    "body": "To know the relation between understanding of students in Economics and their dancing skill, find the rank correlation coefficient.\n\n| Marks in Economics | 60 | 30 | 10 | 20 | 30 | 50 | 30 | 40 |\n|---|---|---|---|---|---|---|---|---|\n| Marks in dancing skill | 80 | 20 | 60 | 40 | 12 | 28 | 20 | 15 |",
+    "body_hi": "अर्थशास्त्र में छात्रों की समझ और उनके नृत्य कौशल के बीच संबंध जानने के लिए, रैंक सहसंबंध गुणांक खोजें।\n\n| अर्थशास्त्र में अंक | 60 | 30 | 10 | 20 | 30 | 50 | 30 | 40 |\n|---|---|---|---|---|---|---|---|---|\n| नृत्य कौशल में अंक | 80 | 20 | 60 | 40 | 12 | 28 | 20 | 15 |",
+    "body_gu": "અર્થશાસ્ત્રમાં વિદ્યાર્થીઓની સમજ અને તેમના નૃત્ય કૌશલ્ય વચ્ચેનો સંબંધ જાણવા માટે, ક્રમ સહસંબંધ ગુણાંક શોધો.\n\n| અર્થશાસ્ત્રમાં ગુણ | 60 | 30 | 10 | 20 | 30 | 50 | 30 | 40 |\n|---|---|---|---|---|---|---|---|---|\n| નૃત્ય કૌશલ્યમાં ગુણ | 80 | 20 | 60 | 40 | 12 | 28 | 20 | 15 |",
+    "steps": [
+      "**Step 1: Assign Ranks**\nIn Economics, 30 repeats 3 times. Ranks 4, 5, 6 average to 5.\nIn dancing skill, 20 repeats 2 times. Ranks 5, 6 average to 5.5.",
+      "**Step 2: Calculate d and d^2**\nThe differences (d) between ranks are calculated, and Σd^2 = 81.5.",
+      "**Step 3: Calculate Correction Factor (CF)**\nFor Economics (m=3): (3^3 - 3)/12 = 2\nFor Dancing (m=2): (2^3 - 2)/12 = 0.5\nTotal CF = 2 + 0.5 = 2.5",
+      "**Step 4: Formula Calculation**\nr = 1 - 6(81.5 + 2.5) / (8(64 - 1))\nr = 1 - 6(84) / 504\nr = 1 - 504/504 = 1 - 1 = 0",
+      "**Conclusion**\nSince r = 0, there is a lack of linear correlation between the ranks."
+    ],
+    "steps_hi": [
+      "**चरण 1: रैंक असाइन करें**\nअर्थशास्त्र में, 30, 3 बार दोहराया जाता है। 4, 5, 6 का औसत 5 है।\nनृत्य कौशल में, 20, 2 बार दोहराया जाता है। 5, 6 का औसत 5.5 है।",
+      "**चरण 2: d और d^2 की गणना करें**\nरैंकों के बीच का अंतर (d) गणना किया जाता है, और Σd^2 = 81.5।",
+      "**चरण 3: सुधार कारक (CF) की गणना करें**\nअर्थशास्त्र के लिए (m=3): (3^3 - 3)/12 = 2\nनृत्य के लिए (m=2): (2^3 - 2)/12 = 0.5\nकुल CF = 2 + 0.5 = 2.5",
+      "**चरण 4: सूत्र गणना**\nr = 1 - 6(81.5 + 2.5) / (8(64 - 1))\nr = 1 - 6(84) / 504\nr = 1 - 504/504 = 1 - 1 = 0",
+      "**निष्कर्ष**\nचूंकि r = 0, इसलिए रैंकों के बीच रैखिक सहसंबंध का अभाव है।"
+    ],
+    "steps_gu": [
+      "**પગલું 1: ક્રમ આપો**\nઅર્થશાસ્ત્રમાં, 30, 3 વાર પુનરાવર્તિત થાય છે. 4, 5, 6 ની સરેરાશ 5 છે.\nનૃત્ય કૌશલ્યમાં, 20, 2 વાર પુનરાવર્તિત થાય છે. 5, 6 ની સરેરાશ 5.5 છે.",
+      "**પગલું 2: d અને d^2 ની ગણતરી કરો**\nક્રમ વચ્ચેના તફાવત (d) ની ગણતરી કરવામાં આવે છે, અને Σd^2 = 81.5.",
+      "**પગલું 3: સુધારણા પરિબળ (CF) ની ગણતરી કરો**\nઅર્થશાસ્ત્ર માટે (m=3): (3^3 - 3)/12 = 2\nનૃત્ય માટે (m=2): (2^3 - 2)/12 = 0.5\nકુલ CF = 2 + 0.5 = 2.5",
+      "**પગલું 4: સૂત્ર ગણતરી**\nr = 1 - 6(81.5 + 2.5) / (8(64 - 1))\nr = 1 - 6(84) / 504\nr = 1 - 504/504 = 1 - 1 = 0",
+      "**નિષ્કર્ષ**\nકારણ કે r = 0, તેથી ક્રમ વચ્ચેના રેખીય સહસંબંધનો અભાવ છે."
+    ]
+  },
+  {
+    "id": "KOBJ_STAT_CH2_9_PRACTICE_1",
+    "type": "practice_question",
+    "title": "Illustration 23 (Practice)",
+    "title_hi": "उदाहरण 23 (अभ्यास)",
+    "title_gu": "ઉદાહરણ 23 (પ્રેક્ટિસ)",
+    "body": "Find the rank correlation coefficient between the sales (in thousand units) and the profits (in lakh ₹) using the following data:\n\n| Sales (thousand units) | 25 | 58 | 215 | 72 | 58 | 25 | 90 | 162 |\n|---|---|---|---|---|---|---|---|---|\n| Profit (lakh ₹) | 65 | 140 | 500 | 115 | 65 | 65 | 220 | 340 |\n\n*Note: Find the tied ranks and Correction Factor carefully!*",
+    "body_hi": "निम्नलिखित डेटा का उपयोग करके बिक्री (हजार इकाइयों में) और लाभ (लाख ₹ में) के बीच रैंक सहसंबंध गुणांक ज्ञात करें:\n\n| बिक्री (हजार इकाइयां) | 25 | 58 | 215 | 72 | 58 | 25 | 90 | 162 |\n|---|---|---|---|---|---|---|---|---|\n| लाभ (लाख ₹) | 65 | 140 | 500 | 115 | 65 | 65 | 220 | 340 |\n\n*नोट: बंधे हुए रैंक और सुधार कारक को सावधानीपूर्वक खोजें!*",
+    "body_gu": "નીચેના ડેટાનો ઉપયોગ કરીને વેચાણ (હજાર એકમોમાં) અને નફા (લાખ ₹ માં) વચ્ચેનો ક્રમ સહસંબંધ ગુણાંક શોધો:\n\n| વેચાણ (હજાર એકમો) | 25 | 58 | 215 | 72 | 58 | 25 | 90 | 162 |\n|---|---|---|---|---|---|---|---|---|\n| નફો (લાખ ₹) | 65 | 140 | 500 | 115 | 65 | 65 | 220 | 340 |\n\n*નોંધ: બંધાયેલા ક્રમ અને સુધારણા પરિબળ કાળજીપૂર્વક શોધો!*"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "chapter_id": "gseb_class12_stats_ch4",
+  "board": "CBSE",
+  "class": "Class 12",
+  "subject": "Statistics",
+  "title": "Time Series",
+  "header_image_url": "https://img.freepik.com/free-vector/timeline-concept-illustration_114360-5231.jpg",
+  "theory_sections": [
+    {
+      "section_title": "1. Meaning of Time Series",
+      "content": "A **Time Series** is a statistical data arrangement in which observations are recorded at successive intervals of time. Time is the independent variable (denoted by 't'), and the variable under study (like sales, production, temperature) is the dependent variable (denoted by 'yt').\n\nExamples of Time Series:\n- Daily closing prices of a stock.\n- Monthly production of cars in a factory.\n- Annual population of a country."
+    },
+    {
+      "section_title": "2. Components of a Time Series",
+      "content": "The changes in a time series are not always uniform. They occur due to various forces. These forces are classified into four components:\n\n1. **Long-term Component or Trend (T):** The general tendency of the data to increase or decrease over a long period. E.g., The steady increase in literacy rate over decades.\n2. **Seasonal Component (S):** Regular, periodic, and short-term variations that repeat within a period of less than a year. E.g., High sale of umbrellas in the monsoon, or woolen clothes in winter.\n3. **Cyclical Component (C):** Oscillatory movements that repeat over a period of more than a year, usually associated with business cycles (Prosperity, Recession, Depression, Recovery).\n4. **Irregular or Random Component (I):** Unpredictable, unforeseen, and accidental variations like earthquakes, strikes, or floods."
+    },
+    {
+      "section_title": "3. Additive Model of Time Series",
+      "content": "To analyze a time series, it is often expressed as an additive model where the observed value (Yt) is the sum of its four components.\n\n**Model:**\n`Yt = Tt + St + Ct + It`\nWhere:\n- Yt = Value of the variable at time t\n- Tt = Trend value at time t\n- St = Seasonal component at time t\n- Ct = Cyclical component at time t\n- It = Irregular/Random component at time t"
+    },
+    {
+      "section_title": "4. Methods for Measuring Trend",
+      "content": "The most important part of analyzing a time series is measuring the Trend (T). The main methods are:\n\n1. **Graphical Method:** The time series data is plotted on a graph, and a smooth freehand curve is drawn passing through maximum points. It is easy but subjective.\n2. **Method of Semi-Averages:** The data is divided into two equal halves. The average of each half is plotted, and a straight line is drawn joining them. \n3. **Method of Moving Averages:** It smooths out short-term fluctuations by taking averages of overlapping periods (e.g., 3-yearly, 4-yearly, or 5-yearly moving averages).\n4. **Method of Least Squares:** This is a mathematical method that gives the 'Line of Best Fit' in the form `Yt = a + bt`."
+    },
+    {
+      "section_title": "5. Method of Moving Averages",
+      "content": "This method is useful to eliminate short-term (seasonal and irregular) variations.\n\n- **3-Yearly Moving Average:** Average of 1st, 2nd, and 3rd year is placed against the 2nd year. Then average of 2nd, 3rd, and 4th is placed against the 3rd year, and so on.\n- **5-Yearly Moving Average:** Similar to 3-yearly, but taking 5 years at a time.\n- **4-Yearly (Even period) Moving Average:** First, find the 4-yearly moving total. Since it falls between two years, find a 2-period centered total of the 4-yearly totals, and then divide by 8 to get the centered average."
+    },
+    {
+      "section_title": "6. Method of Least Squares (Linear Trend)",
+      "content": "This method finds a mathematical equation of the straight line trend: `Yt = a + bt`.\nWhere 't' is time (usually taking values 1, 2, 3...).\n\nThe constants 'a' and 'b' are found using normal equations:\n1. `Σy = na + bΣt`\n2. `Σty = aΣt + bΣt²`\n\nShort-cut formulas (when t = 1, 2, 3...n):\n`b = [nΣty - (Σt)(Σy)] / [nΣt² - (Σt)²]`\n`a = ȳ - bt̄`"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Time Series",
+      "meaning": "A sequence of observations of a variable recorded at regular time intervals."
+    },
+    {
+      "term": "Trend",
+      "meaning": "The long-term tendency of the data to either increase, decrease, or remain stable over a period of time."
+    },
+    {
+      "term": "Seasonal Variations",
+      "meaning": "Short-term, regular, and periodic fluctuations that occur within a year due to nature or customs."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Illustration 1: 3-Yearly Moving Average",
+      "description": "**Data (Year: Value):**\n2018: 10\n2019: 15\n2020: 20\n2021: 18\n2022: 25\n\n**Calculation:**\n1. For 2019 (Middle of 2018-2020): \nTotal = 10 + 15 + 20 = 45\nAverage = 45 / 3 = **15**\n\n2. For 2020 (Middle of 2019-2021):\nTotal = 15 + 20 + 18 = 53\nAverage = 53 / 3 = **17.67**\n\n3. For 2021 (Middle of 2020-2022):\nTotal = 20 + 18 + 25 = 63\nAverage = 63 / 3 = **21**\n\n*(Note: Moving averages cannot be found for the first and last years).*"
+    },
+    {
+      "title": "Illustration 2: Least Squares Method",
+      "description": "**Data:** n=5, Σt=15, Σy=100, Σty=330, Σt²=55. Find 'a' and 'b' for equation Y = a + bt.\n\n**Solution:**\n1. Find 'b':\nb = [nΣty - (Σt)(Σy)] / [nΣt² - (Σt)²]\nb = [5(330) - (15)(100)] / [5(55) - (15)²]\nb = [1650 - 1500] / [275 - 225]\nb = 150 / 50 = **3**\n\n2. Find 'a':\nt̄ = 15/5 = 3\nȳ = 100/5 = 20\na = ȳ - bt̄ = 20 - 3(3) = 20 - 9 = **11**\n\n**Equation:** Yt = 11 + 3t"
+    }
+  ],
+  "exercises": [
+    {
+      "question": "Which component is associated with business cycles like prosperity and depression?",
+      "options": ["Trend", "Seasonal Component", "Cyclical Component", "Irregular Component"],
+      "correct_answer": "Cyclical Component",
+      "explanation": "Cyclical variations occur over a period of more than one year and are directly linked to economic or business cycles."
+    },
+    {
+      "question": "Which mathematical method is used to fit a linear trend line?",
+      "options": ["Moving Averages", "Graphical Method", "Least Squares Method", "Semi-Averages"],
+      "correct_answer": "Least Squares Method",
+      "explanation": "The method of least squares uses mathematical formulas to minimize the sum of squares of errors to provide the line of best fit (Y = a + bt)."
+    },
+    {
+      "question": "Earthquakes and strikes cause which type of variation in a time series?",
+      "options": ["Trend", "Seasonal", "Cyclical", "Irregular (Random)"],
+      "correct_answer": "Irregular (Random)",
+      "explanation": "These events are unpredictable and accidental, hence they cause irregular or random variations."
+    }
+  ],
+  "previous_year_questions": [
+    {
+      "year": "March 2023",
+      "question": "State the Additive Model of a Time Series.",
+      "marks": 1,
+      "answer_hint": "Yt = Tt + St + Ct + It. (Where T=Trend, S=Seasonal, C=Cyclical, I=Irregular components)."
+    },
+    {
+      "year": "July 2022",
+      "question": "Why is the moving average method not useful for estimating values for the first and last periods?",
+      "marks": 1,
+      "answer_hint": "Because the moving average calculates the average centered in the middle of a time span. For the extremes (first and last years), there is no preceding or succeeding data to form a complete span."
+    }
+  ]
+}

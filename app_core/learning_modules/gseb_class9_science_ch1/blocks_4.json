@@ -1,0 +1,170 @@
+[
+  {
+    "id": "KOBJ_C9_CH1_ST4_001",
+    "type": "real_world_example",
+    "content": "Have you ever wondered why an ice cube on your hand feels so cold, or why water left on a hot stove eventually vanishes? What exactly is heat doing to the matter inside?",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [],
+      "next_topics": ["KOBJ_C9_CH1_ST4_002"]
+    },
+    "ai_context": {
+      "learning_goal": "Arouse curiosity about the effect of temperature changes on matter.",
+      "common_misconceptions": ["Heat only makes things hotter."],
+      "tutor_hint": "Ask the student if they have noticed water droplets forming on the outside of a cold glass."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_002",
+    "type": "theory",
+    "content": "Imagine you are giving energy (heat) to a block of ice. The temperature rises, right? But what if I told you that while ice is melting into water, the temperature doesn't change at all, even though you are still heating it! Where is that heat going?",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_001"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_003"]
+    },
+    "ai_context": {
+      "learning_goal": "Introduce the paradox of melting without temperature change.",
+      "common_misconceptions": ["Temperature always increases when heat is supplied."],
+      "tutor_hint": "Ask the student: If the heat isn't making it hotter, could it be busy doing some 'hidden' work on the ice particles?"
+    },
+    "universal_block_metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_003",
+    "type": "image",
+    "content": "Look at this process: Heat acts like a pair of scissors. In ice, particles are locked tightly together. The heat energy you provide is used up in cutting these locks (forces of attraction) between the particles. Because the energy is busy breaking bonds, it doesn't increase the kinetic energy, so the temperature stays at 0°C until all the ice melts.",
+    "visual_url": "assets/images/c9_ch1_temp_change.jpg",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_002"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_004"]
+    },
+    "ai_context": {
+      "learning_goal": "Visualize how heat energy is used to break intermolecular forces.",
+      "common_misconceptions": ["Bonds in solids are unbreakable."],
+      "tutor_hint": "Use the analogy of scissors cutting the bonds between particles."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_004",
+    "type": "definition",
+    "content": "This hidden heat is called **Latent Heat**. The word 'Latent' comes from the Latin word 'latere', which means 'to lie hidden'. \n\n**Latent Heat of Fusion**: The amount of heat energy required to change 1 kg of a solid into a liquid at atmospheric pressure at its melting point.\n\nSimilarly, when liquid turns to gas, the hidden heat used to break those bonds is the **Latent Heat of Vaporization**.",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_003"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_005"]
+    },
+    "ai_context": {
+      "learning_goal": "Define Latent Heat, Latent Heat of Fusion, and Latent Heat of Vaporization.",
+      "common_misconceptions": ["Latent heat is a type of temperature."],
+      "tutor_hint": "Remind them of the word 'Latent' and its meaning 'hidden'."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_005",
+    "type": "mcq",
+    "content": "During the melting of ice, the temperature of the ice-water mixture:",
+    "options": [
+      "A: Increases steadily",
+      "B: Decreases",
+      "C: Remains constant until all ice melts",
+      "D: First increases, then decreases"
+    ],
+    "answer": "C: Remains constant until all ice melts",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_004"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_006"]
+    },
+    "ai_context": {
+      "learning_goal": "Assess understanding of temperature constancy during phase change.",
+      "common_misconceptions": ["Temperature rises as soon as heat is applied."],
+      "tutor_hint": "Think back to the 'scissors' analogy."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_006",
+    "type": "reflection",
+    "content": "Explain in your own words why steam at 100°C causes more severe burns than boiling water at 100°C. Think about the 'hidden' heat we just learned about!",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_005"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_007"]
+    },
+    "ai_context": {
+      "learning_goal": "Reflect on real-world phenomena using the concept of latent heat.",
+      "common_misconceptions": ["Water and steam at the same temperature have the same energy."],
+      "tutor_hint": "Ask: Does steam have any extra 'hidden' energy that boiling water doesn't have?"
+    },
+    "universal_block_metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_007",
+    "type": "theory",
+    "content": "This concept connects to everything from how our body cools down through sweating (latent heat of vaporization) to how refrigerators work. Understanding latent heat is the key to mastering Thermodynamics in higher classes!",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_006"],
+      "next_topics": ["KOBJ_C9_CH1_ST4_008"]
+    },
+    "ai_context": {
+      "learning_goal": "Connect latent heat to everyday applications and future learning.",
+      "common_misconceptions": [],
+      "tutor_hint": "Discuss how evaporation causes cooling."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Evaluate"
+    }
+  },
+  {
+    "id": "KOBJ_C9_CH1_ST4_008",
+    "type": "worked_example",
+    "content": "Mini Challenge: If it takes 3.34 × 10^5 Joules of energy to melt 1 kg of ice at 0°C, how much energy is 'hidden' in 2 kg of water at 0°C compared to 2 kg of ice at 0°C?\n\nAnswer: 2 × 3.34 × 10^5 = 6.68 × 10^5 Joules. The water has this much more energy because it absorbed the latent heat of fusion!",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": ["KOBJ_C9_CH1_ST4_007"],
+      "next_topics": []
+    },
+    "ai_context": {
+      "learning_goal": "Apply the mathematical concept of latent heat.",
+      "common_misconceptions": ["Mass doesn't affect the total latent heat."],
+      "tutor_hint": "Remind the student to multiply the specific latent heat by the mass."
+    },
+    "universal_block_metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Create"
+    }
+  }
+]

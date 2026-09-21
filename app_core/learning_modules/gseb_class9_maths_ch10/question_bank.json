@@ -1,0 +1,121 @@
+[
+  {
+    "id": "GSEB_C9_M_CH10_Q1",
+    "chapter_id": "GSEB_C9_M_CH10",
+    "topic_id": "KOBJ_SEMI_PERIMETER",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": [
+      "GSEB",
+      "CBSE"
+    ],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": [
+      "semi-perimeter"
+    ],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "What is the formula for the semi-perimeter (s) of a triangle with sides a, b, and c?",
+    "answer": "(a + b + c) / 2",
+    "explanation": "The semi-perimeter is exactly half of the total perimeter of the triangle.",
+    "distractor_rationale": "a+b+c is the perimeter, not semi-perimeter. (a*b*c)/2 is mathematically incorrect for this context.",
+    "ai_context": {
+      "learning_goal": "Identify the formula for semi-perimeter.",
+      "common_misconceptions": [
+        "Confusing perimeter with semi-perimeter by forgetting to divide by 2."
+      ],
+      "hint": "What does the prefix 'semi' mean?"
+    }
+  },
+  {
+    "id": "GSEB_C9_M_CH10_Q2",
+    "chapter_id": "GSEB_C9_M_CH10",
+    "topic_id": "KOBJ_HERONS_FORMULA",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": [
+      "GSEB",
+      "CBSE"
+    ],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": [
+      "heron",
+      "formula"
+    ],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "Which of the following represents Heron's formula for the area of a triangle?",
+    "answer": "√[s(s-a)(s-b)(s-c)]",
+    "explanation": "Heron's formula uses the semi-perimeter 's' and the three sides 'a', 'b', and 'c' inside a square root.",
+    "distractor_rationale": "1/2 * base * height is the standard formula, not Heron's. Missing the square root makes it incorrect.",
+    "ai_context": {
+      "learning_goal": "Identify Heron's formula.",
+      "common_misconceptions": [
+        "Forgetting the square root over the entire expression."
+      ],
+      "hint": "Heron's formula requires taking the square root of the product of s and its differences with each side."
+    }
+  },
+  {
+    "id": "GSEB_C9_M_CH10_Q3",
+    "chapter_id": "GSEB_C9_M_CH10",
+    "topic_id": "KOBJ_HERONS_CALCULATION",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": [
+      "GSEB",
+      "CBSE"
+    ],
+    "marks": 2,
+    "bloom_taxonomy": "Applying",
+    "keywords": [
+      "calculation",
+      "area"
+    ],
+    "estimated_time_minutes": 3,
+    "exam_frequency": "High",
+    "question_text": "Find the area of a triangle whose sides are 3 cm, 4 cm, and 5 cm using Heron's Formula.",
+    "answer": "6 cm²",
+    "explanation": "s = (3+4+5)/2 = 6. Area = √[6(6-3)(6-4)(6-5)] = √[6 * 3 * 2 * 1] = √36 = 6 cm².",
+    "distractor_rationale": "12 is the perimeter. 30 is the product of 6 and 5, missing the square root.",
+    "ai_context": {
+      "learning_goal": "Apply Heron's formula to find the area of a basic triangle.",
+      "common_misconceptions": [
+        "Miscalculating the semi-perimeter or making a mistake in prime factorization."
+      ],
+      "hint": "First, find s = (3+4+5)/2. Then substitute s, a, b, c into Heron's formula."
+    }
+  },
+  {
+    "id": "GSEB_C9_M_CH10_Q4",
+    "chapter_id": "GSEB_C9_M_CH10",
+    "topic_id": "KOBJ_HERONS_CALCULATION",
+    "type": "mcq",
+    "difficulty": "Advanced",
+    "board": [
+      "GSEB",
+      "CBSE"
+    ],
+    "marks": 3,
+    "bloom_taxonomy": "Analyzing",
+    "keywords": [
+      "equilateral",
+      "area"
+    ],
+    "estimated_time_minutes": 5,
+    "exam_frequency": "Medium",
+    "question_text": "Using Heron's Formula, what is the area of an equilateral triangle with side 'a'?",
+    "answer": "(√3/4)a²",
+    "explanation": "For an equilateral triangle, sides are a, a, a. Semi-perimeter s = 3a/2. Area = √[(3a/2)(3a/2 - a)(3a/2 - a)(3a/2 - a)] = √[(3a/2)(a/2)(a/2)(a/2)] = √[3a^4/16] = (√3/4)a².",
+    "distractor_rationale": "Missing the /4 or √3 implies a calculation error when taking the square root.",
+    "ai_context": {
+      "learning_goal": "Derive the area formula of an equilateral triangle using Heron's formula.",
+      "common_misconceptions": [
+        "Struggling with algebraic manipulation involving fractions and square roots."
+      ],
+      "hint": "Set all sides to 'a' and find the semi-perimeter s = 3a/2. Substitute this into Heron's formula and simplify."
+    }
+  }
+]

@@ -1,0 +1,688 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch10",
+    "title": "Chapter 10: Vector Algebra",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_001",
+      "type": "hook",
+      "title": "The Invisible Force Guiding Flight",
+      "title_hi": "उड़ान को निर्देशित करने वाला अदृश्य बल",
+      "title_gu": "ઉડ્ડયનને માર્ગદર્શન આપતું અદ્રશ્ય બળ",
+      "body": "Imagine an airplane flying from Ahmedabad to Mumbai at 500 km/h. If a wind blows from the west at 100 km/h, will the airplane land in Mumbai or get pushed off course into the Arabian Sea? Speed alone cannot answer this—direction is equally vital. Welcome to Vector Algebra, the mathematical language of quantities that possess both magnitude and direction!",
+      "body_hi": "कल्पना कीजिए कि एक हवाई जहाज अहमदाबाद से मुंबई के लिए 500 किमी/घंटा की गति से उड़ान भर रहा है। यदि पश्चिम से 100 किमी/घंटा की गति से हवा चलती है, तो क्या हवाई जहाज मुंबई में उतरेगा या अरब सागर में बह जाएगा? केवल गति इसका उत्तर नहीं दे सकती—दिशा भी उतनी ही महत्वपूर्ण है। वेक्टर बीजगणित (सदिश बीजगणित) में आपका स्वागत है, जो उन राशियों की गणितीय भाषा है जिनमें परिमाण और दिशा दोनों होते हैं!",
+      "body_gu": "અમદાવાદથી મુંબઈ 500 km/h ની ઝડપે ઉડતા વિમાનની કલ્પના કરો. જો પશ્ચિમમાંથી 100 km/h ની ઝડપે પવન ફૂંકાય, તો વિમાન મુંબઈ ઉતરશે કે અરબી સમુદ્રમાં તણાઈ જશે? માત્ર ઝડપ આનો જવાબ આપી શકતી નથી—દિશા પણ એટલી જ મહત્વપૂર્ણ છે. વિક્ટર બીજગણિત (સદિશ બીજગણિત) માં આપનું સ્વાગત છે, જે માન અને દિશા બંને ધરાવતી રાશિઓની ગણિતીય ભાષા છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_002",
+      "type": "socratic_question",
+      "title": "Why Magnitude Alone Fails",
+      "title_hi": "केवल परिमाण क्यों विफल रहता है",
+      "title_gu": "શા માટે માત્ર માન નિષ્ફળ જાય છે",
+      "question": "Suppose you walk 5 kilometers, and then walk another 5 kilometers. Is your final distance from the starting point guaranteed to be 10 kilometers?",
+      "question_hi": "मान लीजिए आप 5 किलोमीटर चलते हैं, और फिर 5 किलोमीटर और चलते हैं। क्या शुरुआती बिंदु से आपकी अंतिम दूरी का 10 किलोमीटर होना निश्चित है?",
+      "question_gu": "ધારો કે તમે 5 કિલોમીટર ચાલો છો, અને પછી બીજા 5 કિલોમીટર ચાલો છો. શું શરૂઆતના બિંદુથી તમારું અંતિમ અંતર 10 કિલોમીટર હોવાની ગેરંટી છે?",
+      "options": [
+        "Yes, because 5 + 5 is always 10 scalar arithmetic.",
+        "No, because the displacement depends on the direction of each walk.",
+        "Yes, distance and displacement are always identical.",
+        "No, because distance decreases over time."
+      ],
+      "options_hi": [
+        "हाँ, क्योंकि 5 + 5 हमेशा 10 अदिश अंकगणित होता है।",
+        "नहीं, क्योंकि विस्थापन प्रत्येक चाल की दिशा पर निर्भर करता है।",
+        "हाँ, दूरी और विस्थापन हमेशा समान होते हैं।",
+        "नहीं, क्योंकि समय के साथ दूरी घटती है।"
+      ],
+      "options_gu": [
+        "હા, કારણ કે 5 + 5 હંમેશા 10 અદિશ અંકગણિત થાય છે.",
+        "ના, કારણ કે સ્થાનાંતર દરેક ચાલની દિશા પર આધાર રાખે છે.",
+        "હા, અંતર અને સ્થાનાંતર હંમેશા સમાન હોય છે.",
+        "ના, કારણ કે સમય સાથે અંતર ઘટે છે."
+      ],
+      "correct_index": 1,
+      "explanation": "If you walk 5 km East and then 5 km West, your displacement is 0 km! If you walk 5 km East and 5 km North, displacement is 5√2 km. Direction determines the net vector resultant.",
+      "explanation_hi": "यदि आप 5 किमी पूर्व और फिर 5 किमी पश्चिम चलते हैं, तो आपका विस्थापन 0 किमी है! यदि आप 5 किमी पूर्व और 5 किमी उत्तर चलते हैं, तो विस्थापन 5√2 किमी है। दिशा परिणामी सदिश निर्धारित करती है।",
+      "explanation_gu": "જો તમે 5 કિમી પૂર્વ અને પછી 5 કિમી પશ્ચિમ ચાલો છો, તો તમારું સ્થાનાંતર 0 કિમી છે! જો તમે 5 કિમી પૂર્વ અને 5 કિમી ઉત્તર ચાલો છો, તો સ્થાનાંતર 5√2 કિમી છે. દિશા પરિણામી સદિશ નક્કી કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_003",
+      "type": "discovery",
+      "title": "Discovering Vector Addition: The Triangle Law",
+      "title_hi": "सदिश योग की खोज: त्रिभुज नियम",
+      "title_gu": "સદિશ સરવાળાની શોધ: ત્રિકોણનો નિયમ",
+      "body": "Consider displacement vector A from point O to A, and vector B from point A to B. The net displacement from O to B is represented by vector C = A + B. This forms a triangle where the resultant vector joins the initial tail of the first vector to the terminal tip of the second vector. This geometric intuition gives rise to the Triangle Law of Vector Addition: \\vec{OB} = \\vec{OA} + \\vec{AB}.",
+      "body_hi": "बिंदु O से A तक विस्थापन सदिश A और बिंदु A से B तक सदिश B पर विचार करें। O से B तक का कुल विस्थापन सदिश C = A + B द्वारा दर्शाया जाता है। यह एक त्रिभुज बनाता है जहाँ परिणामी सदिश पहले सदिश की पूंछ (tail) को दूसरे सदिश के शीर्ष (tip) से जोड़ता है। यह ज्यामितीय अंतर्दृष्टि सदिश योग के त्रिभुज नियम को जन्म देती है: \\vec{OB} = \\vec{OA} + \\vec{AB}।",
+      "body_gu": "બિંદુ O થી A સુધીના સ્થાનાંતર સદિશ A અને બિંદુ A થી B સુધીના સદિશ B નો વિચાર કરો. O થી B સુધીનું કુલ સ્થાનાંતર સદિશ C = A + B દ્વારા દર્શાવવામાં આવે છે. આ એક ત્રિકોણ બનાવે છે જ્યાં પરિણામી સદિશ પ્રથમ સદિશના પૂંછડીને બીજા સદિશના શિરોબિંદુ સાથે જોડે છે. આ ભૂમિતિ સદિશ સરવાળાના ત્રિકોણના નિયમને જન્મ આપે છે: \\vec{OB} = \\vec{OA} + \\vec{AB}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_004",
+      "type": "theory",
+      "title": "Core Theory: Components, Direction Cosines, and Products",
+      "title_hi": "मुख्य सिद्धांत: घटक, दिक-कोसाइन और गुणनफल",
+      "title_gu": "મુખ્ય સિદ્ધાંત: ઘટકો, દિક્-કોસાઇન અને ગુણાકાર",
+      "body": "1. Position Vector & Components: Position vector of point P(x, y, z) is \\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}. Its magnitude is |\\vec{r}| = \\sqrt{x^2 + y^2 + z^2}.\n2. Direction Cosines: If \\vec{r} makes angles \\alpha, \\beta, \\gamma with X, Y, Z axes, then l = \\cos\\alpha = \\frac{x}{|\\vec{r}|}, m = \\cos\\beta = \\frac{y}{|\\vec{r}|}, n = \\cos\\gamma = \\frac{z}{|\\vec{r}|}, and l^2 + m^2 + n^2 = 1.\n3. Scalar (Dot) Product: \\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta = a_1 b_1 + a_2 b_2 + a_3 b_3. Projection of \\vec{a} on \\vec{b} is \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|}.\n4. Vector (Cross) Product: \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\end{vmatrix}. Area of triangle = \\frac{1}{2}|\\vec{a} \\times \\vec{b}|; Area of parallelogram = |\\vec{a} \\times \\vec{b}|.",
+      "body_hi": "1. स्थिति सदिश एवं घटक: बिंदु P(x, y, z) का स्थिति सदिश \\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k} है। इसका परिमाण |\\vec{r}| = \\sqrt{x^2 + y^2 + z^2} है।\n2. दिक-कोसाइन (Direction Cosines): यदि \\vec{r} अक्षों से \\alpha, \\beta, \\gamma कोण बनाता है, तो l = \\cos\\alpha = \\frac{x}{|\\vec{r}|}, m = \\cos\\beta = \\frac{y}{|\\vec{r}|}, n = \\cos\\gamma = \\frac{z}{|\\vec{r}|}, और l^2 + m^2 + n^2 = 1।\n3. अदिश (डॉट) गुणनफल: \\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta = a_1 b_1 + a_2 b_2 + a_3 b_3। \\vec{a} का \\vec{b} पर प्रक्षेप \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} है।\n4. सदिश (क्रॉस) गुणनफल: \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n}। त्रिभुज का क्षेत्रफल = \\frac{1}{2}|\\vec{a} \\times \\vec{b}|; समांतर चतुर्भुज का क्षेत्रफल = |\\vec{a} \\times \\vec{b}|।",
+      "body_gu": "1. સ્થાન સદિશ અને ઘટકો: બિંદુ P(x, y, z) નો સ્થાન સદિશ \\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k} છે. તેનું માન |\\vec{r}| = \\sqrt{x^2 + y^2 + z^2} છે.\n2. દિક્-કોસાઇન: જો \\vec{r} અક્ષો સાથે \\alpha, \\beta, \\gamma ખૂણા બનાવે, તો l = \\cos\\alpha = \\frac{x}{|\\vec{r}|}, m = \\cos\\beta = \\frac{y}{|\\vec{r}|}, n = \\cos\\gamma = \\frac{z}{|\\vec{r}|}, અને l^2 + m^2 + n^2 = 1.\n3. અદિશ (ડૉટ) ગુણાકાર: \\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta = a_1 b_1 + a_2 b_2 + a_3 b_3. \\vec{a} નો \\vec{b} પર પ્રક્ષેપ \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} છે.\n4. સદિશ (ક્રૉસ) ગુણાકાર: \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n}. ત્રિકોણનું ક્ષેત્રફળ = \\frac{1}{2}|\\vec{a} \\times \\vec{b}|; સમાંતરબાજુ ચતુષ્કોણનું ક્ષેત્રફળ = |\\vec{a} \\times \\vec{b}|."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_005",
+      "type": "knowledge_check",
+      "title": "Check Point: Unit Vector Calculation",
+      "title_hi": "जांच बिंदु: इकाई सदिश गणना",
+      "title_gu": "ચકાસણી બિંદુ: એકમ સદિશ ગણતરી",
+      "question": "What is the unit vector in the direction of the vector \\vec{a} = 2\\hat{i} + 3\\hat{j} + \\hat{k}?",
+      "question_hi": "सदिश \\vec{a} = 2\\hat{i} + 3\\hat{j} + \\hat{k} की दिशा में इकाई (मात्रक) सदिश क्या है?",
+      "question_gu": "સદિશ \\vec{a} = 2\\hat{i} + 3\\hat{j} + \\hat{k} ની દિશામાં એકમ સદિશ કયો છે?",
+      "options": [
+        "\\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k}",
+        "\\frac{2}{14}\\hat{i} + \\frac{3}{14}\\hat{j} + \\frac{1}{14}\\hat{k}",
+        "\\frac{2}{6}\\hat{i} + \\frac{3}{6}\\hat{j} + \\frac{1}{6}\\hat{k}",
+        "2\\hat{i} + 3\\hat{j} + \\hat{k}"
+      ],
+      "options_hi": [
+        "\\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k}",
+        "\\frac{2}{14}\\hat{i} + \\frac{3}{14}\\hat{j} + \\frac{1}{14}\\hat{k}",
+        "\\frac{2}{6}\\hat{i} + \\frac{3}{6}\\hat{j} + \\frac{1}{6}\\hat{k}",
+        "2\\hat{i} + 3\\hat{j} + \\hat{k}"
+      ],
+      "options_gu": [
+        "\\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k}",
+        "\\frac{2}{14}\\hat{i} + \\frac{3}{14}\\hat{j} + \\frac{1}{14}\\hat{k}",
+        "\\frac{2}{6}\\hat{i} + \\frac{3}{6}\\hat{j} + \\frac{1}{6}\\hat{k}",
+        "2\\hat{i} + 3\\hat{j} + \\hat{k}"
+      ],
+      "correct_index": 0,
+      "explanation": "The magnitude |\\vec{a}| = \\sqrt{2^2 + 3^2 + 1^2} = \\sqrt{4+9+1} = \\sqrt{14}. The unit vector \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k}.",
+      "explanation_hi": "परिमाण |\\vec{a}| = \\sqrt{2^2 + 3^2 + 1^2} = \\sqrt{14} है। मात्रक सदिश \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k} है।",
+      "explanation_gu": "માન |\\vec{a}| = \\sqrt{2^2 + 3^2 + 1^2} = \\sqrt{14} છે. એકમ સદિશ \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{2}{\\sqrt{14}}\\hat{i} + \\frac{3}{\\sqrt{14}}\\hat{j} + \\frac{1}{\\sqrt{14}}\\hat{k} છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_006",
+      "type": "reflection",
+      "title": "Reflection: Dot Product vs Cross Product",
+      "title_hi": "विचार: डॉट गुणनफल बनाम क्रॉस गुणनफल",
+      "title_gu": "વિચારો: અદિશ ગુણાકાર વિ સદિશ ગુણાકાર",
+      "body": "Notice the crucial difference: Dot product (\\vec{a} \\cdot \\vec{b}) measures alignment and produces a scalar quantity (like Work = Force · Displacement). Cross product (\\vec{a} \\times \\vec{b}) measures perpendicularity and produces a vector quantity perpendicular to both original vectors (like Torque = Position × Force). Understanding this output distinction is essential for solving geometric and physical problems.",
+      "body_hi": "महत्वपूर्ण अंतर पर ध्यान दें: डॉट गुणनफल (\\vec{a} \\cdot \\vec{b}) संरेखण को मापता है और एक अदिश राशि उत्पन्न करता है (जैसे कार्य = बल · विस्थापन)। क्रॉस गुणनफल (\\vec{a} \\times \\vec{b}) लंबवतता को मापता है और दोनों मूल सदिशों के लंबवत एक सदिश राशि उत्पन्न करता है (जैसे टॉर्क/बल आघूर्ण = स्थिति × बल)। इस अंतर को समझना ज्यामितीय और भौतिक समस्याओं को हल करने के लिए आवश्यक है।",
+      "body_gu": "મહત્વપૂર્ણ તફાવત નોંધો: અદિશ ગુણાકાર (\\vec{a} \\cdot \\vec{b}) સંરેખણ માપે છે અને અદિશ રાશી ઉત્પન્ન કરે છે (જેમ કે કાર્ય = બળ · સ્થાનાંતર). સદિશ ગુણાકાર (\\vec{a} \\times \\vec{b}) લંબતા માપે છે અને બંને મૂળ સદિશોને લંબ સદિશ રાશી ઉત્પન્ન કરે છે (જેમ કે ટૉર્ક = સ્થાન × બળ)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_007",
+      "type": "connection",
+      "title": "Real World Connection: 3D Graphics & Robotics",
+      "title_hi": "वास्तविक दुनिया से संबंध: 3D ग्राफिक्स और रोबोटिक्स",
+      "title_gu": "વાસ્તવિક દુનિયા સાથે જોડાણ: 3D ગ્રાફિક્સ અને રોબોટિક્સ",
+      "body": "Every 3D video game engine (like Unreal Engine or Unity) uses vector cross products to compute normal vectors for surface lighting and reflection shading. Autonomous drones use dot products to calculate tracking trajectories and collision avoidance angles in real-time space.",
+      "body_hi": "प्रत्येक 3D वीडियो गेम इंजन (जैसे अवास्तविक इंजन या यूनिटी) सतह प्रकाश और परावर्तन शेडिंग के लिए अभिलंब सदिशों (normal vectors) की गणना करने के लिए सदिश क्रॉस उत्पादों का उपयोग करता है। स्वायत्त ड्रोन वास्तविक समय स्थान में ट्रैकिंग प्रक्षेपवक्र और टकराव से बचाव के कोणों की गणना करने के लिए डॉट उत्पादों का उपयोग करते हैं।",
+      "body_gu": "દરેક 3D વિડિયો ગેમ એન્જિન સપાટીના પ્રકાશ અને પરાવર્તન શેડિંગ માટે અભિલંબ સદિશની ગણતરી કરવા સદિશ ક્રોસ પ્રોડક્ટ્સનો ઉપયોગ કરે છે. સ્વાયત્ત ડ્રોન રીઅલ-ટાઇમ સ્પેસમાં ટ્રેકિંગ ટ્રેજેક્ટોરીઝ અને અથડામણ નિવારણ ખૂણાઓની ગણતરી કરવા માટે અદિશ ગુણાકારનો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Perpendicularity & Magnitudes",
+      "title_hi": "मास्टरी चुनौती: लंबवतता और परिमाण",
+      "title_gu": "માસ્ટરી ચેલેન્જ: લંબતા અને માન",
+      "question": "If \\vec{a}, \\vec{b}, \\vec{c} are unit vectors such that \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, what is the value of \\vec{a} \\cdot \\vec{b} + \\vec{b} \\cdot \\vec{c} + \\vec{c} \\cdot \\vec{a}?",
+      "question_hi": "यदि \\vec{a}, \\vec{b}, \\vec{c} ऐसे इकाई सदिश हैं कि \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, तो \\vec{a} \\cdot \\vec{b} + \\vec{b} \\cdot \\vec{c} + \\vec{c} \\cdot \\vec{a} का मान क्या है?",
+      "question_gu": "જો \\vec{a}, \\vec{b}, \\vec{c} એવા એકમ સદિશો હોય કે જેથી \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, તો \\vec{a} \\cdot \\vec{b} + \\vec{b} \\cdot \\vec{c} + \\vec{c} \\cdot \\vec{a} નું મૂલ્ય શું છે?",
+      "options": [
+        "0",
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "-3"
+      ],
+      "options_hi": [
+        "0",
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "-3"
+      ],
+      "options_gu": [
+        "0",
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "-3"
+      ],
+      "correct_index": 1,
+      "explanation": "Squaring both sides of |\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 giving |\\vec{a}|^2 + |\\vec{b}|^2 + |\\vec{c}|^2 + 2(\\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a}) = 0. Since unit vectors have magnitude 1: 1 + 1 + 1 + 2S = 0 => 2S = -3 => S = -3/2.",
+      "explanation_hi": "|\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 के दोनों पक्षों का वर्ग करने पर: |\\vec{a}|^2 + |\\vec{b}|^2 + |\\vec{c}|^2 + 2(\\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a}) = 0। चूकि इकाई सदिशों का परिमाण 1 है: 3 + 2S = 0 => S = -3/2।",
+      "explanation_gu": "|\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 ના બંને બાજુનો વર્ગ કરતા: 1 + 1 + 1 + 2S = 0 => 2S = -3 => S = -3/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_009",
+      "type": "mcq",
+      "title": "Ex 10.1 Q2: Classification of Quantities",
+      "title_hi": "अभ्यास 10.1 Q2: राशियों का वर्गीकरण",
+      "title_gu": "સ્વાધ્યાય 10.1 Q2: રાશિઓનું વર્ગીકરણ",
+      "question": "Classify the following measure as scalar or vector: 2 meters north-west.",
+      "question_hi": "निम्नलिखित माप को अदिश या सदिश के रूप में वर्गीकृत करें: 2 मीटर उत्तर-पश्चिम।",
+      "question_gu": "નીચેના માપને અદિશ અથવા સદિશ તરીકે વર્ગીકૃત કરો: 2 મીટર ઉત્તર-પશ્ચિમ.",
+      "options": [
+        "Scalar quantity",
+        "Vector quantity",
+        "Neither scalar nor vector",
+        "Tensor quantity"
+      ],
+      "options_hi": [
+        "अदिश राशि",
+        "सदिश राशि",
+        "न तो अदिश और न ही सदिश",
+        "प्रदेश (टेंसर) राशि"
+      ],
+      "options_gu": [
+        "અદિશ રાશિ",
+        "સદિશ રાશિ",
+        "અદિશ કે સદિશ બંનેમાંથી એક પણ નહીં",
+        "ટેન્સર રાશિ"
+      ],
+      "correct_index": 1,
+      "explanation": "'2 meters north-west' specifies both magnitude (2 meters) and direction (north-west). Hence it is a vector quantity.",
+      "explanation_hi": "'2 मीटर उत्तर-पश्चिम' परिमाण (2 मीटर) और दिशा (उत्तर-पश्चिम) दोनों को निर्दिष्ट करता है। अतः यह एक सदिश राशि है।",
+      "explanation_gu": "'2 મીટર ઉત્તર-પશ્ચિમ' માન (2 મીટર) અને દિશા (ઉત્તર-પશ્ચિમ) બંને દર્શાવે છે. તેથી તે સદિશ રાશિ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_010",
+      "type": "mcq",
+      "title": "Ex 10.1 Q4: Types of Vectors",
+      "title_hi": "अभ्यास 10.1 Q4: सदिशों के प्रकार",
+      "title_gu": "સ્વાધ્યાય 10.1 Q4: સદિશોના પ્રકાર",
+      "question": "In a square ABCD, if \\vec{AB} = \\vec{a} and \\vec{AD} = \\vec{b}, which vectors are co-initial?",
+      "question_hi": "एक वर्ग ABCD में, यदि \\vec{AB} = \\vec{a} और \\vec{AD} = \\vec{b} है, तो कौन से सदिश सह-आदिम (co-initial) हैं?",
+      "question_gu": "ચોરસ ABCD માં, જો \\vec{AB} = \\vec{a} અને \\vec{AD} = \\vec{b} હોય, તો કયા સદિશો સહ-આરંભિક (co-initial) છે?",
+      "options": [
+        "\\vec{AB} and \\vec{DC}",
+        "\\vec{AB} and \\vec{AD}",
+        "\\vec{BC} and \\vec{AD}",
+        "\\vec{AB} and \\vec{CD}"
+      ],
+      "options_hi": [
+        "\\vec{AB} और \\vec{DC}",
+        "\\vec{AB} और \\vec{AD}",
+        "\\vec{BC} और \\vec{AD}",
+        "\\vec{AB} और \\vec{CD}"
+      ],
+      "options_gu": [
+        "\\vec{AB} અને \\vec{DC}",
+        "\\vec{AB} અને \\vec{AD}",
+        "\\vec{BC} અને \\vec{AD}",
+        "\\vec{AB} અને \\vec{CD}"
+      ],
+      "correct_index": 1,
+      "explanation": "Vectors having the same initial point are called co-initial vectors. Here, both \\vec{AB} and \\vec{AD} start at vertex A.",
+      "explanation_hi": "समान प्रारंभिक बिंदु वाले सदिशों को सह-आदिम सदिश कहा जाता है। यहाँ, \\vec{AB} और \\vec{AD} दोनों शीर्ष A से शुरू होते हैं।",
+      "explanation_gu": "સમાન પ્રારંભિક બિંદુ ધરાવતા સદિશોને સહ-આરંભિક સદિશ કહેવાય છે. અહીં, \\vec{AB} અને \\vec{AD} બંને શિરોબિંદુ A થી શરૂ થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_011",
+      "type": "mcq",
+      "title": "Ex 10.2 Q1: Magnitude of Vector",
+      "title_hi": "अभ्यास 10.2 Q1: सदिश का परिमाण",
+      "title_gu": "સ્વાધ્યાય 10.2 Q1: સદિશનું માન",
+      "question": "Compute the magnitude of the vector \\vec{b} = 2\\hat{i} - 7\\hat{j} - 3\\hat{k}.",
+      "question_hi": "सदिश \\vec{b} = 2\\hat{i} - 7\\hat{j} - 3\\hat{k} का परिमाण परिकलित कीजिए।",
+      "question_gu": "સદિશ \\vec{b} = 2\\hat{i} - 7\\hat{j} - 3\\hat{k} નું માન ગણો.",
+      "options": [
+        "\\sqrt{62}",
+        "\\sqrt{58}",
+        "62",
+        "\\sqrt{12}"
+      ],
+      "options_hi": [
+        "\\sqrt{62}",
+        "\\sqrt{58}",
+        "62",
+        "\\sqrt{12}"
+      ],
+      "options_gu": [
+        "\\sqrt{62}",
+        "\\sqrt{58}",
+        "62",
+        "\\sqrt{12}"
+      ],
+      "correct_index": 0,
+      "explanation": "|\\vec{b}| = \\sqrt{(2)^2 + (-7)^2 + (-3)^2} = \\sqrt{4 + 49 + 9} = \\sqrt{62}.",
+      "explanation_hi": "|\\vec{b}| = \\sqrt{(2)^2 + (-7)^2 + (-3)^2} = \\sqrt{4 + 49 + 9} = \\sqrt{62}।",
+      "explanation_gu": "|\\vec{b}| = \\sqrt{(2)^2 + (-7)^2 + (-3)^2} = \\sqrt{4 + 49 + 9} = \\sqrt{62}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_012",
+      "type": "mcq",
+      "title": "Ex 10.2 Q7: Unit Vector Calculation",
+      "title_hi": "अभ्यास 10.2 Q7: मात्रक सदिश गणना",
+      "title_gu": "સ્વાધ્યાય 10.2 Q7: એકમ સદિશ ગણતરી",
+      "question": "Find the unit vector in the direction of vector \\vec{a} = \\hat{i} + \\hat{j} + 2\\hat{k}.",
+      "question_hi": "सदिश \\vec{a} = \\hat{i} + \\hat{j} + 2\\hat{k} की दिशा में मात्रक सदिश ज्ञात कीजिए।",
+      "question_gu": "સદિશ \\vec{a} = \\hat{i} + \\hat{j} + 2\\hat{k} ની દિશામાં એકમ સદિશ શોધો.",
+      "options": [
+        "\\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}",
+        "\\frac{1}{6}\\hat{i} + \\frac{1}{6}\\hat{j} + \\frac{2}{6}\\hat{k}",
+        "\\frac{1}{\\sqrt{4}}\\hat{i} + \\frac{1}{\\sqrt{4}}\\hat{j} + \\frac{2}{\\sqrt{4}}\\hat{k}",
+        "\\hat{i} + \\hat{j} + 2\\hat{k}"
+      ],
+      "options_hi": [
+        "\\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}",
+        "\\frac{1}{6}\\hat{i} + \\frac{1}{6}\\hat{j} + \\frac{2}{6}\\hat{k}",
+        "\\frac{1}{\\sqrt{4}}\\hat{i} + \\frac{1}{\\sqrt{4}}\\hat{j} + \\frac{2}{\\sqrt{4}}\\hat{k}",
+        "\\hat{i} + \\hat{j} + 2\\hat{k}"
+      ],
+      "options_gu": [
+        "\\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}",
+        "\\frac{1}{6}\\hat{i} + \\frac{1}{6}\\hat{j} + \\frac{2}{6}\\hat{k}",
+        "\\frac{1}{\\sqrt{4}}\\hat{i} + \\frac{1}{\\sqrt{4}}\\hat{j} + \\frac{2}{\\sqrt{4}}\\hat{k}",
+        "\\hat{i} + \\hat{j} + 2\\hat{k}"
+      ],
+      "correct_index": 0,
+      "explanation": "|\\vec{a}| = \\sqrt{1^2 + 1^2 + 2^2} = \\sqrt{6}. Thus, \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}.",
+      "explanation_hi": "|\\vec{a}| = \\sqrt{1^2 + 1^2 + 2^2} = \\sqrt{6}। अतः \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}।",
+      "explanation_gu": "|\\vec{a}| = \\sqrt{1^2 + 1^2 + 2^2} = \\sqrt{6}. તેથી, \\hat{a} = \\frac{\\vec{a}}{|\\vec{a}|} = \\frac{1}{\\sqrt{6}}\\hat{i} + \\frac{1}{\\sqrt{6}}\\hat{j} + \\frac{2}{\\sqrt{6}}\\hat{k}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_013",
+      "type": "true_false",
+      "title": "Ex 10.2 Q11: Collinearity of Vectors",
+      "title_hi": "अभ्यास 10.2 Q11: सदिशों की संरेखता",
+      "title_gu": "સ્વાધ્યાય 10.2 Q11: સદિશોની સંરેખતા",
+      "question": "The vectors \\vec{a} = 2\\hat{i} - 3\\hat{j} + 4\\hat{k} and \\vec{b} = -4\\hat{i} + 6\\hat{j} - 8\\hat{k} are collinear.",
+      "question_hi": "सदिश \\vec{a} = 2\\hat{i} - 3\\hat{j} + 4\\hat{k} और \\vec{b} = -4\\hat{i} + 6\\hat{j} - 8\\hat{k} संरेख हैं।",
+      "question_gu": "સદિશો \\vec{a} = 2\\hat{i} - 3\\hat{j} + 4\\hat{k} અને \\vec{b} = -4\\hat{i} + 6\\hat{j} - 8\\hat{k} સંરેખ છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Here \\vec{b} = -2(2\\hat{i} - 3\\hat{j} + 4\\hat{k}) = -2\\vec{a}. Since \\vec{b} = \\lambda \\vec{a} with \\lambda = -2, the vectors are collinear.",
+      "explanation_hi": "यहाँ \\vec{b} = -2\\vec{a} है। चूँकि \\vec{b} = \\lambda \\vec{a} (जहाँ \\lambda = -2), इसलिए सदिश संरेख हैं।",
+      "explanation_gu": "અહીં \\vec{b} = -2\\vec{a} છે. કારણ કે \\vec{b} = \\lambda \\vec{a} (જ્યાં \\lambda = -2), તેથી સદિશો સંરેખ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_014",
+      "type": "mcq",
+      "title": "Ex 10.2 Q12: Direction Cosines",
+      "title_hi": "अभ्यास 10.2 Q12: दिक-कोसाइन",
+      "title_gu": "સ્વાધ્યાય 10.2 Q12: દિક્-કોસાઇન",
+      "question": "Find the direction cosines of the vector \\vec{a} = \\hat{i} + 2\\hat{j} + 3\\hat{k}.",
+      "question_hi": "सदिश \\vec{a} = \\hat{i} + 2\\hat{j} + 3\\hat{k} के दिक-कोसाइन (direction cosines) ज्ञात कीजिए।",
+      "question_gu": "સદિશ \\vec{a} = \\hat{i} + 2\\hat{j} + 3\\hat{k} ના દિક્-કોસાઇન શોધો.",
+      "options": [
+        "\\left(\\frac{1}{\\sqrt{14}}, \\frac{2}{\\sqrt{14}}, \\frac{3}{\\sqrt{14}}\\right)",
+        "\\left(\\frac{1}{14}, \\frac{2}{14}, \\frac{3}{14}\\right)",
+        "\\left(1, 2, 3\\right)",
+        "\\left(\\frac{1}{6}, \\frac{2}{6}, \\frac{3}{6}\\right)"
+      ],
+      "options_hi": [
+        "\\left(\\frac{1}{\\sqrt{14}}, \\frac{2}{\\sqrt{14}}, \\frac{3}{\\sqrt{14}}\\right)",
+        "\\left(\\frac{1}{14}, \\frac{2}{14}, \\frac{3}{14}\\right)",
+        "\\left(1, 2, 3\\right)",
+        "\\left(\\frac{1}{6}, \\frac{2}{6}, \\frac{3}{6}\\right)"
+      ],
+      "options_gu": [
+        "\\left(\\frac{1}{\\sqrt{14}}, \\frac{2}{\\sqrt{14}}, \\frac{3}{\\sqrt{14}}\\right)",
+        "\\left(\\frac{1}{14}, \\frac{2}{14}, \\frac{3}{14}\\right)",
+        "\\left(1, 2, 3\\right)",
+        "\\left(\\frac{1}{6}, \\frac{2}{6}, \\frac{3}{6}\\right)"
+      ],
+      "correct_index": 0,
+      "explanation": "|\\vec{a}| = \\sqrt{1^2 + 2^2 + 3^2} = \\sqrt{14}. Direction cosines (l, m, n) = (1/\\sqrt{14}, 2/\\sqrt{14}, 3/\\sqrt{14}).",
+      "explanation_hi": "|\\vec{a}| = \\sqrt{1^2 + 2^2 + 3^2} = \\sqrt{14}। दिक-कोसाइन (l, m, n) = (1/\\sqrt{14}, 2/\\sqrt{14}, 3/\\sqrt{14}) हैं।",
+      "explanation_gu": "|\\vec{a}| = \\sqrt{1^2 + 2^2 + 3^2} = \\sqrt{14}. દિક્-કોસાઇન (l, m, n) = (1/\\sqrt{14}, 2/\\sqrt{14}, 3/\\sqrt{14}) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_015",
+      "type": "mcq",
+      "title": "Ex 10.2 Q15: Section Formula",
+      "title_hi": "अभ्यास 10.2 Q15: विभाजन सूत्र",
+      "title_gu": "સ્વાધ્યાય 10.2 Q15: વિભાજન સૂત્ર",
+      "question": "Find the position vector of a point R which divides the line joining P(\\hat{i} + 2\\hat{j} - \\hat{k}) and Q(-\\hat{i} + \\hat{j} + \\hat{k}) internally in the ratio 2:1.",
+      "question_hi": "बिंदु R का स्थिति सदिश ज्ञात कीजिए जो P(\\hat{i} + 2\\hat{j} - \\hat{k}) और Q(-\\hat{i} + \\hat{j} + \\hat{k}) को मिलाने वाली रेखा को 2:1 के अनुपात में अंतःविभाजित करता है।",
+      "question_gu": "P(\\hat{i} + 2\\hat{j} - \\hat{k}) અને Q(-\\hat{i} + \\hat{j} + \\hat{k}) ને જોડતા રેખાખંડનું 2:1 ના ગુણોત્તરમાં અંદરથી વિભાજન કરતા બિંદુ R નો સ્થાન સદિશ શોધો.",
+      "options": [
+        "-\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "-\\hat{i} + 4\\hat{j} + \\hat{k}",
+        "\\frac{1}{3}\\hat{i} - \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}"
+      ],
+      "options_hi": [
+        "-\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "-\\hat{i} + 4\\hat{j} + \\hat{k}",
+        "\\frac{1}{3}\\hat{i} - \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}"
+      ],
+      "options_gu": [
+        "-\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}",
+        "-\\hat{i} + 4\\hat{j} + \\hat{k}",
+        "\\frac{1}{3}\\hat{i} - \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}"
+      ],
+      "correct_index": 0,
+      "explanation": "\\vec{r} = \\frac{2(-\\hat{i} + \\hat{j} + \\hat{k}) + 1(\\hat{i} + 2\\hat{j} - \\hat{k})}{2 + 1} = \\frac{-2\\hat{i} + 2\\hat{j} + 2\\hat{k} + \\hat{i} + 2\\hat{j} - \\hat{k}}{3} = -\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}.",
+      "explanation_hi": "\\vec{r} = \\frac{2(-\\hat{i} + \\hat{j} + \\hat{k}) + 1(\\hat{i} + 2\\hat{j} - \\hat{k})}{2 + 1} = -\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}।",
+      "explanation_gu": "\\vec{r} = \\frac{2(-\\hat{i} + \\hat{j} + \\hat{k}) + 1(\\hat{i} + 2\\hat{j} - \\hat{k})}{2 + 1} = -\\frac{1}{3}\\hat{i} + \\frac{4}{3}\\hat{j} + \\frac{1}{3}\\hat{k}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_016",
+      "type": "mcq",
+      "title": "Ex 10.2 Q19: Scalar Multiplication Condition",
+      "title_hi": "अभ्यास 10.2 Q19: अदिश गुणन शर्त",
+      "title_gu": "સ્વાધ્યાય 10.2 Q19: અદિશ ગુણાકાર શરત",
+      "question": "If \\vec{a} is a non-zero vector of magnitude 'a' and \\lambda is a non-zero scalar, then \\lambda \\vec{a} is a unit vector if:",
+      "question_hi": "यदि \\vec{a} परिमाण 'a' का एक शून्यतर सदिश है और \\lambda एक शून्यतर अदिश है, तो \\lambda \\vec{a} एक मात्रक सदिश है यदि:",
+      "question_gu": "જો \\vec{a} એ 'a' માન ધરાવતો શૂન્યેતર સદિશ હોય અને \\lambda એ શૂન્યેતર અદિશ હોય, તો \\lambda \\vec{a} એ એકમ સદિશ થાય જો:",
+      "options": [
+        "\\lambda = 1",
+        "\\lambda = -1",
+        "a = |\\lambda|",
+        "a = \\frac{1}{|\\lambda|}"
+      ],
+      "options_hi": [
+        "\\lambda = 1",
+        "\\lambda = -1",
+        "a = |\\lambda|",
+        "a = \\frac{1}{|\\lambda|}"
+      ],
+      "options_gu": [
+        "\\lambda = 1",
+        "\\lambda = -1",
+        "a = |\\lambda|",
+        "a = \\frac{1}{|\\lambda|}"
+      ],
+      "correct_index": 3,
+      "explanation": "|\\lambda \\vec{a}| = 1 => |\\lambda||\\vec{a}| = 1 => |\\lambda| a = 1 => a = \\frac{1}{|\\lambda|}.",
+      "explanation_hi": "|\\lambda \\vec{a}| = 1 => |\\lambda||\\vec{a}| = 1 => |\\lambda| a = 1 => a = \\frac{1}{|\\lambda|}।",
+      "explanation_gu": "|\\lambda \\vec{a}| = 1 => |\\lambda||\\vec{a}| = 1 => |\\lambda| a = 1 => a = \\frac{1}{|\\lambda|}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_017",
+      "type": "mcq",
+      "title": "Ex 10.3 Q1: Angle Between Two Vectors",
+      "title_hi": "अभ्यास 10.3 Q1: दो सदिशों के बीच का कोण",
+      "title_gu": "સ્વાધ્યાય 10.3 Q1: બે સદિશો વચ્ચેનો ખૂણો",
+      "question": "Find the angle between two vectors \\vec{a} and \\vec{b} with magnitudes \\sqrt{3} and 2 respectively, having \\vec{a} \\cdot \\vec{b} = \\sqrt{6}.",
+      "question_hi": "क्रमशः \\sqrt{3} और 2 परिमाण वाले दो सदिशों \\vec{a} और \\vec{b} के बीच का कोण ज्ञात कीजिए, यदि \\vec{a} \\cdot \\vec{b} = \\sqrt{6} है।",
+      "question_gu": "અનુક્રમે \\sqrt{3} અને 2 માન ધરાવતા બે સદિશો \\vec{a} અને \\vec{b} વચ્ચેનો ખૂણો શોધો, જ્યારે \\vec{a} \\cdot \\vec{b} = \\sqrt{6} આપેલ હોય.",
+      "options": [
+        "\\frac{\\pi}{6}",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{3}",
+        "\\frac{\\pi}{2}"
+      ],
+      "options_hi": [
+        "\\frac{\\pi}{6}",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{3}",
+        "\\frac{\\pi}{2}"
+      ],
+      "options_gu": [
+        "\\frac{\\pi}{6}",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{3}",
+        "\\frac{\\pi}{2}"
+      ],
+      "correct_index": 1,
+      "explanation": "\\cos\\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}||\\vec{b}|} = \\frac{\\sqrt{6}}{\\sqrt{3} \\times 2} = \\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}. Thus, \\theta = \\frac{\\pi}{4}.",
+      "explanation_hi": "\\cos\\theta = \\frac{\\sqrt{6}}{\\sqrt{3} \\times 2} = \\frac{1}{\\sqrt{2}}। अतः \\theta = \\frac{\\pi}{4}।",
+      "explanation_gu": "\\cos\\theta = \\frac{\\sqrt{6}}{\\sqrt{3} \\times 2} = \\frac{1}{\\sqrt{2}}. તેથી, \\theta = \\frac{\\pi}{4}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_018",
+      "type": "mcq",
+      "title": "Ex 10.3 Q3: Projection of a Vector",
+      "title_hi": "अभ्यास 10.3 Q3: एक सदिश का प्रक्षेप",
+      "title_gu": "સ્વાધ્યાય 10.3 Q3: સદિશનો પ્રક્ષેપ",
+      "question": "Find the projection of vector \\hat{i} - \\hat{j} on vector \\hat{i} + \\hat{j}.",
+      "question_hi": "सदिश \\hat{i} - \\hat{j} का सदिश \\hat{i} + \\hat{j} पर प्रक्षेप (projection) ज्ञात कीजिए।",
+      "question_gu": "સદિશ \\hat{i} - \\hat{j} નો સદિશ \\hat{i} + \\hat{j} પર પ્રક્ષેપ શોધો.",
+      "options": [
+        "0",
+        "1",
+        "\\sqrt{2}",
+        "\\frac{1}{\\sqrt{2}}"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "\\sqrt{2}",
+        "\\frac{1}{\\sqrt{2}}"
+      ],
+      "options_gu": [
+        "0",
+        "1",
+        "\\sqrt{2}",
+        "\\frac{1}{\\sqrt{2}}"
+      ],
+      "correct_index": 0,
+      "explanation": "Projection = \\frac{(\\hat{i} - \\hat{j}) \\cdot (\\hat{i} + \\hat{j})}{|\\hat{i} + \\hat{j}|} = \\frac{1 - 1}{\\sqrt{1^2 + 1^2}} = 0.",
+      "explanation_hi": "प्रक्षेप = \\frac{(\\hat{i} - \\hat{j}) \\cdot (\\hat{i} + \\hat{j})}{|\\hat{i} + \\hat{j}|} = \\frac{1 - 1}{\\sqrt{2}} = 0।",
+      "explanation_gu": "પ્રક્ષેપ = \\frac{(\\hat{i} - \\hat{j}) \\cdot (\\hat{i} + \\hat{j})}{|\\hat{i} + \\hat{j}|} = \\frac{1 - 1}{\\sqrt{2}} = 0."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_019",
+      "type": "mcq",
+      "title": "Ex 10.3 Q13: Scalar Product of Sum of Unit Vectors",
+      "title_hi": "अभ्यास 10.3 Q13: इकाई सदिशों के योग का अदिश गुणनफल",
+      "title_gu": "સ્વાધ્યાય 10.3 Q13: એકમ સદિશોના સરવાળાનો અદિશ ગુણાકાર",
+      "question": "If \\vec{a}, \\vec{b}, \\vec{c} are unit vectors such that \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, find the value of \\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a}.",
+      "question_hi": "यदि \\vec{a}, \\vec{b}, \\vec{c} ऐसे मात्रक सदिश हैं कि \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, तो \\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a} का मान ज्ञात कीजिए।",
+      "question_gu": "જો \\vec{a}, \\vec{b}, \\vec{c} એવા એકમ સદિશો હોય કે જેથી \\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}, તો \\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a} નું મૂલ્ય શોધો.",
+      "options": [
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "0",
+        "-1"
+      ],
+      "options_hi": [
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "0",
+        "-1"
+      ],
+      "options_gu": [
+        "-\\frac{3}{2}",
+        "\\frac{3}{2}",
+        "0",
+        "-1"
+      ],
+      "correct_index": 0,
+      "explanation": "|\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 => 1 + 1 + 1 + 2(\\vec{a}\\cdot\\vec{b} + \\vec{b}\\cdot\\vec{c} + \\vec{c}\\cdot\\vec{a}) = 0 => S = -3/2.",
+      "explanation_hi": "|\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 => 3 + 2S = 0 => S = -3/2।",
+      "explanation_gu": "|\\vec{a} + \\vec{b} + \\vec{c}|^2 = 0 => 3 + 2S = 0 => S = -3/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_020",
+      "type": "mcq",
+      "title": "Ex 10.3 Q16: Acute Angle Condition for Dot Product",
+      "title_hi": "अभ्यास 10.3 Q16: डॉट उत्पाद के लिए न्यून कोण की शर्त",
+      "title_gu": "સ્વાધ્યાય 10.3 Q16: અદિશ ગુણાકાર માટે લઘુકોણની શરત",
+      "question": "If \\theta is the angle between two vectors \\vec{a} and \\vec{b}, then \\vec{a} \\cdot \\vec{b} \\ge 0 only when:",
+      "question_hi": "यदि \\theta दो सदिशों \\vec{a} और \\vec{b} के बीच का कोण है, तो \\vec{a} \\cdot \\vec{b} \\ge 0 केवल तब होता है जब:",
+      "question_gu": "જો \\theta એ બે સદિશો \\vec{a} અને \\vec{b} વચ્ચેનો ખૂણો હોય, તો \\vec{a} \\cdot \\vec{b} \\ge 0 ત્યારે જ થાય જ્યારે:",
+      "options": [
+        "0 \\le \\theta \\le \\frac{\\pi}{2}",
+        "0 < \\theta < \\pi",
+        "0 \\le \\theta \\le \\pi",
+        "\\frac{\\pi}{2} < \\theta \\le \\pi"
+      ],
+      "options_hi": [
+        "0 \\le \\theta \\le \\frac{\\pi}{2}",
+        "0 < \\theta < \\pi",
+        "0 \\le \\theta \\le \\pi",
+        "\\frac{\\pi}{2} < \\theta \\le \\pi"
+      ],
+      "options_gu": [
+        "0 \\le \\theta \\le \\frac{\\pi}{2}",
+        "0 < \\theta < \\pi",
+        "0 \\le \\theta \\le \\pi",
+        "\\frac{\\pi}{2} < \\theta \\le \\pi"
+      ],
+      "correct_index": 0,
+      "explanation": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta. For this to be non-negative, \\cos\\theta \\ge 0, which holds for 0 \\le \\theta \\le \\pi/2.",
+      "explanation_hi": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta। इसके अ-ऋणात्मक होने के लिए, \\cos\\theta \\ge 0 होना चाहिए, जो 0 \\le \\theta \\le \\pi/2 के लिए सत्य है।",
+      "explanation_gu": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta. આ અ-ઋણ રહેવા માટે \\cos\\theta \\ge 0 હોવું જોઈએ, જે 0 \\le \\theta \\le \\pi/2 માટે સત્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_021",
+      "type": "mcq",
+      "title": "Ex 10.4 Q1: Cross Product Magnitude",
+      "title_hi": "अभ्यास 10.4 Q1: क्रॉस गुणनफल का परिमाण",
+      "title_gu": "સ્વાધ્યાય 10.4 Q1: સદિશ ગુણાકારનું માન",
+      "question": "Find |\\vec{a} \\times \\vec{b}|, if \\vec{a} = \\hat{i} - 7\\hat{j} + 7\\hat{k} and \\vec{b} = 3\\hat{i} - 2\\hat{j} + 2\\hat{k}.",
+      "question_hi": "|\\vec{a} \\times \\vec{b}| ज्ञात कीजिए, यदि \\vec{a} = \\hat{i} - 7\\hat{j} + 7\\hat{k} और \\vec{b} = 3\\hat{i} - 2\\hat{j} + 2\\hat{k} है।",
+      "question_gu": "|\\vec{a} \\times \\vec{b}| શોધો, જો \\vec{a} = \\hat{i} - 7\\hat{j} + 7\\hat{k} અને \\vec{b} = 3\\hat{i} - 2\\hat{j} + 2\\hat{k} આપેલ હોય.",
+      "options": [
+        "19\\sqrt{2}",
+        "19",
+        "38",
+        "19\\sqrt{3}"
+      ],
+      "options_hi": [
+        "19\\sqrt{2}",
+        "19",
+        "38",
+        "19\\sqrt{3}"
+      ],
+      "options_gu": [
+        "19\\sqrt{2}",
+        "19",
+        "38",
+        "19\\sqrt{3}"
+      ],
+      "correct_index": 0,
+      "explanation": "\\vec{a} \\times \\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & -7 & 7 \\\\ 3 & -2 & 2 \\end{vmatrix} = 0\\hat{i} + 19\\hat{j} + 19\\hat{k}. Its magnitude is \\sqrt{0^2 + 19^2 + 19^2} = 19\\sqrt{2}.",
+      "explanation_hi": "\\vec{a} \\times \\vec{b} = 0\\hat{i} + 19\\hat{j} + 19\\hat{k}। परिमाण = \\sqrt{19^2 + 19^2} = 19\\sqrt{2}।",
+      "explanation_gu": "\\vec{a} \\times \\vec{b} = 0\\hat{i} + 19\\hat{j} + 19\\hat{k}. માન = \\sqrt{19^2 + 19^2} = 19\\sqrt{2}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_022",
+      "type": "mcq",
+      "title": "Ex 10.4 Q10: Area of Parallelogram",
+      "title_hi": "अभ्यास 10.4 Q10: समांतर चतुर्भुज का क्षेत्रफल",
+      "title_gu": "સ્વાધ્યાય 10.4 Q10: સમાંતરબાજુ ચતુષ્કોણનું ક્ષેત્રફળ",
+      "question": "Find the area of the parallelogram whose adjacent sides are determined by vectors \\vec{a} = \\hat{i} - \\hat{j} + 3\\hat{k} and \\vec{b} = 2\\hat{i} - 7\\hat{j} + \\hat{k}.",
+      "question_hi": "उस समांतर चतुर्भुज का क्षेत्रफल ज्ञात कीजिए जिसकी आसन्न भुजाएं सदिशों \\vec{a} = \\hat{i} - \\hat{j} + 3\\hat{k} और \\vec{b} = 2\\hat{i} - 7\\hat{j} + \\hat{k} द्वारा निर्धारित होती हैं।",
+      "question_gu": "જેની પાસપાસેની બાજુઓ સદિશો \\vec{a} = \\hat{i} - \\hat{j} + 3\\hat{k} અને \\vec{b} = 2\\hat{i} - 7\\hat{j} + \\hat{k} વડે દર્શાવાતી હોય તેવા સમાંતરબાજુ ચતુષ્કોણનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "15\\sqrt{2}",
+        "15",
+        "30\\sqrt{2}",
+        "15\\sqrt{3}"
+      ],
+      "options_hi": [
+        "15\\sqrt{2}",
+        "15",
+        "30\\sqrt{2}",
+        "15\\sqrt{3}"
+      ],
+      "options_gu": [
+        "15\\sqrt{2}",
+        "15",
+        "30\\sqrt{2}",
+        "15\\sqrt{3}"
+      ],
+      "correct_index": 0,
+      "explanation": "\\vec{a} \\times \\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & -1 & 3 \\\\ 2 & -7 & 1 \\end{vmatrix} = 20\\hat{i} + 5\\hat{j} - 5\\hat{k}. Area = |\\vec{a} \\times \\vec{b}| = \\sqrt{400 + 25 + 25} = \\sqrt{450} = 15\\sqrt{2}.",
+      "explanation_hi": "\\vec{a} \\times \\vec{b} = 20\\hat{i} + 5\\hat{j} - 5\\hat{k}। क्षेत्रफल = |\\vec{a} \\times \\vec{b}| = \\sqrt{450} = 15\\sqrt{2}।",
+      "explanation_gu": "\\vec{a} \\times \\vec{b} = 20\\hat{i} + 5\\hat{j} - 5\\hat{k}. ક્ષેત્રફળ = |\\vec{a} \\times \\vec{b}| = \\sqrt{450} = 15\\sqrt{2}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_023",
+      "type": "mcq",
+      "title": "Ex 10.4 Q12: Equal Magnitude of Dot and Cross Product",
+      "title_hi": "अभ्यास 10.4 Q12: डॉट और क्रॉस उत्पाद का समान परिमाण",
+      "title_gu": "સ્વાધ્યાય 10.4 Q12: અદિશ અને સદિશ ગુણાકારનું સમાન માન",
+      "question": "If \\theta is the angle between two vectors \\vec{a} and \\vec{b}, then |\\vec{a} \\times \\vec{b}| = \\vec{a} \\cdot \\vec{b} when \\theta is equal to:",
+      "question_hi": "यदि \\theta दो सदिशों \\vec{a} और \\vec{b} के बीच का कोण है, तो |\\vec{a} \\times \\vec{b}| = \\vec{a} \\cdot \\vec{b} होता है जब \\theta का मान है:",
+      "question_gu": "જો \\theta એ બે સદિશો \\vec{a} અને \\vec{b} વચ્ચેનો ખૂણો હોય, તો |\\vec{a} \\times \\vec{b}| = \\vec{a} \\cdot \\vec{b} ત્યારે જ થાય જ્યારે \\theta ની કિંમત હોય:",
+      "options": [
+        "0",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{2}",
+        "\\pi"
+      ],
+      "options_hi": [
+        "0",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{2}",
+        "\\pi"
+      ],
+      "options_gu": [
+        "0",
+        "\\frac{\\pi}{4}",
+        "\\frac{\\pi}{2}",
+        "\\pi"
+      ],
+      "correct_index": 1,
+      "explanation": "|\\vec{a}||\\vec{b}|\\sin\\theta = |\\vec{a}||\\vec{b}|\\cos\\theta => \\tan\\theta = 1 => \\theta = \\frac{\\pi}{4}.",
+      "explanation_hi": "\\sin\\theta = \\cos\\theta => \\tan\\theta = 1 => \\theta = \\frac{\\pi}{4}।",
+      "explanation_gu": "\\sin\\theta = \\cos\\theta => \\tan\\theta = 1 => \\theta = \\frac{\\pi}{4}."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_024",
+      "type": "mcq",
+      "title": "Misc Exercise Q1: Vector Triple Identity Evaluation",
+      "title_hi": "विविध अभ्यास Q1: सदिश त्रिक पहचान मान",
+      "title_gu": "પ્રકીર્ણ સ્વાધ્યાય Q1: સદિશ ત્રિપલ આઇડેન્ટિટી કિંમત",
+      "question": "Find the value of \\hat{i} \\cdot (\\hat{j} \\times \\hat{k}) + \\hat{j} \\cdot (\\hat{i} \\times \\hat{k}) + \\hat{k} \\cdot (\\hat{i} \\times \\hat{j}).",
+      "question_hi": "\\hat{i} \\cdot (\\hat{j} \\times \\hat{k}) + \\hat{j} \\cdot (\\hat{i} \\times \\hat{k}) + \\hat{k} \\cdot (\\hat{i} \\times \\hat{j}) का मान ज्ञात कीजिए।",
+      "question_gu": "\\hat{i} \\cdot (\\hat{j} \\times \\hat{k}) + \\hat{j} \\cdot (\\hat{i} \\times \\hat{k}) + \\hat{k} \\cdot (\\hat{i} \\times \\hat{j}) ની કિંમત શોધો.",
+      "options": [
+        "0",
+        "-1",
+        "1",
+        "3"
+      ],
+      "options_hi": [
+        "0",
+        "-1",
+        "1",
+        "3"
+      ],
+      "options_gu": [
+        "0",
+        "-1",
+        "1",
+        "3"
+      ],
+      "correct_index": 2,
+      "explanation": "\\hat{j} \\times \\hat{k} = \\hat{i}, \\hat{i} \\times \\hat{k} = -\\hat{j}, \\hat{i} \\times \\hat{j} = \\hat{k}. Thus, \\hat{i} \\cdot \\hat{i} + \\hat{j} \\cdot (-\\hat{j}) + \\hat{k} \\cdot \\hat{k} = 1 - 1 + 1 = 1.",
+      "explanation_hi": "\\hat{j} \\times \\hat{k} = \\hat{i}, \\hat{i} \\times \\hat{k} = -\\hat{j}, \\hat{i} \\times \\hat{j} = \\hat{k}। अतः 1 - 1 + 1 = 1।",
+      "explanation_gu": "\\hat{j} \\times \\hat{k} = \\hat{i}, \\hat{i} \\times \\hat{k} = -\\hat{j}, \\hat{i} \\times \\hat{j} = \\hat{k}. તેથી, 1 - 1 + 1 = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH10_025",
+      "type": "true_false",
+      "title": "Misc Exercise Q2: Orthogonal Property of Cross Product",
+      "title_hi": "विविध अभ्यास Q2: क्रॉस गुणनफल का लांबिक गुणधर्म",
+      "title_gu": "પ્રકીર્ણ સ્વાધ્યાય Q2: સદિશ ગુણાકારનો લંબ ગુણધર્મ",
+      "question": "The cross product \\vec{a} \\times \\vec{b} is perpendicular to both \\vec{a} and \\vec{b}.",
+      "question_hi": "क्रॉस गुणनफल \\vec{a} \\times \\vec{b} दोनों सदिशों \\vec{a} और \\vec{b} पर लंबवत होता है।",
+      "question_gu": "સદિશ ગુણાકાર \\vec{a} \\times \\vec{b} એ બંને સદિશો \\vec{a} અને \\vec{b} ને લંબ હોય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "By definition, \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n}, where \\hat{n} is a unit vector normal (perpendicular) to the plane containing \\vec{a} and \\vec{b}.",
+      "explanation_hi": "परिभाषा के अनुसार, \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n}, जहाँ \\hat{n} एक मात्रक सदिश है जो \\vec{a} और \\vec{b} वाले समतल के लंबवत (अभिलंब) होता है।",
+      "explanation_gu": "વ્યાખ્યા અનુસાર, \\vec{a} \\times \\vec{b} = |\\vec{a}||\\vec{b}|\\sin\\theta \\hat{n}, જ્યાં \\hat{n} એ \\vec{a} અને \\vec{b} ને સમાવતા સમતલને લંબ એકમ સદિશ છે."
+    }
+  ]
+}

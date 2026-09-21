@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "id": "cbse_class4_maths_ch8",
+    "title": "Chapter 8: Money",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the structure and notation of Indian currency in rupees and paise.",
+      "Convert rupees into paise and paise into rupees accurately.",
+      "Perform addition and subtraction of money with decimal notation.",
+      "Calculate simple bills, estimates, and unitary costs for everyday shopping."
+    ],
+    "core_concepts": [
+      "DICT_MONEY_RUPEE",
+      "DICT_MONEY_PAISE",
+      "DICT_MONEY_DECIMAL",
+      "DICT_MONEY_BILLING"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the counting, conversion, addition, subtraction, and practical application of money in daily life.",
+      "common_misconceptions": [
+        "Confusing the position of the decimal point when converting rupees and paise.",
+        "Forgetting to align decimal points when adding or subtracting money amounts.",
+        "Thinking that 50 paise is written as 0.5 rupees instead of 0.50 rupees."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "A Trip to the Neighborhood Bakery",
+      "body": "Imagine walking into your favorite bakery with a colorful 100-rupee note clutched tightly in your hand. The sweet smell of warm chocolate cookies fills the air. You look at the glass display and see cookies priced at ₹15.50 each, a slice of cake for ₹45.75, and a glass of cold milk for ₹20.00. You want to buy one cookie and one slice of cake. How much total money do you need to hand to the baker? And more importantly, how much shiny change will the baker slide back across the counter? Welcome to the fascinating world of money, where numbers turn into delicious treats, tools, toys, and travel!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our bakery story, if you buy a cookie for ₹15.50 and a slice of cake for ₹45.75, what is your first mental step to find the total cost?",
+      "options": [
+        "Multiply the two prices together",
+        "Add the rupees together and add the paise together",
+        "Subtract the smaller price from the larger price"
+      ],
+      "correct_index": 1,
+      "explanation": "To find the total cost of multiple items, you must combine their values by adding them together, keeping rupees with rupees and paise with paise.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Anatomy of Indian Currency",
+      "body": "In India, our official currency is the [DICT_MONEY_RUPEE|Rupee], denoted by the symbol '₹', and its smaller fractional unit is the [DICT_MONEY_PAISE|Paise]. Long ago, people used to trade goods directly in a system called barter, but today, standardized currency makes trade smooth and fair. Every single rupee is worth exactly 100 paise. This means that 100p makes ₹1. When we write money amounts, we use a [DICT_MONEY_DECIMAL|Decimal] point to separate the whole rupees from the fractional paise. For example, in the amount ₹75.25, the number 75 to the left of the dot represents the rupees, while the number 25 to the right represents the paise. Understanding this split is the master key to unlocking all money math!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Pocket Change Audit",
+      "body": "Take out a real wallet, piggy bank, or pouch. Look at actual coins and notes. Find a coin with '50' or '25' written on it. Remember that these represent paise. Notice how 100 individual 1-rupee coins would fill a heavy bag, while a single purple 100-rupee note fits lightly in your pocket. That is the magic of currency design!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "How many paise are equal to exactly 1 Rupee?",
+      "back": "100 paise. Therefore, ₹1 = 100p.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Converting Rupees to Paise",
+      "body": "Because 1 rupee equals 100 paise, converting an amount given in rupees into pure paise is an exciting multiplication adventure. Whenever you want to convert rupees to paise, you simply multiply the rupee value by 100. Why 100? Because every single rupee packs 100 paise inside it! For instance, if you have ₹5, you multiply 5 by 100, giving you 500 paise (500p). What happens if you have rupees and paise together, like ₹12 and 50 paise? You convert the 12 rupees into paise (12 × 100 = 1200p) and then add the extra 50 paise to get 1250p. In short-hand decimal notation, ₹12.50 becomes 1250 paise simply by removing the decimal point!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Convert ₹8.75 entirely into paise.",
+      "options": [
+        "875 paise",
+        "8075 paise",
+        "87.5 paise"
+      ],
+      "correct_index": 0,
+      "explanation": "To convert rupees to paise, remove the decimal point or multiply by 100. ₹8.75 becomes 875 paise.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Converting Paise to Rupees",
+      "body": "Now let us reverse the journey! What if you have a pile of coins totaling 450 paise and your teacher asks you to express that amount in rupees? Because 100 paise make 1 rupee, we need to group our paise into bundles of 100. Mathematically, this means we divide the amount of paise by 100, or simply count two places from the right and place our decimal point! Thus, 450 paise divided by 100 gives us ₹4.50 (four rupees and fifty paise). Let's try another one: 75 paise. Since 75 is less than 100, we write it as ₹0.75. This skill is vital when counting your piggy bank savings at the end of the month.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The Two-Digit Jump Trick",
+      "body": "When converting paise to rupees, tell students: 'Put your finger at the very end of the number, jump two steps to the left, and drop your anchor (the decimal point)!' For example, with 3420 paise, jump two steps from the end (0 and 2), drop the dot, and you get ₹34.20.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "Express 2050 paise in rupees.",
+      "options": [
+        "₹20.50",
+        "₹205.0",
+        "₹2.050"
+      ],
+      "correct_index": 0,
+      "explanation": "Counting two places from the right in 2050 gives ₹20.50.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 2: Addition of Money",
+      "body": "When shopping, you rarely buy just one item. You might buy a notebook, a pen, an eraser, and a geometry box. To find out the total bill, you must master the [DICT_MONEY_BILLING|Addition] of money. The golden rule of adding money is strict column alignment. You must always write the numbers in columns with the decimal points placed directly on top of each other. Rupees go under rupees, and paise go under paise. Let's add ₹45.50 and ₹23.75. First, align the dots. Next, add the paise: 50p + 75p = 125p. Since 125p is 1 rupee and 25 paise, we write down 25 in the paise column and carry over 1 rupee to the rupee column! Then, add the rupees: 45 + 23 + 1 (carried over) = 69. The final answer is ₹69.25. Carrying over works exactly like normal addition, but the decimal point keeps everything anchored!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "flashcard",
+      "front": "What is the golden rule when adding two money amounts like ₹12.40 and ₹5.90?",
+      "back": "Align the decimal points vertically so rupees and paise columns match perfectly.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "Grid Paper Practice",
+      "body": "Have students use squared math notebooks (grid paper) for money addition. Instruct them to put the decimal point in its own individual box. This eliminates 90% of careless alignment errors!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Add ₹18.25 and ₹12.80. What is the result?",
+      "options": [
+        "₹30.05",
+        "₹31.05",
+        "₹31.50"
+      ],
+      "correct_index": 1,
+      "explanation": "25p + 80p = 105p (which is ₹1.05). ₹18 + ₹12 + ₹1 = ₹31. Total is ₹31.05.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 3: Subtraction of Money and Calculating Change",
+      "body": "Subtraction is the superpower you use every time you pay a shopkeeper with a large note and wait for your balance or change. Just like addition, subtraction requires flawless decimal alignment. Let's say you hand a ₹100 note to a fruit seller for a basket of apples costing ₹67.50. How much change does the seller owe you? You must subtract ₹67.50 from ₹100.00. Notice how we write ₹100 as ₹100.00 so that both numbers have two decimal places. When subtracting, if the top paise digit is smaller than the bottom paise digit (for example, trying to subtract 75p from 00p), you must borrow 1 rupee from the rupee column. That 1 rupee becomes 100 paise in the paise column! Once borrowed, subtract normally: 100 - 75 = 25 paise, and 99 - 67 = 32 rupees. Your change is ₹32.25.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "You buy a toy for ₹54.25 and pay with a ₹100 note. What is your correct change?",
+      "options": [
+        "₹45.75",
+        "₹46.75",
+        "₹55.75"
+      ],
+      "correct_index": 0,
+      "explanation": "Subtracting ₹54.25 from ₹100.00 gives ₹45.75.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "The Counting-Up Method for Change",
+      "body": "Teach shopkeepers' subtraction! Instead of heavy borrowing, count up from the cost to the paid amount. For item cost ₹67.50: add 50p to reach ₹68.00, add ₹2 to reach ₹70, and add ₹30 to reach ₹100. Total change: 50p + ₹2 + ₹30 = ₹32.50. It's fast and foolproof!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 4: Multiplication and Unitary Cost",
+      "body": "What happens when you want to buy 5 identical notebooks, and each notebook costs ₹24.50? Instead of adding ₹24.50 five times, multiplication comes to our rescue as a high-speed shortcut. When multiplying money by a whole number, you multiply the amount just like a regular whole number, ignoring the decimal point at first, and then place the decimal point in the final product two digits from the right. Let's calculate: ₹24.50 × 5. First, multiply 2450 by 5, which gives 12250. Then, count two decimal places from the right, resulting in ₹122.50. This concept is also the heart of unitary method calculations—finding the cost of many items when you know the cost of one, or finding the cost of one item when you know the cost of many.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "If 1 pen costs ₹12.50, how do you find the cost of 4 pens?",
+      "back": "Multiply ₹12.50 by 4. (₹12.50 × 4 = ₹50.00)",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "If 3 identical juice boxes cost ₹45.00 in total, what is the cost of 1 juice box?",
+      "options": [
+        "₹15.00",
+        "₹135.00",
+        "₹12.50"
+      ],
+      "correct_index": 0,
+      "explanation": "Divide the total cost by the number of items: ₹45.00 ÷ 3 = ₹15.00.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Reading and Preparing a Cash Memo / Bill",
+      "body": "When you visit a stationery shop, supermarket, or vegetable market, the vendor hands you a printed or handwritten slip of paper called a [DICT_MONEY_BILLING|Cash Memo] or bill. A proper bill is structured in clear columns: Serial Number (S.No.), Item Name, Quantity, Rate (price of one item), and Amount (Total price for that quantity). To prepare or verify a bill, you multiply the quantity of each item by its rate to get the individual item amounts, and then add all the item amounts together to find the Grand Total. Being able to read a bill ensures you are never overcharged and helps you manage your weekly pocket money with professional precision.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "teacher_tip",
+      "title": "Supermarket Simulation",
+      "body": "Set up a mock grocery store in the classroom with empty cereal boxes, fruit, and stationery items with price tags. Have students take turns acting as the cashier, writing out paper bills and calculating change.",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "On a bill, 2 notebooks cost ₹20 each, and 3 pencils cost ₹5 each. What is the Grand Total?",
+      "options": [
+        "₹45.00",
+        "₹55.00",
+        "₹60.00"
+      ],
+      "correct_index": 1,
+      "explanation": "Notebooks total = 2 × ₹20 = ₹40. Pencils total = 3 × ₹5 = ₹15. Grand Total = ₹40 + ₹15 = ₹55.00.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Estimation and Budgeting in Real Life",
+      "body": "Mastering money is not just about precise calculation; it is also about smart planning, known as budgeting. Suppose you have a strict budget of ₹200 for a school project chart, glitter pens, and stickers. You walk down the aisles and see items priced at ₹85.00, ₹48.50, and ₹39.00. Instead of waiting until the cash counter, good mathematicians use estimation! You round the numbers to the nearest tens: ₹85 becomes ₹90, ₹48.50 becomes ₹50, and ₹39 becomes ₹40. Adding your estimates: ₹90 + ₹50 + ₹40 = ₹180. Since ₹180 is safely under your ₹200 limit, you can walk to the billing counter with complete confidence that your money will be enough!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "front": "What is 'Budgeting' in the context of money?",
+      "back": "Planning how much money you have and deciding how to spend it wisely without exceeding your limit.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "If you estimate the sum of ₹192.50 and ₹88.00 by rounding to the nearest ten rupees, what is your estimated total?",
+      "options": [
+        "₹280.00",
+        "₹290.00",
+        "₹300.00"
+      ],
+      "correct_index": 0,
+      "explanation": "₹192.50 rounds to ₹190 (or ₹190-200), ₹88 rounds to ₹90. ₹190 + ₹90 = ₹280.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "teacher_tip",
+      "title": "The Weekly Savings Challenge",
+      "body": "Encourage students to save even ₹5 or ₹10 a week in a labeled piggy bank. Track the accumulation over a month. Connect saving math to future goals like buying a book, a game, or donating to charity.",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Summary: Master Checklist of Money Skills",
+      "body": "Congratulations! You have journeyed through the core pillars of Chapter 8: Money. Let's review your toolkit: 1. You know that Indian currency is expressed in Rupees (₹) and Paise (p), linked by the conversion factor 1 = 100p. 2. You can effortlessly convert rupees to paise by multiplying by 100, and paise to rupees by moving the decimal two places left. 3. You can add and subtract money amounts with flawless decimal column alignment. 4. You can multiply to find total costs for multiple items and interpret practical bills like a professional store manager. Keep practicing these skills every time you go shopping with your family!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    }
+  ]
+}

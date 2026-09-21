@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch14",
+    "title": "Chapter 14: Statistics",
+    "subtitle": "Master Data Analysis and Central Tendency",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "statistics",
+      "mean",
+      "median",
+      "mode",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Calculate Mean of grouped data using various methods.",
+      "Find the Mode of grouped data.",
+      "Determine the Median of grouped data.",
+      "Understand the empirical relationship between mean, median, and mode."
+    ],
+    "ai_context": {
+      "learning_goal": "Help students visualize data and understand the real-world applications of central tendency. Use the 'Socratic Discovery Arc'.",
+      "common_misconceptions": [
+        "Students confuse the formulas for Mean, Median, and Mode.",
+        "Difficulty in finding cumulative frequencies."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you are the manager of a cricket team. You need to pick the best batsman based on their past 10 matches. Should you look at their average score? Or the score they hit most frequently? Or the middle value of their scores? Welcome to the fascinating world of **Statistics (सांख्यिकी / આંકડાશાસ્ત્ર)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "The Three Pillars of Central Tendency: Mean, Median, and Mode. They help us find the 'center' of the data in different ways.",
+      "image_url": "assets/images/maths_ch14_central_tendency.jpg",
+      "alt_text": "Illustration showing Mean, Median, and Mode."
+    },
+    {
+      "type": "theory",
+      "content": "**Mean (माध्य / મધ્યક):**\nThe average of the data.\nFor grouped data (Direct Method):\nx̄ = Σ(fᵢxᵢ) / Σfᵢ\n\nWhere 'x̄' is the mean, 'fᵢ' is the frequency, and 'xᵢ' is the class mark.",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "diagram",
+      "content": "Finding the Mode means finding the peak of the data, the most frequent observation.",
+      "image_url": "assets/images/maths_ch14_mode_peak.jpg",
+      "alt_text": "Graph showing the peak frequency representing the mode."
+    },
+    {
+      "type": "theory",
+      "content": "**Mode (बहुलक / બહુલક):**\nThe value that occurs most frequently.\nFormula for grouped data:\nMode = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h\n\nWhere 'l' is the lower limit of the modal class, 'h' is the class size, 'f₁' is the frequency of the modal class, 'f₀' is the frequency of the preceding class, and 'f₂' is the frequency of the succeeding class.",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "theory",
+      "content": "**Median (माध्यक / મધ્યસ્થ):**\nThe middle value of the sorted data.\nFormula for grouped data:\nMedian = l + [ (n/2 - cf) / f ] × h\n\nWhere 'l' is the lower limit of median class, 'n' is number of observations, 'cf' is cumulative frequency of class preceding the median class, 'f' is frequency of median class, and 'h' is class size.",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** Empirical Relationship\n\n**3 Median = Mode + 2 Mean**\n\n*Board Trick:* You might be given any two values and asked to find the third. Memorize this relation!",
+      "difficulty": "Intermediate",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_1",
+      "type": "quiz",
+      "question": "What is the empirical relationship between the three measures of central tendency?",
+      "question_hi": "केंद्रीय प्रवृत्ति के तीन मापों के बीच अनुभवजन्य संबंध क्या है?",
+      "options": [
+        "3 Median = Mode + 2 Mean",
+        "3 Mean = Mode + 2 Median",
+        "Mode = 3 Mean - 2 Median",
+        "Median = 3 Mode - 2 Mean"
+      ],
+      "options_hi": [
+        "3 माध्यक = बहुलक + 2 माध्य",
+        "3 माध्य = बहुलक + 2 माध्यक",
+        "बहुलक = 3 माध्य - 2 माध्यक",
+        "माध्यक = 3 बहुलक - 2 माध्य"
+      ],
+      "correct_index": 0,
+      "explanation": "The correct empirical formula that relates mean, median, and mode is 3 Median = Mode + 2 Mean.",
+      "explanation_hi": "सही अनुभवजन्य सूत्र जो माध्य, माध्यक और बहुलक को जोड़ता है वह 3 माध्यक = बहुलक + 2 माध्य है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_2",
+      "type": "quiz",
+      "question": "Which measure of central tendency takes into account all the data items?",
+      "question_hi": "केंद्रीय प्रवृत्ति का कौन सा माप सभी डेटा आइटमों को ध्यान में रखता है?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Both Mean and Median"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यक",
+        "बहुलक",
+        "माध्य और माध्यक दोनों"
+      ],
+      "correct_index": 0,
+      "explanation": "The mean is calculated by adding all observations and dividing by the total number of observations, so it uses every data point.",
+      "explanation_hi": "माध्य की गणना सभी अवलोकनों को जोड़कर और अवलोकनों की कुल संख्या से विभाजित करके की जाती है, इसलिए यह प्रत्येक डेटा बिंदु का उपयोग करता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_3",
+      "type": "quiz",
+      "question": "In the formula for calculating mode of grouped data, what does 'f₁' represent?",
+      "question_hi": "वर्गीकृत डेटा के बहुलक की गणना के सूत्र में, 'f₁' क्या दर्शाता है?",
+      "options": [
+        "Frequency of the modal class",
+        "Frequency of the class preceding the modal class",
+        "Frequency of the class succeeding the modal class",
+        "Lower limit of the modal class"
+      ],
+      "options_hi": [
+        "बहुलक वर्ग की बारंबारता",
+        "बहुलक वर्ग से ठीक पहले वाले वर्ग की बारंबारता",
+        "बहुलक वर्ग के ठीक बाद वाले वर्ग की बारंबारता",
+        "बहुलक वर्ग की निचली सीमा"
+      ],
+      "correct_index": 0,
+      "explanation": "In the mode formula, f₁ is the frequency of the modal class (the class with the highest frequency).",
+      "explanation_hi": "बहुलक सूत्र में, f₁ बहुलक वर्ग (सबसे अधिक बारंबारता वाला वर्ग) की बारंबारता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_4",
+      "type": "quiz",
+      "question": "What is the class mark of the class interval 10-25?",
+      "question_hi": "वर्ग अंतराल 10-25 का वर्ग चिह्न क्या है?",
+      "options": [
+        "17.5",
+        "15",
+        "12.5",
+        "20"
+      ],
+      "options_hi": [
+        "17.5",
+        "15",
+        "12.5",
+        "20"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark is the midpoint of the class. (Lower Limit + Upper Limit) / 2 = (10 + 25) / 2 = 17.5.",
+      "explanation_hi": "वर्ग चिह्न वर्ग का मध्य बिंदु होता है। (निचली सीमा + ऊपरी सीमा) / 2 = (10 + 25) / 2 = 17.5।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_5",
+      "type": "quiz",
+      "question": "If the mode of a data is 18 and the mean is 24, what is the median?",
+      "question_hi": "यदि किसी डेटा का बहुलक 18 है और माध्य 24 है, तो माध्यक क्या है?",
+      "options": [
+        "22",
+        "21",
+        "20",
+        "24"
+      ],
+      "options_hi": [
+        "22",
+        "21",
+        "20",
+        "24"
+      ],
+      "correct_index": 0,
+      "explanation": "Using 3 Median = Mode + 2 Mean. 3 Median = 18 + 2(24) = 18 + 48 = 66. So, Median = 66 / 3 = 22.",
+      "explanation_hi": "3 माध्यक = बहुलक + 2 माध्य का उपयोग करते हुए। 3 माध्यक = 18 + 2(24) = 18 + 48 = 66। अतः, माध्यक = 66 / 3 = 22।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_6",
+      "type": "quiz",
+      "question": "Which of the following measures of central tendency cannot be determined graphically?",
+      "question_hi": "केंद्रीय प्रवृत्ति के निम्नलिखित मापों में से किसे ग्राफ़ की मदद से निर्धारित नहीं किया जा सकता है?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Both Median and Mode"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यक",
+        "बहुलक",
+        "माध्यक और बहुलक दोनों"
+      ],
+      "correct_index": 0,
+      "explanation": "Median can be found using ogives, and Mode can be found using a histogram. However, Mean cannot be determined graphically.",
+      "explanation_hi": "माध्यक को त्वरण (ogives) का उपयोग करके पाया जा सकता है, और बहुलक को हिस्टोग्राम का उपयोग करके पाया जा सकता है। हालाँकि, माध्य ग्राफ़िकल रूप से निर्धारित नहीं किया जा सकता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_7",
+      "type": "quiz",
+      "question": "The cumulative frequency curve is also known as:",
+      "question_hi": "संचयी बारंबारता वक्र को किस अन्य नाम से भी जाना जाता है?",
+      "options": [
+        "Ogive",
+        "Histogram",
+        "Frequency polygon",
+        "Bar graph"
+      ],
+      "options_hi": [
+        "ओजाइव (त्वरण)",
+        "आयतचित्र (हिस्टोग्राम)",
+        "बारंबारता बहुभुज",
+        "दंड आलेख (बार ग्राफ़)"
+      ],
+      "correct_index": 0,
+      "explanation": "A cumulative frequency curve is mathematically referred to as an ogive (pronounced o-jive).",
+      "explanation_hi": "एक संचयी बारंबारता वक्र को गणितीय रूप से ओजाइव (ogive) कहा जाता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_8",
+      "type": "quiz",
+      "question": "While calculating the mean of grouped data, we assume that the frequencies are:",
+      "question_hi": "वर्गीकृत डेटा के माध्य की गणना करते समय, हम यह मान लेते हैं कि बारंबारताएँ कहाँ केंद्रित हैं?",
+      "options": [
+        "Centred at the class marks of the classes",
+        "Evenly distributed over the classes",
+        "Centred at the lower limits of the classes",
+        "Centred at the upper limits of the classes"
+      ],
+      "options_hi": [
+        "वर्गों के वर्ग चिह्नों पर केंद्रित",
+        "वर्गों में समान रूप से वितरित",
+        "वर्गों की निचली सीमाओं पर केंद्रित",
+        "वर्गों की ऊपरी सीमाओं पर केंद्रित"
+      ],
+      "correct_index": 0,
+      "explanation": "In grouped data, we assume that all observations in a class interval are concentrated at the class mark (midpoint) of that interval.",
+      "explanation_hi": "वर्गीकृत डेटा में, हम मानते हैं कि एक वर्ग अंतराल के सभी अवलोकन उस अंतराल के वर्ग चिह्न (मध्य बिंदु) पर केंद्रित हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_9",
+      "type": "quiz",
+      "question": "What is the median of the first 10 prime numbers?",
+      "question_hi": "प्रथम 10 अभाज्य संख्याओं का माध्यक क्या है?",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "14"
+      ],
+      "options_hi": [
+        "12",
+        "11",
+        "13",
+        "14"
+      ],
+      "correct_index": 0,
+      "explanation": "The first 10 primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. The median is the average of the 5th and 6th terms: (11+13)/2 = 12.",
+      "explanation_hi": "प्रथम 10 अभाज्य संख्याएँ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 हैं। माध्यक 5वें और 6वें पद का औसत है: (11+13)/2 = 12।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_10",
+      "type": "quiz",
+      "question": "Which measure of central tendency is given by the x-coordinate of the point of intersection of the 'more than' ogive and 'less than' ogive?",
+      "question_hi": "'से अधिक' प्रकार के ओजाइव और 'से कम' प्रकार के ओजाइव के प्रतिच्छेदन बिंदु के x-निर्देशांक द्वारा केंद्रीय प्रवृत्ति का कौन सा माप दिया जाता है?",
+      "options": [
+        "Median",
+        "Mean",
+        "Mode",
+        "None of these"
+      ],
+      "options_hi": [
+        "माध्यक",
+        "माध्य",
+        "बहुलक",
+        "इनमें से कोई नहीं"
+      ],
+      "correct_index": 0,
+      "explanation": "The x-coordinate of the intersection of 'less than' and 'more than' ogives always gives the median of the data.",
+      "explanation_hi": "'से कम' और 'से अधिक' प्रकार के ओजाइव के प्रतिच्छेदन का x-निर्देशांक हमेशा डेटा का माध्यक देता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_11",
+      "type": "quiz",
+      "question": "If the mean of first n natural numbers is 15, what is the value of n?",
+      "question_hi": "यदि प्रथम n प्राकृत संख्याओं का माध्य 15 है, तो n का मान क्या है?",
+      "options": [
+        "29",
+        "30",
+        "28",
+        "31"
+      ],
+      "options_hi": [
+        "29",
+        "30",
+        "28",
+        "31"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2. Setting (n+1)/2 = 15 gives n+1 = 30, so n = 29.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2। (n+1)/2 = 15 रखने पर n+1 = 30 प्राप्त होता है, इसलिए n = 29।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_12",
+      "type": "quiz",
+      "question": "For a symmetrical frequency distribution, which of the following is correct?",
+      "question_hi": "एक सममित बारंबारता बंटन के लिए, निम्नलिखित में से कौन सा सही है?",
+      "options": [
+        "Mean = Median = Mode",
+        "Mean > Median > Mode",
+        "Mean < Median < Mode",
+        "Mode = Median + Mean"
+      ],
+      "options_hi": [
+        "माध्य = माध्यक = बहुलक",
+        "माध्य > माध्यक > बहुलक",
+        "माध्य < माध्यक < बहुलक",
+        "बहुलक = माध्यक + माध्य"
+      ],
+      "correct_index": 0,
+      "explanation": "In a perfectly symmetrical distribution (like a normal bell curve), the mean, median, and mode are all equal and located at the center.",
+      "explanation_hi": "पूरी तरह से सममित बंटन (जैसे सामान्य बेल वक्र) में, माध्य, माध्यक और बहुलक सभी समान होते हैं और केंद्र में स्थित होते हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_13",
+      "type": "quiz",
+      "question": "If the mean of a frequency distribution is 8.1, the sum of frequencies is 20, and the sum of products of frequencies and class marks is 132 + 5k, what is the value of k?",
+      "question_hi": "यदि एक बारंबारता बंटन का माध्य 8.1 है, बारंबारता का योग 20 है, और बारंबारता और वर्ग चिह्नों के गुणनफल का योग 132 + 5k है, तो k का मान क्या है?",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "3"
+      ],
+      "options_hi": [
+        "6",
+        "5",
+        "4",
+        "3"
+      ],
+      "correct_index": 0,
+      "explanation": "Mean = Sum(fx) / Sum(f). So 8.1 = (132 + 5k) / 20. Solving gives 162 = 132 + 5k, then 5k = 30, so k = 6.",
+      "explanation_hi": "माध्य = Sum(fx) / Sum(f)। इसलिए 8.1 = (132 + 5k) / 20। हल करने पर 162 = 132 + 5k प्राप्त होता है, फिर 5k = 30, इसलिए k = 6।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_14",
+      "type": "quiz",
+      "question": "In the formula for finding the median of grouped data, what does 'cf' stand for?",
+      "question_hi": "वर्गीकृत डेटा के माध्यक को ज्ञात करने के सूत्र में, 'cf' का क्या अर्थ है?",
+      "options": [
+        "Cumulative frequency of the class preceding the median class",
+        "Cumulative frequency of the median class",
+        "Frequency of the median class",
+        "Total frequency"
+      ],
+      "options_hi": [
+        "माध्यक वर्ग से ठीक पहले वाले वर्ग की संचयी बारंबारता",
+        "माध्यक वर्ग की संचयी बारंबारता",
+        "माध्यक वर्ग की बारंबारता",
+        "कुल बारंबारता"
+      ],
+      "correct_index": 0,
+      "explanation": "In the median formula, 'cf' represents the cumulative frequency of the class just preceding the median class.",
+      "explanation_hi": "माध्यक सूत्र में, 'cf' माध्यक वर्ग से ठीक पहले वाले वर्ग की संचयी बारंबारता को दर्शाता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch14_15",
+      "type": "quiz",
+      "question": "If xᵢ are the midpoints of class intervals, fᵢ are frequencies, and x̄ is the mean, then what is the value of Σ fᵢ(xᵢ - x̄)?",
+      "question_hi": "यदि xᵢ वर्ग अंतरालों के मध्य बिंदु हैं, fᵢ बारंबारताएँ हैं, और x̄ माध्य है, तो Σ fᵢ(xᵢ - x̄) का मान क्या है?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "correct_index": 0,
+      "explanation": "The algebraic sum of deviations of a set of observations from their mean is always 0. Σ fᵢxᵢ - x̄Σ fᵢ = n x̄ - n x̄ = 0.",
+      "explanation_hi": "अवलोकनों के एक समूह के उनके माध्य से विचलनों का बीजगणितीय योग हमेशा 0 होता है। Σ fᵢxᵢ - x̄Σ fᵢ = n x̄ - n x̄ = 0।"
+    }
+  ]
+}

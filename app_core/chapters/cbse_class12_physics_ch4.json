@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch4",
+    "title": "Chapter 4: Moving Charges and Magnetism",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_001",
+      "type": "hook",
+      "title": "The Dancing Lights of the North and Hidden Invisible Forces",
+      "title_hi": "उत्तरी ध्रुव की नाचती रोशनियाँ और अदृश्य बल",
+      "title_gu": "ઉત્તરીય ધ્રુવના નાચતા પ્રકાશ અને અદ્રશ્ય બળો",
+      "body": "Have you ever wondered what causes the breathtaking Aurora Borealis—the shimmering green and violet lights in the polar skies? They are caused by energetic charged particles thrown from the Sun towards Earth. Earth's invisible magnetic field grabs these moving charges and twists their path, guiding them towards the poles. Magnetism is not just about refrigerator magnets; it is a dynamic force exerted by and upon moving electric charges!",
+      "body_hi": "क्या आपने कभी सोचा है कि ध्रुवीय आकाश में झिलमिलाती हरी और बैंगनी रोशनियाँ—ऑरोरा बोरेलिस—किस कारण होती हैं? ये सूर्य से पृथ्वी की ओर फेंके गए ऊर्जावान आवेशित कणों के कारण होती हैं। पृथ्वी का अदृश्य चुंबकीय क्षेत्र इन गतिमान आवेशों को पकड़ता है और उनके पथ को मोड़कर ध्रुवों की ओर ले जाता है। चुंबकत्व केवल फ्रिज के मैग्नेट तक सीमित नहीं है; यह गतिमान विद्युत आवेशों द्वारा और उन पर लगाया जाने वाला एक गतिशील बल है!",
+      "body_gu": "શું તમે ક્યારેય વિચાર્યું છે કે ધ્રુવીય આકાશમાં ચમકતી લીલી અને જાંબલી રોશની - ઑરોરા બોરેલિસ - શાના કારણે થાય છે? તે સૂર્યમાંથી પૃથ્વી તરફ ફેંકાયેલા ઉર્જાવાન વીજભારિત કણોને કારણે થાય છે. પૃથ્વીનું અદ્રશ્ય ચુંબકીય ક્ષેત્ર આ ગતિમાન વીજભારોને પકડે છે અને તેમનો માર્ગ વાળીને ધ્રુવો તરફ દોરી જાય છે. ચુંબકત્વ એ માત્ર ફ્રિજના મેગ્નેટ વિશે નથી; તે ગતિમાન વિદ્યુતભારો દ્વારા અને તેમના પર લાગતું એક ગતિશીલ બળ છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_002",
+      "type": "socratic_question",
+      "title": "Stationary Charge vs. Moving Charge in a Magnetic Field",
+      "title_hi": "चुंबकीय क्षेत्र में स्थिर आवेश बनाम गतिमान आवेश",
+      "title_gu": "ચુંબકીય ક્ષેત્રમાં સ્થિર વીજભાર વિરુદ્ધ ગતિમાન વીજભાર",
+      "question": "If you place a stationary electric charge in a powerful uniform magnetic field, will it experience any magnetic force?",
+      "question_hi": "यदि आप एक शक्तिशाली एकસમાન चुंबकीय क्षेत्र में एक स्थिर विद्युत आवेश रखते हैं, तो क्या वह कोई चुंबकीय बल अनुभव करेगा?",
+      "question_gu": "જો તમે શક્તિશાળી સમાન ચુંબકીય ક્ષેત્રમાં સ્થિર વિદ્યુતભાર મૂકો છો, તો શું તે કોઈ ચુંબકીય બળ અનુભવશે?",
+      "options": [
+        "Yes, it will accelerate immediately along the magnetic field lines.",
+        "Yes, it will start rotating in a circle.",
+        "No, magnetic fields only exert force on moving charges.",
+        "Yes, but only if the magnetic field is electrostatic."
+      ],
+      "options_hi": [
+        "हाँ, यह तुरंत चुंबकीय क्षेत्र रेखाओं के साथ त्वरित होगा।",
+        "हाँ, यह एक वृत्त में घूमना शुरू कर देगा।",
+        "नहीं, चुंबकीय क्षेत्र केवल गतिमान आवेशों पर ही बल लगाते हैं।",
+        "हाँ, लेकिन केवल तभी जब चुंबकीय क्षेत्र स्थिरविद्युत हो।"
+      ],
+      "options_gu": [
+        "હા, તે ક્ષણભરમાં ચુંબકીય ક્ષેત્ર રેખાઓ સાથે પ્રવેગિત થશે.",
+        "હા, તે વર્તુળાકારમાં ફરવાનું શરૂ કરશે.",
+        "ના, ચુંબકીય ક્ષેત્રો માત્ર ગતિમાન વીજભારો પર જ બળ લગાડે છે.",
+        "હા, પરંતુ જો ચુંબકીય ક્ષેત્ર સ્થિર-વિદ્યુત હોય તો જ."
+      ],
+      "correct_index": 2,
+      "explanation": "According to the Lorentz Magnetic Force equation F = q(v x B), if velocity v = 0, the force F is strictly zero. Magnetic force requires charge in motion relative to the field.",
+      "explanation_hi": "लॉरेंज चुंबकीय बल समीकरण F = q(v x B) के अनुसार, यदि वेग v = 0 है, तो बल F निश्चित रूप से शून्य होता है। चुंबकीय बल के लिए क्षेत्र के सापेक्ष आवेश का गति में होना आवश्यक है।",
+      "explanation_gu": "લોરેન્ઝ ચુંબકીય બળ સમીકરણ F = q(v x B) અનુસાર, જો વેગ v = 0 હોય, તો બળ F સંપૂર્ણપણે શૂન્ય થાય છે. ચુંબકીય બળ માટે ક્ષેત્રની સાપેક્ષમાં વીજભારની ગતિ જરૂરી છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_003",
+      "type": "discovery",
+      "title": "Oersted's Historical Discovery (1820)",
+      "title_hi": "ऑर्स्टेड की ऐतिहासिक खोज (1820)",
+      "title_gu": "ઓર્સ્ટેડની ઐતિહાસિક શોધ (1820)",
+      "body": "In 1820, Danish physicist Hans Christian Oersted accidentally noticed that a magnetic compass needle deflected whenever an electric current was switched on in a nearby wire. This single observation united two previously separate branches of science: Electricity and Magnetism! It proved that moving charges (electric current) produce a magnetic field around them.",
+      "body_hi": "1820 में, डेनिश भौतिक विज्ञानी हंस क्रिश्चियन ऑर्स्टेड ने गलती से देखा कि जब भी पास के तार में विद्युत धारा चालू की जाती थी, तो एक चुंबकीय कम्पास की सुई विक्षेपित हो जाती थी। इस एक अवलोकन ने विज्ञान की दो पहले से अलग शाखाओं: विद्युत और चुंबकत्व को एकजुट कर दिया! इसने साबित कर दिया कि गतिमान आवेश (विद्युत धारा) अपने चारों ओर एक चुंबकीय क्षेत्र उत्पन्न करते हैं।",
+      "body_gu": "1820 માં, ડેનિશ ભૌતિકશાસ્ત્રી હેન્સ ક્રિશ્ચિયન ઓર્સ્ટેડે આકસ્મિક રીતે નોંધ્યું કે જ્યારે પણ નજીકના વાયરમાંથી વિદ્યુતપ્રવાહ ચાલુ કરવામાં આવતો ત્યારે ચુંબકીય હોકાયંત્રની સોય વિચલિત થતી હતી. આ એક જ અવલોકને વિજ્ઞાનની બે અગાઉની અલગ શાખાઓ: વિદ્યુત અને ચુંબકત્વને એક કરી દીધી! આણે સાબિત કર્યું કે ગતિમાન વિદ્યુતભારો (વિદ્યુતપ્રવાહ) તેમની આસપાસ ચુંબકીય ક્ષેત્ર ઉત્પન્ન કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_004",
+      "type": "theory",
+      "title": "Core Concepts: Lorentz Force, Biot-Savart Law & Ampere's Law",
+      "title_hi": "मुख्य अवधारणाएँ: लॉरेंज बल, बायो-सावर्त नियम और एम्पीयर का नियम",
+      "title_gu": "મુખ્ય ખ્યાલો: લોરેન્ઝ બળ, બાયો-સાવર્ત નિયમ અને એમ્પીયરનો નિયમ",
+      "body": "1. **Lorentz Force**: Total force on charge q moving with velocity v in electric field E and magnetic field B is F = q(E + v x B).\n2. **Magnetic Force Properties**: F_mag = q(v x B) = q v B sin(theta). It acts perpendicular to both velocity and magnetic field, doing ZERO work on the particle.\n3. **Biot-Savart Law**: Field dB due to current element I dl at distance r is dB = (mu_0 / 4pi) * (I dl x r_cap) / r^2.\n4. **Ampere's Circuital Law**: Line integral of B around a closed loop equals mu_0 times enclosed current I_enc: integral(B . dl) = mu_0 * I_enc.\n5. **Solenoid & Toroid**: Field inside long solenoid B = mu_0 * n * I where n is turns per unit length.\n6. **Parallel Currents**: Force per unit length between parallel wires separated by d carrying currents I1, I2 is f = (mu_0 * I1 * I2) / (2 * pi * d). Parallel currents attract; antiparallel repel.\n7. **Moving Coil Galvanometer**: Deflection theta = (N A B / k) * I, where sensitivity can be increased by increasing N, A, or B, or decreasing torsional constant k.",
+      "body_hi": "1. **लॉरेंज बल**: विद्युत क्षेत्र E और चुंबकीय क्षेत्र B में वेग v से गतिमान आवेश q पर कुल बल F = q(E + v x B) होता है।\n2. **चुंबकीय बल के गुण**: F_mag = q v B sin(theta)। यह वेग और चुंबकीय क्षेत्र दोनों के लंबवत कार्य करता है, कण पर शून्य कार्य करता है।\n3. **बायो-सावर्त का नियम**: दूरी r पर धारा अवयव I dl के कारण चुंबकीय क्षेत्र dB = (mu_0 / 4pi) * (I dl x r_cap) / r^2।\n4. **एम्पीयर का परिपथीय नियम**: बंद लूप के चारों ओर B का रेखीय समाकलन mu_0 गुना परिबद्ध धारा I_enc के बराबर होता है: integral(B . dl) = mu_0 * I_enc।\n5. **परिनालिका**: लंबी परिनालिका के अंदर क्षेत्र B = mu_0 * n * I जहाँ n प्रति इकाई लंबाई फेरों की संख्या है।\n6. **समांतर धाराएँ**: d दूरी से अलग समांतर तारों के बीच प्रति इकाई लंबाई बल f = (mu_0 * I1 * I2) / (2 * pi * d)। समान दिशा की धाराएँ आकर्षित करती हैं; विपरीत दिशा की प्रतिकर्षित करती हैं।\n7. **चल कुंडली धारामापी**: विक्षेप theta = (N A B / k) * I।",
+      "body_gu": "1. **લોરેન્ઝ બળ**: વિદ્યુતક્ષેત્ર E અને ચુંબકીય ક્ષેત્ર B માં v વેગથી ગતિ કરતા વીજભાર q પર કુલ બળ F = q(E + v x B) છે.\n2. **ચુંબકીય બળના ગુણધર્મો**: F_mag = q v B sin(theta). તે વેગ અને ચુંબકીય ક્ષેત્ર બંનેને લંબરૂપે લાગે છે, કણ પર શૂન્ય કાર્ય કરે છે.\n3. **બાયો-સાવર્તનો નિયમ**: r અંતરે પ્રવાહ ઘટક I dl ના કારણે ક્ષેત્ર dB = (mu_0 / 4pi) * (I dl x r_cap) / r^2.\n4. **એમ્પીયરનો પરિપથનો નિયમ**: બંધ લૂપ પર B નું રેખીય સંકલન mu_0 ગુણ્યા બંધ ઘેરાયેલ પ્રવાહ I_enc બરાબર થાય છે: integral(B . dl) = mu_0 * I_enc.\n5. **સોલેનોઇડ**: લાંબા સોલેનોઇડ અંદર ક્ષેત્ર B = mu_0 * n * I જ્યાં n એ એકમ લંબાઈ દીઠ આંટા છે.\n6. **સમાંતર પ્રવાહો**: d અંતરે રહેલા વાયરો વચ્ચે એકમ લંબાઈ દીઠ બળ f = (mu_0 * I1 * I2) / (2 * pi * d). સમાંતર પ્રવાહો આકર્ષે છે; અસમાંતર પ્રવાહો અપાકર્ષે છે.\n7. **મુવિંગ કોઇલ ગેલ્વેનોમીટર**: વિચલન theta = (N A B / k) * I."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_005",
+      "type": "knowledge_check",
+      "title": "Work Done by Magnetic Force",
+      "title_hi": "चुंबकीय बल द्वारा किया गया कार्य",
+      "title_gu": "ચુંબકીય બળ દ્વારા થતું કાર્ય",
+      "question": "What is the work done by a magnetic force on a charged particle moving freely in a magnetic field?",
+      "question_hi": "चुंबकीय क्षेत्र में स्वतंत्र रूप से गतिमान आवेशित कण पर चुंबकीय बल द्वारा किया गया कार्य कितना होता है?",
+      "question_gu": "ચુંબકીય ક્ષેત્રમાં મુક્તપણે ગતિ કરતા વીજભારિત કણ પર ચુંબકીય બળ દ્વારા થતું કાર્ય કેટલું હોય છે?",
+      "options": [
+        "Always positive",
+        "Always negative",
+        "Always zero",
+        "Depends on the magnitude of magnetic field"
+      ],
+      "options_hi": [
+        "हमेशा धनात्मक",
+        "हमेशा ऋणात्मक",
+        "हमेशा शून्य",
+        "चुंबकीय क्षेत्र के परिमाण पर निर्भर करता है"
+      ],
+      "options_gu": [
+        "હંમેશા ધન",
+        "હંમેશા ઋણ",
+        "હંમેશા શૂન્ય",
+        "ચુંબકીય ક્ષેત્રના મૂલ્ય પર આધાર રાખે છે"
+      ],
+      "correct_index": 2,
+      "explanation": "Since the magnetic force F = q(v x B) is always perpendicular to velocity v (and displacement dr), F . dr = 0. Therefore, work done W = integral(F . dr) is ALWAYS zero.",
+      "explanation_hi": "चूँकि चुंबकीय बल F = q(v x B) हमेशा वेग v (और विस्थापन dr) के लंबवत होता है, F . dr = 0। इसलिए, किया गया कार्य W = integral(F . dr) हमेशा शून्य होता है।",
+      "explanation_gu": "કારણ કે ચુંબકીય બળ F = q(v x B) એ હંમેશા વેગ v (અને સ્થાનાંતર dr) ને લંબરૂપ હોય છે, F . dr = 0. તેથી, થયેલું કાર્ય W = integral(F . dr) હંમેશા શૂન્ય હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_006",
+      "type": "reflection",
+      "title": "Conceptual Insight: Magnetic Force Changes Direction, Not Speed",
+      "title_hi": "वैचारिक अंतर्दृष्टि: चुंबकीय बल दिशा बदलता है, गति नहीं",
+      "title_gu": "વૈચારિક આંતરદ્રષ્ટિ: ચુંબકીય બળ દિશા બદલે છે, ઝડપ નહીં",
+      "body": "Because the magnetic force does zero work on a moving charged particle, its kinetic energy remains strictly constant! The magnetic force can change the *direction* of velocity (causing circular or helical trajectories) but can NEVER change the *speed* or *kinetic energy* of the charge.",
+      "body_hi": "क्योंकि चुंबकीय बल गतिमान आवेशित कण पर शून्य कार्य करता है, इसकी गतिज ऊर्जा बिल्कुल स्थिर रहती है! चुंबकीय बल केवल वेग की *दिशा* बदल सकता है (वृत्ताकार या कुंडलित पथ बना सकता है) लेकिन कभी भी आवेश की *गति* या *गतिज ऊर्जा* नहीं बदल सकता।",
+      "body_gu": "કારણ કે ચુંબકીય બળ ગતિમાન વીજભારિત કણ પર શૂન્ય કાર્ય કરે છે, તેની ગતિઉર્જા સંપૂર્ણપણે અચળ રહે છે! ચુંબકીય બળ વેગની *દિશા* બદલી શકે છે (વર્તુળાકાર કે હેલિકલ માર્ગ બનાવીને) પરંતુ વીજભારની *ઝડપ* કે *ગતિઉર્જા* ક્યારેય બદલી શકતું નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_007",
+      "type": "connection",
+      "title": "Real-World Application: Mass Spectrometers and Velocity Selectors",
+      "title_hi": "वास्तविक दुनिया के अनुप्रयोग: द्रव्यमान स्पेक्ट्रोमीटर और वेग चयनकर्ता",
+      "title_gu": "વાસ્તવિક દુનિયાના અનુપ્રયોગો: માસ સ્પેક્ટ્રોમીટર અને વેગ પસંદગીકાર",
+      "body": "Crossed electric and magnetic fields (E perpendicular to B) act as a Velocity Selector where particles with velocity v = E/B pass undeflected. This principle is fundamental in Mass Spectrometers used in chemistry and forensics to separate isotopes and identify unknown chemical compounds based on mass-to-charge ratios.",
+      "body_hi": "क्रॉस किए गए विद्युत और चुंबकीय क्षेत्र (E लंबवत B) एक वेग चयनकर्ता के रूप में कार्य करते हैं जहां v = E/B वेग वाले कण बिना विक्षेपित हुए गुजरते हैं। यह सिद्धांत मास स्पेक्ट्रोमीटर में मूलभूत है जिसका उपयोग रसायन विज्ञान और फोरेंसिक में समस्थानिकों को अलग करने के लिए किया जाता है।",
+      "body_gu": "ક્રોસ્ડ વિદ્યુત અને ચુંબકીય ક્ષેત્રો (E લંબરૂપ B) વેગ પસંદગીકાર તરીકે કામ કરે છે જ્યાં v = E/B વેગ ધરાવતા કણો વિચલિત થયા વગર પસાર થાય છે. આ સિદ્ધાંત કેમિસ્ટ્રી અને ફોરેન્સિક્સમાં માસ સ્પેક્ટ્રોમીટરમાં ઉપયોગી છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_008",
+      "type": "mastery",
+      "title": "Converting Galvanometer into Ammeter and Voltmeter",
+      "title_hi": "धारामापी को एमीटर और वोल्टमीटर में बदलना",
+      "title_gu": "ગેલ્વેનોમીટરનું એમીટર અને વોલ્ટમીટરમાં રૂપાંતરણ",
+      "question": "To convert a Moving Coil Galvanometer of resistance G into an Ammeter of range I (where full-scale deflection current is I_g), what shunt resistance S must be connected in parallel?",
+      "question_hi": "प्रतिरोध G के चल कुंडली धारामापी को सीमा I के एमीटर में बदलने के लिए (जहाँ पूर्ण-पैमाना विक्षेप धारा I_g है), समानांतर में कौन सा शंट प्रतिरोध S जोड़ा जाना चाहिए?",
+      "question_gu": "G પ્રતિકાર ધરાવતા મુવિંગ કોઇલ ગેલ્વેનોમીટરને I ક્ષમતાવાળા એમીટરમાં રૂપાંતરિત કરવા માટે (જ્યાં પૂર્ણ-માપક્રમ વિચલન પ્રવાહ I_g છે), સમાંતરમાં કયો શંટ પ્રતિકાર S જોડવો જોઈએ?",
+      "options": [
+        "S = (I_g * G) / (I - I_g)",
+        "S = (I - I_g) * G / I_g",
+        "S = I_g * G / I",
+        "S = (I + I_g) * G / I_g"
+      ],
+      "options_hi": [
+        "S = (I_g * G) / (I - I_g)",
+        "S = (I - I_g) * G / I_g",
+        "S = I_g * G / I",
+        "S = (I + I_g) * G / I_g"
+      ],
+      "options_gu": [
+        "S = (I_g * G) / (I - I_g)",
+        "S = (I - I_g) * G / I_g",
+        "S = I_g * G / I",
+        "S = (I + I_g) * G / I_g"
+      ],
+      "correct_index": 0,
+      "explanation": "Potential difference across shunt equals potential across galvanometer: S * (I - I_g) = I_g * G, leading to S = (I_g * G) / (I - I_g).",
+      "explanation_hi": "शंट पर विभवांतर धारामापी पर विभवांतर के बराबर होता है: S * (I - I_g) = I_g * G, जिससे S = (I_g * G) / (I - I_g) प्राप्त होता है।",
+      "explanation_gu": "શંટ પર વિદ્યુતસ્થિતિમાનનો તફાવત ગેલ્વેનોમીટર પરના તફાવત જેટલો હોય છે: S * (I - I_g) = I_g * G, જેથી S = (I_g * G) / (I - I_g) મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_009",
+      "type": "mcq",
+      "title": "NCERT Ex 4.1: Magnetic Field at Center of Circular Coil",
+      "title_hi": "NCERT अभ्यास 4.1: वृत्ताकार कुंडली के केंद्र पर चुंबकीय क्षेत्र",
+      "title_gu": "NCERT સ્વાધ્યાય 4.1: વર્તુળાકાર કોઈલના કેન્દ્ર પર ચુંબકીય ક્ષેત્ર",
+      "question": "A circular coil of wire consisting of 100 turns, each of radius 8.0 cm carries a current of 0.40 A. What is the magnitude of the magnetic field B at the centre of the coil?",
+      "question_hi": "100 फेरों वाली एक वृत्ताकार कुंडली, जिसकी प्रत्येक त्रिज्या 8.0 सेमी है, में 0.40 A की धारा प्रवाहित हो रही है। कुंडली के केंद्र पर चुंबकीय क्षेत्र B का परिमाण क्या है?",
+      "question_gu": "100 આંટા ધરાવતી વર્તુળાકાર કોઈલની ત્રિજ્યા 8.0 cm છે અને તેમાં 0.40 A નો પ્રવાહ વહે છે. કોઈલના કેન્દ્ર પર ચુંબકીય ક્ષેત્ર B નું મૂલ્ય કેટલું હશે?",
+      "options": [
+        "3.14 x 10^-4 T",
+        "6.28 x 10^-4 T",
+        "1.57 x 10^-4 T",
+        "3.14 x 10^-5 T"
+      ],
+      "options_hi": [
+        "3.14 x 10^-4 T",
+        "6.28 x 10^-4 T",
+        "1.57 x 10^-4 T",
+        "3.14 x 10^-5 T"
+      ],
+      "options_gu": [
+        "3.14 x 10^-4 T",
+        "6.28 x 10^-4 T",
+        "1.57 x 10^-4 T",
+        "3.14 x 10^-5 T"
+      ],
+      "correct_index": 0,
+      "explanation": "B = (mu_0 * N * I) / (2 * r) = (4pi x 10^-7 * 100 * 0.40) / (2 * 0.08) = 3.14 x 10^-4 T.",
+      "explanation_hi": "B = (mu_0 * N * I) / (2 * r) = (4pi x 10^-7 * 100 * 0.40) / (2 * 0.08) = 3.14 x 10^-4 T।",
+      "explanation_gu": "B = (mu_0 * N * I) / (2 * r) = (4pi x 10^-7 * 100 * 0.40) / (2 * 0.08) = 3.14 x 10^-4 T."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_010",
+      "type": "mcq",
+      "title": "NCERT Ex 4.2: Field Due to Long Straight Wire",
+      "title_hi": "NCERT अभ्यास 4.2: लंबे सीधे तार के कारण क्षेत्र",
+      "title_gu": "NCERT સ્વાધ્યાય 4.2: લાંબા સીધા વાયરના લીધે ક્ષેત્ર",
+      "question": "A long straight wire carries a current of 35 A. What is the magnitude of the field B at a point 20 cm from the wire?",
+      "question_hi": "एक लंबे सीधे तार में 35 A की धारा प्रवाहित होती है। तार से 20 सेमी की दूरी पर स्थित बिंदु पर क्षेत्र B का परिमाण क्या है?",
+      "question_gu": "એક લાંબા સીધા વાયરમાંથી 35 A નો પ્રવાહ પસાર થાય છે. વાયરથી 20 cm અંતરે આવેલા બિંદુએ ક્ષેત્ર B નું મૂલ્ય કેટલું હશે?",
+      "options": [
+        "3.5 x 10^-5 T",
+        "7.0 x 10^-5 T",
+        "1.75 x 10^-5 T",
+        "3.5 x 10^-4 T"
+      ],
+      "options_hi": [
+        "3.5 x 10^-5 T",
+        "7.0 x 10^-5 T",
+        "1.75 x 10^-5 T",
+        "3.5 x 10^-4 T"
+      ],
+      "options_gu": [
+        "3.5 x 10^-5 T",
+        "7.0 x 10^-5 T",
+        "1.75 x 10^-5 T",
+        "3.5 x 10^-4 T"
+      ],
+      "correct_index": 0,
+      "explanation": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 35) / 0.20 = 3.5 x 10^-5 T.",
+      "explanation_hi": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 35) / 0.20 = 3.5 x 10^-5 T।",
+      "explanation_gu": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 35) / 0.20 = 3.5 x 10^-5 T."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_011",
+      "type": "mcq",
+      "title": "NCERT Ex 4.3: Direction of Magnetic Field",
+      "title_hi": "NCERT अभ्यास 4.3: चुंबकीय क्षेत्र की दिशा",
+      "title_gu": "NCERT સ્વાધ્યાય 4.3: ચુંબકીય ક્ષેત્રની દિશા",
+      "question": "A long straight wire in the horizontal plane carries a current of 50 A in north to south direction. What is the magnitude and direction of B at a point 2.5 m east of the wire?",
+      "question_hi": "क्षैतिज तल में एक लंबा सीधा तार उत्तर से दक्षिण दिशा में 50 A की धारा वहन करता है। तार से 2.5 मीटर पूर्व में स्थित बिंदु पर B का परिमाण और दिशा क्या है?",
+      "question_gu": "સમતલમાં રહેલો એક લાંબો સીધો વાયર ઉત્તરથી દક્ષિણ દિશામાં 50 A નો પ્રવાહ વહન કરે છે. વાયરથી 2.5 m પૂર્વમાં આવેલા બિંદુએ B નું મૂલ્ય અને દિશા શું હશે?",
+      "options": [
+        "4.0 x 10^-6 T, directed vertically upwards",
+        "4.0 x 10^-6 T, directed vertically downwards",
+        "2.0 x 10^-6 T, directed towards North",
+        "4.0 x 10^-5 T, directed vertically upwards"
+      ],
+      "options_hi": [
+        "4.0 x 10^-6 T, लंबवत ऊपर की ओर",
+        "4.0 x 10^-6 T, लंबवत नीचे की ओर",
+        "2.0 x 10^-6 T, उत्तर की ओर",
+        "4.0 x 10^-5 T, लंबवत ऊपर की ओर"
+      ],
+      "options_gu": [
+        "4.0 x 10^-6 T, શિરોલંબ રીતે ઉપર તરફ",
+        "4.0 x 10^-6 T, શિરોલંબ રીતે નીચે તરફ",
+        "2.0 x 10^-6 T, ઉત્તર તરફ",
+        "4.0 x 10^-5 T, શિરોલંબ રીતે ઉપર તરફ"
+      ],
+      "correct_index": 0,
+      "explanation": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 50) / 2.5 = 4.0 x 10^-6 T. By Right Hand Thumb Rule, pointing thumb south and fingers at east gives upward direction.",
+      "explanation_hi": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 50) / 2.5 = 4.0 x 10^-6 T। दाएं हाथ के अंगूठे के नियम से दिशा ऊपर की ओर होगी।",
+      "explanation_gu": "B = (mu_0 * I) / (2 * pi * r) = (2 x 10^-7 * 50) / 2.5 = 4.0 x 10^-6 T. જમણા હાથના અંગૂઠાના નિયમ મુજબ દિશા ઉપર તરફ હશે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_012",
+      "type": "mcq",
+      "title": "NCERT Ex 4.4: Field Below Power Line",
+      "title_hi": "NCERT अभ्यास 4.4: पावर लाइन के नीचे चुंबकीय क्षेत्र",
+      "title_gu": "NCERT સ્વાધ્યાય 4.4: પાવર લાઇન નીચે ચુંબકીય ક્ષેત્ર",
+      "question": "A horizontal overhead power line carries a current of 90 A in east to west direction. What is the magnitude and direction of the magnetic field at a point 1.5 m below the line?",
+      "question_hi": "एक क्षैतिज ओवरहेड पावर लाइन पूर्व से पश्चिम दिशा में 90 A की धारा वहन करती है। लाइन से 1.5 मीटर नीचे एक बिंदु पर चुंबकीय क्षेत्र का परिमाण और दिशा क्या है?",
+      "question_gu": "એક ક્ષિતિજ સમાંતર ઓવરહેડ પાવર લાઇન પૂર્વથી પશ્ચિમ દિશામાં 90 A નો પ્રવાહ વહન કરે છે. લાઇનથી 1.5 m નીચેના બિંદુએ ચુંબકીય ક્ષેત્રનું મૂલ્ય અને દિશા શું હશે?",
+      "options": [
+        "1.2 x 10^-5 T, directed towards South",
+        "1.2 x 10^-5 T, directed towards North",
+        "2.4 x 10^-5 T, directed towards South",
+        "1.2 x 10^-6 T, directed vertically downwards"
+      ],
+      "options_hi": [
+        "1.2 x 10^-5 T, दक्षिण की ओर",
+        "1.2 x 10^-5 T, उत्तर की ओर",
+        "2.4 x 10^-5 T, दक्षिण की ओर",
+        "1.2 x 10^-6 T, लंबवत नीचे की ओर"
+      ],
+      "options_gu": [
+        "1.2 x 10^-5 T, દક્ષિણ તરફ",
+        "1.2 x 10^-5 T, ઉત્તર તરફ",
+        "2.4 x 10^-5 T, દક્ષિણ તરફ",
+        "1.2 x 10^-6 T, શિરોલંબ રીતે નીચે તરફ"
+      ],
+      "correct_index": 0,
+      "explanation": "B = (2 x 10^-7 * 90) / 1.5 = 1.2 x 10^-5 T. By right hand rule, below the west-bound current, the field points towards South.",
+      "explanation_hi": "B = (2 x 10^-7 * 90) / 1.5 = 1.2 x 10^-5 T। दाएं हाथ के नियम से पश्चिम की ओर जाने वाली धारा के नीचे क्षेत्र दक्षिण की ओर होता है।",
+      "explanation_gu": "B = (2 x 10^-7 * 90) / 1.5 = 1.2 x 10^-5 T. જમણા હાથના નિયમ મુજબ દક્ષિણ તરફ હશે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_013",
+      "type": "mcq",
+      "title": "NCERT Ex 4.5: Force per Unit Length on Wire",
+      "title_hi": "NCERT अभ्यास 4.5: तार पर प्रति इकाई लंबाई बल",
+      "title_gu": "NCERT સ્વાધ્યાય 4.5: વાયર પર એકમ લંબાઈ દીઠ બળ",
+      "question": "What is the magnitude of magnetic force per unit length on a wire carrying a current of 8 A and making an angle of 30 degrees with the direction of a uniform magnetic field of 0.15 T?",
+      "question_hi": "0.15 T के एकसमान चुंबकीय क्षेत्र की दिशा से 30 डिग्री का कोण बनाने वाले और 8 A की धारा वहन करने वाले तार पर प्रति इकाई लंबाई चुंबकीय बल का परिमाण क्या है?",
+      "question_gu": "0.15 T ના સમાન ચુંબકીય ક્ષેત્ર સાથે 30 ડિગ્રીનો ખૂણો બનાવતા અને 8 A નો પ્રવાહ વહન કરતા વાયર પર એકમ લંબાઈ દીઠ ચુંબકીય બળનું મૂલ્ય કેટલું હશે?",
+      "options": [
+        "0.60 N/m",
+        "1.20 N/m",
+        "0.30 N/m",
+        "0.06 N/m"
+      ],
+      "options_hi": [
+        "0.60 N/m",
+        "1.20 N/m",
+        "0.30 N/m",
+        "0.06 N/m"
+      ],
+      "options_gu": [
+        "0.60 N/m",
+        "1.20 N/m",
+        "0.30 N/m",
+        "0.06 N/m"
+      ],
+      "correct_index": 0,
+      "explanation": "f = F / L = I * B * sin(theta) = 8 * 0.15 * sin(30 deg) = 8 * 0.15 * 0.5 = 0.60 N/m.",
+      "explanation_hi": "f = F / L = I * B * sin(theta) = 8 * 0.15 * sin(30 deg) = 8 * 0.15 * 0.5 = 0.60 N/m।",
+      "explanation_gu": "f = F / L = I * B * sin(theta) = 8 * 0.15 * sin(30 deg) = 8 * 0.15 * 0.5 = 0.60 N/m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_014",
+      "type": "mcq",
+      "title": "NCERT Ex 4.6: Magnetic Force inside Solenoid",
+      "title_hi": "NCERT अभ्यास 4.6: परिनालिका के अंदर चुंबकीय बल",
+      "title_gu": "NCERT સ્વાધ્યાય 4.6: સોલેનોઇડ અંદર ચુંબકીય બળ",
+      "question": "A 3.0 cm wire carrying a current of 10 A is placed inside a solenoid perpendicular to its axis. The magnetic field inside the solenoid is given to be 0.27 T. What is the magnetic force on the wire?",
+      "question_hi": "10 A धारा ले जाने वाला 3.0 सेमी का तार परिनालिका के अक्ष के लंबवत परिनालिका के अंदर रखा गया है। परिनालिका के अंदर चुंबकीय क्षेत्र 0.27 T दिया गया है। तार पर चुंबकीय बल क्या है?",
+      "question_gu": "10 A નો પ્રવાહ વહન કરતો 3.0 cm નો વાયર સોલેનોઇડની અંદર તેની અક્ષને લંબરૂપે મૂકવામાં આવ્યો છે. સોલેનોઇડ અંદર ચુંબકીય ક્ષેત્ર 0.27 T આપેલ છે. વાયર પર ચુંબકીય બળ કેટલું હશે?",
+      "options": [
+        "8.1 x 10^-2 N",
+        "8.1 x 10^-3 N",
+        "2.7 x 10^-2 N",
+        "1.62 x 10^-1 N"
+      ],
+      "options_hi": [
+        "8.1 x 10^-2 N",
+        "8.1 x 10^-3 N",
+        "2.7 x 10^-2 N",
+        "1.62 x 10^-1 N"
+      ],
+      "options_gu": [
+        "8.1 x 10^-2 N",
+        "8.1 x 10^-3 N",
+        "2.7 x 10^-2 N",
+        "1.62 x 10^-1 N"
+      ],
+      "correct_index": 0,
+      "explanation": "F = I * L * B * sin(90 deg) = 10 * 0.03 * 0.27 * 1 = 0.081 N = 8.1 x 10^-2 N.",
+      "explanation_hi": "F = I * L * B * sin(90 deg) = 10 * 0.03 * 0.27 * 1 = 0.081 N = 8.1 x 10^-2 N।",
+      "explanation_gu": "F = I * L * B * sin(90 deg) = 10 * 0.03 * 0.27 * 1 = 0.081 N = 8.1 x 10^-2 N."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_015",
+      "type": "mcq",
+      "title": "NCERT Ex 4.7: Force between Two Parallel Wires",
+      "title_hi": "NCERT अभ्यास 4.7: दो समांतर तारों के बीच बल",
+      "title_gu": "NCERT સ્વાધ્યાય 4.7: બે સમાંતર વાયરો વચ્ચે બળ",
+      "question": "Two long and parallel straight wires A and B carrying currents of 8.0 A and 5.0 A in the same direction are separated by a distance of 4.0 cm. Estimate the force on a 10 cm section of wire A.",
+      "question_hi": "8.0 A और 5.0 A की धारा समान दिशा में ले जाने वाले दो लंबे और समांतर सीधे तार A और B 4.0 सेमी की दूरी पर स्थित हैं। तार A के 10 सेमी लंबे खंड पर बल का अनुमान लगाएं।",
+      "question_gu": "સમાન દિશામાં 8.0 A અને 5.0 A નો પ્રવાહ વહન કરતા બે લાંબા અને સમાંતર વાયરો A અને B 4.0 cm ના અંતરે છે. વાયર A ના 10 cm વિભાગ પર લાગતા બળની ગણતરી કરો.",
+      "options": [
+        "2.0 x 10^-5 N (attractive)",
+        "2.0 x 10^-5 N (repulsive)",
+        "4.0 x 10^-5 N (attractive)",
+        "1.0 x 10^-5 N (repulsive)"
+      ],
+      "options_hi": [
+        "2.0 x 10^-5 N (आकर्षण)",
+        "2.0 x 10^-5 N (प्रतिकर्षण)",
+        "4.0 x 10^-5 N (आकर्षण)",
+        "1.0 x 10^-5 N (प्रतिकर्षण)"
+      ],
+      "options_gu": [
+        "2.0 x 10^-5 N (આકર્ષી)",
+        "2.0 x 10^-5 N (અપાકર્ષી)",
+        "4.0 x 10^-5 N (આકર્ષી)",
+        "1.0 x 10^-5 N (અપાકર્ષી)"
+      ],
+      "correct_index": 0,
+      "explanation": "f = (mu_0 * I1 * I2) / (2 * pi * d) = (2 x 10^-7 * 8 * 5) / 0.04 = 2 x 10^-4 N/m. For L = 0.1 m, F = f * L = 2 x 10^-5 N. Since currents are in same direction, force is attractive.",
+      "explanation_hi": "f = (2 x 10^-7 * 8 * 5) / 0.04 = 2 x 10^-4 N/m। L = 0.1 m के लिए, F = 2 x 10^-5 N। धाराएँ समान दिशा में हैं इसलिए आकर्षण बल होगा।",
+      "explanation_gu": "f = (2 x 10^-7 * 8 * 5) / 0.04 = 2 x 10^-4 N/m. L = 0.1 m માટે, F = 2 x 10^-5 N. પ્રવાહ સમાન દિશામાં હોવાથી આકર્ષી બળ લાગશે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_016",
+      "type": "mcq",
+      "title": "NCERT Ex 4.8: Solenoid Magnetic Field Calculation",
+      "title_hi": "NCERT अभ्यास 4.8: परिनालिका के चुंबकीय क्षेत्र की गणना",
+      "title_gu": "NCERT સ્વાધ્યાય 4.8: સોલેનોઇડ ચુંબકીય ક્ષેત્રની ગણતરી",
+      "question": "A closely wound solenoid 80 cm long has 5 layers of windings of 400 turns each. The diameter of the solenoid is 1.8 cm. If the current carried is 8.0 A, estimate the magnitude of B inside the solenoid near its centre.",
+      "question_hi": "80 सेमी लंबी एक पास-पास लपेटी गई परिनालिका में 400 फेरों की 5 परतें हैं। परिनालिका का व्यास 1.8 सेमी है। यदि प्रवाहित धारा 8.0 A है, तो इसके केंद्र के पास परिनालिका के अंदर B के परिमाण का अनुमान लगाएं।",
+      "question_gu": "80 cm લાંબા સોલેનોઇડમાં 400 આંટાવાળા 5 પડો છે. સોલેનોઇડનો વ્યાસ 1.8 cm છે. જો પ્રવાહ 8.0 A હોય, તો સોલેનોઇડ અંદર કેન્દ્ર નજીક B નું મૂલ્ય શોધો.",
+      "options": [
+        "2.5 x 10^-2 T",
+        "5.0 x 10^-2 T",
+        "1.25 x 10^-2 T",
+        "2.5 x 10^-3 T"
+      ],
+      "options_hi": [
+        "2.5 x 10^-2 T",
+        "5.0 x 10^-2 T",
+        "1.25 x 10^-2 T",
+        "2.5 x 10^-3 T"
+      ],
+      "options_gu": [
+        "2.5 x 10^-2 T",
+        "5.0 x 10^-2 T",
+        "1.25 x 10^-2 T",
+        "2.5 x 10^-3 T"
+      ],
+      "correct_index": 0,
+      "explanation": "Total turns N = 5 * 400 = 2000. Turns per unit length n = 2000 / 0.8 = 2500 m^-1. B = mu_0 * n * I = 4pi x 10^-7 * 2500 * 8.0 = 2.51 x 10^-2 T.",
+      "explanation_hi": "कुल फेरे N = 5 * 400 = 2000। n = 2000 / 0.8 = 2500 m^-1। B = 4pi x 10^-7 * 2500 * 8.0 = 2.51 x 10^-2 T।",
+      "explanation_gu": "કુલ આંટા N = 5 * 400 = 2000. n = 2000 / 0.8 = 2500 m^-1. B = 4pi x 10^-7 * 2500 * 8.0 = 2.51 x 10^-2 T."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_017",
+      "type": "mcq",
+      "title": "NCERT Ex 4.9: Torque on Square Coil",
+      "title_hi": "NCERT अभ्यास 4.9: वर्गाकार कुंडली पर बलाघूर्ण",
+      "title_gu": "NCERT સ્વાધ્યાય 4.9: ચોરસ કોઈલ પર ટોર્ક",
+      "question": "A square coil of side 10 cm consists of 20 turns and carries a current of 12 A. The coil is suspended vertically and the normal to the plane of the coil makes an angle of 30 degrees with uniform magnetic field B = 0.80 T. What is torque on coil?",
+      "question_hi": "10 सेमी भुजा वाली एक वर्गाकार कुंडली में 20 फेरे हैं और इसमें 12 A की धारा बहती है। कुंडली लंबवत लटकी है और इसके तल का अभिलंब B = 0.80 T के साथ 30 डिग्री का कोण बनाता है। कुंडली पर बलाघूर्ण कितना है?",
+      "question_gu": "10 cm બાજુવાળી ચોરસ કોઈલમાં 20 આંટા છે અને 12 A નો પ્રવાહ વહે છે. કોઈલ લંબરૂપે લટકાવેલ છે અને તેના સમતલનો લંબ B = 0.80 T સાથે 30 ડિગ્રીનો ખૂણો બનાવે છે. કોઈલ પર ટોર્ક કેટલું હશે?",
+      "options": [
+        "0.96 N m",
+        "1.92 N m",
+        "0.48 N m",
+        "0.096 N m"
+      ],
+      "options_hi": [
+        "0.96 N m",
+        "1.92 N m",
+        "0.48 N m",
+        "0.096 N m"
+      ],
+      "options_gu": [
+        "0.96 N m",
+        "1.92 N m",
+        "0.48 N m",
+        "0.096 N m"
+      ],
+      "correct_index": 0,
+      "explanation": "Torque tau = N * I * A * B * sin(theta) = 20 * 12 * (0.10)^2 * 0.80 * sin(30 deg) = 240 * 0.01 * 0.80 * 0.5 = 0.96 N m.",
+      "explanation_hi": "बलाघूर्ण tau = N * I * A * B * sin(theta) = 20 * 12 * 0.01 * 0.80 * 0.5 = 0.96 N m।",
+      "explanation_gu": "ટોર્ક tau = N * I * A * B * sin(theta) = 20 * 12 * 0.01 * 0.80 * 0.5 = 0.96 N m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_018",
+      "type": "mcq",
+      "title": "NCERT Ex 4.10: Galvanometers Sensitivity Comparison",
+      "title_hi": "NCERT अभ्यास 4.10: धारामापी सुग्राहिता तुलना",
+      "title_gu": "NCERT સ્વાધ્યાય 4.10: ગેલ્વેનોમીટર સંવેદનશીલતા સરખામણી",
+      "question": "Two moving coil meters M1 and M2 have: R1=10 ohm, N1=30, A1=3.6x10^-3 m^2, B1=0.25 T; and R2=14 ohm, N2=42, A2=3.6x10^-3 m^2, B2=0.50 T. What is the ratio of current sensitivity of M2 to M1?",
+      "question_hi": "दो चल कुंडली मीटर M1 और M2 में: R1=10 ओम, N1=30, A1=3.6x10^-3 m^2, B1=0.25 T; तथा R2=14 ओम, N2=42, A2=3.6x10^-3 m^2, B2=0.50 T हैं। M2 से M1 की धारा सुग्राहिता का अनुपात क्या है?",
+      "question_gu": "બે મુવિંગ કોઇલ મીટર M1 અને M2 માં: R1=10 ohm, N1=30, A1=3.6x10^-3 m^2, B1=0.25 T; અને R2=14 ohm, N2=42, A2=3.6x10^-3 m^2, B2=0.50 T છે. M2 થી M1 ની પ્રવાહ સંવેદનશીલતાનો ગુણોત્તર કેટલો હશે?",
+      "options": [
+        "1.4",
+        "2.8",
+        "1.0",
+        "0.7"
+      ],
+      "options_hi": [
+        "1.4",
+        "2.8",
+        "1.0",
+        "0.7"
+      ],
+      "options_gu": [
+        "1.4",
+        "2.8",
+        "1.0",
+        "0.7"
+      ],
+      "correct_index": 0,
+      "explanation": "Current sensitivity = (N * A * B) / k. Ratio = (N2 * A2 * B2) / (N1 * A1 * B1) = (42 * 3.6x10^-3 * 0.50) / (30 * 3.6x10^-3 * 0.25) = (42 * 0.50) / (30 * 0.25) = 21 / 7.5 = 2.8? Wait: 42/30 * 0.5/0.25 = 1.4 * 2 = 2.8.",
+      "explanation_hi": "धारा सुग्राहिता = (N * A * B) / k। अनुपात = (42 * 0.50) / (30 * 0.25) = 1.4 * 2 = 2.8।",
+      "explanation_gu": "પ્રવાહ સંવેદનશીલતા = (N * A * B) / k. ગુણોત્તર = (42 * 0.50) / (30 * 0.25) = 1.4 * 2 = 2.8."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH4_019",
+      "type": "mcq",
+      "title": "NCERT Ex 4.11: Radius of Electron Orbit in Magnetic Field",
+      "title_hi": "NCERT अभ्यास 4.11: चुंबकीय क्षेत्र में इलेक्ट्रॉन की कक्षा की त्रिज्या",
+      "title_gu": "NCERT સ્વાધ્યાય 4.11: ચુંબકીય ક્ષેત્રમાં ઇલેક્ટ્રોનની ત્રિજ્યા",
+      "question": "In a chamber, a uniform magnetic field of 6.5 G (1 G = 10^-4 T) is maintained. An electron is shot into the field with a speed of 4.8 x 10^6 m/s normal to the field. What is the radius of the circular orbit? (e = 1.6 x 10^-19 C, m_e = 9.1 x 10^-31 kg)",
+      "question_hi": "एक चैम्बर में 6.5 G (1 G = 10^-4 T) का एकसमान चुंबकीय क्षेत्र बनाए रखा जाता है। एक इलेक्ट्रॉन को क्षेत्र के लंबवत 4.8 x 10^6 m/s की चाल से दागा जाता है। वृत्ताकार कक्षा की त्रिज्या क्या है?",
+      "question_gu": "એક ચેમ્બરમાં 6.5 G (1 G = 10^-4 T) નું સમાન ચુંબકીય ક્ષેત્ર છે. એક ઇલેક્ટ્રોનને ક્ષેત્રને લંબરૂપે 4.8 x 10^6 m/s ની ઝડપે છોડવામાં આવે છે. વર્તુળાકાર કક્ષાની ત્રિજ્યા કેટલી હશે?",
+      "options": [
+        "4.2 cm",
+        "8.4 cm",
+        "2.1 cm",
+        "4.2 m"
+      ],
+      "options_hi": [
+        "4.2 cm",
+        "8.4 cm",
+        "2.1 cm",
+        "4.2 m"
+      ],
+      "options_gu": [
+        "4.2 cm",
+        "8.4 cm",
+        "2.1 cm",
+        "4.2 m"
+      ],
+      "correct_index": 0,
+      "explanation": "r = (m * v) / (q * B) = (9.1 x 10^-31 * 4.8 x 10^6) / (1.6 x 10^-19 * 6.5 x 10^-4) = (43.68 x 10^-25) / (10.4 x 10^-23) = 4.2 x 10^-2 m = 4.2 cm.",
+      "explanation_hi": "r = (m * v) / (q * B) = (9.1 x 10^-31 * 4.8 x 10^6) / (1.6 x 10^-19 * 6.5 x 10^-4) = 4.2 cm।",
+      "explanation_gu": "r = (m * v) / (q * B) = (9.1 x 10^-31 * 4.8 x 10^6) / (1.6 x 10^-19 * 6.5 x 10^-4) = 4.2 cm."
+    }
+  ]
+}

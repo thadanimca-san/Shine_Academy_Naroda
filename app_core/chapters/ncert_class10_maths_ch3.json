@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch3",
+    "title": "Chapter 3: Pair of Linear Equations in Two Variables",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "linear_equations",
+      "algebra",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the geometric meaning of pair of linear equations.",
+      "Solve linear equations algebraically (Substitution, Elimination).",
+      "Identify consistency and inconsistency.",
+      "Formulate and solve real-life word problems."
+    ],
+    "ai_context": {
+      "learning_goal": "Help students visualize linear equations as straight lines. Understand the intersection points as solutions.",
+      "common_misconceptions": [
+        "Students struggle to translate word problems into algebraic equations.",
+        "Students confuse a₁/a₂ ≠ b₁/b₂ with no solution instead of unique solution."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you go to a stationery shop. You buy 2 pencils and 3 erasers for ₹9. Your friend buys 4 pencils and 6 erasers of the same kind for ₹18. Can we find the price of each pencil and eraser? Welcome to the world of **Linear Equations in Two Variables (दो चर वाले रैखिक समीकरण / દ્વિચલ સુરેખ સમીકરણ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Graphical Representation: Intersecting Lines. This means there is exactly one solution. (अद्वितीय हल / અનન્ય ઉકેલ)",
+      "image_url": "assets/images/maths_ch3_intersecting.jpg",
+      "alt_text": "Graph showing two straight lines intersecting at a single point."
+    },
+    {
+      "type": "diagram",
+      "content": "Graphical Representation: Parallel Lines. This means there is NO solution. (कोई हल नहीं / ઉકેલ નથી)",
+      "image_url": "assets/images/maths_ch3_parallel.jpg",
+      "alt_text": "Graph showing two straight lines that are perfectly parallel."
+    },
+    {
+      "type": "theory",
+      "content": "**Standard Form:**\na₁x + b₁y + c₁ = 0\na₂x + b₂y + c₂ = 0\n\n**Conditions:**\n1. Intersecting Lines (Unique Solution): a₁/a₂ ≠ b₁/b₂\n2. Coincident Lines (Infinitely Many Solutions): a₁/a₂ = b₁/b₂ = c₁/c₂\n3. Parallel Lines (No Solution): a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** Consistency\nIf equations have at least one solution (intersecting or coincident), they are **Consistent (संगत / સુસંગત)**.\nIf they have no solution (parallel), they are **Inconsistent (असंगत / અસુસંગત)**.",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "theory",
+      "content": "**Elimination Method (विलोपन विधि / લોપની રીત):**\nStep 1: Multiply equations to make the coefficients of one variable (x or y) equal.\nStep 2: Add or subtract to eliminate that variable.\nStep 3: Solve for the remaining variable.\nStep 4: Substitute back to find the eliminated variable.",
+      "difficulty": "Intermediate",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_1",
+      "type": "quiz",
+      "question": "If the pair of equations 2x + 3y = 7 and aX + bY = 14 have infinitely many solutions, then what is the relationship between a and b?",
+      "question_hi": "यदि समीकरण 2x + 3y = 7 और aX + bY = 14 के अनंत हल हैं, तो a और b के बीच क्या संबंध है?",
+      "options": [
+        "a = 2, b = 3",
+        "a = 4, b = 6",
+        "a = 6, b = 9",
+        "a = 3, b = 2"
+      ],
+      "options_hi": [
+        "a = 2, b = 3",
+        "a = 4, b = 6",
+        "a = 6, b = 9",
+        "a = 3, b = 2"
+      ],
+      "correct_index": 1,
+      "explanation": "For infinitely many solutions, a1/a2 = b1/b2 = c1/c2. Here, 2/a = 3/b = 7/14 = 1/2. So, a = 4, b = 6.",
+      "explanation_hi": "अनंत हलों के लिए, a1/a2 = b1/b2 = c1/c2। यहाँ, 2/a = 3/b = 7/14 = 1/2. इसलिए, a = 4, b = 6।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_2",
+      "type": "quiz",
+      "question": "The pair of equations x = a and y = b graphically represents lines which are:",
+      "question_hi": "समीकरण x = a और y = b का आलेखीय निरूपण उन रेखाओं को दर्शाता है जो हैं:",
+      "options": [
+        "parallel",
+        "intersecting at (b, a)",
+        "coincident",
+        "intersecting at (a, b)"
+      ],
+      "options_hi": [
+        "समानांतर",
+        "(b, a) पर प्रतिच्छेद करती हैं",
+        "संपाती",
+        "(a, b) पर प्रतिच्छेद करती हैं"
+      ],
+      "correct_index": 3,
+      "explanation": "The line x = a is parallel to y-axis and y = b is parallel to x-axis. They intersect at the point (a, b).",
+      "explanation_hi": "रेखा x = a, y-अक्ष के समानांतर है और y = b, x-अक्ष के समानांतर है। वे बिंदु (a, b) पर प्रतिच्छेद करती हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_3",
+      "type": "quiz",
+      "question": "For what value of k, do the equations 3x - y + 8 = 0 and 6x - ky = -16 represent coincident lines?",
+      "question_hi": "k के किस मान के लिए, समीकरण 3x - y + 8 = 0 और 6x - ky = -16 संपाती रेखाओं को निरूपित करते हैं?",
+      "options": [
+        "1/2",
+        "2",
+        "-2",
+        "-1/2"
+      ],
+      "options_hi": [
+        "1/2",
+        "2",
+        "-2",
+        "-1/2"
+      ],
+      "correct_index": 1,
+      "explanation": "For coincident lines, a1/a2 = b1/b2 = c1/c2. So, 3/6 = -1/-k = 8/16. This gives k = 2.",
+      "explanation_hi": "संपाती रेखाओं के लिए, a1/a2 = b1/b2 = c1/c2। इसलिए, 3/6 = -1/-k = 8/16। इससे k = 2 प्राप्त होता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_4",
+      "type": "quiz",
+      "question": "If a pair of linear equations is consistent, then the lines will be:",
+      "question_hi": "यदि रैखिक समीकरणों का एक युग्म संगत है, तो रेखाएँ होंगी:",
+      "options": [
+        "parallel",
+        "always coincident",
+        "intersecting or coincident",
+        "always intersecting"
+      ],
+      "options_hi": [
+        "समानांतर",
+        "हमेशा संपाती",
+        "प्रतिच्छेदी या संपाती",
+        "हमेशा प्रतिच्छेदी"
+      ],
+      "correct_index": 2,
+      "explanation": "A consistent pair of linear equations has at least one solution, which means the lines either intersect at one point or are coincident (infinitely many solutions).",
+      "explanation_hi": "रैखिक समीकरणों के एक संगत युग्म का कम से कम एक हल होता है, जिसका अर्थ है कि रेखाएँ या तो एक बिंदु पर प्रतिच्छेद करती हैं या संपाती होती हैं (अनंत हल)।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_5",
+      "type": "quiz",
+      "question": "The pair of equations y = 0 and y = -7 has:",
+      "question_hi": "समीकरणों y = 0 और y = -7 के हैं:",
+      "options": [
+        "One solution",
+        "Two solutions",
+        "Infinitely many solutions",
+        "No solution"
+      ],
+      "options_hi": [
+        "एक हल",
+        "दो हल",
+        "अनंत हल",
+        "कोई हल नहीं"
+      ],
+      "correct_index": 3,
+      "explanation": "y = 0 is the x-axis and y = -7 is a line parallel to the x-axis. Since parallel lines never intersect, there is no solution.",
+      "explanation_hi": "y = 0, x-अक्ष है और y = -7, x-अक्ष के समानांतर एक रेखा है। चूँकि समानांतर रेखाएँ कभी प्रतिच्छेद नहीं करती हैं, इसलिए कोई हल नहीं है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_6",
+      "type": "quiz",
+      "question": "The value of c for which the pair of equations cx - y = 2 and 6x - 2y = 3 will have infinitely many solutions is:",
+      "question_hi": "c का वह मान जिसके लिए समीकरणों cx - y = 2 और 6x - 2y = 3 के अनंत हल होंगे, है:",
+      "options": [
+        "3",
+        "-3",
+        "-12",
+        "no value"
+      ],
+      "options_hi": [
+        "3",
+        "-3",
+        "-12",
+        "कोई मान नहीं"
+      ],
+      "correct_index": 3,
+      "explanation": "For infinitely many solutions, c/6 = -1/-2 = 2/3. From the first two parts, c/6 = 1/2 implies c = 3. But from the last two parts, 1/2 is not equal to 2/3. So, no such value of c exists.",
+      "explanation_hi": "अनंत हलों के लिए, c/6 = -1/-2 = 2/3। पहले दो भागों से, c/6 = 1/2 का अर्थ है c = 3। लेकिन अंतिम दो भागों से, 1/2, 2/3 के बराबर नहीं है। इसलिए, c का ऐसा कोई मान मौजूद नहीं है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_7",
+      "type": "quiz",
+      "question": "One equation of a pair of dependent linear equations is -5x + 7y = 2. The second equation can be:",
+      "question_hi": "आश्रित रैखिक समीकरणों के एक युग्म का एक समीकरण -5x + 7y = 2 है। दूसरा समीकरण हो सकता है:",
+      "options": [
+        "10x + 14y + 4 = 0",
+        "-10x - 14y + 4 = 0",
+        "-10x + 14y + 4 = 0",
+        "10x - 14y = -4"
+      ],
+      "options_hi": [
+        "10x + 14y + 4 = 0",
+        "-10x - 14y + 4 = 0",
+        "-10x + 14y + 4 = 0",
+        "10x - 14y = -4"
+      ],
+      "correct_index": 3,
+      "explanation": "Dependent linear equations represent coincident lines. Multiplying the given equation by -2 gives 10x - 14y = -4.",
+      "explanation_hi": "आश्रित रैखिक समीकरण संपाती रेखाओं को निरूपित करते हैं। दिए गए समीकरण को -2 से गुणा करने पर 10x - 14y = -4 प्राप्त होता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_8",
+      "type": "quiz",
+      "question": "A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. The fraction is:",
+      "question_hi": "एक भिन्न 1/3 हो जाती है जब उसके अंश से 1 घटाया जाता है और यह 1/4 हो जाती है जब उसके हर में 8 जोड़ा जाता है। भिन्न है:",
+      "options": [
+        "5/12",
+        "3/11",
+        "7/15",
+        "9/17"
+      ],
+      "options_hi": [
+        "5/12",
+        "3/11",
+        "7/15",
+        "9/17"
+      ],
+      "correct_index": 0,
+      "explanation": "Let fraction be x/y. (x-1)/y = 1/3 => 3x - y = 3. x/(y+8) = 1/4 => 4x - y = 8. Subtracting gives x = 5. Then y = 12. Fraction is 5/12.",
+      "explanation_hi": "माना भिन्न x/y है। (x-1)/y = 1/3 => 3x - y = 3। x/(y+8) = 1/4 => 4x - y = 8। घटाने पर x = 5 प्राप्त होता है। तब y = 12। भिन्न 5/12 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_9",
+      "type": "quiz",
+      "question": "Five years ago, Nuri was thrice as old as Sonu. Ten years later, Nuri will be twice as old as Sonu. How old are Nuri and Sonu?",
+      "question_hi": "पाँच वर्ष पूर्व, नूरी की आयु सोनू की आयु की तीन गुनी थी। दस वर्ष पश्चात्, नूरी की आयु सोनू की आयु की दोगुनी हो जाएगी। नूरी और सोनू की आयु कितनी है?",
+      "options": [
+        "Nuri: 40, Sonu: 10",
+        "Nuri: 50, Sonu: 20",
+        "Nuri: 45, Sonu: 15",
+        "Nuri: 60, Sonu: 30"
+      ],
+      "options_hi": [
+        "नूरी: 40, सोनू: 10",
+        "नूरी: 50, सोनू: 20",
+        "नूरी: 45, सोनू: 15",
+        "नूरी: 60, सोनू: 30"
+      ],
+      "correct_index": 1,
+      "explanation": "Let present ages be x and y. x-5 = 3(y-5) => x - 3y = -10. x+10 = 2(y+10) => x - 2y = 10. Subtracting: -y = -20 => y = 20. Then x = 50.",
+      "explanation_hi": "माना वर्तमान आयु x और y है। x-5 = 3(y-5) => x - 3y = -10। x+10 = 2(y+10) => x - 2y = 10। घटाने पर: -y = -20 => y = 20। तब x = 50।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_10",
+      "type": "quiz",
+      "question": "If x = a, y = b is the solution of the equations x - y = 2 and x + y = 4, then the values of a and b are, respectively:",
+      "question_hi": "यदि x = a, y = b समीकरणों x - y = 2 और x + y = 4 का हल है, तो a और b के मान क्रमशः हैं:",
+      "options": [
+        "3 and 5",
+        "5 and 3",
+        "3 and 1",
+        "-1 and -3"
+      ],
+      "options_hi": [
+        "3 और 5",
+        "5 और 3",
+        "3 और 1",
+        "-1 और -3"
+      ],
+      "correct_index": 2,
+      "explanation": "Adding x-y=2 and x+y=4 gives 2x = 6 => x=3. Substituting gives 3+y=4 => y=1. So a=3, b=1.",
+      "explanation_hi": "x-y=2 और x+y=4 को जोड़ने पर 2x = 6 => x=3 प्राप्त होता है। प्रतिस्थापित करने पर 3+y=4 => y=1 प्राप्त होता है। अतः a=3, b=1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_11",
+      "type": "quiz",
+      "question": "Two numbers are in the ratio 5:6. If 8 is subtracted from each of the numbers, the ratio becomes 4:5. Then the numbers are:",
+      "question_hi": "दो संख्याएँ 5:6 के अनुपात में हैं। यदि प्रत्येक संख्या में से 8 घटाया जाए, तो अनुपात 4:5 हो जाता है। तो संख्याएँ हैं:",
+      "options": [
+        "40, 48",
+        "15, 18",
+        "25, 30",
+        "50, 60"
+      ],
+      "options_hi": [
+        "40, 48",
+        "15, 18",
+        "25, 30",
+        "50, 60"
+      ],
+      "correct_index": 0,
+      "explanation": "Let numbers be 5x and 6x. (5x-8)/(6x-8) = 4/5. 25x - 40 = 24x - 32. x = 8. Numbers are 40 and 48.",
+      "explanation_hi": "माना संख्याएँ 5x और 6x हैं। (5x-8)/(6x-8) = 4/5। 25x - 40 = 24x - 32। x = 8। संख्याएँ 40 और 48 हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_12",
+      "type": "quiz",
+      "question": "Graphically, the pair of equations 6x - 3y + 10 = 0 and 2x - y + 9 = 0 represents two lines which are:",
+      "question_hi": "आलेखीय रूप से, समीकरण 6x - 3y + 10 = 0 और 2x - y + 9 = 0 दो रेखाओं को निरूपित करते हैं जो हैं:",
+      "options": [
+        "Intersecting at exactly one point",
+        "Intersecting at exactly two points",
+        "Coincident",
+        "Parallel"
+      ],
+      "options_hi": [
+        "ठीक एक बिंदु पर प्रतिच्छेद करती हैं",
+        "ठीक दो बिंदुओं पर प्रतिच्छेद करती हैं",
+        "संपाती",
+        "समानांतर"
+      ],
+      "correct_index": 3,
+      "explanation": "a1/a2 = 6/2 = 3. b1/b2 = -3/-1 = 3. c1/c2 = 10/9. Since a1/a2 = b1/b2 ≠ c1/c2, the lines are parallel.",
+      "explanation_hi": "a1/a2 = 6/2 = 3। b1/b2 = -3/-1 = 3। c1/c2 = 10/9। चूँकि a1/a2 = b1/b2 ≠ c1/c2, इसलिए रेखाएँ समानांतर हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_13",
+      "type": "quiz",
+      "question": "The pair of linear equations 3x + 4y - 12 = 0 and 6x + 8y - 24 = 0 have:",
+      "question_hi": "रैखिक समीकरणों 3x + 4y - 12 = 0 और 6x + 8y - 24 = 0 के हैं:",
+      "options": [
+        "Unique solution",
+        "Two solutions",
+        "Infinitely many solutions",
+        "No solution"
+      ],
+      "options_hi": [
+        "अद्वितीय हल",
+        "दो हल",
+        "अनंत हल",
+        "कोई हल नहीं"
+      ],
+      "correct_index": 2,
+      "explanation": "a1/a2 = 3/6 = 1/2. b1/b2 = 4/8 = 1/2. c1/c2 = -12/-24 = 1/2. Since all ratios are equal, they have infinitely many solutions.",
+      "explanation_hi": "a1/a2 = 3/6 = 1/2। b1/b2 = 4/8 = 1/2। c1/c2 = -12/-24 = 1/2। चूँकि सभी अनुपात समान हैं, इसलिए उनके अनंत हल हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_14",
+      "type": "quiz",
+      "question": "If 2x + 3y = 11 and 2x - 4y = -24, then the value of m for which y = mx + 3 is:",
+      "question_hi": "यदि 2x + 3y = 11 और 2x - 4y = -24 है, तो m का वह मान जिसके लिए y = mx + 3 है:",
+      "options": [
+        "-1",
+        "1",
+        "2",
+        "-2"
+      ],
+      "options_hi": [
+        "-1",
+        "1",
+        "2",
+        "-2"
+      ],
+      "correct_index": 0,
+      "explanation": "Subtracting equations: 7y = 35 => y = 5. 2x + 15 = 11 => 2x = -4 => x = -2. Putting x, y in y=mx+3: 5 = m(-2) + 3 => 2 = -2m => m = -1.",
+      "explanation_hi": "समीकरणों को घटाने पर: 7y = 35 => y = 5। 2x + 15 = 11 => 2x = -4 => x = -2। x, y को y=mx+3 में रखने पर: 5 = m(-2) + 3 => 2 = -2m => m = -1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch3_15",
+      "type": "quiz",
+      "question": "The sum of the digits of a two-digit number is 9. Also, nine times this number is twice the number obtained by reversing the order of the digits. Find the number.",
+      "question_hi": "दो अंकों की एक संख्या के अंकों का योग 9 है। साथ ही, इस संख्या का नौ गुना अंकों के क्रम को उलटने पर प्राप्त संख्या का दोगुना है। संख्या ज्ञात कीजिए।",
+      "options": [
+        "18",
+        "81",
+        "27",
+        "72"
+      ],
+      "options_hi": [
+        "18",
+        "81",
+        "27",
+        "72"
+      ],
+      "correct_index": 0,
+      "explanation": "Let digits be x and y. x + y = 9. 9(10x + y) = 2(10y + x) => 90x + 9y = 20y + 2x => 88x - 11y = 0 => 8x - y = 0. Solving gives x=1, y=8. Number is 18.",
+      "explanation_hi": "माना अंक x और y हैं। x + y = 9। 9(10x + y) = 2(10y + x) => 90x + 9y = 20y + 2x => 88x - 11y = 0 => 8x - y = 0। हल करने पर x=1, y=8 प्राप्त होता है। संख्या 18 है।"
+    }
+  ]
+}

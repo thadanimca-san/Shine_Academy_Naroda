@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "id": "cbse_class3_computer_ch3",
+    "title": "Chapter 3: Chapter 3 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand the core architecture and basic operating principles of a computer system.",
+      "Identify the difference between hardware and software components.",
+      "Master the fundamental working of input, processing, and output cycles."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_HARDWARE",
+      "DICT_GRADE_SOFTWARE",
+      "DICT_GRADE_CPU",
+      "DICT_GRADE_IPO"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide a deep, textbook-level comprehension of how computer parts work together harmoniously, moving beyond memorization to genuine conceptual intuition.",
+      "common_misconceptions": [
+        "Thinking the monitor is the computer itself rather than just an output display device.",
+        "Believing software can be touched and felt like physical objects."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Magical Kitchen Mystery",
+      "body": "Imagine walking into a magical kitchen where a little robotic chef stands waiting. You write your order on a piece of paper—'Make a pancake!'—and drop it into a slot. Inside the metal box, gears whir, batter mixes, a stove heats up, and delicious smells drift out. A minute later, a warm plate slides out onto the counter. How did the metal box know what to do? Who did the cooking? Inside every computer on your desk, an invisible kitchen operates at lightning speed, taking your instructions, cooking up answers, and serving results before you can even blink.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In the magical kitchen story, what does dropping your order into the slot represent?",
+      "options": [
+        "The computer showing you a picture on the screen",
+        "Giving an instruction or data to the system to be processed",
+        "The computer storing your data forever in a drawer"
+      ],
+      "correct_index": 1,
+      "explanation": "Just like placing an order starts the cooking process, giving an instruction to a computer is the starting point of any task.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Magic of Input, Processing, and Output",
+      "body": "Every single electronic device you use, from a smartphone to a massive desktop computer, follows a strict, elegant rule called the [DICT_GRADE_IPO|IPO Cycle]. IPO stands for Input, Processing, and Output. Think of it like baking a cake: you gather ingredients (Input), you mix and bake them in an oven (Processing), and finally, you enjoy the delicious cake (Output). In computer terms, when you press a key on your keyboard, you are sending data inward ([DICT_GRADE_HARDWARE|Hardware] input). The brain of the machine calculates what you typed, and the screen instantly reveals your words. Without this continuous three-step loop, computers would simply be expensive paperweights.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: What is IPO?",
+      "body": "Front: What does IPO stand for?\nBack: Input, Processing, and Output! The core cycle of how every computer performs tasks.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Try this! The Human Computer",
+      "body": "Let's test the IPO cycle right now using yourself! Ask a friend to give you a math problem verbally (Input). Your brain calculates the answer silently (Processing). Then, you speak the answer out loud (Output). You are an organic computer!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Tangible World of Hardware",
+      "body": "When we talk about [DICT_GRADE_HARDWARE|Hardware], we are referring to the physical, tangible parts of a computer system—the pieces you can actually touch, drop, or clean with a soft cloth. This includes the keyboard beneath your fingers, the mouse you glide across the desk, the heavy system unit sitting on the floor, and the glowing monitor displaying vibrant colors. Hardware is divided into categories based on its job: input devices gather information, processing devices think about it, storage devices save it, and output devices show it to you. If you can stub your toe on it or hold it in your hands, it is definitely hardware!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which of the following is an example of computer hardware?",
+      "options": [
+        "A drawing game application installed on the desktop",
+        "The computer mouse you click with your hand",
+        "An internet website showing cartoons"
+      ],
+      "correct_index": 1,
+      "explanation": "A mouse is a physical device you can touch, making it hardware. Games and websites are software.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Hardware Scavenger Hunt",
+      "body": "Look around your study room right now. Can you point to three pieces of hardware? Hint: Look for anything with wires, plastic shells, buttons, or screens!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: The Brain Inside the Box",
+      "body": "Every computer needs a master commander to make decisions, solve equations, and direct traffic between all connected parts. This master commander is the [DICT_GRADE_CPU|CPU], which stands for Central Processing Unit. Often referred to as the brain of the computer, the CPU is housed safely inside the system cabinet on a tiny, intricate green board called the motherboard. Whenever you click an icon to open a game, the CPU springs into action, calculating millions of instructions every single second. Without a CPU, your monitor would remain pitch black, and your keyboard would simply be a plastic tray with bouncy buttons.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "title": "Flashcard: The CPU",
+      "body": "Front: What does CPU stand for, and what is its nickname?\nBack: Central Processing Unit! Its nickname is 'The Brain of the Computer'.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "Where is the CPU typically located?",
+      "options": [
+        "Strapped to the front of the monitor screen",
+        "Safely hidden inside the system cabinet on the motherboard",
+        "Inside the plastic body of the computer mouse"
+      ],
+      "correct_index": 1,
+      "explanation": "The CPU is a powerful microchip housed inside the main system cabinet.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: The Invisible Magic of Software",
+      "body": "If hardware is the body of the computer, [DICT_GRADE_SOFTWARE|Software] is its mind, soul, and set of instructions. You cannot touch software with your fingers or pack it in a backpack, because it is made entirely of code—lines of instructions written by programmers. Software tells the hardware how to behave. When you play a video game, type a story in a word processor, or browse educational videos online, you are interacting directly with software. Without software, your computer's hardware would just sit there doing nothing at all, like a magnificent sports car with no driver behind the wheel and no fuel in the tank.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "Analogy Time: Book vs. Story",
+      "body": "Think of a storybook. The paper, ink, and cardboard cover are the hardware. The actual imaginary story, characters, and plot that exist in your mind as you read are the software! You can hold the book, but you cannot physically hold the story itself.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Can you touch software with your hands?",
+      "options": [
+        "Yes, if you open up the system cabinet",
+        "No, because software is a set of digital instructions and code, not a physical object",
+        "Yes, whenever you touch the monitor screen"
+      ],
+      "correct_index": 1,
+      "explanation": "Software is intangible; it exists as digital code and programs running on the machine.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Deepening Understanding: Input Devices in Detail",
+      "body": "Let us explore the gatekeepers of information: input devices. Devices like keyboards allow us to type letters and numbers, while a computer mouse helps us point, click, and navigate across graphical windows. Other fascinating input devices include microphones (which capture your voice and turn sound waves into digital data) and webcams (which capture light to record video and take pictures). Each of these tools translates real-world actions—like pressing down on a plastic key or speaking into a mesh grille—into electrical signals that the CPU can understand and interpret.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Flashcard: Input Devices",
+      "body": "Front: Name two common input devices used with desktop computers.\nBack: Keyboard and Mouse! (Microphones and webcams work too!)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Which device would you use if you wanted to send your voice recording into the computer?",
+      "options": [
+        "A monitor",
+        "A microphone",
+        "A printer"
+      ],
+      "correct_index": 1,
+      "explanation": "A microphone captures audio input from the environment and sends it into the computer system.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Deepening Understanding: Output Devices in Detail",
+      "body": "Once the CPU finishes processing data, results must be presented in a way humans can perceive. This is where output devices shine! The monitor displays visual text, images, and moving videos. Speakers blast music, sound effects, and voice prompts into the room. Printers take digital artwork or homework assignments and stamp them onto physical paper so you can hold them in your hands. Without output devices, a computer could calculate the solution to the hardest puzzle in the universe, but you would never know because it would have no way to show or tell you!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Printer Magic",
+      "body": "Notice something fascinating? A printer takes software (a digital document on your screen) and turns it into hardware (a printed piece of paper). It bridges the gap between digital and physical worlds!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "Is a printer considered an input device or an output device?",
+      "options": [
+        "Input device",
+        "Output device",
+        "Processing device"
+      ],
+      "correct_index": 1,
+      "explanation": "A printer delivers results (printed paper) from the computer to you, making it an output device.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "System Harmony: Hardware and Software Working Together",
+      "body": "Hardware and software are lifelong partners; neither can accomplish anything meaningful without the other. Imagine buying a brand-new, ultra-fast gaming laptop with pristine hardware, but you forget to install any operating system or games (software). When you press the power button, the screen might light up, but nothing fun or useful will happen. Conversely, if you have amazing game software on a flash drive, but you don't have a computer with a USB port, screen, and processor to run it, the software remains trapped and useless. True digital magic happens only when hardware and software dance together in perfect synchronization.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "title": "Flashcard: Hardware vs Software",
+      "body": "Front: Can hardware work without software?\nBack: No! Hardware needs software instructions to know what to do, and software needs hardware physical parts to run on.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Why do hardware and software need each other?",
+      "options": [
+        "Because hardware is heavy and software is light",
+        "Hardware provides the physical body while software provides the intelligent instructions",
+        "They don't actually need each other; they can work completely alone"
+      ],
+      "correct_index": 1,
+      "explanation": "They form a complete system: hardware is the physical machine, and software is the intelligence that drives it.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Review Challenge",
+      "body": "Take a moment to explain the difference between hardware and software to a family member or pet using your own words and analogies!",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

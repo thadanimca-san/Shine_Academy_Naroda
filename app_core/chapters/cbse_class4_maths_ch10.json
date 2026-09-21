@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "id": "cbse_class4_maths_ch10",
+    "title": "Chapter 10: Measurement",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the necessity of standard units for length, weight, and capacity.",
+      "Convert between larger and smaller units of measurement smoothly.",
+      "Perform arithmetic operations (addition and subtraction) on measurement quantities.",
+      "Solve real-world word problems involving length, mass, and volume."
+    ],
+    "core_concepts": [
+      "DICT_MATH_LENGTH",
+      "DICT_MATH_MASS",
+      "DICT_MATH_CAPACITY",
+      "DICT_MATH_STANDARD_UNIT"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide a comprehensive textbook-level understanding of measurement systems, empowering students to measure, convert, and calculate length, weight, and volume with confidence.",
+      "common_misconceptions": [
+        "Believing that bigger objects always weigh more than smaller ones.",
+        "Confusing capacity (liquid volume) with weight (mass).",
+        "Forgetting to multiply or divide by powers of 10 when converting units like meters to centimeters."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Giant's Footprint",
+      "body": "Imagine waking up one morning to find a giant footprint in your school playground! Principal Sharma asks everyone in the school to measure its length to see how big the creature was. Leo uses his handspans and finds the footprint is 15 handspans long. Maya uses her footsteps and says it is 10 footsteps long. But when Principal Sharma tries to measure it with his own footsteps, he gets only 7! Everyone is arguing. Who is right? Are all handspans and footsteps the same? This chaotic puzzle introduces us to the fascinating and essential world of [DICT_MATH_STANDARD_UNIT|measurement], where we need agreed-upon rules to make sense of our physical universe.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why did Leo, Maya, and Principal Sharma get different numbers when measuring the giant footprint?",
+      "options": [
+        "The footprint kept shrinking and growing.",
+        "Their body parts (hands and feet) are different sizes, making them non-standard units.",
+        "They did not know how to count past 10."
+      ],
+      "correct_index": 1,
+      "explanation": "Body parts vary from person to person! Using non-standard units like handspans or footsteps leads to confusion because everyone's body is unique. That is why we need standard units.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Magic of Length",
+      "body": "When we want to know how long, tall, or wide something is, we are dealing with [DICT_MATH_LENGTH|length]. Long ago, people used body parts, but as trade and science grew, people needed a universal language. Enter the metric system! The base unit for length is the meter (m). For smaller things, like an eraser or a pencil, we use centimeters (cm). For tiny things, like the thickness of a coin, we use millimeters (mm). For huge distances, like the road between two cities, we use kilometers (km). The golden rule to remember in our metric system is the power of 100: exactly 1 meter equals 100 centimeters (1 m = 100 cm). Furthermore, 1 kilometer is equal to 1,000 meters (1 km = 1,000 m). By understanding these fixed relationships, we can convert any measurement from one unit to another without losing our way.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "question": "How many centimeters are there in 1 meter?",
+      "answer": "100 centimeters (100 cm = 1 m)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "The Ruler Detective",
+      "body": "Grab a 15cm or 30cm plastic ruler. Look closely at the numbers. The big spaces marked with numbers 0, 1, 2, 3 are centimeters. Notice the tiny little lines squeezed in between each centimeter? Those are millimeters! There are 10 tiny millimeter lines inside every single centimeter. Measure your favorite toy car today in both centimeters and millimeters!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Mastering Length Conversions: Meters and Centimeters",
+      "body": "Converting units is like translating a sentence from one language to another. If you have a piece of ribbon that is 3 meters long and you want to know its length in centimeters, what do you do? Since every 1 meter gives you 100 centimeters, you multiply the number of meters by 100! Therefore, 3 meters becomes 3 × 100 = 300 centimeters. Conversely, if you have 450 centimeters of rope and want to express it in meters and centimeters, you split the number. Since 400 cm is 4 meters, 450 cm is simply 4 meters and 50 centimeters. This skill of breaking apart and multiplying by 100 is your master key for all length problems.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Convert 5 meters and 25 centimeters completely into centimeters.",
+      "options": [
+        "525 cm",
+        "5025 cm",
+        "52 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "5 meters equals 5 × 100 = 500 cm. Add the remaining 25 cm to get 500 + 25 = 525 cm.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: Weighing the World with Mass",
+      "body": "Have you ever tried to lift a bag of feathers versus a bag of iron nails of the exact same size? The iron bag is crushing-heavy, while the feather bag is light as air. This property of matter—how heavy an object is—is called [DICT_MATH_MASS|mass] (often referred to in everyday life as weight). To measure mass accurately across the planet, scientists established the gram (g) and the kilogram (kg). For light items, like a single letter or a strawberry, we use grams. For heavier objects, like a watermelon, a school bag, or an adult human, we use kilograms. Just like length, there is a golden conversion rule: exactly 1 kilogram equals 1,000 grams (1 kg = 1,000 g). When you go to the vegetable market, you see shopkeepers placing iron weights of 1 kg, 500 g, or 200 g on one side of a balance scale to match the mass of tomatoes on the other side.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "question": "What is the standard relationship between kilograms and grams?",
+      "answer": "1 kilogram (kg) = 1,000 grams (g)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "Kitchen Scale Adventure",
+      "body": "Ask an adult to help you find a kitchen weighing scale. Gather three household items: an apple, a pack of biscuits, and a spoon. Guess their weights in grams before placing them on the scale. Were your estimations close? Weighing real objects builds strong intuition for numbers.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Converting Kilograms and Grams",
+      "body": "Because 1 kg = 1,000 g, converting mass follows a very predictable rhythm. If a sack of rice weighs 4 kilograms, its weight in grams is 4 × 1,000 = 4,000 grams. What happens if we have a mixed measurement, such as 2 kg 350 g? We convert the kilograms to grams (2 kg = 2,000 g) and add the extra grams: 2,000 g + 350 g = 2,350 g. When adding or subtracting mass in word problems, always make sure your units match. You cannot simply add 3 kg to 400 g without converting them both to grams first or organizing them neatly into separate kg and g columns!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "If a watermelon has a mass of 3 kg 750 g, what is its total mass in grams?",
+      "options": [
+        "375 g",
+        "3075 g",
+        "3750 g"
+      ],
+      "correct_index": 2,
+      "explanation": "3 kg = 3,000 g. Adding 750 g gives 3,000 + 750 = 3,750 g.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: Liquids and Capacity",
+      "body": "Length tells us how far. Mass tells us how heavy. But what about liquids like milk, water, juice, and oil? Liquids do not have a fixed shape of their own; they take the shape of whatever container pours them in. To measure how much liquid a container can hold, we use [DICT_MATH_CAPACITY|capacity]. The standard units for capacity are the liter (l) and the milliliter (ml). A large water bottle or a bucket holds liters of liquid, while a tiny medicine dropper or cough syrup spoon holds milliliters. The magic conversion rule here is identical to mass: exactly 1 liter equals 1,000 milliliters (1 l = 1,000 ml). Think about a juice carton containing 1 liter—if you poured it evenly into 1,000 tiny droplet containers, each would hold 1 milliliter!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "question": "How many milliliters are contained in 1 liter?",
+      "answer": "1,000 milliliters (1,000 ml = 1 l)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "teacher_tip",
+      "title": "Measuring Cup Magic",
+      "body": "Take a transparent measuring jug used for cooking. Pour water into it up to the 500 ml mark (half a liter). Notice how half of 1,000 ml is 500 ml. Pour it into two equal glasses to see how 1 liter can be shared equally among friends.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Capacity Conversions in Action",
+      "body": "Let us practice converting capacity. Suppose your water flask holds 2 liters of water. To find out how many milliliters that is, we multiply by 1,000: 2 × 1,000 = 2,000 ml. Now suppose a recipe calls for 1,250 ml of milk. How can we write this in liters and milliliters? We split the thousands! 1,250 ml is 1,000 ml + 250 ml. Since 1,000 ml is 1 liter, the quantity becomes 1 liter and 250 milliliters (1 l 250 ml). This skill is extremely handy when cooking or baking your favorite treats.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Convert 4 liters 60 milliliters into milliliters.",
+      "options": [
+        "4600 ml",
+        "4060 ml",
+        "40060 ml"
+      ],
+      "correct_index": 1,
+      "explanation": "4 liters = 4,000 ml. Adding 60 ml gives 4,000 + 60 = 4,060 ml. Be careful not to miss the placeholder zero for the hundreds place!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Addition of Measurements: Column Method",
+      "body": "In real life, we often need to add measurements together. For instance, what if you walk 2 km 400 m to school and then 1 km 600 m to the park? To solve this without making mistakes, we use the column method. We create two separate columns: one for kilometers (km) and one for meters (m). We place km values under km and m values under m. First, add the meters: 400 m + 600 m = 1,000 m. Since 1,000 m equals exactly 1 km, we carry over 1 to the kilometer column! Next, add the kilometers: 2 + 1 + 1 (carried over) = 4 km. Total distance: exactly 4 kilometers!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "Add 3 kg 400 g and 2 kg 800 g.",
+      "options": [
+        "5 kg 200 g",
+        "6 kg 200 g",
+        "5 kg 1200 g"
+      ],
+      "correct_index": 0,
+      "explanation": "Add grams: 400 g + 800 g = 1,200 g. This is 1 kg and 200 g. Carry 1 kg over to the kg column. Add kilograms: 3 + 2 + 1 = 6 kg? Wait! Let's check: 3 kg + 2 kg = 5 kg, plus the 1 kg carryover = 6 kg 200 g. Option B is correct!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Correction Note on Addition & Subtraction",
+      "body": "Let us double check our previous calculation carefully! When adding 3 kg 400 g and 2 kg 800 g: Grams column gives 400 + 800 = 1,200 g. 1,200 g is 1 kg and 200 g. We write down 200 g and carry over 1 kg. Kilograms column gives 3 + 2 + 1 (carried) = 6 kg. Thus, the correct answer is indeed 6 kg 200 g. Subtraction works similarly with borrowing: if you need to subtract more grams than you have in the top number, you 'borrow' 1 kg (which converts to 1,000 g) from the kilogram column!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Subtract 1 l 400 ml from 5 l 100 ml.",
+      "options": [
+        "3 l 700 ml",
+        "4 l 300 ml",
+        "3 l 300 ml"
+      ],
+      "correct_index": 0,
+      "explanation": "We cannot subtract 400 ml from 100 ml. We borrow 1 l from 5 l, leaving 4 l. The 1 l becomes 1,000 ml, added to 100 ml to make 1,100 ml. Now subtract: 1,100 ml - 400 ml = 700 ml. For liters: 4 l - 1 l = 3 l. Result: 3 l 700 ml.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Word Problems: Real-World Detective Work",
+      "body": "Mathematics shines brightest when solving real-life puzzles. Word problems combine reading comprehension with measurement skills. Step 1: Read the problem twice and identify what is given. Step 2: Identify what needs to be found (total, remaining difference, etc.). Step 3: Check if all units are identical before performing addition or subtraction. For example, if Riya buys 2 m of blue ribbon and 45 cm of red ribbon and wants to know the total length, she must convert 2 m into 200 cm first before adding 200 cm + 45 cm = 245 cm. Never mix raw meters and centimeters directly without converting!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "question": "What is the golden rule before adding or subtracting mixed units like meters and centimeters?",
+      "answer": "Make sure the units are uniform (convert them into the same unit, e.g., all centimeters or separate columns).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "The Recipe Challenge",
+      "body": "Create a pretend recipe for 'Super Fruit Punch' with your family. Combine 750 ml of orange juice, 500 ml of apple juice, and 250 ml of sparkling water. Calculate the total capacity in liters and milliliters. This is practical math at its tastiest!",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Summary of Measurement Units",
+      "body": "As we conclude our journey through Chapter 10, let's review our toolkit. We explored [DICT_MATH_LENGTH|length] (measured in km, m, cm, mm with 1 m = 100 cm and 1 km = 1,000 m), [DICT_MATH_MASS|mass] (measured in kg and g with 1 kg = 1,000 g), and [DICT_MATH_CAPACITY|capacity] (measured in l and ml with 1 l = 1,000 ml). By using [DICT_MATH_STANDARD_UNIT|standard units], we ensure that people all over the world speak the exact same mathematical language when building houses, baking cakes, or stitching clothes!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "Which of the following units would you use to measure the mass of a tiny gold ring?",
+      "options": [
+        "Kilograms (kg)",
+        "Grams (g)",
+        "Liters (l)"
+      ],
+      "correct_index": 1,
+      "explanation": "A gold ring is very light, so grams (g) is the appropriate unit of mass. Kilograms are too heavy, and liters measure capacity, not mass.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

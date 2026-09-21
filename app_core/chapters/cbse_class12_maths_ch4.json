@@ -1,0 +1,519 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch4",
+    "title": "Chapter 4: Determinants",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_001",
+      "type": "hook",
+      "title": "The Single Number That Dictates Space",
+      "title_hi": "वह एक संख्या जो स्थान का निर्धारण करती है",
+      "title_gu": "એક જ સંખ્યા જે અવકાશનું નિયંત્રણ કરે છે",
+      "body": "Imagine transforming a 2D shape in computer graphics: stretching it, rotating it, or shearing it. How do video game engines know if the shape's area collapses into a flat line (making it invisible), flips inside out, or expands by a factor of 5? It all comes down to a single scalar value extracted from a matrix: **The Determinant**.",
+      "body_hi": "कंप्यूटर ग्राफिक्स में किसी 2D आकार को बदलने की कल्पना करें: उसे खींचना, घुमाना या विकृत करना। वीडियो गेम इंजन को कैसे पता चलता है कि आकार का क्षेत्रफल एक सीधी रेखा में सिमट गया है (जिससे वह अदृश्य हो जाता है), उल्टा हो गया है, या 5 के गुणांक से बढ़ गया है? यह सब आव्यूह (Matrix) से निकाली गई एक एकल अदिश संख्या पर निर्भर करता है: **सारणिक (Determinant)**।",
+      "body_gu": "કોમ્પ્યુટર ગ્રાફિક્સમાં 2D આકારને રૂપાંતરિત કરવાની કલ્પના કરો: તેને ખેંચવું, ફેરવવું અથવા મોટું-નાનું કરવું. વીડિયો ગેમ એન્જિનને કેવી રીતે ખબર પડે છે કે આકારનું ક્ષેત્રફળ એક સીધી રેખામાં સંકોચાઈ ગયું છે (જેથી તે અદ્રશ્ય થઈ જાય છે), ઉલટાઈ ગયું છે, અથવા 5 ગણું વધી ગયું છે? આ બધું શ્રેણિકમાંથી મેળવેલ એક જ મૂલ્ય પર આધારિત છે: **નિશ્ચાયક (Determinant)**."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_002",
+      "type": "socratic_question",
+      "title": "Why Does Matrix Inversion Fail?",
+      "title_hi": "आव्यूह व्युत्क्रमण क्यों विफल होता है?",
+      "title_gu": "શ્રેણિકનો વ્યસ્ત શા માટે શક્ય નથી હોતો?",
+      "question": "For a 2x2 matrix A = [[a, b], [c, d]], we know the inverse matrix involves dividing by the quantity (ad - bc). What happens geometrically and algebraically if this value (ad - bc) equals zero?",
+      "question_hi": "एक 2x2 आव्यूह A = [[a, b], [c, d]] के लिए, व्युत्क्रम आव्यूह में (ad - bc) से भाग देना शामिल है। यदि यह मान (ad - bc) शून्य के बराबर हो जाए, तो ज्यामितीय और बीजगणितीय रूप से क्या होता है?",
+      "question_gu": "2x2 શ્રેણિક A = [[a, b], [c, d]] માટે, વ્યસ્ત શ્રેણિકમાં (ad - bc) વડે ભાગાકાર કરવો પડે છે. જો આ મૂલ્ય (ad - bc) શૂન્ય થઈ જાય, તો ભૌમિતિક અને બીજગણિતીય રીતે શું થાય?",
+      "options": [
+        "The matrix transformation collapses 2D area to 0, making the operation irreversible (no inverse exists).",
+        "The matrix becomes an identity matrix.",
+        "The determinant becomes infinitely large.",
+        "The equations represented by the matrix have infinitely many unique values always equal to 1."
+      ],
+      "options_hi": [
+        "आव्यूह रूपांतरण 2D क्षेत्रफल को 0 में समेट देता है, जिससे ऑपरेशन अपरिवर्तनीय हो जाता है (कोई व्युत्क्रम मौजूद नहीं है)।",
+        "आव्यूह एक तत्समक आव्यूह (Identity matrix) बन जाता है।",
+        "सारणिक असीम रूप से बड़ा हो जाता है।",
+        "आव्यूह द्वारा दर्शाए गए समीकरणों के हमेशा 1 के बराबर अनंत अद्वितीय मान होते हैं।"
+      ],
+      "options_gu": [
+        "શ્રેણિક રૂપાંતરણ 2D ક્ષેત્રફળને 0 કરી દે છે, જેથી આ પ્રક્રિયા ઉલટાવી શકાતી નથી (કોઈ વ્યસ્ત અસ્તિત્વ ધરાવતો નથી).",
+        "શ્રેણિક એ એકમ શ્રેણિક (Identity matrix) બની જાય છે.",
+        "નિશ્ચાયક અનંત મોટો થઈ જાય છે.",
+        "શ્રેણિક દ્વારા દર્શાવવામાં આવેલા સમીકરણો હંમેશા 1 ની સમાન અનંત અનન્ય કિંમતો ધરાવે છે."
+      ],
+      "correct_index": 0,
+      "explanation": "When ad - bc = 0, the matrix scales the area by 0, flattening all vectors onto a single line or point. Since division by zero is undefined and information is lost in flattening, the matrix cannot be inverted.",
+      "explanation_hi": "जब ad - bc = 0 होता है, तो आव्यूह क्षेत्रफल को 0 से गुणा करता है, जिससे सभी सदिश (vectors) एक रेखा या बिंदु पर सिमट जाते हैं। चूंकि शून्य से विभाजन अपरिभाषित है और जानकारी नष्ट हो जाती है, आव्यूह का व्युत्क्रम नहीं निकाला जा सकता।",
+      "explanation_gu": "જ્યારે ad - bc = 0 હોય, ત્યારે શ્રેણિક ક્ષેત્રફળને 0 ગુણકથી બદલે છે, જેથી તમામ સદિશો એક સીધી રેખા અથવા બિંદુ પર આવી જાય છે. શૂન્ય વડે ભાગાકાર અશક્ય હોવાથી અને માહિતી લુપ્ત થઈ જતી હોવાથી, શ્રેણિકનો વ્યસ્ત શોધી શકાતો નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_003",
+      "type": "discovery",
+      "title": "Connecting Matrices to Determinants",
+      "title_hi": "आव्यूह को सारणिक से जोड़ना",
+      "title_gu": "શ્રેણિકને નિશ્ચાયક સાથે જોડવું",
+      "body": "To every square matrix A = [a_ij] of order n, we can associate a unique number (real or complex) called the **determinant of matrix A**, denoted by det(A) or |A|.\n\nKey Insights:\n1. Determinants are defined ONLY for **square matrices**.\n2. |A| does not mean absolute value of A; it represents the determinant scalar value.\n3. For Order 1: If A = [a], then |A| = a.\n4. For Order 2: If A = [[a, b], [c, d]], then |A| = ad - bc.",
+      "body_hi": "n कोटि के प्रत्येक वर्ग आव्यूह A = [a_ij] के साथ, हम एक अद्वितीय संख्या (वास्तविक या सम्मिश्र) को संबद्ध कर सकते हैं जिसे **आव्यूह A का सारणिक** कहा जाता है, जिसे det(A) या |A| द्वारा दर्शाया जाता है।\n\nमुख्य बिंदु:\n1. सारणिक केवल **वर्ग आव्यूह (Square Matrices)** के लिए ही परिभाषित हैं।\n2. |A| का अर्थ A का निरपेक्ष मान (absolute value) नहीं है; यह सारणिक अदिश मान को दर्शाता है।\n3. कोटि 1 के लिए: यदि A = [a], तो |A| = a.\n4. कोटि 2 के लिए: यदि A = [[a, b], [c, d]], तो |A| = ad - bc.",
+      "body_gu": "n કક્ષાના દરેક ચોરસ શ્રેણિક A = [a_ij] માટે, આપણે એક અપ્રતિમ સંખ્યા (વાસ્તવિક અથવા સંકીર્ણ) ને સાંકળી શકીએ છીએ જેને **શ્રેણિક A નો નિશ્ચાયક** કહેવાય છે, જેને det(A) અથવા |A| વડે દર્શાવાય છે.\n\nમુખ્ય મુદ્દાઓ:\n1. નિશ્ચાયક ફક્ત **ચોરસ શ્રેણિક** માટે જ વ્યાખ્યાયિત થયેલ છે.\n2. |A| એ A ની નિરપેક્ષ કિંમત નથી; તે નિશ્ચાયકનું મૂલ્ય દર્શાવે છે.\n3. કક્ષા 1 માટે: જો A = [a], તો |A| = a.\n4. કક્ષા 2 માટે: જો A = [[a, b], [c, d]], તો |A| = ad - bc."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_004",
+      "type": "theory",
+      "title": "Core Theory: Determinants, Minors, Cofactors, Adjoint, and Systems",
+      "title_hi": "मूल सिद्धांत: सारणिक, उपसारणिक, सहखंड, सहखंडज और निकाय",
+      "title_gu": "મુખ્ય સિદ્ધાંત: નિશ્ચાયક, ઉપ-નિશ્ચાયક, સહ-અવયવ, સહ-અવયવજ અને સમીકરણ સંહતિ",
+      "body": "### 1. Determinant Expansion (Order 3)\nTo evaluate a 3x3 determinant, expand along any row or column using sign grid `[+ - +; - + -; + - +]`.\n|A| = a11(a22*a33 - a32*a23) - a12(a21*a33 - a31*a23) + a13(a21*a32 - a31*a22).\n\n### 2. Minors & Cofactors\n- **Minor (M_ij)**: Determinant of submatrix after deleting row i and column j.\n- **Cofactor (A_ij)**: A_ij = (-1)^(i+j) * M_ij.\n- Value of determinant = Sum of product of elements of any row/column with their corresponding cofactors.\n\n### 3. Area of Triangle\nArea = 0.5 * | x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2) |.\nIf Area = 0, the three points are collinear.\n\n### 4. Adjoint & Inverse of Matrix\n- **adj(A)**: Transpose of cofactor matrix [A_ij]^T.\n- **Properties**: A * adj(A) = adj(A) * A = |A| * I.\n- **Inverse**: A^(-1) = (1 / |A|) * adj(A), provided |A| ≠ 0 (A is non-singular).\n\n### 5. Solving System of Linear Equations (AX = B)\n- If |A| ≠ 0: Consistent, unique solution X = A^(-1) * B.\n- If |A| = 0 and (adj A)*B ≠ 0: Inconsistent (No solution).\n- If |A| = 0 and (adj A)*B = 0: Consistent/Inconsistent (Infinitely many solutions or no solution).",
+      "body_hi": "### 1. सारणिक विस्तार (कोटि 3)\n3x3 सारणिक का मान ज्ञात करने के लिए, चिन्ह ग्रिड `[+ - +; - + -; + - +]` का उपयोग करके किसी भी पंक्ति या स्तंभ के अनुदिश विस्तार करें।\n\n### 2. उपसारणिक और सहखंड\n- **उपसारणिक (M_ij)**: पंक्ति i और स्तंभ j को हटाने के बाद बचे उप-आव्यूह का सारणिक।\n- **सहखंड (A_ij)**: A_ij = (-1)^(i+j) * M_ij.\n\n### 3. त्रिभुज का क्षेत्रफल\nक्षेत्रफल = 0.5 * | x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2) |.\nयदि क्षेत्रफल = 0 है, तो तीनों बिंदु संरेख (collinear) हैं।\n\n### 4. आव्यूह का सहखंडज और व्युत्क्रम\n- **adj(A)**: सहखंड आव्यूह [A_ij]^T का परिवर्त।\n- **व्युत्क्रम**: A^(-1) = (1 / |A|) * adj(A), बशर्ते |A| ≠ 0 (A व्युत्क्रमणीय/non-singular है)।\n\n### 5. रैखिक समीकरण निकाय का हल (AX = B)\n- यदि |A| ≠ 0: संगत (Consistent), अद्वितीय हल X = A^(-1) * B।",
+      "body_gu": "### 1. નિશ્ચાયકનું વિસ્તરણ (કક્ષા 3)\n3x3 નિશ્ચાયકની કિંમત શોધવા માટે, ચિહ્ન ગ્રીડ `[+ - +; - + -; + - +]` નો ઉપયોગ કરીને કોઈપણ હાર અથવા સ્તંભ દ્વારા વિસ્તરણ કરો.\n\n### 2. ઉપ-નિશ્ચાયક અને સહ-અવયવ\n- **ઉપ-નિશ્ચાયક (M_ij)**: હાર i અને સ્તંભ j ને દૂર કર્યા પછી બચેલા શ્રેણિકનો નિશ્ચાયક.\n- **સહ-અવયવ (A_ij)**: A_ij = (-1)^(i+j) * M_ij.\n\n### 3. ત્રિકોણનું ક્ષેત્રફળ\nક્ષેત્રફળ = 0.5 * | x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2) |.\nજો ક્ષેત્રફળ = 0 હોય, તો ત્રણેય બિંદુઓ એકરેખ (collinear) છે.\n\n### 4. સહ-અવયવજ શ્રેણિક અને વ્યસ્ત શ્રેણિક\n- **adj(A)**: સહ-અવયવ શ્રેણિક [A_ij]^T નો પરિવર્ત શ્રેણિક.\n- **વ્યસ્ત શ્રેણિક**: A^(-1) = (1 / |A|) * adj(A), શરત એ કે |A| ≠ 0 (A એ સામાન્ય શ્રેણિક છે).\n\n### 5. સુરેખ સમીકરણ સંહતિનો ઉકેલ (AX = B)\n- જો |A| ≠ 0: સુસંગત (Consistent), અનન્ય ઉકેલ X = A^(-1) * B."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_005",
+      "type": "knowledge_check",
+      "question_type": "mcq",
+      "title": "Property Verification Check",
+      "title_hi": "गुणधर्म सत्यापन परीक्षण",
+      "title_gu": "ગુણધર્મ ચકાસણી કસોટી",
+      "question": "If A is a square matrix of order 3x3 such that |A| = 5, what is the value of |3A|?",
+      "question_hi": "यदि A 3x3 कोटि का एक वर्ग आव्यूह है जैसे कि |A| = 5, तो |3A| का मान क्या होगा?",
+      "question_gu": "જો A એ 3x3 કક્ષાનો ચોરસ શ્રેણિક હોય જ્યાં |A| = 5, તો |3A| ની કિંમત કેટલી થાય?",
+      "options": [
+        "15",
+        "45",
+        "135",
+        "75"
+      ],
+      "options_hi": [
+        "15",
+        "45",
+        "135",
+        "75"
+      ],
+      "options_gu": [
+        "15",
+        "45",
+        "135",
+        "75"
+      ],
+      "correct_index": 2,
+      "explanation": "For a square matrix A of order n, |kA| = (k^n) * |A|. Here n = 3 and k = 3, so |3A| = (3^3) * |A| = 27 * 5 = 135.",
+      "explanation_hi": "n कोटि के वर्ग आव्यूह A के लिए, |kA| = (k^n) * |A| होता है। यहाँ n = 3 और k = 3 है, इसलिए |3A| = (3^3) * |A| = 27 * 5 = 135।",
+      "explanation_gu": "n કક્ષાના ચોરસ શ્રેણિક A માટે, |kA| = (k^n) * |A| થાય. અહીં n = 3 અને k = 3 છે, તેથી |3A| = (3^3) * |A| = 27 * 5 = 135."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_006",
+      "type": "reflection",
+      "title": "Matrix Singularity Insight",
+      "title_hi": "आव्यूह की अ-व्युत्क्रमणीयता (Singularity) की समझ",
+      "title_gu": "શ્રેણિકની અસામાન્યતા (Singularity) નું પ્રતિબિંબ",
+      "body": "Reflect on why a non-zero determinant is the sole gatekeeper for matrix inversion:\nIn matrix algebra, division is not directly defined. Inverse A^(-1) acts like division. Just as dividing real numbers by 0 is undefined, dividing matrix adj(A) by |A| = 0 is undefined. Singular matrices (|A| = 0) lose information, compressing dimensions into lower dimensions.",
+      "body_hi": "इस बात पर विचार करें कि गैर-शून्य सारणिक ही आव्यूह व्युत्क्रमण के लिए एकमात्र शर्त क्यों है:\nआव्यूह बीजगणित में, भाग प्रत्यक्ष रूप से परिभाषित नहीं है। व्युत्क्रम A^(-1) भाग की तरह कार्य करता है। जिस प्रकार वास्तविक संख्याओं को 0 से विभाजित करना अपरिभाषित है, उसी प्रकार आव्यूह adj(A) को |A| = 0 से विभाजित करना अपरिभाषित है।",
+      "body_gu": "વિચારો કેશા માટે અ-શૂન્ય નિશ્ચાયક એ શ્રેણિકના વ્યસ્ત માટે એકમાત્ર શરત છે:\nશ્રેણિક બીજગણિતમાં, ભાગાકાર સીધી રીતે વ્યાખ્યાયિત નથી. વ્યસ્ત A^(-1) એ ભાગાકાર જેવું કામ કરે છે. જેમ વાસ્તવિક સંખ્યાઓને 0 વડે ભાગવા અશક્ય છે, તેમ શ્રેણિક adj(A) ને |A| = 0 વડે ભાગવું અશક્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_007",
+      "type": "connection",
+      "title": "Real-World Application: Electrical Circuits & Graphics Engine",
+      "title_hi": "वास्तविक दुनिया का अनुप्रयोग: विद्युत परिपथ और ग्राफिक्स इंजन",
+      "title_gu": "વાસ્તવિક દુનિયાનો ઉપયોગ: ઇલેક્ટ્રિક સર્કિટ અને ગ્રાફિક્સ એન્જિન",
+      "body": "Determinants are used extensively in Kirchhoff's laws for complex electrical circuits (Cramer's rule / Matrix method) to solve simultaneous loop current equations. In modern 3D rendering engines (Unity, Unreal Engine), determinants are computed in real-time to check if 3D mesh transformations preserve volume or become distorted.",
+      "body_hi": "जटिल विद्युत परिपथों में किरचॉफ के नियमों के लिए युगपत लूप धारा समीकरणों को हल करने के लिए सारणिकों का बड़े पैमाने पर उपयोग किया जाता है। आधुनिक 3D रेंडरिंग इंजन में, यह जांचने के लिए सारणिकों की गणना वास्तविक समय में की जाती है कि 3D मॉडल का आयतन सही है या विकृत हो गया है।",
+      "body_gu": "જટિલ ઇલેક્ટ્રિકલ સર્કિટમાં કિરચોફના નિયમો માટે સુરેખ સમીકરણોનો ઉકેલ લાવવા માટે નિશ્ચાયકનો બહોળા પ્રમાણમાં ઉપયોગ થાય છે. આધુનિક 3D ગેમિંગ એન્જિનમાં, 3D આકારો યોગ્ય પરિમાણ જાળવે છે કે નહીં તે ચકાસવા માટે નિશ્ચાયકનો ઉપયોગ થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Determinants Core",
+      "title_hi": "मास्टरी चुनौती: सारणिक कोर",
+      "title_gu": "પ્રભુત્વ પડકાર: નિશ્ચાયક",
+      "body": "Mastery Checklist:\n1. Expand 2x2 and 3x3 determinants accurately.\n2. Calculate minors M_ij and cofactors A_ij.\n3. Compute adj(A) and evaluate A^(-1) = (1/|A|) * adj(A).\n4. Solve systems of equations AX = B using matrix inversion.\n5. Compute triangle areas and establish collinearity.",
+      "body_hi": "मास्टरी चेकलिस्ट:\n1. 2x2 और 3x3 सारणिकों का सटीक विस्तार करें।\n2. उपसारणिक M_ij और सहखंड A_ij की गणना करें।\n3. adj(A) निकालें और A^(-1) = (1/|A|) * adj(A) का मान ज्ञात करें।\n4. आव्यूह व्युत्क्रमण का उपयोग करके समीकरण निकायों AX = B को हल करें।",
+      "body_gu": "પ્રભુત્વ ચેકલિસ્ટ:\n1. 2x2 અને 3x3 નિશ્ચાયકનું યોગ્ય વિસ્તરણ કરો.\n2. ઉપ-નિશ્ચાયક M_ij અને સહ-અવયવ A_ij ની ગણતરી કરો.\n3. adj(A) શોધો અને A^(-1) = (1/|A|) * adj(A) મેળવો.\n4. શ્રેણિક વ્યસ્તનો ઉપયોગ કરીને AX = B સુરેખ સમીકરણો ઉકેલો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_009",
+      "type": "mcq",
+      "title": "Textbook Ex 4.1 Q1: Determinant Calculation",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.1 Q1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.1 Q1",
+      "question": "Evaluate the determinant: | 2  4 ; -5 -1 |",
+      "question_hi": "सारणिक का मान ज्ञात कीजिए: | 2  4 ; -5 -1 |",
+      "question_gu": "નિશ્ચાયકનું મૂલ્ય શોધો: | 2  4 ; -5 -1 |",
+      "options": [
+        "18",
+        "-18",
+        "22",
+        "-22"
+      ],
+      "options_hi": [
+        "18",
+        "-18",
+        "22",
+        "-22"
+      ],
+      "options_gu": [
+        "18",
+        "-18",
+        "22",
+        "-22"
+      ],
+      "correct_index": 0,
+      "explanation": "| 2 4 ; -5 -1 | = 2*(-1) - 4*(-5) = -2 + 20 = 18.",
+      "explanation_hi": "| 2 4 ; -5 -1 | = 2*(-1) - 4*(-5) = -2 + 20 = 18।",
+      "explanation_gu": "| 2 4 ; -5 -1 | = 2*(-1) - 4*(-5) = -2 + 20 = 18."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_010",
+      "type": "mcq",
+      "title": "Textbook Ex 4.1 Q2(i): Trigonometric Determinant",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.1 Q2(i)",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.1 Q2(i)",
+      "question": "Evaluate the determinant: | cosθ  -sinθ ; sinθ  cosθ |",
+      "question_hi": "सारणिक का मान ज्ञात कीजिए: | cosθ  -sinθ ; sinθ  cosθ |",
+      "question_gu": "નિશ્ચાયકનું મૂલ્ય શોધો: | cosθ  -sinθ ; sinθ  cosθ |",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "cos(2θ)"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "-1",
+        "cos(2θ)"
+      ],
+      "options_gu": [
+        "0",
+        "1",
+        "-1",
+        "cos(2θ)"
+      ],
+      "correct_index": 1,
+      "explanation": "Determinant = cosθ*cosθ - (-sinθ)*sinθ = cos^2(θ) + sin^2(θ) = 1.",
+      "explanation_hi": "सारणिक = cosθ*cosθ - (-sinθ)*sinθ = cos^2(θ) + sin^2(θ) = 1।",
+      "explanation_gu": "નિશ્ચાયક = cosθ*cosθ - (-sinθ)*sinθ = cos^2(θ) + sin^2(θ) = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_011",
+      "type": "mcq",
+      "title": "Textbook Ex 4.1 Q3: Determinant Scalar Relation",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.1 Q3",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.1 Q3",
+      "question": "If matrix A = [[1, 2], [4, 2]], then which of the following statements is true?",
+      "question_hi": "यदि आव्यूह A = [[1, 2], [4, 2]] है, तो निम्नलिखित में से कौन सा कथन सत्य है?",
+      "question_gu": "જો શ્રેણિક A = [[1, 2], [4, 2]] હોય, તો નીચેનામાંથી કયું વિધાન સત્ય છે?",
+      "options": [
+        "|2A| = 2|A|",
+        "|2A| = 4|A|",
+        "|2A| = 8|A|",
+        "|2A| = |A|"
+      ],
+      "options_hi": [
+        "|2A| = 2|A|",
+        "|2A| = 4|A|",
+        "|2A| = 8|A|",
+        "|2A| = |A|"
+      ],
+      "options_gu": [
+        "|2A| = 2|A|",
+        "|2A| = 4|A|",
+        "|2A| = 8|A|",
+        "|2A| = |A|"
+      ],
+      "correct_index": 1,
+      "explanation": "For a 2x2 matrix, |kA| = k^2 * |A|. Thus |2A| = 2^2 * |A| = 4|A|.",
+      "explanation_hi": "2x2 आव्यूह के लिए, |kA| = k^2 * |A| होता है। अतः |2A| = 2^2 * |A| = 4|A|।",
+      "explanation_gu": "2x2 શ્રેણિક માટે, |kA| = k^2 * |A| થાય. તેથી |2A| = 2^2 * |A| = 4|A|."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_012",
+      "type": "mcq",
+      "title": "Textbook Ex 4.1 Q7(i): Solving Determinant Equation",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.1 Q7(i)",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.1 Q7(i)",
+      "question": "Find values of x if | 2  4 ; 5  1 | = | 2x  4 ; 6  x |",
+      "question_hi": "यदि | 2  4 ; 5  1 | = | 2x  4 ; 6  x | है, तो x का मान ज्ञात कीजिए:",
+      "question_gu": "જો | 2  4 ; 5  1 | = | 2x  4 ; 6  x | હોય, તો x ની કિંમત શોધો:",
+      "options": [
+        "x = ±√3",
+        "x = ±3",
+        "x = ±√6",
+        "x = 3"
+      ],
+      "options_hi": [
+        "x = ±√3",
+        "x = ±3",
+        "x = ±√6",
+        "x = 3"
+      ],
+      "options_gu": [
+        "x = ±√3",
+        "x = ±3",
+        "x = ±√6",
+        "x = 3"
+      ],
+      "correct_index": 0,
+      "explanation": "LHS = 2*1 - 4*5 = -18. RHS = 2x*x - 4*6 = 2x^2 - 24. So 2x^2 - 24 = -18 => 2x^2 = 6 => x^2 = 3 => x = ±√3.",
+      "explanation_hi": "LHS = 2*1 - 4*5 = -18। RHS = 2x*x - 4*6 = 2x^2 - 24। इसलिए 2x^2 - 24 = -18 => 2x^2 = 6 => x = ±√3।",
+      "explanation_gu": "LHS = 2*1 - 4*5 = -18. RHS = 2x*x - 4*6 = 2x^2 - 24. તેથી 2x^2 - 24 = -18 => 2x^2 = 6 => x = ±√3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_013",
+      "type": "mcq",
+      "title": "Textbook Ex 4.2 Q1: Area of Triangle",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.2 Q1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.2 Q1",
+      "question": "Find area of the triangle with vertices (1, 0), (6, 0), (4, 3).",
+      "question_hi": "शीर्षों (1, 0), (6, 0), (4, 3) वाले त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "શિરોબિંદુઓ (1, 0), (6, 0), (4, 3) વાળા ત્રિકોણનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "15/2 sq units",
+        "25/2 sq units",
+        "8 sq units",
+        "12 sq units"
+      ],
+      "options_hi": [
+        "15/2 वर्ग इकाई",
+        "25/2 वर्ग इकाई",
+        "8 वर्ग इकाई",
+        "12 वर्ग इकाई"
+      ],
+      "options_gu": [
+        "15/2 ચોરસ એકમ",
+        "25/2 ચોરસ એકમ",
+        "8 ચોરસ એકમ",
+        "12 ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area = 0.5 * | 1(0 - 3) - 0 + 1(18 - 0) | = 0.5 * |-3 + 18| = 15/2 sq units.",
+      "explanation_hi": "क्षेत्रफल = 0.5 * | 1(0 - 3) - 0 + 1(18 - 0) | = 0.5 * |-3 + 18| = 15/2 वर्ग इकाई।",
+      "explanation_gu": "ક્ષેત્રફળ = 0.5 * | 1(0 - 3) - 0 + 1(18 - 0) | = 0.5 * |-3 + 18| = 15/2 ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_014",
+      "type": "mcq",
+      "title": "Textbook Ex 4.2 Q4: Equation of Line Using Determinants",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.2 Q4",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.2 Q4",
+      "question": "Find equation of line joining (1, 2) and (3, 6) using determinants.",
+      "question_hi": "सारणिकों का प्रयोग करके (1, 2) और (3, 6) को जोड़ने वाली रेखा का समीकरण ज्ञात कीजिए।",
+      "question_gu": "નિશ્ચાયકનો ઉપયોગ કરીને (1, 2) અને (3, 6) ને જોડતી રેખાનું સમીકરણ શોધો.",
+      "options": [
+        "y = 2x",
+        "x = 2y",
+        "y = x + 1",
+        "2y = x"
+      ],
+      "options_hi": [
+        "y = 2x",
+        "x = 2y",
+        "y = x + 1",
+        "2y = x"
+      ],
+      "options_gu": [
+        "y = 2x",
+        "x = 2y",
+        "y = x + 1",
+        "2y = x"
+      ],
+      "correct_index": 0,
+      "explanation": "Set determinant | x y 1 ; 1 2 1 ; 3 6 1 | = 0 => x(2-6) - y(1-3) + 1(6-6) = 0 => -4x + 2y = 0 => y = 2x.",
+      "explanation_hi": "सारणिक | x y 1 ; 1 2 1 ; 3 6 1 | = 0 सेट करें => x(2-6) - y(1-3) + 1(6-6) = 0 => -4x + 2y = 0 => y = 2x।",
+      "explanation_gu": "| x y 1 ; 1 2 1 ; 3 6 1 | = 0 લો => x(2-6) - y(1-3) + 1(6-6) = 0 => -4x + 2y = 0 => y = 2x."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_015",
+      "type": "mcq",
+      "title": "Textbook Ex 4.3 Q1: Minors and Cofactors",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.3 Q1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.3 Q1",
+      "question": "For matrix A = [[2, -4], [0, 3]], find cofactors A11 and A12.",
+      "question_hi": "आव्यूह A = [[2, -4], [0, 3]] के लिए सहखंड A11 और A12 ज्ञात कीजिए।",
+      "question_gu": "શ્રેણિક A = [[2, -4], [0, 3]] માટે સહ-અવયવ A11 અને A12 શોધો.",
+      "options": [
+        "A11 = 3, A12 = 0",
+        "A11 = 3, A12 = -4",
+        "A11 = 2, A12 = 0",
+        "A11 = 3, A12 = 4"
+      ],
+      "options_hi": [
+        "A11 = 3, A12 = 0",
+        "A11 = 3, A12 = -4",
+        "A11 = 2, A12 = 0",
+        "A11 = 3, A12 = 4"
+      ],
+      "options_gu": [
+        "A11 = 3, A12 = 0",
+        "A11 = 3, A12 = -4",
+        "A11 = 2, A12 = 0",
+        "A11 = 3, A12 = 4"
+      ],
+      "correct_index": 0,
+      "explanation": "M11 = 3, M12 = 0. A11 = (-1)^(1+1)*3 = 3. A12 = (-1)^(1+2)*0 = 0.",
+      "explanation_hi": "M11 = 3, M12 = 0। A11 = (-1)^(1+1)*3 = 3। A12 = (-1)^(1+2)*0 = 0।",
+      "explanation_gu": "M11 = 3, M12 = 0. A11 = (-1)^(1+1)*3 = 3. A12 = (-1)^(1+2)*0 = 0."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_016",
+      "type": "mcq",
+      "title": "Textbook Ex 4.3 Q5: Expansion Identity",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.3 Q5",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.3 Q5",
+      "question": "If Δ = det([a_ij]) of order 3 and A_ij is cofactor of a_ij, value of Δ is given by:",
+      "question_hi": "यदि Δ = कोटि 3 का det([a_ij]) है और A_ij, a_ij का सहखंड है, तो Δ का मान किसके द्वारा दिया जाता है?",
+      "question_gu": "જો Δ = 3 કક્ષાનો det([a_ij]) હોય અને A_ij એ a_ij નો સહ-અવયવ હોય, તો Δ ની કિંમત શેના વડે દર્શાવાય?",
+      "options": [
+        "a11*A31 + a12*A32 + a13*A33",
+        "a11*A11 + a12*A21 + a13*A31",
+        "a21*A11 + a22*A12 + a23*A13",
+        "a11*A11 + a21*A21 + a31*A31"
+      ],
+      "options_hi": [
+        "a11*A31 + a12*A32 + a13*A33",
+        "a11*A11 + a12*A21 + a13*A31",
+        "a21*A11 + a22*A12 + a23*A13",
+        "a11*A11 + a21*A21 + a31*A31"
+      ],
+      "options_gu": [
+        "a11*A31 + a12*A32 + a13*A33",
+        "a11*A11 + a12*A21 + a13*A31",
+        "a21*A11 + a22*A12 + a23*A13",
+        "a11*A11 + a21*A21 + a31*A31"
+      ],
+      "correct_index": 3,
+      "explanation": "Determinant value is the sum of product of elements of any column (here Column 1: a11, a21, a31) with their corresponding cofactors.",
+      "explanation_hi": "सारणिक का मान किसी भी स्तंभ (यहाँ स्तंभ 1: a11, a21, a31) के अवयवों और उनके संगत सहखंडों के गुणनफल का योग होता है।",
+      "explanation_gu": "નિશ્ચાયકનું મૂલ્ય એ કોઈપણ સ્તંભના ઘટકો અને તેના અનુરૂપ સહ-અવયવોના ગુણાકારનો સરવાળો હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_017",
+      "type": "mcq",
+      "title": "Textbook Ex 4.4 Q1: Adjoint of 2x2 Matrix",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.4 Q1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.4 Q1",
+      "question": "Find the adjoint of matrix A = [[1, 2], [3, 4]].",
+      "question_hi": "आव्यूह A = [[1, 2], [3, 4]] का सहखंडज (adjoint) ज्ञात कीजिए।",
+      "question_gu": "શ્રેણિક A = [[1, 2], [3, 4]] નો સહ-અવયવજ (adjoint) શોધો.",
+      "options": [
+        "[[4, -2], [-3, 1]]",
+        "[[4, 2], [3, 1]]",
+        "[[-1, 2], [3, -4]]",
+        "[[1, -3], [-2, 4]]"
+      ],
+      "options_hi": [
+        "[[4, -2], [-3, 1]]",
+        "[[4, 2], [3, 1]]",
+        "[[-1, 2], [3, -4]]",
+        "[[1, -3], [-2, 4]]"
+      ],
+      "options_gu": [
+        "[[4, -2], [-3, 1]]",
+        "[[4, 2], [3, 1]]",
+        "[[-1, 2], [3, -4]]",
+        "[[1, -3], [-2, 4]]"
+      ],
+      "correct_index": 0,
+      "explanation": "For 2x2 matrix [[a, b], [c, d]], adj(A) is obtained by swapping main diagonal elements (a and d) and changing signs of off-diagonal elements (b and c): [[4, -2], [-3, 1]].",
+      "explanation_hi": "2x2 आव्यूह [[a, b], [c, d]] के लिए, adj(A) मुख्य विकर्ण के तत्वों की अदला-बदली करके और अन्य तत्वों के चिन्ह बदलकर प्राप्त होता है: [[4, -2], [-3, 1]]।",
+      "explanation_gu": "2x2 શ્રેણિક [[a, b], [c, d]] માટે, adj(A) મુખ્ય વિકર્ણના ઘટકોની અદલાબદલી કરીને અને બાકીના ઘટકોના ચિહ્નો બદલીને મળે છે: [[4, -2], [-3, 1]]."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_018",
+      "type": "mcq",
+      "title": "Textbook Ex 4.4 Q13: Adjoint Determinant Formula",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.4 Q13",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.4 Q13",
+      "question": "If A is a non-singular matrix of order 3, then |adj A| equals:",
+      "question_hi": "यदि A कोटि 3 का एक व्युत्क्रमणीय आव्यूह है, तो |adj A| बराबर है:",
+      "question_gu": "જો A એ 3 કક્ષાનો સામાન્ય શ્રેણિક હોય, તો |adj A| બરાબર શું થાય?",
+      "options": [
+        "|A|",
+        "|A|^2",
+        "|A|^3",
+        "3|A|"
+      ],
+      "options_hi": [
+        "|A|",
+        "|A|^2",
+        "|A|^3",
+        "3|A|"
+      ],
+      "options_gu": [
+        "|A|",
+        "|A|^2",
+        "|A|^3",
+        "3|A|"
+      ],
+      "correct_index": 1,
+      "explanation": "For matrix of order n, |adj A| = |A|^(n-1). Here n = 3, so |adj A| = |A|^(3-1) = |A|^2.",
+      "explanation_hi": "n कोटि के आव्यूह के लिए, |adj A| = |A|^(n-1) होता है। यहाँ n = 3 है, इसलिए |adj A| = |A|^2।",
+      "explanation_gu": "n કક્ષાના શ્રેણિક માટે, |adj A| = |A|^(n-1) થાય. અહીં n = 3 છે, તેથી |adj A| = |A|^2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_019",
+      "type": "mcq",
+      "title": "Textbook Ex 4.5 Q1: System Consistency Check",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.5 Q1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.5 Q1",
+      "question": "Examine consistency of system: x + 2y = 2, 2x + 3y = 3.",
+      "question_hi": "निकाय की संगति की जाँच कीजिए: x + 2y = 2, 2x + 3y = 3।",
+      "question_gu": "સમીકરણ સંહતિની સુસંગતતા ચકાસો: x + 2y = 2, 2x + 3y = 3.",
+      "options": [
+        "Consistent (Unique Solution)",
+        "Inconsistent (No Solution)",
+        "Infinitely many solutions",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "संगत (अद्वितीय हल)",
+        "असंगत (कोई हल नहीं)",
+        "अनंत हल",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "options_gu": [
+        "સુસંગત (અનન્ય ઉકેલ)",
+        "અસંગત (કોઈ ઉકેલ નથી)",
+        "અનંત ઉકેલો",
+        "નક્કી કરી શકાતું નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "A = [[1, 2], [2, 3]]. |A| = 3 - 4 = -1 ≠ 0. Since |A| ≠ 0, system is consistent and has a unique solution.",
+      "explanation_hi": "A = [[1, 2], [2, 3]]। |A| = 3 - 4 = -1 ≠ 0। चूंकि |A| ≠ 0 है, निकाय संगत है और इसका एक अद्वितीय हल है।",
+      "explanation_gu": "A = [[1, 2], [2, 3]]. |A| = 3 - 4 = -1 ≠ 0. |A| ≠ 0 હોવાથી, સંહતિ સુસંગત છે અને અનન્ય ઉકેલ ધરાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH4_020",
+      "type": "mcq",
+      "title": "Textbook Ex 4.5 Q7: System of Linear Equations",
+      "title_hi": "पाठ्यपुस्तक प्रश्न अभ्यास 4.5 Q7",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4.5 Q7",
+      "question": "Solve the system using matrix method: 2x + 5y = 1, 3x + 2y = 7.",
+      "question_hi": "आव्यूह विधि का प्रयोग करके निकाय को हल कीजिए: 2x + 5y = 1, 3x + 2y = 7।",
+      "question_gu": "શ્રેણિક રીતનો ઉપયોગ કરીને સમીકરણ સંહતિ ઉકેલો: 2x + 5y = 1, 3x + 2y = 7.",
+      "options": [
+        "x = 3, y = -1",
+        "x = -3, y = 1",
+        "x = 1, y = 3",
+        "x = 2, y = -1"
+      ],
+      "options_hi": [
+        "x = 3, y = -1",
+        "x = -3, y = 1",
+        "x = 1, y = 3",
+        "x = 2, y = -1"
+      ],
+      "options_gu": [
+        "x = 3, y = -1",
+        "x = -3, y = 1",
+        "x = 1, y = 3",
+        "x = 2, y = -1"
+      ],
+      "correct_index": 0,
+      "explanation": "|A| = 4 - 15 = -11. adj(A) = [[2, -5], [-3, 2]]. X = A^(-1)B = (-1/11) * [[2, -5], [-3, 2]] * [1, 7]^T = (-1/11) * [-33, 11]^T = [3, -1]^T. Thus x = 3, y = -1.",
+      "explanation_hi": "|A| = 4 - 15 = -11। adj(A) = [[2, -5], [-3, 2]]। X = A^(-1)B = (-1/11) * [[2, -5], [-3, 2]] * [1, 7]^T = [3, -1]^T। अतः x = 3, y = -1।",
+      "explanation_gu": "|A| = 4 - 15 = -11. adj(A) = [[2, -5], [-3, 2]]. X = A^(-1)B = (-1/11) * [[2, -5], [-3, 2]] * [1, 7]^T = [3, -1]^T. તેથી x = 3, y = -1."
+    }
+  ]
+}

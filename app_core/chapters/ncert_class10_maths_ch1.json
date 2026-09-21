@@ -1,0 +1,1914 @@
+{
+  "metadata": {
+    "title": "Real Numbers",
+    "subject": "Maths",
+    "grade": "10",
+    "curriculum": [
+      "GSEB",
+      "NCERT",
+      "CBSE"
+    ],
+    "difficulty": "Intermediate",
+    "version": "4.0.0",
+    "id": "cbse_class10_maths_ch1"
+  },
+  "blocks": [
+    {
+      "id": "SAMPLE_HOOK",
+      "type": "hook",
+      "title": "The Mystery of Prime Numbers",
+      "title_hi": "अभाज्य संख्याओं का रहस्य",
+      "title_gu": "અવિભાજ્ય સંખ્યાઓનું રહસ્ય",
+      "body": "Have you ever wondered how your online messages are kept secure? It all comes down to prime numbers! Let's explore the magic of Real Numbers.",
+      "body_hi": "क्या आपने कभी सोचा है कि आपके ऑनलाइन संदेश सुरक्षित कैसे रहते हैं? यह सब अभाज्य संख्याओं के कारण है! आइए वास्तविक संख्याओं के जादू का पता लगाएं।",
+      "body_gu": "શું તમે ક્યારેય વિચાર્યું છે કે તમારા ઓનલાઇન સંદેશાઓ કેવી રીતે સુરક્ષિત રહે છે? આ બધું અવિભાજ્ય સંખ્યાઓને કારણે છે! ચાલો વાસ્તવિક સંખ્યાઓના જાદુનું અન્વેષણ કરીએ."
+    },
+    {
+      "id": "SAMPLE_SOCRATIC",
+      "type": "socratic_question",
+      "title": "Think About It",
+      "title_hi": "इस पर विचार करें",
+      "title_gu": "આના વિશે વિચારો",
+      "body": "If you multiply two prime numbers together, how many factors will the resulting number have?",
+      "body_hi": "यदि आप दो अभाज्य संख्याओं को एक साथ गुणा करते हैं, तो परिणामी संख्या के कितने गुणनखंड होंगे?",
+      "body_gu": "જો તમે બે અવિભાજ્ય સંખ્યાઓનો ગુણાકાર કરો છો, તો પરિણામી સંખ્યામાં કેટલા અવયવ હશે?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "Infinite"
+      ],
+      "options_hi": [
+        "2",
+        "3",
+        "4",
+        "अनंत"
+      ],
+      "options_gu": [
+        "2",
+        "3",
+        "4",
+        "અનંત"
+      ],
+      "correct_index": 2,
+      "explanation": "It will have 4 factors: 1, the first prime, the second prime, and the product itself.",
+      "explanation_hi": "इसके 4 गुणनखंड होंगे: 1, पहला अभाज्य, दूसरा अभाज्य, और स्वयं गुणनफल।",
+      "explanation_gu": "તેમાં 4 અવયવો હશે: 1, પ્રથમ અવિભાજ્ય, બીજી અવિભાજ્ય, અને ઉત્પાદન પોતે."
+    },
+    {
+      "id": "SAMPLE_DISCOVERY",
+      "type": "discovery",
+      "title": "Building Blocks",
+      "title_hi": "निर्माण खंड",
+      "title_gu": "બિલ્ડીંગ બ્લોક્સ",
+      "body": "Just like every wall is made of individual bricks, every number is made of prime numbers multiplied together. This is the fundamental rule of arithmetic.",
+      "body_hi": "जैसे हर दीवार ईंटों से बनी होती है, वैसे ही हर संख्या अभाज्य संख्याओं को गुणा करके बनी होती है। यह अंकगणित का मूल नियम है।",
+      "body_gu": "જેમ દરેક દિવાલ ઇંટોથી બનેલી છે, તેમ દરેક સંખ્યા અવિભાજ્ય સંખ્યાઓનો ગુણાકાર કરીને બનેલી છે. આ અંકગણિતનો મૂળભૂત નિયમ છે."
+    },
+    {
+      "id": "SAMPLE_REFLECTION",
+      "type": "reflection",
+      "title": "Your Turn",
+      "title_hi": "आपकी बारी",
+      "title_gu": "તમારો વારો",
+      "body": "Close your eyes and try to explain what a 'composite number' is to an imaginary friend. If you can explain it simply, you've mastered it!",
+      "body_hi": "अपनी आँखें बंद करें और एक काल्पनिक दोस्त को 'भाज्य संख्या' क्या है, यह समझाने का प्रयास करें। यदि आप इसे सरलता से समझा सकते हैं, तो आपने इसमें महारत हासिल कर ली है!",
+      "body_gu": "તમારી આંખો બંધ કરો અને કાલ્પનિક મિત્રને 'સંયુક્ત સંખ્યા' શું છે તે સમજાવવાનો પ્રયાસ કરો. જો તમે તેને સરળતાથી સમજાવી શકો, તો તમે તેમાં નિપુણતા પ્રાપ્ત કરી છે!"
+    },
+    {
+      "id": "SAMPLE_MASTERY",
+      "type": "mastery",
+      "title": "The Final Challenge",
+      "title_hi": "अंतिम चुनौती",
+      "title_gu": "અંતિમ પડકાર",
+      "body": "You now have all the tools. Apply Euclid's Division Lemma to find the HCF of 455 and 42 on a piece of paper.",
+      "body_hi": "अब आपके पास सभी उपकरण हैं। एक कागज के टुकड़े पर 455 और 42 का HCF खोजने के लिए यूक्लिड के विभाजन लेम्मा को लागू करें।",
+      "body_gu": "હવે તમારી પાસે બધા સાધનો છે. કાગળના ટુકડા પર 455 અને 42 ના HCF શોધવા માટે યુક્લિડના ભાગાકાર લેમ્માને લાગુ કરો."
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_01",
+      "title": "A Puzzle from the Past",
+      "title_hi": "अतीत से एक पहेली",
+      "body": "Imagine you have a basket of eggs. If you count them in twos, 1 is left. If you count in threes, 2 are left. If you count in fours, 3 are left... up to counting in sevens where 0 are left. How many eggs are there? This is an ancient puzzle. How do we even begin to solve it?",
+      "body_hi": "कल्पना करें कि आपके पास अंडों की एक टोकरी है। यदि आप उन्हें दो-दो करके गिनते हैं, तो 1 बचता है। यदि आप तीन-तीन करके गिनते हैं, तो 2 बचते हैं। यदि आप चार-चार करके गिनते हैं, तो 3 बचते हैं... और यदि सात-सात करके गिनते हैं तो 0 बचते हैं। कुल कितने अंडे हैं? यह एक प्राचीन पहेली है। हम इसे हल करना कैसे शुरू करें?"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_02",
+      "title": "Think About Division",
+      "title_hi": "विभाजन के बारे में सोचें",
+      "body": "When you divide 17 by 3, what happens? You get a quotient of 5 and a remainder of 2. Can you write this relationship in a single line? What if you try to find a remainder that is bigger than 3? Is that possible?",
+      "body_hi": "जब आप 17 को 3 से भाग देते हैं, तो क्या होता है? आपको भागफल 5 और शेषफल 2 मिलता है। क्या आप इस संबंध को एक पंक्ति में लिख सकते हैं? क्या होगा यदि आप ऐसा शेषफल खोजने की कोशिश करें जो 3 से बड़ा हो? क्या यह संभव है?"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_03",
+      "title": "Visualizing Division",
+      "title_hi": "विभाजन की कल्पना",
+      "body": "Think of division as grouping. If you have 17 items and group them into boxes of 3, you'll fill 5 boxes perfectly, and 2 items will be left outside. The remainder must always be smaller than the box size, otherwise, you could fill another box! This simple truth is the heart of our concept today.",
+      "body_hi": "विभाजन को समूहीकरण के रूप में सोचें। यदि आपके पास 17 वस्तुएं हैं और आप उन्हें 3 के बक्सों में समूहित करते हैं, तो आप 5 बक्से पूरी तरह से भर देंगे, और 2 वस्तुएं बाहर रह जाएंगी। शेषफल हमेशा बक्से के आकार से छोटा होना चाहिए, अन्यथा, आप एक और बक्सा भर सकते हैं! यह सरल सत्य आज की हमारी अवधारणा का हृदय है।"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_04",
+      "title": "Euclid's Division Lemma",
+      "title_hi": "यूक्लिड विभाजन प्रमेयिका (लेम्मा)",
+      "body": "Euclid's Division Lemma states: Given positive integers a and b, there exist unique integers q and r satisfying a = bq + r, where 0 ≤ r < b. Here, 'a' is the dividend, 'b' is the divisor, 'q' is the quotient, and 'r' is the remainder.",
+      "body_hi": "यूक्लिड विभाजन प्रमेयिका कहती है: दिए गए धनात्मक पूर्णांकों a और b के लिए, ऐसी अद्वितीय पूर्ण संख्याएँ q और r विद्यमान हैं कि a = bq + r, जहाँ 0 ≤ r < b है। यहाँ 'a' भाज्य है, 'b' भाजक है, 'q' भागफल है, और 'r' शेषफल है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_05",
+      "question": "According to Euclid's Division Lemma (a = bq + r), which of the following conditions is true for the remainder 'r'?",
+      "question_hi": "यूक्लिड विभाजन प्रमेयिका (a = bq + r) के अनुसार, शेषफल 'r' के लिए निम्नलिखित में से कौन सी शर्त सत्य है?",
+      "options": [
+        "0 < r ≤ b",
+        "0 ≤ r < b",
+        "0 ≤ r ≤ b",
+        "r < 0"
+      ],
+      "options_hi": [
+        "0 < r ≤ b",
+        "0 ≤ r < b",
+        "0 ≤ r ≤ b",
+        "r < 0"
+      ],
+      "correct_index": 1,
+      "explanation": "The remainder must be at least 0 but strictly less than the divisor 'b'.",
+      "explanation_hi": "शेषफल कम से कम 0 होना चाहिए लेकिन भाजक 'b' से सख्ती से कम होना चाहिए।"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_06",
+      "title": "Reflection",
+      "title_hi": "चिंतन (Reflection)",
+      "body": "Explain Euclid's Division Lemma in your own words. How would you teach it to a 5th-grade student who just learned long division? What does the 'Lemma' mean?",
+      "body_hi": "अपने शब्दों में यूक्लिड विभाजन प्रमेयिका को समझाएं। आप इसे 5वीं कक्षा के उस छात्र को कैसे सिखाएंगे जिसने अभी-अभी लंबा भाग (long division) सीखा है? 'प्रमेयिका' (Lemma) का क्या अर्थ है?"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_07",
+      "title": "Connecting the Dots",
+      "title_hi": "ज्ञान को जोड़ना",
+      "body": "This lemma isn't just about division. It's the foundation for finding the Highest Common Factor (HCF) of two numbers efficiently using Euclid's Division Algorithm. It's heavily used in number theory and even in computer cryptography!",
+      "body_hi": "यह प्रमेयिका केवल विभाजन के बारे में नहीं है। यह यूक्लिड विभाजन एल्गोरिथ्म का उपयोग करके दो संख्याओं का महत्तम समापवर्तक (HCF) कुशलतापूर्वक खोजने की नींव है। इसका उपयोग संख्या सिद्धांत (number theory) और यहाँ तक कि कंप्यूटर क्रिप्टोग्राफी में भी भारी मात्रा में किया जाता है!"
+    },
+    {
+      "type": "theory",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_08",
+      "title": "Mastery Challenge",
+      "title_hi": "महारत की चुनौती",
+      "body": "Can you show that any positive odd integer is of the form 4q + 1 or 4q + 3, where q is some integer? Try applying Euclid's Division Lemma with b = 4.",
+      "body_hi": "क्या आप दिखा सकते हैं कि कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होता है, जहाँ q कोई पूर्णांक है? b = 4 के साथ यूक्लिड विभाजन प्रमेयिका लागू करने का प्रयास करें।"
+    },
+    {
+      "type": "worked_example",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_09",
+      "title": "Example 1: Basic Application",
+      "title_hi": "उदाहरण 1: मूल अनुप्रयोग",
+      "question": "Use Euclid's division lemma to find the quotient and remainder when 45 is divided by 7.",
+      "question_hi": "यूक्लिड विभाजन प्रमेयिका का उपयोग करके 45 को 7 से भाग देने पर भागफल और शेषफल ज्ञात कीजिए।",
+      "solution": "Here, a = 45 and b = 7.\nAccording to Euclid's division lemma, a = bq + r (0 ≤ r < b).\n45 = 7 × 6 + 3\nSo, quotient (q) = 6 and remainder (r) = 3.",
+      "solution_hi": "यहाँ, a = 45 और b = 7।\nयूक्लिड विभाजन प्रमेयिका के अनुसार, a = bq + r (0 ≤ r < b)।\n45 = 7 × 6 + 3\nअतः, भागफल (q) = 6 और शेषफल (r) = 3।"
+    },
+    {
+      "type": "worked_example",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_10",
+      "title": "Example 2: Finding HCF",
+      "title_hi": "उदाहरण 2: HCF ज्ञात करना",
+      "question": "Use Euclid's algorithm to find the HCF of 4052 and 12576.",
+      "question_hi": "यूक्लिड एल्गोरिथ्म का प्रयोग करके 4052 और 12576 का HCF ज्ञात कीजिए।",
+      "solution": "Since 12576 > 4052, we apply the lemma to 12576 and 4052:\n12576 = 4052 × 3 + 420\nSince the remainder 420 ≠ 0, we apply the lemma to 4052 and 420:\n4052 = 420 × 9 + 272\nSince remainder 272 ≠ 0, apply to 420 and 272:\n420 = 272 × 1 + 148\nApply to 272 and 148:\n272 = 148 × 1 + 124\nApply to 148 and 124:\n148 = 124 × 1 + 24\nApply to 124 and 24:\n124 = 24 × 5 + 4\nApply to 24 and 4:\n24 = 4 × 6 + 0\nThe remainder is now zero, so our procedure stops. The divisor at this stage is 4. Thus, HCF is 4.",
+      "solution_hi": "चूँकि 12576 > 4052 है, हम 12576 और 4052 पर प्रमेयिका लागू करते हैं:\n12576 = 4052 × 3 + 420\nचूँकि शेषफल 420 ≠ 0 है, हम 4052 और 420 पर प्रमेयिका लागू करते हैं:\n4052 = 420 × 9 + 272\nशेषफल 272 ≠ 0, 420 और 272 पर लागू करें:\n420 = 272 × 1 + 148\n272 और 148 पर लागू करें:\n272 = 148 × 1 + 124\n148 और 124 पर लागू करें:\n148 = 124 × 1 + 24\n124 और 24 पर लागू करें:\n124 = 24 × 5 + 4\n24 और 4 पर लागू करें:\n24 = 4 × 6 + 0\nअब शेषफल शून्य है, इसलिए हमारी प्रक्रिया रुक जाती है। इस चरण में भाजक 4 है। इस प्रकार, HCF 4 है।"
+    },
+    {
+      "type": "worked_example",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_11",
+      "title": "Example 3: Even Integers",
+      "title_hi": "उदाहरण 3: सम पूर्णांक",
+      "question": "Show that every positive even integer is of the form 2q, and every positive odd integer is of the form 2q + 1, where q is some integer.",
+      "question_hi": "दर्शाइए कि प्रत्येक धनात्मक सम पूर्णांक 2q के रूप का होता है, और प्रत्येक धनात्मक विषम पूर्णांक 2q + 1 के रूप का होता है, जहाँ q कोई पूर्णांक है।",
+      "solution": "Let a be any positive integer and b = 2.\nBy Euclid's division lemma, a = 2q + r, for some integer q ≥ 0, and r = 0 or r = 1 (since 0 ≤ r < 2).\nTherefore, a = 2q or a = 2q + 1.\nIf a = 2q, it is an even integer. Therefore, any positive odd integer is of the form 2q + 1.",
+      "solution_hi": "मान लीजिए a कोई धनात्मक पूर्णांक है और b = 2 है।\nयूक्लिड विभाजन प्रमेयिका द्वारा, a = 2q + r, किसी पूर्णांक q ≥ 0 के लिए, और r = 0 या r = 1 (चूँकि 0 ≤ r < 2)।\nइसलिए, a = 2q या a = 2q + 1।\nयदि a = 2q है, तो यह एक सम पूर्णांक है। इसलिए, कोई भी धनात्मक विषम पूर्णांक 2q + 1 के रूप का होता है।"
+    },
+    {
+      "type": "worked_example",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_12",
+      "title": "Example 4: Form of Odd Integers",
+      "title_hi": "उदाहरण 4: विषम पूर्णांकों का रूप",
+      "question": "Show that any positive odd integer is of the form 4q + 1 or 4q + 3, where q is some integer.",
+      "question_hi": "दर्शाइए कि कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होता है, जहाँ q कोई पूर्णांक है।",
+      "solution": "Let a be a positive odd integer and b = 4.\nBy Euclid's division lemma, a = 4q + r, where 0 ≤ r < 4. So, r can be 0, 1, 2, or 3.\nThus, a can be 4q, 4q + 1, 4q + 2, or 4q + 3.\nHowever, 4q and 4q + 2 are both divisible by 2 (they are even).\nTherefore, any positive odd integer must be of the form 4q + 1 or 4q + 3.",
+      "solution_hi": "मान लीजिए a एक धनात्मक विषम पूर्णांक है और b = 4 है।\nयूक्लिड विभाजन प्रमेयिका द्वारा, a = 4q + r, जहाँ 0 ≤ r < 4. तो, r = 0, 1, 2, या 3 हो सकता है।\nइस प्रकार, a = 4q, 4q + 1, 4q + 2, या 4q + 3 हो सकता है।\nहालाँकि, 4q और 4q + 2 दोनों 2 से विभाज्य हैं (वे सम हैं)।\nइसलिए, कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होना चाहिए।"
+    },
+    {
+      "type": "worked_example",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_13",
+      "title": "Example 5: Sweet Seller Problem",
+      "title_hi": "उदाहरण 5: मिठाई विक्रेता की समस्या",
+      "question": "A sweet seller has 420 kaju barfis and 130 badam barfis. She wants to stack them such that each stack has the same number, and they take up the least area. What is the maximum number of barfis in each stack?",
+      "question_hi": "एक मिठाई विक्रेता के पास 420 काजू बर्फी और 130 बादाम बर्फी हैं। वह उन्हें इस तरह से ढेर (stack) करना चाहती है कि प्रत्येक ढेर में समान संख्या हो, और वे कम से कम क्षेत्र घेरें। प्रत्येक ढेर में अधिकतम कितनी बर्फी हो सकती हैं?",
+      "solution": "To find the maximum number of barfis in each stack, we need to find the HCF of 420 and 130 using Euclid's algorithm.\n420 = 130 × 3 + 30\n130 = 30 × 4 + 10\n30 = 10 × 3 + 0\nThe HCF is 10. Therefore, the sweet seller can make stacks of 10 barfis of both kinds.",
+      "solution_hi": "प्रत्येक ढेर में अधिकतम बर्फी की संख्या ज्ञात करने के लिए, हमें यूक्लिड के एल्गोरिथ्म का उपयोग करके 420 और 130 का HCF ज्ञात करना होगा।\n420 = 130 × 3 + 30\n130 = 30 × 4 + 10\n30 = 10 × 3 + 0\nHCF 10 है। इसलिए, मिठाई विक्रेता दोनों प्रकार की बर्फी के 10-10 के ढेर बना सकती है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_14",
+      "question": "For any two positive integers a and b, a = bq + r, where 0 ≤ r < b. What are q and r?",
+      "question_hi": "किन्हीं दो धनात्मक पूर्णांकों a और b के लिए, a = bq + r, जहाँ 0 ≤ r < b है। q और r क्या हैं?",
+      "options": [
+        "Any integers",
+        "Positive integers only",
+        "Unique whole numbers",
+        "Rational numbers"
+      ],
+      "options_hi": [
+        "कोई भी पूर्णांक",
+        "केवल धनात्मक पूर्णांक",
+        "अद्वितीय पूर्ण संख्याएँ (Unique whole numbers)",
+        "परिमेय संख्याएँ"
+      ],
+      "correct_index": 2,
+      "explanation": "According to Euclid's Division Lemma, q and r are unique whole numbers (integers where q ≥ 0 and r ≥ 0).",
+      "explanation_hi": "यूक्लिड विभाजन प्रमेयिका के अनुसार, q और r अद्वितीय पूर्ण संख्याएँ हैं (पूर्णांक जहाँ q ≥ 0 और r ≥ 0)।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_15",
+      "question": "If we divide a positive integer n by 3, what are the possible values for the remainder?",
+      "question_hi": "यदि हम किसी धनात्मक पूर्णांक n को 3 से भाग दें, तो शेषफल के संभावित मान क्या हैं?",
+      "options": [
+        "0, 1, 2, 3",
+        "0, 1, 2",
+        "1, 2",
+        "1, 2, 3"
+      ],
+      "options_hi": [
+        "0, 1, 2, 3",
+        "0, 1, 2",
+        "1, 2",
+        "1, 2, 3"
+      ],
+      "correct_index": 1,
+      "explanation": "The remainder must be greater than or equal to 0 and less than the divisor (3). So, r can be 0, 1, or 2.",
+      "explanation_hi": "शेषफल 0 से बड़ा या बराबर और भाजक (3) से छोटा होना चाहिए। इसलिए, r का मान 0, 1, या 2 हो सकता है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_16",
+      "question": "Use Euclid's division lemma to find the quotient and remainder when 55 is divided by 8.",
+      "question_hi": "यूक्लिड विभाजन प्रमेयिका का उपयोग करके 55 को 8 से भाग देने पर भागफल और शेषफल ज्ञात कीजिए।",
+      "options": [
+        "q = 6, r = 7",
+        "q = 7, r = 6",
+        "q = 6, r = 5",
+        "q = 5, r = 15"
+      ],
+      "options_hi": [
+        "q = 6, r = 7",
+        "q = 7, r = 6",
+        "q = 6, r = 5",
+        "q = 5, r = 15"
+      ],
+      "correct_index": 0,
+      "explanation": "55 = 8 × 6 + 7. So quotient q = 6 and remainder r = 7.",
+      "explanation_hi": "55 = 8 × 6 + 7। अतः भागफल q = 6 और शेषफल r = 7।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_17",
+      "question": "Euclid's division algorithm is primarily used to compute which of the following?",
+      "question_hi": "यूक्लिड विभाजन एल्गोरिथ्म का उपयोग मुख्य रूप से निम्नलिखित में से किसकी गणना करने के लिए किया जाता है?",
+      "options": [
+        "LCM of two numbers",
+        "HCF of two numbers",
+        "Square root of a number",
+        "Prime factors of a number"
+      ],
+      "options_hi": [
+        "दो संख्याओं का LCM",
+        "दो संख्याओं का HCF",
+        "किसी संख्या का वर्गमूल",
+        "किसी संख्या के अभाज्य गुणनखंड"
+      ],
+      "correct_index": 1,
+      "explanation": "It is a technique to compute the Highest Common Factor (HCF) of two given positive integers.",
+      "explanation_hi": "यह दिए गए दो धनात्मक पूर्णांकों का महत्तम समापवर्तक (HCF) ज्ञात करने की एक तकनीक है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_18",
+      "question": "The HCF of 124 and 24 is:",
+      "question_hi": "124 और 24 का HCF है:",
+      "options": [
+        "8",
+        "4",
+        "12",
+        "2"
+      ],
+      "options_hi": [
+        "8",
+        "4",
+        "12",
+        "2"
+      ],
+      "correct_index": 1,
+      "explanation": "124 = 24 × 5 + 4; 24 = 4 × 6 + 0. The divisor at the last step is 4.",
+      "explanation_hi": "124 = 24 × 5 + 4; 24 = 4 × 6 + 0। अंतिम चरण में भाजक 4 है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_19",
+      "question": "If two positive integers p and q are such that p = 3q + r, what cannot be a value of r?",
+      "question_hi": "यदि दो धनात्मक पूर्णांक p और q ऐसे हैं कि p = 3q + r, तो r का मान क्या नहीं हो सकता है?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 3,
+      "explanation": "The remainder r must be strictly less than the divisor 3. So r cannot be 3.",
+      "explanation_hi": "शेषफल r भाजक 3 से सख्ती से कम होना चाहिए। इसलिए r, 3 नहीं हो सकता।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_20",
+      "question": "Any positive even integer can be written in the form:",
+      "question_hi": "किसी भी धनात्मक सम पूर्णांक को किस रूप में लिखा जा सकता है:",
+      "options": [
+        "2q",
+        "2q + 1",
+        "3q",
+        "4q + 1"
+      ],
+      "options_hi": [
+        "2q",
+        "2q + 1",
+        "3q",
+        "4q + 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Even integers are divisible by 2, leaving a remainder of 0. Thus, they are of the form 2q.",
+      "explanation_hi": "सम पूर्णांक 2 से विभाज्य होते हैं, जिससे शेषफल 0 बचता है। इस प्रकार, वे 2q के रूप में होते हैं।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_21",
+      "question": "According to Euclid's division algorithm, the process of finding HCF stops when:",
+      "question_hi": "यूक्लिड विभाजन एल्गोरिथ्म के अनुसार, HCF ज्ञात करने की प्रक्रिया कब रुक जाती है?",
+      "options": [
+        "The quotient is zero",
+        "The divisor is zero",
+        "The remainder is zero",
+        "The remainder is 1"
+      ],
+      "options_hi": [
+        "जब भागफल शून्य हो",
+        "जब भाजक शून्य हो",
+        "जब शेषफल शून्य हो",
+        "जब शेषफल 1 हो"
+      ],
+      "correct_index": 2,
+      "explanation": "The algorithm terminates when the remainder becomes 0. The divisor at that stage is the HCF.",
+      "explanation_hi": "एल्गोरिथ्म तब समाप्त होता है जब शेषफल 0 हो जाता है। उस स्तर पर भाजक HCF होता है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_22",
+      "question": "In a = bq + r, if a is a prime number and b = 2, what can you say about r?",
+      "question_hi": "a = bq + r में, यदि a एक अभाज्य संख्या (2 को छोड़कर) है और b = 2 है, तो आप r के बारे में क्या कह सकते हैं?",
+      "options": [
+        "r can be 0 or 1",
+        "r must be 0",
+        "r must be 1",
+        "r can be 2"
+      ],
+      "options_hi": [
+        "r, 0 या 1 हो सकता है",
+        "r, 0 होना चाहिए",
+        "r, 1 होना चाहिए",
+        "r, 2 हो सकता है"
+      ],
+      "correct_index": 2,
+      "explanation": "Since 'a' is a prime number (and we assume it's > 2 to be odd), it is an odd number. When an odd number is divided by 2, the remainder is always 1.",
+      "explanation_hi": "चूँकि 'a' एक अभाज्य संख्या है (और हम मान लेते हैं कि यह 2 से बड़ी है इसलिए विषम है), यह एक विषम संख्या है। जब विषम संख्या को 2 से भाग दिया जाता है, तो शेषफल हमेशा 1 होता है।"
+    },
+    {
+      "type": "mcq",
+      "id": "KOBJ_CLASS10_MATH_CH1_T1_23",
+      "question": "If HCF(a, b) = 1, then a and b are called:",
+      "question_hi": "यदि HCF(a, b) = 1 है, तो a और b क्या कहलाते हैं?",
+      "options": [
+        "Prime numbers",
+        "Co-prime numbers",
+        "Composite numbers",
+        "Even numbers"
+      ],
+      "options_hi": [
+        "अभाज्य संख्याएँ",
+        "सह-अभाज्य संख्याएँ (Co-prime numbers)",
+        "भाज्य संख्याएँ",
+        "सम संख्याएँ"
+      ],
+      "correct_index": 1,
+      "explanation": "Two numbers are said to be co-prime if their Highest Common Factor is 1.",
+      "explanation_hi": "दो संख्याओं को सह-अभाज्य कहा जाता है यदि उनका महत्तम समापवर्तक (HCF) 1 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_01",
+      "type": "theory",
+      "title": "A Builder's Secret (Hook)",
+      "title_hi": "एक बिल्डर का रहस्य (हूक)",
+      "body": "Imagine you are building a giant wall. Instead of using bricks of the same size, you have a magical set of 'prime' bricks that can never be broken down further. Did you know every number can be built using only these prime bricks?",
+      "body_hi": "कल्पना करें कि आप एक विशाल दीवार बना रहे हैं। समान आकार की ईंटों का उपयोग करने के बजाय, आपके पास 'अभाज्य' ईंटों का एक जादुई सेट है जिसे कभी भी आगे नहीं तोड़ा जा सकता है। क्या आप जानते हैं कि हर संख्या केवल इन्हीं अभाज्य ईंटों का उपयोग करके बनाई जा सकती है?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_02",
+      "type": "theory",
+      "title": "Think About It (Socratic)",
+      "title_hi": "इसके बारे में सोचें (सुकराती)",
+      "body": "Take the number 30. Can you break it down into a multiplication of smaller numbers? What if you keep breaking those smaller numbers down until they cannot be broken anymore? What numbers do you end up with?",
+      "body_hi": "संख्या 30 लें। क्या आप इसे छोटी संख्याओं के गुणन में तोड़ सकते हैं? क्या होगा यदि आप उन छोटी संख्याओं को तब तक तोड़ते रहें जब तक कि वे और न टूट सकें? अंत में आपके पास कौन सी संख्याएँ बचेंगी?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_03",
+      "type": "theory",
+      "title": "Finding the Prime Building Blocks (Discovery)",
+      "title_hi": "अभाज्य निर्माण खंड ढूँढना (खोज)",
+      "body": "Let's factorize 30: 30 = 2 × 15. The number 2 is prime, but 15 is not. We break down 15 as 3 × 5. Now, all numbers (2, 3, and 5) are prime. So, 30 = 2 × 3 × 5. No matter how you start, you will always end up with 2, 3, and 5!",
+      "body_hi": "आइए 30 का गुणनखंड करें: 30 = 2 × 15। संख्या 2 अभाज्य है, लेकिन 15 नहीं। हम 15 को 3 × 5 के रूप में तोड़ते हैं। अब, सभी संख्याएँ (2, 3 और 5) अभाज्य हैं। तो, 30 = 2 × 3 × 5। कोई फर्क नहीं पड़ता कि आप कैसे शुरू करते हैं, अंत में आपके पास हमेशा 2, 3 और 5 ही आएंगे!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_04",
+      "type": "theory",
+      "title": "The Fundamental Theorem of Arithmetic (Reveal)",
+      "title_hi": "अंकगणित का आधारभूत प्रमेय (प्रकटीकरण)",
+      "body": "Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.",
+      "body_hi": "प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के एक गुणनफल के रूप में व्यक्त (गुणनखंडित) किया जा सकता है, और यह गुणनखंडन अद्वितीय होता है, इस पर ध्यान दिए बिना कि अभाज्य गुणनखंड किस क्रम में आते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_05",
+      "type": "mcq",
+      "question": "Which of the following is the correct prime factorization of 60?",
+      "question_hi": "निम्नलिखित में से कौन सा 60 का सही अभाज्य गुणनखंडन है?",
+      "options": [
+        "2 × 30",
+        "4 × 15",
+        "2² × 3 × 5",
+        "2 × 3 × 10"
+      ],
+      "options_hi": [
+        "2 × 30",
+        "4 × 15",
+        "2² × 3 × 5",
+        "2 × 3 × 10"
+      ],
+      "correct_index": 2,
+      "explanation": "60 can be broken down to 2 × 2 × 3 × 5, which is 2² × 3 × 5. All numbers must be prime.",
+      "explanation_hi": "60 को 2 × 2 × 3 × 5 में तोड़ा जा सकता है, जो कि 2² × 3 × 5 है। सभी संख्याएँ अभाज्य होनी चाहिए।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_06",
+      "type": "theory",
+      "title": "Your Turn (Reflection)",
+      "title_hi": "आपकी बारी (प्रतिबिंब)",
+      "body": "Explain in your own words why we only use prime numbers for this theorem. What would happen if we allowed composite numbers in our 'unique' factorization?",
+      "body_hi": "अपने शब्दों में समझाएं कि हम इस प्रमेय के लिए केवल अभाज्य संख्याओं का उपयोग क्यों करते हैं। क्या होगा यदि हम अपने 'अद्वितीय' गुणनखंडन में भाज्य संख्याओं को अनुमति दें?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_07",
+      "type": "theory",
+      "title": "Linking it all Together (Connection)",
+      "title_hi": "सब कुछ एक साथ जोड़ना (कनेक्शन)",
+      "body": "This theorem is the reason why prime numbers are considered the 'atoms' of mathematics. It is used extensively in cryptography, which keeps your passwords and internet banking secure!",
+      "body_hi": "यही प्रमेय कारण है कि अभाज्य संख्याओं को गणित का 'परमाणु' माना जाता है। इसका उपयोग क्रिप्टोग्राफी में बड़े पैमाने पर किया जाता है, जो आपके पासवर्ड और इंटरनेट बैंकिंग को सुरक्षित रखता है!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_08",
+      "type": "theory",
+      "title": "Time for Action (Mastery)",
+      "title_hi": "कार्रवाई का समय (महारत)",
+      "body": "Let's apply the Fundamental Theorem of Arithmetic to find the HCF and LCM of numbers. This is a very common type of question in your board exams.",
+      "body_hi": "आइए संख्याओं का HCF और LCM ज्ञात करने के लिए अंकगणित के आधारभूत प्रमेय को लागू करें। यह आपकी बोर्ड परीक्षाओं में बहुत ही सामान्य प्रकार का प्रश्न है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_09",
+      "type": "worked_example",
+      "title": "Example 1: Express 140 as a product of prime factors",
+      "title_hi": "उदाहरण 1: 140 को अभाज्य गुणनखंडों के गुणनफल के रूप में व्यक्त करें",
+      "body": "Step 1: Divide by 2, 140 = 2 × 70\nStep 2: Divide 70 by 2, 70 = 2 × 35\nStep 3: Divide 35 by 5, 35 = 5 × 7\nStep 4: 7 is prime.\nSo, 140 = 2 × 2 × 5 × 7 = 2² × 5 × 7.",
+      "body_hi": "चरण 1: 2 से विभाजित करें, 140 = 2 × 70\nचरण 2: 70 को 2 से विभाजित करें, 70 = 2 × 35\nचरण 3: 35 को 5 से विभाजित करें, 35 = 5 × 7\nचरण 4: 7 अभाज्य है।\nतो, 140 = 2 × 2 × 5 × 7 = 2² × 5 × 7।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_10",
+      "type": "worked_example",
+      "title": "Example 2: Express 156 as a product of prime factors",
+      "title_hi": "उदाहरण 2: 156 को अभाज्य गुणनखंडों के गुणनफल के रूप में व्यक्त करें",
+      "body": "Step 1: 156 = 2 × 78\nStep 2: 78 = 2 × 39\nStep 3: 39 = 3 × 13\nSince 13 is prime, the prime factorisation is 2² × 3 × 13.",
+      "body_hi": "चरण 1: 156 = 2 × 78\nचरण 2: 78 = 2 × 39\nचरण 3: 39 = 3 × 13\nचूंकि 13 अभाज्य है, इसलिए अभाज्य गुणनखंडन 2² × 3 × 13 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_11",
+      "type": "worked_example",
+      "title": "Example 3: Find HCF and LCM of 6 and 20 by prime factorisation method.",
+      "title_hi": "उदाहरण 3: अभाज्य गुणनखंडन विधि द्वारा 6 और 20 का HCF और LCM ज्ञात कीजिए।",
+      "body": "Prime factorisation of 6 = 2 × 3\nPrime factorisation of 20 = 2 × 2 × 5 = 2² × 5\nHCF is product of the smallest power of each common prime factor. So, HCF(6, 20) = 2.\nLCM is product of the greatest power of each prime factor. So, LCM(6, 20) = 2² × 3 × 5 = 60.",
+      "body_hi": "6 का अभाज्य गुणनखंडन = 2 × 3\n20 का अभाज्य गुणनखंडन = 2 × 2 × 5 = 2² × 5\nHCF प्रत्येक उभयनिष्ठ अभाज्य गुणनखंड की सबसे छोटी घात का गुणनफल है। अतः, HCF(6, 20) = 2.\nLCM प्रत्येक अभाज्य गुणनखंड की सबसे बड़ी घात का गुणनफल है। अतः, LCM(6, 20) = 2² × 3 × 5 = 60."
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_12",
+      "type": "worked_example",
+      "title": "Example 4: Given HCF (306, 657) = 9, find LCM (306, 657).",
+      "title_hi": "उदाहरण 4: दिया गया है HCF (306, 657) = 9, LCM (306, 657) ज्ञात कीजिए।",
+      "body": "We know that for any two positive integers a and b, HCF(a, b) × LCM(a, b) = a × b.\nSo, 9 × LCM = 306 × 657.\nLCM = (306 × 657) / 9 = 22338.",
+      "body_hi": "हम जानते हैं कि किन्हीं दो धनात्मक पूर्णांकों a और b के लिए, HCF(a, b) × LCM(a, b) = a × b.\nतो, 9 × LCM = 306 × 657.\nLCM = (306 × 657) / 9 = 22338."
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_13",
+      "type": "worked_example",
+      "title": "Example 5: Check whether 6^n can end with the digit 0 for any natural number n.",
+      "title_hi": "उदाहरण 5: जाँच कीजिए कि क्या किसी प्राकृत संख्या n के लिए 6^n अंक 0 पर समाप्त हो सकता है।",
+      "body": "If a number ends with digit 0, it must be divisible by 10 (i.e., 2 and 5).\nPrime factorisation of 6^n is (2 × 3)^n = 2^n × 3^n.\nSince 5 does not occur in the prime factorisation of 6^n, by uniqueness of Fundamental Theorem of Arithmetic, 6^n can never end with 0.",
+      "body_hi": "यदि कोई संख्या अंक 0 पर समाप्त होती है, तो उसे 10 (अर्थात 2 और 5) से विभाज्य होना चाहिए।\n6^n का अभाज्य गुणनखंडन (2 × 3)^n = 2^n × 3^n है।\nचूंकि 6^n के अभाज्य गुणनखंडन में 5 नहीं आता है, इसलिए अंकगणित के आधारभूत प्रमेय की विशिष्टता से, 6^n कभी भी 0 पर समाप्त नहीं हो सकता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_14",
+      "type": "mcq",
+      "question": "What is the prime factorization of 3825?",
+      "question_hi": "3825 का अभाज्य गुणनखंडन क्या है?",
+      "options": [
+        "3² × 5² × 17",
+        "3 × 5³ × 17",
+        "3² × 5 × 17²",
+        "5² × 17"
+      ],
+      "options_hi": [
+        "3² × 5² × 17",
+        "3 × 5³ × 17",
+        "3² × 5 × 17²",
+        "5² × 17"
+      ],
+      "correct_index": 0,
+      "explanation": "3825 = 3 × 1275 = 3 × 3 × 425 = 3 × 3 × 5 × 85 = 3 × 3 × 5 × 5 × 17 = 3² × 5² × 17.",
+      "explanation_hi": "3825 = 3 × 1275 = 3 × 3 × 425 = 3 × 3 × 5 × 85 = 3 × 3 × 5 × 5 × 17 = 3² × 5² × 17।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_15",
+      "type": "mcq",
+      "question": "If HCF of 16 and y is 8 and LCM of 16 and y is 48, then value of y is:",
+      "question_hi": "यदि 16 और y का HCF 8 है और 16 और y का LCM 48 है, तो y का मान है:",
+      "options": [
+        "24",
+        "16",
+        "8",
+        "48"
+      ],
+      "options_hi": [
+        "24",
+        "16",
+        "8",
+        "48"
+      ],
+      "correct_index": 0,
+      "explanation": "We know that HCF × LCM = Product of numbers. 8 × 48 = 16 × y. So y = (8 × 48) / 16 = 24.",
+      "explanation_hi": "हम जानते हैं कि HCF × LCM = संख्याओं का गुणनफल। 8 × 48 = 16 × y. अतः y = (8 × 48) / 16 = 24."
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_16",
+      "type": "mcq",
+      "question": "The prime factorization of 5005 is:",
+      "question_hi": "5005 का अभाज्य गुणनखंडन है:",
+      "options": [
+        "5 × 11 × 13",
+        "5 × 7 × 11 × 13",
+        "5 × 7 × 13",
+        "5 × 1001"
+      ],
+      "options_hi": [
+        "5 × 11 × 13",
+        "5 × 7 × 11 × 13",
+        "5 × 7 × 13",
+        "5 × 1001"
+      ],
+      "correct_index": 1,
+      "explanation": "5005 = 5 × 1001 = 5 × 7 × 143 = 5 × 7 × 11 × 13.",
+      "explanation_hi": "5005 = 5 × 1001 = 5 × 7 × 143 = 5 × 7 × 11 × 13."
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_17",
+      "type": "mcq",
+      "question": "The HCF of two consecutive even numbers is always:",
+      "question_hi": "दो लगातार सम संख्याओं का HCF हमेशा होता है:",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "Even number"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "4",
+        "सम संख्या"
+      ],
+      "correct_index": 1,
+      "explanation": "Two consecutive even numbers (like 2 and 4, or 10 and 12) share only the prime factor 2.",
+      "explanation_hi": "दो लगातार सम संख्याएं (जैसे 2 और 4, या 10 और 12) केवल 2 अभाज्य गुणनखंड साझा करती हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_18",
+      "type": "mcq",
+      "question": "The product of a non-zero rational and an irrational number is:",
+      "question_hi": "एक शून्येतर परिमेय और एक अपरिमेय संख्या का गुणनफल होता है:",
+      "options": [
+        "Always rational",
+        "Always irrational",
+        "Rational or irrational",
+        "One"
+      ],
+      "options_hi": [
+        "हमेशा परिमेय",
+        "हमेशा अपरिमेय",
+        "परिमेय या अपरिमेय",
+        "एक"
+      ],
+      "correct_index": 1,
+      "explanation": "The product of any non-zero rational number and an irrational number is always irrational.",
+      "explanation_hi": "किसी भी शून्येतर परिमेय संख्या और एक अपरिमेय संख्या का गुणनफल हमेशा अपरिमेय होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_19",
+      "type": "mcq",
+      "question": "Which of the following numbers is an irrational number?",
+      "question_hi": "निम्नलिखित में से कौन सी संख्या एक अपरिमेय संख्या है?",
+      "options": [
+        "√16",
+        "√25",
+        "√3",
+        "√36"
+      ],
+      "options_hi": [
+        "√16",
+        "√25",
+        "√3",
+        "√36"
+      ],
+      "correct_index": 2,
+      "explanation": "√3 is irrational because 3 is not a perfect square.",
+      "explanation_hi": "√3 अपरिमेय है क्योंकि 3 एक पूर्ण वर्ग नहीं है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_20",
+      "type": "mcq",
+      "question": "Find the HCF of 96 and 404 by the prime factorisation method.",
+      "question_hi": "अभाज्य गुणनखंडन विधि द्वारा 96 और 404 का HCF ज्ञात कीजिए।",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "12"
+      ],
+      "options_hi": [
+        "2",
+        "4",
+        "6",
+        "12"
+      ],
+      "correct_index": 1,
+      "explanation": "96 = 2^5 × 3 and 404 = 2² × 101. The common factor with smallest power is 2² = 4.",
+      "explanation_hi": "96 = 2^5 × 3 और 404 = 2² × 101. सबसे छोटी घात वाला उभयनिष्ठ गुणनखंड 2² = 4 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_21",
+      "type": "mcq",
+      "question": "What is the LCM of 96 and 404?",
+      "question_hi": "96 और 404 का LCM क्या है?",
+      "options": [
+        "9696",
+        "4040",
+        "38784",
+        "96404"
+      ],
+      "options_hi": [
+        "9696",
+        "4040",
+        "38784",
+        "96404"
+      ],
+      "correct_index": 0,
+      "explanation": "LCM = (96 × 404) / HCF = (96 × 404) / 4 = 9696.",
+      "explanation_hi": "LCM = (96 × 404) / HCF = (96 × 404) / 4 = 9696."
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_22",
+      "type": "mcq",
+      "question": "If two positive integers p and q can be expressed as p = ab² and q = a³b (where a, b are prime numbers), then LCM(p, q) is:",
+      "question_hi": "यदि दो धनात्मक पूर्णांकों p और q को p = ab² और q = a³b (जहाँ a, b अभाज्य संख्याएँ हैं) के रूप में व्यक्त किया जा सकता है, तो LCM(p, q) है:",
+      "options": [
+        "ab",
+        "a²b²",
+        "a³b²",
+        "a³b³"
+      ],
+      "options_hi": [
+        "ab",
+        "a²b²",
+        "a³b²",
+        "a³b³"
+      ],
+      "correct_index": 2,
+      "explanation": "LCM takes the highest power of each prime factor, so it is a³ and b², giving a³b².",
+      "explanation_hi": "LCM प्रत्येक अभाज्य गुणनखंड की उच्चतम घात लेता है, इसलिए यह a³ और b² है, जो a³b² देता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T2_23",
+      "type": "mcq",
+      "question": "If p and q are co-prime numbers, then what is their HCF?",
+      "question_hi": "यदि p और q सह-अभाज्य संख्याएँ हैं, तो उनका HCF क्या है?",
+      "options": [
+        "p",
+        "q",
+        "1",
+        "pq"
+      ],
+      "options_hi": [
+        "p",
+        "q",
+        "1",
+        "pq"
+      ],
+      "correct_index": 2,
+      "explanation": "Co-prime numbers have no common factor other than 1. So, HCF is 1.",
+      "explanation_hi": "सह-अभाज्य संख्याओं में 1 के अतिरिक्त कोई उभयनिष्ठ गुणनखंड नहीं होता है। अतः, HCF 1 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_01",
+      "type": "theory",
+      "title": "Step 1: The Hook - A Flaw in Perfection",
+      "title_hi": "चरण 1: हुक - पूर्णता में एक खामी",
+      "body": "Imagine you are building a perfect square room. The walls are exactly 1 meter long. You want to measure the diagonal distance across the floor from one corner to the opposite corner. How long is it? Pythagoras' theorem says it's √2. But what exactly is √2? Can you write it as a simple fraction?",
+      "body_hi": "कल्पना करें कि आप एक पूर्ण वर्गाकार कमरा बना रहे हैं। दीवारें ठीक 1 मीटर लंबी हैं। आप फर्श के पार एक कोने से विपरीत कोने तक की विकर्ण दूरी मापना चाहते हैं। यह कितनी लंबी है? पाइथागोरस का प्रमेय कहता है कि यह √2 है। लेकिन वास्तव में √2 क्या है? क्या आप इसे एक साधारण भिन्न के रूप में लिख सकते हैं?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_02",
+      "type": "theory",
+      "title": "Step 2: Socratic Thinking",
+      "title_hi": "चरण 2: सुकराती सोच",
+      "body": "If every number could be written as a fraction p/q (where p and q are integers), math would be very neat. But if √2 can be written as p/q, what happens when we square both sides? We get 2 = p²/q², which means p² = 2q². What does this tell you about p² and p?",
+      "body_hi": "यदि प्रत्येक संख्या को p/q (जहां p और q पूर्णांक हैं) के रूप में लिखा जा सकता है, तो गणित बहुत साफ-सुथरा होगा। लेकिन अगर √2 को p/q के रूप में लिखा जा सकता है, तो जब हम दोनों पक्षों का वर्ग करते हैं तो क्या होता है? हमें 2 = p²/q² मिलता है, जिसका अर्थ है p² = 2q²। यह आपको p² और p के बारे में क्या बताता है?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_03",
+      "type": "theory",
+      "title": "Step 3: Discovery - The Contradiction",
+      "title_hi": "चरण 3: खोज - विरोधाभास",
+      "body": "Let's explore this. If p² = 2q², then p² is even, which means p must also be even (let's say p = 2m). Substituting this gives (2m)² = 2q², or 4m² = 2q², which simplifies to q² = 2m². This means q² is even, so q is also even! But wait, if p and q are both even, they share a common factor of 2. This contradicts our assumption that p/q is in its simplest form. We've hit a wall!",
+      "body_hi": "आइए इसका अन्वेषण करें। यदि p² = 2q², तो p² सम है, जिसका अर्थ है कि p भी सम होना चाहिए (मान लीजिए p = 2m)। इसे प्रतिस्थापित करने पर (2m)² = 2q², या 4m² = 2q² मिलता है, जो q² = 2m² में सरल हो जाता है। इसका अर्थ है q² सम है, अतः q भी सम है! लेकिन रुकिए, यदि p और q दोनों सम हैं, तो उनका एक उभयनिष्ठ गुणनखंड 2 है। यह हमारी इस धारणा का खंडन करता है कि p/q अपने सरलतम रूप में है। हम एक दीवार से टकरा गए हैं!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_04",
+      "type": "theory",
+      "title": "Step 4: Reveal - The Irrational Numbers",
+      "title_hi": "चरण 4: प्रकट - अपरिमेय संख्याएँ",
+      "body": "Because of this contradiction, our initial assumption must be wrong. √2 cannot be written as a simple fraction p/q. Numbers like these, which cannot be expressed in the form p/q (where p and q are integers and q ≠ 0), are called Irrational Numbers. Other examples include √3, √5, and π. Their decimal expansions are non-terminating and non-recurring.",
+      "body_hi": "इस विरोधाभास के कारण, हमारी प्रारंभिक धारणा गलत होनी चाहिए। √2 को एक साधारण भिन्न p/q के रूप में नहीं लिखा जा सकता है। इस तरह की संख्याएँ, जिन्हें p/q (जहाँ p और q पूर्णांक हैं और q ≠ 0) के रूप में व्यक्त नहीं किया जा सकता है, अपरिमेय संख्याएँ कहलाती हैं। अन्य उदाहरणों में √3, √5 और π शामिल हैं। उनके दशमलव प्रसार असांत और अनावर्ती होते हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_05",
+      "type": "mcq",
+      "title": "Step 5: Knowledge Check",
+      "title_hi": "चरण 5: ज्ञान जाँच",
+      "question": "Which of the following is an irrational number?",
+      "question_hi": "निम्नलिखित में से कौन सी एक अपरिमेय संख्या है?",
+      "options": [
+        "√4",
+        "√9",
+        "√5",
+        "22/7"
+      ],
+      "options_hi": [
+        "√4",
+        "√9",
+        "√5",
+        "22/7"
+      ],
+      "correct_index": 2,
+      "explanation": "√5 cannot be written as a simple fraction. √4 is 2, √9 is 3, and 22/7 is a fraction (a rational approximation of pi, but not pi itself).",
+      "explanation_hi": "√5 को साधारण भिन्न के रूप में नहीं लिखा जा सकता है। √4 2 है, √9 3 है, और 22/7 एक भिन्न है (पाई का एक परिमेय सन्निकटन, लेकिन स्वयं पाई नहीं)।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_06",
+      "type": "theory",
+      "title": "Step 6: Reflection",
+      "title_hi": "चरण 6: प्रतिबिंब",
+      "body": "Think about it: Why was the method of 'Proof by Contradiction' so powerful here? We assumed the opposite of what we wanted to prove, and showed that it leads to an impossible situation. Can you think of a real-life situation where you prove someone wrong by assuming they are right and showing it leads to nonsense?",
+      "body_hi": "इस बारे में सोचें: यहाँ 'विरोधाभास द्वारा प्रमाण' की विधि इतनी शक्तिशाली क्यों थी? हमने जो सिद्ध करना था, उसका ठीक उल्टा मान लिया, और दिखाया कि यह एक असंभव स्थिति की ओर ले जाता है। क्या आप एक वास्तविक जीवन की स्थिति के बारे में सोच सकते हैं जहाँ आप किसी को गलत साबित करते हैं, यह मानकर कि वे सही हैं और दिखाते हैं कि यह बकवास की ओर ले जाता है?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_07",
+      "type": "theory",
+      "title": "Step 7: Connection to the Knowledge Graph",
+      "title_hi": "चरण 7: ज्ञान ग्राफ से कनेक्शन",
+      "body": "Irrational numbers fill the 'gaps' on the number line left by rational numbers. Together, rational and irrational numbers make up the Real Numbers. This is crucial for geometry, calculus, and physics, as many real-world measurements (like orbits of planets) involve irrational numbers.",
+      "body_hi": "अपरिमेय संख्याएँ संख्या रेखा पर परिमेय संख्याओं द्वारा छोड़े गए 'अंतराल' को भरती हैं। साथ में, परिमेय और अपरिमेय संख्याएँ वास्तविक संख्याएँ बनाती हैं। यह ज्यामिति, कलन और भौतिकी के लिए महत्वपूर्ण है, क्योंकि कई वास्तविक दुनिया के मापों (जैसे ग्रहों की कक्षाएँ) में अपरिमेय संख्याएँ शामिल होती हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_08",
+      "type": "theory",
+      "title": "Step 8: Mastery",
+      "title_hi": "चरण 8: महारत",
+      "body": "Now that you understand √2 is irrational, the same logic applies to √3, √5, and so on. A key theorem we use is: Let p be a prime number. If p divides a², then p divides a, where a is a positive integer. We will apply this mastery in the following problems.",
+      "body_hi": "अब जब आप समझ गए हैं कि √2 अपरिमेय है, तो वही तर्क √3, √5 आदि पर लागू होता है। एक प्रमुख प्रमेय जिसका हम उपयोग करते हैं वह है: मान लीजिए कि p एक अभाज्य संख्या है। यदि p, a² को विभाजित करता है, तो p, a को विभाजित करेगा, जहाँ a एक धनात्मक पूर्णांक है। हम इस महारत को निम्नलिखित समस्याओं में लागू करेंगे।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_09",
+      "type": "worked_example",
+      "title": "Solved Example 1: Prove √3 is irrational",
+      "title_hi": "हल किया गया उदाहरण 1: सिद्ध कीजिए कि √3 अपरिमेय है",
+      "body": "Let us assume √3 is rational. So, √3 = p/q (p, q are co-prime integers, q ≠ 0). Squaring both sides, 3 = p²/q² => p² = 3q². This means 3 divides p², hence 3 divides p. Let p = 3c. Then (3c)² = 3q² => 9c² = 3q² => q² = 3c². This means 3 divides q², hence 3 divides q. Thus, p and q have a common factor 3, contradicting that they are co-prime. Therefore, √3 is irrational.",
+      "body_hi": "मान लें कि √3 परिमेय है। इसलिए, √3 = p/q (p, q सह-अभाज्य पूर्णांक हैं, q ≠ 0)। दोनों पक्षों का वर्ग करने पर, 3 = p²/q² => p² = 3q²। इसका मतलब है कि 3, p² को विभाजित करता है, इसलिए 3, p को विभाजित करता है। माना p = 3c. तो (3c)² = 3q² => 9c² = 3q² => q² = 3c²। इसका मतलब है कि 3, q² को विभाजित करता है, इसलिए 3, q को विभाजित करता है। इस प्रकार, p और q का एक उभयनिष्ठ गुणनखंड 3 है, जो इस बात का खंडन करता है कि वे सह-अभाज्य हैं। इसलिए, √3 अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_10",
+      "type": "worked_example",
+      "title": "Solved Example 2: Prove 5 - √3 is irrational",
+      "title_hi": "हल किया गया उदाहरण 2: सिद्ध कीजिए कि 5 - √3 अपरिमेय है",
+      "body": "Let us assume to the contrary that 5 - √3 is rational. Then 5 - √3 = p/q (where p and q are co-prime, q ≠ 0). Rearranging, we get √3 = 5 - p/q = (5q - p)/q. Since p and q are integers, (5q - p)/q is rational. This implies √3 is rational, which contradicts the fact that √3 is irrational. Hence, 5 - √3 is irrational.",
+      "body_hi": "आइए इसके विपरीत यह मान लें कि 5 - √3 परिमेय है। तब 5 - √3 = p/q (जहाँ p और q सह-अभाज्य हैं, q ≠ 0)। पुनर्व्यवस्थित करने पर, हमें √3 = 5 - p/q = (5q - p)/q प्राप्त होता है। चूँकि p और q पूर्णांक हैं, (5q - p)/q परिमेय है। इसका तात्पर्य यह है कि √3 परिमेय है, जो इस तथ्य का खंडन करता है कि √3 अपरिमेय है। अतः 5 - √3 अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_11",
+      "type": "worked_example",
+      "title": "Solved Example 3: Prove 3√2 is irrational",
+      "title_hi": "हल किया गया उदाहरण 3: सिद्ध कीजिए कि 3√2 अपरिमेय है",
+      "body": "Assume 3√2 is rational. Thus, 3√2 = p/q (p, q are co-prime integers, q ≠ 0). Rearranging gives √2 = p/(3q). Since 3, p, and q are integers, p/(3q) is a rational number. Therefore, √2 must be rational. But we know √2 is irrational. This contradiction means our assumption is wrong. So, 3√2 is irrational.",
+      "body_hi": "मान लें कि 3√2 परिमेय है। इस प्रकार, 3√2 = p/q (p, q सह-अभाज्य पूर्णांक हैं, q ≠ 0)। पुनर्व्यवस्थित करने पर √2 = p/(3q) मिलता है। चूँकि 3, p और q पूर्णांक हैं, p/(3q) एक परिमेय संख्या है। इसलिए, √2 को परिमेय होना चाहिए। लेकिन हम जानते हैं कि √2 अपरिमेय है। इस विरोधाभास का अर्थ है कि हमारी धारणा गलत है। अतः 3√2 अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_12",
+      "type": "worked_example",
+      "title": "Solved Example 4: Prove 1/√2 is irrational",
+      "title_hi": "हल किया गया उदाहरण 4: सिद्ध कीजिए कि 1/√2 अपरिमेय है",
+      "body": "Assume 1/√2 is rational. So, 1/√2 = p/q, where p, q are integers and q ≠ 0. This implies √2 = q/p. Since q and p are integers (and p ≠ 0 since √2 ≠ 0), q/p is a rational number. This contradicts the fact that √2 is irrational. Hence, 1/√2 is irrational.",
+      "body_hi": "मान लें कि 1/√2 परिमेय है। इसलिए, 1/√2 = p/q, जहाँ p, q पूर्णांक हैं और q ≠ 0। इसका तात्पर्य यह है कि √2 = q/p। चूँकि q और p पूर्णांक हैं (और p ≠ 0 क्योंकि √2 ≠ 0), q/p एक परिमेय संख्या है। यह इस तथ्य का खंडन करता है कि √2 अपरिमेय है। अतः 1/√2 अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_13",
+      "type": "worked_example",
+      "title": "Solved Example 5: Prove √2 + √3 is irrational",
+      "title_hi": "हल किया गया उदाहरण 5: सिद्ध कीजिए कि √2 + √3 अपरिमेय है",
+      "body": "Assume √2 + √3 = r, where r is a rational number. Squaring both sides: (√2 + √3)² = r² => 2 + 3 + 2√6 = r² => 5 + 2√6 = r² => √6 = (r² - 5)/2. Since r is rational, (r² - 5)/2 is rational, meaning √6 is rational. But √6 is irrational (as 6 is not a perfect square). This is a contradiction. Hence, √2 + √3 is irrational.",
+      "body_hi": "मान लें कि √2 + √3 = r, जहाँ r एक परिमेय संख्या है। दोनों पक्षों का वर्ग करने पर: (√2 + √3)² = r² => 2 + 3 + 2√6 = r² => 5 + 2√6 = r² => √6 = (r² - 5)/2। चूँकि r परिमेय है, (r² - 5)/2 परिमेय है, जिसका अर्थ है कि √6 परिमेय है। लेकिन √6 अपरिमेय है (चूंकि 6 एक पूर्ण वर्ग नहीं है)। यह एक विरोधाभास है। अतः √2 + √3 अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_14",
+      "type": "mcq",
+      "title": "Practice Question 1",
+      "title_hi": "अभ्यास प्रश्न 1",
+      "question": "If p is a prime number, then √p is always:",
+      "question_hi": "यदि p एक अभाज्य संख्या है, तो √p हमेशा होता है:",
+      "options": [
+        "A rational number",
+        "An integer",
+        "An irrational number",
+        "A whole number"
+      ],
+      "options_hi": [
+        "एक परिमेय संख्या",
+        "एक पूर्णांक",
+        "एक अपरिमेय संख्या",
+        "एक पूर्ण संख्या"
+      ],
+      "correct_index": 2,
+      "explanation": "The square root of any prime number is always irrational because prime numbers are not perfect squares.",
+      "explanation_hi": "किसी भी अभाज्य संख्या का वर्गमूल हमेशा अपरिमेय होता है क्योंकि अभाज्य संख्याएँ पूर्ण वर्ग नहीं होती हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_15",
+      "type": "mcq",
+      "title": "Practice Question 2",
+      "title_hi": "अभ्यास प्रश्न 2",
+      "question": "The sum of a rational and an irrational number is always:",
+      "question_hi": "एक परिमेय और एक अपरिमेय संख्या का योग हमेशा होता है:",
+      "options": [
+        "Rational",
+        "Irrational",
+        "Zero",
+        "Integer"
+      ],
+      "options_hi": [
+        "परिमेय",
+        "अपरिमेय",
+        "शून्य",
+        "पूर्णांक"
+      ],
+      "correct_index": 1,
+      "explanation": "Adding a rational number to an irrational number always yields an irrational number.",
+      "explanation_hi": "एक अपरिमेय संख्या में परिमेय संख्या जोड़ने पर हमेशा एक अपरिमेय संख्या प्राप्त होती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_16",
+      "type": "mcq",
+      "title": "Practice Question 3",
+      "title_hi": "अभ्यास प्रश्न 3",
+      "question": "The product of a non-zero rational and an irrational number is:",
+      "question_hi": "एक अशून्य परिमेय और एक अपरिमेय संख्या का गुणनफल होता है:",
+      "options": [
+        "Always rational",
+        "Always irrational",
+        "Can be rational or irrational",
+        "One"
+      ],
+      "options_hi": [
+        "हमेशा परिमेय",
+        "हमेशा अपरिमेय",
+        "परिमेय या अपरिमेय हो सकता है",
+        "एक"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplying any non-zero rational number by an irrational number always results in an irrational number.",
+      "explanation_hi": "किसी भी अशून्य परिमेय संख्या को अपरिमेय संख्या से गुणा करने पर हमेशा एक अपरिमेय संख्या प्राप्त होती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_17",
+      "type": "mcq",
+      "title": "Practice Question 4",
+      "title_hi": "अभ्यास प्रश्न 4",
+      "question": "Which of these is an irrational number?",
+      "question_hi": "इनमें से कौन एक अपरिमेय संख्या है?",
+      "options": [
+        "√16",
+        "3.14",
+        "2 + √3",
+        "0"
+      ],
+      "options_hi": [
+        "√16",
+        "3.14",
+        "2 + √3",
+        "0"
+      ],
+      "correct_index": 2,
+      "explanation": "√16 is 4. 3.14 is rational (314/100). 0 is rational. 2 + √3 is the sum of a rational and irrational, which is irrational.",
+      "explanation_hi": "√16, 4 है। 3.14 परिमेय (314/100) है। 0 परिमेय है। 2 + √3 एक परिमेय और अपरिमेय का योग है, जो अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_18",
+      "type": "mcq",
+      "title": "Practice Question 5",
+      "title_hi": "अभ्यास प्रश्न 5",
+      "question": "If p divides a², then p also divides a, provided p is a:",
+      "question_hi": "यदि p, a² को विभाजित करता है, तो p, a को भी विभाजित करता है, बशर्ते p एक है:",
+      "options": [
+        "Composite number",
+        "Even number",
+        "Prime number",
+        "Odd number"
+      ],
+      "options_hi": [
+        "भाज्य संख्या",
+        "सम संख्या",
+        "अभाज्य संख्या",
+        "विषम संख्या"
+      ],
+      "correct_index": 2,
+      "explanation": "This is a fundamental theorem: Let p be a prime number. If p divides a², then p divides a.",
+      "explanation_hi": "यह एक मौलिक प्रमेय है: मान लीजिए p एक अभाज्य संख्या है। यदि p, a² को विभाजित करता है, तो p, a को विभाजित करता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_19",
+      "type": "mcq",
+      "title": "Practice Question 6",
+      "title_hi": "अभ्यास प्रश्न 6",
+      "question": "What is the nature of the number π (pi)?",
+      "question_hi": "संख्या π (पाई) की प्रकृति क्या है?",
+      "options": [
+        "Rational",
+        "Irrational",
+        "Integer",
+        "Fraction"
+      ],
+      "options_hi": [
+        "परिमेय",
+        "अपरिमेय",
+        "पूर्णांक",
+        "भिन्न"
+      ],
+      "correct_index": 1,
+      "explanation": "π is an irrational number because its decimal expansion is non-terminating and non-recurring.",
+      "explanation_hi": "π एक अपरिमेय संख्या है क्योंकि इसका दशमलव प्रसार असांत और अनावर्ती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_20",
+      "type": "mcq",
+      "title": "Practice Question 7",
+      "title_hi": "अभ्यास प्रश्न 7",
+      "question": "Is (3 + √5) - (3 - √5) a rational or irrational number?",
+      "question_hi": "क्या (3 + √5) - (3 - √5) एक परिमेय या अपरिमेय संख्या है?",
+      "options": [
+        "Rational",
+        "Irrational",
+        "Both",
+        "None"
+      ],
+      "options_hi": [
+        "परिमेय",
+        "अपरिमेय",
+        "दोनों",
+        "कोई नहीं"
+      ],
+      "correct_index": 1,
+      "explanation": "(3 + √5) - (3 - √5) = 3 + √5 - 3 + √5 = 2√5, which is irrational.",
+      "explanation_hi": "(3 + √5) - (3 - √5) = 3 + √5 - 3 + √5 = 2√5, जो अपरिमेय है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_21",
+      "type": "mcq",
+      "title": "Practice Question 8",
+      "title_hi": "अभ्यास प्रश्न 8",
+      "question": "Let p = 2 and q = 3. What kind of number is √p + √q?",
+      "question_hi": "मान लीजिए p = 2 और q = 3. √p + √q किस प्रकार की संख्या है?",
+      "options": [
+        "Rational",
+        "Irrational",
+        "Integer",
+        "None of these"
+      ],
+      "options_hi": [
+        "परिमेय",
+        "अपरिमेय",
+        "पूर्णांक",
+        "इनमें से कोई नहीं"
+      ],
+      "correct_index": 1,
+      "explanation": "The sum of the square roots of two distinct prime numbers is always irrational.",
+      "explanation_hi": "दो अलग-अलग अभाज्य संख्याओं के वर्गमूलों का योग हमेशा अपरिमेय होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_22",
+      "type": "mcq",
+      "title": "Practice Question 9",
+      "title_hi": "अभ्यास प्रश्न 9",
+      "question": "Which method is commonly used to prove that a number like √2 is irrational?",
+      "question_hi": "√2 जैसी संख्या अपरिमेय है, यह सिद्ध करने के लिए आमतौर पर किस विधि का उपयोग किया जाता है?",
+      "options": [
+        "Direct proof",
+        "Proof by contradiction",
+        "Proof by induction",
+        "Geometric proof"
+      ],
+      "options_hi": [
+        "प्रत्यक्ष प्रमाण",
+        "विरोधाभास द्वारा प्रमाण",
+        "आगमन द्वारा प्रमाण",
+        "ज्यामितीय प्रमाण"
+      ],
+      "correct_index": 1,
+      "explanation": "We assume the number is rational, reach a contradiction, and conclude it must be irrational.",
+      "explanation_hi": "हम मान लेते हैं कि संख्या परिमेय है, एक विरोधाभास पर पहुँचते हैं, और निष्कर्ष निकालते हैं कि यह अपरिमेय होनी चाहिए।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T3_23",
+      "type": "mcq",
+      "title": "Practice Question 10",
+      "title_hi": "अभ्यास प्रश्न 10",
+      "question": "If x is rational and y is irrational, what can we say about x/y (where x ≠ 0)?",
+      "question_hi": "यदि x परिमेय है और y अपरिमेय है, तो हम x/y (जहाँ x ≠ 0) के बारे में क्या कह सकते हैं?",
+      "options": [
+        "It is rational",
+        "It is irrational",
+        "It can be rational or irrational",
+        "It is 1"
+      ],
+      "options_hi": [
+        "यह परिमेय है",
+        "यह अपरिमेय है",
+        "यह परिमेय या अपरिमेय हो सकता है",
+        "यह 1 है"
+      ],
+      "correct_index": 1,
+      "explanation": "The quotient of a non-zero rational number and an irrational number is always irrational.",
+      "explanation_hi": "एक अशून्य परिमेय संख्या और एक अपरिमेय संख्या का भागफल हमेशा अपरिमेय होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_01",
+      "type": "theory",
+      "title": "The Hook: The Mystery of Ending Numbers",
+      "title_hi": "हुक: समाप्त होने वाली संख्याओं का रहस्य",
+      "body": "Have you ever noticed that when you divide 1 by 2, it ends at 0.5, but when you divide 1 by 3, it goes on forever as 0.333...? Why do some fractions stop nicely while others never end? Let's find out!",
+      "body_hi": "क्या आपने कभी ध्यान दिया है कि जब आप 1 को 2 से भाग देते हैं, तो यह 0.5 पर समाप्त होता है, लेकिन जब आप 1 को 3 से भाग देते हैं, तो यह 0.333... के रूप में हमेशा चलता रहता है? क्यों कुछ भिन्न (fractions) अच्छे से समाप्त हो जाते हैं जबकि अन्य कभी समाप्त नहीं होते? आइए पता करें!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_02",
+      "type": "theory",
+      "title": "Socratic Thinking: Predict the Ending",
+      "title_hi": "सुकराती सोच: अंत की भविष्यवाणी करें",
+      "body": "What do you think would happen if we divide 1 by 4? Will it end, or will it go on forever? What about 1 divided by 5? Can you see a pattern in the numbers that make a fraction stop?",
+      "body_hi": "आपको क्या लगता है कि यदि हम 1 को 4 से भाग दें तो क्या होगा? क्या यह समाप्त होगा, या यह हमेशा चलता रहेगा? 1 को 5 से भाग देने पर क्या होगा? क्या आप उन संख्याओं में कोई पैटर्न देख सकते हैं जो किसी भिन्न (fraction) को रोकती हैं?"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_03",
+      "type": "theory",
+      "title": "Discovery: The Power of 10",
+      "title_hi": "खोज: 10 की शक्ति",
+      "body": "Let's do an experiment. Any decimal that ends can be written with a denominator of 10, 100, 1000, etc. For example, 0.25 is 25/100. And what makes 10? It's just 2 multiplied by 5! So, if a fraction's denominator is only made up of 2s and 5s, it will end!",
+      "body_hi": "आइए एक प्रयोग करें। कोई भी दशमलव (decimal) जो समाप्त होता है उसे 10, 100, 1000 आदि के हर (denominator) के साथ लिखा जा सकता है। उदाहरण के लिए, 0.25, 25/100 है। और 10 किससे बनता है? यह केवल 2 और 5 का गुणा है! इसलिए, यदि किसी भिन्न का हर केवल 2 और 5 से बना है, तो वह समाप्त हो जाएगा!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_04",
+      "type": "theory",
+      "title": "Reveal: The Formal Theorem",
+      "title_hi": "प्रकटीकरण: औपचारिक प्रमेय",
+      "body": "Theorem: Let x = p/q be a rational number, where p and q are coprime. If the prime factorization of q is of the form 2^n * 5^m (where n, m are non-negative integers), then x has a decimal expansion which terminates. Otherwise, it is non-terminating repeating.",
+      "body_hi": "प्रमेय: मान लीजिए x = p/q एक परिमेय संख्या है, जहाँ p और q सह-अभाज्य हैं। यदि q का अभाज्य गुणनखंड 2^n * 5^m के रूप का है (जहाँ n, m गैर-नकारात्मक पूर्णांक हैं), तो x का दशमलव प्रसार सांत (terminating) होता है। अन्यथा, यह असांत आवर्ती (non-terminating repeating) होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_05",
+      "type": "mcq",
+      "question": "Which of the following will have a terminating decimal expansion?",
+      "question_hi": "निम्नलिखित में से किसका दशमलव प्रसार सांत होगा?",
+      "options": [
+        "7/8",
+        "10/3",
+        "4/7",
+        "11/6"
+      ],
+      "options_hi": [
+        "7/8",
+        "10/3",
+        "4/7",
+        "11/6"
+      ],
+      "correct_index": 0,
+      "explanation": "7/8 has denominator 8. The prime factorization of 8 is 2^3. Since it only contains 2, it is terminating.",
+      "explanation_hi": "7/8 का हर 8 है। 8 का अभाज्य गुणनखंड 2^3 है। चूँकि इसमें केवल 2 है, इसलिए यह सांत है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_06",
+      "type": "theory",
+      "title": "Reflection: Why just 2 and 5?",
+      "title_hi": "चिंतन: केवल 2 और 5 ही क्यों?",
+      "body": "Explain in your own words why 2 and 5 are so special. Think about our number system. Why does multiplying by 2 and 5 give us a 'perfect' ending? Our entire number system is base 10, and the only prime factors of 10 are 2 and 5!",
+      "body_hi": "अपने शब्दों में समझाएं कि 2 और 5 इतने खास क्यों हैं। हमारी संख्या प्रणाली के बारे में सोचें। 2 और 5 से गुणा करने पर हमें 'पूर्ण' अंत क्यों मिलता है? हमारी पूरी संख्या प्रणाली आधार 10 है, और 10 के एकमात्र अभाज्य गुणनखंड 2 और 5 हैं!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_07",
+      "type": "theory",
+      "title": "Connection: Beyond Rational Numbers",
+      "title_hi": "संबंध: परिमेय संख्याओं से परे",
+      "body": "We have seen that rational numbers either terminate or repeat. But what about numbers that neither terminate nor repeat, like Pi (π) or √2? These are called Irrational Numbers. Understanding this boundary helps us map the entire universe of Real Numbers!",
+      "body_hi": "हमने देखा है कि परिमेय संख्याएं या तो समाप्त होती हैं या दोहराती हैं। लेकिन उन संख्याओं का क्या जो न तो समाप्त होती हैं और न ही दोहराती हैं, जैसे Pi (π) या √2? इन्हें अपरिमेय संख्याएं कहा जाता है। इस सीमा को समझने से हमें वास्तविक संख्याओं के पूरे ब्रह्मांड को मैप करने में मदद मिलती है!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_08",
+      "type": "theory",
+      "title": "Mastery: Predict without Dividing",
+      "title_hi": "महारत: बिना भाग दिए भविष्यवाणी करें",
+      "body": "Now you have a superpower! You can look at any fraction like 13/3125 or 29/343, and without doing the long division, you can instantly tell if it will stop or go on forever. Just factorize the denominator!",
+      "body_hi": "अब आपके पास एक महाशक्ति है! आप 13/3125 या 29/343 जैसे किसी भी भिन्न को देख सकते हैं, और लंबी भाग किए बिना, आप तुरंत बता सकते हैं कि यह रुकेगा या हमेशा चलता रहेगा। बस हर का गुणनखंड करें!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_09",
+      "type": "worked_example",
+      "title": "Example 1: Checking Termination",
+      "title_hi": "उदाहरण 1: सांत की जाँच",
+      "question": "Without performing long division, check if 13/3125 is terminating or non-terminating repeating.",
+      "question_hi": "लंबी भाग के बिना, जांचें कि 13/3125 सांत है या असांत आवर्ती।",
+      "solution": "1. 13 and 3125 are coprime.\n2. Prime factorization of 3125 = 5^5.\n3. Since denominator has only prime factor 5 (form 2^n * 5^m), it has a terminating decimal expansion.",
+      "solution_hi": "1. 13 और 3125 सह-अभाज्य हैं।\n2. 3125 का अभाज्य गुणनखंड = 5^5।\n3. चूंकि हर में केवल अभाज्य गुणनखंड 5 (2^n * 5^m रूप) है, इसका दशमलव प्रसार सांत है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_10",
+      "type": "worked_example",
+      "title": "Example 2: A Non-Terminating Case",
+      "title_hi": "उदाहरण 2: एक असांत मामला",
+      "question": "Determine the nature of the decimal expansion of 64/455.",
+      "question_hi": "64/455 के दशमलव प्रसार की प्रकृति निर्धारित करें।",
+      "solution": "1. 64 and 455 are coprime.\n2. Prime factorization of 455 = 5 * 7 * 13.\n3. Since the denominator contains prime factors other than 2 and 5 (it has 7 and 13), the expansion is non-terminating repeating.",
+      "solution_hi": "1. 64 और 455 सह-अभाज्य हैं।\n2. 455 का अभाज्य गुणनखंड = 5 * 7 * 13।\n3. चूंकि हर में 2 और 5 के अलावा अन्य अभाज्य गुणनखंड (7 और 13) हैं, इसलिए प्रसार असांत आवर्ती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_11",
+      "type": "worked_example",
+      "title": "Example 3: Simplification First",
+      "title_hi": "उदाहरण 3: पहले सरलीकरण",
+      "question": "Check the decimal expansion of 6/15.",
+      "question_hi": "6/15 के दशमलव प्रसार की जांच करें।",
+      "solution": "1. First, make them coprime! Divide by 3. 6/15 = 2/5.\n2. The new denominator is 5.\n3. Since the denominator is of the form 2^n * 5^m, it is terminating. (Note: if we didn't simplify, we would have incorrectly seen a '3' in 15).",
+      "solution_hi": "1. सबसे पहले, उन्हें सह-अभाज्य बनाएं! 3 से भाग दें। 6/15 = 2/5।\n2. नया हर 5 है।\n3. चूंकि हर 2^n * 5^m के रूप में है, इसलिए यह सांत है। (ध्यान दें: यदि हमने सरलीकृत नहीं किया होता, तो हमने 15 में गलत तरीके से '3' देखा होता)।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_12",
+      "type": "worked_example",
+      "title": "Example 4: Combined Factors",
+      "title_hi": "उदाहरण 4: संयुक्त गुणनखंड",
+      "question": "Will 23 / (2^3 * 5^2) terminate?",
+      "question_hi": "क्या 23 / (2^3 * 5^2) सांत होगा?",
+      "solution": "1. The fraction is already in simplest form as 23 is prime.\n2. The denominator is clearly given as 2^3 * 5^2.\n3. It perfectly matches the condition 2^n * 5^m. Hence, it is a terminating decimal.",
+      "solution_hi": "1. भिन्न पहले से ही सरलतम रूप में है क्योंकि 23 अभाज्य है।\n2. हर स्पष्ट रूप से 2^3 * 5^2 दिया गया है।\n3. यह स्थिति 2^n * 5^m से पूरी तरह मेल खाता है। इसलिए, यह एक सांत दशमलव है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_13",
+      "type": "worked_example",
+      "title": "Example 5: Finding the Number of Decimal Places",
+      "title_hi": "उदाहरण 5: दशमलव स्थानों की संख्या ज्ञात करना",
+      "question": "After how many decimal places will the decimal expansion of 43 / (2^4 * 5^3) terminate?",
+      "question_hi": "43 / (2^4 * 5^3) का दशमलव प्रसार कितने दशमलव स्थानों के बाद सांत होगा?",
+      "solution": "1. The maximum power of 2 or 5 in the denominator determines the places.\n2. Here, max(4, 3) = 4.\n3. We can multiply numerator and denominator by 5^1 to get 43*5 / (2^4 * 5^4) = 215 / 10^4 = 0.0215.\n4. It terminates after 4 decimal places.",
+      "solution_hi": "1. हर में 2 या 5 की अधिकतम घात (power) स्थानों को निर्धारित करती है।\n2. यहाँ, max(4, 3) = 4।\n3. हम अंश और हर को 5^1 से गुणा कर सकते हैं: 43*5 / (2^4 * 5^4) = 215 / 10^4 = 0.0215।\n4. यह 4 दशमलव स्थानों के बाद सांत होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_14",
+      "type": "mcq",
+      "question": "The decimal expansion of the rational number 33/(2² * 5) will terminate after:",
+      "question_hi": "परिमेय संख्या 33/(2² * 5) का दशमलव प्रसार कितने स्थानों के बाद सांत होगा?",
+      "options": [
+        "one decimal place",
+        "two decimal places",
+        "three decimal places",
+        "more than three decimal places"
+      ],
+      "options_hi": [
+        "एक दशमलव स्थान",
+        "दो दशमलव स्थान",
+        "तीन दशमलव स्थान",
+        "तीन से अधिक दशमलव स्थान"
+      ],
+      "correct_index": 1,
+      "explanation": "The maximum power of 2 and 5 in the denominator is 2 (from 2²). So it terminates after 2 decimal places.",
+      "explanation_hi": "हर में 2 और 5 की अधिकतम घात 2 (2² से) है। इसलिए यह 2 दशमलव स्थानों के बाद सांत होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_15",
+      "type": "mcq",
+      "question": "Which of the following rational numbers has a non-terminating repeating decimal expansion?",
+      "question_hi": "निम्नलिखित में से किस परिमेय संख्या का दशमलव प्रसार असांत आवर्ती है?",
+      "options": [
+        "31/3125",
+        "71/512",
+        "23/200",
+        "None of these"
+      ],
+      "options_hi": [
+        "31/3125",
+        "71/512",
+        "23/200",
+        "इनमें से कोई नहीं"
+      ],
+      "correct_index": 3,
+      "explanation": "3125=5^5 (terminating), 512=2^9 (terminating), 200=2^3 * 5^2 (terminating). All are terminating.",
+      "explanation_hi": "3125=5^5 (सांत), 512=2^9 (सांत), 200=2^3 * 5^2 (सांत)। सभी सांत हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_16",
+      "type": "mcq",
+      "question": "Is 17/8 a terminating or non-terminating decimal?",
+      "question_hi": "क्या 17/8 एक सांत या असांत दशमलव है?",
+      "options": [
+        "Terminating",
+        "Non-terminating repeating",
+        "Non-terminating non-repeating",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "सांत",
+        "असांत आवर्ती",
+        "असांत अनावर्ती",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "correct_index": 0,
+      "explanation": "Denominator 8 = 2^3. Since the prime factors only include 2, it is terminating.",
+      "explanation_hi": "हर 8 = 2^3। चूंकि अभाज्य गुणनखंडों में केवल 2 शामिल है, यह सांत है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_17",
+      "type": "mcq",
+      "question": "Without long division, state whether 15/1600 is terminating or not.",
+      "question_hi": "लंबी भाग के बिना, बताएं कि क्या 15/1600 सांत है या नहीं।",
+      "options": [
+        "Terminating",
+        "Non-terminating"
+      ],
+      "options_hi": [
+        "सांत",
+        "असांत"
+      ],
+      "correct_index": 0,
+      "explanation": "15/1600 = 3/320. 320 = 2^6 * 5. Terminating.",
+      "explanation_hi": "15/1600 = 3/320। 320 = 2^6 * 5। सांत।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_18",
+      "type": "mcq",
+      "question": "What kind of decimal expansion does 29/343 have?",
+      "question_hi": "29/343 का दशमलव प्रसार किस प्रकार का है?",
+      "options": [
+        "Terminating",
+        "Non-terminating repeating",
+        "Non-terminating non-repeating",
+        "Integer"
+      ],
+      "options_hi": [
+        "सांत",
+        "असांत आवर्ती",
+        "असांत अनावर्ती",
+        "पूर्णांक"
+      ],
+      "correct_index": 1,
+      "explanation": "343 = 7^3. It has prime factor 7, so it is non-terminating repeating.",
+      "explanation_hi": "343 = 7^3। इसमें अभाज्य गुणनखंड 7 है, इसलिए यह असांत आवर्ती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_19",
+      "type": "mcq",
+      "question": "If a rational number p/q terminates, what must be true about the prime factors of q (when p,q are coprime)?",
+      "question_hi": "यदि एक परिमेय संख्या p/q सांत है, तो q के अभाज्य गुणनखंडों के बारे में क्या सच होना चाहिए (जब p,q सह-अभाज्य हों)?",
+      "options": [
+        "They must include 3",
+        "They must only be 2 or 5",
+        "They can be any prime",
+        "They must be greater than 5"
+      ],
+      "options_hi": [
+        "उनमें 3 शामिल होना चाहिए",
+        "वे केवल 2 या 5 होने चाहिए",
+        "वे कोई भी अभाज्य हो सकते हैं",
+        "वे 5 से अधिक होने चाहिए"
+      ],
+      "correct_index": 1,
+      "explanation": "For a decimal to terminate, the denominator's prime factorization must be of the form 2^n * 5^m.",
+      "explanation_hi": "एक दशमलव के सांत होने के लिए, हर का अभाज्य गुणनखंड 2^n * 5^m के रूप में होना चाहिए।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_20",
+      "type": "mcq",
+      "question": "After how many decimal places will 14587/1250 terminate?",
+      "question_hi": "14587/1250 कितने दशमलव स्थानों के बाद सांत होगा?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "options_hi": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "explanation": "1250 = 2 * 5^4. The max power is 4. Thus, it terminates after 4 places.",
+      "explanation_hi": "1250 = 2 * 5^4। अधिकतम घात 4 है। इस प्रकार, यह 4 स्थानों के बाद सांत होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_21",
+      "type": "mcq",
+      "question": "Determine the nature of 77/210.",
+      "question_hi": "77/210 की प्रकृति निर्धारित करें।",
+      "options": [
+        "Terminating",
+        "Non-terminating repeating",
+        "Irrational",
+        "Integer"
+      ],
+      "options_hi": [
+        "सांत",
+        "असांत आवर्ती",
+        "अपरिमेय",
+        "पूर्णांक"
+      ],
+      "correct_index": 1,
+      "explanation": "77/210 = 11/30. 30 = 2 * 3 * 5. Contains 3, hence non-terminating repeating.",
+      "explanation_hi": "77/210 = 11/30। 30 = 2 * 3 * 5। 3 शामिल है, इसलिए असांत आवर्ती है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_22",
+      "type": "mcq",
+      "question": "Is 35/50 a terminating decimal?",
+      "question_hi": "क्या 35/50 एक सांत दशमलव है?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "options_hi": [
+        "हाँ",
+        "नहीं"
+      ],
+      "correct_index": 0,
+      "explanation": "35/50 = 7/10. 10 = 2 * 5. It is terminating.",
+      "explanation_hi": "35/50 = 7/10। 10 = 2 * 5। यह सांत है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_T4_23",
+      "type": "mcq",
+      "question": "What is the decimal expansion of 13/125?",
+      "question_hi": "13/125 का दशमलव प्रसार क्या है?",
+      "options": [
+        "0.104",
+        "0.0104",
+        "1.04",
+        "0.13"
+      ],
+      "options_hi": [
+        "0.104",
+        "0.0104",
+        "1.04",
+        "0.13"
+      ],
+      "correct_index": 0,
+      "explanation": "13/125 = 13/(5^3) = (13 * 2^3) / (10^3) = 104 / 1000 = 0.104",
+      "explanation_hi": "13/125 = 13/(5^3) = (13 * 2^3) / (10^3) = 104 / 1000 = 0.104"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_DEO_01",
+      "type": "mcq",
+      "question": "If two positive integers a and b are written as a = x^3 y^2 and b = xy^3, where x, y are prime numbers, then HCF(a, b) is:",
+      "question_hi": "यदि दो धनात्मक पूर्णांकों a और b को a = x^3 y^2 और b = xy^3 के रूप में लिखा जाता है, जहाँ x, y अभाज्य संख्याएँ हैं, तो HCF(a, b) क्या है?",
+      "options": [
+        "xy",
+        "xy^2",
+        "x^3 y^3",
+        "x^2 y^2"
+      ],
+      "options_hi": [
+        "xy",
+        "xy^2",
+        "x^3 y^3",
+        "x^2 y^2"
+      ],
+      "correct_index": 1,
+      "explanation": "HCF(a,b) is the product of the smallest power of each common prime factor. a = x^3 * y^2. b = x^1 * y^3. The smallest power of x is 1 and y is 2. So, HCF = x * y^2.",
+      "explanation_hi": "HCF(a,b) प्रत्येक उभयनिष्ठ अभाज्य गुणनखंड की सबसे छोटी घात का गुणनफल है। a = x^3 * y^2, b = x^1 * y^3। x की सबसे छोटी घात 1 है और y की 2 है। इसलिए, HCF = x * y^2 है।",
+      "is_board_challenge": true
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_DEO_02",
+      "type": "mcq",
+      "question": "The largest number which divides 70 and 125, leaving remainders 5 and 8 respectively, is:",
+      "question_hi": "वह सबसे बड़ी संख्या जो 70 और 125 को विभाजित करती है, क्रमशः 5 और 8 शेषफल छोड़ती है, है:",
+      "options": [
+        "13",
+        "65",
+        "875",
+        "1750"
+      ],
+      "options_hi": [
+        "13",
+        "65",
+        "875",
+        "1750"
+      ],
+      "correct_index": 0,
+      "explanation": "Since remainders are 5 and 8, the required number must divide (70 - 5 = 65) and (125 - 8 = 117) exactly. Required number = HCF(65, 117). 65 = 5 * 13, 117 = 3 * 3 * 13. HCF = 13.",
+      "explanation_hi": "चूंकि शेषफल 5 और 8 हैं, इसलिए आवश्यक संख्या (70 - 5 = 65) और (125 - 8 = 117) को पूरी तरह से विभाजित करनी चाहिए। आवश्यक संख्या = HCF(65, 117)। 65 = 5 * 13, 117 = 3 * 3 * 13। HCF = 13।",
+      "is_board_challenge": true
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_DEO_03",
+      "type": "mcq",
+      "question": "If the HCF of 65 and 117 is expressible in the form 65m - 117, then the value of m is:",
+      "question_hi": "यदि 65 और 117 का HCF, 65m - 117 के रूप में व्यक्त किया जा सकता है, तो m का मान है:",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "options_hi": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "correct_index": 1,
+      "explanation": "HCF(65, 117) = 13. Therefore, 65m - 117 = 13. This gives 65m = 130, so m = 2.",
+      "explanation_hi": "HCF(65, 117) = 13. इसलिए, 65m - 117 = 13. यह 65m = 130 देता है, इसलिए m = 2 है।",
+      "is_board_challenge": true
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_DEO_04",
+      "type": "mcq",
+      "question": "The decimal expansion of the rational number 14587/1250 will terminate after:",
+      "question_hi": "परिमेय संख्या 14587/1250 का दशमलव प्रसार कितने स्थानों के बाद सांत होगा?",
+      "options": [
+        "One decimal place",
+        "Two decimal places",
+        "Three decimal places",
+        "Four decimal places"
+      ],
+      "options_hi": [
+        "एक दशमलव स्थान",
+        "दो दशमलव स्थान",
+        "तीन दशमलव स्थान",
+        "चार दशमलव स्थान"
+      ],
+      "correct_index": 3,
+      "explanation": "1250 = 2^1 * 5^4. The max power of 2 or 5 in the denominator is 4. So, it terminates after 4 decimal places.",
+      "explanation_hi": "1250 = 2^1 * 5^4। हर में 2 या 5 की अधिकतम घात 4 है। इसलिए, यह 4 दशमलव स्थानों के बाद सांत होता है।",
+      "is_board_challenge": true
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH1_DEO_05",
+      "type": "mcq",
+      "question": "The product of a non-zero rational and an irrational number is:",
+      "question_hi": "एक शून्येतर परिमेय और एक अपरिमेय संख्या का गुणनफल होता है:",
+      "options": [
+        "Always irrational",
+        "Always rational",
+        "Rational or irrational",
+        "One"
+      ],
+      "options_hi": [
+        "हमेशा अपरिमेय",
+        "हमेशा परिमेय",
+        "परिमेय या अपरिमेय",
+        "एक"
+      ],
+      "correct_index": 0,
+      "explanation": "The product of a non-zero rational number and an irrational number is always irrational. For example, 2 (rational) * sqrt(3) (irrational) = 2*sqrt(3), which is irrational.",
+      "explanation_hi": "एक शून्येतर परिमेय संख्या और एक अपरिमेय संख्या का गुणनफल हमेशा अपरिमेय होता है। उदाहरण के लिए, 2 (परिमेय) * sqrt(3) (अपरिमेय) = 2*sqrt(3), जो अपरिमेय है।",
+      "is_board_challenge": true
+    },
+    {
+      "id": "KOBJ_CH1_Q1",
+      "type": "quiz",
+      "question": "Which of the following numbers belongs to the family of Real Numbers?",
+      "question_hi": "निम्नलिखित में से कौन सी संख्या वास्तविक संख्याओं (Real Numbers) के परिवार से संबंधित है?",
+      "options": [
+        "Only Rational numbers",
+        "Only Irrational numbers",
+        "Both Rational and Irrational numbers",
+        "Only Integers"
+      ],
+      "options_hi": [
+        "केवल परिमेय संख्याएँ",
+        "केवल अपरिमेय संख्याएँ",
+        "परिमेय और अपरिमेय दोनों संख्याएँ",
+        "केवल पूर्णांक"
+      ],
+      "correct_index": 2,
+      "explanation": "As seen in the Number Tree, the family of Real Numbers includes all Rational and Irrational numbers.",
+      "explanation_hi": "जैसा कि नंबर ट्री में देखा गया है, वास्तविक संख्याओं के परिवार में सभी परिमेय और अपरिमेय संख्याएँ शामिल हैं।"
+    },
+    {
+      "id": "KOBJ_CH1_Q2",
+      "type": "quiz",
+      "question": "According to the Fundamental Theorem of Arithmetic, what is the prime factorisation of 12?",
+      "question_hi": "अंकगणित की आधारभूत प्रमेय के अनुसार, 12 का अभाज्य गुणनखंड (prime factorisation) क्या है?",
+      "options": [
+        "3 × 4",
+        "2² × 3",
+        "2 × 6",
+        "2³ × 3"
+      ],
+      "options_hi": [
+        "3 × 4",
+        "2² × 3",
+        "2 × 6",
+        "2³ × 3"
+      ],
+      "correct_index": 1,
+      "explanation": "12 = 2 × 2 × 3, which is uniquely written as 2² × 3 using prime factors.",
+      "explanation_hi": "12 = 2 × 2 × 3, जिसे अभाज्य गुणनखंडों का उपयोग करके 2² × 3 के रूप में विशिष्ट रूप से लिखा जाता है।"
+    },
+    {
+      "id": "KOBJ_CH1_Q3",
+      "type": "quiz",
+      "question": "If you know that HCF(a, b) = 4 and LCM(a, b) = 24, and one number 'a' is 8, what is the value of 'b'?",
+      "question_hi": "यदि आप जानते हैं कि HCF(a, b) = 4 और LCM(a, b) = 24 है, और एक संख्या 'a' 8 है, तो 'b' का मान क्या है?",
+      "options": [
+        "6",
+        "12",
+        "16",
+        "24"
+      ],
+      "options_hi": [
+        "6",
+        "12",
+        "16",
+        "24"
+      ],
+      "correct_index": 1,
+      "explanation": "Using the Board Exam trick: HCF × LCM = a × b. So, 4 × 24 = 8 × b. Therefore, 96 = 8b, which means b = 12.",
+      "explanation_hi": "बोर्ड परीक्षा ट्रिक का उपयोग करते हुए: HCF × LCM = a × b। इसलिए, 4 × 24 = 8 × b। अतः 96 = 8b, जिसका अर्थ है b = 12।"
+    },
+    {
+      "id": "KOBJ_CH1_Q4",
+      "type": "quiz",
+      "question": "Which of the following is an Irrational number?",
+      "question_hi": "निम्नलिखित में से कौन सी एक अपरिमेय (Irrational) संख्या है?",
+      "options": [
+        "22/7",
+        "√4",
+        "√2",
+        "1.5"
+      ],
+      "options_hi": [
+        "22/7",
+        "√4",
+        "√2",
+        "1.5"
+      ],
+      "correct_index": 2,
+      "explanation": "√2 cannot be written in the form p/q. (Note: 22/7 is a rational approximation of π, but π itself is irrational).",
+      "explanation_hi": "√2 को p/q के रूप में नहीं लिखा जा सकता है। (ध्यान दें: 22/7, π का एक परिमेय सन्निकटन है, लेकिन π स्वयं अपरिमेय है)।"
+    },
+    {
+      "id": "KOBJ_CH1_Q5",
+      "type": "quiz",
+      "question": "Using the '2 and 5 Rule', will the fraction 7/20 have a terminating or non-terminating decimal expansion?",
+      "question_hi": "'2 और 5 के नियम' का उपयोग करते हुए, क्या भिन्न 7/20 का दशमलव प्रसार शांत (terminating) होगा या अशांत (non-terminating)?",
+      "options": [
+        "Terminating",
+        "Non-terminating repeating",
+        "Non-terminating non-repeating",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "शांत (Terminating)",
+        "अशांत आवर्ती (Non-terminating repeating)",
+        "अशांत अनावर्ती (Non-terminating non-repeating)",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "correct_index": 0,
+      "explanation": "The denominator is 20. Its prime factors are 2² × 5. Since it only contains 2s and 5s, the decimal expansion is terminating.",
+      "explanation_hi": "हर 20 है। इसके अभाज्य गुणनखंड 2² × 5 हैं। चूँकि इसमें केवल 2 और 5 हैं, दशमलव प्रसार शांत है।"
+    },
+    {
+      "id": "KOBJ_CH1_Q6",
+      "type": "quiz",
+      "question": "When proving that √5 is irrational by contradiction, if we assume √5 = a/b, what does the equation become after squaring both sides?",
+      "question_hi": "विरोधाभास द्वारा √5 को अपरिमेय सिद्ध करते समय, यदि हम मान लें कि √5 = a/b, तो दोनों पक्षों का वर्ग करने के बाद समीकरण क्या हो जाता है?",
+      "options": [
+        "5 = a/b",
+        "5b² = a²",
+        "25b² = a²",
+        "b² = 5a²"
+      ],
+      "options_hi": [
+        "5 = a/b",
+        "5b² = a²",
+        "25b² = a²",
+        "b² = 5a²"
+      ],
+      "correct_index": 1,
+      "explanation": "Squaring √5 = a/b gives 5 = a²/b², which rearranges to 5b² = a².",
+      "explanation_hi": "√5 = a/b का वर्ग करने पर 5 = a²/b² प्राप्त होता है, जिसे पुनर्व्यवस्थित करने पर 5b² = a² प्राप्त होता है।"
+    },
+    {
+      "id": "KOBJ_CH1_Q7",
+      "type": "quiz",
+      "question": "In the proof of 3 + 2√5 being irrational, we isolate √5 to get √5 = (a - 3b)/2b. Why does this create a contradiction?",
+      "question_hi": "3 + 2√5 को अपरिमेय सिद्ध करने में, हम √5 = (a - 3b)/2b प्राप्त करने के लिए √5 को अलग करते हैं। यह विरोधाभास क्यों पैदा करता है?",
+      "options": [
+        "Because (a - 3b)/2b is an integer.",
+        "Because it implies √5 is rational, but we know √5 is irrational.",
+        "Because 2b cannot be zero.",
+        "Because 3 is a prime number."
+      ],
+      "options_hi": [
+        "क्योंकि (a - 3b)/2b एक पूर्णांक है।",
+        "क्योंकि इसका अर्थ है कि √5 परिमेय है, लेकिन हम जानते हैं कि √5 अपरिमेय है।",
+        "क्योंकि 2b शून्य नहीं हो सकता।",
+        "क्योंकि 3 एक अभाज्य संख्या है।"
+      ],
+      "correct_index": 1,
+      "explanation": "Since a and b are integers, the expression (a - 3b)/2b represents a rational number. If it equals √5, it wrongly implies √5 is rational.",
+      "explanation_hi": "चूँकि a और b पूर्णांक हैं, व्यंजक (a - 3b)/2b एक परिमेय संख्या का प्रतिनिधित्व करता है। यदि यह √5 के बराबर है, तो यह गलत रूप से दर्शाता है कि √5 परिमेय है।"
+    },
+    {
+      "id": "KOBJ_CH1_Q8",
+      "type": "quiz",
+      "question": "If you are asked to prove 1/√2 is irrational, what is the best first step after assuming 1/√2 = a/b?",
+      "question_hi": "यदि आपको यह सिद्ध करने के लिए कहा जाए कि 1/√2 अपरिमेय है, तो 1/√2 = a/b मानने के बाद सबसे अच्छा पहला कदम क्या है?",
+      "options": [
+        "Multiply both sides by √2",
+        "Reverse the fractions to get √2/1 = b/a",
+        "Square both sides directly to get 1/2 = a²/b²",
+        "Add 1 to both sides"
+      ],
+      "options_hi": [
+        "दोनों पक्षों को √2 से गुणा करें",
+        "√2/1 = b/a प्राप्त करने के लिए भिन्नों को उल्टा करें",
+        "सीधे दोनों पक्षों का वर्ग करके 1/2 = a²/b² प्राप्त करें",
+        "दोनों पक्षों में 1 जोड़ें"
+      ],
+      "correct_index": 1,
+      "explanation": "The easiest method is to take the reciprocal of both sides, giving √2 = b/a. Since b/a is rational, it contradicts that √2 is irrational.",
+      "explanation_hi": "सबसे आसान तरीका दोनों पक्षों का व्युत्क्रम (reciprocal) लेना है, जिससे √2 = b/a प्राप्त होता है। चूँकि b/a परिमेय है, यह इस तथ्य का खंडन करता है कि √2 अपरिमेय है।"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 1",
+      "title_hi": "अभ्यास प्रश्न 1",
+      "body": "**Q: Prove that √3 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume, to the contrary, that √3 is rational.\n2. Then, there exist co-prime integers 'a' and 'b' (b ≠ 0) such that √3 = a/b.\n3. Squaring both sides, we get: 3 = a²/b²  =>  3b² = a².\n4. This means a² is divisible by 3. Therefore, 'a' is also divisible by 3. (Let a = 3c for some integer c).\n5. Substitute a = 3c into the equation: 3b² = (3c)²  =>  3b² = 9c²  =>  b² = 3c².\n6. This means b² is divisible by 3, so 'b' is also divisible by 3.\n7. Since both 'a' and 'b' are divisible by 3, they are not co-prime. This contradicts our initial assumption.\n8. Hence, our assumption was wrong, and √3 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि √3 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए, इसके विपरीत, कि √3 एक परिमेय संख्या है।\n2. तब, सह-अभाज्य पूर्णांक 'a' और 'b' (b ≠ 0) मौजूद हैं ताकि √3 = a/b हो।\n3. दोनों पक्षों का वर्ग करने पर, हमें मिलता है: 3 = a²/b² => 3b² = a²।\n4. इसका अर्थ है कि a², 3 से विभाज्य है। इसलिए, 'a' भी 3 से विभाज्य है। (मान लें कि किसी पूर्णांक c के लिए a = 3c है)।\n5. समीकरण में a = 3c प्रतिस्थापित करें: 3b² = (3c)² => 3b² = 9c² => b² = 3c²।\n6. इसका अर्थ है कि b², 3 से विभाज्य है, इसलिए 'b' भी 3 से विभाज्य है।\n7. चूँकि 'a' और 'b' दोनों 3 से विभाज्य हैं, वे सह-अभाज्य नहीं हैं। यह हमारी प्रारंभिक मान्यता का खंडन करता है।\n8. अतः, हमारी मान्यता गलत थी, और √3 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_4C66D0D9"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 2",
+      "title_hi": "अभ्यास प्रश्न 2",
+      "body": "**Q: Prove that 5 - √3 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 5 - √3 is a rational number.\n2. So, we can find co-prime integers a and b (b ≠ 0) such that 5 - √3 = a/b.\n3. Rearranging this equation to isolate √3, we get: √3 = 5 - a/b.\n4. Therefore, √3 = (5b - a) / b.\n5. Since 'a' and 'b' are integers, (5b - a)/b is a rational number.\n6. This implies that √3 is rational.\n7. However, this contradicts the fact that √3 is an irrational number.\n8. This contradiction has arisen because of our incorrect assumption. Therefore, 5 - √3 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 5 - √3 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 5 - √3 एक परिमेय संख्या है।\n2. इसलिए, हम सह-अभाज्य पूर्णांक a और b (b ≠ 0) पा सकते हैं ताकि 5 - √3 = a/b हो।\n3. √3 को अलग करने के लिए इस समीकरण को पुनर्व्यवस्थित करने पर, हमें मिलता है: √3 = 5 - a/b।\n4. इसलिए, √3 = (5b - a) / b।\n5. चूँकि 'a' और 'b' पूर्णांक हैं, (5b - a)/b एक परिमेय संख्या है।\n6. इसका तात्पर्य यह है कि √3 परिमेय है।\n7. हालाँकि, यह इस तथ्य का खंडन करता है कि √3 एक अपरिमेय संख्या है।\n8. यह विरोधाभास हमारी गलत मान्यता के कारण उत्पन्न हुआ है। इसलिए, 5 - √3 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_421AE55F"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 3",
+      "title_hi": "अभ्यास प्रश्न 3",
+      "body": "**Q: Prove that 3√2 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 3√2 is rational.\n2. Then we can express it in the form a/b, where a and b are co-prime integers (b ≠ 0).\n3. So, 3√2 = a/b.\n4. Rearranging to isolate the square root, we get: √2 = a / (3b).\n5. Since 3, a, and b are integers, a/(3b) is a rational number.\n6. This implies that √2 is a rational number.\n7. But this contradicts the universal fact that √2 is irrational.\n8. Hence, our assumption is false, and 3√2 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 3√2 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 3√2 परिमेय है।\n2. तब हम इसे a/b के रूप में व्यक्त कर सकते हैं, जहाँ a और b सह-अभाज्य पूर्णांक हैं (b ≠ 0)।\n3. इसलिए, 3√2 = a/b।\n4. वर्गमूल को अलग करने के लिए पुनर्व्यवस्थित करने पर, हमें मिलता है: √2 = a / (3b)।\n5. चूँकि 3, a, और b पूर्णांक हैं, a/(3b) एक परिमेय संख्या है।\n6. इसका तात्पर्य यह है कि √2 एक परिमेय संख्या है।\n7. लेकिन यह इस सार्वभौमिक तथ्य का खंडन करता है कि √2 अपरिमेय है।\n8. अतः, हमारी मान्यता गलत है, और 3√2 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_E8E06152"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 4",
+      "title_hi": "अभ्यास प्रश्न 4",
+      "body": "**Q: Prove that √5 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume, to the contrary, that √5 is rational.\n2. Then √5 = p/q, where p and q are co-prime integers and q ≠ 0.\n3. Squaring both sides: 5 = p²/q² => p² = 5q².\n4. This shows p² is divisible by 5, meaning 'p' is also divisible by 5. Let p = 5m.\n5. Substitute p: (5m)² = 5q² => 25m² = 5q² => q² = 5m².\n6. This shows q² is divisible by 5, meaning 'q' is also divisible by 5.\n7. Since both p and q are divisible by 5, they are not co-prime. Contradiction!\n8. Therefore, √5 is an irrational number.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि √5 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए, इसके विपरीत, कि √5 परिमेय है।\n2. तब √5 = p/q, जहाँ p और q सह-अभाज्य पूर्णांक हैं और q ≠ 0।\n3. दोनों पक्षों का वर्ग करने पर: 5 = p²/q² => p² = 5q²।\n4. यह दर्शाता है कि p², 5 से विभाज्य है, जिसका अर्थ है 'p' भी 5 से विभाज्य है। माना p = 5m।\n5. p प्रतिस्थापित करें: (5m)² = 5q² => 25m² = 5q² => q² = 5m²।\n6. यह दर्शाता है कि q², 5 से विभाज्य है, जिसका अर्थ है 'q' भी 5 से विभाज्य है।\n7. चूँकि p और q दोनों 5 से विभाज्य हैं, वे सह-अभाज्य नहीं हैं। विरोधाभास!\n8. इसलिए, √5 एक अपरिमेय संख्या है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_954B3B21"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 5",
+      "title_hi": "अभ्यास प्रश्न 5",
+      "body": "**Q: Prove that 3 + 2√5 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 3 + 2√5 is rational.\n2. Therefore, 3 + 2√5 = a/b (where a and b are co-prime integers, b ≠ 0).\n3. Rearranging the terms, we get: 2√5 = (a/b) - 3 = (a - 3b)/b.\n4. Further isolating √5, we get: √5 = (a - 3b) / (2b).\n5. Since a and b are integers, (a - 3b)/(2b) is a rational number.\n6. This implies that √5 is rational.\n7. However, this contradicts the fact that √5 is irrational.\n8. Therefore, our assumption was incorrect. 3 + 2√5 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 3 + 2√5 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 3 + 2√5 परिमेय है।\n2. इसलिए, 3 + 2√5 = a/b (जहाँ a और b सह-अभाज्य पूर्णांक हैं, b ≠ 0)।\n3. पदों को पुनर्व्यवस्थित करने पर, हमें मिलता है: 2√5 = (a/b) - 3 = (a - 3b)/b।\n4. √5 को और अलग करने पर, हमें मिलता है: √5 = (a - 3b) / (2b)।\n5. चूँकि a और b पूर्णांक हैं, (a - 3b)/(2b) एक परिमेय संख्या है।\n6. इसका तात्पर्य यह है कि √5 परिमेय है।\n7. हालाँकि, यह इस तथ्य का खंडन करता है कि √5 अपरिमेय है।\n8. इसलिए, हमारी मान्यता गलत थी। 3 + 2√5 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_DFA57276"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 6",
+      "title_hi": "अभ्यास प्रश्न 6",
+      "body": "**Q: Prove that 1/√2 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 1/√2 is a rational number.\n2. So, 1/√2 = a/b, where a and b are co-prime integers (a, b ≠ 0).\n3. Reversing the fractions (taking reciprocals) on both sides: √2/1 = b/a.\n4. Therefore, √2 = b/a.\n5. Since a and b are integers, b/a is a rational number.\n6. This implies that √2 is rational.\n7. But we know this contradicts the fact that √2 is irrational.\n8. Hence, 1/√2 must be irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 1/√2 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 1/√2 एक परिमेय संख्या है।\n2. इसलिए, 1/√2 = a/b, जहाँ a और b सह-अभाज्य पूर्णांक हैं (a, b ≠ 0)।\n3. दोनों पक्षों पर भिन्नों को उलटने (व्युत्क्रम लेने) पर: √2/1 = b/a।\n4. इसलिए, √2 = b/a।\n5. चूँकि a और b पूर्णांक हैं, b/a एक परिमेय संख्या है।\n6. इसका तात्पर्य यह है कि √2 परिमेय है।\n7. लेकिन हम जानते हैं कि यह इस तथ्य का खंडन करता है कि √2 अपरिमेय है।\n8. अतः, 1/√2 अपरिमेय होना चाहिए।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_0E55ABDF"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 7",
+      "title_hi": "अभ्यास प्रश्न 7",
+      "body": "**Q: Prove that 7√5 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 7√5 is rational.\n2. Then 7√5 = a/b (where a and b are co-prime integers, b ≠ 0).\n3. Rearranging to isolate the root: √5 = a / (7b).\n4. Since a, 7, and b are integers, the fraction a/(7b) is rational.\n5. This implies √5 is a rational number.\n6. This contradicts the established fact that √5 is irrational.\n7. Our assumption was incorrect. Therefore, 7√5 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 7√5 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 7√5 परिमेय है।\n2. तब 7√5 = a/b (जहाँ a और b सह-अभाज्य पूर्णांक हैं, b ≠ 0)।\n3. मूल को अलग करने के लिए पुनर्व्यवस्थित करें: √5 = a / (7b)।\n4. चूँकि a, 7, और b पूर्णांक हैं, भिन्न a/(7b) परिमेय है।\n5. इसका तात्पर्य है कि √5 एक परिमेय संख्या है।\n6. यह स्थापित तथ्य का खंडन करता है कि √5 अपरिमेय है।\n7. हमारी मान्यता गलत थी। इसलिए, 7√5 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_9CB955D7"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 8",
+      "title_hi": "अभ्यास प्रश्न 8",
+      "body": "**Q: Prove that 6 + √2 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 6 + √2 is rational.\n2. So, 6 + √2 = p/q (where p, q are integers and q ≠ 0).\n3. Rearranging the equation: √2 = p/q - 6.\n4. Taking the LCM: √2 = (p - 6q) / q.\n5. Since p and q are integers, (p - 6q)/q represents a rational number.\n6. This implies that √2 is rational.\n7. This contradicts the fact that √2 is irrational.\n8. Therefore, 6 + √2 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 6 + √2 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 6 + √2 परिमेय है।\n2. इसलिए, 6 + √2 = p/q (जहाँ p, q पूर्णांक हैं और q ≠ 0)।\n3. समीकरण को पुनर्व्यवस्थित करें: √2 = p/q - 6।\n4. LCM लेने पर: √2 = (p - 6q) / q।\n5. चूँकि p और q पूर्णांक हैं, (p - 6q)/q एक परिमेय संख्या को दर्शाता है।\n6. इसका तात्पर्य है कि √2 परिमेय है।\n7. यह इस तथ्य का खंडन करता है कि √2 अपरिमेय है।\n8. इसलिए, 6 + √2 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_82F25858"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 9",
+      "title_hi": "अभ्यास प्रश्न 9",
+      "body": "**Q: Prove that √7 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume, to the contrary, that √7 is rational.\n2. Then √7 = a/b, where a and b are co-prime integers (b ≠ 0).\n3. Squaring both sides: 7 = a²/b² => a² = 7b².\n4. This implies a² is divisible by 7, so 'a' is also divisible by 7. (Let a = 7c).\n5. Substitute a = 7c: (7c)² = 7b² => 49c² = 7b² => b² = 7c².\n6. This implies b² is divisible by 7, so 'b' is also divisible by 7.\n7. Since a and b are both divisible by 7, they are not co-prime. Contradiction!\n8. Therefore, √7 is an irrational number.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि √7 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए, इसके विपरीत, कि √7 परिमेय है।\n2. तब √7 = a/b, जहाँ a और b सह-अभाज्य पूर्णांक हैं (b ≠ 0)।\n3. दोनों पक्षों का वर्ग करने पर: 7 = a²/b² => a² = 7b²।\n4. इसका तात्पर्य है कि a², 7 से विभाज्य है, इसलिए 'a' भी 7 से विभाज्य है। (मान लें a = 7c)।\n5. a = 7c प्रतिस्थापित करें: (7c)² = 7b² => 49c² = 7b² => b² = 7c²।\n6. इसका तात्पर्य है कि b², 7 से विभाज्य है, इसलिए 'b' भी 7 से विभाज्य है।\n7. चूँकि a और b दोनों 7 से विभाज्य हैं, वे सह-अभाज्य नहीं हैं। विरोधाभास!\n8. इसलिए, √7 एक अपरिमेय संख्या है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_1EC57016"
+    },
+    {
+      "type": "theory",
+      "title": "Practice Question 10",
+      "title_hi": "अभ्यास प्रश्न 10",
+      "body": "**Q: Prove that 2√5 + √3 is irrational.**\n\n**Detailed Solution:**\n1. Let us assume that 2√5 + √3 is rational, say 'x'. So, 2√5 + √3 = x.\n2. Rearrange to isolate one root: 2√5 = x - √3.\n3. Square both sides: (2√5)² = (x - √3)².\n4. 20 = x² - 2x√3 + 3.\n5. Rearrange to isolate √3: 2x√3 = x² + 3 - 20 = x² - 17.\n6. √3 = (x² - 17) / 2x.\n7. Since x is assumed to be rational, (x² - 17) / 2x is a rational number.\n8. This implies √3 is rational, which contradicts the fact that √3 is irrational.\n9. Therefore, our assumption was false, and 2√5 + √3 is irrational.",
+      "body_hi": "**प्रश्न: सिद्ध कीजिए कि 2√5 + √3 एक अपरिमेय संख्या है।**\n\n**विस्तृत समाधान:**\n1. मान लीजिए कि 2√5 + √3 परिमेय है, जैसे 'x'। इसलिए, 2√5 + √3 = x।\n2. एक मूल को अलग करने के लिए पुनर्व्यवस्थित करें: 2√5 = x - √3।\n3. दोनों पक्षों का वर्ग करें: (2√5)² = (x - √3)²।\n4. 20 = x² - 2x√3 + 3।\n5. √3 को अलग करने के लिए पुनर्व्यवस्थित करें: 2x√3 = x² + 3 - 20 = x² - 17।\n6. √3 = (x² - 17) / 2x।\n7. चूँकि x को परिमेय माना गया है, (x² - 17) / 2x एक परिमेय संख्या है।\n8. इसका तात्पर्य है कि √3 परिमेय है, जो इस तथ्य का खंडन करता है कि √3 अपरिमेय है।\n9. इसलिए, हमारी मान्यता गलत थी, और 2√5 + √3 अपरिमेय है।",
+      "difficulty": "Advanced",
+      "bloom": "Analyze",
+      "id": "KOBJ_AUTO_89EA8092"
+    },
+    {
+      "type": "heading",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_1",
+      "title": "Exercise 1.1",
+      "title_hi": "प्रश्नावली 1.1",
+      "title_gu": "સ્વાધ્યાય 1.1"
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_1_Q1",
+      "difficulty": "Beginner",
+      "marks": 2,
+      "question_en": "Express 140 as a product of its prime factors.",
+      "question_hi": "140 को अभाज्य गुणनखंडों के गुणनफल के रूप में व्यक्त कीजिए।",
+      "question_gu": "140 ને તેના અવિભાજ્ય અવયવોના ગુણાકાર સ્વરૂપે દર્શાવો.",
+      "answer_en": "140 = 2 × 2 × 5 × 7 = 2² × 5 × 7",
+      "answer_hi": "140 = 2 × 2 × 5 × 7 = 2² × 5 × 7",
+      "answer_gu": "140 = 2 × 2 × 5 × 7 = 2² × 5 × 7",
+      "explanation_en": "We divide 140 by the smallest prime number 2 to get 70. Divide 70 by 2 to get 35. Divide 35 by 5 to get 7. Since 7 is a prime number, we stop here.",
+      "explanation_hi": "हम 140 को सबसे छोटी अभाज्य संख्या 2 से विभाजित करते हैं जिससे 70 मिलता है। 70 को 2 से विभाजित करने पर 35 मिलता है। 35 को 5 से विभाजित करने पर 7 मिलता है। चूँकि 7 एक अभाज्य संख्या है, इसलिए हम यहीं रुक जाते हैं।",
+      "explanation_gu": "આપણે 140 ને સૌથી નાની અવિભાજ્ય સંખ્યા 2 વડે ભાગીએ છીએ જેથી 70 મળે. 70 ને 2 વડે ભાગવાથી 35 મળે. 35 ને 5 વડે ભાગવાથી 7 મળે. 7 અવિભાજ્ય સંખ્યા હોવાથી આપણે અહીં અટકીએ છીએ."
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_1_Q2",
+      "difficulty": "Intermediate",
+      "marks": 3,
+      "question_en": "Find the LCM and HCF of 26 and 91 and verify that LCM × HCF = product of the two numbers.",
+      "question_hi": "26 और 91 के LCM और HCF ज्ञात कीजिए तथा इसकी जाँच कीजिए कि दो संख्याओं का गुणनफल = HCF × LCM है।",
+      "question_gu": "26 અને 91 ના ગુ.સા.અ. અને લ.સા.અ. શોધો અને ચકાસો કે ગુ.સા.અ. × લ.સા.અ. = બંને સંખ્યાઓનો ગુણાકાર.",
+      "answer_en": "Prime factorisation:\n26 = 2 × 13\n91 = 7 × 13\nHCF = 13\nLCM = 2 × 7 × 13 = 182\nVerification: LCM × HCF = 182 × 13 = 2366. Product of numbers = 26 × 91 = 2366.",
+      "answer_hi": "अभाज्य गुणनखंड:\n26 = 2 × 13\n91 = 7 × 13\nHCF = 13\nLCM = 2 × 7 × 13 = 182\nसत्यापन: LCM × HCF = 182 × 13 = 2366. संख्याओं का गुणनफल = 26 × 91 = 2366.",
+      "answer_gu": "અવિભાજ્ય અવયવો:\n26 = 2 × 13\n91 = 7 × 13\nગુ.સા.અ. = 13\nલ.સા.અ. = 2 × 7 × 13 = 182\nચકાસણી: ગુ.સા.અ. × લ.સા.અ. = 182 × 13 = 2366. સંખ્યાઓનો ગુણાકાર = 26 × 91 = 2366.",
+      "explanation_en": "HCF is the product of the smallest power of each common prime factor. LCM is the product of the greatest power of each prime factor.",
+      "explanation_hi": "HCF प्रत्येक उभयनिष्ठ अभाज्य गुणनखंड की सबसे छोटी घात का गुणनफल है। LCM प्रत्येक अभाज्य गुणनखंड की सबसे बड़ी घात का गुणनफल है।",
+      "explanation_gu": "ગુ.સા.અ. એ દરેક સામાન્ય અવિભાજ્ય અવયવની સૌથી નાની ઘાતનો ગુણાકાર છે. લ.સા.અ. એ દરેક અવિભાજ્ય અવયવની સૌથી મોટી ઘાતનો ગુણાકાર છે."
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_1_Q4",
+      "difficulty": "Intermediate",
+      "marks": 2,
+      "question_en": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+      "question_hi": "HCF (306, 657) = 9 दिया है। LCM (306, 657) ज्ञात कीजिए।",
+      "question_gu": "જો ગુ.સા.અ. (306, 657) = 9 આપેલ હોય, તો લ.સા.અ. (306, 657) શોધો.",
+      "answer_en": "We know that LCM × HCF = Product of two numbers.\nLCM × 9 = 306 × 657\nLCM = (306 × 657) / 9\nLCM = 34 × 657 = 22338",
+      "answer_hi": "हम जानते हैं कि LCM × HCF = दो संख्याओं का गुणनफल।\nLCM × 9 = 306 × 657\nLCM = (306 × 657) / 9\nLCM = 34 × 657 = 22338",
+      "answer_gu": "આપણે જાણીએ છીએ કે ગુ.સા.અ. × લ.સા.અ. = બે સંખ્યાઓનો ગુણાકાર.\nલ.સા.અ. × 9 = 306 × 657\nલ.સા.અ. = (306 × 657) / 9\nલ.સા.અ. = 34 × 657 = 22338",
+      "explanation_en": "This uses the fundamental relationship between LCM and HCF of any two positive integers a and b: LCM(a,b) × HCF(a,b) = a × b.",
+      "explanation_hi": "यह किन्हीं दो धनात्मक पूर्णांकों a और b के LCM और HCF के बीच मूलभूत संबंध का उपयोग करता है: LCM(a,b) × HCF(a,b) = a × b.",
+      "explanation_gu": "આ કોઈપણ બે ધન પૂર્ણાંકો a અને b ના ગુ.સા.અ. અને લ.સા.અ. વચ્ચેના મૂળભૂત સંબંધનો ઉપયોગ કરે છે: લ.સા.અ.(a,b) × ગુ.સા.અ.(a,b) = a × b."
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_1_Q5",
+      "difficulty": "Advanced",
+      "marks": 2,
+      "question_en": "Check whether 6ⁿ can end with the digit 0 for any natural number n.",
+      "question_hi": "जाँच कीजिए कि क्या किसी प्राकृत संख्या n के लिए, 6ⁿ अंक 0 पर समाप्त हो सकती है।",
+      "question_gu": "ચકાસો કે કોઈ પ્રાકૃતિક સંખ્યા n માટે 6ⁿ નો અંતિમ અંક 0 હોઈ શકે કે કેમ.",
+      "answer_en": "If a number ends with 0, it must be divisible by 10 (i.e., by both 2 and 5).\nThe prime factorisation of 6ⁿ is (2 × 3)ⁿ = 2ⁿ × 3ⁿ.\nSince there is no factor of 5 in the prime factorisation, 6ⁿ can never end with the digit 0.",
+      "answer_hi": "यदि कोई संख्या 0 पर समाप्त होती है, तो वह 10 (यानी 2 और 5 दोनों) से विभाज्य होनी चाहिए।\n6ⁿ का अभाज्य गुणनखंडन (2 × 3)ⁿ = 2ⁿ × 3ⁿ है।\nचूँकि अभाज्य गुणनखंडन में 5 का कोई गुणनखंड नहीं है, इसलिए 6ⁿ कभी भी अंक 0 पर समाप्त नहीं हो सकता।",
+      "answer_gu": "જો કોઈ સંખ્યા 0 પર સમાપ્ત થાય, તો તે 10 (એટલે ​​કે 2 અને 5 બંને) વડે વિભાજ્ય હોવી જોઈએ.\n6ⁿ ના અવિભાજ્ય અવયવો (2 × 3)ⁿ = 2ⁿ × 3ⁿ છે.\nઅવિભાજ્ય અવયવોમાં 5 નો કોઈ અવયવ ન હોવાથી, 6ⁿ ક્યારેય 0 અંક પર સમાપ્ત થઈ શકે નહીં.",
+      "explanation_en": "According to the Fundamental Theorem of Arithmetic, this prime factorisation is unique. Without a factor of 5, the number cannot be a multiple of 10.",
+      "explanation_hi": "अंकगणित की आधारभूत प्रमेय के अनुसार, यह अभाज्य गुणनखंडन अद्वितीय है। 5 के गुणनखंड के बिना, संख्या 10 का गुणज नहीं हो सकती है।",
+      "explanation_gu": "અંકગણિતના મૂળભૂત પ્રમેય મુજબ, આ અવિભાજ્ય અવયવો અદ્વિતીય છે. 5 ના અવયવ વિના, સંખ્યા 10 નો ગુણક હોઈ શકે નહીં."
+    },
+    {
+      "type": "heading",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_2",
+      "title": "Exercise 1.2",
+      "title_hi": "प्रश्नावली 1.2",
+      "title_gu": "સ્વાધ્યાય 1.2"
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_2_Q1",
+      "difficulty": "Advanced",
+      "marks": 3,
+      "question_en": "Prove that √5 is irrational.",
+      "question_hi": "सिद्ध कीजिए कि √5 एक अपरिमेय संख्या है।",
+      "question_gu": "સાબિત કરો કે √5 અસંમેય છે.",
+      "answer_en": "Let us assume √5 is rational. Then √5 = a/b (where a and b are coprime integers, b ≠ 0).\nSquaring both sides: 5 = a²/b² => a² = 5b².\nThis means a² is divisible by 5, so 'a' is also divisible by 5. Let a = 5c.\nSubstituting a: (5c)² = 5b² => 25c² = 5b² => b² = 5c².\nThis means b² is divisible by 5, so 'b' is also divisible by 5.\nSince both a and b are divisible by 5, they are not coprime. This contradicts our assumption. Hence, √5 is irrational.",
+      "answer_hi": "माना कि √5 एक परिमेय संख्या है। तब √5 = a/b (जहाँ a और b सहअभाज्य पूर्णांक हैं, b ≠ 0)।\nदोनों पक्षों का वर्ग करने पर: 5 = a²/b² => a² = 5b².\nइसका अर्थ है कि a², 5 से विभाज्य है, इसलिए 'a' भी 5 से विभाज्य होगा। माना a = 5c.\na का मान रखने पर: (5c)² = 5b² => 25c² = 5b² => b² = 5c².\nइसका अर्थ है कि b², 5 से विभाज्य है, इसलिए 'b' भी 5 से विभाज्य होगा।\nचूँकि a और b दोनों 5 से विभाज्य हैं, इसलिए वे सहअभाज्य नहीं हैं। यह हमारी कल्पना का विरोधाभास है। अतः √5 एक अपरिमेय संख्या है।",
+      "answer_gu": "ધારો કે √5 સંમેય સંખ્યા છે. તેથી √5 = a/b (જ્યાં a અને b પરસ્પર અવિભાજ્ય પૂર્ણાંકો છે, b ≠ 0).\nબંને બાજુનો વર્ગ કરતા: 5 = a²/b² => a² = 5b².\nઆનો અર્થ એ છે કે a² એ 5 વડે વિભાજ્ય છે, તેથી 'a' પણ 5 વડે વિભાજ્ય છે. ધારો કે a = 5c.\na ની કિંમત મુકતા: (5c)² = 5b² => 25c² = 5b² => b² = 5c².\nઆનો અર્થ એ છે કે b² એ 5 વડે વિભાજ્ય છે, તેથી 'b' પણ 5 વડે વિભાજ્ય છે.\nકારણ કે a અને b બંને 5 વડે વિભાજ્ય છે, તેઓ પરસ્પર અવિભાજ્ય નથી. આ આપણી ધારણાનો વિરોધાભાસ છે. તેથી, √5 અસંમેય છે.",
+      "explanation_en": "This is a classic proof by contradiction. We assume the opposite of what we want to prove, and show that it leads to a logical impossibility.",
+      "explanation_hi": "यह विरोधाभास द्वारा एक क्लासिक प्रमाण है। हम जो साबित करना चाहते हैं उसके विपरीत मान लेते हैं, और दिखाते हैं कि इससे तार्किक असंभवता उत्पन्न होती है।",
+      "explanation_gu": "આ વિરોધાભાસ દ્વારા એક ઉત્તમ સાબિતી છે. આપણે જે સાબિત કરવા માંગીએ છીએ તેનાથી વિરુદ્ધ ધારીએ છીએ, અને બતાવીએ છીએ કે તે તાર્કિક અશક્યતા તરફ દોરી જાય છે."
+    },
+    {
+      "type": "short_note",
+      "id": "KOBJ_CLASS10_MATH_CH1_EX_1_2_Q2",
+      "difficulty": "Intermediate",
+      "marks": 3,
+      "question_en": "Prove that 3 + 2√5 is irrational.",
+      "question_hi": "सिद्ध कीजिए कि 3 + 2√5 एक अपरिमेय संख्या है।",
+      "question_gu": "સાબિત કરો કે 3 + 2√5 અસંમેય છે.",
+      "answer_en": "Assume 3 + 2√5 is rational. Let 3 + 2√5 = a/b (a, b are coprime integers, b ≠ 0).\n2√5 = (a/b) - 3 = (a - 3b) / b\n√5 = (a - 3b) / 2b\nSince a and b are integers, (a - 3b)/2b is a rational number.\nThis implies √5 is rational. But we know √5 is irrational.\nThis contradiction arises because of our incorrect assumption. Hence, 3 + 2√5 is irrational.",
+      "answer_hi": "माना कि 3 + 2√5 एक परिमेय संख्या है। माना 3 + 2√5 = a/b (a, b सहअभाज्य पूर्णांक हैं, b ≠ 0)।\n2√5 = (a/b) - 3 = (a - 3b) / b\n√5 = (a - 3b) / 2b\nचूँकि a और b पूर्णांक हैं, (a - 3b)/2b एक परिमेय संख्या है।\nइसका अर्थ है कि √5 परिमेय है। लेकिन हम जानते हैं कि √5 अपरिमेय है।\nयह विरोधाभास हमारी गलत कल्पना के कारण उत्पन्न हुआ है। अतः 3 + 2√5 अपरिमेय है।",
+      "answer_gu": "ધારો કે 3 + 2√5 સંમેય સંખ્યા છે. ધારો કે 3 + 2√5 = a/b (a, b પરસ્પર અવિભાજ્ય પૂર્ણાંકો છે, b ≠ 0).\n2√5 = (a/b) - 3 = (a - 3b) / b\n√5 = (a - 3b) / 2b\nકારણ કે a અને b પૂર્ણાંકો છે, (a - 3b)/2b સંમેય સંખ્યા છે.\nઆ દર્શાવે છે કે √5 સંમેય છે. પરંતુ આપણે જાણીએ છીએ કે √5 અસંમેય છે.\nઆ વિરોધાભાસ આપણી ખોટી ધારણાને કારણે ઊભો થયો છે. તેથી, 3 + 2√5 અસંમેય છે.",
+      "explanation_en": "By isolating the irrational part (√5), we show that a rational number would have to equal an irrational one, which is impossible.",
+      "explanation_hi": "अपरिमेय भाग (√5) को अलग करके, हम दिखाते हैं कि एक परिमेय संख्या को एक अपरिमेय संख्या के बराबर होना होगा, जो असंभव है।",
+      "explanation_gu": "અસંમેય ભાગ (√5) ને અલગ કરીને, આપણે બતાવીએ છીએ કે સંમેય સંખ્યા અસંમેય સંખ્યા બરાબર હોવી જોઈએ, જે અશક્ય છે."
+    }
+  ],
+  "id": "ncert_class10_maths_ch1"
+}

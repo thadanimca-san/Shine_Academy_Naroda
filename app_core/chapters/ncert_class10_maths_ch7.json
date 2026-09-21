@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch7",
+    "title": "Chapter 7: Coordinate Geometry",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "coordinate_geometry",
+      "distance_formula",
+      "section_formula",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Master the Distance Formula to find the length between two points.",
+      "Understand the Section Formula to find coordinates of a point dividing a line segment.",
+      "Solve CBSE/State Board HOTS questions related to coordinate geometry.",
+      "Apply logic to real-world geometric scenarios."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract coordinates feel real. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
+      "common_misconceptions": [
+        "Students get confused with negative signs in the formulas.",
+        "Students struggle with the ratio in the section formula."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you are standing at point A and your friend is at point B on a giant grid. How do you find the exact distance between you two? Or what if you want to meet exactly halfway? This is the power of **Coordinate Geometry (निर्देशांक ज्यामिति / યામ ભૂમિતિ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "The Cartesian Plane: The map of mathematical reality where every point has an address (x, y).",
+      "image_url": "assets/images/maths_ch7_cartesian_plane.jpg",
+      "alt_text": "A glowing Cartesian plane showing the X and Y axes with a point."
+    },
+    {
+      "type": "theory",
+      "content": "**Distance Formula (दूरी सूत्र):**\nThe distance between two points P(x₁, y₁) and Q(x₂, y₂) is given by:\n**PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]**\n\n*Example:* Distance between (0,0) and (3,4) is √[(3-0)² + (4-0)²] = √(9+16) = √25 = 5 units.",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** The Distance Formula is just the Pythagorean Theorem in disguise! Draw a right triangle between the two points, and the distance is simply the hypotenuse.",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "The Section Formula: Finding the exact coordinate that divides a journey into specific ratios.",
+      "image_url": "assets/images/maths_ch7_section_formula.jpg",
+      "alt_text": "A line segment divided into a ratio m1:m2 with coordinates shown."
+    },
+    {
+      "type": "theory",
+      "content": "**Section Formula (विभाजन सूत्र):**\nThe coordinates of the point P(x, y) which divides the line segment joining the points A(x₁, y₁) and B(x₂, y₂) internally in the ratio m₁ : m₂ are:\n**x = (m₁x₂ + m₂x₁) / (m₁ + m₂)**\n**y = (m₁y₂ + m₂y₁) / (m₁ + m₂)**",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Midpoint Formula\n\nIf the ratio is 1:1, P is the midpoint! The formula simplifies to:\n**( (x₁+x₂)/2 , (y₁+y₂)/2 )**\n\n*Board Trick:* Use k:1 ratio when you need to find the ratio itself! It makes calculations much easier.",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_1",
+      "type": "quiz",
+      "question": "The distance of the point P(2, 3) from the x-axis is",
+      "question_hi": "बिंदु P(2, 3) की x-अक्ष से दूरी है",
+      "options": ["2", "3", "1", "5"],
+      "options_hi": ["2", "3", "1", "5"],
+      "correct_index": 1,
+      "explanation": "The distance of a point from the x-axis is its y-coordinate. Hence, the distance is 3 units.",
+      "explanation_hi": "x-अक्ष से किसी बिंदु की दूरी उसका y-निर्देशांक होती है। इसलिए, दूरी 3 इकाई है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_2",
+      "type": "quiz",
+      "question": "The distance between the points A(0,6) and B(0,-2) is",
+      "question_hi": "बिंदुओं A(0,6) और B(0,-2) के बीच की दूरी है",
+      "options": ["4", "8", "6", "2"],
+      "options_hi": ["4", "8", "6", "2"],
+      "correct_index": 1,
+      "explanation": "Distance = √[(0-0)² + (-2-6)²] = √(-8)² = 8 units.",
+      "explanation_hi": "दूरी = √[(0-0)² + (-2-6)²] = √(-8)² = 8 इकाई।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_3",
+      "type": "quiz",
+      "question": "The distance of the point P(-6, 8) from the origin is",
+      "question_hi": "बिंदु P(-6, 8) की मूल बिंदु से दूरी है",
+      "options": ["8", "2", "10", "6"],
+      "options_hi": ["8", "2", "10", "6"],
+      "correct_index": 2,
+      "explanation": "Distance from origin = √(x² + y²) = √((-6)² + 8²) = √(36 + 64) = √100 = 10 units.",
+      "explanation_hi": "मूल बिंदु से दूरी = √(x² + y²) = √((-6)² + 8²) = √(36 + 64) = √100 = 10 इकाई।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_4",
+      "type": "quiz",
+      "question": "The coordinates of the point which lies on the y-axis at a distance of 5 units in the negative direction of y-axis are",
+      "question_hi": "y-अक्ष पर y-अक्ष की ऋणात्मक दिशा में 5 इकाई की दूरी पर स्थित बिंदु के निर्देशांक हैं",
+      "options": ["(5,0)", "(0,5)", "(-5,0)", "(0,-5)"],
+      "options_hi": ["(5,0)", "(0,5)", "(-5,0)", "(0,-5)"],
+      "correct_index": 3,
+      "explanation": "Since the point lies on the y-axis, its x-coordinate is 0. Distance is 5 in negative direction, so y = -5. Point is (0, -5).",
+      "explanation_hi": "चूँकि बिंदु y-अक्ष पर स्थित है, इसका x-निर्देशांक 0 है। ऋणात्मक दिशा में दूरी 5 है, इसलिए y = -5। बिंदु (0, -5) है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_5",
+      "type": "quiz",
+      "question": "The midpoint of the line segment joining the points A(-2, 8) and B(-6, -4) is",
+      "question_hi": "बिंदुओं A(-2, 8) और B(-6, -4) को मिलाने वाले रेखाखंड का मध्य बिंदु है",
+      "options": ["(-4, -6)", "(2, 6)", "(-4, 2)", "(4, 2)"],
+      "options_hi": ["(-4, -6)", "(2, 6)", "(-4, 2)", "(4, 2)"],
+      "correct_index": 2,
+      "explanation": "Midpoint = ((-2-6)/2 , (8-4)/2) = (-8/2, 4/2) = (-4, 2).",
+      "explanation_hi": "मध्य बिंदु = ((-2-6)/2 , (8-4)/2) = (-8/2, 4/2) = (-4, 2)।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_6",
+      "type": "quiz",
+      "question": "The ratio in which x-axis divides the line segment joining the points (5, 4) and (2, -3) is",
+      "question_hi": "वह अनुपात जिसमें x-अक्ष बिंदुओं (5, 4) और (2, -3) को मिलाने वाले रेखाखंड को विभाजित करता है",
+      "options": ["5:2", "3:4", "2:5", "4:3"],
+      "options_hi": ["5:2", "3:4", "2:5", "4:3"],
+      "correct_index": 3,
+      "explanation": "Let ratio be k:1. Any point on x-axis has y-coordinate 0. So, (k(-3) + 1(4))/(k+1) = 0 => -3k + 4 = 0 => k = 4/3.",
+      "explanation_hi": "माना अनुपात k:1 है। x-अक्ष पर किसी भी बिंदु का y-निर्देशांक 0 होता है। इसलिए, (k(-3) + 1(4))/(k+1) = 0 => -3k + 4 = 0 => k = 4/3।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_7",
+      "type": "quiz",
+      "question": "If the points A(1, 2), B(0, 0) and C(a, b) are collinear, then",
+      "question_hi": "यदि बिंदु A(1, 2), B(0, 0) और C(a, b) संरेख हैं, तो",
+      "options": ["a = b", "a = 2b", "2a = b", "a = -b"],
+      "options_hi": ["a = b", "a = 2b", "2a = b", "a = -b"],
+      "correct_index": 2,
+      "explanation": "Area of triangle is 0. 1(0 - b) + 0(b - 2) + a(2 - 0) = 0 => -b + 2a = 0 => 2a = b.",
+      "explanation_hi": "त्रिभुज का क्षेत्रफल 0 है। 1(0 - b) + 0(b - 2) + a(2 - 0) = 0 => -b + 2a = 0 => 2a = b।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_8",
+      "type": "quiz",
+      "question": "A point on x-axis which is equidistant from points A(2, -5) and B(-2, 9) is",
+      "question_hi": "x-अक्ष पर एक बिंदु जो बिंदुओं A(2, -5) और B(-2, 9) से समदूरस्थ है",
+      "options": ["(7, 0)", "(-7, 0)", "(0, 7)", "(0, -7)"],
+      "options_hi": ["(7, 0)", "(-7, 0)", "(0, 7)", "(0, -7)"],
+      "correct_index": 1,
+      "explanation": "Let point be (x,0). (x-2)² + (0+5)² = (x+2)² + (0-9)². x² - 4x + 4 + 25 = x² + 4x + 4 + 81. -8x = 56 => x = -7. Point is (-7, 0).",
+      "explanation_hi": "माना बिंदु (x,0) है। (x-2)² + (0+5)² = (x+2)² + (0-9)²। x² - 4x + 4 + 25 = x² + 4x + 4 + 81। -8x = 56 => x = -7। बिंदु (-7, 0) है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_9",
+      "type": "quiz",
+      "question": "If A(-6, 7) and B(-1, -5) are two given points then the distance 2AB is",
+      "question_hi": "यदि A(-6, 7) और B(-1, -5) दो दिए गए बिंदु हैं तो दूरी 2AB है",
+      "options": ["13", "26", "169", "238"],
+      "options_hi": ["13", "26", "169", "238"],
+      "correct_index": 1,
+      "explanation": "AB = √[(-1 - (-6))² + (-5 - 7)²] = √[5² + (-12)²] = √[25 + 144] = √169 = 13. So, 2AB = 2 × 13 = 26.",
+      "explanation_hi": "AB = √[(-1 - (-6))² + (-5 - 7)²] = √[5² + (-12)²] = √[25 + 144] = √169 = 13. इसलिए, 2AB = 2 × 13 = 26."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_10",
+      "type": "quiz",
+      "question": "The coordinates of the centroid of a triangle whose vertices are (0, 6), (8, 12) and (8, 0) is",
+      "question_hi": "एक त्रिभुज जिसके शीर्ष (0, 6), (8, 12) और (8, 0) हैं, के केंद्रक के निर्देशांक हैं",
+      "options": ["(4, 6)", "(16, 6)", "(8, 6)", "(16/3, 6)"],
+      "options_hi": ["(4, 6)", "(16, 6)", "(8, 6)", "(16/3, 6)"],
+      "correct_index": 3,
+      "explanation": "Centroid = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3) = ((0+8+8)/3, (6+12+0)/3) = (16/3, 18/3) = (16/3, 6).",
+      "explanation_hi": "केंद्रक = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3) = ((0+8+8)/3, (6+12+0)/3) = (16/3, 18/3) = (16/3, 6)।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_11",
+      "type": "quiz",
+      "question": "The distance between the points (a cosθ + b sinθ, 0) and (0, a sinθ - b cosθ) is",
+      "question_hi": "बिंदुओं (a cosθ + b sinθ, 0) और (0, a sinθ - b cosθ) के बीच की दूरी है",
+      "options": ["a² + b²", "√(a² + b²)", "a + b", "a - b"],
+      "options_hi": ["a² + b²", "√(a² + b²)", "a + b", "a - b"],
+      "correct_index": 1,
+      "explanation": "d² = (0 - (a cosθ + b sinθ))² + (a sinθ - b cosθ - 0)² = a²cos²θ + b²sin²θ + 2ab sinθ cosθ + a²sin²θ + b²cos²θ - 2ab sinθ cosθ = a²(cos²θ + sin²θ) + b²(sin²θ + cos²θ) = a² + b². So d = √(a² + b²).",
+      "explanation_hi": "d² = (0 - (a cosθ + b sinθ))² + (a sinθ - b cosθ - 0)² = a²cos²θ + b²sin²θ + 2ab sinθ cosθ + a²sin²θ + b²cos²θ - 2ab sinθ cosθ = a²(cos²θ + sin²θ) + b²(sin²θ + cos²θ) = a² + b²। इसलिए d = √(a² + b²)।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_12",
+      "type": "quiz",
+      "question": "If the distance between the points (4, p) and (1, 0) is 5, then the value of p is",
+      "question_hi": "यदि बिंदुओं (4, p) और (1, 0) के बीच की दूरी 5 है, तो p का मान है",
+      "options": ["4 only", "±4", "-4 only", "0"],
+      "options_hi": ["केवल 4", "±4", "केवल -4", "0"],
+      "correct_index": 1,
+      "explanation": "d² = (4 - 1)² + (p - 0)² = 25 => 3² + p² = 25 => 9 + p² = 25 => p² = 16 => p = ±4.",
+      "explanation_hi": "d² = (4 - 1)² + (p - 0)² = 25 => 3² + p² = 25 => 9 + p² = 25 => p² = 16 => p = ±4।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_13",
+      "type": "quiz",
+      "question": "A line segment is of length 10 units. If the coordinates of its one end are (2, -3) and the abscissa of the other end is 10, then its ordinate is",
+      "question_hi": "एक रेखाखंड की लंबाई 10 इकाई है। यदि इसके एक सिरे के निर्देशांक (2, -3) हैं और दूसरे सिरे का भुज 10 है, तो इसकी कोटि है",
+      "options": ["9", "-6", "3 or -9", "-3 or 9"],
+      "options_hi": ["9", "-6", "3 या -9", "-3 या 9"],
+      "correct_index": 2,
+      "explanation": "Let the other end be (10, y). Distance = √[(10 - 2)² + (y - (-3))²] = 10. => 8² + (y + 3)² = 100 => 64 + (y + 3)² = 100 => (y + 3)² = 36 => y + 3 = ±6. So y = 3 or y = -9.",
+      "explanation_hi": "माना दूसरा सिरा (10, y) है। दूरी = √[(10 - 2)² + (y - (-3))²] = 10। => 8² + (y + 3)² = 100 => 64 + (y + 3)² = 100 => (y + 3)² = 36 => y + 3 = ±6। इसलिए y = 3 या y = -9।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_14",
+      "type": "quiz",
+      "question": "In what ratio does the y-axis divide the line segment joining the points P(-4, 2) and Q(8, 3)?",
+      "question_hi": "y-अक्ष बिंदुओं P(-4, 2) और Q(8, 3) को मिलाने वाले रेखाखंड को किस अनुपात में विभाजित करता है?",
+      "options": ["1:2", "2:1", "3:1", "1:3"],
+      "options_hi": ["1:2", "2:1", "3:1", "1:3"],
+      "correct_index": 0,
+      "explanation": "Let ratio be k:1. At y-axis, x = 0. So, (k(8) + 1(-4))/(k+1) = 0 => 8k - 4 = 0 => k = 4/8 = 1/2. Ratio is 1:2.",
+      "explanation_hi": "माना अनुपात k:1 है। y-अक्ष पर, x = 0। इसलिए, (k(8) + 1(-4))/(k+1) = 0 => 8k - 4 = 0 => k = 4/8 = 1/2। अनुपात 1:2 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch7_15",
+      "type": "quiz",
+      "question": "The fourth vertex D of a parallelogram ABCD whose three vertices are A(-2, 3), B(6, 7) and C(8, 3) is",
+      "question_hi": "एक समांतर चतुर्भुज ABCD का चौथा शीर्ष D जिसके तीन शीर्ष A(-2, 3), B(6, 7) और C(8, 3) हैं, है",
+      "options": ["(0, 1)", "(0, -1)", "(-1, 0)", "(1, 0)"],
+      "options_hi": ["(0, 1)", "(0, -1)", "(-1, 0)", "(1, 0)"],
+      "correct_index": 1,
+      "explanation": "Diagonals bisect each other. Midpoint of AC = Midpoint of BD. ( (-2+8)/2, (3+3)/2 ) = ( (6+x)/2, (7+y)/2 ). (3, 3) = ((6+x)/2, (7+y)/2). 6+x=6 => x=0; 7+y=6 => y=-1. So D is (0, -1).",
+      "explanation_hi": "विकर्ण एक दूसरे को समद्विभाजित करते हैं। AC का मध्य बिंदु = BD का मध्य बिंदु। ( (-2+8)/2, (3+3)/2 ) = ( (6+x)/2, (7+y)/2 )। (3, 3) = ((6+x)/2, (7+y)/2)। 6+x=6 => x=0; 7+y=6 => y=-1। इसलिए D (0, -1) है।"
+    }
+  ]
+}

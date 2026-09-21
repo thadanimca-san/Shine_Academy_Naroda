@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Q001",
+    "chapter_id": "GSEB_C9_M_CH01",
+    "topic_id": "rational_numbers",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": ["rational number", "definition"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "Which of the following is an irrational number?",
+    "answer": {
+      "options": ["A. √4", "B. √9", "C. √2", "D. √16"],
+      "correct": "C. √2"
+    },
+    "explanation": "√4, √9, and √16 are perfect squares which result in rational numbers (2, 3, and 4). √2 cannot be expressed as a simple fraction, so it is an irrational number.",
+    "distractor_rationale": "A, B, and D are square roots of perfect squares and therefore are rational.",
+    "ai_context": {
+      "learning_goal": "Identify irrational numbers among given square roots.",
+      "common_misconceptions": ["Assuming any number under a square root is irrational."],
+      "hint": "Evaluate the square roots. If the result is an integer, it's rational."
+    }
+  },
+  {
+    "id": "Q002",
+    "chapter_id": "GSEB_C9_M_CH01",
+    "topic_id": "decimal_expansions",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["decimal expansion", "rational number"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "Medium",
+    "question_text": "The decimal expansion of an irrational number is:",
+    "answer": {
+      "options": [
+        "A. Terminating",
+        "B. Non-terminating recurring",
+        "C. Non-terminating non-recurring",
+        "D. Terminating or non-terminating recurring"
+      ],
+      "correct": "C. Non-terminating non-recurring"
+    },
+    "explanation": "An irrational number's decimal representation neither terminates (ends) nor repeats in a pattern. Thus, it is non-terminating and non-recurring.",
+    "distractor_rationale": "A and B describe the decimal expansion of rational numbers.",
+    "ai_context": {
+      "learning_goal": "Distinguish between the decimal properties of rational and irrational numbers.",
+      "common_misconceptions": ["Confusing the rules for rational vs irrational decimal expansions."],
+      "hint": "Think about Pi (π), it never ends and never repeats."
+    }
+  },
+  {
+    "id": "Q003",
+    "chapter_id": "GSEB_C9_M_CH01",
+    "topic_id": "rationalizing_denominator",
+    "type": "mcq",
+    "difficulty": "Advanced",
+    "board": ["GSEB", "CBSE"],
+    "marks": 2,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["rationalizing", "denominator", "conjugate"],
+    "estimated_time_minutes": 3,
+    "exam_frequency": "High",
+    "question_text": "To rationalize the denominator of 1 / (√5 - √2), we must multiply the numerator and denominator by:",
+    "answer": {
+      "options": ["A. (√5 - √2)", "B. (√5 + √2)", "C. √5", "D. √2"],
+      "correct": "B. (√5 + √2)"
+    },
+    "explanation": "To rationalize a binomial denominator with square roots, we multiply by its conjugate. The conjugate of (√5 - √2) is (√5 + √2). This uses the algebraic identity (a-b)(a+b) = a²-b² to remove the square roots.",
+    "distractor_rationale": "Option A would just square the binomial and leave middle terms with roots. C and D only address part of the denominator.",
+    "ai_context": {
+      "learning_goal": "Apply the conjugate to rationalize a binomial denominator.",
+      "common_misconceptions": ["Thinking you only need to multiply by one of the square roots."],
+      "hint": "Use the difference of squares formula: (a - b)(a + b) = a² - b²."
+    }
+  },
+  {
+    "id": "Q004",
+    "chapter_id": "GSEB_C9_M_CH01",
+    "topic_id": "laws_of_exponents",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["exponents", "real numbers"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "Medium",
+    "question_text": "What is the value of (64)^(1/2)?",
+    "answer": {
+      "options": ["A. 4", "B. 8", "C. 16", "D. 32"],
+      "correct": "B. 8"
+    },
+    "explanation": "(64)^(1/2) is the same as finding the square root of 64. Since 8 * 8 = 64, the square root is 8.",
+    "distractor_rationale": "A is the cube root of 64. D is half of 64.",
+    "ai_context": {
+      "learning_goal": "Evaluate fractional exponents representing roots.",
+      "common_misconceptions": ["Dividing the base by the denominator of the fraction instead of taking the root."],
+      "hint": "A power of 1/2 is equivalent to taking the square root."
+    }
+  }
+]

@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch5",
+    "title": "Chapter 5: Arithmetic Progressions",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "arithmetic_progressions",
+      "nth_term",
+      "sum_of_n_terms",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the concept of an Arithmetic Progression (AP).",
+      "Calculate the nth term (aₙ) of an AP.",
+      "Calculate the sum of first n terms (Sₙ) of an AP.",
+      "Solve CBSE/State Board HOTS questions related to APs."
+    ],
+    "ai_context": {
+      "learning_goal": "Make sequences feel intuitive. Use real-life examples like savings and stadium seating before jumping into formulas.",
+      "common_misconceptions": [
+        "Students confuse the number of terms 'n' with the nth term 'aₙ'.",
+        "Students forget the common difference 'd' can be negative."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you get Rs. 100 on your first birthday, Rs. 150 on your second, Rs. 200 on your third, and so on. Every year, the amount increases by a fixed Rs. 50. What will you get on your 18th birthday? This magic of predictable patterns is called an **Arithmetic Progression (समांतर श्रेढ़ी / સમાંતર શ્રેણી)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "A staircase where every step is of equal height represents an AP perfectly.",
+      "image_url": "assets/images/maths_ch5_staircase.jpg",
+      "alt_text": "A staircase with each step marked with numbers showing a constant difference."
+    },
+    {
+      "type": "theory",
+      "content": "**Nth Term Formula (nवाँ पद):**\nIf 'a' is the first term and 'd' is the common difference, the nth term aₙ is given by:\n\n**aₙ = a + (n - 1)d**\n\n*Example:* If a = 2, d = 3, then a₅ = 2 + (5 - 1)3 = 14.",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** Don't confuse **'n'** (the position of the term, like the 5th chair) with **'aₙ'** (the value of the term, like who is sitting in the 5th chair)!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "theory",
+      "content": "**Sum of First n Terms (प्रथम n पदों का योग):**\nThe sum Sₙ of the first n terms of an AP is:\n\n**Sₙ = n/2 × [2a + (n - 1)d]**\n\nAlternatively, if you know the first term 'a' and the last term 'l', **Sₙ = n/2 × (a + l)**.",
+      "difficulty": "Advanced",
+      "bloom": "Evaluate"
+    },
+    {
+      "type": "diagram",
+      "content": "Visualizing the sum of an AP by matching the first and last terms, just like young Gauss did to add 1 to 100 instantly!",
+      "image_url": "assets/images/maths_ch5_gauss_sum.jpg",
+      "alt_text": "A diagram showing how pairing numbers from the beginning and end of a sequence gives a constant sum."
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** Word problems on Sₙ\n\n*Board Trick:* When 3 terms are in AP, assume them as **a - d, a, a + d**. This makes addition much simpler because the 'd's cancel out!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_1",
+      "type": "quiz",
+      "question": "If the 3rd and 9th terms of an AP are 4 and -8 respectively, which term of this AP is zero?",
+      "question_hi": "यदि किसी समांतर श्रेढ़ी का तीसरा और 9वाँ पद क्रमशः 4 और -8 है, तो इसका कौन सा पद शून्य होगा?",
+      "options": [
+        "5th",
+        "4th",
+        "6th",
+        "7th"
+      ],
+      "options_hi": [
+        "5वाँ",
+        "4था",
+        "6ठा",
+        "7वाँ"
+      ],
+      "correct_index": 0,
+      "explanation": "Let a and d be the first term and common difference. a + 2d = 4, a + 8d = -8. Subtracting gives 6d = -12 => d = -2. Then a = 8. Let nth term be 0: a + (n-1)d = 0 => 8 + (n-1)(-2) = 0 => n-1 = 4 => n = 5.",
+      "explanation_hi": "माना a और d प्रथम पद और सार्व अंतर हैं। a + 2d = 4, a + 8d = -8। घटाने पर 6d = -12 => d = -2। तब a = 8। माना nवाँ पद शून्य है: a + (n-1)d = 0 => 8 + (n-1)(-2) = 0 => n-1 = 4 => n = 5।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_2",
+      "type": "quiz",
+      "question": "Which term of the AP: 3, 15, 27, 39, ... will be 132 more than its 54th term?",
+      "question_hi": "समांतर श्रेढ़ी 3, 15, 27, 39, ... का कौन सा पद इसके 54वें पद से 132 अधिक होगा?",
+      "options": [
+        "65th",
+        "66th",
+        "64th",
+        "67th"
+      ],
+      "options_hi": [
+        "65वाँ",
+        "66वाँ",
+        "64वाँ",
+        "67वाँ"
+      ],
+      "correct_index": 0,
+      "explanation": "a = 3, d = 12. a_54 = 3 + 53(12) = 639. We want a_n = 639 + 132 = 771. 3 + (n-1)12 = 771 => (n-1)12 = 768 => n-1 = 64 => n = 65.",
+      "explanation_hi": "a = 3, d = 12. a_54 = 3 + 53(12) = 639. हमें a_n = 639 + 132 = 771 चाहिए। 3 + (n-1)12 = 771 => (n-1)12 = 768 => n-1 = 64 => n = 65."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_3",
+      "type": "quiz",
+      "question": "How many two-digit numbers are divisible by 3?",
+      "question_hi": "दो अंकों की कितनी संख्याएँ 3 से विभाज्य हैं?",
+      "options": [
+        "30",
+        "29",
+        "31",
+        "32"
+      ],
+      "options_hi": [
+        "30",
+        "29",
+        "31",
+        "32"
+      ],
+      "correct_index": 0,
+      "explanation": "The AP is 12, 15, ..., 99. a = 12, d = 3, a_n = 99. a_n = a + (n-1)d => 99 = 12 + (n-1)3 => 87 = (n-1)3 => n-1 = 29 => n = 30.",
+      "explanation_hi": "समांतर श्रेढ़ी 12, 15, ..., 99 है। a = 12, d = 3, a_n = 99. a_n = a + (n-1)d => 99 = 12 + (n-1)3 => 87 = (n-1)3 => n-1 = 29 => n = 30."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_4",
+      "type": "quiz",
+      "question": "For what value of n, are the nth terms of two APs: 63, 65, 67, ... and 3, 10, 17, ... equal?",
+      "question_hi": "n के किस मान के लिए, दो समांतर श्रेढ़ियों 63, 65, 67, ... और 3, 10, 17, ... के nवें पद बराबर हैं?",
+      "options": [
+        "13",
+        "12",
+        "14",
+        "15"
+      ],
+      "options_hi": [
+        "13",
+        "12",
+        "14",
+        "15"
+      ],
+      "correct_index": 0,
+      "explanation": "AP 1: a=63, d=2. a_n = 63 + 2(n-1). AP 2: a=3, d=7. a_n = 3 + 7(n-1). Equating: 63 + 2n - 2 = 3 + 7n - 7 => 61 + 2n = 7n - 4 => 65 = 5n => n = 13.",
+      "explanation_hi": "श्रेढ़ी 1: a=63, d=2. a_n = 63 + 2(n-1). श्रेढ़ी 2: a=3, d=7. a_n = 3 + 7(n-1). दोनों को बराबर करने पर: 63 + 2n - 2 = 3 + 7n - 7 => 61 + 2n = 7n - 4 => 65 = 5n => n = 13."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_5",
+      "type": "quiz",
+      "question": "The sum of the 4th and 8th terms of an AP is 24 and the sum of the 6th and 10th terms is 44. Find the first term.",
+      "question_hi": "किसी समांतर श्रेढ़ी के चौथे और 8वें पदों का योग 24 है और छठे और 10वें पदों का योग 44 है। प्रथम पद ज्ञात कीजिए।",
+      "options": [
+        "-13",
+        "-10",
+        "-8",
+        "-15"
+      ],
+      "options_hi": [
+        "-13",
+        "-10",
+        "-8",
+        "-15"
+      ],
+      "correct_index": 0,
+      "explanation": "(a+3d) + (a+7d) = 24 => 2a + 10d = 24 => a + 5d = 12. Also (a+5d) + (a+9d) = 44 => 2a + 14d = 44 => a + 7d = 22. Subtracting equations: 2d = 10 => d = 5. Therefore a = 12 - 25 = -13.",
+      "explanation_hi": "(a+3d) + (a+7d) = 24 => 2a + 10d = 24 => a + 5d = 12. तथा (a+5d) + (a+9d) = 44 => 2a + 14d = 44 => a + 7d = 22. समीकरणों को घटाने पर: 2d = 10 => d = 5. अतः a = 12 - 25 = -13."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_6",
+      "type": "quiz",
+      "question": "If the sum of first n terms of an AP is 4n - n^2, what is the first term (that is S1)?",
+      "question_hi": "यदि किसी समांतर श्रेढ़ी के प्रथम n पदों का योग 4n - n^2 है, तो प्रथम पद (अर्थात S1) क्या है?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "options_hi": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "correct_index": 0,
+      "explanation": "First term a_1 is S_1. S_1 = 4(1) - (1)^2 = 4 - 1 = 3.",
+      "explanation_hi": "प्रथम पद a_1 ही S_1 होता है। S_1 = 4(1) - (1)^2 = 4 - 1 = 3."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_7",
+      "type": "quiz",
+      "question": "Find the sum of first 15 multiples of 8.",
+      "question_hi": "8 के प्रथम 15 गुणजों का योग ज्ञात कीजिए।",
+      "options": [
+        "960",
+        "900",
+        "840",
+        "1020"
+      ],
+      "options_hi": [
+        "960",
+        "900",
+        "840",
+        "1020"
+      ],
+      "correct_index": 0,
+      "explanation": "The AP is 8, 16, 24, ... a = 8, d = 8, n = 15. S_n = n/2 (2a + (n-1)d) = 15/2 (16 + 14(8)) = 15/2 (16 + 112) = 15/2 (128) = 15 * 64 = 960.",
+      "explanation_hi": "समांतर श्रेढ़ी 8, 16, 24, ... है। a = 8, d = 8, n = 15. S_n = n/2 (2a + (n-1)d) = 15/2 (16 + 14(8)) = 15/2 (16 + 112) = 15/2 (128) = 15 * 64 = 960."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_8",
+      "type": "quiz",
+      "question": "If 7 times the 7th term of an AP is equal to 11 times its 11th term, then its 18th term will be:",
+      "question_hi": "यदि किसी समांतर श्रेढ़ी के 7वें पद का 7 गुना उसके 11वें पद के 11 गुने के बराबर है, तो उसका 18वाँ पद होगा:",
+      "options": [
+        "0",
+        "7",
+        "11",
+        "18"
+      ],
+      "options_hi": [
+        "0",
+        "7",
+        "11",
+        "18"
+      ],
+      "correct_index": 0,
+      "explanation": "7(a + 6d) = 11(a + 10d) => 7a + 42d = 11a + 110d => 4a + 68d = 0 => a + 17d = 0. Since a_18 = a + 17d, the 18th term is 0.",
+      "explanation_hi": "7(a + 6d) = 11(a + 10d) => 7a + 42d = 11a + 110d => 4a + 68d = 0 => a + 17d = 0. क्योंकि a_18 = a + 17d है, इसलिए 18वाँ पद 0 होगा।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_9",
+      "type": "quiz",
+      "question": "In an AP, if a = 3.5, d = 0, n = 101, then a_n will be:",
+      "question_hi": "एक समांतर श्रेढ़ी में, यदि a = 3.5, d = 0, n = 101, तो a_n होगा:",
+      "options": [
+        "3.5",
+        "0",
+        "104.5",
+        "103.5"
+      ],
+      "options_hi": [
+        "3.5",
+        "0",
+        "104.5",
+        "103.5"
+      ],
+      "correct_index": 0,
+      "explanation": "When common difference d = 0, all terms of the AP are equal to the first term. Hence a_n = 3.5.",
+      "explanation_hi": "जब सार्व अंतर d = 0 होता है, तो समांतर श्रेढ़ी के सभी पद प्रथम पद के बराबर होते हैं। इसलिए a_n = 3.5।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_10",
+      "type": "quiz",
+      "question": "The 10th term from the end of the AP: 4, 9, 14, ..., 254 is:",
+      "question_hi": "समांतर श्रेढ़ी 4, 9, 14, ..., 254 का अंतिम पद से 10वाँ पद है:",
+      "options": [
+        "209",
+        "214",
+        "204",
+        "219"
+      ],
+      "options_hi": [
+        "209",
+        "214",
+        "204",
+        "219"
+      ],
+      "correct_index": 0,
+      "explanation": "To find nth term from end, we can reverse the AP: first term l = 254, common difference is -d = -5. The 10th term is l + (10-1)(-d) = 254 + 9(-5) = 254 - 45 = 209.",
+      "explanation_hi": "अंतिम से nवाँ पद ज्ञात करने के लिए, हम श्रेढ़ी को उलट सकते हैं: प्रथम पद l = 254, सार्व अंतर -d = -5. 10वाँ पद है l + (10-1)(-d) = 254 + 9(-5) = 254 - 45 = 209।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_11",
+      "type": "quiz",
+      "question": "Find the sum of all natural numbers from 1 to 100.",
+      "question_hi": "1 से 100 तक की सभी प्राकृत संख्याओं का योग ज्ञात कीजिए।",
+      "options": [
+        "5050",
+        "5000",
+        "5150",
+        "4950"
+      ],
+      "options_hi": [
+        "5050",
+        "5000",
+        "5150",
+        "4950"
+      ],
+      "correct_index": 0,
+      "explanation": "This is an AP with a=1, l=100, n=100. Sum = n/2(a + l) = 100/2(1 + 100) = 50(101) = 5050.",
+      "explanation_hi": "यह एक समांतर श्रेढ़ी है जिसमें a=1, l=100, n=100. योग = n/2(a + l) = 100/2(1 + 100) = 50(101) = 5050."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_12",
+      "type": "quiz",
+      "question": "Two APs have the same common difference. The difference between their 100th terms is 100. What is the difference between their 1000th terms?",
+      "question_hi": "दो समांतर श्रेढ़ियों का सार्व अंतर समान है। उनके 100वें पदों का अंतर 100 है। उनके 1000वें पदों का अंतर क्या है?",
+      "options": [
+        "100",
+        "1000",
+        "900",
+        "0"
+      ],
+      "options_hi": [
+        "100",
+        "1000",
+        "900",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "Let first terms be a1 and a2. The nth term difference is (a1 + (n-1)d) - (a2 + (n-1)d) = a1 - a2. The difference remains constant for all n. So it is 100.",
+      "explanation_hi": "माना प्रथम पद a1 और a2 हैं। nवें पद का अंतर है (a1 + (n-1)d) - (a2 + (n-1)d) = a1 - a2। यह अंतर सभी n के लिए स्थिर रहता है। इसलिए यह 100 ही रहेगा।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_13",
+      "type": "quiz",
+      "question": "If the numbers a, 7, b, 23, c are in AP, what is the value of a?",
+      "question_hi": "यदि संख्याएँ a, 7, b, 23, c समांतर श्रेढ़ी में हैं, तो a का मान क्या है?",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "-2"
+      ],
+      "options_hi": [
+        "-1",
+        "0",
+        "1",
+        "-2"
+      ],
+      "correct_index": 0,
+      "explanation": "The terms are T1=a, T2=7, T3=b, T4=23. Using T4 = T2 + 2d => 23 = 7 + 2d => 16 = 2d => d = 8. Then T2 = T1 + d => 7 = a + 8 => a = -1.",
+      "explanation_hi": "पद हैं T1=a, T2=7, T3=b, T4=23. T4 = T2 + 2d का उपयोग करने पर => 23 = 7 + 2d => 16 = 2d => d = 8. तब T2 = T1 + d => 7 = a + 8 => a = -1."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_14",
+      "type": "quiz",
+      "question": "Find the sum of the first 22 terms of an AP in which d = 7 and 22nd term is 149.",
+      "question_hi": "उस समांतर श्रेढ़ी के प्रथम 22 पदों का योग ज्ञात कीजिए जिसमें d = 7 है और 22वाँ पद 149 है।",
+      "options": [
+        "1661",
+        "1540",
+        "1600",
+        "1700"
+      ],
+      "options_hi": [
+        "1661",
+        "1540",
+        "1600",
+        "1700"
+      ],
+      "correct_index": 0,
+      "explanation": "a_22 = a + 21d => 149 = a + 21(7) => 149 = a + 147 => a = 2. Sum = n/2(a + l) = 22/2(2 + 149) = 11(151) = 1661.",
+      "explanation_hi": "a_22 = a + 21d => 149 = a + 21(7) => 149 = a + 147 => a = 2. योग = n/2(a + l) = 22/2(2 + 149) = 11(151) = 1661."
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch5_15",
+      "type": "quiz",
+      "question": "Subba Rao started work in 1995 at an annual salary of Rs 5000 and received an increment of Rs 200 each year. In which year did his income reach Rs 7000?",
+      "question_hi": "सुब्बा राव ने 1995 में 5000 रुपये के वार्षिक वेतन पर कार्य आरम्भ किया और प्रत्येक वर्ष 200 रुपये की वेतन वृद्धि प्राप्त की। किस वर्ष में उनका वेतन 7000 रुपये हो गया?",
+      "options": [
+        "2005",
+        "2006",
+        "2004",
+        "2007"
+      ],
+      "options_hi": [
+        "2005",
+        "2006",
+        "2004",
+        "2007"
+      ],
+      "correct_index": 0,
+      "explanation": "The salary forms an AP: 5000, 5200, 5400, ... a = 5000, d = 200, a_n = 7000. a + (n-1)d = 7000 => 5000 + (n-1)200 = 7000 => (n-1)200 = 2000 => n-1 = 10 => n = 11. 11th year from 1995 is 2005.",
+      "explanation_hi": "वेतन एक समांतर श्रेढ़ी बनाता है: 5000, 5200, 5400, ... a = 5000, d = 200, a_n = 7000. a + (n-1)d = 7000 => 5000 + (n-1)200 = 7000 => (n-1)200 = 2000 => n-1 = 10 => n = 11. 1995 से 11वाँ वर्ष 2005 है।"
+    }
+  ]
+}

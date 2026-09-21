@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch9",
+    "title": "Chapter 9: Some Applications of Trigonometry",
+    "subtitle": "Heights and Distances: The Ultimate Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 120,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "trigonometry",
+      "heights_distances",
+      "angle_of_elevation",
+      "angle_of_depression"
+    ],
+    "learning_outcomes": [
+      "Understand the concepts of Line of Sight, Angle of Elevation, and Angle of Depression.",
+      "Apply trigonometric ratios to solve real-world problems involving heights and distances.",
+      "Visualize problems using diagrams to accurately form right-angled triangles."
+    ],
+    "ai_context": {
+      "learning_goal": "Help students visualize heights and distances problems using right-angled triangles.",
+      "common_misconceptions": [
+        "Students confuse the angle of elevation with the angle of depression.",
+        "Students forget to draw a horizontal line when measuring the angle of depression."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Have you ever wondered how astronomers calculate the distance to the moon, or how engineers build towering skyscrapers? They don't use a giant measuring tape! They use the magic of **Trigonometry**! Let's explore how to measure heights and distances using triangles.",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Line of Sight and Angle of Elevation. When you look UP at an object, the angle formed by your line of sight with the horizontal is the Angle of Elevation.",
+      "image_url": "assets/images/maths_ch9_elevation.jpg",
+      "alt_text": "A person looking up at the top of a tower, showing the horizontal line, line of sight, and angle of elevation."
+    },
+    {
+      "type": "theory",
+      "content": "**Angle of Elevation (उन्नयन कोण):**\nWhen you are looking UP at an object, the angle between the horizontal line and your line of sight is called the Angle of Elevation. It's like your eyes 'elevating' to see something high.\n\n**Angle of Depression (अवनमन कोण):**\nWhen you are looking DOWN at an object, the angle between the horizontal line and your line of sight is called the Angle of Depression. Always remember to draw the horizontal line at eye level!",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "diagram",
+      "content": "Line of Sight and Angle of Depression. When you look DOWN at an object, the angle formed by your line of sight with the horizontal is the Angle of Depression.",
+      "image_url": "assets/images/maths_ch9_depression.jpg",
+      "alt_text": "A person looking down from a balcony at a car on the road, showing the horizontal line, line of sight, and angle of depression."
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** By Alternate Interior Angles, the Angle of Depression from the top is ALWAYS EQUAL to the Angle of Elevation from the bottom! So you can often convert a depression problem into an elevation problem to make it easier.",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Multi-Triangle Problem\n\nMany 4-mark and 5-mark questions will involve TWO triangles (e.g., observing a tower from two different points). \n*Board Trick:* Find a common side (usually the height or the base) between the two triangles, express it in terms of trigonometric ratios for both triangles, and equate them!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_1",
+      "type": "quiz",
+      "question": "The angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of the tower, is 30°. The height of the tower is:",
+      "question_hi": "भूमि के एक बिंदु से, जो मीनार के पाद-बिंदु से 30 मीटर की दूरी पर है, मीनार के शिखर का उन्नयन कोण 30° है। मीनार की ऊँचाई है:",
+      "options": [
+        "10√3 m",
+        "15√3 m",
+        "20√3 m",
+        "30√3 m"
+      ],
+      "options_hi": [
+        "10√3 मीटर",
+        "15√3 मीटर",
+        "20√3 मीटर",
+        "30√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "tan 30° = h / 30 => 1/√3 = h / 30 => h = 30/√3 = 10√3 m.",
+      "explanation_hi": "tan 30° = h / 30 => 1/√3 = h / 30 => h = 30/√3 = 10√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_2",
+      "type": "quiz",
+      "question": "A kite is flying at a height of 60 m above the ground. The string attached to the kite is temporarily tied to a point on the ground. The inclination of the string with the ground is 60°. Find the length of the string, assuming that there is no slack in the string.",
+      "question_hi": "भूमि से 60 मीटर की ऊँचाई पर एक पतंग उड़ रही है। पतंग से लगी डोरी को अस्थायी रूप से भूमि के एक बिंदु से बांध दिया गया है। भूमि के साथ डोरी का झुकाव 60° है। यह मानकर कि डोरी में कोई ढील नहीं है, डोरी की लंबाई ज्ञात कीजिए।",
+      "options": [
+        "40√3 m",
+        "60√3 m",
+        "20√3 m",
+        "80√3 m"
+      ],
+      "options_hi": [
+        "40√3 मीटर",
+        "60√3 मीटर",
+        "20√3 मीटर",
+        "80√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "sin 60° = 60 / l => √3/2 = 60 / l => l = 120 / √3 = 40√3 m.",
+      "explanation_hi": "sin 60° = 60 / l => √3/2 = 60 / l => l = 120 / √3 = 40√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_3",
+      "type": "quiz",
+      "question": "The shadow of a tower standing on a level ground is found to be 40 m longer when the Sun's altitude is 30° than when it is 60°. Find the height of the tower.",
+      "question_hi": "एक समतल भूमि पर खड़ी मीनार की छाया उस स्थिति में 40 मीटर अधिक लंबी हो जाती है जब सूर्य का उन्नतांश 60° से घटकर 30° हो जाता है। मीनार की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "20√3 m",
+        "10√3 m",
+        "30√3 m",
+        "40√3 m"
+      ],
+      "options_hi": [
+        "20√3 मीटर",
+        "10√3 मीटर",
+        "30√3 मीटर",
+        "40√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Let height be h. Shadow difference: h(cot 30° - cot 60°) = 40 => h(√3 - 1/√3) = 40 => h(2/√3) = 40 => h = 20√3 m.",
+      "explanation_hi": "माना ऊँचाई h है। छाया का अंतर: h(cot 30° - cot 60°) = 40 => h(√3 - 1/√3) = 40 => h(2/√3) = 40 => h = 20√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_4",
+      "type": "quiz",
+      "question": "From a point on the ground, the angles of elevation of the bottom and the top of a transmission tower fixed at the top of a 20 m high building are 45° and 60° respectively. Find the height of the tower.",
+      "question_hi": "भूमि के एक बिंदु से एक 20 मीटर ऊंचे भवन के शिखर पर लगी एक संचार मीनार के तल और शिखर के उन्नयन कोण क्रमशः 45° और 60° हैं। मीनार की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "20(√3 - 1) m",
+        "20(√3 + 1) m",
+        "10(√3 - 1) m",
+        "20√3 m"
+      ],
+      "options_hi": [
+        "20(√3 - 1) मीटर",
+        "20(√3 + 1) मीटर",
+        "10(√3 - 1) मीटर",
+        "20√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Base x = 20 / tan 45° = 20 m. Total height = 20 + h = x tan 60° = 20√3 => h = 20(√3 - 1) m.",
+      "explanation_hi": "आधार x = 20 / tan 45° = 20 मीटर। कुल ऊँचाई = 20 + h = x tan 60° = 20√3 => h = 20(√3 - 1) मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_5",
+      "type": "quiz",
+      "question": "A statue, 1.6 m tall, stands on the top of a pedestal. From a point on the ground, the angle of elevation of the top of the statue is 60° and from the same point the angle of elevation of the top of the pedestal is 45°. Find the height of the pedestal.",
+      "question_hi": "एक पेडस्टल के शिखर पर एक 1.6 मीटर ऊंची मूर्ति लगी है। भूमि के एक बिंदु से मूर्ति के शिखर का उन्नयन कोण 60° है और उसी बिंदु से पेडस्टल के शिखर का उन्नयन कोण 45° है। पेडस्टल की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "0.8(√3 + 1) m",
+        "1.6(√3 + 1) m",
+        "0.8(√3 - 1) m",
+        "1.6(√3 - 1) m"
+      ],
+      "options_hi": [
+        "0.8(√3 + 1) मीटर",
+        "1.6(√3 + 1) मीटर",
+        "0.8(√3 - 1) मीटर",
+        "1.6(√3 - 1) मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Let height of pedestal be h. Base x = h / tan 45° = h. Total height h + 1.6 = x tan 60° = h√3 => h(√3 - 1) = 1.6 => h = 1.6 / (√3 - 1) = 0.8(√3 + 1) m.",
+      "explanation_hi": "माना पेडस्टल की ऊँचाई h है। आधार x = h / tan 45° = h। कुल ऊँचाई h + 1.6 = x tan 60° = h√3 => h(√3 - 1) = 1.6 => h = 1.6 / (√3 - 1) = 0.8(√3 + 1) मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_6",
+      "type": "quiz",
+      "question": "The angle of elevation of the top of a building from the foot of the tower is 30° and the angle of elevation of the top of the tower from the foot of the building is 60°. If the tower is 50 m high, find the height of the building.",
+      "question_hi": "एक मीनार के पाद-बिंदु से एक भवन के शिखर का उन्नयन कोण 30° है और भवन के पाद-बिंदु से मीनार के शिखर का उन्नयन कोण 60° है। यदि मीनार 50 मीटर ऊंची हो, तो भवन की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "16.67 m",
+        "25 m",
+        "50√3 m",
+        "15 m"
+      ],
+      "options_hi": [
+        "16.67 मीटर",
+        "25 मीटर",
+        "50√3 मीटर",
+        "15 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Base x = 50 / tan 60° = 50/√3 m. Height of building h = x tan 30° = (50/√3) * (1/√3) = 50/3 = 16.67 m.",
+      "explanation_hi": "आधार x = 50 / tan 60° = 50/√3 मीटर। भवन की ऊँचाई h = x tan 30° = (50/√3) * (1/√3) = 50/3 = 16.67 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_7",
+      "type": "quiz",
+      "question": "Two poles of equal heights are standing opposite each other on either side of the road, which is 80 m wide. From a point between them on the road, the angles of elevation of the top of the poles are 60° and 30°, respectively. Find the height of the poles.",
+      "question_hi": "एक 80 मीटर चौड़ी सड़क के दोनों ओर आमने-सामने समान लंबाई वाले दो खंभे लगे हुए हैं। इन दोनों खंभों के बीच सड़क के एक बिंदु से खंभों के शिखर के उन्नयन कोण क्रमशः 60° और 30° हैं। खंभों की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "20√3 m",
+        "40√3 m",
+        "10√3 m",
+        "30√3 m"
+      ],
+      "options_hi": [
+        "20√3 मीटर",
+        "40√3 मीटर",
+        "10√3 मीटर",
+        "30√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Let height be h. Distances are x and 80-x. h = x tan 60° = √3 x, h = (80-x) tan 30° = (80-x)/√3. So √3 x = (80-x)/√3 => 3x = 80-x => 4x = 80 => x = 20. h = 20√3 m.",
+      "explanation_hi": "माना ऊँचाई h है। दूरियां x और 80-x हैं। h = x tan 60° = √3 x, h = (80-x) tan 30° = (80-x)/√3। तो √3 x = (80-x)/√3 => 3x = 80-x => 4x = 80 => x = 20। h = 20√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_8",
+      "type": "quiz",
+      "question": "A TV tower stands vertically on a bank of a canal. From a point on the other bank directly opposite the tower, the angle of elevation of the top of the tower is 60°. From another point 20 m away from this point on the line joining this point to the foot of the tower, the angle of elevation of the top of the tower is 30°. Find the height of the tower.",
+      "question_hi": "एक नहर के एक तट पर एक टीवी टावर ऊर्ध्वाधर खड़ा है। टावर के ठीक सामने दूसरे तट के एक अन्य बिंदु से टावर के शिखर का उन्नयन कोण 60° है। इसी तट पर इस बिंदु से 20 मीटर दूर और इस बिंदु को मीनार के पाद से मिलाने वाली रेखा पर स्थित एक अन्य बिंदु से टावर के शिखर का उन्नयन कोण 30° है। टावर की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "10√3 m",
+        "20√3 m",
+        "10 m",
+        "30√3 m"
+      ],
+      "options_hi": [
+        "10√3 मीटर",
+        "20√3 मीटर",
+        "10 मीटर",
+        "30√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Let width of canal be x and height be h. h = x tan 60° = x√3. Also h = (x+20) tan 30° = (x+20)/√3. So x√3 = (x+20)/√3 => 3x = x+20 => 2x = 20 => x=10. h = 10√3 m.",
+      "explanation_hi": "माना नहर की चौड़ाई x है और ऊँचाई h है। h = x tan 60° = x√3। और h = (x+20) tan 30° = (x+20)/√3। अतः x√3 = (x+20)/√3 => 3x = x+20 => 2x = 20 => x=10। h = 10√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_9",
+      "type": "quiz",
+      "question": "From the top of a 7 m high building, the angle of elevation of the top of a cable tower is 60° and the angle of depression of its foot is 45°. Determine the height of the tower.",
+      "question_hi": "एक 7 मीटर ऊंचे भवन के शिखर से एक केबल टावर के शिखर का उन्नयन कोण 60° है और इसके पाद का अवनमन कोण 45° है। टावर की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "7(√3 + 1) m",
+        "7(√3 - 1) m",
+        "14 m",
+        "14√3 m"
+      ],
+      "options_hi": [
+        "7(√3 + 1) मीटर",
+        "7(√3 - 1) मीटर",
+        "14 मीटर",
+        "14√3 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Base x = 7 / tan 45° = 7. Height above building = x tan 60° = 7√3. Total height = 7 + 7√3 = 7(√3 + 1) m.",
+      "explanation_hi": "आधार x = 7 / tan 45° = 7. भवन के ऊपर की ऊँचाई = x tan 60° = 7√3. कुल ऊँचाई = 7 + 7√3 = 7(√3 + 1) मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_10",
+      "type": "quiz",
+      "question": "As observed from the top of a 75 m high lighthouse from the sea-level, the angles of depression of two ships are 30° and 45°. If one ship is exactly behind the other on the same side of the lighthouse, find the distance between the two ships.",
+      "question_hi": "समुद्र तल से 75 मीटर ऊंचे लाइटहाउस के शिखर से देखने पर दो समुद्री जहाजों के अवनमन कोण 30° और 45° हैं। यदि लाइटहाउस के एक ही ओर एक जहाज दूसरे जहाज के ठीक पीछे हो, तो दो जहाजों के बीच की दूरी ज्ञात कीजिए।",
+      "options": [
+        "75(√3 - 1) m",
+        "75(√3 + 1) m",
+        "75√3 m",
+        "75 m"
+      ],
+      "options_hi": [
+        "75(√3 - 1) मीटर",
+        "75(√3 + 1) मीटर",
+        "75√3 मीटर",
+        "75 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Distance of first ship = 75 / tan 45° = 75 m. Distance of second ship = 75 / tan 30° = 75√3 m. Distance between them = 75√3 - 75 = 75(√3 - 1) m.",
+      "explanation_hi": "पहले जहाज की दूरी = 75 / tan 45° = 75 मीटर। दूसरे जहाज की दूरी = 75 / tan 30° = 75√3 मीटर। उनके बीच की दूरी = 75√3 - 75 = 75(√3 - 1) मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_11",
+      "type": "quiz",
+      "question": "A 1.2 m tall girl spots a balloon moving with the wind in a horizontal line at a height of 88.2 m from the ground. The angle of elevation of the balloon from the eyes of the girl at any instant is 60°. After some time, the angle of elevation reduces to 30°. Find the distance travelled by the balloon during the interval.",
+      "question_hi": "एक 1.2 मीटर लंबी लड़की भूमि से 88.2 मीटर की ऊँचाई पर एक क्षैतिज रेखा में हवा में उड़ रहे एक गुब्बारे को देखती है। किसी भी क्षण लड़की की आंख से गुब्बारे का उन्नयन कोण 60° है। कुछ समय बाद, उन्नयन कोण घटकर 30° हो जाता है। इस अंतराल के दौरान गुब्बारे द्वारा तय की गई दूरी ज्ञात कीजिए।",
+      "options": [
+        "58√3 m",
+        "87√3 m",
+        "29√3 m",
+        "58 m"
+      ],
+      "options_hi": [
+        "58√3 मीटर",
+        "87√3 मीटर",
+        "29√3 मीटर",
+        "58 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Height above eyes = 88.2 - 1.2 = 87 m. Initial dist x1 = 87 / tan 60° = 87/√3 = 29√3 m. Final dist x2 = 87 / tan 30° = 87√3 m. Distance travelled = 87√3 - 29√3 = 58√3 m.",
+      "explanation_hi": "आँखों से ऊपर की ऊँचाई = 88.2 - 1.2 = 87 मीटर। प्रारंभिक दूरी x1 = 87 / tan 60° = 87/√3 = 29√3 मीटर। अंतिम दूरी x2 = 87 / tan 30° = 87√3 मीटर। तय की गई दूरी = 87√3 - 29√3 = 58√3 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_12",
+      "type": "quiz",
+      "question": "A straight highway leads to the foot of a tower. A man standing at the top of the tower observes a car at an angle of depression of 30°, which is approaching the foot of the tower with a uniform speed. Six seconds later, the angle of depression of the car is found to be 60°. Find the time taken by the car to reach the foot of the tower from this point.",
+      "question_hi": "एक सीधा राजमार्ग एक मीनार के पाद तक जाता है। मीनार के शिखर पर खड़ा एक आदमी एक कार को 30° के अवनमन कोण पर देखता है, जो एक समान गति से मीनार के पाद की ओर आ रही है। छह सेकंड बाद, कार का अवनमन कोण 60° हो जाता है। इस बिंदु से मीनार के पाद तक पहुँचने में कार द्वारा लिया गया समय ज्ञात कीजिए।",
+      "options": [
+        "3 seconds",
+        "2 seconds",
+        "4 seconds",
+        "6 seconds"
+      ],
+      "options_hi": [
+        "3 सेकंड",
+        "2 सेकंड",
+        "4 सेकंड",
+        "6 सेकंड"
+      ],
+      "correct_index": 0,
+      "explanation": "Distances from foot are x and y. h = x tan 60° = y tan 30° => x√3 = y/√3 => y = 3x. Distance travelled in 6s is y - x = 2x. Speed v = 2x/6 = x/3. Time to cover remaining distance x is x / (x/3) = 3 seconds.",
+      "explanation_hi": "पाद से दूरियां x और y हैं। h = x tan 60° = y tan 30° => x√3 = y/√3 => y = 3x. 6 सेकंड में तय की गई दूरी y - x = 2x है। गति v = 2x/6 = x/3. शेष दूरी x तय करने में लगा समय x / (x/3) = 3 सेकंड है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_13",
+      "type": "quiz",
+      "question": "The angles of elevation of the top of a tower from two points at a distance of 4 m and 9 m from the base of the tower and in the same straight line with it are complementary. Prove that the height of the tower is 6 m. What is the height?",
+      "question_hi": "मीनार के आधार से और एक सरल रेखा में 4 मीटर और 9 मीटर की दूरी पर स्थित दो बिंदुओं से मीनार के शिखर के उन्नयन कोण पूरक हैं। सिद्ध कीजिए कि मीनार की ऊँचाई 6 मीटर है। ऊँचाई क्या है?",
+      "options": [
+        "6 m",
+        "5 m",
+        "13 m",
+        "36 m"
+      ],
+      "options_hi": [
+        "6 मीटर",
+        "5 मीटर",
+        "13 मीटर",
+        "36 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "If angles are θ and 90°-θ, tan θ = h/4 and tan(90°-θ) = cot θ = h/9. Multiplying both, tan θ * cot θ = (h/4)*(h/9) => 1 = h²/36 => h² = 36 => h = 6 m.",
+      "explanation_hi": "यदि कोण θ और 90°-θ हैं, तो tan θ = h/4 और tan(90°-θ) = cot θ = h/9। दोनों को गुणा करने पर, tan θ * cot θ = (h/4)*(h/9) => 1 = h²/36 => h² = 36 => h = 6 मीटर।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_14",
+      "type": "quiz",
+      "question": "If the length of the shadow of a tower is √3 times its height, then the angle of elevation of the sun is:",
+      "question_hi": "यदि किसी मीनार की छाया की लंबाई उसकी ऊँचाई की √3 गुनी है, तो सूर्य का उन्नयन कोण है:",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "options_hi": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correct_index": 0,
+      "explanation": "tan θ = height / shadow = h / (h√3) = 1/√3. Therefore, θ = 30°.",
+      "explanation_hi": "tan θ = ऊँचाई / छाया = h / (h√3) = 1/√3। इसलिए, θ = 30°।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch9_15",
+      "type": "quiz",
+      "question": "A tree breaks due to storm and the broken part bends so that the top of the tree touches the ground making an angle 30° with it. The distance between the foot of the tree to the point where the top touches the ground is 8 m. Find the total height of the tree.",
+      "question_hi": "आंधी आने से एक पेड़ टूट जाता है और टूटा हुआ भाग इस तरह मुड़ जाता है कि पेड़ का शिखर जमीन को छूने लगता है और इसके साथ 30° का कोण बनाता है। पेड़ के पाद-बिंदु की उस बिंदु से दूरी जहाँ शिखर जमीन को छूता है, 8 मीटर है। पेड़ की कुल ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        "8√3 m",
+        "16√3 m",
+        "24 m",
+        "8 m"
+      ],
+      "options_hi": [
+        "8√3 मीटर",
+        "16√3 मीटर",
+        "24 मीटर",
+        "8 मीटर"
+      ],
+      "correct_index": 0,
+      "explanation": "Height of standing part = 8 tan 30° = 8/√3. Length of broken part = 8 / cos 30° = 16/√3. Total height = 8/√3 + 16/√3 = 24/√3 = 8√3 m.",
+      "explanation_hi": "खड़े भाग की ऊँचाई = 8 tan 30° = 8/√3। टूटे हुए भाग की लंबाई = 8 / cos 30° = 16/√3। कुल ऊँचाई = 8/√3 + 16/√3 = 24/√3 = 8√3 मीटर।"
+    }
+  ]
+}

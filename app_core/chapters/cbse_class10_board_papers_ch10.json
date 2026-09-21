@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "id": "cbse_class10_board_papers_ch10",
+    "title": "Maths (Standard) - March 2024 (Solved)",
+    "subject": "Board Papers",
+    "grade": "10",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Real Numbers and Polynomials",
+      "Pair of Linear Equations in Two Variables and Quadratic Equations",
+      "Arithmetic Progressions and Coordinate Geometry",
+      "Triangles, Circles, and Trigonometry",
+      "Applications of Trigonometry and Mensuration",
+      "Statistics and Probability"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_0_1",
+      "type": "hook",
+      "title": "The Ancient Cryptographer's Puzzle",
+      "body": "Imagine you are standing before a massive, ancient vault door in Alexandria, sealed thousands of years ago. On the stone facade, mathematicians carved a riddle involving the invisible building blocks of numbers—primes that cannot be broken down any further—and parabolic curves that predict the paths of celestial bodies. The vault won't open with physical keys; it requires an unbreakable code built on the fundamental theorem of arithmetic and the geometric behavior of polynomial roots. Welcome to the gateway of Real Numbers and Polynomials, where abstract algebra dictates the architecture of our universe."
+    },
+    {
+      "id": "KOBJ_0_2",
+      "type": "socratic",
+      "question": "If you take any composite number, say 84, and break it down into its prime factors (2 × 2 × 3 × 7), does the order in which you discover these prime factors change the final prime factorization?",
+      "options": [
+        "Yes, the prime factorization depends entirely on the method used to divide the number.",
+        "No, the prime factorization is unique except for the order in which the prime factors are written.",
+        "Only if the number is even; odd numbers have multiple unique prime factorizations.",
+        "It depends on whether we include negative integers in our calculation."
+      ],
+      "correct_index": 1,
+      "explanation": "This is the essence of the Fundamental Theorem of Arithmetic! Every composite number can be expressed as a product of primes, and this factorization is unique, apart from the order of the prime factors."
+    },
+    {
+      "id": "KOBJ_0_3",
+      "type": "theory",
+      "title": "Real Numbers and Polynomials: Deep Dive",
+      "body": "In the realm of Grade 10 Mathematics, mastering Real Numbers and Polynomials requires moving past mere arithmetic computation into structural understanding. We begin with the Fundamental Theorem of Arithmetic, which states that every integer greater than 1 either is a prime number itself or can be represented as a unique product of prime numbers. This deceptively simple theorem is the backbone of modern cryptography and allows us to easily compute HCF and LCM using prime factorization, as well as prove the irrationality of numbers like √2 and √3 via proof by contradiction. Transitioning into polynomials, an expression of the form p(x) = anx^n + an-1x^n-1 + ... + a0 serves as an algebraic engine where the degree of the polynomial dictates its maximum potential behavior. For quadratic polynomials of the form ax² + bx + c, the relationship between coefficients and zeroes forms a powerful bridge: the sum of zeroes equals -b/a, and the product of zeroes equals c/a. Furthermore, the Graphical Meaning of Zeroes tells us that the zeroes of a polynomial are precisely the x-coordinates of the points where its graph intersects the x-axis. Whether we are utilizing Euclid's Division Lemma to find Highest Common Factors or applying the Division Algorithm for polynomials to break down complex expressions into linear factors, these tools empower us to model real-world phenomena—from projectile motion to economic forecasting—with absolute mathematical precision.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_0_4",
+      "type": "knowledge_check",
+      "question": "If α and β are the zeroes of the quadratic polynomial p(x) = 2x² - 5x + 3, what is the exact value of α² + β²?",
+      "options": [
+        "25/4",
+        "13/4",
+        "7/4",
+        "19/4"
+      ],
+      "correct_index": 1,
+      "explanation": "For 2x² - 5x + 3, a = 2, b = -5, c = 3. The sum of zeroes α + β = -(-5)/2 = 5/2, and the product αβ = 3/2. Using the algebraic identity α² + β² = (α + β)² - 2αβ, we substitute the values: (5/2)² - 2(3/2) = 25/4 - 3 = 25/4 - 12/4 = 13/4."
+    },
+    {
+      "id": "AP_CG_2024_1",
+      "type": "hook",
+      "title": "The Ancient Architect's Blueprint",
+      "body": "Imagine you are an architect designing a grand amphitheater in ancient Greece. The first row has 20 seats, the second has 23, the third has 26, and so on, growing by a fixed rhythm. Meanwhile, you need to plot the exact coordinates of the royal pillars on a vast marble grid. How do the steady heartbeat of numbers (Arithmetic Progressions) and the silent grid of space (Coordinate Geometry) unite to help you map the universe?"
+    },
+    {
+      "id": "AP_CG_2024_2",
+      "type": "socratic",
+      "question": "If an Arithmetic Progression starts at 5 and increases by a common difference of 4, what will be the exact coordinate of the 10th term if we plot the term number on the x-axis and the term value on the y-axis?",
+      "options": [
+        "(10, 41)",
+        "(9, 41)",
+        "(10, 45)",
+        "(41, 10)"
+      ],
+      "correct_index": 0,
+      "explanation": "The n-th term of an AP is given by a_n = a + (n - 1)d. Here, a = 5, d = 4, and n = 10. So, a_10 = 5 + (10 - 1)(4) = 5 + 36 = 41. Plotting term number (x = 10) against term value (y = 41) gives the coordinate (10, 41)."
+    },
+    {
+      "id": "AP_CG_2024_3",
+      "type": "theory",
+      "title": "Bridging Sequences and Space: The Core Mechanics",
+      "body": "In the March 2024 Standard Mathematics board paper, questions blending Arithmetic Progressions (AP) and Coordinate Geometry test a student's ability to transition from algebraic sequences to geometric visualizations. An AP is fundamentally a linear relationship where terms progress by a constant common difference ($d$). When we translate this to the Cartesian plane, each term $a_n$ corresponding to its index $n$ forms a discrete set of points $(n, a_n)$ that lie perfectly on a straight line, embodying the equation $y = mx + c$. Mastery of this section requires fluent navigation between the $n$-th term formula $a_n = a + (n-1)d$, the sum of $n$ terms $S_n = \frac{n}{2}[2a + (n-1)d]$, and coordinate geometry tools such as the distance formula, section formula, and slope. For instance, board problems frequently ask us to prove collinearity of points derived from sequence terms, or to find coordinates that divide a line segment in a ratio determined by an AP sum. By understanding that a sequence is simply a function defined on natural numbers, we unlock the power to solve complex multi-concept board problems with absolute clarity and mathematical elegance.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 6
+    },
+    {
+      "id": "AP_CG_2024_4",
+      "type": "knowledge_check",
+      "question": "The points A(2, 3), B(4, k), and C(6, -3) are collinear. If the y-coordinates of these points form an Arithmetic Progression, what is the value of k?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "correct_index": 0,
+      "explanation": "Since the y-coordinates (3, k, -3) form an AP, the middle term must be the arithmetic mean of the outer terms: k = (3 + (-3)) / 2 = 0. Furthermore, collinearity confirms this slope consistency."
+    },
+    {
+      "id": "KOBJ_3_1",
+      "type": "hook",
+      "title": "The Ancient Surveyor's Secret",
+      "body": "Imagine standing at the base of a towering, unscalable cliff, needing to know its exact height without ever climbing it. Over two thousand years ago, ancient Greek mathematicians realized that the secret didn't lie in physical measurement, but in the invisible, rigid proportions of triangles and the sweeping symmetry of circles. By looking at how shadows stretch across the earth and how angles lock shapes into unchanging relationships, they unlocked a universal code. Today, this exact code—combining Triangles, Circles, and Trigonometry—serves as the mathematical backbone for everything from GPS satellite navigation to the computer graphics in modern video games."
+    },
+    {
+      "id": "KOBJ_3_2",
+      "type": "socratic",
+      "question": "If you draw a right-angled triangle inside a semicircle such that the hypotenuse is the diameter of the circle, where does the opposite vertex always lie?",
+      "options": [
+        "Strictly inside the circle",
+        "Strictly outside the circle",
+        "On the circumference of the circle",
+        "At the exact center of the circle"
+      ],
+      "correct_index": 2,
+      "explanation": "This is a direct application of Thales's Theorem. Any angle subtended by a diameter at the circumference of a circle is always a right angle (90 degrees). Therefore, the vertex opposite the diameter must touch the circumference."
+    },
+    {
+      "id": "KOBJ_3_3",
+      "type": "theory",
+      "title": "Triangles, Circles, and Trigonometry: Deep Dive",
+      "body": "In the Grade 10 Mathematics curriculum, the convergence of triangles, circles, and trigonometry represents the pinnacle of geometric reasoning, frequently appearing in high-weightage board exam problems. The foundation rests heavily on similarity (such as Basic Proportionality Theorem / Thales's Theorem) where ratios of corresponding sides in equiangular triangles remain constant. When we transition to circles, theorems concerning tangents—specifically that the tangent at any point of a circle is perpendicular to the radius through the point of contact, and that lengths of tangents drawn from an external point are equal—frequently merge with right-triangle properties (like Pythagoras' theorem) to solve complex multi-step rider problems. Trigonometry acts as the ultimate algebraic bridge, translating geometric lengths and angles into solvable ratios: Sine, Cosine, and Tangent. In standard board exam questions (like those from March 2024), examiners love to test your ability to construct auxiliary lines—such as connecting radii to points of tangency or dropping altitudes—thereby creating hidden right-angled triangles within circular frameworks. By mastering how side-splitter ratios, cyclic properties, tangent-secant theorems, and trigonometric identities interact, you eliminate guesswork. You learn to see every complex figure not as a chaotic puzzle, but as a harmonious assembly of predictable, interlocking geometric laws that yield exact numerical solutions."
+    },
+    {
+      "id": "KOBJ_3_4",
+      "type": "knowledge_check",
+      "question": "From a point Q, the length of the tangent to a circle is 24 cm and the distance of Q from the centre is 25 cm. What is the radius of the circle?",
+      "options": [
+        "7 cm",
+        "12 cm",
+        "15 cm",
+        "24.5 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "The radius drawn to the point of contact is perpendicular to the tangent. This forms a right-angled triangle where the hypotenuse is the distance from the centre to Q (25 cm), one leg is the tangent length (24 cm), and the other leg is the radius (r). By Pythagoras' theorem: r^2 = 25^2 - 24^2 = 625 - 576 = 49. Therefore, r = 7 cm.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_TRIG_MENS_1",
+      "type": "hook",
+      "title": "The Ancient Surveyor's Secret",
+      "body": "Imagine you are standing at the base of the majestic Qutub Minar, tasked with finding its exact height without ever climbing it with a measuring tape. Centuries before modern lasers, ancient mathematicians realized they didn't need to touch the top of a monument to measure it. By simply measuring the angle at which their eyes looked up and the distance they stood from the base, they unlocked a hidden geometric bridge connecting angles to lengths. This magical bridge is Trigonometry, and when combined with Mensuration—the mathematics of calculating areas and volumes—it allows us to map the physical world, build skyscrapers, and navigate the stars."
+    },
+    {
+      "id": "KOBJ_TRIG_MENS_2",
+      "type": "socratic",
+      "question": "If you walk further away from a tall lighthouse, what happens to the angle of elevation from the ground to the top of the lighthouse?",
+      "options": [
+        "The angle increases because you are looking from a wider perspective.",
+        "The angle decreases because you have to tilt your head down less to see the top.",
+        "The angle stays exactly the same regardless of your distance.",
+        "The angle drops to zero instantly."
+      ],
+      "correct_index": 1,
+      "explanation": "As you move further away from an object, the height remains constant while the horizontal distance increases. In a right-angled triangle, the ratio of perpendicular to base decreases, which means the angle of elevation must decrease."
+    },
+    {
+      "id": "KOBJ_TRIG_MENS_3",
+      "type": "theory",
+      "title": "Applications of Trigonometry and Mensuration: Deep Dive",
+      "body": "In board examinations, problems merging Applications of Trigonometry with Mensuration test your ability to translate a complex, multi-layered real-world scenario into precise mathematical models. Trigonometry provides the tools—specifically the trigonometric ratios (sine, cosine, tangent) working within right-angled triangles—to determine unknown heights and distances using angles of elevation and depression. Meanwhile, Mensuration steps in to calculate surface areas, curved areas, and volumes of composite solid figures such as tents, towers, silos, and toys formed by combining cones, cylinders, and hemispheres. When solving these problems, the process begins by visualizing or sketching the scenario accurately. You must clearly identify the line of sight, the horizontal line, and the right-angled triangles embedded within or formed by the physical structures. For instance, finding the total canvas required for a tent shaped like a cylinder surmounted by a cone requires using trigonometry to find the slant height or radius, and then applying mensuration formulas (curved surface area of cylinder + curved surface area of cone) to compute the final answer. Mastery of this dual domain requires rigorous attention to units, precise values of trigonometric ratios for standard angles (0°, 30°, 45°, 60°, 90°), and a systematic, step-by-step algebraic approach to isolate unknown variables.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_TRIG_MENS_4",
+      "type": "knowledge_check",
+      "question": "The angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of the tower, is 30°. What is the height of the tower?",
+      "options": [
+        "10√3 m",
+        "30√3 m",
+        "15 m",
+        "10/√3 m"
+      ],
+      "correct_index": 0,
+      "explanation": "Let h be the height of the tower. In the right-angled triangle, tan(30°) = height / base = h / 30. Since tan(30°) = 1/√3, we have h / 30 = 1/√3. Therefore, h = 30 / √3 = (10 × 3 × √3) / 3 = 10√3 meters.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_STATS_1",
+      "type": "hook",
+      "title": "The Weather Forecaster's Dilemma",
+      "body": "Imagine you are running a massive outdoor music festival in March. The weather report says: 'There is a 70% chance of rain.' Do you spend thousands of dollars building a massive tent roof, or do you risk it and let the music play under the open sky? This is the eternal dance between data and uncertainty—statistics tells us what has happened in past Marches, while probability whispers what might happen today. In the Board Exam, mastering these two twin pillars doesn't just guarantee marks; it gives you the mathematical superpower to tame randomness."
+    },
+    {
+      "id": "KOBJ_STATS_2",
+      "type": "socratic",
+      "question": "If the mean of a frequency distribution is 25 and the median is 24, what can you intuitively infer about the mode using the empirical relationship?",
+      "options": [
+        "Mode is greater than 25",
+        "Mode is approximately 22",
+        "Mode is exactly equal to 24.5",
+        "Mode cannot be determined without raw data"
+      ],
+      "correct_index": 1,
+      "explanation": "According to the empirical relationship for moderately skewed distributions, Mode = 3(Median) - 2(Mean). Substituting the values: Mode = 3(24) - 2(25) = 72 - 50 = 22."
+    },
+    {
+      "id": "KOBJ_STATS_3",
+      "type": "theory",
+      "title": "Deconstructing Central Tendency and Experimental Uncertainty",
+      "body": "When tackling Board Exam problems in Statistics and Probability, you must view formulas not as rigid rules to memorize, but as logical instruments designed to summarize chaos. For grouped data, the mean can be calculated via the direct method, assumed mean method, or step-deviation method ($\\bar{x} = a + h \\frac{\\sum f_i u_i}{\\sum f_i}$), each engineered to reduce computational fatigue with large numbers. The median formula ($L + \\frac{\\frac{n}{2} - cf}{f} \\times h$) relies on cumulative frequencies to locate the exact middle value within continuous class intervals, where $L$ is the lower limit of the median class and $f$ is its frequency. Meanwhile, probability in Grade 10 transitions from intuitive guessing to rigorous sample space analysis, governed by the foundational law $P(E) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of equally likely outcomes}}$, along with the vital complementary relation $P(E) + P(\\bar{E}) = 1$. Whether you are calculating the missing frequencies in a median distribution or determining the odds of drawing two consecutive ace cards from a well-shuffled deck, success depends on meticulous table construction, clear identification of lower limits and class sizes ($h$), and treating every decimal place with absolute mathematical respect.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_STATS_4",
+      "type": "knowledge_check",
+      "question": "A box contains 5 red marbles, 8 white marbles, and 4 green marbles. One marble is taken out of the box at random. What is the probability that the marble taken out is not green?",
+      "options": [
+        "4/17",
+        "13/17",
+        "5/17",
+        "8/17"
+      ],
+      "correct_index": 1,
+      "explanation": "Total marbles = 5 (red) + 8 (white) + 4 (green) = 17. The number of marbles that are NOT green is 5 + 8 = 13. Therefore, P(not green) = 13/17."
+    }
+  ]
+}

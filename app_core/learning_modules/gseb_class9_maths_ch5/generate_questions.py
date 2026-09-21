@@ -1,0 +1,126 @@
+import json
+
+target_dir = "/home/ubuntu/Shine_Academy_Naroda/app_core/learning_modules/gseb_class9_maths_ch5"
+
+question_bank = [
+  {
+    "id": "Q_GSEB_M9_CH5_001",
+    "chapter_id": "GSEB_M9_CH5",
+    "topic_id": "KOBJ_GSEB_M9_CH5_006",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": ["axioms", "euclid", "geometry"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "Which of the following needs a proof?",
+    "answer": "Theorem",
+    "options": ["Axiom", "Theorem", "Postulate", "Definition"],
+    "explanation": "A theorem requires a logical proof, whereas axioms and postulates are assumed to be true without proof.",
+    "distractor_rationale": "Axioms and postulates are assumptions that are obvious universal truths and do not need proof. Definitions describe the terms.",
+    "ai_context": {
+      "learning_goal": "Understand the difference between axioms, postulates, and theorems.",
+      "common_misconceptions": ["Thinking axioms require proof."],
+      "hint": "What do we call a mathematical statement that we have to prove using logic?"
+    }
+  },
+  {
+    "id": "Q_GSEB_M9_CH5_002",
+    "chapter_id": "GSEB_M9_CH5",
+    "topic_id": "KOBJ_GSEB_M9_CH5_004",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": ["point", "dimension", "geometry"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "Medium",
+    "question_text": "According to Euclid's definitions, a point has how many dimensions?",
+    "answer": "0",
+    "options": ["0", "1", "2", "3"],
+    "explanation": "Euclid defines a point as 'that which has no part', meaning it has no length, width, or depth (zero dimensions).",
+    "distractor_rationale": "A line has 1 dimension. A surface has 2 dimensions. A solid has 3 dimensions.",
+    "ai_context": {
+      "learning_goal": "Memorize Euclid's fundamental definitions of dimensions.",
+      "common_misconceptions": ["Assuming a point drawn on paper has physical thickness (dimension)."],
+      "hint": "Think about the definition of a point. Does it have length or width?"
+    }
+  },
+  {
+    "id": "Q_GSEB_M9_CH5_003",
+    "chapter_id": "GSEB_M9_CH5",
+    "topic_id": "KOBJ_GSEB_M9_CH5_007",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["axioms", "equals", "geometry"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "If A = B and B = C, then according to Euclid's axiom, which of the following is true?",
+    "answer": "A = C",
+    "options": ["A = C", "A > C", "A < C", "A = 2C"],
+    "explanation": "According to Euclid's first axiom, 'Things which are equal to the same thing are equal to one another.'",
+    "distractor_rationale": "The axiom specifically relates equality. A > C or A < C would imply inequality.",
+    "ai_context": {
+      "learning_goal": "Apply Euclid's axioms to abstract mathematical values.",
+      "common_misconceptions": ["Failing to link logical transitivity to geometric axioms."],
+      "hint": "If John has the same money as Alice, and Alice has the same money as Bob, how does John's money relate to Bob's?"
+    }
+  },
+  {
+    "id": "Q_GSEB_M9_CH5_004",
+    "chapter_id": "GSEB_M9_CH5",
+    "topic_id": "KOBJ_GSEB_M9_CH5_013",
+    "type": "mcq",
+    "difficulty": "Advanced",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Analyzing",
+    "keywords": ["postulate", "parallel lines", "geometry"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "High",
+    "question_text": "Playfair's Axiom is an equivalent version of which of Euclid's postulates?",
+    "answer": "Fifth Postulate",
+    "options": ["First Postulate", "Third Postulate", "Fifth Postulate", "Second Postulate"],
+    "explanation": "Playfair's Axiom is a simplified equivalent statement of Euclid's Fifth Postulate, which deals with parallel lines.",
+    "distractor_rationale": "The other postulates deal with drawing lines (1st), extending lines (2nd), and drawing circles (3rd). The 5th is about intersection and parallels.",
+    "ai_context": {
+      "learning_goal": "Recognize equivalent versions of Euclid's fifth postulate.",
+      "common_misconceptions": ["Thinking Playfair's Axiom is unrelated to Euclid's work."],
+      "hint": "Which postulate famously defines the conditions for two lines to be parallel?"
+    }
+  },
+  {
+    "id": "Q_GSEB_M9_CH5_005",
+    "chapter_id": "GSEB_M9_CH5",
+    "topic_id": "KOBJ_GSEB_M9_CH5_010",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB", "CBSE"],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": ["postulate", "circle", "radius"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "Medium",
+    "question_text": "Which postulate states that a circle can be drawn with any centre and any radius?",
+    "answer": "Postulate 3",
+    "options": ["Postulate 1", "Postulate 2", "Postulate 3", "Postulate 4"],
+    "explanation": "Euclid's Postulate 3 explicitly states: 'A circle can be drawn with any centre and any radius.'",
+    "distractor_rationale": "Postulate 1 is about drawing a line between two points. Postulate 2 is about extending lines. Postulate 4 is about right angles.",
+    "ai_context": {
+      "learning_goal": "Identify Euclid's third postulate.",
+      "common_misconceptions": ["Confusing the postulates for drawing lines and circles."],
+      "hint": "Think about what shape is defined by a centre and a radius."
+    }
+  }
+]
+
+with open(f"{target_dir}/question_bank.json", "w") as f:
+    json.dump(question_bank, f, indent=2)
+
+print("Generated question_bank.json")

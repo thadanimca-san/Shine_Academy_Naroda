@@ -1,0 +1,570 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_01",
+    "type": "hook",
+    "title": "The Mystery of the Pyramids",
+    "title_hi": "पिरामिड का रहस्य",
+    "body": "Have you ever wondered how the ancient Egyptians built the massive Pyramids without modern lasers or measuring tapes? They used the magic of similar shapes!",
+    "body_hi": "क्या आपने कभी सोचा है कि प्राचीन मिस्रवासियों ने बिना आधुनिक लेजर या मापने वाले टेप के विशाल पिरामिड कैसे बनाए? उन्होंने समरूप आकृतियों के जादू का इस्तेमाल किया!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_02",
+    "type": "socratic",
+    "question": "If I take a photo of you and zoom in, do you look the same or different? What changes?",
+    "question_hi": "अगर मैं आपकी तस्वीर लेता हूँ और उसे ज़ूम करता हूँ, तो क्या आप वही दिखते हैं या अलग? क्या बदलता है?",
+    "options": [
+      "Shape changes, size remains same",
+      "Size changes, shape remains same",
+      "Both change",
+      "Neither changes"
+    ],
+    "options_hi": [
+      "आकार बदलता है, परिमाण वही रहता है",
+      "परिमाण बदलता है, आकार वही रहता है",
+      "दोनों बदलते हैं",
+      "कोई नहीं बदलता"
+    ],
+    "correct_index": 1,
+    "explanation": "When we zoom in, the size (dimension) increases, but the shape (proportions) remains exactly the same. This is the core of Similarity!",
+    "explanation_hi": "जब हम ज़ूम करते हैं, तो परिमाण (आयाम) बढ़ता है, लेकिन आकार (अनुपात) बिल्कुल वही रहता है। यह समरूपता का मूल है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_03",
+    "type": "discovery",
+    "title": "Exploring Congruence vs Similarity",
+    "title_hi": "सर्वांगसमता बनाम समरूपता की खोज",
+    "body": "Look at your two hands. They are identical in shape and size (Congruent). Now compare a real car with a toy car. They look identical in shape, but different in size (Similar).",
+    "body_hi": "अपने दोनों हाथों को देखें। वे आकार और परिमाण में समान हैं (सर्वांगसम)। अब एक असली कार की तुलना एक खिलौना कार से करें। वे आकार में समान दिखते हैं, लेकिन परिमाण में भिन्न होते हैं (समरूप)।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_04",
+    "type": "reveal",
+    "title": "Similar Figures Definition",
+    "title_hi": "समरूप आकृतियों की परिभाषा",
+    "body": "Two polygons of the same number of sides are similar, if (i) their corresponding angles are equal and (ii) their corresponding sides are in the same ratio (or proportion).",
+    "body_hi": "समान भुजाओं वाले दो बहुभुज समरूप होते हैं, यदि (i) उनके संगत कोण बराबर हों और (ii) उनकी संगत भुजाएँ एक ही अनुपात (या समानुपात) में हों।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_05",
+    "type": "knowledge_check",
+    "question": "Are all circles similar?",
+    "question_hi": "क्या सभी वृत्त समरूप होते हैं?",
+    "options": [
+      "Yes",
+      "No",
+      "Only if they have same radius",
+      "Cannot say"
+    ],
+    "options_hi": [
+      "हाँ",
+      "नहीं",
+      "केवल अगर उनकी त्रिज्या समान हो",
+      "कह नहीं सकते"
+    ],
+    "correct_index": 0,
+    "explanation": "Yes, all circles are similar because their shape is always perfectly round, only their radius (size) differs.",
+    "explanation_hi": "हाँ, सभी वृत्त समरूप होते हैं क्योंकि उनका आकार हमेशा पूरी तरह गोल होता है, केवल उनकी त्रिज्या (परिमाण) भिन्न होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_06",
+    "type": "reflection",
+    "title": "Think About It",
+    "title_hi": "इस पर विचार करें",
+    "body": "Can you think of two real-life objects that are similar but not congruent? Explain it to your friend.",
+    "body_hi": "क्या आप किन्हीं दो वास्तविक जीवन की वस्तुओं के बारे में सोच सकते हैं जो समरूप हों लेकिन सर्वांगसम न हों? अपने दोस्त को समझाएं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_07",
+    "type": "hook",
+    "title": "The Thales Theorem",
+    "title_hi": "थेल्स प्रमेय",
+    "body": "A Greek mathematician named Thales used a simple trick involving shadows to measure the height of the Great Pyramid! How did he do it?",
+    "body_hi": "थेल्स नामक एक यूनानी गणितज्ञ ने महान पिरामिड की ऊंचाई मापने के लिए छाया से जुड़ी एक सरल तरकीब का इस्तेमाल किया! उसने ऐसा कैसे किया?"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_08",
+    "type": "discovery",
+    "title": "Drawing Parallel Lines in a Triangle",
+    "title_hi": "एक त्रिभुज में समानांतर रेखाएँ खींचना",
+    "body": "Draw a triangle. Now draw a line parallel to its base that cuts the other two sides. Measure the parts of the two sides. What do you notice about their ratios?",
+    "body_hi": "एक त्रिभुज बनाएं। अब इसके आधार के समानांतर एक रेखा खींचें जो अन्य दो भुजाओं को काटती हो। दोनों भुजाओं के भागों को मापें। आप उनके अनुपातों के बारे में क्या देखते हैं?"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_09",
+    "type": "reveal",
+    "title": "Basic Proportionality Theorem (BPT)",
+    "title_hi": "आधारभूत समानुपातिकता प्रमेय (BPT)",
+    "body": "If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.",
+    "body_hi": "यदि किसी त्रिभुज की एक भुजा के समांतर अन्य दो भुजाओं को भिन्न-भिन्न बिंदुओं पर प्रतिच्छेद करने के लिए एक रेखा खींची जाए, तो ये अन्य दो भुजाएँ एक ही अनुपात में विभाजित हो जाती हैं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_10",
+    "type": "knowledge_check",
+    "question": "In a triangle ABC, if DE is parallel to BC (D on AB, E on AC), and AD/DB = 3/2, then AE/EC is?",
+    "question_hi": "एक त्रिभुज ABC में, यदि DE, BC के समांतर है (D, AB पर, E, AC पर), और AD/DB = 3/2, तो AE/EC क्या है?",
+    "options": [
+      "2/3",
+      "3/2",
+      "5/2",
+      "1/2"
+    ],
+    "options_hi": [
+      "2/3",
+      "3/2",
+      "5/2",
+      "1/2"
+    ],
+    "correct_index": 1,
+    "explanation": "By BPT, AD/DB = AE/EC. Since AD/DB is 3/2, AE/EC is also 3/2.",
+    "explanation_hi": "BPT द्वारा, AD/DB = AE/EC। चूँकि AD/DB 3/2 है, AE/EC भी 3/2 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_11",
+    "type": "reflection",
+    "title": "BPT in Reverse?",
+    "title_hi": "विपरीत में BPT?",
+    "body": "If a line divides two sides of a triangle in the same ratio, must it be parallel to the third side? This is the converse of BPT, and it is true!",
+    "body_hi": "यदि कोई रेखा एक त्रिभुज की दो भुजाओं को समान अनुपात में विभाजित करती है, तो क्या यह तीसरी भुजा के समांतर होनी चाहिए? यह BPT का विलोम है, और यह सत्य है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_12",
+    "type": "connection",
+    "title": "Connecting to Daily Life",
+    "title_hi": "दैनिक जीवन से जोड़ना",
+    "body": "Architects use BPT and similar triangles to create scale models of buildings before constructing them. It ensures everything is perfectly proportioned.",
+    "body_hi": "वास्तुकार इमारतों का निर्माण करने से पहले उनके स्केल मॉडल बनाने के लिए BPT और समरूप त्रिभुजों का उपयोग करते हैं। यह सुनिश्चित करता है कि सब कुछ पूरी तरह से आनुपातिक है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_13",
+    "type": "mastery",
+    "title": "Shadow Challenge",
+    "title_hi": "छाया चुनौती",
+    "body": "Go outside on a sunny day. Measure your height and your shadow's length. Then measure a tree's shadow. Use similar triangles to calculate the tree's actual height!",
+    "body_hi": "धूप वाले दिन बाहर जाएँ। अपनी ऊंचाई और अपनी छाया की लंबाई मापें। फिर एक पेड़ की छाया मापें। पेड़ की वास्तविक ऊंचाई की गणना करने के लिए समरूप त्रिभुजों का उपयोग करें!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "In a trapezium ABCD where AB || DC, diagonals AC and BD intersect at O. If AB = 2CD, what is the ratio of the areas of triangles AOB and COD?",
+    "question_hi": "एक समलंब चतुर्भुज ABCD में जहाँ AB || DC है, विकर्ण AC और BD बिंदु O पर प्रतिच्छेद करते हैं। यदि AB = 2CD है, तो त्रिभुज AOB और COD के क्षेत्रफलों का अनुपात क्या है?",
+    "options": [
+      "1:2",
+      "2:1",
+      "4:1",
+      "1:4"
+    ],
+    "options_hi": [
+      "1:2",
+      "2:1",
+      "4:1",
+      "1:4"
+    ],
+    "correct_index": 2,
+    "explanation": "In triangle AOB and triangle COD, angle AOB = angle COD (vertically opposite) and angle OAB = angle OCD (alternate interior). Therefore, triangle AOB ~ triangle COD. The ratio of their areas is equal to the square of the ratio of their corresponding sides. Area(AOB)/Area(COD) = (AB/CD)^2 = (2CD/CD)^2 = 4/1.",
+    "explanation_hi": "त्रिभुज AOB और त्रिभुज COD में, कोण AOB = कोण COD (शीर्षाभिमुख कोण) और कोण OAB = कोण OCD (एकांतर अंतः कोण)। इसलिए, त्रिभुज AOB ~ त्रिभुज COD। उनके क्षेत्रफलों का अनुपात उनकी संगत भुजाओं के अनुपात के वर्ग के बराबर होता है। क्षेत्रफल(AOB)/क्षेत्रफल(COD) = (AB/CD)^2 = (2CD/CD)^2 = 4/1।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "A vertical pole of length 6m casts a shadow 4m long on the ground and at the same time a tower casts a shadow 28m long. Find the height of the tower.",
+    "question_hi": "6 मीटर लंबा एक ऊर्ध्वाधर खंभा जमीन पर 4 मीटर लंबी छाया डालता है और उसी समय एक मीनार 28 मीटर लंबी छाया डालती है। मीनार की ऊंचाई ज्ञात कीजिए।",
+    "options": [
+      "40m",
+      "42m",
+      "44m",
+      "48m"
+    ],
+    "options_hi": [
+      "40 मीटर",
+      "42 मीटर",
+      "44 मीटर",
+      "48 मीटर"
+    ],
+    "correct_index": 1,
+    "explanation": "Let the height of the tower be h. At the same time, the angle of elevation of the sun is the same, so the triangles formed by the objects and their shadows are similar. By similarity, (Height of pole)/(Length of pole's shadow) = (Height of tower)/(Length of tower's shadow) => 6/4 = h/28 => h = (6 * 28)/4 = 42m.",
+    "explanation_hi": "मान लीजिए कि मीनार की ऊंचाई h है। एक ही समय पर सूर्य का उन्नयन कोण समान होता है, इसलिए वस्तुओं और उनकी छायाओं द्वारा बनाए गए त्रिभुज समरूप होते हैं। समरूपता के अनुसार, (खंभे की ऊंचाई)/(खंभे की छाया की लंबाई) = (मीनार की ऊंचाई)/(मीनार की छाया की लंबाई) => 6/4 = h/28 => h = (6 * 28)/4 = 42 मीटर।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "In triangle ABC, D and E are points on the sides AB and AC respectively such that DE || BC. If AD = x, DB = x - 2, AE = x + 2 and EC = x - 1, find the value of x.",
+    "question_hi": "त्रिभुज ABC में, D और E क्रमशः भुजाओं AB और AC पर ऐसे बिंदु हैं कि DE || BC है। यदि AD = x, DB = x - 2, AE = x + 2 और EC = x - 1, तो x का मान ज्ञात कीजिए।",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "options_hi": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct_index": 1,
+    "explanation": "By BPT, AD/DB = AE/EC. So, x/(x-2) = (x+2)/(x-1). Cross-multiplying, we get x(x-1) = (x+2)(x-2) => x^2 - x = x^2 - 4 => -x = -4 => x = 4.",
+    "explanation_hi": "BPT द्वारा, AD/DB = AE/EC। इसलिए, x/(x-2) = (x+2)/(x-1)। तिर्यक गुणा (Cross-multiplying) करने पर, हमें प्राप्त होता है x(x-1) = (x+2)(x-2) => x^2 - x = x^2 - 4 => -x = -4 => x = 4।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The perimeters of two similar triangles ABC and PQR are 36 cm and 24 cm respectively. If PQ = 10 cm, then find the length of AB.",
+    "question_hi": "दो समरूप त्रिभुजों ABC और PQR के परिमाप क्रमशः 36 सेमी और 24 सेमी हैं। यदि PQ = 10 सेमी है, तो AB की लंबाई ज्ञात कीजिए।",
+    "options": [
+      "12 cm",
+      "15 cm",
+      "18 cm",
+      "20 cm"
+    ],
+    "options_hi": [
+      "12 सेमी",
+      "15 सेमी",
+      "18 सेमी",
+      "20 सेमी"
+    ],
+    "correct_index": 1,
+    "explanation": "The ratio of corresponding sides of similar triangles is equal to the ratio of their perimeters. Therefore, AB/PQ = Perimeter(ABC)/Perimeter(PQR) => AB/10 = 36/24 => AB/10 = 3/2 => AB = (3 * 10)/2 = 15 cm.",
+    "explanation_hi": "समरूप त्रिभुजों की संगत भुजाओं का अनुपात उनके परिमापों के अनुपात के बराबर होता है। इसलिए, AB/PQ = परिमाप(ABC)/परिमाप(PQR) => AB/10 = 36/24 => AB/10 = 3/2 => AB = (3 * 10)/2 = 15 सेमी।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH6_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "D is a point on the side BC of a triangle ABC such that angle ADC = angle BAC. Then which of the following is true?",
+    "question_hi": "एक त्रिभुज ABC की भुजा BC पर एक बिंदु D इस प्रकार है कि कोण ADC = कोण BAC। तो निम्नलिखित में से कौन सा सत्य है?",
+    "options": [
+      "CA^2 = CB * CD",
+      "CA^2 = CB * BD",
+      "AB^2 = CB * CD",
+      "AB^2 = CB * BD"
+    ],
+    "options_hi": [
+      "CA^2 = CB * CD",
+      "CA^2 = CB * BD",
+      "AB^2 = CB * CD",
+      "AB^2 = CB * BD"
+    ],
+    "correct_index": 0,
+    "explanation": "In triangle ADC and triangle BAC, angle ADC = angle BAC (given) and angle C = angle C (common). By AA similarity criterion, triangle ADC ~ triangle BAC. Therefore, corresponding sides are proportional: CA/CB = CD/CA. Cross-multiplying gives CA^2 = CB * CD.",
+    "explanation_hi": "त्रिभुज ADC और त्रिभुज BAC में, कोण ADC = कोण BAC (दिया गया है) और कोण C = कोण C (उभयनिष्ठ/सामान्य)। AA समरूपता कसौटी के अनुसार, त्रिभुज ADC ~ त्रिभुज BAC। इसलिए, संगत भुजाएँ समानुपाती होती हैं: CA/CB = CD/CA। तिर्यक गुणा (Cross-multiplying) करने पर CA^2 = CB * CD प्राप्त होता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_1",
+    "type": "quiz",
+    "question": "Sample mock test question 1 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 1 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 1. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 1 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_2",
+    "type": "quiz",
+    "question": "Sample mock test question 2 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 2 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 2. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 2 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_3",
+    "type": "quiz",
+    "question": "Sample mock test question 3 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 3 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 3. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 3 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_4",
+    "type": "quiz",
+    "question": "Sample mock test question 4 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 4 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 4. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 4 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_5",
+    "type": "quiz",
+    "question": "Sample mock test question 5 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 5 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 5. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 5 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_6",
+    "type": "quiz",
+    "question": "Sample mock test question 6 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 6 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 6. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 6 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_7",
+    "type": "quiz",
+    "question": "Sample mock test question 7 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 7 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 7. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 7 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_8",
+    "type": "quiz",
+    "question": "Sample mock test question 8 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 8 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 8. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 8 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_9",
+    "type": "quiz",
+    "question": "Sample mock test question 9 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 9 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 9. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 9 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_10",
+    "type": "quiz",
+    "question": "Sample mock test question 10 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 10 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 10. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 10 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_11",
+    "type": "quiz",
+    "question": "Sample mock test question 11 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 11 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 11. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 11 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_12",
+    "type": "quiz",
+    "question": "Sample mock test question 12 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 12 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 12. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 12 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_13",
+    "type": "quiz",
+    "question": "Sample mock test question 13 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 13 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 13. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 13 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_14",
+    "type": "quiz",
+    "question": "Sample mock test question 14 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 14 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 14. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 14 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch6_15",
+    "type": "quiz",
+    "question": "Sample mock test question 15 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 15 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 15. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 15 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  }
+]

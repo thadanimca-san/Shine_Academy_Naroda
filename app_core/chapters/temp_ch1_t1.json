@@ -1,0 +1,339 @@
+[
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_01",
+    "title": "A Puzzle from the Past",
+    "title_hi": "अतीत से एक पहेली",
+    "body": "Imagine you have a basket of eggs. If you count them in twos, 1 is left. If you count in threes, 2 are left. If you count in fours, 3 are left... up to counting in sevens where 0 are left. How many eggs are there? This is an ancient puzzle. How do we even begin to solve it?",
+    "body_hi": "कल्पना करें कि आपके पास अंडों की एक टोकरी है। यदि आप उन्हें दो-दो करके गिनते हैं, तो 1 बचता है। यदि आप तीन-तीन करके गिनते हैं, तो 2 बचते हैं। यदि आप चार-चार करके गिनते हैं, तो 3 बचते हैं... और यदि सात-सात करके गिनते हैं तो 0 बचते हैं। कुल कितने अंडे हैं? यह एक प्राचीन पहेली है। हम इसे हल करना कैसे शुरू करें?"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_02",
+    "title": "Think About Division",
+    "title_hi": "विभाजन के बारे में सोचें",
+    "body": "When you divide 17 by 3, what happens? You get a quotient of 5 and a remainder of 2. Can you write this relationship in a single line? What if you try to find a remainder that is bigger than 3? Is that possible?",
+    "body_hi": "जब आप 17 को 3 से भाग देते हैं, तो क्या होता है? आपको भागफल 5 और शेषफल 2 मिलता है। क्या आप इस संबंध को एक पंक्ति में लिख सकते हैं? क्या होगा यदि आप ऐसा शेषफल खोजने की कोशिश करें जो 3 से बड़ा हो? क्या यह संभव है?"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_03",
+    "title": "Visualizing Division",
+    "title_hi": "विभाजन की कल्पना",
+    "body": "Think of division as grouping. If you have 17 items and group them into boxes of 3, you'll fill 5 boxes perfectly, and 2 items will be left outside. The remainder must always be smaller than the box size, otherwise, you could fill another box! This simple truth is the heart of our concept today.",
+    "body_hi": "विभाजन को समूहीकरण के रूप में सोचें। यदि आपके पास 17 वस्तुएं हैं और आप उन्हें 3 के बक्सों में समूहित करते हैं, तो आप 5 बक्से पूरी तरह से भर देंगे, और 2 वस्तुएं बाहर रह जाएंगी। शेषफल हमेशा बक्से के आकार से छोटा होना चाहिए, अन्यथा, आप एक और बक्सा भर सकते हैं! यह सरल सत्य आज की हमारी अवधारणा का हृदय है।"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_04",
+    "title": "Euclid's Division Lemma",
+    "title_hi": "यूक्लिड विभाजन प्रमेयिका (लेम्मा)",
+    "body": "Euclid's Division Lemma states: Given positive integers a and b, there exist unique integers q and r satisfying a = bq + r, where 0 ≤ r < b. Here, 'a' is the dividend, 'b' is the divisor, 'q' is the quotient, and 'r' is the remainder.",
+    "body_hi": "यूक्लिड विभाजन प्रमेयिका कहती है: दिए गए धनात्मक पूर्णांकों a और b के लिए, ऐसी अद्वितीय पूर्ण संख्याएँ q और r विद्यमान हैं कि a = bq + r, जहाँ 0 ≤ r < b है। यहाँ 'a' भाज्य है, 'b' भाजक है, 'q' भागफल है, और 'r' शेषफल है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_05",
+    "question": "According to Euclid's Division Lemma (a = bq + r), which of the following conditions is true for the remainder 'r'?",
+    "question_hi": "यूक्लिड विभाजन प्रमेयिका (a = bq + r) के अनुसार, शेषफल 'r' के लिए निम्नलिखित में से कौन सी शर्त सत्य है?",
+    "options": [
+      "0 < r ≤ b",
+      "0 ≤ r < b",
+      "0 ≤ r ≤ b",
+      "r < 0"
+    ],
+    "options_hi": [
+      "0 < r ≤ b",
+      "0 ≤ r < b",
+      "0 ≤ r ≤ b",
+      "r < 0"
+    ],
+    "correct_index": 1,
+    "explanation": "The remainder must be at least 0 but strictly less than the divisor 'b'.",
+    "explanation_hi": "शेषफल कम से कम 0 होना चाहिए लेकिन भाजक 'b' से सख्ती से कम होना चाहिए।"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_06",
+    "title": "Reflection",
+    "title_hi": "चिंतन (Reflection)",
+    "body": "Explain Euclid's Division Lemma in your own words. How would you teach it to a 5th-grade student who just learned long division? What does the 'Lemma' mean?",
+    "body_hi": "अपने शब्दों में यूक्लिड विभाजन प्रमेयिका को समझाएं। आप इसे 5वीं कक्षा के उस छात्र को कैसे सिखाएंगे जिसने अभी-अभी लंबा भाग (long division) सीखा है? 'प्रमेयिका' (Lemma) का क्या अर्थ है?"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_07",
+    "title": "Connecting the Dots",
+    "title_hi": "ज्ञान को जोड़ना",
+    "body": "This lemma isn't just about division. It's the foundation for finding the Highest Common Factor (HCF) of two numbers efficiently using Euclid's Division Algorithm. It's heavily used in number theory and even in computer cryptography!",
+    "body_hi": "यह प्रमेयिका केवल विभाजन के बारे में नहीं है। यह यूक्लिड विभाजन एल्गोरिथ्म का उपयोग करके दो संख्याओं का महत्तम समापवर्तक (HCF) कुशलतापूर्वक खोजने की नींव है। इसका उपयोग संख्या सिद्धांत (number theory) और यहाँ तक कि कंप्यूटर क्रिप्टोग्राफी में भी भारी मात्रा में किया जाता है!"
+  },
+  {
+    "type": "theory",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_08",
+    "title": "Mastery Challenge",
+    "title_hi": "महारत की चुनौती",
+    "body": "Can you show that any positive odd integer is of the form 4q + 1 or 4q + 3, where q is some integer? Try applying Euclid's Division Lemma with b = 4.",
+    "body_hi": "क्या आप दिखा सकते हैं कि कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होता है, जहाँ q कोई पूर्णांक है? b = 4 के साथ यूक्लिड विभाजन प्रमेयिका लागू करने का प्रयास करें।"
+  },
+  {
+    "type": "worked_example",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_09",
+    "title": "Example 1: Basic Application",
+    "title_hi": "उदाहरण 1: मूल अनुप्रयोग",
+    "question": "Use Euclid's division lemma to find the quotient and remainder when 45 is divided by 7.",
+    "question_hi": "यूक्लिड विभाजन प्रमेयिका का उपयोग करके 45 को 7 से भाग देने पर भागफल और शेषफल ज्ञात कीजिए।",
+    "solution": "Here, a = 45 and b = 7.\nAccording to Euclid's division lemma, a = bq + r (0 ≤ r < b).\n45 = 7 × 6 + 3\nSo, quotient (q) = 6 and remainder (r) = 3.",
+    "solution_hi": "यहाँ, a = 45 और b = 7।\nयूक्लिड विभाजन प्रमेयिका के अनुसार, a = bq + r (0 ≤ r < b)।\n45 = 7 × 6 + 3\nअतः, भागफल (q) = 6 और शेषफल (r) = 3।"
+  },
+  {
+    "type": "worked_example",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_10",
+    "title": "Example 2: Finding HCF",
+    "title_hi": "उदाहरण 2: HCF ज्ञात करना",
+    "question": "Use Euclid's algorithm to find the HCF of 4052 and 12576.",
+    "question_hi": "यूक्लिड एल्गोरिथ्म का प्रयोग करके 4052 और 12576 का HCF ज्ञात कीजिए।",
+    "solution": "Since 12576 > 4052, we apply the lemma to 12576 and 4052:\n12576 = 4052 × 3 + 420\nSince the remainder 420 ≠ 0, we apply the lemma to 4052 and 420:\n4052 = 420 × 9 + 272\nSince remainder 272 ≠ 0, apply to 420 and 272:\n420 = 272 × 1 + 148\nApply to 272 and 148:\n272 = 148 × 1 + 124\nApply to 148 and 124:\n148 = 124 × 1 + 24\nApply to 124 and 24:\n124 = 24 × 5 + 4\nApply to 24 and 4:\n24 = 4 × 6 + 0\nThe remainder is now zero, so our procedure stops. The divisor at this stage is 4. Thus, HCF is 4.",
+    "solution_hi": "चूँकि 12576 > 4052 है, हम 12576 और 4052 पर प्रमेयिका लागू करते हैं:\n12576 = 4052 × 3 + 420\nचूँकि शेषफल 420 ≠ 0 है, हम 4052 और 420 पर प्रमेयिका लागू करते हैं:\n4052 = 420 × 9 + 272\nशेषफल 272 ≠ 0, 420 और 272 पर लागू करें:\n420 = 272 × 1 + 148\n272 और 148 पर लागू करें:\n272 = 148 × 1 + 124\n148 और 124 पर लागू करें:\n148 = 124 × 1 + 24\n124 और 24 पर लागू करें:\n124 = 24 × 5 + 4\n24 और 4 पर लागू करें:\n24 = 4 × 6 + 0\nअब शेषफल शून्य है, इसलिए हमारी प्रक्रिया रुक जाती है। इस चरण में भाजक 4 है। इस प्रकार, HCF 4 है।"
+  },
+  {
+    "type": "worked_example",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_11",
+    "title": "Example 3: Even Integers",
+    "title_hi": "उदाहरण 3: सम पूर्णांक",
+    "question": "Show that every positive even integer is of the form 2q, and every positive odd integer is of the form 2q + 1, where q is some integer.",
+    "question_hi": "दर्शाइए कि प्रत्येक धनात्मक सम पूर्णांक 2q के रूप का होता है, और प्रत्येक धनात्मक विषम पूर्णांक 2q + 1 के रूप का होता है, जहाँ q कोई पूर्णांक है।",
+    "solution": "Let a be any positive integer and b = 2.\nBy Euclid's division lemma, a = 2q + r, for some integer q ≥ 0, and r = 0 or r = 1 (since 0 ≤ r < 2).\nTherefore, a = 2q or a = 2q + 1.\nIf a = 2q, it is an even integer. Therefore, any positive odd integer is of the form 2q + 1.",
+    "solution_hi": "मान लीजिए a कोई धनात्मक पूर्णांक है और b = 2 है।\nयूक्लिड विभाजन प्रमेयिका द्वारा, a = 2q + r, किसी पूर्णांक q ≥ 0 के लिए, और r = 0 या r = 1 (चूँकि 0 ≤ r < 2)।\nइसलिए, a = 2q या a = 2q + 1।\nयदि a = 2q है, तो यह एक सम पूर्णांक है। इसलिए, कोई भी धनात्मक विषम पूर्णांक 2q + 1 के रूप का होता है।"
+  },
+  {
+    "type": "worked_example",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_12",
+    "title": "Example 4: Form of Odd Integers",
+    "title_hi": "उदाहरण 4: विषम पूर्णांकों का रूप",
+    "question": "Show that any positive odd integer is of the form 4q + 1 or 4q + 3, where q is some integer.",
+    "question_hi": "दर्शाइए कि कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होता है, जहाँ q कोई पूर्णांक है।",
+    "solution": "Let a be a positive odd integer and b = 4.\nBy Euclid's division lemma, a = 4q + r, where 0 ≤ r < 4. So, r can be 0, 1, 2, or 3.\nThus, a can be 4q, 4q + 1, 4q + 2, or 4q + 3.\nHowever, 4q and 4q + 2 are both divisible by 2 (they are even).\nTherefore, any positive odd integer must be of the form 4q + 1 or 4q + 3.",
+    "solution_hi": "मान लीजिए a एक धनात्मक विषम पूर्णांक है और b = 4 है।\nयूक्लिड विभाजन प्रमेयिका द्वारा, a = 4q + r, जहाँ 0 ≤ r < 4. तो, r = 0, 1, 2, या 3 हो सकता है।\nइस प्रकार, a = 4q, 4q + 1, 4q + 2, या 4q + 3 हो सकता है।\nहालाँकि, 4q और 4q + 2 दोनों 2 से विभाज्य हैं (वे सम हैं)।\nइसलिए, कोई भी धनात्मक विषम पूर्णांक 4q + 1 या 4q + 3 के रूप का होना चाहिए।"
+  },
+  {
+    "type": "worked_example",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_13",
+    "title": "Example 5: Sweet Seller Problem",
+    "title_hi": "उदाहरण 5: मिठाई विक्रेता की समस्या",
+    "question": "A sweet seller has 420 kaju barfis and 130 badam barfis. She wants to stack them such that each stack has the same number, and they take up the least area. What is the maximum number of barfis in each stack?",
+    "question_hi": "एक मिठाई विक्रेता के पास 420 काजू बर्फी और 130 बादाम बर्फी हैं। वह उन्हें इस तरह से ढेर (stack) करना चाहती है कि प्रत्येक ढेर में समान संख्या हो, और वे कम से कम क्षेत्र घेरें। प्रत्येक ढेर में अधिकतम कितनी बर्फी हो सकती हैं?",
+    "solution": "To find the maximum number of barfis in each stack, we need to find the HCF of 420 and 130 using Euclid's algorithm.\n420 = 130 × 3 + 30\n130 = 30 × 4 + 10\n30 = 10 × 3 + 0\nThe HCF is 10. Therefore, the sweet seller can make stacks of 10 barfis of both kinds.",
+    "solution_hi": "प्रत्येक ढेर में अधिकतम बर्फी की संख्या ज्ञात करने के लिए, हमें यूक्लिड के एल्गोरिथ्म का उपयोग करके 420 और 130 का HCF ज्ञात करना होगा।\n420 = 130 × 3 + 30\n130 = 30 × 4 + 10\n30 = 10 × 3 + 0\nHCF 10 है। इसलिए, मिठाई विक्रेता दोनों प्रकार की बर्फी के 10-10 के ढेर बना सकती है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_14",
+    "question": "For any two positive integers a and b, a = bq + r, where 0 ≤ r < b. What are q and r?",
+    "question_hi": "किन्हीं दो धनात्मक पूर्णांकों a और b के लिए, a = bq + r, जहाँ 0 ≤ r < b है। q और r क्या हैं?",
+    "options": [
+      "Any integers",
+      "Positive integers only",
+      "Unique whole numbers",
+      "Rational numbers"
+    ],
+    "options_hi": [
+      "कोई भी पूर्णांक",
+      "केवल धनात्मक पूर्णांक",
+      "अद्वितीय पूर्ण संख्याएँ (Unique whole numbers)",
+      "परिमेय संख्याएँ"
+    ],
+    "correct_index": 2,
+    "explanation": "According to Euclid's Division Lemma, q and r are unique whole numbers (integers where q ≥ 0 and r ≥ 0).",
+    "explanation_hi": "यूक्लिड विभाजन प्रमेयिका के अनुसार, q और r अद्वितीय पूर्ण संख्याएँ हैं (पूर्णांक जहाँ q ≥ 0 और r ≥ 0)।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_15",
+    "question": "If we divide a positive integer n by 3, what are the possible values for the remainder?",
+    "question_hi": "यदि हम किसी धनात्मक पूर्णांक n को 3 से भाग दें, तो शेषफल के संभावित मान क्या हैं?",
+    "options": [
+      "0, 1, 2, 3",
+      "0, 1, 2",
+      "1, 2",
+      "1, 2, 3"
+    ],
+    "options_hi": [
+      "0, 1, 2, 3",
+      "0, 1, 2",
+      "1, 2",
+      "1, 2, 3"
+    ],
+    "correct_index": 1,
+    "explanation": "The remainder must be greater than or equal to 0 and less than the divisor (3). So, r can be 0, 1, or 2.",
+    "explanation_hi": "शेषफल 0 से बड़ा या बराबर और भाजक (3) से छोटा होना चाहिए। इसलिए, r का मान 0, 1, या 2 हो सकता है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_16",
+    "question": "Use Euclid's division lemma to find the quotient and remainder when 55 is divided by 8.",
+    "question_hi": "यूक्लिड विभाजन प्रमेयिका का उपयोग करके 55 को 8 से भाग देने पर भागफल और शेषफल ज्ञात कीजिए।",
+    "options": [
+      "q = 6, r = 7",
+      "q = 7, r = 6",
+      "q = 6, r = 5",
+      "q = 5, r = 15"
+    ],
+    "options_hi": [
+      "q = 6, r = 7",
+      "q = 7, r = 6",
+      "q = 6, r = 5",
+      "q = 5, r = 15"
+    ],
+    "correct_index": 0,
+    "explanation": "55 = 8 × 6 + 7. So quotient q = 6 and remainder r = 7.",
+    "explanation_hi": "55 = 8 × 6 + 7। अतः भागफल q = 6 और शेषफल r = 7।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_17",
+    "question": "Euclid's division algorithm is primarily used to compute which of the following?",
+    "question_hi": "यूक्लिड विभाजन एल्गोरिथ्म का उपयोग मुख्य रूप से निम्नलिखित में से किसकी गणना करने के लिए किया जाता है?",
+    "options": [
+      "LCM of two numbers",
+      "HCF of two numbers",
+      "Square root of a number",
+      "Prime factors of a number"
+    ],
+    "options_hi": [
+      "दो संख्याओं का LCM",
+      "दो संख्याओं का HCF",
+      "किसी संख्या का वर्गमूल",
+      "किसी संख्या के अभाज्य गुणनखंड"
+    ],
+    "correct_index": 1,
+    "explanation": "It is a technique to compute the Highest Common Factor (HCF) of two given positive integers.",
+    "explanation_hi": "यह दिए गए दो धनात्मक पूर्णांकों का महत्तम समापवर्तक (HCF) ज्ञात करने की एक तकनीक है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_18",
+    "question": "The HCF of 124 and 24 is:",
+    "question_hi": "124 और 24 का HCF है:",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "2"
+    ],
+    "options_hi": [
+      "8",
+      "4",
+      "12",
+      "2"
+    ],
+    "correct_index": 1,
+    "explanation": "124 = 24 × 5 + 4; 24 = 4 × 6 + 0. The divisor at the last step is 4.",
+    "explanation_hi": "124 = 24 × 5 + 4; 24 = 4 × 6 + 0। अंतिम चरण में भाजक 4 है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_19",
+    "question": "If two positive integers p and q are such that p = 3q + r, what cannot be a value of r?",
+    "question_hi": "यदि दो धनात्मक पूर्णांक p और q ऐसे हैं कि p = 3q + r, तो r का मान क्या नहीं हो सकता है?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "options_hi": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct_index": 3,
+    "explanation": "The remainder r must be strictly less than the divisor 3. So r cannot be 3.",
+    "explanation_hi": "शेषफल r भाजक 3 से सख्ती से कम होना चाहिए। इसलिए r, 3 नहीं हो सकता।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_20",
+    "question": "Any positive even integer can be written in the form:",
+    "question_hi": "किसी भी धनात्मक सम पूर्णांक को किस रूप में लिखा जा सकता है:",
+    "options": [
+      "2q",
+      "2q + 1",
+      "3q",
+      "4q + 1"
+    ],
+    "options_hi": [
+      "2q",
+      "2q + 1",
+      "3q",
+      "4q + 1"
+    ],
+    "correct_index": 0,
+    "explanation": "Even integers are divisible by 2, leaving a remainder of 0. Thus, they are of the form 2q.",
+    "explanation_hi": "सम पूर्णांक 2 से विभाज्य होते हैं, जिससे शेषफल 0 बचता है। इस प्रकार, वे 2q के रूप में होते हैं।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_21",
+    "question": "According to Euclid's division algorithm, the process of finding HCF stops when:",
+    "question_hi": "यूक्लिड विभाजन एल्गोरिथ्म के अनुसार, HCF ज्ञात करने की प्रक्रिया कब रुक जाती है?",
+    "options": [
+      "The quotient is zero",
+      "The divisor is zero",
+      "The remainder is zero",
+      "The remainder is 1"
+    ],
+    "options_hi": [
+      "जब भागफल शून्य हो",
+      "जब भाजक शून्य हो",
+      "जब शेषफल शून्य हो",
+      "जब शेषफल 1 हो"
+    ],
+    "correct_index": 2,
+    "explanation": "The algorithm terminates when the remainder becomes 0. The divisor at that stage is the HCF.",
+    "explanation_hi": "एल्गोरिथ्म तब समाप्त होता है जब शेषफल 0 हो जाता है। उस स्तर पर भाजक HCF होता है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_22",
+    "question": "In a = bq + r, if a is a prime number and b = 2, what can you say about r?",
+    "question_hi": "a = bq + r में, यदि a एक अभाज्य संख्या (2 को छोड़कर) है और b = 2 है, तो आप r के बारे में क्या कह सकते हैं?",
+    "options": [
+      "r can be 0 or 1",
+      "r must be 0",
+      "r must be 1",
+      "r can be 2"
+    ],
+    "options_hi": [
+      "r, 0 या 1 हो सकता है",
+      "r, 0 होना चाहिए",
+      "r, 1 होना चाहिए",
+      "r, 2 हो सकता है"
+    ],
+    "correct_index": 2,
+    "explanation": "Since 'a' is a prime number (and we assume it's > 2 to be odd), it is an odd number. When an odd number is divided by 2, the remainder is always 1.",
+    "explanation_hi": "चूँकि 'a' एक अभाज्य संख्या है (और हम मान लेते हैं कि यह 2 से बड़ी है इसलिए विषम है), यह एक विषम संख्या है। जब विषम संख्या को 2 से भाग दिया जाता है, तो शेषफल हमेशा 1 होता है।"
+  },
+  {
+    "type": "mcq",
+    "id": "KOBJ_CLASS10_MATH_CH1_T1_23",
+    "question": "If HCF(a, b) = 1, then a and b are called:",
+    "question_hi": "यदि HCF(a, b) = 1 है, तो a और b क्या कहलाते हैं?",
+    "options": [
+      "Prime numbers",
+      "Co-prime numbers",
+      "Composite numbers",
+      "Even numbers"
+    ],
+    "options_hi": [
+      "अभाज्य संख्याएँ",
+      "सह-अभाज्य संख्याएँ (Co-prime numbers)",
+      "भाज्य संख्याएँ",
+      "सम संख्याएँ"
+    ],
+    "correct_index": 1,
+    "explanation": "Two numbers are said to be co-prime if their Highest Common Factor is 1.",
+    "explanation_hi": "दो संख्याओं को सह-अभाज्य कहा जाता है यदि उनका महत्तम समापवर्तक (HCF) 1 है।"
+  }
+]

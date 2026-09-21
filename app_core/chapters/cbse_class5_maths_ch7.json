@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch7",
+    "title": "Chapter 7: Decimals",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the relationship between fractions and decimals",
+      "Read, write, and compare decimal numbers up to thousandths",
+      "Perform basic addition and subtraction with decimals",
+      "Apply decimals to real-world money and measurement problems"
+    ],
+    "core_concepts": [
+      "DICT_MATH_DECIMAL",
+      "DICT_MATH_TENTH",
+      "DICT_MATH_HUNDREDTH",
+      "DICT_MATH_PLACEVALUE"
+    ],
+    "ai_context": {
+      "learning_goal": "Students will master the concept of fractional parts expressed as powers of ten through the use of the decimal point.",
+      "common_misconceptions": [
+        "Believing that a longer decimal number is always larger (e.g., thinking 0.45 is larger than 0.5)",
+        "Forgetting to align decimal points during addition and subtraction"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Coin",
+      "body": "Imagine you walk into your favorite bookstore with a crisp ten-dollar bill to buy a comic book priced at $7.50. The cashier hands you back your change: a few paper bills and a couple of shiny metallic coins. But wait—what is that little dot sitting between the 7 and the 5 in $7.50? Without that tiny punctuation mark, you might think you owe seven hundred fifty dollars! That magical little dot is the gateway to the world of decimals. It separates the whole things we own from the broken-up pieces and fractions of things. In this chapter, we will unlock the secret language of decimals and see how they rule our money, our sports scores, and even our heights.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What does the decimal point do in a number like $7.50?",
+      "options": [
+        "It acts as a decorative flourish with no mathematical meaning.",
+        "It separates the whole number units from the fractional parts.",
+        "It tells you how many pages are in the book."
+      ],
+      "correct_index": 1,
+      "explanation": "The decimal point is a vital marker that separates the whole number part (7 dollars) from the fractional part (50 cents, or 50/100 of a dollar).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: From Fractions to [DICT_MATH_DECIMAL|Decimals]",
+      "body": "To truly understand decimals, we must first look at fractions with denominators of 10, 100, and 1,000. Imagine a strip of chocolate divided into 10 equal bars. If you eat 3 of those bars, you have eaten 3/10 (three-tenths) of the chocolate. In mathematics, we often get tired of writing fractions with huge denominators, so mathematicians invented an alternate notation using a dot called a decimal point. [DICT_MATH_TENTH|Tenths] are written immediately to the right of the decimal point. Therefore, the fraction 3/10 is written as 0.3. The zero in front of the dot simply tells us that we do not have a full, whole chocolate bar yet—we only have a piece of one. As we move further to the right, each place value becomes ten times smaller. This elegant system allows us to write any fraction effortlessly without dealing with awkward numerators and denominators.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Meter Stick Trick",
+      "body": "Grab a standard meter stick (which measures 100 centimeters). Point to 1 centimeter. That is 1/100 of a meter, or 0.01 meters. Point to 10 centimeters. That is 10/100, which simplifies to 1/10, or 0.1 meters. Visualizing physical objects helps anchor abstract decimal values in your mind!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "How do you write the fraction 7/10 as a decimal?",
+      "back": "0.7",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Unlocking [DICT_MATH_HUNDREDTH|Hundredths]",
+      "body": "What happens if we take that same strip of chocolate or a large square grid and chop it up into 100 tiny equal squares? If you shade 25 of those tiny squares, your fraction is 25/100. When we translate this into our decimal system, it occupies two places to the right of the decimal point: 0.25. The first digit after the decimal point (the 2) represents [DICT_MATH_TENTH|tenths], and the second digit (the 5) represents [DICT_MATH_HUNDREDTH|hundredths]. Think of it like money: a dollar is split into 100 pennies. One penny is 1/100 of a dollar, or $0.01. When reading decimal numbers out loud, always read the whole number part first, say 'and' for the decimal point, and then read the fractional part followed by the name of the last place value. For example, 4.25 is read as 'four and twenty-five hundredths'.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "How should you correctly read the decimal number 8.04?",
+      "options": [
+        "Eight point four",
+        "Eight and four hundredths",
+        "Eighty-four tenths"
+      ],
+      "correct_index": 1,
+      "explanation": "Since the 4 is in the hundredths place (two places after the decimal), it is read as 'eight and four hundredths'. The zero in the tenths place acts as a placeholder.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The Grand [DICT_MATH_PLACEVALUE|Place Value] Mansion",
+      "body": "Numbers in our base-ten system live in a grand mansion where every room to the right of the decimal point is getting smaller by a factor of ten. To the left of the decimal point, we have our familiar rooms: Ones, Tens, Hundreds, and Thousands. But when we cross over the decimal point to the right side, the rooms change their names and add a 'th' to the end! The first room is the [DICT_MATH_TENTH|Tenths] room (1/10), followed by the [DICT_MATH_HUNDREDTH|Hundredths] room (1/100), and then the Thousandths room (1/1,000). Understanding this mansion is crucial because it tells us the true value of a digit based solely on where it sits. For instance, in the number 3.44, the first 4 means four-tenths (0.4), while the second 4 means four-hundredths (0.04). Even though they look identical, their home addresses give them completely different values!",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The 'Th' Sound Rule",
+      "body": "Remind students: If it's to the left of the decimal, it ends in 's' (Ones, Tens, Hundreds). If it's to the right of the decimal, it ends in 'ths' (Tenths, Hundredths, Thousandths). Listening to the sound of the word tells you which side of the decimal point you are on!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "In the number 5.678, which digit is in the hundredths place?",
+      "back": "7 (its value is 0.07)",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Expanding Decimals: Pulling the Mansion Apart",
+      "body": "Just like whole numbers can be written in expanded form (like 345 = 300 + 40 + 5), decimal numbers can also be stretched out to show the exact value of each component room. Let's take the number 56.382. We can break it down piece by piece: 50 + 6 + 0.3 + 0.08 + 0.002. Alternatively, we can write them as fractions: 50 + 6 + (3/10) + (8/100) + (2/1,000). Doing this exercise destroys any mystery about what a decimal number actually is. It proves that every decimal is simply a collection of smaller fraction pieces added together with whole numbers. Whenever you are confused by a large decimal number, stretch it out into its expanded form to see its true skeleton.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "What is the expanded form of the decimal number 9.24?",
+      "options": [
+        "9 + 2 + 4",
+        "9 + 0.2 + 0.04",
+        "90 + 2 + 0.4"
+      ],
+      "correct_index": 1,
+      "explanation": "9 is the whole number, 2 is in the tenths place (0.2), and 4 is in the hundredths place (0.04). Therefore, 9 + 0.2 + 0.04 is correct.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: Comparing Decimals (The Trap of Length)",
+      "body": "One of the greatest traps in all of mathematics happens when students try to compare decimals. Consider this classic question: Which is larger, 0.4 or 0.38? Many students instantly shout, '0.38 is larger because 38 is bigger than 4!' But let's look closer. Think of 0.4 as 0.40 (four tents compared to thirty-eight hundredths). If you had 40 cents and your friend had 38 cents, who has more money? You do! When comparing decimals, you must always compare place value by place value, starting from the left. First, look at the whole number part (they are both 0). Next, look at the tenths place: 0.4 has a 4 in the tenths place, while 0.38 has a 3 in the tenths place. Since 4 is greater than 3, 0.4 is strictly greater than 0.38, regardless of how many digits follow after!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "The Padding Zero Technique",
+      "body": "Whenever comparing decimals of unequal length (like 0.6 and 0.55), teach students to 'pad' the shorter decimal with a zero on the right to make them equal in length (changing 0.6 to 0.60). Suddenly, comparing 0.60 and 0.55 becomes obvious: 60 is bigger than 55!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "Which is greater: 0.7 or 0.65?",
+      "back": "0.7 (since 0.7 is equal to 0.70, and 70 hundredths is greater than 65 hundredths)",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 4: Converting Decimals to Fractions (and Vice Versa)",
+      "body": "Decimals and fractions are two sides of the same coin; they are just different costumes worn by the same numerical value. Converting them is an essential superpower. To convert a decimal to a fraction, you simply read the decimal correctly and write it as a fraction with a denominator of 10, 100, or 1,000. For example, 0.75 is read as 'seventy-five hundredths', so its fraction form is 75/100. From there, you can simplify it by dividing the top and bottom by their greatest common factor (in this case, 25), giving you 3/4. Conversely, to convert a fraction to a decimal, you can either scale the denominator up to 10, 100, or 1,000 (for instance, multiplying 3/5 by 2/2 gives 6/10, which is 0.6), or you can use division. Mastering this conversion allows you to move fluidly between different mathematical representations.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What is the simplest fraction form of the decimal 0.5?",
+      "options": [
+        "5/10",
+        "1/2",
+        "1/5"
+      ],
+      "correct_index": 1,
+      "explanation": "0.5 is five-tenths (5/10). When you divide both the numerator and denominator by 5, you get 1/2.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 5: Addition and Subtraction of Decimals",
+      "body": "Adding and subtracting decimals is just like adding and subtracting regular whole numbers, with one golden, unbreakable rule: **Line up the decimal points!** Imagine trying to add 3.5 apples to 24.25 apples without aligning them properly—you would end up adding tenths to hundredths, which is like adding centimeters to meters. When setting up a problem like 14.5 + 3.28, you must stack them vertically so that the decimal points form a straight, vertical line down the page. If one number has extra empty spaces after the decimal, fill them in with placeholder zeros (so 14.5 becomes 14.50). Once your columns are neatly aligned, you add or subtract normally from right to left, and bring the decimal point straight down into your final answer like an anchor.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Graph Paper Method",
+      "body": "Have students experiencing trouble with decimal alignment do their addition and subtraction problems on grid paper or graph paper. Putting one digit per grid square naturally prevents misalignment errors and keeps decimal points stacked in a straight column.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "front": "What is the absolute most important rule when adding or subtracting decimals?",
+      "back": "Line up the decimal points vertically!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Calculate: 12.4 + 3.15",
+      "options": [
+        "15.55",
+        "15.29",
+        "43.9"
+      ],
+      "correct_index": 0,
+      "explanation": "Line them up as 12.40 + 3.15. Adding them column by column gives 15.55.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Decimals in Action: Money and Measurement",
+      "body": "Why do we care so much about decimals in real life? Because the physical world is not made of strictly whole items! Money is entirely based on decimals, where the decimal point separates dollars from cents ($15.75 means 15 whole dollars and 75/100 of a dollar). Measurements in science, construction, and sports also rely heavily on decimals. When an Olympic runner finishes a 100-meter dash in 9.58 seconds, that fractional second determines gold medal glory versus silver. When an engineer builds an airplane wing, a discrepancy of 0.01 inches can cause catastrophic failure. Decimals give our measurements the extreme precision required to build modern civilization.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "If you buy a notebook for $3.20 and a pen for $1.45, how much total change should you expect from a $10.00 bill?",
+      "options": [
+        "$5.35",
+        "$6.80",
+        "$4.65"
+      ],
+      "correct_index": 0,
+      "explanation": "First, find the total cost: $3.20 + $1.45 = $4.65. Then, subtract that from $10.00: $10.00 - $4.65 = $5.35.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "How many centimeters are in 3.5 meters?",
+      "back": "350 centimeters (since 1 meter = 100 centimeters, multiply 3.5 by 100)",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Chapter Summary: Master of the Decimal Point",
+      "body": "Congratulations! You have journeyed through the universe of decimals. We began with the humble fraction and discovered how the decimal point acts as a bridge to smaller parts of wholes. We explored the grand place value mansion where rooms to the right of the dot represent tenths, hundredths, and thousandths. We conquered the great comparison trap by learning to look at place values sequentially and using padding zeros. Finally, we mastered the golden rule of aligning decimal points to perform addition and subtraction accurately. Armed with these tools, you are now fully equipped to handle money, scientific measurements, and advanced mathematical challenges with absolute confidence.",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

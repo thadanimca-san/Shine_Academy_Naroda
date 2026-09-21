@@ -1,0 +1,522 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch6",
+    "title": "Chapter 6: Electromagnetic Induction",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_001",
+      "type": "hook",
+      "title": "Powering the Modern World Without Batteries",
+      "title_hi": "बिना बैटरी के आधुनिक दुनिया को ऊर्जा देना",
+      "title_gu": "બેટરી વિના આધુનિક વિશ્વને ઉર્જા આપવી",
+      "body": "Imagine a world where electricity flows from motion alone. Induction motors, wireless phone chargers, giant hydroelectric power stations, and magnetic levitation trains all rely on one single, brilliant discovery made by Michael Faraday in 1831: Magnetism in motion can generate electricity!",
+      "body_hi": "एक ऐसी दुनिया की कल्पना करें जहां केवल गति से बिजली बहती है। इंडक्शन मोटर, वायरलेस फोन चार्जर, विशाल जलविद्युत पावर स्टेशन और चुंबकीय लेविटेशन ट्रेनें सभी 1831 में माइकल फैराडे द्वारा की गई एक ही महान खोज पर निर्भर हैं: गति में चुंबकत्व बिजली पैदा कर सकता है!",
+      "body_gu": "એવા વિશ્વની કલ્પના કરો જ્યાં ફક્ત ગતિથી વીજળી પ્રવાહિત થાય છે. ઇન્ડક્શન મોટર્સ, વાયરલેસ ફોન ચાર્જર, વિશાળ હાઇડ્રોઇલેક્ટ્રિક પાવર સ્ટેશનો અને મેગ્નેટિક લેવિટેશન ટ્રેનો આ બધું 1831 માં માઇકલ ફેરાડે દ્વારા કરવામાં આવેલી એક ભવ્ય શોધ પર આધારિત છે: ગતિમાં ચુંબકત્વ વીજળી ઉત્પન્ન કરી શકે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_002",
+      "type": "socratic_question",
+      "title": "The Spark of Curiosity",
+      "title_hi": "जिज्ञासा की चिंगारी",
+      "title_gu": "જિજ્ઞાસાની ચિનગારી",
+      "question": "If placing a stationary magnet inside a closed coil produces zero electric current, what must happen to the magnetic environment to induce a voltage?",
+      "question_hi": "यदि एक बंद कुंडली के अंदर एक स्थिर चुंबक रखने से शून्य विद्युत धारा उत्पन्न होती है, तो वोल्टेज को प्रेरित करने के लिए चुंबकीय वातावरण में क्या होना चाहिए?",
+      "question_gu": "જો કોઈ બંધ કોઇલની અંદર સ્થિર ચુંબક રાખવાથી શૂન્ય વિદ્યુત પ્રવાહ ઉત્પન્ન થાય છે, તો વોલ્ટેજ પ્રેરિત કરવા માટે ચુંબકીય વાતાવરણમાં શું થવું જોઈએ?",
+      "options": [
+        "The magnet must be heated to a high temperature",
+        "The magnetic field or flux passing through the loop must change over time",
+        "The coil must be made thicker",
+        "The setup must be immersed in water"
+      ],
+      "options_hi": [
+        "चुंबक को उच्च तापमान तक गर्म किया जाना चाहिए",
+        "लूप से गुजरने वाले चुंबकीय क्षेत्र या फ्लक्स में समय के साथ बदलाव होना चाहिए",
+        "कुंडली को मोटा बनाया जाना चाहिए",
+        "सेटअप को पानी में डुबोया जाना चाहिए"
+      ],
+      "options_gu": [
+        "ચુંબકને ઊંચા તાપમાને ગરમ કરવું જોઈએ",
+        "લૂપમાંથી પસાર થતા ચુંબકીય ક્ષેત્ર અથવા ફ્લક્સમાં સમય સાથે ફેરફાર થવો જોઈએ",
+        "કોઇલને જાડી બનાવવી જોઈએ",
+        "સેટઅપને પાણીમાં ડૂબાડવું જોઈએ"
+      ],
+      "correct_index": 1,
+      "explanation": "Static magnetic fields do not induce an electric current. An electromotive force (emf) is induced only when the magnetic flux linked with the circuit changes over time.",
+      "explanation_hi": "स्थिर चुंबकीय क्षेत्र विद्युत धारा प्रेरित नहीं करते हैं। एक प्रेरित विद्युत वाहक बल (emf) केवल तभी उत्पन्न होता है जब परिपथ से जुड़ा चुंबकीय फ्लक्स समय के साथ बदलता है।",
+      "explanation_gu": "સ્થિર ચુંબકીય ક્ષેત્રો વિદ્યુત પ્રવાહ પ્રેરિત કરતા નથી. પ્રેરિત વિદ્યુતચાલક બળ (emf) ત્યારે જ ઉત્પન્ન થાય છે જ્યારે પરિપથ સાથે સંકળાયેલ ચુંબકીય ફ્લક્સ સમય સાથે બદલાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_003",
+      "type": "discovery",
+      "title": "Faraday's and Henry's Discovery",
+      "title_hi": "फैराडे और हेनरी की खोज",
+      "title_gu": "ફેરાડે અને હેનરીની શોધ",
+      "body": "Through a series of pioneering experiments, Michael Faraday and Joseph Henry observed that moving a bar magnet towards or away from a coil deflects a galvanometer connected to it. Faster motion causes greater deflection. Relative motion between the conductor and the magnetic field changes the total number of magnetic field lines crossing the loop, discovering Electromagnetic Induction.",
+      "body_hi": "प्रायोगिक प्रयोगों की एक श्रृंखला के माध्यम से, माइकल फैराडे और जोसेफ हेनरी ने देखा कि एक छड़ चुंबक को कुंडली की ओर या उससे दूर ले जाने पर उससे जुड़ा गैल्वेनोमीटर विक्षेपित होता है। तेज़ गति से अधिक विक्षेप होता है। चालक और चुंबकीय क्षेत्र के बीच सापेक्ष गति लूप को पार करने वाली चुंबकीय क्षेत्र रेखाओं की कुल संख्या को बदल देती है, जिससे विद्युत चुंबकीय प्रेरण की खोज हुई।",
+      "body_gu": "પ્રયોગોની શ્રેણી દ્વારા, માઇકલ ફેરાડે અને જોસેફ હેનરીએ અવલોકન કર્યું કે બાર મેગ્નેટને કોઇલ તરફ કે દૂર ખસેડવાથી તેની સાથે જોડાયેલ ગેલ્વેનોમીટર વિચલન દર્શાવે છે. ઝડપી ગતિ વધુ વિચલનનું કારણ બને છે. વાહક અને ચુંબકીય ક્ષેત્ર વચ્ચેની સાપેક્ષ ગતિ લૂપને પસાર કરતી ચુંબકીય ક્ષેત્ર રેખાઓની કુલ સંખ્યા બદલે છે, જેથી વિદ્યુતચુંબકીય પ્રેરણની શોધ થઈ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_004",
+      "type": "theory",
+      "title": "Magnetic Flux & Faraday's Law of Induction",
+      "title_hi": "चुंबकीय फ्लक्स और फैराडे का प्रेरण का नियम",
+      "title_gu": "ચુંબકીય ફ્લક્સ અને ફેરાડેનો પ્રેરણનો નિયમ",
+      "body": "Magnetic flux (Φ_B) through a surface of area A in a uniform magnetic field B is defined as Φ_B = B · A = B A cos(θ), where θ is the angle between B and the normal to the surface. SI Unit: Weber (Wb).\n\nFaraday's Law of Electromagnetic Induction states that the magnitude of induced electromotive force (emf) in a circuit is equal to the time rate of change of magnetic flux through the circuit:\n\nε = - N (dΦ_B / dt)\n\nwhere N is the number of turns in the coil. The negative sign represents the direction of the induced emf.",
+      "body_hi": "एकसमान चुंबकीय क्षेत्र B में क्षेत्रफल A की सतह से गुजरने वाला चुंबकीय फ्लक्स (Φ_B) Φ_B = B · A = B A cos(θ) के रूप में परिभाषित किया गया है, जहाँ θ चुंबकीय क्षेत्र B और सतह के लंबवत के बीच का कोण है। SI मात्रक: वेबर (Wb)।\n\nफैराडे का विद्युत चुंबकीय प्रेरण का नियम कहता है कि किसी परिपथ में प्रेरित विद्युत वाहक बल (emf) का परिमाण परिपथ के माध्यम से चुंबकीय फ्लक्स के समय के साथ परिवर्तन की दर के बराबर होता है:\n\nε = - N (dΦ_B / dt)\n\nजहाँ N कुंडली में फेरों की संख्या है। ऋणात्मक चिह्न प्रेरित emf की दिशा को दर्शाता है।",
+      "body_gu": "સમાન ચુંબકીય ક્ષેત્ર B માં A ક્ષેત્રફળની સપાટીમાંથી પસાર થતો ચુંબકીય ફ્લક્સ (Φ_B) Φ_B = B · A = B A cos(θ) તરીકે વ્યાખ્યાયિત થાય છે, જ્યાં θ એ B અને સપાટીના લંબ વચ્ચેનો ખૂણો છે. SI એકમ: વેબર (Wb).\n\nફેરાડેનો વિદ્યુતચુંબકીય પ્રેરણનો નિયમ જણાવે છે કે પરિપથમાં પ્રેરિત વિદ્યુતચાલક બળ (emf) નું મૂલ્ય પરિપથમાંથી ચુંબકીય ફ્લક્સના સમય સાથેના ફેરફારના દર જેટલું હોય છે:\n\nε = - N (dΦ_B / dt)\n\nજ્યાં N એ કોઇલમાં આંટાની સંખ્યા છે. ઋણ નિશાની પ્રેરિત emf ની દિશા દર્શાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_005",
+      "type": "knowledge_check",
+      "title": "Applying Faraday's Law",
+      "title_hi": "फैराडे के नियम का अनुप्रयोग",
+      "title_gu": "ફેરાડેના નિયમનો ઉપયોગ",
+      "question": "A magnetic flux linked with a 100-turn coil changes from 12 Wb to 2 Wb in 0.2 seconds. What is the magnitude of the induced emf?",
+      "question_hi": "100-फेरों वाली कुंडली से जुड़ा चुंबकीय फ्लक्स 0.2 सेकंड में 12 Wb से बदलकर 2 Wb हो जाता है। प्रेरित emf का परिमाण क्या है?",
+      "question_gu": "100-આંટા ધરાવતી કોઇલ સાથે સંકળાયેલ ચુંબકીય ફ્લક્સ 0.2 સેકન્ડમાં 12 Wb થી ઘટીને 2 Wb થાય છે. પ્રેરિત emf નું મૂલ્ય શું છે?",
+      "options": [
+        "1000 V",
+        "5000 V",
+        "500 V",
+        "50 V"
+      ],
+      "options_hi": [
+        "1000 V",
+        "5000 V",
+        "500 V",
+        "50 V"
+      ],
+      "options_gu": [
+        "1000 V",
+        "5000 V",
+        "500 V",
+        "50 V"
+      ],
+      "correct_index": 1,
+      "explanation": "|ε| = N * |ΔΦ / Δt| = 100 * |(2 - 12) / 0.2| = 100 * (10 / 0.2) = 100 * 50 = 5000 V.",
+      "explanation_hi": "|ε| = N * |ΔΦ / Δt| = 100 * |(2 - 12) / 0.2| = 100 * (10 / 0.2) = 100 * 50 = 5000 V.",
+      "explanation_gu": "|ε| = N * |ΔΦ / Δt| = 100 * |(2 - 12) / 0.2| = 100 * (10 / 0.2) = 100 * 50 = 5000 V."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_006",
+      "type": "theory",
+      "title": "Lenz's Law and Motional EMF",
+      "title_hi": "लेन्ज़ का नियम और गतिक विद्युत वाहक बल",
+      "title_gu": "લેન્ઝનો નિયમ અને ગતિક વિદ્યુતચાલક બળ",
+      "body": "Lenz's Law states that the direction of induced current is such that it opposes the change in magnetic flux that produces it. It is a direct statement of the Law of Conservation of Energy.\n\nMotional EMF: When a straight conductor of length 'l' moves with velocity 'v' perpendicular to a uniform magnetic field 'B', an emf is induced across its ends given by:\n\nε = B · l · v",
+      "body_hi": "लेन्ज़ का नियम कहता है कि प्रेरित धारा की दिशा ऐसी होती है कि वह चुंबकीय फ्लक्स में होने वाले परिवर्तन का विरोध करती है जो इसे उत्पन्न करता है। यह ऊर्जा संरक्षण के नियम का एक सीधा कथन है।\n\nगतिक EMF: जब 'l' लंबाई का एक सीधा चालक एकसमान चुंबकीय क्षेत्र 'B' के लंबवत 'v' वेग से चलता है, तो इसके सिरों पर प्रेरित emf इस प्रकार दिया जाता है:\n\nε = B · l · v",
+      "body_gu": "લેન્ઝનો નિયમ જણાવે છે કે પ્રેરિત પ્રવાહની દિશા એવી હોય છે કે તે તેને ઉત્પન્ન કરતા ચુંબકીય ફ્લક્સના ફેરફારનો વિરોધ કરે છે. આ ઊર્જા સંરક્ષણના નિયમનું સીધું વિધાન છે.\n\nગતિક EMF: જ્યારે 'l' લંબાઈનો સીધો વાહક સમાન ચુંબકીય ક્ષેત્ર 'B' ને લંબરૂપે 'v' વેગથી ગતિ કરે છે, ત્યારે તેના છેડા વચ્ચે પ્રેરિત emf આપેલ છે:\n\nε = B · l · v"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_007",
+      "type": "knowledge_check",
+      "title": "Lenz's Law & Energy Conservation",
+      "title_hi": "लेन्ज़ का नियम और ऊर्जा संरक्षण",
+      "title_gu": "લેન્ઝનો નિયમ અને ઊર્જા સંરક્ષણ",
+      "question": "Lenz's law is a consequence of which fundamental conservation law of physics?",
+      "question_hi": "लेन्ज़ का नियम भौतिकी के किस मूल संरक्षण नियम का परिणाम है?",
+      "question_gu": "લેન્ઝનો નિયમ ભૌતિકશાસ્ત્રના કયા મૂળભૂત સંરક્ષણ નિયમનું પરિણામ છે?",
+      "options": [
+        "Conservation of Charge",
+        "Conservation of Linear Momentum",
+        "Conservation of Energy",
+        "Conservation of Mass"
+      ],
+      "options_hi": [
+        "आवेश का संरक्षण",
+        "रेखीय संवेग का संरक्षण",
+        "ऊर्जा का संरक्षण",
+        "द्रव्यमान का संरक्षण"
+      ],
+      "options_gu": [
+        "વિદ્યુતભારનું સંરક્ષણ",
+        "રેખીય વેગમાનનું સંરક્ષણ",
+        "ઊર્જાનું સંરક્ષણ",
+        "દળનું સંરક્ષણ"
+      ],
+      "correct_index": 2,
+      "explanation": "Mechanical work done in overcoming magnetic repulsion/attraction turns into electrical energy (and eventually heat). Thus, Lenz's law obeys the Law of Conservation of Energy.",
+      "explanation_hi": "चुंबकीय प्रतिकर्षण/आकर्षण पर काबू पाने में किया गया यांत्रिक कार्य विद्युत ऊर्जा (और अंततः ऊष्मा) में परिवर्तित हो जाता है। अतः, लेन्ज़ का नियम ऊर्जा संरक्षण के नियम का पालन करता है।",
+      "explanation_gu": "ચુંબકીય અપાકર્ષણ/આકર્ષણને દૂર કરવા માટે કરવામાં આવેલું યાંત્રિક કાર્ય વિદ્યુત ઊર્જા (અને અંતે ઉષ્મા) માં રૂપાંતરિત થાય છે. આથી, લેન્ઝનો નિયમ ઊર્જા સંરક્ષણના નિયમનું પાલન કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_008",
+      "type": "theory",
+      "title": "Inductance & Energy Stored in an Inductor",
+      "title_hi": "प्रेरकत्व और प्रेरक में संचित ऊर्जा",
+      "title_gu": "પ્રેરકત્વ અને પ્રેરકમાં સંગ્રહિત ઊર્જા",
+      "body": "Inductance is the ratio of magnetic flux linkage to current. \n1. Self-Inductance (L): Induced emf opposes change in current within the same coil. ε = - L (dI/dt). For a long solenoid: L = (μ₀ N² A) / l.\n2. Mutual Inductance (M): Changing current in one coil induces emf in an adjacent coil. ε₂ = - M (dI₁/dt).\n3. Magnetic Energy Stored in an Inductor: U = (1/2) L I².",
+      "body_hi": "प्रेरकत्व चुंबकीय फ्लक्स संबद्धता और धारा का अनुपात है।\n1. स्व-प्रेरकत्व (L): प्रेरित emf उसी कुंडली में धारा के परिवर्तन का विरोध करता है। ε = - L (dI/dt)। एक लंबी परिनालिका के लिए: L = (μ₀ N² A) / l।\n2. अन्योन्य प्रेरकत्व (M): एक कुंडली में बदलती धारा पास की कुंडली में emf प्रेरित करती है। ε₂ = - M (dI₁/dt)।\n3. प्रेरक में संचित चुंबकीय ऊर्जा: U = (1/2) L I²।",
+      "body_gu": "પ્રેરકત્વ એ ચુંબકીય ફ્લક્સ સંકલન અને વિદ્યુતપ્રવાહનો ગુણોત્તર છે.\n1. સ્વ-પ્રેરકત્વ (L): પ્રેરિત emf તે જ કોઇલમાં પ્રવાહના ફેરફારનો વિરોધ કરે છે. ε = - L (dI/dt). લાંબા સોલેનોઇડ માટે: L = (μ₀ N² A) / l.\n2. અન્યોન્ય પ્રેરકત્વ (M): એક કોઇલમાં બદલાતો પ્રવાહ નજીકની કોઇલમાં emf પ્રેરિત કરે છે. ε₂ = - M (dI₁/dt).\n3. પ્રેરકમાં સંગ્રહિત ચુંબકીય ઊર્જા: U = (1/2) L I²."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_009",
+      "type": "reflection",
+      "title": "Reflecting on Mechanical to Electrical Conversion",
+      "title_hi": "यांत्रिक से विद्युत रूपांतरण पर विचार",
+      "title_gu": "યાંત્રિકમાંથી વિદ્યુતમાં રૂપાંતરણ પર વિચાર",
+      "body": "When you drag a wire loop out of a magnetic field, you feel physical resistance. Why does this pushback exist, and how does it safeguard the principle that energy cannot be created out of nothing?",
+      "body_hi": "जब आप एक तार के लूप को चुंबकीय क्षेत्र से बाहर खींचते हैं, तो आपको भौतिक प्रतिरोध महसूस होता है। यह विरोध क्यों मौजूद है, और यह इस सिद्धांत की सुरक्षा कैसे करता है कि शून्य से ऊर्जा का निर्माण नहीं किया जा सकता है?",
+      "body_gu": "જ્યારે તમે વાહક લૂપને ચુંબકીય ક્ષેત્રમાંથી બહાર ખેંચો છો, ત્યારે તમને ભૌતિક અવરોધ અનુભવાય છે. આ પ્રતિકાર શા માટે અસ્તિત્વમાં છે, અને તે કેવી રીતે એ સિદ્ધાંતનું રક્ષણ કરે છે કે શૂન્યમાંથી ઊર્જા સર્જી શકાતી નથી?"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_010",
+      "type": "connection",
+      "title": "Real-World Applications: AC Generators & Eddy Currents",
+      "title_hi": "वास्तविक दुनिया के अनुप्रयोग: AC जनरेटर और भंवर धाराएं",
+      "title_gu": "વાસ્તવિક દુનિયાના ઉપયોગો: AC જનરેટર અને એડી પ્રવાહો",
+      "body": "1. AC Generators convert mechanical energy into alternating electric energy by rotating a coil in a uniform magnetic field (ε = N A B ω sin(ωt)).\n2. Eddy Currents: Circular induced currents formed in bulk conductors placed in changing magnetic fields. Used in electromagnetic braking in trains and induction furnaces, but minimized in transformer cores using laminated sheets.",
+      "body_hi": "1. AC जनरेटर एकसमान चुंबकीय क्षेत्र में एक कुंडली को घुमाकर यांत्रिक ऊर्जा को प्रत्यावर्ती विद्युत ऊर्जा में बदलते हैं (ε = N A B ω sin(ωt))।\n2. भंवर धाराएं (Eddy Currents): बदलते चुंबकीय क्षेत्रों में रखे गए ठोस चालकों में बनने वाली वृत्ताकार प्रेरित धाराएं। ट्रेनों में विद्युत चुंबकीय ब्रेकिंग और इंडक्शन भट्टियों में उपयोग किया जाता है, लेकिन टुकड़ेदार (लैमिनेटेड) कोर का उपयोग करके ट्रांसफार्मर में इन्हें कम किया जाता है।",
+      "body_gu": "1. AC જનરેટર સમાન ચુંબકીય ક્ષેત્રમાં કોઇલને ભ્રમણ કરાવીને યાંત્રિક ઊર્જાનું અલ્ટરનેટિંગ વિદ્યુત ઊર્જામાં રૂપાંતર કરે છે (ε = N A B ω sin(ωt)).\n2. એડી પ્રવાહો (Eddy Currents): બદલાતા ચુંબકીય ક્ષેત્રોમાં મુકેલા મોટા વાહકોમાં રચાતા વર્તુળાકાર પ્રેરિત પ્રવાહો. ટ્રેનોમાં વિદ્યુતચુંબકીય બ્રેકિંગ અને ઇન્ડક્શન ભઠ્ઠીઓમાં વપરાય છે, પરંતુ લેમિનેટેડ કોરનો ઉપયોગ કરીને ટ્રાન્સફોર્મરમાં તેને ઘટાડવામાં આવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_011",
+      "type": "mastery",
+      "title": "Mastery Challenge: Inductor Calculations",
+      "title_hi": "मास्टरी चुनौती: प्रेरक की गणना",
+      "title_gu": "માસ્ટરી ચેલેન્જ: પ્રેરકની ગણતરી",
+      "question": "An inductor of self-inductance L = 2.0 H carries a current decreasing uniformly from 5.0 A to 0.0 A in 0.1 s. What is the induced electromotive force (emf)?",
+      "question_hi": "स्व-प्रेरकत्व L = 2.0 H वाला एक प्रेरक 0.1 s में 5.0 A से 0.0 A तक समान रूप से घटने वाली धारा वहन करता है। प्रेरित विद्युत वाहक बल (emf) क्या है?",
+      "question_gu": "સ્વ-પ્રેરકત્વ L = 2.0 H ધરાવતો પ્રેરક 0.1 s માં 5.0 A થી ઘટીને 0.0 A થતો નિયમિત પ્રવાહ ધરાવે છે. પ્રેરિત વિદ્યુતચાલક બળ (emf) શું છે?",
+      "options": [
+        "10 V",
+        "100 V",
+        "50 V",
+        "200 V"
+      ],
+      "options_hi": [
+        "10 V",
+        "100 V",
+        "50 V",
+        "200 V"
+      ],
+      "options_gu": [
+        "10 V",
+        "100 V",
+        "50 V",
+        "200 V"
+      ],
+      "correct_index": 1,
+      "explanation": "|ε| = L * (|ΔI| / Δt) = 2.0 * (|0.0 - 5.0| / 0.1) = 2.0 * 50 = 100 V.",
+      "explanation_hi": "|ε| = L * (|ΔI| / Δt) = 2.0 * (|0.0 - 5.0| / 0.1) = 2.0 * 50 = 100 V.",
+      "explanation_gu": "|ε| = L * (|ΔI| / Δt) = 2.0 * (|0.0 - 5.0| / 0.1) = 2.0 * 50 = 100 V."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_012",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.1 (Part a)",
+      "title_hi": "NCERT अभ्यास 6.1 (भाग a)",
+      "title_gu": "NCERT સ્વાધ્યાય 6.1 (ભાગ a)",
+      "question": "Predict the direction of induced current in a closed loop when the South pole of a bar magnet is brought towards a circular loop.",
+      "question_hi": "जब एक छड़ चुंबक के दक्षिणी ध्रुव को एक वृत्ताकार लूप की ओर लाया जाता है, तो बंद लूप में प्रेरित धारा की दिशा का अनुमान लगाएं।",
+      "question_gu": "જ્યારે બાર મેગ્નેટના દક્ષિણ ધ્રુવને વર્તુળાકાર લૂપ તરફ લાવવામાં આવે ત્યારે બંધ લૂપમાં પ્રેરિત પ્રવાહની દિશા જણાવો.",
+      "options": [
+        "Clockwise as viewed from the magnet side",
+        "Anticlockwise as viewed from the magnet side",
+        "Zero current",
+        "Alternating continuously"
+      ],
+      "options_hi": [
+        "चुंबक की ओर से देखने पर दक्षिणावर्त (Clockwise)",
+        "चुंबक की ओर से देखने पर वामावर्त (Anticlockwise)",
+        "शून्य धारा",
+        "सतत रूप से बदलती हुई"
+      ],
+      "options_gu": [
+        "ચુંબકની બાજુથી જોતાં સમઘડી દિશામાં (Clockwise)",
+        "ચુંબકની બાજુથી જોતાં વિષમઘડી દિશામાં (Anticlockwise)",
+        "શૂન્ય પ્રવાહ",
+        "સતત બદલાતી"
+      ],
+      "correct_index": 0,
+      "explanation": "According to Lenz's law, approaching South pole creates a South pole facing the magnet to oppose the motion. A South pole corresponds to clockwise current flow.",
+      "explanation_hi": "लेन्ज़ के नियम के अनुसार, पास आता हुआ दक्षिणी ध्रुव गति का विरोध करने के लिए चुंबक के सामने एक दक्षिणी ध्रुव बनाता है। दक्षिणी ध्रुव दक्षिणावर्त (clockwise) धारा प्रवाह से मेल खाता है।",
+      "explanation_gu": "લેન્ઝના નિયમ મુજબ, નજીક આવતો દક્ષિણ ધ્રુવ ગતિનો વિરોધ કરવા માટે ચુંબક સામે દક્ષિણ ધ્રુવ બનાવે છે. દક્ષિણ ધ્રુવ સમઘડી (clockwise) પ્રવાહ સાથે સંબંધિત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_013",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.2",
+      "title_hi": "NCERT अभ्यास 6.2",
+      "title_gu": "NCERT સ્વાધ્યાય 6.2",
+      "question": "A long solenoid with 15 turns per cm has a small loop of area 2.0 cm² placed inside normal to its axis. If current changes steadily from 2.0 A to 4.0 A in 0.1 s, what is the induced emf in the loop?",
+      "question_hi": "15 फेरे प्रति सेमी वाली एक लंबी परिनालिका के अंदर उसके अक्ष के लंबवत 2.0 सेमी² क्षेत्रफल का एक छोटा लूप रखा गया है। यदि धारा 0.1 s में 2.0 A से 4.0 A तक समान रूप से बदलती है, तो लूप में प्रेरित emf क्या है?",
+      "question_gu": "15 આંટા પ્રતિ સેમી ધરાવતા સોલેનોઇડની અંદર તેની અક્ષને લંબરૂપે 2.0 cm² ક્ષેત્રફળ ધરાવતી નાની લૂપ મૂકેલી છે. જો પ્રવાહ 0.1 s માં 2.0 A થી વધીને 4.0 A થાય, તો લૂપમાં પ્રેરિત emf કેટલું હશે?",
+      "options": [
+        "7.5 × 10⁻⁶ V",
+        "1.5 × 10⁻⁶ V",
+        "3.0 × 10⁻⁵ V",
+        "4.8 × 10⁻⁴ V"
+      ],
+      "options_hi": [
+        "7.5 × 10⁻⁶ V",
+        "1.5 × 10⁻⁶ V",
+        "3.0 × 10⁻⁵ V",
+        "4.8 × 10⁻⁴ V"
+      ],
+      "options_gu": [
+        "7.5 × 10⁻⁶ V",
+        "1.5 × 10⁻⁶ V",
+        "3.0 × 10⁻⁵ V",
+        "4.8 × 10⁻⁴ V"
+      ],
+      "correct_index": 0,
+      "explanation": "n = 1500 turns/m. B = μ₀ n I. ΔB = μ₀ n ΔI = (4π × 10⁻⁷) × 1500 × (4 - 2) = 12π × 10⁻⁴ T. Induced emf ε = ΔΦ/Δt = (A * ΔB) / Δt = (2 × 10⁻⁴ × 12π × 10⁻⁴) / 0.1 ≈ 7.54 × 10⁻⁶ V.",
+      "explanation_hi": "n = 1500 फेरे/मी. B = μ₀ n I. ΔB = μ₀ n ΔI = (4π × 10⁻⁷) × 1500 × (4 - 2) = 12π × 10⁻⁴ T. प्रेरित emf ε = ΔΦ/Δt = (A * ΔB) / Δt = (2 × 10⁻⁴ × 12π × 10⁻⁴) / 0.1 ≈ 7.54 × 10⁻⁶ V.",
+      "explanation_gu": "n = 1500 આંટા/મી. B = μ₀ n I. ΔB = μ₀ n ΔI = (4π × 10⁻⁷) × 1500 × (4 - 2) = 12π × 10⁻⁴ T. પ્રેરિત emf ε = ΔΦ/Δt = (A * ΔB) / Δt = (2 × 10⁻⁴ × 12π × 10⁻⁴) / 0.1 ≈ 7.54 × 10⁻⁶ V."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_014",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.3",
+      "title_hi": "NCERT अभ्यास 6.3",
+      "title_gu": "NCERT સ્વાધ્યાય 6.3",
+      "question": "A rectangular loop and a circular loop are moving out of a uniform magnetic field region to a field-free region with a constant velocity. In which loop do you expect constant induced emf?",
+      "question_hi": "एक आयताकार लूप और एक वृत्ताकार लूप एकसमान चुंबकीय क्षेत्र से बाहर एक क्षेत्र-मुक्त क्षेत्र में नियत वेग से गति कर रहे हैं। किस लूप में आप नियत प्रेरित emf की आशा करते हैं?",
+      "question_gu": "એક લંબચોરસ લૂપ અને એક વર્તુળાકાર લૂપ સમાન ચુંબકીય ક્ષેત્રમાંથી બહાર ક્ષેત્ર-મુક્ત વિસ્તારમાં અચળ વેગથી ગતિ કરે છે. કયા લૂપમાં તમે અચળ પ્રેરિત emf ની અપેક્ષા રાખો છો?",
+      "options": [
+        "Rectangular loop",
+        "Circular loop",
+        "Both loops",
+        "Neither loop"
+      ],
+      "options_hi": [
+        "आयताकार लूप",
+        "वृत्ताकार लूप",
+        "दोनों लूप",
+        "दोनों में से कोई नहीं"
+      ],
+      "options_gu": [
+        "લંબચોરસ લૂપ",
+        "વર્તુળાકાર લૂપ",
+        "બંને લૂપ",
+        "એકપણ લૂપ નહીં"
+      ],
+      "correct_index": 0,
+      "explanation": "In a rectangular loop, the rate of change of area emerging out is constant, so dA/dt is constant, producing a constant emf. In a circular loop, the rate of change of area varies with time.",
+      "explanation_hi": "आयताकार लूप में बाहर निकलने वाले क्षेत्रफल के परिवर्तन की दर नियत होती है (dA/dt = constant), इसलिए नियत emf उत्पन्न होता है। वृत्ताकार लूप में समय के साथ क्षेत्रफल परिवर्तन की दर बदलती है।",
+      "explanation_gu": "લંબચોરસ લૂપમાં બહાર આવતા ક્ષેત્રફળના ફેરફારનો દર અચળ રહે છે (dA/dt = constant), તેથી અચળ emf ઉત્પન્ન થાય છે. વર્તુળાકાર લૂપમાં સમય સાથે ક્ષેત્રફળના ફેરફારનો દર બદલાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_015",
+      "type": "true_false",
+      "title": "NCERT Exercise 6.4",
+      "title_hi": "NCERT अभ्यास 6.4",
+      "title_gu": "NCERT સ્વાધ્યાય 6.4",
+      "question": "When a magnet moves towards a loop with its North pole facing the loop, the side of the loop facing the magnet acts as a North pole.",
+      "question_hi": "जब कोई चुंबक अपने उत्तरी ध्रुव को लूप की ओर रखते हुए गति करता है, तो लूप का चुंबक की ओर वाला भाग उत्तरी ध्रुव के रूप में कार्य करता है।",
+      "question_gu": "જ્યારે ચુંબક તેનો ઉત્તર ધ્રુવ લૂપ તરફ રાખીને લૂપ તરફ ગતિ કરે છે, ત્યારે લૂપનો ચુંબક તરફનો ભાગ ઉત્તર ધ્રુવ તરીકે વર્તે છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "True. By Lenz's law, the induced current creates a magnetic field that opposes the motion of the approaching magnet, making the facing side a North pole.",
+      "explanation_hi": "सत्य। लेन्ज़ के नियम के अनुसार, प्रेरित धारा एक चुंबकीय क्षेत्र बनाती है जो पास आते हुए चुंबक की गति का विरोध करती है, जिससे सामने वाला भाग उत्तरी ध्रुव बन जाता है।",
+      "explanation_gu": "સાચું. લેન્ઝના નિયમ અનુસાર, પ્રેરિત પ્રવાહ એવું ચુંબકીય ક્ષેત્ર ઉત્પન્ન કરે છે જે નજીક આવતા ચુંબકની ગતિનો વિરોધ કરે છે, જેથી સામેની બાજુ ઉત્તર ધ્રુવ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_016",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.5",
+      "title_hi": "NCERT अभ्यास 6.5",
+      "title_gu": "NCERT સ્વાધ્યાય 6.5",
+      "question": "A 1.0 m long metallic rod is rotated with an angular frequency of 400 rad/s about an axis normal to the rod passing through one end. The other end is in contact with a circular metallic ring. A uniform magnetic field of 0.5 T parallel to the axis exists everywhere. Calculate the emf developed between the center and the ring.",
+      "question_hi": "1.0 m लंबी एक धात्विक छड़ को इसके एक सिरे से गुजरने वाले अक्ष के परितः 400 rad/s की कोणीय आवृत्ति से घुमाया जाता है। दूसरा सिरा एक वृत्ताकार धात्विक वलय के संपर्क में है। 0.5 T का एकसमान चुंबकीय क्षेत्र अक्ष के समांतर सर्वत्र मौजूद है। केंद्र और वलय के बीच विकसित emf की गणना करें।",
+      "question_gu": "1.0 m લાંબો ધાતુનો સળિયો તેના એક છેડામાંથી પસાર થતી અક્ષને અનુલક્ષીને 400 rad/s ની કોણીય આવૃત્તિથી ભ્રમણ કરે છે. બીજો છેડો વર્તુળાકાર ધાતુની રિંગના સંપર્કમાં છે. અક્ષને સમાંતર 0.5 T નું સમાન ચુંબકીય ક્ષેત્ર બધે અસ્તિત્વમાં છે. કેન્દ્ર અને રિંગ વચ્ચે ઉત્પન્ન થતા emf ની ગણતરી કરો.",
+      "options": [
+        "100 V",
+        "50 V",
+        "200 V",
+        "400 V"
+      ],
+      "options_hi": [
+        "100 V",
+        "50 V",
+        "200 V",
+        "400 V"
+      ],
+      "options_gu": [
+        "100 V",
+        "50 V",
+        "200 V",
+        "400 V"
+      ],
+      "correct_index": 0,
+      "explanation": "Induced emf ε = (1/2) * B * ω * l² = 0.5 * 0.5 * 400 * (1.0)² = 100 V.",
+      "explanation_hi": "प्रेरित emf ε = (1/2) * B * ω * l² = 0.5 * 0.5 * 400 * (1.0)² = 100 V.",
+      "explanation_gu": "પ્રેરિત emf ε = (1/2) * B * ω * l² = 0.5 * 0.5 * 400 * (1.0)² = 100 V."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_017",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.6",
+      "title_hi": "NCERT अभ्यास 6.6",
+      "title_gu": "NCERT સ્વાધ્યાય 6.6",
+      "question": "A horizontal straight wire 10 m long extending from east to west is falling with a speed of 5.0 m/s perpendicular to the horizontal component of Earth's magnetic field B_H = 0.30 × 10⁻⁴ Wb/m². What is the instantaneous value of the emf induced in the wire?",
+      "question_hi": "पूर्व से पश्चिम की ओर फैली 10 m लंबी एक क्षैतिज सीधी तार पृथ्वी के चुंबकीय क्षेत्र के क्षैतिज घटक B_H = 0.30 × 10⁻⁴ Wb/m² के लंबवत 5.0 m/s की चाल से गिर रही है। तार में प्रेरित emf का तात्कालिक मान क्या है?",
+      "question_gu": "પૂર્વથી પશ્ચિમ તરફ લંબાયેલો 10 m લાંબો સમક્ષિતિજ સીધો વાયર પૃથ્વીના ચુંબકીય ક્ષેત્રના સમક્ષિતિજ ઘટક B_H = 0.30 × 10⁻⁴ Wb/m² ને લંબરૂપે 5.0 m/s ની ઝડપથી નીચે પડે છે. વાયરમાં પ્રેરિત emf નું તત્કાલીન મૂલ્ય કેટલું હશે?",
+      "options": [
+        "1.5 × 10⁻³ V",
+        "3.0 × 10⁻³ V",
+        "1.5 × 10⁻⁴ V",
+        "0.3 × 10⁻³ V"
+      ],
+      "options_hi": [
+        "1.5 × 10⁻³ V",
+        "3.0 × 10⁻³ V",
+        "1.5 × 10⁻⁴ V",
+        "0.3 × 10⁻³ V"
+      ],
+      "options_gu": [
+        "1.5 × 10⁻³ V",
+        "3.0 × 10⁻³ V",
+        "1.5 × 10⁻⁴ V",
+        "0.3 × 10⁻³ V"
+      ],
+      "correct_index": 0,
+      "explanation": "ε = B_H * v * l = (0.30 × 10⁻⁴) * 5.0 * 10 = 1.5 × 10⁻³ V = 1.5 mV.",
+      "explanation_hi": "ε = B_H * v * l = (0.30 × 10⁻⁴) * 5.0 * 10 = 1.5 × 10⁻³ V = 1.5 mV.",
+      "explanation_gu": "ε = B_H * v * l = (0.30 × 10⁻⁴) * 5.0 * 10 = 1.5 × 10⁻³ V = 1.5 mV."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_018",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.7",
+      "title_hi": "NCERT अभ्यास 6.7",
+      "title_gu": "NCERT સ્વાધ્યાય 6.7",
+      "question": "Current in a circuit falls from 5.0 A to 0.0 A in 0.1 s. If an average emf of 200 V is induced, estimate the self-inductance of the circuit.",
+      "question_hi": "एक परिपथ में धारा 0.1 s में 5.0 A से 0.0 A तक गिरती है। यदि 200 V का औसत emf प्रेरित होता है, तो परिपथ के स्व-प्रेरकत्व का अनुमान लगाएं।",
+      "question_gu": "પરિપથમાં વિદ્યુતપ્રવાહ 0.1 s માં 5.0 A થી ઘટીને 0.0 A થાય છે. જો 200 V નું સરેરાશ emf પ્રેરિત થાય, તો પરિપથના સ્વ-પ્રેરકત્વનો અંદાજ લગાવો.",
+      "options": [
+        "4 H",
+        "2 H",
+        "8 H",
+        "1 H"
+      ],
+      "options_hi": [
+        "4 H",
+        "2 H",
+        "8 H",
+        "1 H"
+      ],
+      "options_gu": [
+        "4 H",
+        "2 H",
+        "8 H",
+        "1 H"
+      ],
+      "correct_index": 0,
+      "explanation": "|ε| = L * (|ΔI| / Δt) => 200 = L * (5.0 / 0.1) => 200 = 50 L => L = 4 H.",
+      "explanation_hi": "|ε| = L * (|ΔI| / Δt) => 200 = L * (5.0 / 0.1) => 200 = 50 L => L = 4 H.",
+      "explanation_gu": "|ε| = L * (|ΔI| / Δt) => 200 = L * (5.0 / 0.1) => 200 = 50 L => L = 4 H."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_019",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.8",
+      "title_hi": "NCERT अभ्यास 6.8",
+      "title_gu": "NCERT સ્વાધ્યાય 6.8",
+      "question": "A pair of adjacent coils has a mutual inductance of 1.5 H. If the current in one coil changes from 0 to 20 A in 0.5 s, what is the change of flux linkage with the other coil?",
+      "question_hi": "पास-पास रखी कुंडलियों के एक जोड़े का अन्योन्य प्रेरकत्व 1.5 H है। यदि एक कुंडली में धारा 0.5 s में 0 से 20 A तक बदलती है, तो दूसरी कुंडली के साथ फ्लक्स संबद्धता में क्या परिवर्तन होगा?",
+      "question_gu": "પાસપાસે રાખેલી કોઇલની જોડનું અન્યોન્ય પ્રેરકત્વ 1.5 H છે. જો એક કોઇલમાં પ્રવાહ 0.5 s માં 0 થી વધીને 20 A થાય, તો બીજી કોઇલ સાથે સંકળાયેલ ફ્લક્સમાં કેટલો ફેરફાર થશે?",
+      "options": [
+        "30 Wb",
+        "15 Wb",
+        "60 Wb",
+        "7.5 Wb"
+      ],
+      "options_hi": [
+        "30 Wb",
+        "15 Wb",
+        "60 Wb",
+        "7.5 Wb"
+      ],
+      "options_gu": [
+        "30 Wb",
+        "15 Wb",
+        "60 Wb",
+        "7.5 Wb"
+      ],
+      "correct_index": 0,
+      "explanation": "ΔΦ = M * ΔI = 1.5 H * 20 A = 30 Wb.",
+      "explanation_hi": "ΔΦ = M * ΔI = 1.5 H * 20 A = 30 Wb.",
+      "explanation_gu": "ΔΦ = M * ΔI = 1.5 H * 20 A = 30 Wb."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_020",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.9",
+      "title_hi": "NCERT अभ्यास 6.9",
+      "title_gu": "NCERT સ્વાધ્યાય 6.9",
+      "question": "A jet plane is traveling towards west at a speed of 1800 km/h. What is the voltage difference developed between the ends of the wing having a span of 25 m, if the Earth's magnetic field at the location has a magnitude of 5.0 × 10⁻⁴ T and the dip angle is 30°?",
+      "question_hi": "एक जेट प्लेन 1800 km/h की चाल से पश्चिम की ओर जा रहा है। 25 m के विस्तार वाले पंखों के सिरों के बीच विकसित वोल्टेज अंतर क्या है, यदि उस स्थान पर पृथ्वी के चुंबकीय क्षेत्र का परिमाण 5.0 × 10⁻⁴ T है और नति कोण (dip angle) 30° है?",
+      "question_gu": "એક જેટ પ્લેન 1800 km/h ની ઝડપે પશ્ચિમ તરફ જઈ રહ્યું છે. 25 m નો પાંખનો વિસ્તાર ધરાવતા પાંખોના છેડા વચ્ચે કેટલો વોલ્ટેજ તફાવત ઉત્પન્ન થશે, જો તે સ્થળે પૃથ્વીના ચુંબકીય ક્ષેત્રનું મૂલ્ય 5.0 × 10⁻⁴ T અને નમનકોણ (dip angle) 30° હોય?",
+      "options": [
+        "3.125 V",
+        "6.25 V",
+        "1.56 V",
+        "12.5 V"
+      ],
+      "options_hi": [
+        "3.125 V",
+        "6.25 V",
+        "1.56 V",
+        "12.5 V"
+      ],
+      "options_gu": [
+        "3.125 V",
+        "6.25 V",
+        "1.56 V",
+        "12.5 V"
+      ],
+      "correct_index": 0,
+      "explanation": "v = 1800 km/h = 1800 × (5/18) = 500 m/s. Vertical component B_V = B sin(30°) = 5.0 × 10⁻⁴ × 0.5 = 2.5 × 10⁻⁴ T. Voltage difference ε = B_V * v * l = 2.5 × 10⁻⁴ × 500 × 25 = 3.125 V.",
+      "explanation_hi": "v = 1800 km/h = 1800 × (5/18) = 500 m/s। ऊर्ध्वाधर घटक B_V = B sin(30°) = 5.0 × 10⁻⁴ × 0.5 = 2.5 × 10⁻⁴ T। वोल्टेज अंतर ε = B_V * v * l = 2.5 × 10⁻⁴ × 500 × 25 = 3.125 V।",
+      "explanation_gu": "v = 1800 km/h = 1800 × (5/18) = 500 m/s. શિરોલંબ ઘટક B_V = B sin(30°) = 5.0 × 10⁻⁴ × 0.5 = 2.5 × 10⁻⁴ T. વોલ્ટેજ તફાવત ε = B_V * v * l = 2.5 × 10⁻⁴ × 500 × 25 = 3.125 V."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH6_021",
+      "type": "mcq",
+      "title": "NCERT Exercise 6.10",
+      "title_hi": "NCERT अभ्यास 6.10",
+      "title_gu": "NCERT સ્વાધ્યાય 6.10",
+      "question": "Calculate the self-inductance of an air-cored solenoid of length 50 cm, cross-sectional area 20 cm², and total turns 500.",
+      "question_hi": "50 cm लंबाई, 20 cm² अनुप्रस्थ काट क्षेत्रफल और 500 कुल फेरों वाली एक वायु-क्रोड परिनालिका के स्व-प्रेरकत्व की गणना करें।",
+      "question_gu": "50 cm લંબાઈ, 20 cm² ક્ષેત્રફળ અને કુલ 500 આંટા ધરાવતા એર-કોર્ડ સોલેનોઇડના સ્વ-પ્રેરકત્વની ગણતરી કરો.",
+      "options": [
+        "1.26 mH",
+        "2.52 mH",
+        "0.63 mH",
+        "5.04 mH"
+      ],
+      "options_hi": [
+        "1.26 mH",
+        "2.52 mH",
+        "0.63 mH",
+        "5.04 mH"
+      ],
+      "options_gu": [
+        "1.26 mH",
+        "2.52 mH",
+        "0.63 mH",
+        "5.04 mH"
+      ],
+      "correct_index": 0,
+      "explanation": "L = (μ₀ * N² * A) / l = (4π × 10⁻⁷ × (500)² × 20 × 10⁻⁴) / 0.5 = (4π × 10⁻⁷ × 250000 × 0.002) / 0.5 ≈ 1.256 × 10⁻³ H = 1.26 mH.",
+      "explanation_hi": "L = (μ₀ * N² * A) / l = (4π × 10⁻⁷ × (500)² × 20 × 10⁻⁴) / 0.5 = (4π × 10⁻⁷ × 250000 × 0.002) / 0.5 ≈ 1.256 × 10⁻³ H = 1.26 mH.",
+      "explanation_gu": "L = (μ₀ * N² * A) / l = (4π × 10⁻⁷ × (500)² × 20 × 10⁻⁴) / 0.5 = (4π × 10⁻⁷ × 250000 × 0.002) / 0.5 ≈ 1.256 × 10⁻³ H = 1.26 mH."
+    }
+  ]
+}

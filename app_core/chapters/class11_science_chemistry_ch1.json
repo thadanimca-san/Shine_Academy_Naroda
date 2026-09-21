@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "id": "class11_science_chemistry_ch1",
+    "title": "Some Basic Concepts of Chemistry",
+    "subject": "Chemistry",
+    "grade": "11",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Importance and Scope of Chemistry",
+      "Nature of Matter and States of Matter",
+      "Dalton's Atomic Theory and Atomic/Molecular Masses",
+      "Mole Concept and Molar Masses",
+      "Percentage Composition and Empirical/Molecular Formulae",
+      "Stoichiometry and Stoichiometric Calculations"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_0_1",
+      "type": "hook",
+      "title": "The Invisible Architecture of Life",
+      "body": "Imagine waking up tomorrow in a world completely devoid of synthetic materials—no plastics, no nylon, no modern medicines, no fertilizers to feed billions, and no batteries to power your smartphone. You would find yourself back in the Stone Age. Every medication that cures a disease, every fabric that keeps you warm, and every microchip that processes information exists because someone manipulated atoms and molecules. Welcome to the central science: chemistry."
+    },
+    {
+      "id": "KOBJ_0_2",
+      "type": "socratic",
+      "question": "Why is chemistry often referred to by scientists as 'The Central Science'?",
+      "options": [
+        "Because it is the oldest branch of science ever studied by humans.",
+        "Because it physically connects and overlaps with physics, biology, geology, and environmental science.",
+        "Because it only deals with the study of the Earth's core and central atmosphere.",
+        "Because it requires more mathematical calculations than any other science."
+      ],
+      "correct_index": 1,
+      "explanation": "Chemistry is called the central science because its principles form the foundational understanding for physics, biology, environmental science, and materials engineering. Understanding how molecules interact bridges the gap between living systems (biology) and fundamental forces (physics)."
+    },
+    {
+      "id": "KOBJ_0_3",
+      "type": "theory",
+      "title": "Importance and Scope of Chemistry: Deep Dive",
+      "body": "Chemistry is not merely a collection of test tubes, periodic tables, and pungent odors; it is the comprehensive study of matter, its properties, how and why substances combine or separate, and how they interact with energy. The scope of chemistry touches virtually every facet of modern human existence and industry. In agriculture, chemistry has revolutionized food production through the development of synthetic fertilizers (like urea and nitrates), pesticides, and herbicides, protecting crops and sustaining a global population that would otherwise outstrip natural resources. In medicine, pharmaceutical chemistry designs, synthesizes, and evaluates life-saving drugs—from early antibiotics like penicillin to targeted cancer therapies—by understanding the precise lock-and-key molecular mechanisms of biological receptors. Furthermore, environmental chemistry allows us to monitor, analyze, and mitigate anthropogenic pollution, developing green chemistry principles to minimize hazardous waste and design biodegradable plastics. In materials science, chemists synthesize advanced polymers, superconductors, nanomaterials, and semiconductors that drive the digital revolution. At its core, the study of chemistry empowers us to predict outcomes, engineer brand-new substances with tailored properties that do not exist in nature, and solve some of humanity's most complex challenges by manipulating the sub-microscopic realm of atoms and molecules.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_0_4",
+      "type": "knowledge_check",
+      "question": "A pharmaceutical research team is trying to design a new molecule that can block a specific viral enzyme responsible for replication. Which branch of chemistry's scope is primarily being applied here?",
+      "options": [
+        "Analytical chemistry to determine the exact mass of the virus",
+        "Organic and medicinal chemistry to synthesize a targeted molecular structure",
+        "Nuclear chemistry to alter the radioactive decay of the viral cells",
+        "Geochemistry to study the mineral origin of the virus"
+      ],
+      "correct_index": 1,
+      "explanation": "Designing a specific molecule to interact with a biological target (like an enzyme) relies heavily on organic chemistry principles (understanding carbon-based molecular architecture) and medicinal chemistry, which focuses on drug discovery and synthesis.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_NM_1",
+      "type": "hook",
+      "title": "The Invisible Dance of the Universe",
+      "body": "Imagine taking a deep breath of crisp morning air. You feel nothing solid entering your lungs, yet that invisible gas is packed with trillions of moving particles. If you drop an ice cube into a glass of warm tea, it vanishes into liquid water, which can then turn into invisible steam when boiled. What is this magical shapeshifting power? It is the fundamental nature of matter itself—everything you can touch, see, or breathe is locked in a constant, dynamic dance of atoms and molecules."
+    },
+    {
+      "id": "KOBJ_NM_2",
+      "type": "socratic",
+      "question": "If you compress a gas inside a sealed syringe, the volume decreases significantly. However, if you try the same with a liquid-filled syringe, it barely compresses at all. What does this tell us fundamentally about the space between particles in different states of matter?",
+      "options": [
+        "Liquid particles are larger than gas particles.",
+        "Gas particles have massive empty space between them, while liquid particles are tightly packed with very little empty space.",
+        "Liquid particles repel each other, whereas gas particles attract each other.",
+        "Gas particles have zero mass, while liquid particles have mass."
+      ],
+      "correct_index": 1,
+      "explanation": "Gases are highly compressible because their molecules are separated by vast distances of empty space. Liquids, having much less inter-molecular free space, resist compression strongly."
+    },
+    {
+      "id": "KOBJ_NM_3",
+      "type": "discovery",
+      "title": "Unveiling the Three Classical States and Beyond",
+      "body": "Matter is formally defined as anything that has mass and occupies space. At the macroscopic level, it presents itself primarily in three physical states: solid, liquid, and gas—governed by the eternal tug-of-war between thermal energy (which promotes random motion) and intermolecular forces (which promote cohesion). As we heat a solid, thermal energy overpowers intermolecular bonds, causing a transition to a liquid, and eventually into a gas. At extreme temperatures and energies, ionized plasmas and Bose-Einstein condensates emerge, expanding our understanding of the universe's material canvas."
+    },
+    {
+      "id": "KOBJ_NM_4",
+      "type": "theory",
+      "title": "Nature of Matter and States of Matter: Deep Dive",
+      "body": "At the microscopic heart of chemistry lies the particulate nature of matter. Matter is not continuous; rather, it is composed of discrete entities—atoms, molecules, or ions—that are perpetually in motion. In the solid state, intermolecular or interatomic forces are exceptionally strong, restricting particles to fixed positions where they only vibrate about mean points, imparting definite shape and volume. When thermal energy is supplied, these particles gain kinetic energy until it overcomes the potential energy of attractive forces, leading to the liquid state. Here, particles remain close due to cohesive forces, but possess enough translational freedom to slide past one another, taking the shape of their container while maintaining a fixed volume. In the gaseous state, kinetic energy completely dwarfs attractive forces; gas molecules move randomly at high velocities, colliding elastically with one another and container walls, thus filling any available volume entirely. Understanding these states at a molecular level allows chemists to manipulate phase transitions, engineer advanced materials, and predict how substances behave under varying environmental conditions of temperature and pressure.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_NM_5",
+      "type": "knowledge_check",
+      "question": "Which of the following macroscopic properties best distinguishes a gas from a liquid?",
+      "options": [
+        "Gases have mass, while liquids do not.",
+        "Gases have a definite volume but no definite shape.",
+        "Gases expand to completely fill any container they are placed in, whereas liquids have a fixed volume.",
+        "Liquid particles are in motion, whereas gas particles are completely stationary."
+      ],
+      "correct_index": 2,
+      "explanation": "A liquid maintains a constant volume regardless of its container (due to significant intermolecular forces), whereas a gas expands or compresses to completely occupy the entire volume of its container because its particles move independently and are not bound by strong attractive forces.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_NM_6",
+      "type": "connection",
+      "title": "Matter in Action: Cryogenics and Cooking",
+      "body": "Think about how we cook food or preserve biological samples. Liquid nitrogen, sitting at a chilling -196°C, is used in molecular gastronomy to instantly freeze ice cream, showcasing how extreme changes in thermal energy alter states of matter in seconds. Similarly, weather patterns on Earth—from the evaporation of ocean water to the formation of clouds and rain—are just grand-scale demonstrations of phase transitions governed by the exact same molecular principles you are studying today."
+    },
+    {
+      "id": "KOBJ_2_1",
+      "type": "hook",
+      "title": "The Infinite Lego Box of Nature",
+      "body": "Imagine you are handed a massive, infinitely complex castle built entirely out of standard plastic interlocking bricks. If you smash the castle down to dust, you find it was made of only a few hundred unique types of bricks. Ancient Greek philosophers like Democritus gazed at the vast diversity of the material universe and wondered: if you keep cutting a piece of gold in half, do you eventually reach an indivisible, ultimate speck of gold that cannot be cut any further? This dream of an ultimate, indivisible building block launched humanity's greatest scientific quest into the nature of matter."
+    },
+    {
+      "id": "KOBJ_2_2",
+      "type": "socratic",
+      "question": "If you completely burn a piece of wood in a sealed, airtight glass container, what happens to the total mass of the system after it turns to ash and smoke?",
+      "options": [
+        "The total mass decreases significantly because smoke and gases disappear.",
+        "The total mass increases because fire adds matter to the system.",
+        "The total mass remains exactly the same, conserved within the sealed container.",
+        "The total mass fluctuates randomly depending on the temperature."
+      ],
+      "correct_index": 2,
+      "explanation": "According to the Law of Conservation of Mass, matter is neither created nor destroyed during a chemical change. In a sealed container, all the gases, ash, and remaining matter are trapped, proving the total mass remains constant."
+    },
+    {
+      "id": "KOBJ_2_3",
+      "type": "discovery",
+      "title": "John Dalton and the Resurgence of the Atom",
+      "body": "Building upon the foundational Laws of Chemical Combination—specifically Antoine Lavoisier's Law of Conservation of Mass and Joseph Proust's Law of Definite Proportions—English schoolteacher John Dalton proposed a revolutionary atomic theory in 1808. Dalton postulated that matter consists of indivisible atoms, all atoms of a given element are identical in mass and properties, compounds are formed by combinations of atoms in fixed whole-number ratios, and chemical reactions involve the reorganization of these atoms. While modern science has since discovered that atoms are divisible into subatomic particles (protons, neutrons, and electrons) and can exist as isotopes with varying masses, Dalton's visionary framework successfully explained macro-level chemical behaviors using micro-level entities, laying the groundwork for quantifying atomic and molecular masses."
+    },
+    {
+      "id": "KOBJ_2_4",
+      "type": "theory",
+      "title": "Dalton's Atomic Theory and Atomic/Molecular Masses: Deep Dive",
+      "body": "Dalton's atomic theory provided a rational explanation for the macroscopic laws of chemical combination by proposing that elements are composed of tiny, indestructible particles called atoms. However, a major challenge arose: how do we weigh something invisible to the naked eye? Because absolute masses of individual atoms are unimaginably small (on the order of 10^-24 grams), chemists developed a relative mass scale. Today, the standard unit of atomic mass is the unified atomic mass unit (symbol 'u' oramu), defined precisely as one-twelfth (1/12th) of the mass of an unbound neutral atom of carbon-12 at rest. Using this standard, the atomic mass of an element represents how many times heavier an average atom of that element is compared to 1/12th of a carbon-12 atom. When naturally occurring elements contain multiple isotopes, we calculate the average atomic mass by taking the weighted average of their isotopic masses based on their fractional natural abundances. Extending this concept to compounds, the molecular mass is obtained by simply adding up the atomic masses of all the atoms present in a single molecule, calculated by multiplying the atomic mass of each element by its subscript in the molecular formula. For ionic compounds that do not exist as discrete molecules, we use the term formula mass instead, summing the atomic masses of the ions in the empirical formula. This quantification bridges the gap between the microscopic realm of atoms and the macroscopic laboratory scale, allowing chemists to predict exact quantities required in chemical reactions.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_2_5",
+      "type": "knowledge_check",
+      "question": "What is the molecular mass of sulfuric acid (H2SO4), given that the atomic masses of H, S, and O are approximately 1 u, 32 u, and 16 u respectively?",
+      "options": [
+        "49 u",
+        "98 u",
+        "80 u",
+        "34 u"
+      ],
+      "correct_index": 1,
+      "explanation": "To find the molecular mass of H2SO4, multiply the number of atoms of each element by its atomic mass and sum them up: (2 x 1 u) for Hydrogen + (1 x 32 u) for Sulfur + (4 x 16 u) for Oxygen = 2 + 32 + 64 = 98 u.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2_6",
+      "type": "reflection",
+      "title": "Weighing the Unseen",
+      "body": "Take a moment to appreciate the sheer brilliance of the relative atomic mass scale. We cannot place a single oxygen atom on a physical laboratory balance. Yet, by agreeing on a universal reference standard—the carbon-12 atom—scientists have created a reliable accounting system that lets us weigh invisible particles by the trillions. How does knowing that matter is built from fixed, countable atomic masses change your perspective on the medicines you take or the materials used to build smartphones?"
+    },
+    {
+      "id": "KOBJ_MC_1",
+      "type": "hook",
+      "title": "The Pharmacist's Dilemma: Counting the Uncountable",
+      "body": "Imagine you walk into a wholesale medical warehouse. The pharmacist isn't sitting there counting individual aspirin tablets one by one—that would take centuries! Instead, they grab a high-precision digital scale and weigh out exactly 500 grams of pills. They know that if one pill weighs precisely 0.5 grams, a 500-gram bag must contain exactly 1,000 pills. In chemistry, atoms and molecules present an even greater challenge: they are unfathomably small, completely invisible to the naked eye, and numbering in the billions even in a tiny grain of sand. How can chemists possibly 'count' atoms without going crazy? They weigh them! And to bridge the gap between the microscopic world of atoms and the macroscopic world of laboratory balances, scientists invented chemistry's ultimate counting unit: The Mole."
+    },
+    {
+      "id": "KOBJ_MC_2",
+      "type": "socratic",
+      "question": "If a dozen means 12 and a gross means 144, what do you think a 'mole' represents in chemistry?",
+      "options": [
+        "A tiny subatomic particle found inside the nucleus",
+        "A specific physical weight of exactly one gram of hydrogen",
+        "A counting number representing a specific collection of particles ($6.022 \\times 10^{23}$)",
+        "The volume occupied by a gas at standard temperature and pressure"
+      ],
+      "correct_index": 2,
+      "explanation": "Just like a 'dozen' is a shorthand word for 12 items, a 'mole' is simply a chemist's shorthand word for a very large collection of items: precisely $6.022 \\times 10^{23}$ particles (atoms, molecules, or ions)."
+    },
+    {
+      "id": "KOBJ_MC_3",
+      "type": "theory",
+      "title": "Mole Concept and Molar Masses: Deep Dive",
+      "body": "The mole (symbol: mol) is the SI unit for the amount of substance. One mole is defined as the exact amount of a substance that contains as many elementary entities (such as atoms, molecules, ions, or electrons) as there are atoms in exactly 12 grams of carbon-12 isotope ($^{12}\\text{C}$). This monumental number is known as the Avogadro constant ($N_A$), with an accepted value of $6.02214076 \\times 10^{23} \\text{ mol}^{-1}$. To put this number into perspective, if you had a mole of marbles, they would cover the entire surface of the Earth to a depth of several miles! Because counting individual atoms is impossible, the mole serves as the indispensable bridge connecting the mass of a substance we can measure in the laboratory to the number of particles reacting on a microscopic scale. Closely tied to this is the concept of molar mass—the mass of one mole of a substance in grams per mole ($\text{g/mol}$). While the atomic mass of a single atom is expressed in atomic mass units (u)—where one carbon-12 atom is assigned a mass of exactly 12 u—the molar mass of that same element numerically equals its atomic mass, but carries the unit $\text{g/mol}$. For instance, a single oxygen atom has an atomic mass of approximately 16.00 u, meaning one mole of oxygen atoms has a mass of exactly 16.00 grams. By utilizing molar mass as a conversion factor, chemists can seamlessly translate grams of reactants into moles, use balanced chemical equations to determine stoichiometric ratios, and accurately predict how much product will form in a chemical reaction.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_MC_4",
+      "type": "knowledge_check",
+      "question": "What is the total number of oxygen atoms present in exactly 0.5 moles of molecular oxygen ($\text{O}_2$)?",
+      "options": [
+        "$3.011 \\times 10^{23}$ atoms",
+        "$6.022 \\times 10^{23}$ atoms",
+        "$1.204 \\times 10^{24}$ atoms",
+        "$1.505 \\times 10^{23}$ atoms"
+      ],
+      "correct_index": 1,
+      "explanation": "First, find the number of moles of molecules: $0.5 \\text{ moles of } \\text{O}_2 \\times 6.022 \\times 10^{23} \\text{ molecules/mol} = 3.011 \\times 10^{23}$ molecules of $\text{O}_2$. Since each $\text{O}_2$ molecule contains 2 oxygen atoms, we multiply that by 2: $3.011 \\times 10^{23} \\times 2 = 6.022 \\times 10^{23}$ oxygen atoms (which happens to be exactly 1 mole of oxygen atoms!).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_4_1",
+      "type": "hook",
+      "title": "The Mystery of the Counterfeit Medicine",
+      "body": "Imagine you are a forensic chemist working late in the lab. A batch of life-saving pharmaceutical drugs has been seized from a suspicious shipment. The packaging looks identical to the real medicine, and the white powder inside passes a basic physical inspection. However, patients taking this medicine are not getting better. Desperate to know if the active ingredient has been substituted with something cheap or inert, you cannot just look at the powder—you need to know its exact chemical identity. How do you prove whether a white powder is legitimate aspirin or a dangerous fake using only the weight of its elements?"
+    },
+    {
+      "id": "KOBJ_4_2",
+      "type": "socratic",
+      "question": "If you have a 100g sample of water (H2O), and you know that hydrogen has an atomic mass of roughly 1 amu and oxygen has 16 amu, what percentage of the total mass of water comes purely from oxygen?",
+      "options": [
+        "11.1%",
+        "88.9%",
+        "50.0%",
+        "33.3%"
+      ],
+      "correct_index": 1,
+      "explanation": "In 1 mole of H2O, there are 2 moles of H (mass ≈ 2g) and 1 mole of O (mass ≈ 16g). Total mass = 18g. The mass percentage of oxygen is (16 / 18) × 100 = 88.89%, which rounds to 88.9%."
+    },
+    {
+      "id": "KOBJ_4_3",
+      "type": "theory",
+      "title": "Percentage Composition and Empirical/Molecular Formulae: Deep Dive",
+      "body": "To truly understand what matter is made of, chemists must bridge the macroscopic world we can weigh on a balance with the microscopic world of atoms and molecules. This is where percentage composition and chemical formulae become indispensable. Percentage composition expresses the relative mass of each element present in a compound, calculated simply as the mass of that element in 1 sample of the compound divided by the total molecular mass of the compound, multiplied by 100. This tells us the chemical fingerprint of a substance by weight, regardless of how much of it we have. But what if we are given a percentage composition from a laboratory combustion analysis and need to work backward to find the formula of the compound? We use the empirical formula—the simplest whole-number ratio of atoms of each element in a molecule. To find it, we convert the percentage data (assuming a 100g sample) into moles for each element, divide each mole value by the smallest mole value obtained to establish a preliminary ratio, and if necessary, multiply by a small integer to clear out fractions into whole numbers. However, an empirical formula is only a ratio; it may or may not be the actual molecular formula, which gives the exact count of each atom in a real molecule. To move from the empirical formula to the molecular formula, we must know the molar mass of the compound. By dividing the molar mass by the empirical formula mass, we find an integer multiplier ($n$) that scales the empirical formula up to its true molecular size (Molecular Formula = $n$ × Empirical Formula). Mastering this workflow allows chemists to decode unknown substances, verify manufacturing purity, and synthesize novel materials with absolute precision.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_4_4",
+      "type": "knowledge_check",
+      "question": "A compound contains 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. If its molar mass is determined to be 180 g/mol, what is its molecular formula? (Atomic masses: C = 12, H = 1, O = 16)",
+      "options": [
+        "CH2O",
+        "C2H4O2",
+        "C3H6O3",
+        "C6H12O6"
+      ],
+      "correct_index": 3,
+      "explanation": "First, find moles of each in 100g: C = 40/12 = 3.33 mol; H = 6.7/1 = 6.7 mol; O = 53.3/16 = 3.33 mol. Dividing by the smallest (3.33) gives the empirical formula CH2O, with an empirical mass of 30 g/mol. The ratio of molar mass to empirical mass is 180 / 30 = 6. Multiplying the empirical formula by 6 yields C6H12O6.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_5_1",
+      "type": "hook",
+      "title": "The Master Baker's Dilemma",
+      "body": "Imagine you run a legendary bakery and your signature recipe for a triple-chocolate wedding cake requires precisely 3 cups of flour, 2 cups of sugar, and 6 eggs. One morning, an excited apprentice rushes in with a mountain of 60 eggs, a massive sack of flour, but only 2 cups of sugar. If the apprentice hastily bakes a cake using all the available eggs and flour, disaster strikes—the batter is ruined because the ratio was completely broken! Chemistry operates on this exact same principle of quantitative proportion. Atoms and molecules do not combine haphazardly; they follow strict, unyielding recipes known as chemical equations."
+    },
+    {
+      "id": "KOBJ_5_2",
+      "type": "socratic",
+      "question": "If you burn 4 grams of hydrogen gas ($H_2$) completely in the presence of excess oxygen ($O_2$) to form water ($H_2O$), how many grams of water will be produced? (Atomic masses: H = 1 u, O = 16 u)",
+      "options": [
+        "18 grams",
+        "36 grams",
+        "8 grams",
+        "72 grams"
+      ],
+      "correct_index": 1,
+      "explanation": "The balanced chemical equation is $2H_2 + O_2 \\rightarrow 2H_2O$. This tells us that 2 moles of $H_2$ (4 grams) react to produce 2 moles of $H_2O$. Since 1 mole of $H_2O$ weighs 18 grams, 2 moles weigh $2 \\times 18 = 36$ grams. Mass is conserved perfectly!"
+    },
+    {
+      "id": "KOBJ_5_3",
+      "type": "theory",
+      "title": "Stoichiometry and Stoichiometric Calculations: Deep Dive",
+      "body": "The term 'stoichiometry' is derived from two Greek words: *stoicheion* (meaning element) and *metron* (meaning measure). At its core, stoichiometry is the calculation of relative quantities of reactants and products in chemical reactions. To perform these calculations successfully, we must first master the art of writing and balancing chemical equations, which relies fundamentally on the Law of Conservation of Mass—matter can neither be created nor destroyed. The coefficients placed before chemical formulas in a balanced equation represent mole ratios, not mass ratios. For instance, in the combustion of methane ($CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$), the coefficients tell us that 1 mole of methane reacts with precisely 2 moles of oxygen gas. When solving stoichiometric problems, chemists follow a reliable roadmap: convert the given mass or volume of a substance into moles using molar mass or molar volume, use the stoichiometric mole ratio from the balanced equation to bridge from the given substance to the desired substance, and finally, convert those moles back into whatever unit (mass, volume, or number of particles) is demanded by the problem. Furthermore, real-world reactions often involve a 'limiting reagent'—the reactant that is entirely consumed first, halting the reaction and dictating the maximum amount of product (the theoretical yield) that can ever be formed. Mastering stoichiometry allows chemists to predict yields, minimize expensive chemical waste, and safely engineer everything from automobile airbags to pharmaceutical drugs.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_5_4",
+      "type": "knowledge_check",
+      "question": "Consider the reaction: $N_2(g) + 3H_2(g) \\rightarrow 2NH_3(g)$. If 28 grams of nitrogen gas reacts with 6 grams of hydrogen gas, what is the limiting reagent and how much ammonia ($NH_3$) is produced? (Atomic masses: N = 14 u, H = 1 u)",
+      "options": [
+        "Hydrogen is limiting; 34 g of ammonia is produced.",
+        "Nitrogen is limiting; 17 g of ammonia is produced.",
+        "Neither is limiting; 34 g of ammonia is produced.",
+        "Hydrogen is limiting; 17 g of ammonia is produced."
+      ],
+      "correct_index": 2,
+      "explanation": "First, find the moles of each reactant: 28 g of $N_2 = 1$ mole ($28/28$). 6 g of $H_2 = 3$ moles ($6/2$). According to the balanced equation, 1 mole of $N_2$ requires exactly 3 moles of $H_2$. Since we have precisely 1 mole of $N_2$ and 3 moles of $H_2$, both are completely consumed simultaneously—neither is in excess! From 1 mole of $N_2$, we produce 2 moles of $NH_3$. The molar mass of $NH_3$ is 17 g/mol, so 2 moles equal $2 \\times 17 = 34$ grams.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    }
+  ]
+}

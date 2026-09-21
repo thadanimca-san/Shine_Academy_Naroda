@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch8",
+    "title": "Chapter 8: Introduction to Trigonometry",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "trigonometry",
+      "sin_cos_tan",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Master trigonometric ratios.",
+      "Understand and apply SOH CAH TOA.",
+      "Solve CBSE/State Board HOTS questions related to trigonometric identities.",
+      "Apply logic to real-world scenarios involving heights and distances."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract trigonometry feel real. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
+      "common_misconceptions": [
+        "Students get confused about opposite and adjacent sides.",
+        "Students forget the trigonometric identities."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you are looking at the top of the Burj Khalifa from a distance. If you know the angle at which you are looking up and how far you are from the building, can you find its exact height without measuring it directly? Yes! This is the magic of **Trigonometry (त्रिकोणमिति / ત્રિકોણમિતિ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "The Right Angled Triangle: The foundation of all trigonometry.",
+      "image_url": "assets/images/maths_ch8_triangle.jpg",
+      "alt_text": "A right angled triangle highlighting the Hypotenuse, Opposite, and Adjacent sides with respect to angle θ."
+    },
+    {
+      "type": "theory",
+      "content": "**Trigonometric Ratios (त्रिकोणमितीय अनुपात):**\nThese are ratios of the lengths of the sides of a right-angled triangle. They relate the angles of a triangle to the lengths of its sides.",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "memory_trick",
+      "content": "💡 **Teacher's Secret (The SOH CAH TOA Trick):**\nRemember this to easily recall the formulas:\n**SOH** -> **S**in = **O**pposite / **H**ypotenuse\n**CAH** -> **C**os = **A**djacent / **H**ypotenuse\n**TOA** -> **T**an = **O**pposite / **A**djacent",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Visual representation of SOH CAH TOA to cement it in your memory.",
+      "image_url": "assets/images/maths_ch8_sohcahtoa.jpg",
+      "alt_text": "A colorful infographic showing SOH CAH TOA with corresponding triangle sides highlighted."
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Supreme Identity\n\nThis is the most important identity in trigonometry:\n**sin²θ + cos²θ = 1**\n\n*Board Trick:* Almost every proof question in the exam will use this identity directly or indirectly. Memorize it!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_1",
+      "type": "quiz",
+      "question": "In a right triangle ABC, right-angled at B, if tan A = 1, then the value of 2 sin A cos A is:",
+      "question_hi": "एक समकोण त्रिभुज ABC में, जिसका कोण B समकोण है, यदि tan A = 1 है, तो 2 sin A cos A का मान है:",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "1/2"
+      ],
+      "options_hi": [
+        "1",
+        "0",
+        "2",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "tan A = 1 means angle A = 45°. Therefore, 2 sin 45° cos 45° = 2(1/√2)(1/√2) = 2(1/2) = 1.",
+      "explanation_hi": "tan A = 1 का अर्थ है कोण A = 45°। इसलिए, 2 sin 45° cos 45° = 2(1/√2)(1/√2) = 2(1/2) = 1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_2",
+      "type": "quiz",
+      "question": "If 15 cot A = 8, then what is the value of sin A?",
+      "question_hi": "यदि 15 cot A = 8 है, तो sin A का मान क्या होगा?",
+      "options": [
+        "15/17",
+        "8/17",
+        "17/15",
+        "17/8"
+      ],
+      "options_hi": [
+        "15/17",
+        "8/17",
+        "17/15",
+        "17/8"
+      ],
+      "correct_index": 0,
+      "explanation": "cot A = 8/15. Let adjacent = 8k, opposite = 15k. Hypotenuse = √(8k)² + (15k)² = 17k. sin A = opposite / hypotenuse = 15/17.",
+      "explanation_hi": "cot A = 8/15. माना संलग्न भुजा = 8k, सम्मुख भुजा = 15k। कर्ण = √(8k)² + (15k)² = 17k. sin A = सम्मुख भुजा / कर्ण = 15/17।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_3",
+      "type": "quiz",
+      "question": "The value of (sin 30° + cos 60°) - (sin 60° + cos 30°) is:",
+      "question_hi": "(sin 30° + cos 60°) - (sin 60° + cos 30°) का मान है:",
+      "options": [
+        "1 - √3",
+        "0",
+        "√3 - 1",
+        "2"
+      ],
+      "options_hi": [
+        "1 - √3",
+        "0",
+        "√3 - 1",
+        "2"
+      ],
+      "correct_index": 0,
+      "explanation": "sin 30° = 1/2, cos 60° = 1/2. Their sum = 1. sin 60° = √3/2, cos 30° = √3/2. Their sum = √3. Difference is 1 - √3.",
+      "explanation_hi": "sin 30° = 1/2, cos 60° = 1/2। उनका योग = 1. sin 60° = √3/2, cos 30° = √3/2। उनका योग = √3. अंतर 1 - √3 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_4",
+      "type": "quiz",
+      "question": "The value of (tan 1° tan 2° tan 3° ... tan 89°) is:",
+      "question_hi": "(tan 1° tan 2° tan 3° ... tan 89°) का मान है:",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "1/2"
+      ],
+      "options_hi": [
+        "1",
+        "0",
+        "2",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "tan(90°-θ) = cot θ. So tan 89° = cot 1°, tan 88° = cot 2°, etc. tan θ * cot θ = 1. Everything pairs up and cancels except tan 45° which is 1. The product is 1.",
+      "explanation_hi": "tan(90°-θ) = cot θ. इसलिए tan 89° = cot 1°, tan 88° = cot 2°, आदि। tan θ * cot θ = 1. tan 45° (जो 1 है) को छोड़कर सब कट जाता है। गुणनफल 1 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_5",
+      "type": "quiz",
+      "question": "If sin θ = cos θ, then the value of 2 tan θ + cos² θ is:",
+      "question_hi": "यदि sin θ = cos θ, तो 2 tan θ + cos² θ का मान है:",
+      "options": [
+        "5/2",
+        "2",
+        "3/2",
+        "1"
+      ],
+      "options_hi": [
+        "5/2",
+        "2",
+        "3/2",
+        "1"
+      ],
+      "correct_index": 0,
+      "explanation": "sin θ = cos θ implies θ = 45°. 2 tan 45° + cos² 45° = 2(1) + (1/√2)² = 2 + 1/2 = 5/2.",
+      "explanation_hi": "sin θ = cos θ का अर्थ है θ = 45°। 2 tan 45° + cos² 45° = 2(1) + (1/√2)² = 2 + 1/2 = 5/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_6",
+      "type": "quiz",
+      "question": "If √3 tan θ = 3 sin θ, then the value of sin² θ - cos² θ is:",
+      "question_hi": "यदि √3 tan θ = 3 sin θ, तो sin² θ - cos² θ का मान है:",
+      "options": [
+        "1/3",
+        "2/3",
+        "1",
+        "0"
+      ],
+      "options_hi": [
+        "1/3",
+        "2/3",
+        "1",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "√3 (sin θ / cos θ) = 3 sin θ => cos θ = √3 / 3 = 1/√3. Then sin² θ = 1 - 1/3 = 2/3. sin² θ - cos² θ = 2/3 - 1/3 = 1/3.",
+      "explanation_hi": "√3 (sin θ / cos θ) = 3 sin θ => cos θ = √3 / 3 = 1/√3. फिर sin² θ = 1 - 1/3 = 2/3. sin² θ - cos² θ = 2/3 - 1/3 = 1/3।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_7",
+      "type": "quiz",
+      "question": "The value of (1 + tan² θ)(1 - sin θ)(1 + sin θ) is:",
+      "question_hi": "(1 + tan² θ)(1 - sin θ)(1 + sin θ) का मान है:",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "options_hi": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "correct_index": 0,
+      "explanation": "(1 - sin θ)(1 + sin θ) = 1 - sin² θ = cos² θ. And (1 + tan² θ) = sec² θ. sec² θ × cos² θ = 1.",
+      "explanation_hi": "(1 - sin θ)(1 + sin θ) = 1 - sin² θ = cos² θ. और (1 + tan² θ) = sec² θ. sec² θ × cos² θ = 1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_8",
+      "type": "quiz",
+      "question": "If sin A + sin² A = 1, then the value of the expression (cos² A + cos⁴ A) is:",
+      "question_hi": "यदि sin A + sin² A = 1 है, तो व्यंजक (cos² A + cos⁴ A) का मान है:",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "options_hi": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "correct_index": 0,
+      "explanation": "sin A = 1 - sin² A = cos² A. Substitute this in the expression: (sin A) + (sin A)² = sin A + sin² A, which is given as 1.",
+      "explanation_hi": "sin A = 1 - sin² A = cos² A. इसे व्यंजक में रखें: (sin A) + (sin A)² = sin A + sin² A, जो 1 दिया गया है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_9",
+      "type": "quiz",
+      "question": "Given that sin α = 1/2 and cos β = 1/2, then the value of (α + β) is:",
+      "question_hi": "दिया गया है कि sin α = 1/2 और cos β = 1/2, तो (α + β) का मान है:",
+      "options": [
+        "90°",
+        "30°",
+        "60°",
+        "0°"
+      ],
+      "options_hi": [
+        "90°",
+        "30°",
+        "60°",
+        "0°"
+      ],
+      "correct_index": 0,
+      "explanation": "sin α = 1/2 means α = 30°. cos β = 1/2 means β = 60°. Therefore, α + β = 30° + 60° = 90°.",
+      "explanation_hi": "sin α = 1/2 का अर्थ है α = 30°। cos β = 1/2 का अर्थ है β = 60°। इसलिए, α + β = 30° + 60° = 90°।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_10",
+      "type": "quiz",
+      "question": "The value of sec A (1 - sin A) (sec A + tan A) is:",
+      "question_hi": "sec A (1 - sin A) (sec A + tan A) का मान है:",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "-1"
+      ],
+      "options_hi": [
+        "1",
+        "0",
+        "2",
+        "-1"
+      ],
+      "correct_index": 0,
+      "explanation": "(1/cos A)(1 - sin A)(1/cos A + sin A/cos A) = (1 - sin A)(1 + sin A) / cos² A = (1 - sin² A) / cos² A = cos² A / cos² A = 1.",
+      "explanation_hi": "(1/cos A)(1 - sin A)(1/cos A + sin A/cos A) = (1 - sin A)(1 + sin A) / cos² A = (1 - sin² A) / cos² A = cos² A / cos² A = 1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_11",
+      "type": "quiz",
+      "question": "If 4 tan θ = 3, then (4 sin θ - cos θ) / (4 sin θ + cos θ) is equal to:",
+      "question_hi": "यदि 4 tan θ = 3 है, तो (4 sin θ - cos θ) / (4 sin θ + cos θ) बराबर है:",
+      "options": [
+        "1/2",
+        "2/3",
+        "1/3",
+        "3/4"
+      ],
+      "options_hi": [
+        "1/2",
+        "2/3",
+        "1/3",
+        "3/4"
+      ],
+      "correct_index": 0,
+      "explanation": "Divide numerator and denominator by cos θ: (4 tan θ - 1)/(4 tan θ + 1) = (3 - 1)/(3 + 1) = 2/4 = 1/2.",
+      "explanation_hi": "अंश और हर को cos θ से भाग दें: (4 tan θ - 1)/(4 tan θ + 1) = (3 - 1)/(3 + 1) = 2/4 = 1/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_12",
+      "type": "quiz",
+      "question": "Value of cos 1° cos 2° cos 3° ... cos 180° is:",
+      "question_hi": "cos 1° cos 2° cos 3° ... cos 180° का मान है:",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "1/2"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "-1",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "The product includes cos 90° somewhere in between. Since cos 90° = 0, the entire product becomes 0.",
+      "explanation_hi": "इस गुणनफल में बीच में कहीं cos 90° आता है। चूँकि cos 90° = 0 है, इसलिए पूरा गुणनफल 0 हो जाता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_13",
+      "type": "quiz",
+      "question": "The maximum value of 1/(csc α) is:",
+      "question_hi": "1/(csc α) का अधिकतम मान है:",
+      "options": [
+        "1",
+        "0",
+        "√2",
+        "infinity"
+      ],
+      "options_hi": [
+        "1",
+        "0",
+        "√2",
+        "अनंत"
+      ],
+      "correct_index": 0,
+      "explanation": "1/(csc α) is equal to sin α. The maximum possible value for sin α is 1.",
+      "explanation_hi": "1/(csc α), sin α के बराबर है। sin α का अधिकतम संभव मान 1 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_14",
+      "type": "quiz",
+      "question": "If sin θ - cos θ = 0, then the value of (sin⁴ θ + cos⁴ θ) is:",
+      "question_hi": "यदि sin θ - cos θ = 0 है, तो (sin⁴ θ + cos⁴ θ) का मान है:",
+      "options": [
+        "1/2",
+        "1",
+        "3/4",
+        "1/4"
+      ],
+      "options_hi": [
+        "1/2",
+        "1",
+        "3/4",
+        "1/4"
+      ],
+      "correct_index": 0,
+      "explanation": "sin θ = cos θ implies θ = 45°. Therefore, (1/√2)⁴ + (1/√2)⁴ = 1/4 + 1/4 = 2/4 = 1/2.",
+      "explanation_hi": "sin θ = cos θ का अर्थ है θ = 45°। इसलिए, (1/√2)⁴ + (1/√2)⁴ = 1/4 + 1/4 = 2/4 = 1/2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch8_15",
+      "type": "quiz",
+      "question": "9 sec² A - 9 tan² A is equal to:",
+      "question_hi": "9 sec² A - 9 tan² A बराबर है:",
+      "options": [
+        "9",
+        "1",
+        "8",
+        "0"
+      ],
+      "options_hi": [
+        "9",
+        "1",
+        "8",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "Factoring out 9, we get 9(sec² A - tan² A). By trigonometric identity, sec² A - tan² A = 1. So, 9(1) = 9.",
+      "explanation_hi": "9 को बाहर निकालने पर, हमें 9(sec² A - tan² A) मिलता है। त्रिकोणमितीय सर्वसमिका द्वारा, sec² A - tan² A = 1. इसलिए, 9(1) = 9।"
+    }
+  ]
+}

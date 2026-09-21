@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "id": "GSEB_SCI_09_09",
+    "title": "Gravitation",
+    "subject": "Science",
+    "grade": "9",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the Universal Law of Gravitation and its significance.",
+      "Distinguish between mass and weight across different celestial bodies.",
+      "Calculate free fall acceleration and understand equations of motion under gravity.",
+      "Analyze thrust, pressure, buoyancy, and Archimedes' Principle in fluids."
+    ],
+    "core_concepts": [
+      "DICT_SCI_09_GRAVITATION",
+      "DICT_SCI_09_FREEFALL",
+      "DICT_SCI_09_BUOYANCY"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide students with a comprehensive understanding of gravitational forces, planetary motion, free fall mechanics, and fluid pressure.",
+      "common_misconceptions": [
+        "Heavy objects fall faster than light objects in a vacuum.",
+        "An astronaut floats in space because there is zero gravity there.",
+        "Mass and weight are the same thing."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "GRAV_B01",
+      "type": "hook",
+      "title": "The Apple and the Moon",
+      "body": "Imagine sitting beneath an apple tree, watching a fruit detach and plummet straight to the ground. Sir Isaac Newton famously pondered why that apple fell perpendicularly rather than flying sideways or floating away. But his genius did not stop at the tree. He raised his gaze to the night sky and asked a much bolder question: Does the same mysterious force that pulls an apple to the Earth also reach out into the vastness of space to keep the Moon locked in its perpetual orbit around our planet? This single epiphany bridged the gap between earthly physics and celestial mechanics, launching humanity into a new era of scientific understanding.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "GRAV_B02",
+      "type": "quiz",
+      "question": "According to Newton's realization, what keeps the Moon in its orbit around the Earth?",
+      "options": [
+        "Magnetic repulsion from the Sun",
+        "The same gravitational force that pulls apples to the ground",
+        "Centrifugal force pushing it away from the Earth",
+        "The Earth's atmosphere pushing it along"
+      ],
+      "correct_index": 1,
+      "explanation": "Newton deduced that the centripetal force required for the Moon's circular motion is provided by the Earth's gravitational pull, exactly the same force acting on objects near the surface.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B03",
+      "type": "theory",
+      "title": "Introduction to Gravitation",
+      "body": "Every single object in the universe attracts every other object with a force called [DICT_SCI_09_GRAVITATION|gravitation]. This force is not restricted to massive planets and stars; even two books sitting on your desk exert an invisible gravitational pull on one another. However, because everyday objects have relatively small masses, this force is unimaginably weak compared to electromagnetic or nuclear forces. It is only when dealing with massive celestial bodies like the Earth, the Moon, and the Sun that gravitational force becomes overwhelmingly obvious, dictating the structure of our solar system and holding galaxies together across the cosmos.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B04",
+      "type": "teacher_tip",
+      "title": "Classroom Demonstration: Mutual Attraction",
+      "body": "Ask students to hold two heavy textbooks close to each other. Explain that while gravity is pulling them together, frictional forces and the immense mass of the Earth overpower this minute attraction, preventing the books from sliding toward one another.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "GRAV_B05",
+      "type": "theory",
+      "title": "Newton's Universal Law of Gravitation",
+      "body": "In 1687, Sir Isaac Newton formulated the Universal Law of Gravitation. This law states that every particle attracts every other particle in the universe with a force proportional to the product of their masses and inversely proportional to the square of the distance between their centers. Mathematically, it is expressed as $F = G \\frac{m_1 m_2}{d^2}$, where $F$ is the gravitational force, $m_1$ and $m_2$ are the masses of the two objects, $d$ is the distance between their centers, and $G$ is the universal gravitational constant ($6.673 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$). The inverse-square nature means that if you double the distance between two masses, the gravitational pull drops to one-fourth of its original strength.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "GRAV_B06",
+      "type": "flashcard",
+      "front": "What does the inverse-square law mean for gravitational force when distance is tripled?",
+      "back": "The gravitational force decreases to 1/9th of its original value (since 3 squared is 9).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B07",
+      "type": "theory",
+      "title": "Significance of the Universal Law",
+      "body": "The Universal Law of Gravitation successfully explained several phenomena that previously seemed unrelated: (1) the force that binds us to the Earth, (2) the motion of the Moon around the Earth, (3) the motion of planets around the Sun, and (4) the occurrence of tides due to the Moon and the Sun. The discovery of $G$ (the Universal Gravitational Constant) by Henry Cavendish using a sensitive torsion balance allowed scientists to accurately calculate the mass of the Earth for the very first time, proving that physics applies universally across both terrestrial and celestial realms.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B08",
+      "type": "quiz",
+      "question": "If the distance between two masses is halved, how does the gravitational force between them change?",
+      "options": [
+        "It becomes half as strong",
+        "It becomes twice as strong",
+        "It becomes four times as strong",
+        "It remains unchanged"
+      ],
+      "correct_index": 2,
+      "explanation": "Because force is inversely proportional to the square of the distance ($1/d^2$), halving the distance ($1/2$) squared gives $1/4$, meaning the denominator shrinks by 4, making the force 4 times larger.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B09",
+      "type": "theory",
+      "title": "Free Fall and Acceleration Due to Gravity",
+      "body": "When an object is dropped from a height, it accelerates downward. This acceleration is caused entirely by the Earth's gravitational pull and is known as acceleration due to gravity, denoted by the letter '$g$'. Unlike universal gravitation, [DICT_SCI_09_FREEFALL|free fall] describes the motion of an object when sole gravity acts upon it, with zero air resistance. A remarkable consequence of Galileo's experiments and Newton's laws is that all bodies—regardless of whether they are a feather or a solid iron cannonball—fall at the exact same rate in a vacuum. The value of $g$ near the Earth's surface is approximately $9.8 \\text{ m/s}^2$.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "GRAV_B10",
+      "type": "teacher_tip",
+      "title": "The Coin and Feather Vacuum Experiment",
+      "body": "Show a video of the famous Apollo 15 demonstration where astronaut David Scott dropped a hammer and a feather on the Moon, showing they hit the surface simultaneously. Explain that without air resistance, mass does not affect acceleration.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "GRAV_B11",
+      "type": "theory",
+      "title": "Calculating Acceleration Due to Gravity (g)",
+      "body": "To understand why $g$ is independent of the falling object's mass, we can combine Newton's Second Law of Motion ($F = ma$) with the Universal Law of Gravitation ($F = G \\frac{M m}{d^2}$). Here, $M$ is the mass of the Earth, $m$ is the mass of the falling object, and $d$ is the radius of the Earth ($R$). Setting gravitational force equal to weight ($mg$), we get: $mg = G \\frac{Mm}{R^2}$. Notice that the mass of the object ($m$) cancels out from both sides! This leaves us with the formula for acceleration due to gravity: $g = \\frac{GM}{R^2}$. This proves that $g$ depends only on the mass and radius of the planet, not on the mass of the falling object.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "GRAV_B12",
+      "type": "flashcard",
+      "front": "Does a 10 kg rock experience a greater acceleration due to gravity than a 1 kg rock?",
+      "back": "No. The acceleration due to gravity ($g$) is independent of the falling object's mass.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B13",
+      "type": "theory",
+      "title": "Equations of Motion for Freely Falling Bodies",
+      "body": "Because acceleration due to gravity ($g$) is constant near the Earth's surface, the standard equations of linear motion can be directly applied to freely falling bodies by replacing acceleration '$a$' with '$g$':\n1. $v = u + gt$\n2. $s = ut + \\frac{1}{2}gt^2$\n3. $v^2 = u^2 + 2gs$\nHere, '$u$' is initial velocity, '$v$' is final velocity, '$t$' is time, and '$s$' is height or displacement. When an object is dropped from rest, its initial velocity $u = 0$. When an object is thrown upwards, the gravitational force acts against its motion, so we use $-g$ for acceleration until it reaches its peak.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B14",
+      "type": "quiz",
+      "question": "An object is dropped freely from rest from a tower. What will be its velocity after 2 seconds? (Assume $g = 9.8 \\text{ m/s}^2$)",
+      "options": [
+        "9.8 m/s",
+        "19.6 m/s",
+        "4.9 m/s",
+        "39.2 m/s"
+      ],
+      "correct_index": 1,
+      "explanation": "Using $v = u + gt$ where $u = 0$, $g = 9.8$, and $t = 2$: $v = 0 + (9.8 \\times 2) = 19.6 \\text{ m/s}$.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "GRAV_B15",
+      "type": "theory",
+      "title": "Mass vs. Weight",
+      "body": "In everyday language, people often use 'mass' and 'weight' interchangeably, but in physics, they are fundamentally different. Mass is a measure of the amount of matter contained in an object; it is an intrinsic property that remains constant whether you are on Earth, the Moon, or floating in deep space. Weight, on the other hand, is the gravitational force exerted on that object by a planet: $W = mg$. Because acceleration due to gravity ($g$) varies depending on the planet's mass and radius, your weight changes depending on where you are. Your mass on the Moon is identical to your mass on Earth, but your weight on the Moon is only about one-sixth of your Earth weight because the Moon's gravity is weaker.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B16",
+      "type": "flashcard",
+      "front": "If your mass on Earth is 60 kg, what is your approximate mass on the Moon?",
+      "back": "60 kg. Mass does not change with location.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B17",
+      "type": "theory",
+      "title": "Weightlessness in Free Fall",
+      "body": "Why do astronauts float in the International Space Station (ISS)? A common misconception is that there is no gravity in space. In reality, at the altitude of the ISS (about 400 km), Earth's gravity is still about 90% as strong as it is on the surface! Astronauts float not because gravity is zero, but because both the astronauts and the space station are in a state of continuous [DICT_SCI_09_FREEFALL|free fall] around the Earth. Because they are falling together at the same acceleration, the normal reaction force between their feet and the floor becomes zero, creating the sensation of weightlessness.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B18",
+      "type": "quiz",
+      "question": "Why do astronauts experience weightlessness inside an orbiting spacecraft?",
+      "options": [
+        "There is zero gravity in space.",
+        "The spacecraft shields them from gravity.",
+        "They are in continuous free fall around the Earth along with the spacecraft.",
+        "Centrifugal force cancels out gravity completely."
+      ],
+      "correct_index": 2,
+      "explanation": "Orbiting spacecraft are in free fall towards the Earth while moving forward fast enough to keep missing it, resulting in apparent weightlessness.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B19",
+      "type": "theory",
+      "title": "Thrust and Pressure in Fluids",
+      "body": "To understand how objects behave in liquids and gases, we must explore thrust and pressure. Thrust is the net force acting perpendicular to a surface. Pressure is defined as the thrust (force) acting per unit area: $\\text{Pressure} = \\frac{\\text{Force}}{\\text{Area}}$. Because pressure is inversely proportional to area, a sharp knife cuts easily because a tiny surface area concentrates the applied force into an immense pressure. Conversely, wide camel feet or broad tractor tires distribute weight over a large area to prevent sinking into soft sand or mud.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B20",
+      "type": "teacher_tip",
+      "title": "Activity: The Balloon and Pin",
+      "body": "Demonstrate pressure by trying to pop a balloon with a flat wooden block (high surface area, no pop) versus a single thumbtack or needle (tiny surface area, instant pop). Discuss how area changes pressure.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "GRAV_B21",
+      "type": "theory",
+      "title": "Pressure in Fluids and Atmospheric Pressure",
+      "body": "Fluids (which include both liquids and gases) have weight and therefore exert pressure in all directions—downward, upward, and sideways—against any surface they touch. Atmospheric pressure is the pressure exerted by the blanket of air surrounding the Earth. At sea level, atmospheric pressure is massive—about $101,325 \\text{ Pascals}$ (or $\\text{N/m}^2$)—which is equivalent to a weight of about 10 kg pressing down on every square centimeter! We do not feel crushed by this immense pressure because the fluids inside our bodies exert an equal outward pressure that balances the atmosphere.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B22",
+      "type": "flashcard",
+      "front": "Why doesn't the immense atmospheric pressure crush the human body?",
+      "back": "Because internal body fluids exert an outward pressure that perfectly balances the atmospheric pressure.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B23",
+      "type": "theory",
+      "title": "Buoyancy: Upward Force in Fluids",
+      "body": "Have you ever tried to push a hollow plastic bottle under water? You can feel a distinct upward push resisting your hand. This phenomenon is known as [DICT_SCI_09_BUOYANCY|buoyancy], and the upward force exerted by the fluid on an immersed object is called the buoyant force (or upthrust). The magnitude of the buoyant force depends directly on the density of the fluid. An object sinks in a fluid if its density is greater than that of the fluid; it floats if its density is less than or equal to the fluid's density.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B24",
+      "type": "quiz",
+      "question": "An object will float in a liquid if:",
+      "options": [
+        "Its density is greater than the liquid's density",
+        "Its density is less than or equal to the liquid's density",
+        "It has zero mass",
+        "It experiences no gravity"
+      ],
+      "correct_index": 1,
+      "explanation": "An object floats when the upward buoyant force equals its total weight, which happens when the object's average density is less than or equal to the fluid density.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B25",
+      "type": "theory",
+      "title": "Archimedes' Principle",
+      "body": "The Greek mathematician Archimedes discovered a fundamental law governing buoyant force. Archimedes' Principle states: 'When an object is partly or fully immersed in a fluid, it experiences an upward force (buoyant force) that is equal in magnitude to the weight of the fluid displaced by the object.' This explains why giant steel ships—which are much denser than water—can float effortlessly. By designing the ship's hull with a hollow shape containing a large volume of air, the ship displaces a massive volume of water. The weight of this displaced water equals the total weight of the ship, creating enough buoyant force to keep it afloat.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "GRAV_B26",
+      "type": "flashcard",
+      "front": "According to Archimedes' Principle, what is the magnitude of the buoyant force on an immersed object?",
+      "back": "It is equal to the weight of the fluid displaced by the object.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B27",
+      "type": "theory",
+      "title": "Applications of Archimedes' Principle",
+      "body": "Archimedes' Principle is not just a theoretical concept; it has crucial practical applications in modern engineering and science:\n1. Designing ships and submarines: Submarines use ballast tanks to take in or expel water, adjusting their average density to submerge or surface.\n2. Lactometers: Devices used to test the purity of milk based on the density principle.\n3. Hydrometers: Instruments used to measure the density of liquids, such as battery acid or sugar solutions in beverages.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B28",
+      "type": "quiz",
+      "question": "How does a submarine submerge into deep water?",
+      "options": [
+        "By firing internal thrusters downward",
+        "By opening its ballast tanks to take in seawater, increasing its weight and average density",
+        "By releasing all its compressed air into space",
+        "By turning off its engines"
+      ],
+      "correct_index": 1,
+      "explanation": "A submarine submerges by filling its ballast tanks with water, making its overall density greater than the surrounding water so it sinks.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "GRAV_B29",
+      "type": "theory",
+      "title": "Relative Density",
+      "body": "In scientific and industrial applications, it is often more useful to compare the density of a substance directly to the density of pure water rather than using absolute units like kg/m³. This ratio is known as relative density. Relative Density = (Density of a substance) / (Density of water). Because relative density is a ratio of two similar physical quantities, it is a dimensionless quantity with no units. For example, if the relative density of gold is 19.3, it means gold is 19.3 times as dense as an equal volume of water.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "GRAV_B30",
+      "type": "flashcard",
+      "front": "What are the SI units for relative density?",
+      "back": "Relative density has no units (it is a dimensionless ratio).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "BLK_CH2_001",
+    "type": "theory",
+    "title": "Introduction to Polynomials",
+    "content": "An algebraic expression consists of variables and constants, combined using arithmetic operations. A polynomial is a special type of algebraic expression where the exponent of the variable is a non-negative integer.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_002",
+    "type": "definition",
+    "title": "Definition of a Polynomial",
+    "content": "A polynomial in one variable x is an algebraic expression of the form p(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0, where a_0, a_1, ..., a_n are constants and a_n ≠ 0, and n is a whole number. The highest power n is called the degree of the polynomial.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "BLK_CH2_003",
+    "type": "common_mistakes",
+    "title": "Identifying Polynomials Properly",
+    "content": "Students often think any algebraic expression is a polynomial. Remember, expressions like x^(-2), 1/x, and √x are NOT polynomials because their exponents are not non-negative integers (-2, -1, and 1/2 respectively).",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_004",
+    "type": "worked_example",
+    "title": "Identifying the Degree",
+    "content": "Find the degree of the polynomial p(x) = 5x^3 - 4x^2 + x - √2.\n\nSolution: The terms of the polynomial are 5x^3, -4x^2, x, and -√2. The power of x in each term is 3, 2, 1, and 0 respectively. The highest power is 3. Therefore, the degree of the polynomial is 3.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "BLK_CH2_005",
+    "type": "theory",
+    "title": "Zeroes of a Polynomial",
+    "content": "The zero of a polynomial p(x) is a number c such that p(c) = 0. In a geometric sense, the zeroes of a polynomial are the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_006",
+    "type": "worked_example",
+    "title": "Finding the Zero of a Linear Polynomial",
+    "content": "Find the zero of the polynomial p(x) = 3x - 6.\n\nSolution: To find the zero, set the polynomial equal to zero: 3x - 6 = 0. Solving for x, we get 3x = 6, which implies x = 2. Thus, 2 is the zero of the polynomial.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "BLK_CH2_007",
+    "type": "common_mistakes",
+    "title": "Zero vs Constant Term",
+    "content": "Do not confuse the 'zero' of a polynomial with the number 0. The zero of a polynomial is the value of the variable that makes the whole polynomial equal to 0. A non-zero constant polynomial has no zeroes, and the zero polynomial has every real number as its zero.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "BLK_CH2_008",
+    "type": "theory",
+    "title": "The Remainder Theorem",
+    "content": "When a polynomial is divided by another polynomial, there is a quotient and a remainder. The Remainder Theorem provides a shortcut for finding the remainder when a polynomial is divided by a linear polynomial of the form x - a.",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_009",
+    "type": "formula",
+    "title": "Remainder Theorem Formula",
+    "content": "Let p(x) be any polynomial of degree greater than or equal to one and let 'a' be any real number. If p(x) is divided by the linear polynomial (x - a), then the remainder is p(a).",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "BLK_CH2_010",
+    "type": "worked_example",
+    "title": "Applying the Remainder Theorem",
+    "content": "Find the remainder when x^4 + x^3 - 2x^2 + x + 1 is divided by x - 1.\n\nSolution: By the Remainder Theorem, the remainder when p(x) is divided by x - 1 is p(1).\nHere, p(x) = x^4 + x^3 - 2x^2 + x + 1.\nTherefore, p(1) = (1)^4 + (1)^3 - 2(1)^2 + 1 + 1 = 1 + 1 - 2 + 1 + 1 = 2.\nThe remainder is 2.",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 7,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "BLK_CH2_011",
+    "type": "common_mistakes",
+    "title": "Sign Errors in Remainder Theorem",
+    "content": "A common mistake when dividing by (x + a) is to substitute x = a instead of x = -a. Always remember that you are evaluating p(x) at the value of x that makes the divisor zero.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "BLK_CH2_012",
+    "type": "theory",
+    "title": "The Factor Theorem",
+    "content": "The Factor Theorem is a special case of the Remainder Theorem. It links the factors of a polynomial to its zeroes.",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_013",
+    "type": "formula",
+    "title": "Factor Theorem Formula",
+    "content": "If p(x) is a polynomial of degree n ≥ 1 and a is any real number, then:\n(i) x - a is a factor of p(x), if p(a) = 0.\n(ii) p(a) = 0, if x - a is a factor of p(x).",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "BLK_CH2_014",
+    "type": "worked_example",
+    "title": "Using the Factor Theorem",
+    "content": "Determine whether x + 2 is a factor of x^3 + 3x^2 + 5x + 6.\n\nSolution: Let p(x) = x^3 + 3x^2 + 5x + 6. According to the Factor Theorem, x + 2 will be a factor of p(x) if p(-2) = 0.\np(-2) = (-2)^3 + 3(-2)^2 + 5(-2) + 6 = -8 + 12 - 10 + 6 = 18 - 18 = 0.\nSince p(-2) = 0, (x + 2) is a factor of p(x).",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 7,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "BLK_CH2_015",
+    "type": "theory",
+    "title": "Algebraic Identities",
+    "content": "An algebraic identity is an algebraic equation that is true for all values of the variables occurring in it. These are incredibly useful for calculating products and factorizing polynomials.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "BLK_CH2_016",
+    "type": "formula",
+    "title": "Essential Square Identities",
+    "content": "Identity I: (x + y)^2 = x^2 + 2xy + y^2\nIdentity II: (x - y)^2 = x^2 - 2xy + y^2\nIdentity III: x^2 - y^2 = (x + y)(x - y)\nIdentity IV: (x + a)(x + b) = x^2 + (a + b)x + ab",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "BLK_CH2_017",
+    "type": "formula",
+    "title": "Cube Identities",
+    "content": "Identity V: (x + y)^3 = x^3 + y^3 + 3xy(x + y)\nIdentity VI: (x - y)^3 = x^3 - y^3 - 3xy(x - y)\nIdentity VII: (x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx\nIdentity VIII: x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx)",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "BLK_CH2_018",
+    "type": "worked_example",
+    "title": "Evaluating Expressions using Identities",
+    "content": "Evaluate (105)^2 without multiplying directly.\n\nSolution: We can write 105 as 100 + 5. Using Identity I, (x + y)^2 = x^2 + 2xy + y^2.\nHere x = 100 and y = 5.\n(100 + 5)^2 = (100)^2 + 2(100)(5) + (5)^2 = 10000 + 1000 + 25 = 11025.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 6,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "BLK_CH2_019",
+    "type": "worked_example",
+    "title": "Factorizing using Identities",
+    "content": "Factorize: 49a^2 + 70ab + 25b^2.\n\nSolution: We can rewrite the expression as (7a)^2 + 2(7a)(5b) + (5b)^2.\nThis matches Identity I, x^2 + 2xy + y^2 = (x + y)^2, where x = 7a and y = 5b.\nSo, 49a^2 + 70ab + 25b^2 = (7a + 5b)^2 = (7a + 5b)(7a + 5b).",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 6,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "BLK_CH2_020",
+    "type": "common_mistakes",
+    "title": "Misapplying (x - y)^2",
+    "content": "A very common error is stating that (x - y)^2 = x^2 - y^2. This is incorrect! Remember that (x - y)^2 = (x - y)(x - y) = x^2 - 2xy + y^2. The term -2xy is crucial.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    }
+  }
+]

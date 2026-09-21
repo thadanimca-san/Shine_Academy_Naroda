@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "id": "cbse_class12_chemistry_ch5",
+    "title": "Chapter 5: Coordination Compounds",
+    "subject": "Chemistry",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_001",
+      "type": "hook",
+      "title": "The Secret Color & Life-Giving Power of Coordination Compounds",
+      "title_hi": "उपसहसंयोजन यौगिकों का गुप्त रंग और जीवनदायी शक्ति",
+      "title_gu": "ઉપસહસંયોજક સંયોજનોનો ગૂઢ રંગ અને જીવનદાયી શક્તિ",
+      "body": "Why is human blood bright red while plant leaves are vivid green? The secret lies in complex coordination compounds! Hemoglobin carries oxygen using an Fe²⁺ core, chlorophyll absorbs sunlight via a Mg²⁺ core, and Vitamin B₁₂ regulates red blood cells with a Co³⁺ core. Coordination chemistry is the architecture of life itself.",
+      "body_hi": "मानव रक्त लाल क्यों होता है और पौधों की पत्तियां हरी क्यों होती हैं? इसका रहस्य जटिल उपसहसंयोजन यौगिकों में छिपा है! हीमोग्लोबिन Fe²⁺ केंद्र का उपयोग करके ऑक्सीजन ले जाता है, क्लोरोफिल Mg²⁺ केंद्र के माध्यम से सूर्य के प्रकाश को अवशोषित करता है, और विटामिन B₁₂ Co³⁺ केंद्र के साथ लाल रक्त कोशिकाओं को नियंत्रित करता है।",
+      "body_gu": "માનવ રક્ત લાલ શા માટે હોય છે અને વનસ્પતિના પાંદડા લીલા શા માટે હોય છે? આનું રહસ્ય જટિલ ઉપસહસંયોજન સંયોજનોમાં છુપાયેલું છે! હિમોગ્લોબિન Fe²⁺ કેન્દ્રનો ઉપયોગ કરીને ઓક્સિજનનું વહન કરે છે, ક્લોરોફિલ Mg²⁺ કેન્દ્ર દ્વારા સૂર્યપ્રકાશનું શોષણ કરે છે, અને વિટામિન B₁₂ Co³⁺ કેન્દ્ર સાથે રક્તકણોનું નિયમન કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_002",
+      "type": "socratic_question",
+      "question": "When CuSO₄ dissolves in water, it forms a light blue solution [Cu(H₂O)₄]²⁺. Adding excess ammonia yields an intense deep blue complex [Cu(NH₃)₄]²⁺. Why does ammonia displace water molecules, and why does the color intensify?",
+      "question_hi": "जब CuSO₄ पानी में घुलता है, तो यह हल्का नीला घोल [Cu(H₂O)₄]²⁺ बनाता है। अमोनिया की अधिकता मिलाने पर गहरा नीला कॉम्प्लेक्स [Cu(NH₃)₄]²⁺ बनता है। अमोनिया जल के अणुओं को विस्थापित क्यों करता है, और रंग गहरा क्यों हो जाता है?",
+      "question_gu": "જ્યારે CuSO₄ પાણીમાં ઓગળે છે, ત્યારે તે આછો વાદળી દ્રાવણ [Cu(H₂O)₄]²⁺ બનાવે છે. વધુ પડતો એમોનિયા ઉમેરતાં ઘેરો વાદળી સંકીર્ણ [Cu(NH₃)₄]²⁺ મળે છે. એમોનિયા પાણીના અણુઓને શા માટે વિસ્થાપિત કરે છે અને રંગ શા માટે ઘેરો બને છે?",
+      "hint": "Consider electron pair donor strength (spectrochemical series) and d-d electronic transition energy.",
+      "hint_hi": "इलेक्ट्रॉन युग्म दाता शक्ति (स्पेक्ट्रमीरासायनिक श्रृंखला) और d-d इलेक्ट्रॉनिक संक्रमण ऊर्जा पर विचार करें।",
+      "hint_gu": "ઈલેક્ટ્રોન યુગ્મ દાતા ક્ષમતા (સ્પેક્ટ્રોકેમિકલ શ્રેણી) અને d-d ઈલેક્ટ્રોનિક સંક્રાંતિ ઊર્જા ધ્યાનમાં લો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_003",
+      "type": "discovery",
+      "title": "Double Salts vs. Coordination Complexes",
+      "title_hi": "द्विक लवण बनाम उपसहसंयोजन यौगिक",
+      "title_gu": "દ્રિક ક્ષાર વિરુદ્ધ ઉપસહસંયોજક સંયોજનો",
+      "body": "When Carnallite (KCl·MgCl₂·6H₂O) dissolves in water, it completely dissociates into K⁺, Mg²⁺, and Cl⁻ ions, giving positive chemical tests for all constituent ions. However, when Potassium Ferrocyanide (K₄[Fe(CN)₆]) dissolves, it dissociates only into 4K⁺ and the stable complex ion [Fe(CN)₆]⁴⁻. The complex ion retains its identity in aqueous solution because the Fe-CN coordinate covalent bonds do not break easily.",
+      "body_hi": "जब कार्नेलाइट (KCl·MgCl₂·6H₂O) पानी में घुलता है, तो यह पूरी तरह से K⁺, Mg²⁺, और Cl⁻ आयनों में वियोजित हो जाता है। लेकिन पोटेशियम फेरोसाइनाइड (K₄[Fe(CN)₆]) केवल 4K⁺ और [Fe(CN)₆]⁴⁻ में वियोजित होता है।",
+      "body_gu": "જ્યારે કાર્નેલાઇટ (KCl·MgCl₂·6H₂O) પાણીમાં ઓગળે છે, ત્યારે તે K⁺, Mg²⁺, અને Cl⁻ આયનોમાં વિયોજિત થાય છે. પરંતુ પોટેશિયમ ફેરોસાયનાઈડ (K₄[Fe(CN)₆]) માત્ર 4K⁺ અને સંકીર્ણ આયન [Fe(CN)₆]⁴⁻ માં જ વિભાજિત થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_004",
+      "type": "theory",
+      "title": "Werner's Theory & Key Concepts of Coordination Chemistry",
+      "title_hi": "वर्नर का सिद्धांत एवं उपसहसंयोजन रसायन विज्ञान की मुख्य अवधारणाएँ",
+      "title_gu": "વર્નરનો સિદ્ધાંત અને ઉપસહસંયોજન રસાયણશાસ્ત્રના મુખ્ય ખ્યાલો",
+      "body": "Alfred Werner proposed that transition metals exhibit two types of valencies:\n1. Primary Valency: Ionizable, satisfied by negative ions, corresponds to oxidation state.\n2. Secondary Valency: Non-ionizable, satisfied by neutral molecules or negative ions, corresponds to coordination number and has fixed spatial directional geometry.\n\nKey Concepts:\n- Coordination Entity: Central atom/ion bonded to a fixed number of ions or molecules.\n- Ligands: Molecules/ions donating lone pairs (Monodentate: Cl⁻, NH₃, H₂O; Didentate: ethane-1,2-diamine 'en', oxalate 'ox²⁻'; Polydentate: EDTA⁴⁻).\n- Chelate Effect: Multidentate ligands form stable ring structures with central metal ions.",
+      "body_hi": "अल्फ्रेड वर्नर ने प्रस्ताव दिया कि संक्रमण धातुओं में दो प्रकार की संयोजकताएँ होती हैं:\n1. प्राथमिक संयोजकता: आयननीय, ऋणात्मक आयनों द्वारा संतुष्ट, ऑक्सीकरण अवस्था के समान।\n2. द्वितीयक संयोजकता: गैर-आयननीय, उपसहसंयोजन संख्या के समान, और निश्चित त्रिविम दिशात्मक ज्यामिति होती है।\n\nमुख्य अवधारणाएँ:\n- लिगैंड: एकाकी युग्म दान करने वाले अणु/आयन (एकदंतुर, द्विदंतुर, बहुदंतुर)।\n- कीलेट प्रभाव: बहुदंतुर लिगैंड धातु आयनों के साथ स्थिर वलय संरचनाएं बनाते हैं।",
+      "body_gu": "આલ્ફ્રેડ વર્નરે પ્રસ્તાવ મૂક્યો હતો કે સંક્રાંતિ ધાતુઓ બે પ્રકારની સંયોજકતા ધરાવે છે:\n1. પ્રાથમિક સંયોજકતા: આયનીય, ઓક્સિડેશન આંક સાથે સુસંગત.\n2. દ્વિતીયક સંયોજકતા: બિન-આયનીય, સશક્ત દિશાત્મક ગુણધર્મ ધરાવે છે અને સહસંયોજક ક્રમાંક દર્શાવે છે.\n\nમુખ્ય વ્યાખ્યાઓ:\n- લિગાન્ડ: ઈલેક્ટ્રોન યુગ્મ આપનાર અણુઓ/આયનો.\n- કિલેટ અસર: મલ્ટિડેન્ટેટ લિગાન્ડ્સ રિંગ રચના બનાવી સ્થિરતામાં મોટો વધારો કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_005",
+      "type": "knowledge_check",
+      "question": "One mole of a coordination compound CoCl₃·5NH₃ gives 2 moles of AgCl precipitate when reacted with excess AgNO₃ solution. What is the secondary valency (coordination number) of cobalt in this complex?",
+      "question_hi": "जब उपसहसंयोजन यौगिक CoCl₃·5NH₃ के एक मोल की अधिक AgNO₃ के साथ अभिक्रिया कराई जाती है, तो 2 मोल AgCl का अवक्षेप प्राप्त होता है। इस कॉम्प्लेक्स में कोबाल्ट की द्वितीयक संयोजकता (उपसहसंयोजन संख्या) क्या है?",
+      "question_gu": "જ્યારે કોઓર્ડિનેશન કમ્પાઉન્ડ CoCl₃·5NH₃ ના 1 મોલની વધુ પડતા AgNO₃ સાથે પ્રક્રિયા કરવામાં આવે ત્યારે 2 મોલ AgCl અવક્ષેપ મળે છે. આ સંકીર્ણમાં કોબાલ્ટનો દ્વિતીયક સંયોજકતા (સહસંયોજક ક્રમાંક) કેટલો છે?",
+      "options": [
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "options_hi": [
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "options_gu": [
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "correct_index": 1,
+      "explanation": "Since 2 moles of AgCl precipitate, 2 Cl⁻ ions are in the outer ionizable sphere. The chemical formula is [Co(NH₃)₅Cl]Cl₂. Inside the coordination sphere, 5 NH₃ molecules and 1 Cl⁻ ion are attached to Co, giving a secondary valency of 5 + 1 = 6.",
+      "explanation_hi": "चूंकि 2 मोल AgCl अवक्षेपित होते हैं, 2 Cl⁻ आयन बाहरी आयननीय क्षेत्र में हैं। सूत्र [Co(NH₃)₅Cl]Cl₂ है। कोबाल्ट से 5 NH₃ और 1 Cl⁻ जुड़े हैं, इसलिए द्वितीयक संयोजकता = 6 है।",
+      "explanation_gu": "2 મોલ AgCl અવક્ષેપિત થતા હોવાથી, 2 Cl⁻ આયનો બહાર છે. બંધારણ [Co(NH₃)₅Cl]Cl₂ છે. સંકીર્ણમાં 5 NH₃ અને 1 Cl⁻ જોડાયેલા છે, તેથી દ્વિતીયક સંયોજકતા = 6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_006",
+      "type": "reflection",
+      "prompt": "Consider why chelating ligands like EDTA⁴⁻ are extremely effective antidotes for heavy metal poisoning (such as lead Pb²⁺ or mercury Hg²⁺) in human tissues.",
+      "prompt_hi": "विचार करें कि EDTA⁴⁻ जैसे कीलेटिंग लिगैंड मानव ऊतकों में भारी धातु के विषैलेपन (जैसे सीसा Pb²⁺ या पारा Hg²⁺) के लिए बेहद प्रभावी विषनाशक क्यों हैं।",
+      "prompt_gu": "વિચારો કે શા માટે EDTA⁴⁻ જેવા કિલેટિંગ લિગાન્ડ્સ માનવ પેશીઓમાં ભારે ધાતુના ઝેર (જેમ કે સીસું Pb²⁺ અથવા પારો Hg²⁺) ના ઉપચાર માટે ખૂબ અસરોકારક છે.",
+      "takeaway": "EDTA⁴⁻ is a hexadentate ligand that wraps around the toxic heavy metal ion, forming stable multi-ring chelate structures with exceptionally high formation constants (log K > 16). This renders the metal chemically unreactive and soluble, allowing safe excretion via kidneys.",
+      "takeaway_hi": "EDTA⁴⁻ एक षट्दंतुक लिगैंड है जो विषैले धातु आयन के चारों ओर अत्यधिक स्थिर वलय संरचना बनाता है, जिससे यह गुर्दे के माध्यम से सुरक्षित रूप से उत्सर्जित हो जाता है।",
+      "takeaway_gu": "EDTA⁴⁻ એ હેક્સાડેન્ટેટ લિગાન્ડ છે જે ઝેરી ધાતુ આયન સાથે અત્યંત સ્થિર બહુ-રિંગ કિલેટ બનાવે છે, જેથી તે મૂત્રપિંડ દ્વારા સરળતાથી બહાર નીકળી જાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_007",
+      "type": "connection",
+      "title": "Real World & Industrial Applications of Coordination Compounds",
+      "title_hi": "उपसहसंयोजन यौगिकों के वास्तविक दुनिया और औद्योगिक अनुप्रयोग",
+      "title_gu": "ઉપસહસંયોજન સંયોજનોના વાસ્તવિક દુનિયા અને ઔદ્યોગિક ઉપયોગો",
+      "body": "1. Cancer Chemotherapy: Cisplatin, cis-[Pt(NH₃)₂Cl₂], binds to DNA of rapidly dividing cancer cells, inhibiting replication.\n2. Homogeneous Catalysis: Wilkinson's catalyst, [Rh(PPh₃)₃Cl], is used for selective hydrogenation of alkenes.\n3. Metallurgy: Extraction of Gold (Au) and Silver (Ag) by complexation with cyanide forming soluble [Au(CN)₂]⁻ and [Ag(CN)₂]⁻.\n4. Analytical Testing: Ni²⁺ is estimated quantitatively using dimethylglyoxime (DMG) which forms a bright rosy-red precipitate [Ni(dmg)₂].",
+      "body_hi": "1. कैंसर कीमोथेरेपी: सिस्प्लैटिन कैंसर कोशिकाओं के डीएनए से जुड़कर उनके विभाजन को रोकता है।\n2. उत्प्रेरण: विल्किंसन उत्प्रेरक का उपयोग एल्कीन के हाइड्रोजनीकरण में किया जाता है।\n3. धातु कर्म: साइनाइड कॉम्प्लेक्स का उपयोग करके सोने और चांदी का निष्कर्षण।\n4. गुणात्मक विश्लेषण: Ni²⁺ का आकलन DMG के साथ लाल अवक्षेप बनाकर किया जाता है।",
+      "body_gu": "1. કેન્સર થેરાપી: સિસપ્લેટિન કોષ વિભાજન અટકાવે છે.\n2. ઉદ્દીપન: વિલ્કિન્સન કૅટેલિસ્ટ એલ્કીનના હાઇડ્રોજિનેશન માટે વપરાય છે.\n3. ધાતુશાસ્ત્ર: સોના અને ચાંદીનું નિષ્કર્ષણ સાયનાઇડ સંકીર્ણ દ્વારા થાય છે.\n4. પૃથ્થકરણ: Ni²⁺ નું પ્રમાણ DMG સાથે ગુલાબી-લાલ અવક્ષેપ દ્વારા નક્કી થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_008",
+      "type": "mastery",
+      "title": "Mastery Check: Isomerism in Coordination Compounds",
+      "title_hi": "मास्टरी चेक: उपसहसंयोजन यौगिकों में समावयवता",
+      "title_gu": "માસ્ટરી ચેક: ઉપસહસંયોજક સંયોજનોમાં સમઘટકતા",
+      "question": "Which of the following octahedral complexes exhibits optical activity (is optically active)?",
+      "question_hi": "निम्नलिखित में से कौन सा अष्टफलकीय संकुल प्रकाशिक सक्रियता (optical activity) प्रदर्शित करता है?",
+      "question_gu": "નીચેનામાંથી કયો અષ્ટફલકીય સંકીર્ણ પ્રકાશીય ગુણધર્મ (ઓપ્ટિકલ એક્ટિવિટી) દર્શાવે છે?",
+      "options": [
+        "cis-[Co(en)₂Cl₂]⁺",
+        "trans-[Co(en)₂Cl₂]⁺",
+        "[Co(NH₃)₅Cl]²⁺",
+        "trans-[Pt(NH₃)₂Cl₂]"
+      ],
+      "options_hi": [
+        "cis-[Co(en)₂Cl₂]⁺",
+        "trans-[Co(en)₂Cl₂]⁺",
+        "[Co(NH₃)₅Cl]²⁺",
+        "trans-[Pt(NH₃)₂Cl₂]"
+      ],
+      "options_gu": [
+        "cis-[Co(en)₂Cl₂]⁺",
+        "trans-[Co(en)₂Cl₂]⁺",
+        "[Co(NH₃)₅Cl]²⁺",
+        "trans-[Pt(NH₃)₂Cl₂]"
+      ],
+      "correct_index": 0,
+      "explanation": "cis-[Co(en)₂Cl₂]⁺ lacks a plane of symmetry (unsymmetrical/chiral) and exists as non-superimposable d- and l-enantiomers. The trans isomer has a plane of symmetry and is optically inactive.",
+      "explanation_hi": "cis-[Co(en)₂Cl₂]⁺ में सममिति का तल नहीं होता है (किराल है) और इसके गैर-अध्यारोपनीय दर्पण प्रतिबिंब होते हैं, इसलिए यह प्रकाशिक रूप से सक्रिय है।",
+      "explanation_gu": "cis-[Co(en)₂Cl₂]⁺ માં સંમિતિ તલ હોતું નથી, તેથી તે પ્રકાશીય રીતે સક્રિય સમઘટક છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_009",
+      "type": "theory",
+      "title": "Bonding Theories: Valence Bond Theory (VBT) vs Crystal Field Theory (CFT)",
+      "title_hi": "आबंधन सिद्धांत: संयोजकता बंध सिद्धांत (VBT) बनाम क्रिस्टल क्षेत्र सिद्धांत (CFT)",
+      "title_gu": "બંધન સિદ્ધાંતો: સંયોજકતા બંધન સિદ્ધાંત (VBT) વિરુદ્ધ ક્રિસ્ટલ ફીલ્ડ થિયરી (CFT)",
+      "body": "1. Valence Bond Theory (VBT):\n- Assumes hybridization between metal d, s, and p orbitals.\n- Inner orbital complex: d²sp³ hybridization using (n-1)d orbitals (low spin, paired electrons with strong field ligands).\n- Outer orbital complex: sp³d² hybridization using nd orbitals (high spin, unpaired electrons with weak field ligands).\n\n2. Crystal Field Theory (CFT):\n- Considers electrostatic interaction between metal cation and point-charge ligands.\n- Octahedral field splits degenerate d-orbitals into lower energy t₂g (dxy, dyz, dzx) and higher energy eg (dx²-y², dz²) sets separated by crystal field splitting energy Δₒ.\n- Spectrochemical Series: I⁻ < Br⁻ < SCN⁻ < Cl⁻ < F⁻ < OH⁻ < C₂O₄²⁻ < H₂O < NCS⁻ < EDTA⁴⁻ < NH₃ < en < CN⁻ < CO.",
+      "body_hi": "1. संयोजकता बंध सिद्धांत (VBT): आंतरिक कक्षक (d²sp³) और बाह्य कक्षक (sp³d²) संकरण समझाता है।\n2. क्रिस्टल क्षेत्र सिद्धांत (CFT): लिगैंड्स को बिंदु आवेश मानता है, जिससे d-कक्षक t₂g और eg सेटों में विभाजित हो जाते हैं (विपाटन ऊर्जा Δₒ)।",
+      "body_gu": "1. VBT: આંતરિક કક્ષક (d²sp³) અને બાહ્ય કક્ષક (sp³d²) સંકરણ દર્શાવે છે.\n2. CFT: લિગાન્ડ્સના કારણે d-કક્ષકો t₂g અને eg ઊર્જા સ્તરોમાં વિભાજિત થાય છે (સ્પિલટિંગ ઊર્જા Δₒ)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_010",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.1: What is the correct IUPAC name of the coordination compound [Co(NH₃)₄(H₂O)Cl]Cl₂?",
+      "question_hi": "NCERT अभ्यास Q5.1: उपसहसंयोजन यौगिक [Co(NH₃)₄(H₂O)Cl]Cl₂ का सही IUPAC नाम क्या है?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.1: સંકીર્ણ સંયોજન [Co(NH₃)₄(H₂O)Cl]Cl₂ નું સાચું IUPAC નામ કયું છે?",
+      "options": [
+        "Tetraammineaquachloridocobalt(III) chloride",
+        "Tetraamminechloridaquacobalt(III) dichloride",
+        "Chloridotetraammineaquacobalt(III) chloride",
+        "Tetraammineaquachloridocobalt(II) chloride"
+      ],
+      "options_hi": [
+        "टैट्राऐमीनऐक्वाक्लोरिडोकोबाल्ट(III) क्लोराइड",
+        "टैट्राऐमीनक्लोरिडोऐक्वाकोबाल्ट(III) डाइक्लोराइड",
+        "क्लोरिडोटैट्राऐमीनऐक्वाकोबाल्ट(III) क्लोराइड",
+        "टैट्राऐमीनऐक्वाक्लोरिडोकोबाल्ट(II) क्लोराइड"
+      ],
+      "options_gu": [
+        "ટેટ્રાએમાઈનએક્વાક્લોરિડોકોબાલ્ટ(III) ક્લોરાઈડ",
+        "ટેટ્રાએમાઈનક્લોરિડોએક્વાકોબાલ્ટ(III) ડાયક્લોરાઈડ",
+        "ક્લોરિડોટેટ્રાએમાઈનએક્વાકોબાલ્ટ(III) ક્લોરાઈડ",
+        "ટેટ્રાએમાઈનએક્વાક્લોરિડોકોબાલ્ટ(II) ક્લોરાઈડ"
+      ],
+      "correct_index": 0,
+      "explanation": "Ligands are named alphabetically: ammine ('a-m-m'), aqua ('a-q'), chlorido ('c'). Oxidation state of Co is x + 0 + 0 - 1 - 2 = 0 => x = +3. Hence: Tetraammineaquachloridocobalt(III) chloride.",
+      "explanation_hi": "लिगैंड्स को वर्णमाला क्रम में लिखा जाता है: ammine, aqua, chlorido। Co की ऑक्सीकरण अवस्था +3 है। अतः सही नाम टैट्राऐमीनऐक्वाक्लोरिडोकोबाल्ट(III) क्लोराइड है।",
+      "explanation_gu": "લિગાન્ડ્સ કક્કાવારી પ્રમાણે: ammine, aqua, chlorido. Co નો ઓક્સિડેશન આંક +3 છે. માટે સાચું નામ ટેટ્રાએમાઈનએક્વાક્લોરિડોકોબાલ્ટ(III) ક્લોરાઈડ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_011",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.2: What is the IUPAC formula for Potassium trioxalatochromate(III)?",
+      "question_hi": "NCERT अभ्यास Q5.2: पोटेशियम ट्राइऑक्सालेटोक्रोमेट(III) का सूत्र क्या है?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.2: પોટેશિયમ ટ્રાયઓક્સાલેટોક્રોમેટ(III) નું રાસાયણિક સૂત્ર કયું છે?",
+      "options": [
+        "K₃[Cr(C₂O₄)₃]",
+        "K₂[Cr(C₂O₄)₃]",
+        "K[Cr(C₂O₄)₂]",
+        "K₃[Cr(C₂O₄)₂Cl₂]"
+      ],
+      "options_hi": [
+        "K₃[Cr(C₂O₄)₃]",
+        "K₂[Cr(C₂O₄)₃]",
+        "K[Cr(C₂O₄)₂]",
+        "K₃[Cr(C₂O₄)₂Cl₂]"
+      ],
+      "options_gu": [
+        "K₃[Cr(C₂O₄)₃]",
+        "K₂[Cr(C₂O₄)₃]",
+        "K[Cr(C₂O₄)₂]",
+        "K₃[Cr(C₂O₄)₂Cl₂]"
+      ],
+      "correct_index": 0,
+      "explanation": "Chromium is in +3 state, oxalate ion C₂O₄²⁻ has charge -2. Complex anion = [Cr(C₂O₄)₃]³⁻. To balance 3- charge, 3 K⁺ cations are required: K₃[Cr(C₂O₄)₃].",
+      "explanation_hi": "क्रोमियम +3 अवस्था में है, ऑक्सालेट का आवेश -2 है। कॉम्प्लेक्स ऋणायन [Cr(C₂O₄)₃]³⁻ है, जिसे संतुलित करने के लिए 3 K⁺ आयनों की आवश्यकता है।",
+      "explanation_gu": "ક્રોમિયમ +3 ઓક્સિડેશન આંક ધરાવે છે, ઓક્સાલેટ -2 ચાર્જ ધરાવે છે. તેથી K₃[Cr(C₂O₄)₃] સાચું સૂત્ર છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_012",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.3: Which type of isomerism is exhibited by the pair of compounds [Co(NH₃)₅(SO₄)]Br and [Co(NH₃)₅Br]SO₄?",
+      "question_hi": "NCERT अभ्यास Q5.3: यौगिकों के युग्म [Co(NH₃)₅(SO₄)]Br और [Co(NH₃)₅Br]SO₄ द्वारा किस प्रकार की समावयवता प्रदर्शित की जाती है?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.3: [Co(NH₃)₅(SO₄)]Br અને [Co(NH₃)₅Br]SO₄ ની જોડી કયા પ્રકારની સમઘટકતા દર્શાવે છે?",
+      "options": [
+        "Ionization isomerism",
+        "Linkage isomerism",
+        "Coordination isomerism",
+        "Solvate isomerism"
+      ],
+      "options_hi": [
+        "आयनन समावयवता (Ionization isomerism)",
+        "बंधनी समावयवता (Linkage isomerism)",
+        "उपसहसंयोजन समावयवता (Coordination isomerism)",
+        "विलायकयोजन समावयवता (Solvate isomerism)"
+      ],
+      "options_gu": [
+        "આયનીકરણ સમઘટકતા (Ionization isomerism)",
+        "લિંકેજ સમઘટકતા (Linkage isomerism)",
+        "સહસંયોજક સમઘટકતા (Coordination isomerism)",
+        "દ્રાવક સમઘટકતા (Solvate isomerism)"
+      ],
+      "correct_index": 0,
+      "explanation": "These compounds yield different ions in aqueous solution (one gives Br⁻, the other gives SO₄²⁻), representing Ionization Isomerism.",
+      "explanation_hi": "ये यौगिक जलीय घोल में अलग-अलग आयन देते हैं (एक Br⁻ और दूसरा SO₄²⁻ देता है), जो आयनन समावयवता को दर्शाता है।",
+      "explanation_gu": "આ સંયોજનો જલીય દ્રાવણમાં જુદા જુદા આયનો આપે છે (એક Br⁻ અને બીજું SO₄²⁻), તેથી તે આયનીકરણ સમઘટકતા દર્શાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_013",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.4: Ambidentate ligands produce which specific type of structural isomerism in coordination complexes?",
+      "question_hi": "NCERT अभ्यास Q5.4: उभयदंतुक लिगैंड (Ambidentate ligands) उपसहसंयोजन परिसरों में किस विशिष्ट प्रकार की संरचनात्मक समावयवता उत्पन्न करते हैं?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.4: ઉભયદંતી લિગાન્ડ્સ (Ambidentate ligands) સંકીર્ણોમાં કયા પ્રકારની બંધારણીય સમઘટકતા આપે છે?",
+      "options": [
+        "Linkage isomerism",
+        "Ionization isomerism",
+        "Coordination isomerism",
+        "Geometrical isomerism"
+      ],
+      "options_hi": [
+        "बंधनी समावयवता (Linkage isomerism)",
+        "आयनन समावयवता (Ionization isomerism)",
+        "उपसहसंयोजन समावयवता (Coordination isomerism)",
+        "ज्यामितीय समावयवता (Geometrical isomerism)"
+      ],
+      "options_gu": [
+        "લિંકેજ સમઘટકતા (Linkage isomerism)",
+        "આયનીકરણ સમઘટકતા (Ionization isomerism)",
+        "સહસંયોજક સમઘટકતા (Coordination isomerism)",
+        "ભૌમિતિક સમઘટકતા (Geometrical isomerism)"
+      ],
+      "correct_index": 0,
+      "explanation": "Ambidentate ligands (like NO₂⁻ / ONO⁻ or SCN⁻ / NCS⁻) have two different donor atoms and can bind through either, giving Linkage Isomerism.",
+      "explanation_hi": "उभयदंतुक लिगैंड (जैसे NO₂⁻/ONO⁻) दो अलग-अलग दाता परमाणुओं के माध्यम से जुड़ सकते हैं, जिससे बंधनी समावयवता (Linkage isomerism) उत्पन्न होती है।",
+      "explanation_gu": "ઉભયદંતી લિગાન્ડ્સ બે અલગ અલગ દાતા પરમાણુઓ ધરાવે છે, તેથી તે લિંકેજ (લિંક) સમઘટકતા દર્શાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_014",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.5: According to Crystal Field Theory, what is the electronic configuration of d⁴ ion in an octahedral field with a strong field ligand (Δₒ > P)?",
+      "question_hi": "NCERT अभ्यास Q5.5: क्रिस्टल क्षेत्र सिद्धांत के अनुसार, प्रबल क्षेत्र लिगैंड (Δₒ > P) वाले अष्टफलकीय क्षेत्र में d⁴ आयन का इलेक्ट्रॉनिक विन्यास क्या होगा?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.5: ક્રિસ્ટલ ફીલ્ડ થિયરી મુજબ, પ્રબળ લિગાન્ડ ક્ષેત્રમાં (Δₒ > P) d⁴ આયનની ઈલેક્ટ્રોનિક રચના શું હશે?",
+      "options": [
+        "t₂g⁴ eg⁰",
+        "t₂g³ eg¹",
+        "t₂g² eg²",
+        "t₂g¹ eg³"
+      ],
+      "options_hi": [
+        "t₂g⁴ eg⁰",
+        "t₂g³ eg¹",
+        "t₂g² eg²",
+        "t₂g¹ eg³"
+      ],
+      "options_gu": [
+        "t₂g⁴ eg⁰",
+        "t₂g³ eg¹",
+        "t₂g² eg²",
+        "t₂g¹ eg³"
+      ],
+      "correct_index": 0,
+      "explanation": "When Δₒ > P (strong field ligand, low spin complex), pairing energy is less than crystal field splitting energy. All 4 electrons fill the lower t₂g orbitals before eg orbitals, giving t₂g⁴ eg⁰.",
+      "explanation_hi": "जब Δₒ > P (प्रबल क्षेत्र लिगैंड) होता है, तो युग्मन ऊर्जा विपाटन ऊर्जा से कम होती है। सभी 4 इलेक्ट्रॉन निचले t₂g कक्षक में युग्मित होते हैं, जिससे विन्यास t₂g⁴ eg⁰ बनता है।",
+      "explanation_gu": "જ્યારે Δₒ > P હોય, ત્યારે યુગ્મીકરણ ઊર્જા ઓછી હોવાથી ચારેય ઈલેક્ટ્રોન t₂g કક્ષકમાં જ સમાઈ જાય છે, તેથી t₂g⁴ eg⁰ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_015",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.6: Why is [Fe(H₂O)₆]³⁺ strongly paramagnetic with 5 unpaired electrons, whereas [Fe(CN)₆]³⁻ is weakly paramagnetic with only 1 unpaired electron?",
+      "question_hi": "NCERT अभ्यास Q5.6: [Fe(H₂O)₆]³⁺ 5 अयुग्मित इलेक्ट्रॉनों के साथ प्रबल अनुचुंबकीय क्यों है, जबकि [Fe(CN)₆]³⁻ केवल 1 अयुग्मित इलेक्ट्रॉन के साथ दुर्बल अनुचुंबकीय है?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.6: શા માટે [Fe(H₂O)₆]³⁺ 5 અયુગ્મિત ઈલેક્ટ્રોન સાથે પ્રબળ અનુચુંબકીય છે, જ્યારે [Fe(CN)₆]³⁻ માત્ર 1 અયુગ્મિત ઈલેક્ટ્રોન ધરાવે છે?",
+      "options": [
+        "CN⁻ is a strong field ligand forcing d-electron pairing, while H₂O is a weak field ligand",
+        "H₂O is a strong field ligand forcing d-electron pairing, while CN⁻ is weak",
+        "Fe in [Fe(CN)₆]³⁻ is in +2 state while in [Fe(H₂O)₆]³⁺ it is in +3 state",
+        "Fe-CN bond is ionic while Fe-H₂O bond is covalent"
+      ],
+      "options_hi": [
+        "CN⁻ एक प्रबल क्षेत्र लिगैंड है जो d-इलेक्ट्रॉन युग्मन के लिए मजबूर करता है, जबकि H₂O दुर्बल क्षेत्र लिगैंड है",
+        "H₂O प्रबल क्षेत्र लिगैंड है जो d-इलेक्ट्रॉन युग्मन के लिए मजबूर करता है",
+        "Fe की ऑक्सीकरण अवस्थाएँ दोनों संकुलों में भिन्न हैं",
+        "Fe-CN बंध आयनिक है जबकि Fe-H₂O बंध सहसंयोजक है"
+      ],
+      "options_gu": [
+        "CN⁻ પ્રબળ લિગાન્ડ હોવાથી d-ઈલેક્ટ્રોનનું યુગ્મીકરણ કરે છે, જ્યારે H₂O નિર્બળ લિગાન્ડ છે",
+        "H₂O પ્રબળ લિગાન્ડ હોવાથી d-ઈલેક્ટ્રોન યુગ્મિત થાય છે",
+        "બંને સંકીર્ણમાં Fe નો ઓક્સિડેશન આંક અલગ છે",
+        "Fe-CN બંધ આયનીય છે જ્યારે Fe-H₂O બંધ સહસંયોજક છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Fe³⁺ has 3d⁵ configuration. CN⁻ is a strong field ligand (Δₒ > P), causing electron pairing in t₂g orbitals leaving 1 unpaired electron (t₂g⁵ eg⁰). H₂O is a weak field ligand (Δₒ < P), so electrons remain unpaired giving 5 unpaired electrons (t₂g³ eg²).",
+      "explanation_hi": "Fe³⁺ में 3d⁵ विन्यास है। CN⁻ प्रबल क्षेत्र लिगैंड है जो 4 इलेक्ट्रॉनों को युग्मित करता है (1 अयुग्मित), जबकि H₂O दुर्बल लिगैंड है जिससे 5ों इलेक्ट्रॉन अयुग्मित रहते हैं।",
+      "explanation_gu": "Fe³⁺ એ 3d⁵ રચના ધરાવે છે. CN⁻ પ્રબળ લિગાન્ડ હોવાથી ઈલેક્ટ્રોન યુગ્મિત થાય છે (1 અયુગ્મિત), જ્યારે H₂O નિર્બળ હોવાથી 5 ઈલેક્ટ્રોન અયુગ્મિત રહે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_016",
+      "type": "true_false",
+      "question": "NCERT Exercise Q5.7: In homoleptic metal carbonyls such as Ni(CO)₄ and Fe(CO)₅, the M-C bond possesses both σ and π character due to synergic bonding.",
+      "question_hi": "NCERT अभ्यास Q5.7: homoleptic धातु कार्बोनिल जैसे Ni(CO)₄ और Fe(CO)₅ में, सिनर्जिक आबंधन के कारण M-C बंध में σ और π दोनों लक्षण होते हैं।",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.7: Ni(CO)₄ અને Fe(CO)₅ જેવા મેટલ કાર્બોનિલમાં સાયનર્જિક બંધનને કારણે M-C બંધ σ અને π બંને ગુણધર્મો ધરાવે છે.",
+      "is_true": true,
+      "explanation": "True. The M-C σ bond is formed by lone pair donation from carbon to metal empty orbital, while the M-C π bond is formed by back-donation of electrons from filled metal d-orbitals into empty π* antibonding orbital of CO (Synergic effect).",
+      "explanation_hi": "सत्य। M-C σ बंध कार्बन द्वारा धातु को इलेक्ट्रॉन दान करने से बनता है, और M-C π बंध धातु से CO के π* कक्षक में बैक-डोनेशन (सिनर्जिक प्रभाव) द्वारा बनता है।",
+      "explanation_gu": "સાચું. C થી ધાતુ તરફ σ-દાણ અને ધાતુની d-કક્ષકમાંથી CO ના anti-bonding π* કક્ષકમાં પશ્ચ-દાન (સિનેર્જિક અસર) ને લીધે M-C બંધ σ અને π ગુણધર્મ ધરાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_017",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.8: What is the spin-only magnetic moment (μ) of [Mn(CN)₆]³⁻ in Bohr Magnetons (BM)? (Atomic number of Mn = 25)",
+      "question_hi": "NCERT अभ्यास Q5.8: बोहर मैग्नेटॉन (BM) में [Mn(CN)₆]³⁻ का केवल-चक्रण चुंबकीय आघूर्ण (μ) क्या है? (Mn की परमाणु संख्या = 25)",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.8: બોહર મેગ્નેટોન (BM) માં [Mn(CN)₆]³⁻ નો ચુંબકીય આઘૂર્ણ (μ) કેટલો થાય? (Mn નો પરમાણુ ક્રમાંક = 25)",
+      "options": [
+        "2.83 BM",
+        "3.87 BM",
+        "4.90 BM",
+        "5.92 BM"
+      ],
+      "options_hi": [
+        "2.83 BM",
+        "3.87 BM",
+        "4.90 BM",
+        "5.92 BM"
+      ],
+      "options_gu": [
+        "2.83 BM",
+        "3.87 BM",
+        "4.90 BM",
+        "5.92 BM"
+      ],
+      "correct_index": 0,
+      "explanation": "Mn in [Mn(CN)₆]³⁻ is Mn³⁺ (3d⁴). CN⁻ is a strong field ligand, so pairing occurs in t₂g set: t₂g³ (paired) + t₂g¹ -> actually 2 unpaired electrons (n = 2). μ = √(2(2+2)) = √8 = 2.83 BM.",
+      "explanation_hi": "Mn³⁺ का विन्यास 3d⁴ है। CN⁻ प्रबल लिगैंड है जिससे 2 इलेक्ट्रॉन युग्मित होते हैं और 2 अयुग्मित इलेक्ट्रॉन बचते हैं (n = 2)। μ = √8 = 2.83 BM।",
+      "explanation_gu": "Mn³⁺ ની ઇલેક્ટ્રોન રચના 3d⁴ છે. CN⁻ પ્રબળ હોવાથી 2 અયુગ્મિત ઇલેક્ટ્રોન (n = 2) બચે છે. μ = √8 = 2.83 BM."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_018",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.9: How many geometrical isomers are possible for the square planar complex [Pt(NH₃)(Br)(Cl)(py)]?",
+      "question_hi": "NCERT अभ्यास Q5.9: वर्ग समतली संकुल [Pt(NH₃)(Br)(Cl)(py)] के लिए कितने ज्यामितीय समावयवी संभव हैं?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.9: ચોરસ સમતલીય સંકીર્ણ [Pt(NH₃)(Br)(Cl)(py)] માટે કેટલા ભૌમિતિક સમઘટકો શક્ય છે?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "options_hi": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "options_gu": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "correct_index": 0,
+      "explanation": "For a square planar complex of type [Mabcd] with four different monodentate ligands, fixing one ligand and interchanging the other three gives exactly 3 geometrical isomers.",
+      "explanation_hi": "चार भिन्न एकदंतुक लिगैंडों वाले वर्ग समतली कॉम्प्लेक्स [Mabcd] के लिए 3 ज्यामितीय समावयवी संभव होते हैं।",
+      "explanation_gu": "ચાર વિભિન્ન લિગાન્ડ ધરાવતા ચોરસ સમતલીય સંકીર્ણ [Mabcd] માટે કુલ 3 ભૌમિતિક સમઘટકો બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_019",
+      "type": "mcq",
+      "question": "NCERT Exercise Q5.10: Based on Valence Bond Theory, what is the hybridization and spatial geometry of [CoF₆]³⁻?",
+      "question_hi": "NCERT अभ्यास Q5.10: संयोजकता बंध सिद्धांत के आधार पर, [CoF₆]³⁻ का संकरण और त्रिविम ज्यामिति क्या है?",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.10: સંયોજકતા બંધન સિદ્ધાંત મુજબ, [CoF₆]³⁻ નું સંકરણ અને ભૌમિતિક આકાર કયો છે?",
+      "options": [
+        "sp³d², Outer orbital octahedral",
+        "d²sp³, Inner orbital octahedral",
+        "sp³d, Trigonal bipyramidal",
+        "dsp², Square planar"
+      ],
+      "options_hi": [
+        "sp³d², बाह्य कक्षक अष्टफलकीय",
+        "d²sp³, आंतरिक कक्षक अष्टफलकीय",
+        "sp³d, त्रिकोणीय द्विपिरामिडी",
+        "dsp², वर्ग समतली"
+      ],
+      "options_gu": [
+        "sp³d², બાહ્ય કક્ષકીય અષ્ટફલકીય",
+        "d²sp³, આંતરિક કક્ષકીય અષ્ટફલકીય",
+        "sp³d, ત્રિકોણીય દ્વિપિરામિડલ",
+        "dsp², ચોરસ સમતલીય"
+      ],
+      "correct_index": 0,
+      "explanation": "Co³⁺ is 3d⁶. F⁻ is a weak field ligand and cannot cause electron pairing in 3d orbitals. Thus, 4d orbitals are used in hybridization forming sp³d² outer orbital paramagnetic octahedral complex.",
+      "explanation_hi": "Co³⁺ में 3d⁶ विन्यास है। F⁻ दुर्बल लिगैंड होने के कारण 3d इलेक्ट्रॉनों का युग्मन नहीं कर पाता, इसलिए 4d कक्षकों का उपयोग करके sp³d² बाह्य कक्षक अष्टफलकीय कॉम्प्लेक्स बनता है।",
+      "explanation_gu": "Co³⁺ માં 3d⁶ રચના છે. F⁻ નિર્બળ લિગાન્ડ હોવાથી યુગ્મીકરણ થતું નથી, તેથી 4d કક્ષક વાપરીને sp³d² બાહ્ય કક્ષકીય અષ્ટફલકીય સંકીર્ણ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH5_020",
+      "type": "true_false",
+      "question": "NCERT Exercise Q5.11: Aqueous solution of [Ti(H₂O)₆]³⁺ is violet in color, but upon heating it turns colorless because water molecules evaporate removing the d-d electronic transition mechanism.",
+      "question_hi": "NCERT अभ्यास Q5.11: [Ti(H₂O)₆]³⁺ का जलीय घोल बैंगनी रंग का होता है, लेकिन गर्म करने पर यह रंगहीन हो जाता है क्योंकि पानी के अणु वाष्पित हो जाते हैं जिससे d-d इलेक्ट्रॉनिक संक्रमण समाप्त हो जाता है।",
+      "question_gu": "NCERT સ્વાધ્યાય Q5.11: [Ti(H₂O)₆]³⁺ નું જલીય દ્રાવણ વાયોલેટ (જાંબલી) રંગનું હોય છે, પણ ગરમ કરવાથી તે રંગહીન બને છે કારણ કે પાણીના અણુઓ દૂર થતા d-d સંક્રાંતિ ક્ષમતા નાશ પામે છે.",
+      "is_true": true,
+      "explanation": "True. Heating removes the ligand water molecules, destroying the octahedral crystal field splitting. Without ligands, d-orbital splitting ceases and d-d electronic transitions cannot occur, making the compound colorless.",
+      "explanation_hi": "सत्य। गर्म करने पर लिगैंड पानी के अणु हट जाते हैं, जिससे क्रिस्टल क्षेत्र विपाटन समाप्त हो जाता है और d-d संक्रमण न होने के कारण यौगिक रंगहीन हो जाता है।",
+      "explanation_gu": "સાચું. ગરમ કરવાથી લિગાન્ડ H₂O દૂર થાય છે, જેથી d-કક્ષકનું વિભાજન અટકી જાય છે અને d-d ઈલેક્ટ્રોન સંક્રાંતિ ન થવાને કારણે સંયોજન રંગહીન બને છે."
+    }
+  ]
+}

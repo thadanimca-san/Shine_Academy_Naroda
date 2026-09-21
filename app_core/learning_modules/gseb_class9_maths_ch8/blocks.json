@@ -1,0 +1,540 @@
+{
+  "blocks": [
+    {
+      "id": "BLK_QUAD_01",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_POLYGON",
+          "KOBJ_TRIANGLE"
+        ],
+        "prerequisites": [
+          "KOBJ_LINES_AND_ANGLES"
+        ],
+        "next_topics": [
+          "BLK_QUAD_02"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Understand the basic definition and components of a quadrilateral.",
+        "common_misconceptions": [
+          "Thinking any 4 connected lines make a quadrilateral."
+        ],
+        "tutor_hint": "Ask the student: 'How many diagonals can you draw in a quadrilateral?'"
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 2,
+        "bloom": "Remember"
+      },
+      "title": "Introduction to Quadrilaterals",
+      "text": "A quadrilateral is a closed figure obtained by joining four points (in order) on a plane, such that no three points are collinear. It has four sides, four angles, and four vertices."
+    },
+    {
+      "id": "BLK_QUAD_02",
+      "type": "formula",
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_TRIANGLE_ANGLE_SUM"
+        ],
+        "prerequisites": [
+          "BLK_QUAD_01"
+        ],
+        "next_topics": [
+          "BLK_QUAD_03"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Know and use the angle sum property of quadrilaterals.",
+        "common_misconceptions": [
+          "Confusing the angle sum with triangles (180°)."
+        ],
+        "tutor_hint": "If they forget, ask them how many triangles fit inside a quadrilateral using one diagonal."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 3,
+        "bloom": "Understand"
+      },
+      "title": "Angle Sum Property of a Quadrilateral",
+      "formula": "∠A + ∠B + ∠C + ∠D = 360°",
+      "explanation": "The sum of the four angles of a quadrilateral is always 360°. This can be proved by drawing a diagonal that splits the quadrilateral into two triangles, each with an angle sum of 180°."
+    },
+    {
+      "id": "BLK_QUAD_03",
+      "type": "worked_example",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_02"
+        ],
+        "next_topics": [
+          "BLK_QUAD_04"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Apply the angle sum property to find an unknown angle.",
+        "common_misconceptions": [
+          "Adding incorrectly or subtracting from 180° instead of 360°."
+        ],
+        "tutor_hint": "Prompt the user to set up an algebraic equation first before trying to subtract."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4,
+        "bloom": "Apply"
+      },
+      "title": "Finding a Missing Angle",
+      "problem": "Three angles of a quadrilateral are 75°, 90°, and 75°. Find the measure of the fourth angle.",
+      "solution_steps": [
+        "Let the fourth angle be x.",
+        "We know that the sum of angles of a quadrilateral is 360°.",
+        "Therefore, 75° + 90° + 75° + x = 360°",
+        "240° + x = 360°",
+        "x = 360° - 240° = 120°",
+        "The fourth angle is 120°."
+      ]
+    },
+    {
+      "id": "BLK_QUAD_04",
+      "type": "definition",
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_TRAPEZIUM",
+          "KOBJ_KITE"
+        ],
+        "prerequisites": [
+          "BLK_QUAD_01"
+        ],
+        "next_topics": [
+          "BLK_QUAD_05"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Define a parallelogram correctly.",
+        "common_misconceptions": [
+          "Thinking it only needs one pair of parallel sides (that's a trapezium)."
+        ],
+        "tutor_hint": "Highlight the prefix 'parallel' and ask how many pairs of opposite sides a quadrilateral has."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 2,
+        "bloom": "Remember"
+      },
+      "term": "Parallelogram",
+      "definition": "A quadrilateral in which both pairs of opposite sides are parallel is called a parallelogram."
+    },
+    {
+      "id": "BLK_QUAD_05",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_CONGRUENT_TRIANGLES"
+        ],
+        "prerequisites": [
+          "BLK_QUAD_04"
+        ],
+        "next_topics": [
+          "BLK_QUAD_06"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Understand that the diagonal creates two identical, congruent triangles.",
+        "common_misconceptions": [
+          "Assuming the diagonal bisects the corner angles (only true for rhombus/square)."
+        ],
+        "tutor_hint": "Ask the student to trace the Z-pattern (alternate interior angles) created by the diagonal."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 5,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.1 - Diagonal of a Parallelogram",
+      "text": "A diagonal of a parallelogram divides it into two congruent triangles."
+    },
+    {
+      "id": "BLK_QUAD_06",
+      "type": "diagram",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_05"
+        ],
+        "next_topics": [
+          "BLK_QUAD_07"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Visualize Theorem 8.1.",
+        "common_misconceptions": [],
+        "tutor_hint": "Can you spot the ASA (Angle-Side-Angle) congruence criteria in the diagram?"
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 2,
+        "bloom": "Understand"
+      },
+      "title": "Diagonal Dividing a Parallelogram",
+      "image_url": "/assets/math/class9/parallelogram_diagonal.svg",
+      "description": "A visual representation showing a parallelogram ABCD with diagonal AC splitting it into triangle ABC and triangle CDA, highlighting congruent alternate interior angles."
+    },
+    {
+      "id": "BLK_QUAD_07",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_05"
+        ],
+        "next_topics": [
+          "BLK_QUAD_08"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Learn the relationship between opposite sides in a parallelogram.",
+        "common_misconceptions": [
+          "Forgetting that we need both pairs of opposite sides to be equal, not just one."
+        ],
+        "tutor_hint": "Remind them that Theorem 8.1 is the key to proving Theorem 8.2."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.2 and 8.3 - Opposite Sides",
+      "text": "Theorem 8.2: In a parallelogram, opposite sides are equal.\nTheorem 8.3: If each pair of opposite sides of a quadrilateral is equal, then it is a parallelogram (Converse of 8.2)."
+    },
+    {
+      "id": "BLK_QUAD_08",
+      "type": "teacher_tip",
+      "content": {
+        "tip": "To prove a quadrilateral is a parallelogram, you do not always have to prove both pairs of sides are parallel. Proving that both pairs of opposite sides are equal is enough (Theorem 8.3)!"
+      },
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_07"
+        ],
+        "next_topics": [
+          "BLK_QUAD_09"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Internalize proof strategies for parallelograms.",
+        "common_misconceptions": [],
+        "tutor_hint": "Ask: 'If I just measure the sides with a ruler and find opposite sides are equal, is it definitely a parallelogram?'"
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 1,
+        "bloom": "Apply"
+      }
+    },
+    {
+      "id": "BLK_QUAD_09",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_07"
+        ],
+        "next_topics": [
+          "BLK_QUAD_10"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Master the properties of opposite angles in a parallelogram.",
+        "common_misconceptions": [
+          "Confusing opposite angles with consecutive/adjacent angles (which add up to 180°)."
+        ],
+        "tutor_hint": "Ask what the sum of consecutive angles in a parallelogram is."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.4 and 8.5 - Opposite Angles",
+      "text": "Theorem 8.4: In a parallelogram, opposite angles are equal.\nTheorem 8.5: If in a quadrilateral, each pair of opposite angles is equal, then it is a parallelogram."
+    },
+    {
+      "id": "BLK_QUAD_10",
+      "type": "worked_example",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_09"
+        ],
+        "next_topics": [
+          "BLK_QUAD_11"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Apply the opposite angles theorem to solve for algebraic variables.",
+        "common_misconceptions": [
+          "Adding them and equating to 180° (treating them as consecutive)."
+        ],
+        "tutor_hint": "Ask the student to draw the parallelogram to visually confirm A and C are opposite."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 5,
+        "bloom": "Apply"
+      },
+      "title": "Finding Parallelogram Angles",
+      "problem": "In parallelogram ABCD, if ∠A = (3x + 10)° and ∠C = (4x - 20)°, find the value of x.",
+      "solution_steps": [
+        "In a parallelogram, opposite angles are equal.",
+        "∠A and ∠C are opposite angles.",
+        "Therefore, 3x + 10 = 4x - 20",
+        "Subtract 3x from both sides: 10 = x - 20",
+        "Add 20 to both sides: 30 = x",
+        "The value of x is 30."
+      ]
+    },
+    {
+      "id": "BLK_QUAD_11",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_09"
+        ],
+        "next_topics": [
+          "BLK_QUAD_12"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Understand that the intersection point of diagonals cuts each diagonal exactly in half.",
+        "common_misconceptions": [
+          "Thinking the diagonals are equal in length (only true for rectangles/squares)."
+        ],
+        "tutor_hint": "Clarify the word 'bisect' - it means cutting into two equal parts, but doesn't mean both lines are the same length."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.6 and 8.7 - Diagonals of a Parallelogram",
+      "text": "Theorem 8.6: The diagonals of a parallelogram bisect each other.\nTheorem 8.7: If the diagonals of a quadrilateral bisect each other, then it is a parallelogram."
+    },
+    {
+      "id": "BLK_QUAD_12",
+      "type": "common_mistakes",
+      "content": {
+        "mistake": "Confusing Rhombus, Rectangle, and Square",
+        "correction": "A rectangle has equal diagonals. A rhombus has perpendicular diagonals. A square has BOTH equal and perpendicular diagonals. A general parallelogram has neither!"
+      },
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_SQUARE",
+          "KOBJ_RHOMBUS",
+          "KOBJ_RECTANGLE"
+        ],
+        "prerequisites": [
+          "BLK_QUAD_11"
+        ],
+        "next_topics": [
+          "BLK_QUAD_13"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Differentiate special parallelograms based on their diagonals.",
+        "common_misconceptions": [
+          "All parallelograms have perpendicular diagonals."
+        ],
+        "tutor_hint": "Ask them to draw a very long, flat parallelogram. Are its diagonals perpendicular?"
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 3,
+        "bloom": "Analyze"
+      }
+    },
+    {
+      "id": "BLK_QUAD_13",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_07"
+        ],
+        "next_topics": [
+          "BLK_QUAD_14"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Learn the most powerful shortcut to proving a quadrilateral is a parallelogram.",
+        "common_misconceptions": [
+          "Thinking we need to prove both pairs are parallel, or both are equal."
+        ],
+        "tutor_hint": "Emphasize 'equal AND parallel' on the SAME pair of opposite sides."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Advanced",
+        "estimated_minutes": 4,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.8 - The Single Pair Condition",
+      "text": "A quadrilateral is a parallelogram if a pair of opposite sides is equal and parallel."
+    },
+    {
+      "id": "BLK_QUAD_14",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [
+          "KOBJ_TRIANGLE_SIMILARITY"
+        ],
+        "prerequisites": [
+          "BLK_QUAD_13"
+        ],
+        "next_topics": [
+          "BLK_QUAD_15"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Understand the Mid-point theorem deeply.",
+        "common_misconceptions": [
+          "Applying it when points are not exactly mid-points."
+        ],
+        "tutor_hint": "Ask them what two conditions the segment must meet (parallel AND half the length)."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Advanced",
+        "estimated_minutes": 5,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.9 - The Mid-point Theorem",
+      "text": "The line segment joining the mid-points of two sides of a triangle is parallel to the third side and is half of it."
+    },
+    {
+      "id": "BLK_QUAD_15",
+      "type": "worked_example",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_14"
+        ],
+        "next_topics": [
+          "BLK_QUAD_16"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Calculate lengths using the Mid-point theorem.",
+        "common_misconceptions": [
+          "Calculating double the length instead of half."
+        ],
+        "tutor_hint": "Ask them if DE looks shorter or longer than BC in the diagram."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4,
+        "bloom": "Apply"
+      },
+      "title": "Applying the Mid-point Theorem",
+      "problem": "In ΔABC, D and E are mid-points of AB and AC respectively. If BC = 14 cm, find the length of DE.",
+      "solution_steps": [
+        "Since D and E are mid-points of sides AB and AC,",
+        "By the Mid-point Theorem, DE || BC and DE = 1/2 BC.",
+        "DE = 1/2 * 14 cm",
+        "DE = 7 cm."
+      ]
+    },
+    {
+      "id": "BLK_QUAD_16",
+      "type": "theory",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_14"
+        ],
+        "next_topics": [
+          "BLK_QUAD_17"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Understand the converse of the Mid-point theorem.",
+        "common_misconceptions": [
+          "Confusing the theorem with its converse."
+        ],
+        "tutor_hint": "Point out the starting conditions: Theorem starts with two mid-points. Converse starts with one mid-point and a parallel line."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Advanced",
+        "estimated_minutes": 5,
+        "bloom": "Understand"
+      },
+      "title": "Theorem 8.10 - Converse of the Mid-point Theorem",
+      "text": "The line drawn through the mid-point of one side of a triangle, parallel to another side bisects the third side."
+    },
+    {
+      "id": "BLK_QUAD_17",
+      "type": "worked_example",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_14",
+          "BLK_QUAD_13"
+        ],
+        "next_topics": [
+          "BLK_QUAD_18"
+        ]
+      },
+      "ai_context": {
+        "learning_goal": "Combine the Mid-point theorem and Theorem 8.8 to solve a complex proof.",
+        "common_misconceptions": [
+          "Forgetting to draw the diagonal AC to create triangles."
+        ],
+        "tutor_hint": "We know the Mid-point theorem applies to triangles. How can we turn this quadrilateral into triangles?"
+      },
+      "universal_block_metadata": {
+        "difficulty": "Advanced",
+        "estimated_minutes": 8,
+        "bloom": "Analyze"
+      },
+      "title": "Mid-points of a Quadrilateral",
+      "problem": "Show that the quadrilateral formed by joining the mid-points of the consecutive sides of a quadrilateral is a parallelogram.",
+      "solution_steps": [
+        "Let ABCD be a quadrilateral and P, Q, R, S be the mid-points of sides AB, BC, CD, DA respectively.",
+        "Draw diagonal AC.",
+        "In ΔABC, P and Q are mid-points of AB and BC. By Mid-point theorem, PQ || AC and PQ = 1/2 AC.",
+        "In ΔADC, S and R are mid-points of AD and DC. By Mid-point theorem, SR || AC and SR = 1/2 AC.",
+        "Therefore, PQ || SR and PQ = SR.",
+        "Since one pair of opposite sides (PQ and SR) is equal and parallel, PQRS is a parallelogram (Theorem 8.8)."
+      ]
+    },
+    {
+      "id": "BLK_QUAD_18",
+      "type": "summary",
+      "knowledge_graph_links": {
+        "related_topics": [],
+        "prerequisites": [
+          "BLK_QUAD_17"
+        ],
+        "next_topics": []
+      },
+      "ai_context": {
+        "learning_goal": "Consolidate all chapter learnings.",
+        "common_misconceptions": [],
+        "tutor_hint": "Ask the student to recite the 5 sufficient conditions for a quadrilateral to be a parallelogram."
+      },
+      "universal_block_metadata": {
+        "difficulty": "Beginner",
+        "estimated_minutes": 3,
+        "bloom": "Remember"
+      },
+      "title": "Chapter Summary",
+      "points": [
+        "Sum of angles of a quadrilateral is 360°.",
+        "A diagonal of a parallelogram divides it into two congruent triangles.",
+        "In a parallelogram: opposite sides are equal, opposite angles are equal, and diagonals bisect each other.",
+        "A quadrilateral is a parallelogram if one pair of opposite sides is equal and parallel.",
+        "Mid-point Theorem: Segment joining mid-points of two sides of a triangle is parallel to third side and half of it."
+      ]
+    }
+  ]
+}

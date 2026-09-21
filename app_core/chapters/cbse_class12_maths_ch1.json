@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch1",
+    "title": "Chapter 1: Relations and Functions",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_001",
+      "type": "hook",
+      "title": "The Social Network of Mathematics",
+      "title_hi": "गणित का सोशल नेटवर्क",
+      "title_gu": "ગણિતનું સોશિયલ નેટવર્ક",
+      "body": "Imagine a social media platform connecting millions of users. How do algorithms decide who is your 'friend', 'follower', or 'recommended contact'? Mathematics uses Relations and Functions to structure these exact connections. From database logic to machine learning mapping, relations define how sets of data interact with each other.",
+      "body_hi": "लाखों उपयोगकर्ताओं को जोड़ने वाले एक सोशल मीडिया प्लेटफॉर्म की कल्पना करें। एल्गोरिदम यह कैसे तय करते हैं कि आपका 'मित्र', 'फॉलोअर' या 'सिफारिश की गई प्रोफ़ाइल' कौन है? गणित इन संबंधों को परिभाषित करने के लिए 'संबंध और फलन' (Relations and Functions) का उपयोग करता है। डेटाबेस लॉजिक से लेकर मशीन लर्निंग मैपिंग तक, संबंध यह तय करते हैं कि डेटा के सेट कैसे परस्पर क्रिया करते हैं।",
+      "body_gu": "લાખો યુઝર્સને જોડતા સોશિયલ મીડિયા પ્લેટફોર્મની કલ્પના કરો. એલ્ગોરિધમ્સ કેવી રીતે નક્કી કરે છે કે તમારો 'મિત્ર', 'ફોલોઅર' કે 'ભલામણ કરેલ પ્રોફાઇલ' કોણ છે? ગણિત આ ચોક્કસ જોડાણોને વ્યાખ્યાયિત કરવા માટે સંબંધો અને વિધેયો (Relations and Functions) નો ઉપયોગ કરે છે. ડેટાબેઝ લોજિકથી લઈને મશીન લર્નિંગ મેપિંગ સુધી, સંબંધો નક્કી કરે છે કે ડેટાના સેટ કેવી રીતે એકબીજા સાથે ક્રિયાપ્રતિક્રિયા કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_002",
+      "type": "socratic_question",
+      "question": "If person A is a sibling of person B, is B always a sibling of A? What if person A is the father of B?",
+      "question_hi": "यदि व्यक्ति A व्यक्ति B का भाई/बहन है, तो क्या B हमेशा A का भाई/बहन होता है? यदि व्यक्ति A, B का पिता है तो क्या होगा?",
+      "question_gu": "જો વ્યક્તિ A એ વ્યક્તિ B નો ભાઈ/બહેન છે, તો શું B એ હંમેશા A નો ભાઈ/બહેન છે? જો વ્યક્તિ A એ B ના પિતા હોય તો શું થાય?",
+      "options": [
+        "Sibling is symmetric; Father is not symmetric.",
+        "Both relations are always symmetric.",
+        "Neither relation is symmetric.",
+        "Father is symmetric; Sibling is not symmetric."
+      ],
+      "options_hi": [
+        "भाई/बहन का संबंध सममित (Symmetric) है; पिता का संबंध सममित नहीं है।",
+        "दोनों संबंध हमेशा सममित होते हैं।",
+        "कोई भी संबंध सममित नहीं है।",
+        "पिता का संबंध सममित है; भाई/बहन का संबंध सममित नहीं है।"
+      ],
+      "options_gu": [
+        "ભાઈ/બહેનનો સંબંધ સંમિતિ (Symmetric) ધરાવે છે; પિતાનો સંબંધ સંમિતિ ધરાવતો નથી.",
+        "બંને સંબંધો હંમેશા સંમિત હોય છે.",
+        "એકપણ સંબંધ સંમિત નથી.",
+        "પિતાનો સંબંધ સંમિત છે; ભાઈ/બહેનનો સંબંધ સંમિત નથી."
+      ],
+      "correct_index": 0,
+      "explanation": "If A is a sibling of B, B is also a sibling of A (Symmetric). But if A is the father of B, B is the child of A, not the father (Not Symmetric).",
+      "explanation_hi": "यदि A, B का भाई/बहन है, तो B भी A का भाई/बहन है (सममित)। लेकिन यदि A, B का पिता है, तो B, A का बच्चा है, पिता नहीं (सममित नहीं)।",
+      "explanation_gu": "જો A એ B નો ભાઈ/બહેન હોય, તો B પણ A નો ભાઈ/બહેન જ હોય (સંમિત). પરંતુ જો A એ B ના પિતા હોય, તો B એ A નું સંતાન છે, પિતા નહીં (સંમિત નથી)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_003",
+      "type": "discovery",
+      "title": "Uncovering Properties of Relations",
+      "title_hi": "संबंधों के गुणों की खोज",
+      "title_gu": "સંબંધોના ગુણધર્મોની શોધ",
+      "body": "Consider a relation R on a set A.\n1. Reflexive: Every element is related to itself (a, a) ∈ R for all a ∈ A.\n2. Symmetric: If (a, b) ∈ R, then (b, a) ∈ R.\n3. Transitive: If (a, b) ∈ R and (b, c) ∈ R, then (a, c) ∈ R.\nWhen a relation satisfies ALL three properties, it is called an EQUIVALENCE RELATION.",
+      "body_hi": "समुच्चय A पर एक संबंध R पर विचार करें।\n1. स्वतः तुल्य (Reflexive): प्रत्येक अवयव स्वयं से संबंधित है (a, a) ∈ R सभी a ∈ A के लिए।\n2. सममित (Symmetric): यदि (a, b) ∈ R, तो (b, a) ∈ R।\n3. संक्रामक (Transitive): यदि (a, b) ∈ R और (b, c) ∈ R, तो (a, c) ∈ R।\nजब कोई संबंध इन तीनों गुणों को पूरा करता है, तो इसे तुल्यता संबंध (Equivalence Relation) कहा जाता है।",
+      "body_gu": "ગણ A પર એક સંબંધ R ને ધ્યાનમાં લો.\n1. સ્વવાચક (Reflexive): દરેક ઘટક પોતે જ પોતાની સાથે સંબંધિત છે (a, a) ∈ R, તમામ a ∈ A માટે.\n2. સંમિત (Symmetric): જો (a, b) ∈ R, તો (b, a) ∈ R.\n3. પરંપરિત (Transitive): જો (a, b) ∈ R અને (b, c) ∈ R, તો (a, c) ∈ R.\nજ્યારે કોઈ સંબંધ આ ત્રણેય ગુણધર્મોનું પાલન કરે છે, ત્યારે તેને સાચો સામ્ય સંબંધ (Equivalence Relation) કહેવામાં આવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_004",
+      "type": "theory",
+      "title": "Types of Functions: One-One & Onto",
+      "title_hi": "फलन के प्रकार: एकैकी और आच्छादक",
+      "title_gu": "વિધેયના પ્રકારો: એક-એક અને વ્યાપ્ત",
+      "body": "Let f: X → Y be a function.\n1. One-One (Injective): Distinct elements in X have distinct images in Y. Mathematically, f(x₁) = f(x₂) ⟹ x₁ = x₂.\n2. Many-One: Two or more distinct elements in X have the same image in Y.\n3. Onto (Surjective): Every element in codomain Y is the image of at least one element in domain X (Range = Codomain).\n4. Bijective: A function that is BOTH One-One and Onto.",
+      "body_hi": "मान लीजिए f: X → Y एक फलन है।\n1. एकैकी (Injective): X के भिन्न अवयवों के Y में भिन्न प्रतिबिंब होते हैं। गणितीय रूप से, f(x₁) = f(x₂) ⟹ x₁ = x₂।\n2. बहु-एक (Many-One): X के दो या अधिक भिन्न अवयवों का Y में समान प्रतिबिंब होता है।\n3. आच्छादक (Surjective): सह-प्रांत Y का प्रत्येक अवयव प्रांत X के कम से कम एक अवयव का प्रतिबिंब है (परिसर = सह-प्रांत)।\n4. एकैकी आच्छादी (Bijective): एक फलन जो एकैकी और आच्छादक दोनों है।",
+      "body_gu": "ધારો કે f: X → Y એ એક વિધેય છે.\n1. એક-એક (Injective): X ના ભિન્ન ઘટકોના Y માં ભિન્ન પ્રતિબિંબો હોય છે. ગણિતીય રીતે, f(x₁) = f(x₂) ⟹ x₁ = x₂.\n2. અનેક-એક (Many-One): X ના બે અથવા વધુ ભિન્ન ઘટકોનું Y માં એક જ પ્રતિબિંબ હોય છે.\n3. વ્યાપ્ત (Surjective): સહ-પ્રદેશ Y નો દરેક ઘટક એ પ્રદેશ X ના ઓછામાં ઓછા એક ઘટકનું પ્રતિબિંબ છે (વિસ્તાર = સહ-પ્રદેશ).\n4. એક-એક અને વ્યાપ્ત (Bijective): એવું વિધેય જે એક-એક અને વ્યાપ્ત બંને હોય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_005",
+      "type": "knowledge_check",
+      "question": "If f: R → R is defined by f(x) = x², then f is:",
+      "question_hi": "यदि f: R → R, f(x) = x² द्वारा परिभाषित है, तो f है:",
+      "question_gu": "જો f: R → R એ f(x) = x² દ્વારા વ્યાખ્યાયિત હોય, તો f એ:",
+      "options": [
+        "One-one and Onto",
+        "Many-one and Into (Neither one-one nor onto)",
+        "One-one but not Onto",
+        "Onto but not One-one"
+      ],
+      "options_hi": [
+        "एकैकी और आच्छादक",
+        "बहु-एक और अंतःक्षेपी (न तो एकैकी और न ही आच्छादक)",
+        "एकैकी लेकिन आच्छादक नहीं",
+        "आच्छादक लेकिन एकैकी नहीं"
+      ],
+      "options_gu": [
+        "એક-એક અને વ્યાપ્ત",
+        "અનેક-એક અને અંદરનું (એક-એક પણ નથી અને વ્યાપ્ત પણ નથી)",
+        "એક-એક છે પણ વ્યાપ્ત નથી",
+        "વ્યાપ્ત છે પણ એક-એક નથી"
+      ],
+      "correct_index": 1,
+      "explanation": "f(1) = 1² = 1 and f(-1) = (-1)² = 1, so f is not one-one (it is many-one). Negative real numbers have no pre-images in R, so range = [0, ∞) ≠ R (codomain). Thus f is neither one-one nor onto.",
+      "explanation_hi": "f(1) = 1² = 1 और f(-1) = (-1)² = 1, इसलिए f एकैकी नहीं है (यह बहु-एक है)। ऋणात्मक वास्तविक संख्याओं का R में कोई पूर्व-प्रतिबिंब नहीं है, इसलिए परिसर = [0, ∞) ≠ R (सह-प्रांत)। इस प्रकार f न तो एकैकी है और न ही आच्छादक।",
+      "explanation_gu": "f(1) = 1² = 1 અને f(-1) = (-1)² = 1, તેથી f એ એક-એક નથી (અનેક-એક છે). ઋણ વાસ્તવિક સંખ્યાઓ માટે R માં કોઈ પૂર્વ-પ્રતિબિંબ નથી, તેથી વિસ્તાર = [0, ∞) ≠ R (સહ-પ્રદેશ). આમ f એ એક-એક પણ નથી અને વ્યાપ્ત પણ નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_006",
+      "type": "reflection",
+      "title": "Real-World Equivalence Relations",
+      "title_hi": "वास्तविक जीवन में तुल्यता संबंध",
+      "title_gu": "વાસ્તવિક જીવનમાં સામ્ય સંબંધો",
+      "body": "Think about lines in a 2D plane with relation 'is parallel to'. Every line is parallel to itself (reflexive). If line L₁ is parallel to L₂, then L₂ is parallel to L₁ (symmetric). If L₁ ∥ L₂ and L₂ ∥ L₃, then L₁ ∥ L₃ (transitive). Hence, parallelism partitions lines into equivalence classes of direction!",
+      "body_hi": "'समांतर है' संबंध के साथ 2D समतल में रेखाओं के बारे में सोचें। प्रत्येक रेखा स्वयं के समांतर होती है (स्वतुल्य)। यदि रेखा L₁, L₂ के समांतर है, तो L₂, L₁ के समांतर है (सममित)। यदि L₁ ∥ L₂ और L₂ ∥ L₃, तो L₁ ∥ L₃ (संक्रामक)। इसलिए, समांतरता रेखाओं को दिशा की तुल्यता श्रेणियों में विभाजित करती है!",
+      "body_gu": "'સમાંતર છે' સંબંધ સાથે 2D સમતલમાં રેખાઓ વિશે વિચારો. દરેક રેખા પોતે જ પોતાની સાથે સમાંતર હોય છે (સ્વવાચક). જો રેખા L₁ એ L₂ ને સમાંતર હોય, તો L₂ એ L₁ ને સમાંતર હોય છે (સંમિત). જો L₁ ∥ L₂ અને L₂ ∥ L₃ હોય, તો L₁ ∥ L₃ (પરંપરિત). આથી, સમાંતરતા એ રેખાઓને દિશાના સામ્ય વર્ગોમાં વિભાજિત કરે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_007",
+      "type": "connection",
+      "title": "Connection to Computer Science Databases",
+      "title_hi": "कंप्यूटर साइंस डेटाबेस से संबंध",
+      "title_gu": "કમ્પ્યુટર સાયન્સ ડેટાબેઝ સાથે જોડાણ",
+      "body": "Relational Databases (SQL) get their name directly from mathematical Relations! Primary key to foreign key mapping requires functions that are strictly One-to-One or One-to-Many to guarantee data integrity.",
+      "body_hi": "रिलेशनल डेटाबेस (SQL) को अपना नाम सीधे गणितीय संबंधों (Relations) से मिलता है! डेटा अखंडता की गारंटी के लिए प्राइमरी कुंजी से फॉरेन कुंजी मैपिंग के लिए ऐसे फलनों की आवश्यकता होती है जो सख्ती से वन-टू-वन या वन-टू-मेनी हों।",
+      "body_gu": "રિલેશનલ ડેટાબેઝ (SQL) ને તેમનું નામ સીધું ગણિતીય સંબંધો (Relations) પરથી મળ્યું છે! ડેટાની પ્રામાણિકતા જાળવી રાખવા માટે પ્રાયમરી કી થી ફોરેન કી મેપિંગ માટે એવા વિધેયોની જરૂર પડે છે જે સ્પષ્ટપણે 'વન-ટુ-વન' અથવા 'વન-ટુ-મેની' હોય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Properties & Functions",
+      "title_hi": "मास्टरी चैलेंज: गुण और फलन",
+      "title_gu": "માસ્ટરી ચેલેન્જ: ગુણધર્મો અને વિધેયો",
+      "body": "Now that you have understood Reflexive, Symmetric, Transitive relations along with Injective and Surjective functions, test your complete understanding with the official CBSE textbook exercise questions that follow!",
+      "body_hi": "अब जब आपने एकैकी और आच्छादक फलनों के साथ स्वतः तुल्य, सममित, और संक्रामक संबंधों को समझ लिया है, तो आने वाले आधिकारिक CBSE पाठ्यपुस्तक अभ्यास प्रश्नों के साथ अपनी पूरी समझ का परीक्षण करें!",
+      "body_gu": "હવે જ્યારે તમે એક-એક અને વ્યાપ્ત વિધેયો સાથે સ્વવાચક, સંમિત અને પરંપરિત સંબંધો સમજી લીધા છે, તો પછીના અધિકૃત CBSE પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો સાથે તમારી સંપૂર્ણ સમજ ચકાસો!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_009",
+      "type": "mcq",
+      "question": "Ex 1.1 Q1(i): Determine whether the relation R in the set A = {1, 2, 3, ..., 13, 14} defined as R = {(x, y) : 3x - y = 0} is reflexive, symmetric, or transitive.",
+      "question_hi": "Ex 1.1 Q1(i): निर्धारित कीजिए कि क्या समुच्चय A = {1, 2, 3, ..., 13, 14} में संबंध R = {(x, y) : 3x - y = 0} स्वतः तुल्य, सममित या संक्रामक है।",
+      "question_gu": "Ex 1.1 Q1(i): નક્કી કરો કે ગણ A = {1, 2, 3, ..., 13, 14} પર સંબંધ R = {(x, y) : 3x - y = 0} એ સ્વવાચક, સંમિત અથવા પરંપરિત છે કે નહીં.",
+      "options": [
+        "Reflexive, Symmetric, and Transitive",
+        "Reflexive only",
+        "Symmetric only",
+        "Neither reflexive, nor symmetric, nor transitive"
+      ],
+      "options_hi": [
+        "स्वतः तुल्य, सममित और संक्रामक",
+        "केवल स्वतः तुल्य",
+        "केवल सममित",
+        "न तो स्वतः तुल्य, न सममित, न ही संक्रामक"
+      ],
+      "options_gu": [
+        "સ્વવાચક, સંમિત અને પરંપરિત",
+        "માત્ર સ્વવાચક",
+        "માત્ર સંમિત",
+        "સ્વવાચક પણ નથી, સંમિત પણ નથી અને પરંપરિત પણ નથી"
+      ],
+      "correct_index": 3,
+      "explanation": "R = {(1,3), (2,6), (3,9), (4,12)}. (1,1) ∉ R so not reflexive. (1,3) ∈ R but (3,1) ∉ R so not symmetric. (1,3) ∈ R, (3,9) ∈ R but (1,9) ∉ R so not transitive.",
+      "explanation_hi": "R = {(1,3), (2,6), (3,9), (4,12)}। (1,1) ∉ R इसलिए स्वतः तुल्य नहीं है। (1,3) ∈ R लेकिन (3,1) ∉ R इसलिए सममित नहीं है। (1,3) ∈ R, (3,9) ∈ R लेकिन (1,9) ∉ R इसलिए संक्रामक नहीं है।",
+      "explanation_gu": "R = {(1,3), (2,6), (3,9), (4,12)}. (1,1) ∉ R તેથી સ્વવાચક નથી. (1,3) ∈ R પણ (3,1) ∉ R તેથી સંમિત નથી. (1,3) ∈ R, (3,9) ∈ R પણ (1,9) ∉ R તેથી પરંપરિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_010",
+      "type": "mcq",
+      "question": "Ex 1.1 Q1(ii): Relation R in the set N of natural numbers defined as R = {(x, y) : y = x + 5 and x < 4} is:",
+      "question_hi": "Ex 1.1 Q1(ii): प्राकृतिक संख्याओं के समुच्चय N में R = {(x, y) : y = x + 5 और x < 4} द्वारा परिभाषित संबंध R है:",
+      "question_gu": "Ex 1.1 Q1(ii): પ્રાકૃતિક સંખ્યાઓના ગણ N પર R = {(x, y) : y = x + 5 અને x < 4} દ્વારા વ્યાખ્યાયિત સંબંધ R એ:",
+      "options": [
+        "Reflexive and Symmetric",
+        "Transitive only (vacuously transitive)",
+        "Equivalence relation",
+        "Symmetric and Transitive"
+      ],
+      "options_hi": [
+        "स्वतः तुल्य और सममित",
+        "केवल संक्रामक",
+        "तुल्यता संबंध",
+        "सममित और संक्रामक"
+      ],
+      "options_gu": [
+        "સ્વવાચક અને સંમિત",
+        "માત્ર પરંપરિત",
+        "સામ્ય સંબંધ",
+        "સંમિત અને પરંપરિત"
+      ],
+      "correct_index": 1,
+      "explanation": "R = {(1,6), (2,7), (3,8)}. No (x,x) so not reflexive. (1,6)∈R but (6,1)∉R so not symmetric. Since there are no pairs (x,y) and (y,z) in R, the condition for transitivity is not broken, so it is vacuously transitive.",
+      "explanation_hi": "R = {(1,6), (2,7), (3,8)}। कोई (x,x) नहीं है इसलिए स्वतः तुल्य नहीं है। (1,6)∈R लेकिन (6,1)∉R इसलिए सममित नहीं है। चूँकि R में (x,y) और (y,z) के ऐसे कोई युग्म नहीं हैं, इसलिए संक्रामकता की शर्त नहीं टूटती है, अतः यह संक्रामक है।",
+      "explanation_gu": "R = {(1,6), (2,7), (3,8)}. (x,x) ઘટકો નથી તેથી સ્વવાચક નથી. (1,6)∈R પણ (6,1)∉R તેથી સંમિત નથી. (x,y) અને (y,z) જેવી કોઈ જોડી R માં ન હોવાથી પરંપરિતતાની શરત ભંગ થતી નથી, તેથી તે પરંપરિત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_011",
+      "type": "mcq",
+      "question": "Ex 1.1 Q1(iii): Relation R in the set A = {1, 2, 3, 4, 5, 6} as R = {(x, y) : y is divisible by x} is:",
+      "question_hi": "Ex 1.1 Q1(iii): समुच्चय A = {1, 2, 3, 4, 5, 6} में R = {(x, y) : y, x से भाज्य है} द्वारा परिभाषित संबंध R है:",
+      "question_gu": "Ex 1.1 Q1(iii): ગણ A = {1, 2, 3, 4, 5, 6} પર R = {(x, y) : y એ x વડે વિભાજ્ય છે} દ્વારા વ્યાખ્યાયિત સંબંધ R એ:",
+      "options": [
+        "Reflexive and Transitive, but not Symmetric",
+        "Reflexive and Symmetric, but not Transitive",
+        "Symmetric and Transitive, but not Reflexive",
+        "Equivalence Relation"
+      ],
+      "options_hi": [
+        "स्वतः तुल्य और संक्रामक, लेकिन सममित नहीं",
+        "स्वतः तुल्य और सममित, लेकिन संक्रामक नहीं",
+        "सममित और संक्रामक, लेकिन स्वतः तुल्य नहीं",
+        "तुल्यता संबंध"
+      ],
+      "options_gu": [
+        "સ્વવાચક અને પરંપરિત, પણ સંમિત નથી",
+        "સ્વવાચક અને સંમિત, પણ પરંપરિત નથી",
+        "સંમિત અને પરંપરિત, પણ સ્વવાચક નથી",
+        "સામ્ય સંબંધ"
+      ],
+      "correct_index": 0,
+      "explanation": "1. x is divisible by x for all x ∈ A (Reflexive).\n2. (2,4) ∈ R because 4 is divisible by 2, but (4,2) ∉ R (Not Symmetric).\n3. If y is divisible by x and z is divisible by y, then z is divisible by x (Transitive).",
+      "explanation_hi": "1. सभी x ∈ A के लिए x, x से भाज्य है (स्वतः तुल्य)।\n2. (2,4) ∈ R क्योंकि 4, 2 से भाज्य है, लेकिन (4,2) ∉ R (सममित नहीं)।\n3. यदि y, x से भाज्य है और z, y से भाज्य है, तो z, x से भाज्य है (संक्रामक)।",
+      "explanation_gu": "1. તમામ x ∈ A માટે x એ x વડે વિભાજ્ય છે (સ્વવાચક).\n2. (2,4) ∈ R કારણ કે 4 એ 2 વડે વિભાજ્ય છે, પણ (4,2) ∉ R (સંમિત નથી).\n3. જો y એ x વડે વિભાજ્ય હોય અને z એ y વડે વિભાજ્ય હોય, તો z એ x વડે વિભાજ્ય હોય (પરંપરિત)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_012",
+      "type": "mcq",
+      "question": "Ex 1.1 Q1(iv): Relation R in the set Z of all integers defined as R = {(x, y) : x - y is an integer} is:",
+      "question_hi": "Ex 1.1 Q1(iv): समस्त पूर्णांकों के समुच्चय Z में R = {(x, y) : x - y एक पूर्णांक है} द्वारा परिभाषित संबंध R है:",
+      "question_gu": "Ex 1.1 Q1(iv): તમામ પૂર્ણાંકોના ગણ Z પર R = {(x, y) : x - y એ પૂર્ણાંક છે} દ્વારા વ્યાખ્યાયિત સંબંધ R એ:",
+      "options": [
+        "Equivalence Relation",
+        "Reflexive only",
+        "Symmetric only",
+        "Transitive only"
+      ],
+      "options_hi": [
+        "तुल्यता संबंध",
+        "केवल स्वतः तुल्य",
+        "केवल सममित",
+        "केवल संक्रामक"
+      ],
+      "options_gu": [
+        "સામ્ય સંબંધ",
+        "માત્ર સ્વવાચક",
+        "માત્ર સંમિત",
+        "માત્ર પરંપરિત"
+      ],
+      "correct_index": 0,
+      "explanation": "x - x = 0 ∈ Z (Reflexive). If x - y ∈ Z, then y - x = -(x - y) ∈ Z (Symmetric). If x - y ∈ Z and y - z ∈ Z, then (x - y) + (y - z) = x - z ∈ Z (Transitive). Thus it is an Equivalence Relation.",
+      "explanation_hi": "x - x = 0 ∈ Z (स्वतः तुल्य)। यदि x - y ∈ Z, तो y - x = -(x - y) ∈ Z (सममित)। यदि x - y ∈ Z और y - z ∈ Z, तो (x - y) + (y - z) = x - z ∈ Z (संक्रामक)। अतः यह एक तुल्यता संबंध है।",
+      "explanation_gu": "x - x = 0 ∈ Z (સ્વવાચક). જો x - y ∈ Z, તો y - x = -(x - y) ∈ Z (સંમિત). જો x - y ∈ Z અને y - z ∈ Z, તો (x - y) + (y - z) = x - z ∈ Z (પરંપરિત). આથી તે સામ્ય સંબંધ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_013",
+      "type": "mcq",
+      "question": "Ex 1.1 Q2: Show that the relation R in R defined as R = {(a, b) : a ≤ b²} is:",
+      "question_hi": "Ex 1.1 Q2: सिद्ध कीजिए कि R में R = {(a, b) : a ≤ b²} द्वारा परिभाषित संबंध R है:",
+      "question_gu": "Ex 1.1 Q2: સાબિત કરો કે R પર R = {(a, b) : a ≤ b²} દ્વારા વ્યાખ્યાયિત સંબંધ R એ:",
+      "options": [
+        "Neither reflexive, nor symmetric, nor transitive",
+        "Reflexive and Symmetric",
+        "Symmetric and Transitive",
+        "An Equivalence Relation"
+      ],
+      "options_hi": [
+        "न तो स्वतः तुल्य, न सममित और न ही संक्रामक",
+        "स्वतः तुल्य और सममित",
+        "सममित और संक्रामक",
+        "एक तुल्यता संबंध"
+      ],
+      "options_gu": [
+        "સ્વવાચક પણ નથી, સંમિત પણ નથી અને પરંપરિત પણ નથી",
+        "સ્વવાચક અને સંમિત",
+        "સંમિત અને પરંપરિત",
+        "એક સામ્ય સંબંધ"
+      ],
+      "correct_index": 0,
+      "explanation": "1/2 ≤ (1/2)² = 1/4 is FALSE, so not reflexive. 1 ≤ 2² holds but 2 ≤ 1² is FALSE, so not symmetric. 3 ≤ (-2)² and -2 ≤ 1² hold, but 3 ≤ 1² is FALSE, so not transitive.",
+      "explanation_hi": "1/2 ≤ (1/2)² = 1/4 असत्य है, इसलिए स्वतः तुल्य नहीं है। 1 ≤ 2² सत्य है लेकिन 2 ≤ 1² असत्य है, इसलिए सममित नहीं है। 3 ≤ (-2)² और -2 ≤ 1² सत्य हैं, लेकिन 3 ≤ 1² असत्य है, इसलिए संक्रामक नहीं है।",
+      "explanation_gu": "1/2 ≤ (1/2)² = 1/4 ખોટું છે, તેથી સ્વવાચક નથી. 1 ≤ 2² સાચું છે પણ 2 ≤ 1² ખોટું છે, તેથી સંમિત નથી. 3 ≤ (-2)² અને -2 ≤ 1² સાચા છે, પણ 3 ≤ 1² ખોટું છે, તેથી પરંપરિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_014",
+      "type": "mcq",
+      "question": "Ex 1.1 Q15: Let R be the relation in the set {1, 2, 3, 4} given by R = {(1,2), (2,2), (1,1), (4,4), (1,3), (3,3), (3,2)}. Choose the correct answer.",
+      "question_hi": "Ex 1.1 Q15: मान लीजिए कि समुच्चय {1, 2, 3, 4} में R = {(1,2), (2,2), (1,1), (4,4), (1,3), (3,3), (3,2)} द्वारा दिया गया संबंध R है। सही उत्तर चुनिए।",
+      "question_gu": "Ex 1.1 Q15: ધારો કે ગણ {1, 2, 3, 4} પર R = {(1,2), (2,2), (1,1), (4,4), (1,3), (3,3), (3,2)} વડે વ્યાખ્યાયિત સંબંધ R છે. સાચો વિકલ્પ પસંદ કરો.",
+      "options": [
+        "R is reflexive and symmetric but not transitive",
+        "R is reflexive and transitive but not symmetric",
+        "R is symmetric and transitive but not reflexive",
+        "R is an equivalence relation"
+      ],
+      "options_hi": [
+        "R स्वतः तुल्य और सममित है लेकिन संक्रामक नहीं है",
+        "R स्वतः तुल्य और संक्रामक है लेकिन सममित नहीं है",
+        "R सममित और संक्रामक है लेकिन स्वतः तुल्य नहीं है",
+        "R एक तुल्यता संबंध है"
+      ],
+      "options_gu": [
+        "R સ્વવાચક અને સંમિત છે પણ પરંપરિત નથી",
+        "R સ્વવાચક અને પરંપરિત છે પણ સંમિત નથી",
+        "R સંમિત અને પરંપરિત છે પણ સ્વવાચક નથી",
+        "R એ સામ્ય સંબંધ છે"
+      ],
+      "correct_index": 1,
+      "explanation": "(1,1),(2,2),(3,3),(4,4) ∈ R so Reflexive. (1,2) ∈ R but (2,1) ∉ R so Not Symmetric. If (a,b),(b,c) ∈ R then (a,c) ∈ R, e.g. (1,3) & (3,2) ⇒ (1,2) ∈ R so Transitive.",
+      "explanation_hi": "(1,1),(2,2),(3,3),(4,4) ∈ R इसलिए स्वतः तुल्य है। (1,2) ∈ R लेकिन (2,1) ∉ R इसलिए सममित नहीं है। यदि (a,b),(b,c) ∈ R तो (a,c) ∈ R, जैसे (1,3) और (3,2) ⇒ (1,2) ∈ R इसलिए संक्रामक है।",
+      "explanation_gu": "(1,1),(2,2),(3,3),(4,4) ∈ R તેથી સ્વવાચક છે. (1,2) ∈ R પણ (2,1) ∉ R તેથી સંમિત નથી. જો (a,b),(b,c) ∈ R તો (a,c) ∈ R, દા.ત. (1,3) અને (3,2) ⇒ (1,2) ∈ R તેથી પરંપરિત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_015",
+      "type": "mcq",
+      "question": "Ex 1.1 Q16: Let R be the relation in the set N given by R = {(a, b) : a = b - 2, b > 6}. Choose the correct answer.",
+      "question_hi": "Ex 1.1 Q16: मान लीजिए कि समुच्चय N में R = {(a, b) : a = b - 2, b > 6} द्वारा दिया गया संबंध R है। सही उत्तर चुनिए।",
+      "question_gu": "Ex 1.1 Q16: ધારો કે ગણ N પર R = {(a, b) : a = b - 2, b > 6} વડે વ્યાખ્યાયિત સંબંધ R છે. સાચો વિકલ્પ પસંદ કરો.",
+      "options": [
+        "(2, 4) ∈ R",
+        "(3, 8) ∈ R",
+        "(6, 8) ∈ R",
+        "(8, 7) ∈ R"
+      ],
+      "options_hi": [
+        "(2, 4) ∈ R",
+        "(3, 8) ∈ R",
+        "(6, 8) ∈ R",
+        "(8, 7) ∈ R"
+      ],
+      "options_gu": [
+        "(2, 4) ∈ R",
+        "(3, 8) ∈ R",
+        "(6, 8) ∈ R",
+        "(8, 7) ∈ R"
+      ],
+      "correct_index": 2,
+      "explanation": "b must be > 6. For b = 8, a = 8 - 2 = 6. Thus (6, 8) ∈ R.",
+      "explanation_hi": "b > 6 होना चाहिए। b = 8 के लिए, a = 8 - 2 = 6। इस प्रकार (6, 8) ∈ R है।",
+      "explanation_gu": "b > 6 હોવું જોઈએ. b = 8 માટે, a = 8 - 2 = 6. આથી (6, 8) ∈ R."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_016",
+      "type": "mcq",
+      "question": "Ex 1.2 Q1: Show that the function f: R* → R* defined by f(x) = 1/x is one-one and onto, where R* is the set of all non-zero real numbers.",
+      "question_hi": "Ex 1.2 Q1: सिद्ध कीजिए कि f(x) = 1/x द्वारा परिभाषित फलन f: R* → R* एकैकी तथा आच्छादक है, जहाँ R* सभी ऋणेतर (शून्येतर) वास्तविक संख्याओं का समुच्चय है।",
+      "question_gu": "Ex 1.2 Q1: સાબિત કરો કે f(x) = 1/x દ્વારા વ્યાખ્યાયિત વિધેય f: R* → R* એ એક-એક અને વ્યાપ્ત છે, જ્યાં R* એ તમામ શૂન્યતર વાસ્તવિક સંખ્યાઓનો ગણ છે.",
+      "options": [
+        "f is Bijective (One-one and Onto)",
+        "f is One-one but not Onto",
+        "f is Onto but not One-one",
+        "f is neither One-one nor Onto"
+      ],
+      "options_hi": [
+        "f एकैकी आच्छादी (Bijective) है",
+        "f एकैकी है लेकिन आच्छादक नहीं",
+        "f आच्छादक है लेकिन एकैकी नहीं",
+        "f न तो एकैकी है और न ही आच्छादक"
+      ],
+      "options_gu": [
+        "f એ એક-એક અને વ્યાપ્ત (Bijective) છે",
+        "f એ એક-એક છે પણ વ્યાપ્ત નથી",
+        "f એ વ્યાપ્ત છે પણ એક-એક નથી",
+        "f એ એક-એક પણ નથી અને વ્યાપ્ત પણ નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "f(x₁) = f(x₂) ⇒ 1/x₁ = 1/x₂ ⇒ x₁ = x₂ (One-one). For any y ∈ R*, y = 1/x ⇒ x = 1/y ∈ R*, so f(1/y) = y (Onto). Thus f is Bijective.",
+      "explanation_hi": "f(x₁) = f(x₂) ⇒ 1/x₁ = 1/x₂ ⇒ x₁ = x₂ (एकैकी)। किसी भी y ∈ R* के लिए, y = 1/x ⇒ x = 1/y ∈ R*, इसलिए f(1/y) = y (आच्छादक)। अतः f एकैकी आच्छादी है।",
+      "explanation_gu": "f(x₁) = f(x₂) ⇒ 1/x₁ = 1/x₂ ⇒ x₁ = x₂ (એક-એક). કોઈપણ y ∈ R* માટે, y = 1/x ⇒ x = 1/y ∈ R*, તેથી f(1/y) = y (વ્યાપ્ત). આથી f એ એક-એક અને વ્યાપ્ત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_017",
+      "type": "mcq",
+      "question": "Ex 1.2 Q2(i): Check the injectivity and surjectivity of f: N → N given by f(x) = x².",
+      "question_hi": "Ex 1.2 Q2(i): f(x) = x² द्वारा दिए गए फलन f: N → N के एकैकी (injectivity) तथा आच्छादी (surjectivity) गुणों की जाँच कीजिए।",
+      "question_gu": "Ex 1.2 Q2(i): f(x) = x² દ્વારા આપેલા વિધેય f: N → N માટે એક-એક અને વ્યાપ્તતાની ચકાસણી કરો.",
+      "options": [
+        "Injective but not Surjective",
+        "Surjective but not Injective",
+        "Both Injective and Surjective",
+        "Neither Injective nor Surjective"
+      ],
+      "options_hi": [
+        "एकैकी है लेकिन आच्छादक नहीं",
+        "आच्छादक है लेकिन एकैकी नहीं",
+        "एकैकी और आच्छादक दोनों",
+        "न तो एकैकी और न ही आच्छादक"
+      ],
+      "options_gu": [
+        "એક-એક છે પણ વ્યાપ્ત નથી",
+        "વ્યાપ્ત છે પણ એક-એક નથી",
+        "એક-એક અને વ્યાપ્ત બંને છે",
+        "એક-એક પણ નથી અને વ્યાપ્ત પણ નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "For x₁, x₂ ∈ N, x₁² = x₂² ⇒ x₁ = x₂ (since natural numbers are positive), so Injective. But range = {1, 4, 9, 16, ...} ≠ N (codomain), e.g., 2 has no pre-image, so NOT Surjective.",
+      "explanation_hi": "x₁, x₂ ∈ N के लिए, x₁² = x₂² ⇒ x₁ = x₂ (क्योंकि प्राकृत संख्याएँ धनात्मक होती हैं), इसलिए एकैकी है। लेकिन परिसर = {1, 4, 9, 16, ...} ≠ N (सह-प्रांत), उदाहरण के लिए, 2 का कोई पूर्व-प्रतिबिंब नहीं है, इसलिए आच्छादक नहीं है।",
+      "explanation_gu": "x₁, x₂ ∈ N માટે, x₁² = x₂² ⇒ x₁ = x₂ (કારણ કે પ્રાકૃતિક સંખ્યાઓ ધન હોય છે), તેથી એક-એક છે. પણ વિસ્તાર = {1, 4, 9, 16, ...} ≠ N (સહ-પ્રદેશ), દા.ત., 2 નું કોઈ પૂર્વ-પ્રતિબિંબ નથી, તેથી વ્યાપ્ત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_018",
+      "type": "mcq",
+      "question": "Ex 1.2 Q11: Let f: R → R be defined as f(x) = x⁴. Choose the correct answer.",
+      "question_hi": "Ex 1.2 Q11: मान लीजिए कि f: R → R, f(x) = x⁴ द्वारा परिभाषित है। सही उत्तर चुनिए।",
+      "question_gu": "Ex 1.2 Q11: ધારો કે f: R → R એ f(x) = x⁴ દ્વારા વ્યાખ્યાયિત છે. સાચો વિકલ્પ પસંદ કરો.",
+      "options": [
+        "f is one-one onto",
+        "f is many-one onto",
+        "f is one-one but not onto",
+        "f is neither one-one nor onto"
+      ],
+      "options_hi": [
+        "f एकैकी आच्छादक है",
+        "f बहु-एक आच्छादक है",
+        "f एकैकी है लेकिन आच्छादक नहीं",
+        "f न तो एकैकी है और न ही आच्छादक"
+      ],
+      "options_gu": [
+        "f એક-એક અને વ્યાપ્ત છે",
+        "f અનેક-એક અને વ્યાપ્ત છે",
+        "f એક-એક છે પણ વ્યાપ્ત નથી",
+        "f એક-એક પણ નથી અને વ્યાપ્ત પણ નથી"
+      ],
+      "correct_index": 3,
+      "explanation": "f(1) = 1⁴ = 1 and f(-1) = (-1)⁴ = 1 ⇒ Not One-one. Range = [0, ∞) ≠ R (codomain) ⇒ Not Onto.",
+      "explanation_hi": "f(1) = 1⁴ = 1 और f(-1) = (-1)⁴ = 1 ⇒ एकैकी नहीं है। परिसर = [0, ∞) ≠ R (सह-प्रांत) ⇒ आच्छादक नहीं है।",
+      "explanation_gu": "f(1) = 1⁴ = 1 અને f(-1) = (-1)⁴ = 1 ⇒ એક-એક નથી. વિસ્તાર = [0, ∞) ≠ R (સહ-પ્રદેશ) ⇒ વ્યાપ્ત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_019",
+      "type": "mcq",
+      "question": "Ex 1.2 Q12: Let f: R → R be defined as f(x) = 3x. Choose the correct answer.",
+      "question_hi": "Ex 1.2 Q12: मान लीजिए कि f: R → R, f(x) = 3x द्वारा परिभाषित है। सही उत्तर चुनिए।",
+      "question_gu": "Ex 1.2 Q12: ધારો કે f: R → R એ f(x) = 3x દ્વારા વ્યાખ્યાયિત છે. સાચો વિકલ્પ પસંદ કરો.",
+      "options": [
+        "f is one-one onto",
+        "f is many-one onto",
+        "f is one-one but not onto",
+        "f is neither one-one nor onto"
+      ],
+      "options_hi": [
+        "f एकैकी आच्छादक है",
+        "f बहु-एक आच्छादक है",
+        "f एकैकी है लेकिन आच्छादक नहीं",
+        "f न तो एकैकी है और न ही आच्छादक"
+      ],
+      "options_gu": [
+        "f એક-એક અને વ્યાપ્ત છે",
+        "f અનેક-એક અને વ્યાપ્ત છે",
+        "f એક-એક છે પણ વ્યાપ્ત નથી",
+        "f એક-એક પણ નથી અને વ્યાપ્ત પણ નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "f(x₁) = f(x₂) ⇒ 3x₁ = 3x₂ ⇒ x₁ = x₂ (One-one). For any y ∈ R, let x = y/3 ∈ R, then f(x) = 3(y/3) = y (Onto). So f is Bijective.",
+      "explanation_hi": "f(x₁) = f(x₂) ⇒ 3x₁ = 3x₂ ⇒ x₁ = x₂ (एकैकी)। किसी भी y ∈ R के लिए, x = y/3 ∈ R, फिर f(x) = 3(y/3) = y (आच्छादक)। अतः f एकैकी आच्छादक है।",
+      "explanation_gu": "f(x₁) = f(x₂) ⇒ 3x₁ = 3x₂ ⇒ x₁ = x₂ (એક-એક). કોઈપણ y ∈ R માટે, x = y/3 ∈ R, પછી f(x) = 3(y/3) = y (વ્યાપ્ત). આથી f એક-એક અને વ્યાપ્ત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH1_020",
+      "type": "true_false",
+      "question": "True or False: Every identity function on a non-empty set A is a bijective function.",
+      "question_hi": "सत्य या असत्य: किसी अराजित समुच्चय A पर प्रत्येक तत्समक फलन (identity function) एक एकैकी आच्छादी फलन होता है।",
+      "question_gu": "ખરું કે ખોટું: અશૂન્ય ગણ A પરનું દરેક તદેવ વિધેય (identity function) એ એક-એક અને વ્યાપ્ત વિધેય હોય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "ખરું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Identity function I_A(x) = x maps every element uniquely to itself (One-One) and covers all elements in the codomain set A (Onto). Thus it is always Bijective.",
+      "explanation_hi": "तत्समक फलन I_A(x) = x प्रत्येक अवयव को विशिष्ट रूप से स्वयं से मैप करता है (एकैकी) और सह-प्रांत समुच्चय A के सभी अवयवों को कवर करता है (आच्छादक)। इसलिए यह हमेशा एकैकी आच्छादी होता है।",
+      "explanation_gu": "તદેવ વિધેય I_A(x) = x દરેક ઘટકને તેની પોતાની સાથે જ સાંકળે છે (એક-એક) અને સહ-પ્રદેશ ગણ A ના તમામ ઘટકોને આવરી લે છે (વ્યાપ્ત). આથી તે હંમેશા એક-એક અને વ્યાપ્ત હોય છે."
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_01",
+    "type": "hook",
+    "title": "The Perfect Blueprint",
+    "title_hi": "सटीक ब्लूप्रिंट",
+    "body": "Imagine you are an architect building a bridge. You can't just guess the measurements! You need precise tools to draw perfectly straight lines and exact angles. Welcome to the world of Constructions!",
+    "body_hi": "कल्पना कीजिए कि आप एक पुल बनाने वाले आर्किटेक्ट हैं। आप केवल अंदाज़ा लगाकर मापन नहीं कर सकते! आपको बिल्कुल सीधी रेखाएँ और सटीक कोण बनाने के लिए सटीक उपकरणों की आवश्यकता होती है। रचनाओं की दुनिया में आपका स्वागत है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_02",
+    "type": "socratic_thinking",
+    "question": "If you only have a compass and a straightedge (ruler without marks), can you divide a line segment exactly in half?",
+    "question_hi": "यदि आपके पास केवल एक परकार और एक सीधी रेखा (बिना निशान वाला पैमाना) है, तो क्या आप एक रेखाखंड को बिल्कुल आधा बाँट सकते हैं?",
+    "options": [
+      "Yes, absolutely",
+      "No, we need to measure it"
+    ],
+    "options_hi": [
+      "हाँ, बिल्कुल",
+      "नहीं, हमें इसे मापने की आवश्यकता है"
+    ],
+    "correct_index": 0,
+    "explanation": "Yes, we can! Geometry gives us tools to bisect lines precisely without even looking at numbers.",
+    "explanation_hi": "हाँ, हम कर सकते हैं! ज्यामिति हमें संख्याओं को देखे बिना भी रेखाओं को ठीक से समद्विभाजित करने के उपकरण देती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_03",
+    "type": "discovery",
+    "title": "Dividing a Line Segment",
+    "title_hi": "एक रेखाखंड का विभाजन",
+    "body": "To divide a line segment in a given ratio, we draw a ray making an acute angle with the given segment, mark equal points on it, and then draw parallel lines. It's like creating a mini-ladder where every step is perfectly spaced!",
+    "body_hi": "दिए गए अनुपात में एक रेखाखंड को विभाजित करने के लिए, हम दिए गए खंड के साथ एक न्यून कोण बनाते हुए एक किरण खींचते हैं, उस पर समान बिंदु अंकित करते हैं, और फिर समानांतर रेखाएँ खींचते हैं। यह एक मिनी-सीढ़ी बनाने जैसा है जहाँ हर कदम पूरी तरह से दूरी पर है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_04",
+    "type": "reveal",
+    "title": "Formal Method: Internal Division",
+    "title_hi": "औपचारिक विधि: आंतरिक विभाजन",
+    "body": "To divide a line segment AB in the ratio m:n, we draw a ray AX. We locate m+n points on AX at equal distances. We join the last point to B, and draw a line parallel to it from the m-th point to intersect AB. This point divides AB in m:n.",
+    "body_hi": "एक रेखाखंड AB को m:n के अनुपात में विभाजित करने के लिए, हम एक किरण AX खींचते हैं। हम AX पर समान दूरी पर m+n बिंदु खोजते हैं। हम अंतिम बिंदु को B से मिलाते हैं, और m-वें बिंदु से इसके समानांतर एक रेखा खींचते हैं जो AB को प्रतिच्छेद करती है। यह बिंदु AB को m:n में विभाजित करता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_05",
+    "type": "knowledge_check",
+    "question": "To divide a line segment in the ratio 3:2, how many equal points do we mark on the acute angle ray?",
+    "question_hi": "एक रेखाखंड को 3:2 के अनुपात में विभाजित करने के लिए, हम न्यून कोण किरण पर कितने समान बिंदु अंकित करते हैं?",
+    "options": [
+      "3",
+      "2",
+      "5",
+      "6"
+    ],
+    "options_hi": [
+      "3",
+      "2",
+      "5",
+      "6"
+    ],
+    "correct_index": 2,
+    "explanation": "We mark m + n points, so 3 + 2 = 5 equal points.",
+    "explanation_hi": "हम m + n बिंदु अंकित करते हैं, इसलिए 3 + 2 = 5 समान बिंदु।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_06",
+    "type": "reflection",
+    "question": "Why do you think drawing parallel lines helps in dividing the main line segment accurately?",
+    "question_hi": "आपको क्यों लगता है कि समानांतर रेखाएँ खींचने से मुख्य रेखाखंड को सटीक रूप से विभाजित करने में मदद मिलती है?",
+    "body": "Think about similar triangles! The parallel line creates a smaller triangle similar to the large one. This guarantees the ratios of their sides are equal, which is why the division is perfect.",
+    "body_hi": "समरूप त्रिभुजों के बारे में सोचें! समानांतर रेखा बड़े त्रिभुज के समान एक छोटा त्रिभुज बनाती है। यह गारंटी देता है कि उनकी भुजाओं के अनुपात समान हैं, यही वजह है कि विभाजन सही है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_07",
+    "type": "hook",
+    "title": "Touching the Circle",
+    "title_hi": "वृत्त को छूना",
+    "body": "Imagine a wheel spinning on a flat road. The road touches the wheel at exactly ONE point. In geometry, this 'road' is called a Tangent. Let's learn how to construct it from a point far away!",
+    "body_hi": "कल्पना कीजिए कि एक सपाट सड़क पर एक पहिया घूम रहा है। सड़क पहिये को ठीक एक बिंदु पर छूती है। ज्यामिति में, इस 'सड़क' को स्पर्शरेखा कहा जाता है। आइए सीखें कि इसे दूर के बिंदु से कैसे बनाया जाए!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_08",
+    "type": "discovery",
+    "title": "Constructing Tangents",
+    "title_hi": "स्पर्शरेखाओं की रचना",
+    "body": "To draw a tangent from an external point P to a circle with center O, we join OP and bisect it. We draw a new circle using this midpoint. Where this new circle cuts the original circle, we find our points of contact!",
+    "body_hi": "केंद्र O वाले वृत्त पर एक बाहरी बिंदु P से स्पर्शरेखा खींचने के लिए, हम OP को मिलाते हैं और इसे समद्विभाजित करते हैं। हम इस मध्यबिंदु का उपयोग करके एक नया वृत्त खींचते हैं। जहाँ यह नया वृत्त मूल वृत्त को काटता है, हमें अपने संपर्क के बिंदु मिलते हैं!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_09",
+    "type": "knowledge_check",
+    "question": "How many tangents can be drawn from an external point to a circle?",
+    "question_hi": "एक बाहरी बिंदु से एक वृत्त पर कितनी स्पर्शरेखाएँ खींची जा सकती हैं?",
+    "options": [
+      "1",
+      "2",
+      "Infinite",
+      "0"
+    ],
+    "options_hi": [
+      "1",
+      "2",
+      "अनंत",
+      "0"
+    ],
+    "correct_index": 1,
+    "explanation": "Exactly two tangents can be drawn from a point outside the circle.",
+    "explanation_hi": "वृत्त के बाहर के एक बिंदु से ठीक दो स्पर्शरेखाएँ खींची जा सकती हैं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_10",
+    "type": "connection",
+    "title": "Where does this connect?",
+    "title_hi": "यह कहाँ जुड़ता है?",
+    "body": "Constructions are the practical application of 'Triangles' (similarity) and 'Circles' (tangent properties) chapters. The theory you learned before is now being drawn by your own hands!",
+    "body_hi": "रचनाएँ 'त्रिभुज' (समरूपता) और 'वृत्त' (स्पर्शरेखा गुण) अध्यायों का व्यावहारिक अनुप्रयोग हैं। जो सिद्धांत आपने पहले सीखा था वह अब आपके अपने हाथों से खींचा जा रहा है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_11",
+    "type": "mastery",
+    "title": "Mastery Challenge",
+    "title_hi": "महारत की चुनौती",
+    "body": "Draw a circle of radius 3 cm. Take a point P at a distance of 8 cm from its center. Construct a pair of tangents to the circle from point P and measure their lengths. Try this on paper right now!",
+    "body_hi": "3 सेमी त्रिज्या का एक वृत्त खींचिए। इसके केंद्र से 8 सेमी की दूरी पर एक बिंदु P लीजिए। बिंदु P से वृत्त पर स्पर्शरेखाओं की एक जोड़ी की रचना कीजिए और उनकी लंबाई मापिए। इसे अभी कागज़ पर आजमाएँ!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "To construct a triangle similar to a given triangle ABC with its sides 3/7 of the corresponding sides of triangle ABC, a ray BX is drawn such that angle CBX is an acute angle and X lies on the opposite side of A with respect to BC. Then points B1, B2, B3... are located at equal distances on BX. Which point is joined to C in the next step?",
+    "question_hi": "एक दिए गए त्रिभुज ABC के समरूप एक त्रिभुज बनाने के लिए जिसकी भुजाएँ त्रिभुज ABC की संगत भुजाओं की 3/7 हैं, एक किरण BX इस प्रकार खींची जाती है कि कोण CBX एक न्यून कोण हो और X, BC के सापेक्ष A के विपरीत दिशा में हो। फिर बिंदु B1, B2, B3... BX पर समान दूरी पर स्थित होते हैं। अगले चरण में किस बिंदु को C से जोड़ा जाता है?",
+    "options": [
+      "B3",
+      "B7",
+      "B10",
+      "B4"
+    ],
+    "options_hi": [
+      "B3",
+      "B7",
+      "B10",
+      "B4"
+    ],
+    "correct_index": 1,
+    "explanation": "The denominator of the scale factor 3/7 is 7. So, we locate 7 points on the ray BX at equal distances. We always join the point representing the denominator (B7) to C. Then we draw a line through B3 (numerator) parallel to B7C.",
+    "explanation_hi": "स्केल फैक्टर 3/7 का हर 7 है। इसलिए, हम किरण BX पर समान दूरी पर 7 बिंदु खोजते हैं। हम हमेशा हर का प्रतिनिधित्व करने वाले बिंदु (B7) को C से मिलाते हैं। फिर हम B3 (अंश) के माध्यम से B7C के समानांतर एक रेखा खींचते हैं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "To construct a pair of tangents to a circle at an angle of 60 degrees to each other, we first draw two radii of the circle. What should be the angle between these two radii at the centre of the circle?",
+    "question_hi": "एक दूसरे से 60 डिग्री के कोण पर एक वृत्त पर स्पर्शरेखाओं की एक जोड़ी बनाने के लिए, हम पहले वृत्त की दो त्रिज्याएँ खींचते हैं। वृत्त के केंद्र में इन दोनों त्रिज्याओं के बीच का कोण क्या होना चाहिए?",
+    "options": [
+      "60 degrees",
+      "90 degrees",
+      "120 degrees",
+      "180 degrees"
+    ],
+    "options_hi": [
+      "60 डिग्री",
+      "90 डिग्री",
+      "120 डिग्री",
+      "180 डिग्री"
+    ],
+    "correct_index": 2,
+    "explanation": "The angle between the two tangents and the angle between the two radii drawn to the points of contact are supplementary (they sum to 180°). So, if the tangents are inclined at 60°, the angle between the radii must be 180° - 60° = 120°.",
+    "explanation_hi": "दो स्पर्शरेखाओं के बीच का कोण और संपर्क बिंदुओं तक खींची गई दो त्रिज्याओं के बीच का कोण संपूरक होते हैं (उनका योग 180° होता है)। इसलिए, यदि स्पर्शरेखाएँ 60° पर झुकी हुई हैं, तो त्रिज्याओं के बीच का कोण 180° - 60° = 120° होना चाहिए।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If a line segment AB of length 7.6 cm is divided internally in the ratio 5:8, what is the approximate length of the smaller part?",
+    "question_hi": "यदि 7.6 सेमी लंबाई का एक रेखाखंड AB आंतरिक रूप से 5:8 के अनुपात में विभाजित होता है, तो छोटे भाग की अनुमानित लंबाई क्या है?",
+    "options": [
+      "2.92 cm",
+      "4.68 cm",
+      "5.0 cm",
+      "3.8 cm"
+    ],
+    "options_hi": [
+      "2.92 सेमी",
+      "4.68 सेमी",
+      "5.0 सेमी",
+      "3.8 सेमी"
+    ],
+    "correct_index": 0,
+    "explanation": "The line is divided in the ratio 5:8. The total number of parts is 5 + 8 = 13. The smaller part corresponds to 5 parts. Its length is (5/13) * 7.6 cm = 38 / 13 = 2.923... cm. Thus, it is approximately 2.92 cm.",
+    "explanation_hi": "रेखा 5:8 के अनुपात में विभाजित है। भागों की कुल संख्या 5 + 8 = 13 है। छोटा भाग 5 भागों से मेल खाता है। इसकी लंबाई (5/13) * 7.6 सेमी = 38 / 13 = 2.923... सेमी है। इस प्रकार, यह लगभग 2.92 सेमी है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "While constructing a triangle similar to a given triangle with a scale factor of 5/3, which of the following statements is true regarding the new constructed triangle compared to the original one?",
+    "question_hi": "5/3 के स्केल फैक्टर वाले दिए गए त्रिभुज के समरूप एक त्रिभुज का निर्माण करते समय, मूल त्रिभुज की तुलना में नए निर्मित त्रिभुज के संबंध में निम्नलिखित में से कौन सा कथन सत्य है?",
+    "options": [
+      "The new triangle is smaller than the original triangle",
+      "The new triangle is congruent to the original triangle",
+      "The new triangle is larger than the original triangle",
+      "The new triangle cannot be constructed"
+    ],
+    "options_hi": [
+      "नया त्रिभुज मूल त्रिभुज से छोटा है",
+      "नया त्रिभुज मूल त्रिभुज के सर्वांगसम है",
+      "नया त्रिभुज मूल त्रिभुज से बड़ा है",
+      "नया त्रिभुज नहीं बनाया जा सकता है"
+    ],
+    "correct_index": 2,
+    "explanation": "The scale factor 5/3 is strictly greater than 1. This means each corresponding side of the new triangle is 5/3 times longer than the side of the original triangle, making the new triangle an enlarged version.",
+    "explanation_hi": "स्केल फैक्टर 5/3 स्पष्ट रूप से 1 से बड़ा है। इसका मतलब है कि नए त्रिभुज की प्रत्येक संगत भुजा मूल त्रिभुज की भुजा से 5/3 गुना लंबी है, जिससे नया त्रिभुज एक बड़ा संस्करण बन जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH11_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "A tangent is constructed from an external point P to a circle with centre O and radius 5 cm. If the distance from the centre O to the point P is 13 cm, what is the exact length of the tangent segment constructed?",
+    "question_hi": "एक बाहरी बिंदु P से केंद्र O और 5 सेमी त्रिज्या वाले वृत्त पर एक स्पर्शरेखा खींची जाती है। यदि केंद्र O से बिंदु P की दूरी 13 सेमी है, तो निर्मित स्पर्शरेखा खंड की सटीक लंबाई क्या है?",
+    "options": [
+      "8 cm",
+      "10 cm",
+      "12 cm",
+      "14 cm"
+    ],
+    "options_hi": [
+      "8 सेमी",
+      "10 सेमी",
+      "12 सेमी",
+      "14 सेमी"
+    ],
+    "correct_index": 2,
+    "explanation": "A tangent to a circle is perpendicular to the radius at the point of contact. This forms a right-angled triangle. By Pythagoras theorem, (Tangent)² + (Radius)² = (Distance to centre)². So, Tangent² + 5² = 13², Tangent² = 169 - 25 = 144, Tangent = 12 cm.",
+    "explanation_hi": "वृत्त की स्पर्शरेखा संपर्क बिंदु पर त्रिज्या के लंबवत होती है। यह एक समकोण त्रिभुज बनाता है। पाइथागोरस प्रमेय द्वारा, (स्पर्शरेखा)² + (त्रिज्या)² = (केंद्र से दूरी)²। तो, स्पर्शरेखा² + 5² = 13², स्पर्शरेखा² = 169 - 25 = 144, स्पर्शरेखा = 12 सेमी।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_1",
+    "type": "quiz",
+    "question": "Sample mock test question 1 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 1 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 1. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 1 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_2",
+    "type": "quiz",
+    "question": "Sample mock test question 2 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 2 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 2. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 2 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_3",
+    "type": "quiz",
+    "question": "Sample mock test question 3 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 3 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 3. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 3 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_4",
+    "type": "quiz",
+    "question": "Sample mock test question 4 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 4 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 4. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 4 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_5",
+    "type": "quiz",
+    "question": "Sample mock test question 5 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 5 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 5. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 5 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_6",
+    "type": "quiz",
+    "question": "Sample mock test question 6 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 6 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 6. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 6 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_7",
+    "type": "quiz",
+    "question": "Sample mock test question 7 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 7 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 7. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 7 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_8",
+    "type": "quiz",
+    "question": "Sample mock test question 8 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 8 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 8. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 8 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_9",
+    "type": "quiz",
+    "question": "Sample mock test question 9 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 9 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 9. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 9 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_10",
+    "type": "quiz",
+    "question": "Sample mock test question 10 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 10 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 10. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 10 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_11",
+    "type": "quiz",
+    "question": "Sample mock test question 11 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 11 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 11. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 11 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_12",
+    "type": "quiz",
+    "question": "Sample mock test question 12 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 12 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 12. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 12 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_13",
+    "type": "quiz",
+    "question": "Sample mock test question 13 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 13 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 13. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 13 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_14",
+    "type": "quiz",
+    "question": "Sample mock test question 14 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 14 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 14. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 14 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch11_15",
+    "type": "quiz",
+    "question": "Sample mock test question 15 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 15 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 15. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 15 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  }
+]

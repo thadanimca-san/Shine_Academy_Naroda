@@ -1,0 +1,512 @@
+{
+  "metadata": {
+    "id": "cbse_class12_physics_ch14",
+    "title": "Chapter 14: Semiconductor Electronics",
+    "subject": "Physics",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_001",
+      "type": "hook",
+      "title": "The Silicon Revolution: How Sand Powers the Modern World",
+      "title_hi": "सिलिकॉन क्रांति: रेत कैसे आधुनिक दुनिया को ऊर्जा देती है",
+      "title_gu": "સિલિકોન ક્રાંતિ: રેતી કેવી રીતે આધુનિક વિશ્વને ઉર્જા આપે છે",
+      "body": "Did you know that every smartphone, supercomputer, and AI chip is made from refined quartz sand (Silicon)? Silicon is a semiconductor—a material that is neither a pure conductor like Copper nor a pure insulator like Glass. By controlling its purity and electric field, we can switch electrical currents on and off billions of times per second. This single property forms the foundation of all digital technology today!",
+      "body_hi": "क्या आप जानते हैं कि हर स्मार्टफोन, सुपरकंप्यूटर और एआई चिप परिष्कृत क्वार्ट्ज रेत (सिलिकॉन) से बनी है? सिलिकॉन एक अर्धचालक (semiconductor) है - एक ऐसा पदार्थ जो न तो तांबे की तरह शुद्ध चालक है और न ही कांच की तरह पूर्ण कुचालक। इसकी शुद्धता और विद्युत क्षेत्र को नियंत्रित करके, हम विद्युत धारा को प्रति सेकंड अरबों बार चालू और बंद कर सकते हैं। यही एक गुण आज की सभी डिजिटल तकनीक का आधार है!",
+      "body_gu": "શું તમે જાણો છો કે દરેક સ્માર્ટફોન, સુપરકોમ્પ્યુટર અને AI ચિપ રિફાઇન્ડ ક્વાર્ટ્ઝ રેતી (સિલિકોન) માંથી બનાવવામાં આવે છે? સિલિકોન એ અર્ધવાહક (semiconductor) છે - એક એવો પદાર્થ જે તાંબાની જેમ શુદ્ધ વાહક પણ નથી અને કાચની જેમ શુદ્ધ અવાહક પણ નથી. તેની શુદ્ધતા અને વિદ્યુત ક્ષેત્રને નિયંત્રિત કરીને, આપણે વિદ્યુત પ્રવાહને પ્રતિ સેકન્ડ કરોડો વખત ચાલુ અને બંધ કરી શકીએ છીએ. આ એક ગુણધર્મ આજે તમામ ડિજિટલ ટેકનોલોજીનો પાયો છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_002",
+      "type": "socratic_question",
+      "title": "Conductor vs Insulator Dilemma",
+      "title_hi": "चालक बनाम कुचालक दुविधा",
+      "title_gu": "વાહક વિરુદ્ધ અવાહક મૂંઝવણ",
+      "question": "At absolute zero temperature (0 K), pure Silicon behaves as a perfect insulator. However, at room temperature (300 K), it conducts a small amount of electric current. Why does this happen?",
+      "question_hi": "परम शून्य ताप (0 K) पर शुद्ध सिलिकॉन एक आदर्श कुचालक की तरह व्यवहार करता है। हालाँकि, कमरे के तापमान (300 K) पर, यह थोड़ी मात्रा में विद्युत धारा का संचालन करता है। ऐसा क्यों होता है?",
+      "question_gu": "પરમ શૂન્ય તાપમાને (0 K), શુદ્ધ સિલિકોન સંપૂર્ણ અવાહક તરીકે વર્તે છે. જો કે, ઓરડાના તાપમાને (300 K), તે થોડા પ્રમાણમાં વિદ્યુત પ્રવાહનું વહન કરે છે. આવું શા માટે થાય છે?",
+      "options": [
+        "Thermal energy breaks covalent bonds, liberating electrons into the conduction band and leaving behind positive holes.",
+        "Silicon atoms melt at room temperature, releasing free charge carriers.",
+        "The lattice constant decreases at room temperature, forcing electrons out.",
+        "Photons from ambient light ionize all silicon nuclei completely."
+      ],
+      "options_hi": [
+        "ऊष्मीय ऊर्जा सहसंयोजक बंधों को तोड़ती है, जिससे इलेक्ट्रॉन चालन बैंड में मुक्त होते हैं और पीछे धनात्मक होल छोड़ जाते हैं।",
+        "कमरे के तापमान पर सिलिकॉन परमाणु पिघल जाते हैं, जिससे मुक्त आवेश वाहक निकलते हैं।",
+        "कमरे के तापमान पर जालक स्थिरांक घट जाता है, जिससे इलेक्ट्रॉन बाहर निकल जाते हैं।",
+        "परिवेशीय प्रकाश के फोटॉन सभी सिलिकॉन नाभिकों को पूरी तरह से आयनीकृत कर देते हैं।"
+      ],
+      "options_gu": [
+        "ઉષ્મીય ઊર્જા સહસંયોજક બંધોને તોડે છે, જેનાથી ઇલેક્ટ્રોન કન્ડક્શન બેન્ડમાં મુક્ત થાય છે અને હકારાત્મક હોલ પાછળ છોડી દે છે.",
+        "ઓરડાના તાપમાને સિલિકોન અણુઓ પીગળી જાય છે, મુક્ત ચાર્જ વાહકો મુક્ત કરે છે.",
+        "ઓરડાના તાપમાને લેટિસ અચળાંક ઘટે છે, જે ઇલેક્ટ્રોનને બહાર ધકેલે છે.",
+        "આસપાસના પ્રકાશમાંથી ફોટોન તમામ સિલિકોન ન્યુક્લિયસનું સંપૂર્ણ આયનીકરણ કરે છે."
+      ],
+      "correct_index": 0,
+      "explanation": "At 0 K, all valence electrons are tightly bound in covalent bonds (valence band full, conduction band empty). At 300 K, thermal energy ($k_B T$) breaks a few covalent bonds, transferring electrons across the energy band gap ($E_g$) to the conduction band and creating vacant states (holes) in the valence band.",
+      "explanation_hi": "0 K पर, सभी वैलेंस इलेक्ट्रॉन सहसंयोजक बंधों में कसकर बंधे होते हैं (वैलेंस बैंड भरा हुआ, चालन बैंड खाली)। 300 K पर, ऊष्मीय ऊर्जा ($k_B T$) कुछ सहसंयोजक बंधों को तोड़ती है, जिससे इलेक्ट्रॉन ऊर्जा बैंड अंतराल ($E_g$) को पार करके चालन बैंड में चले जाते हैं और वैलेंस बैंड में रिक्त स्थान (होल) बनाते हैं।",
+      "explanation_gu": "0 K પર, તમામ વેલેન્સ ઇલેક્ટ્રોન સહસંયોજક બંધમાં ચુસ્તપણે જોડાયેલા હોય છે (વેલેન્સ બેન્ડ ભરેલો, કન્ડક્શન બેન્ડ ખાલી). 300 K પર, ઉષ્મીય ઊર્જા ($k_B T$) કેટલાક સહસંયોજક બંધોને તોડે છે, ઇલેક્ટ્રોનને એનર્જી ગેપ ($E_g$) પાર કરીને કન્ડક્શન બેન્ડમાં મોકલે છે અને વેલેન્સ બેન્ડમાં ખાલી જગ્યાઓ (હોલ) બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_003",
+      "type": "discovery",
+      "title": "Unveiling Energy Bands & Doping",
+      "title_hi": "ऊर्जा बैंड और डोपिंग की खोज",
+      "title_gu": "ઊર્જા બેન્ડ અને ડોપિંગની શોધ",
+      "body": "In isolated atoms, electron energy levels are discrete. But inside a crystal lattice, interacting atoms cause energy levels to split and spread into continuous **Energy Bands**:\n\n1. **Valence Band (VB):** Contains valence electrons involved in bonding.\n2. **Conduction Band (CB):** Contains free electrons responsible for conduction.\n3. **Energy Band Gap ($E_g$):** The forbidden energy gap between VB and CB.\n   - **Metals:** $E_g = 0$ (VB and CB overlap).\n   - **Insulators:** $E_g > 3\\text{ eV}$ (e.g., Diamond $E_g \\approx 5.4\\text{ eV}$).\n   - **Semiconductors:** $E_g < 3\\text{ eV}$ (e.g., Si $\\approx 1.1\\text{ eV}$, Ge $\\approx 0.72\\text{ eV}$).\n\n**Doping (Extrinsic Semiconductors):**\n- **n-type:** Doping pure Si/Ge with **Pentavalent impurities** (P, As, Sb). Electrons are majority carriers ($n_e \\gg n_h$).\n- **p-type:** Doping with **Trivalent impurities** (B, Al, In). Holes are majority carriers ($n_h \\gg n_e$).\n\n**Mass-Action Law:** Under thermal equilibrium, $n_e \\cdot n_h = n_i^2$.",
+      "body_hi": "विलगित परमाणुओं में, इलेक्ट्रॉन ऊर्जा स्तर विविक्त (discrete) होते हैं। लेकिन एक क्रिस्टल जालक के अंदर, अंतःक्रिया करने वाले परमाणु ऊर्जा स्तरों को विभाजित करके निरंतर **ऊर्जा बैंड** में फैला देते हैं:\n\n1. **संयोजकता बैंड (VB):** इसमें बाइंडिंग में शामिल वैलेंस इलेक्ट्रॉन होते हैं।\n2. **चालन बैंड (CB):** इसमें चालन के लिए उत्तरदायी मुक्त इलेक्ट्रॉन होते हैं।\n3. **ऊर्जा बैंड अंतराल ($E_g$):** VB और CB के बीच वर्जित ऊर्जा अंतराल।\n   - **धातुएँ:** $E_g = 0$ (VB और CB अतिव्याप्त होते हैं)।\n   - **कुचालक:** $E_g > 3\\text{ eV}$ (जैसे, हीरा $E_g \\approx 5.4\\text{ eV}$)।\n   - **अर्धचालक:** $E_g < 3\\text{ eV}$ (जैसे, Si $\\approx 1.1\\text{ eV}$, Ge $\\approx 0.72\\text{ eV}$)।\n\n**डोपिंग (अपद्रवी अर्धचालक):**\n- **n-प्रकार:** शुद्ध Si/Ge को **पंचसंयोजी अपद्रव्यों** (P, As, Sb) से डोप करना। इलेक्ट्रॉन बहुसंख्यक वाहक हैं ($n_e \\gg n_h$)।\n- **p-प्रकार:** **त्रिसंयोजी अपद्रव्यों** (B, Al, In) से डोप करना। होल बहुसंख्यक वाहक हैं ($n_h \\gg n_e$)।\n\n**द्रव्यमान-क्रिया नियम:** तापीय संतुलन में, $n_e \\cdot n_h = n_i^2$।",
+      "body_gu": "અલગ ફેંકાયેલા અણુઓમાં, ઇલેક્ટ્રોન ઊર્જા સ્તરો અલગ હોય છે. પરંતુ સ્ફટિક લેટિસની અંદર, આંતરક્રિયા કરતા અણુઓ ઊર્જા સ્તરોને વિભાજિત કરીને સતત **ઊર્જા બેન્ડ** માં ફેલાવે છે:\n\n1. **વેલેન્સ બેન્ડ (VB):** બંધનમાં સામેલ વેલેન્સ ઇલેક્ટ્રોન ધરાવે છે.\n2. **કન્ડક્શન બેન્ડ (CB):** વહન માટે જવાબદાર મુક્ત ઇલેક્ટ્રોન ધરાવે છે.\n3. **એનર્જી બેન્ડ ગેપ ($E_g$):** VB અને CB વચ્ચેનો પ્રતિબંધિત ઊર્જા તફાવત.\n   - **ધાતુઓ:** $E_g = 0$ (VB અને CB ઓવરલેપ થાય છે).\n   - **અવાહકો:** $E_g > 3\\text{ eV}$ (દા.ત., હીરો $E_g \\approx 5.4\\text{ eV}$).\n   - **અર્ધવાહકો:** $E_g < 3\\text{ eV}$ (દા.ત., Si $\\approx 1.1\\text{ eV}$, Ge $\\approx 0.72\\text{ eV}$).\n\n**ડોપિંગ (બાહ્ય અર્ધવાહકો):**\n- **n-પ્રકાર:** શુદ્ધ Si/Ge ને **પંચ-સંયોજક અશુદ્ધિઓ** (P, As, Sb) વડે ડોપ કરવું. ઇલેક્ટ્રોન મુખ્ય વાહકો છે ($n_e \\gg n_h$).\n- **p-પ્રકાર:** **ત્રિ-સંયોજક અશુદ્ધિઓ** (B, Al, In) વડે ડોપ કરવું. હોલ મુખ્ય વાહકો છે ($n_h \\gg n_e$).\n\n**માસ-એક્શન નિયમ:** થર્મલ સંતુલન હેઠળ, $n_e \\cdot n_h = n_i^2$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_004",
+      "type": "theory",
+      "title": "p-n Junction Diode, Biasing, and Rectification",
+      "title_hi": "p-n जंक्शन डायोड, बायसिंग और दिष्टकरण (Rectification)",
+      "title_gu": "p-n જંકશન ડાયોડ, બાયસિંગ અને રેક્ટિફિકેશન",
+      "body": "### 1. p-n Junction Formation\nWhen a p-type semiconductor is joined to an n-type semiconductor:\n- **Diffusion Current:** Majority holes diffuse from p to n, and majority electrons from n to p.\n- **Depletion Region:** Uncompensated immobile donor ions ($+$) assemble on the n-side and acceptor ions ($-$) on the p-side, forming a region devoid of mobile charge carriers.\n- **Built-in Potential ($V_0$):** Creates an internal electric field pointing from n to p, generating a **Drift Current** that balances diffusion at equilibrium ($I_{\\text{diffusion}} = I_{\\text{drift}}$).\n\n### 2. Biasing a p-n Junction\n- **Forward Bias:** p-side to Positive, n-side to Negative.\n  - Depletion width decreases, barrier potential reduces ($V_0 - V$).\n  - Current flows easily (mA range).\n- **Reverse Bias:** p-side to Negative, n-side to Positive.\n  - Depletion width increases, barrier potential increases ($V_0 + V$).\n  - Extremely small reverse saturation current flows ($\\mu\\text{A}$ range).\n\n### 3. Rectifiers\n- **Half-Wave Rectifier:** Uses 1 diode. Converts only one half-cycle of AC to DC. Output frequency = Input frequency ($f_{\\text{out}} = f_{\\text{in}}$).\n- **Full-Wave Rectifier:** Uses 2 diodes (center-tapped) or 4 diodes (bridge). Converts both half-cycles. Output frequency = $2 f_{\\text{in}}$.",
+      "body_hi": "### 1. p-n जंक्शन का निर्माण\nजब एक p-प्रकार के अर्धचालक को n-प्रकार के अर्धचालक से जोड़ा जाता है:\n- **विसरण धारा (Diffusion Current):** बहुसंख्यक होल p से n की ओर और बहुसंख्यक इलेक्ट्रॉन n से p की ओर विसरित होते हैं।\n- **अवक्षय परत (Depletion Region):** स्थिर दाता आयन ($+$) n-क्षेत्र में और ग्राही आयन ($-$) p-क्षेत्र में एकत्र हो जाते हैं, जिससे गतिशील वाहकों से रहित एक क्षेत्र बनता है।\n- **प्राचीर विभव ($V_0$):** एक आंतरिक विद्युत क्षेत्र बनाता है जो n से p की ओर होता है और **अपवाह धारा (Drift Current)** उत्पन्न करता है। संतुलन पर $I_{\\text{diffusion}} = I_{\\text{drift}}$।\n\n### 2. p-n जंक्शन का बायसन\n- **अग्र अभिनति (Forward Bias):** p-सिरा धनात्मक से, n-सिरा ऋणात्मक से।\n  - अवक्षय परत की चौड़ाई घटती है, विभव प्राचीर कम होता है ($V_0 - V$)।\n  - धारा आसानी से प्रवाहित होती है (mA में)।\n- **पश्च अभिनति (Reverse Bias):** p-सिरा ऋणात्मक से, n-सिरा धनात्मक से।\n  - अवक्षय परत की चौड़ाई बढ़ती है, विभव प्राचीर बढ़ता है ($V_0 + V$)।\n  - बहुत कम पश्च संतृप्ति धारा प्रवाहित होती है ($\\mu\\text{A}$ में)।\n\n### 3. दिष्टकारी (Rectifiers)\n- **अर्ध-तरंग दिष्टकारी:** 1 डायोड का उपयोग करता है। केवल आधे चक्र को DC में बदलता है। निर्गत आवृत्ति = निवेशी आवृत्ति ($f_{\\text{out}} = f_{\\text{in}}$)।\n- **पूर्ण-तरंग दिष्टकारी:** 2 या 4 डायोड का उपयोग करता है। दोनों आधे चक्रों को बदलता है। निर्गत आवृत्ति = $2 f_{\\text{in}}$।",
+      "body_gu": "### 1. p-n જંકશનનું નિર્માણ\nજ્યારે p-પ્રકારના અર્ધવાહકને n-પ્રકારના અર્ધવાહક સાથે જોડવામાં આવે છે:\n- **વિસરણ પ્રવાહ (Diffusion Current):** મુખ્‍ય હોલ p થી n તરફ અને ઇલેક્ટ્રોન n થી p તરફ વિસરીત થાય છે.\n- **ડેપ્લેશન વિસ્તાર (Depletion Region):** સ્થિર દાતા આયનો ($+$) n-બાજુ અને સ્વીકારક આયનો ($-$) p-બાજુ ભેગા થાય છે, જે ચલિત વાહકો વગરનો વિસ્તાર બનાવે છે.\n- **બિલ્ટ-ઇન પોટેન્શિયલ ($V_0$):** n થી p તરફનું એક આંતરિક વિદ્યુત ક્ષેત્ર બનાવે છે જે **ડ્રિફ્ટ પ્રવાહ** ઉત્પન્ન કરે છે. સંતુલને $I_{\\text{diffusion}} = I_{\\text{drift}}$.\n\n### 2. p-n જંકશનનું બાયસિંગ\n- **ફોરવર્ડ બાયસ:** p-છેડો ધન સાથે, n-છેડો ઋણ સાથે.\n  - ડેપ્લેશન પહોળાઈ ઘટે છે, બેરિયર પોટેન્શિયલ ઘટે છે ($V_0 - V$).\n  - પ્રવાહ સરળતાથી વહે છે (mA માં).\n- **રિવર્સ બાયસ:** p-છેડો ઋણ સાથે, n-છેડો ધન સાથે.\n  - ડેપ્લેશન પહોળાઈ વધે છે, બેરિયર પોટેન્શિયલ વધે છે ($V_0 + V$).\n  - અત્યંત નાનો રિવર્સ સેચ્યુરેશન પ્રવાહ વહે છે ($\\mu\\text{A}$ માં).\n\n### 3. રેક્ટિફાયર\n- **હાફ-વેવ રેક્ટિફાયર:** 1 ડાયોડ વાપરે છે. AC ના માત્ર અડધા ચક્રને DC માં રૂપાંતરિત કરે છે. આઉટપુટ આવૃત્તિ = ઇનપુટ આવૃત્તિ ($f_{\\text{out}} = f_{\\text{in}}$).\n- **ફુલ-વેવ રેક્ટિફાયર:** 2 અથવા 4 ડાયોડ વાપરે છે. બંને અડધા ચક્રને રૂપાંતરિત કરે છે. આઉટપુટ આવૃત્તિ = $2 f_{\\text{in}}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_005",
+      "type": "knowledge_check",
+      "title": "Concept Check: Thermal Equilibrium in Semiconductors",
+      "title_hi": "अवधारणा जांच: अर्धचालकों में तापीय संतुलन",
+      "title_gu": "ખ્યાલ ચકાસણી: અર્ધવાહકોમાં થર્મલ સંતુલન",
+      "question": "If an intrinsic semiconductor is doped with Phosphorus (a pentavalent element) to form an n-type semiconductor, how does the hole concentration ($n_h$) change compared to its intrinsic value ($n_i$)?",
+      "question_hi": "यदि किसी निज अर्धचालक को n-प्रकार का अर्धचालक बनाने के लिए फास्फोरस (एक पंचसंयोजी तत्व) के साथ डोप किया जाता है, तो इसके निज मान ($n_i$) की तुलना में होल सांद्रता ($n_h$) कैसे परिवर्तित होती है?",
+      "question_gu": "જો અર્ધવાહકને n-પ્રકારનો અર્ધવાહક બનાવવા માટે ફોસ્ફરસ (પંચ-સંયોજક તત્વ) વડે ડોપ કરવામાં આવે, તો તેના નિજ મૂલ્ય ($n_i$) ની સરખામણીમાં હોલ સાંદ્રતા ($n_h$) કેવી રીતે બદલાય છે?",
+      "options": [
+        "It decreases because the product $n_e \\cdot n_h = n_i^2$ remains constant at a fixed temperature.",
+        "It increases because donor atoms also donate extra holes.",
+        "It remains exactly equal to $n_i$.",
+        "It becomes zero instantly."
+      ],
+      "options_hi": [
+        "यह घटती है क्योंकि स्थिर तापमान पर गुणनफल $n_e \\cdot n_h = n_i^2$ नियत रहता है।",
+        "यह बढ़ती है क्योंकि दाता परमाणु अतिरिक्त होल भी दान करते हैं।",
+        "यह बिल्कुल $n_i$ के बराबर रहती है।",
+        "यह तुरंत शून्य हो जाती है।"
+      ],
+      "options_gu": [
+        "તે ઘટે છે કારણ કે ચોક્કસ તાપમાને ગુણાકાર $n_e \\cdot n_h = n_i^2$ અચળ રહે છે.",
+        "તે વધે છે કારણ કે દાતા અણુઓ વધારાના હોલ પણ દાન કરે છે.",
+        "તે બિલકુલ $n_i$ જેટલી જ રહે છે.",
+        "તે તરત જ શૂન્ય થઈ જાય છે."
+      ],
+      "correct_index": 0,
+      "explanation": "According to the Law of Mass Action ($n_e \\cdot n_h = n_i^2$), increasing the electron concentration $n_e$ by pentavalent doping increases the rate of electron-hole recombination, thereby reducing the hole concentration $n_h$ below $n_i$.",
+      "explanation_hi": "द्रव्यमान क्रिया के नियम ($n_e \\cdot n_h = n_i^2$) के अनुसार, पंचसंयोजी डोपिंग द्वारा इलेक्ट्रॉन सांद्रता $n_e$ बढ़ाने से इलेक्ट्रॉन-होल पुनर्योजन की दर बढ़ जाती है, जिससे होल सांद्रता $n_h$, $n_i$ से कम हो जाती है।",
+      "explanation_gu": "માસ એક્શનના નિયમ ($n_e \\cdot n_h = n_i^2$) મુજબ, પંચ-સંયોજક ડોપિંગ દ્વારા ઇલેક્ટ્રોન સાંદ્રતા $n_e$ વધારવાથી ઇલેક્ટ્રોન-હોલ પુનઃસંયોજનનો દર વધે છે, જેનાથી હોલ સાંદ્રતા $n_h$ ઘટીને $n_i$ થી નીચે જાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_006",
+      "type": "reflection",
+      "title": "Conceptual Deep-Dive: Hole Conduction & Depletion Layer",
+      "title_hi": "अवधारणात्मक गहराई: होल चालन और अवक्षय परत",
+      "title_gu": "ઊંડાણપૂર્વકની સમજ: હોલ વહન અને ડેપ્લેશન સ્તર",
+      "body": "Reflect on two critical physical insights:\n\n1. **What is a Hole?** A hole is NOT a physical positive particle like a proton. It is an empty covalent bond position in the valence band that acts as an effective positive charge $+e$. When a neighboring valence electron jumps into this empty space, the hole appears to move in the opposite direction. Thus, hole conduction occurs exclusively inside the **Valence Band**.\n\n2. **Why does diffusion stop in an unbiased p-n junction?** When mobile majority carriers diffuse across the junction, they leave behind fixed immobile ions. These ions create an internal electric field $\\vec{E}_{in}$ pointing from n to p. This field drives drift current in the opposite direction to diffusion until $I_{\\text{diff}} = I_{\\text{drift}}$, establishing electrostatic equilibrium.",
+      "body_hi": "दो महत्वपूर्ण भौतिक अंतर्दृष्टि पर विचार करें:\n\n1. **होल क्या है?** होल प्रोटॉन की तरह कोई भौतिक धनात्मक कण नहीं है। यह वैलेंस बैंड में एक खाली सहसंयोजक बंध स्थिति है जो एक प्रभावी धनात्मक आवेश $+e$ के रूप में कार्य करती है। जब पड़ोसी वैलेंस इलेक्ट्रॉन इस खाली स्थान में कूदता है, तो होल विपरीत दिशा में गति करता हुआ प्रतीत होता है। इस प्रकार, होल चालन विशेष रूप से **संयोजकता बैंड** के भीतर होता है।\n\n2. **बिना बायस वाले p-n जंक्शन में विसरण क्यों रुक जाता है?** जब गतिशील बहुसंख्यक वाहक जंक्शन के पार विसरित होते हैं, तो वे पीछे स्थिर आयन छोड़ जाते हैं। ये आयन एक आंतरिक विद्युत क्षेत्र $\\vec{E}_{in}$ बनाते हैं जो n से p की ओर होता है। यह क्षेत्र विसरण के विपरीत दिशा में अपवाह धारा चलाता है जब तक कि $I_{\\text{diff}} = I_{\\text{drift}}$ न हो जाए, जिससे विद्युत स्थैतिक संतुलन स्थापित होता है।",
+      "body_gu": "બે મહત્વપૂર્ણ ભૌતિક બાબતો પર વિચાર કરો:\n\n1. **હોલ શું છે?** હોલ એ પ્રોટોનની જેમ ભૌતિક ધન કણ નથી. તે વેલેન્સ બેન્ડમાં એક ખાલી સહસંયોજક બંધ સ્થાન છે જે અસરકારક ધન ચાર્જ $+e$ તરીકે વર્તે છે. જ્યારે પાડોશી વેલેન્સ ઇલેક્ટ્રોન આ ખાલી જગ્યામાં કૂદે છે, ત્યારે હોલ વિરુદ્ધ દિશામાં ગતિ કરતો જણાય છે. આમ, હોલ વહન માત્ર **વેલેન્સ બેન્ડ** માં થાય છે.\n\n2. **અનબાયસ્ડ p-n જંકશનમાં વિસરણ શા માટે અટકે છે?** જ્યારે ચલિત વાહકો જંકશનની આરપાર વિસરીત થાય છે, ત્યારે તેઓ સ્થિર આયનો પાછળ છોડી દે છે. આ આયનો n થી p તરફનું આંતરિક વિદ્યુત ક્ષેત્ર $\\vec{E}_{in}$ બનાવે છે. આ ક્ષેત્ર વિસરણની વિરુદ્ધ દિશામાં ડ્રિફ્ટ પ્રવાહ ચલાવે છે જ્યાં સુધી $I_{\\text{diff}} = I_{\\text{drift}}$ ન થાય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_007",
+      "type": "connection",
+      "title": "Real-World Applications: Optoelectronics & Digital Logic",
+      "title_hi": "वास्तविक दुनिया के अनुप्रयोग: ऑप्टोइलेक्ट्रॉनिक्स और डिजिटल लॉजिक",
+      "title_gu": "વાસ્તવિક દુનિયાના અનુપ્રયોગો: ઓપ્ટોઈલેક્ટ્રોનિક્સ અને ડિજિટલ લોજિક",
+      "body": "Semiconductor physics enables essential real-world devices:\n\n- **Photodiode:** Operates in **Reverse Bias** to detect optical signals. Reverse current changes linearly with incident light intensity.\n- **Light Emitting Diode (LED):** Operates in **Forward Bias**. Recombination of electrons and holes releases energy as visible light or IR photons ($h\\nu \\approx E_g$).\n- **Solar Cell:** Operates without external bias. Uses light to generate electron-hole pairs at the depletion region, generating photovoltage ($V_{oc}$) and photocurrent ($I_{sc}$).\n- **Zener Diode:** Heavily doped p-n junction operating in breakdown region under reverse bias, maintaining constant breakdown voltage ($V_Z$) for voltage regulation.",
+      "body_hi": "अर्धचालक भौतिकी आवश्यक वास्तविक दुनिया के उपकरणों को सक्षम बनाती है:\n\n- **फोटोडायोड:** प्रकाश संकेतों का पता लगाने के लिए **पश्च अभिनति** में काम करता है। पश्च धारा आपतित प्रकाश की तीव्रता के साथ रेखीय रूप से बदलती है।\n- **प्रकाश उत्सर्जक डायोड (LED):** **अग्र अभिनति** में काम करता है। इलेक्ट्रॉनों और होल का पुनर्योजन दृश्य प्रकाश या IR फोटॉन ($h\\nu \\approx E_g$) के रूप में ऊर्जा मुक्त करता है।\n- **सौर सेल:** बिना किसी बाहरी बायस के काम करता है। अवक्षय क्षेत्र में इलेक्ट्रॉन-होल युग्म उत्पन्न करने के लिए प्रकाश का उपयोग करता है, जिससे फोटोवोल्टेज ($V_{oc}$) उत्पन्न होता है।\n- **जेनर डायोड:** अत्यधिक डोप किया गया p-n जंक्शन जो पश्च अभिनति में भंजन क्षेत्र में काम करता है, वोल्टेज नियमन के लिए स्थिर भंजन वोल्टेज ($V_Z$) बनाए रखता है।",
+      "body_gu": "અર્ધવાહક ભૌતિકશાસ્ત્ર વાસ્તવિક દુનિયાના જરૂરી સાધનોને સક્ષમ બનાવે છે:\n\n- **ફોટોડાયોડ:** પ્રકાશ સંકેતો શોધવા માટે **રિવર્સ બાયસ** માં કામ કરે છે. આપાત પ્રકાશની તીવ્રતા સાથે રિવર્સ પ્રવાહ રેખીય રીતે બદલાય છે.\n- **લાઇટ એમિટિંગ ડાયોડ (LED):** **ફોરવર્ડ બાયસ** માં કામ કરે છે. ઇલેક્ટ્રોન અને હોલનું પુનઃસંયોજન દ્રશ્ય પ્રકાશ અથવા IR ફોટોન ($h\\nu \\approx E_g$) તરીકે ઊર્જા મુક્ત કરે છે.\n- **સોલર સેલ:** બાહ્ય બાયસ વગર કામ કરે છે. ડેપ્લેશન વિસ્તારમાં ઇલેક્ટ્રોન-હોલ જોડીઓ ઉત્પન્ન કરવા માટે પ્રકાશનો ઉપયોગ કરે છે.\n- **ઝેનર ડાયોડ:** રિવર્સ બાયસ હેઠળ બ્રેકડાઉન વિસ્તારમાં કામ કરતો ભારે ડોપ કરેલો p-n જંકશન, જે વોલ્ટેજ નિયમન માટે અચળ વોલ્ટેજ ($V_Z$) જાળવી રાખે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_008",
+      "type": "mastery",
+      "title": "Mastery Equations & Problem-Solving Guide",
+      "title_hi": "मास्टरी समीकरण और समस्या समाधान गाइड",
+      "title_gu": "માસ્ટરી સમીકરણો અને સમસ્યા ઉકેલવાની માર્ગદર્શિકા",
+      "body": "### Key Operational Formulas:\n\n1. **Charge Neutrality & Mass Action:**\n   $$n_e \\cdot n_h = n_i^2$$\n   - For n-type: $n_e \\approx N_d$, $n_h \\approx \\frac{n_i^2}{N_d}$\n   - For p-type: $n_h \\approx N_a$, $n_e \\approx \\frac{n_i^2}{N_a}$\n\n2. **Total Semiconductor Current:**\n   $$I = I_e + I_h = e A (n_e v_e + n_h v_h)$$\n   $$\\sigma = e (n_e \\mu_e + n_h \\mu_h)$$\n\n3. **Optoelectronic Threshold Wavelength:**\n   $$\\lambda_{\\text{max}} = \\frac{h c}{E_g} \\approx \\frac{1240}{E_g (\\text{in eV})} \\text{ nm}$$\n\n4. **Rectifier Output Frequencies:**\n   - Half-Wave: $f_{\\text{out}} = f_{\\text{in}}$\n   - Full-Wave: $f_{\\text{out}} = 2 f_{\\text{in}}$",
+      "body_hi": "### प्रमुख परिचालन सूत्र:\n\n1. **आवेश तटस्थता और द्रव्यमान क्रिया:**\n   $$n_e \\cdot n_h = n_i^2$$\n   - n-प्रकार के लिए: $n_e \\approx N_d$, $n_h \\approx \\frac{n_i^2}{N_d}$\n   - p-प्रकार के लिए: $n_h \\approx N_a$, $n_e \\approx \\frac{n_i^2}{N_a}$\n\n2. **कुल अर्धचालक धारा:**\n   $$I = I_e + I_h = e A (n_e v_e + n_h v_h)$$\n   $$\\sigma = e (n_e \\mu_e + n_h \\mu_h)$$\n\n3. **ऑप्टोइलेक्ट्रॉनिक देहली तरंगदैर्ध्य:**\n   $$\\lambda_{\\text{max}} = \\frac{h c}{E_g} \\approx \\frac{1240}{E_g (\\text{in eV})} \\text{ nm}$$\n\n4. **दिष्टकारी निर्गत आवृत्तियाँ:**\n   - अर्ध-तरंग: $f_{\\text{out}} = f_{\\text{in}}$\n   - पूर्ण-तरंग: $f_{\\text{out}} = 2 f_{\\text{in}}$",
+      "body_gu": "### મુખ્ય કાર્યાત્મક સૂત્રો:\n\n1. **ચાર્જ તટસ્થતા અને માસ એક્શન:**\n   $$n_e \\cdot n_h = n_i^2$$\n   - n-પ્રકાર માટે: $n_e \\approx N_d$, $n_h \\approx \\frac{n_i^2}{N_d}$\n   - p-પ્રકાર માટે: $n_h \\approx N_a$, $n_e \\approx \\frac{n_i^2}{N_a}$\n\n2. **કુલ અર્ધવાહક પ્રવાહ:**\n   $$I = I_e + I_h = e A (n_e v_e + n_h v_h)$$\n   $$\\sigma = e (n_e \\mu_e + n_h \\mu_h)$$\n\n3. **ઓપ્ટોઈલેક્ટ્રોનિક થ્રેશોલ્ડ તરંગલંબાઇ:**\n   $$\\lambda_{\\text{max}} = \\frac{h c}{E_g} \\approx \\frac{1240}{E_g (\\text{in eV})} \\text{ nm}$$\n\n4. **રેક્ટિફાયર આઉટપુટ આવૃત્તિઓ:**\n   - હાફ-વેવ: $f_{\\text{out}} = f_{\\text{in}}$\n   - ફુલ-વેવ: $f_{\\text{out}} = 2 f_{\\text{in}}$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_009",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.1: Valence Electrons and Energy Bands",
+      "title_hi": "एनसीईआरटी अभ्यास 14.1: वैलेंस इलेक्ट्रॉन और ऊर्जा बैंड",
+      "title_gu": "NCERT સ્વાધ્યાય 14.1: વેલેન્સ ઇલેક્ટ્રોન અને એનર્જી બેન્ડ",
+      "question": "Carbon, Silicon, and Germanium have four valence electrons each. These are characterized by valence and conduction bands separated by energy band gaps respectively equal to $(E_g)_C$, $(E_g)_{Si}$, and $(E_g)_{Ge}$. Which of the following statements is true?",
+      "question_hi": "कार्बन, सिलिकॉन और जर्मेनियम प्रत्येक में चार वैलेंस इलेक्ट्रॉन होते हैं। इनकी विशेषता वैलेंस और चालन बैंड हैं जो क्रमशः $(E_g)_C$, $(E_g)_{Si}$, और $(E_g)_{Ge}$ के बराबर ऊर्जा बैंड अंतराल से अलग होते हैं। निम्नलिखित में से कौन सा कथन सत्य है?",
+      "question_gu": "કાર્બન, સિલિકોન અને જર્મેનિયમ દરેક ચાર વેલેન્સ ઇલેક્ટ્રોન ધરાવે છે. અનુક્રમે $(E_g)_C$, $(E_g)_{Si}$, અને $(E_g)_{Ge}$ ના એનર્જી ગેપ વડે જુદા પડેલા વેલેન્સ અને કન્ડક્શન બેન્ડ તેમની લાક્ષણિકતા છે. નીચેનામાંથી કયું વિધાન સાચું છે?",
+      "options": [
+        "$(E_g)_C < (E_g)_{Si} < (E_g)_{Ge}$",
+        "$(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$",
+        "$(E_g)_C = (E_g)_{Si} = (E_g)_{Ge}$",
+        "$(E_g)_C < (E_g)_{Ge} < (E_g)_{Si}$"
+      ],
+      "options_hi": [
+        "$(E_g)_C < (E_g)_{Si} < (E_g)_{Ge}$",
+        "$(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$",
+        "$(E_g)_C = (E_g)_{Si} = (E_g)_{Ge}$",
+        "$(E_g)_C < (E_g)_{Ge} < (E_g)_{Si}$"
+      ],
+      "options_gu": [
+        "$(E_g)_C < (E_g)_{Si} < (E_g)_{Ge}$",
+        "$(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$",
+        "$(E_g)_C = (E_g)_{Si} = (E_g)_{Ge}$",
+        "$(E_g)_C < (E_g)_{Ge} < (E_g)_{Si}$"
+      ],
+      "correct_index": 1,
+      "explanation": "Carbon (diamond) has the smallest atomic size and highest binding strength ($E_g \\approx 5.4\\text{ eV}$). Silicon has $E_g \\approx 1.1\\text{ eV}$, and Germanium has $E_g \\approx 0.72\\text{ eV}$. Thus, $(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$.",
+      "explanation_hi": "कार्बन (हीरा) का परमाणु आकार सबसे छोटा और बंधन शक्ति सबसे अधिक होती है ($E_g \\approx 5.4\\text{ eV}$)। सिलिकॉन का $E_g \\approx 1.1\\text{ eV}$ है, और जर्मेनियम का $E_g \\approx 0.72\\text{ eV}$ है। अतः, $(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$।",
+      "explanation_gu": "કાર્બન (હીરો) સૌથી નાનું અણુ કદ અને સૌથી વધુ બંધન ક્ષમતા ધરાવે છે ($E_g \\approx 5.4\\text{ eV}$). સિલિકોન $E_g \\approx 1.1\\text{ eV}$ ધરાવે છે, અને જર્મેનિયમ $E_g \\approx 0.72\\text{ eV}$ ધરાવે છે. તેથી, $(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_010",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.2: n-type Semiconductor Characteristics",
+      "title_hi": "एनसीईआरटी अभ्यास 14.2: n-प्रकार अर्धचालक की विशेषताएं",
+      "title_gu": "NCERT સ્વાધ્યાય 14.2: n-પ્રકાર અર્ધવાહકના લક્ષણો",
+      "question": "In an n-type silicon, which of the following statements is true?",
+      "question_hi": "n-प्रकार के सिलिकॉन में, निम्नलिखित में से कौन सा कथन सत्य है?",
+      "question_gu": "n-પ્રકારના સિલિકોનમાં, નીચેનામાંથી કયું વિધાન સાચું છે?",
+      "options": [
+        "Electrons are majority carriers and trivalent atoms are dopants.",
+        "Electrons are minority carriers and pentavalent atoms are dopants.",
+        "Holes are minority carriers and pentavalent atoms are dopants.",
+        "Holes are majority carriers and trivalent atoms are dopants."
+      ],
+      "options_hi": [
+        "इलेक्ट्रॉन बहुसंख्यक वाहक हैं और त्रिसंयोजी परमाणु अपद्रव्य हैं।",
+        "इलेक्ट्रॉन अल्पसंख्यक वाहक हैं और पंचसंयोजी परमाणु अपद्रव्य हैं।",
+        "होल अल्पसंख्यक वाहक हैं और पंचसंयोजी परमाणु अपद्रव्य हैं।",
+        "होल बहुसंख्यक वाहक हैं और त्रिसंयोजी परमाणु अपद्रव्य हैं।"
+      ],
+      "options_gu": [
+        "ઇલેક્ટ્રોન મુખ્ય વાહકો છે અને ત્રિ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "ઇલેક્ટ્રોન ગૌણ વાહકો છે અને પંચ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "હોલ ગૌણ વાહકો છે અને પંચ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "હોલ મુખ્ય વાહકો છે અને ત્રિ-સંયોજક અણુઓ ડોપન્ટ્સ છે."
+      ],
+      "correct_index": 2,
+      "explanation": "In an n-type semiconductor, pentavalent dopants (e.g., Phosphorus) contribute extra free electrons. Thus, electrons are the majority carriers ($n_e \\gg n_h$), making holes the minority carriers.",
+      "explanation_hi": "n-प्रकार के अर्धचालक में, पंचसंयोजी अपद्रव्य (जैसे फास्फोरस) अतिरिक्त मुक्त इलेक्ट्रॉन प्रदान करते हैं। इस प्रकार, इलेक्ट्रॉन बहुसंख्यक वाहक ($n_e \\gg n_h$) होते हैं, जिससे होल अल्पसंख्यक वाहक बन जाते हैं।",
+      "explanation_gu": "n-પ્રકારના અર્ધવાહકમાં, પંચ-સંયોજક ડોપન્ટ્સ (દા.ત. ફોસ્ફરસ) વધારાના મુક્ત ઇલેક્ટ્રોન આપે છે. આમ, ઇલેક્ટ્રોન મુખ્ય વાહકો ($n_e \\gg n_h$) છે, જેથી હોલ ગૌણ વાહકો બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_011",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.3: p-type Semiconductor Statements",
+      "title_hi": "एनसीईआरटी अभ्यास 14.3: p-प्रकार अर्धचालक कथन",
+      "title_gu": "NCERT સ્વાધ્યાય 14.3: p-પ્રકાર અર્ધવાહક વિધાનો",
+      "question": "Which of the statements given below is true for a p-type semiconductor?",
+      "question_hi": "p-प्रकार के अर्धचालक के लिए नीचे दिया गया कौन सा कथन सत्य है?",
+      "question_gu": "p-પ્રકારના અર્ધવાહક માટે નીચે આપેલા વિધાનોમાંથી કયું સાચું છે?",
+      "options": [
+        "Holes are majority carriers and trivalent atoms are dopants.",
+        "Holes are majority carriers and pentavalent atoms are dopants.",
+        "Electrons are majority carriers and trivalent atoms are dopants.",
+        "Electrons are minority carriers and pentavalent atoms are dopants."
+      ],
+      "options_hi": [
+        "होल बहुसंख्यक वाहक हैं और त्रिसंयोजी परमाणु अपद्रव्य हैं।",
+        "होल बहुसंख्यक वाहक हैं और पंचसंयोजी परमाणु अपद्रव्य हैं।",
+        "इलेक्ट्रॉन बहुसंख्यक वाहक हैं और त्रिसंयोजी परमाणु अपद्रव्य हैं।",
+        "इलेक्ट्रॉन अल्पसंख्यक वाहक हैं और पंचसंयोजी परमाणु अपद्रव्य हैं।"
+      ],
+      "options_gu": [
+        "હોલ મુખ્ય વાહકો છે અને ત્રિ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "હોલ મુખ્ય વાહકો છે અને પંચ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "ઇલેક્ટ્રોન મુખ્ય વાહકો છે અને ત્રિ-સંયોજક અણુઓ ડોપન્ટ્સ છે.",
+        "ઇલેક્ટ્રોન ગૌણ વાહકો છે અને પંચ-સંયોજક અણુઓ ડોપન્ટ્સ છે."
+      ],
+      "correct_index": 0,
+      "explanation": "p-type semiconductors are created by adding trivalent impurity atoms (e.g., Boron, Aluminium), which create holes in the valence band. Thus, holes are majority carriers ($n_h \\gg n_e$).",
+      "explanation_hi": "p-प्रकार के अर्धचालक त्रिसंयोजी अपद्रव्य परमाणुओं (जैसे बोरॉन, एल्यूमीनियम) को मिलाकर बनाए जाते हैं, जो संयोजकता बैंड में होल बनाते हैं। इस प्रकार, होल बहुसंख्यक वाहक ($n_h \\gg n_e$) होते हैं।",
+      "explanation_gu": "p-પ્રકારના અર્ધવાહકો ત્રિ-સંયોજક અશુદ્ધિ અણુઓ (દા.ત. બોરોન, એલ્યુમિનિયમ) ઉમેરીને બનાવવામાં આવે છે, જે વેલેન્સ બેન્ડમાં હોલ બનાવે છે. આમ, હોલ મુખ્ય વાહકો ($n_h \\gg n_e$) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_012",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.4: Energy Band Gap Comparison",
+      "title_hi": "एनसीईआरटी अभ्यास 14.4: ऊर्जा बैंड अंतराल की तुलना",
+      "title_gu": "NCERT સ્વાધ્યાય 14.4: એનર્જી બેન્ડ ગેપ સરખામણી",
+      "question": "Carbon, silicon, and germanium have four valence electrons each. At room temperature, which of the following statements is correct regarding their conductivity?",
+      "question_hi": "कार्बन, सिलिकॉन और जर्मेनियम प्रत्येक में चार वैलेंस इलेक्ट्रॉन होते हैं। कमरे के तापमान पर, उनकी चालकता के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "question_gu": "કાર્બન, સિલિકોન અને જર્મેનિયમ દરેક ચાર વેલેન્સ ઇલેક્ટ્રોન ધરાવે છે. ઓરડાના તાપમાને, તેમની વાહકતા અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+      "options": [
+        "The number of free conduction electrons is significant only in Si and Ge, but zero in C.",
+        "The number of free conduction electrons is maximum in C and minimum in Ge.",
+        "The number of free conduction electrons is equal in all three materials.",
+        "Carbon is a conductor at room temperature."
+      ],
+      "options_hi": [
+        "मुक्त चालन इलेक्ट्रॉनों की संख्या केवल Si और Ge में महत्वपूर्ण है, लेकिन C में शून्य है।",
+        "मुक्त चालन इलेक्ट्रॉनों की संख्या C में अधिकतम और Ge में न्यूनतम होती है।",
+        "मुक्त चालन इलेक्ट्रॉनों की संख्या तीनों सामग्रियों में समान होती है।",
+        "कार्बन कमरे के तापमान पर चालक होता है।"
+      ],
+      "options_gu": [
+        "મુક્ત કન્ડક્શન ઇલેક્ટ્રોનની સંખ્યા માત્ર Si અને Ge માં નોંધપાત્ર છે, પરંતુ C માં શૂન્ય છે.",
+        "મુક્ત કન્ડક્શન ઇલેક્ટ્રોનની સંખ્યા C માં મહત્તમ અને Ge માં ન્યૂનતમ છે.",
+        "મુક્ત કન્ડક્શન ઇલેક્ટ્રોનની સંખ્યા ત્રણેય પદાર્થોમાં સમાન છે.",
+        "કાર્બન ઓરડાના તાપમાને વાહક છે."
+      ],
+      "correct_index": 0,
+      "explanation": "Due to Carbon's high band gap ($E_g \\approx 5.4\\text{ eV}$), thermal energy at 300 K cannot jump electrons from VB to CB, rendering free conduction electrons effectively zero in Diamond. For Si and Ge, $E_g$ is small enough to yield measurable free conduction electrons.",
+      "explanation_hi": "कार्बन के उच्च बैंड अंतराल ($E_g \\approx 5.4\\text{ eV}$) के कारण, 300 K पर ऊष्मीय ऊर्जा इलेक्ट्रॉनों को VB से CB में नहीं ले जा सकती, जिससे हीरे में मुक्त चालन इलेक्ट्रॉन प्रभावी रूप से शून्य हो जाते हैं। Si और Ge के लिए $E_g$ इतना कम है कि मापने योग्य मुक्त इलेक्ट्रॉन मिलते हैं।",
+      "explanation_gu": "કાર્બનના ઊંચા બેન્ડ ગેપ ($E_g \\approx 5.4\\text{ eV}$) ને લીધે, 300 K પર ઉષ્મીય ઊર્જા ઇલેક્ટ્રોનને VB માંથી CB માં મોકલી શકતી નથી, જેથી હીરામાં મુક્ત ઇલેક્ટ્રોન શૂન્ય હોય છે. Si અને Ge માટે $E_g$ પૂરતો નાનો છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_013",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.5: Hole Diffusion in Unbiased Junction",
+      "title_hi": "एनसीईआरटी अभ्यास 14.5: बिना बायस वाले जंक्शन में होल विसरण",
+      "title_gu": "NCERT સ્વાધ્યાય 14.5: અનબાયસ્ડ જંકશનમાં હોલ વિસરણ",
+      "question": "In an unbiased p-n junction, holes diffuse from the p-region to the n-region because:",
+      "question_hi": "बिना बायस वाले p-n जंक्शन में, होल p-क्षेत्र से n-क्षेत्र की ओर विसरित होते हैं क्योंकि:",
+      "question_gu": "અનબાયસ્ડ p-n જંકશનમાં, હોલ p-વિસ્તારમાંથી n-વિસ્તારમાં વિસરીત થાય છે કારણ કે:",
+      "options": [
+        "Hole concentration in p-region is more as compared to n-region.",
+        "Free electrons in n-region attract them.",
+        "Electric field pulls them from p to n region.",
+        "All of the above."
+      ],
+      "options_hi": [
+        "p-क्षेत्र में होल सांद्रता n-क्षेत्र की तुलना में अधिक है।",
+        "n-क्षेत्र में मुक्त इलेक्ट्रॉन उन्हें आकर्षित करते हैं।",
+        "विद्युत क्षेत्र उन्हें p से n क्षेत्र की ओर खींचता है।",
+        "उपरोक्त सभी।"
+      ],
+      "options_gu": [
+        "p-વિસ્તારમાં હોલ સાંદ્રતા n-વિસ્તારની સરખામણીમાં વધુ છે.",
+        "n-વિસ્તારમાં મુક્ત ઇલેક્ટ્રોન તેમને આકર્ષિત કરે છે.",
+        "વિદ્યુત ક્ષેત્ર તેમને p થી n વિસ્તાર તરફ ખેંચે છે.",
+        "ઉપર આપેલ તમામ."
+      ],
+      "correct_index": 0,
+      "explanation": "Diffusion occurs purely due to the concentration gradient of charge carriers. Since holes are in much higher concentration in the p-region than in the n-region, they diffuse from p to n.",
+      "explanation_hi": "विसरण केवल आवेश वाहकों की सांद्रता प्रवणता (concentration gradient) के कारण होता है। चूंकि n-क्षेत्र की तुलना में p-क्षेत्र में होल की सांद्रता बहुत अधिक होती है, इसलिए वे p से n की ओर विसरित होते हैं।",
+      "explanation_gu": "વિસરણ માત્ર ચાર્જ વાહકોની સાંદ્રતાના તફાવતને કારણે થાય છે. p-વિસ્તારમાં હોલની સાંદ્રતા n-વિસ્તાર કરતાં વધુ હોવાથી, તેઓ p થી n તરફ વિસરીત થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_014",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.6: Forward Bias Effect on p-n Junction",
+      "title_hi": "एनसीईआरटी अभ्यास 14.6: p-n जंक्शन पर अग्र अभिनति का प्रभाव",
+      "title_gu": "NCERT સ્વાધ્યાય 14.6: p-n જંકશન પર ફોરવર્ડ બાયસની અસર",
+      "question": "When a forward bias is applied to a p-n junction, it:",
+      "question_hi": "जब किसी p-n जंक्शन पर अग्र अभिनति लगाई जाती है, तो यह:",
+      "question_gu": "જ્યારે p-n જંકશન પર ફોરવર્ડ બાયસ આપવામાં આવે છે, ત્યારે તે:",
+      "options": [
+        "Decreases the potential barrier.",
+        "Increases the potential barrier.",
+        "Reduces the majority carrier current to zero.",
+        "Increases the depletion layer width."
+      ],
+      "options_hi": [
+        "विभव प्राचीर को घटाता है।",
+        "विभव प्राचीर को बढ़ाता है।",
+        "बहुसंख्यक वाहक धारा को शून्य कर देता है।",
+        "अवक्षय परत की चौड़ाई को बढ़ाता है।"
+      ],
+      "options_gu": [
+        "બેરિયર પોટેન્શિયલ ઘટાડે છે.",
+        "બેરિયર પોટેન્શિયલ વધારે છે.",
+        "મુખ્ય વાહક પ્રવાહને શૂન્ય કરે છે.",
+        "ડેપ્લેશન સ્તરની પહોળાઈ વધારે છે."
+      ],
+      "correct_index": 0,
+      "explanation": "In forward bias, the external voltage opposes the internal built-in potential $V_0$. The effective potential barrier reduces to $(V_0 - V)$, which narrows the depletion layer and allows strong majority carrier diffusion current.",
+      "explanation_hi": "अग्र अभिनति में, बाहरी वोल्टेज आंतरिक निर्मित विभव $V_0$ का विरोध करता है। प्रभावी विभव प्राचीर घटकर $(V_0 - V)$ हो जाता है, जिससे अवक्षय परत पतली हो जाती है और तीव्र बहुसंख्यक वाहक विसरण धारा प्रवाहित होती है।",
+      "explanation_gu": "ફોરવર્ડ બાયસમાં, બાહ્ય વોલ્ટેજ આંતરિક પોટેન્શિયલ $V_0$ નો વિરોધ કરે છે. અસરકારક બેરિયર પોટેન્શિયલ ઘટીને $(V_0 - V)$ થાય છે, જે ડેપ્લેશન સ્તરને નાનું બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_015",
+      "type": "true_false",
+      "title": "NCERT Conceptual: Depletion Layer Charge",
+      "title_hi": "एनसीईआरटी अवधारणात्मक: अवक्षय परत आवेश",
+      "title_gu": "NCERT સૈદ્ધાંતિક: ડેપ્લેશન સ્તર ચાર્જ",
+      "question": "Is the depletion region of an unbiased p-n junction electrically neutral overall?",
+      "question_hi": "क्या बिना बायस वाले p-n जंक्शन का अवक्षय क्षेत्र कुल मिलाकर विद्युत रूप से उदासीन होता है?",
+      "question_gu": "શું અનબાયસ્ડ p-n જંકશનનો ડેપ્લેશન વિસ્તાર એકંદરે વિદ્યુત રીતે તટસ્થ હોય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "True. The positive donor ions on the n-side of the depletion layer exactly equal the magnitude of the negative acceptor ions on the p-side. Thus, the total depletion region as a whole is electrically neutral.",
+      "explanation_hi": "सत्य। अवक्षय परत के n-पक्ष पर धनात्मक दाता आयन p-पक्ष पर ऋणात्मक ग्राही आयनों के परिमाण के ठीक बराबर होते हैं। इस प्रकार, संपूर्ण अवक्षय क्षेत्र कुल मिलाकर विद्युत रूप से उदासीन होता है।",
+      "explanation_gu": "સાચું. ડેપ્લેશન સ્તરની n-બાજુના ધન દાતા આયનો p-બાજુના ઋણ એક્સેપ્ટર આયનોના મૂલ્ય જેટલા જ હોય છે. આમ, સમગ્ર ડેપ્લેશન વિસ્તાર વિદ્યુત રીતે તટસ્થ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_016",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.8: Carrier Concentration Calculation",
+      "title_hi": "एनसीईआरटी अभ्यास 14.8: वाहक सांद्रता की गणना",
+      "title_gu": "NCERT સ્વાધ્યાય 14.8: વાહક સાંદ્રતા ગણતરી",
+      "question": "In an intrinsic semiconductor, the concentration of intrinsic carriers is $n_i = 1.5 \\times 10^{16} \\text{ m}^{-3}$. On doping with Phosphorus, the electron density increases to $n_e = 5 \\times 10^{22} \\text{ m}^{-3}$. What is the hole concentration $n_h$ in the doped semiconductor?",
+      "question_hi": "एक निज अर्धचालक में, निज वाहकों की सांद्रता $n_i = 1.5 \\times 10^{16} \\text{ m}^{-3}$ है। फास्फोरस से डोपिंग करने पर, इलेक्ट्रॉन घनत्व बढ़कर $n_e = 5 \\times 10^{22} \\text{ m}^{-3}$ हो जाता है। डोप किए गए अर्धचालक में होल सांद्रता $n_h$ क्या है?",
+      "question_gu": "એક અર્ધવાહકમાં, નિજ વાહકોની સાંદ્રતા $n_i = 1.5 \\times 10^{16} \\text{ m}^{-3}$ છે. ફોસ્ફરસ વડે ડોપિંગ કરવાથી, ઇલેક્ટ્રોન ઘનતા વધીને $n_e = 5 \\times 10^{22} \\text{ m}^{-3}$ થાય છે. ડોપ કરેલા અર્ધવાહકમાં હોલ સાંદ્રતા $n_h$ કેટલી હશે?",
+      "options": [
+        "$4.5 \\times 10^9 \\text{ m}^{-3}$",
+        "$2.25 \\times 10^{32} \\text{ m}^{-3}$",
+        "$3.0 \\times 10^{15} \\text{ m}^{-3}$",
+        "$1.5 \\times 10^6 \\text{ m}^{-3}$"
+      ],
+      "options_hi": [
+        "$4.5 \\times 10^9 \\text{ m}^{-3}$",
+        "$2.25 \\times 10^{32} \\text{ m}^{-3}$",
+        "$3.0 \\times 10^{15} \\text{ m}^{-3}$",
+        "$1.5 \\times 10^6 \\text{ m}^{-3}$"
+      ],
+      "options_gu": [
+        "$4.5 \\times 10^9 \\text{ m}^{-3}$",
+        "$2.25 \\times 10^{32} \\text{ m}^{-3}$",
+        "$3.0 \\times 10^{15} \\text{ m}^{-3}$",
+        "$1.5 \\times 10^6 \\text{ m}^{-3}$"
+      ],
+      "correct_index": 0,
+      "explanation": "Using the Mass Action Law $n_e \\cdot n_h = n_i^2$:\n$$n_h = \\frac{n_i^2}{n_e} = \\frac{(1.5 \\times 10^{16})^2}{5 \\times 10^{22}} = \\frac{2.25 \\times 10^{32}}{5 \\times 10^{22}} = 4.5 \\times 10^9 \\text{ m}^{-3}$$",
+      "explanation_hi": "द्रव्यमान क्रिया नियम $n_e \\cdot n_h = n_i^2$ का उपयोग करने पर:\n$$n_h = \\frac{n_i^2}{n_e} = \\frac{(1.5 \\times 10^{16})^2}{5 \\times 10^{22}} = \\frac{2.25 \\times 10^{32}}{5 \\times 10^{22}} = 4.5 \\times 10^9 \\text{ m}^{-3}$$",
+      "explanation_gu": "માસ એક્શન નિયમ $n_e \\cdot n_h = n_i^2$ નો ઉપયોગ કરીને:\n$$n_h = \\frac{n_i^2}{n_e} = \\frac{(1.5 \\times 10^{16})^2}{5 \\times 10^{22}} = \\frac{2.25 \\times 10^{32}}{5 \\times 10^{22}} = 4.5 \\times 10^9 \\text{ m}^{-3}$$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_017",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.9: Reverse Bias Photodiode Operation",
+      "title_hi": "एनसीईआरटी अभ्यास 14.9: पश्च अभिनत फोटोडायोड का संचालन",
+      "title_gu": "NCERT સ્વાધ્યાય 14.9: રિવર્સ બાયસ્ડ ફોટોડાયોડ કાર્યાનવયન",
+      "question": "Why is a photodiode preferably operated in reverse bias mode to measure light intensity?",
+      "question_hi": "प्रकाश की तीव्रता को मापने के लिए फोटोडायोड को पश्च अभिनति मोड में संचालित करना क्यों बेहतर माना जाता है?",
+      "question_gu": "પ્રકાશની તીવ્રતા માપવા માટે ફોટોડાયોડને રિવર્સ બાયસ મોડમાં શા માટે ચલાવવામાં આવે છે?",
+      "options": [
+        "The fractional change in minority carrier current under illumination is much higher and easily measurable in reverse bias.",
+        "The potential barrier is reduced to zero in reverse bias.",
+        "Majority carrier diffusion current becomes independent of light.",
+        "Forward bias damages the optical window of the diode."
+      ],
+      "options_hi": [
+        "प्रकाश पड़ने पर अल्पसंख्यक वाहक धारा में आंशिक परिवर्तन बहुत अधिक होता है और पश्च अभिनति में आसानी से मापने योग्य होता है।",
+        "पश्च अभिनति में विभव प्राचीर घटकर शून्य हो जाता है।",
+        "बहुसंख्यक वाहक विसरण धारा प्रकाश से स्वतंत्र हो जाती है।",
+        "अग्र अभिनति डायोड की ऑप्टिकल विंडो को नुकसान पहुंचाती है।"
+      ],
+      "options_gu": [
+        "પ્રકાશ આપાત થવા પર ગૌણ વાહક પ્રવાહમાં થતો ફેરફાર રિવર્સ બાયસમાં ઘણો વધારે અને સરળતાથી માપી શકાય તેવો હોય છે.",
+        "રિવર્સ બાયસમાં બેરિયર પોટેન્શિયલ ઘટીને શૂન્ય થઈ જાય છે.",
+        "મુખ્ય વાહક વિસરણ પ્રવાહ પ્રકાશથી સ્વતંત્ર થઈ જાય છે.",
+        "ફોરવર્ડ બાયસ ડાયોડની ઓપ્ટિકલ વિંડોને નુકસાન પહોંચાડે છે."
+      ],
+      "correct_index": 0,
+      "explanation": "In reverse bias, current is dominated by minority carriers ($I_R$). When light creates additional electron-hole pairs $\\Delta n = \\Delta p$, the fractional increase $\\Delta n / n$ for minority carriers is huge compared to $\\Delta p / p$ for majority carriers, making light intensity detection extremely sensitive.",
+      "explanation_hi": "पश्च अभिनति में, धारा में अल्पसंख्यक वाहकों ($I_R$) का प्रभुत्व होता है। जब प्रकाश अतिरिक्त इलेक्ट्रॉन-होल युग्म $\\Delta n = \\Delta p$ बनाता है, तो अल्पसंख्यक वाहकों के लिए आंशिक वृद्धि $\\Delta n / n$ बहुसंख्यक वाहकों की तुलना में बहुत अधिक होती है, जिससे प्रकाश तीव्रता का पता लगाना बहुत संवेदनशील हो जाता है।",
+      "explanation_gu": "રિવર્સ બાયસમાં, પ્રવાહ ગૌણ વાહકો ($I_R$) દ્વારા સંચાલિત થાય છે. જ્યારે પ્રકાશ વધારાની ઇલેક્ટ્રોન-હોલ જોડીઓ $\\Delta n = \\Delta p$ બનાવે છે, ત્યારે ગૌણ વાહકો માટેનો વધારો $\\Delta n / n$ મુખ્ય વાહકો કરતાં ઘણો મોટો હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_018",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.10: Semiconductor Wavelength Limit",
+      "title_hi": "एनसीईआरटी अभ्यास 14.10: अर्धचालक तरंगदैर्ध्य सीमा",
+      "title_gu": "NCERT સ્વાધ્યાય 14.10: અર્ધવાહક તરંગલંબાઇ સીમા",
+      "question": "A semiconductor has a band gap of $E_g = 1.2 \\text{ eV}$. What is the maximum wavelength of electromagnetic radiation that can excite an electron from the valence band to the conduction band? (Given: $h c \\approx 1240 \\text{ eV}\\cdot\\text{nm}$)",
+      "question_hi": "एक अर्धचालक का बैंड अंतराल $E_g = 1.2 \\text{ eV}$ है। विद्युत चुंबकीय विकिरण की अधिकतम तरंगदैर्ध्य क्या है जो एक इलेक्ट्रॉन को संयोजकता बैंड से चालन बैंड में उत्तेजित कर सकती है? (दिया गया है: $h c \\approx 1240 \\text{ eV}\\cdot\\text{nm}$)",
+      "question_gu": "એક અર્ધવાહકનો બેન્ડ ગેપ $E_g = 1.2 \\text{ eV}$ છે. વેલેન્સ બેન્ડમાંથી કન્ડક્શન બેન્ડમાં ઇલેક્ટ્રોનને ઉત્તેજિત કરી શકે તેવા વિદ્યુતચુંબકીય વિકિરણની મહત્તમ તરંગલંબાઇ કેટલી હશે? ($h c \\approx 1240 \\text{ eV}\\cdot\\text{nm}$ આપેલ છે)",
+      "options": [
+        "$1033 \\text{ nm}$",
+        "$620 \\text{ nm}$",
+        "$1240 \\text{ nm}$",
+        "$850 \\text{ nm}$"
+      ],
+      "options_hi": [
+        "$1033 \\text{ nm}$",
+        "$620 \\text{ nm}$",
+        "$1240 \\text{ nm}$",
+        "$850 \\text{ nm}$"
+      ],
+      "options_gu": [
+        "$1033 \\text{ nm}$",
+        "$620 \\text{ nm}$",
+        "$1240 \\text{ nm}$",
+        "$850 \\text{ nm}$"
+      ],
+      "correct_index": 0,
+      "explanation": "The maximum threshold wavelength is given by:\n$$\\lambda_{\\text{max}} = \\frac{h c}{E_g} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{1.2 \\text{ eV}} \\approx 1033.33 \\text{ nm}$$",
+      "explanation_hi": "अधिकतम देहली तरंगदैर्ध्य सूत्र द्वारा दी जाती है:\n$$\\lambda_{\\text{max}} = \\frac{h c}{E_g} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{1.2 \\text{ eV}} \\approx 1033.33 \\text{ nm}$$",
+      "explanation_gu": "મહત્તમ થ્રેશોલ્ડ તરંગલંબાઇ આ સૂત્ર દ્વારા મળે છે:\n$$\\lambda_{\\text{max}} = \\frac{h c}{E_g} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{1.2 \\text{ eV}} \\approx 1033.33 \\text{ nm}$$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_019",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.11: Rectifier Ripple Frequency",
+      "title_hi": "एनसीईआरटी अभ्यास 14.11: दिष्टकारी रिपल आवृत्ति",
+      "title_gu": "NCERT સ્વાધ્યાય 14.11: રેક્ટિફાયર રિપલ આવૃત્તિ",
+      "question": "If the primary AC input frequency to a rectifier is $50 \\text{ Hz}$, what is the fundamental output ripple frequency for (a) a half-wave rectifier and (b) a full-wave rectifier?",
+      "question_hi": "यदि दिष्टकारी के लिए प्राथमिक AC निवेशी आवृत्ति $50 \\text{ Hz}$ है, तो (a) एक अर्ध-तरंग दिष्टकारी और (b) एक पूर्ण-तरंग दिष्टकारी के लिए मूल निर्गत रिपल आवृत्ति क्या है?",
+      "question_gu": "જો રેક્ટિફાયરમાં પ્રાથમિક AC ઇનપુટ આવૃત્તિ $50 \\text{ Hz}$ હોય, તો (a) હાફ-વેવ રેક્ટિફાયર અને (b) ફુલ-વેવ રેક્ટિફાયર માટે મુખ્ય આઉટપુટ રિપલ આવૃત્તિ કેટલી હશે?",
+      "options": [
+        "(a) $50 \\text{ Hz}$, (b) $100 \\text{ Hz}$",
+        "(a) $100 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $25 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $50 \\text{ Hz}$, (b) $50 \\text{ Hz}$"
+      ],
+      "options_hi": [
+        "(a) $50 \\text{ Hz}$, (b) $100 \\text{ Hz}$",
+        "(a) $100 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $25 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $50 \\text{ Hz}$, (b) $50 \\text{ Hz}$"
+      ],
+      "options_gu": [
+        "(a) $50 \\text{ Hz}$, (b) $100 \\text{ Hz}$",
+        "(a) $100 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $25 \\text{ Hz}$, (b) $50 \\text{ Hz}$",
+        "(a) $50 \\text{ Hz}$, (b) $50 \\text{ Hz}$"
+      ],
+      "correct_index": 0,
+      "explanation": "For a half-wave rectifier, output repeats every full AC cycle, so $f_{\\text{out}} = f_{\\text{in}} = 50 \\text{ Hz}$. For a full-wave rectifier, both positive and negative half-cycles produce output pulses in the same direction, doubling the ripple frequency: $f_{\\text{out}} = 2 f_{\\text{in}} = 100 \\text{ Hz}$.",
+      "explanation_hi": "अर्ध-तरंग दिष्टकारी के लिए, निर्गत प्रत्येक पूर्ण AC चक्र में दोहराया जाता है, इसलिए $f_{\\text{out}} = f_{\\text{in}} = 50 \\text{ Hz}$। पूर्ण-तरंग दिष्टकारी के लिए, दोनों धनात्मक और ऋणात्मक आधे चक्र एक ही दिशा में पल्स उत्पन्न करते हैं, जिससे रिपल आवृत्ति दोगुनी हो जाती है: $f_{\\text{out}} = 2 f_{\\text{in}} = 100 \\text{ Hz}$।",
+      "explanation_gu": "હાફ-વેવ રેક્ટિફાયર માટે, આઉટપુટ દરેક પૂર્ણ AC ચક્રમાં પુનરાવર્તિત થાય છે, તેથી $f_{\\text{out}} = f_{\\text{in}} = 50 \\text{ Hz}$. ફુલ-વેવ રેક્ટિફાયર માટે, બંને અડધા ચક્ર સમાન દિશામાં પલ્સ ઉત્પન્ન કરે છે, જેથી રિપલ આવૃત્તિ બમણી થાય છે: $f_{\\text{out}} = 2 f_{\\text{in}} = 100 \\text{ Hz}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_PHY_CH14_020",
+      "type": "mcq",
+      "title": "NCERT Exercise 14.12: Zener Diode Voltage Regulation",
+      "title_hi": "एनसीईआरटी अभ्यास 14.12: जेनर डायोड वोल्टेज नियमन",
+      "title_gu": "NCERT સ્વાધ્યાય 14.12: ઝેનર ડાયોડ વોલ્ટેજ નિયમન",
+      "question": "A Zener diode is specified with breakdown voltage $V_Z = 6.0 \\text{ V}$ and maximum power dissipation $P_{\\text{max}} = 0.3 \\text{ W}$. What is the maximum safe Zener current $I_{Z,\\text{max}}$?",
+      "question_hi": "एक जेनर डायोड को भंजन वोल्टेज $V_Z = 6.0 \\text{ V}$ और अधिकतम शक्ति अपव्यय $P_{\\text{max}} = 0.3 \\text{ W}$ के साथ निर्दिष्ट किया गया है। अधिकतम सुरक्षित जेनर धारा $I_{Z,\\text{max}}$ क्या है?",
+      "question_gu": "એક ઝેનર ડાયોડ માટે બ્રેકડાઉન વોલ્ટેજ $V_Z = 6.0 \\text{ V}$ અને મહત્તમ પાવર વ્યય $P_{\\text{max}} = 0.3 \\text{ W}$ આપેલ છે. મહત્તમ સલામત ઝેનર પ્રવાહ $I_{Z,\\text{max}}$ કેટલો હશે?",
+      "options": [
+        "$50 \\text{ mA}$",
+        "$20 \\text{ mA}$",
+        "$100 \\text{ mA}$",
+        "$5 \\text{ mA}$"
+      ],
+      "options_hi": [
+        "$50 \\text{ mA}$",
+        "$20 \\text{ mA}$",
+        "$100 \\text{ mA}$",
+        "$5 \\text{ mA}$"
+      ],
+      "options_gu": [
+        "$50 \\text{ mA}$",
+        "$20 \\text{ mA}$",
+        "$100 \\text{ mA}$",
+        "$5 \\text{ mA}$"
+      ],
+      "correct_index": 0,
+      "explanation": "Power dissipation in Zener breakdown is $P = V_Z \\cdot I_Z$.\n$$I_{Z,\\text{max}} = \\frac{P_{\\text{max}}}{V_Z} = \\frac{0.3 \\text{ W}}{6.0 \\text{ V}} = 0.05 \\text{ A} = 50 \\text{ mA}$$",
+      "explanation_hi": "जेनर भंजन में शक्ति अपव्यय $P = V_Z \\cdot I_Z$ है।\n$$I_{Z,\\text{max}} = \\frac{P_{\\text{max}}}{V_Z} = \\frac{0.3 \\text{ W}}{6.0 \\text{ V}} = 0.05 \\text{ A} = 50 \\text{ mA}$$",
+      "explanation_gu": "ઝેનર બ્રેકડાઉનમાં પાવર વ્યય $P = V_Z \\cdot I_Z$ છે.\n$$I_{Z,\\text{max}} = \\frac{P_{\\text{max}}}{V_Z} = \\frac{0.3 \\text{ W}}{6.0 \\text{ V}} = 0.05 \\text{ A} = 50 \\text{ mA}$$"
+    }
+  ]
+}

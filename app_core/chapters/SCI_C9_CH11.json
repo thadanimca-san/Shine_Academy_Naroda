@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "id": "SCI_C9_CH11",
+    "title": "Sound",
+    "subject": "Science",
+    "grade": "9",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the production and propagation of sound waves.",
+      "Distinguish between longitudinal and transverse waves.",
+      "Analyze the characteristics of sound such as frequency, amplitude, and speed.",
+      "Explain the reflection of sound and its applications like echo and SONAR."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_LONGITUDINAL",
+      "DICT_GRADE_FREQUENCY",
+      "DICT_GRADE_AMPLITUDE",
+      "DICT_GRADE_ECHO"
+    ],
+    "ai_context": {
+      "learning_goal": "To master the physical properties, transmission mechanisms, and practical applications of sound energy.",
+      "common_misconceptions": [
+        "Sound can travel through a vacuum.",
+        "High pitched sounds travel faster than low pitched sounds.",
+        "Amplitude and frequency are the same property."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Silent Cosmos",
+      "body": "Imagine you are floating in outer space, watching a massive spaceship explode in a brilliant flash of silent fire. In science fiction movies, explosions in space are accompanied by earth-shattering roars. But in reality? Absolute, deafening silence. Why? Because space is a vacuum, devoid of matter. This everyday cinematic illusion points to a profound physical truth: sound is not magic; it is a mechanical disturbance that desperately needs a material medium—a highway of particles—to travel. Without matter to bump into, your ears remain isolated from the universe's most violent events. Welcome to the invisible, vibrating world of sound.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why can't astronauts hear explosions in outer space?",
+      "options": [
+        "Because sound waves travel too slowly in space.",
+        "Because space is a vacuum and lacks a medium for sound propagation.",
+        "Because human ears cannot process high-intensity frequencies."
+      ],
+      "correct_index": 1,
+      "explanation": "Sound is a mechanical wave requiring a material medium (solid, liquid, or gas) to travel. Since space is a vacuum with virtually no particles, sound waves cannot propagate.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Production of Sound",
+      "body": "How does the world become so noisy? Every single sound you hear originates from a vibrating body. When you pluck a guitar string, strike a tuning fork, or speak through your vocal cords, mechanical energy sets off rapid back-and-forth movements known as vibrations. As an object moves forward, it pushes the air molecules in front of it, compressing them together into a high-pressure region called a compression. Conversely, as the object swings backward, it creates a region of low pressure called a rarefaction. These alternating compressions and rarefactions march outward from the source, carrying energy through space. Without vibration, there is no sound; it is the universal heartbeat of acoustic physics.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Quick Check: Production",
+      "front": "What physical state must an object undergo to produce sound?",
+      "back": "It must vibrate (oscillate back and forth rapidly).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "Concept 2: Propagation of Sound Waves",
+      "body": "Once sound is produced, it propagates outward as a mechanical wave. Specifically, sound travels through gases, liquids, and solids in the form of [DICT_GRADE_LONGITUDINAL|longitudinal waves]. In a longitudinal wave, the individual particles of the medium do not travel all the way from the source to your ear; instead, they oscillate back and forth parallel to the direction of wave propagation. Think of a slinky: if you push and pull one end longitudinally, you create compressed coils and stretched coils that travel down the length of the toy. Because sound relies on particle collisions, its speed depends heavily on the medium's density and elasticity. Sound travels fastest in solids because molecules are tightly packed, slower in liquids, and slowest in gases like air.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "teacher_tip",
+      "title": "The Rail Track Experiment",
+      "body": "Have you ever wondered why Native Americans in old western movies put their ears to the railroad tracks to listen for approaching trains? Because steel is an elastic solid, sound travels through it at roughly 5,100 meters per second—nearly 15 times faster than through air! You can hear the train coming through the tracks long before you hear it through the air.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "In which medium does sound travel the slowest at room temperature?",
+      "options": [
+        "Iron (Solid)",
+        "Water (Liquid)",
+        "Air (Gas)"
+      ],
+      "correct_index": 2,
+      "explanation": "Gases have particles that are widely separated with weak intermolecular forces, resulting in slower collisions and slower sound propagation compared to liquids and solids.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: Characteristics of Sound Waves - Frequency and Pitch",
+      "body": "Not all sounds are created equal. If a lion roars and a mosquito buzzes, your brain instantly distinguishes them. This brings us to the first major characteristic of sound: [DICT_GRADE_FREQUENCY|frequency]. Frequency is defined as the number of complete wave cycles (or oscillations) per second, measured in Hertz (Hz). The human ear can generally detect frequencies between 20 Hz and 20,000 Hz, known as the audible range. Frequencies below 20 Hz are called infrasound (used by whales and elephants), while frequencies above 20,000 Hz are called ultrasound (used in medical imaging and by bats). Frequency directly determines pitch: high-frequency waves produce high-pitched sounds (like a whistle), while low-frequency waves produce low-pitched sounds (like a bass drum).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Quick Check: Frequency",
+      "front": "What unit is used to measure frequency?",
+      "back": "Hertz (Hz), which represents cycles per second.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Concept 4: Characteristics of Sound Waves - Amplitude and Loudness",
+      "body": "While frequency controls pitch, another vital parameter governs how loud or soft a sound is: [DICT_GRADE_AMPLITUDE|amplitude]. The amplitude of a wave is the maximum displacement of particles from their mean position during wave propagation. Visually, it is the height of the wave peak on a graph. A high-amplitude sound wave carries a tremendous amount of energy, which slams against your eardrum, registering in your brain as a loud sound. Conversely, a low-amplitude wave carries little energy and sounds quiet or whispered. Loudness is measured in decibels (dB). Prolonged exposure to sounds above 85 dB can cause permanent hearing damage, turning acoustic science into a matter of personal health and safety.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "If you strike a drum gently and then strike it very hard, which wave property changes the most?",
+      "options": [
+        "Frequency",
+        "Amplitude",
+        "Wavelength"
+      ],
+      "correct_index": 1,
+      "explanation": "Striking the drum harder transfers more energy into the membrane, increasing the displacement of air particles—which means a higher amplitude and a louder sound.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 5: Speed of Sound in Air",
+      "body": "Sound travels at a finite speed. Under normal conditions (at 0°C), the speed of sound in air is approximately 331 meters per second, and at room temperature (20°C), it rises to about 343 meters per second. This finite speed explains why you see a lightning flash before you hear the thunderclap. Light travels at an astronomical 300,000 kilometers per second, reaching your eyes almost instantaneously, whereas sound takes roughly 3 seconds to travel every kilometer. Furthermore, the speed of sound is affected by environmental factors: as temperature increases, air molecules move faster, transmitting sound waves more rapidly. Humidity also plays a role, as moist air is less dense than dry air, causing sound to travel faster on humid days.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Lightning-Thunder Rule",
+      "body": "Next time you see a thunderstorm, start counting seconds until you hear the thunder: 1 Mississippi, 2 Mississippi, 3 Mississippi. Divide the number of seconds by 3, and that is roughly how many kilometers away the lightning strike occurred!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Concept 6: Reflection of Sound",
+      "body": "Just like a rubber ball bounces off a concrete wall when thrown against it, sound waves also obey the laws of reflection. When sound encounters a hard, rigid surface—such as a large cliff wall, a brick building, or the interior walls of an empty gymnasium—it bounces back into the medium from which it came. This phenomenon is known as the reflection of sound. The angle of incidence of the sound wave equals the angle of reflection, exactly like light mirrors. Understanding acoustic reflection allows architects to design concert halls with optimal sound distribution, ensuring that every audience member enjoys crisp, clear music without muddy interference.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "title": "Quick Check: Reflection",
+      "front": "What type of surfaces are best for reflecting sound waves?",
+      "back": "Hard, rigid surfaces (like metal, concrete, or stone). Soft surfaces absorb sound.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 7: Echo and Reverberation",
+      "body": "Have you ever shouted inside an empty room or across a deep canyon and heard your voice repeat back to you? That repeated sound is called an [DICT_GRADE_ECHO|echo]. Due to the persistence of hearing in the human brain, our ears retain sound sensations for approximately 0.1 seconds. For you to hear a distinct echo, the reflected sound wave must take at least 0.1 seconds to return to your ears. Given the speed of sound in air (343 m/s), the minimum distance required between the sound source and the reflecting obstacle for a clear echo is 17.2 meters. In smaller rooms where sound reflects multiple times off walls, floors, and ceilings faster than 0.1 seconds, the sounds blur together into a lingering hum known as reverberation. Concert halls use acoustic panels to control excessive reverberation.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What is the minimum distance required from a reflecting surface to hear a clear echo in air at room temperature?",
+      "options": [
+        "5.5 meters",
+        "17.2 meters",
+        "34.3 meters"
+      ],
+      "correct_index": 1,
+      "explanation": "Since sound travels 343 meters in 1 second, in 0.1 seconds it travels 34.3 meters total (to the wall and back). Therefore, the distance to the wall must be half of that, which is 17.2 meters.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 8: Applications of Reflection - SONAR",
+      "body": "The principles of sound reflection are not just for amusement in canyons; they form the basis of vital technologies like SONAR (Sound Navigation and Ranging). SONAR is a technique used to navigate, measure distances, and map objects underwater. A ship or submarine equipped with a SONAR device sends out high-frequency ultrasonic sound waves into the watery depths. These waves travel downward, strike the ocean floor or a submerged obstacle (like a sunken ship or school of fish), and bounce back as echoes. By measuring the exact time ($t$) it takes for the ultrasonic pulse to make a round trip and knowing the speed ($v$) of sound in seawater, engineers calculate the total distance ($d$) using the formula $d = (v \\times t) / 2$. This technology allows marine biologists to map underwater trenches and naval vessels to detect hazards.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "title": "Quick Check: SONAR",
+      "front": "What does the acronym SONAR stand for?",
+      "back": "Sound Navigation and Ranging.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 9: The Human Ear",
+      "body": "All these physical vibrations would be meaningless without a biological receiver: the human ear. The ear is an engineering masterpiece divided into three main sections: the outer ear, middle ear, and inner ear. The outer ear (pinna) collects sound waves from the environment and channels them down the auditory canal to strike a stretched membrane called the eardrum (tympanic membrane). When compressions and rarefactions hit the eardrum, it vibrates back and forth. These vibrations are amplified by three tiny bones in the middle ear—the malleus (hammer), incus (anvil), and stapes (stirrup). Finally, the vibrations pass into the fluid-filled inner ear, specifically the cochlea. Inside the cochlea, delicate hair cells convert mechanical wave energy into electrical nerve impulses, which travel along the auditory nerve to the brain, where they are finally interpreted as speech, music, or noise.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Which part of the human ear is responsible for converting mechanical vibrations into electrical nerve signals?",
+      "options": [
+        "Pinna",
+        "Eardrum",
+        "Cochlea"
+      ],
+      "correct_index": 2,
+      "explanation": "The cochlea contains specialized hair cells immersed in fluid that transduce mechanical wave vibrations into electrical nerve impulses sent to the brain.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Chapter Summary & Integration",
+      "body": "As we conclude our journey through the physics of sound, remember that sound is fundamentally a mechanical wave born from vibration and sustained by particle collisions. From understanding why space is silent to calculating echo distances and marveling at the microscopic hair cells inside our cochleas, sound bridges the physical universe with human perception. Whether utilized by bats navigating in pitch darkness via echolocation, doctors examining internal organs with ultrasound, or musicians tuning frequencies to create harmony, sound is an indispensable pillar of science and everyday life.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Which of the following phenomena best demonstrates that sound is a mechanical wave requiring a medium?",
+      "options": [
+        "Radio waves traveling from Mars to Earth.",
+        "An electric bell ringing inside an evacuated glass jar becoming inaudible as air is removed.",
+        "Light bending as it passes through a glass prism."
+      ],
+      "correct_index": 1,
+      "explanation": "Removing air from the bell jar creates a partial vacuum, causing the sound of the bell to fade away because there are no particles left to transmit the sound wave.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    }
+  ]
+}

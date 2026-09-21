@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "id": "cbse_grade4_maths_ch4",
+    "title": "Chapter 4: Multiplication",
+    "subject": "Maths",
+    "grade": "Grade 4",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand multiplication as repeated addition.",
+      "Master multiplication tables up to 10x10.",
+      "Perform multi-digit multiplication using standard algorithms.",
+      "Solve real-world word problems using multiplication."
+    ],
+    "core_concepts": [
+      "DICT_GRADE4_MULTIPLICATION",
+      "DICT_GRADE4_PRODUCT",
+      "DICT_GRADE4_FACTORS",
+      "DICT_GRADE4_ARRAY"
+    ],
+    "ai_context": {
+      "learning_goal": "To transition students from additive thinking to multiplicative thinking, enabling efficient computation of large quantities.",
+      "common_misconceptions": [
+        "Confusing multiplication with addition when dealing with word problems.",
+        "Forgetting to carry over numbers in multi-digit vertical multiplication.",
+        "Assuming multiplication always makes a number bigger (forgetting fractions or decimals, though less relevant for early grades)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Grand Royal Banquet Mystery",
+      "body": "Imagine you are the chief royal banquet organizer for the kingdom of Mathtopia. The King has invited 246 special guests to a grand feast, and you need to arrange the seating. Each of the 12 long tables must have exactly 18 golden chairs. If you tried to calculate this by adding 18 twelve times, or worse, counting individual chairs one by one, your brain would melt before the soup was served! How can you figure out the exact number of chairs instantly without losing your mind? Welcome to the magical, lightning-fast world of [DICT_GRADE4_MULTIPLICATION|multiplication]!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why is multiplication considered better than repeated addition for large numbers?",
+      "options": [
+        "It is always subtraction in disguise.",
+        "It is a shortcut that saves time and prevents counting mistakes when numbers get large.",
+        "It only works with numbers smaller than 10."
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplication is essentially repeated addition turned into a super-fast shortcut, saving immense time and reducing errors.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Multiplication?",
+      "body": "At its core, [DICT_GRADE4_MULTIPLICATION|multiplication] is nothing more than repeated addition. Suppose you have 4 boxes of crayons, and each box contains 6 crayons. Instead of writing 6 + 6 + 6 + 6 = 24, we write 4 × 6 = 24. The numbers you multiply together are called [DICT_GRADE4_FACTORS|factors], and the result of the multiplication is called the [DICT_GRADE4_PRODUCT|product]. Think of factors as the ingredients in a recipe, and the product as the delicious cake you bake at the end! Understanding this relationship is the secret key to unlocking all advanced mathematics.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "front": "What do we call the answer to a multiplication problem?",
+      "back": "The Product!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "The Counter Activity",
+      "body": "Grab 20 small objects like buttons or coins. Arrange them into 4 rows with 5 in each row. Notice how easy it is to see 4 × 5 = 20. This visual grid is called an [DICT_GRADE4_ARRAY|array]!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Power of Arrays",
+      "body": "An [DICT_GRADE4_ARRAY|array] is an orderly arrangement of objects in rows and columns. Imagine a chocolate bar with squares. If there are 3 rows and 5 columns of chocolate squares, you have an array representing 3 × 5. Arrays show us the geometric beauty of [DICT_GRADE4_MULTIPLICATION|multiplication]. They prove that math isn't just numbers on a flat paper; it has shape and structure all around us in the real world—from apartment windows in a skyscraper to egg cartons in your refrigerator.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If an array has 5 rows and 3 columns, what multiplication sentence does it represent?",
+      "options": [
+        "5 + 3 = 8",
+        "5 × 3 = 15",
+        "5 - 3 = 2"
+      ],
+      "correct_index": 1,
+      "explanation": "Rows represent groups (5 groups) and columns represent items per group (3 items), giving 5 × 3 = 15.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Properties of Multiplication: Commutative Property",
+      "body": "Did you know that the order in which you multiply numbers doesn't change the [DICT_GRADE4_PRODUCT|product]? This is called the Commutative Property. Whether you calculate 3 × 4 or 4 × 3, the answer is always 12. Imagine 3 bags with 4 apples each, versus 4 bags with 3 apples each. Total apples remain 12! This property is like putting your shoes on: whether you put the left shoe first or the right shoe first, you end up with both shoes on your feet. It makes learning multiplication tables twice as fast because if you know 4 × 5, you automatically know 5 × 4!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "If 7 × 8 = 56, what is 8 × 7?",
+      "back": "56! (Because of the Commutative Property)",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Properties of Multiplication: Identity and Zero Properties",
+      "body": "Numbers have special personalities when multiplying. Meet the Identity Property (The Mirror Property): any number multiplied by 1 stays exactly the same (e.g., 47 × 1 = 47). It looks into the mirror and sees itself! On the flip side, meet the Zero Property (The Black Hole Property): any number multiplied by 0 becomes 0 (e.g., 5,432 × 0 = 0). No matter how huge the number is, zero swallows it completely. If you have 5 boxes of zero cookies, you have zero cookies to eat. Sad, but mathematically powerful!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What is 894 × 0?",
+      "options": [
+        "894",
+        "1",
+        "0"
+      ],
+      "correct_index": 2,
+      "explanation": "Any number multiplied by zero results in zero, according to the Zero Property of multiplication.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 3: Multiplying by Tens and Hundreds",
+      "body": "What happens when you multiply by 10, 100, or 1,000? There is a magnificent shortcut! When multiplying a whole number by 10, you simply attach one zero to the end of the number. For example, 7 × 10 = 70. Why? Because you have 7 groups of ten. When multiplying by 100, you attach two zeros (7 × 100 = 700). This happens because our number system is base-10. Every time you shift left in place value, you multiply by 10. This trick lets you solve massive multiplication equations in your head in milliseconds!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Zero Count Trick",
+      "body": "To solve 40 × 30, multiply the non-zero digits first (4 × 3 = 12), then count how many total zeros are in the problem (one in 40, one in 30 = two zeros). Slap them on: 1,200!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Calculate: 50 × 400",
+      "options": [
+        "2,000",
+        "20,000",
+        "200,000"
+      ],
+      "correct_index": 1,
+      "explanation": "5 × 4 = 20. Count the zeros: one from 50 and two from 400 (total 3 zeros). Attach them to 20 to get 20,000.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 4: Standard Algorithm - 2-Digit by 1-Digit",
+      "body": "When numbers get too large for mental math, we use the standard vertical algorithm. Let's solve 34 × 3. Step 1: Write the larger number ([DICT_GRADE4_FACTORS|factor]) on top and the 1-digit factor underneath. Step 2: Multiply the ones digit first (3 × 4 ones = 12 ones). Since 12 is 1 ten and 2 ones, write the 2 in the ones column and 'carry over' the 1 to the tens column. Step 3: Multiply the tens digit (3 × 3 tens = 9 tens), then add the carried-over 1 ten to get 10 tens. Write 10 in front, giving a final [DICT_GRADE4_PRODUCT|product] of 102!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "In the problem 46 × 2, what is the first multiplication step?",
+      "back": "Multiply 2 by the ones digit: 2 × 6 = 12.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What is 23 × 4?",
+      "options": [
+        "82",
+        "92",
+        "96"
+      ],
+      "correct_index": 1,
+      "explanation": "4 × 3 = 12 (write 2, carry 1). 4 × 2 = 8, plus 1 carried over = 9. Total is 92.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 5: Multiplying 2-Digit by 2-Digit Numbers",
+      "body": "Ready for the summit of Grade 4 multiplication? Multiplying a 2-digit number by a 2-digit number (like 24 × 13) uses the brilliant technique of partial products. Step 1: Multiply the top number by the ones digit of the bottom number (24 × 3 = 72). Step 2: Put a magical placeholder zero in the ones column because we are now multiplying by tens! Step 3: Multiply the top number by the tens digit of the bottom number (24 × 1 = 24, but with our zero placeholder, it's 240). Step 4: Add the two partial products together (72 + 240 = 312). You have successfully conquered multi-digit multiplication!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Placeholder Zero Hero",
+      "body": "Remind students: when moving to the tens column in vertical multiplication, always drop down a zero placeholder first! It guards the place value and prevents costly shifting errors.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "When multiplying 32 by 14, what is the first partial product when multiplying by 4?",
+      "options": [
+        "128",
+        "32",
+        "120"
+      ],
+      "correct_index": 0,
+      "explanation": "4 × 2 = 8, and 4 × 30 = 120, so 120 + 8 = 128.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Word Problems: Translating Language into Math",
+      "body": "Real life rarely hands you neat equations like '24 × 15 = ?'. Instead, it gives you stories. Keywords like 'each', 'every', 'per', 'in all', and 'total' are huge clues that [DICT_GRADE4_MULTIPLICATION|multiplication] is needed. For example: 'If a superhero saves 14 citizens every hour, how many citizens does she save in 6 hours?' Recognize the groups (6 hours) and the items per group (14 citizens). Translate it into 14 × 6 = 84 citizens. Becoming a word problem detective is the ultimate test of mathematical mastery!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "A bakery boxes 12 cookies in every box. If they sell 25 boxes, which operation should you use to find the total cookies?",
+      "options": [
+        "Addition",
+        "Multiplication",
+        "Division"
+      ],
+      "correct_index": 1,
+      "explanation": "Equal groups (25 boxes) with the same amount in each (12 cookies) calls for multiplication (25 × 12).",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "front": "What keyword in a word problem usually signals multiplication?",
+      "back": "Words like 'each', 'every', or 'total equal groups'.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Estimation: Checking Your Work Like a Scientist",
+      "body": "Even the best mathematicians make calculation slips. How do we catch them? Estimation! Before calculating 48 × 32 precisely, round the [DICT_GRADE4_FACTORS|factors] to easy numbers: 50 × 30 = 1,500. When you do the exact calculation and get 1,536, you know your answer is reasonable because it is close to 1,500. If you accidentally wrote 15,360, your estimation alarm bells would ring instantly! Always estimate first, calculate second, and verify third.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Estimate the product of 79 × 42 by rounding to the nearest ten.",
+      "options": [
+        "3,200",
+        "2,800",
+        "3,600"
+      ],
+      "correct_index": 0,
+      "explanation": "79 rounds to 80, and 42 rounds to 40. 80 × 40 = 3,200.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "teacher_tip",
+      "title": "The Estimation Challenge",
+      "body": "Give students 5 minutes to estimate 5 complex multiplication problems without paper. It builds strong number sense and prevents blind reliance on algorithms.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Chapter Summary: The Multiplication Mastermind",
+      "body": "Look how far you've traveled! You started by understanding [DICT_GRADE4_MULTIPLICATION|multiplication] as repeated addition. You explored visual [DICT_GRADE4_ARRAY|arrays], mastered the Commutative, Identity, and Zero properties, unlocked fast shortcuts for tens and hundreds, conquered vertical algorithms with carrying and placeholder zeros, and even learned how to estimate and solve real-world word problems. You are no longer just a student—you are a certified Mathtopia banquet architect and multiplication mastermind!",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "What is the final product of 15 × 15?",
+      "options": [
+        "215",
+        "225",
+        "250"
+      ],
+      "correct_index": 1,
+      "explanation": "15 × 5 = 75, and 15 × 10 = 150. 75 + 150 = 225.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    }
+  ]
+}

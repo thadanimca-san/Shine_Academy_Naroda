@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "id": "class11_science_physics_ch11",
+    "title": "Thermal Properties of Matter",
+    "subject": "Physics",
+    "grade": "11",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Temperature and Thermal Expansion",
+      "Heat Capacity, Specific Heat, and Calorimetry",
+      "Change of State and Latent Heat",
+      "Transfer of Heat: Conduction, Convection, and Radiation",
+      "Ideal Gas Laws and Kinetic Theory of Gases"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_2_1",
+      "type": "hook",
+      "title": "The Strange Case of Boiling Water",
+      "body": "Imagine you are boiling a pot of water on your kitchen stove to cook pasta. You place a high-precision thermometer into the rolling, bubbling water and notice something fascinating and counterintuitive: the temperature reads exactly 100°C, and it refuses to climb any higher, no matter how high you crank up the stove's burner. You are pumping continuous thermal energy into the pot, yet the thermometer remains stubbornly fixed. Where is all that heat energy going if the temperature isn't rising?"
+    },
+    {
+      "id": "KOBJ_2_2",
+      "type": "socratic",
+      "question": "If heat is constantly being added to a substance at its melting or boiling point, but the temperature does not change, what is this hidden heat energy actually doing to the substance?",
+      "options": [
+        "It is being lost to the surrounding air as waste radiation.",
+        "It is increasing the average kinetic energy of the molecules.",
+        "It is breaking the intermolecular bonds, increasing potential energy rather than kinetic energy.",
+        "It is slowing down the molecular motion to create a stable lattice."
+      ],
+      "correct_index": 2,
+      "explanation": "At a phase transition, the added heat does not raise the kinetic energy (which dictates temperature). Instead, it does internal work against the intermolecular forces holding the molecules together, increasing their potential energy as they transition to a less constrained state of matter."
+    },
+    {
+      "id": "KOBJ_2_3",
+      "type": "theory",
+      "title": "Change of State and Latent Heat: Deep Dive",
+      "body": "When a substance transitions from one phase of matter to another—such as solid to liquid (melting) or liquid to gas (vaporization)—it undergoes a fundamental transformation in its molecular arrangement and energy distribution. During these phase changes, the substance absorbs or releases heat without any accompanying change in its temperature. This thermal energy is known as 'latent heat,' derived from the Latin word *latere*, meaning 'to lie hidden.' To understand the physics behind this phenomenon, we must look at energy on a microscopic scale. Temperature is a macroscopic measure of the average translational kinetic energy of a system's particles. When a substance like ice is at 0°C and absorbs heat, that energy is not utilized to make the water molecules move faster (which would raise the temperature); rather, it is entirely funneled into disrupting the rigid hydrogen-bonded crystal lattice of the ice. The molecules are pulled slightly further apart, transitioning from a localized, vibration-only state to a more fluid, translational state. Consequently, the potential energy of the system increases while the kinetic energy remains constant. Mathematically, the heat ($Q$) required for a change of state is expressed as $Q = mL$, where $m$ is the mass of the substance and $L$ is the specific latent heat characteristic of the material and the specific transition (such as latent heat of fusion, $L_f$, or latent heat of vaporization, $L_v$). The latent heat of vaporization is almost always significantly larger than the latent heat of fusion for any given substance because separating molecules from a liquid state into a dispersed, highly energetic gas requires overcoming almost all intermolecular attractive forces, demanding a massive input of energy.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_2_4",
+      "type": "knowledge_check",
+      "question": "Why does a severe steam burn at 100°C typically cause much more severe tissue damage than a burn from boiling water at the exact same temperature of 100°C?",
+      "options": [
+        "Steam has a much lower specific heat capacity than liquid water.",
+        "Steam releases both its latent heat of vaporization as it condenses on the skin, plus thermal energy as the resulting water cools.",
+        "Steam molecules move at a lower velocity, concentrating all their force on a smaller surface area of the skin.",
+        "Boiling water cannot penetrate the outer layer of human skin, whereas microscopic steam vapor can."
+      ],
+      "correct_index": 1,
+      "explanation": "When steam at 100°C touches the skin, it first condenses into liquid water at 100°C, releasing a massive amount of latent heat of vaporization ($2.26 \\times 10^6 \\text{ J/kg}$) directly onto the skin. Only after this condensation phase does it cool further like regular boiling water, making the total energy transferred drastically higher."
+    },
+    {
+      "id": "KOBJ_4_1",
+      "type": "hook",
+      "title": "The Invisible Ball Pit Inside a Balloon",
+      "body": "Imagine walking into a massive room filled with millions of hyperactive, microscopic toddlers throwing billions of tennis balls against the walls in every direction. If you tried to squeeze the room smaller, those toddlers would pack in tighter, bouncing off each other and the walls with furious intensity, violently pushing back against your hands. This frantic, chaotic dance is happening right now inside every breath of air, every inflated balloon, and every car tire. Welcome to the microscopic world of gases, where invisible atomic collisions dictate the macroscopic weather, pressure, and temperature of our entire universe."
+    },
+    {
+      "id": "KOBJ_4_2",
+      "type": "socratic",
+      "question": "If you take a sealed, rigid metal cylinder filled with air and heat it up over an open flame, what happens to the pressure of the gas inside, and why?",
+      "options": [
+        "The pressure decreases because the gas expands when heated.",
+        "The pressure stays the same because the volume of the rigid container cannot change.",
+        "The pressure increases because the gas molecules gain kinetic energy and strike the container walls harder and more frequently.",
+        "The pressure drops to zero because heat destroys gas molecules."
+      ],
+      "correct_index": 2,
+      "explanation": "When you heat a gas, you increase its absolute temperature, which directly translates to a higher average kinetic energy for the gas molecules. Because they are moving faster, they collide with the walls of the rigid container with greater momentum and frequency, causing a measurable surge in pressure."
+    },
+    {
+      "id": "KOBJ_4_3",
+      "type": "theory",
+      "title": "Ideal Gas Laws and Kinetic Theory of Gases: Deep Dive",
+      "body": "To bridge the gap between what we can measure in a laboratory—like pressure, volume, and temperature (macroscopic properties)—and what individual atoms and molecules are actually doing (microscopic properties), physicists developed the Kinetic Theory of Gases alongside the empirical Ideal Gas Laws. An 'ideal gas' is a theoretical model based on specific postulates: gas molecules are treated as point masses with negligible volumes compared to the container, they undergo perfectly elastic collisions with no energy lost, they exert no intermolecular forces on each other except during collisions, and they are in constant, random motion. Experimentally, relationships like Boyle's Law ($PV = \\text{constant}$ at constant temperature), Charles's Law ($V/T = \\text{constant}$ at constant pressure), and Gay-Lussac's Law combine into the master equation of state: $PV = nRT$ (or $PV = N k_B T$). But why does this equation work? The Kinetic Theory answers this by deriving pressure from first principles. By calculating the change in momentum when a particle bounces off a wall, summing these collisions over time, and linking average kinetic energy directly to absolute temperature ($KE_{avg} = \\frac{3}{2} k_B T$), we prove that macroscopic pressure is nothing more than the collective, statistical averaging of microscopic molecular impacts. This powerful unification allows us to understand everything from stellar atmospheres to the efficiency of internal combustion engines.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_4_4",
+      "type": "knowledge_check",
+      "question": "If the absolute temperature of an ideal gas in a closed container is tripled, what happens to the root-mean-square (rms) speed of the gas molecules?",
+      "options": [
+        "It remains exactly the same.",
+        "It increases by a factor of 3.",
+        "It increases by a factor of the square root of 3 ($\\sqrt{3}$ approx. 1.73).",
+        "It decreases by a factor of 3."
+      ],
+      "correct_index": 2,
+      "explanation": "From kinetic theory, the root-mean-square speed of gas molecules is given by $v_{rms} = \\sqrt{\\frac{3RT}{M}}$. Since $v_{rms}$ is directly proportional to the square root of the absolute temperature ($T$), tripling the temperature multiplies the speed by the square root of 3.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    }
+  ]
+}

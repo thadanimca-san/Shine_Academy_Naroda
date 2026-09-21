@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "id": "cbse_class3_maths_ch12",
+    "title": "Chapter 12: Patterns",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Identify, extend, and create repeating visual and numeric patterns.",
+      "Recognize the foundational rules behind increasing and decreasing number sequences.",
+      "Apply pattern logic to solve real-world puzzles and everyday situations."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_PATTERN",
+      "DICT_GRADE_SEQUENCE",
+      "DICT_GRADE_RULE"
+    ],
+    "ai_context": {
+      "learning_goal": "Students should master the ability to look past superficial elements to identify the underlying structural rule of any visual or numeric progression.",
+      "common_misconceptions": [
+        "Students often think patterns only exist in colorful artwork and never in numbers.",
+        "Students may focus on the last number in a sequence rather than the constant rule governing the entire set."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Secret Message in the Forest",
+      "body": "Imagine you are walking down a quiet forest trail on a crisp autumn morning. Suddenly, you notice the stepping stones across a bubbling brook. The first stone has one leaf painted on it. The second stone has two leaves. The third stone has three leaves. The fourth stone has four leaves. As you look across the stream, you realize this isn't just random artwork—it is a hidden message! Nature, numbers, and shapes love to talk to us in secret rhythms. When we learn to listen to these rhythms, we unlock the master key to mathematics: the world of [DICT_GRADE_PATTERN|Patterns].",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on the story, if the stone with four leaves is followed by the next stone in the stream, how many leaves should it have if the rhythm continues?",
+      "options": [
+        "4 leaves",
+        "5 leaves",
+        "10 leaves"
+      ],
+      "correct_index": 1,
+      "explanation": "The stones increase by one leaf each time: 1, 2, 3, 4. Following this order, the next number must be 5.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "What is a Pattern?",
+      "body": "At its very heart, a [DICT_GRADE_PATTERN|Pattern] is anything that repeats or changes in an orderly, predictable way. You see them everywhere: on the stripes of a zebra, the tiles on your kitchen floor, the ticking of a clock (tick, tock, tick, tock), and the days of the week. In mathematics, patterns give us the power to look into the future. If you know how something starts and what [DICT_GRADE_RULE|Rule] it follows, you can predict what comes next without having to guess. Patterns are built upon a core unit that repeats over and over again, like a musical beat in your favorite song.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Quick Check: Core Unit",
+      "body": "What do we call the foundational part of a pattern that repeats over and over again?",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "Visual Patterns: Shapes and Colors",
+      "body": "Let us look at visual patterns first. Imagine a row of shapes: a red triangle, a blue square, a red triangle, a blue square. What is the repeating core unit here? It is 'triangle, square' with alternating colors 'red, blue'. Visual patterns rely on attributes like shape, size, color, and orientation. For example, an arrow pointing UP, then pointing RIGHT, then pointing DOWN, then pointing LEFT is a pattern of rotation! Every time, the arrow turns a quarter turn clockwise. By identifying these visual shifts, we train our brains to spot order in chaos.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "teacher_tip",
+      "title": "Classroom Activity: Shape Detective",
+      "body": "Grab colored pencils and draw a shape pattern on a strip of paper using three different colors and two different shapes. Hand it to a friend and ask them to find the hidden rule and continue the sequence for three more steps!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Look at this visual pattern: Circle, Star, Square, Circle, Star, Square, Circle. What shape comes next?",
+      "options": [
+        "Circle",
+        "Star",
+        "Square"
+      ],
+      "correct_index": 1,
+      "explanation": "The repeating core is 'Circle, Star, Square'. After the Circle, the sequence restarts with the Star.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Introduction to Number Sequences",
+      "body": "While shapes are fun, numbers take patterns to an extraordinary new level. A number [DICT_GRADE_SEQUENCE|Sequence] is an ordered list of numbers governed by a specific [DICT_GRADE_RULE|Rule]. Think of numbers as marching soldiers; they cannot just jump wherever they want. They must march in step. For example, consider the numbers: 2, 4, 6, 8, 10. Are these numbers random? Absolutely not! Each number is larger than the one before it by exactly 2. This steady, predictable change is what makes it a true mathematical sequence.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Sequence Definition",
+      "body": "True or False: A number sequence is just a random collection of numbers written in any order.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "The Magic Rule: Adding On",
+      "body": "To solve any number pattern, your number one job is to find the [DICT_GRADE_RULE|Rule]. The most common rule in elementary math is the 'adding rule' or skip counting. Let’s look at the sequence: 5, 10, 15, 20, 25. How do we get from 5 to 10? We add 5. How do we get from 10 to 15? We add 5 again. Because the addition amount is constant (+5), we have unlocked the secret code of the sequence. To find the number after 25, we simply apply the rule: 25 + 5 = 30!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What is the rule for this sequence: 10, 20, 30, 40, 50?",
+      "options": [
+        "Add 5",
+        "Add 10",
+        "Subtract 10"
+      ],
+      "correct_index": 1,
+      "explanation": "Each number increases by 10 as you move from left to right (10 + 10 = 20, etc.).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Going Backwards: Subtracting Patterns",
+      "body": "Patterns don't always grow larger; sometimes they shrink! These are called decreasing patterns or countdown patterns. Imagine an elevator moving down from the top floor, or a rocket launch countdown: 10, 9, 8, 7, 6. Here, the numbers are getting smaller by 1 each time. The rule is subtraction (-1). If you encounter a sequence like 50, 40, 30, 20, your brain should immediately recognize that each step removes 10. Subtracting rules are just as vital as addition rules in understanding how numbers behave.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "Real-World Countdown",
+      "body": "Use a kitchen timer set to 60 seconds. Watch the numbers tick down: 60, 59, 58... Notice how every single second subtracts 1 from the total. That is a real-life decreasing pattern!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "What comes next in this decreasing pattern: 45, 40, 35, 30, ?",
+      "options": [
+        "35",
+        "25",
+        "20"
+      ],
+      "correct_index": 1,
+      "explanation": "The pattern decreases by 5 each time (45 - 5 = 40, and so on). 30 minus 5 is 25.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Growing Patterns with Shapes (Geometric Growth)",
+      "body": "Sometimes patterns combine shapes and numbers into what we call growing geometric patterns. Picture Step 1: one square tile. Step 2: three square tiles arranged in an 'L' shape. Step 3: six square tiles arranged in a triangle staircase. The shape itself is growing larger in a predictable architectural design. Builders, architects, and engineers use growing patterns every single day to design bridges, tiled patios, and skyscrapers safely and efficiently.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Architectural Patterns",
+      "body": "Why do engineers and architects need to understand growing patterns?",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "The Mystery of Missing Numbers",
+      "body": "A classic test of your pattern-solving skills is finding a missing number hiding in the middle of a sequence. For example: 3, 6, [?], 12, 15. At first glance, the gap looks mysterious. But look at the neighbors! We know 3 jumps to 6 (+3), and 12 jumps to 15 (+3). The [DICT_GRADE_RULE|Rule] is clearly 'add 3'. Therefore, to find the missing number, we take 6 and add 3 to get 9! Let's double-check: does 9 + 3 equal 12? Yes! The puzzle is successfully solved.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "Find the missing number in the sequence: 4, 8, [?], 16, 20.",
+      "options": [
+        "10",
+        "12",
+        "14"
+      ],
+      "correct_index": 1,
+      "explanation": "The rule is add 4. 8 + 4 = 12. And 12 + 4 = 16, which fits the rest of the sequence.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Patterns in Daily Life: Calendars and Clocks",
+      "body": "Patterns are not confined to math workbooks; they govern time itself. Look at a calendar: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Then it loops right back to Monday! This is a 7-day repeating cycle. Look at the clock face: the numbers 1 through 12 repeat twice every single day. Recognizing cyclic patterns helps us organize our lives, predict the changing seasons, and understand the rhythm of day and night.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "Calendar Hunt",
+      "body": "Pull out a monthly calendar and look at the column for Wednesdays. Notice how the date numbers increase by 7 every single week because there are 7 days in a week!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "If today is Wednesday, what day of the week will it be after a 7-day cycle?",
+      "options": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ],
+      "correct_index": 1,
+      "explanation": "Because a week has 7 days, completing a full 7-day cycle brings you right back to the exact same day of the week.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Advanced Trick: Alternating Rules",
+      "body": "Just when you think you have mastered patterns, math throws an exciting twist: alternating rules! Consider this sequence: 2, 4, 3, 5, 4, 6, 5. Look closely—it doesn't just go up or down consistently. Let's inspect the steps: from 2 to 4 we add 2 (+2). From 4 to 3 we subtract 1 (-1). From 3 to 5 we add 2 (+2). From 5 to 4 we subtract 1 (-1). The rule is a tag-team: '+2, then -1, +2, then -1'! Spotting two rules working together makes you a true pattern ninja.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "title": "Alternating Challenge",
+      "body": "What does an alternating pattern sequence do differently than a simple one-rule sequence?",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Creating Your Own Mathematical Universe",
+      "body": "The ultimate test of understanding is creation. When you invent your own [DICT_GRADE_PATTERN|Pattern], you become the architect of a mini mathematical universe. You get to decide whether your numbers grow by 3s, shrink by 5s, or alternate between adding 1 and multiplying. When you share your puzzle with a classmate, you test their logical reasoning. Mathematics is not just about memorizing answers; it is a creative language of order, symmetry, and prediction.",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Final Challenge: Pattern Master",
+      "body": "Design a 5-number sequence on a piece of paper using a tricky rule (like adding 3 then subtracting 1). Give it to an adult or sibling and see if they can crack your code!",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "Which of the following is a correct rule for the sequence: 100, 90, 80, 70?",
+      "options": [
+        "Add 10",
+        "Subtract 10",
+        "Multiply by 2"
+      ],
+      "correct_index": 1,
+      "explanation": "The numbers decrease by 10 with each step, meaning the rule is Subtract 10.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_ch12",
+    "title": "Chapter 12: Ratio and Proportion",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the concept of ratio and how to express comparisons between quantities of the same units",
+      "Simplify ratios to their lowest terms and recognize equivalent ratios",
+      "Understand proportion as an equality of two ratios and solve problems using unitary method"
+    ],
+    "core_concepts": [
+      "DICT_MATH_RATIO",
+      "DICT_MATH_PROPORTION",
+      "DICT_MATH_UNITARY"
+    ],
+    "ai_context": {
+      "learning_goal": "Students must master comparing quantities using division, finding equivalent forms, and solving real-world proportion problems.",
+      "common_misconceptions": [
+        "Students often think ratios can be written with different units without converting them first.",
+        "Students confuse the order of terms in a ratio (e.g., writing 2:3 when the answer is 3:2)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Grand Lemonade Recipe",
+      "body": "Imagine you are running a legendary juice stall at your school fair. Your special lemonade recipe requires exactly 2 cups of lemon juice for every 6 cups of water. It tastes magical! But suddenly, a massive crowd arrives, and you need to make a giant batch using 10 cups of lemon juice. How much water do you need so the lemonade tastes exactly the same? If you guess randomly, it might end up too sour or too watery. In mathematics, we use the powerful magic of [DICT_MATH_RATIO|Ratio] and [DICT_MATH_PROPORTION|Proportion] to solve scaling puzzles like this effortlessly!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In the lemonade story, if you use 2 cups of lemon juice for every 6 cups of water, what is the core relationship being compared?",
+      "options": [
+        "The difference in weight between lemons and water",
+        "The relative amounts of lemon juice compared to water using division",
+        "The total volume of liquids added together"
+      ],
+      "correct_index": 1,
+      "explanation": "A ratio is a way of comparing quantities of the same kind by division, showing how many times one quantity is contained in another.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Understanding Ratios and Comparison by Division",
+      "body": "In daily life, we compare things constantly. We say Rahul is taller than Priya, or a basketball is heavier than a tennis ball. This is comparison by subtraction. However, in mathematics, when we want a precise, mathematical relationship, we use comparison by division. This comparison is called a [DICT_MATH_RATIO|Ratio]. For example, if Reena has 8 pens and Meena has 4 pens, we can compare them by saying Reena has twice as many pens as Meena. Mathematically, the ratio of Reena's pens to Meena's pens is 8 to 4, which is written with a colon as 8:4. The colon symbol ':' is read as 'is to'. A ratio has no units because it is a pure number comparing similar quantities. If you are comparing lengths, both must be in centimeters or both in meters. You cannot compare 5 kilograms of apples to 3 centimeters of ribbon directly without converting or understanding that ratios compare homogeneous quantities.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "front": "What does a colon symbol (:) represent in a ratio?",
+      "back": "It is read as 'is to' and separates the two quantities being compared.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Classroom Activity: Count the Classroom Items",
+      "body": "Ask students to count the number of boys and girls in the classroom, or the number of windows and doors. Write these down as ratios on the board. Emphasize that order matters: the ratio of boys to girls is different from the ratio of girls to boys!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Properties of Ratios: Order and Units",
+      "body": "When working with ratios, two golden rules must always be obeyed. First, order is extremely crucial. If the problem asks for the ratio of the number of red balls to blue balls, and there are 3 red balls and 5 blue balls, the ratio is 3:5. If you write 5:3, it represents blue balls to red balls, which is entirely different! Second, the quantities must be in the same units. Suppose you want to find the ratio of 50 cm to 2 meters. You cannot write 50:2 directly because centimeters and meters are different units. You must first convert 2 meters into centimeters (2 × 100 = 200 cm). Then, the ratio becomes 50 cm to 200 cm, which is written as 50:200. Ignoring units is the number one trap that students fall into during examinations.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "What is the ratio of 50 paise to 2 rupees? (Hint: 1 rupee = 100 paise)",
+      "options": [
+        "1:4",
+        "50:2",
+        "1:2"
+      ],
+      "correct_index": 0,
+      "explanation": "First convert 2 rupees to paise: 2 × 100 = 200 paise. Then form the ratio 50:200. Divide both numbers by 50 to get 1:4.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Simplifying Ratios to Lowest Terms",
+      "body": "Just like fractions, ratios can and should be simplified to their lowest terms. A ratio is in its simplest form when its terms have no common factor other than 1. For instance, consider the ratio 12:18. To reduce this to its simplest form, we find the Highest Common Factor (HCF) of 12 and 18, which is 6. Dividing both terms by 6 gives us 12 ÷ 6 = 2 and 18 ÷ 6 = 3. Thus, the simplified ratio is 2:3. Notice how 12:18, 4:6, and 2:3 all represent the exact same proportional relationship. These are known as equivalent ratios. To find an equivalent ratio, you can multiply or divide both terms of a given ratio by the same non-zero number, exactly as you do with equivalent fractions.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "How do you simplify a ratio like 24:36?",
+      "back": "Find the HCF of 24 and 36 (which is 12) and divide both terms by 12, resulting in 2:3.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Concept 2: What is a Proportion?",
+      "body": "Now that we master ratios, let's step up to [DICT_MATH_PROPORTION|Proportion]. What happens when two ratios are equal to each other? We say that they are in proportion. For example, consider the ratio 2:3 and the ratio 4:6. Since both simplify to the same value, we write them as 2:3 = 4:6, or using the proportion symbol (::), as 2:3 :: 4:6. This is read as '2 is to 3 as 4 is to 6'. In any proportion, there are four terms. Let's write a general proportion as a:b = c:d. The first and last terms (a and d) are called the 'extremes', while the middle terms (b and c) are called the 'means'. A fundamental, beautiful property of proportions is that the product of the extremes equals the product of the means! That is, if a:b = c:d, then a × d = b × c. This cross-multiplication rule is a master key for checking if four numbers form a proportion.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "Are the numbers 3, 9, 4, and 12 in proportion in that order (3:9 and 4:12)?",
+      "options": [
+        "Yes, because 3 × 12 = 36 and 9 × 4 = 36",
+        "No, because 3 × 9 does not equal 4 × 12",
+        "Yes, because 3 + 9 equals 4 + 8"
+      ],
+      "correct_index": 0,
+      "explanation": "Using the product of extremes equals product of means: Extremes are 3 and 12 (product 36). Means are 9 and 4 (product 36). Since products are equal, they form a proportion.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "teacher_tip",
+      "title": "The Scaling Analogy",
+      "body": "Explain proportions to students using photocopier machines. When you enlarge a photo from 100% to 200%, the length and breadth scale in proportion. If length doubles, breadth must also double, otherwise the picture looks distorted!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: The Unitary Method",
+      "body": "Often, word problems give you the value of multiple items and ask you to find the value of a different number of items. To solve these smoothly, mathematicians developed the [DICT_MATH_UNITARY|Unitary Method]. The word 'unitary' comes from 'unit', which means one. The strategy has two simple steps: Step 1: Find the value of one unit by dividing. Step 2: Find the value of the required number of units by multiplying. For example, if the cost of 6 notebooks is ₹180, how much will 10 notebooks cost? First, find the cost of 1 notebook: ₹180 ÷ 6 = ₹30. Second, find the cost of 10 notebooks: ₹30 × 10 = ₹300. This two-step dance—divide to find one, multiply to find many—is one of the most useful tools in all of mathematics and everyday commerce.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "What are the two steps of the Unitary Method?",
+      "back": "Step 1: Find the value of one unit by division. Step 2: Find the value of the required quantity by multiplication.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "If a car travels 150 km in 3 hours, how far will it travel in 5 hours at the same speed?",
+      "options": [
+        "200 km",
+        "250 km",
+        "300 km"
+      ],
+      "correct_index": 1,
+      "explanation": "Distance in 1 hour = 150 ÷ 3 = 50 km. Distance in 5 hours = 50 × 5 = 250 km.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Dividing a Quantity in a Given Ratio",
+      "body": "Another common application of ratios is dividing a total quantity into parts based on a specific ratio. Suppose ₹500 is to be divided between two friends, Aman and Bhuvan, in the ratio 2:3. How much does each person get? Here is the systematic method: First, find the total number of parts by adding the terms of the ratio together (2 + 3 = 5 parts). Second, find the value of a single part by dividing the total quantity by the total number of parts (₹500 ÷ 5 = ₹100 per part). Third, multiply the value of one part by each individual ratio term. Aman gets 2 parts, so 2 × ₹100 = ₹200. Bhuvan gets 3 parts, so 3 × ₹100 = ₹300. To check your work, add their shares together: ₹200 + ₹300 = ₹500, which matches the original total!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "When dividing a quantity in the ratio a:b, what is the first step you must perform?",
+      "back": "Add the ratio terms together (a + b) to find the total number of parts.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "Divide 36 marbles between Maya and Tara in the ratio 1:2. How many marbles does Tara get?",
+      "options": [
+        "12 marbles",
+        "18 marbles",
+        "24 marbles"
+      ],
+      "correct_index": 2,
+      "explanation": "Total parts = 1 + 2 = 3 parts. Value of one part = 36 ÷ 3 = 12. Tara gets 2 parts, so 2 × 12 = 24 marbles.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Deep Dive: Why Ratios Govern Art, Architecture, and Nature",
+      "body": "Ratios are not just numbers in a textbook; they are the hidden harmony of the universe! Ancient Greek architects used a special ratio called the Golden Ratio (approximately 1.618:1) to design breathtaking structures like the Parthenon. In nature, the spiral of a nautilus shell, the arrangement of leaves on a stem, and the proportions of the human body follow precise mathematical ratios. When things are in pleasing proportions, our brains perceive them as beautiful and balanced. Furthermore, in music, notes harmonize when their frequencies form simple ratios like 2:1 (an octave) or 3:2 (a fifth). Thus, mastering ratios unlocks an appreciation for how science, art, and mathematics intertwine.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "Real-World Currency and Shopping",
+      "body": "Take grocery bills or restaurant menus to class. Ask students to compare the price-per-weight ratio of a small packet of chips versus a family pack. This teaches them how smart shoppers use ratios to find the best value for money!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "If a 500g box of cereal costs ₹100 and a 1kg (1000g) box costs ₹180, which pack has a better price-per-gram ratio?",
+      "options": [
+        "The 500g box",
+        "The 1kg box",
+        "Both have the same ratio"
+      ],
+      "correct_index": 1,
+      "explanation": "500g costs ₹100, so 1000g at that rate would be ₹200. The 1kg box costs ₹180, which is cheaper, giving a better price-per-gram ratio.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Summary of Key Concepts & Problem Solving Strategies",
+      "body": "Let's review our journey through Chapter 12. First, we learned that a ratio compares two quantities of the same kind by division, written as a:b, and must always be in identical units. Second, we discovered that ratios can be simplified like fractions by dividing both terms by their HCF. Third, we explored proportions, where two ratios are equal (a:b = c:d), satisfying the golden rule that the product of extremes equals the product of means. Finally, we mastered the unitary method—finding the value of one unit first before calculating the final answer—and learned how to divide quantities into proportional parts. With these tools in your mathematical toolkit, you are ready to conquer any challenge involving ratios and proportions!",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

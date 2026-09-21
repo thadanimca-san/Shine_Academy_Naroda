@@ -1,0 +1,94 @@
+[
+  {
+    "id": "Q_MATH_9_CH9_001",
+    "chapter_id": "GSEB_MATH_9_CH9",
+    "topic_id": "KOBJ_CIRCLE_CHORD",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["chord", "radius", "perpendicular distance"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "High",
+    "question_text": "A chord of length 16 cm is drawn in a circle of radius 10 cm. Find the distance of the chord from the centre of the circle.",
+    "options": ["6 cm", "8 cm", "10 cm", "12 cm"],
+    "answer": "6 cm",
+    "explanation": "Let the chord be AB = 16 cm. A perpendicular dropped from the centre bisects the chord, so half of the chord is 8 cm. Using Pythagoras theorem in the right triangle formed by the radius, half-chord, and distance from the centre: r^2 = d^2 + (AB/2)^2 => 10^2 = d^2 + 8^2 => 100 = d^2 + 64 => d^2 = 36 => d = 6 cm.",
+    "distractor_rationale": "8 cm is half the chord length. 10 cm is the radius. 12 cm is a miscalculation of the Pythagorean theorem.",
+    "ai_context": {
+      "learning_goal": "Apply the theorem that the perpendicular from the centre of a circle to a chord bisects the chord, and use the Pythagorean theorem.",
+      "common_misconceptions": ["Forgetting to halve the chord length before using the Pythagorean theorem.", "Adding the squares instead of subtracting."],
+      "hint": "Draw a diagram. The radius, the perpendicular distance from the centre to the chord, and half of the chord form a right-angled triangle. Try using the Pythagorean theorem."
+    }
+  },
+  {
+    "id": "Q_MATH_9_CH9_002",
+    "chapter_id": "GSEB_MATH_9_CH9",
+    "topic_id": "KOBJ_CIRCLE_CYCLIC_QUAD",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["cyclic quadrilateral", "angles"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "In a cyclic quadrilateral ABCD, if angle A = 70 degrees, what is the measure of angle C?",
+    "options": ["70 degrees", "110 degrees", "90 degrees", "180 degrees"],
+    "answer": "110 degrees",
+    "explanation": "In a cyclic quadrilateral, the sum of opposite angles is 180 degrees. Therefore, angle A + angle C = 180 degrees. 70 + angle C = 180 => angle C = 110 degrees.",
+    "distractor_rationale": "70 degrees is the measure if it were a parallelogram. 90 is a right angle trap. 180 is the sum, not the individual angle.",
+    "ai_context": {
+      "learning_goal": "Understand and apply the property that opposite angles of a cyclic quadrilateral are supplementary.",
+      "common_misconceptions": ["Thinking opposite angles in a cyclic quadrilateral are equal.", "Confusing cyclic quadrilaterals with parallelograms."],
+      "hint": "What is the relationship between opposite angles in a cyclic quadrilateral? Their sum is always a specific value."
+    }
+  },
+  {
+    "id": "Q_MATH_9_CH9_003",
+    "chapter_id": "GSEB_MATH_9_CH9",
+    "topic_id": "KOBJ_CIRCLE_ARC_ANGLE",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["arc", "angle subtended", "centre"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "Medium",
+    "question_text": "An arc of a circle subtends an angle of 60 degrees at the centre. What angle does the same arc subtend at any remaining part of the circle?",
+    "options": ["120 degrees", "60 degrees", "30 degrees", "90 degrees"],
+    "answer": "30 degrees",
+    "explanation": "The angle subtended by an arc at the centre is double the angle subtended by it at any remaining part of the circle. Therefore, the angle at the remaining part is 60 / 2 = 30 degrees.",
+    "distractor_rationale": "120 is double instead of half. 60 is assuming they are equal. 90 is a random angle.",
+    "ai_context": {
+      "learning_goal": "Apply the theorem relating the angle subtended by an arc at the centre to the angle subtended at the remaining part of the circle.",
+      "common_misconceptions": ["Thinking the angle at the circumference is double the angle at the centre.", "Assuming the angles are equal."],
+      "hint": "Remember the theorem: The angle at the centre is exactly twice the angle on the circumference subtended by the same arc."
+    }
+  },
+  {
+    "id": "Q_MATH_9_CH9_004",
+    "chapter_id": "GSEB_MATH_9_CH9",
+    "topic_id": "KOBJ_CIRCLE_SEMICIRCLE",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["semicircle", "angle"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "What is the measure of an angle in a semicircle?",
+    "options": ["45 degrees", "60 degrees", "90 degrees", "180 degrees"],
+    "answer": "90 degrees",
+    "explanation": "An angle inscribed in a semicircle is always a right angle, which is 90 degrees.",
+    "distractor_rationale": "180 is a straight angle. 45 and 60 are incorrect common angles.",
+    "ai_context": {
+      "learning_goal": "Recognize that the angle in a semicircle is a right angle.",
+      "common_misconceptions": ["Confusing a semicircle angle with the straight angle of the diameter itself (180 degrees)."],
+      "hint": "Think about the angle subtended by the diameter at the circumference."
+    }
+  }
+]

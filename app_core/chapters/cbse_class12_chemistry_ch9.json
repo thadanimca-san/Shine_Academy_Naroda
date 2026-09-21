@@ -1,0 +1,531 @@
+{
+  "metadata": {
+    "id": "cbse_class12_chemistry_ch9",
+    "title": "Chapter 9: Amines",
+    "subject": "Chemistry",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_001",
+      "type": "hook",
+      "title": "Step 1: Hook - The Molecular Basis of Life and Medicine",
+      "title_hi": "चरण 1: हुक - जीवन और औषधि का आणविक आधार",
+      "title_gu": "પગલું 1: હૂક - જીવન અને ઔષધિનો આણ્વીય આધાર",
+      "body": "Did you know that the sudden rush of energy you feel during fear or excitement (adrenaline), the pain relief from morphine, and the vibrant synthetic dyes used in textiles all owe their existence to nitrogen-containing organic compounds called Amines? Amines are derivative forms of ammonia where one or more hydrogen atoms are replaced by alkyl or aryl groups. From vital vitamins like Thiamine to local anesthetics like Novocaine, amines form the foundation of life-saving biochemistry!",
+      "body_hi": "क्या आप जानते हैं कि डर या उत्तेजना के दौरान महसूस होने वाला एड्रेनालाईन का प्रवाह, मॉर्फिन से मिलने वाली दर्द से राहत, और कपड़ों में उपयोग की जाने वाली चमकीली डाई सभी नाइट्रोजन युक्त कार्बनिक यौगिकों 'ऐमीन' (Amines) के कारण हैं? ऐमीन अमोनिया के व्युत्पन्न हैं जहां एक या अधिक हाइड्रोजन परमाणुओं को एल्किल या एरिल समूहों द्वारा प्रतिस्थापित किया जाता है। थियामिन जैसे विटामिन से लेकर नोवोकेन जैसे निश्चेतक तक, ऐमीन जीवन रक्षक जैव-रसायन का आधार हैं!",
+      "body_gu": "શું તમે જાણો છો કે ડર કે ઉત્તેજના સમયે તમને અનુભવાતો એડ્રેનાલિનનો આવેગ, મોર્ફિનથી મળતી દર્દ મુક્તિ અને કાપડ ઉદ્યોગમાં વપરાતા જીવંત રંજકો (dyes) આ બધું જ નાઇટ્રોજન ધરાવતા કાર્બનિક સંયોજનો એટલે કે 'એમાઇન્સ' ને આભારી છે? એમાઇન્સ એ એમોનિયાના વ્યુત્પન્ન છે જેમાં એક કે તેથી વધુ હાઇડ્રોજન પરમાણુઓનું આલ્કાઇલ અથવા એરાઇલ સમૂહ દ્વારા વિસ્થાપન થાય છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_002",
+      "type": "socratic_question",
+      "title": "Step 2: Socratic Question - Unveiling Nitrogen's Chemistry",
+      "title_hi": "चरण 2: सुकराती प्रश्न - नाइट्रोजन के रसायन विज्ञान का अनावरण",
+      "title_gu": "પગલું 2: સોક્રેટિક પ્રશ્ન - નાઇટ્રોજન રસાયણવિજ્ઞાનનું અનાવરણ",
+      "question": "Ammonia (NH3) has an unshared lone pair of electrons on its nitrogen atom, making it a Lewis base. When we replace hydrogen atoms with alkyl groups (e.g., -CH3), how does the basicity of the resulting amine change in the gaseous state versus aqueous solution?",
+      "question_hi": "अमोनिया (NH3) के नाइट्रोजन परमाणु पर एक एकाकी इलेक्ट्रॉन युग्म (lone pair) होता है, जो इसे लुईस क्षार बनाता है। जब हम हाइड्रोजन परमाणुओं को एल्किल समूहों (जैसे -CH3) से बदलते हैं, तो गैसीय अवस्था बनाम जलीय विलयन में ऐमीन की क्षारकता कैसे बदलती है?",
+      "question_gu": "એમોનિયા (NH3) ના નાઇટ્રોજન પરમાણુ પર અવિભાજિત ઇલેક્ટ્રોન યુગ્મ (lone pair) હોય છે, જે તેને લુઇસ બેઇઝ બનાવે છે. જ્યારે આપણે હાઇડ્રોજન પરમાણુઓને આલ્કાઇલ સમૂહો (જેમ કે -CH3) દ્વારા વિસ્થાપિત કરીએ છીએ, ત્યારે વાયુ અવાસ્થા અને જલીય દ્રાવણમાં બનતા એમાઇનની બેઝિકતા કેવી રીતે બદલાય છે?",
+      "options": [
+        "In the gaseous state, basicity increases strictly with alkyl substitution (3° > 2° > 1° > NH3), but in aqueous state, steric hindrance and hydration energy alter this order.",
+        "In both gaseous and aqueous states, tertiary amines are always the weakest bases due to steric crowding.",
+        "Replacing hydrogen with alkyl groups decreases basicity in all states because alkyl groups are electron-withdrawing.",
+        "The basicity remains identical in both states because solvation has no effect on electron density."
+      ],
+      "options_hi": [
+        "गैसीय अवस्था में, क्षारकता एल्किल प्रतिस्थापन के साथ बढ़ती है (3° > 2° > 1° > NH3), लेकिन जलीय अवस्था में, त्रिविम बाधा और जलयोजन ऊर्जा इस क्रम को बदल देती है।",
+        "गैसीय और जलीय दोनों अवस्थाओं में, त्रिविम बाधा के कारण तृतीयक ऐमीन हमेशा सबसे कमजोर क्षार होते हैं।",
+        "हाइड्रोजन को एल्किल समूहों से बदलने पर सभी अवस्थाओं में क्षारकता घट जाती है क्योंकि एल्किल समूह इलेक्ट्रॉन-आकर्षी होते हैं।",
+        "दोनों अवस्थाओं में क्षारकता समान रहती है क्योंकि विलायकयोजन का इलेक्ट्रॉन घनत्व पर कोई प्रभाव नहीं पड़ता है।"
+      ],
+      "options_gu": [
+        "વાયુ અવસ્થામાં, બેઝિકતા આલ્કાઇલ વિસ્થાપન સાથે ચોક્કસપણે વધે છે (3° > 2° > 1° > NH3), પરંતુ જલીય દ્રાવણમાં અવકાશીય અવરોધ અને હાઇડ્રેશન ઊર્જા આ ક્રમને બદલી નાખે છે.",
+        "વાયુ અને જલીય બંને અવસ્થામાં, અવકાશીય અવરોધને કારણે તૃતીયક એમાઇન હંમેશા સૌથી નિર્બળ બેઇઝ હોય છે.",
+        "હાઇડ્રોજનને આલ્કાઇલ સમૂહો દ્વારા વિસ્થાપિત કરવાથી બધી અવસ્થાઓમાં બેઝિકતા ઘટે છે કારણ કે આલ્કાઇલ સમૂહો ઇલેક્ટ્રોન-આકર્ષક છે.",
+        "બંને અવસ્થાઓમાં બેઝિકતા સમાન રહે છે કારણ કે સોલ્વેશનની ઇલેક્ટ્રોન ઘનતા પર કોઈ અસર થતી નથી."
+      ],
+      "correct_index": 0,
+      "explanation": "In the gas phase, basicity depends only on the inductive (+I) effect of alkyl groups: 3° > 2° > 1° > NH3. However, in aqueous solution, basicity is governed by three factors working together: inductive effect, steric hindrance, and solvation (hydration) energy of the substituted ammonium cation.",
+      "explanation_hi": "गैसीय अवस्था में, क्षारकता केवल एल्किल समूहों के प्रेरक (+I) प्रभाव पर निर्भर करती है: 3° > 2° > 1° > NH3। हालांकि, जलीय विलयन में क्षारकता तीन कारकों के संयोजन द्वारा नियंत्रित होती है: प्रेरक प्रभाव, त्रिविम बाधा (steric hindrance), और प्रतिस्थापित अमोनियम धनायन की विलायकयोजन (जलयोजन) ऊर्जा।",
+      "explanation_gu": "વાયુ અવસ્થામાં, બેઝિકતા માત્ર આલ્કાઇલ સમૂહોની પ્રેરક (+I) અસર પર આધાર રાખે છે: 3° > 2° > 1° > NH3. પરંતુ, જલીય દ્રાવણમાં બેઝિકતા ત્રણ પરિબળોની સંયુક્ત અસર પર આધાર રાખે છે: પ્રેરક અસર, અવકાશીય અવરોધ અને હાઇડ્રેશન ઊર્જા."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_003",
+      "type": "discovery",
+      "title": "Step 3: Discovery - The Dual Forces: Inductive Effect vs Solvation",
+      "title_hi": "चरण 3: खोज - दोहरे बल: प्रेरक प्रभाव बनाम जलयोजन",
+      "title_gu": "પગલું 3: શોધ - બેવડા બળો: પ્રેરક અસર વિરુદ્ધ સોલ્વેશન",
+      "body": "When methyl-substituted amines are placed in water, the order of basic strength is found to be: (CH3)2NH (2°) > CH3NH2 (1°) > (CH3)3N (3°) > NH3. Notice that the tertiary amine is LESS basic than the secondary and primary amine! Why? Because as the size of the substituted ammonium ion increases, steric hindrance impedes hydrogen bonding with water molecules, reducing its hydration stabilization energy. For ethyl-substituted amines, the basicity order becomes: (C2H5)2NH (2°) > (C2H5)3N (3°) > C2H5NH2 (1°) > NH3. The fundamental principle discovered here is that aqueous basic strength is a delicate balance of inductive (+I) effect, steric crowding, and hydrogen-bonded solvation.",
+      "body_hi": "जब मिथाइल-प्रतिस्थापित ऐमीन को पानी में रखा जाता है, तो क्षारीय सामर्थ्य का क्रम होता है: (CH3)2NH (2°) > CH3NH2 (1°) > (CH3)3N (3°) > NH3। ध्यान दें कि तृतीयक ऐमीन (3°) द्वितीयक और प्राथमिक ऐमीन से कम क्षारीय है! ऐसा क्यों? क्योंकि प्रतिस्थापित अमोनियम आयन का आकार बढ़ने से, त्रिविम बाधा जल के अणुओं के साथ हाइड्रोजन बंध बनाने में रुकावट डालती है। इथाइल-प्रतिस्थापित ऐमीन के लिए यह क्रम (C2H5)2NH (2°) > (C2H5)3N (3°) > C2H5NH2 (1°) > NH3 होता है।",
+      "body_gu": "જ્યારે મિથાઇલ-વિસ્થાપિત એમાઇન્સને પાણીમાં ઓગાળવામાં આવે છે, ત્યારે બેઝિક પ્રબળતાનો ક્રમ: (CH3)2NH (2°) > CH3NH2 (1°) > (CH3)3N (3°) > NH3 મળે છે. ધ્યાન આપો કે તૃતીયક એમાઇન એ દ્વિતીયક અને પ્રાથમિક કરતાં ઓછો બેઝિક છે! ઇથાઇલ-વિસ્થાપિત એમાઇન્સ માટે આ ક્રમ (C2H5)2NH (2°) > (C2H5)3N (3°) > C2H5NH2 (1°) > NH3 થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_004",
+      "type": "theory",
+      "title": "Step 4: Theory - Structure, Synthesis, and Chemical Reactivity of Amines",
+      "title_hi": "चरण 4: सिद्धांत - ऐमीन की संरचना, संश्लेषण और रासायनिक अभिक्रियाशीलता",
+      "title_gu": "પગલું 4: સિદ્ધાંત - એમાઇન્સની રચના, સંશ્લેષણ અને રાસાયણિક પ્રતિક્રિયાત્મકતા",
+      "body": "STRUCTURE: Nitrogen in amines is sp3 hybridized with a pyramidal geometry due to the presence of one lone pair (C-N-E angle is approx 108° for trimethylamine).\n\nPREPARATION METHODS:\n1. Reduction of Nitro compounds (H2/Pd, Sn+HCl, or Fe+HCl).\n2. Ammonolysis of Alkyl Halides (Hoffmann's method - gives mixture of 1°, 2°, 3° amines & quaternary ammonium salt).\n3. Reduction of Nitriles (LiAlH4 or Na/C2H5OH - yields amine with SAME number of carbons).\n4. Reduction of Amides (LiAlH4/ether followed by H2O).\n5. Gabriel Phthalimide Synthesis (Exclusively for 1° aliphatic amines; aromatic 1° amines CANNOT be prepared this way as aryl halides do not undergo nucleophilic substitution).\n6. Hoffmann Bromamide Degradation: R-CONH2 + Br2 + 4NaOH -> R-NH2 + Na2CO3 + 2NaBr + 2H2O (Yields 1° amine with ONE LESS carbon atom).\n\nKEY REACTION TESTS:\n1. Carbylamine Test (Isocyanide Test): Primary amines (aliphatic & aromatic) + CHCl3 + alc. KOH -> Foul-smelling Isocyanide (R-NC).\n2. Hinsberg Test (Benzenesulphonyl chloride): 1° amine yields alkali-soluble sulphonamide; 2° amine yields alkali-insoluble sulphonamide; 3° amine does not react.\n3. Diazotisation: Aniline + NaNO2 + 2HCl (273-278 K) -> Benzenediazonium chloride (Ar-N2+ Cl-), vital for synthesizing dyes and aromatic derivatives.",
+      "body_hi": "संरचना: ऐमीन में नाइट्रोजन sp3 संकरित होता है और एकाकी युग्म की उपस्थिति के कारण इसकी ज्यामिति पिरामिडी होती है।\n\nविरचन की विधियां:\n1. नाइट्रो यौगिकों का अपचयन (H2/Pd, Sn+HCl, Fe+HCl)।\n2. एल्किल हैलाइडों का अमोनियापघटन (हॉफमान विधि - 1°, 2°, 3° और चतुष्क लवण का मिश्रण देती है)।\n3. नाइट्राइल का अपचयन (LiAlH4 या Na/C2H5OH - समान कार्बन वाला ऐमीन देती है)।\n4. एमाइड का अपचयन (LiAlH4)।\n5. गैब्रिएल थैलिमाइड संश्लेषण (केवल 1° एलिफैटिक ऐमीन के लिए; ऐरिल हैलाइड नाभिकरागी प्रतिस्थापन नहीं दर्शाते इसलिए ऐरोमैटिक ऐमीन नहीं बन सकते)।\n6. हॉफमान ब्रोमामाइड निम्नीकरण: R-CONH2 + Br2 + 4NaOH -> R-NH2 + Na2CO3 + 2NaBr + 2H2O (एक कम कार्बन वाला 1° ऐमीन बनता है)।\n\nमहत्वपूर्ण परीक्षण:\n1. कार्बिलऐमीन परीक्षण: प्राथमिक ऐमीन + CHCl3 + alc. KOH -> दुर्गंधयुक्त आइसोसाइनाइड (R-NC)।\n2. हिन्सबर्ग परीक्षण (बेन्जीनसल्फोनिल क्लोराइड): 1° ऐमीन क्षार में घुलनशील उत्पाद देता है; 2° ऐमीन क्षार में अघुलनशील; 3° ऐमीन अभिक्रिया नहीं करता।\n3. डाइऐजोटीकरण: एनिलीन + NaNO2 + 2HCl (273-278 K) -> बेन्जीनडाइऐजोनियम क्लोराइड।",
+      "body_gu": "બંધારણ: એમાઇન્સમાં નાઇટ્રોજન sp3 સંકરણ ધરાવે છે અને લોન પેરની હાજરીને કારણે પિરામિડલ આકાર ધરાવે છે.\n\nબનાવટની પદ્ધતિઓ:\n1. નાઇટ્રો સંયોજનોનું રિડક્શન (H2/Pd, Sn+HCl, અથવા Fe+HCl).\n2. આલ્કાઇલ હેલાઇડ્સનું એમોનોલિસિસ (હોફમેન પદ્ધતિ).\n3. નાઇટ્રાઇલ્સનું રિડક્શન (LiAlH4 - સમાન કાર્બન સંખ્યા ધરાવતો એમાઇન આપશે).\n4. એમાઇડ્સનું રિડક્શન (LiAlH4).\n5. ગેબ્રિયલ થેલીમાઇડ સંશ્લેષણ (માત્ર 1° એલિફેટિક એમાઇન્સ માટે).\n6. હોફમેન બ્રોમામાઇડ વિઘટન પ્રક્રિયા: R-CONH2 + Br2 + 4NaOH -> R-NH2 + Na2CO3 + 2NaBr + 2H2O (એક કાર્બન ઓછો ધરાવતો 1° એમાઇન બનાવે છે).\n\nમહત્વપૂર્ણ કસોટીઓ:\n1. કાર્બાઇલએમાઇન કસોટી: 1° એમાઇન + CHCl3 + alc. KOH -> ખરાબ વાસ ધરાવતો આઇસોસાયનાઇડ (R-NC).\n2. હિન્સબર્ગ કસોટી: 1° એમાઇન બેઇઝમાં દ્રાવ્ય સલ્ફોનામાઇડ આપે છે; 2° એમાઇન અદ્રાવ્ય; 3° એમાઇન પ્રક્રિયા કરતો નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_005",
+      "type": "knowledge_check",
+      "title": "Step 5: Knowledge Check - Reaction Mechanisms & Tests",
+      "title_hi": "चरण 5: ज्ञान जांच - अभिक्रिया क्रियाविधि और परीक्षण",
+      "title_gu": "પગલું 5: જ્ઞાન ચકાસણી - પ્રક્રિયા વિગતો અને કસોટીઓ",
+      "question": "An organic compound 'X' with molecular formula C3H9N reacts with Benzenesulphonyl chloride to give a solid product that is INSOLUBLE in aqueous NaOH. Compound 'X' does NOT give the Carbylamine test. What is compound 'X'?",
+      "question_hi": "आणविक सूत्र C3H9N वाला एक कार्बनिक यौगिक 'X' बेन्जीनसल्फोनिल क्लोराइड के साथ अभिक्रिया करके एक ठोस उत्पाद देता है जो जलीय NaOH में अघुलनशील है। यौगिक 'X' कार्बिलऐमीन परीक्षण नहीं देता है। यौगिक 'X' क्या है?",
+      "question_gu": "આણ્વીય સૂત્ર C3H9N ધરાવતું કાર્બનિક સંયોજન 'X' બેન્ઝીનસલ્ફોનાઇલ ક્લોરાઇડ સાથે પ્રક્રિયા કરીને એવો ઘન પદાર્થ આપે છે જે જલીય NaOH માં અદ્રાવ્ય છે. 'X' કાર્બાઇલએમાઇન કસોટી આપતો નથી. સંયોજન 'X' કયું છે?",
+      "options": [
+        "N-Methylamidoethane",
+        "N,N-Dimethylmethanamine (Tertiary amine)",
+        "N-Methylethanamine (Secondary amine)",
+        "Propan-1-amine (Primary amine)"
+      ],
+      "options_hi": [
+        "N-मिथाइलऐमिडोइथेन",
+        "N,N-डाइमिथाइलमेथेनामीन (तृतीयक ऐमीन)",
+        "N-मिथाइलइथेनामीन (द्वितीयक ऐमीन)",
+        "प्रोपेन-1-ऐमीन (प्राथमिक ऐमीन)"
+      ],
+      "options_gu": [
+        "N-મિથાઇલએમિડોઇથેન",
+        "N,N-ડાઇમિથાઇલમેથેનામાઇન (તૃતીયક એમાઇન)",
+        "N-મિથાઇલઇથેનામાઇન (દ્વિતીયક એમાઇન)",
+        "પ્રોપેન-1-એમાઇન (પ્રાથમિક એમાઇન)"
+      ],
+      "correct_index": 2,
+      "explanation": "Secondary amines react with Hinsberg's reagent to form N,N-disubstituted sulphonamides that lack an acidic hydrogen on nitrogen, making them insoluble in NaOH. Secondary amines also do not respond to the Carbylamine test.",
+      "explanation_hi": "द्वितीयक ऐमीन हिन्सबर्ग अभिकर्मक के साथ अभिक्रिया करके N,N-द्विप्रतिस्थापित सल्फोनामाइड बनाते हैं जिसमें नाइट्रोजन पर कोई अम्लीय हाइड्रोजन नहीं होता है, जिससे यह NaOH में अघुलनशील हो जाता है। द्वितीयक ऐमीन कार्बिलऐमीन परीक्षण भी नहीं देते हैं।",
+      "explanation_gu": "દ્વિતીયક એમાઇન હિન્સબર્ગ પ્રક્રિયાક સાથે પ્રક્રિયા કરીને N,N-વિસ્થાપિત સલ્ફોનામાઇડ બનાવે છે જેમાં નાઇટ્રોજન પર એસિડિક હાઇડ્રોજન હોતો નથી, તેથી તે NaOH માં અદ્રાવ્ય રહે છે. દ્વિતીયક એમાઇન કાર્બાઇલએમાઇન કસોટી પણ આપતા નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_006",
+      "type": "reflection",
+      "title": "Step 6: Reflection - Aniline Anomalies in Electrophilic Substitution",
+      "title_hi": "चरण 6: विचार - इलेक्ट्रॉनरागी प्रतिस्थापन में एनिलीन की असंगतियाँ",
+      "title_gu": "પગલું 6: વિચાર - ઇલેક્ટ્રોનઅનુરાગી વિસ્થાપનમાં એનિલાઇનની વિસંગતતાઓ",
+      "prompt": "Why does Aniline NOT undergo Friedel-Crafts alkylation/acylation reactions, and why does nitration of aniline with concentrated HNO3/H2SO4 produce a significant amount (47%) of m-nitroaniline despite -NH2 being strongly ortho/para-directing?",
+      "prompt_hi": "एनिलीन फ्रीडेल-क्राफ्ट्स एल्किलीकरण/एसिलीकरण अभिक्रियाएं क्यों नहीं दर्शाता है, और -NH2 समूह के प्रबल अर्थो/पैरा-निर्देशी होने के बावजूद सांद्र HNO3/H2SO4 के साथ एनिलीन का नाइट्रीकरण महत्वपूर्ण मात्रा (47%) में m-नाइट्रोएनिलीन क्यों पैदा करता है?",
+      "prompt_gu": "એનિલાઇન ફ્રિડલ-ક્રાફ્ટ્સ પ્રક્રિયા શા માટે દર્શાવતું નથી, અને -NH2 સમૂહ ખૂબ ઓર્થો/પેરા-નિર્દેશક હોવા છતાં નાઇટ્રેશન પ્રક્રિયામાં 47% m-નાઇટ્રોએનિલાઇન શા માટે આપે છે?",
+      "body": "Aniline is a strong Lewis base and reacts with the Lewis acid catalyst AlCl3 used in Friedel-Crafts reaction to form a complex salt [C6H5NH2+-AlCl3-]. This places a positive charge on nitrogen, turning the -NH2 group into a powerful deactivating group and completely blocking the reaction.\n\nIn nitration under strongly acidic conditions, aniline gets protonated to form the Anilinium ion (-NH3+), which is m-directing! Hence, 47% m-nitroaniline is formed alongside 51% p-nitroaniline and 2% o-nitroaniline. To obtain p-nitroaniline as the major product, the -NH2 group must first be protected by acetylation with acetic anhydride.",
+      "body_hi": "एनिलीन एक प्रबल लुईस क्षार है और फ्रीडेल-क्राफ्ट्स में प्रयुक्त लुईस अम्ल उत्प्रेरक AlCl3 के साथ अभिक्रिया करके एक लवण [C6H5NH2+-AlCl3-] बनाता है। यह नाइट्रोजन पर धनावेश उत्पन्न करता है जो रिंग को अत्यधिक निष्क्रिय कर देता है।\n\nतीव्र अम्लीय माध्यम में नाइट्रीकरण के दौरान, एनिलीन प्रोटॉनीकृत होकर एनीलीनियम आयन (-NH3+) बनाता है, जो m-निर्देशी होता है! इसलिए, 47% m-नाइट्रोएनिलीन बनता है। -NH2 समूह को सुरक्षित करने के लिए पहले एथिलीन एनहाइड्राइड से एसिटिलीकरण किया जाता है।",
+      "body_gu": "એનિલાઇન એ પ્રબળ લુઇસ બેઇઝ છે અને તે ફ્રિડલ-ક્રાફ્ટ્સમાં વપરાતા લુઇસ એસિડ AlCl3 સાથે પ્રક્રિયા કરીને ક્ષાર સંકીર્ણ [C6H5NH2+-AlCl3-] બનાવે છે, જે બેન્ઝીન રિંગને નિષ્ક્રિય કરે છે.\n\nપ્રબળ એસિડિક માધ્યમમાં નાઇટ્રેશન દરમિયાન, એનિલાઇન પ્રોટોન મેળવીને એનિલીનિયમ આયન (-NH3+) બનાવે છે, જે m-નિર્દેશક છે! તેથી 47% m-નાઇટ્રોએનિલાઇન મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_007",
+      "type": "connection",
+      "title": "Step 7: Connection - Industrial Synthetic Organic Dyes & Medicine",
+      "title_hi": "चरण 7: संबंध - औद्योगिक संश्लेषित रंजक और औषधि",
+      "title_gu": "પગલું 7: જોડાણ - ઔદ્યોગિક સંશ્લેષિત રંજકો અને ઔષધિઓ",
+      "body": "Diazonium salts (Ar-N2+ X-) serve as versatile synthetic intermediates in organic chemistry. Through Sandmeyer, Gattermann, and replacement reactions, the diazonium group can be replaced by -Cl, -Br, -CN, -I, -OH, -F, and -H, allowing synthesis of aromatic compounds that cannot be prepared by direct substitution.\n\nFurthermore, when diazonium salts react with phenol or aniline in alkaline/neutral media, they undergo Coupling Reactions to form brightly colored Azo Dyes (e.g., p-hydroxyazobenzene - orange dye; p-aminoazobenzene - yellow dye). This fundamental reaction powers the modern pigment and textile dye industries!",
+      "body_hi": "डाइऐजोनियम लवण (Ar-N2+ X-) कार्बनिक रसायन विज्ञान में बहुमुखी संश्लेषित मध्यवर्ती के रूप में कार्य करते हैं। सैंडमायर, गाटरमान और प्रतिस्थापन अभिक्रियाओं के माध्यम से डाइऐजोनियम समूह को -Cl, -Br, -CN, -I, -OH, -F, और -H द्वारा प्रतिस्थापित किया जा सकता है।\n\nइसके अतिरिक्त, जब डाइऐजोनियम लवण फिनोल या एनिलीन के साथ अभिक्रिया करते हैं, तो वे युग्मन अभिक्रियाएं (Coupling Reactions) करके एजो रंजक (Azo Dyes) बनाते हैं। यह अभिक्रिया आधुनिक टेक्सटाइल डाई उद्योगों की नींव है!",
+      "body_gu": "ડાયએઝોનિયમ ક્ષાર (Ar-N2+ X-) કાર્બનિક સંશ્લેષણમાં ખૂબ જ ઉપયોગી મધ્યવર્તી છે. સેન્ડમેયર અને ગેટરમેન પ્રક્રિયાઓ દ્વારા ડાયએઝોનિયમ સમૂહનું -Cl, -Br, -CN, -I, -OH, -F માં વિસ્થાપન કરી શકાય છે.\n\nઉપરાંત, જ્યારે ડાયએઝોનિયમ ક્ષાર ફિનોલ કે એનિલાઇન સાથે યુગ્મન પ્રક્રિયા (Coupling Reaction) કરે છે ત્યારે રંગીન એઝો રંજકો (Azo Dyes) બને છે, જે રંગ ઉદ્યોગનો પાયો છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_008",
+      "type": "mastery",
+      "title": "Step 8: Mastery Challenge - Multi-step Synthesis Scheme",
+      "title_hi": "चरण 8: मास्टर चुनौती - बहु-स्तरीय संश्लेषण योजना",
+      "title_gu": "પગલું 8: માસ્ટરી ચેલેન્જ - બહુ-ચરણ સંશ્લેષણ યોજના",
+      "question": "What is the correct sequence of reagents to convert Nitrobenzene into 2,4,6-Tribromofluorobenzene?",
+      "question_hi": "नाइट्रोबेन्जीन को 2,4,6-ट्राइब्रोमोफ्लोरोबेन्जीन में परिवर्तित करने के लिए अभिकर्मकों का सही क्रम क्या है?",
+      "question_gu": "નાઇટ્રોબેન્ઝીનનું 2,4,6-ટ્રાઇબ્રોમોફ્લોરોબેન્ઝીનમાં રૂપાંતર કરવા માટે પ્રક્રિયાકોનો સાચો ક્રમ કયો છે?",
+      "options": [
+        "1) Fe/HCl  2) Br2/H2O  3) NaNO2+HCl (273-278 K)  4) HBF4 followed by heating (Schiemann reaction)",
+        "1) Br2/FeBr3  2) Fe/HCl  3) NaNO2+HCl  4) CuF",
+        "1) HNO3/H2SO4  2) Br2/CS2  3) Sn/HCl  4) KF",
+        "1) NaNO2/HCl  2) Br2/H2O  3) Fe/HCl  4) HBF4/heat"
+      ],
+      "options_hi": [
+        "1) Fe/HCl  2) Br2/H2O  3) NaNO2+HCl (273-278 K)  4) HBF4 के बाद गर्म करना (शीमान अभिक्रिया)",
+        "1) Br2/FeBr3  2) Fe/HCl  3) NaNO2+HCl  4) CuF",
+        "1) HNO3/H2SO4  2) Br2/CS2  3) Sn/HCl  4) KF",
+        "1) NaNO2/HCl  2) Br2/H2O  3) Fe/HCl  4) HBF4/गर्म करना"
+      ],
+      "options_gu": [
+        "1) Fe/HCl  2) Br2/H2O  3) NaNO2+HCl (273-278 K)  4) HBF4 ત્યારબાદ ગરમ કરવું (શિમેન પ્રક્રિયા)",
+        "1) Br2/FeBr3  2) Fe/HCl  3) NaNO2+HCl  4) CuF",
+        "1) HNO3/H2SO4  2) Br2/CS2  3) Sn/HCl  4) KF",
+        "1) NaNO2/HCl  2) Br2/H2O  3) Fe/HCl  4) HBF4/ગરમ કરવું"
+      ],
+      "correct_index": 0,
+      "explanation": "Nitrobenzene is reduced by Fe/HCl to Aniline. Aniline reacts rapidly with bromine water (Br2/H2O) to form 2,4,6-tribromoaniline. Diazotisation with NaNO2/HCl gives 2,4,6-tribromobenzenediazonium chloride, which upon treatment with HBF4 followed by heating (Schiemann reaction) yields 2,4,6-tribromofluorobenzene.",
+      "explanation_hi": "नाइट्रोबेन्जीन Fe/HCl द्वारा एनिलीन में अपचयित होता है। एनिलीन ब्रोमीन जल (Br2/H2O) से अभिक्रिया करके 2,4,6-ट्राइब्रोमोएनिलीन बनाता है। NaNO2/HCl के साथ डाइऐजोटीकरण से डाइऐजोनियम लवण बनता है, जो HBF4 से गर्म करने पर (शीमान अभिक्रिया) 2,4,6-ट्राइब्रोमोफ्लोरोबेन्जीन देता है।",
+      "explanation_gu": "નાઇટ્રોબેન્ઝીનનું Fe/HCl દ્વારા એનિલાઇનમાં રિડક્શન થાય છે. એનિલાઇન બ્રોમીન જળ સાથે 2,4,6-ટ્રાઇબ્રોમોએનિલાઇન આપે છે. ડાયએઝોટીકરણ બાદ HBF4 સાથે ગરમ કરવાથી (શિમેન પ્રક્રિયા) 2,4,6-ટ્રાઇબ્રોમોફ્લોરોબેન્ઝીન બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_009",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.1: IUPAC Nomenclature & Classification",
+      "title_hi": "NCERT अभ्यास 9.1: IUPAC नामकरण और वर्गीकरण",
+      "title_gu": "NCERT સ્વાધ્યાય 9.1: IUPAC નામકરણ અને વર્ગીકરણ",
+      "question": "What is the correct IUPAC name and degree of classification for the compound (CH3)2CH-NH2?",
+      "question_hi": "यौगिक (CH3)2CH-NH2 का सही IUPAC नाम और वर्गीकरण की डिग्री क्या है?",
+      "question_gu": "(CH3)2CH-NH2 સંયોજનનું સાચું IUPAC નામ અને વર્ગીકરણ કયું છે?",
+      "options": [
+        "Propan-2-amine (Primary amine)",
+        "Isopropylamine (Secondary amine)",
+        "Propan-1-amine (Primary amine)",
+        "Dimethylmethanamine (Secondary amine)"
+      ],
+      "options_hi": [
+        "प्रोपेन-2-ऐमीन (प्राथमिक ऐमीन)",
+        "आइसोप्रोपिलऐमीन (द्वितीयक ऐमीन)",
+        "प्रोपेन-1-ऐमीन (प्राथमिक ऐमीन)",
+        "डाइमिथाइलमेथेनामीन (द्वितीयक ऐमीन)"
+      ],
+      "options_gu": [
+        "પ્રોપેન-2-એમાઇન (પ્રાથમિક એમાઇન)",
+        "આઇસોપ્રોપાઇલએમાઇન (દ્વિતીયક એમાઇન)",
+        "પ્રોપેન-1-એમાઇન (પ્રાથમિક એમાઇન)",
+        "ડાઇમિથાઇલમેથેનામાઇન (દ્વિતીયક એમાઇન)"
+      ],
+      "correct_index": 0,
+      "explanation": "The carbon chain contains 3 carbons with the -NH2 group on carbon-2. Since nitrogen is attached to only one alkyl group carbon, it is a 1° (Primary) amine named Propan-2-amine.",
+      "explanation_hi": "कार्बन श्रृंखला में 3 कार्बन हैं और -NH2 समूह कार्बन-2 पर है। चूंकि नाइट्रोजन केवल एक एल्किल समूह कार्बन से जुड़ा है, यह एक 1° (प्राथमिक) ऐमीन है जिसका नाम प्रोपेन-2-ऐमीन है।",
+      "explanation_gu": "કાર્બન શ્રૃંખલામાં 3 કાર્બન છે અને -NH2 સમૂહ બીજા કાર્બન પર છે. નાઇટ્રોજન માત્ર એક જ આલ્કાઇલ કાર્બન સાથે જોડાયેલ હોવાથી તે 1° એમાઇન (પ્રોપેન-2-એમાઇન) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_010",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.1 (Part II): IUPAC Name of Tertiary Amine",
+      "title_hi": "NCERT अभ्यास 9.1 (भाग II): तृतीयक ऐमीन का IUPAC नाम",
+      "title_gu": "NCERT સ્વાધ્યાય 9.1 (ભાગ II): તૃતીયક એમાઇનનું IUPAC નામ",
+      "question": "What is the correct IUPAC name of the compound CH3-N(CH3)-CH2-CH3?",
+      "question_hi": "यौगिक CH3-N(CH3)-CH2-CH3 का सही IUPAC नाम क्या है?",
+      "question_gu": "CH3-N(CH3)-CH2-CH3 સંયોજનનું સાચું IUPAC નામ શું છે?",
+      "options": [
+        "N,N-Dimethylethanamine",
+        "N-Methylethanamine",
+        "Ethyldimethylamine",
+        "N-Ethyl-N-methylmethanamine"
+      ],
+      "options_hi": [
+        "N,N-डाइमिथाइलइथेनामीन",
+        "N-मिथाइलइथेनामीन",
+        "इथाइलडाइमिथाइलऐमीन",
+        "N-इथाइल-N-मिथाइलमेथेनामीन"
+      ],
+      "options_gu": [
+        "N,N-ડાઇમિથાઇલઇથેનામાઇન",
+        "N-મિથાઇલઇથેનામાઇન",
+        "ઇથાઇલડાઇમિથાઇલએમાઇન",
+        "N-ઇથાઇલ-N-મિથાઇલમેથેનામાઇન"
+      ],
+      "correct_index": 0,
+      "explanation": "The longest carbon chain attached to nitrogen has 2 carbons (ethane core). The other two substituents on nitrogen are methyl groups, giving N,N-Dimethylethanamine.",
+      "explanation_hi": "नाइट्रोजन से जुड़ी सबसे लंबी कार्बन श्रृंखला में 2 कार्बन हैं (इथेन मुख्य श्रृंखला)। नाइट्रोजन पर अन्य दो प्रतिस्थापी मिथाइल समूह हैं, जिससे N,N-डाइमिथाइलइथेनामीन नाम मिलता है।",
+      "explanation_gu": "નાઇટ્રોજન સાથે જોડાયેલી સૌથી લાંબી શ્રૃંખલા 2 કાર્બનની છે. નાઇટ્રોજન પર બીજા બે મિથાઇલ સમૂહો જોડાયેલા હોવાથી N,N-ડાઇમિથાઇલઇથેનામાઇન નામ મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_011",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.2: Physical Properties - Boiling Point Comparison",
+      "title_hi": "NCERT अभ्यास 9.2: भौतिक गुण - क्वथनांक की तुलना",
+      "title_gu": "NCERT સ્વાધ્યાય 9.2: ભૌતિક ગુણધર્મો - ઉત્કલનબિંદુ સરખામણી",
+      "question": "Among Primary (1°), Secondary (2°), and Tertiary (3°) isomeric amines of molecular formula C3H9N, which order correctly represents their DECREASING boiling points?",
+      "question_hi": "आणविक सूत्र C3H9N के प्राथमिक (1°), द्वितीयक (2°), और तृतीयक (3°) समावयवी ऐमीन के बीच, कौन सा क्रम उनके घटते हुए क्वथनांक का सही प्रतिनिधित्व करता है?",
+      "question_gu": "આણ્વીય સૂત્ર C3H9N ધરાવતા 1°, 2°, અને 3° સમઘટકીય એમાઇન્સ માટે ઉત્કલનબિંદુનો ઘટતો સાચો ક્રમ કયો છે?",
+      "options": [
+        "Primary amine > Secondary amine > Tertiary amine",
+        "Tertiary amine > Secondary amine > Primary amine",
+        "Secondary amine > Primary amine > Tertiary amine",
+        "Primary amine = Secondary amine = Tertiary amine"
+      ],
+      "options_hi": [
+        "प्राथमिक ऐमीन > द्वितीयक ऐमीन > तृतीयक ऐमीन",
+        "तृतीयक ऐमीन > द्वितीयक ऐमीन > प्राथमिक ऐमीन",
+        "द्वितीयक ऐमीन > प्राथमिक ऐमीन > तृतीयक ऐमीन",
+        "प्राथमिक ऐमीन = द्वितीयक ऐमीन = तृतीयक ऐमीन"
+      ],
+      "options_gu": [
+        "પ્રાથમિક એમાઇન > દ્વિતીયક એમાઇન > તૃતીયક એમાઇન",
+        "તૃતીયક એમાઇન > દ્વિતીયક એમાઇન > પ્રાથમિક એમાઇન",
+        "દ્વિતીયક એમાઇન > પ્રાથમિક એમાઇન > તૃતીયક એમાઇન",
+        "પ્રાથમિક એમાઇન = દ્વિતીયક એમાઇન = તૃતીયક એમાઇન"
+      ],
+      "correct_index": 0,
+      "explanation": "Primary amines have two hydrogen atoms on nitrogen for extensive intermolecular hydrogen bonding. Secondary amines have only one N-H hydrogen, and tertiary amines have NO hydrogen on nitrogen to form intermolecular H-bonds. Thus, boiling points decrease in order: 1° > 2° > 3°.",
+      "explanation_hi": "प्राथमिक ऐमीन में व्यापक अंतराआण्विक हाइड्रोजन बंधन के लिए नाइट्रोजन पर दो हाइड्रोजन परमाणु होते हैं। द्वितीयक में केवल एक N-H हाइड्रोजन होता है, और तृतीयक ऐमीन में N-H हाइड्रोजन नहीं होता है। अतः क्वथनांक का क्रम है: 1° > 2° > 3°।",
+      "explanation_gu": "પ્રાથમિક એમાઇનમાં નાઇટ્રોજન પર બે હાઇડ્રોજન હોવાથી પ્રબળ આંતરઆણ્વીય H-બંધ બને છે. દ્વિતીયકમાં એક અને તૃતીયકમાં એક પણ N-H હાઇડ્રોજન ન હોવાથી ઉત્કલનબિંદુનો ઘટતો ક્રમ 1° > 2° > 3° છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_012",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.3: Order of Basicity in Aqueous Solution",
+      "title_hi": "NCERT अभ्यास 9.3: जलीय विलयन में क्षारकता का क्रम",
+      "title_gu": "NCERT સ્વાધ્યાય 9.3: જલીય દ્રાવણમાં બેઝિકતાનો ક્રમ",
+      "question": "Arrange the following compounds in INCREASING order of basic strength in aqueous solution: C6H5NH2, C2H5NH2, (C2H5)2NH, NH3.",
+      "question_hi": "निम्नलिखित यौगिकों को जलीय विलयन में क्षारीय सामर्थ्य के बढ़ते क्रम में व्यवस्थित करें: C6H5NH2, C2H5NH2, (C2H5)2NH, NH3।",
+      "question_gu": "જલીય દ્રાવણમાં બેઝિક પ્રબળતાના વધતા ક્રમમાં ગોઠવો: C6H5NH2, C2H5NH2, (C2H5)2NH, NH3.",
+      "options": [
+        "C6H5NH2 < NH3 < C2H5NH2 < (C2H5)2NH",
+        "NH3 < C6H5NH2 < (C2H5)2NH < C2H5NH2",
+        "C6H5NH2 < (C2H5)2NH < C2H5NH2 < NH3",
+        "(C2H5)2NH < C2H5NH2 < NH3 < C6H5NH2"
+      ],
+      "options_hi": [
+        "C6H5NH2 < NH3 < C2H5NH2 < (C2H5)2NH",
+        "NH3 < C6H5NH2 < (C2H5)2NH < C2H5NH2",
+        "C6H5NH2 < (C2H5)2NH < C2H5NH2 < NH3",
+        "(C2H5)2NH < C2H5NH2 < NH3 < C6H5NH2"
+      ],
+      "options_gu": [
+        "C6H5NH2 < NH3 < C2H5NH2 < (C2H5)2NH",
+        "NH3 < C6H5NH2 < (C2H5)2NH < C2H5NH2",
+        "C6H5NH2 < (C2H5)2NH < C2H5NH2 < NH3",
+        "(C2H5)2NH < C2H5NH2 < NH3 < C6H5NH2"
+      ],
+      "correct_index": 0,
+      "explanation": "Aniline (C6H5NH2) is the weakest base because the electron lone pair on nitrogen is delocalized over the benzene ring. Ammonia (NH3) is stronger than aniline but weaker than ethylamines due to lack of +I effect. Among ethylamines, (C2H5)2NH (2°) > C2H5NH2 (1°). Thus: C6H5NH2 < NH3 < C2H5NH2 < (C2H5)2NH.",
+      "explanation_hi": "एनिलीन (C6H5NH2) सबसे कमजोर क्षार है क्योंकि नाइट्रोजन का लोन पेयर बेन्जीन वलय में विस्थानिकृत होता है। अमोनिया (NH3) एनिलीन से मजबूत है लेकिन +I प्रभाव की कमी के कारण इथाइलऐमीन से कमजोर है। इथाइलऐमीन में, (C2H5)2NH (2°) > C2H5NH2 (1°)।",
+      "explanation_gu": "એનિલાઇનમાં લોન પેર બેન્ઝીન રિંગમાં વિસ્થાનિકૃત થવાથી તે સૌથી નિર્બળ બેઇઝ છે. NH3 એ એનિલાઇન કરતાં પ્રબળ પણ ઇથાઇલએમાઇન્સ કરતાં નિર્બળ છે. ઇથાઇલ સમૂહ માટે 2° > 1° હોવાથી સાચો ક્રમ C6H5NH2 < NH3 < C2H5NH2 < (C2H5)2NH છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_013",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.4: Reagents for Gabriel Phthalimide Synthesis",
+      "title_hi": "NCERT अभ्यास 9.4: गैब्रिएल थैलिमाइड संश्लेषण के लिए अभिकर्मक",
+      "title_gu": "NCERT સ્વાધ્યાય 9.4: ગેબ્રિયલ થેલીમાઇડ સંશ્લેષણ માટે પ્રક્રિયાકો",
+      "question": "Which of the following compounds CANNOT be prepared by Gabriel Phthalimide synthesis?",
+      "question_hi": "निम्नलिखित में से कौन सा यौगिक गैब्रिएल थैलिमाइड संश्लेषण द्वारा नहीं बनाया जा सकता है?",
+      "question_gu": "નીચેનામાંથી કયું સંયોજન ગેબ્રિયલ થેલીમાઇડ સંશ્લેષણ દ્વારા બનાવી શકાતું નથી?",
+      "options": [
+        "Aniline (Aromatic primary amine)",
+        "Methanamine",
+        "Ethanamine",
+        "Propan-1-amine"
+      ],
+      "options_hi": [
+        "एनिलीन (ऐरोमैटिक प्राथमिक ऐमीन)",
+        "मेथेनामीन",
+        "इथेनामीन",
+        "प्रोपेन-1-ऐमीन"
+      ],
+      "options_gu": [
+        "એનિલાઇન (એરોમેટિક પ્રાથમિક એમાઇન)",
+        "મેથેનામાઇન",
+        "ઇથેનામાઇન",
+        "પ્રોપેન-1-એમાઇન"
+      ],
+      "correct_index": 0,
+      "explanation": "Gabriel Phthalimide synthesis requires nucleophilic substitution (SN2) of phthalimide anion on an organic halide. Aromatic halides (e.g. bromobenzene) do not undergo nucleophilic substitution under normal conditions, so aromatic primary amines like Aniline cannot be prepared.",
+      "explanation_hi": "गैब्रिएल थैलिमाइड संश्लेषण के लिए ऑर्गेनिक हैलाइड पर थैलिमाइड ऋणायन के नाभिकरागी प्रतिस्थापन (SN2) की आवश्यकता होती है। ऐरिल हैलाइड नाभिकरागी प्रतिस्थापन नहीं दर्शाते हैं, इसलिए एनिलीन जैसे ऐरोमैटिक प्राथमिक ऐमीन नहीं बनाए जा सकते।",
+      "explanation_gu": "ગેબ્રિયલ થેલીમાઇડ સંશ્લેષણમાં થેલીમાઇડ એનાયન દ્વારા SN2 પ્રતિસ્થાપન પ્રક્રિયા થાય છે. એરાઇલ હેલાઇડ્સ કેન્દ્રાનુરાગી વિસ્થાપન અનુભવતા નથી, તેથી એનિલાઇન જેવા એરોમેટિક 1° એમાઇન બનાવી શકાતા નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_014",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.4 (Part II): Hoffmann Bromamide Reaction",
+      "title_hi": "NCERT अभ्यास 9.4 (भाग II): हॉफमान ब्रोमामाइड अभिक्रिया",
+      "title_gu": "NCERT સ્વાધ્યાય 9.4 (ભાગ II): હોફમેન બ્રોમામાઇડ પ્રક્રિયા",
+      "question": "When Propanamide (CH3CH2CONH2) is treated with Br2 and aqueous KOH, what product is formed?",
+      "question_hi": "जब प्रोपेनामाइड (CH3CH2CONH2) का उपचार Br2 और जलीय KOH के साथ किया जाता है, तो कौन सा उत्पाद बनता है?",
+      "question_gu": "જ્યારે પ્રોપેનામાઇડ (CH3CH2CONH2) ની Br2 અને જલીય KOH સાથે પ્રક્રિયા કરવામાં આવે, ત્યારે કઈ નીપજ મળે છે?",
+      "options": [
+        "Ethanamine (CH3CH2NH2)",
+        "Propan-1-amine (CH3CH2CH2NH2)",
+        "Bromethane (CH3CH2Br)",
+        "Methanamine (CH3NH2)"
+      ],
+      "options_hi": [
+        "इथेनामीन (CH3CH2NH2)",
+        "प्रोपेन-1-ऐमीन (CH3CH2CH2NH2)",
+        "ब्रोमोइथेन (CH3CH2Br)",
+        "मेथेनामीन (CH3NH2)"
+      ],
+      "options_gu": [
+        "ઇથેનામાઇન (CH3CH2NH2)",
+        "પ્રોપેન-1-એમાઇન (CH3CH2CH2NH2)",
+        "બ્રોમોઇથેન (CH3CH2Br)",
+        "મેથેનામાઇન (CH3NH2)"
+      ],
+      "correct_index": 0,
+      "explanation": "Hoffmann bromamide degradation reaction degrades an amide to a primary amine containing ONE LESS carbon atom than the amide. Propanamide (3 carbons) yields Ethanamine (2 carbons).",
+      "explanation_hi": "हॉफमान ब्रोमामाइड निम्नीकरण अभिक्रिया एमाइड को मूल एमाइड से एक कम कार्बन वाले प्राथमिक ऐमीन में निम्नीकृत करती है। प्रोपेनामाइड (3 कार्बन) इथेनामीन (2 कार्बन) देता है।",
+      "explanation_gu": "હોફમેન બ્રોમામાઇડ વિઘટન પ્રક્રિયા એમાઇડમાંથી એક ઓછો કાર્બન ધરાવતો પ્રાથમિક એમાઇન આપે છે. પ્રોપેનામાઇડ (3 કાર્બન) માંથી ઇથેનામાઇન (2 કાર્બન) મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_015",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.5: Distinguishing Chemical Tests",
+      "title_hi": "NCERT अभ्यास 9.5: विभेदक रासायनिक परीक्षण",
+      "title_gu": "NCERT સ્વાધ્યાય 9.5: જુદા પાડતા રાસાયણિક પરીક્ષણો",
+      "question": "Which chemical test can easily distinguish between Methylamine (CH3NH2) and Dimethylamine ((CH3)2NH)?",
+      "question_hi": "कौन सा रासायनिक परीक्षण मिथाइलऐमीन (CH3NH2) और डाइमिथाइलऐमीन ((CH3)2NH) के बीच आसानी से अंतर कर सकता है?",
+      "question_gu": "કઈ રાસાયણિક કસોટી વડે મિથાઇલએમાઇન (CH3NH2) અને ડાઇમિથાઇલએમાઇન ((CH3)2NH) વચ્ચે ભેદ પારખી શકાય છે?",
+      "options": [
+        "Carbylamine Test (CHCl3 + alc. KOH)",
+        "Iodoform Test",
+        "Tollens' Test",
+        "Biuret Test"
+      ],
+      "options_hi": [
+        "कार्बिलऐमीन परीक्षण (CHCl3 + alc. KOH)",
+        "आयोडोफॉर्म परीक्षण",
+        "टॉलेन परीक्षण",
+        "बाययूरेट परीक्षण"
+      ],
+      "options_gu": [
+        "કાર્બાઇલએમાઇન કસોટી (CHCl3 + alc. KOH)",
+        "આઇઓડોફોર્મ કસોટી",
+        "ટોલેન્સ કસોટી",
+        "બાયયુરેટ કસોટી"
+      ],
+      "correct_index": 0,
+      "explanation": "Methylamine (1° amine) responds to the Carbylamine test giving a highly foul-smelling methyl isocyanide (CH3NC). Dimethylamine (2° amine) does NOT respond to this test.",
+      "explanation_hi": "मिथाइलऐमीन (1° ऐमीन) कार्बिलऐमीन परीक्षण देता है जिससे अत्यधिक दुर्गंधयुक्त मिथाइल आइसोसाइनाइड (CH3NC) बनता है। डाइमिथाइलऐमीन (2° ऐमीन) यह परीक्षण नहीं देता है।",
+      "explanation_gu": "મિથાઇલએમાઇન (1° એમાઇન) કાર્બાઇલએમાઇન કસોટી આપે છે અને ખરાબ વાસ ધરાવતો મિથાઇલ આઇસોસાયનાઇડ બનાવે છે. ડાઇમિથાઇલએમાઇન (2° એમાઇન) આ કસોટી આપતો નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_016",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.5 (Part II): Distinguishing Aniline and Benzylamine",
+      "title_hi": "NCERT अभ्यास 9.5 (भाग II): एनिलीन और बेन्जिलऐमीन में अंतर",
+      "title_gu": "NCERT સ્વાધ્યાય 9.5 (ભાગ II): એનિલાઇન અને બેન્ઝાઇલએમાઇન વચ્ચે ભેદ",
+      "question": "Which test distinguishes Aniline (C6H5NH2) from Benzylamine (C6H5CH2NH2)?",
+      "question_hi": "कौन सा परीक्षण एनिलीन (C6H5NH2) और बेन्जिलऐमीन (C6H5CH2NH2) के बीच अंतर करता है?",
+      "question_gu": "કઈ કસોટી વડે એનિલાઇન (C6H5NH2) અને બેન્ઝાઇલએમાઇન (C6H5CH2NH2) વચ્ચે ભેદ પારખી શકાય છે?",
+      "options": [
+        "Azo-dye test (NaNO2 + HCl at 273-278 K followed by reaction with β-naphthol)",
+        "Carbylamine test",
+        "Hinsberg test",
+        "Litmus paper test"
+      ],
+      "options_hi": [
+        "एजो-रंजक परीक्षण (273-278 K पर NaNO2 + HCl के बाद β-नेफ्थॉल के साथ अभिक्रिया)",
+        "कार्बिलऐमीन परीक्षण",
+        "हिन्सबर्ग परीक्षण",
+        "लिटमस पत्र परीक्षण"
+      ],
+      "options_gu": [
+        "એઝો-ડાય કસોટી (273-278 K પર NaNO2 + HCl ત્યારબાદ β-નેપ્થોલ સાથે પ્રક્રિયા)",
+        "કાર્બાઇલએમાઇન કસોટી",
+        "હિન્સબર્ગ કસોટી",
+        "લિટમસ પેપર કસોટી"
+      ],
+      "correct_index": 0,
+      "explanation": "Aniline is an aromatic 1° amine that forms a stable diazonium salt at 0-5°C which reacts with β-naphthol to give an intense scarlet red azo dye. Benzylamine is an aliphatic 1° amine whose diazonium salt decomposes rapidly yielding N2 gas and benzyl alcohol, failing the dye test.",
+      "explanation_hi": "एनिलीन एक ऐरोमैटिक 1° ऐमीन है जो 0-5°C पर एक स्थायी डाइऐजोनियम लवण बनाता है जो β-नेफ्थॉल के साथ अभिक्रिया करके गहरा लाल एजो रंजक देता है। बेन्जिलऐमीन का डाइऐजोनियम लवण तेजी से अपघटित होकर N2 गैस देता है।",
+      "explanation_gu": "એનિલાઇન એ એરોમેટિક 1° એમાઇન છે જે 0-5°C પર સ્થિર ડાયએઝોનિયમ ક્ષાર બનાવે છે અને β-નેપ્થોલ સાથે લાલ રંગનો એઝો રંજક આપે છે. બેન્ઝાઇલએમાઇન એલિફેટિક હોવાથી N2 વાયુ મુક્ત કરે છે અને એઝો-ડાય બનાવતો નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_017",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.6: Conversions - Nitrobenzene to Benzoic Acid",
+      "title_hi": "NCERT अभ्यास 9.6: परिवर्तन - नाइट्रोबेन्जीन से बेन्जोइक अम्ल",
+      "title_gu": "NCERT સ્વાધ્યાય 9.6: રૂપાંતરણ - નાઇટ્રોબેન્ઝીનમાંથી બેન્ઝોઇક એસિડ",
+      "question": "Select the correct sequence of steps to convert Nitrobenzene to Benzoic Acid.",
+      "question_hi": "नाइट्रोबेन्जीन को बेन्जोइक अम्ल में परिवर्तित करने के लिए चरणों का सही क्रम चुनें।",
+      "question_gu": "નાઇટ્રોબેન્ઝીનમાંથી બેન્ઝોઇક એસિડ બનાવવા માટે યોગ્ય ક્રમિક પગલાં પસંદ કરો.",
+      "options": [
+        "1) Fe/HCl -> Aniline  2) NaNO2+HCl (273-278 K) -> Diazonium Salt  3) CuCN/KCN -> Benzonitrile  4) H3O+ (Hydrol) -> Benzoic Acid",
+        "1) KMnO4/KOH  2) Fe/HCl  3) NaNO2/HCl",
+        "1) LiAlH4  2) CO2/ether  3) H3O+",
+        "1) Sn/HCl  2) CH3Cl/AlCl3  3) KMnO4"
+      ],
+      "options_hi": [
+        "1) Fe/HCl -> एनिलीन  2) NaNO2+HCl (273-278 K) -> डाइऐजोनियम लवण  3) CuCN/KCN -> बेन्जोनाइट्राइल  4) H3O+ (जलअपघटन) -> बेन्जोइक अम्ल",
+        "1) KMnO4/KOH  2) Fe/HCl  3) NaNO2/HCl",
+        "1) LiAlH4  2) CO2/ईथर  3) H3O+",
+        "1) Sn/HCl  2) CH3Cl/AlCl3  3) KMnO4"
+      ],
+      "options_gu": [
+        "1) Fe/HCl -> એનિલાઇન  2) NaNO2+HCl (273-278 K) -> ડાયએઝોનિયમ ક્ષાર  3) CuCN/KCN -> બેન્ઝોનાઇટ્રાઇલ  4) H3O+ (જળવિભાજન) -> બેન્ઝોઇક એસિડ",
+        "1) KMnO4/KOH  2) Fe/HCl  3) NaNO2/HCl",
+        "1) LiAlH4  2) CO2/ઈથર  3) H3O+",
+        "1) Sn/HCl  2) CH3Cl/AlCl3  3) KMnO4"
+      ],
+      "correct_index": 0,
+      "explanation": "Nitrobenzene is reduced with Fe/HCl to Aniline. Aniline is diazotized to Benzenediazonium chloride. Sandmeyer reaction with CuCN gives Benzonitrile. Acid hydrolysis of Benzonitrile yields Benzoic acid.",
+      "explanation_hi": "नाइट्रोबेन्जीन Fe/HCl के साथ एनिलीन में अपचयित होता है। एनिलीन का बेन्जीनडाइऐजोनियम क्लोराइड में डाइऐजोटीकरण होता है। CuCN के साथ सैंडमायर अभिक्रिया बेन्जोनाइट्राइल देती है। बेन्जोनाइट्राइल का अम्लीय जलअपघटन बेन्जोइक अम्ल देता है।",
+      "explanation_gu": "નાઇટ્રોબેન્ઝીન Fe/HCl દ્વારા એનિલાઇનમાં રૂપાંતરિત થાય છે. એનિલાઇનનું ડાયએઝોટીકરણ કરી CuCN સાથે સેન્ડમેયર પ્રક્રિયા વડે બેન્ઝોનાઇટ્રાઇલ મેળવાય છે, જેનું એસિડિક જળવિભાજન બેન્ઝોઇક એસિડ આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_018",
+      "type": "true_false",
+      "title": "NCERT Exercise 9.7: Conceptual Reasoning - pKb of Aniline vs Methylamine",
+      "title_hi": "NCERT अभ्यास 9.7: वैचारिक तर्क - एनिलीन बनाम मिथाइलऐमीन का pKb",
+      "title_gu": "NCERT સ્વાધ્યાય 9.7: વૈચારિક તર્ક - એનિલાઇન વિરુદ્ધ મિથાઇલએમાઇનનો pKb",
+      "question": "State True or False: The pKb of aniline is HIGHER than that of methylamine because the lone pair of electrons on nitrogen in aniline is delocalized over the benzene ring by resonance.",
+      "question_hi": "सत्य या असत्य बताएं: एनिलीन का pKb मान मिथाइलऐमीन की तुलना में अधिक होता है क्योंकि एनिलीन में नाइट्रोजन पर इलेक्ट्रॉन का एकाकी युग्म अनुनाद द्वारा बेन्जीन वलय पर विस्थानिकृत होता है।",
+      "question_gu": "સત્ય કે અસત્ય જણાવો: એનિલાઇનનો pKb મિથાઇલએમાઇન કરતાં વધુ હોય છે કારણ કે એનિલાઇનમાં નાઇટ્રોજન પરનું ઇલેક્ટ્રોન યુગ્મ બેન્ઝીન રિંગ પર સંસ્પંદન દ્વારા વિસ્થાનિકૃત થાય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સત્ય",
+        "અસત્ય"
+      ],
+      "correct_index": 0,
+      "explanation": "True. A HIGHER pKb value indicates a WEAKER base. In aniline, nitrogen's lone pair is delocalized over the benzene ring via resonance, making it less available for protonation compared to methylamine (where the +I effect of methyl group increases electron density). Thus, aniline has a higher pKb (9.38) than methylamine (3.38).",
+      "explanation_hi": "सत्य। अधिक pKb मान एक कमजोर क्षार को दर्शाता है। एनिलीन में, नाइट्रोजन का एकाकी युग्म अनुनाद के माध्यम से बेन्जीन वलय में विस्थानिकृत हो जाता है, जिससे यह मिथाइलऐमीन की तुलना में प्रोटॉनीकरण के लिए कम उपलब्ध होता है। अतः एनिलीन का pKb (9.38) मिथाइलऐमीन (3.38) से अधिक होता है।",
+      "explanation_gu": "સત્ય. વધુ pKb મૂલ્ય એ નિર્બળ બેઇઝ સૂચવે છે. એનિલાઇનમાં સંસ્પંદનને કારણે નાઇટ્રોજન પરનું લોન પેર બેન્ઝીન રિંગમાં વિસ્થાનિકૃત થાય છે, તેથી તે પ્રોટોનેશન માટે સરળતાથી ઉપલબ્ધ થતું નથી. આથી એનિલાઇનનો pKb (9.38) મિથાઇલએમાઇન (3.38) કરતાં વધુ હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_019",
+      "type": "true_false",
+      "title": "NCERT Exercise 9.7 (Part II): Diazonium Salt Stability",
+      "title_hi": "NCERT अभ्यास 9.7 (भाग II): डाइऐजोनियम लवण का स्थायित्व",
+      "title_gu": "NCERT સ્વાધ્યાય 9.7 (ભાગ II): ડાયએઝોનિયમ ક્ષારની સ્થિરતા",
+      "question": "State True or False: Arenediazonium salts are more stable than Alkyldiazonium salts because the positive charge on diazonium nitrogen is stabilized by resonance with the benzene ring.",
+      "question_hi": "सत्य या असत्य बताएं: एरीनडाइऐजोनियम लवण एल्किलडाइऐजोनियम लवण की तुलना में अधिक स्थायी होते हैं क्योंकि डाइऐजोनियम नाइट्रोजन पर धनावेश बेन्जीन वलय के साथ अनुनाद द्वारा स्थायी होता है।",
+      "question_gu": "સત્ય કે અસત્ય જણાવો: એરીનડાયએઝોનિયમ ક્ષાર આલ્કાઇલડાયએઝોનિયમ ક્ષાર કરતાં વધુ સ્થિર હોય છે કારણ કે નાઇટ્રોજન પરનો ધનભાર બેન્ઝીન રિંગ સાથે સંસ્પંદન દ્વારા સ્થિર થાય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સત્ય",
+        "અસત્ય"
+      ],
+      "correct_index": 0,
+      "explanation": "True. Arenediazonium salts (Ar-N2+ Cl-) are stabilized at 273-278 K due to delocalization of the positive charge across the aromatic pi-system. Alkyldiazonium salts (R-N2+ Cl-) lack resonance stabilization and decompose spontaneously even at low temperatures to give carbocations and N2 gas.",
+      "explanation_hi": "सत्य। एरीनडाइऐजोनियम लवण 273-278 K पर ऐरोमैटिक पाई-प्रणाली में धनावेश के विस्थानीकरण के कारण स्थायी होते हैं। एल्किलडाइऐजोनियम लवण में अनुनाद स्थायित्व की कमी होती है और वे नाइट्रोजन गैस छोड़ते हुए तुरंत अपघटित हो जाते हैं।",
+      "explanation_gu": "સત્ય. એરીનડાયએઝોનિયમ ક્ષાર 273-278 K તાપમાને એરોમેટિક પાઇ-સિસ્ટમ સાથે સંસ્પંદનથી સ્થિરતા મેળવે છે, જ્યારે આલ્કાઇલડાયએઝોનિયમ ક્ષાર તુરંત જ વિઘટન પામી N2 વાયુ મુક્ત કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH9_020",
+      "type": "mcq",
+      "title": "NCERT Exercise 9.8: Complete Reaction - Nitration of Aniline Product Distribution",
+      "title_hi": "NCERT अभ्यास 9.8: पूर्ण अभिक्रिया - एनिलीन के नाइट्रीकरण का उत्पाद वितरण",
+      "title_gu": "NCERT સ્વાધ્યાય 9.8: પૂર્ણ પ્રક્રિયા - એનિલાઇનના નાઇટ્રેશનની નીપજો",
+      "question": "Direct nitration of Aniline with concentrated HNO3 and concentrated H2SO4 at 288 K produces three isomeric nitroanilines. What are their respective percentage yields?",
+      "question_hi": "288 K पर सांद्र HNO3 और सांद्र H2SO4 के साथ एनिलीन का सीधा नाइट्रीकरण तीन समावयवी नाइट्रोएनिलीन पैदा करता है। उनकी संबंधित प्रतिशत उपज क्या है?",
+      "question_gu": "288 K તાપમાને સાંદ્ર HNO3 અને H2SO4 વડે એનિલાઇનનું સીધું નાઇટ્રેશન ત્રણ સમઘટકીય નાઇટ્રોએનિલાઇન આપે છે. તેમની ટકાવારીનું સાચું પ્રમાણ કયું છે?",
+      "options": [
+        "p-nitroaniline (51%), m-nitroaniline (47%), o-nitroaniline (2%)",
+        "p-nitroaniline (90%), m-nitroaniline (5%), o-nitroaniline (5%)",
+        "m-nitroaniline (100%)",
+        "o-nitroaniline (50%), p-nitroaniline (50%), m-nitroaniline (0%)"
+      ],
+      "options_hi": [
+        "p-नाइट्रोएनिलीन (51%), m-नाइट्रोएनिलीन (47%), o-नाइट्रोएनिलीन (2%)",
+        "p-नाइट्रोएनिलीन (90%), m-नाइट्रोएनिलीन (5%), o-नाइट्रोएनिलीन (5%)",
+        "m-नाइट्रोएनिलीन (100%)",
+        "o-नाइट्रोएनिलीन (50%), p-नाइट्रोएनिलीन (50%), m-नाइट्रोएनिलीन (0%)"
+      ],
+      "options_gu": [
+        "p-નાઇટ્રોએનિલાઇન (51%), m-નાઇટ્રોએનિલાઇન (47%), o-નાઇટ્રોએનિલાઇન (2%)",
+        "p-નાઇટ્રોએનિલાઇન (90%), m-નાઇટ્રોએનિલાઇન (5%), o-નાઇટ્રોએનિલાઇન (5%)",
+        "m-નાઇટ્રોએનિલાઇન (100%)",
+        "o-નાઇટ્રોએનિલાઇન (50%), p-નાઇટ્રોએનિલાઇન (50%), m-નાઇટ્રોએનિલાઇન (0%)"
+      ],
+      "correct_index": 0,
+      "explanation": "Due to protonation of aniline to the meta-directing anilinium ion in acidic media, nitration yields 51% para, 47% meta, and 2% ortho nitroaniline.",
+      "explanation_hi": "अम्लीय माध्यम में मेटा-निर्देशी एनीलीनियम आयन में एनिलीन के प्रोटॉनीकरण के कारण, नाइट्रीकरण से 51% पैरा, 47% मेटा, और 2% अर्थो नाइट्रोएनिलीन प्राप्त होता है।",
+      "explanation_gu": "એસિડિક માધ્યમમાં એનિલીનિયમ આયન બનવાને કારણે meta-નિર્દેશક અસર જોવા મળે છે, જેથી 51% p-નાઇટ્રોએનિલાઇન, 47% m-નાઇટ્રોએનિલાઇન અને 2% o-નાઇટ્રોએનિલાઇન બને છે."
+    }
+  ]
+}

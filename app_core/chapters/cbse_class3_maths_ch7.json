@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "id": "cbse_grade_unknown_maths_ch7",
+    "title": "Chapter 7: Decimals",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand decimals as fractions with denominators of 10 and 100",
+      "Read, write, and compare decimal numbers up to two decimal places",
+      "Convert between fractions and decimals seamlessly",
+      "Perform basic addition and subtraction of decimals in real-world contexts"
+    ],
+    "core_concepts": [
+      "DICT_GRADE_DECIMAL",
+      "DICT_GRADE_TENTHS",
+      "DICT_GRADE_HUNDREDTHS",
+      "DICT_GRADE_DECIMAL_POINT"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the foundational understanding of decimals by connecting them to fractions, money, and measurement.",
+      "common_misconceptions": [
+        "Believing that 0.45 is larger than 0.5 because 45 is larger than 5",
+        "Ignoring the decimal point when reading numbers aloud",
+        "Thinking whole numbers cannot be written with decimals (e.g., missing that 7 is 7.0)"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Coin",
+      "body": "Imagine you walk into your favorite bookstore with a crisp 10-dollar bill. You find a comic book priced at $7.85. When the cashier hands you your change, you receive a handful of shiny coins: a one-dollar coin, two dimes, and five pennies. Have you ever wondered how we write numbers that are smaller than a whole number? Whole numbers like 1, 7, and 10 are fantastic for counting whole items, but what happens when we slice things into smaller pieces, share a chocolate bar, or measure exact heights? Welcome to the incredible world of decimals, where numbers live in the spaces between whole numbers!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our opening story, if a comic book costs $7.85, what does the '.85' represent?",
+      "options": [
+        "Exactly 85 whole dollars",
+        "A part of a dollar, specifically 85 cents",
+        "85 separate comic books"
+      ],
+      "correct_index": 1,
+      "explanation": "The digits after the decimal point represent parts of a whole, just like cents are fractional parts of a whole dollar.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is a Decimal?",
+      "body": "In our base-ten number system, every time we move to the left, our place values multiply by 10 (ones, tens, hundreds). But what happens when we move to the right of the ones place? We enter the realm of fractions where wholes are broken down into equal parts of 10, 100, 1,000, and beyond. A [DICT_GRADE_DECIMAL|decimal] is simply another way of writing a fraction whose denominator is a power of ten. To separate the whole number part from the fractional part, we use a small dot called the [DICT_GRADE_DECIMAL_POINT|decimal point]. Think of the decimal point as an anchor that tells you exactly where the whole numbers end and the fractional parts begin.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Ruler Visualization",
+      "body": "Look closely at a standard metric ruler. The large numbers (0, 1, 2, 3) represent centimeters. Between 0 and 1, there are 10 tiny tick marks. Each tiny tick mark is one millimeter, which is exactly one-tenth of a centimeter! When you measure something as 5 centimeters and 3 tiny marks, you are measuring 5.3 centimeters.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the primary job of a decimal point in a number?",
+      "back": "It separates the whole number part from the fractional part.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Meet the Tenths",
+      "body": "When a single whole object—like a strip of paper or a chocolate bar—is sliced into 10 perfectly equal pieces, each individual piece is called one-tenth. As a fraction, we write this as 1/10. In the decimal world, we write this exact same value as 0.1. The first position immediately to the right of the [DICT_GRADE_DECIMAL_POINT|decimal point] is called the [DICT_GRADE_TENTHS|tenths] place. If you have 4 of those 10 pieces, your fraction is 4/10, and your decimal is 0.4. Notice how the number of shaded or counted parts matches the digit in the tenths place. If you ever collect all 10 tenths (10/10), you have successfully reassembled a brand new whole number, which is written as 1.0 or simply 1!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "How do you write the fraction 7/10 as a decimal?",
+      "options": [
+        "7.0",
+        "0.07",
+        "0.7"
+      ],
+      "correct_index": 2,
+      "explanation": "7/10 means 7 parts out of 10, which occupies the tenths place right after the decimal point: 0.7.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "The Power of the Grid: Moving to Hundredths",
+      "body": "What happens if we take that same whole strip, or a large square grid, and slice it up even further? Imagine a large square grid divided into 100 tiny, equal squares. If you shade in just 1 of those tiny squares, you have represented 1 part out of 100. As a fraction, it is 1/100. In decimal notation, we write this as 0.01. This second position to the right of the decimal point is known as the [DICT_GRADE_HUNDREDTHS|hundredths] place. Because 100 is much larger than 10, each hundredth is ten times smaller than a tenth! It takes 10 tiny hundredth squares to equal just 1 tenth strip.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Grid Coloring Exercise",
+      "body": "Draw a 10x10 grid on graph paper (100 squares total). Color in 3 complete columns (30 squares) and 4 individual squares. Ask yourself: how many tenths is that? (3 tenths) And how many extra hundredths? (4 hundredths). Together, you've shaded 0.34 of the entire grid!",
+      "bloom": "Create",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "Which place value is smaller: tenths or hundredths?",
+      "back": "Hundredths are smaller, because a whole is divided into 100 equal parts instead of 10.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: Reading and Writing Decimals Aloud",
+      "body": "Reading decimals correctly prevents many common mathematical misunderstandings. When you see the number 4.6, how should you say it out loud? You should say 'four and six-tenths'. The word 'and' acts as the vocal bridge representing the [DICT_GRADE_DECIMAL_POINT|decimal point]. If you have two digits after the decimal, such as 3.25, you read it as 'three and twenty-five hundredths'. Never say 'three point twenty-five', because technically the tenths place comes before the hundredths place, and saying the full fractional name reminds your brain of the actual value represented by those digits.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "What is the correct way to read the decimal number 0.82 out loud?",
+      "options": [
+        "Zero point eighty-two",
+        "Eighty-two",
+        "Eighty-two hundredths"
+      ],
+      "correct_index": 2,
+      "explanation": "0.82 has two decimal places, meaning it represents 82 parts out of 100, or eighty-two hundredths.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Equivalence: Decimals and Fractions Hand in Hand",
+      "body": "Every [DICT_GRADE_DECIMAL|decimal] has a fraction twin, and every fraction with a denominator of 10 or 100 has a decimal twin. Let's look at some common pairs: 5/10 is identical to 0.5, which is also equal to one-half (1/2) in simplified fraction form. Similarly, 25/100 is identical to 0.25, which equals one-quarter (1/4). Recognizing these bridges allows you to switch back and forth depending on which format is easier for solving a puzzle. If you are baking, fractions like 1/2 cup are common; if you are handling currency, decimals like $0.50 rule the day!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "The Money Connection",
+      "body": "Money is the absolute best tool for learning decimals. One dollar ($1.00) is the whole. A dime is 1/10 of a dollar ($0.10). A penny is 1/100 of a dollar ($0.01). Whenever you count money, you are actually performing advanced decimal arithmetic without even realizing it!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "What fraction is equivalent to the decimal 0.5?",
+      "back": "5/10 (or simplified to 1/2)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 4: Comparing and Ordering Decimals",
+      "body": "Comparing decimals can sometimes be tricky if you rely only on the total number of digits. Which is larger: 0.4 or 0.38? Many students mistakenly think 0.38 is larger because 38 is bigger than 4. However, let's look at place value! 0.4 can be written as 0.40 (adding a placeholder zero doesn't change its value). Now compare 0.40 to 0.38. Looking at the [DICT_GRADE_TENTHS|tenths] place first, 0.40 has 4 tenths, while 0.38 has 3 tenths. Since 4 tenths is greater than 3 tenths, 0.4 is indeed larger than 0.38! Always compare place values from left to right, starting with the wholes, then the tenths, and finally the hundredths.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Which decimal is strictly greater: 0.7 or 0.65?",
+      "options": [
+        "0.65 because 65 is greater than 7",
+        "0.7 because 7 tenths is greater than 6 tenths",
+        "They are exactly equal"
+      ],
+      "correct_index": 1,
+      "explanation": "0.7 is equal to 0.70. Comparing 0.70 to 0.65, the tenths digit 7 is larger than 6.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Adding and Subtracting Decimals: Lining Up the Anchors",
+      "body": "When you want to add or subtract whole numbers, you align them by the ones column on the right. When working with decimals, your golden rule is: **Line up the decimal points!** If you are adding 3.4 and 2.15, you must set them up so that the [DICT_GRADE_DECIMAL_POINT|decimal points] sit directly on top of each other in a vertical column. This ensures you add tenths to tenths and hundredths to hundredths. If one number has fewer decimal places than another, simply fill in empty spaces with placeholder zeros. For example, 3.4 becomes 3.40. Now, 3.40 + 2.15 becomes an easy addition problem: 5.55!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Column Alignment Trick",
+      "body": "Use grid paper or turn your notebook sideways so the vertical lines act as columns. Write the decimal point in its own separate column. This prevents messy handwriting errors where tenths drift into the ones column!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "front": "What is the golden rule when adding or subtracting decimal numbers?",
+      "back": "Always line up the decimal points vertically before calculating.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Calculate the sum: 4.2 + 1.35",
+      "options": [
+        "5.55",
+        "5.37",
+        "1.77"
+      ],
+      "correct_index": 0,
+      "explanation": "Rewrite 4.2 as 4.20. Then add 4.20 + 1.35 to get 5.55.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Decimals in the Real World: Measurement and Sports",
+      "body": "Decimals are everywhere in science, sports, and daily life. When Olympic sprinters run a 100-meter dash, races are rarely decided by whole seconds; they are won by fractions of a second, such as 9.58 seconds. When engineers build bridges, car parts must be measured to the thousandth of a millimeter to ensure everything fits safely. Weather reporters tell us that it will rain 0.5 inches today. Understanding decimals empowers you to understand precise measurements, track sports statistics, and manage financial accounts with absolute confidence.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Why do Olympic track events use decimals for timing instead of just whole seconds?",
+      "options": [
+        "Because whole numbers are illegal in sports",
+        "Because races are often won by extremely tiny margins of time",
+        "To make the timers look more confusing"
+      ],
+      "correct_index": 1,
+      "explanation": "Decimals allow for extreme precision, capturing fractions of a second when athletes finish milliseconds apart.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "How would you write 'six and nine hundredths' as a standard decimal number?",
+      "back": "6.09 (Notice the zero in the tenths place because there are no full tenths!)",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Summary and Master Review",
+      "body": "You have journeyed through the core pillars of decimals! You now know that decimals represent fractional parts of a whole using base-ten place values. The [DICT_GRADE_DECIMAL_POINT|decimal point] serves as your anchor, separating whole numbers on the left from [DICT_GRADE_TENTHS|tenths] and [DICT_GRADE_HUNDREDTHS|hundredths] on the right. Whether you are comparing values, converting fractions, or adding money at the store, treating every decimal with respect to its place value guarantees success. Keep practicing, keep looking for decimals in your daily life, and you will master this mathematical superpower!",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

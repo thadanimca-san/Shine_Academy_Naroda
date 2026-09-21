@@ -1,0 +1,311 @@
+{
+  "metadata": {
+    "id": "cbse_class4_maths_ch11",
+    "title": "Chapter 11: Geometry Basics",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the foundational elements of geometry including points, lines, line segments, and rays.",
+      "Classify different types of angles based on their degrees and visual characteristics.",
+      "Recognize and describe 2D shapes and their properties like vertices and sides.",
+      "Apply spatial reasoning to real-world architectural and design problems."
+    ],
+    "core_concepts": [
+      "DICT_GEO_POINT",
+      "DICT_GEO_LINE",
+      "DICT_GEO_RAY",
+      "DICT_GEO_ANGLE"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the fundamental vocabulary and classification of geometric shapes and measurements.",
+      "common_misconceptions": [
+        "Confusing a line segment with a line because both are drawn straight.",
+        "Thinking that an angle gets larger because its line arms are drawn longer.",
+        "Believing a point has a measurable size instead of representing a pure exact location."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Secret Architect of the World",
+      "body": "Imagine you are standing inside an ancient Egyptian pyramid, staring up at massive stone blocks that fit together so perfectly that you cannot slide a single sheet of paper between them. How did builders thousands of years ago achieve such mind-boggling precision without computers or laser measures? They used the invisible language of the universe: geometry. From the hexagonal pattern inside a beehive to the straight flight path of an airplane, our entire physical reality is built upon dots, stretching pathways, and sharp corners. Today, we put on our architect hats to discover how simple marks on a paper form the blueprint of everything we see.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "According to the story, what secret tool did ancient builders rely on to create precise structures like pyramids?",
+      "options": [
+        "Magic spells and heavy machinery",
+        "The invisible language of geometry and shapes",
+        "Random guessing until the stones fit"
+      ],
+      "correct_index": 1,
+      "explanation": "Ancient builders relied on geometry—the rules of points, lines, and shapes—to design and align monumental structures with astonishing accuracy.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Building Blocks - Points and Lines",
+      "body": "Every magnificent skyscraper, intricate bridge, and simple doodle starts with the humblest entity in mathematics: the [DICT_GEO_POINT|point]. A point has no length, no width, and no height; it is simply a precise location in space, usually represented by a dot. When you put infinite points together in a continuous straight path that goes on forever in both directions, you create a [DICT_GEO_LINE|line]. Because lines extend endlessly to infinity, we can never draw a complete one on a piece of paper, so we put arrows at both ends to remind ourselves of their infinite journey. However, engineers and architects often need to measure things. When we pluck a specific piece out of that infinite line with two distinct endpoints, we get a line segment. Think of a line segment like a rigid wooden stick with a clear beginning and a clear end.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Starry Night Analogy",
+      "body": "Look up at the night sky (or imagine looking at one). Each bright star is like a single point. If you connect two stars with your finger, you are tracing a line segment. If you imagine that laser beam shooting past those two stars forever into outer space, you are visualizing a line!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the key difference between a line and a line segment?",
+      "back": "A line goes on forever in both directions with no endpoints, while a line segment has two distinct endpoints and a measurable length.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Rays: The One-Way Travelers",
+      "body": "Now that we understand lines and line segments, let us look at a fascinating hybrid: the [DICT_GEO_RAY|ray]. A ray has one fixed endpoint (like a starting gate in a race) and stretches off infinitely in the other direction. Think of a flashlight beam or a laser pointer. The light is emitted from a single bulb (the endpoint) and travels outward across the room forever until it hits a wall. In geometry, we always name a ray by starting with its endpoint first, followed by any other point it passes through on its infinite journey. Understanding rays is crucial because when two rays start from the exact same starting point, something magical happens—they open up to form an angle!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which geometric shape has exactly one endpoint and extends infinitely in the other direction?",
+      "options": [
+        "Line",
+        "Line Segment",
+        "Ray"
+      ],
+      "correct_index": 2,
+      "explanation": "A ray starts at one fixed point and travels endlessly in one direction, much like a beam of light from a torch.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The World of Angles",
+      "body": "When two rays share a common endpoint called a vertex, they form an [DICT_GEO_ANGLE|angle]. You can think of an angle as a measure of turn or opening. Imagine opening a pair of scissors or a door. As the door swings open away from the wall, the space between the doorframe and the door gets wider—that opening is an angle! We measure angles in units called degrees (°), using a semicircle tool called a protractor. Angles are everywhere: the corner of your math notebook forms a square corner, a pizza slice creates a narrow wedge at the tip, and the hands of a clock continuously create changing angles throughout the day.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Body Movement Angle Check",
+      "body": "Stand up and stretch your right arm straight out to your side, and point your other arm straight up toward the ceiling. The angle formed at your shoulder is a square corner. Now, stretch both arms straight out—that's a flat line of 180 degrees!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is the common endpoint where two rays meet to form an angle called?",
+      "back": "The vertex.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Classifying Angles: Right, Acute, and Obtuse",
+      "body": "Not all angles are created equal! Mathematicians classify angles into distinct families based on their size compared to a square corner. A 'Right Angle' measures exactly 90 degrees, looking like the crisp corner of a book or a picture frame. If an angle is smaller than a right angle—narrow, sharp, and pointy like the tip of an ice cream cone—we call it an 'Acute Angle' (think of 'cute' and tiny!). On the other hand, if an angle is wider and more spread out than a right angle, stretching open like a comfortable reclining chair, it is called an 'Obtuse Angle'. Finally, when an angle opens up completely to form a straight line, it measures 180 degrees and is aptly named a 'Straight Angle'.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "You look at an angle that measures 45 degrees. How would you classify it?",
+      "options": [
+        "Right Angle",
+        "Acute Angle",
+        "Obtuse Angle"
+      ],
+      "correct_index": 1,
+      "explanation": "Any angle measuring less than 90 degrees is an acute angle.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: Flatland - 2D Shapes and Polygons",
+      "body": "When straight line segments connect end-to-end to close in a flat, two-dimensional space, they form shapes known as polygons. The word polygon comes from Greek, where 'poly' means many and 'gon' means angles or knees. A shape cannot be a polygon if it has curved lines or if there is a gap in its boundary. The simplest polygon is the triangle, boasting 3 sides and 3 angles. Add one more side, and you get a quadrilateral with 4 sides, such as rectangles, squares, and rhombuses. Pentagons have 5 sides, hexagons have 6 sides like honeycomb cells, and octagons have 8 sides like a bright red stop sign on the street corner.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Toothpick Polygon Challenge",
+      "body": "Give students a box of toothpicks and some small marshmallows (or clay blobs). Ask them to build a triangle, square, and pentagon. Ask: What happens if you poke the middle of the square? It wobbles! But the triangle holds its rigid shape. Triangles are the strongest shape in engineering.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "What is a polygon with 6 sides called?",
+      "back": "A hexagon (like a cell in a beehive).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Special Quadrilaterals: Squares and Rectangles",
+      "body": "Among all polygons, quadrilaterals (four-sided figures) are the most common in our built environment—look at your walls, windows, doors, and computer screens! A rectangle is a special quadrilateral with four straight sides and four right angles (90 degrees each), where opposite sides are equal in length. A square is an even stricter version of a rectangle: not only does it have four right angles, but ALL four of its sides must be completely equal in length. Rectangles and squares are foundational because their straight edges allow us to tile floors and build walls without wasting any empty space.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Which statement is true about both squares and rectangles?",
+      "options": [
+        "They both have four right angles.",
+        "They both must have all four sides equal in length.",
+        "They both contain acute angles only."
+      ],
+      "correct_index": 0,
+      "explanation": "Both squares and rectangles feature four interior angles that are all 90-degree right angles.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Perimeter: Walking Around the Edge",
+      "body": "Once we know the shapes of objects, we often need to measure them. Imagine you are tasked with building a shiny new fence around a rectangular garden. How much fencing material do you need to buy? To find out, you calculate the perimeter. Perimeter is the total distance around the outside edge of a 2D shape. To find the perimeter of any polygon, you simply add up the lengths of all its outer sides. If a rectangle has a top side of 5 meters, a bottom of 5 meters, a left side of 3 meters, and a right side of 3 meters, you walk around adding them: 5 + 3 + 5 + 3 = 16 meters of fencing total!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Ant Walk Demonstration",
+      "body": "Draw a large triangle on the whiteboard. Tell students: 'Imagine an ant walking along the border, starting at one corner and returning to the same spot.' Have them physically trace the outline with their finger while counting each side's length.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "front": "What is perimeter?",
+      "back": "The total distance around the outside boundary of a 2D shape, found by adding all outer side lengths together.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Area: Covering the Inside",
+      "body": "While perimeter measures the outer fence, area measures the lush grass growing inside the yard! Area is the amount of flat space enclosed within the boundary of a 2D shape. Instead of measuring in linear units (like meters of fence), we measure area in square units (like square centimeters or square meters), imagining how many tiny 1x1 squares can fit snugly to cover the entire surface without overlapping. For a rectangle, finding the area is super quick: you simply multiply its length by its width (Area = Length × Width). If your room is 4 meters long and 3 meters wide, the floor area is 4 × 3 = 12 square meters!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "A square garden has sides measuring 5 meters each. What is its total area?",
+      "options": [
+        "20 meters",
+        "25 square meters",
+        "10 square meters"
+      ],
+      "correct_index": 1,
+      "explanation": "Area is calculated by multiplying length by width (or side × side for a square). 5 meters × 5 meters = 25 square meters.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Symmetry: Nature's Mirror",
+      "body": "Geometry is also deeply connected to beauty and balance. Look at a butterfly's wings, a human face, or a crisp maple leaf. If you draw a line straight down the middle, the left side matches the right side like a mirror reflection! This is called line symmetry. A line of symmetry divides a shape into two identical, matching halves that would perfectly overlap if you folded the paper along that line. Some shapes have only one line of symmetry (like an isosceles triangle or a heart), while others have many—a circle has an infinite number of lines of symmetry because you can slice it through the center in any direction and both halves will match!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Paper Folding Symmetry Art",
+      "body": "Take a blank sheet of paper, fold it in half, and cut out half a heart shape along the fold. When you unfold it, you get a perfectly symmetrical heart! Discuss how folding acts as the mirror line.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "front": "How many lines of symmetry does a circle have?",
+      "back": "Infinite lines of symmetry, because it can be folded or divided evenly through its center in any direction.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Putting It All Together: Real-World Geometry",
+      "body": "Geometry is not just a collection of rules in a textbook; it is the master toolkit used by game designers, architects, tailors, and mapmakers every single day. When a video game designer builds a 3D digital world, their computer program calculates thousands of interconnected triangles and vertices to render characters and terrain. When an urban planner designs a city grid, they ensure streets intersect at right angles for orderly traffic flow. By mastering points, lines, angles, perimeters, and areas, you unlock the ability to decode and design the physical space around you.",
+      "bloom": "Synthesize",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "Why do video game designers and computer animators rely heavily on triangles and geometry?",
+      "options": [
+        "Because triangles are colorful shapes.",
+        "Because meshes of triangles are the most efficient way to build and render 3D surfaces and digital worlds.",
+        "Because computers cannot process numbers above three."
+      ],
+      "correct_index": 1,
+      "explanation": "Triangles form rigid, simple meshes that computer processors can quickly calculate to build complex 3D graphics.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    }
+  ]
+}

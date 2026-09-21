@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "id": "cbse_class10_maths_ch5",
+    "title": "Chapter 5: Arithmetic Progressions",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi (Bilingual)",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 180,
+    "version": "4.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "arithmetic_progressions",
+      "ap",
+      "series",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Understand the concept of an Arithmetic Progression.",
+      "Identify the first term and common difference.",
+      "Calculate the nth term of an AP.",
+      "Calculate the sum of the first n terms of an AP."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract algebraic concepts visual. Connect arithmetic progressions to real life patterns like saving money.",
+      "common_misconceptions": [
+        "Students confuse the formula for nth term with the sum formula.",
+        "Students forget that the common difference 'd' can be negative or zero."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_01_HOOK",
+      "type": "theory",
+      "title": "The Ladder and The Bank",
+      "title_hi": "सीढ़ी और बैंक",
+      "body": "• Have you noticed the rungs of a ladder?\n• Or how your money grows in a piggy bank if you add ₹10 every day?\n• There is a hidden pattern in these real-life scenarios!\n• The difference between consecutive steps or consecutive days is always the same.",
+      "body_hi": "• क्या आपने सीढ़ी के डंडों पर ध्यान दिया है?\n• या यदि आप हर दिन ₹10 डालते हैं तो गुल्लक में आपका पैसा कैसे बढ़ता है?\n• इन वास्तविक जीवन के परिदृश्यों में एक छिपा हुआ पैटर्न है!\n• लगातार चरणों या लगातार दिनों के बीच का अंतर हमेशा समान होता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_02_SOCRATIC",
+      "type": "socratic_question",
+      "question": "If you start with ₹100 and add ₹20 every month, how much will you have in the 2nd and 3rd month?",
+      "question_hi": "यदि आप ₹100 से शुरू करते हैं और हर महीने ₹20 जोड़ते हैं, तो दूसरे और तीसरे महीने में आपके पास कितने पैसे होंगे?",
+      "options": [
+        "120, 130",
+        "120, 140",
+        "100, 120",
+        "140, 160"
+      ],
+      "options_hi": [
+        "120, 130",
+        "120, 140",
+        "100, 120",
+        "140, 160"
+      ],
+      "correct_index": 1,
+      "explanation": "• Month 1 = ₹100\n• Month 2 = 100 + 20 = ₹120\n• Month 3 = 120 + 20 = ₹140.",
+      "explanation_hi": "• महीना 1 = ₹100\n• महीना 2 = 100 + 20 = ₹120\n• महीना 3 = 120 + 20 = ₹140।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_03_REVEAL",
+      "type": "definition",
+      "title": "Arithmetic Progression (A.P.)",
+      "title_hi": "समांतर श्रेढ़ी (A.P.)",
+      "body": "• An Arithmetic Progression is a list of numbers in which each term is obtained by adding a fixed number to the preceding term.\n• This fixed number is called the **common difference (d)**.\n• The first term is usually denoted by **a**.",
+      "body_hi": "• समांतर श्रेढ़ी संख्याओं की एक ऐसी सूची है जिसमें प्रत्येक पद अपने पिछले पद में एक निश्चित संख्या जोड़ने पर प्राप्त होता है।\n• इस निश्चित संख्या को **सार्व अंतर (d)** कहा जाता है।\n• पहले पद को आमतौर पर **a** द्वारा दर्शाया जाता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_04_TEACHER_TIP",
+      "type": "teacher_tip",
+      "body": "• The common difference 'd' can be positive, negative, or even zero!\n• If d > 0, the A.P. is increasing.\n• If d < 0, the A.P. is decreasing.",
+      "body_hi": "• सार्व अंतर 'd' धनात्मक, ऋणात्मक, या शून्य भी हो सकता है!\n• यदि d > 0 है, तो A.P. बढ़ रही है।\n• यदि d < 0 है, तो A.P. घट रही है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_05_DISCOVERY_NTH",
+      "type": "theory",
+      "title": "Jumping to the Future",
+      "title_hi": "भविष्य की छलांग",
+      "body": "• What if you need to find the amount in your bank after 50 months?\n• Adding ₹20 fifty times manually is too slow!\n• Let's build a formula:\n  • Term 1 (a₁) = a\n  • Term 2 (a₂) = a + d\n  • Term 3 (a₃) = a + 2d\n  • Term 4 (a₄) = a + 3d\n• Notice the pattern? The multiplier for 'd' is always one less than the term number!",
+      "body_hi": "• क्या होगा यदि आपको 50 महीनों के बाद अपने बैंक में राशि ज्ञात करनी हो?\n• 50 बार ₹20 मैन्युअल रूप से जोड़ना बहुत धीमा है!\n• आइए एक सूत्र बनाएँ:\n  • पद 1 (a₁) = a\n  • पद 2 (a₂) = a + d\n  • पद 3 (a₃) = a + 2d\n  • पद 4 (a₄) = a + 3d\n• क्या आपने पैटर्न देखा? 'd' का गुणक हमेशा पद संख्या से एक कम होता है!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_06_FORMULA",
+      "type": "definition",
+      "title": "nth Term Formula",
+      "title_hi": "nवाँ पद सूत्र",
+      "body": "• The nth term (aₙ) of an A.P. with first term 'a' and common difference 'd' is given by:\n• **aₙ = a + (n - 1)d**\n• Sometimes, aₙ is also called the general term or the last term (l).",
+      "body_hi": "• एक A.P. जिसका पहला पद 'a' और सार्व अंतर 'd' है, उसका nवाँ पद (aₙ) निम्न द्वारा दिया जाता है:\n• **aₙ = a + (n - 1)d**\n• कभी-कभी, aₙ को व्यापक पद या अंतिम पद (l) भी कहा जाता है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_07_EXAMPLE_1",
+      "type": "worked_example",
+      "title": "Example 1: Finding the nth Term",
+      "title_hi": "उदाहरण 1: nवाँ पद ज्ञात करना",
+      "body": "**Problem:**\nFind the 10th term of the A.P. : 2, 7, 12, ...\n\n**Step-by-Step Solution:**\n1. Identify the first term (a) = 2.\n2. Find common difference (d) = 7 - 2 = 5.\n3. We need to find the 10th term, so n = 10.\n4. Use formula: aₙ = a + (n - 1)d\n5. a₁₀ = 2 + (10 - 1)5\n6. a₁₀ = 2 + (9)5\n7. a₁₀ = 2 + 45 = 47\n8. Conclusion: The 10th term is 47.",
+      "body_hi": "**समस्या:**\nA.P. : 2, 7, 12, ... का 10वाँ पद ज्ञात कीजिए।\n\n**चरण-दर-चरण समाधान:**\n1. पहला पद (a) = 2 पहचानें।\n2. सार्व अंतर (d) = 7 - 2 = 5 ज्ञात करें।\n3. हमें 10वाँ पद ज्ञात करना है, इसलिए n = 10.\n4. सूत्र का प्रयोग करें: aₙ = a + (n - 1)d\n5. a₁₀ = 2 + (10 - 1)5\n6. a₁₀ = 2 + (9)5\n7. a₁₀ = 2 + 45 = 47\n8. निष्कर्ष: 10वाँ पद 47 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_08_EXAMPLE_2",
+      "type": "worked_example",
+      "title": "Example 2: Finding the Number of Terms",
+      "title_hi": "उदाहरण 2: पदों की संख्या ज्ञात करना",
+      "body": "**Problem:**\nWhich term of the A.P. : 21, 18, 15, ... is -81?\n\n**Step-by-Step Solution:**\n1. First term (a) = 21.\n2. Common difference (d) = 18 - 21 = -3.\n3. Let the nth term be -81. So, aₙ = -81.\n4. Use formula: aₙ = a + (n - 1)d\n5. -81 = 21 + (n - 1)(-3)\n6. -81 - 21 = (n - 1)(-3)\n7. -102 = (n - 1)(-3)\n8. Divide by -3: n - 1 = 34\n9. n = 34 + 1 = 35\n10. Conclusion: The 35th term is -81.",
+      "body_hi": "**समस्या:**\nA.P. : 21, 18, 15, ... का कौन सा पद -81 है?\n\n**चरण-दर-चरण समाधान:**\n1. पहला पद (a) = 21.\n2. सार्व अंतर (d) = 18 - 21 = -3.\n3. मान लीजिए कि nवाँ पद -81 है। इसलिए, aₙ = -81.\n4. सूत्र का प्रयोग करें: aₙ = a + (n - 1)d\n5. -81 = 21 + (n - 1)(-3)\n6. -81 - 21 = (n - 1)(-3)\n7. -102 = (n - 1)(-3)\n8. -3 से भाग दें: n - 1 = 34\n9. n = 34 + 1 = 35\n10. निष्कर्ष: 35वाँ पद -81 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_09_HOOK_SUM",
+      "type": "theory",
+      "title": "The Story of Young Gauss",
+      "title_hi": "युवा गॉस की कहानी",
+      "body": "• When the famous mathematician Carl Friedrich Gauss was 10 years old, his teacher asked the class to add all numbers from 1 to 100.\n• The teacher expected them to take hours.\n• Gauss gave the answer in seconds: 5050!\n• How did he do it? He paired the numbers: 1+100=101, 2+99=101, etc. He had 50 such pairs.\n• 50 × 101 = 5050. This is the logic behind the sum of an A.P.!",
+      "body_hi": "• जब प्रसिद्ध गणितज्ञ कार्ल फ्रेडरिक गॉस 10 वर्ष के थे, तब उनके शिक्षक ने कक्षा को 1 से 100 तक की सभी संख्याओं को जोड़ने के लिए कहा।\n• शिक्षक को लगा कि उन्हें घंटों लगेंगे।\n• गॉस ने कुछ ही सेकंड में उत्तर दे दिया: 5050!\n• उन्होंने यह कैसे किया? उन्होंने संख्याओं के जोड़े बनाए: 1+100=101, 2+99=101, आदि। उनके पास ऐसे 50 जोड़े थे।\n• 50 × 101 = 5050. एक A.P. के योग के पीछे यही तर्क है!"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_10_FORMULA_SUM",
+      "type": "definition",
+      "title": "Sum of First n Terms Formula",
+      "title_hi": "प्रथम n पदों के योग का सूत्र",
+      "body": "• The sum of the first 'n' terms (Sₙ) of an A.P. is given by:\n• **Sₙ = n/2 [2a + (n - 1)d]**\n• If the last term (l) is known, you can use the shortcut:\n• **Sₙ = n/2 (a + l)**",
+      "body_hi": "• एक A.P. के प्रथम 'n' पदों का योग (Sₙ) निम्न द्वारा दिया जाता है:\n• **Sₙ = n/2 [2a + (n - 1)d]**\n• यदि अंतिम पद (l) ज्ञात हो, तो आप शॉर्टकट का उपयोग कर सकते हैं:\n• **Sₙ = n/2 (a + l)**"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_11_EXAMPLE_3",
+      "type": "worked_example",
+      "title": "Example 3: Sum of First n Terms",
+      "title_hi": "उदाहरण 3: प्रथम n पदों का योग",
+      "body": "**Problem:**\nFind the sum of the first 22 terms of the A.P. : 8, 3, -2, ...\n\n**Step-by-Step Solution:**\n1. a = 8\n2. d = 3 - 8 = -5\n3. n = 22\n4. Formula: Sₙ = n/2 [2a + (n - 1)d]\n5. S₂₂ = 22/2 [2(8) + (22 - 1)(-5)]\n6. S₂₂ = 11 [16 + (21)(-5)]\n7. S₂₂ = 11 [16 - 105]\n8. S₂₂ = 11 [-89]\n9. S₂₂ = -979",
+      "body_hi": "**समस्या:**\nA.P. : 8, 3, -2, ... के प्रथम 22 पदों का योग ज्ञात कीजिए।\n\n**चरण-दर-चरण समाधान:**\n1. a = 8\n2. d = 3 - 8 = -5\n3. n = 22\n4. सूत्र: Sₙ = n/2 [2a + (n - 1)d]\n5. S₂₂ = 22/2 [2(8) + (22 - 1)(-5)]\n6. S₂₂ = 11 [16 + (21)(-5)]\n7. S₂₂ = 11 [16 - 105]\n8. S₂₂ = 11 [-89]\n9. S₂₂ = -979"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_101_MCQ",
+      "type": "mcq",
+      "question": "In an A.P., if a = 28, d = -4, n = 7, then aₙ is:",
+      "question_hi": "एक A.P. में, यदि a = 28, d = -4, n = 7 है, तो aₙ है:",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "7"
+      ],
+      "options_hi": [
+        "4",
+        "5",
+        "3",
+        "7"
+      ],
+      "correct_index": 0,
+      "explanation": "aₙ = a + (n - 1)d = 28 + (7 - 1)(-4) = 28 + 6(-4) = 28 - 24 = 4.",
+      "explanation_hi": "aₙ = a + (n - 1)d = 28 + (7 - 1)(-4) = 28 + 6(-4) = 28 - 24 = 4।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_102_MCQ",
+      "type": "mcq",
+      "question": "If a = 10 and d = 10, then the first four terms will be:",
+      "question_hi": "यदि a = 10 और d = 10 है, तो पहले चार पद होंगे:",
+      "options": [
+        "10, 30, 50, 70",
+        "10, 20, 30, 40",
+        "10, 15, 20, 25",
+        "10, 0, -10, -20"
+      ],
+      "options_hi": [
+        "10, 30, 50, 70",
+        "10, 20, 30, 40",
+        "10, 15, 20, 25",
+        "10, 0, -10, -20"
+      ],
+      "correct_index": 1,
+      "explanation": "Terms are a, a+d, a+2d, a+3d = 10, 20, 30, 40.",
+      "explanation_hi": "पद a, a+d, a+2d, a+3d = 10, 20, 30, 40 हैं।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_103_MCQ",
+      "type": "mcq",
+      "question": "The 30th term of the A.P: 10, 7, 4, ..., is:",
+      "question_hi": "A.P: 10, 7, 4, ... का 30वाँ पद है:",
+      "options": [
+        "97",
+        "77",
+        "-77",
+        "-87"
+      ],
+      "options_hi": [
+        "97",
+        "77",
+        "-77",
+        "-87"
+      ],
+      "correct_index": 2,
+      "explanation": "a = 10, d = -3, n = 30. a₃₀ = 10 + 29(-3) = 10 - 87 = -77.",
+      "explanation_hi": "a = 10, d = -3, n = 30. a₃₀ = 10 + 29(-3) = 10 - 87 = -77।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_104_MCQ",
+      "type": "mcq",
+      "question": "The common difference of the A.P. 1/p, (1-p)/p, (1-2p)/p, ... is:",
+      "question_hi": "A.P. 1/p, (1-p)/p, (1-2p)/p, ... का सार्व अंतर है:",
+      "options": [
+        "1",
+        "1/p",
+        "-1",
+        "-1/p"
+      ],
+      "options_hi": [
+        "1",
+        "1/p",
+        "-1",
+        "-1/p"
+      ],
+      "correct_index": 2,
+      "explanation": "d = a₂ - a₁ = [(1-p)/p] - [1/p] = (1 - p - 1) / p = -p / p = -1.",
+      "explanation_hi": "d = a₂ - a₁ = [(1-p)/p] - [1/p] = (1 - p - 1) / p = -p / p = -1।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_105_MCQ",
+      "type": "mcq",
+      "question": "The 11th term of the A.P: -3, -1/2, 2, ..., is:",
+      "question_hi": "A.P: -3, -1/2, 2, ... का 11वाँ पद है:",
+      "options": [
+        "28",
+        "22",
+        "-38",
+        "-48"
+      ],
+      "options_hi": [
+        "28",
+        "22",
+        "-38",
+        "-48"
+      ],
+      "correct_index": 1,
+      "explanation": "a = -3, d = (-1/2) - (-3) = 5/2. a₁₁ = -3 + 10(5/2) = -3 + 25 = 22.",
+      "explanation_hi": "a = -3, d = (-1/2) - (-3) = 5/2. a₁₁ = -3 + 10(5/2) = -3 + 25 = 22।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_106_MCQ",
+      "type": "mcq",
+      "question": "If the sum of first n terms of an A.P. is 3n² + n, what is the first term?",
+      "question_hi": "यदि एक A.P. के प्रथम n पदों का योग 3n² + n है, तो पहला पद क्या है?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "options_hi": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct_index": 2,
+      "explanation": "S₁ = a₁. For n = 1, S₁ = 3(1)² + 1 = 4. So the first term is 4.",
+      "explanation_hi": "S₁ = a₁ होता है। n = 1 के लिए, S₁ = 3(1)² + 1 = 4. तो पहला पद 4 है।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_107_MCQ",
+      "type": "mcq",
+      "question": "What is the sum of the first 100 positive integers?",
+      "question_hi": "प्रथम 100 धनात्मक पूर्णांकों का योग क्या है?",
+      "options": [
+        "5000",
+        "5050",
+        "5500",
+        "5100"
+      ],
+      "options_hi": [
+        "5000",
+        "5050",
+        "5500",
+        "5100"
+      ],
+      "correct_index": 1,
+      "explanation": "Using formula Sₙ = n(n+1)/2. For n = 100, S₁₀₀ = 100(101)/2 = 5050.",
+      "explanation_hi": "सूत्र Sₙ = n(n+1)/2 का उपयोग करने पर। n = 100 के लिए, S₁₀₀ = 100(101)/2 = 5050।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_108_MCQ",
+      "type": "mcq",
+      "question": "The sum of the first 15 multiples of 8 is:",
+      "question_hi": "8 के प्रथम 15 गुणजों (multiples) का योग है:",
+      "options": [
+        "960",
+        "840",
+        "900",
+        "1000"
+      ],
+      "options_hi": [
+        "960",
+        "840",
+        "900",
+        "1000"
+      ],
+      "correct_index": 0,
+      "explanation": "The A.P. is 8, 16, 24... Here a = 8, d = 8. S₁₅ = (15/2) [2(8) + 14(8)] = (15/2) [16 + 112] = 15/2 × 128 = 15 × 64 = 960.",
+      "explanation_hi": "A.P. है 8, 16, 24... यहाँ a = 8, d = 8. S₁₅ = (15/2) [2(8) + 14(8)] = (15/2) [16 + 112] = 15/2 × 128 = 15 × 64 = 960।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_109_MCQ",
+      "type": "mcq",
+      "question": "If 2x, x+10, 3x+2 are in A.P., then x is equal to:",
+      "question_hi": "यदि 2x, x+10, 3x+2 A.P. में हैं, तो x किसके बराबर है?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "options_hi": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_index": 2,
+      "explanation": "For A.P., 2b = a + c ⇒ 2(x + 10) = 2x + (3x + 2) ⇒ 2x + 20 = 5x + 2 ⇒ 3x = 18 ⇒ x = 6.",
+      "explanation_hi": "A.P. के लिए, 2b = a + c ⇒ 2(x + 10) = 2x + (3x + 2) ⇒ 2x + 20 = 5x + 2 ⇒ 3x = 18 ⇒ x = 6।"
+    },
+    {
+      "id": "KOBJ_CLASS10_MATH_CH5_110_MCQ",
+      "type": "mcq",
+      "question": "The number of two-digit numbers divisible by 3 is:",
+      "question_hi": "3 से विभाज्य दो अंकों की संख्याओं की संख्या है:",
+      "options": [
+        "30",
+        "20",
+        "29",
+        "31"
+      ],
+      "options_hi": [
+        "30",
+        "20",
+        "29",
+        "31"
+      ],
+      "correct_index": 0,
+      "explanation": "The A.P. is 12, 15, ..., 99. Here a = 12, d = 3, l = 99. Using l = a + (n-1)d ⇒ 99 = 12 + (n-1)3 ⇒ 87 = (n-1)3 ⇒ 29 = n-1 ⇒ n = 30.",
+      "explanation_hi": "A.P. है 12, 15, ..., 99. यहाँ a = 12, d = 3, l = 99. l = a + (n-1)d का उपयोग करने पर ⇒ 99 = 12 + (n-1)3 ⇒ 87 = (n-1)3 ⇒ 29 = n-1 ⇒ n = 30।"
+    }
+  ]
+}

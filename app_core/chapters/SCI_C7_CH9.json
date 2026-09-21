@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "id": "SCI_C7_CH9",
+    "title": "Motion and Time (गति और समय)",
+    "subject": "Science",
+    "grade": "7",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the concepts of slow and fast motion using everyday examples.",
+      "Define speed and calculate it using the standard formula and units.",
+      "Understand how time was measured in ancient times using periodic events.",
+      "Read and interpret simple distance-time graphs for uniform motion."
+    ],
+    "core_concepts": [
+      "DICT_C7_MOTION",
+      "DICT_C7_SPEED",
+      "DICT_C7_OSCILLATION",
+      "DICT_C7_UNIFORM_MOTION"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the fundamentals of motion, time measurement, speed calculation, and graphical representation of motion.",
+      "common_misconceptions": [
+        "Thinking a bigger vehicle always moves faster than a smaller one.",
+        "Confusing distance-time graphs with a picture of the actual path travelled.",
+        "Believing time is absolute and independent of any periodic motion."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Race of the Cheetah and the Tortoise",
+      "body": "Imagine standing at the edge of a vast African savannah. In the distance, a cheetah crouches in the golden grass, locking its eyes on a sprinting gazelle. Just a few feet away, a tiny tortoise slowly pulls its head from its shell, taking a deliberate step forward. When we look around us, everything in the universe seems to be doing one of two things: resting or moving. A bird flies across the sky, a train rattles down the tracks, water flows from a tap, and even the Earth itself spins silently through space. But how do we truly know if something is moving fast or slow? And how can we measure the invisible passage of seconds, hours, and days that govern our lives? Welcome to the fascinating world of motion and time!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on our everyday observations, which of the following is generally considered to have the fastest motion?",
+      "options": [
+        "A crawling tortoise",
+        "A walking human",
+        "An airplane in flight"
+      ],
+      "correct_index": 2,
+      "explanation": "An airplane covers huge distances in a very short span of time compared to a walking human or a crawling tortoise, making its motion much faster.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Slow or Fast Motion",
+      "body": "When we look at multiple objects moving along the same path, our first instinct is to determine which one covers a greater distance in a given time, or which one takes less time to cover a certain distance. This relative concept of movement is known as [DICT_C7_MOTION|motion]. If you and your friend start running from the same school gate towards the playground, the one who reaches the goal first is said to be running faster. However, determining 'slow' or 'fast' is often contextual. A bicycle may seem fast compared to a walking pedestrian, but it looks agonizingly slow when a bullet train flashes past it on a parallel track. Therefore, comparing distances covered by different objects in a unit time—such as one second, one minute, or one hour—gives us a precise way to judge whether an object's motion is slow or fast.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Activity: The Dropped Ruler Reaction",
+      "body": "Hold a plastic scale vertically so its zero mark is between your friend's thumb and index finger. Without warning, drop the scale. Have your friend catch it as quickly as possible. Note the mark where they caught it. The smaller the distance the scale fell before being caught, the faster your friend's reaction time! This demonstrates how distance and quickness are intertwined.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does comparing the distance covered by different objects in a given time help us determine?",
+      "back": "It helps us determine which object is moving faster or slower.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Defining Speed",
+      "body": "To make our comparison of motion scientific and exact, scientists use a physical quantity called [DICT_C7_SPEED|speed]. In simple terms, speed is the distance covered by an object in unit time. If a car travels a distance of 100 kilometers in 2 hours, we can find its speed by dividing the total distance travelled by the total time taken. The standard or SI unit of distance is the meter (m), and the standard unit of time is the second (s). Consequently, the standard unit of speed is meters per second (m/s). However, for larger distances and longer times, we frequently use kilometers per hour (km/h). Understanding speed allows us to predict arrival times, design safer vehicles, and understand how energy is transferred across distances.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "What is the standard (SI) unit of speed?",
+      "options": [
+        "Kilometers per hour (km/h)",
+        "Meters per second (m/s)",
+        "Miles per minute (mi/min)"
+      ],
+      "correct_index": 1,
+      "explanation": "The SI unit of distance is meters (m) and time is seconds (s), making the SI unit of speed meters per second (m/s).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Calculating Speed: The Mathematical Relationship",
+      "body": "Mathematics is the language of physics. The relationship between distance, speed, and time can be expressed through a golden formula: Speed = Distance / Time. From this single equation, we can also derive how to find distance if speed and time are known (Distance = Speed × Time) or how to find time if distance and speed are known (Time = Distance / Speed). For example, if a cheetah runs at a constant speed of 25 meters per second for 10 seconds, the distance it covers is 25 m/s × 10 s = 250 meters. Mastering this formula is essential for solving numerical problems in physics and engineering.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Real-World Calculation",
+      "body": "Next time you travel in a car or bus, look at the milestone markers by the road. Note down the time on your watch when you pass one milestone, and note the time when you pass another milestone exactly 1 kilometer away. Use the formula Speed = Distance / Time to calculate the average speed of your vehicle!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is the formula to calculate distance when speed and time are given?",
+      "back": "Distance = Speed × Time",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 3: Measurement of Time in Ancient Days",
+      "body": "Before mechanical clocks and atomic wristwatches existed, how did human civilizations measure time? Our ancestors looked up at the sky. They noticed that certain events repeated themselves at regular intervals. For instance, the time between one sunrise and the next was called a day. A month was measured from one new moon to the next, and a year was measured as the time the Earth takes to complete one revolution around the sun. Sundials were used to measure time by observing the position and length of shadows cast by the sun. Water clocks and hourglasses (sand clocks) measured the flow of a liquid or sand from one container to another at a steady rate. These ingenious devices relied on periodic or repetitive motion.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "Which of the following natural periodic events was historically used to measure the duration of a 'month'?",
+      "options": [
+        "The rotation of the Earth on its axis",
+        "The changing phases of the moon from one new moon to the next",
+        "The melting of snow in spring"
+      ],
+      "correct_index": 1,
+      "explanation": "Ancient timekeepers tracked the lunar cycle, defining a month by the time elapsed between successive new moons.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 4: Clocks, Watches, and Periodic Motion",
+      "body": "Most clocks and watches make use of some form of [DICT_C7_OSCILLATION|oscillation] or periodic motion. One of the most famous and reliable forms of periodic motion is seen in a simple pendulum. A simple pendulum consists of a small metallic ball (called a bob) suspended from a rigid stand by a thread. When the bob is displaced slightly to one side and released, it moves back and forth. One complete to-and-fro motion of a simple pendulum—from extreme position A to extreme position B and back to A—is called one oscillation. The time taken by the pendulum to complete one oscillation is called its time period. Galileo Galilei was one of the first scientists to study the properties of a pendulum, noticing that the time period remains constant regardless of the smallness of the swing, which revolutionized clock-making.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Build a Simple Pendulum",
+      "body": "Tie a small stone or metal nut to a 1-meter long cotton thread. Hang it from a hook or doorframe. Pull the stone slightly to the side and release it. Count how many oscillations it makes in 20 seconds using a digital stopwatch. Can you calculate its time period for one oscillation?",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "What is one complete to-and-fro motion of a simple pendulum called?",
+      "back": "One oscillation",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Units of Time and Speed Conversion",
+      "body": "The basic unit of time is the second (s), denoted by 's'. Larger units include minutes (min) and hours (h). Remembering the conversions is vital: 1 minute = 60 seconds, and 1 hour = 60 minutes = 3600 seconds. Often, you will need to convert speeds given in kilometers per hour (km/h) into meters per second (m/s) or vice versa. To convert km/h to m/s, you multiply the value by 5/18. Why 5/18? Because 1 kilometer = 1000 meters and 1 hour = 3600 seconds, so 1000/3600 simplifies to 5/18. Conversely, to convert m/s to km/h, you multiply by 18/5. Practicing these conversions builds strong quantitative skills for physics.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "How do you convert a speed of 72 km/h into meters per second (m/s)?",
+      "options": [
+        "Multiply 72 by 5/18",
+        "Multiply 72 by 18/5",
+        "Divide 72 by 60"
+      ],
+      "correct_index": 0,
+      "explanation": "To convert km/h to m/s, you multiply by the conversion factor 5/18 (72 × 5/18 = 20 m/s).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 5: Uniform and Non-Uniform Motion",
+      "body": "When an object moves along a straight line, its motion can be classified into two main types: [DICT_C7_UNIFORM_MOTION|uniform motion] and non-uniform motion. If an object covers equal distances in equal intervals of time, it is said to possess uniform motion. In this case, the speed of the object remains constant. For example, a car cruising down an empty, straight highway at a steady 60 km/h without speeding up or slowing down is exhibiting uniform motion. On the other hand, if an object covers unequal distances in equal intervals of time, its motion is non-uniform. Most motion in our daily lives—like a car navigating heavy city traffic or a runner sprinting and then resting—is non-uniform, meaning its speed keeps changing.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "What type of motion is exhibited by an object covering equal distances in equal intervals of time?",
+      "back": "Uniform motion",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "A train slows down as it approaches a railway station. What kind of motion is this?",
+      "options": [
+        "Uniform motion",
+        "Non-uniform motion",
+        "Circular motion"
+      ],
+      "correct_index": 1,
+      "explanation": "Since the speed of the train is changing (decreasing) as it approaches the station, it covers unequal distances in equal intervals of time, making it non-uniform motion.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Measuring Speed with Odometers and Speedometers",
+      "body": "Have you ever looked at the dashboard of a car or scooter? You will see two important instruments. One is the speedometer, which records the speed of the vehicle directly in kilometers per hour (km/h) at any given instant. The other instrument is the odometer, which measures the total distance travelled by the vehicle in kilometers. When your parents say, 'Our car has run 45,000 kilometers,' that number comes straight from the odometer reading. Together, these instruments give drivers precise feedback about their journey, ensuring safety and efficiency on roads.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "What does an odometer measure in a vehicle?",
+      "back": "The total distance travelled by the vehicle.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Concept 6: Representing Motion Through Graphs",
+      "body": "Pictures speak louder than words, and in physics, graphs speak louder than tables of numbers. A distance-time graph is a pictorial way of representing how an object's distance from a starting point changes over time. To draw such a graph, we take two perpendicular lines called axes—the horizontal X-axis represents time, and the vertical Y-axis represents distance. By plotting various data points of distance against corresponding times and connecting them, we obtain a graph line. For an object in uniform motion, the distance-time graph is always a straight line sloping upwards. This straight line tells us that the object covers equal increments of distance for every equal increment of time.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Drawing Your First Graph",
+      "body": "Take a sheet of graph paper. Draw an X-axis for time (0, 1, 2, 3 minutes) and a Y-axis for distance (0, 10, 20, 30 meters). Plot points for a car moving at a steady 10 meters per minute. Connect the dots with a ruler. Notice how the straight line slopes upward at a constant angle!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "What shape does the distance-time graph take for an object in uniform motion?",
+      "options": [
+        "A zigzag wave",
+        "A straight line",
+        "A horizontal flat line parallel to the time axis"
+      ],
+      "correct_index": 1,
+      "explanation": "For uniform motion, equal distances are covered in equal intervals of time, resulting in a straight line on a distance-time graph.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Interpreting Non-Uniform Motion Graphs",
+      "body": "What happens if the motion is not uniform? If a car speeds up, slows down, or stops at traffic signals, the distance-time graph will no longer be a straight line. Instead, it will be a curved line or a jagged line with varying slopes. A steeper slope on a distance-time graph indicates a higher speed, because a larger distance is covered in a shorter amount of time. Conversely, a flatter slope indicates a slower speed. If the graph line becomes completely horizontal (parallel to the time axis), it means the distance is not changing as time passes—in other words, the object has stopped and is at rest!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "What does a horizontal (flat) line on a distance-time graph indicate?",
+      "back": "The object is stationary (at rest) at that time.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "On a distance-time graph, what does a steeper slope signify?",
+      "options": [
+        "Higher speed",
+        "Lower speed",
+        "Zero motion"
+      ],
+      "correct_index": 0,
+      "explanation": "A steeper slope means a greater distance is covered in less time, which represents a higher speed.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "theory",
+      "title": "Summary: The Journey of Motion and Time",
+      "body": "As we conclude our exploration of motion and time, remember that understanding how things move and how time is measured forms the backbone of modern science and technology. From ancient sundials tracking shadows to atomic clocks measuring billionths of a second, and from simple speed calculations to complex distance-time graphs, these tools allow us to map our universe. Whether you are calculating how long a road trip will take or analyzing the orbit of a satellite, the principles of speed, time, and motion remain constant companions in your scientific journey.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "quiz",
+      "question": "If an object travels 150 km in 3 hours, what is its average speed?",
+      "options": [
+        "30 km/h",
+        "50 km/h",
+        "450 km/h"
+      ],
+      "correct_index": 1,
+      "explanation": "Speed = Distance / Time = 150 km / 3 h = 50 km/h.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

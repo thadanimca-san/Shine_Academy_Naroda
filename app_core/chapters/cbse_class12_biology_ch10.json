@@ -1,0 +1,486 @@
+{
+  "metadata": {
+    "id": "cbse_class12_biology_ch10",
+    "title": "Chapter 10: Biotechnology and its Applications",
+    "subject": "Biology",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_001",
+      "type": "hook",
+      "title": "Living Factories & Precision Medicine",
+      "title_hi": "जीवित कारखाने और सटीक चिकित्सा",
+      "title_gu": "જીવંત કારખાનાઓ અને ચોક્કસ તબીબી વિજ્ઞાન",
+      "body": "Imagine crops that manufacture their own eco-friendly insecticides, or a cow whose milk provides perfectly balanced human protein for infants! Biotechnology has elevated biology from pure observation into an applied technology that can rewrite genetic blueprints to feed millions and cure once-untreatable hereditary diseases.",
+      "body_hi": "कल्पना कीजिए ऐसी फसलों की जो खुद अपना पर्यावरण-अनुकूल कीटनाशक बनाती हैं, या एक ऐसी गाय जिसका दूध शिशुओं के लिए पूरी तरह से संतुलित मानव प्रोटीन प्रदान करता है! जैव प्रौद्योगिकी ने जीव विज्ञान को केवल अवलोकन से आगे बढ़ाकर एक ऐसे व्यावहारिक विज्ञान में बदल दिया है जो लाखों लोगों का पेट भरने और लाइलाज आनुवंशिक रोगों का इलाज करने के लिए आनुवंशिक ब्लूप्रिंट को फिर से लिख सकता है।",
+      "body_gu": "એવી પાકની કલ્પના કરો જે પોતાના પર્યાવરણ-અનુકૂળ જંતુનાશકો જાતે બનાવે છે, અથવા એવી ગાય જેનું દૂધ શિશુઓ માટે સંપૂર્ણ માનવ પ્રોટીન પૂરું પાડે છે! બાયોટેકનોલોજીએ જીવવિજ્ઞાનને માત્ર અવલોકનમાંથી એક એવા વ્યવહારુ વિજ્ઞાનમાં રૂપાંતરિત કર્યું છે જે લાખો લોકોને અન્ન પૂરું પાડવા અને અસાધ્ય આનુવંશિક રોગોની સારવાર માટે જીનેટિક બ્લૂપ્રિન્ટ ફરીથી લખી શકે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_002",
+      "type": "socratic_question",
+      "title": "The Mystery of the Bacterial Toxin",
+      "title_hi": "जीवाणु टॉक्सिन का रहस्य",
+      "title_gu": "બેક્ટેરિયાના ટોક્સિનનું રહસ્ય",
+      "prompt": "Bacillus thuringiensis produces a lethal protein crystal that destroys insects, yet the bacterium itself remains unharmed. How can a cell store a deadly toxin internally without committing suicide?",
+      "prompt_hi": "बैसिलस थुरिंजिअस एक घातक प्रोटीन क्रिस्टल बनाता है जो कीटों को नष्ट कर देता है, फिर भी जीवाणु स्वयं सुरक्षित रहता है। एक कोशिका आत्महत्या किए बिना अपने अंदर एक घातक टॉक्सिन कैसे संग्रहीत कर सकती है?",
+      "prompt_gu": "બેસિલસ થુરિન્જિએન્સિસ એક ઘાતક પ્રોટીન ક્રિસ્ટલ બનાવે છે જે કીટકોનો નાશ કરે છે, છતાં બેક્ટેરિયા પોતે નુકસાન પામતા નથી. એક કોષ આત્મહત્યા કર્યા વગર પોતાની અંદર આટલું ઘાતક ઝેર કેવી રીતે સંગ્રહિત કરી શકે?",
+      "explanation": "The bacterium produces the toxin in an inactive form called a 'protoxin'. It requires an alkaline pH, which is only present in the gut of specific insects, to solubilize and solubly activate into its lethal toxic form.",
+      "explanation_hi": "जीवाणु इस टॉक्सिन को एक निष्क्रिय रूप में बनाता है जिसे 'प्रोटॉक्सिन' (Protoxin) कहते हैं। इसे सक्रिय विष में बदलने के लिए क्षारीय pH की आवश्यकता होती है, जो केवल कुछ कीटों की आंत में मौजूद होता है।",
+      "explanation_gu": "બેક્ટેરિયા આ ટોક્સિનને એક નિષ્ક્રિય સ્વરૂપમાં ઉત્પન્ન કરે છે જેને 'પ્રોટોક્સિન' કહેવાય છે. તેને દ્રાવ્ય થઈને તેના સક્રિય ઘાતક ઝેરમાં બદલાવા માટે ક્ષારીય pH ની જરૂર પડે છે, જે માત્ર ચોક્કસ કીટકોના આંતરડામાં જ હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_003",
+      "type": "discovery",
+      "title": "Targeted Molecular Defense: Bt Toxin & RNAi",
+      "title_hi": "लक्षित आणविक रक्षा: Bt टॉक्सिन और RNAi",
+      "title_gu": "લક્ષિત આણ્વીય બચાવ: Bt ટોક્સિન અને RNAi",
+      "body": "Biotechnologists harnessed two remarkable biological mechanisms for crop protection:\n\n1. **Bt Toxin Mechanism**: *Bacillus thuringiensis* produces Cry proteins (encoded by *cry* genes like *cryIAc*, *cryIIAb*, *cryIAb*). Insect ingests inactive protoxin -> Alkaline gut pH solubilizes crystals -> Midgut proteases cleave protoxin into active toxin -> Toxin binds to midgut epithelial cells -> Creates pores -> Cell swelling, lysis, and insect death.\n\n2. **RNA Interference (RNAi)**: A cellular defense mechanism present in all eukaryotic organisms involving gene silencing. Double-stranded RNA (dsRNA) introduces target-specific silencing. Introduced via *Agrobacterium* vectors, host plants form both sense and anti-sense RNA forming dsRNA. When the nematode (*Meloidogyne incognitia*) feeds, the dsRNA silences specific essential mRNA of the parasite, preventing its survival.",
+      "body_hi": "जैव प्रौद्योगिकीविदों ने फसल सुरक्षा के लिए दो उल्लेखनीय जैविक तंत्रों का उपयोग किया:\n\n1. **Bt टॉक्सिन तंत्र**: *बैसिलस थुरिंजिअस* क्राई प्रोटीन (जैसे *cryIAc*, *cryIIAb*, *cryIAb* जीन द्वारा कोडित) उत्पन्न करता है। कीट निष्क्रिय प्रोटॉक्सिन निगलता है -> क्षारीय आंत pH क्रिस्टल को घोलता है -> मध्य-आंत प्रोटीएज प्रोटॉक्सिन को सक्रिय टॉक्सिन में काटते हैं -> टॉक्सिन मध्य-आंत उपकला कोशिकाओं से जुड़ता है -> छिद्र बनाता है -> कोशिका सूजन, लय (lysis), और कीट की मृत्यु होती है।\n\n2. **RNA अंतक्षेप (RNAi)**: सभी यूकेरियोटिक जीवों में मौजूद एक कोशिकीय रक्षा तंत्र जिसमें जीन साइलेंसिंग शामिल है। द्विसूत्री RNA (dsRNA) विशिष्ट जीन को निष्क्रिय (silence) करता है। *Agrobacterium* वैक्टरों के माध्यम से पेश किए जाने पर, मेजबान पौधे सेंस और एंटी-सेंस दोनों RNA बनाते हैं जो dsRNA बनाते हैं। जब नेमाटोड (*Meloidogyne incognitia*) भोजन करता है, तो dsRNA परजीवी के विशिष्ट आवश्यक mRNA को साइलेंस कर देता है, जिससे उसका जीवित रहना असंभव हो जाता है।",
+      "body_gu": "બાયોટેકનોલોજિસ્ટ્સે પાક સંરક્ષણ માટે બે નોંધપાત્ર જૈવિક પ્રક્રિયાઓનો ઉપયોગ કર્યો:\n\n1. **Bt ટોક્સિન પ્રક્રિયા**: *બેસિલસ થુરિન્જિએન્સિસ* Cry પ્રોટીન (*cryIAc*, *cryIIAb*, *cryIAb* જેવા જનીનો દ્વારા સંકેતિત) બનાવે છે। કીટક નિષ્ક્રિય પ્રોટોક્સિન ગળે છે -> આંતરડાની ક્ષારીય pH ક્રિસ્ટલને દ્રાવ્ય કરે છે -> મધ્યાંતર પ્રોટીએઝ પ્રોટોક્સિનને સક્રિય ટોક્સિનમાં રૂપાંતરિત કરે છે -> ટોક્સિન મધ્યાંતરના અધિચ્છદીય કોષો સાથે જોડાય છે -> કાણાં (pores) પાડે છે -> કોષ ફૂલે છે અને ફૂટી જાય છે, જેનાથી કીટક મૃત્યુ પામે છે.\n\n2. **RNA એન્ટરફેરન્સ (RNAi)**: બધા યુકેરીયોટિક સજીવોમાં હાજર એક કોષીય સંરક્ષણ પ્રક્રિયા જેમાં જનીન સાયલેન્સિંગ થાય છે। દ્વિ-શૃંખલાવાળું RNA (dsRNA) વિશિષ્ટ mRNA ને સાયલેન્સ કરે છે. *Agrobacterium* વાહકો દ્વારા દાખલ કરવામાં આવતા, યજમાન વનસ્પતિ સેન્સ અને એન્ટી-સેન્સ બંને RNA બનાવે છે જે dsRNA રચે છે. જ્યારે કૃમિ (*Meloidogyne incognitia*) આહાર લે છે, ત્યારે dsRNA પરોપજીવીના ચોક્કસ જરૂરી mRNA ને સાયલેન્સ કરે છે, જેથી તે જીવી શકતું નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_004",
+      "type": "theory",
+      "title": "Biotechnological Applications in Medicine & Agriculture",
+      "title_hi": "चिकित्सा और कृषि में जैव प्रौद्योगिकी के अनुप्रयोग",
+      "title_gu": "તબીબી વિજ્ઞાન અને કૃષિમાં બાયોટેકનોલોજીના ઉપયોગો",
+      "body": "### 1. Genetically Engineered Human Insulin (Humulin)\n- Insulin consists of two short polypeptide chains: **Chain A** (21 amino acids) and **Chain B** (30 amino acids), linked together by **disulfide bridges**.\n- Mammalian insulin is synthesized as a **pro-hormone** containing an extra stretch called the **C-peptide** (removed during maturation).\n- In 1983, **Eli Lilly** (an American company) prepared two DNA sequences corresponding to chains A and B of human insulin and introduced them into plasmids of *E. coli* to produce insulin chains separately. Chains A and B were extracted and combined by creating disulfide bonds.\n\n### 2. Gene Therapy\n- Collection of methods allowing correction of a gene defect diagnosed in a child/embryo.\n- **First Clinical Gene Therapy (1990)**: Performed on a 4-year-old girl with **Adenosine Deaminase (ADA) deficiency** (caused by deletion of the gene for ADA, crucial for immune system functioning).\n- *Steps*: Lymphocytes from blood of patient are grown in culture -> A functional ADA cDNA is introduced using a **retroviral vector** -> Cells returned to patient. (Requires periodic infusion unless stem cells from bone marrow producing ADA are introduced at early embryonic stages).\n\n### 3. Transgenic Animals & Ethical Issues\n- **Rosie (1997)**: First transgenic cow that produced human protein-enriched milk (**2.4 grams per liter** containing human **alpha-lactalbumin**).\n- **GEAC (Genetic Engineering Approval Committee)**: Indian government organization that makes decisions regarding the validity of GM research and safety of introducing GM organisms for public services.\n- **Biopiracy**: Use of bio-resources by multinational companies and other organizations without proper authorization from the countries and people concerned without compensatory payment.",
+      "body_hi": "### 1. आनुवंशिक रूप से इंजीनियर मानव इंसुलिन (ह्युमुलिन)\n- इंसुलिन में दो छोटी पॉलीपेप्टाइड श्रृंखलाएं होती हैं: **श्रृंखला A** (21 एमिनो एसिड) और **श्रृंखला B** (30 एमिनो एसिड), जो **डाइसल्फाइड पुलों** द्वारा आपस में जुड़ी होती हैं।\n- स्तनधारी इंसुलिन एक **प्रो-हार्मोन** के रूप में संश्लेषित होता है जिसमें एक अतिरिक्त खंड होता है जिसे **C-पेप्टाइड** कहा जाता है (जो परिपक्वता के दौरान हटा दिया जाता है)।\n- 1983 में, **एली लिली** (एक अमेरिकी कंपनी) ने मानव इंसुलिन की ए और बी श्रृंखलाओं के अनुरूप दो डीएनए अनुक्रम तैयार किए और इंसुलिन श्रृंखलाओं को अलग-अलग उत्पन्न करने के लिए *E. coli* के प्लास्मिड में पेश किया। श्रृंखला A और B को निकाला गया और डाइसल्फाइड बंध बनाकर जोड़ा गया।\n\n### 2. जीन थेरेपी (Gene Therapy)\n- उन विधियों का संग्रह जो बच्चे/भ्रूण में निदान किए गए जीन दोष के सुधार की अनुमति देती हैं।\n- **पहला नैदानिक जीन थेरेपी (1990)**: **एडिनोसिन डिएमिनेज (ADA) की कमी** (ADA के लिए जीन के विलोपन के कारण, जो प्रतिरक्षा प्रणाली के कामकाज के लिए महत्वपूर्ण है) से पीड़ित 4 वर्षीय लड़की पर किया गया।\n- *चरण*: रोगी के रक्त से लिम्फोसाइटों को संवर्धन में उगाया जाता है -> **रेट्रोवायरल वेक्टर** का उपयोग करके एक कार्यात्मक ADA cDNA पेश किया जाता है -> कोशिकाएं रोगी को वापस कर दी जाती हैं।\n\n### 3. ट्रांसजेनिक जानवर और नैतिक मुद्दे\n- **रोजी (1997)**: पहली ट्रांसजेनिक गाय जिसने मानव प्रोटीन-समृद्ध दूध (**2.4 ग्राम प्रति लीटर** जिसमें मानव **अल्फा-लैक्टलबुमिन** शामिल है) का उत्पादन किया।\n- **GEAC (जेनेटिक इंजीनियरिंग अप्रूवल कमेटी)**: भारत सरकार का संगठन जो जीएम अनुसंधान की वैधता और सार्वजनिक सेवाओं के लिए जीएम जीवों को पेश करने की सुरक्षा के संबंध में निर्णय लेता है।\n- **बायोपायरेसी (Biopiracy)**: संबंधित देशों और लोगों से उचित प्राधिकरण और क्षतिपूर्ति भुगतान के बिना बहुराष्ट्रीय कंपनियों द्वारा जैव-संसाधनों का अनधिकृत उपयोग।",
+      "body_gu": "### 1. જેનિટિકલી એન્જિનિયર્ડ માનવ ઇન્સ્યુલિન (હ્યુમ્યુલિન)\n- ઇન્સ્યુલિનમાં બે ટૂંકી પોલિપેપ્ટાઇડ શૃંખલાઓ હોય છે: **શૃંખલા A** (21 એમિનો એસિડ) અને **શૃંખલા B** (30 એમિનો એસિડ), જે **ડાઇસલ્ફાઇડ બંધો** દ્વારા જોડાયેલી હોય છે.\n- સસ્તન પ્રાણીઓનું ઇન્સ્યુલિન એક **પ્રો-હોર્મોન** તરીકે સંશ્લેષિત થાય છે જેમાં વધારાનો ભાગ હોય છે જેને **C-પેપ્ટાઇડ** કહેવાય છે (જે પરિપક્વતા દરમિયાન દૂર થાય છે).\n- 1983માં, **એલી લીલી** (અમેરિકન કંપની) એ માનવ ઇન્સ્યુલિનની A અને B શૃંખલાઓને અનુરૂપ બે DNA સિક્વન્સ તૈયાર કર્યા અને *E. coli* ના પ્લાઝમિડમાં દાખલ કર્યા. શૃંખલા A અને B ને અલગથી મેળવીને ડાઇસલ્ફાઇડ બંધ દ્વારા જોડવામાં આવી.\n\n### 2. જીન થેરાપી (Gene Therapy)\n- બાળકમાં અથવા ગર્ભમાં નિદાન થયેલ જનીન ખામી સુધારવાની પદ્ધતિઓનો સમૂહ.\n- **પ્રથમ ક્લિનિકલ જીન થેરાપી (1990)**: **એડેનોસાઇન ડિએમિનેઝ (ADA) ની ઊણપ** વાળી 4 વર્ષની બાળકી પર કરવામાં આવી હતી.\n- *તબક્કા*: દર્દીના લોહીમાંથી લિમ્ફોસાઇટ્સ ઉછેરવામાં આવે છે -> **રેટ્રોવાયરલ વાહક**નો ઉપયોગ કરીને કાર્યાત્મક ADA cDNA દાખલ કરવામાં આવે છે -> કોષો દર્દીમાં પાછા મૂકવામાં આવે છે.\n\n### 3. પારજનીનિક (Transgenic) પ્રાણીઓ અને નૈતિક મુદ્દાઓ\n- **રોઝી (1997)**: પ્રથમ ટ્રાન્સજેનિક ગાય જેણે માનવ પ્રોટીન-સભર દૂધ (**2.4 ગ્રામ પ્રતિ લિટર** જેમાં **આલ્ફા-લેક્ટાલ્બ્યુમિન** હોય છે) ઉત્પન્ન કર્યું.\n- **GEAC (જેનેટિક એન્જિનિયરિંગ એપ્રુવલ કમિટી)**: ભારત સરકારની સંસ્થા જે GM સંશોધનની માન્યતા અને જાહેર સેવાઓ માટે GM સજીવોની સુરક્ષા અંગે નિર્ણયો લે છે.\n- **બાયોપાયરસી (Biopiracy)**: યોગ્ય પરવાનગી અથવા નાણાકીય ચુકવણી વગર બહુરાષ્ટ્રીય કંપનીઓ દ્વારા જે-તે દેશોના જૈવ-સંસાધનોનો બિનઅધિકૃત ઉપયોગ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_005",
+      "type": "mcq",
+      "title": "Knowledge Check: Protoxin Activation",
+      "title_hi": "ज्ञान जांच: प्रोटॉक्सिन सक्रियण",
+      "title_gu": "જ્ઞાન ચકાસણી: પ્રોટોક્સિન સક્રિયકરણ",
+      "question": "Which specific condition in the insect gut transforms the inactive Bt protoxin into an active insecticidal toxin?",
+      "question_hi": "कीट की आंत में कौन सी विशिष्ट स्थिति निष्क्रिय Bt प्रोटॉक्सिन को सक्रिय कीटनाशक टॉक्सिन में परिवर्तित करती है?",
+      "question_gu": "કીટકના આંતરડાની કઈ ચોક્કસ સ્થિતિ નિષ્ક્રિય Bt પ્રોટોક્સિનને સક્રિય જંતુનાશક ટોક્સિનમાં ફેરવે છે?",
+      "options": [
+        "Highly acidic pH in the foregut",
+        "Alkaline pH in the midgut solubilizing the crystals",
+        "Presence of specific digestive lipids",
+        "High concentration of salivary amylase"
+      ],
+      "options_hi": [
+        "अग्र-आंत में अत्यधिक अम्लीय pH",
+        "मध्य-आंत में क्षारीय pH जो क्रिस्टल को घोलता है",
+        "विशिष्ट पाचक लिपिड की उपस्थिति",
+        "लालीय एमाइलेज की उच्च सांद्रता"
+      ],
+      "options_gu": [
+        "અગ્રાંતરમાં અત્યંત એસિડિક pH",
+        "મધ્યાંતરમાં ક્ષારીય pH જે સ્ફટિકોને દ્રાવ્ય કરે છે",
+        "ચોક્કસ પાચક લિપિડ્સની હાજરી",
+        "લાળરસ એમાઇલેઝનું ઊંચું પ્રમાણ"
+      ],
+      "correct_index": 1,
+      "explanation": "The inactive protoxin is converted into an active form of toxin due to the alkaline pH of the gut, which solubilizes the crystals.",
+      "explanation_hi": "निष्क्रिय प्रोटॉक्सिन आंत के क्षारीय pH के कारण टॉक्सिन के सक्रिय रूप में परिवर्तित हो जाता है, जो क्रिस्टल को घोल देता है।",
+      "explanation_gu": "નિષ્ક્રિય પ્રોટોક્સિન આંતરડાના ક્ષારીય pH ને કારણે સક્રિય ટોક્સિનમાં ફેરવાય છે, જે સ્ફટિકોને ઓગાળી (દ્રાવ્ય કરી) નાખે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_006",
+      "type": "mcq",
+      "title": "Knowledge Check: Genetically Engineered Insulin",
+      "title_hi": "ज्ञान जांच: आनुवंशिक रूप से इंजीनियर इंसुलिन",
+      "title_gu": "જ્ઞાન ચકાસણી: જેનિટિકલી એન્જિનિયર્ડ ઇન્સ્યુલિન",
+      "question": "What main challenge did Eli Lilly overcome during the commercial manufacture of recombinant human insulin?",
+      "question_hi": "एली लिली ने पुनःसंयोजक मानव इंसुलिन के व्यावसायिक निर्माण के दौरान किस मुख्य चुनौती पर विजय प्राप्त की?",
+      "question_gu": "રિકોમ્બિનન્ટ માનવ ઇન્સ્યુલિનના વ્યાપારી ઉત્પાદન દરમિયાન એલી લીલીએ કઈ મુખ્ય પડકારરૂપ બાબત ઉકેલી?",
+      "options": [
+        "Synthesizing C-peptide independently and joining it to Chain A",
+        "Assembling Chain A and Chain B separately and joining them via disulfide bonds",
+        "Extracting pro-insulin directly from transgenic cattle",
+        "Cleaving C-peptide inside mammalian cells using restriction enzymes"
+      ],
+      "options_hi": [
+        "C-पेप्टाइड का स्वतंत्र रूप से संश्लेषण करना और इसे श्रृंखला A से जोड़ना",
+        "श्रृंखला A और श्रृंखला B को अलग-अलग तैयार करना और उन्हें डाइसल्फाइड बंधों से जोड़ना",
+        "ट्रांसजेनिक मवेशियों से सीधे प्रो-इंसुलिन निकालना",
+        "प्रतिबंधन एंजाइमों का उपयोग करके स्तनधारी कोशिकाओं के अंदर C-पेप्टाइड को काटना"
+      ],
+      "options_gu": [
+        "C-પેપ્ટાઇડનું સ્વતંત્ર સંશ્લેષણ કરીને તેને શૃંખલા A સાથે જોડવું",
+        "શૃંખલા A અને શૃંખલા B ને અલગથી તૈયાર કરી ડાઇસલ્ફાઇડ બંધ વડે જોડવી",
+        "ટ્રાન્સજેનિક પશુઓમાંથી સીધું પ્રો-ઇન્સ્યુલિન મેળવવું",
+        "સસ્તન કોષોમાં રેસ્ટ્રિક્શન ઉત્સેચકો વડે C-પેપ્ટાઇડ દૂર કરવું"
+      ],
+      "correct_index": 1,
+      "explanation": "Eli Lilly prepared two DNA sequences corresponding to chains A and B of human insulin, introduced them into E. coli to produce chains A and B separately, extracted them, and combined them by creating disulfide bonds.",
+      "explanation_hi": "एली लिली ने मानव इंसुलिन की श्रृंखला A और B के अनुरूप दो डीएनए अनुक्रम तैयार किए, उन्हें अलग से A और B श्रृंखला उत्पन्न करने के लिए E. coli में पेश किया, उन्हें निकाला और डाइसल्फाइड बंध बनाकर जोड़ा।",
+      "explanation_gu": "એલી લીલીએ માનવ ઇન્સ્યુલિનની A અને B શૃંખલાઓને અનુરૂપ બે DNA સિક્વન્સ બનાવી, *E. coli* માં અલગથી પ્રોડ્યુસ કરી, તેને નિષ્કર્ષિત કરી ડાઇસલ્ફાઇડ બંધો વડે જોડી દીધી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_007",
+      "type": "reflection",
+      "title": "Bioethics & Patenting Bio-resources",
+      "title_hi": "जैव नैतिकता और जैव-संसाधनों का पेटेंटिंग",
+      "title_gu": "બાયોએથિક્સ અને જૈવ-સંસાધનોનું પેટન્ટિંગ",
+      "reflection_prompt": "Reflect on how foreign corporations patent traditional bio-resources like Basmati rice or Neem. Why is equity and international regulation necessary in biotechnology?",
+      "reflection_prompt_hi": "विचार करें कि कैसे विदेशी निगम बासमती चावल या नीम जैसे पारंपरिक जैव-संसाधनों का पेटेंट कराते हैं। जैव प्रौद्योगिकी में निष्पक्षता और अंतर्राष्ट्रीय विनियमन क्यों आवश्यक है?",
+      "reflection_prompt_gu": "વિચારો કે કેવી રીતે વિદેશી કંપનીઓ બાસમતી ચોખા કે લીમડા જેવા પરંપરાગત જૈવ-સંસાધનોનું પેટન્ટ મેળવી લે છે. બાયોટેકનોલોજીમાં સમાનતા અને આંતરરાષ્ટ્રીય નિયમો શા માટે જરૂરી છે?",
+      "body": "Developing nations are rich in traditional biodiversity and indigenous knowledge, whereas industrialized nations possess advanced technology and finance. Unregulated exploitation leads to biopiracy without fair compensation to native communities.",
+      "body_hi": "विकासशील देश पारंपरिक जैव विविधता और स्वदेशी ज्ञान में समृद्ध हैं, जबकि औद्योगिक देशों के पास उन्नत तकनीक और वित्त है। अनियंत्रित शोषण से native समुदायों को उचित मुआवजे के बिना बायोपायरेसी होती है।",
+      "body_gu": "વિકાસશીલ દેશો પરંપરાગત જૈવવિવિધતા અને સ્થાનિક જ્ઞાનથી સમૃદ્ધ છે, જ્યારે ઔદ્યોગિક દેશો પાસે અદ્યતન ટેકનોલોજી અને નાણાં છે. અંકુશ વગરનું શોષણ સ્થાનિક સમુદાયોને યોગ્ય વળતર આપ્યા વિના બાયોપાયરસી તરફ દોરી જાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_008",
+      "type": "connection",
+      "title": "Interdisciplinary Impact of Medical Biotechnology",
+      "title_hi": "चिकित्सा जैव प्रौद्योगिकी का अंतःविषय प्रभाव",
+      "title_gu": "મેડિકલ બાયોટેકનોલોજીની આંતર-શાખાકીય અસર",
+      "body": "Recombinant DNA Technology links **Genetics**, **Pharmacology**, and **Diagnostics**:\n- **Early Disease Detection**: PCR amplifies trace amounts of viral DNA/RNA before symptoms manifest (e.g., HIV detection).\n- **ELISA**: Uses antigen-antibody interaction to detect infections rapidly.\n- **Personalized Gene Therapy**: Replaces defective genes using viral vectors to cure severe combined immunodeficiency (SCID).",
+      "body_hi": "पुनःसंयोजक डीएनए प्रौद्योगिकी **आनुवंशिकी**, **औधध विज्ञान**, और **निदान** को जोड़ती है:\n- **प्रारंभिक रोग का पता लगाना**: लक्षण प्रकट होने से पहले पीसीआर वायरल डीएनए/आरएनए की सूक्ष्म मात्रा को बढ़ाता है (जैसे, एचआईवी का पता लगाना)।\n- **ELISA**: संक्रमण का तेजी से पता लगाने के लिए प्रतिजन-प्रतिरक्षी (antigen-antibody) सहभागिता का उपयोग करता है।\n- **व्यक्तिगत जीन थेरेपी**: गंभीर संयुक्त इम्यूनोडेफिशिएंसी (SCID) को ठीक करने के लिए वायरल वैक्टर का उपयोग करके दोषपूर्ण जीन को बदलता है।",
+      "body_gu": "રિકોમ્બિનન્ટ DNA ટેકનોલોજી **જેનેટિક્સ**, **ફાર્માકોલોજી**, અને **નિદાન (Diagnostics)** ને જોડે છે:\n- **રોગની વહેલી જાણકારી**: લક્ષણો દેખાય તે પહેલાં PCR વાયરસના DNA/RNA ના અતિ સૂક્ષ્મ પ્રમાણને વધારી (amplify) આપે છે (દા.ત., HIV નું નિદાન).\n- **ELISA**: એન્ટિજન-એન્ટિબોડી આંતરક્રિયાનો ઉપયોગ કરી ઝડપી ચેપ નિદાન કરે છે.\n- **જીન થેરાપી**: વાયરસ વાહકોનો ઉપયોગ કરીને ખામીયુક્ત જનીનને બદલીને ગંભીર રોગોની સારવાર કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_009",
+      "type": "mastery",
+      "title": "Mastery Challenge: Gene Therapy vs RNA Interference",
+      "title_hi": "मास्टरी चुनौती: जीन थेरेपी बनाम RNA अंतक्षेप",
+      "title_gu": "માસ્ટરી ચેલેન્જ: જીન થેરાપી વિરુદ્ધ RNA એન્ટરફેરન્સ",
+      "question": "Which statement correctly distinguishes Gene Therapy for ADA deficiency from RNA interference (RNAi) used in pest control?",
+      "question_hi": "कौन सा कथन ADA कमी के लिए जीन थेरेपी को कीट नियंत्रण में प्रयुक्त RNA अंतक्षेप (RNAi) से सही ढंग से अलग करता है?",
+      "question_gu": "કયું વિધાન ADA ની ઊણપ માટેની જીન થેરાપી અને કીટક નિયંત્રણ માટેના RNA એન્ટરફેરન્સ (RNAi) વચ્ચેનો સાચો તફાવત દર્શાવે છે?",
+      "options": [
+        "Gene Therapy silences harmful host mRNAs, whereas RNAi inserts functional human genes into host genomes.",
+        "Gene Therapy introduces a functional gene (ADA cDNA) to produce a deficient enzyme, whereas RNAi uses dsRNA to silence specific parasitic mRNA.",
+        "Gene Therapy relies on Agrobacterium vectors exclusively, while RNAi relies solely on retroviruses.",
+        "Gene Therapy works only in plants, whereas RNAi works only in animals."
+      ],
+      "options_hi": [
+        "जीन थेरेपी हानिकारक मेजबान mRNA को साइलेंस करती है, जबकि RNAi मेजबान जीनोम में कार्यात्मक मानव जीन डालता है।",
+        "जीन थेरेपी एक कार्यात्मक जीन (ADA cDNA) पेश करती है ताकि कमी वाले एंजाइम का उत्पादन किया जा सके, जबकि RNAi विशिष्ट परजीवी mRNA को साइलेंस करने के लिए dsRNA का उपयोग करता है।",
+        "जीन थेरेपी विशेष रूप से एग्रोबैक्टीरियम वैक्टर पर निर्भर करती है, जबकि RNAi केवल रेट्रोवायरस पर निर्भर करता है।",
+        "जीन थेरेपी केवल पौधों में काम करती है, जबकि RNAi केवल जानवरों में काम करती है।"
+      ],
+      "options_gu": [
+        "જીન થેરાપી નુકસાનકારક mRNA ને સાયલેન્સ કરે છે, જ્યારે RNAi યજમાન જીનોમમાં નવું જનીન ઉમેરે છે.",
+        "જીન થેરાપી ખામીયુક્ત ઉત્સેચક બનાવવા કાર્યાત્મક જનીન (ADA cDNA) ઉમેરે છે, જ્યારે RNAi પરોપજીવીના mRNA ને સાયલેન્સ કરવા dsRNA નો ઉપયોગ કરે છે.",
+        "જીન થેરાપી માત્ર એગ્રોબેક્ટેરિયમ વાહકો પર આધાર રાખે છે, જ્યારે RNAi માત્ર રેટ્રોવાયરસ પર આધાર રાખે છે.",
+        "જીન થેરાપી માત્ર વનસ્પતિઓમાં થાય છે, જ્યારે RNAi માત્ર પ્રાણીઓમાં થાય છે."
+      ],
+      "correct_index": 1,
+      "explanation": "Gene Therapy introduces a functional gene (ADA cDNA via retrovirus) to supply missing ADA enzyme in humans. RNAi uses complementary dsRNA to degrade/silence targeted mRNA of pests (like Meloidogyne incognitia).",
+      "explanation_hi": "जीन थेरेपी मनुष्यों में लापता ADA एंजाइम की आपूर्ति करने के लिए एक कार्यात्मक जीन (रेट्रोवायरस के माध्यम से ADA cDNA) पेश करती है। RNAi कीटों (जैसे मेलोइडोगाइन इनकोग्निशिया) के लक्षित mRNA को नीचा/साइलेंस करने के लिए पूरक dsRNA का उपयोग करता है।",
+      "explanation_gu": "જીન થેરાપી માનવમાં ઘટેલા ADA ઉત્સેચક પૂરા પાડવા કાર્યાત્મક જનીન ઉમેરે છે. જ્યારે RNAi પરોપજીવી કૃમિના વિશિષ્ટ mRNA ને સાયલેન્સ કરવા પૂરક dsRNA નો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_010",
+      "type": "mcq",
+      "title": "NCERT Ex Q1: Bt Toxin Crystal Inactivity",
+      "title_hi": "एनसीईआरटी अभ्यास Q1: Bt टॉक्सिन क्रिस्टल निष्क्रियता",
+      "title_gu": "NCERT સ્વાધ્યાય Q1: Bt ટોક્સિન સ્ફટિકોની નિષ્ક્રિયતા",
+      "question": "Crystals of Bt toxin produced by some bacteria do not kill the bacteria themselves because:",
+      "question_hi": "कुछ बैक्टीरिया द्वारा उत्पादित Bt टॉक्सिन के क्रिस्टल स्वयं बैक्टीरिया को नहीं मारते क्योंकि:",
+      "question_gu": "કેટલાક બેક્ટેરિયા દ્વારા ઉત્પન્ન થતા Bt ટોક્સિનના સ્ફટિકો બેક્ટેરિયાને જાતે કેમ મારી નાખતા નથી?",
+      "options": [
+        "Bacteria are immune to the toxin",
+        "Toxin is inactive and present as a protoxin",
+        "Toxin is enclosed in a special membrane container",
+        "Bacteria contain an enzyme that degrades the active toxin instantly"
+      ],
+      "options_hi": [
+        "बैक्टीरिया टॉक्सिन के प्रति प्रतिरक्षात्मक हैं",
+        "टॉक्सिन निष्क्रिय है और प्रोटॉक्सिन के रूप में मौजूद है",
+        "टॉक्सिन एक विशेष झिल्लीदार कंटेनर में बंद है",
+        "बैक्टीरिया में एक एंजाइम होता है जो तुरंत सक्रिय टॉक्सिन को नीचा दिखाता है"
+      ],
+      "options_gu": [
+        "બેક્ટેરિયા ટોક્સિન સામે રોગપ્રતિકારક શક્તિ ધરાવે છે",
+        "ટોક્સિન નિષ્ક્રિય હોય છે અને પ્રોટોક્સિન સ્વરૂપે રહેલું હોય છે",
+        "ટોક્સિન વિશેષ પટલથી આવરીત હોય છે",
+        "બેક્ટેરિયામાં ઉત્સેચક હોય છે જે સક્રિય ટોક્સિનનો તરત નાશ કરે છે"
+      ],
+      "correct_index": 1,
+      "explanation": "Bt toxin is produced as an inactive precursor called protoxin in bacteria. It requires the alkaline pH of the insect midgut to get converted into its active toxic form.",
+      "explanation_hi": "Bt टॉक्सिन बैक्टीरिया में प्रोटॉक्सिन नामक एक निष्क्रिय अग्रदूत के रूप में निर्मित होता है। इसे इसके सक्रिय विषाक्त रूप में परिवर्तित होने के लिए कीट की मध्य-आंत के क्षारीय pH की आवश्यकता होती है।",
+      "explanation_gu": "Bt ટોક્સિન બેક્ટેરિયામાં પ્રોટોક્સિન નામના નિષ્ક્રિય સ્વરૂપે બને છે. તે કીટકના આંતરડાના ક્ષારીય pH માં જ દ્રાવ્ય થઈ સક્રિય બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_011",
+      "type": "mcq",
+      "title": "NCERT Ex Q2: Definition of Transgenic Bacteria",
+      "title_hi": "एनसीईआरटी अभ्यास Q2: ट्रांसजेनिक बैक्टीरिया की परिभाषा",
+      "title_gu": "NCERT સ્વાધ્યાય Q2: ટ્રાન્સજેનિક બેક્ટેરિયાની વ્યાખ્યા",
+      "question": "Which of the following best defines transgenic bacteria and an example of their application?",
+      "question_hi": "निम्नलिखित में से कौन ट्रांसजेनिक बैक्टीरिया और उनके अनुप्रयोग के उदाहरण को सर्वोत्तम रूप से परिभाषित करता है?",
+      "question_gu": "નીચેનામાંથી કયું ટ્રાન્સજેનિક બેક્ટેરિયા અને તેના ઉપયોગનું શ્રેષ્ઠ ઉદાહરણ દર્શાવે છે?",
+      "options": [
+        "Bacteria that have swallowed foreign enzymes; used in curd formation",
+        "Bacteria into which foreign DNA/gene has been introduced by rDNA technology; e.g., E. coli producing human insulin",
+        "Bacteria that undergo natural mutation; used in penicillin synthesis",
+        "Bacteria having extra cell walls; used in biogas production"
+      ],
+      "options_hi": [
+        "बैक्टीरिया जिन्होंने विदेशी एंजाइमों को निगल लिया है; दही बनाने में उपयोग किया जाता है",
+        "बैक्टीरिया जिनमें आरडीएनए तकनीक द्वारा विदेशी डीएनए/जीन पेश किया गया है; उदाहरण के लिए, मानव इंसुलिन का उत्पादन करने वाला E. coli",
+        "प्राकृतिक उत्परिवर्तन से गुजरने वाले बैक्टीरिया; पेनिसिलिन संश्लेषण में उपयोग किया जाता है",
+        "अतिरिक्त कोशिका भित्ति वाले बैक्टीरिया; बायोगैस उत्पादन में उपयोग किया जाता है"
+      ],
+      "options_gu": [
+        "બેક્ટેરિયા જેણે બહારના ઉત્સેચકો ગળી લીધા છે; દહીં બનાવવામાં વપરાય છે",
+        "બેક્ટેરિયા જેમાં rDNA ટેકનોલોજી દ્વારા વિજાતીય DNA/જનીન દાખલ કરવામાં આવ્યું છે; દા.ત., માનવ ઇન્સ્યુલિન બનાવતું E. coli",
+        "કુદરતી વિકૃતિ પામતા બેક્ટેરિયા; પેનિસિલિન બનાવવામાં વપરાય છે",
+        "વધારાની કોષદિવાલ ધરાવતા બેક્ટેરિયા; બાયોગેસ ઉત્પાદનમાં વપરાય છે"
+      ],
+      "correct_index": 1,
+      "explanation": "Transgenic bacteria carry manipulated foreign genes inserted via recombinant DNA technology. E. coli engineered with human insulin genes A and B is a classic example.",
+      "explanation_hi": "ट्रांसजेनिक बैक्टीरिया में पुनःसंयोजक डीएनए तकनीक के माध्यम से हेरफेर किए गए विदेशी जीन होते हैं। मानव इंसुलिन जीन A और B के साथ इंजीनियर E. coli एक क्लासिक उदाहरण है।",
+      "explanation_gu": "ટ્રાન્સજેનિક બેક્ટેરિયામાં rDNA ટેકનોલોજી વડે બહારનું જનીન દાખલ કરવામાં આવે છે. *E. coli* માં માનવ ઇન્સ્યુલિનના જનીનો દાખલ કરીને ઇન્સ્યુલિન મેળવવું એ તેનું ઉત્તમ ઉદાહરણ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_012",
+      "type": "mcq",
+      "title": "NCERT Ex Q3: Advantages of GM Crops",
+      "title_hi": "एनसीईआरटी अभ्यास Q3: जीएम फसलों के लाभ",
+      "title_gu": "NCERT સ્વાધ્યાય Q3: GM પાકના ફાયદા",
+      "question": "Which of the following is NOT a recognized advantage of Genetically Modified (GM) crops?",
+      "question_hi": "निम्नलिखित में से कौन सा जेनेटिकली मॉडिफाइड (जीएम) फसलों का एक मान्यता प्राप्त लाभ नहीं है?",
+      "question_gu": "નીચેનામાંથી કયો જનીનિક રીતે રૂપાંતરિત (GM) પાકોનો સ્વીકૃત ફાયદો નથી?",
+      "options": [
+        "Increased tolerance to abiotic stresses (cold, drought, salt)",
+        "Reduced reliance on chemical pesticides",
+        "Increased post-harvest losses due to faster ripening",
+        "Enhanced nutritional value of food (e.g., Vitamin A enriched rice)"
+      ],
+      "options_hi": [
+        "अजैविक तनाव (ठंड, सूखा, नमक) के प्रति सहनशीलता में वृद्धि",
+        "रासायनिक कीटनाशकों पर निर्भरता कम होना",
+        "तेजी से पकने के कारण कटाई के बाद के नुकसान में वृद्धि",
+        "भोजन के पोषण मूल्य में वृद्धि (जैसे, विटामिन ए समृद्ध चावल)"
+      ],
+      "options_gu": [
+        "અજૈવિક તાણ (ઠંડી, દુષ્કાળ, ક્ષાર) સામે વધુ સહનશીલતા",
+        "રાસાયણિક જંતુનાશકો પર ઓછી નિર્ભરતા",
+        "ઝડપી પાકવાને કારણે લણણી પછી નુકસાનમાં વધારો",
+        "ખોરાકનું પોષણમૂલ્ય વધવું (દા.ત., વિટામિન A સભર ચોખા)"
+      ],
+      "correct_index": 2,
+      "explanation": "GM crops actually help REDUCE post-harvest losses (e.g., Flavr Savr tomato with delayed ripening), making increased loss incorrect.",
+      "explanation_hi": "जीएम फसलें वास्तव में कटाई के बाद के नुकसान को कम करने में मदद करती हैं (उदा. फ्लेवर सावर टमाटर विलंबित पकने के साथ), इसलिए नुकसान में वृद्धि गलत है।",
+      "explanation_gu": "GM પાકો વાસ્તવમાં લણણી પછીનું નુકસાન 'ઘટાડવામાં' મદદ કરે છે (દા.ત., ટામેટાના વિલંબિત પાકવાની પ્રક્રિયા), તેથી નુકસાન વધવું એ ખોટો વિકલ્પ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_013",
+      "type": "mcq",
+      "title": "NCERT Ex Q4: RNA Interference & Nematodes",
+      "title_hi": "एनसीईआरटी अभ्यास Q4: RNA अंतक्षेप और नेमाटोड",
+      "title_gu": "NCERT સ્વાધ્યાય Q4: RNA એન્ટરફેરન્સ અને કૃમિ",
+      "question": "RNA interference (RNAi) prevents nematode infestation in tobacco plants by silencing specific mRNA using:",
+      "question_hi": "RNA अंतक्षेप (RNAi) तंबाकू के पौधों में नेमाटोड के संक्रमण को विशिष्ट mRNA को साइलेंस करके रोकता है:",
+      "question_gu": "RNA એન્ટરફેરન્સ (RNAi) તમાકુના છોડમાં કૃમિના ચેપને ચોક્કસ mRNA સાયલેન્સ કરીને અટકાવે છે, જે શેના દ્વારા થાય છે?",
+      "options": [
+        "Complementary double-stranded RNA (dsRNA)",
+        "Single-stranded DNA (ssDNA)",
+        "Bacterial restriction endonucleases",
+        "Heat shock proteins"
+      ],
+      "options_hi": [
+        "पूरक द्विसूत्री RNA (dsRNA)",
+        "एकल-सूत्री DNA (ssDNA)",
+        "बैक्टीरियल प्रतिबंधन एंडोन्यूक्लीज",
+        "हीट शॉक प्रोटीन"
+      ],
+      "options_gu": [
+        "પૂરક દ્વિ-શૃંખલાવાળું RNA (dsRNA)",
+        "એકલ-શૃંખલાવાળું DNA (ssDNA)",
+        "બેક્ટેરિયલ રેસ્ટ્રિક્શન એન્ડોન્યુક્લીએઝ",
+        "હીટ શોક પ્રોટીન"
+      ],
+      "correct_index": 0,
+      "explanation": "RNAi involves silencing of a specific mRNA due to a complementary dsRNA molecule that binds to and prevents translation of the mRNA.",
+      "explanation_hi": "RNAi में एक पूरक dsRNA अणु के कारण एक विशिष्ट mRNA का साइलेंसिंग शामिल होता है जो mRNA से जुड़ता है और उसके अनुवाद को रोकता है।",
+      "explanation_gu": "RNAi માં પૂરક dsRNA અણુ ચોક્કસ mRNA સાથે જોડાઈને તેનું ભાષાંતરણ અટકાવે છે, જેથી જનીન સાયલેન્સ થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_014",
+      "type": "mcq",
+      "title": "NCERT Ex Q5: ADA Deficiency & Gene Therapy",
+      "title_hi": "एनसीईआरटी अभ्यास Q5: ADA कमी और जीन थेरेपी",
+      "title_gu": "NCERT સ્વાધ્યાય Q5: ADA ની ઊણપ અને જીન થેરાપી",
+      "question": "In the treatment of Adenosine Deaminase (ADA) deficiency, why is lymphocyte infusion not a permanent cure?",
+      "question_hi": "एडिनोसिन डिएमिनेज (ADA) की कमी के इलाज में, लिम्फोसाइट जलसेक एक स्थायी इलाज क्यों नहीं है?",
+      "question_gu": "એડેનોસાઇન ડિએમિનેઝ (ADA) ની ઊણપની સારવારમાં, લિમ્ફોસાઇટ કોષો આપવાની પદ્ધતિ શા માટે કાયમી ઇલાજ નથી?",
+      "options": [
+        "Infused genetically engineered lymphocytes have a limited lifespan and are not immortal",
+        "ADA enzyme degrades the transfused cells immediately",
+        "Retroviral vectors mutate inside the human body",
+        "Immune system rejects foreign lymphocytes"
+      ],
+      "options_hi": [
+        "इन्फ्यूज्ड जेनेटिकली इंजीनियर लिम्फोसाइट्स का जीवनकाल सीमित होता है और वे अमर नहीं होते हैं",
+        "ADA एंजाइम तुरंत स्थानांतरित कोशिकाओं को नीचा दिखाता है",
+        "रेट्रोवायरल वैक्टर मानव शरीर के अंदर उत्परिवर्तित होते हैं",
+        "प्रतिरक्षा प्रणाली विदेशी लिम्फोसाइटों को अस्वीकार करती है"
+      ],
+      "options_gu": [
+        "દાખલ કરાયેલા જીનેટિકલી એન્જિનિયર્ડ લિમ્ફોસાઇટ્સ મર્યાદિત આયુષ્ય ધરાવે છે અને અમર હોતા નથી",
+        "ADA ઉત્સેચક કોષોનો તરત નાશ કરે છે",
+        "રેટ્રોવાયરસ માનવ શરીરમાં વિકૃતિ પામે છે",
+        "રોગપ્રતિકારક શક્તિ આ કોષોનો અસ્વીકાર કરે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Genetically engineered lymphocytes transferred into the patient are not immortal, so the patient requires periodic infusion of such cells. A permanent cure requires introducing the ADA gene into bone marrow stem cells at early embryonic stages.",
+      "explanation_hi": "रोगी में स्थानांतरित आनुवंशिक रूप से इंजीनियर लिम्फोसाइट्स अमर नहीं होते हैं, इसलिए रोगी को ऐसी कोशिकाओं के आवधिक जलसेक की आवश्यकता होती है। एक स्थायी इलाज के लिए शुरुआती भ्रूण अवस्था में अस्थि मज्जा स्टेम कोशिकाओं में ADA जीन को पेश करने की आवश्यकता होती है।",
+      "explanation_gu": "દર્દીમાં દાખલ કરાયેલા લિમ્ફોસાઇટ્સ અમર નથી, તેથી તેમને સમયાંતરે દર્દીમાં દાખલ કરવા પડે છે. કાયમી ઇલાજ માટે ગર્ભના પ્રારંભિક તબક્કે અસ્થિમજ્જાના ટોટીપોટન્ટ કોષોમાં ADA જનીન દાખલ કરવું પડે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_015",
+      "type": "mcq",
+      "title": "NCERT Ex Q6: Structure of Human Insulin",
+      "title_hi": "एनसीईआरटी अभ्यास Q6: मानव इंसुलिन की संरचना",
+      "title_gu": "NCERT સ્વાધ્યાય Q6: માનવ ઇન્સ્યુલિનની રચના",
+      "question": "Which component present in pro-insulin is absent in mature functional human insulin?",
+      "question_hi": "प्रो-इंसुलिन में मौजूद कौन सा घटक परिपक्व कार्यात्मक मानव इंसुलिन में अनुपस्थित होता है?",
+      "question_gu": "પ્રો-ઇન્સ્યુલિનમાં હાજર કયો ભાગ પરિપક્વ કાર્યકારી માનવ ઇન્સ્યુલિનમાં હોતો નથી?",
+      "options": [
+        "Chain A",
+        "Chain B",
+        "C-peptide",
+        "Disulfide bonds"
+      ],
+      "options_hi": [
+        "श्रृंखला A",
+        "श्रृंखला B",
+        "C-पेप्टाइड",
+        "डाइसल्फाइड बंध"
+      ],
+      "options_gu": [
+        "શૃંખલા A",
+        "શૃંખલા B",
+        "C-પેપ્ટાઇડ",
+        "ડાઇસલ્ફાઇડ બંધો"
+      ],
+      "correct_index": 2,
+      "explanation": "Pro-insulin contains an extra polypeptide chain called the C-peptide, which is removed during maturation to form functional insulin containing only Chains A and B.",
+      "explanation_hi": "प्रो-इंसुलिन में C-पेप्टाइड नामक एक अतिरिक्त पॉलीपेप्टाइड श्रृंखला होती है, जिसे केवल A और B श्रृंखलाओं वाले कार्यात्मक इंसुलिन बनाने के लिए परिपक्वता के दौरान हटा दिया जाता है।",
+      "explanation_gu": "પ્રો-ઇન્સ્યુલિનમાં 'C-પેપ્ટાઇડ' નામની વધારાની શૃંખલા હોય છે, જે પરિપક્વતા દરમિયાન દૂર થાય છે અને માત્ર A તથા B શૃંખલાઓ ધરાવતું સક્રિય ઇન્સ્યુલિન બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_016",
+      "type": "true_false",
+      "title": "NCERT Ex Q7: Golden Rice Characterization",
+      "title_hi": "एनसीईआरटी अभ्यास Q7: गोल्डन राइस लक्षण वर्णन",
+      "title_gu": "NCERT સ્વાધ્યાય Q7: ગોલ્ડન રાઇસની લાક્ષણિકતા",
+      "question": "Golden Rice is a transgenic variety of rice enriched with Beta-carotene (provitamin A) to fight nutritional deficiency.",
+      "question_hi": "गोल्डन राइस चावल की एक ट्रांसजेनिक किस्म है जो पोषण संबंधी कमी से लड़ने के लिए बीटा-कैरोटीन (प्रोविटामिन ए) से समृद्ध है।",
+      "question_gu": "ગોલ્ડન રાઇસ એ ચોખાની ટ્રાન્સજેનિક જાત છે જે કુપોષણ દૂર કરવા માટે બીટા-કેરોટીન (પ્રોવિટામિન A) થી સમૃદ્ધ છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Golden rice is genetically engineered to biosynthesize beta-carotene, a precursor of vitamin A, in the edible parts of rice.",
+      "explanation_hi": "गोल्डन राइस को चावल के खाने योग्य भागों में विटामिन ए के अग्रदूत बीटा-कैरोटीन को बायोसिंथिसिस करने के लिए आनुवंशिक रूप से इंजीनियर किया गया है।",
+      "explanation_gu": "ગોલ્ડન રાઇસ જનીનિક રીતે રૂપાંતરિત ચોખા છે, જેમાં વિટામિન A નું પુરોગામી બીટા-કેરોટીન પ્રચૂર પ્રમાણમાં ઉત્પન્ન થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_017",
+      "type": "mcq",
+      "title": "NCERT Ex Q8: Nucleases & Proteases in Blood Plasma",
+      "title_hi": "एनसीईआरटी अभ्यास Q8: रक्त प्लाज्मा में न्यूक्लीज और प्रोटीएज",
+      "title_gu": "NCERT સ્વાધ્યાય Q8: બ્લડ પ્લાઝમામાં ન્યુક્લીએઝ અને પ્રોટીએઝ",
+      "question": "Why do active proteases and nucleases NOT normally degrade serum proteins and nucleic acids in healthy human circulating blood?",
+      "question_hi": "सक्रिय प्रोटीएज और न्यूक्लीज सामान्य रूप से स्वस्थ मानव परिसंचारी रक्त में सीरम प्रोटीन और न्यूक्लिक एसिड को नीचा क्यों नहीं दिखाते हैं?",
+      "question_gu": "સક્રિય પ્રોટીએઝ અને ન્યુક્લીએઝ સામાન્ય રીતે તંદુરસ્ત માનવ રક્તમાં રહેલા પ્રોટીન અને ન્યુક્લિક એસિડનો નાશ કેમ કરતા નથી?",
+      "options": [
+        "Blood plasma contains protective protease inhibitors, and nucleases exist in inactive zymogen forms or inside cellular compartments",
+        "Human blood temperature destroys all digestive enzymes completely",
+        "Blood contains no proteins or nucleic acids under normal physiology",
+        "White blood cells consume all digestive enzymes in blood"
+      ],
+      "options_hi": [
+        "रक्त प्लाज्मा में सुरक्षात्मक प्रोटीएज अवरोधक होते हैं, और न्यूक्लीज निष्क्रिय ज़ाइमोजेन रूपों में या कोशिकीय डिब्बों के अंदर मौजूद होते हैं",
+        "मानव रक्त का तापमान सभी पाचक एंजाइमों को पूरी तरह से नष्ट कर देता है",
+        "सामान्य शरीर विज्ञान के तहत रक्त में कोई प्रोटीन या न्यूक्लिक एसिड नहीं होता है",
+        "श्वेत रक्त कोशिकाएं रक्त में सभी पाचक एंजाइमों का उपभोग करती हैं"
+      ],
+      "options_gu": [
+        "બ્લડ પ્લાઝમામાં રક્ષણાત્મક ઉત્સેચક અવરોધકો (inhibitors) હોય છે, અને ન્યુક્લીએઝ નિષ્ક્રિય સ્વરૂપે અથવા કોષોની અંદર હોય છે",
+        "માનવ લોહીનું તાપમાન બધા પાચક ઉત્સેચકોનો નાશ કરે છે",
+        "સામાન્ય સંજોગોમાં લોહીમાં પ્રોટીન કે ન્યુક્લિક એસિડ હોતા નથી",
+        "શ્વેતકણો બધા ઉત્સેચકોને ખાઈ જાય છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Proteases in blood plasma are strictly regulated by specific inhibitors (e.g. alpha-1-antitrypsin), and active cellular nucleases operate intracellularly or are inactivated rapidly to prevent degradation of serum components.",
+      "explanation_hi": "रक्त प्लाज्मा में प्रोटीएज को विशिष्ट अवरोधकों (जैसे अल्फा-1-एंटीट्रिप्सिन) द्वारा सख्ती से नियंत्रित किया जाता है, और सक्रिय कोशिकीय न्यूक्लीज सीरम घटकों के क्षरण को रोकने के लिए अंतःकोशिकीय रूप से काम करते हैं या तेजी से निष्क्रिय हो जाते हैं।",
+      "explanation_gu": "લોહીના પ્લાઝમામાં રહેલા પ્રોટીએઝ ઉત્સેચકો ચોક્કસ ઇનહિબિટર્સ દ્વારા નિયંત્રિત હોય છે, અને ન્યુક્લીએઝ કોષની અંદર કાર્ય કરે છે જેથી લોહીના ઘટકો સુરક્ષિત રહે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_018",
+      "type": "mcq",
+      "title": "NCERT Ex Q9: First Transgenic Cow 'Rosie'",
+      "title_hi": "एनसीईआरटी अभ्यास Q9: पहली ट्रांसजेनिक गाय 'रोजी'",
+      "title_gu": "NCERT સ્વાધ્યાય Q9: પ્રથમ ટ્રાન્સજેનિક ગાય 'રોઝી'",
+      "question": "The first transgenic cow, Rosie (produced in 1997), was remarkable because her milk contained 2.4 grams per liter of which human protein?",
+      "question_hi": "पहली ट्रांसजेनिक गाय, रोजी (1997 में उत्पादित), उल्लेखनीय थी क्योंकि उसके दूध में किस मानव प्रोटीन का 2.4 ग्राम प्रति लीटर था?",
+      "question_gu": "પ્રથમ ટ્રાન્સજેનિક ગાય, રોઝી (1997), શા માટે જાણીતી હતી? તેના દૂધમાં લિટર દીઠ 2.4 ગ્રામ કયું માનવ પ્રોટીન હતું?",
+      "options": [
+        "Human alpha-lactalbumin",
+        "Human serum albumin",
+        "Alpha-1-antitrypsin",
+        "Insulin-like growth factor"
+      ],
+      "options_hi": [
+        "मानव अल्फा-लैक्टलबुमिन",
+        "मानव सीरम एल्ब्यूमिन",
+        "अल्फा-1-एंटीट्रिप्सिन",
+        "इंसुलिन जैसा विकास कारक"
+      ],
+      "options_gu": [
+        "માનવ આલ્ફા-લેક્ટાલ્બ્યુમિન",
+        "માનવ સિરમ અલ્બ્યુમિન",
+        "આલ્ફા-1-એન્ટિટ્રિપ્સિન",
+        "ઇન્સ્યુલિન જેવું ગ્રોથ ફેક્ટર"
+      ],
+      "correct_index": 0,
+      "explanation": "Rosie produced milk containing human alpha-lactalbumin (2.4 g/L), making it a nutritionally more balanced product for human babies than natural cow milk.",
+      "explanation_hi": "रोजी ने मानव अल्फा-लैक्टलबुमिन (2.4 ग्राम/लीटर) युक्त दूध का उत्पादन किया, जिससे यह प्राकृतिक गाय के दूध की तुलना में मानव बच्चों के लिए पोषण संबंधी अधिक संतुलित उत्पाद बन गया।",
+      "explanation_gu": "રોઝી ગાયના દૂધમાં માનવ આલ્ફા-લેક્ટાલ્બ્યુમિન (2.4 g/L) હતું, જે કુદરતી ગાયના દૂધ કરતા માનવ શિશુઓ માટે વધુ પોષણક્ષમ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_BIO_CH10_019",
+      "type": "mcq",
+      "title": "NCERT Ex Q10: Role of GEAC & Biopiracy Prevention",
+      "title_hi": "एनसीईआरटी अभ्यास Q10: GEAC की भूमिका और बायोपायरेसी रोकथाम",
+      "title_gu": "NCERT સ્વાધ્યાય Q10: GEAC ની ભૂમિકા અને બાયોપાયરસી અટકાવવી",
+      "question": "In India, which statutory body is responsible for making decisions regarding the validity of GM research and ensuring the safety of introducing GM organisms for public use?",
+      "question_hi": "भारत में, कौन सा वैधानिक निकाय जीएम अनुसंधान की वैधता के बारे में निर्णय लेने और सार्वजनिक उपयोग के लिए जीएम जीवों को पेश करने की सुरक्षा सुनिश्चित करने के लिए जिम्मेदार है?",
+      "question_gu": "ભારતમાં, GM સંશોધનની માન્યતા અને જાહેર સેવાઓ માટે GM સજીવોની સુરક્ષા અંગે નિર્ણયો લેવા કઈ વૈધાનિક સંસ્થા જવાબદાર છે?",
+      "options": [
+        "ICAR (Indian Council of Agricultural Research)",
+        "GEAC (Genetic Engineering Approval Committee)",
+        "CSIR (Council of Scientific and Industrial Research)",
+        "NCERT (National Council of Educational Research and Training)"
+      ],
+      "options_hi": [
+        "ICAR (भारतीय कृषि अनुसंधान परिषद)",
+        "GEAC (जेनेटिक इंजीनियरिंग अप्रूवल कमेटी)",
+        "CSIR (वैज्ञानिक और औद्योगिक अनुसंधान परिषद)",
+        "NCERT (राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद)"
+      ],
+      "options_gu": [
+        "ICAR (ઇન્ડિયન કાઉન્સિલ ઓફ એગ્રીકલ્ચરલ રિસર્ચ)",
+        "GEAC (જેનેટિક એન્જિનિયરિંગ એપ્રુવલ કમિટી)",
+        "CSIR (કાઉન્સિલ ઓફ સાયન્ટિફિક એન્ડ ઇન્ડસ્ટ્રિયલ રિસર્ચ)",
+        "NCERT (નેશનલ કાઉન્સિલ ઓફ એજ્યુકેશનલ રિસર્ચ એન્ડ ટ્રેનિંગ)"
+      ],
+      "correct_index": 1,
+      "explanation": "GEAC (Genetic Engineering Approval Committee) is the official regulatory body under the Ministry of Environment, Forest and Climate Change in India.",
+      "explanation_hi": "GEAC (जेनेटिक इंजीनियरिंग अप्रूवल कमेटी) भारत में पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय के तहत आधिकारिक नियामक निकाय है।",
+      "explanation_gu": "GEAC (જેનેટિક એન્જિનિયરિંગ એપ્રુવલ કમિટી) ભારત સરકારના પર્યાવરણ અને વન મંત્રાલય હેઠળની અધિકૃત નિયંત્રણ સંસ્થા છે."
+    }
+  ]
+}

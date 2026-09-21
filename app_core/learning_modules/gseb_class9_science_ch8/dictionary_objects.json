@@ -1,0 +1,99 @@
+{
+  "DICT_DISTANCE": {
+    "term": {
+      "english": "Distance",
+      "gujarati": "અંતર (Antar)",
+      "hindi": "दूरी (Doori)"
+    },
+    "definition": {
+      "simple": "The total path you traveled, no matter which way you went.",
+      "academic": "The total length of the actual path covered by an object in motion."
+    },
+    "examples": [
+      "Walking 5km on a treadmill (your distance is 5km, even though you didn't go anywhere)."
+    ],
+    "media": {},
+    "knowledge_graph_links": {
+      "related": ["DICT_DISPLACEMENT", "DICT_SPEED"],
+      "prerequisites": [],
+      "used_in": ["SCI_C9_CH8"]
+    },
+    "ai_context": {
+      "common_misconceptions": ["Thinking distance is always a straight line."],
+      "tutor_hint": "Ask them if their smartwatch counts distance even if they run in circles."
+    }
+  },
+  "DICT_DISPLACEMENT": {
+    "term": {
+      "english": "Displacement",
+      "gujarati": "સ્થાનાંતર (Sthanantar)",
+      "hindi": "विस्थापन (Visthapan)"
+    },
+    "definition": {
+      "simple": "The straight-line shortcut from where you started to where you ended up, including the direction.",
+      "academic": "The shortest straight-line distance between the initial and final position of an object, along with its direction."
+    },
+    "examples": [
+      "Going 3km East and 4km North results in a displacement of 5km North-East."
+    ],
+    "media": {},
+    "knowledge_graph_links": {
+      "related": ["DICT_DISTANCE", "DICT_VELOCITY"],
+      "prerequisites": [],
+      "used_in": ["SCI_C9_CH8"]
+    },
+    "ai_context": {
+      "common_misconceptions": ["Believing displacement can be larger than distance."],
+      "tutor_hint": "Have them draw a triangle. Distance is the two sides, displacement is the hypotenuse."
+    }
+  },
+  "DICT_VELOCITY": {
+    "term": {
+      "english": "Velocity",
+      "gujarati": "વેગ (Veg)",
+      "hindi": "वेग (Veg)"
+    },
+    "definition": {
+      "simple": "Speed with a direction. Like '50 km/h North'.",
+      "academic": "The rate of change of displacement of an object with respect to time."
+    },
+    "examples": [
+      "A car driving 100 km/h on a highway going East."
+    ],
+    "media": {},
+    "knowledge_graph_links": {
+      "related": ["DICT_SPEED", "DICT_ACCELERATION"],
+      "prerequisites": ["DICT_DISPLACEMENT"],
+      "used_in": ["SCI_C9_CH8"]
+    },
+    "ai_context": {
+      "common_misconceptions": ["Thinking velocity and speed are exactly the same thing."],
+      "tutor_hint": "Ask what happens if two cars have the same speed but different velocities."
+    }
+  },
+  "DICT_ACCELERATION": {
+    "term": {
+      "english": "Acceleration",
+      "gujarati": "પ્રવેગ (Praveg)",
+      "hindi": "त्वरण (Tvaran)"
+    },
+    "definition": {
+      "simple": "How quickly you speed up, slow down, or change direction.",
+      "academic": "The rate of change of velocity of an object with respect to time."
+    },
+    "examples": [
+      "Pressing the gas pedal in a car.",
+      "Slamming on the brakes (negative acceleration or deceleration)."
+    ],
+    "media": {},
+    "knowledge_graph_links": {
+      "related": ["DICT_VELOCITY", "DICT_FORCE"],
+      "prerequisites": ["DICT_VELOCITY"],
+      "used_in": ["SCI_C9_CH8"]
+    },
+    "ai_context": {
+      "common_misconceptions": ["Thinking you are accelerating when going at a constant fast speed."],
+      "tutor_hint": "Remind them that turning the steering wheel is also acceleration!"
+    }
+  }
+}

@@ -1,0 +1,1306 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch2",
+    "title": "Chapter 2: Inverse Trigonometric Functions",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_001",
+      "type": "hook",
+      "title": "The Secret Key of Inverse Functions: Reversing Time in Math",
+      "title_hi": "प्रतिलोम फलनों की गुप्त कुंजी: गणित में समय को उलटना",
+      "title_gu": "પ્રતિવિધેયની ગુપ્ત ચાવી: ગણિતમાં સમયને ઉલટાવવો",
+      "body": "Imagine radar tracking an aircraft. The radar measures the aircraft's altitude and horizontal distance, giving us a ratio (like sine or cosine of an angle). But how does the radar system calculate the exact angle of elevation to aim its dish? Trigonometry alone goes from angle to ratio. To go backward—from ratio to angle—we need Inverse Trigonometric Functions! They form the brain behind GPS tracking, game engine physics, robotic arm positioning, and 3D computer graphics.",
+      "body_hi": "कल्पना कीजिए कि एक रडार एक विमान को ट्रैक कर रहा है। रडार विमान की ऊंचाई और क्षैतिज दूरी को मापता है, जो हमें एक अनुपात (जैसे किसी कोण का साइन या कोसाइन) देता है। लेकिन रडार प्रणाली अपनी डिश को लक्षित करने के लिए सटीक उन्नयन कोण की गणना कैसे करती है? त्रिकोणमिति केवल कोण से अनुपात तक जाती है। पीछे जाने के लिए—अनुपात से कोण तक—हमें प्रतिलोम त्रिकोणमितीय फलनों की आवश्यकता होती है! वे GPS ट्रैकिंग, गेम इंजन भौतिकी, रोबोटिक आर्म पोजिशनिंग और 3D कंप्यूटर ग्राफिक्स के पीछे का दिमाग हैं।",
+      "body_gu": "ધારો કે એક રડાર વિમાનને ટ્રેક કરી રહ્યું છે. રડાર વિમાનની ઊંચાઈ અને ક્ષૈતિજ અંતર માપે છે, જે આપણને ગુણોત્તર (જેમ કે ખૂણાનો સાઈન અથવા કોસાઈન) આપે છે. પરંતુ રડાર સિસ્ટમ ડિશને તે તરફ ગોઠવવા માટે ચોક્કસ ઉત્સેધકોણની ગણતરી કેવી રીતે કરે છે? ત્રિકોણમિતિ ફક્ત ખૂણા પરથી ગુણોત્તર આપે છે. પાછા જવા માટે—ગુણોત્તર પરથી ખૂણો મેળવવા માટે—આપણને ત્રિકોણમિતિ-પ્રતિવિધેયોની જરૂર છે! તે GPS ટ્રેકિંગ, ગેમ એન્જિન ફિઝિક્સ, રોબોટિક આર્મ પોઝિશનિંગ અને 3D કમ્પ્યુટર ગ્રાફિક્સનો મુખ્ય આધાર છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_002",
+      "type": "socratic_question",
+      "question": "For a function to have an inverse, it must be one-one (injective) and onto (surjective). But sin(x) repeats its values infinitely (e.g., sin(0) = sin(π) = 0). How can sin(x) have an inverse if it fails the one-one test on ℝ?",
+      "question_hi": "किसी फलन का प्रतिलोम (inverse) होने के लिए, उसका एकैकी (one-one) और आच्छादक (onto) होना आवश्यक है। लेकिन sin(x) अपने मानों को अनंत बार दोहराता है (जैसे, sin(0) = sin(π) = 0)। यदि sin(x) ℝ पर एकैकी परीक्षण में विफल रहता है, तो इसका प्रतिलोम कैसे हो सकता है?",
+      "question_gu": "કોઈ વિધેયનું પ્રતિવિધેય હોવા માટે, તે એક-એક (one-one) અને વ્યાપ્ત (onto) હોવું જરૂરી છે. પરંતુ sin(x) તેની કિંમતોનું પુનરાવર્તન કરે છે (જેમ કે, sin(0) = sin(π) = 0). જો sin(x) એ ℝ પર એક-એક કસોટીમાં નિષ્ફળ જાય, તો તેનું પ્રતિવિધેય કેવી રીતે શક્ય બને?",
+      "options": [
+        "We cannot invert sin(x) under any circumstances.",
+        "We restrict the domain of sin(x) to an interval where it is one-one and onto.",
+        "Inverse sine exists only for positive numbers.",
+        "We change the definition of one-one functions for trigonometry."
+      ],
+      "options_hi": [
+        "हम किसी भी परिस्थिति में sin(x) का प्रतिलोम नहीं निकाल सकते।",
+        "हम sin(x) के प्रांत (domain) को ऐसे अंतराल तक सीमित करते हैं जहाँ यह एकैकी और आच्छादक हो।",
+        "प्रतिलोम साइन केवल धनात्मक संख्याओं के लिए मौजूद है।",
+        "हम त्रिकोणमिति के लिए एकैकी फलन की परिभाषा बदलते हैं।"
+      ],
+      "options_gu": [
+        "આપણે કોઈ પણ સંજોગોમાં sin(x) નું પ્રતિવિધેય મેળવી શકીએ નહીં.",
+        "આપણે sin(x) ના પ્રદેશ (domain) ને એવા અંSub-interval સુધી મર્યાદિત કરીએ છીએ જ્યાં તે એક-એક અને વ્યાપ્ત હોય.",
+        "પ્રતિવિધેય સાઈન ફક્ત ધન સંખ્યાઓ માટે જ અસ્તિત્વ ધરાવે છે.",
+        "આપણે ત્રિકોણમિતિ માટે એક-એક વિધેયની વ્યાખ્યા બદલીએ છીએ."
+      ],
+      "correct_index": 1,
+      "explanation": "Trigonometric functions are periodic and not one-one over their natural domains. By restricting their domains to specific suitable intervals (like [-π/2, π/2] for sine), they become bijective, allowing us to define their inverse functions.",
+      "explanation_hi": "त्रिकोणमितीय फलन आवर्ती होते हैं और अपने प्राकृतिक प्रांतों पर एकैकी नहीं होते हैं। उनके प्रांतों को विशिष्ट उपयुक्त अंतरालों (जैसे साइन के लिए [-π/2, π/2]) तक सीमित करके, वे एकैकी-आच्छादी (bijective) बन जाते हैं, जिससे हम उनके प्रतिलोम फलनों को परिभाषित कर सकते हैं।",
+      "explanation_gu": "ત્રિકોણમિતિય વિધેયો આવર્તી હોય છે અને તેમના કુદરતી પ્રદેશ પર એક-એક હોતા નથી. તેમના પ્રદેશને ચોક્કસ યોગ્ય અંતરાલ (જેમ કે સાઈન માટે [-π/2, π/2]) સુધી મર્યાદિત કરીને, તે એક-એક અને વ્યાપ્ત બને છે, જેથી આપણે તેમના પ્રતિવિધેયો વ્યાખ્યાયિત કરી શકીએ છીએ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_003",
+      "type": "discovery",
+      "title": "Discovering Principal Value Branches",
+      "title_hi": "मुख्य मान शाखाओं की खोज",
+      "title_gu": "મુખ્ય કિંમત શાખાઓની શોધ",
+      "body": "When we restrict y = sin(x) to x ∈ [-π/2, π/2], the value of y ranges from -1 to 1 uniquely. Thus, the inverse function x = sin⁻¹(y) has domain [-1, 1] and range [-π/2, π/2]. This default range is called the **Principal Value Branch**. Similarly, restricting y = cos(x) to x ∈ [0, π] gives domain [-1, 1] and principal value range [0, π]. Restricting tan(x) to (-π/2, π/2) gives domain ℝ and principal value range (-π/2, π/2).",
+      "body_hi": "जब हम y = sin(x) को x ∈ [-π/2, π/2] तक सीमित करते हैं, तो y का मान अद्वितीय रूप से -1 से 1 तक होता है। इस प्रकार, प्रतिलोम फलन x = sin⁻¹(y) का प्रांत [-1, 1] और परिसर [-π/2, π/2] होता है। इस डिफ़ॉल्ट परिसर को **मुख्य मान शाखा** (Principal Value Branch) कहा जाता है। इसी तरह, y = cos(x) को x ∈ [0, π] तक सीमित करने पर प्रांत [-1, 1] और मुख्य मान परिसर [0, π] प्राप्त होता है। tan(x) को (-π/2, π/2) तक सीमित करने पर प्रांत ℝ और मुख्य मान परिसर (-π/2, π/2) मिलता है।",
+      "body_gu": "જ્યારે આપણે y = sin(x) ને x ∈ [-π/2, π/2] સુધી મર્યાદિત કરીએ છીએ, ત્યારે y ની કિંમત અનન્ય રીતે -1 થી 1 સુધી બદલાય છે. આમ, પ્રતિવિધેય x = sin⁻¹(y) નો પ્રદેશ [-1, 1] અને વિસ્તાર [-π/2, π/2] બને છે. આ મૂળભૂત વિસ્તારને **મુખ્ય કિંમત શાખા** (Principal Value Branch) કહેવામાં આવે છે. તેવી જ રીતે, y = cos(x) ને x ∈ [0, π] સુધી મર્યાદિત કરવાથી પ્રદેશ [-1, 1] અને મુખ્ય કિંમત વિસ્તાર [0, π] મળે છે. tan(x) ને (-π/2, π/2) સુધી મર્યાદિત કરવાથી પ્રદેશ ℝ અને મુખ્ય કિંમત વિસ્તાર (-π/2, π/2) મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_004",
+      "type": "theory",
+      "title": "Master Table: Domains and Principal Value Branches",
+      "title_hi": "मास्टर तालिका: प्रांत और मुख्य मान शाखाएं",
+      "title_gu": "માસ્ટર કોષ્ટક: પ્રદેશ અને મુખ્ય કિંમત શાખાઓ",
+      "body": "Here are the official domains and principal value branches for all 6 inverse trigonometric functions:\n\n1. **sin⁻¹(x)**: Domain = [-1, 1], Range (Principal Value Branch) = [ -π/2, π/2 ]\n2. **cos⁻¹(x)**: Domain = [-1, 1], Range = [ 0, π ]\n3. **tan⁻¹(x)**: Domain = ℝ, Range = ( -π/2, π/2 )\n4. **cosec⁻¹(x)**: Domain = ℝ \\ (-1, 1), Range = [ -π/2, π/2 ] \\ {0}\n5. **sec⁻¹(x)**: Domain = ℝ \\ (-1, 1), Range = [ 0, π ] \\ {π/2}\n6. **cot⁻¹(x)**: Domain = ℝ, Range = ( 0, π )\n\n**Key Negative Angle Rules:**\n• sin⁻¹(-x) = -sin⁻¹(x)\n• tan⁻¹(-x) = -tan⁻¹(x)\n• cosec⁻¹(-x) = -cosec⁻¹(x)\n• cos⁻¹(-x) = π - cos⁻¹(x)\n• sec⁻¹(-x) = π - sec⁻¹(x)\n• cot⁻¹(-x) = π - cot⁻¹(x)",
+      "body_hi": "सभी 6 प्रतिलोम त्रिकोणमितीय फलनों के आधिकारिक प्रांत और मुख्य मान शाखाएं यहाँ दी गई हैं:\n\n1. **sin⁻¹(x)**: प्रांत = [-1, 1], परिसर (मुख्य मान शाखा) = [ -π/2, π/2 ]\n2. **cos⁻¹(x)**: प्रांत = [-1, 1], परिसर = [ 0, π ]\n3. **tan⁻¹(x)**: प्रांत = ℝ, परिसर = ( -π/2, π/2 )\n4. **cosec⁻¹(x)**: प्रांत = ℝ \\ (-1, 1), परिसर = [ -π/2, π/2 ] \\ {0}\n5. **sec⁻¹(x)**: प्रांत = ℝ \\ (-1, 1), परिसर = [ 0, π ] \\ {π/2}\n6. **cot⁻¹(x)**: प्रांत = ℝ, परिसर = ( 0, π )\n\n**ऋणात्मक कोण के नियम:**\n• sin⁻¹(-x) = -sin⁻¹(x)\n• tan⁻¹(-x) = -tan⁻¹(x)\n• cosec⁻¹(-x) = -cosec⁻¹(x)\n• cos⁻¹(-x) = π - cos⁻¹(x)\n• sec⁻¹(-x) = π - sec⁻¹(x)\n• cot⁻¹(-x) = π - cot⁻¹(x)",
+      "body_gu": "તમામ 6 ત્રિકોણમિતિ-પ્રતિવિધેયો માટેના અધિકૃત પ્રદેશ અને મુખ્ય કિંમત શાખાઓ નીચે મુજબ છે:\n\n1. **sin⁻¹(x)**: પ્રદેશ = [-1, 1], વિસ્તાર (મુખ્ય કિંમત શાખા) = [ -π/2, π/2 ]\n2. **cos⁻¹(x)**: પ્રદેશ = [-1, 1], વિસ્તાર = [ 0, π ]\n3. **tan⁻¹(x)**: પ્રદેશ = ℝ, વિસ્તાર = ( -π/2, π/2 )\n4. **cosec⁻¹(x)**: પ્રદેશ = ℝ \\ (-1, 1), વિસ્તાર = [ -π/2, π/2 ] \\ {0}\n5. **sec⁻¹(x)**: પ્રદેશ = ℝ \\ (-1, 1), વિસ્તાર = [ 0, π ] \\ {π/2}\n6. **cot⁻¹(x)**: પ્રદેશ = ℝ, વિસ્તાર = ( 0, π )\n\n**ઋણ ખૂણાના અગત્યના નિયમો:**\n• sin⁻¹(-x) = -sin⁻¹(x)\n• tan⁻¹(-x) = -tan⁻¹(x)\n• cosec⁻¹(-x) = -cosec⁻¹(x)\n• cos⁻¹(-x) = π - cos⁻¹(x)\n• sec⁻¹(-x) = π - sec⁻¹(x)\n• cot⁻¹(-x) = π - cot⁻¹(x)"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_005",
+      "type": "knowledge_check",
+      "question": "What is the principal value of cos⁻¹(-1/2)?",
+      "question_hi": "cos⁻¹(-1/2) का मुख्य मान क्या है?",
+      "question_gu": "cos⁻¹(-1/2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/3",
+        "π/3",
+        "2π/3",
+        "4π/3"
+      ],
+      "options_hi": [
+        "-π/3",
+        "π/3",
+        "2π/3",
+        "4π/3"
+      ],
+      "options_gu": [
+        "-π/3",
+        "π/3",
+        "2π/3",
+        "4π/3"
+      ],
+      "correct_index": 2,
+      "explanation": "Using cos⁻¹(-x) = π - cos⁻¹(x): cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3. Since 2π/3 ∈ [0, π], it is the principal value.",
+      "explanation_hi": "cos⁻¹(-x) = π - cos⁻¹(x) का उपयोग करने पर: cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3। चूंकि 2π/3 ∈ [0, π], यह मुख्य मान है।",
+      "explanation_gu": "cos⁻¹(-x) = π - cos⁻¹(x) સૂત્રનો ઉપયોગ કરતા: cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3. કારણ કે 2π/3 ∈ [0, π], તે મુખ્ય કિંમત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_006",
+      "type": "reflection",
+      "title": "Why differentiate between sin⁻¹ and cos⁻¹ ranges?",
+      "title_hi": "sin⁻¹ और cos⁻¹ परिसरों के बीच अंतर क्यों करें?",
+      "title_gu": "sin⁻¹ અને cos⁻¹ ના વિસ્તાર વચ્ચેનો તફાવત શા માટે?",
+      "body": "Notice that for sine, tangent, and cosecant, the principal ranges are centered around 0 (e.g., [-π/2, π/2]). For cosine, secant, and cotangent, the ranges lie in [0, π]. Why? Because sine is an odd function (sin(-x) = -sin x), taking negative inputs into quadrant IV (-π/2 to 0). Cosine is even (cos(-x) = cos x), so in quadrant IV cosine is positive; to get negative values for cos(x), we must move into quadrant II (π/2 to π). Thus cos⁻¹(-x) = π - cos⁻¹(x).",
+      "body_hi": "ध्यान दें कि साइन, टेंगेंट और कोसेकेंट के लिए, मुख्य परिसर 0 के आसपास केंद्रित हैं (जैसे, [-π/2, π/2])। कोसाइन, सीकेंट और कोटेंगेंट के लिए, परिसर [0, π] में स्थित हैं। ऐसा क्यों? क्योंकि साइन एक विषम फलन है (sin(-x) = -sin x), जो ऋणात्मक इनपुट को चतुर्थ चतुर्थांश (-π/2 से 0) में ले जाता है। कोसाइन सम है (cos(-x) = cos x), इसलिए चौथे चतुर्थांश में कोसाइन धनात्मक होता है; cos(x) के ऋणात्मक मान प्राप्त करने के लिए, हमें द्वितीय चतुर्थांश (π/2 से π) में जाना होगा। इस प्रकार cos⁻¹(-x) = π - cos⁻¹(x)।",
+      "body_gu": "નોંધો કે સાઈન, ટેન્જન્ટ અને કોસેકન્ટ માટે મુખ્ય વિસ્તાર 0 ની આસપાસ કેન્દ્રિત છે (જેમ કે, [-π/2, π/2]). કોસાઈન, સેકન્ટ અને કોટેન્જન્ટ માટે વિસ્તાર [0, π] માં રહેલો છે. શા માટે? કારણ કે સાઈન એ યુગ્મ/અયુગ્મમાં અયુગ્મ વિધેય છે (sin(-x) = -sin x), જે ઋણ ઇનપુટને ચોથા ચરણ (-π/2 થી 0) માં લઈ જાય છે. કોસાઈન યુગ્મ છે (cos(-x) = cos x), તેથી ચોથા ચરણમાં કોસાઈન ધન છે; cos(x) માટે ઋણ કિંમતો મેળવવા આપણે બીજા ચરણ (π/2 થી π) માં જવું પડે. તેથી cos⁻¹(-x) = π - cos⁻¹(x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_007",
+      "type": "connection",
+      "title": "Calculus & Real World Applications",
+      "title_hi": "कलन (Calculus) और वास्तविक दुनिया के अनुप्रयोग",
+      "title_gu": "કલનશાસ્ત્ર (Calculus) અને વાસ્તવિક દુનિયાના અનુપ્રયોગો",
+      "body": "In Calculus (Chapter 5 & Chapter 7), you will integrate and differentiate these functions. For example, d/dx [tan⁻¹(x)] = 1 / (1 + x²). Standard algebraic integrals like ∫ dx / (a² + x²) resolve directly to (1/a) tan⁻¹(x/a). Simplifying inverse trigonometric expressions using substitutions like x = a tan θ or x = a sin θ before taking derivatives is a core skill tested heavily in CBSE Class 12 board exams!",
+      "body_hi": "कलन (अध्याय 5 और अध्याय 7) में, आप इन फलनों का अवकलन और समाकलन करेंगे। उदाहरण के लिए, d/dx [tan⁻¹(x)] = 1 / (1 + x²)। समाकलन जैसे ∫ dx / (a² + x²) सीधे (1/a) tan⁻¹(x/a) बन जाते हैं। अवकलन लेने से पहले x = a tan θ या x = a sin θ जैसी प्रतिस्थापनाओं का उपयोग करके प्रतिलोम त्रिकोणमितीय व्यंजकों को सरल बनाना सीबीएसई कक्षा 12 की बोर्ड परीक्षाओं में पूछा जाने वाला एक प्रमुख कौशल है!",
+      "body_gu": "કલનશાસ્ત્ર (પ્રકરણ 5 અને પ્રકરણ 7) માં, તમે આ વિધેયોનું વિકલન અને સંકલન કરશો. ઉદાહરણ તરીકે, d/dx [tan⁻¹(x)] = 1 / (1 + x²). ∫ dx / (a² + x²) જેવા સંકલનો સીધા જ (1/a) tan⁻¹(x/a) બને છે. વિકલન કરતા પહેલાં x = a tan θ અથવા x = a sin θ જેવા આદેશ લઈને પ્રતિવિધેયોને સરળ સ્વરૂપમાં ફેરવવા એ CBSE ધોરણ 12 ની પરીક્ષા માટે ખૂબ જ મહત્વપૂર્ણ કૌશલ્ય છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_008",
+      "type": "mastery",
+      "question": "Simplify tan⁻¹( (cos x - sin x) / (cos x + sin x) ), where -π/4 < x < 3π/4.",
+      "question_hi": "tan⁻¹( (cos x - sin x) / (cos x + sin x) ) को सरल कीजिए, जहाँ -π/4 < x < 3π/4 है।",
+      "question_gu": "tan⁻¹( (cos x - sin x) / (cos x + sin x) ) નું સરળ સ્વરૂપ આપો, જ્યાં -π/4 < x < 3π/4.",
+      "options": [
+        "π/4 + x",
+        "π/4 - x",
+        "x - π/4",
+        "π/2 - x"
+      ],
+      "options_hi": [
+        "π/4 + x",
+        "π/4 - x",
+        "x - π/4",
+        "π/2 - x"
+      ],
+      "options_gu": [
+        "π/4 + x",
+        "π/4 - x",
+        "x - π/4",
+        "π/2 - x"
+      ],
+      "correct_index": 1,
+      "explanation": "Divide numerator and denominator inside by cos x: (1 - tan x)/(1 + tan x) = tan(π/4 - x). Thus, tan⁻¹(tan(π/4 - x)) = π/4 - x, since -π/4 < x < 3π/4 implies (π/4 - x) ∈ (-π/2, π/2).",
+      "explanation_hi": "अंश और हर को cos x से विभाजित करें: (1 - tan x)/(1 + tan x) = tan(π/4 - x)। इस प्रकार, tan⁻¹(tan(π/4 - x)) = π/4 - x, क्योंकि -π/4 < x < 3π/4 का अर्थ है कि (π/4 - x) ∈ (-π/2, π/2)।",
+      "explanation_gu": "અંશ અને છેદને cos x વડે ભાગતાં: (1 - tan x)/(1 + tan x) = tan(π/4 - x). તેથી, tan⁻¹(tan(π/4 - x)) = π/4 - x, કારણ કે -π/4 < x < 3π/4 પરથી (π/4 - x) ∈ (-π/2, π/2) મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_009",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q1] Find the principal value of sin⁻¹(-1/2).",
+      "question_hi": "[Ex 2.1 Q1] sin⁻¹(-1/2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q1] sin⁻¹(-1/2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/6",
+        "π/6",
+        "5π/6",
+        "-π/3"
+      ],
+      "options_hi": [
+        "-π/6",
+        "π/6",
+        "5π/6",
+        "-π/3"
+      ],
+      "options_gu": [
+        "-π/6",
+        "π/6",
+        "5π/6",
+        "-π/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Let sin⁻¹(-1/2) = y. Then sin y = -1/2 = -sin(π/6) = sin(-π/6). Since -π/6 ∈ [-π/2, π/2], the principal value is -π/6.",
+      "explanation_hi": "माना sin⁻¹(-1/2) = y। तो sin y = -1/2 = -sin(π/6) = sin(-π/6)। चूंकि -π/6 ∈ [-π/2, π/2], मुख्य मान -π/6 है।",
+      "explanation_gu": "ધારો કે sin⁻¹(-1/2) = y. તેથી sin y = -1/2 = -sin(π/6) = sin(-π/6). કારણ કે -π/6 ∈ [-π/2, π/2], મુખ્ય કિંમત -π/6 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_010",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q2] Find the principal value of cos⁻¹(√3/2).",
+      "question_hi": "[Ex 2.1 Q2] cos⁻¹(√3/2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q2] cos⁻¹(√3/2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "π/3",
+        "π/6",
+        "5π/6",
+        "2π/3"
+      ],
+      "options_hi": [
+        "π/3",
+        "π/6",
+        "5π/6",
+        "2π/3"
+      ],
+      "options_gu": [
+        "π/3",
+        "π/6",
+        "5π/6",
+        "2π/3"
+      ],
+      "correct_index": 1,
+      "explanation": "Let cos⁻¹(√3/2) = y. Then cos y = √3/2 = cos(π/6). Since π/6 ∈ [0, π], the principal value is π/6.",
+      "explanation_hi": "माना cos⁻¹(√3/2) = y। तो cos y = √3/2 = cos(π/6)। चूंकि π/6 ∈ [0, π], मुख्य मान π/6 है।",
+      "explanation_gu": "ધારો કે cos⁻¹(√3/2) = y. તેથી cos y = √3/2 = cos(π/6). કારણ કે π/6 ∈ [0, π], મુખ્ય કિંમત π/6 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_011",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q3] Find the principal value of cosec⁻¹(2).",
+      "question_hi": "[Ex 2.1 Q3] cosec⁻¹(2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q3] cosec⁻¹(2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "π/3",
+        "π/4",
+        "π/6",
+        "-π/6"
+      ],
+      "options_hi": [
+        "π/3",
+        "π/4",
+        "π/6",
+        "-π/6"
+      ],
+      "options_gu": [
+        "π/3",
+        "π/4",
+        "π/6",
+        "-π/6"
+      ],
+      "correct_index": 2,
+      "explanation": "cosec⁻¹(2) = sin⁻¹(1/2) = π/6. Since π/6 ∈ [-π/2, π/2] \\ {0}, the principal value is π/6.",
+      "explanation_hi": "cosec⁻¹(2) = sin⁻¹(1/2) = π/6। चूंकि π/6 ∈ [-π/2, π/2] \\ {0}, मुख्य मान π/6 है।",
+      "explanation_gu": "cosec⁻¹(2) = sin⁻¹(1/2) = π/6. કારણ કે π/6 ∈ [-π/2, π/2] \\ {0}, મુખ્ય કિંમત π/6 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_012",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q4] Find the principal value of tan⁻¹(-√3).",
+      "question_hi": "[Ex 2.1 Q4] tan⁻¹(-√3) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q4] tan⁻¹(-√3) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/3",
+        "-π/6",
+        "2π/3",
+        "π/3"
+      ],
+      "options_hi": [
+        "-π/3",
+        "-π/6",
+        "2π/3",
+        "π/3"
+      ],
+      "options_gu": [
+        "-π/3",
+        "-π/6",
+        "2π/3",
+        "π/3"
+      ],
+      "correct_index": 0,
+      "explanation": "tan⁻¹(-√3) = -tan⁻¹(√3) = -π/3. Since -π/3 ∈ (-π/2, π/2), the principal value is -π/3.",
+      "explanation_hi": "tan⁻¹(-√3) = -tan⁻¹(√3) = -π/3। चूंकि -π/3 ∈ (-π/2, π/2), मुख्य मान -π/3 है।",
+      "explanation_gu": "tan⁻¹(-√3) = -tan⁻¹(√3) = -π/3. કારણ કે -π/3 ∈ (-π/2, π/2), મુખ્ય કિંમત -π/3 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_013",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q5] Find the principal value of cos⁻¹(-1/2).",
+      "question_hi": "[Ex 2.1 Q5] cos⁻¹(-1/2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q5] cos⁻¹(-1/2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "π/3",
+        "2π/3",
+        "-π/3",
+        "5π/6"
+      ],
+      "options_hi": [
+        "π/3",
+        "2π/3",
+        "-π/3",
+        "5π/6"
+      ],
+      "options_gu": [
+        "π/3",
+        "2π/3",
+        "-π/3",
+        "5π/6"
+      ],
+      "correct_index": 1,
+      "explanation": "cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3.",
+      "explanation_hi": "cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3।",
+      "explanation_gu": "cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_014",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q6] Find the principal value of tan⁻¹(-1).",
+      "question_hi": "[Ex 2.1 Q6] tan⁻¹(-1) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q6] tan⁻¹(-1) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_hi": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_gu": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "correct_index": 0,
+      "explanation": "tan⁻¹(-1) = -tan⁻¹(1) = -π/4.",
+      "explanation_hi": "tan⁻¹(-1) = -tan⁻¹(1) = -π/4।",
+      "explanation_gu": "tan⁻¹(-1) = -tan⁻¹(1) = -π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_015",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q7] Find the principal value of sec⁻¹(2/√3).",
+      "question_hi": "[Ex 2.1 Q7] sec⁻¹(2/√3) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q7] sec⁻¹(2/√3) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "π/6",
+        "π/3",
+        "5π/6",
+        "7π/6"
+      ],
+      "options_hi": [
+        "π/6",
+        "π/3",
+        "5π/6",
+        "7π/6"
+      ],
+      "options_gu": [
+        "π/6",
+        "π/3",
+        "5π/6",
+        "7π/6"
+      ],
+      "correct_index": 0,
+      "explanation": "sec⁻¹(2/√3) = cos⁻¹(√3/2) = π/6.",
+      "explanation_hi": "sec⁻¹(2/√3) = cos⁻¹(√3/2) = π/6।",
+      "explanation_gu": "sec⁻¹(2/√3) = cos⁻¹(√3/2) = π/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_016",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q8] Find the principal value of cot⁻¹(√3).",
+      "question_hi": "[Ex 2.1 Q8] cot⁻¹(√3) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q8] cot⁻¹(√3) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "π/6",
+        "π/3",
+        "-π/6",
+        "2π/3"
+      ],
+      "options_hi": [
+        "π/6",
+        "π/3",
+        "-π/6",
+        "2π/3"
+      ],
+      "options_gu": [
+        "π/6",
+        "π/3",
+        "-π/6",
+        "2π/3"
+      ],
+      "correct_index": 0,
+      "explanation": "cot⁻¹(√3) = tan⁻¹(1/√3) = π/6.",
+      "explanation_hi": "cot⁻¹(√3) = tan⁻¹(1/√3) = π/6।",
+      "explanation_gu": "cot⁻¹(√3) = tan⁻¹(1/√3) = π/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_017",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q9] Find the principal value of cos⁻¹(-1/√2).",
+      "question_hi": "[Ex 2.1 Q9] cos⁻¹(-1/√2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q9] cos⁻¹(-1/√2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "5π/4"
+      ],
+      "options_hi": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "5π/4"
+      ],
+      "options_gu": [
+        "-π/4",
+        "3π/4",
+        "π/4",
+        "5π/4"
+      ],
+      "correct_index": 1,
+      "explanation": "cos⁻¹(-1/√2) = π - cos⁻¹(1/√2) = π - π/4 = 3π/4.",
+      "explanation_hi": "cos⁻¹(-1/√2) = π - cos⁻¹(1/√2) = π - π/4 = 3π/4।",
+      "explanation_gu": "cos⁻¹(-1/√2) = π - cos⁻¹(1/√2) = π - π/4 = 3π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_018",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q10] Find the principal value of cosec⁻¹(-√2).",
+      "question_hi": "[Ex 2.1 Q10] cosec⁻¹(-√2) का मुख्य मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q10] cosec⁻¹(-√2) ની મુખ્ય કિંમત શોધો.",
+      "options": [
+        "-π/4",
+        "3π/4",
+        "-3π/4",
+        "π/4"
+      ],
+      "options_hi": [
+        "-π/4",
+        "3π/4",
+        "-3π/4",
+        "π/4"
+      ],
+      "options_gu": [
+        "-π/4",
+        "3π/4",
+        "-3π/4",
+        "π/4"
+      ],
+      "correct_index": 0,
+      "explanation": "cosec⁻¹(-√2) = -cosec⁻¹(√2) = -π/4.",
+      "explanation_hi": "cosec⁻¹(-√2) = -cosec⁻¹(√2) = -π/4।",
+      "explanation_gu": "cosec⁻¹(-√2) = -cosec⁻¹(√2) = -π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_019",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q11] Find the value of tan⁻¹(1) + cos⁻¹(-1/2) + sin⁻¹(-1/2).",
+      "question_hi": "[Ex 2.1 Q11] tan⁻¹(1) + cos⁻¹(-1/2) + sin⁻¹(-1/2) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q11] tan⁻¹(1) + cos⁻¹(-1/2) + sin⁻¹(-1/2) ની કિંમત શોધો.",
+      "options": [
+        "π/4",
+        "3π/4",
+        "2π/3",
+        "π"
+      ],
+      "options_hi": [
+        "π/4",
+        "3π/4",
+        "2π/3",
+        "π"
+      ],
+      "options_gu": [
+        "π/4",
+        "3π/4",
+        "2π/3",
+        "π"
+      ],
+      "correct_index": 1,
+      "explanation": "tan⁻¹(1) = π/4. Also, cos⁻¹(-1/2) + sin⁻¹(-1/2) = π/2 (using sin⁻¹x + cos⁻¹x = π/2). Total = π/4 + π/2 = 3π/4.",
+      "explanation_hi": "tan⁻¹(1) = π/4। तथा cos⁻¹(-1/2) + sin⁻¹(-1/2) = π/2 (sin⁻¹x + cos⁻¹x = π/2 का प्रयोग करके)। कुल = π/4 + π/2 = 3π/4।",
+      "explanation_gu": "tan⁻¹(1) = π/4. પણ cos⁻¹(-1/2) + sin⁻¹(-1/2) = π/2 (sin⁻¹x + cos⁻¹x = π/2 નો ઉપયોગ કરતા). કુલ = π/4 + π/2 = 3π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_020",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q12] Find the value of cos⁻¹(1/2) + 2 sin⁻¹(1/2).",
+      "question_hi": "[Ex 2.1 Q12] cos⁻¹(1/2) + 2 sin⁻¹(1/2) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.1 Q12] cos⁻¹(1/2) + 2 sin⁻¹(1/2) ની કિંમત શોધો.",
+      "options": [
+        "π/3",
+        "2π/3",
+        "π",
+        "π/2"
+      ],
+      "options_hi": [
+        "π/3",
+        "2π/3",
+        "π",
+        "π/2"
+      ],
+      "options_gu": [
+        "π/3",
+        "2π/3",
+        "π",
+        "π/2"
+      ],
+      "correct_index": 1,
+      "explanation": "cos⁻¹(1/2) = π/3 and sin⁻¹(1/2) = π/6. Result = π/3 + 2(π/6) = π/3 + π/3 = 2π/3.",
+      "explanation_hi": "cos⁻¹(1/2) = π/3 और sin⁻¹(1/2) = π/6। परिणाम = π/3 + 2(π/6) = π/3 + π/3 = 2π/3।",
+      "explanation_gu": "cos⁻¹(1/2) = π/3 અને sin⁻¹(1/2) = π/6. પરિણામ = π/3 + 2(π/6) = π/3 + π/3 = 2π/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_021",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q13] If sin⁻¹(x) = y, then:",
+      "question_hi": "[Ex 2.1 Q13] यदि sin⁻¹(x) = y, तो:",
+      "question_gu": "[Ex 2.1 Q13] જો sin⁻¹(x) = y હોય, તો:",
+      "options": [
+        "0 ≤ y ≤ π",
+        "-π/2 ≤ y ≤ π/2",
+        "0 < y < π",
+        "-π/2 < y < π/2"
+      ],
+      "options_hi": [
+        "0 ≤ y ≤ π",
+        "-π/2 ≤ y ≤ π/2",
+        "0 < y < π",
+        "-π/2 < y < π/2"
+      ],
+      "options_gu": [
+        "0 ≤ y ≤ π",
+        "-π/2 ≤ y ≤ π/2",
+        "0 < y < π",
+        "-π/2 < y < π/2"
+      ],
+      "correct_index": 1,
+      "explanation": "The principal value branch of sin⁻¹(x) is [-π/2, π/2], so -π/2 ≤ y ≤ π/2.",
+      "explanation_hi": "sin⁻¹(x) का मुख्य मान परिसर [-π/2, π/2] है, इसलिए -π/2 ≤ y ≤ π/2।",
+      "explanation_gu": "sin⁻¹(x) નો મુખ્ય કિંમત વિસ્તાર [-π/2, π/2] છે, તેથી -π/2 ≤ y ≤ π/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_022",
+      "type": "mcq",
+      "question": "[Ex 2.1 Q14] tan⁻¹(√3) - sec⁻¹(-2) is equal to:",
+      "question_hi": "[Ex 2.1 Q14] tan⁻¹(√3) - sec⁻¹(-2) का मान बराबर है:",
+      "question_gu": "[Ex 2.1 Q14] tan⁻¹(√3) - sec⁻¹(-2) ની કિંમત સોધો:",
+      "options": [
+        "π",
+        "-π/3",
+        "π/3",
+        "2π/3"
+      ],
+      "options_hi": [
+        "π",
+        "-π/3",
+        "π/3",
+        "2π/3"
+      ],
+      "options_gu": [
+        "π",
+        "-π/3",
+        "π/3",
+        "2π/3"
+      ],
+      "correct_index": 1,
+      "explanation": "tan⁻¹(√3) = π/3. sec⁻¹(-2) = π - sec⁻¹(2) = π - π/3 = 2π/3. Value = π/3 - 2π/3 = -π/3.",
+      "explanation_hi": "tan⁻¹(√3) = π/3। sec⁻¹(-2) = π - sec⁻¹(2) = π - π/3 = 2π/3। मान = π/3 - 2π/3 = -π/3।",
+      "explanation_gu": "tan⁻¹(√3) = π/3. sec⁻¹(-2) = π - sec⁻¹(2) = π - π/3 = 2π/3. કિંમત = π/3 - 2π/3 = -π/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_023",
+      "type": "true_false",
+      "question": "[Ex 2.2 Q1] Is 3 sin⁻¹(x) = sin⁻¹(3x - 4x³) true for all x ∈ [-1/2, 1/2]?",
+      "question_hi": "[Ex 2.2 Q1] क्या 3 sin⁻¹(x) = sin⁻¹(3x - 4x³) सभी x ∈ [-1/2, 1/2] के लिए सत्य है?",
+      "question_gu": "[Ex 2.2 Q1] શું 3 sin⁻¹(x) = sin⁻¹(3x - 4x³) એ તમામ x ∈ [-1/2, 1/2] માટે સત્ય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Let x = sin θ. Then RHS = sin⁻¹(3 sin θ - 4 sin³ θ) = sin⁻¹(sin 3θ) = 3θ = 3 sin⁻¹(x), valid for x ∈ [-1/2, 1/2] where 3θ ∈ [-π/2, π/2].",
+      "explanation_hi": "माना x = sin θ। तो RHS = sin⁻¹(3 sin θ - 4 sin³ θ) = sin⁻¹(sin 3θ) = 3θ = 3 sin⁻¹(x), जो x ∈ [-1/2, 1/2] के लिए मान्य है जहाँ 3θ ∈ [-π/2, π/2]।",
+      "explanation_gu": "ધારો કે x = sin θ. RHS = sin⁻¹(3 sin θ - 4 sin³ θ) = sin⁻¹(sin 3θ) = 3θ = 3 sin⁻¹(x), જે x ∈ [-1/2, 1/2] માટે સત્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_024",
+      "type": "true_false",
+      "question": "[Ex 2.2 Q2] Is 3 cos⁻¹(x) = cos⁻¹(4x³ - 3x) true for x ∈ [1/2, 1]?",
+      "question_hi": "[Ex 2.2 Q2] क्या 3 cos⁻¹(x) = cos⁻¹(4x³ - 3x) x ∈ [1/2, 1] के लिए सत्य है?",
+      "question_gu": "[Ex 2.2 Q2] શું 3 cos⁻¹(x) = cos⁻¹(4x³ - 3x) એ x ∈ [1/2, 1] માટે સત્ય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Let x = cos θ. RHS = cos⁻¹(4 cos³ θ - 3 cos θ) = cos⁻¹(cos 3θ) = 3θ = 3 cos⁻¹(x), valid for x ∈ [1/2, 1] where 3θ ∈ [0, π].",
+      "explanation_hi": "माना x = cos θ। RHS = cos⁻¹(4 cos³ θ - 3 cos θ) = cos⁻¹(cos 3θ) = 3θ = 3 cos⁻¹(x), जो x ∈ [1/2, 1] के लिए मान्य है।",
+      "explanation_gu": "ધારો કે x = cos θ. RHS = cos⁻¹(4 cos³ θ - 3 cos θ) = cos⁻¹(cos 3θ) = 3θ = 3 cos⁻¹(x), જે x ∈ [1/2, 1] માટે સત્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_025",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q5] Write in simplest form: tan⁻¹( (√(1+x²) - 1) / x ), x ≠ 0.",
+      "question_hi": "[Ex 2.2 Q5] सरलतम रूप में लिखिए: tan⁻¹( (√(1+x²) - 1) / x ), x ≠ 0।",
+      "question_gu": "[Ex 2.2 Q5] સરળ સ્વરૂપમાં લખો: tan⁻¹( (√(1+x²) - 1) / x ), x ≠ 0.",
+      "options": [
+        "(1/2) tan⁻¹(x)",
+        "tan⁻¹(x)",
+        "2 tan⁻¹(x)",
+        "(1/2) cot⁻¹(x)"
+      ],
+      "options_hi": [
+        "(1/2) tan⁻¹(x)",
+        "tan⁻¹(x)",
+        "2 tan⁻¹(x)",
+        "(1/2) cot⁻¹(x)"
+      ],
+      "options_gu": [
+        "(1/2) tan⁻¹(x)",
+        "tan⁻¹(x)",
+        "2 tan⁻¹(x)",
+        "(1/2) cot⁻¹(x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Put x = tan θ. Then (sec θ - 1)/tan θ = (1 - cos θ)/sin θ = tan(θ/2). So tan⁻¹(tan(θ/2)) = θ/2 = (1/2) tan⁻¹(x).",
+      "explanation_hi": "x = tan θ रखें। तब (sec θ - 1)/tan θ = (1 - cos θ)/sin θ = tan(θ/2)। अतः tan⁻¹(tan(θ/2)) = θ/2 = (1/2) tan⁻¹(x)।",
+      "explanation_gu": "x = tan θ મૂકતાં: (sec θ - 1)/tan θ = (1 - cos θ)/sin θ = tan(θ/2). માટે tan⁻¹(tan(θ/2)) = θ/2 = (1/2) tan⁻¹(x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_026",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q6] Write in simplest form: tan⁻¹( 1 / √(x² - 1) ), |x| > 1.",
+      "question_hi": "[Ex 2.2 Q6] सरलतम रूप में लिखिए: tan⁻¹( 1 / √(x² - 1) ), |x| > 1।",
+      "question_gu": "[Ex 2.2 Q6] સરળ સ્વરૂપમાં લખો: tan⁻¹( 1 / √(x² - 1) ), |x| > 1.",
+      "options": [
+        "cosec⁻¹(x)",
+        "sec⁻¹(x)",
+        "π/2 + sec⁻¹(x)",
+        "tan⁻¹(x)"
+      ],
+      "options_hi": [
+        "cosec⁻¹(x)",
+        "sec⁻¹(x)",
+        "π/2 + sec⁻¹(x)",
+        "tan⁻¹(x)"
+      ],
+      "options_gu": [
+        "cosec⁻¹(x)",
+        "sec⁻¹(x)",
+        "π/2 + sec⁻¹(x)",
+        "tan⁻¹(x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Put x = sec θ. Then tan⁻¹(1 / tan θ) = tan⁻¹(cot θ) = tan⁻¹(tan(π/2 - θ)) = π/2 - θ = π/2 - sec⁻¹(x) = cosec⁻¹(x).",
+      "explanation_hi": "x = sec θ रखें। तब tan⁻¹(1 / tan θ) = tan⁻¹(cot θ) = tan⁻¹(tan(π/2 - θ)) = π/2 - θ = π/2 - sec⁻¹(x) = cosec⁻¹(x)।",
+      "explanation_gu": "x = sec θ મૂકતાં: tan⁻¹(1 / tan θ) = tan⁻¹(cot θ) = tan⁻¹(tan(π/2 - θ)) = π/2 - θ = π/2 - sec⁻¹(x) = cosec⁻¹(x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_027",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q7] Write in simplest form: tan⁻¹( √((1 - cos x) / (1 + cos x)) ), 0 < x < π.",
+      "question_hi": "[Ex 2.2 Q7] सरलतम रूप में लिखिए: tan⁻¹( √((1 - cos x) / (1 + cos x)) ), 0 < x < π।",
+      "question_gu": "[Ex 2.2 Q7] સરળ સ્વરૂપમાં લખો: tan⁻¹( √((1 - cos x) / (1 + cos x)) ), 0 < x < π.",
+      "options": [
+        "x",
+        "x/2",
+        "π/2 - x",
+        "2x"
+      ],
+      "options_hi": [
+        "x",
+        "x/2",
+        "π/2 - x",
+        "2x"
+      ],
+      "options_gu": [
+        "x",
+        "x/2",
+        "π/2 - x",
+        "2x"
+      ],
+      "correct_index": 1,
+      "explanation": "√((1 - cos x)/(1 + cos x)) = √( (2 sin²(x/2)) / (2 cos²(x/2)) ) = tan(x/2). Thus tan⁻¹(tan(x/2)) = x/2.",
+      "explanation_hi": "√((1 - cos x)/(1 + cos x)) = √( (2 sin²(x/2)) / (2 cos²(x/2)) ) = tan(x/2)। अतः tan⁻¹(tan(x/2)) = x/2।",
+      "explanation_gu": "√((1 - cos x)/(1 + cos x)) = √( (2 sin²(x/2)) / (2 cos²(x/2)) ) = tan(x/2). માટે tan⁻¹(tan(x/2)) = x/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_028",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q9] Write in simplest form: tan⁻¹( x / √(a² - x²) ), |x| < a.",
+      "question_hi": "[Ex 2.2 Q9] सरलतम रूप में लिखिए: tan⁻¹( x / √(a² - x²) ), |x| < a।",
+      "question_gu": "[Ex 2.2 Q9] સરળ સ્વરૂપમાં લખો: tan⁻¹( x / √(a² - x²) ), |x| < a.",
+      "options": [
+        "sin⁻¹(x/a)",
+        "cos⁻¹(x/a)",
+        "tan⁻¹(x/a)",
+        "a sin⁻¹(x)"
+      ],
+      "options_hi": [
+        "sin⁻¹(x/a)",
+        "cos⁻¹(x/a)",
+        "tan⁻¹(x/a)",
+        "a sin⁻¹(x)"
+      ],
+      "options_gu": [
+        "sin⁻¹(x/a)",
+        "cos⁻¹(x/a)",
+        "tan⁻¹(x/a)",
+        "a sin⁻¹(x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Put x = a sin θ. Then tan⁻¹(a sin θ / (a cos θ)) = tan⁻¹(tan θ) = θ = sin⁻¹(x/a).",
+      "explanation_hi": "x = a sin θ रखें। तब tan⁻¹(a sin θ / (a cos θ)) = tan⁻¹(tan θ) = θ = sin⁻¹(x/a)।",
+      "explanation_gu": "x = a sin θ મૂકતાં: tan⁻¹(a sin θ / (a cos θ)) = tan⁻¹(tan θ) = θ = sin⁻¹(x/a)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_029",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q10] Write in simplest form: tan⁻¹( (3a²x - x³) / (a³ - 3ax²) ), a > 0, -a/√3 < x < a/√3.",
+      "question_hi": "[Ex 2.2 Q10] सरलतम रूप में लिखिए: tan⁻¹( (3a²x - x³) / (a³ - 3ax²) ), a > 0, -a/√3 < x < a/√3।",
+      "question_gu": "[Ex 2.2 Q10] સરળ સ્વરૂપમાં લખો: tan⁻¹( (3a²x - x³) / (a³ - 3ax²) ), a > 0, -a/√3 < x < a/√3.",
+      "options": [
+        "3 tan⁻¹(x/a)",
+        "tan⁻¹(3x/a)",
+        "3 sin⁻¹(x/a)",
+        "tan⁻¹(x/3a)"
+      ],
+      "options_hi": [
+        "3 tan⁻¹(x/a)",
+        "tan⁻¹(3x/a)",
+        "3 sin⁻¹(x/a)",
+        "tan⁻¹(x/3a)"
+      ],
+      "options_gu": [
+        "3 tan⁻¹(x/a)",
+        "tan⁻¹(3x/a)",
+        "3 sin⁻¹(x/a)",
+        "tan⁻¹(x/3a)"
+      ],
+      "correct_index": 0,
+      "explanation": "Put x = a tan θ. Then inside expression becomes tan 3θ. tan⁻¹(tan 3θ) = 3θ = 3 tan⁻¹(x/a).",
+      "explanation_hi": "x = a tan θ रखें। तब अंदर का व्यंजक tan 3θ बन जाता है। tan⁻¹(tan 3θ) = 3θ = 3 tan⁻¹(x/a)।",
+      "explanation_gu": "x = a tan θ મૂકતાં: અંદરનું પદ tan 3θ બનશે. tan⁻¹(tan 3θ) = 3θ = 3 tan⁻¹(x/a)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_030",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q11] Find the value of tan⁻¹[ 2 cos( 2 sin⁻¹(1/2) ) ].",
+      "question_hi": "[Ex 2.2 Q11] tan⁻¹[ 2 cos( 2 sin⁻¹(1/2) ) ] का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q11] tan⁻¹[ 2 cos( 2 sin⁻¹(1/2) ) ] ની કિંમત શોધો.",
+      "options": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "options_hi": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "options_gu": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "correct_index": 0,
+      "explanation": "sin⁻¹(1/2) = π/6. 2*(π/6) = π/3. cos(π/3) = 1/2. 2*(1/2) = 1. tan⁻¹(1) = π/4.",
+      "explanation_hi": "sin⁻¹(1/2) = π/6। 2*(π/6) = π/3। cos(π/3) = 1/2। 2*(1/2) = 1। tan⁻¹(1) = π/4।",
+      "explanation_gu": "sin⁻¹(1/2) = π/6. 2*(π/6) = π/3. cos(π/3) = 1/2. 2*(1/2) = 1. tan⁻¹(1) = π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_031",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q12] Find the value of cot( tan⁻¹ a + cot⁻¹ a ).",
+      "question_hi": "[Ex 2.2 Q12] cot( tan⁻¹ a + cot⁻¹ a ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q12] cot( tan⁻¹ a + cot⁻¹ a ) ની કિંમત શોધો.",
+      "options": [
+        "0",
+        "1",
+        "Undefined",
+        "1/2"
+      ],
+      "options_hi": [
+        "0",
+        "1",
+        "अपरिभाषित",
+        "1/2"
+      ],
+      "options_gu": [
+        "0",
+        "1",
+        "અવ્યાખ્યાયિત",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "We know tan⁻¹ a + cot⁻¹ a = π/2. Thus, cot(π/2) = 0.",
+      "explanation_hi": "हम जानते हैं कि tan⁻¹ a + cot⁻¹ a = π/2। अतः, cot(π/2) = 0।",
+      "explanation_gu": "આપણે જાણીએ છીએ કે tan⁻¹ a + cot⁻¹ a = π/2. તેથી, cot(π/2) = 0."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_032",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q13] Find the value of tan( (1/2) [ sin⁻¹(2x / (1+x²)) + cos⁻¹((1-y²) / (1+y²)) ] ), |x| < 1, y > 0, xy < 1.",
+      "question_hi": "[Ex 2.2 Q13] tan( (1/2) [ sin⁻¹(2x / (1+x²)) + cos⁻¹((1-y²) / (1+y²)) ] ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q13] tan( (1/2) [ sin⁻¹(2x / (1+x²)) + cos⁻¹((1-y²) / (1+y²)) ] ) ની કિંમત શોધો.",
+      "options": [
+        "(x + y) / (1 - xy)",
+        "(x - y) / (1 + xy)",
+        "(1 + xy) / (x - y)",
+        "xy / (1 + xy)"
+      ],
+      "options_hi": [
+        "(x + y) / (1 - xy)",
+        "(x - y) / (1 + xy)",
+        "(1 + xy) / (x - y)",
+        "xy / (1 + xy)"
+      ],
+      "options_gu": [
+        "(x + y) / (1 - xy)",
+        "(x - y) / (1 + xy)",
+        "(1 + xy) / (x - y)",
+        "xy / (1 + xy)"
+      ],
+      "correct_index": 0,
+      "explanation": "sin⁻¹(2x/(1+x²)) = 2 tan⁻¹(x) and cos⁻¹((1-y²)/(1+y²)) = 2 tan⁻¹(y). Value = tan( (1/2) [2 tan⁻¹ x + 2 tan⁻¹ y] ) = tan(tan⁻¹ x + tan⁻¹ y) = (x + y)/(1 - xy).",
+      "explanation_hi": "sin⁻¹(2x/(1+x²)) = 2 tan⁻¹(x) और cos⁻¹((1-y²)/(1+y²)) = 2 tan⁻¹(y)। मान = tan( (1/2) [2 tan⁻¹ x + 2 tan⁻¹ y] ) = tan(tan⁻¹ x + tan⁻¹ y) = (x + y)/(1 - xy)।",
+      "explanation_gu": "sin⁻¹(2x/(1+x²)) = 2 tan⁻¹(x) અને cos⁻¹((1-y²)/(1+y²)) = 2 tan⁻¹(y). કિંમત = tan( (1/2) [2 tan⁻¹ x + 2 tan⁻¹ y] ) = tan(tan⁻¹ x + tan⁻¹ y) = (x + y)/(1 - xy)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_033",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q14] If sin( sin⁻¹(1/5) + cos⁻¹(x) ) = 1, then find the value of x.",
+      "question_hi": "[Ex 2.2 Q14] यदि sin( sin⁻¹(1/5) + cos⁻¹(x) ) = 1, तो x का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q14] જો sin( sin⁻¹(1/5) + cos⁻¹(x) ) = 1 હોય, તો x ની કિંમત શોધો.",
+      "options": [
+        "1/5",
+        "2/5",
+        "0",
+        "1"
+      ],
+      "options_hi": [
+        "1/5",
+        "2/5",
+        "0",
+        "1"
+      ],
+      "options_gu": [
+        "1/5",
+        "2/5",
+        "0",
+        "1"
+      ],
+      "correct_index": 0,
+      "explanation": "sin⁻¹(1/5) + cos⁻¹(x) = sin⁻¹(1) = π/2. Since sin⁻¹(1/5) + cos⁻¹(1/5) = π/2, we must have x = 1/5.",
+      "explanation_hi": "sin⁻¹(1/5) + cos⁻¹(x) = sin⁻¹(1) = π/2। चूंकि sin⁻¹(1/5) + cos⁻¹(1/5) = π/2, x = 1/5 होना चाहिए।",
+      "explanation_gu": "sin⁻¹(1/5) + cos⁻¹(x) = sin⁻¹(1) = π/2. આપણી પાસે sin⁻¹(1/5) + cos⁻¹(1/5) = π/2 હોવાથી x = 1/5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_034",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q15] If tan⁻¹((x-1)/(x-2)) + tan⁻¹((x+1)/(x+2)) = π/4, then find x.",
+      "question_hi": "[Ex 2.2 Q15] यदि tan⁻¹((x-1)/(x-2)) + tan⁻¹((x+1)/(x+2)) = π/4, तो x का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q15] જો tan⁻¹((x-1)/(x-2)) + tan⁻¹((x+1)/(x+2)) = π/4 હોય, તો x ની કિંમત શોધો.",
+      "options": [
+        "± 1/√2",
+        "± 1/2",
+        "± √2",
+        "± 2"
+      ],
+      "options_hi": [
+        "± 1/√2",
+        "± 1/2",
+        "± √2",
+        "± 2"
+      ],
+      "options_gu": [
+        "± 1/√2",
+        "± 1/2",
+        "± √2",
+        "± 2"
+      ],
+      "correct_index": 0,
+      "explanation": "tan⁻¹[ ((x-1)(x+2) + (x+1)(x-2)) / ((x-2)(x+2) - (x-1)(x+1)) ] = π/4. Simplifying gives (2x² - 4)/(-3) = tan(π/4) = 1 => 2x² - 4 = -3 => 2x² = 1 => x = ±1/√2.",
+      "explanation_hi": "tan⁻¹[ ((x-1)(x+2) + (x+1)(x-2)) / ((x-2)(x+2) - (x-1)(x+1)) ] = π/4। सरल करने पर (2x² - 4)/(-3) = 1 => 2x² = 1 => x = ±1/√2।",
+      "explanation_gu": "tan⁻¹[ ((x-1)(x+2) + (x+1)(x-2)) / ((x-2)(x+2) - (x-1)(x+1)) ] = π/4. સાદું રૂપ આપતાં (2x² - 4)/(-3) = 1 => 2x² = 1 => x = ±1/√2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_035",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q16] Find the value of sin⁻¹( sin(2π/3) ).",
+      "question_hi": "[Ex 2.2 Q16] sin⁻¹( sin(2π/3) ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q16] sin⁻¹( sin(2π/3) ) ની કિંમત શોધો.",
+      "options": [
+        "2π/3",
+        "π/3",
+        "-π/3",
+        "4π/3"
+      ],
+      "options_hi": [
+        "2π/3",
+        "π/3",
+        "-π/3",
+        "4π/3"
+      ],
+      "options_gu": [
+        "2π/3",
+        "π/3",
+        "-π/3",
+        "4π/3"
+      ],
+      "correct_index": 1,
+      "explanation": "2π/3 ∉ [-π/2, π/2]. Write sin(2π/3) = sin(π - π/3) = sin(π/3). Thus sin⁻¹(sin(π/3)) = π/3.",
+      "explanation_hi": "2π/3 ∉ [-π/2, π/2]। sin(2π/3) = sin(π - π/3) = sin(π/3) लिखें। अतः sin⁻¹(sin(π/3)) = π/3।",
+      "explanation_gu": "2π/3 ∉ [-π/2, π/2]. sin(2π/3) = sin(π - π/3) = sin(π/3) લખો. માટે sin⁻¹(sin(π/3)) = π/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_036",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q17] Find the value of tan⁻¹( tan(3π/4) ).",
+      "question_hi": "[Ex 2.2 Q17] tan⁻¹( tan(3π/4) ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q17] tan⁻¹( tan(3π/4) ) ની કિંમત શોધો.",
+      "options": [
+        "3π/4",
+        "-π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_hi": [
+        "3π/4",
+        "-π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_gu": [
+        "3π/4",
+        "-π/4",
+        "π/4",
+        "-3π/4"
+      ],
+      "correct_index": 1,
+      "explanation": "3π/4 ∉ (-π/2, π/2). tan(3π/4) = tan(π - π/4) = -tan(π/4) = tan(-π/4). So tan⁻¹(tan(-π/4)) = -π/4.",
+      "explanation_hi": "3π/4 ∉ (-π/2, π/2)। tan(3π/4) = tan(π - π/4) = -tan(π/4) = tan(-π/4)। अतः tan⁻¹(tan(-π/4)) = -π/4।",
+      "explanation_gu": "3π/4 ∉ (-π/2, π/2). tan(3π/4) = tan(π - π/4) = -tan(π/4) = tan(-π/4). માટે tan⁻¹(tan(-π/4)) = -π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_037",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q18] Find the value of tan( sin⁻¹(3/5) + cot⁻¹(3/2) ).",
+      "question_hi": "[Ex 2.2 Q18] tan( sin⁻¹(3/5) + cot⁻¹(3/2) ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Ex 2.2 Q18] tan( sin⁻¹(3/5) + cot⁻¹(3/2) ) ની કિંમત શોધો.",
+      "options": [
+        "17/6",
+        "6/17",
+        "7/6",
+        "3/5"
+      ],
+      "options_hi": [
+        "17/6",
+        "6/17",
+        "7/6",
+        "3/5"
+      ],
+      "options_gu": [
+        "17/6",
+        "6/17",
+        "7/6",
+        "3/5"
+      ],
+      "correct_index": 0,
+      "explanation": "sin⁻¹(3/5) = tan⁻¹(3/4) and cot⁻¹(3/2) = tan⁻¹(2/3). tan(tan⁻¹(3/4) + tan⁻¹(2/3)) = (3/4 + 2/3) / (1 - (3/4)(2/3)) = (17/12) / (6/12) = 17/6.",
+      "explanation_hi": "sin⁻¹(3/5) = tan⁻¹(3/4) और cot⁻¹(3/2) = tan⁻¹(2/3)। tan(tan⁻¹(3/4) + tan⁻¹(2/3)) = (3/4 + 2/3) / (1 - (3/4)(2/3)) = (17/12) / (6/12) = 17/6।",
+      "explanation_gu": "sin⁻¹(3/5) = tan⁻¹(3/4) અને cot⁻¹(3/2) = tan⁻¹(2/3). tan(tan⁻¹(3/4) + tan⁻¹(2/3)) = (3/4 + 2/3) / (1 - (3/4)(2/3)) = (17/12) / (6/12) = 17/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_038",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q19] cos⁻¹( cos(7π/6) ) is equal to:",
+      "question_hi": "[Ex 2.2 Q19] cos⁻¹( cos(7π/6) ) बराबर है:",
+      "question_gu": "[Ex 2.2 Q19] cos⁻¹( cos(7π/6) ) ની કિંમત શોધો:",
+      "options": [
+        "7π/6",
+        "5π/6",
+        "π/3",
+        "π/6"
+      ],
+      "options_hi": [
+        "7π/6",
+        "5π/6",
+        "π/3",
+        "π/6"
+      ],
+      "options_gu": [
+        "7π/6",
+        "5π/6",
+        "π/3",
+        "π/6"
+      ],
+      "correct_index": 1,
+      "explanation": "7π/6 ∉ [0, π]. cos(7π/6) = cos(2π - 5π/6) = cos(5π/6). Since 5π/6 ∈ [0, π], cos⁻¹(cos(5π/6)) = 5π/6.",
+      "explanation_hi": "7π/6 ∉ [0, π]। cos(7π/6) = cos(2π - 5π/6) = cos(5π/6)। चूंकि 5π/6 ∈ [0, π], cos⁻¹(cos(5π/6)) = 5π/6।",
+      "explanation_gu": "7π/6 ∉ [0, π]. cos(7π/6) = cos(2π - 5π/6) = cos(5π/6). 5π/6 ∈ [0, π] હોવાથી cos⁻¹(cos(5π/6)) = 5π/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_039",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q20] sin( π/3 - sin⁻¹(-1/2) ) is equal to:",
+      "question_hi": "[Ex 2.2 Q20] sin( π/3 - sin⁻¹(-1/2) ) का मान बराबर है:",
+      "question_gu": "[Ex 2.2 Q20] sin( π/3 - sin⁻¹(-1/2) ) ની કિંમત શોધો:",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1"
+      ],
+      "options_hi": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1"
+      ],
+      "options_gu": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1"
+      ],
+      "correct_index": 3,
+      "explanation": "sin⁻¹(-1/2) = -π/6. Expression = sin(π/3 - (-π/6)) = sin(π/3 + π/6) = sin(π/2) = 1.",
+      "explanation_hi": "sin⁻¹(-1/2) = -π/6। व्यंजक = sin(π/3 - (-π/6)) = sin(π/3 + π/6) = sin(π/2) = 1।",
+      "explanation_gu": "sin⁻¹(-1/2) = -π/6. પદ = sin(π/3 - (-π/6)) = sin(π/3 + π/6) = sin(π/2) = 1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_040",
+      "type": "mcq",
+      "question": "[Ex 2.2 Q21] tan⁻¹(√3) - cot⁻¹(-√3) is equal to:",
+      "question_hi": "[Ex 2.2 Q21] tan⁻¹(√3) - cot⁻¹(-√3) का मान बराबर है:",
+      "question_gu": "[Ex 2.2 Q21] tan⁻¹(√3) - cot⁻¹(-√3) ની કિંમત શોધો:",
+      "options": [
+        "π",
+        "-π/2",
+        "0",
+        "2√3"
+      ],
+      "options_hi": [
+        "π",
+        "-π/2",
+        "0",
+        "2√3"
+      ],
+      "options_gu": [
+        "π",
+        "-π/2",
+        "0",
+        "2√3"
+      ],
+      "correct_index": 1,
+      "explanation": "tan⁻¹(√3) = π/3. cot⁻¹(-√3) = π - cot⁻¹(√3) = π - π/6 = 5π/6. Value = π/3 - 5π/6 = -π/2.",
+      "explanation_hi": "tan⁻¹(√3) = π/3। cot⁻¹(-√3) = π - cot⁻¹(√3) = π - π/6 = 5π/6। मान = π/3 - 5π/6 = -π/2।",
+      "explanation_gu": "tan⁻¹(√3) = π/3. cot⁻¹(-√3) = π - cot⁻¹(√3) = π - π/6 = 5π/6. કિંમત = π/3 - 5π/6 = -π/2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_041",
+      "type": "mcq",
+      "question": "[Misc Ex Q1] Find the value of cos⁻¹( cos(13π/6) ).",
+      "question_hi": "[Misc Ex Q1] cos⁻¹( cos(13π/6) ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Misc Ex Q1] cos⁻¹( cos(13π/6) ) ની કિંમત શોધો.",
+      "options": [
+        "13π/6",
+        "7π/6",
+        "π/6",
+        "5π/6"
+      ],
+      "options_hi": [
+        "13π/6",
+        "7π/6",
+        "π/6",
+        "5π/6"
+      ],
+      "options_gu": [
+        "13π/6",
+        "7π/6",
+        "π/6",
+        "5π/6"
+      ],
+      "correct_index": 2,
+      "explanation": "cos(13π/6) = cos(2π + π/6) = cos(π/6). Since π/6 ∈ [0, π], cos⁻¹(cos(π/6)) = π/6.",
+      "explanation_hi": "cos(13π/6) = cos(2π + π/6) = cos(π/6)। चूंकि π/6 ∈ [0, π], cos⁻¹(cos(π/6)) = π/6।",
+      "explanation_gu": "cos(13π/6) = cos(2π + π/6) = cos(π/6). π/6 ∈ [0, π] હોવાથી cos⁻¹(cos(π/6)) = π/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_042",
+      "type": "mcq",
+      "question": "[Misc Ex Q2] Find the value of tan⁻¹( tan(7π/6) ).",
+      "question_hi": "[Misc Ex Q2] tan⁻¹( tan(7π/6) ) का मान ज्ञात कीजिए।",
+      "question_gu": "[Misc Ex Q2] tan⁻¹( tan(7π/6) ) ની કિંમત શોધો.",
+      "options": [
+        "7π/6",
+        "π/6",
+        "5π/6",
+        "-π/6"
+      ],
+      "options_hi": [
+        "7π/6",
+        "π/6",
+        "5π/6",
+        "-π/6"
+      ],
+      "options_gu": [
+        "7π/6",
+        "π/6",
+        "5π/6",
+        "-π/6"
+      ],
+      "correct_index": 1,
+      "explanation": "7π/6 ∉ (-π/2, π/2). tan(7π/6) = tan(π + π/6) = tan(π/6). Thus tan⁻¹(tan(π/6)) = π/6.",
+      "explanation_hi": "7π/6 ∉ (-π/2, π/2)। tan(7π/6) = tan(π + π/6) = tan(π/6)। अतः tan⁻¹(tan(π/6)) = π/6।",
+      "explanation_gu": "7π/6 ∉ (-π/2, π/2). tan(7π/6) = tan(π + π/6) = tan(π/6). માટે tan⁻¹(tan(π/6)) = π/6."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_043",
+      "type": "true_false",
+      "question": "[Misc Ex Q3] Is sin⁻¹(8/17) + sin⁻¹(3/5) = tan⁻¹(77/36) true?",
+      "question_hi": "[Misc Ex Q3] क्या sin⁻¹(8/17) + sin⁻¹(3/5) = tan⁻¹(77/36) सत्य है?",
+      "question_gu": "[Misc Ex Q3] શું sin⁻¹(8/17) + sin⁻¹(3/5) = tan⁻¹(77/36) સત્ય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Convert both to tan⁻¹: sin⁻¹(8/17) = tan⁻¹(8/15) and sin⁻¹(3/5) = tan⁻¹(3/4). tan⁻¹(8/15) + tan⁻¹(3/4) = tan⁻¹[ (8/15 + 3/4) / (1 - (8/15)(3/4)) ] = tan⁻¹(77/36).",
+      "explanation_hi": "दोनों को tan⁻¹ में बदलें: sin⁻¹(8/17) = tan⁻¹(8/15) और sin⁻¹(3/5) = tan⁻¹(3/4)। tan⁻¹(8/15) + tan⁻¹(3/4) = tan⁻¹[ (8/15 + 3/4) / (1 - (8/15)(3/4)) ] = tan⁻¹(77/36)।",
+      "explanation_gu": "બંનેને tan⁻¹ માં ફેરવતાં: sin⁻¹(8/17) = tan⁻¹(8/15) અને sin⁻¹(3/5) = tan⁻¹(3/4). tan⁻¹(8/15) + tan⁻¹(3/4) = tan⁻¹[ (8/15 + 3/4) / (1 - (8/15)(3/4)) ] = tan⁻¹(77/36)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_044",
+      "type": "true_false",
+      "question": "[Misc Ex Q4] Is cos⁻¹(4/5) + cos⁻¹(12/13) = cos⁻¹(33/65) true?",
+      "question_hi": "[Misc Ex Q4] क्या cos⁻¹(4/5) + cos⁻¹(12/13) = cos⁻¹(33/65) सत्य है?",
+      "question_gu": "[Misc Ex Q4] શું cos⁻¹(4/5) + cos⁻¹(12/13) = cos⁻¹(33/65) સત્ય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "cos⁻¹A + cos⁻¹B = cos⁻¹[ AB - √((1-A²)(1-B²)) ]. Here (4/5)(12/13) - (3/5)(5/13) = 48/65 - 15/65 = 33/65. True!",
+      "explanation_hi": "cos⁻¹A + cos⁻¹B = cos⁻¹[ AB - √((1-A²)(1-B²)) ]। यहाँ (4/5)(12/13) - (3/5)(5/13) = 48/65 - 15/65 = 33/65। सत्य!",
+      "explanation_gu": "cos⁻¹A + cos⁻¹B = cos⁻¹[ AB - √((1-A²)(1-B²)) ]. અહીં (4/5)(12/13) - (3/5)(5/13) = 48/65 - 15/65 = 33/65. સાચું!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_045",
+      "type": "true_false",
+      "question": "[Misc Ex Q8] Is tan⁻¹(1/5) + tan⁻¹(1/7) + tan⁻¹(1/3) + tan⁻¹(1/8) = π/4 true?",
+      "question_hi": "[Misc Ex Q8] क्या tan⁻¹(1/5) + tan⁻¹(1/7) + tan⁻¹(1/3) + tan⁻¹(1/8) = π/4 सत्य है?",
+      "question_gu": "[Misc Ex Q8] શું tan⁻¹(1/5) + tan⁻¹(1/7) + tan⁻¹(1/3) + tan⁻¹(1/8) = π/4 સત્ય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Pair first two: tan⁻¹(1/5)+tan⁻¹(1/7) = tan⁻¹(6/17). Pair last two: tan⁻¹(1/3)+tan⁻¹(1/8) = tan⁻¹(11/23). Then tan⁻¹(6/17)+tan⁻¹(11/23) = tan⁻¹(325/325) = tan⁻¹(1) = π/4.",
+      "explanation_hi": "पहले दो को जोड़ें: tan⁻¹(1/5)+tan⁻¹(1/7) = tan⁻¹(6/17)। अंतिम दो को जोड़ें: tan⁻¹(1/3)+tan⁻¹(1/8) = tan⁻¹(11/23)। फिर tan⁻¹(6/17)+tan⁻¹(11/23) = tan⁻¹(1) = π/4।",
+      "explanation_gu": "પ્રથમ બે પદ: tan⁻¹(1/5)+tan⁻¹(1/7) = tan⁻¹(6/17). છેલ્લા બે પદ: tan⁻¹(1/3)+tan⁻¹(1/8) = tan⁻¹(11/23). હવે tan⁻¹(6/17)+tan⁻¹(11/23) = tan⁻¹(1) = π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_046",
+      "type": "mcq",
+      "question": "[Misc Ex Q13] Solve for x: 2 tan⁻¹(cos x) = tan⁻¹(2 cosec x).",
+      "question_hi": "[Misc Ex Q13] x के लिए हल कीजिए: 2 tan⁻¹(cos x) = tan⁻¹(2 cosec x)।",
+      "question_gu": "[Misc Ex Q13] x માટે ઉકેલો: 2 tan⁻¹(cos x) = tan⁻¹(2 cosec x).",
+      "options": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "options_hi": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "options_gu": [
+        "π/4",
+        "π/3",
+        "π/6",
+        "π/2"
+      ],
+      "correct_index": 0,
+      "explanation": "LHS = tan⁻¹( 2 cos x / (1 - cos²x) ) = tan⁻¹( 2 cos x / sin²x ). Equating: 2 cos x / sin²x = 2 / sin x => cos x / sin x = 1 => cot x = 1 => x = π/4.",
+      "explanation_hi": "LHS = tan⁻¹( 2 cos x / (1 - cos²x) ) = tan⁻¹( 2 cos x / sin²x )। समतुल्य करने पर: 2 cos x / sin²x = 2 / sin x => cot x = 1 => x = π/4।",
+      "explanation_gu": "LHS = tan⁻¹( 2 cos x / (1 - cos²x) ) = tan⁻¹( 2 cos x / sin²x ). સરખાવતાં: 2 cos x / sin²x = 2 / sin x => cot x = 1 => x = π/4."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_047",
+      "type": "mcq",
+      "question": "[Misc Ex Q14] Solve for x: tan⁻¹((1-x)/(1+x)) = (1/2) tan⁻¹(x), x > 0.",
+      "question_hi": "[Misc Ex Q14] x के लिए हल कीजिए: tan⁻¹((1-x)/(1+x)) = (1/2) tan⁻¹(x), x > 0।",
+      "question_gu": "[Misc Ex Q14] x માટે ઉકેલો: tan⁻¹((1-x)/(1+x)) = (1/2) tan⁻¹(x), x > 0.",
+      "options": [
+        "1/√3",
+        "√3",
+        "1",
+        "1/2"
+      ],
+      "options_hi": [
+        "1/√3",
+        "√3",
+        "1",
+        "1/2"
+      ],
+      "options_gu": [
+        "1/√3",
+        "√3",
+        "1",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "tan⁻¹(1) - tan⁻¹(x) = (1/2) tan⁻¹(x) => π/4 = (3/2) tan⁻¹(x) => tan⁻¹(x) = π/6 => x = tan(π/6) = 1/√3.",
+      "explanation_hi": "tan⁻¹(1) - tan⁻¹(x) = (1/2) tan⁻¹(x) => π/4 = (3/2) tan⁻¹(x) => tan⁻¹(x) = π/6 => x = tan(π/6) = 1/√3।",
+      "explanation_gu": "tan⁻¹(1) - tan⁻¹(x) = (1/2) tan⁻¹(x) => π/4 = (3/2) tan⁻¹(x) => tan⁻¹(x) = π/6 => x = tan(π/6) = 1/√3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_048",
+      "type": "mcq",
+      "question": "[Misc Ex Q16] Solve for x: sin⁻¹(1-x) - 2 sin⁻¹(x) = π/2.",
+      "question_hi": "[Misc Ex Q16] x के लिए हल कीजिए: sin⁻¹(1-x) - 2 sin⁻¹(x) = π/2।",
+      "question_gu": "[Misc Ex Q16] x માટે ઉકેલો: sin⁻¹(1-x) - 2 sin⁻¹(x) = π/2.",
+      "options": [
+        "0",
+        "1/2",
+        "0, 1/2",
+        "-1/2"
+      ],
+      "options_hi": [
+        "0",
+        "1/2",
+        "0, 1/2",
+        "-1/2"
+      ],
+      "options_gu": [
+        "0",
+        "1/2",
+        "0, 1/2",
+        "-1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "Let sin⁻¹x = y => x = sin y. sin⁻¹(1-x) = π/2 + 2y => 1-x = sin(π/2 + 2y) = cos 2y = 1 - 2 sin²y = 1 - 2x². So 1-x = 1-2x² => 2x² - x = 0 => x = 0 or x = 1/2. Testing x = 1/2 gives LHS = -π/6 ≠ π/2. Thus, x = 0 is the only valid solution.",
+      "explanation_hi": "माना sin⁻¹x = y => x = sin y। sin⁻¹(1-x) = π/2 + 2y => 1-x = cos 2y = 1 - 2x²। अतः 2x² - x = 0 => x = 0 या 1/2। x = 1/2 रखने पर LHS = -π/6 ≠ π/2। इसलिए केवल x = 0 ही सही हल है।",
+      "explanation_gu": "ધારો કે sin⁻¹x = y => x = sin y. sin⁻¹(1-x) = π/2 + 2y => 1-x = cos 2y = 1 - 2x². તેથી 2x² - x = 0 => x = 0 અથવા 1/2. x = 1/2 ચકાસતા LHS = -π/6 ≠ π/2. આથી ફક્ત x = 0 સાચો ઉકેલ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH2_049",
+      "type": "mcq",
+      "question": "[Misc Ex Q17] Find the value of tan⁻¹(x/y) - tan⁻¹((x-y)/(x+y)).",
+      "question_hi": "[Misc Ex Q17] tan⁻¹(x/y) - tan⁻¹((x-y)/(x+y)) का मान ज्ञात कीजिए।",
+      "question_gu": "[Misc Ex Q17] tan⁻¹(x/y) - tan⁻¹((x-y)/(x+y)) ની કિંમત શોધો.",
+      "options": [
+        "π/2",
+        "π/3",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_hi": [
+        "π/2",
+        "π/3",
+        "π/4",
+        "-3π/4"
+      ],
+      "options_gu": [
+        "π/2",
+        "π/3",
+        "π/4",
+        "-3π/4"
+      ],
+      "correct_index": 2,
+      "explanation": "tan⁻¹((x-y)/(x+y)) = tan⁻¹( (x/y - 1)/(1 + (x/y)) ) = tan⁻¹(x/y) - tan⁻¹(1). Therefore, tan⁻¹(x/y) - [tan⁻¹(x/y) - π/4] = π/4.",
+      "explanation_hi": "tan⁻¹((x-y)/(x+y)) = tan⁻¹( (x/y - 1)/(1 + (x/y)) ) = tan⁻¹(x/y) - tan⁻¹(1)। इसलिए, tan⁻¹(x/y) - [tan⁻¹(x/y) - π/4] = π/4।",
+      "explanation_gu": "tan⁻¹((x-y)/(x+y)) = tan⁻¹( (x/y - 1)/(1 + (x/y)) ) = tan⁻¹(x/y) - tan⁻¹(1). તેથી, tan⁻¹(x/y) - [tan⁻¹(x/y) - π/4] = π/4."
+    }
+  ]
+}

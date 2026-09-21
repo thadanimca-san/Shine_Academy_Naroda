@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch4",
+    "title": "Chapter 4: Quadratic Equations",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "quadratic_equations",
+      "roots",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Identify quadratic equations in various forms.",
+      "Solve quadratic equations using factorization and quadratic formula.",
+      "Understand the nature of roots using the discriminant.",
+      "Apply quadratic equations to solve real-life word problems."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract algebraic concepts visual. Connect quadratic equations to parabolic shapes in real life.",
+      "common_misconceptions": [
+        "Students confuse linear and quadratic equations.",
+        "Students struggle with signs when using the quadratic formula."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine throwing a basketball into a hoop. The path the ball takes through the air is a perfect curve! This curve is called a parabola, and the mathematics that describes this beautiful arc is none other than **Quadratic Equations (द्विघात समीकरण / દ્વિઘાત સમીકરણ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "A beautiful glowing parabola representing the path of a basketball, with its corresponding quadratic equation shown next to it.",
+      "image_url": "assets/images/maths_ch4_parabola_basketball.jpg",
+      "alt_text": "Basketball thrown in a parabolic arc."
+    },
+    {
+      "type": "theory",
+      "content": "**Standard Form of a Quadratic Equation:**\nAny equation of the form **ax² + bx + c = 0**, where a, b, and c are real numbers and a ≠ 0, is a quadratic equation.\nThe highest power (degree) of x is exactly 2 (notice the superscript x²!).",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "exam_tips",
+      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Quadratic Formula (श्रीधराचार्य सूत्र)\n\nTo find the roots (solutions) for x, use this magical formula:\n**x = [-b ± √(b² - 4ac)] / 2a**\n\n*Board Trick:* Always write the values of a, b, and c clearly with their signs before substituting them into the formula!",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "diagram",
+      "content": "The Discriminant tells us the story of the roots before we even solve the equation! Let's see how parabolas behave based on D.",
+      "image_url": "assets/images/maths_ch4_parabola_roots.jpg",
+      "alt_text": "Three parabolas showing two real roots, one real root, and no real roots."
+    },
+    {
+      "type": "memory_trick",
+      "content": "**The Discriminant (D = b² - 4ac):**\nThink of D as a magic detector!\n1. If **D > 0**: Two distinct real roots (The parabola cuts the x-axis twice).\n2. If **D = 0**: Two equal real roots (The parabola just touches the x-axis).\n3. If **D < 0**: No real roots (The parabola never touches the x-axis).",
+      "difficulty": "Intermediate",
+      "bloom": "Analyze"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_1",
+      "type": "quiz",
+      "question": "Which of the following is a quadratic equation?",
+      "question_hi": "निम्नलिखित में से कौन सा एक द्विघात समीकरण है?",
+      "options": [
+        "x² - 3x + 4 = 0",
+        "2x + 5 = 0",
+        "x³ - 2x = 0",
+        "1/x + x = 2"
+      ],
+      "options_hi": [
+        "x² - 3x + 4 = 0",
+        "2x + 5 = 0",
+        "x³ - 2x = 0",
+        "1/x + x = 2"
+      ],
+      "correct_index": 0,
+      "explanation": "A quadratic equation must be of the form ax² + bx + c = 0 where a ≠ 0. Only x² - 3x + 4 = 0 has highest degree 2.",
+      "explanation_hi": "द्विघात समीकरण ax² + bx + c = 0 के रूप में होना चाहिए जहाँ a ≠ 0। केवल x² - 3x + 4 = 0 की अधिकतम घात 2 है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_2",
+      "type": "quiz",
+      "question": "What is the discriminant of the quadratic equation 2x² - 4x + 3 = 0?",
+      "question_hi": "द्विघात समीकरण 2x² - 4x + 3 = 0 का विविक्तकर (discriminant) क्या है?",
+      "options": [
+        "-8",
+        "8",
+        "-4",
+        "16"
+      ],
+      "options_hi": [
+        "-8",
+        "8",
+        "-4",
+        "16"
+      ],
+      "correct_index": 0,
+      "explanation": "The discriminant D = b² - 4ac. Here a = 2, b = -4, c = 3. D = (-4)² - 4(2)(3) = 16 - 24 = -8.",
+      "explanation_hi": "विविक्तकर D = b² - 4ac। यहाँ a = 2, b = -4, c = 3। D = (-4)² - 4(2)(3) = 16 - 24 = -8।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_3",
+      "type": "quiz",
+      "question": "If the discriminant of a quadratic equation is zero, what can be said about its roots?",
+      "question_hi": "यदि किसी द्विघात समीकरण का विविक्तकर शून्य है, तो इसके मूलों के बारे में क्या कहा जा सकता है?",
+      "options": [
+        "Two distinct real roots",
+        "Two equal real roots",
+        "No real roots",
+        "Cannot be determined"
+      ],
+      "options_hi": [
+        "दो भिन्न वास्तविक मूल",
+        "दो समान वास्तविक मूल",
+        "कोई वास्तविक मूल नहीं",
+        "निर्धारित नहीं किया जा सकता"
+      ],
+      "correct_index": 1,
+      "explanation": "When the discriminant D = 0, the equation has two equal and real roots.",
+      "explanation_hi": "जब विविक्तकर D = 0 होता है, तो समीकरण के दो समान और वास्तविक मूल होते हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_4",
+      "type": "quiz",
+      "question": "Find the roots of the equation x² - 3x - 10 = 0.",
+      "question_hi": "समीकरण x² - 3x - 10 = 0 के मूल ज्ञात कीजिए।",
+      "options": [
+        "5, -2",
+        "-5, 2",
+        "5, 2",
+        "-5, -2"
+      ],
+      "options_hi": [
+        "5, -2",
+        "-5, 2",
+        "5, 2",
+        "-5, -2"
+      ],
+      "correct_index": 0,
+      "explanation": "Factorizing: x² - 5x + 2x - 10 = 0 ⇒ x(x - 5) + 2(x - 5) = 0 ⇒ (x - 5)(x + 2) = 0. Therefore, x = 5 or x = -2.",
+      "explanation_hi": "गुणनखंड करने पर: x² - 5x + 2x - 10 = 0 ⇒ x(x - 5) + 2(x - 5) = 0 ⇒ (x - 5)(x + 2) = 0। इसलिए, x = 5 या x = -2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_5",
+      "type": "quiz",
+      "question": "For what value of k will the quadratic equation 2x² + kx + 3 = 0 have two equal roots?",
+      "question_hi": "k के किस मान के लिए द्विघात समीकरण 2x² + kx + 3 = 0 के दो समान मूल होंगे?",
+      "options": [
+        "± √24",
+        "± 2√6",
+        "Both A and B",
+        "None of these"
+      ],
+      "options_hi": [
+        "± √24",
+        "± 2√6",
+        "A और B दोनों",
+        "इनमें से कोई नहीं"
+      ],
+      "correct_index": 2,
+      "explanation": "For equal roots, D = 0. So, k² - 4(2)(3) = 0 ⇒ k² - 24 = 0 ⇒ k = ±√24 = ±2√6.",
+      "explanation_hi": "समान मूलों के लिए, D = 0। इसलिए, k² - 4(2)(3) = 0 ⇒ k² - 24 = 0 ⇒ k = ±√24 = ±2√6।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_6",
+      "type": "quiz",
+      "question": "The sum of the roots of the quadratic equation 3x² - 5x + 2 = 0 is:",
+      "question_hi": "द्विघात समीकरण 3x² - 5x + 2 = 0 के मूलों का योग है:",
+      "options": [
+        "5/3",
+        "-5/3",
+        "2/3",
+        "-2/3"
+      ],
+      "options_hi": [
+        "5/3",
+        "-5/3",
+        "2/3",
+        "-2/3"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of roots = -b/a = -(-5)/3 = 5/3.",
+      "explanation_hi": "मूलों का योग = -b/a = -(-5)/3 = 5/3।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_7",
+      "type": "quiz",
+      "question": "The product of the roots of the quadratic equation 4x² - 7x + 3 = 0 is:",
+      "question_hi": "द्विघात समीकरण 4x² - 7x + 3 = 0 के मूलों का गुणनफल है:",
+      "options": [
+        "3/4",
+        "-3/4",
+        "7/4",
+        "-7/4"
+      ],
+      "options_hi": [
+        "3/4",
+        "-3/4",
+        "7/4",
+        "-7/4"
+      ],
+      "correct_index": 0,
+      "explanation": "Product of roots = c/a = 3/4.",
+      "explanation_hi": "मूलों का गुणनफल = c/a = 3/4।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_8",
+      "type": "quiz",
+      "question": "Which of the following equations has 2 as a root?",
+      "question_hi": "निम्नलिखित में से किस समीकरण का मूल 2 है?",
+      "options": [
+        "x² - 4x + 5 = 0",
+        "x² + 3x - 12 = 0",
+        "2x² - 7x + 6 = 0",
+        "3x² - 6x - 2 = 0"
+      ],
+      "options_hi": [
+        "x² - 4x + 5 = 0",
+        "x² + 3x - 12 = 0",
+        "2x² - 7x + 6 = 0",
+        "3x² - 6x - 2 = 0"
+      ],
+      "correct_index": 2,
+      "explanation": "Substitute x = 2 in 2x² - 7x + 6 = 0: 2(4) - 7(2) + 6 = 8 - 14 + 6 = 0. Therefore, 2 is a root.",
+      "explanation_hi": "2x² - 7x + 6 = 0 में x = 2 रखने पर: 2(4) - 7(2) + 6 = 8 - 14 + 6 = 0। इसलिए, 2 एक मूल है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_9",
+      "type": "quiz",
+      "question": "If one root of the equation x² + px + 12 = 0 is 4, while the equation x² + px + q = 0 has equal roots, the value of q is:",
+      "question_hi": "यदि समीकरण x² + px + 12 = 0 का एक मूल 4 है, जबकि समीकरण x² + px + q = 0 के मूल समान हैं, तो q का मान है:",
+      "options": [
+        "49/4",
+        "4",
+        "3",
+        "12"
+      ],
+      "options_hi": [
+        "49/4",
+        "4",
+        "3",
+        "12"
+      ],
+      "correct_index": 0,
+      "explanation": "Since 4 is a root of x² + px + 12 = 0, 16 + 4p + 12 = 0 ⇒ 4p = -28 ⇒ p = -7. For x² - 7x + q = 0 to have equal roots, D = 0 ⇒ (-7)² - 4(1)(q) = 0 ⇒ 49 = 4q ⇒ q = 49/4.",
+      "explanation_hi": "चूँकि 4 समीकरण x² + px + 12 = 0 का एक मूल है, 16 + 4p + 12 = 0 ⇒ 4p = -28 ⇒ p = -7। x² - 7x + q = 0 के समान मूल होने के लिए, D = 0 ⇒ (-7)² - 4(1)(q) = 0 ⇒ 49 = 4q ⇒ q = 49/4।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_10",
+      "type": "quiz",
+      "question": "The quadratic equation 2x² - √5x + 1 = 0 has:",
+      "question_hi": "द्विघात समीकरण 2x² - √5x + 1 = 0 के हैं:",
+      "options": [
+        "Two distinct real roots",
+        "Two equal real roots",
+        "No real roots",
+        "More than two roots"
+      ],
+      "options_hi": [
+        "दो भिन्न वास्तविक मूल",
+        "दो समान वास्तविक मूल",
+        "कोई वास्तविक मूल नहीं",
+        "दो से अधिक मूल"
+      ],
+      "correct_index": 2,
+      "explanation": "D = (-√5)² - 4(2)(1) = 5 - 8 = -3. Since D < 0, there are no real roots.",
+      "explanation_hi": "D = (-√5)² - 4(2)(1) = 5 - 8 = -3। चूँकि D < 0 है, इसलिए कोई वास्तविक मूल नहीं है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_11",
+      "type": "quiz",
+      "question": "If 1/2 is a root of the equation x² + kx - 5/4 = 0, then the value of k is:",
+      "question_hi": "यदि 1/2 समीकरण x² + kx - 5/4 = 0 का एक मूल है, तो k का मान है:",
+      "options": [
+        "2",
+        "-2",
+        "1/4",
+        "1/2"
+      ],
+      "options_hi": [
+        "2",
+        "-2",
+        "1/4",
+        "1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "Substitute x = 1/2: (1/2)² + k(1/2) - 5/4 = 0 ⇒ 1/4 + k/2 - 5/4 = 0 ⇒ k/2 = 4/4 = 1 ⇒ k = 2.",
+      "explanation_hi": "x = 1/2 रखने पर: (1/2)² + k(1/2) - 5/4 = 0 ⇒ 1/4 + k/2 - 5/4 = 0 ⇒ k/2 = 4/4 = 1 ⇒ k = 2।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_12",
+      "type": "quiz",
+      "question": "A natural number, when increased by 12, equals 160 times its reciprocal. Find the number.",
+      "question_hi": "एक प्राकृत संख्या, जब 12 से बढ़ जाती है, तो अपने व्युत्क्रम के 160 गुना के बराबर हो जाती है। संख्या ज्ञात कीजिए।",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "options_hi": [
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "correct_index": 0,
+      "explanation": "Let the number be x. x + 12 = 160/x ⇒ x² + 12x - 160 = 0 ⇒ (x+20)(x-8)=0. Since x is natural, x = 8.",
+      "explanation_hi": "माना संख्या x है। x + 12 = 160/x ⇒ x² + 12x - 160 = 0 ⇒ (x+20)(x-8)=0। चूँकि x प्राकृत संख्या है, x = 8।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_13",
+      "type": "quiz",
+      "question": "What is the nature of the roots of the equation x² + x + 1 = 0?",
+      "question_hi": "समीकरण x² + x + 1 = 0 के मूलों की प्रकृति क्या है?",
+      "options": [
+        "Real and distinct",
+        "Real and equal",
+        "Not real",
+        "Cannot determine"
+      ],
+      "options_hi": [
+        "वास्तविक और भिन्न",
+        "वास्तविक और समान",
+        "वास्तविक नहीं",
+        "निर्धारित नहीं कर सकते"
+      ],
+      "correct_index": 2,
+      "explanation": "D = 1² - 4(1)(1) = 1 - 4 = -3. Since D < 0, the roots are not real.",
+      "explanation_hi": "D = 1² - 4(1)(1) = 1 - 4 = -3। चूँकि D < 0, मूल वास्तविक नहीं हैं।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_14",
+      "type": "quiz",
+      "question": "If one root of the quadratic equation 2x² + kx + 4 = 0 is 2, find the other root.",
+      "question_hi": "यदि द्विघात समीकरण 2x² + kx + 4 = 0 का एक मूल 2 है, तो दूसरा मूल ज्ञात कीजिए।",
+      "options": [
+        "1",
+        "2",
+        "-2",
+        "4"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "-2",
+        "4"
+      ],
+      "correct_index": 0,
+      "explanation": "Product of roots = c/a = 4/2 = 2. Let other root be α, then 2 * α = 2 ⇒ α = 1.",
+      "explanation_hi": "मूलों का गुणनफल = c/a = 4/2 = 2। माना दूसरा मूल α है, तब 2 * α = 2 ⇒ α = 1।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch4_15",
+      "type": "quiz",
+      "question": "The quadratic formula was originally derived by which ancient mathematician?",
+      "question_hi": "द्विघाती सूत्र (quadratic formula) मूल रूप से किस प्राचीन गणितज्ञ द्वारा व्युत्पन्न किया गया था?",
+      "options": [
+        "Sridharacharya",
+        "Aryabhata",
+        "Pythagoras",
+        "Euclid"
+      ],
+      "options_hi": [
+        "श्रीधराचार्य",
+        "आर्यभट्ट",
+        "पाइथागोरस",
+        "यूक्लिड"
+      ],
+      "correct_index": 0,
+      "explanation": "The ancient Indian mathematician Sridharacharya derived the quadratic formula used for solving quadratic equations.",
+      "explanation_hi": "प्राचीन भारतीय गणितज्ञ श्रीधराचार्य ने द्विघात समीकरणों को हल करने के लिए उपयोग किए जाने वाले द्विघाती सूत्र को व्युत्पन्न किया था।"
+    }
+  ]
+}

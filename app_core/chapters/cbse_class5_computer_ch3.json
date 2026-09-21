@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "id": "cbse_class5_computer_ch3",
+    "title": "Chapter 3: Chapter 3 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand the fundamentals of advanced computer operations.",
+      "Master core software navigation and file management.",
+      "Apply safe digital habits and basic troubleshooting skills."
+    ],
+    "core_concepts": [
+      "DICT_COMP_OS",
+      "DICT_COMP_FILE",
+      "DICT_COMP_FOLDER",
+      "DICT_COMP_NET"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide students with a comprehensive, textbook-grade foundation in computer systems, file structures, and operating system mechanics.",
+      "common_misconceptions": [
+        "Folders store actual files inside them physically like a paper folder.",
+        "Deleting a file from the desktop permanently erases it from the computer instantly."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Homework",
+      "body": "Imagine walking into a massive, magical library where every single book, scroll, and piece of parchment is scattered entirely across the floor in a giant, chaotic mountain. If your teacher asked you to find your exact science homework from last Tuesday, you might search for hours! Computers, without their incredible hidden organization systems, would be just like that messy room. Every picture you draw, game you play, and project you type would be lost in a digital sea of confusion. Luckily, computers have an invisible librarian working around the clock to keep everything neatly cataloged, sorted, and ready for you in the blink of an eye. Let's dive deep into how this digital magic actually happens!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why is organization important for a computer system?",
+      "options": [
+        "It makes the computer screen look colorful.",
+        "It helps the computer find and manage files quickly without losing them.",
+        "It prevents the computer from running out of electricity."
+      ],
+      "correct_index": 1,
+      "explanation": "Just like a tidy room helps you find your toys, a structured digital system helps the computer locate your files instantly.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Master Controller - Operating Systems",
+      "body": "At the very heart of every computer lies a powerful piece of software known as the [DICT_COMP_OS|Operating System] (OS). Think of the Operating System as the grand conductor of a massive symphony orchestra. Without the conductor, every musician (keyboard, mouse, screen, processor) would play a different tune at a different time, resulting in total noise. The OS manages all the hardware components, allocates memory, handles input and output devices, and provides a friendly desktop interface so you can click icons instead of typing complicated mathematical codes. Popular operating systems include Windows, macOS, and Linux. When you power on your device, the OS is the very first program that wakes up and the absolute last program to go to sleep.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Real-World Analogy",
+      "body": "Compare the Operating System to the principal of a school. The principal doesn't teach every class, but they manage all the teachers, keep the building running smoothly, and make sure everyone has what they need to succeed!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does an Operating System (OS) do?",
+      "back": "It acts as the manager of computer hardware and software, helping them work together smoothly.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Storing Information - Files and Data",
+      "body": "Every piece of work you create on a computer—whether it is a story written in a word processor, a digital painting, a favorite song, or a video clip—is stored as a [DICT_COMP_FILE|File]. A file is simply a collection of data stored under a specific name. Every file has two main parts: the file name and the file extension (like .txt, .jpg, or .mp3). The extension tells the operating system which program is needed to open that file correctly. If you try to open a music file with a drawing program, it won't work because the data formats are completely different. Understanding how files are named and structured is the first step to becoming a computer expert.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "What does a file extension (like .jpg or .mp3) tell the computer?",
+      "options": [
+        "How heavy the file is in physical weight.",
+        "Which program should be used to open and read the file.",
+        "The exact password required to delete the file."
+      ],
+      "correct_index": 1,
+      "explanation": "File extensions act as labels that guide the operating system to launch the right application for that specific type of data.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Naming Best Practices",
+      "body": "Always give your files clear, descriptive names like 'Science_Project_Draft1.docx' instead of random letters like 'asdfgh.docx'. Future you will thank present you!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: Keeping Things Tidy - Folders and Directories",
+      "body": "If you had five hundred loose papers on your desk, you would surely lose your math worksheet. That is why computers use a [DICT_COMP_FOLDER|Folder] system (sometimes called a directory). A folder is a virtual container used to store related files together. Just like physical filing cabinets in an office, you can create folders inside other folders—forming a hierarchical structure. For example, you might have a main folder called 'School', inside which you have folders for 'Math', 'Science', and 'English'. Inside the 'Science' folder, you store your science report files. This neat arrangement ensures that you can locate any document in seconds without stress or confusion.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is a folder hierarchy?",
+      "back": "A system of folders placed inside other folders to organize files logically, like branches on a tree.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "If you put your drawing file inside a 'Drawings' folder, which of the following statements is true?",
+      "options": [
+        "The drawing file is deleted automatically.",
+        "The drawing file is safely stored inside that container for easy access.",
+        "The drawing file turns into a music file."
+      ],
+      "correct_index": 1,
+      "explanation": "Folders are containers designed to keep related files grouped together safely and neatly.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: Connecting the World - Networks",
+      "body": "A computer standing alone is useful, but a computer connected to a [DICT_COMP_NET|Network] is infinitely more powerful. A network is a collection of computers and other devices linked together to share information, printers, and internet access. Networks can be small, like the Wi-Fi router in your home connecting your tablet, phone, and laptop (Local Area Network or LAN), or they can be massive, spanning the entire globe to form the internet (Wide Area Network or WAN). Through networks, we can send instant messages across oceans, collaborate on school projects with friends in different cities, and explore educational websites from around the world.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Spiderweb Analogy",
+      "body": "Think of a network like a giant spiderweb. If a bug lands on any part of the web, vibrations travel across the threads. Similarly, data travels across network cables or Wi-Fi waves to connect devices together!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "What does LAN stand for?",
+      "back": "Local Area Network (a network connecting computers in a small area like a home or school).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "Which of these is an example of a global network?",
+      "options": [
+        "The Internet",
+        "A single calculator",
+        "A USB flash drive"
+      ],
+      "correct_index": 0,
+      "explanation": "The Internet is the ultimate Wide Area Network connecting billions of devices worldwide.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Deep Dive: How Files Travel and Save",
+      "body": "When you click 'Save' on your computer keyboard, magic happens inside the storage drive. Whether it is a traditional Hard Disk Drive (HDD) with spinning magnetic platters or a modern Solid State Drive (SSD) with lightning-fast electronic memory cells, your data is converted into binary code—long strings of 1s and 0s. The operating system coordinates with the storage hardware to carve out a specific parking spot for your file. This ensures that even when you turn the computer completely off, your data remains safely waiting for you the next time you boot up.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What language do computers use at the most fundamental hardware level?",
+      "back": "Binary code (1s and 0s representing electrical off and on states).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "Where does data go when you turn off the computer if you forgot to save your work?",
+      "options": [
+        "It is permanently saved on the desktop.",
+        "It is lost because temporary RAM memory clears when power is removed.",
+        "It is emailed to your teacher automatically."
+      ],
+      "correct_index": 1,
+      "explanation": "Unsaved work lives in temporary memory (RAM) which vanishes when the computer shuts down. Always save your work!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Digital Citizenship and Safety",
+      "body": "Using computers and networks is an amazing privilege, but it comes with important responsibilities. Being a good digital citizen means respecting other people's privacy, never sharing your personal passwords with strangers, and being kind when communicating online. Furthermore, you should always protect your computer from digital pests like viruses and malware by keeping security software updated and downloading files only from trusted sources. Safety online is just as important as safety when crossing a busy street!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "Password Security Rule",
+      "body": "Never use your pet's name or your birthday as a password! Create strong passwords using a mix of upper and lower case letters, numbers, and symbols.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "What is a safe practice when using the internet?",
+      "options": [
+        "Sharing your home address with anyone who asks in a game.",
+        "Keeping passwords secret and asking an adult before downloading unknown files.",
+        "Clicking on pop-up ads promising free prizes."
+      ],
+      "correct_index": 1,
+      "explanation": "Protecting personal information and consulting trusted adults keeps you safe in the digital world.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Troubleshooting Basic Computer Glitches",
+      "body": "Even the best computers sometimes freeze or act strangely. When this happens, don't panic! Computer scientists use a process called troubleshooting. The golden rule of basic troubleshooting is the famous 'reboot'—turning the device off and on again. Restarting clears out temporary glitches in the system memory and gives the operating system a fresh start. If your mouse stops working, check if the cable is plugged in firmly or if the wireless battery is charged. Being calm and methodical makes you a master problem solver.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "front": "What is the first simple trick to try when a computer app freezes?",
+      "back": "Restart the application or reboot the computer.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "What does 'troubleshooting' mean in computer science?",
+      "options": [
+        "Throwing the computer out the window.",
+        "Finding and fixing problems in a logical, step-by-step way.",
+        "Writing a story about trouble."
+      ],
+      "correct_index": 1,
+      "explanation": "Troubleshooting is the detective work of identifying what is wrong and applying a fix.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Summary of Chapter 3 Concepts",
+      "body": "You have journeyed through the core pillars of computer science! From the master conductor operating system that wakes up your machine, to individual files holding your creative work, organized folders keeping your digital room tidy, and sprawling networks connecting you to the world—you now understand how computers operate behind the scenes. Armed with good digital citizenship and troubleshooting skills, you are fully prepared to explore even more exciting technology adventures ahead!",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

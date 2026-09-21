@@ -1,0 +1,694 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch9",
+    "title": "Chapter 9: Differential Equations",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_001",
+      "type": "hook",
+      "title": "The Math Behind Growth and Decay",
+      "title_hi": "वृद्धि और क्षय के पीछे का गणित",
+      "title_gu": "વૃદ્ધિ અને ક્ષય પાછળનું ગણિત",
+      "body": "How do scientists predict how fast a virus spreads, how bacteria grow in a lab, or how radioactive materials decay over thousands of years? They use equations that connect a changing quantity directly to its rate of change — Differential Equations!",
+      "body_hi": "वैज्ञानिक कैसे अनुमान लगाते हैं कि कोई वायरस कितनी तेजी से फैलता है, प्रयोगशाला में बैक्टीरिया कैसे बढ़ते हैं, या हजारों वर्षों में रेडियोधर्मी पदार्थ कैसे क्षय होते हैं? वे ऐसे समीकरणों का उपयोग करते हैं जो बदलती मात्रा को सीधे उसके परिवर्तन की दर से जोड़ते हैं — अवकल समीकरण!",
+      "body_gu": "વૈજ્ઞાનિકો કેવી રીતે આગાહી કરે છે કે વાયરસ કેટલી ઝડપથી ફેલાય છે, લેબમાં બેક્ટેરિયા કેવી રીતે વધે છે, અથવા હજારો વર્ષોમાં રેડિયોએક્ટિવ પદાર્થો કેવી રીતે ક્ષીણ થાય છે? તેઓ એવા સમીકરણોનો ઉપયોગ કરે છે જે બદલાતી માત્રાને તેના ફેરફારના દર સાથે સીધી રીતે જોડે છે — વિકલ સમીકરણો!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_002",
+      "type": "socratic_question",
+      "title": "Rate of Growth vs Quantity",
+      "title_hi": "वृद्धि की दर बनाम मात्रा",
+      "title_gu": "વૃદ્ધિનો દર વિરુદ્ધ માત્રા",
+      "question": "If the growth rate of a population P with respect to time t is directly proportional to the current population P itself, which of the following equations correctly expresses this relationship?",
+      "question_hi": "यदि समय t के सापेक्ष जनसंख्या P की वृद्धि दर स्वयं वर्तमान जनसंख्या P के समानुपाती है, तो निम्नलिखित में से कौन सा समीकरण इस संबंध को सही ढंग से व्यक्त करता है?",
+      "question_gu": "જો સમય t ની સાપેક્ષે વસ્તી P ની વૃદ્ધિનો દર વર્તમાન વસ્તી P ના જ પ્રમાણમાં હોય, તો નીચેનામાંથી કયું સમીકરણ આ સંબંધને સાચી રીતે દર્શાવે છે?",
+      "options": [
+        "dP/dt = k * P",
+        "dP/dt = k * t",
+        "P = k * t",
+        "d²P/dt² = k"
+      ],
+      "options_hi": [
+        "dP/dt = k * P",
+        "dP/dt = k * t",
+        "P = k * t",
+        "d²P/dt² = k"
+      ],
+      "options_gu": [
+        "dP/dt = k * P",
+        "dP/dt = k * t",
+        "P = k * t",
+        "d²P/dt² = k"
+      ],
+      "correct_index": 0,
+      "explanation": "'Rate of growth with respect to time' is represented by dP/dt. 'Proportional to P' means dP/dt = k * P, where k is a constant of proportionality. This is a differential equation!",
+      "explanation_hi": "'समय के सापेक्ष वृद्धि की दर' को dP/dt द्वारा दर्शाया जाता है। 'P के समानुपाती' का अर्थ है dP/dt = k * P, जहाँ k आनुपातिकता नियतांक है। यह एक अवकल समीकरण है!",
+      "explanation_gu": "'સમય સાપેક્ષ વૃદ્ધિનો દર' dP/dt દ્વારા દર્શાવાય છે. 'P ના પ્રમાણમાં' એટલે dP/dt = k * P, જ્યાં k એ પ્રમાણસરતાનો અચળાંક છે. આ એક વિકલ સમીકરણ છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_003",
+      "type": "discovery",
+      "title": "Order and Degree of Differential Equations",
+      "title_hi": "अवकल समीकरणों की कोटि और घात",
+      "title_gu": "વિકલ સમીકરણોની કક્ષા અને પરિમાણ (ડિગ્રી)",
+      "body": "1. **Order**: The order of a differential equation is the order of the highest order derivative involved in the equation.\n2. **Degree**: The degree of a differential equation is the highest exponent (power) of the highest order derivative present, provided the equation is a polynomial in its derivatives (i.e., derivatives are free from radicals and fractional powers, and not inside functions like sin, log, exp).",
+      "body_hi": "1. **कोटि (Order)**: किसी अवकल समीकरण की कोटि उसमें मौजूद उच्चतम कोटि के अवकलज की कोटि होती है।\n2. **घात (Degree)**: किसी अवकल समीकरण की घात उसमें मौजूद उच्चतम कोटि के अवकलज की उच्चतम घात होती है, बशर्ते समीकरण अपने अवकलजों में एक बहुपद (polynomial) हो।",
+      "body_gu": "1. **કક્ષા (Order)**: વિકલ સમીકરણની કક્ષા એ સમીકરણમાં આવતા ઉચ્ચતમ કક્ષાના વિકલિતની કક્ષા છે.\n2. **પરિમાણ / ડિગ્રી (Degree)**: વિકલ સમીકરણની ડિગ્રી એ ઉચ્ચતમ કક્ષાના વિકલિતની મહત્તમ ઘાત છે, શરત એ કે સમીકરણ તેના વિકલિતોમાં બહપદી હોવું જોઈએ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_004",
+      "type": "theory",
+      "title": "Methods of Solving First Order Differential Equations",
+      "title_hi": "प्रथम कोटि के अवकल समीकरणों को हल करने की विधियाँ",
+      "title_gu": "પ્રથમ કક્ષાના વિકલ સમીકરણો ઉકેલવાની પદ્ધતિઓ",
+      "body": "There are three primary methods in CBSE Class 12:\n\n1. **Variable Separable Method**: Equations of the form dy/dx = f(x) * g(y) are solved by separating variables: dy/g(y) = f(x)dx, followed by integrating both sides.\n\n2. **Homogeneous Differential Equations**: Equations of the form dy/dx = F(x, y) / G(x, y) where F and G are homogeneous functions of the same degree. Substitute y = v*x (so dy/dx = v + x * dv/dx) to reduce it to variable separable form.\n\n3. **Linear Differential Equations**: Equations of the form dy/dx + P(x)*y = Q(x).\n- Integrating Factor (I.F.) = e^(∫ P(x) dx)\n- Solution: y * (I.F.) = ∫ (Q(x) * (I.F.)) dx + C",
+      "body_hi": "CBSE कक्षा 12 में तीन प्राथमिक विधियाँ हैं:\n\n1. **पृथक्करणीय चर विधि (Variable Separable)**: dy/dx = f(x) * g(y) रूप के समीकरणों को चरों को अलग करके हल किया जाता है: dy/g(y) = f(x)dx, और फिर दोनों पक्षों का समाकलन किया जाता है।\n\n2. **समघातीय अवकल समीकरण (Homogeneous DE)**: dy/dx = F(x, y) / G(x, y) रूप के समीकरण जहाँ F और G समान घात वाले समघातीय फलन हैं। y = v*x प्रतिस्थापित करें (ताकि dy/dx = v + x * dv/dx हो) इसे पृथक्करणीय चर रूप में बदलने के लिए।\n\n3. **रैखिक अवकल समीकरण (Linear DE)**: dy/dx + P(x)*y = Q(x) रूप के समीकरण।\n- समाकलन गुणक (I.F.) = e^(∫ P(x) dx)\n- हल: y * (I.F.) = ∫ (Q(x) * (I.F.)) dx + C",
+      "body_gu": "CBSE ધોરણ 12 માં ત્રણ મુખ્ય પદ્ધતિઓ છે:\n\n1. **વિયોજનીય ચલ પદ્ધતિ (Variable Separable)**: dy/dx = f(x) * g(y) સ્વરૂપના સમીકરણો ચલોને અલગ કરીને ઉકેલાય છે: dy/g(y) = f(x)dx, અને પછી બંને બાજુ સંકલન કરવામાં આવે છે.\n\n2. **સમઘાતી વિકલ સમીકરણો (Homogeneous DE)**: dy/dx = F(x, y) / G(x, y) સ્વરૂપના સમીકરણો જ્યાં F અને G સમાન ઘાતવાળા સમઘાતી વિધેયો છે. y = v*x આદેશ લો (જેથી dy/dx = v + x * dv/dx થાય) તેને વિયોજનીય ચલ સ્વરૂપમાં ફેરવવા માટે.\n\n3. **સુરેખ વિકલ સમીકરણો (Linear DE)**: dy/dx + P(x)*y = Q(x) સ્વરૂપના સમીકરણો.\n- સંકલન કારક (I.F.) = e^(∫ P(x) dx)\n- ઉકેલ: y * (I.F.) = ∫ (Q(x) * (I.F.)) dx + C"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_005",
+      "type": "knowledge_check",
+      "title": "Integrating Factor Check",
+      "title_hi": "समाकलन गुणक परीक्षण",
+      "title_gu": "સંકલન કારક ચકાસણી",
+      "question": "What is the Integrating Factor (I.F.) for the linear differential equation dy/dx + y * tan(x) = sec(x)?",
+      "question_hi": "रैखिक अवकल समीकरण dy/dx + y * tan(x) = sec(x) के लिए समाकलन गुणक (I.F.) क्या है?",
+      "question_gu": "સુરેખ વિકલ સમીકરણ dy/dx + y * tan(x) = sec(x) માટે સંકલન કારક (I.F.) શું છે?",
+      "options": [
+        "sec(x)",
+        "cos(x)",
+        "sin(x)",
+        "e^(tan x)"
+      ],
+      "options_hi": [
+        "sec(x)",
+        "cos(x)",
+        "sin(x)",
+        "e^(tan x)"
+      ],
+      "options_gu": [
+        "sec(x)",
+        "cos(x)",
+        "sin(x)",
+        "e^(tan x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Here P(x) = tan(x). Therefore, I.F. = e^(∫ tan(x) dx) = e^(ln |sec x|) = sec(x).",
+      "explanation_hi": "यहाँ P(x) = tan(x) है। इसलिए, I.F. = e^(∫ tan(x) dx) = e^(ln |sec x|) = sec(x)।",
+      "explanation_gu": "અહીં P(x) = tan(x) છે. તેથી, I.F. = e^(∫ tan(x) dx) = e^(ln |sec x|) = sec(x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_006",
+      "type": "reflection",
+      "title": "When is Degree Undefined?",
+      "title_hi": "घात कब अपरिभाषित होती है?",
+      "title_gu": "ડિગ્રી ક્યારે અવ્યાખ્યાયિત હોય છે?",
+      "body": "Why is the degree of d²y/dx² + sin(dy/dx) = 0 not defined? Because sin(dy/dx) can be expanded into an infinite power series of derivatives, meaning the equation cannot be written as a polynomial in terms of its derivatives!",
+      "body_hi": "d²y/dx² + sin(dy/dx) = 0 की घात अपरिभाषित क्यों है? क्योंकि sin(dy/dx) को अवकलज की एक अनंत घात श्रेणी में विस्तारित किया जा सकता है, जिसका अर्थ है कि समीकरण को उसके अवकलज के संदर्भ में बहुपद के रूप में नहीं लिखा जा सकता है!",
+      "body_gu": "d²y/dx² + sin(dy/dx) = 0 ની ડિગ્રી શા માટે અવ્યાખ્યાયિત છે? કારણ કે sin(dy/dx) ને વિકલિતોની અનંત ઘાત શ્રેણીમાં વિસ્તૃત કરી શકાય છે, જેનો અર્થ છે કે સમીકરણને તેના વિકલિતોના સંદર્ભમાં બહુપદી તરીકે લખી શકાતું નથી!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_007",
+      "type": "connection",
+      "title": "Real-World Application: Newton's Law of Cooling",
+      "title_hi": "वास्तविक दुनिया का अनुप्रयोग: न्यूटन का शीतलन नियम",
+      "title_gu": "વાસ્તવિક વિશ્વ એપ્લિકેશન: ન્યૂટનનો શીતળતાનો નિયમ",
+      "body": "Newton's Law of Cooling states that the rate of temperature change of a body is proportional to the temperature difference between the body and its surroundings: dT/dt = -k(T - T_0). Solving this variable separable differential equation gives T(t) = T_0 + (T_initial - T_0) * e^(-kt). Forensic scientists use this exact formula to estimate time of death!",
+      "body_hi": "न्यूटन का शीतलन नियम कहता है कि किसी पिंड के तापमान परिवर्तन की दर पिंड और उसके परिवेश के बीच के तापमान अंतर के समानुपाती होती है: dT/dt = -k(T - T_0)। इस पृथक्करणीय चर अवकल समीकरण को हल करने पर T(t) = T_0 + (T_initial - T_0) * e^(-kt) प्राप्त होता है। फॉरेंसिक वैज्ञानिक मृत्यु के समय का अनुमान लगाने के लिए इसी सूत्र का उपयोग करते हैं!",
+      "body_gu": "ન્યૂટનનો શીતળતાનો નિયમ જણાવે છે કે પદાર્થના તાપમાનમાં ફેરફારનો દર પદાર્થ અને તેની આસપાસના તાપમાનના તફાવતના પ્રમાણમાં હોય છે: dT/dt = -k(T - T_0). આ વિયોજનીય ચલ વિકલ સમીકરણ ઉકેલવાથી T(t) = T_0 + (T_initial - T_0) * e^(-kt) મળે છે. ફોરેન્સિક વૈજ્ઞાનિકો મૃત્યુનો સમય નક્કી કરવા માટે આ જ સૂત્રનો ઉપયોગ કરે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Solving Variable Separable DE",
+      "title_hi": "मास्टरी चुनौती: पृथक्करणीय चर अवकल समीकरण हल करना",
+      "title_gu": "માસ્ટરી ચેલેન્જ: વિયોજનીય ચલ વિકલ સમીકરણ ઉકેલવું",
+      "question": "Find the general solution of the differential equation dy/dx = (1 + y²) / (1 + x²).",
+      "question_hi": "अवकल समीकरण dy/dx = (1 + y²) / (1 + x²) का व्यापक हल ज्ञात कीजिए।",
+      "question_gu": "વિકલ સમીકરણ dy/dx = (1 + y²) / (1 + x²) નો વ્યાપક ઉકેલ શોધો.",
+      "options": [
+        "tan⁻¹(y) - tan⁻¹(x) = C",
+        "tan⁻¹(y) + tan⁻¹(x) = C",
+        "y - x = C",
+        "ln(1 + y²) = ln(1 + x²) + C"
+      ],
+      "options_hi": [
+        "tan⁻¹(y) - tan⁻¹(x) = C",
+        "tan⁻¹(y) + tan⁻¹(x) = C",
+        "y - x = C",
+        "ln(1 + y²) = ln(1 + x²) + C"
+      ],
+      "options_gu": [
+        "tan⁻¹(y) - tan⁻¹(x) = C",
+        "tan⁻¹(y) + tan⁻¹(x) = C",
+        "y - x = C",
+        "ln(1 + y²) = ln(1 + x²) + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Separating variables: dy / (1 + y²) = dx / (1 + x²). Integrating both sides: ∫ dy/(1 + y²) = ∫ dx/(1 + x²) => tan⁻¹(y) = tan⁻¹(x) + C => tan⁻¹(y) - tan⁻¹(x) = C.",
+      "explanation_hi": "चरों को अलग करने पर: dy / (1 + y²) = dx / (1 + x²)। दोनों पक्षों का समाकलन करने पर: tan⁻¹(y) = tan⁻¹(x) + C => tan⁻¹(y) - tan⁻¹(x) = C।",
+      "explanation_gu": "ચલો અલગ કરતાં: dy / (1 + y²) = dx / (1 + x²). બંને બાજુ સંકલન કરતાં: tan⁻¹(y) = tan⁻¹(x) + C => tan⁻¹(y) - tan⁻¹(x) = C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_009",
+      "type": "mcq",
+      "title": "Textbook Ex 9.1 - Question 1",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.1 - प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.1 - પ્રશ્ન 1",
+      "question": "Determine the order and degree (if defined) of the differential equation: (d⁴y/dx⁴) + sin(y''') = 0",
+      "question_hi": "अवकल समीकरण (d⁴y/dx⁴) + sin(y''') = 0 की कोटि तथा घात (यदि परिभाषित हो) ज्ञात कीजिए।",
+      "question_gu": "વિકલ સમીકરણ (d⁴y/dx⁴) + sin(y''') = 0 ની કક્ષા અને પરિમાણ (જો વ્યાખ્યાયિત હોય તો) નક્કી કરો.",
+      "options": [
+        "Order = 4, Degree = Not Defined",
+        "Order = 4, Degree = 1",
+        "Order = 3, Degree = Not Defined",
+        "Order = 3, Degree = 1"
+      ],
+      "options_hi": [
+        "कोटि = 4, घात = अपरिभाषित",
+        "कोटि = 4, घात = 1",
+        "कोटि = 3, घात = अपरिभाषित",
+        "कोटि = 3, घात = 1"
+      ],
+      "options_gu": [
+        "કક્ષા = 4, પરિમાણ = વ્યાખ્યાયિત નથી",
+        "કક્ષા = 4, પરિમાણ = 1",
+        "કક્ષા = 3, પરિમાણ = વ્યાખ્યાયિત નથી",
+        "કક્ષા = 3, પરિમાણ = 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Highest order derivative is d⁴y/dx⁴ (Order = 4). Since the derivative y''' is inside sin(), the equation is not a polynomial in derivatives, so Degree is Not Defined.",
+      "explanation_hi": "उच्चतम कोटि का अवकलज d⁴y/dx⁴ है (कोटि = 4)। चूँकि अवकलज y''' sin() के अंदर है, समीकरण अवकलजों में बहुपद नहीं है, इसलिए घात अपरिभाषित है।",
+      "explanation_gu": "મહત્તમ કક્ષાનું વિકલિત d⁴y/dx⁴ છે (કક્ષા = 4). કારણ કે વિકલિત y''' એ sin() ની અંદર છે, સમીકરણ વિકલિતોમાં બહુપદી નથી, તેથી પરિમાણ વ્યાખ્યાયિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_010",
+      "type": "mcq",
+      "title": "Textbook Ex 9.1 - Question 2",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.1 - प्रश्न 2",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.1 - પ્રશ્ન 2",
+      "question": "Determine the order and degree of the differential equation: y' + 5y = 0",
+      "question_hi": "अवकल समीकरण y' + 5y = 0 की कोटि तथा घात ज्ञात कीजिए।",
+      "question_gu": "વિકલ સમીકરણ y' + 5y = 0 ની કક્ષા અને પરિમાણ નક્કી કરો.",
+      "options": [
+        "Order = 1, Degree = 1",
+        "Order = 1, Degree = 5",
+        "Order = 0, Degree = 1",
+        "Order = 1, Degree = Not Defined"
+      ],
+      "options_hi": [
+        "कोटि = 1, घात = 1",
+        "कोटि = 1, घात = 5",
+        "कोटि = 0, घात = 1",
+        "कोटि = 1, घात = अपरिभाषित"
+      ],
+      "options_gu": [
+        "કક્ષા = 1, પરિમાણ = 1",
+        "કક્ષા = 1, પરિમાણ = 5",
+        "કક્ષા = 0, પરિમાણ = 1",
+        "કક્ષા = 1, પરિમાણ = વ્યાખ્યાયિત નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "Highest derivative is y' = dy/dx (Order = 1) and its highest power is 1 (Degree = 1).",
+      "explanation_hi": "उच्चतम अवकलज y' = dy/dx है (कोटि = 1) और इसकी उच्चतम घात 1 है (घात = 1)।",
+      "explanation_gu": "મહત્તમ વિકલિત y' = dy/dx છે (કક્ષા = 1) અને તેની મહત્તમ ઘાત 1 છે (પરિમાણ = 1)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_011",
+      "type": "mcq",
+      "title": "Textbook Ex 9.1 - Question 11",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.1 - प्रश्न 11",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.1 - પ્રશ્ન 11",
+      "question": "The degree of the differential equation (d²y/dx²)³ + (dy/dx)² + sin(dy/dx) + 1 = 0 is:",
+      "question_hi": "अवकल समीकरण (d²y/dx²)³ + (dy/dx)² + sin(dy/dx) + 1 = 0 की घात है:",
+      "question_gu": "વિકલ સમીકરણ (d²y/dx²)³ + (dy/dx)² + sin(dy/dx) + 1 = 0 નું પરિમાણ છે:",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "not defined"
+      ],
+      "options_hi": [
+        "3",
+        "2",
+        "1",
+        "अपरिभाषित"
+      ],
+      "options_gu": [
+        "3",
+        "2",
+        "1",
+        "વ્યાખ્યાયિત નથી"
+      ],
+      "correct_index": 3,
+      "explanation": "The term sin(dy/dx) makes the equation a non-polynomial in derivatives. Thus, the degree is not defined.",
+      "explanation_hi": "पद sin(dy/dx) समीकरण को अवकलज में गैर-बहुपद बनाता है। अतः घात अपरिभाषित है।",
+      "explanation_gu": "પદ sin(dy/dx) સમીકરણને વિકલિતોમાં બહુપદી બનવા દેતું નથી. તેથી, પરિમાણ વ્યાખ્યાયિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_012",
+      "type": "mcq",
+      "title": "Textbook Ex 9.1 - Question 12",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.1 - प्रश्न 12",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.1 - પ્રશ્ન 12",
+      "question": "The order of the differential equation 2x²(d²y/dx²) - 3(dy/dx) + y = 0 is:",
+      "question_hi": "अवकल समीकरण 2x²(d²y/dx²) - 3(dy/dx) + y = 0 की कोटि है:",
+      "question_gu": "વિકલ સમીકરણ 2x²(d²y/dx²) - 3(dy/dx) + y = 0 ની કક્ષા છે:",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "not defined"
+      ],
+      "options_hi": [
+        "2",
+        "1",
+        "0",
+        "अपरिभाषित"
+      ],
+      "options_gu": [
+        "2",
+        "1",
+        "0",
+        "વ્યાખ્યાયિત નથી"
+      ],
+      "correct_index": 0,
+      "explanation": "The highest order derivative present in the equation is d²y/dx², which is of order 2.",
+      "explanation_hi": "समीकरण में मौजूद उच्चतम कोटि का अवकलज d²y/dx² है, जिसकी कोटि 2 है।",
+      "explanation_gu": "સમીકરણમાં હાજર ઉચ્ચતમ કક્ષાનું વિકલિત d²y/dx² છે, જેની કક્ષા 2 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_013",
+      "type": "true_false",
+      "title": "Textbook Ex 9.2 - Question 1 Verification",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.2 - प्रश्न 1 सत्यापन",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.2 - પ્રશ્ન 1 ચકાસણી",
+      "question": "Is the function y = e^x + 1 a solution to the differential equation y'' - y' = 0?",
+      "question_hi": "क्या फलन y = e^x + 1 अवकल समीकरण y'' - y' = 0 का एक हल है?",
+      "question_gu": "શું વિધેય y = e^x + 1 એ વિકલ સમીકરણ y'' - y' = 0 નો ઉકેલ છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "y = e^x + 1 => y' = e^x and y'' = e^x. Therefore, y'' - y' = e^x - e^x = 0. It satisfies the DE, so it is TRUE.",
+      "explanation_hi": "y = e^x + 1 => y' = e^x तथा y'' = e^x। इसलिए, y'' - y' = e^x - e^x = 0। यह अवकल समीकरण को संतुष्ट करता है, इसलिए सत्य है।",
+      "explanation_gu": "y = e^x + 1 => y' = e^x અને y'' = e^x. તેથી, y'' - y' = e^x - e^x = 0. તે વિકલ સમીકરણનું પાલન કરે છે, તેથી સાચું છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_014",
+      "type": "mcq",
+      "title": "Textbook Ex 9.2 - Question 11",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.2 - प्रश्न 11",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.2 - પ્રશ્ન 11",
+      "question": "The number of arbitrary constants in the general solution of a differential equation of fourth order is:",
+      "question_hi": "चतुर्थ कोटि के किसी अवकल समीकरण के व्यापक हल में स्वेच्छ अचरों की संख्या है:",
+      "question_gu": "ચોથી કક્ષાના વિકલ સમીકરણના વ્યાપક ઉકેલમાં સ્વેચ્છ અચળાંકોની સંખ્યા છે:",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_hi": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_gu": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 3,
+      "explanation": "The number of arbitrary constants in the general solution of a differential equation of order n is always equal to n. Here order n = 4, so answer is 4.",
+      "explanation_hi": "कोटि n के अवकल समीकरण के व्यापक हल में स्वेच्छ अचरों की संख्या हमेशा n के बराबर होती है। यहाँ कोटि n = 4 है, इसलिए उत्तर 4 है।",
+      "explanation_gu": "n કક્ષાના વિકલ સમીકરણના વ્યાપક ઉકેલમાં સ્વેચ્છ અચળાંકોની સંખ્યા હંમેશા n જેટલી હોય છે. અહીં કક્ષા n = 4 છે, તેથી જવાબ 4 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_015",
+      "type": "mcq",
+      "title": "Textbook Ex 9.2 - Question 12",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.2 - प्रश्न 12",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.2 - પ્રશ્ન 12",
+      "question": "The number of arbitrary constants in the particular solution of a differential equation of third order is:",
+      "question_hi": "तृतीय कोटि के किसी अवकल समीकरण के विशिष्ट हल में स्वेच्छ अचरों की संख्या है:",
+      "question_gu": "ત્રીજી કક્ષાના વિકલ સમીકરણના વિશિષ્ટ ઉકેલમાં સ્વેચ્છ અચળાંકોની સંખ્યા છે:",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "options_hi": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "options_gu": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correct_index": 3,
+      "explanation": "A PARTICULAR solution contains NO arbitrary constants (number of arbitrary constants is 0).",
+      "explanation_hi": "किसी विशिष्ट हल (Particular Solution) में कोई स्वेच्छ अचर नहीं होता (स्वेच्छ अचरों की संख्या 0 होती है)।",
+      "explanation_gu": "વિશિષ્ટ ઉકેલમાં એક પણ સ્વેચ્છ અચળાંક હોતો નથી (સ્વેચ્છ અચળાંકોની સંખ્યા 0 હોય છે)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_016",
+      "type": "mcq",
+      "title": "Textbook Ex 9.4 - Question 1",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.4 - प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.4 - પ્રશ્ન 1",
+      "question": "Find the general solution of the differential equation dy/dx = (1 - cos x) / (1 + cos x).",
+      "question_hi": "अवकल समीकरण dy/dx = (1 - cos x) / (1 + cos x) का व्यापक हल ज्ञात कीजिए।",
+      "question_gu": "વિકલ સમીકરણ dy/dx = (1 - cos x) / (1 + cos x) નો વ્યાપક ઉકેલ શોધો.",
+      "options": [
+        "y = 2 tan(x/2) - x + C",
+        "y = tan(x/2) - x + C",
+        "y = 2 tan(x/2) + x + C",
+        "y = tan(x/2) + x + C"
+      ],
+      "options_hi": [
+        "y = 2 tan(x/2) - x + C",
+        "y = tan(x/2) - x + C",
+        "y = 2 tan(x/2) + x + C",
+        "y = tan(x/2) + x + C"
+      ],
+      "options_gu": [
+        "y = 2 tan(x/2) - x + C",
+        "y = tan(x/2) - x + C",
+        "y = 2 tan(x/2) + x + C",
+        "y = tan(x/2) + x + C"
+      ],
+      "correct_index": 0,
+      "explanation": "dy/dx = (2 sin²(x/2)) / (2 cos²(x/2)) = tan²(x/2) = sec²(x/2) - 1. Integrating both sides: y = ∫ (sec²(x/2) - 1) dx = 2 tan(x/2) - x + C.",
+      "explanation_hi": "dy/dx = (2 sin²(x/2)) / (2 cos²(x/2)) = tan²(x/2) = sec²(x/2) - 1। समाकलन करने पर: y = 2 tan(x/2) - x + C।",
+      "explanation_gu": "dy/dx = (2 sin²(x/2)) / (2 cos²(x/2)) = tan²(x/2) = sec²(x/2) - 1. સંકલન કરતાં: y = 2 tan(x/2) - x + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_017",
+      "type": "mcq",
+      "title": "Textbook Ex 9.4 - Question 2",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.4 - प्रश्न 2",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.4 - પ્રશ્ન 2",
+      "question": "Find the general solution of dy/dx = √(4 - y²) (-2 < y < 2).",
+      "question_hi": "dy/dx = √(4 - y²) (-2 < y < 2) का व्यापक हल ज्ञात कीजिए।",
+      "question_gu": "dy/dx = √(4 - y²) (-2 < y < 2) નો વ્યાપક ઉકેલ શોધો.",
+      "options": [
+        "sin⁻¹(y/2) = x + C",
+        "cos⁻¹(y/2) = x + C",
+        "sin⁻¹(y) = 2x + C",
+        "tan⁻¹(y/2) = x + C"
+      ],
+      "options_hi": [
+        "sin⁻¹(y/2) = x + C",
+        "cos⁻¹(y/2) = x + C",
+        "sin⁻¹(y) = 2x + C",
+        "tan⁻¹(y/2) = x + C"
+      ],
+      "options_gu": [
+        "sin⁻¹(y/2) = x + C",
+        "cos⁻¹(y/2) = x + C",
+        "sin⁻¹(y) = 2x + C",
+        "tan⁻¹(y/2) = x + C"
+      ],
+      "correct_index": 0,
+      "explanation": "Separating variables: dy / √(4 - y²) = dx. Integrating both sides: ∫ dy / √(2² - y²) = ∫ dx => sin⁻¹(y/2) = x + C.",
+      "explanation_hi": "चरों को पृथक करने पर: dy / √(4 - y²) = dx। दोनों पक्षों का समाकलन करने पर: sin⁻¹(y/2) = x + C।",
+      "explanation_gu": "ચલો અલગ કરતાં: dy / √(4 - y²) = dx. બંને બાજુ સંકલન કરતાં: sin⁻¹(y/2) = x + C."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_018",
+      "type": "mcq",
+      "title": "Textbook Ex 9.4 - Question 10",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.4 - प्रश्न 10",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.4 - પ્રશ્ન 10",
+      "question": "Find the general solution of e^x tan(y) dx + (1 - e^x) sec²(y) dy = 0.",
+      "question_hi": "e^x tan(y) dx + (1 - e^x) sec²(y) dy = 0 का व्यापक हल ज्ञात कीजिए।",
+      "question_gu": "e^x tan(y) dx + (1 - e^x) sec²(y) dy = 0 નો વ્યાપક ઉકેલ શોધો.",
+      "options": [
+        "tan(y) = C(1 - e^x)",
+        "tan(y) = C(1 + e^x)",
+        "sec(y) = C(1 - e^x)",
+        "tan(y) = C e^x"
+      ],
+      "options_hi": [
+        "tan(y) = C(1 - e^x)",
+        "tan(y) = C(1 + e^x)",
+        "sec(y) = C(1 - e^x)",
+        "tan(y) = C e^x"
+      ],
+      "options_gu": [
+        "tan(y) = C(1 - e^x)",
+        "tan(y) = C(1 + e^x)",
+        "sec(y) = C(1 - e^x)",
+        "tan(y) = C e^x"
+      ],
+      "correct_index": 0,
+      "explanation": "Rearranging: sec²(y) dy / tan(y) = -e^x dx / (1 - e^x) = e^x dx / (e^x - 1). Integrating: ln|tan y| = ln|e^x - 1| + ln C = ln|C(e^x - 1)| => tan(y) = C(1 - e^x).",
+      "explanation_hi": "पुनर्व्यवस्थित करने पर: sec²(y) dy / tan(y) = e^x dx / (e^x - 1)। समाकलन करने पर: ln|tan y| = ln|C(e^x - 1)| => tan(y) = C(1 - e^x)।",
+      "explanation_gu": "ગોઠવણી કરતાં: sec²(y) dy / tan(y) = e^x dx / (e^x - 1). સંકલન કરતાં: ln|tan y| = ln|C(e^x - 1)| => tan(y) = C(1 - e^x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_019",
+      "type": "mcq",
+      "title": "Textbook Ex 9.5 - Homogeneous Definition",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.5 - समघातीय परिभाषा",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.5 - સમઘાતી વ્યાખ્યા",
+      "question": "A function F(x, y) is called a homogeneous function of degree n if F(λx, λy) is equal to:",
+      "question_hi": "फलन F(x, y) घात n का समघातीय फलन कहलाता है यदि F(λx, λy) बराबर है:",
+      "question_gu": "વિધેય F(x, y) ને n ઘાતવાળું સમઘાતી વિધેય કહેવાય જો F(λx, λy) બરાબર હોય:",
+      "options": [
+        "λ^n * F(x, y)",
+        "λ * F(x, y)",
+        "F(x, y) / λ^n",
+        "n * F(x, y)"
+      ],
+      "options_hi": [
+        "λ^n * F(x, y)",
+        "λ * F(x, y)",
+        "F(x, y) / λ^n",
+        "n * F(x, y)"
+      ],
+      "options_gu": [
+        "λ^n * F(x, y)",
+        "λ * F(x, y)",
+        "F(x, y) / λ^n",
+        "n * F(x, y)"
+      ],
+      "correct_index": 0,
+      "explanation": "By definition of homogeneous functions, F(λx, λy) = λ^n * F(x, y) for any non-zero constant λ.",
+      "explanation_hi": "समघातीय फलन की परिभाषा के अनुसार, किसी भी गैर-शून्य नियतांक λ के लिए F(λx, λy) = λ^n * F(x, y) होता है।",
+      "explanation_gu": "સમઘાતી વિધેયની વ્યાખ્યા મુજબ, કોઈપણ શૂન્યતર અચળાંક λ માટે F(λx, λy) = λ^n * F(x, y) થાય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_020",
+      "type": "mcq",
+      "title": "Textbook Ex 9.5 - Question 13",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.5 - प्रश्न 13",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.5 - પ્રશ્ન 13",
+      "question": "Which substitution is made to solve a homogeneous differential equation of the form dy/dx = F(x, y)?",
+      "question_hi": "dy/dx = F(x, y) रूप के समघातीय अवकल समीकरण को हल करने के लिए कौन सा प्रतिस्थापन किया जाता है?",
+      "question_gu": "dy/dx = F(x, y) સ્વરૂપના સમઘાતી વિકલ સમીકરણને ઉકેલવા માટે કયો આદેશ લેવામાં આવે છે?",
+      "options": [
+        "y = v * x",
+        "x = v * y",
+        "y = v / x",
+        "x = v / y"
+      ],
+      "options_hi": [
+        "y = v * x",
+        "x = v * y",
+        "y = v / x",
+        "x = v / y"
+      ],
+      "options_gu": [
+        "y = v * x",
+        "x = v * y",
+        "y = v / x",
+        "x = v / y"
+      ],
+      "correct_index": 0,
+      "explanation": "For dy/dx = F(x, y), we substitute y = v*x, which gives dy/dx = v + x(dv/dx).",
+      "explanation_hi": "dy/dx = F(x, y) के लिए, हम y = v*x प्रतिस्थापित करते हैं, जिससे dy/dx = v + x(dv/dx) मिलता है।",
+      "explanation_gu": "dy/dx = F(x, y) માટે, આપણે y = v*x આદેશ લઈએ છીએ, જેથી dy/dx = v + x(dv/dx) મળે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_021",
+      "type": "mcq",
+      "title": "Textbook Ex 9.5 - Question 14",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.5 - प्रश्न 14",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.5 - પ્રશ્ન 14",
+      "question": "Which of the following is a homogeneous differential equation?",
+      "question_hi": "निम्नलिखित में से कौन सा एक समघातीय अवकल समीकरण है?",
+      "question_gu": "નીચેનામાંથી કયું સમઘાતી વિકલ સમીકરણ છે?",
+      "options": [
+        "(4x + 6y + 5) dx - (3y + 2x + 4) dy = 0",
+        "(x y) dx - (x³ + y³) dy = 0",
+        "(x³ + 2y²) dx + 2x y dy = 0",
+        "y² dx + (x² - x y - y²) dy = 0"
+      ],
+      "options_hi": [
+        "(4x + 6y + 5) dx - (3y + 2x + 4) dy = 0",
+        "(x y) dx - (x³ + y³) dy = 0",
+        "(x³ + 2y²) dx + 2x y dy = 0",
+        "y² dx + (x² - x y - y²) dy = 0"
+      ],
+      "options_gu": [
+        "(4x + 6y + 5) dx - (3y + 2x + 4) dy = 0",
+        "(x y) dx - (x³ + y³) dy = 0",
+        "(x³ + 2y²) dx + 2x y dy = 0",
+        "y² dx + (x² - x y - y²) dy = 0"
+      ],
+      "correct_index": 3,
+      "explanation": "In y² dx + (x² - xy - y²) dy = 0, both y² and (x² - xy - y²) are homogeneous functions of degree 2.",
+      "explanation_hi": "y² dx + (x² - xy - y²) dy = 0 में, y² और (x² - xy - y²) दोनों घात 2 के समघातीय फलन हैं।",
+      "explanation_gu": "y² dx + (x² - xy - y²) dy = 0 માં, y² અને (x² - xy - y²) બંને 2 ઘાતવાળા સમઘાતી વિધેયો છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_022",
+      "type": "mcq",
+      "title": "Textbook Ex 9.6 - Question 19",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.6 - प्रश्न 19",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.6 - પ્રશ્ન 19",
+      "question": "The Integrating Factor of the differential equation (1 - y²)(dx/dy) + y x = a y (-1 < y < 1) is:",
+      "question_hi": "अवकल समीकरण (1 - y²)(dx/dy) + y x = a y (-1 < y < 1) का समाकलन गुणक है:",
+      "question_gu": "વિકલ સમીકરણ (1 - y²)(dx/dy) + y x = a y (-1 < y < 1) નો સંકલન કારક છે:",
+      "options": [
+        "1 / √(1 - y²)",
+        "1 / (1 - y²)",
+        "1 / √(y² - 1)",
+        "1 / (y² - 1)"
+      ],
+      "options_hi": [
+        "1 / √(1 - y²)",
+        "1 / (1 - y²)",
+        "1 / √(y² - 1)",
+        "1 / (y² - 1)"
+      ],
+      "options_gu": [
+        "1 / √(1 - y²)",
+        "1 / (1 - y²)",
+        "1 / √(y² - 1)",
+        "1 / (y² - 1)"
+      ],
+      "correct_index": 0,
+      "explanation": "Rewrite as dx/dy + [y/(1 - y²)] x = ay/(1 - y²). Here P₁(y) = y/(1 - y²). I.F. = e^(∫ y/(1 - y²) dy) = e^(-1/2 ln|1 - y²|) = 1 / √(1 - y²).",
+      "explanation_hi": "dx/dy + [y/(1 - y²)] x = ay/(1 - y²) के रूप में लिखें। यहाँ P₁(y) = y/(1 - y²)। I.F. = e^(∫ y/(1 - y²) dy) = 1 / √(1 - y²)।",
+      "explanation_gu": "dx/dy + [y/(1 - y²)] x = ay/(1 - y²) સ્વરૂપે લખો. અહીં P₁(y) = y/(1 - y²). I.F. = e^(∫ y/(1 - y²) dy) = 1 / √(1 - y²)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_023",
+      "type": "mcq",
+      "title": "Textbook Ex 9.6 - Question 15",
+      "title_hi": "पाठ्यपुस्तक अभ्यास 9.6 - प्रश्न 15",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 9.6 - પ્રશ્ન 15",
+      "question": "Find the Integrating Factor of x (dy/dx) - y = 2x².",
+      "question_hi": "x (dy/dx) - y = 2x² का समाकलन गुणक ज्ञात कीजिए।",
+      "question_gu": "x (dy/dx) - y = 2x² નો સંકલન કારક શોધો.",
+      "options": [
+        "1/x",
+        "-1/x",
+        "x",
+        "e^(-x)"
+      ],
+      "options_hi": [
+        "1/x",
+        "-1/x",
+        "x",
+        "e^(-x)"
+      ],
+      "options_gu": [
+        "1/x",
+        "-1/x",
+        "x",
+        "e^(-x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Divide by x: dy/dx - (1/x) y = 2x. P(x) = -1/x. I.F. = e^(∫ -1/x dx) = e^(-ln x) = e^(ln(1/x)) = 1/x.",
+      "explanation_hi": "x से भाग दें: dy/dx - (1/x) y = 2x। P(x) = -1/x। I.F. = e^(∫ -1/x dx) = 1/x।",
+      "explanation_gu": "x વડે ભાગતાં: dy/dx - (1/x) y = 2x. P(x) = -1/x. I.F. = e^(∫ -1/x dx) = 1/x."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_024",
+      "type": "mcq",
+      "title": "Textbook Chapter 9 Miscellaneous - Question 1",
+      "title_hi": "पाठ्यपुस्तक अध्याय 9 विविध - प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક પ્રકરણ 9 પ્રકીર્ણ - પ્રશ્ન 1",
+      "question": "Find the order and degree of (d²y/dx²)² + cos(dy/dx) = 0.",
+      "question_hi": "(d²y/dx²)² + cos(dy/dx) = 0 की कोटि और घात ज्ञात कीजिए।",
+      "question_gu": "(d²y/dx²)² + cos(dy/dx) = 0 ની કક્ષા અને પરિમાણ શોધો.",
+      "options": [
+        "Order = 2, Degree = Not Defined",
+        "Order = 2, Degree = 2",
+        "Order = 1, Degree = Not Defined",
+        "Order = 2, Degree = 1"
+      ],
+      "options_hi": [
+        "कोटि = 2, घात = अपरिभाषित",
+        "कोटि = 2, घात = 2",
+        "कोटि = 1, घात = अपरिभाषित",
+        "कोटि = 2, घात = 1"
+      ],
+      "options_gu": [
+        "કક્ષા = 2, પરિમાણ = વ્યાખ્યાયિત નથી",
+        "કક્ષા = 2, પરિમાણ = 2",
+        "કક્ષા = 1, પરિમાણ = વ્યાખ્યાયિત નથી",
+        "કક્ષા = 2, પરિમાણ = 1"
+      ],
+      "correct_index": 0,
+      "explanation": "Highest derivative is d²y/dx² (Order = 2). Due to cos(dy/dx), the equation is not a polynomial in derivatives, so Degree is Not Defined.",
+      "explanation_hi": "उच्चतम अवकलज d²y/dx² है (कोटि = 2)। cos(dy/dx) के कारण, समीकरण अवकलजों में बहुपद नहीं है, इसलिए घात अपरिभाषित है।",
+      "explanation_gu": "મહત્તમ વિકલિત d²y/dx² છે (કક્ષા = 2). cos(dy/dx) ના લીધે, સમીકરણ વિકલિતોમાં બહુપદી નથી, તેથી પરિમાણ વ્યાખ્યાયિત નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH9_025",
+      "type": "mcq",
+      "title": "Textbook Chapter 9 Miscellaneous - Question 18",
+      "title_hi": "पाठ्यपुस्तक अध्याय 9 विविध - प्रश्न 18",
+      "title_gu": "પાઠ્યપુસ્તક પ્રકરણ 9 પ્રકીર્ણ - પ્રશ્ન 18",
+      "question": "The general solution of the differential equation dy/dx + e^x y = 0 is:",
+      "question_hi": "अवकल समीकरण dy/dx + e^x y = 0 का व्यापक हल है:",
+      "question_gu": "વિકલ સમીકરણ dy/dx + e^x y = 0 નો વ્યાપક ઉકેલ છે:",
+      "options": [
+        "y = C e^(-e^x)",
+        "y = C e^(e^x)",
+        "y = e^x + C",
+        "y = C e^(-x)"
+      ],
+      "options_hi": [
+        "y = C e^(-e^x)",
+        "y = C e^(e^x)",
+        "y = e^x + C",
+        "y = C e^(-x)"
+      ],
+      "options_gu": [
+        "y = C e^(-e^x)",
+        "y = C e^(e^x)",
+        "y = e^x + C",
+        "y = C e^(-x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Separating variables: dy/y = -e^x dx. Integrating both sides: ln|y| = -e^x + ln C => y = C e^(-e^x).",
+      "explanation_hi": "चरों को पृथक करने पर: dy/y = -e^x dx। समाकलन करने पर: ln|y| = -e^x + ln C => y = C e^(-e^x)।",
+      "explanation_gu": "ચલો અલગ કરતાં: dy/y = -e^x dx. સંકલન કરતાં: ln|y| = -e^x + ln C => y = C e^(-e^x)."
+    }
+  ]
+}

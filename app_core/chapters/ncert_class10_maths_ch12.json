@@ -1,0 +1,400 @@
+{
+  "metadata": {
+    "id": "ncert_class10_maths_ch12",
+    "title": "Chapter 12: Areas Related to Circles",
+    "subtitle": "The Ultimate Board Exam Mastery Guide",
+    "subject": "Maths",
+    "grade": "10",
+    "board": "NCERT/CBSE",
+    "curriculum": [
+      "Universal"
+    ],
+    "language": "English/Hindi/Gujarati (Bilingual)",
+    "difficulty": "Advanced",
+    "estimated_minutes": 180,
+    "version": "3.0.0-SUPREME-MATHS",
+    "author": "Antigravity Supreme Intelligence",
+    "reviewed_by": "Chief Academic Architect",
+    "tags": [
+      "maths",
+      "areas",
+      "circles",
+      "sectors",
+      "segments",
+      "board_special",
+      "bilingual"
+    ],
+    "learning_outcomes": [
+      "Calculate the perimeter and area of a circle.",
+      "Understand and calculate the area of sectors and segments of a circle.",
+      "Solve CBSE/State Board HOTS questions related to combinations of plane figures.",
+      "Apply formulas to real-world scenarios like finding areas of designs."
+    ],
+    "ai_context": {
+      "learning_goal": "Make abstract geometric areas easy to visualize. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
+      "common_misconceptions": [
+        "Students confuse sectors with segments.",
+        "Students make mistakes when calculating the area of a major segment."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hook",
+      "content": "Imagine you have a large circular pizza and you want to share it equally among your 4 friends. The piece you get is called a sector. But what if you cut the pizza along a straight line not passing through the center? You get a segment! Welcome to the fascinating world of **Areas Related to Circles (वृत्तों से संबंधित क्षेत्रफल / વર્તુળ સંબંધિત ક્ષેત્રફળ)**!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Visualizing Sectors and Segments: A sector is like a slice of pizza, bounded by two radii and an arc. A segment is bounded by a chord and an arc.",
+      "image_url": "assets/images/maths_ch12_sector_segment.jpg",
+      "alt_text": "A pizza showing a slice (sector) and a straight cut (segment)."
+    },
+    {
+      "type": "theory",
+      "content": "**Perimeter and Area of a Circle:**\nThe distance covered by travelling once around a circle is its perimeter, usually called its circumference.\n\n*Formulas:*\nCircumference = 2πr or πd (where d is diameter)\nArea = πr²",
+      "difficulty": "Intermediate",
+      "bloom": "Remember"
+    },
+    {
+      "type": "teacher_tip",
+      "content": "💡 **Teacher's Secret:** The value of π is approximately 22/7 or 3.14. Always check if the radius is a multiple of 7 before choosing which value to use. If r is a multiple of 7, 22/7 makes calculations much easier!",
+      "difficulty": "Beginner",
+      "bloom": "Understand"
+    },
+    {
+      "type": "diagram",
+      "content": "Understanding the angle of a sector. If the total angle is 360°, a sector with angle θ takes up a fraction (θ/360°) of the entire circle's area.",
+      "image_url": "assets/images/maths_ch12_angle_sector.jpg",
+      "alt_text": "A circle showing an angle theta for a sector."
+    },
+    {
+      "type": "theory",
+      "content": "**Area of Sector (त्रिज्यखंड का क्षेत्रफल / વૃત્તાંશનું ક્ષેત્રફળ):**\nLet θ be the angle of the sector in degrees.\nArea of sector = (θ/360°) × πr²\nLength of an arc of a sector = (θ/360°) × 2πr",
+      "difficulty": "Advanced",
+      "bloom": "Apply"
+    },
+    {
+      "type": "memory_trick",
+      "content": "**Area of Segment (वृत्तखंड का क्षेत्रफल / વૃત્તખંડનું ક્ષેત્રફળ):**\nArea of minor segment = Area of corresponding sector - Area of the corresponding triangle.\nArea of major segment = Area of circle - Area of minor segment.\n\n*Pro Tip:* To find the area of the triangle formed by radii and a chord, use the formula ½ r² sin(θ) if you know trigonometry, or split it into two right-angled triangles!",
+      "difficulty": "Advanced",
+      "bloom": "Evaluate"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_1",
+      "type": "quiz",
+      "question": "If the perimeter and the area of a circle are numerically equal, then the radius of the circle is:",
+      "question_hi": "यदि एक वृत्त का परिमाप और क्षेत्रफल संख्यात्मक रूप से समान हैं, तो वृत्त की त्रिज्या है:",
+      "options": [
+        "2 units",
+        "π units",
+        "4 units",
+        "7 units"
+      ],
+      "options_hi": [
+        "2 इकाइयाँ",
+        "π इकाइयाँ",
+        "4 इकाइयाँ",
+        "7 इकाइयाँ"
+      ],
+      "correct_index": 0,
+      "explanation": "Since Perimeter = Area, 2πr = πr². Dividing by πr on both sides (r > 0), we get 2 = r. Therefore, the radius is 2 units.",
+      "explanation_hi": "चूँकि परिमाप = क्षेत्रफल, 2πr = πr²। दोनों तरफ πr से विभाजित करने पर (r > 0), हमें 2 = r मिलता है। इसलिए, त्रिज्या 2 इकाइयाँ है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_2",
+      "type": "quiz",
+      "question": "The area of a sector of a circle with radius 6 cm if the angle of the sector is 60° is:",
+      "question_hi": "6 सेमी त्रिज्या वाले एक वृत्त के त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए जिसका कोण 60° है:",
+      "options": [
+        "132/7 cm²",
+        "142/7 cm²",
+        "152/7 cm²",
+        "162/7 cm²"
+      ],
+      "options_hi": [
+        "132/7 cm²",
+        "142/7 cm²",
+        "152/7 cm²",
+        "162/7 cm²"
+      ],
+      "correct_index": 0,
+      "explanation": "Area of sector = (θ/360) × πr² = (60/360) × (22/7) × 6² = (1/6) × (22/7) × 36 = 132/7 cm².",
+      "explanation_hi": "त्रिज्यखंड का क्षेत्रफल = (θ/360) × πr² = (60/360) × (22/7) × 6² = (1/6) × (22/7) × 36 = 132/7 cm²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_3",
+      "type": "quiz",
+      "question": "A horse is tied to a peg at one corner of a square shaped grass field of side 15 m by means of a 5 m long rope. The area of that part of the field in which the horse can graze is:",
+      "question_hi": "एक घोड़ा 15 मीटर भुजा वाले एक वर्गाकार घास के मैदान के एक कोने पर 5 मीटर लंबी रस्सी से बंधा है। मैदान के उस भाग का क्षेत्रफल जिसमें घोड़ा चर सकता है, है:",
+      "options": [
+        "19.625 m²",
+        "19.5 m²",
+        "20.625 m²",
+        "15.625 m²"
+      ],
+      "options_hi": [
+        "19.625 m²",
+        "19.5 m²",
+        "20.625 m²",
+        "15.625 m²"
+      ],
+      "correct_index": 0,
+      "explanation": "The horse can graze a sector of a circle with radius 5 m and angle 90°. Area = (90/360) × 3.14 × 5² = (1/4) × 3.14 × 25 = 19.625 m².",
+      "explanation_hi": "घोड़ा 5 मीटर त्रिज्या और 90° कोण वाले वृत्त के एक त्रिज्यखंड को चर सकता है। क्षेत्रफल = (90/360) × 3.14 × 5² = (1/4) × 3.14 × 25 = 19.625 m²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_4",
+      "type": "quiz",
+      "question": "The radii of two circles are 19 cm and 9 cm respectively. The radius of the circle which has a circumference equal to the sum of the circumferences of the two circles is:",
+      "question_hi": "दो वृत्तों की त्रिज्याएँ क्रमशः 19 सेमी और 9 सेमी हैं। उस वृत्त की त्रिज्या जिसकी परिधि दोनों वृत्तों की परिधियों के योग के बराबर है:",
+      "options": [
+        "10 cm",
+        "28 cm",
+        "38 cm",
+        "18 cm"
+      ],
+      "options_hi": [
+        "10 cm",
+        "28 cm",
+        "38 cm",
+        "18 cm"
+      ],
+      "correct_index": 1,
+      "explanation": "Let R be the required radius. 2πR = 2π(19) + 2π(9) => 2πR = 2π(19 + 9) => R = 28 cm.",
+      "explanation_hi": "माना आवश्यक त्रिज्या R है। 2πR = 2π(19) + 2π(9) => 2πR = 2π(19 + 9) => R = 28 सेमी।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_5",
+      "type": "quiz",
+      "question": "If the circumference of a circle and the perimeter of a square are equal, then:",
+      "question_hi": "यदि किसी वृत्त की परिधि और वर्ग का परिमाप समान हों, तो:",
+      "options": [
+        "Area of the circle = Area of the square",
+        "Area of the circle > Area of the square",
+        "Area of the circle < Area of the square",
+        "None of the above"
+      ],
+      "options_hi": [
+        "वृत्त का क्षेत्रफल = वर्ग का क्षेत्रफल",
+        "वृत्त का क्षेत्रफल > वर्ग का क्षेत्रफल",
+        "वृत्त का क्षेत्रफल < वर्ग का क्षेत्रफल",
+        "इनमें से कोई नहीं"
+      ],
+      "correct_index": 1,
+      "explanation": "Let 2πr = 4a. So a = (πr)/2. Area of circle = πr². Area of square = a² = (π²r²)/4. Since π ≈ 3.14, π/4 ≈ 0.785. So π > π²/4, meaning circle area > square area.",
+      "explanation_hi": "माना 2πr = 4a। इसलिए a = (πr)/2। वृत्त का क्षेत्रफल = πr²। वर्ग का क्षेत्रफल = a² = (π²r²)/4। चूँकि π ≈ 3.14, π/4 ≈ 0.785। इसलिए π > π²/4, अर्थात वृत्त का क्षेत्रफल > वर्ग का क्षेत्रफल।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_6",
+      "type": "quiz",
+      "question": "The minute hand of a clock is 14 cm long. The area swept by the minute hand in 5 minutes is:",
+      "question_hi": "एक घड़ी की मिनट की सूई 14 सेमी लंबी है। 5 मिनट में मिनट की सूई द्वारा रचित क्षेत्रफल है:",
+      "options": [
+        "154 cm²",
+        "154/3 cm²",
+        "77/3 cm²",
+        "51.33 cm²"
+      ],
+      "options_hi": [
+        "154 cm²",
+        "154/3 cm²",
+        "77/3 cm²",
+        "51.33 cm²"
+      ],
+      "correct_index": 1,
+      "explanation": "Angle swept in 60 mins = 360°. In 5 mins, angle = (360/60) × 5 = 30°. Area = (30/360) × π × 14² = (1/12) × (22/7) × 196 = 154/3 cm².",
+      "explanation_hi": "60 मिनट में रचित कोण = 360°। 5 मिनट में कोण = (360/60) × 5 = 30°। क्षेत्रफल = (30/360) × π × 14² = (1/12) × (22/7) × 196 = 154/3 cm²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_7",
+      "type": "quiz",
+      "question": "Area of a sector of angle p (in degrees) of a circle with radius R is:",
+      "question_hi": "त्रिज्या R वाले वृत्त के उस त्रिज्यखंड का क्षेत्रफल जिसका कोण p (डिग्री में) है, निम्नलिखित है:",
+      "options": [
+        "(p/180) × 2πR",
+        "(p/180) × πR²",
+        "(p/360) × 2πR",
+        "(p/720) × 2πR²"
+      ],
+      "options_hi": [
+        "(p/180) × 2πR",
+        "(p/180) × πR²",
+        "(p/360) × 2πR",
+        "(p/720) × 2πR²"
+      ],
+      "correct_index": 3,
+      "explanation": "Area of sector = (p/360) × πR². Multiply numerator and denominator by 2: (p/720) × 2πR².",
+      "explanation_hi": "त्रिज्यखंड का क्षेत्रफल = (p/360) × πR²। अंश और हर को 2 से गुणा करें: (p/720) × 2πR²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_8",
+      "type": "quiz",
+      "question": "The radii of two circles are 8 cm and 6 cm respectively. The radius of the circle having area equal to the sum of the areas of the two circles is:",
+      "question_hi": "दो वृत्तों की त्रिज्याएँ क्रमशः 8 सेमी और 6 सेमी हैं। उस वृत्त की त्रिज्या जिसका क्षेत्रफल दोनों वृत्तों के क्षेत्रफलों के योग के बराबर है:",
+      "options": [
+        "10 cm",
+        "14 cm",
+        "12 cm",
+        "16 cm"
+      ],
+      "options_hi": [
+        "10 cm",
+        "14 cm",
+        "12 cm",
+        "16 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "Let R be the required radius. πR² = π(8²) + π(6²) => R² = 64 + 36 = 100 => R = 10 cm.",
+      "explanation_hi": "माना आवश्यक त्रिज्या R है। πR² = π(8²) + π(6²) => R² = 64 + 36 = 100 => R = 10 सेमी।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_9",
+      "type": "quiz",
+      "question": "A chord of a circle of radius 10 cm subtends a right angle at the centre. The area of the corresponding minor segment is (Use π = 3.14):",
+      "question_hi": "10 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर एक समकोण अंतरित करती है। संगत लघु वृत्तखंड का क्षेत्रफल है (π = 3.14 का प्रयोग करें):",
+      "options": [
+        "28.5 cm²",
+        "29.5 cm²",
+        "27.5 cm²",
+        "30.5 cm²"
+      ],
+      "options_hi": [
+        "28.5 cm²",
+        "29.5 cm²",
+        "27.5 cm²",
+        "30.5 cm²"
+      ],
+      "correct_index": 0,
+      "explanation": "Area of sector = (90/360) × 3.14 × 100 = 78.5 cm². Area of triangle = ½ × 10 × 10 = 50 cm². Area of minor segment = 78.5 - 50 = 28.5 cm².",
+      "explanation_hi": "त्रिज्यखंड का क्षेत्रफल = (90/360) × 3.14 × 100 = 78.5 cm²। त्रिभुज का क्षेत्रफल = ½ × 10 × 10 = 50 cm²। लघु वृत्तखंड का क्षेत्रफल = 78.5 - 50 = 28.5 cm²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_10",
+      "type": "quiz",
+      "question": "The diameter of a circle whose area is equal to the sum of the areas of the two circles of radii 24 cm and 7 cm is:",
+      "question_hi": "उस वृत्त का व्यास जिसका क्षेत्रफल 24 सेमी और 7 सेमी त्रिज्या वाले दो वृत्तों के क्षेत्रफलों के योग के बराबर है, है:",
+      "options": [
+        "31 cm",
+        "25 cm",
+        "50 cm",
+        "62 cm"
+      ],
+      "options_hi": [
+        "31 cm",
+        "25 cm",
+        "50 cm",
+        "62 cm"
+      ],
+      "correct_index": 2,
+      "explanation": "Let R be the new radius. πR² = π(24²) + π(7²) => R² = 576 + 49 = 625 => R = 25 cm. Diameter = 2R = 50 cm.",
+      "explanation_hi": "माना नई त्रिज्या R है। πR² = π(24²) + π(7²) => R² = 576 + 49 = 625 => R = 25 सेमी। व्यास = 2R = 50 सेमी।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_11",
+      "type": "quiz",
+      "question": "If the sum of the areas of two circles with radii R₁ and R₂ is equal to the area of a circle of radius R, then:",
+      "question_hi": "यदि R₁ और R₂ त्रिज्या वाले दो वृत्तों के क्षेत्रफलों का योग R त्रिज्या वाले एक वृत्त के क्षेत्रफल के बराबर हो, तो:",
+      "options": [
+        "R₁ + R₂ = R",
+        "R₁² + R₂² = R²",
+        "R₁ + R₂ < R",
+        "R₁² + R₂² < R²"
+      ],
+      "options_hi": [
+        "R₁ + R₂ = R",
+        "R₁² + R₂² = R²",
+        "R₁ + R₂ < R",
+        "R₁² + R₂² < R²"
+      ],
+      "correct_index": 1,
+      "explanation": "According to the given condition, πR₁² + πR₂² = πR². Dividing by π, we get R₁² + R₂² = R².",
+      "explanation_hi": "दी गई शर्त के अनुसार, πR₁² + πR₂² = πR²। π से भाग देने पर हमें R₁² + R₂² = R² मिलता है।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_12",
+      "type": "quiz",
+      "question": "The area of the largest triangle that can be inscribed in a semi-circle of radius r is:",
+      "question_hi": "r त्रिज्या वाले अर्धवृत्त के अंतर्गत खींचे जा सकने वाले सबसे बड़े त्रिभुज का क्षेत्रफल है:",
+      "options": [
+        "r²",
+        "½ r²",
+        "2r²",
+        "√2 r²"
+      ],
+      "options_hi": [
+        "r²",
+        "½ r²",
+        "2r²",
+        "√2 r²"
+      ],
+      "correct_index": 0,
+      "explanation": "The largest triangle inscribed in a semi-circle has its base as the diameter (2r) and height equal to the radius (r). Area = ½ × base × height = ½ × 2r × r = r².",
+      "explanation_hi": "अर्धवृत्त में खुदे सबसे बड़े त्रिभुज का आधार व्यास (2r) और ऊँचाई त्रिज्या (r) के बराबर होती है। क्षेत्रफल = ½ × आधार × ऊँचाई = ½ × 2r × r = r²।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_13",
+      "type": "quiz",
+      "question": "If the difference between the circumference and the radius of a circle is 37 cm, then using π = 22/7, the circumference (in cm) of the circle is:",
+      "question_hi": "यदि किसी वृत्त की परिधि और त्रिज्या के बीच का अंतर 37 सेमी है, तो π = 22/7 का उपयोग करते हुए, वृत्त की परिधि (सेमी में) है:",
+      "options": [
+        "154",
+        "44",
+        "14",
+        "7"
+      ],
+      "options_hi": [
+        "154",
+        "44",
+        "14",
+        "7"
+      ],
+      "correct_index": 1,
+      "explanation": "2πr - r = 37 => r(2 × 22/7 - 1) = 37 => r(44/7 - 1) = 37 => r(37/7) = 37 => r = 7 cm. Circumference = 2πr = 2 × 22/7 × 7 = 44 cm.",
+      "explanation_hi": "2πr - r = 37 => r(2 × 22/7 - 1) = 37 => r(44/7 - 1) = 37 => r(37/7) = 37 => r = 7 सेमी। परिधि = 2πr = 2 × 22/7 × 7 = 44 सेमी।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_14",
+      "type": "quiz",
+      "question": "A circle is inscribed in a square. The ratio of the area of the circle to the area of the square is:",
+      "question_hi": "एक वृत्त एक वर्ग के अंतर्गत खुदा हुआ है। वृत्त के क्षेत्रफल और वर्ग के क्षेत्रफल का अनुपात है:",
+      "options": [
+        "π : 4",
+        "4 : π",
+        "π : 2",
+        "2 : π"
+      ],
+      "options_hi": [
+        "π : 4",
+        "4 : π",
+        "π : 2",
+        "2 : π"
+      ],
+      "correct_index": 0,
+      "explanation": "Let the side of the square be 2r. Area of square = (2r)² = 4r². Radius of inscribed circle = r. Area of circle = πr². Ratio = πr² / 4r² = π : 4.",
+      "explanation_hi": "माना वर्ग की भुजा 2r है। वर्ग का क्षेत्रफल = (2r)² = 4r²। खुदे हुए वृत्त की त्रिज्या = r। वृत्त का क्षेत्रफल = πr²। अनुपात = πr² / 4r² = π : 4।"
+    },
+    {
+      "id": "QUIZ_ncert_class10_maths_ch12_15",
+      "type": "quiz",
+      "question": "It is proposed to build a single circular park equal in area to the sum of areas of two circular parks of diameters 16 m and 12 m in a locality. The radius of the new park would be:",
+      "question_hi": "किसी इलाके में 16 मीटर और 12 मीटर व्यास वाले दो वृत्ताकार पार्कों के क्षेत्रफलों के योग के बराबर क्षेत्रफल वाला एक वृत्ताकार पार्क बनाने का प्रस्ताव है। नए पार्क की त्रिज्या होगी:",
+      "options": [
+        "10 m",
+        "15 m",
+        "20 m",
+        "24 m"
+      ],
+      "options_hi": [
+        "10 m",
+        "15 m",
+        "20 m",
+        "24 m"
+      ],
+      "correct_index": 0,
+      "explanation": "Radii of two parks are 8 m and 6 m. Let the radius of the new park be R. Area = π(8²) + π(6²) = 64π + 36π = 100π = πR² => R = 10 m.",
+      "explanation_hi": "दो पार्कों की त्रिज्याएँ 8 मीटर और 6 मीटर हैं। माना नए पार्क की त्रिज्या R है। क्षेत्रफल = π(8²) + π(6²) = 64π + 36π = 100π = πR² => R = 10 मीटर।"
+    }
+  ]
+}

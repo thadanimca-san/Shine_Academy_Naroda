@@ -1,0 +1,256 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_01",
+    "type": "theory",
+    "title": "The Mystery of the Pyramids",
+    "title_hi": "पिरामिडों का रहस्य",
+    "body": "Have you ever wondered how the ancient Egyptians built the Great Pyramid of Giza without modern cranes? How did they measure the exact height of such a massive structure just by looking at its shadow? The secret lies in the magic of triangles!",
+    "body_hi": "क्या आपने कभी सोचा है कि प्राचीन मिस्रवासियों ने बिना आधुनिक क्रेनों के गीज़ा का महान पिरामिड कैसे बनाया? उन्होंने केवल उसकी परछाई देखकर इतनी विशाल संरचना की सटीक ऊंचाई कैसे मापी? रहस्य त्रिकोणों के जादू में छिपा है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_02",
+    "type": "socratic_question",
+    "question": "Imagine you are standing far away from a tall tree. If you know how far you are from the tree, and the angle you have to look up to see its top, do you think you can find the tree's height without actually climbing it?",
+    "question_hi": "कल्पना करें कि आप एक ऊंचे पेड़ से दूर खड़े हैं। यदि आप जानते हैं कि आप पेड़ से कितनी दूर हैं, और इसके शीर्ष को देखने के लिए आपको किस कोण पर ऊपर देखना होगा, तो क्या आपको लगता है कि आप वास्तव में पेड़ पर चढ़े बिना उसकी ऊंचाई का पता लगा सकते हैं?",
+    "options": [
+      "Yes, there must be a mathematical way.",
+      "No, we have to climb and measure it with a tape."
+    ],
+    "options_hi": [
+      "हाँ, कोई गणितीय तरीका होना चाहिए।",
+      "नहीं, हमें चढ़कर टेप से मापना होगा।"
+    ],
+    "correct_index": 0,
+    "explanation": "Yes! This is exactly what Trigonometry allows us to do. It helps us find unknown distances and heights using angles and known sides of a triangle.",
+    "explanation_hi": "हाँ! बिल्कुल यही त्रिकोणमिति हमें करने की अनुमति देती है। यह एक त्रिकोण के कोणों और ज्ञात भुजाओं का उपयोग करके अज्ञात दूरियों और ऊंचाइयों को खोजने में मदद करता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_03",
+    "type": "theory",
+    "title": "Discovering the Right-Angled Triangle",
+    "title_hi": "समकोण त्रिभुज की खोज",
+    "body": "Let's build intuition. Draw a right-angled triangle. Notice that the side opposite to the 90-degree angle is always the longest. We call it the Hypotenuse. But what about the other two sides? They change their names based on which angle you are looking from! Let's say we are looking from angle A. The side right next to angle A is the 'Adjacent' side, and the side far away from angle A is the 'Opposite' side.",
+    "body_hi": "आइए अंतर्ज्ञान का निर्माण करें। एक समकोण त्रिभुज बनाएं। ध्यान दें कि 90-डिग्री के कोण के विपरीत भुजा हमेशा सबसे लंबी होती है। हम इसे कर्ण (Hypotenuse) कहते हैं। लेकिन अन्य दो भुजाओं का क्या? आप किस कोण से देख रहे हैं, इसके आधार पर उनके नाम बदलते हैं! मान लीजिए हम कोण A से देख रहे हैं। कोण A के ठीक बगल वाली भुजा 'आसन्न' (Adjacent) भुजा है, और कोण A से दूर वाली भुजा 'विपरीत' (Opposite) भुजा है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_04",
+    "type": "theory",
+    "title": "Revealing the Magic Word: Trigonometry",
+    "title_hi": "जादुई शब्द का खुलासा: त्रिकोणमिति",
+    "body": "The word 'Trigonometry' comes from three Greek words: 'Tri' (Three), 'Gon' (Sides), and 'Metron' (Measure). It is the study of relationships between the sides and angles of a triangle. Today, we will learn 6 powerful ratios that connect the angles to the sides: Sine, Cosine, Tangent, Cosecant, Secant, and Cotangent.",
+    "body_hi": "शब्द 'Trigonometry' (त्रिकोणमिति) तीन ग्रीक शब्दों से आया है: 'Tri' (तीन), 'Gon' (भुजाएं), और 'Metron' (मापना)। यह एक त्रिभुज की भुजाओं और कोणों के बीच संबंधों का अध्ययन है। आज, हम 6 शक्तिशाली अनुपातों को सीखेंगे जो कोणों को भुजाओं से जोड़ते हैं: साइन (Sine), कोसाइन (Cosine), टेंजेंट (Tangent), कोसेकेंट (Cosecant), सीकेंट (Secant), और कोटेंजेंट (Cotangent)।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_05",
+    "type": "theory",
+    "title": "The First Three Ratios (Sin, Cos, Tan)",
+    "title_hi": "पहले तीन अनुपात (Sin, Cos, Tan)",
+    "body": "For an angle θ (theta) in a right triangle:\n1. sin θ = Opposite / Hypotenuse\n2. cos θ = Adjacent / Hypotenuse\n3. tan θ = Opposite / Adjacent\n\nMemory trick (SOH CAH TOA):\nSOH: Sin = Opposite / Hypotenuse\nCAH: Cos = Adjacent / Hypotenuse\nTOA: Tan = Opposite / Adjacent",
+    "body_hi": "एक समकोण त्रिभुज में कोण θ (थीटा) के लिए:\n1. sin θ = विपरीत (Opposite) / कर्ण (Hypotenuse)\n2. cos θ = आसन्न (Adjacent) / कर्ण\n3. tan θ = विपरीत / आसन्न\n\nयाद रखने की तरकीब (पंडित बद्री प्रसाद हर हर बोले): \nSin = लंब (Perpendicular) / कर्ण (Hypotenuse)\nCos = आधार (Base) / कर्ण\nTan = लंब / आधार"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_06",
+    "type": "quiz",
+    "question": "In a right-angled triangle, if we want to calculate the ratio of the side adjacent to angle A to the hypotenuse, which trigonometric ratio should we use?",
+    "question_hi": "एक समकोण त्रिभुज में, यदि हम कोण A से सटी (आसन्न) भुजा और कर्ण के अनुपात की गणना करना चाहते हैं, तो हमें किस त्रिकोणमितीय अनुपात का उपयोग करना चाहिए?",
+    "options": [
+      "sin A",
+      "cos A",
+      "tan A",
+      "cosec A"
+    ],
+    "options_hi": [
+      "sin A",
+      "cos A",
+      "tan A",
+      "cosec A"
+    ],
+    "correct_index": 1,
+    "explanation": "Correct! Cosine (cos) is the ratio of the adjacent side to the hypotenuse. Remember CAH (Cos = Adjacent / Hypotenuse).",
+    "explanation_hi": "सही! कोसाइन (cos) आसन्न भुजा और कर्ण का अनुपात है। CAH (Cos = Adjacent / Hypotenuse) याद रखें।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_07",
+    "type": "reflection",
+    "title": "Reflect on SOH CAH TOA",
+    "title_hi": "SOH CAH TOA पर विचार करें",
+    "body": "Close your eyes and try to visualize a right triangle. If I give you an angle, can you quickly point to its opposite side, adjacent side, and the hypotenuse? Explain the difference between Sine and Cosine in your own words.",
+    "body_hi": "अपनी आँखें बंद करें और एक समकोण त्रिभुज की कल्पना करने का प्रयास करें। यदि मैं आपको एक कोण दूं, तो क्या आप जल्दी से उसकी विपरीत भुजा, आसन्न भुजा और कर्ण की ओर इशारा कर सकते हैं? साइन और कोसाइन के बीच के अंतर को अपने शब्दों में समझाएं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_08",
+    "type": "theory",
+    "title": "The Reciprocal Ratios",
+    "title_hi": "व्युत्क्रम (Reciprocal) अनुपात",
+    "body": "Now meet the cousins of Sin, Cos, and Tan. They are just upside-down versions (reciprocals)!\n1. cosec θ = 1 / sin θ = Hypotenuse / Opposite\n2. sec θ = 1 / cos θ = Hypotenuse / Adjacent\n3. cot θ = 1 / tan θ = Adjacent / Opposite",
+    "body_hi": "अब Sin, Cos, और Tan के चचेरे भाइयों से मिलें। वे बस उल्टे संस्करण (व्युत्क्रम) हैं!\n1. cosec θ = 1 / sin θ = कर्ण / विपरीत\n2. sec θ = 1 / cos θ = कर्ण / आसन्न\n3. cot θ = 1 / tan θ = आसन्न / विपरीत"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_09",
+    "type": "quiz",
+    "question": "Which of the following is the reciprocal of cos θ?",
+    "question_hi": "निम्नलिखित में से कौन cos θ का व्युत्क्रम है?",
+    "options": [
+      "sin θ",
+      "tan θ",
+      "sec θ",
+      "cot θ"
+    ],
+    "options_hi": [
+      "sin θ",
+      "tan θ",
+      "sec θ",
+      "cot θ"
+    ],
+    "correct_index": 2,
+    "explanation": "Yes! Secant (sec) is the reciprocal of Cosine (cos). So, sec θ = 1 / cos θ.",
+    "explanation_hi": "हाँ! सीकेंट (sec), कोसाइन (cos) का व्युत्क्रम है। इसलिए, sec θ = 1 / cos θ."
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_10",
+    "type": "theory",
+    "title": "Connecting Trigonometry to Real Life",
+    "title_hi": "त्रिकोणमिति को वास्तविक जीवन से जोड़ना",
+    "body": "Why do we care about these ratios? Because they are everywhere! Video game graphics use trigonometry to render 3D worlds. GPS systems use it to calculate your location on Earth. Architects use it to design safe, stable buildings. It's the language of the physical world.",
+    "body_hi": "हम इन अनुपातों की परवाह क्यों करते हैं? क्योंकि वे हर जगह हैं! वीडियो गेम ग्राफिक्स 3D दुनिया को रेंडर करने के लिए त्रिकोणमिति का उपयोग करते हैं। GPS सिस्टम पृथ्वी पर आपके स्थान की गणना करने के लिए इसका उपयोग करते हैं। आर्किटेक्ट इसका उपयोग सुरक्षित, स्थिर इमारतों को डिजाइन करने के लिए करते हैं। यह भौतिक दुनिया की भाषा है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_11",
+    "type": "theory",
+    "title": "Mastery Challenge: Find the Unknown",
+    "title_hi": "निपुणता चुनौती: अज्ञात खोजें",
+    "body": "A ladder is leaning against a wall. The ladder is 10 meters long (Hypotenuse). The angle it makes with the ground is 30 degrees. Can you find how high the ladder reaches on the wall (Opposite side)?\nUse sin 30° = 1/2.\nsin 30° = Opposite / Hypotenuse\n1/2 = Opposite / 10\nOpposite = 10 * (1/2) = 5 meters!",
+    "body_hi": "एक सीढ़ी एक दीवार के सहारे खड़ी है। सीढ़ी 10 मीटर लंबी है (कर्ण)। यह जमीन के साथ 30 डिग्री का कोण बनाती है। क्या आप पता लगा सकते हैं कि सीढ़ी दीवार पर कितनी ऊंचाई तक पहुंचती है (विपरीत भुजा)?\nsin 30° = 1/2 का उपयोग करें।\nsin 30° = विपरीत / कर्ण\n1/2 = विपरीत / 10\nविपरीत = 10 * (1/2) = 5 मीटर!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_12",
+    "type": "quiz",
+    "question": "If tan A = 4/3, what is the value of cot A?",
+    "question_hi": "यदि tan A = 4/3 है, तो cot A का मान क्या होगा?",
+    "options": [
+      "3/4",
+      "4/5",
+      "5/4",
+      "1/2"
+    ],
+    "options_hi": [
+      "3/4",
+      "4/5",
+      "5/4",
+      "1/2"
+    ],
+    "correct_index": 0,
+    "explanation": "Exactly! cot A is the reciprocal of tan A. So if tan A = 4/3, then cot A = 3/4.",
+    "explanation_hi": "बिल्कुल! cot A, tan A का व्युत्क्रम है। इसलिए यदि tan A = 4/3 है, तो cot A = 3/4 होगा।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If sin θ - cos θ = 0, then find the value of (sin^4 θ + cos^4 θ).",
+    "question_hi": "यदि sin θ - cos θ = 0 है, तो (sin^4 θ + cos^4 θ) का मान ज्ञात कीजिए।",
+    "options": [
+      "1",
+      "3/4",
+      "1/2",
+      "1/4"
+    ],
+    "options_hi": [
+      "1",
+      "3/4",
+      "1/2",
+      "1/4"
+    ],
+    "correct_index": 2,
+    "explanation": "Since sin θ - cos θ = 0, we get sin θ = cos θ, which means tan θ = 1. Therefore, θ = 45°. Now, substitute θ = 45°: sin^4(45°) + cos^4(45°) = (1/√2)^4 + (1/√2)^4 = (1/4) + (1/4) = 2/4 = 1/2.",
+    "explanation_hi": "चूंकि sin θ - cos θ = 0, हमें sin θ = cos θ मिलता है, जिसका अर्थ है tan θ = 1। इसलिए, θ = 45°। अब, θ = 45° को प्रतिस्थापित करें: sin^4(45°) + cos^4(45°) = (1/√2)^4 + (1/√2)^4 = (1/4) + (1/4) = 2/4 = 1/2।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If sec θ + tan θ = p, what is the value of sec θ?",
+    "question_hi": "यदि sec θ + tan θ = p है, तो sec θ का मान क्या होगा?",
+    "options": [
+      "(p^2 - 1) / (2p)",
+      "(p^2 + 1) / (2p)",
+      "2p / (p^2 + 1)",
+      "2p / (p^2 - 1)"
+    ],
+    "options_hi": [
+      "(p^2 - 1) / (2p)",
+      "(p^2 + 1) / (2p)",
+      "2p / (p^2 + 1)",
+      "2p / (p^2 - 1)"
+    ],
+    "correct_index": 1,
+    "explanation": "We know the identity sec^2 θ - tan^2 θ = 1. This can be written as (sec θ - tan θ)(sec θ + tan θ) = 1. Substituting sec θ + tan θ = p, we get sec θ - tan θ = 1/p. Adding the two equations: (sec θ + tan θ) + (sec θ - tan θ) = p + 1/p. This gives 2sec θ = (p^2 + 1)/p, so sec θ = (p^2 + 1) / (2p).",
+    "explanation_hi": "हम सर्वसमिका sec^2 θ - tan^2 θ = 1 जानते हैं। इसे (sec θ - tan θ)(sec θ + tan θ) = 1 के रूप में लिखा जा सकता है। sec θ + tan θ = p रखने पर, हमें sec θ - tan θ = 1/p प्राप्त होता है। दोनों समीकरणों को जोड़ने पर: (sec θ + tan θ) + (sec θ - tan θ) = p + 1/p। इससे 2sec θ = (p^2 + 1)/p मिलता है, इसलिए sec θ = (p^2 + 1) / (2p)।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "Evaluate the product: tan 1° × tan 2° × tan 3° × ... × tan 89°.",
+    "question_hi": "गुणनफल का मान ज्ञात कीजिए: tan 1° × tan 2° × tan 3° × ... × tan 89°।",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "Not defined"
+    ],
+    "options_hi": [
+      "0",
+      "1",
+      "1/2",
+      "परिभाषित नहीं"
+    ],
+    "correct_index": 1,
+    "explanation": "Using the complementary angle property: tan (90° - θ) = cot θ. So, tan 89° = cot 1°, tan 88° = cot 2°, and so on. Also, tan θ × cot θ = 1. The terms pair up as (tan 1° × cot 1°) × (tan 2° × cot 2°) × ... × tan 45°. All pairs evaluate to 1, and tan 45° is also 1. The total product is 1.",
+    "explanation_hi": "पूरक कोण गुणधर्म का उपयोग करने पर: tan (90° - θ) = cot θ। इसलिए, tan 89° = cot 1°, tan 88° = cot 2°, आदि। साथ ही, tan θ × cot θ = 1। पद इस प्रकार जुड़ते हैं: (tan 1° × cot 1°) × (tan 2° × cot 2°) × ... × tan 45°। सभी जोड़ियों का मान 1 होता है, और tan 45° भी 1 है। कुल गुणनफल 1 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If x = a sin θ and y = b tan θ, then find the value of (a^2 / x^2) - (b^2 / y^2).",
+    "question_hi": "यदि x = a sin θ और y = b tan θ है, तो (a^2 / x^2) - (b^2 / y^2) का मान ज्ञात कीजिए।",
+    "options": [
+      "1",
+      "-1",
+      "2",
+      "0"
+    ],
+    "options_hi": [
+      "1",
+      "-1",
+      "2",
+      "0"
+    ],
+    "correct_index": 0,
+    "explanation": "From the given equations, we have a/x = 1/sin θ = cosec θ, and b/y = 1/tan θ = cot θ. Now substitute these into the expression: (a^2 / x^2) - (b^2 / y^2) = cosec^2 θ - cot^2 θ. According to the standard trigonometric identity, cosec^2 θ - cot^2 θ = 1.",
+    "explanation_hi": "दिए गए समीकरणों से, हमारे पास a/x = 1/sin θ = cosec θ, और b/y = 1/tan θ = cot θ है। अब इन्हें व्यंजक में प्रतिस्थापित करें: (a^2 / x^2) - (b^2 / y^2) = cosec^2 θ - cot^2 θ। मानक त्रिकोणमितीय सर्वसमिका के अनुसार, cosec^2 θ - cot^2 θ = 1 होता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH8_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "In ΔABC, right-angled at B, if tan A = √3, find the value of (sin A cos C + cos A sin C).",
+    "question_hi": "ΔABC में, जिसका कोण B समकोण है, यदि tan A = √3 है, तो (sin A cos C + cos A sin C) का मान ज्ञात कीजिए।",
+    "options": [
+      "0",
+      "1/2",
+      "1",
+      "√3/2"
+    ],
+    "options_hi": [
+      "0",
+      "1/2",
+      "1",
+      "√3/2"
+    ],
+    "correct_index": 2,
+    "explanation": "Given tan A = √3, we know that angle A = 60°. Since angle B = 90°, and the sum of angles in a triangle is 180°, angle C must be 180° - (90° + 60°) = 30°. Now we evaluate sin A cos C + cos A sin C = sin(60°)cos(30°) + cos(60°)sin(30°) = (√3/2)(√3/2) + (1/2)(1/2) = (3/4) + (1/4) = 1. Alternatively, using the formula sin(A+C) = sin(90°) = 1.",
+    "explanation_hi": "दिया गया है tan A = √3, हम जानते हैं कि कोण A = 60° है। चूँकि कोण B = 90° है, और त्रिभुज के कोणों का योग 180° होता है, इसलिए कोण C = 180° - (90° + 60°) = 30° होना चाहिए। अब हम मान निकालते हैं: sin A cos C + cos A sin C = sin(60°)cos(30°) + cos(60°)sin(30°) = (√3/2)(√3/2) + (1/2)(1/2) = (3/4) + (1/4) = 1. वैकल्पिक रूप से, सूत्र sin(A+C) = sin(90°) = 1 का उपयोग करने पर।"
+  }
+]

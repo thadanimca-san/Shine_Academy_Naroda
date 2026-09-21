@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "id": "cbse_class4_maths_ch6",
+    "title": "Chapter 6: Fractions",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the meaning of a fraction as part of a whole or part of a collection.",
+      "Identify numerators and denominators in proper and improper fractions.",
+      "Compare and order like fractions with ease.",
+      "Add and subtract simple like fractions using visual models."
+    ],
+    "core_concepts": [
+      "DICT_MATH_FRACTION",
+      "DICT_MATH_NUMERATOR",
+      "DICT_MATH_DENOMINATOR",
+      "DICT_MATH_LIKE_FRACTIONS"
+    ],
+    "ai_context": {
+      "learning_goal": "Students should deeply internalize fractions as equal parts of a whole rather than just memorizing numbers stacked on top of each other.",
+      "common_misconceptions": [
+        "Students often think that a larger denominator means a larger fraction because the number itself is bigger.",
+        "Students sometimes forget that all parts of a fraction must be equal in size."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Pizza Party Mystery",
+      "body": "Imagine it is your birthday, and your absolute favorite pepperoni pizza arrives hot and fresh from the oven. Before you can even grab a slice, your three best friends walk through the door with huge smiles. Now, there are four of you in total, and just one whole pizza. How do you share it fairly so no one feels cheated? You cannot just tear it into messy crumbs; every single person expects an exact, identical share. This everyday dilemma is where mathematics meets the real world. Welcome to the magical, practical universe of fractions!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If you divide your birthday pizza equally among 4 people, into how many equal parts must the pizza be cut?",
+      "options": [
+        "2 equal parts",
+        "3 equal parts",
+        "4 equal parts"
+      ],
+      "correct_index": 2,
+      "explanation": "To share equally among 4 people, you must slice the whole pizza into 4 identical, equal parts.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is a Fraction?",
+      "body": "In mathematics, whole numbers like 1, 2, and 10 are fantastic for counting complete objects, such as dogs, cars, or apples. But what happens when you have something that is not whole? What if you eat half an apple, or share a chocolate bar? This is where the [DICT_MATH_FRACTION|fraction] comes to the rescue. A fraction represents a part of a whole or a part of a collection. Crucially, in mathematics, parts must always be equal. If you cut a strip of paper into two pieces, but one piece is tiny and the other is huge, you do not have proper fractional parts. Every time you encounter a fraction, picture a whole object sliced, folded, or measured into perfectly equal pieces.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Classroom Activity: Paper Folding",
+      "body": "Take a rectangular sheet of paper. Fold it carefully in half, edge to edge. Crease it firmly and unfold it. Ask yourself: how many equal sections do you see? Two! Each section represents one half of the whole paper sheet.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the golden rule when dividing a shape into fractional parts?",
+      "back": "All the parts must be completely equal in size and shape!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Anatomy of a Fraction: Numerator and Denominator",
+      "body": "Every fraction is written as two numbers stacked vertically, separated by a straight horizontal line called the fraction bar. Let's look at the fraction 3/4. The bottom number is called the [DICT_MATH_DENOMINATOR|denominator]. Think of 'denominator' as 'downstairs'—it tells you the total number of equal parts that the whole has been divided into. In our pizza example, if the pizza is cut into 4 slices, the denominator is 4. The top number is called the [DICT_MATH_NUMERATOR|numerator]. Think of 'numerator' as the number of parts you are currently talking about, selecting, or eating. If you eat 3 of those slices, your numerator is 3. Together, 3/4 means you have 3 out of 4 equal parts!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "In the fraction 5/8, what does the number 8 represent?",
+      "options": [
+        "The number of parts you have taken",
+        "The total number of equal parts the whole is divided into",
+        "The leftover parts in the box"
+      ],
+      "correct_index": 1,
+      "explanation": "The denominator (bottom number) always represents the total number of equal parts that make up the whole.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Memory Trick for Numerator & Denominator",
+      "body": "Use the stairs trick! De-nom-in-ator is down-stairs (at the bottom). Nu-mer-ator is up-stairs (at the top, numbering what you have). Never mix them up again!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 2: Fractions of a Collection",
+      "body": "Fractions do not only apply to single continuous items like pizzas or chocolate bars; they also apply to groups or collections of objects! Imagine you have a basket containing 10 shiny marbles. If 3 of those marbles are bright red and the rest are blue, what fraction of the marbles are red? Here, our 'whole' is the collection of 10 marbles. The collection is divided into 10 equal items. Therefore, our denominator is 10. Since 3 marbles are red, our numerator is 3. We write this fraction as 3/10. Fractions of a collection help us describe parts of a group, whether they are students in a classroom, flowers in a garden, or crayons in a box.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "You have 12 eggs in a carton. 4 eggs are cracked. What fraction of the eggs are cracked?",
+      "options": [
+        "4/12",
+        "12/4",
+        "8/12"
+      ],
+      "correct_index": 0,
+      "explanation": "There are 12 total eggs (denominator = 12) and 4 are cracked (numerator = 4). So the fraction is 4/12.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "flashcard",
+      "front": "True or False: Fractions can only be used for single whole objects like cakes, not for groups of things.",
+      "back": "False! Fractions can represent parts of a single whole object or parts of a collection of objects.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 3: Types of Fractions - Proper, Improper, and Unit Fractions",
+      "body": "Fractions come in different flavors depending on how the numerator relates to the denominator. First, we have **Unit Fractions**, which are fractions where the numerator is exactly 1 (such as 1/2, 1/3, or 1/10). They represent a single equal part of a whole. Second, we have **Proper Fractions**, where the numerator is strictly smaller than the denominator (such as 3/4 or 2/5). Proper fractions always represent an amount less than a whole. Finally, we have **Improper Fractions**, where the numerator is greater than or equal to the denominator (such as 5/4 or 7/3). This means you have more parts than what makes up one single whole—like having five slices of pizza when each pizza only has 4 slices in total!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "quiz",
+      "question": "Which of the following is an example of an improper fraction?",
+      "options": [
+        "2/3",
+        "1/4",
+        "7/5"
+      ],
+      "correct_index": 2,
+      "explanation": "In 7/5, the numerator (7) is greater than the denominator (5), making it an improper fraction.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Visualizing Improper Fractions",
+      "body": "Draw two chocolate bars, each divided into 4 equal blocks. If you shade 5 blocks in total, you have shaded one whole bar (4/4) and one extra block (1/4), giving you 5/4. Improper fractions are completely normal and show quantities greater than one whole!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 4: Like Fractions",
+      "body": "When comparing or calculating with fractions, life becomes remarkably easy when fractions share the same denominator. These are known as [DICT_MATH_LIKE_FRACTIONS|like fractions]. For example, 1/5, 3/5, and 4/5 are like fractions because they all have a denominator of 5. This means every fraction is cut into the exact same sized pieces (fifths). When pieces are the exact same size, you can easily compare them just by looking at their numerators. If you have 3 slices of fifths and your friend has 2 slices of fifths, you instantly know you have more because 3 is greater than 2.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "Which set of fractions are all like fractions?",
+      "options": [
+        "1/4, 2/5, 3/6",
+        "2/7, 4/7, 5/7",
+        "3/8, 3/9, 3/10"
+      ],
+      "correct_index": 1,
+      "explanation": "Like fractions must have the exact same denominator. In 2/7, 4/7, and 5/7, all denominators are 7.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What makes two or more fractions 'like fractions'?",
+      "back": "They have the exact same denominator!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Comparing Like Fractions",
+      "body": "Comparing like fractions is as simple as comparing standard whole numbers. Because the denominators are identical, the 'size' of the fractional pieces is the same. Therefore, the fraction with the larger numerator is always the larger fraction. Imagine two identical chocolate bars divided into 8 equal pieces. If Rohan eats 5 pieces (5/8) and Priya eats 3 pieces (3/8), who ate more? Since both bars are cut into eighths, Rohan's 5 pieces are larger than Priya's 3 pieces. Mathematically, since 5 > 3, we can state that 5/8 > 3/8. Always remember: when denominators match, compare only the numerators!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "Which fraction is larger: 4/9 or 7/9?",
+      "options": [
+        "4/9",
+        "7/9",
+        "They are equal"
+      ],
+      "correct_index": 1,
+      "explanation": "Since both fractions have the same denominator (9), we compare the numerators: 7 is greater than 4, so 7/9 is larger.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "The Pizza Slice Rule",
+      "body": "Tell students: 'If the denominator is the same, imagine identical pizza slices. More numerator pieces on your plate means more pizza!'",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 5: Adding Like Fractions",
+      "body": "Now that we know how to identify and compare fractions, let's look at combining them through addition. Adding like fractions is wonderfully straightforward. When you add fractions with the same denominator, you add only the numerators while keeping the denominator exactly the same. Why does the denominator stay unchanged? Because the size of the pieces does not change when you put them together! If you eat 2 slices of a pizza cut into 6 parts (2/6), and then eat another 3 slices of the same pizza (3/6), you have eaten a total of 5 slices. The calculation is simply 2/6 + 3/6 = (2 + 3)/6 = 5/6. You never add the denominators together; denominators just tell you the name and size of the pieces!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "What is 3/10 + 4/10?",
+      "options": [
+        "7/20",
+        "7/10",
+        "12/10"
+      ],
+      "correct_index": 1,
+      "explanation": "Add the numerators (3 + 4 = 7) and keep the denominator (10) the same. The result is 7/10.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "flashcard",
+      "front": "When adding like fractions, do you add the denominators together?",
+      "back": "No! Never add denominators. Keep the denominator the same and add only the numerators.",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Concept 6: Subtracting Like Fractions",
+      "body": "Just as addition works seamlessly with like fractions, subtraction follows the exact same logical rule. If you start with a certain number of equal parts and take some away, you subtract the numerators and keep the common denominator identical. Imagine you have a ribbon divided into 8 equal segments. You start with 7/8 of the ribbon. If you cut off and give away 3/8 of the ribbon, how much is left? You subtract the numerators: 7 - 3 = 4. The denominator remains 8. So you are left with 4/8 of the ribbon. Always verify that your denominators match before subtracting, and remember that the denominator stays untouched in your final answer.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Calculate: 8/11 - 3/11",
+      "options": [
+        "5/0",
+        "5/11",
+        "11/11"
+      ],
+      "correct_index": 1,
+      "explanation": "Subtract the numerators (8 - 3 = 5) and keep the denominator (11) the same. The answer is 5/11.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "teacher_tip",
+      "title": "Real-World Subtraction Lab",
+      "body": "Use a chocolate bar with 10 squares. Break off 8 squares (8/10). Eat 3 squares. Count what is left on the bar (5 squares). Write out the equation: 8/10 - 3/10 = 5/10. Hands-on learning locks concepts into long-term memory!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "What is 5/12 + 4/12 - 2/12?",
+      "back": "7/12 (Add 5 + 4 = 9, then subtract 2 to get 7, keeping 12 as the denominator).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Chapter Review: Master Summary",
+      "body": "Congratulations on journeying through the world of fractions! Let's review our vital toolkit. A [DICT_MATH_FRACTION|fraction] represents equal parts of a whole or a collection. The [DICT_MATH_DENOMINATOR|denominator] (downstairs) tells us the total number of equal parts, while the [DICT_MATH_NUMERATOR|numerator] (upstairs) tells us how many parts we are considering. When working with [DICT_MATH_LIKE_FRACTIONS|like fractions]—fractions sharing the same denominator—comparing, adding, and subtracting become wonderfully easy because the piece sizes are identical. Keep practicing with everyday objects like fruit, pizza, and stationery, and fractions will become your mathematical superpower!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Q_GSEB_C9_M_CH4_01",
+    "chapter_id": "GSEB_C9_M_CH4",
+    "topic_id": "T_INTRO_LINEAR_EQ",
+    "type": "mcq",
+    "difficulty": "Beginner",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Remembering",
+    "keywords": ["linear equation", "two variables", "standard form"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "Which of the following is the standard form of a linear equation in two variables?",
+    "options": [
+      "ax + b = 0",
+      "ax^2 + bx + c = 0",
+      "ax + by + c = 0",
+      "ax + by = c"
+    ],
+    "answer": "ax + by + c = 0",
+    "explanation": "The standard form of a linear equation in two variables x and y is ax + by + c = 0, where a, b, and c are real numbers, and a and b are not both zero.",
+    "distractor_rationale": "Option A is a linear equation in one variable. Option B is a quadratic equation. Option D is close but the standard form brings all terms to one side.",
+    "ai_context": {
+      "learning_goal": "Identify the standard form of a linear equation in two variables.",
+      "common_misconceptions": ["Confusing linear equations in one variable with two variables.", "Misinterpreting the standard form."],
+      "hint": "Look for an equation with both x and y to the power of 1, and all terms equated to zero."
+    }
+  },
+  {
+    "id": "Q_GSEB_C9_M_CH4_02",
+    "chapter_id": "GSEB_C9_M_CH4",
+    "topic_id": "T_SOLUTIONS",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["solution", "infinite solutions"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "High",
+    "question_text": "How many solutions does a linear equation in two variables have?",
+    "options": [
+      "Zero",
+      "One unique solution",
+      "Two solutions",
+      "Infinitely many solutions"
+    ],
+    "answer": "Infinitely many solutions",
+    "explanation": "For any linear equation in two variables, substituting an arbitrary real value for one variable will yield a corresponding real value for the other variable. Thus, there are infinitely many such pairs (x, y) that satisfy the equation.",
+    "distractor_rationale": "A linear equation in one variable has a unique solution. A quadratic equation can have two solutions.",
+    "ai_context": {
+      "learning_goal": "Understand the number of solutions for a linear equation in two variables.",
+      "common_misconceptions": ["Believing that like an equation in one variable, an equation in two variables also has a single solution."],
+      "hint": "Think about the graph of the equation. How many points are on a straight line?"
+    }
+  },
+  {
+    "id": "Q_GSEB_C9_M_CH4_03",
+    "chapter_id": "GSEB_C9_M_CH4",
+    "topic_id": "T_FIND_SOLUTION",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 2,
+    "bloom_taxonomy": "Applying",
+    "keywords": ["find solution", "substitution"],
+    "estimated_time_minutes": 3,
+    "exam_frequency": "Medium",
+    "question_text": "Which of the following points is a solution to the equation 2x + 3y = 12?",
+    "options": [
+      "(2, 3)",
+      "(3, 2)",
+      "(0, 6)",
+      "(4, 0)"
+    ],
+    "answer": "(3, 2)",
+    "explanation": "Substitute x = 3 and y = 2 into the equation: 2(3) + 3(2) = 6 + 6 = 12, which matches the right side of the equation.",
+    "distractor_rationale": "Substituting (2,3) gives 2(2)+3(3) = 13 ≠ 12. Substituting (0,6) gives 2(0)+3(6) = 18 ≠ 12. Substituting (4,0) gives 2(4)+3(0) = 8 ≠ 12.",
+    "ai_context": {
+      "learning_goal": "Verify if a given coordinate pair is a solution to the equation.",
+      "common_misconceptions": ["Swapping x and y values during substitution."],
+      "hint": "Substitute the first value of the coordinate pair as x and the second as y into the equation."
+    }
+  },
+  {
+    "id": "Q_GSEB_C9_M_CH4_04",
+    "chapter_id": "GSEB_C9_M_CH4",
+    "topic_id": "T_GRAPH_LINEAR_EQ",
+    "type": "mcq",
+    "difficulty": "Intermediate",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Understanding",
+    "keywords": ["graph", "straight line", "origin"],
+    "estimated_time_minutes": 1,
+    "exam_frequency": "High",
+    "question_text": "The graph of the linear equation y = kx (where k ≠ 0) always passes through which point?",
+    "options": [
+      "(k, 0)",
+      "(0, k)",
+      "(1, k)",
+      "(0, 0)"
+    ],
+    "answer": "(0, 0)",
+    "explanation": "If we substitute x = 0 in the equation y = kx, we get y = k(0) = 0. Therefore, the graph of any equation of the form y = kx always passes through the origin (0, 0).",
+    "distractor_rationale": "Substituting x = 0 gives y = 0, not k. Substituting x = 1 gives y = k, so (1, k) is a point on the line, but (0, 0) is the defining characteristic point representing the origin for this form.",
+    "ai_context": {
+      "learning_goal": "Identify the characteristics of equations passing through the origin.",
+      "common_misconceptions": ["Thinking the y-intercept is k instead of 0."],
+      "hint": "What is the value of y when x is 0?"
+    }
+  },
+  {
+    "id": "Q_GSEB_C9_M_CH4_05",
+    "chapter_id": "GSEB_C9_M_CH4",
+    "topic_id": "T_LINES_PARALLEL_AXES",
+    "type": "mcq",
+    "difficulty": "Advanced",
+    "board": ["GSEB"],
+    "marks": 1,
+    "bloom_taxonomy": "Analyzing",
+    "keywords": ["parallel lines", "x-axis", "y-axis"],
+    "estimated_time_minutes": 2,
+    "exam_frequency": "Medium",
+    "question_text": "The equation of a line parallel to the y-axis and situated at a distance of 5 units to its left is:",
+    "options": [
+      "y = -5",
+      "y = 5",
+      "x = 5",
+      "x = -5"
+    ],
+    "answer": "x = -5",
+    "explanation": "A line parallel to the y-axis has the general equation x = a. Since it is situated 5 units to the left of the y-axis, the x-coordinate of every point on this line is -5. Thus, the equation is x = -5.",
+    "distractor_rationale": "Lines parallel to the y-axis have equations of the form x = a, not y = a. Since it is to the left, 'a' must be negative (-5), not positive (5).",
+    "ai_context": {
+      "learning_goal": "Formulate equations for lines parallel to the coordinate axes.",
+      "common_misconceptions": ["Confusing x = a (parallel to y-axis) with y = a (parallel to x-axis).", "Misinterpreting 'left' as positive distance."],
+      "hint": "A line parallel to the y-axis means the x-value is constant everywhere. 'Left' implies the negative side of the x-axis."
+    }
+  }
+]

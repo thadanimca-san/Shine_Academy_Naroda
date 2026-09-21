@@ -1,0 +1,442 @@
+{
+  "metadata": {
+    "id": "cbse_class12_chemistry_ch8",
+    "title": "Chapter 8: Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_001",
+      "type": "hook",
+      "title": "The Secrets Behind Flavors and Fragrances",
+      "title_hi": "स्वादों और सुगंधों के पीछे का रहस्य",
+      "title_gu": "સ્વાદ અને સુગંધ પાછળનું રહસ્ય",
+      "body": "Did you know that the distinct aroma of vanilla ice cream (vanillin), the spicy warmth of cinnamon (cinnamaldehyde), and the soothing smell of almonds (benzaldehyde) all belong to the exact same organic family? They all share the magical double-bonded C=O group known as the Carbonyl Group. Carbonyl compounds dictate the flavor industry and play vital roles in biological metabolism!",
+      "body_hi": "क्या आप जानते हैं कि वेनिला आइसक्रीम (वेनिलिन) की मनमोहक महक, दालचीनी (सिनेमाल्डिहाइड) की तीखी सुगंध और बादाम (बेंजाल्डिहाइड) की सोंधी खुशबू सब एक ही कार्बनिक परिवार का हिस्सा हैं? इन सब में एक समान C=O द्वि-बंध (कार्बोनिल समूह) होता है। कार्बोनिल यौगिक फ्लेवर उद्योग से लेकर हमारे शरीर के चयापचय (metabolism) तक में बेहद महत्वपूर्ण भूमिका निभाते हैं!",
+      "body_gu": "શું તમે જાણો છો કે વેનીલા આઈસ્ક્રીમ (વેનિલીન) ની સુગંધ, તજ (સિનેમાલ્ડીહાઈડ) ની મસાલેદાર સુવાસ અને બદામ (બેન્ઝાલ્ડીહાઈડ) ની મીઠી સુગંધ એ એક જ ઓર્ગેનિક પરિવારના સભ્યો છે? આ બધામાં સમાન C=O દ્વિ-બંધ (કાર્બોનિલ સમૂહ) હાજર હોય છે. કાર્બોનિલ સંયોજનો સ્વાદ ઉદ્યોગથી લઈને જૈવિક ચયાપચય સુધી અત્યંત મહત્વપૂર્ણ ભૂમિકા ભજવે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_002",
+      "type": "socratic_question",
+      "title": "Exploring Carbonyl Polarity",
+      "title_hi": "कार्बोनिल ध्रुवीयता की खोज",
+      "title_gu": "કાર્બોનિલ ધ્રુવીયતાની શોધ",
+      "question": "In a carbon-oxygen double bond (C=O), oxygen is significantly more electronegative than carbon. What impact does this electronegativity difference have on the carbon atom's reactivity?",
+      "question_hi": "कार्बन-ऑक्सीजन द्वि-बंध (C=O) में, ऑक्सीजन कार्बन की तुलना में अधिक विद्युत-ऋणात्मक (electronegative) है। इस अंतर का कार्बन परमाणु की क्रियाशीलता पर क्या प्रभाव पड़ता है?",
+      "question_gu": "કાર્બન-ઓક્સિજન દ્વિ-બંધ (C=O) માં, ઓક્સિજન કાર્બન કરતાં વધુ વિદ્યુત-ઋણીય છે. આ તફાવતની કાર્બન પરમાણુની પ્રક્રિયાત્મકતા પર શું અસર પડે છે?",
+      "options": [
+        "Carbon becomes electron-rich and attracts electrophiles",
+        "Carbon becomes electron-deficient (partial positive charge) and attracts nucleophiles",
+        "Carbon remains completely non-polar and unreactive",
+        "Oxygen gets a partial positive charge and carbon gets a partial negative charge"
+      ],
+      "options_hi": [
+        "कार्बन इलेक्ट्रॉन-समृद्ध हो जाता है और इलेक्ट्रोफाइल को आकर्षित करता है",
+        "कार्बन इलेक्ट्रॉन-न्यून (आंशिक धनावेशित) हो जाता है और न्यूक्लियोफाइल को आकर्षित करता है",
+        "कार्बन पूरी तरह से अध्रुवीय और अक्रिय रहता है",
+        "ऑक्सीजन पर आंशिक धनावेश और कार्बन पर आंशिक ऋणावेश आता है"
+      ],
+      "options_gu": [
+        "કાર્બન ઇલેક્ટ્રોન-સમૃદ્ધ બને છે અને ઇલેક્ટ્રોફાઇલને આકર્ષે છે",
+        "કાર્બન ઇલેક્ટ્રોન-ઓછો (આંશિક ધન વીજભારિત) બને છે અને ન્યુક્લિયોફાઇલને આકર્ષે છે",
+        "કાર્બન સંપૂર્ણપણે અ-ધ્રુવીય અને નિષ્ક્રિય રહે છે",
+        "ઓક્સિજન પર આંશિક ધન વીજભાર અને કાર્બન પર આંશિક ઋણ વીજભાર આવે છે"
+      ],
+      "correct_index": 1,
+      "explanation": "Due to high electronegativity of oxygen, the pi electron cloud is pulled towards oxygen (C^delta+ = O^delta-). Thus, carbonyl carbon becomes electrophilic and readily undergoes Nucleophilic Addition Reactions.",
+      "explanation_hi": "ऑक्सीजन की उच्च विद्युत-ऋणात्मकता के कारण, पाई इलेक्ट्रॉन बादल ऑक्सीजन की ओर खिंच जाता है (C^delta+ = O^delta-)। इसलिए, कार्बोनिल कार्बन इलेक्ट्रोफिलिक बन जाता है और न्यूक्लियोफिलिक योगात्मक अभिक्रियाएं (Nucleophilic Addition) दिखाता है।",
+      "explanation_gu": "ઓક્સિજનની ઉચ્ચ વિદ્યુત-ઋણતાને લીધે, પાઈ ઇલેક્ટ્રોન વાદળ ઓક્સિજન તરફ ખેંચાય છે (C^delta+ = O^delta-). તેથી, કાર્બોનિલ કાર્બન ઇલેક્ટ્રોફિલિક બને છે અને સરળતાથી ન્યુક્લિયોફિલિક યોગશીલ પ્રક્રિયાઓ આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_003",
+      "type": "discovery",
+      "title": "Nucleophilic Addition & Stereochemistry",
+      "title_hi": "न्यूक्लियोफिलिक योगात्मक अभिक्रिया और स्टीरियोकेमिस्ट्री",
+      "title_gu": "ન્યુક્લિયોફિલિક યોગશીલ પ્રક્રિયા અને સ્ટીરિયોકેમિસ્ટ્રી",
+      "body": "Observe the geometry change during nucleophilic attack:\n1. The carbonyl carbon is sp2 hybridized and planar (bond angle ~120°).\n2. A nucleophile (Nu:-) attacks perpendicular to the carbonyl plane.\n3. Carbon changes hybridization from sp2 (planar) to sp3 (tetrahedral alkoxide intermediate).\n4. Protonation of the alkoxide intermediate produces the final addition product.",
+      "body_hi": "न्यूक्लियोफिलिक आक्रमण के दौरान ज्यामिति परिवर्तन देखें:\n1. कार्बोनिल कार्बन sp2 संकरित (hybridized) और समतलीय (planar, कोण ~120°) होता है।\n2. न्यूक्लियोफाइल (Nu:-) कार्बोनिल समतल के लंबवत आक्रमण करता है।\n3. कार्बन का संकरण sp2 (समतलीय) से बदलकर sp3 (चतुष्फलकीय/tetrahedral एल्कोक्साइड मध्यवर्ती) हो जाता है।\n4. एल्कोक्साइड मध्यवर्ती के प्रोटॉनीकरण से अंतिम योगात्मक उत्पाद बनता है।",
+      "body_gu": "ન્યુક્લિયોફિલિક હુમલા દરમિયાન ભૂમિતિમાં થતો ફેરફાર જુઓ:\n1. કાર્બોનિલ કાર્બન sp2 સંકૃત અને સમતલીય (કોણ ~120°) હોય છે.\n2. ન્યુક્લિયોફાઇલ (Nu:-) કાર્બોનિલ સમતલને લંબરૂપે હુમલો કરે છે.\n3. કાર્બનનું સંકરણ sp2 (સમતલીય) થી બદલાઈને sp3 (ચતુષ્ફલકીય આલ્કોક્સાઇડ મધ્યસ્થી) બને છે.\n4. આલ્કોક્સાઇડ મધ્યસ્થીના પ્રોટોનેશનથી આખરી યોગશીલ નીપજ મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_004",
+      "type": "theory",
+      "title": "Core Reactions: Ald aldehydes, Ketones & Carboxylic Acids",
+      "title_hi": "मुख्य अभिक्रियाएं: एल्डिहाइड, कीटोन और कार्बोक्सिलिक अम्ल",
+      "title_gu": "મુખ્ય પ્રક્રિયાઓ: એલ્ડીહાઈડ, કીટોન અને કાર્બોક્સિલિંક એસિડ",
+      "body": "Key Reactions Summary:\n\n1. Name Reactions for Aldehydes & Ketones:\n- Rosenmund Reduction: Ar/R-COCl + H2 (Pd-BaSO4) -> R-CHO\n- Stephen Reaction: R-CN + SnCl2/HCl -> R-CH=NH.HCl -(H2O)-> R-CHO\n- Etard Reaction: Toluene + CrO2Cl2/CS2 -(H3O+)-> Benzaldehyde\n- Aldol Condensation: Aldehydes/Ketones with alpha-H + Dilute NaOH -> beta-hydroxyaldehyde -> alpha,beta-unsaturated aldehyde (on heating)\n- Cannizzaro Reaction: Aldehydes WITHOUT alpha-H + Conc. KOH -> Disproportionation to Alcohol + Carboxylate salt\n\n2. Tests to Distinguish:\n- Tollens' Test: Aldehydes reduce Tollens' reagent [Ag(NH3)2]+ to Silver Mirror. Ketones do NOT.\n- Fehling's Test: Aliphatic aldehydes give red ppt of Cu2O with Fehling soln. Ketones & Benzaldehyde do NOT.\n- Iodoform Test: Compounds with CH3-C=O or CH3-CH(OH)- group reacting with I2/NaOH give yellow ppt of CHI3.\n\n3. Carboxylic Acids & HVZ Reaction:\n- Acidity: R-COOH > Ar-OH > R-OH (EWG increases acidity, EDG decreases acidity).\n- Hell-Volhard-Zelinsky (HVZ) Reaction: R-CH2-COOH + Red P / X2 (X2=Cl2,Br2) -(H2O)-> R-CH(X)-COOH (alpha-halo carboxylic acid).",
+      "body_hi": "मुख्य अभिक्रियाओं का सारांश:\n\n1. नामी अभिक्रियाएं (Name Reactions):\n- रोजेनमुंड अपचयन: R-COCl + H2 (Pd-BaSO4) -> R-CHO\n- स्टीफन अभिक्रिया: R-CN + SnCl2/HCl -> R-CH=NH.HCl -(H2O)-> R-CHO\n- इटार्ड अभिक्रिया: टालुईन + CrO2Cl2/CS2 -(H3O+)-> बेंजाल्डिहाइड\n- एल्डोल संघनन: अल्फा-H युक्त एल्डिहाइड/कीटोन + तनु NaOH -> बीटा-हाइड्रॉक्सी एल्डिहाइड -> अल्फा,बीटा-असंतृप्त एल्डिहाइड\n- कैनिजारो अभिक्रिया: बिना अल्फा-H वाले एल्डिहाइड + सांद्र KOH -> एल्कोहल और कार्बोक्सिलेट लवण (असमानुपातन)\n\n2. विभेदक परीक्षण:\n- टॉलेन परीक्षण: एल्डिहाइड टॉलेन अभिकर्मक को रजत दर्पण (Silver Mirror) में अपचयित करते हैं। कीटोन नहीं करते।\n- फेलिंग परीक्षण: एलिफैटिक एल्डिहाइड लाल अवक्षेप (Cu2O) देते हैं। कीटोन और बेंजाल्डिहाइड नहीं देते।\n- आयोडोफॉर्म परीक्षण: CH3-C=O या CH3-CH(OH)- समूह वाले यौगिक I2/NaOH के साथ पीला अवक्षेप (CHI3) देते हैं।\n\n3. कार्बोक्सिलिक अम्ल और HVZ अभिक्रिया:\n- अम्लीयता: R-COOH > Ar-OH > R-OH (EWG अम्लीयता बढ़ाता है, EDG घटता है)।\n- हेल-व्होलार्ड-ज़ेलिंस्की (HVZ) अभिक्रिया: R-CH2-COOH + लाल P / X2 -(H2O)-> R-CH(X)-COOH (अल्फा-हैलो कार्बोक्सिलिक अम्ल)।",
+      "body_gu": "મુખ્ય પ્રક્રિયાઓનો સારાંશ:\n\n1. નામની પ્રક્રિયાઓ:\n- રોઝનમંડ રિડક્શન: R-COCl + H2 (Pd-BaSO4) -> R-CHO\n- સ્ટીફન પ્રક્રિયા: R-CN + SnCl2/HCl -> R-CH=NH.HCl -(H2O)-> R-CHO\n- ઈટાર્ડ પ્રક્રિયા: ટોલ્યુઈન + CrO2Cl2/CS2 -(H3O+)-> બેન્ઝાલ્ડીહાઈડ\n- એલ્ડોલ સંઘનન: આલ્ફા-H ધરાવતા એલ્ડીહાઈડ/કીટોન + મંદ NaOH -> બીટા-હાઈડ્રોક્સી એલ્ડીહાઈડ -> અસંતૃપ્ત એલ્ડીહાઈડ\n- કેનિઝારો પ્રક્રિયા: આલ્ફા-H વગરના એલ્ડીહાઈડ + સાંદ્ર KOH -> આલ્કોહોલ + કાર્બોક્સિલેટ ક્ષાર (અસમાનપ્રમાણન)\n\n2. તફાવત પરખ કસોટીઓ:\n- ટોલેન્સ કસોટી: એલ્ડીહાઈડ ટોલેન્સ પ્રક્રિયકનું સિલ્વર મિરરમાં રિડક્શન કરે છે. કીટોન આપતા નથી.\n- ફેહલિંગ કસોટી: એલિફેટિક એલ્ડીહાઈડ Cu2O નો લાલ અવક્ષેપ આપે છે. કીટોન અને બેન્ઝાલ્ડીહાઈડ આપતા નથી.\n- આયોડોફોર્મ કસોટી: CH3-C=O અથવા CH3-CH(OH)- ધરાવતા સંયોજનો I2/NaOH સાથે CHI3 નો પીળો અવક્ષેપ આપે છે.\n\n3. કાર્બોક્સિલિંક એસિડ અને HVZ પ્રક્રિયા:\n- એસિડિકતા: R-COOH > Ar-OH > R-OH (EWG એસિડિકતા વધારે, EDG ઘટાડે).\n- હેલ-વોલ્હાર્ડ-ઝેલિન્સ્કી (HVZ) પ્રક્રિયા: R-CH2-COOH + લાલ P / X2 -(H2O)-> R-CH(X)-COOH (આલ્ફા-હેલો કાર્બોક્સિલિંક એસિડ)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_005",
+      "type": "knowledge_check",
+      "title": "Distinguishing Aldehydes and Ketones",
+      "title_hi": "एल्डिहाइड और कीटोन में अंतर",
+      "title_gu": "એલ્ડીહાઈડ અને કીટોન વચ્ચેનો તફાવત",
+      "question": "Which of the following compounds will give a positive Tollens' test but a negative Fehling's test?",
+      "question_hi": "निम्नलिखित में से कौन सा यौगिक धनात्मक टॉलेन परीक्षण देगा लेकिन ऋणात्मक फेलिंग परीक्षण देगा?",
+      "question_gu": "નીચેનામાંથી કયું સંયોજન હકારાત્મક ટોલેન્સ કસોટી આપશે પરંતુ નકારાત્મક ફેહલિંગ કસોટી આપશે?",
+      "options": [
+        "Acetaldehyde (CH3CHO)",
+        "Benzaldehyde (C6H5CHO)",
+        "Acetone (CH3COCH3)",
+        "Formaldehyde (HCHO)"
+      ],
+      "options_hi": [
+        "एसिटाल्डिहाइड (CH3CHO)",
+        "बेंजाल्डिहाइड (C6H5CHO)",
+        "एसिटोन (CH3COCH3)",
+        "फॉर्मेल्डिहाइड (HCHO)"
+      ],
+      "options_gu": [
+        "એસિટાલ્ડીહાઈડ (CH3CHO)",
+        "બેન્ઝાલ્ડીહાઈડ (C6H5CHO)",
+        "એસીટોન (CH3COCH3)",
+        "ફોર્માલ્ડીહાઈડ (HCHO)"
+      ],
+      "correct_index": 1,
+      "explanation": "Benzaldehyde is an aromatic aldehyde. Aromatic aldehydes reduce Tollens' reagent but do NOT reduce Fehling's solution.",
+      "explanation_hi": "बेंजाल्डिहाइड एक सुगंधित (aromatic) एल्डिहाइड है। ऐरोमैटिक एल्डिहाइड टॉलेन अभिकर्मक का अपचयन करते हैं परंतु फेलिंग विलयन का नहीं।",
+      "explanation_gu": "બેન્ઝાલ્ઝાલ્ડીહાઈડ એ એરોમેટિક એલ્ડીહાઈડ છે. એરોમેટિક એલ્ડીહાઈડ ટોલેન્સ પ્રક્રિયકનું રિડક્શન કરે છે પરંતુ ફેહલિંગ દ્રાવણનું કરતા નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_006",
+      "type": "reflection",
+      "title": "Reactivity Comparison: Nucleophilic Attack",
+      "title_hi": "क्रियाशीलता की तुलना: न्यूक्लियोफिलिक आक्रमण",
+      "title_gu": "પ્રક્રિયાત્મકતાની સરખામણી: ન્યુક્લિયોફિલિક હુમલો",
+      "body": "Why are aldehydes generally more reactive than ketones towards nucleophilic addition reactions?\nTwo main reasons:\n1. Inductive / Electronic effect: Alkyl groups are electron-donating (+I). Ketones have two alkyl groups reducing positive charge on carbonyl carbon, making it less electrophilic.\n2. Steric hinderance: Ketones have two bulky alkyl groups shielding the carbonyl carbon from attack, whereas aldehydes have only one alkyl group and a small hydrogen.",
+      "body_hi": "एल्डिहाइड सामान्यतः कीटोन की तुलना में न्यूक्लियोफिलिक योगात्मक अभिक्रियाओं के प्रति अधिक क्रियाशील क्यों होते हैं?\nदो मुख्य कारण हैं:\n1. प्रेरणिक / इलेक्ट्रॉनिक प्रभाव: एल्किल समूह इलेक्ट्रॉन-दाता (+I) होते हैं। कीटोन में दो एल्किल समूह कार्बोनिल कार्बन के धन आवेश को कम कर देते हैं, जिससे वह कम इलेक्ट्रोफिलिक बनता है।\n2. त्रिविम बाधा (Steric Hinderance): कीटोन में दो बड़े एल्किल समूह होते हैं जो कार्बोनिल कार्बन को ढकते हैं, जबकि एल्डिहाइड में केवल एक एल्किल समूह और एक छोटा हाइड्रोजन होता है।",
+      "body_gu": "એલ્ડીહાઈડ સામાન્ય રીતે ન્યુક્લિયોફિલિક યોગશીલ પ્રક્રિયાઓમાં કીટોન કરતાં વધુ પ્રક્રિયાશીલ શા માટે હોય છે?\nબે મુખ્ય કારણો:\n1. પ્રેરેક અસર: આલ્કાઈલ સમૂહ ઇલેક્ટ્રોન-દાતા (+I) છે. કીટોનમાં બે આલ્કાઈલ સમૂહ કાર્બોનિલ કાર્બન પરના ધન વીજભારને ઘટાડે છે.\n2. અવકાશીય અવરોધ (Steric Hinderance): કીટોનમાં બે મોટા આલ્કાઈલ સમૂહ હોવાથી હુમલામાં અવરોધ ઊભો થાય છે, જ્યારે એલ્ડીહાઈડમાં માત્ર એક આલ્કાઈલ સમૂહ અને નાનો હાઇડ્રોજન હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_007",
+      "type": "connection",
+      "title": "Industrial Applications & Biology",
+      "title_hi": "औद्योगिक अनुप्रयोग और जीव विज्ञान",
+      "title_gu": "ઔદ્યોગિક ઉપયોગો અને જીવવિજ્ઞાન",
+      "body": "1. Formalin (40% aqueous formaldehyde) is used as a biological preservative for tissues and embalming.\n2. Acetone is the primary industrial solvent for paints, nail polish removers, and synthetic resins.\n3. Acetic acid (ethanoic acid) is the main component of commercial vinegar (4-8%) and an important feedstock for cellulose acetate polymers.",
+      "body_hi": "1. फॉर्मेलिन (40% जलीय फॉर्मेल्डिहाइड) का उपयोग जैविक नमूनों और ऊतकों के संरक्षण के लिए किया जाता है।\n2. एसिटोन पेंट, नेल पॉलिश रिमूवर और सिंथेटिक रेजिन के लिए एक प्रमुख औद्योगिक विलायक है।\n3. एसिटिक एसिड सिरके का मुख्य घटक (4-8%) है और सेलुलोज एसीटेट बहुलक के लिए महत्वपूर्ण कच्चा माल है।",
+      "body_gu": "1. ફોર્મેલિન (40% જલીય ફોર્માલ્ડીહાઈડ) નો ઉપયોગ જૈવિક નમૂનાઓ અને પેશીઓના સંરક્ષણ માટે થાય છે.\n2. એસીટોન એ પેઇન્ટ, નેઇલ પોલિશ રિમૂવર અને સિન્થેટિક રેઝિન માટે પ્રાથમિક ઔદ્યોગિક દ્રાવક છે.\n3. એસિટિક એસિડ એ સરકાનો મુખ્ય ઘટક (4-8%) છે અને સેલ્યુલોઝ એસિટેટ માટે મહત્વપૂર્ણ કાચો માલ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_008",
+      "type": "mastery",
+      "title": "Mastering the Acid Strength Factors",
+      "title_hi": "अम्लीय सामर्थ्य के कारकों पर महारत",
+      "title_gu": "એસિડિક ક્ષમતાના પરિબળો પર પ્રભુત્વ",
+      "body": "Carboxylic acid acidity increases with Electron Withdrawing Groups (EWG: -NO2, -CN, -F, -Cl) due to stabilization of the carboxylate anion by negative inductive (-I) and resonance effects.\n\nOrder of acidic strength:\nCF3COOH > CCl3COOH > CHCl2COOH > CH2ClCOOH > CH3COOH\n\nAlso, the closer the EWG to the carboxylic carbon, the stronger the acid:\nCH3-CH2-CH(Cl)-COOH > CH3-CH(Cl)-CH2-COOH > CH2(Cl)-CH2-CH2-COOH.",
+      "body_hi": "कार्बोक्सिलेट आयन के स्थायित्व (-I प्रभाव और अनुनाद) के कारण इलेक्ट्रॉन-आकर्षी समूह (EWG: -NO2, -CN, -F, -Cl) कार्बोक्सिलिक अम्ल की अम्लीयता को बढ़ाते हैं।\n\nअम्लीय सामर्थ्य का क्रम:\nCF3COOH > CCl3COOH > CHCl2COOH > CH2ClCOOH > CH3COOH\n\nसाथ ही, EWG कार्बोक्सिल समूह के जितने पास होगा, अम्ल उतना ही मजबूत होगा:\nCH3-CH2-CH(Cl)-COOH > CH3-CH(Cl)-CH2-COOH > CH2(Cl)-CH2-CH2-COOH.",
+      "body_gu": "કાર્બોક્સિલેટ એનાયનની સ્થિરતા (-I અસર અને રેઝોનન્સ) ને લીધે ઇલેક્ટ્રોન આકર્ષક સમૂહો (EWG: -NO2, -CN, -F, -Cl) કાર્બોક્સિલિંક એસિડની એસિડિકતા વધારે છે.\n\nએસિડિક શક્તિનો ક્રમ:\nCF3COOH > CCl3COOH > CHCl2COOH > CH2ClCOOH > CH3COOH\n\nતેમજ, EWG કાર્બોક્સિલ સમૂહની જેટલી નજીક હશે, તેટલો એસિડ વધુ મજબૂત હશે:\nCH3-CH2-CH(Cl)-COOH > CH3-CH(Cl)-CH2-COOH > CH2(Cl)-CH2-CH2-COOH."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_009",
+      "type": "mcq",
+      "title": "NCERT Ex 8.1: IUPAC Nomenclature",
+      "title_hi": "NCERT अभ्यास 8.1: IUPAC नामकरण",
+      "title_gu": "NCERT સ્વાધ્યાય 8.1: IUPAC નામકરણ",
+      "question": "What is the IUPAC name of (CH3)2CH-CH2-CHO?",
+      "question_hi": "(CH3)2CH-CH2-CHO का IUPAC नाम क्या है?",
+      "question_gu": "(CH3)2CH-CH2-CHO નું IUPAC નામ શું છે?",
+      "options": [
+        "3-Methylbutanal",
+        "2-Methylbutanal",
+        "Isovaleraldehyde",
+        "Pentan-2-one"
+      ],
+      "options_hi": [
+        "3-मेथिलब्यूटेनल",
+        "2-मेथिलब्यूटेनल",
+        "आइसोवैलेराल्डिहाइड",
+        "पेन्टेन-2-ओन"
+      ],
+      "options_gu": [
+        "3-મિથાઈલબ્યુટેનાલ",
+        "2-મિથાઈલબ્યુટેનાલ",
+        "આઈસોવેલેરાલ્ડીહાઈડ",
+        "પેન્ટેન-2-ઓન"
+      ],
+      "correct_index": 0,
+      "explanation": "Chain has 4 carbons starting from aldehyde carbon C1: C4H3-C3H(CH3)-C2H2-C1HO -> 3-methylbutanal.",
+      "explanation_hi": "एल्डिहाइड कार्बन C1 से शुरू होने वाली 4-कार्बन श्रृंखला: C4H3-C3H(CH3)-C2H2-C1HO -> 3-मेथिलब्यूटेनल।",
+      "explanation_gu": "એલ્ડીહાઈડ કાર્બન C1 થી શરૂ થતી 4-કાર્બન શ્રૃંખલા: C4H3-C3H(CH3)-C2H2-C1HO -> 3-મિથાઈલબ્યુટેનાલ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_010",
+      "type": "mcq",
+      "title": "NCERT Ex 8.2: Product Prediction - Stephen Reduction",
+      "title_hi": "NCERT अभ्यास 8.2: उत्पाद अनुमान - स्टीफन अपचयन",
+      "title_gu": "NCERT સ્વાધ્યાય 8.2: નીપજનું અનુમાન - સ્ટીફન રિડક્શન",
+      "question": "What is the product formed when Benzonitrile (C6H5CN) reacts with SnCl2/HCl followed by hydrolysis?",
+      "question_hi": "जब बेंजोनाइट्रिल (C6H5CN) SnCl2/HCl के बाद जलअपघटन से अभिक्रिया करता है, तो क्या उत्पाद बनता है?",
+      "question_gu": "જ્યારે બેન્ઝોનાઈટ્રાઈલ (C6H5CN) SnCl2/HCl અને ત્યારબાદ જળવિભાજન પામે ત્યારે કઈ નીપજ મળે છે?",
+      "options": [
+        "Benzoic acid",
+        "Benzaldehyde",
+        "Benzyl alcohol",
+        "Aniline"
+      ],
+      "options_hi": [
+        "बेंजोइक अम्ल",
+        "बेंजाल्डिहाइड",
+        "बेंजिल एल्कोहल",
+        "ऐनिलिन"
+      ],
+      "options_gu": [
+        "બેન્ઝોઈક એસિડ",
+        "બેન્ઝાલ્ડીહાઈડ",
+        "બેન્ઝાઈલ આલ્કોહોલ",
+        "એનિલીન"
+      ],
+      "correct_index": 1,
+      "explanation": "Nitrales react with SnCl2/HCl to yield imine hydrochloride, which on hydrolysis gives aldehyde (Stephen Reaction). C6H5CN -> C6H5CHO.",
+      "explanation_hi": "नाइट्राइल SnCl2/HCl से अभिक्रिया करके इमीन हाइड्रोक्लोराइड बनाते हैं, जो जलअपघटन पर एल्डिहाइड देते हैं (स्टीफन अभिक्रिया)। C6H5CN -> C6H5CHO।",
+      "explanation_gu": "નાઈટ્રાઈલ SnCl2/HCl સાથે પ્રક્રિયા કરીને ઈમાઈન હાઈડ્રોક્લોરાઈડ બનાવે છે, જે જળવિભાજનથી એલ્ડીહાઈડ આપે છે (સ્ટીફન પ્રક્રિયા). C6H5CN -> C6H5CHO."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_011",
+      "type": "mcq",
+      "title": "NCERT Ex 8.3: Aldol Condensation Product",
+      "title_hi": "NCERT अभ्यास 8.3: एल्डोल संघनन उत्पाद",
+      "title_gu": "NCERT સ્વાધ્યાય 8.3: એલ્ડોલ સંઘનન નીપજ",
+      "question": "Propanal on heating with dilute NaOH gives a beta-hydroxy aldehyde. On further heating with acid, what unsaturated aldehyde is obtained?",
+      "question_hi": "प्रोपेनल को तनु NaOH के साथ गर्म करने पर बीटा-हाइड्रॉक्सी एल्डिहाइड मिलता है। अम्ल के साथ गर्म करने पर कौन सा असंतृप्त एल्डिहाइड प्राप्त होता है?",
+      "question_gu": "પ્રોપેનાલને મંદ NaOH સાથે ગરમ કરવાથી બીટા-હાઈડ્રોક્સી એલ્ડીહાઈડ મળે છે. એસિડ સાથે ગરમ કરવાથી કયો અસંતૃપ્ત એલ્ડીહાઈડ મળે છે?",
+      "options": [
+        "Pent-2-enal",
+        "2-Methylpent-2-enal",
+        "Hex-2-enal",
+        "But-2-enal"
+      ],
+      "options_hi": [
+        "पेन्ट-2-इनल",
+        "2-मेथिलपेन्ट-2-इनल",
+        "हेक्स-2-इनल",
+        "ब्यूट-2-इनल"
+      ],
+      "options_gu": [
+        "પેન્ટ-2-ઇનાલ",
+        "2-મિથાઈલપેન્ટ-2-ઇનાલ",
+        "હેક્સ-2-ઇનાલ",
+        "બ્યુટ-2-ઇનાલ"
+      ],
+      "correct_index": 1,
+      "explanation": "2 molecules of CH3CH2CHO condense: CH3CH2CH(OH)-CH(CH3)CHO -(H2O)-> CH3CH2CH=C(CH3)CHO, which is 2-methylpent-2-enal.",
+      "explanation_hi": "CH3CH2CHO के 2 अणु संघनित होते हैं: CH3CH2CH(OH)-CH(CH3)CHO -(H2O)-> CH3CH2CH=C(CH3)CHO, जो 2-मेथिलपेन्ट-2-इनल है।",
+      "explanation_gu": "CH3CH2CHO ના 2 અણુઓ સંઘનિત થાય છે: CH3CH2CH(OH)-CH(CH3)CHO -(H2O)-> CH3CH2CH=C(CH3)CHO, જે 2-મિથાઈલપેન્ટ-2-ઇનાલ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_012",
+      "type": "mcq",
+      "title": "NCERT Ex 8.4: Distinguish Propanal and Propanone",
+      "title_hi": "NCERT अभ्यास 8.4: प्रोपेनल और प्रोपेनोन में विभेद",
+      "title_gu": "NCERT સ્વાધ્યાય 8.4: પ્રોપેનાલ અને પ્રોપેનોન વચ્ચે તફાવત",
+      "question": "Which reagent can be used to distinguish between Propanal (CH3CH2CHO) and Propanone (CH3COCH3)?",
+      "question_hi": "प्रोपेनल (CH3CH2CHO) और प्रोपेनोन (CH3COCH3) के बीच अंतर करने के लिए किस अभिकर्मक का उपयोग किया जा सकता है?",
+      "question_gu": "પ્રોપેનાલ (CH3CH2CHO) અને પ્રોપેનોન (CH3COCH3) વચ્ચે તફાવત કરવા માટે કયા પ્રક્રિયકનો ઉપયોગ કરી શકાય?",
+      "options": [
+        "Tollens' Reagent",
+        "2,4-DNP Reagent",
+        "Sodium bisulphite",
+        "Hydroxylamine"
+      ],
+      "options_hi": [
+        "टॉलेन अभिकर्मक",
+        "2,4-DNP अभिकर्मक",
+        "सोडियम बाइसल्फाइट",
+        "हाइड्रॉक्सिलामाइन"
+      ],
+      "options_gu": [
+        "ટોલેન્સ પ્રક્રિયક",
+        "2,4-DNP પ્રક્રિયક",
+        "સોડિયમ બાયસલ્ફાઈટ",
+        "હાઈડ્રોક્સિલએમાઈન"
+      ],
+      "correct_index": 0,
+      "explanation": "Propanal reduces Tollens' reagent giving a silver mirror, while Propanone being a ketone does not give Tollens' test.",
+      "explanation_hi": "प्रोपेनल टॉलेन अभिकर्मक को अपचयित करके रजत दर्पण देता है, जबकि प्रोपेनोन एक कीटोन होने के कारण टॉलेन परीक्षण नहीं देता।",
+      "explanation_gu": "પ્રોપેનાલ ટોલેન્સ પ્રક્રિયકનું રિડક્શન કરીને સિલ્વર મિરર આપે છે, જ્યારે પ્રોપેનોન કીટોન હોવાથી ટોલેન્સ કસોટી આપતું નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_013",
+      "type": "mcq",
+      "title": "NCERT Ex 8.5: Cannizzaro Reaction",
+      "title_hi": "NCERT अभ्यास 8.5: कैनिजारो अभिक्रिया",
+      "title_gu": "NCERT સ્વાધ્યાય 8.5: કેનિઝારો પ્રક્રિયા",
+      "question": "Which of the following compounds will undergo Cannizzaro reaction upon treatment with concentrated KOH?",
+      "question_hi": "सांद्र KOH के साथ उपचार करने पर निम्नलिखित में से कौन सा यौगिक कैनिजारो अभिक्रिया प्रदर्शित करेगा?",
+      "question_gu": "સાંદ્ર KOH સાથે પ્રક્રિયા કરવાથી નીચેનામાંથી કયું સંયોજન કેનિઝારો પ્રક્રિયા આપશે?",
+      "options": [
+        "Acetaldehyde (CH3CHO)",
+        "Formaldehyde (HCHO)",
+        "Propanal (CH3CH2CHO)",
+        "Acetone (CH3COCH3)"
+      ],
+      "options_hi": [
+        "एसिटाल्डिहाइड (CH3CHO)",
+        "फॉर्मेल्डिहाइड (HCHO)",
+        "प्रोपेनल (CH3CH2CHO)",
+        "एसिटोन (CH3COCH3)"
+      ],
+      "options_gu": [
+        "એસિટાલ્ડીહાઈડ (CH3CHO)",
+        "ફોર્માલ્ડીહાઈડ (HCHO)",
+        "પ્રોપેનાલ (CH3CH2CHO)",
+        "એસીટોન (CH3COCH3)"
+      ],
+      "correct_index": 1,
+      "explanation": "Cannizzaro reaction is shown by aldehydes that lack alpha-hydrogen. Formaldehyde (HCHO) has no alpha-hydrogens.",
+      "explanation_hi": "कैनिजारो अभिक्रिया उन एल्डिहाइडों द्वारा दर्शाई जाती है जिनमें अल्फा-हाइड्रोजन नहीं होता। फॉर्मेल्डिहाइड (HCHO) में कोई अल्फा-हाइड्रोजन नहीं है।",
+      "explanation_gu": "કેનિઝારો પ્રક્રિયા એવા એલ્ડીહાઈડ દર્શાવે છે જેમાં આલ્ફા-હાઈડ્રોજન હોતો નથી. ફોર્માલ્ડીહાઈડ (HCHO) માં આલ્ફા-હાઈડ્રોજન નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_014",
+      "type": "mcq",
+      "title": "NCERT Ex 8.6: Acidic Strength Comparison",
+      "title_hi": "NCERT अभ्यास 8.6: अम्लीय सामर्थ्य की तुलना",
+      "title_gu": "NCERT સ્વાધ્યાય 8.6: એસિડિક શક્તિની સરખામણી",
+      "question": "Arrange the following in INCREASING order of acidic strength: F-CH2-COOH, Cl-CH2-COOH, Br-CH2-COOH, CH3-COOH.",
+      "question_hi": "निम्नलिखित को अम्लीय सामर्थ्य के बढ़ते क्रम में व्यवस्थित करें: F-CH2-COOH, Cl-CH2-COOH, Br-CH2-COOH, CH3-COOH।",
+      "question_gu": "નીચેનાને એસિડિક ક્ષમતાના વધતા ક્રમમાં ગોઠવો: F-CH2-COOH, Cl-CH2-COOH, Br-CH2-COOH, CH3-COOH.",
+      "options": [
+        "CH3-COOH < Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH",
+        "F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH < CH3-COOH",
+        "CH3-COOH < F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH",
+        "Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH < CH3-COOH"
+      ],
+      "options_hi": [
+        "CH3-COOH < Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH",
+        "F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH < CH3-COOH",
+        "CH3-COOH < F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH",
+        "Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH < CH3-COOH"
+      ],
+      "options_gu": [
+        "CH3-COOH < Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH",
+        "F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH < CH3-COOH",
+        "CH3-COOH < F-CH2-COOH < Cl-CH2-COOH < Br-CH2-COOH",
+        "Br-CH2-COOH < Cl-CH2-COOH < F-CH2-COOH < CH3-COOH"
+      ],
+      "correct_index": 0,
+      "explanation": "-I effect increases acidity: Electronegativity order F > Cl > Br > H. Stronger -I effect stabilizes carboxylate anion better.",
+      "explanation_hi": "-I प्रभाव अम्लीयता बढ़ाता है: विद्युत-ऋणात्मकता का क्रम F > Cl > Br > H। अधिक मजबूत -I प्रभाव कार्बोक्सिलेट आयन को अधिक स्थायित्व प्रदान करता है।",
+      "explanation_gu": "-I અસર એસિડિકતા વધારે છે: વિદ્યુત-ઋણતાનો ક્રમ F > Cl > Br > H. પ્રબળ -I અસર કાર્બોક્સિલેટ એનાયનને વધુ સ્થિર બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_015",
+      "type": "true_false",
+      "title": "NCERT Ex 8.7: Clemmensen Reduction Statement",
+      "title_hi": "NCERT अभ्यास 8.7: क्लेमेंसन अपचयन कथन",
+      "title_gu": "NCERT સ્વાધ્યાય 8.7: ક્લેમેન્સન રિડક્શન વિધાન",
+      "question": "Clemmensen reduction uses Zinc-amalgam (Zn-Hg) and concentrated HCl to reduce carbonyl groups (>C=O) to methylene groups (>CH2).",
+      "question_hi": "क्लेमेंसन अपचयन में कार्बोनिल समूह (>C=O) को मेथिलीन समूह (>CH2) में अपचयित करने के लिए जिंक-अमलगम (Zn-Hg) और सांद्र HCl का उपयोग किया जाता है।",
+      "question_gu": "ક્લેમેન્સન રિડક્શનમાં કાર્બોનિલ સમૂહ (>C=O) નું મિથિલીન સમૂહ (>CH2) માં રિડક્શન કરવા માટે ઝિંક-એમલ્ગમ (Zn-Hg) અને સાંદ્ર HCl નો ઉપયોગ થાય છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "True. Clemmensen reduction employs Zn-Hg and conc. HCl to reduce aldehydes/ketones to corresponding alkanes.",
+      "explanation_hi": "सत्य। क्लेमेंसन अपचयन एल्डिहाइड/कीटोन को संबंधित एल्केन में अपचयित करने के लिए Zn-Hg और सांद्र HCl का उपयोग करता है।",
+      "explanation_gu": "સાચું. ક્લેમેન્સન રિડક્શન એલ્ડીહાઈડ/કીટોનનું આલ્કેનમાં રિડક્શન કરવા માટે Zn-Hg અને સાંદ્ર HCl નો ઉપયોગ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_016",
+      "type": "mcq",
+      "title": "NCERT Ex 8.8: HVZ Reaction Reagent",
+      "title_hi": "NCERT अभ्यास 8.8: HVZ अभिक्रिया अभिकर्मक",
+      "title_gu": "NCERT સ્વાધ્યાય 8.8: HVZ પ્રક્રિયા પ્રક્રિયક",
+      "question": "Which combination of reagents is used in the Hell-Volhard-Zelinsky (HVZ) reaction?",
+      "question_hi": "हेल-व्होलार्ड-ज़ेलिंस्की (HVZ) अभिक्रिया में अभिकर्मकों के किस संयोजन का उपयोग किया जाता है?",
+      "question_gu": "હેલ-વોલ્હાર્ડ-ઝેલિન્સ્કી (HVZ) પ્રક્રિયામાં કયા પ્રક્રિયકોના મિશ્રણનો ઉપયોગ થાય છે?",
+      "options": [
+        "X2 / Red Phosphorus followed by H2O",
+        "SOCl2 / Pyridine",
+        "KMnO4 / KOH",
+        "LiAlH4 / Ether"
+      ],
+      "options_hi": [
+        "X2 / लाल फास्फोरस और फिर H2O",
+        "SOCl2 / पिरिडीन",
+        "KMnO4 / KOH",
+        "LiAlH4 / ईथर"
+      ],
+      "options_gu": [
+        "X2 / લાલ ફોસ્ફરસ અને ત્યારબાદ H2O",
+        "SOCl2 / પિરિડીન",
+        "KMnO4 / KOH",
+        "LiAlH4 / ઈથર"
+      ],
+      "correct_index": 0,
+      "explanation": "HVZ reaction halogenates alpha-position of carboxylic acids containing alpha-hydrogens using X2 (Br2 or Cl2) and Red Phosphorus.",
+      "explanation_hi": "HVZ अभिक्रिया लाल फास्फोरस और X2 (Br2 या Cl2) का उपयोग करके अल्फा-हाइड्रोजन वाले कार्बोक्सिलिक अम्लों के अल्फा-स्थान को हैलोजेनीकृत करती है।",
+      "explanation_gu": "HVZ પ્રક્રિયા લાલ ફોસ્ફરસ અને X2 નો ઉપયોગ કરીને કાર્બોક્સિલિંક એસિડના આલ્ફા-સ્થાન પર હેલોજીનેશન કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_017",
+      "type": "mcq",
+      "title": "NCERT Ex 8.9: Iodoform Test Identification",
+      "title_hi": "NCERT अभ्यास 8.9: आयोडोफॉर्म परीक्षण पहचान",
+      "title_gu": "NCERT સ્વાધ્યાય 8.9: આયોડોફોર્મ કસોટી ઓળખ",
+      "question": "Which of the following compounds will NOT give a positive Iodoform test?",
+      "question_hi": "निम्नलिखित में से कौन सा यौगिक धनात्मक आयोडोफॉर्म परीक्षण नहीं देगा?",
+      "question_gu": "નીચેનામાંથી કયું સંયોજન હકારાત્મક આયોડોફોર્મ કસોટી આપશે નહીં?",
+      "options": [
+        "Pentan-2-one",
+        "Ethanol",
+        "Pentan-3-one",
+        "Propan-2-ol"
+      ],
+      "options_hi": [
+        "पेन्टेन-2-ओन",
+        "एथेनॉल",
+        "पेन्टेन-3-ओन",
+        "प्रोपेन-2-ऑल"
+      ],
+      "options_gu": [
+        "પેન્ટેન-2-ઓન",
+        "એથેનોલ",
+        "પેન્ટેન-3-ઓન",
+        "પ્રોપેન-2-ઓલ"
+      ],
+      "correct_index": 2,
+      "explanation": "Pentan-3-one (CH3CH2COCH2CH3) lacks the CH3-C=O group, so it gives a negative iodoform test. Pentan-2-one has CH3-C=O and gives positive test.",
+      "explanation_hi": "पेन्टेन-3-ओन (CH3CH2COCH2CH3) में CH3-C=O समूह नहीं होता, इसलिए यह ऋणात्मक आयोडोफॉर्म परीक्षण देता है।",
+      "explanation_gu": "પેન્ટેન-3-ઓન માં CH3-C=O સમૂહ હોતો નથી, તેથી તે નકારાત્મક આયોડોફોર્મ કસોટી આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH8_018",
+      "type": "true_false",
+      "title": "NCERT Ex 8.10: Decarboxylation Reaction",
+      "title_hi": "NCERT अभ्यास 8.10: विकार्बोक्सिलीकरण अभिक्रिया",
+      "title_gu": "NCERT સ્વાધ્યાય 8.10: ડીકાર્બોક્સિલેશન પ્રક્રિયા",
+      "question": "Heating sodium salts of carboxylic acids with Sodalime (NaOH + CaO) results in the loss of carbon dioxide to yield an alkane having ONE carbon atom LESS than the carboxylic acid.",
+      "question_hi": "सोडालाइम (NaOH + CaO) के साथ कार्बोक्सिलिक अम्लों के सोडियम लवण को गर्म करने पर कार्बन डाइऑक्साइड की हानि होती है और एक कार्बन परमाणु कम वाला एल्केन प्राप्त होता है।",
+      "question_gu": "કાર્બોક્સિલિંક એસિડના સોડિયમ ક્ષારને સોડાલાઈમ (NaOH + CaO) સાથે ગરમ કરવાથી CO2 મુક્ત થાય છે અને એક કાર્બન ઓછો ધરાવતો આલ્કેન મળે છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "True. Sodalime decarboxylation eliminates CO2 as Na2CO3, forming an alkane with n-1 carbons.",
+      "explanation_hi": "सत्य। सोडालाइम विकार्बोक्सिलीकरण CO2 को Na2CO3 के रूप में बाहर निकालता है और n-1 कार्बन वाला एल्केन बनाता है।",
+      "explanation_gu": "સાચું. સોડાલાઈમ ડીકાર્બોક્સિલેશન CO2 ને Na2CO3 તરીકે દૂર કરીને n-1 કાર્બન ધરાવતો આલ્કેન બનાવે છે."
+    }
+  ]
+}

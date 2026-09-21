@@ -1,0 +1,804 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch11",
+    "title": "Chapter 11: Three Dimensional Geometry",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_001",
+      "type": "hook",
+      "title": "Navigating 3D Space: Flight Control & GPS",
+      "title_hi": "3D स्थान में मार्गदर्शन: उड़ान नियंत्रण और जीपीएस",
+      "title_gu": "3D અવકાશમાં સંચાલન: ફ્લાઇટ નિયંત્રણ અને GPS",
+      "body": "Imagine you are an air traffic controller tracking two aircraft at different altitudes. Unlike cars on a flat 2D road, planes move in a 3D environment. How do we ensure their flight paths never cross dangerously, even if they aren't parallel? Three-Dimensional Geometry gives us the exact mathematical framework to model lines, calculate shortest distances, and navigate 3D space safely.",
+      "body_hi": "कल्पना कीजिए कि आप एक एयर ट्रैफिक कंट्रोलर हैं जो अलग-अलग ऊंचाइयों पर दो विमानों को ट्रैक कर रहे हैं। समतल 2D सड़क पर कारों के विपरीत, हवाई जहाज 3D वातावरण में चलते हैं। हम यह कैसे सुनिश्चित करते हैं कि उनके उड़ान मार्ग कभी खतरनाक रूप से न कटें, भले ही वे समानांतर न हों? त्रिविमीय ज्यामिति (Three-Dimensional Geometry) हमें रेखाओं को मॉडल करने, न्यूनतम दूरी की गणना करने और 3D स्थान में सुरक्षित रूप से नेविगेट करने के लिए सटीक गणितीय ढांचा प्रदान करती है।",
+      "body_gu": "કલ્પના કરો કે તમે એર ટ્રાફિક કંટ્રોલર છો જે જુદી જુદી ઊંચાઈએ બે વિમાનોને ટ્રેક કરી રહ્યા છો। સમતલ 2D રોડ પર કારોથી વિપરીત, વિમાનો 3D વાતાવરણમાં ગતિ કરે છે। આપણે કેવી રીતે સુનિશ્ચિત કરી શકીએ કે તેમના ફ્લાઇટ પાથ ક્યારેય જોખમી રીતે એકબીજાને ન છેદે, ભલે તે સમાંતર ન હોય? ત્રિપરિમાણીય ભૂમિતિ (Three-Dimensional Geometry) આપણને રેખાઓનું મોડેલ બનાવવા, લઘુત્તમ અંતરની ગણતરી કરવા અને 3D અવકાશમાં સુરક્ષિત રીતે નેવિગેટ કરવા માટે સચોટ ગાણિતિક માળખું આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_002",
+      "type": "socratic_question",
+      "title": "Orientation in 3D Space",
+      "title_hi": "3D स्थान में अभिविन्यास",
+      "title_gu": "3D અવકાશમાં સ્થાન નિર્ધારણ",
+      "question": "In 2D space, the direction of a line is completely determined by a single angle θ with the X-axis (slope m = tan θ). In 3D space, how many angles do you think are needed to uniquely define the direction of a line with respect to the coordinate axes?",
+      "question_hi": "2D स्थान में, किसी रेखा की दिशा X-अक्ष के साथ एक ही कोण θ (ढाल m = tan θ) द्वारा पूरी तरह से निर्धारित होती है। 3D स्थान में, आपको क्या लगता है कि निर्देशांक अक्षों के संबंध में किसी रेखा की दिशा को विशिष्ट रूप से परिभाषित करने के लिए कितने कोणों की आवश्यकता होती है?",
+      "question_gu": "2D અવકાશમાં, રેખાની દિશા X-અક્ષ સાથેના એક જ ખૂણા θ (ઢાળ m = tan θ) દ્વારા સંપૂર્ણપણે નક્કી થાય છે। 3D અવકાશમાં, અક્ષોના સંદર્ભમાં રેખાની દિશાને અનન્ય રીતે વ્યાખ્યાયિત કરવા માટે કેટલા ખૂણાઓની જરૂર પડે છે?",
+      "options": [
+        "1 angle with the X-axis",
+        "2 angles with X and Y axes",
+        "3 angles with X, Y, and Z axes",
+        "4 angles including the origin"
+      ],
+      "options_hi": [
+        "X-अक्ष के साथ 1 कोण",
+        "X और Y अक्षों के साथ 2 कोण",
+        "X, Y और Z अक्षों के साथ 3 कोण",
+        "मूल बिंदु सहित 4 कोण"
+      ],
+      "options_gu": [
+        "X-અક્ષ સાથે 1 ખૂણો",
+        "X અને Y અક્ષો સાથે 2 ખૂણા",
+        "X, Y અને Z અક્ષો સાથે 3 ખૂણા",
+        "ઉગમબિંદુ સહિત 4 ખૂણા"
+      ],
+      "correct_index": 2,
+      "explanation": "In 3D space, a line makes three angles α, β, and γ with the positive directions of the X, Y, and Z axes respectively. These are called direction angles, and their cosines (l = cos α, m = cos β, n = cos γ) are called direction cosines.",
+      "explanation_hi": "3D स्थान में, एक रेखा क्रमशः X, Y और Z अक्षों की धनात्मक दिशाओं के साथ तीन कोण α, β, और γ बनाती है। इन्हें दिक्-कोण (direction angles) कहा जाता है, और इनके कोसाइन (l = cos α, m = cos β, n = cos γ) को दिक्-कोसाइन (direction cosines) कहा जाता है।",
+      "explanation_gu": "3D અવકાશમાં, રેખા X, Y અને Z અક્ષોની ધન દિશા સાથે અનુક્રમે ત્રણ ખૂણા α, β, અને γ બનાવે છે। આને દિક-ખૂણા (direction angles) કહેવામાં આવે છે, અને તેના કોસાઇન (l = cos α, m = cos β, n = cos γ) ને દિક-કોસાઇન (direction cosines) કહેવાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_003",
+      "type": "discovery",
+      "title": "Fundamental Relation of Direction Cosines",
+      "title_hi": "दिक्-कोसाइन का मूल संबंध",
+      "title_gu": "દિક-કોસાઇનનો મૂળભૂત સંબંધ",
+      "body": "Let a line passing through the origin make angles α, β, γ with the X, Y, and Z axes respectively. Take a point P(x, y, z) on the line at a distance r from the origin O.\n\nFrom right triangles formed by dropping perpendiculars onto the axes:\nx = r cos α = r l\ny = r cos β = r m\nz = r cos γ = r n\n\nSince distance OP = r = √(x² + y² + z²):\nr² = x² + y² + z² = (rl)² + (rm)² + (rn)² = r²(l² + m² + n²)\n\nDividing both sides by r² (r ≠ 0):\nl² + m² + n² = cos² α + cos² β + cos² γ = 1\n\nKey Takeaway: The sum of the squares of direction cosines of any line is ALWAYS equal to 1.",
+      "body_hi": "माना मूल बिंदु से गुजरने वाली एक रेखा X, Y और Z अक्षों के साथ क्रमशः α, β, γ कोण बनाती है। मूल बिंदु O से r दूरी पर रेखा पर एक बिंदु P(x, y, z) लें।\n\nअक्षों पर लंब गिराकर बनने वाले समकोण त्रिभुजों से:\nx = r cos α = r l\ny = r cos β = r m\nz = r cos γ = r n\n\nचूंकि दूरी OP = r = √(x² + y² + z²):\nr² = x² + y² + z² = (rl)² + (rm)² + (rn)² = r²(l² + m² + n²)\n\nदोनों पक्षों को r² (r ≠ 0) से विभाजित करने पर:\nl² + m² + n² = cos² α + cos² β + cos² γ = 1\n\nमुख्य निष्कर्ष: किसी भी रेखा के दिक्-कोसाइन के वर्गों का योग हमेशा 1 के बराबर होता है।",
+      "body_gu": "ધારો કે ઉગમબિંદુમાંથી પસાર થતી રેખા X, Y અને Z અક્ષો સાથે અનુક્રમે α, β, γ ખૂણા બનાવે છે। ઉગમબિંદુ O થી r અંતરે રેખા પરનું એક બિંદુ P(x, y, z) લો।\n\nઅક્ષો પર લંબ દોરીને બનતા કાટકોણ ત્રિકોણ પરથી:\nx = r cos α = r l\ny = r cos β = r m\nz = r cos γ = r n\n\nઅંતર OP = r = √(x² + y² + z²) હોવાથી:\nr² = x² + y² + z² = (rl)² + (rm)² + (rn)² = r²(l² + m² + n²)\n\nબંને બાજુ r² વડે ભાગતા (r ≠ 0):\nl² + m² + n² = cos² α + cos² β + cos² γ = 1\n\nમુખ્ય સિદ્ધાંત: કોઈપણ રેખાના દિક-કોસાઇનના વર્ગોનો સરવાળો હંમેશા 1 થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_004",
+      "type": "theory",
+      "title": "Comprehensive Theory: Lines in 3D Space",
+      "title_hi": "व्यापक सिद्धांत: 3D स्थान में रेखाएँ",
+      "title_gu": "સમગ્ર સિદ્ધાંત: 3D અવકાશમાં રેખાઓ",
+      "body": "1. DIRECTION RATIOS (a, b, c):\nNumbers proportional to direction cosines (l, m, n) are direction ratios.\n  l = a / √(a² + b² + c²), m = b / √(a² + b² + c²), n = c / √(a² + b² + c²)\n\n2. EQUATION OF A LINE PASSING THROUGH A POINT ā AND PARALLEL TO VECTOR b̄:\n  - Vector Form: r̄ = ā + λb̄\n  - Cartesian Form: (x - x₁)/a = (y - y₁)/b = (z - z₁)/c\n\n3. EQUATION OF A LINE PASSING THROUGH TWO POINTS A(x₁, y₁, z₁) AND B(x₂, y₂, z₂):\n  - Vector Form: r̄ = ā + λ(b̄ - ā)\n  - Cartesian Form: (x - x₁)/(x₂ - x₁) = (y - y₁)/(y₂ - y₁) = (z - z₁)/(z₂ - z₁)\n\n4. ANGLE BETWEEN TWO LINES (with direction vectors b̄₁ and b̄₂):\n  cos θ = |b̄₁ · b̄₂| / (|b̄₁| |b̄₂|)\n  - Perpendicular if: a₁a₂ + b₁b₂ + c₁c₂ = 0\n  - Parallel if: a₁/a₂ = b₁/b₂ = c₁/c₂\n\n5. SHORTEST DISTANCE BETWEEN SKEW LINES:\nSkew lines are non-parallel, non-intersecting lines in 3D.\n  d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂|\n\n6. DISTANCE BETWEEN PARALLEL LINES (r̄ = ā₁ + λb̄ and r̄ = ā₂ + μb̄):\n  d = |b̄ × (ā₂ - ā₁)| / |b̄|",
+      "body_hi": "1. दिक्-अनुपात (a, b, c):\nदिक्-कोसाइन (l, m, n) के समानुपाती संख्याओं को दिक्-अनुपात कहते हैं।\n  l = a / √(a² + b² + c²), m = b / √(a² + b² + c²), n = c / √(a² + b² + c²)\n\n2. बिंदु ā से गुजरने वाली और सदिश b̄ के समानांतर रेखा का समीकरण:\n  - सदिश रूप: r̄ = ā + λb̄\n  - कार्तिए रूप: (x - x₁)/a = (y - y₁)/b = (z - z₁)/c\n\n3. दो बिंदुओं A(x₁, y₁, z₁) और B(x₂, y₂, z₂) से गुजरने वाली रेखा का समीकरण:\n  - सदिश रूप: r̄ = ā + λ(b̄ - ā)\n  - कार्तिए रूप: (x - x₁)/(x₂ - x₁) = (y - y₁)/(y₂ - y₁) = (z - z₁)/(z₂ - z₁)\n\n4. दो रेखाओं के बीच का कोण (दिशामक सदिश b̄₁ और b̄₂ के साथ):\n  cos θ = |b̄₁ · b̄₂| / (|b̄₁| |b̄₂|)\n  - लंबवत यदि: a₁a₂ + b₁b₂ + c₁c₂ = 0\n  - समानांतर यदि: a₁/a₂ = b₁/b₂ = c₁/c₂\n\n5. विषमतलीय (Skew) रेखाओं के बीच की न्यूनतम दूरी:\nविषमतलीय रेखाएँ वे रेखाएँ हैं जो न तो समानांतर होती हैं और न ही प्रतिच्छेद करती हैं।\n  d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂|\n\n6. समानांतर रेखाओं के बीच की दूरी:\n  d = |b̄ × (ā₂ - ā₁)| / |b̄|",
+      "body_gu": "1. દિક-ગુણોત્તર (a, b, c):\nદિક-કોસાઇન (l, m, n) ના પ્રમાણમાં રહેલી સંખ્યાઓને દિક-ગુણોત્તર કહે છે.\n  l = a / √(a² + b² + c²), m = b / √(a² + b² + c²), n = c / √(a² + b² + c²)\n\n2. બિંદુ ā માંથી પસાર થતી અને સદિશ b̄ ને સમાંતર રેખાનું સમીકરણ:\n  - સદિશ સ્વરૂપ: r̄ = ā + λb̄\n  - કાર્તેઝીય સ્વરૂપ: (x - x₁)/a = (y - y₁)/b = (z - z₁)/c\n\n3. બે બિંદુઓ A(x₁, y₁, z₁) અને B(x₂, y₂, z₂) માંથી પસાર થતી રેખાનું સમીકરણ:\n  - સદિશ સ્વરૂપ: r̄ = ā + λ(b̄ - ā)\n  - કાર્તેઝીય સ્વરૂપ: (x - x₁)/(x₂ - x₁) = (y - y₁)/(y₂ - y₁) = (z - z₁)/(z₂ - z₁)\n\n4. બે રેખાઓ વચ્ચેનો ખૂણો (દિશા સદિશ b̄₁ અને b̄₂ સાથે):\n  cos θ = |b̄₁ · b̄₂| / (|b̄₁| |b̄₂|)\n  - પરસ્પર લંબ જો: a₁a₂ + b₁b₂ + c₁c₂ = 0\n  - સમાંતર જો: a₁/a₂ = b₁/b₂ = c₁/c₂\n\n5. વિષમતલીય (Skew) રેખાઓ વચ્ચેનું લઘુત્તમ અંતર:\nજે રેખાઓ સમાંતર ન હોય અને છેદતી પણ ન હોય તેમને વિષમતલીય રેખાઓ કહે છે.\n  d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂|\n\n6. સમાંતર રેખાઓ વચ્ચેનું અંતર:\n  d = |b̄ × (ā₂ - ā₁)| / |b̄|"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_005",
+      "type": "knowledge_check",
+      "title": "Check Understanding: Direction Cosines",
+      "title_hi": "समझ की जाँच: दिक्-कोसाइन",
+      "title_gu": "સમજની ચકાસણી: દિક-કોસાઇન",
+      "question": "If a line makes angles 90°, 60°, and 30° with the X, Y, and Z axes respectively, what are its direction cosines?",
+      "question_hi": "यदि कोई रेखा X, Y और Z अक्षों के साथ क्रमशः 90°, 60° और 30° का कोण बनाती है, तो इसके दिक्-कोसाइन क्या हैं?",
+      "question_gu": "જો કોઈ રેખા X, Y અને Z અક્ષો સાથે અનુક્રમે 90°, 60° અને 30° ના ખૂણા બનાવે, તો તેના દિક-કોસાઇન કયા થશે?",
+      "options": [
+        "0, 1/2, √3/2",
+        "1, 1/2, 1/2",
+        "0, √3/2, 1/2",
+        "0, 1/2, 1/2"
+      ],
+      "options_hi": [
+        "0, 1/2, √3/2",
+        "1, 1/2, 1/2",
+        "0, √3/2, 1/2",
+        "0, 1/2, 1/2"
+      ],
+      "options_gu": [
+        "0, 1/2, √3/2",
+        "1, 1/2, 1/2",
+        "0, √3/2, 1/2",
+        "0, 1/2, 1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction cosines are l = cos 90° = 0, m = cos 60° = 1/2, n = cos 30° = √3/2. Notice that 0² + (1/2)² + (√3/2)² = 0 + 1/4 + 3/4 = 1.",
+      "explanation_hi": "दिक्-कोसाइन हैं: l = cos 90° = 0, m = cos 60° = 1/2, n = cos 30° = √3/2। ध्यान दें कि 0² + (1/2)² + (√3/2)² = 0 + 1/4 + 3/4 = 1।",
+      "explanation_gu": "દિક-કોસાઇન l = cos 90° = 0, m = cos 60° = 1/2, n = cos 30° = √3/2 થાય. અહીં 0² + (1/2)² + (√3/2)² = 0 + 1/4 + 3/4 = 1 ચકાસી શકાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_006",
+      "type": "reflection",
+      "title": "Conceptual Insight: Why Skew Lines Exist Only in 3D",
+      "title_hi": "अवधारणात्मक अंतर्दृष्टि: विषमतलीय रेखाएँ केवल 3D में क्यों होती हैं?",
+      "title_gu": "સંકલ્પનાત્મક સમજ: વિષમતલીય રેખાઓ માત્ર 3D માં જ શા માટે હોય છે?",
+      "body": "In 2D plane geometry, two non-parallel lines MUST intersect at some point. However, in 3D space, two lines can be non-parallel AND never intersect! \n\nThink of a highway overpass: the road on top goes East-West, while the road below goes North-South. They do not cross each other because they are in different parallel planes. These are SKEW lines. The shortest distance between them is measured along their common perpendicular line.",
+      "body_hi": "2D समतल ज्यामिति में, दो गैर-समानांतर रेखाओं को किसी न किसी बिंदु पर प्रतिच्छेद करना ही पड़ता है। हालांकि, 3D स्थान में, दो रेखाएं गैर-समानांतर भी हो सकती हैं और कभी प्रतिच्छेद भी नहीं कर सकतीं!\n\nफ्लाईओवर (ओवरपास) के बारे में सोचें: ऊपर की सड़क पूर्व-पश्चिम जाती है, जबकि नीचे की सड़क उत्तर-दक्षिण जाती है। वे एक-दूसरे को नहीं काटतीं क्योंकि वे अलग-अलग समानांतर समतलों में हैं। इन्हें विषमतलीय (SKEW) रेखाएँ कहते हैं। उनके बीच की न्यूनतम दूरी उनकी उभयनिष्ठ लंबवत रेखा के अनुदिश मापी जाती है।",
+      "body_gu": "2D સમતલ ભૂમિતિમાં, બે અસમાંતર રેખાઓ એકબીજાને છેદે જ છે. જો કે, 3D અવકાશમાં, બે રેખાઓ અસમાંતર હોવા છતાં પણ ક્યારેય ન છેદે તેવું બની શકે!\n\nઓવરબ્રિજનું ઉદાહરણ લો: ઉપરનો રસ્તો પૂર્વ-પશ્ચિમ જાય છે, જ્યારે નીચેનો રસ્તો ઉત્તર-દક્ષિણ જાય છે. તેઓ જુદા જુદા સમાંતર સમતલોમાં હોવાથી એકબીજાને છેદતા નથી. આને વિષમતલીય (SKEW) રેખાઓ કહે છે. તેમની વચ્ચેનું લઘુત્તમ અંતર તેમની સામાન્ય લંબ રેખા પર મપાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_007",
+      "type": "connection",
+      "title": "Real-World Application: Air Traffic Control Collision Avoidance",
+      "title_hi": "वास्तविक जीवन में अनुप्रयोग: हवाई यातायात नियंत्रण टकराव निवारण",
+      "title_gu": "વાસ્તવિક ઉપયોગ: એર ટ્રાફિક કંટ્રોલ ટક્કર નિવારણ",
+      "body": "Modern Automated Collision Avoidance Systems (TCAS) in commercial airliners calculate the paths of two nearby planes as vectors in 3D space:\n  r̄₁ = ā₁ + t v̄₁\n  r̄₂ = ā₂ + t v̄₂\n\nBy evaluating the shortest distance between these two 3D lines using the vector formula d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂|, the flight computer instantly determines if the safety margin (usually 1,000 feet vertically or 5 miles horizontally) will be breached, issuing automated climb or descend commands to the pilots.",
+      "body_hi": "वाणिज्यिक एयरलाइनों में आधुनिक स्वचालित टकराव निवारण प्रणाली (TCAS) 3D स्थान में दो नजदीकी विमानों के रास्तों की गणना सदिशों के रूप में करती है:\n  r̄₁ = ā₁ + t v̄₁\n  r̄₂ = ā₂ + t v̄₂\n\nसदिश सूत्र d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂| का उपयोग करके इन दो 3D रेखाओं के बीच की न्यूनतम दूरी का मूल्यांकन करके, फ्लाइट कंप्यूटर तुरंत निर्धारित करता है कि सुरक्षा मार्जिन का उल्लंघन होगा या नहीं, और पायलटों को चढ़ने या उतरने के स्वचालित आदेश देता है।",
+      "body_gu": "કોમર્શિયલ એરલાઇન્સમાં આધુનિક ઓટોમેટેડ કોલિઝન એવોઇડન્સ સિસ્ટમ (TCAS) 3D અવકાશમાં બે નજીકના વિમાનોના માર્ગોની ગણતરી સદિશ તરીકે કરે છે:\n  r̄₁ = ā₁ + t v̄₁\n  r̄₂ = ā₂ + t v̄₂\n\nસદિશ સૂત્ર d = |(b̄₁ × b̄₂) · (ā₂ - ā₁)| / |b̄₁ × b̄₂| નો ઉપયોગ કરીને આ બે 3D રેખાઓ વચ્ચેના લઘુત્તમ અંતરનું મૂલ્યાંકન કરીને, ફ્લાઇટ કોમ્પ્યુટર તરત જ નક્કી કરે છે કે સુરક્ષા અંતર જાળવાશે કે નહીં, અને પાઇલોટ્સને ઊંચાઈ વધારવા કે ઘટાડવાના ઓટોમેટિક આદેશો આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Perpendicular Lines",
+      "title_hi": "मास्टरी चुनौती: लंबवत रेखाएँ",
+      "title_gu": "માસ્ટરી ચેલેન્જ: પરસ્પર લંબ રેખાઓ",
+      "question": "Find the value of p so that the lines L₁: (1 - x)/3 = (7y - 14)/2p = (z - 3)/2 and L₂: (7 - 7x)/3p = (y - 5)/1 = (6 - z)/5 are perpendicular to each other.",
+      "question_hi": "p का मान ज्ञात कीजिए ताकि रेखाएँ L₁: (1 - x)/3 = (7y - 14)/2p = (z - 3)/2 और L₂: (7 - 7x)/3p = (y - 5)/1 = (6 - z)/5 एक दूसरे के लंबवत हों।",
+      "question_gu": "p ની કિંમત શોધો જેથી રેખાઓ L₁: (1 - x)/3 = (7y - 14)/2p = (z - 3)/2 અને L₂: (7 - 7x)/3p = (y - 5)/1 = (6 - z)/5 પરસ્પર લંબ થાય.",
+      "options": [
+        "p = 70 / 11",
+        "p = 11 / 70",
+        "p = 7 / 11",
+        "p = -70 / 11"
+      ],
+      "options_hi": [
+        "p = 70 / 11",
+        "p = 11 / 70",
+        "p = 7 / 11",
+        "p = -70 / 11"
+      ],
+      "options_gu": [
+        "p = 70 / 11",
+        "p = 11 / 70",
+        "p = 7 / 11",
+        "p = -70 / 11"
+      ],
+      "correct_index": 0,
+      "explanation": "Standard form of L₁: (x - 1)/(-3) = (y - 2)/(2p/7) = (z - 3)/2. Direction ratios: a₁ = -3, b₁ = 2p/7, c₁ = 2.\nStandard form of L₂: (x - 1)/(-3p/7) = (y - 5)/1 = (z - 6)/(-5). Direction ratios: a₂ = -3p/7, b₂ = 1, c₂ = -5.\nFor perpendicularity: a₁a₂ + b₁b₂ + c₁c₂ = 0\n(-3)(-3p/7) + (2p/7)(1) + (2)(-5) = 0\n9p/7 + 2p/7 - 10 = 0 => 11p/7 = 10 => p = 70/11.",
+      "explanation_hi": "L₁ का मानक रूप: (x - 1)/(-3) = (y - 2)/(2p/7) = (z - 3)/2। दिक्-अनुपात: a₁ = -3, b₁ = 2p/7, c₁ = 2।\nL₂ का मानक रूप: (x - 1)/(-3p/7) = (y - 5)/1 = (z - 6)/(-5)। दिक्-अनुपात: a₂ = -3p/7, b₂ = 1, c₂ = -5।\nलंबवत होने के लिए: a₁a₂ + b₁b₂ + c₁c₂ = 0\n(-3)(-3p/7) + (2p/7)(1) + (2)(-5) = 0\n9p/7 + 2p/7 - 10 = 0 => 11p/7 = 10 => p = 70/11।",
+      "explanation_gu": "L₁ નું પ્રમાણિત સ્વરૂપ: (x - 1)/(-3) = (y - 2)/(2p/7) = (z - 3)/2. દિક-ગુણોત્તર: a₁ = -3, b₁ = 2p/7, c₁ = 2.\nL₂ નું પ્રમાણિત સ્વરૂપ: (x - 1)/(-3p/7) = (y - 5)/1 = (z - 6)/(-5). દિક-ગુણોત્તર: a₂ = -3p/7, b₂ = 1, c₂ = -5.\nલંબ હોવાની શરત: a₁a₂ + b₁b₂ + c₁c₂ = 0\n(-3)(-3p/7) + (2p/7)(1) + (2)(-5) = 0\n9p/7 + 2p/7 - 10 = 0 => 11p/7 = 10 => p = 70/11."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_009",
+      "type": "mcq",
+      "title": "Exercise 11.1 - Question 1",
+      "title_hi": "अभ्यास 11.1 - प्रश्न 1",
+      "title_gu": "સ્વાધ્યાય 11.1 - પ્રશ્ન 1",
+      "question": "If a line makes angles 90°, 135°, 45° with the X, Y and Z axes respectively, find its direction cosines.",
+      "question_hi": "यदि एक रेखा X, Y और Z अक्षों के साथ क्रमशः 90°, 135°, 45° के कोण बनाती है, तो इसके दिक्-कोसाइन ज्ञात कीजिए।",
+      "question_gu": "જો એક રેખા X, Y અને Z અક્ષો સાથે અનુક્રમે 90°, 135°, 45° ના ખૂણા બનાવે, તો તેના દિક-કોસાઇન શોધો.",
+      "options": [
+        "0, -1/√2, 1/√2",
+        "0, 1/√2, 1/√2",
+        "1, -1/√2, 1/√2",
+        "0, -1/2, 1/2"
+      ],
+      "options_hi": [
+        "0, -1/√2, 1/√2",
+        "0, 1/√2, 1/√2",
+        "1, -1/√2, 1/√2",
+        "0, -1/2, 1/2"
+      ],
+      "options_gu": [
+        "0, -1/√2, 1/√2",
+        "0, 1/√2, 1/√2",
+        "1, -1/√2, 1/√2",
+        "0, -1/2, 1/2"
+      ],
+      "correct_index": 0,
+      "explanation": "l = cos(90°) = 0; m = cos(135°) = -1/√2; n = cos(45°) = 1/√2. So direction cosines are (0, -1/√2, 1/√2).",
+      "explanation_hi": "l = cos(90°) = 0; m = cos(135°) = -1/√2; n = cos(45°) = 1/√2। इसलिए दिक्-कोसाइन (0, -1/√2, 1/√2) हैं।",
+      "explanation_gu": "l = cos(90°) = 0; m = cos(135°) = -1/√2; n = cos(45°) = 1/√2. તેથી દિક-કોસાઇન (0, -1/√2, 1/√2) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_010",
+      "type": "mcq",
+      "title": "Exercise 11.1 - Question 2",
+      "title_hi": "अभ्यास 11.1 - प्रश्न 2",
+      "title_gu": "સ્વાધ્યાય 11.1 - પ્રશ્ન 2",
+      "question": "Find the direction cosines of a line which makes equal angles with the coordinate axes.",
+      "question_hi": "निर्देशांक अक्षों के साथ समान कोण बनाने वाली रेखा के दिक्-कोसाइन ज्ञात कीजिए।",
+      "question_gu": "યામ અક્ષો સાથે સમાન ખૂણા બનાવતી રેખાના દિક-કોસાઇન શોધો.",
+      "options": [
+        "±(1/√3, 1/√3, 1/√3)",
+        "±(1/3, 1/3, 1/3)",
+        "±(1/√2, 1/√2, 1/√2)",
+        "±(1, 1, 1)"
+      ],
+      "options_hi": [
+        "±(1/√3, 1/√3, 1/√3)",
+        "±(1/3, 1/3, 1/3)",
+        "±(1/√2, 1/√2, 1/√2)",
+        "±(1, 1, 1)"
+      ],
+      "options_gu": [
+        "±(1/√3, 1/√3, 1/√3)",
+        "±(1/3, 1/3, 1/3)",
+        "±(1/√2, 1/√2, 1/√2)",
+        "±(1, 1, 1)"
+      ],
+      "correct_index": 0,
+      "explanation": "Since α = β = γ, l = m = n = cos α. Using l² + m² + n² = 1 => 3 cos² α = 1 => cos α = ±1/√3. Direction cosines are ±(1/√3, 1/√3, 1/√3).",
+      "explanation_hi": "चूंकि α = β = γ, l = m = n = cos α। l² + m² + n² = 1 का उपयोग करने पर => 3 cos² α = 1 => cos α = ±1/√3। दिक्-कोसाइन ±(1/√3, 1/√3, 1/√3) हैं।",
+      "explanation_gu": "α = β = γ હોવાથી, l = m = n = cos α. l² + m² + n² = 1 પરથી => 3 cos² α = 1 => cos α = ±1/√3. દિક-કોસાઇન ±(1/√3, 1/√3, 1/√3) થાય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_011",
+      "type": "mcq",
+      "title": "Exercise 11.1 - Question 3",
+      "title_hi": "अभ्यास 11.1 - प्रश्न 3",
+      "title_gu": "સ્વાધ્યાય 11.1 - પ્રશ્ન 3",
+      "question": "If a line has the direction ratios -18, 12, -4, then what are its direction cosines?",
+      "question_hi": "यदि किसी रेखा के दिक्-अनुपात -18, 12, -4 हैं, तो इसके दिक्-कोसाइन क्या हैं?",
+      "question_gu": "જો રેખાના દિક-ગુણોત્તર -18, 12, -4 હોય, તો તેના દિક-કોસાઇન કયા થશે?",
+      "options": [
+        "-9/11, 6/11, -2/11",
+        "-18/22, 12/22, -4/22",
+        "-9/22, 6/22, -2/22",
+        "-3/11, 2/11, -1/11"
+      ],
+      "options_hi": [
+        "-9/11, 6/11, -2/11",
+        "-18/22, 12/22, -4/22",
+        "-9/22, 6/22, -2/22",
+        "-3/11, 2/11, -1/11"
+      ],
+      "options_gu": [
+        "-9/11, 6/11, -2/11",
+        "-18/22, 12/22, -4/22",
+        "-9/22, 6/22, -2/22",
+        "-3/11, 2/11, -1/11"
+      ],
+      "correct_index": 0,
+      "explanation": "√(a² + b² + c²) = √((-18)² + 12² + (-4)²) = √(324 + 144 + 16) = √484 = 22.\nl = -18/22 = -9/11, m = 12/22 = 6/11, n = -4/22 = -2/11.",
+      "explanation_hi": "√(a² + b² + c²) = √((-18)² + 12² + (-4)²) = √(324 + 144 + 16) = √484 = 22।\nl = -18/22 = -9/11, m = 12/22 = 6/11, n = -4/22 = -2/11।",
+      "explanation_gu": "√(a² + b² + c²) = √((-18)² + 12² + (-4)²) = √(324 + 144 + 16) = √484 = 22.\nl = -18/22 = -9/11, m = 12/22 = 6/11, n = -4/22 = -2/11."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_012",
+      "type": "true_false",
+      "title": "Exercise 11.1 - Question 4",
+      "title_hi": "अभ्यास 11.1 - प्रश्न 4",
+      "title_gu": "સ્વાધ્યાય 11.1 - પ્રશ્ન 4",
+      "question": "The points A(2, 3, 4), B(-1, -2, 1) and C(5, 8, 7) are collinear. State True or False.",
+      "question_hi": "बिंदु A(2, 3, 4), B(-1, -2, 1) और C(5, 8, 7) संरेख (collinear) हैं। सत्य या असत्य बताइए।",
+      "question_gu": "બિંદુઓ A(2, 3, 4), B(-1, -2, 1) અને C(5, 8, 7) સમરેખ છે. સાચું કે ખોટું જણાવો.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction ratios of AB are (-1-2, -2-3, 1-4) = (-3, -5, -3).\nDirection ratios of BC are (5-(-1), 8-(-2), 7-1) = (6, 10, 6).\nSince (6, 10, 6) = -2(-3, -5, -3), direction ratios are proportional, so AB is parallel to BC. Since B is common, A, B, C are collinear.",
+      "explanation_hi": "AB के दिक्-अनुपात: (-3, -5, -3)।\nBC के दिक्-अनुपात: (6, 10, 6)।\nचूंकि (6, 10, 6) = -2(-3, -5, -3), दिक्-अनुपात समानुपाती हैं, इसलिए AB, BC के समानांतर है। चूंकि B उभयनिष्ठ बिंदु है, इसलिए A, B, C संरेख हैं।",
+      "explanation_gu": "AB ના દિક-ગુણોત્તર: (-3, -5, -3).\nBC ના દિક-ગુણોત્તર: (6, 10, 6).\n(6, 10, 6) = -2(-3, -5, -3) હોવાથી દિક-ગુણોત્તર પ્રમાણમાં છે, તેથી AB અને BC સમાંતર છે. B શિરોબિંદુ સામાન્ય હોવાથી A, B, C સમરેખ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_013",
+      "type": "mcq",
+      "title": "Exercise 11.1 - Question 5",
+      "title_hi": "अभ्यास 11.1 - प्रश्न 5",
+      "title_gu": "સ્વાધ્યાય 11.1 - પ્રશ્ન 5",
+      "question": "Find the direction cosines of the side AB of a triangle with vertices A(3, 5, -4), B(-1, 1, 2) and C(-5, -5, -2).",
+      "question_hi": "शीर्षों A(3, 5, -4), B(-1, 1, 2) और C(-5, -5, -2) वाले त्रिभुज की भुजा AB के दिक्-कोसाइन ज्ञात कीजिए।",
+      "question_gu": "શિરોબિંદુઓ A(3, 5, -4), B(-1, 1, 2) અને C(-5, -5, -2) વાળા ત્રિકોણની બાજુ AB ના દિક-કોસાઇન શોધો.",
+      "options": [
+        "-2/√17, -2/√17, 3/√17",
+        "2/√17, 2/√17, -3/√17",
+        "-4/√17, -4/√17, 6/√17",
+        "-1/√17, -1/√17, 2/√17"
+      ],
+      "options_hi": [
+        "-2/√17, -2/√17, 3/√17",
+        "2/√17, 2/√17, -3/√17",
+        "-4/√17, -4/√17, 6/√17",
+        "-1/√17, -1/√17, 2/√17"
+      ],
+      "options_gu": [
+        "-2/√17, -2/√17, 3/√17",
+        "2/√17, 2/√17, -3/√17",
+        "-4/√17, -4/√17, 6/√17",
+        "-1/√17, -1/√17, 2/√17"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction ratios of AB = (-1-3, 1-5, 2-(-4)) = (-4, -4, 6).\nMagnitude = √((-4)² + (-4)² + 6²) = √(16 + 16 + 36) = √68 = 2√17.\nDirection cosines of AB = (-4/(2√17), -4/(2√17), 6/(2√17)) = (-2/√17, -2/√17, 3/√17).",
+      "explanation_hi": "AB के दिक्-अनुपात = (-4, -4, 6)।\nपरिमाण = √(16 + 16 + 36) = √68 = 2√17।\nAB के दिक्-कोसाइन = (-2/√17, -2/√17, 3/√17)।",
+      "explanation_gu": "AB ના દિક-ગુણોત્તર = (-4, -4, 6).\nમાન = √(16 + 16 + 36) = √68 = 2√17.\nAB ના દિક-કોસાઇન = (-2/√17, -2/√17, 3/√17)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_014",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 1",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 1",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 1",
+      "question": "What is the angle between two lines with direction cosines (12/13, -3/13, -4/13) and (4/13, 12/13, 3/13)?",
+      "question_hi": "दिक्-कोसाइन (12/13, -3/13, -4/13) और (4/13, 12/13, 3/13) वाली दो रेखाओं के बीच का कोण क्या है?",
+      "question_gu": "દિક-કોસાઇન (12/13, -3/13, -4/13) અને (4/13, 12/13, 3/13) ધરાવતી બે રેખાઓ વચ્ચેનો ખૂણો કેટલો થાય?",
+      "options": [
+        "90° (Mutually Perpendicular)",
+        "0° (Parallel)",
+        "45°",
+        "60°"
+      ],
+      "options_hi": [
+        "90° (परस्पर लंबवत)",
+        "0° (समानांतर)",
+        "45°",
+        "60°"
+      ],
+      "options_gu": [
+        "90° (પરસ્પર લંબ)",
+        "0° (સમાંતર)",
+        "45°",
+        "60°"
+      ],
+      "correct_index": 0,
+      "explanation": "cos θ = l₁l₂ + m₁m₂ + n₁n₂ = (12/13)(4/13) + (-3/13)(12/13) + (-4/13)(3/13) = (48 - 36 - 12)/169 = 0. So θ = 90°.",
+      "explanation_hi": "cos θ = l₁l₂ + m₁m₂ + n₁n₂ = (12*4 - 3*12 - 4*3)/169 = (48 - 36 - 12)/169 = 0। अतः θ = 90°।",
+      "explanation_gu": "cos θ = l₁l₂ + m₁m₂ + n₁n₂ = (48 - 36 - 12)/169 = 0. તેથી θ = 90°."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_015",
+      "type": "true_false",
+      "title": "Exercise 11.2 - Question 2",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 2",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 2",
+      "question": "The line passing through (1, -1, 2) and (3, 4, -2) is perpendicular to the line passing through (0, 3, 2) and (3, 5, 6). State True or False.",
+      "question_hi": "(1, -1, 2) और (3, 4, -2) से होकर जाने वाली रेखा, (0, 3, 2) और (3, 5, 6) से होकर जाने वाली रेखा पर लंबवत है। सत्य या असत्य बताइए।",
+      "question_gu": "(1, -1, 2) અને (3, 4, -2) માંથી પસાર થતી રેખા એ (0, 3, 2) અને (3, 5, 6) માંથી પસાર થતી રેખાને લંબ છે. સાચું કે ખોટું જણાવો.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction ratios of L₁: a₁ = 3-1 = 2, b₁ = 4-(-1) = 5, c₁ = -2-2 = -4.\nDirection ratios of L₂: a₂ = 3-0 = 3, b₂ = 5-3 = 2, c₂ = 6-2 = 4.\na₁a₂ + b₁b₂ + c₁c₂ = 2(3) + 5(2) + (-4)(4) = 6 + 10 - 16 = 0. Hence perpendicular.",
+      "explanation_hi": "L₁ के दिक्-अनुपात: (2, 5, -4)। L₂ के दिक्-अनुपात: (3, 2, 4)।\na₁a₂ + b₁b₂ + c₁c₂ = 2(3) + 5(2) + (-4)(4) = 6 + 10 - 16 = 0। अतः लंबवत हैं।",
+      "explanation_gu": "L₁ ના દિક-ગુણોત્તર: (2, 5, -4). L₂ ના દિક-ગુણોત્તર: (3, 2, 4).\na₁a₂ + b₁b₂ + c₁c₂ = 2(3) + 5(2) + (-4)(4) = 6 + 10 - 16 = 0. તેથી પરસ્પર લંબ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_016",
+      "type": "true_false",
+      "title": "Exercise 11.2 - Question 3",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 3",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 3",
+      "question": "The line passing through (4, 7, 8) and (2, 3, 4) is parallel to the line passing through (-1, -2, 1) and (1, 2, 5). State True or False.",
+      "question_hi": "(4, 7, 8) और (2, 3, 4) से होकर जाने वाली रेखा, (-1, -2, 1) और (1, 2, 5) से होकर जाने वाली रेखा के समानांतर है। सत्य या असत्य बताइए।",
+      "question_gu": "(4, 7, 8) અને (2, 3, 4) માંથી પસાર થતી રેખા એ (-1, -2, 1) અને (1, 2, 5) માંથી પસાર થતી રેખાને સમાંતર છે. સાચું કે ખોટું જણાવો.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction ratios of L₁: (2-4, 3-7, 4-8) = (-2, -4, -4).\nDirection ratios of L₂: (1-(-1), 2-(-2), 5-1) = (2, 4, 4).\nRatio: -2/2 = -4/4 = -4/4 = -1. Since direction ratios are proportional, lines are parallel.",
+      "explanation_hi": "L₁ के दिक्-अनुपात: (-2, -4, -4)। L₂ के दिक्-अनुपात: (2, 4, 4)।\nअनुपात = -1 (समानुपाती)। अतः रेखाएँ समानांतर हैं।",
+      "explanation_gu": "L₁ ના દિક-ગુણોત્તર: (-2, -4, -4). L₂ ના દિક-ગુણોત્તર: (2, 4, 4).\nગુણોત્તર -1 (સમપ્રમાણમાં) હોવાથી રેખાઓ સમાંતર છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_017",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 4",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 4",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 4",
+      "question": "Find the equation of the line which passes through the point (1, 2, 3) and is parallel to the vector 3î + 2ĵ - 2k̂.",
+      "question_hi": "उस रेखा का समीकरण ज्ञात कीजिए जो बिंदु (1, 2, 3) से होकर जाती है और सदिश 3î + 2ĵ - 2k̂ के समानांतर है।",
+      "question_gu": "બિંદુ (1, 2, 3) માંથી પસાર થતી અને સદિશ 3î + 2ĵ - 2k̂ ને સમાંતર રેખાનું સમીકરણ શોધો.",
+      "options": [
+        "r̄ = (î + 2ĵ + 3k̂) + λ(3î + 2ĵ - 2k̂)",
+        "r̄ = (3î + 2ĵ - 2k̂) + λ(î + 2ĵ + 3k̂)",
+        "r̄ = (î - 2ĵ + 3k̂) + λ(3î + 2ĵ + 2k̂)",
+        "r̄ = (î + 2ĵ - 3k̂) + λ(3î - 2ĵ - 2k̂)"
+      ],
+      "options_hi": [
+        "r̄ = (î + 2ĵ + 3k̂) + λ(3î + 2ĵ - 2k̂)",
+        "r̄ = (3î + 2ĵ - 2k̂) + λ(î + 2ĵ + 3k̂)",
+        "r̄ = (î - 2ĵ + 3k̂) + λ(3î + 2ĵ + 2k̂)",
+        "r̄ = (î + 2ĵ - 3k̂) + λ(3î - 2ĵ - 2k̂)"
+      ],
+      "options_gu": [
+        "r̄ = (î + 2ĵ + 3k̂) + λ(3î + 2ĵ - 2k̂)",
+        "r̄ = (3î + 2ĵ - 2k̂) + λ(î + 2ĵ + 3k̂)",
+        "r̄ = (î - 2ĵ + 3k̂) + λ(3î + 2ĵ + 2k̂)",
+        "r̄ = (î + 2ĵ - 3k̂) + λ(3î - 2ĵ - 2k̂)"
+      ],
+      "correct_index": 0,
+      "explanation": "Vector equation of line passing through point ā and parallel to b̄ is r̄ = ā + λb̄. Here ā = î + 2ĵ + 3k̂ and b̄ = 3î + 2ĵ - 2k̂.",
+      "explanation_hi": "बिंदु ā से गुजरने वाली और b̄ के समानांतर रेखा का सदिश समीकरण r̄ = ā + λb̄ होता है। यहाँ ā = î + 2ĵ + 3k̂ और b̄ = 3î + 2ĵ - 2k̂।",
+      "explanation_gu": "બિંદુ ā માંથી પસાર થતી અને b̄ ને સમાંતર રેખાનું સદિશ સમીકરણ r̄ = ā + λb̄ છે. અહીં ā = î + 2ĵ + 3k̂ અને b̄ = 3î + 2ĵ - 2k̂."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_018",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 5",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 5",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 5",
+      "question": "Find the Cartesian equation of the line passing through the point with position vector 2î - ĵ + 4k̂ and in the direction î + 2ĵ - k̂.",
+      "question_hi": "स्थिति सदिश 2î - ĵ + 4k̂ वाले बिंदु से गुजरने वाली और î + 2ĵ - k̂ की दिशा में जाने वाली रेखा का कार्तिए समीकरण ज्ञात कीजिए।",
+      "question_gu": "સ્થાન સદિશ 2î - ĵ + 4k̂ વાળા બિંદુમાંથી પસાર થતી અને î + 2ĵ - k̂ ની દિશાવાળી રેખાનું કાર્તેઝીય સમીકરણ શોધો.",
+      "options": [
+        "(x - 2)/1 = (y + 1)/2 = (z - 4)/(-1)",
+        "(x + 2)/1 = (y - 1)/2 = (z + 4)/(-1)",
+        "(x - 1)/2 = (y - 2)/(-1) = (z + 1)/4",
+        "(x - 2)/1 = (y - 1)/2 = (z - 4)/1"
+      ],
+      "options_hi": [
+        "(x - 2)/1 = (y + 1)/2 = (z - 4)/(-1)",
+        "(x + 2)/1 = (y - 1)/2 = (z + 4)/(-1)",
+        "(x - 1)/2 = (y - 2)/(-1) = (z + 1)/4",
+        "(x - 2)/1 = (y - 1)/2 = (z - 4)/1"
+      ],
+      "options_gu": [
+        "(x - 2)/1 = (y + 1)/2 = (z - 4)/(-1)",
+        "(x + 2)/1 = (y - 1)/2 = (z + 4)/(-1)",
+        "(x - 1)/2 = (y - 2)/(-1) = (z + 1)/4",
+        "(x - 2)/1 = (y - 1)/2 = (z - 4)/1"
+      ],
+      "correct_index": 0,
+      "explanation": "Point (x₁, y₁, z₁) = (2, -1, 4) and direction ratios (a, b, c) = (1, 2, -1). Cartesian form: (x - 2)/1 = (y + 1)/2 = (z - 4)/(-1).",
+      "explanation_hi": "बिंदु (x₁, y₁, z₁) = (2, -1, 4) और दिक्-अनुपात (a, b, c) = (1, 2, -1)। कार्तिए रूप: (x - 2)/1 = (y + 1)/2 = (z - 4)/(-1)।",
+      "explanation_gu": "બિંદુ (x₁, y₁, z₁) = (2, -1, 4) અને દિક-ગુણોત્તર (a, b, c) = (1, 2, -1). કાર્તેઝીય સ્વરૂપ: (x - 2)/1 = (y + 1)/2 = (z - 4)/(-1)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_019",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 6",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 6",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 6",
+      "question": "Convert the Cartesian equation (x + 3)/2 = (y - 5)/4 = (z + 6)/2 into vector form.",
+      "question_hi": "कार्तिए समीकरण (x + 3)/2 = (y - 5)/4 = (z + 6)/2 को सदिश रूप में परिवर्तित कीजिए।",
+      "question_gu": "કાર્તેઝીય સમીકરણ (x + 3)/2 = (y - 5)/4 = (z + 6)/2 ને સદિશ સ્વરૂપમાં ફેરવો.",
+      "options": [
+        "r̄ = (-3î + 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (3î - 5ĵ + 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (2î + 4ĵ + 2k̂) + λ(-3î + 5ĵ - 6k̂)",
+        "r̄ = (-3î - 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)"
+      ],
+      "options_hi": [
+        "r̄ = (-3î + 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (3î - 5ĵ + 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (2î + 4ĵ + 2k̂) + λ(-3î + 5ĵ - 6k̂)",
+        "r̄ = (-3î - 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)"
+      ],
+      "options_gu": [
+        "r̄ = (-3î + 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (3î - 5ĵ + 6k̂) + λ(2î + 4ĵ + 2k̂)",
+        "r̄ = (2î + 4ĵ + 2k̂) + λ(-3î + 5ĵ - 6k̂)",
+        "r̄ = (-3î - 5ĵ - 6k̂) + λ(2î + 4ĵ + 2k̂)"
+      ],
+      "correct_index": 0,
+      "explanation": "Line passes through (-3, 5, -6) so position vector ā = -3î + 5ĵ - 6k̂. Parallel to vector b̄ = 2î + 4ĵ + 2k̂. Vector equation is r̄ = ā + λb̄.",
+      "explanation_hi": "रेखा (-3, 5, -6) से गुजरती है इसलिए ā = -3î + 5ĵ - 6k̂। b̄ = 2î + 4ĵ + 2k̂ के समानांतर है। सदिश समीकरण r̄ = ā + λb̄ है।",
+      "explanation_gu": "રેખા (-3, 5, -6) માંથી પસાર થાય છે તેથી ā = -3î + 5ĵ - 6k̂. b̄ = 2î + 4ĵ + 2k̂ ને સમાંતર છે. સદિશ સમીકરણ r̄ = ā + λb̄ થાય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_020",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 7",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 7",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 7",
+      "question": "The Cartesian equation of a line is (x - 5)/3 = (y + 4)/7 = (z - 6)/2. Write its vector form.",
+      "question_hi": "एक रेखा का कार्तिए समीकरण (x - 5)/3 = (y + 4)/7 = (z - 6)/2 है। इसका सदिश रूप लिखिए।",
+      "question_gu": "એક રેખાનું કાર્તેઝીય સમીકરણ (x - 5)/3 = (y + 4)/7 = (z - 6)/2 છે. તેનું સદિશ સ્વરૂપ લખો.",
+      "options": [
+        "r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (-5î + 4ĵ - 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (3î + 7ĵ + 2k̂) + λ(5î - 4ĵ + 6k̂)",
+        "r̄ = (5î + 4ĵ + 6k̂) + λ(3î - 7ĵ + 2k̂)"
+      ],
+      "options_hi": [
+        "r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (-5î + 4ĵ - 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (3î + 7ĵ + 2k̂) + λ(5î - 4ĵ + 6k̂)",
+        "r̄ = (5î + 4ĵ + 6k̂) + λ(3î - 7ĵ + 2k̂)"
+      ],
+      "options_gu": [
+        "r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (-5î + 4ĵ - 6k̂) + λ(3î + 7ĵ + 2k̂)",
+        "r̄ = (3î + 7ĵ + 2k̂) + λ(5î - 4ĵ + 6k̂)",
+        "r̄ = (5î + 4ĵ + 6k̂) + λ(3î - 7ĵ + 2k̂)"
+      ],
+      "correct_index": 0,
+      "explanation": "Passing point = (5, -4, 6) => ā = 5î - 4ĵ + 6k̂. Direction vector b̄ = 3î + 7ĵ + 2k̂. Vector form: r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂).",
+      "explanation_hi": "गुजरने वाला बिंदु = (5, -4, 6) => ā = 5î - 4ĵ + 6k̂। दिशा सदिश b̄ = 3î + 7ĵ + 2k̂। सदिश रूप: r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂)।",
+      "explanation_gu": "પસાર થતું બિંદુ = (5, -4, 6) => ā = 5î - 4ĵ + 6k̂. દિશા સદિશ b̄ = 3î + 7ĵ + 2k̂. સદિશ સ્વરૂપ: r̄ = (5î - 4ĵ + 6k̂) + λ(3î + 7ĵ + 2k̂)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_021",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 8",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 8",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 8",
+      "question": "Find the Cartesian equation of the line passing through the origin and (5, -2, 3).",
+      "question_hi": "मूल बिंदु और (5, -2, 3) से गुजरने वाली रेखा का कार्तिए समीकरण ज्ञात कीजिए।",
+      "question_gu": "ઉગમબિંદુ અને (5, -2, 3) માંથી પસાર થતી રેખાનું કાર્તેઝીય સમીકરણ શોધો.",
+      "options": [
+        "x/5 = y/(-2) = z/3",
+        "(x - 5)/5 = (y + 2)/(-2) = (z - 3)/3",
+        "x/(-5) = y/2 = z/3",
+        "x/2 = y/5 = z/(-3)"
+      ],
+      "options_hi": [
+        "x/5 = y/(-2) = z/3",
+        "(x - 5)/5 = (y + 2)/(-2) = (z - 3)/3",
+        "x/(-5) = y/2 = z/3",
+        "x/2 = y/5 = z/(-3)"
+      ],
+      "options_gu": [
+        "x/5 = y/(-2) = z/3",
+        "(x - 5)/5 = (y + 2)/(-2) = (z - 3)/3",
+        "x/(-5) = y/2 = z/3",
+        "x/2 = y/5 = z/(-3)"
+      ],
+      "correct_index": 0,
+      "explanation": "Equation passing through (0,0,0) and (x₂, y₂, z₂) is x/x₂ = y/y₂ = z/z₂. Here, x/5 = y/(-2) = z/3.",
+      "explanation_hi": "(0,0,0) और (x₂, y₂, z₂) से गुजरने वाली रेखा का समीकरण x/x₂ = y/y₂ = z/z₂ होता है। यहाँ x/5 = y/(-2) = z/3।",
+      "explanation_gu": "(0,0,0) અને (x₂, y₂, z₂) માંથી પસાર થતી રેખાનું સમીકરણ x/x₂ = y/y₂ = z/z₂ છે. અહીં x/5 = y/(-2) = z/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_022",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 9",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 9",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 9",
+      "question": "Find the vector equation of the line passing through (3, -2, -5) and (3, -2, 6).",
+      "question_hi": "(3, -2, -5) और (3, -2, 6) से होकर जाने वाली रेखा का सदिश समीकरण ज्ञात कीजिए।",
+      "question_gu": "(3, -2, -5) અને (3, -2, 6) માંથી પસાર થતી રેખાનું સદિશ સમીકરણ શોધો.",
+      "options": [
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂)",
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(6î - 4ĵ + k̂)",
+        "r̄ = (3î - 2ĵ + 6k̂) + λ(3î - 2ĵ)",
+        "r̄ = (3î + 2ĵ - 5k̂) + λ(11k̂)"
+      ],
+      "options_hi": [
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂)",
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(6î - 4ĵ + k̂)",
+        "r̄ = (3î - 2ĵ + 6k̂) + λ(3î - 2ĵ)",
+        "r̄ = (3î + 2ĵ - 5k̂) + λ(11k̂)"
+      ],
+      "options_gu": [
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂)",
+        "r̄ = (3î - 2ĵ - 5k̂) + λ(6î - 4ĵ + k̂)",
+        "r̄ = (3î - 2ĵ + 6k̂) + λ(3î - 2ĵ)",
+        "r̄ = (3î + 2ĵ - 5k̂) + λ(11k̂)"
+      ],
+      "correct_index": 0,
+      "explanation": "b̄ - ā = (3-3)î + (-2-(-2))ĵ + (6-(-5))k̂ = 11k̂. Vector equation: r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂).",
+      "explanation_hi": "b̄ - ā = 0î + 0ĵ + 11k̂ = 11k̂। सदिश समीकरण: r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂)।",
+      "explanation_gu": "b̄ - ā = 0î + 0ĵ + 11k̂ = 11k̂. સદિશ સમીકરણ: r̄ = (3î - 2ĵ - 5k̂) + λ(11k̂)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_023",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 10",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 10",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 10",
+      "question": "Find the angle between the pair of lines: r̄ = 2î - 5ĵ + k̂ + λ(3î + 2ĵ + 6k̂) and r̄ = 7î - k̂ + μ(î + 2ĵ + 2k̂).",
+      "question_hi": "रेखाओं के युग्म के बीच का कोण ज्ञात कीजिए: r̄ = 2î - 5ĵ + k̂ + λ(3î + 2ĵ + 6k̂) और r̄ = 7î - k̂ + μ(î + 2ĵ + 2k̂)।",
+      "question_gu": "રેખાઓની જોડી વચ્ચેનો ખૂણો શોધો: r̄ = 2î - 5ĵ + k̂ + λ(3î + 2ĵ + 6k̂) અને r̄ = 7î - k̂ + μ(î + 2ĵ + 2k̂).",
+      "options": [
+        "cos⁻¹(19/21)",
+        "cos⁻¹(8/21)",
+        "cos⁻¹(12/21)",
+        "cos⁻¹(1/3)"
+      ],
+      "options_hi": [
+        "cos⁻¹(19/21)",
+        "cos⁻¹(8/21)",
+        "cos⁻¹(12/21)",
+        "cos⁻¹(1/3)"
+      ],
+      "options_gu": [
+        "cos⁻¹(19/21)",
+        "cos⁻¹(8/21)",
+        "cos⁻¹(12/21)",
+        "cos⁻¹(1/3)"
+      ],
+      "correct_index": 0,
+      "explanation": "b̄₁ = 3î + 2ĵ + 6k̂, b̄₂ = î + 2ĵ + 2k̂.\nb̄₁ · b̄₂ = 3(1) + 2(2) + 6(2) = 3 + 4 + 12 = 19.\n|b̄₁| = √(9 + 4 + 36) = √49 = 7; |b̄₂| = √(1 + 4 + 4) = √9 = 3.\ncos θ = 19 / (7 * 3) = 19 / 21 => θ = cos⁻¹(19/21).",
+      "explanation_hi": "b̄₁ · b̄₂ = 3(1) + 2(2) + 6(2) = 19। |b̄₁| = 7, |b̄₂| = 3। cos θ = 19 / 21 => θ = cos⁻¹(19/21)।",
+      "explanation_gu": "b̄₁ · b̄₂ = 3(1) + 2(2) + 6(2) = 19. |b̄₁| = 7, |b̄₂| = 3. cos θ = 19 / 21 => θ = cos⁻¹(19/21)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_024",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 11",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 11",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 11",
+      "question": "Find the angle between the lines: (x - 2)/2 = (y - 1)/5 = (z + 3)/(-3) and (x + 2)/(-1) = (y - 4)/8 = (z - 5)/4.",
+      "question_hi": "रेखाओं के बीच का कोण ज्ञात कीजिए: (x - 2)/2 = (y - 1)/5 = (z + 3)/(-3) और (x + 2)/(-1) = (y - 4)/8 = (z - 5)/4।",
+      "question_gu": "રેખાઓ વચ્ચેનો ખૂણો શોધો: (x - 2)/2 = (y - 1)/5 = (z + 3)/(-3) અને (x + 2)/(-1) = (y - 4)/8 = (z - 5)/4.",
+      "options": [
+        "cos⁻¹(26 / (9√38))",
+        "cos⁻¹(26 / 38)",
+        "cos⁻¹(13 / 38)",
+        "cos⁻¹(2 / 9)"
+      ],
+      "options_hi": [
+        "cos⁻¹(26 / (9√38))",
+        "cos⁻¹(26 / 38)",
+        "cos⁻¹(13 / 38)",
+        "cos⁻¹(2 / 9)"
+      ],
+      "options_gu": [
+        "cos⁻¹(26 / (9√38))",
+        "cos⁻¹(26 / 38)",
+        "cos⁻¹(13 / 38)",
+        "cos⁻¹(2 / 9)"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction vectors: b̄₁ = (2, 5, -3), b̄₂ = (-1, 8, 4).\nb̄₁ · b̄₂ = 2(-1) + 5(8) + (-3)(4) = -2 + 40 - 12 = 26.\n|b̄₁| = √(4 + 25 + 9) = √38, |b̄₂| = √(1 + 64 + 16) = √81 = 9.\ncos θ = 26 / (9√38) => θ = cos⁻¹(26 / (9√38)).",
+      "explanation_hi": "b̄₁ = (2, 5, -3), b̄₂ = (-1, 8, 4)।\nb̄₁ · b̄₂ = 26। |b̄₁| = √38, |b̄₂| = 9। cos θ = 26 / (9√38)।",
+      "explanation_gu": "b̄₁ = (2, 5, -3), b̄₂ = (-1, 8, 4).\nb̄₁ · b̄₂ = 26. |b̄₁| = √38, |b̄₂| = 9. cos θ = 26 / (9√38)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_025",
+      "type": "true_false",
+      "title": "Exercise 11.2 - Question 13",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 13",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 13",
+      "question": "Show that the lines (x - 5)/7 = (y + 2)/(-5) = z/1 and x/1 = y/2 = z/3 are perpendicular to each other. State True or False.",
+      "question_hi": "दर्शाइए कि रेखाएँ (x - 5)/7 = (y + 2)/(-5) = z/1 और x/1 = y/2 = z/3 परस्पर लंबवत हैं। सत्य या असत्य बताइए।",
+      "question_gu": "સાબિત કરો કે રેખાઓ (x - 5)/7 = (y + 2)/(-5) = z/1 અને x/1 = y/2 = z/3 પરસ્પર લંબ છે. સાચું કે ખોટું જણાવો.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "Direction ratios: (7, -5, 1) and (1, 2, 3).\na₁a₂ + b₁b₂ + c₁c₂ = 7(1) + (-5)(2) + 1(3) = 7 - 10 + 3 = 0. Therefore, the lines are perpendicular.",
+      "explanation_hi": "दिक्-अनुपात: (7, -5, 1) और (1, 2, 3)।\na₁a₂ + b₁b₂ + c₁c₂ = 7 - 10 + 3 = 0। इसलिए, रेखाएँ लंबवत हैं।",
+      "explanation_gu": "દિક-ગુણોત્તર: (7, -5, 1) અને (1, 2, 3).\na₁a₂ + b₁b₂ + c₁c₂ = 7 - 10 + 3 = 0. તેથી રેખાઓ પરસ્પર લંબ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_026",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 14",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 14",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 14",
+      "question": "Find the shortest distance between the lines r̄ = (î + 2ĵ + k̂) + λ(î - ĵ + k̂) and r̄ = (2î - ĵ - k̂) + μ(2î + ĵ + 2k̂).",
+      "question_hi": "रेखाओं r̄ = (î + 2ĵ + k̂) + λ(î - ĵ + k̂) और r̄ = (2î - ĵ - k̂) + μ(2î + ĵ + 2k̂) के बीच की न्यूनतम दूरी ज्ञात कीजिए।",
+      "question_gu": "રેખાઓ r̄ = (î + 2ĵ + k̂) + λ(î - ĵ + k̂) અને r̄ = (2î - ĵ - k̂) + μ(2î + ĵ + 2k̂) વચ્ચેનું લઘુત્તમ અંતર શોધો.",
+      "options": [
+        "3√2 / 2",
+        "3 / √2",
+        "√2 / 3",
+        "3√2"
+      ],
+      "options_hi": [
+        "3√2 / 2",
+        "3 / √2",
+        "√2 / 3",
+        "3√2"
+      ],
+      "options_gu": [
+        "3√2 / 2",
+        "3 / √2",
+        "√2 / 3",
+        "3√2"
+      ],
+      "correct_index": 0,
+      "explanation": "ā₂ - ā₁ = î - 3ĵ - 2k̂.\nb̄₁ × b̄₂ = |î ĵ k̂; 1 -1 1; 2 1 2| = î(-2 - 1) - ĵ(2 - 2) + k̂(1 - (-2)) = -3î + 0ĵ + 3k̂.\n|b̄₁ × b̄₂| = √((-3)² + 3²) = √18 = 3√2.\n(b̄₁ × b̄₂) · (ā₂ - ā₁) = -3(1) + 0(-3) + 3(-2) = -3 - 6 = -9.\nd = |-9| / (3√2) = 9 / (3√2) = 3 / √2 = 3√2 / 2.",
+      "explanation_hi": "ā₂ - ā₁ = î - 3ĵ - 2k̂। b̄₁ × b̄₂ = -3î + 3k̂। |b̄₁ × b̄₂| = 3√2। (b̄₁ × b̄₂) · (ā₂ - ā₁) = -9। d = 9 / (3√2) = 3/√2 = 3√2 / 2।",
+      "explanation_gu": "ā₂ - ā₁ = î - 3ĵ - 2k̂. b̄₁ × b̄₂ = -3î + 3k̂. |b̄₁ × b̄₂| = 3√2. (b̄₁ × b̄₂) · (ā₂ - ā₁) = -9. d = 9 / (3√2) = 3/√2 = 3√2 / 2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_027",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 15",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 15",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 15",
+      "question": "Find the shortest distance between the lines (x + 1)/7 = (y + 1)/(-6) = (z + 1)/1 and (x - 3)/1 = (y - 5)/(-2) = (z - 7)/1.",
+      "question_hi": "रेखाओं (x + 1)/7 = (y + 1)/(-6) = (z + 1)/1 और (x - 3)/1 = (y - 5)/(-2) = (z - 7)/1 के बीच की न्यूनतम दूरी ज्ञात कीजिए।",
+      "question_gu": "રેખાઓ (x + 1)/7 = (y + 1)/(-6) = (z + 1)/1 અને (x - 3)/1 = (y - 5)/(-2) = (z - 7)/1 વચ્ચેનું લઘુત્તમ અંતર શોધો.",
+      "options": [
+        "2√29",
+        "√29",
+        "116 / √29",
+        "4√29"
+      ],
+      "options_hi": [
+        "2√29",
+        "√29",
+        "116 / √29",
+        "4√29"
+      ],
+      "options_gu": [
+        "2√29",
+        "√29",
+        "116 / √29",
+        "4√29"
+      ],
+      "correct_index": 0,
+      "explanation": "Point A₁(-1,-1,-1), A₂(3,5,7) => ā₂ - ā₁ = (4, 6, 8).\nb̄₁ = (7, -6, 1), b̄₂ = (1, -2, 1).\nb̄₁ × b̄₂ = (-4, -6, -8) or (4, 6, 8) after simplification direction.\n|b̄₁ × b̄₂| = √(16 + 36 + 64) = √116 = 2√29.\n(b̄₁ × b̄₂) · (ā₂ - ā₁) = (-4)(4) + (-6)(6) + (-8)(8) = -16 - 36 - 64 = -116.\nd = |-116| / √116 = √116 = 2√29.",
+      "explanation_hi": "ā₂ - ā₁ = (4, 6, 8)। b̄₁ × b̄₂ = (-4, -6, -8)। |b̄₁ × b̄₂| = √116 = 2√29। d = 116 / √116 = √116 = 2√29।",
+      "explanation_gu": "ā₂ - ā₁ = (4, 6, 8). b̄₁ × b̄₂ = (-4, -6, -8). |b̄₁ × b̄₂| = √116 = 2√29. d = 116 / √116 = √116 = 2√29."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_028",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 16",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 16",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 16",
+      "question": "Find the shortest distance between the lines r̄ = (î + 2ĵ + 3k̂) + λ(î - 3ĵ + 2k̂) and r̄ = (4î + 5ĵ + 6k̂) + μ(2î + 3ĵ + k̂).",
+      "question_hi": "रेखाओं r̄ = (î + 2ĵ + 3k̂) + λ(î - 3ĵ + 2k̂) और r̄ = (4î + 5ĵ + 6k̂) + μ(2î + 3ĵ + k̂) के बीच की न्यूनतम दूरी ज्ञात कीजिए।",
+      "question_gu": "રેખાઓ r̄ = (î + 2ĵ + 3k̂) + λ(î - 3ĵ + 2k̂) અને r̄ = (4î + 5ĵ + 6k̂) + μ(2î + 3ĵ + k̂) વચ્ચેનું લઘુત્તમ અંતર શોધો.",
+      "options": [
+        "3√19 / 19",
+        "270 / √19",
+        "3 / √19",
+        "0"
+      ],
+      "options_hi": [
+        "3√19 / 19",
+        "270 / √19",
+        "3 / √19",
+        "0"
+      ],
+      "options_gu": [
+        "3√19 / 19",
+        "270 / √19",
+        "3 / √19",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "ā₂ - ā₁ = 3î + 3ĵ + 3k̂.\nb̄₁ × b̄₂ = |î ĵ k̂; 1 -3 2; 2 3 1| = î(-3 - 6) - ĵ(1 - 4) + k̂(3 + 6) = -9î + 3ĵ + 9k̂.\n|b̄₁ × b̄₂| = √(81 + 9 + 81) = √171 = 3√19.\n(b̄₁ × b̄₂) · (ā₂ - ā₁) = -9(3) + 3(3) + 9(3) = -27 + 9 + 27 = 9.\nd = |9| / (3√19) = 3 / √19 = 3√19 / 19.",
+      "explanation_hi": "ā₂ - ā₁ = 3î + 3ĵ + 3k̂। b̄₁ × b̄₂ = -9î + 3ĵ + 9k̂। |b̄₁ × b̄₂| = 3√19। d = 9 / (3√19) = 3√19 / 19।",
+      "explanation_gu": "ā₂ - ā₁ = 3î + 3ĵ + 3k̂. b̄₁ × b̄₂ = -9î + 3ĵ + 9k̂. |b̄₁ × b̄₂| = 3√19. d = 9 / (3√19) = 3√19 / 19."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH11_029",
+      "type": "mcq",
+      "title": "Exercise 11.2 - Question 17",
+      "title_hi": "अभ्यास 11.2 - प्रश्न 17",
+      "title_gu": "સ્વાધ્યાય 11.2 - પ્રશ્ન 17",
+      "question": "Find the shortest distance between the lines r̄ = (1 - t)î + (t - 2)ĵ + (3 - 2t)k̂ and r̄ = (s + 1)î + (2s - 1)ĵ - (2s + 1)k̂.",
+      "question_hi": "रेखाओं r̄ = (1 - t)î + (t - 2)ĵ + (3 - 2t)k̂ और r̄ = (s + 1)î + (2s - 1)ĵ - (2s + 1)k̂ के बीच की न्यूनतम दूरी ज्ञात कीजिए।",
+      "question_gu": "રેખાઓ r̄ = (1 - t)î + (t - 2)ĵ + (3 - 2t)k̂ અને r̄ = (s + 1)î + (2s - 1)ĵ - (2s + 1)k̂ વચ્ચેનું લઘુત્તમ અંતર શોધો.",
+      "options": [
+        "8 / √29",
+        "3 / √29",
+        "2√29",
+        "5 / √29"
+      ],
+      "options_hi": [
+        "8 / √29",
+        "3 / √29",
+        "2√29",
+        "5 / √29"
+      ],
+      "options_gu": [
+        "8 / √29",
+        "3 / √29",
+        "2√29",
+        "5 / √29"
+      ],
+      "correct_index": 0,
+      "explanation": "Rewrite equations:\nL₁: r̄ = (î - 2ĵ + 3k̂) + t(-î + ĵ - 2k̂) => ā₁ = î - 2ĵ + 3k̂, b̄₁ = -î + ĵ - 2k̂.\nL₂: r̄ = (î - ĵ - k̂) + s(î + 2ĵ - 2k̂) => ā₂ = î - ĵ - k̂, b̄₂ = î + 2ĵ - 2k̂.\nā₂ - ā₁ = 0î + ĵ - 4k̂.\nb̄₁ × b̄₂ = |î ĵ k̂; -1 1 -2; 1 2 -2| = 2î - 4ĵ - 3k̂.\n|b̄₁ × b̄₂| = √(4 + 16 + 9) = √29.\n(b̄₁ × b̄₂) · (ā₂ - ā₁) = 2(0) + (-4)(1) + (-3)(-4) = -4 + 12 = 8.\nd = 8 / √29.",
+      "explanation_hi": "L₁: ā₁ = î - 2ĵ + 3k̂, b̄₁ = -î + ĵ - 2k̂। L₂: ā₂ = î - ĵ - k̂, b̄₂ = î + 2ĵ - 2k̂।\nā₂ - ā₁ = ĵ - 4k̂। b̄₁ × b̄₂ = 2î - 4ĵ - 3k̂। |b̄₁ × b̄₂| = √29। d = 8 / √29।",
+      "explanation_gu": "L₁: ā₁ = î - 2ĵ + 3k̂, b̄₁ = -î + ĵ - 2k̂. L₂: ā₂ = î - ĵ - k̂, b̄₂ = î + 2ĵ - 2k̂.\nā₂ - ā₁ = ĵ - 4k̂. b̄₁ × b̄₂ = 2î - 4ĵ - 3k̂. |b̄₁ × b̄₂| = √29. d = 8 / √29."
+    }
+  ]
+}

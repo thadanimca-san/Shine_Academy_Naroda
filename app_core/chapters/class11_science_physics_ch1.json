@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "id": "class11_science_physics_ch1",
+    "title": "Basics of Physics",
+    "subject": "Physics",
+    "grade": "Unknown",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Introduction to Physical Quantities and Units",
+      "Kinematics: Describing Motion in One and Two Dimensions",
+      "Dynamics: Forces and Newton's Laws of Motion",
+      "Work, Energy, and Conservation Principles",
+      "Momentum and Collisions"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_0_1",
+      "type": "hook",
+      "title": "The Trader Who Almost Lost a Rocket",
+      "body": "Imagine walking into a marketplace where the fruit vendor tells you a melon costs '5'—just 5. Five what? Five grams? Five tons? Five coins? You wouldn't buy it because a number alone is meaningless without a shared standard. In 1999, a multi-million dollar NASA Mars orbiter was famously lost because one engineering team used imperial units (pounds) while another used metric units (newtons) for calculations. Without clear physical quantities and units, the universe becomes a chaotic guessing game."
+    },
+    {
+      "id": "KOBJ_0_2",
+      "type": "socratic",
+      "question": "If an alien civilization visits Earth and wants to build a bridge with us, which of the following would be the absolute easiest property to communicate without sharing any language?",
+      "options": [
+        "The exact length of our meter stick",
+        "The concept of a second based on the ticking of a mechanical clock",
+        "The time it takes for a specific microwave transition of a cesium-133 atom",
+        "The ratio of a circle's circumference to its diameter (Pi)"
+      ],
+      "correct_index": 3,
+      "explanation": "Universal constants like Pi, or the properties of fundamental atomic transitions, are invariant across the cosmos. While length and time units depend on human-defined standards, mathematical ratios are universally understood anywhere in the universe."
+    },
+    {
+      "id": "KOBJ_0_3",
+      "type": "theory",
+      "title": "Introduction to Physical Quantities and Units: Deep Dive",
+      "body": "Physics is the quantitative study of nature, meaning it relies on measuring the physical universe. To measure anything, we must divide our observations into two pillars: physical quantities and units. A physical quantity is a property of a phenomenon, body, or substance that can be quantified by measurement—such as mass, length, time, and electric current. However, stating that an object has a mass of '5' is incomplete; we must specify a unit, such as 'kilograms', which provides an agreed-upon magnitude to serve as a standard of comparison. The International System of Units (SI) establishes seven base quantities from which all other derived quantities (like velocity, force, and energy) are constructed. Understanding how these base quantities combine dimensionally allows physicists to check equations, predict behaviors, and translate real-world observations into rigorous mathematical models that hold true from the subatomic scale to the edge of the observable universe.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_0_4",
+      "type": "knowledge_check",
+      "question": "Which of the following represents a fundamental (base) physical quantity and its correct SI unit rather than a derived quantity?",
+      "options": [
+        "Force measured in Newtons",
+        "Electric Current measured in Amperes",
+        "Velocity measured in meters per second",
+        "Energy measured in Joules"
+      ],
+      "correct_index": 1,
+      "explanation": "Electric current (measured in Amperes) is one of the seven SI base quantities. Force, velocity, and energy are all derived quantities calculated using combinations of base quantities (e.g., Force = mass × acceleration).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_1_1",
+      "type": "hook",
+      "title": "The Falcon's Dive",
+      "body": "Imagine a peregrine falcon plummeting from the sky at over 200 miles per hour to catch its prey. To the casual observer, it is a chaotic blur of speed and feathers. But to a physicist, every microsecond of that descent is a masterclass in geometry, time, and change. The falcon is not just falling; it is executing a precise dance of position, velocity, and acceleration across both vertical drops and horizontal tracking. How do we translate this breathtaking, fluid reality into the rigid, predictable language of mathematics?"
+    },
+    {
+      "id": "KOBJ_1_2",
+      "type": "socratic",
+      "question": "If you throw a ball straight up into the air, what is its velocity and acceleration at the exact highest point of its trajectory?",
+      "options": [
+        "Velocity is zero, acceleration is zero",
+        "Velocity is zero, acceleration is downward due to gravity",
+        "Velocity is upward, acceleration is zero",
+        "Velocity is downward, acceleration is upward"
+      ],
+      "correct_index": 1,
+      "explanation": "At the peak, the ball momentarily stops moving vertically, making its velocity zero. However, gravity is still constantly acting on it, meaning a downward acceleration of approximately 9.8 m/s² is still actively pulling on it."
+    },
+    {
+      "id": "KOBJ_1_3",
+      "type": "theory",
+      "title": "Kinematics: Describing Motion in One and Two Dimensions: Deep Dive",
+      "body": "Kinematics is the branch of classical mechanics that describes the motion of points, bodies, and systems of bodies without consideration of the forces that cause the motion. When we examine motion in one dimension (1D), we deal with a single axis—typically the x-axis for horizontal movement or the y-axis for vertical free-fall—where an object's position changes over time. We define fundamental quantities such as displacement (change in position), velocity (rate of change of displacement), and acceleration (rate of change of velocity). The power of 1D kinematics is captured in the kinematic equations of motion, which assume constant acceleration and allow us to predict future positions or past histories if initial conditions are known. However, the real world is rarely confined to a single straight line. Motion in two dimensions (2D) expands this framework into a plane (the xy-coordinate system). The foundational secret of 2D kinematics—exemplified by projectile motion—is the principle of independence of perpendicular vectors: horizontal and vertical motions are completely independent of one another. Gravity acts exclusively in the vertical direction, meaning the horizontal velocity remains constant (ignoring air resistance) while the vertical motion undergoes constant acceleration. By treating the horizontal and vertical components separately yet simultaneously through trigonometry and vector addition, we can predict the exact landing spot of a cannonball, the arc of a soccer penalty kick, or the flight path of our peregrine falcon with astonishing precision.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_1_4",
+      "type": "knowledge_check",
+      "question": "A projectile is launched horizontally off a 20-meter-high cliff with an initial speed of 15 m/s. Simultaneously, an identical rock is dropped straight down from the same height. Ignoring air resistance, which rock hits the ground first?",
+      "options": [
+        "The rock launched horizontally hits first because it travels faster overall.",
+        "The dropped rock hits first because it has a shorter distance to travel.",
+        "Both rocks hit the ground at the exact same time.",
+        "It depends on the mass of the rocks."
+      ],
+      "correct_index": 2,
+      "explanation": "Because horizontal and vertical motions are independent, the initial horizontal velocity does not affect how quickly gravity pulls the projectile down. Both objects start with a vertical velocity of zero and fall the same vertical distance under the exact same gravitational acceleration, meaning they hit the ground simultaneously.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2_1",
+      "type": "hook",
+      "title": "The Phantom Slide",
+      "body": "Imagine you are floating in the vast, silent emptiness of deep space, holding a massive, heavy boulder. If you give that boulder a mighty shove away from you, you don't just send the boulder flying—you, too, will drift backward into the void. Why does pushing an object away from you result in you moving in the exact opposite direction? This simple, invisible interaction is the gateway to understanding how the entire universe moves, clashes, and accelerates."
+    },
+    {
+      "id": "KOBJ_2_2",
+      "type": "socratic",
+      "question": "If you are riding in a sleek sports car traveling at a constant speed of 100 km/h in a straight line, and you toss a heavy apple straight up into the air inside the cabin, where will the apple land?",
+      "options": [
+        "It will land behind you because the car raced ahead while the apple was in the air.",
+        "It will land right back in your hand because you, the car, and the apple share the same forward velocity.",
+        "It will smash against the windshield because of the sudden acceleration.",
+        "It will hover in mid-air indefinitely due to zero gravity."
+      ],
+      "correct_index": 1,
+      "explanation": "Because of Newton's First Law of Motion (inertia), the apple maintains its horizontal velocity of 100 km/h even when it leaves your hand, landing right back in your palm."
+    },
+    {
+      "id": "KOBJ_2_3",
+      "type": "theory",
+      "title": "Dynamics: Forces and Newton's Laws of Motion: Deep Dive",
+      "body": "Dynamics is the branch of classical mechanics that deals with the causal relationship between forces and the motion of physical bodies. At the absolute core of this study lie Sir Isaac Newton's three monumental laws of motion, which bridge the gap between kinematics (describing motion) and the physical agents that cause it. The First Law, often called the Law of Inertia, states that an object at rest will remain at rest, and an object in motion will remain in motion at a constant velocity unless acted upon by a net external force—highlighting that force is not required to keep an object moving, but rather to change its state of motion. When a net force *is* applied, it brings us to the Second Law: mathematically expressed as $F = ma$, where the acceleration of an object is directly proportional to the net force acting upon it and inversely proportional to its mass. This means doubling the mass of an object while keeping the force constant will cut its acceleration in half. Finally, the Third Law dictates that forces never occur in isolation; for every action, there is an equal and opposite reaction. When a rocket engine expels hot gases downward with immense force, those gases exert an equal and upward reaction force on the rocket, launching it into orbit. Together, these laws form a complete, elegant framework for predicting the mechanical behavior of everything from falling apples to orbiting planets.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_2_4",
+      "type": "knowledge_check",
+      "question": "A massive freight truck and a small compact car experience a head-on collision. During the impact, how do the forces they exert on each other compare?",
+      "options": [
+        "The truck exerts a much larger force on the car because of its massive size and weight.",
+        "The car exerts a larger force because it is moving faster and crumples more.",
+        "The truck and the car exert forces on each other that are exactly equal in magnitude.",
+        "Neither exerts a force on the other; the damage is solely due to kinetic energy transfer."
+      ],
+      "correct_index": 2,
+      "explanation": "According to Newton's Third Law, forces always come in equal and opposite pairs. The truck exerts a force on the car, and the car exerts an identical magnitude of force back on the truck. The car experiences greater acceleration and damage only because its mass is significantly smaller (per Newton's Second Law, $a = F/m$).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "WE_1",
+      "type": "hook",
+      "title": "The Infinite Roller Coaster Mystery",
+      "body": "Imagine standing at the edge of a colossal roller coaster track. You watch a cart get hauled to the top of the highest peak—the 'hill of all hills'—and then released. It dives, screams through loops, whips around sharp banking turns, and climbs back up a slightly smaller hill, over and over, until it finally rolls to a gentle stop at the loading platform. If you look closely at the mechanics, no engine is driving the cart after that initial lift. Yet, it seems to possess an invisible currency that constantly transforms: trading height for speed, and speed back into height. What is this mysterious currency, and why does the total amount never seem to magically increase?"
+    },
+    {
+      "id": "WE_2",
+      "type": "socratic",
+      "question": "If a roller coaster starts from rest at the top of a 50-meter hill, rolls down into a valley, and climbs up a second hill, what is the absolute maximum height the second hill can possibly be for the cart to just barely reach the top without any motors?",
+      "options": [
+        "Exactly 100 meters, because momentum doubles height",
+        "Exactly 50 meters, because energy is conserved and cannot exceed the initial starting amount",
+        "It doesn't matter; friction creates new energy, so it can go infinitely high",
+        "25 meters, because half the energy is always lost to the air permanently"
+      ],
+      "correct_index": 1,
+      "explanation": "Due to the Law of Conservation of Energy, a closed system cannot create energy out of nothing. The initial potential energy at the 50-meter mark is the absolute maximum total energy budget the cart has, meaning it can never climb higher than 50 meters in a frictionless world."
+    },
+    {
+      "id": "WE_3",
+      "type": "theory",
+      "title": "Work, Energy, and Conservation Principles: Deep Dive",
+      "body": "In physics, 'Work' is not just the effort you put into studying or cleaning your room; it is strictly defined as the transfer of energy that occurs when a force makes an object move over a distance, mathematically expressed as $W = Fd\\cos(\\theta)$. When you push a heavy crate across a frictionless floor, you are doing work on it, which directly increases its kinetic energy—the energy of motion ($KE = \\frac{1}{2}mv^2$). Conversely, if you lift that same crate onto a shelf, you are doing work against gravity, storing that effort as gravitational potential energy ($PE = mgh$). The profound beauty of classical mechanics lies in the Work-Energy Theorem, which states that the total work done on an object equals its change in kinetic energy. However, the overarching master law governing all these interactions is the Conservation of Mechanical Energy. In an isolated system devoid of non-conservative forces like friction or air resistance, the sum of kinetic and potential energy remains perfectly constant ($E_{total} = KE + PE = \\text{constant}$). Energy is never truly created or destroyed; it merely shapeshifts continuously between motion, height, heat, and sound, orchestrating every dynamic event in the universe from crashing ocean waves to orbiting planets.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "WE_4",
+      "type": "knowledge_check",
+      "question": "A 2 kg ball is dropped from a height of 10 meters. Just before it hits the ground, ignoring air resistance, what is its kinetic energy? (Assume $g = 10 \\text{ m/s}^2$)",
+      "options": [
+        "20 Joules",
+        "100 Joules",
+        "200 Joules",
+        "There is not enough information to calculate"
+      ],
+      "correct_index": 2,
+      "explanation": "Initially, the ball's total mechanical energy is purely gravitational potential energy: $PE = mgh = (2 \\text{ kg})(10 \\text{ m/s}^2)(10 \\text{ m}) = 200 \\text{ Joules}$. By the Law of Conservation of Energy, all of this potential energy converts into kinetic energy right before impact, making the final kinetic energy 200 Joules."
+    }
+  ]
+}

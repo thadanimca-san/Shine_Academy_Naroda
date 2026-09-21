@@ -1,0 +1,400 @@
+
+ 
+
+Py
+
+Contents :
+3.1 Introduction
+3.2 Linear Regression Model
+3.3 Fitting of Regression Line
+3.3.1 Method of Scatter Diagram
+3.3.2 Method of Least Squares
+3.4 Utility of the study of Regression
+3.5 Regression Coefficient from Covariance and Correlation Coefficient
+3.6 Coefficient of Determination
+3.7. Properties of Regression Coefficient
+
+3.8 Precautions while using Regression
+
+ 
+
+116
+Statistics : Part 1: Standard 12 YR
+3.1 Introduction
+
+In the previous chapter 2, we have studied the concept of correlation. We have seen whether the
+correlation between two variables is positive or negative is known by the correlation coefficient. Moreover,
+we get numerical measure of the closeness of the variables. But the coefficient of correlation fails to
+provide the expected value of one variable for the given value of the other variable. When some relation
+exists between two variables, many times it is necessary to obtain the approximate or estimated value
+of one variable for a known value of the other variable using this relation.
+
+e.g. We know that there is a correlation between advertisement cost and sale of an item. Now,
+for some given amount of advertisement cost, if we want to know the corresponding expected sale then
+it is not possible to obtain it only by correlation. For this, it is necessary to use the concept of regression.
+
+The literal meaning of regression is ‘to avert’ or ‘return to the mean value’. The term regression
+was first used by a statistician Sir Francis Galton during his study of human inheritance. He had
+collected the information about the height of 1000 pairs of fathers and sons. He revealed the following
+interesting results.
+
+(i) Tall fathers have tall sons and short fathers have short sons.
+
+(ii) The average height of sons of a group of tall fathers is less than average height of group
+of tall fathers.
+
+(iii) The average height of sons of a group of short fathers is greater than average height of group
+
+of short fathers.
+
+So, it is clear from the above findings that the heights of sons show regressive tendency with respect
+to the height of their fathers. The existence of this tendency restricts the humans to split into two races
+of pigmies and giants. So, Sir Francis Galton has given the name regression to describe such relation.
+
+Regression is a functional relation between two correlated variables. We shall study the concept
+of regression under the assumption that there exists a cause-effect relationship between two variables.
+
+3.2 Linear Regression Model
+
+A set of one or more equations representing a relation or a problem is called a model. A statistical
+model which describes the cause and effect relationship between two variables is called a regression
+model. Generally, out of two variables having cause-effect relationship, the causal variable is denoted by
+X. We shall call this variable as independent or explanatory variable and effect variable is denoted by
+Y. We shall call this variable as dependent or explained variable. Let us understand the meaning of
+independent variable and dependent variable from the following illustrations :
+
+(i) In case of ‘advertisement cost’ and ‘sales’, generally, because of increase (decrease) in the
+‘advertisement cost’, corresponding ‘sales’ also increases (decreases), so we shall take
+‘advertisement cost’ as independent variable X and ‘sales’ as dependent variable Y.
+
+(ii) In case of ‘rainfall’ and ‘yield of rice’ in some region, it is very clear that ‘yield of rice’ depends on
+‘rainfall’. So, we shall take ‘rainfall’ as independent variable X and ‘yield of rice’ as dependent
+variable Y.
+
+In a regression model, the dependent variable Y is expressed in the form of an appropriate
+mathematical function of the independent variable X.
+Now, we shall define a linear regression model as follows.
+
+Y=a+PX+u
+Where, y = Dependent Variable
+
+X = Independent Variable
+a = Constant
+
+8B = Constant
+
+u
+
+= Disturbance Variable of the Model
+
+(17)
+YY Linear Regression
+The inadequacy of the linearity between two variables X and Y is shown by uw. The perfect linear
+relation is possible in natural science like mathematics. So, the disturbance variable u obviously becomes
+0 in such a case. In other words, when there is a perfect linear correlation between two variables X
+
+and Y then the regression model is Y=a+X. But we know that exact linear relation between the
+
+variables is not always possible in business, economics and social science as these correlated variables
+are also affected by other factors. Thus, when there is a partial correlation between the variables X
+
+and Y then the linear regression model is Y=a+$X-+u. From the above discussion, we can define
+linear regression in simple words as follows.
+
+“A mathematical or functional relationship between two correlated variables which helps in estimating
+the value of dependent variable for some given (known) value of independent variable is called Linear
+Regression.”
+
+3.3 Fitting of Regression Line
+
+In a scatter diagram of two correlated variables, if the points are clustered around a line, we can
+say that there is a linear regression. The method of obtaining such a line expressing the relation between
+
+two variables is called fitting of a regression line.
+There are two methods for fitting a regression line : (1) Method of Scatter Diagram (2) Method
+
+of Least Squares.
+
+3.3.1 Method of Scatter Diagram
+
+Suppose n ordered pairs of observations of two correlated variables X and Y are
+
+(x, y), (x, Yo), veseseee A(X, y,)- Using this data, we draw a scatter diagram. Now, a line is drawn in such a
+
+way that it is close to almost all the points of the scatter diagram. If Y is a dependent variable and X is an
+independent variable then such a line is called regression line of Y on X and an approximate value of
+dependent variable Y can be obtained for any given value of independent variable X from it. Since no
+computation is required to draw such a line, it is very easy and quick method of fitting a regression line. But
+there is a problem in doing so. Different persons may draw different lines. As a result, different persons may
+provide different estimates of the dependent variable Y for the same value of independent variable X. It can
+be seen very easily from the following scatter diagram.
+
+Two different persons have drawn two
+
+y
+
+different lines J, and /, in the following scatter
+v L diagram of the same data. We can see that for
+Vp some value ‘a’ of independent variable X,
+
+corresponding estimated value is ‘ y,’ from line
+
+|, and it is ‘ y)’ from the line 1, . Thus we get
+
+different estimates for dependent variable Y
+from different lines for a single value of
+Oo | * independent variable X. So, it can be said that
+
+this method is subjective. A line of regression
+drawn by this method is not the best fitted line because it does not guarantee the best estimate of the dependent
+
+ 
+
+ 
+
+variable. The method of least square is used to obtain such a best fitted regression line.
+
+ 
+
+Statistics : Part 1: Standard 12 U8)
+3.3.2 Method of Least Squares
+
+Suppose n ordered pairs of observations of two correlated variables X (independent variable) and
+
+Y (dependent variable) are (x,, y,), (x25 ¥2)s----- (Xs Yn) We shall draw a scatter diagram for this data
+
+to understand the method of least squares.
+
+y
+
+     
+ 
+
+Gs In)
+Oi ¥)
+
+CY) Os Fay
+
+ey
+
+(%, Ya)
+
+ 
+
+*t
+
+an error in the estimation. It is denoted by e; .
+*. € =Y¥,— Fj =I; — (a+ bx) =, -a—by,
+Where, i=1, 2, 3,.......,.2
+
+If an equation of the best fitted
+line describing the linear regression
+between the variables X and Y is
+
+§=a+bx then the constants a and
+b of this line can be obtained by the
+method of least squares as follows.
+
+Let the estimated values of
+variable Y corresponding to values
+
+Ms Xa 3
+
+Ips Jas F535 , from the line and
+the corresponding observed values
+
+of Y are yy, Yas Vgyeee Vp
+respectively. Now, for some
+
+.»X, of variable X are
+
+ 
+
+  
+
+X =x,, estimated value of Y from
+
+the line is §, = a+bx,. The vertical
+distance (i.e. distance parallel to
+Y-axis) between observed value y;
+
+and the estimated value $, is called
+
+Obviously, the error will be positive for points above the line the error will be negative for points
+below the line and it will be zero for the points which are on the line.
+
+Now, the values of constants a and b of the fitted line $=a+bx (known as regression line of
+
+Y on X) are obtained in such a way that the sum of the squares of the errors is minimum.
+
+ie. Le? = X(y,- ay =2(y,-a—bx;)” is minimum.
+
+By ignoring the suffix i for convenience, we can get such values of a and b by a simple algebraic
+
+method, which are as follows.
+
+3(x-X)(y-7
++ eaten
+n&xy-(Ex)(Zy)
+nx?(Ex)?
+And
+a=y-bx
+
+The line $=a+bx obtained by this method is a line passing as close as possible to the points
+of scatter diagram. The sum of squares of the errors is minimised while obtaining the regression line.
+
+Therefore, this method is called ‘method of least squares’.
+
+ 
+
+(19>
+®
+
+Linear Regression
+The value of b obtained by this method is called the regression coefficient of the regression line of Y on
+X. b is also called slope of the regression line and the constant a is called intercept of the regression line.
+
+Interpretation of regression coefficient b
+b =the estimated change in the value of Y for a unit change in the value of X.
+
+ie. when 5b>0, it means that a unit increase in the value of independent variable X implies
+an estimated increase of 5 units in the value of dependent variable Y.
+
+when p<0, it means that a unit increase in the value of independent variable X implies
+an estimated decrease of | units in the value of dependent variable Y.
+
+Note that the regression line obtained by the method of least squares is also known as the line
+of best fit.
+
+Note : (1) The regression coefficient b can also be denoted by ,,. If not required, generally we shall
+denote regression coefficient by b only.
+
+(2) Ifall the points in a scatter diagram are on one line only then error will be zero for all the points.
+
+Hence, the estimated value } is same as its observed value y. So, the form of the regression
+
+line will be y=a+bx in place of $=a+bx. Naturally, in this situation r is 1 if b>0
+
+andr is—l if b<0.
+
+Additional Information for understanding
+
+Generally, only ‘fitted line’ is mentioned for the regression line obtained instead of ‘best
+fitted line’.
+
+ 
+
+ 
+
+Now, let us take some examples to obtain a regression line.
+Illustration 1 : The following observations are obtained for life (years of usage) of cars and their
+average annual maintenance costs of a specific model of car of a particular company.
+
+ 
+
+Life of cars (years) 2 4 6 8
+
+Average annual maintenance cost (thousand %) 10 20 25 30
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Obtain the regression line of maintenance cost on the life of cars. Also, estimate the
+maintenance cost if the life of a car is 10 years.
+
+‘Life of a car’ is an independent variable. So, we shall denote it by variable X and ‘maintenance
+cost’ is dependent variable. So, we shall denote it by Y. Considering at the data, we shall prepare the
+following table for obtaining the regression line.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Life of Maintenance cost] xy x?
+car (years) x (thousand %) y
+2 10 20 4
+4 20 80 16
+6 25 150 36
+8 30 240 64
+Total 20 85 490 120
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Statistics : Part 1 : Standard 12 Woy
+Let us find the regression coefficient as follows.
+
+_ n&xy-(Ex)(Zy)
+~ n3x?-(Ex)?
+
+4(490)-{20)(85)
+4(120)-(20)?
+
+1960-1700
+480-400
+
+= 260
+80
+
+3.25
+
+*. b=3.25
+Now, putting the values of x,y and bin the formula of a,
+a =y-bx
+= 21.25—3.25(5)
+=21.25-16.25
+a=5
+So, the regression line of ‘maintenance cost’ (Y) on ‘life of car’ (X) is
+p=atbx
+$=543.25 x
+Putting X =10,
+} =5+3.25(10)
+=5+32.5=37.5
+$ =37.5
+So, when the life of a car is 10 years then its estimated maintenance cost is ¥ 37.5 thousand Note
+: Since b=3.25, we can say that every year (one unit change in X), the maintenance cost of the car
+increases by approximately % 3.25 thousand (change in Y).
+
+Illustration 2 : The monthly sale of different types of laptops (in hundred units) and its profit
+(in lakh %) for the last six months for a company is given below.
+
+ 
+
+ 
+
+ 
+

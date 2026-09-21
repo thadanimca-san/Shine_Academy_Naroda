@@ -1,0 +1,215 @@
+{
+  "practical_examples": [
+    {
+      "example_no": 1,
+      "title": "Interest on Monthly Drawings",
+      "problem": "Hiral, withdraws ₹ 500 in the beginning of every month. If 10 % p.a. interest is chargeable on drawings, determine annual drawings and interest on drawings.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Calculation Steps", "Amount (₹)"],
+      "rows": [
+        {"part": "Total annual drawings", "x": "₹ 500 × 12", "y": "", "z": "", "total": "₹ 6000"},
+        {"part": "Interest on drawings", "x": "₹ 500 × (10/100) × (78/12)", "y": "", "z": "", "total": "₹ 325"}
+      ],
+      "journal_entry": "Hiral's Capital/Current A/c ... Dr. ₹ 325\n    To Interest on Drawings A/c ... ₹ 325"
+    },
+    {
+      "example_no": 2,
+      "title": "Partner's Commission After Deduction",
+      "problem": "Hansa, Hitesh and Vijay are partners of a firm. Their capital proportion is 3:2:1. Hitesh is entitled to receive commission 10% of net profit after deduction of his such share. What amount will be received by Hitesh, When profit of the firm is ₹ 1,65,000 at the end of the year.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Calculation Formula", "Amount (₹)"],
+      "rows": [
+        {"part": "Commission of Hitesh", "x": "₹ 1,65,000 × (10 / 110)", "y": "", "z": "", "total": "₹ 15,000"},
+        {"part": "Divisible Profit", "x": "₹ 1,65,000 - ₹ 15,000", "y": "", "z": "", "total": "₹ 1,50,000"},
+        {"part": "Total amount received by Hitesh", "x": "₹ 50,000 (Profit) + ₹ 15,000 (Commission)", "y": "", "z": "", "total": "₹ 65,000"}
+      ],
+      "journal_entry": "Partner's Commission A/c ... Dr. ₹ 15,000\n    To Hitesh's Capital/Current A/c ... ₹ 15,000"
+    },
+    {
+      "example_no": 3,
+      "title": "Manager Commission and Profit Distribution",
+      "problem": "The profit-loss sharing ratio of Jayesh, Suresh and Pankaj is 6:2:3. A manager has received his commission of ₹ 6600, at 10% after deduction of such commission from profit. Ascertain distribution of profit amongst the partners.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Calculation Formula", "Amount (₹)"],
+      "rows": [
+        {"part": "Divisible Profit", "x": "(₹ 6600 × 100) / 10", "y": "", "z": "", "total": "₹ 66,000"},
+        {"part": "Jayesh's share", "x": "₹ 66,000 × (6 / 11)", "y": "", "z": "", "total": "₹ 36,000"},
+        {"part": "Suresh's share", "x": "₹ 66,000 × (2 / 11)", "y": "", "z": "", "total": "₹ 12,000"},
+        {"part": "Pankaj's share", "x": "₹ 66,000 × (3 / 11)", "y": "", "z": "", "total": "₹ 18,000"}
+      ],
+      "journal_entry": "Manager's Commission A/c ... Dr. ₹ 6600\n    To Outstanding Manager's Commission A/c ... ₹ 6600"
+    },
+    {
+      "example_no": 4,
+      "title": "Manager Commission from Partner Share",
+      "problem": "Sheela, Surbhi and Seema are partners sharing profit-loss in the ratio of 5:7:9. Manager Sanket is entitled to receive 10% commission from profit after deduction of his such commission. Surbhi receives share in profit ₹ 7000. Determine the amount of commission of Sanket. Also determine amount of profit before the commission of manager.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Calculation Formula", "Amount (₹)"],
+      "rows": [
+        {"part": "Total Divisible Profit", "x": "(₹ 7000 × 21) / 7", "y": "", "z": "", "total": "₹ 21,000"},
+        {"part": "Manager Sanket's Commission", "x": "₹ 21,000 × (10 / 100)", "y": "", "z": "", "total": "₹ 2100"},
+        {"part": "Profit before commission of manager", "x": "₹ 21,000 + ₹ 2100", "y": "", "z": "", "total": "₹ 23,100"}
+      ],
+      "journal_entry": "Manager's Commission A/c ... Dr. ₹ 2100\n    To Outstanding Manager's Commission A/c ... ₹ 2100"
+    },
+    {
+      "example_no": 5,
+      "title": "Proportional Share of Profit",
+      "problem": "Riya, Dilip and Kirtan are partners of a partnership firm. The share of Kirtan is 1/5th of share of Dilip and share of Riya is double of share of Kirtan. Determine the amount of profit of each partner, if the profit of the firm at the end of the year was ₹ 1,92,000.",
+      "ledger_type": "analytical_table",
+      "columns": ["Partner", "Proportion Ratio", "Calculation Formula", "Amount (₹)"],
+      "rows": [
+        {"part": "Riya", "x": "2", "y": "₹ 1,92,000 × (2 / 8)", "z": "", "total": "₹ 48,000"},
+        {"part": "Dilip", "x": "5", "y": "₹ 1,92,000 × (5 / 8)", "z": "", "total": "₹ 1,20,000"},
+        {"part": "Kirtan", "x": "1", "y": "₹ 1,92,000 × (1 / 8)", "z": "", "total": "₹ 24,000"}
+      ],
+      "journal_entry": "Ratio of Riya : Dilip : Kirtan = 2 : 5 : 1 (Total = 8)"
+    },
+    {
+      "example_no": 6,
+      "title": "Rectification of Wrong Profit Distribution",
+      "problem": "Milin, Hemant and Rasik have distributed profit of the firm of ₹ 1,89,000 in equal proportion, instead of distributing it in 1:2:4 proportion. To rectify this mistake what treatment will be given to the capital account ?",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Milin (₹)", "Hemant (₹)", "Rasik (₹)", "Total (₹)"],
+      "rows": [
+        {"part": "Correct distribution in 1:2:4", "x": "+ 27,000", "y": "+ 54,000", "z": "+ 1,08,000", "total": "1,89,000"},
+        {"part": "Incorrect distribution in 1:1:1", "x": "63,000", "y": "63,000", "z": "63,000", "total": "1,89,000"},
+        {"part": "Amount of difference", "x": "36,000 (Debit)", "y": "9000 (Debit)", "z": "+ 45,000 (Credit)", "total": "Nil"}
+      ],
+      "journal_entry": "Milin's Capital/Current A/c ... Dr. ₹ 36,000\nHemant's Capital/Current A/c ... Dr. ₹ 9000\n    To Rasik's Capital/Current A/c ... ₹ 45,000"
+    },
+    {
+      "example_no": 7,
+      "title": "Rectification for Omitted Interest on Capital",
+      "problem": "Ram, Laxman and Sita are partners of a firm. On 1-4-2016 their capital was ₹ 40,000, ₹ 30,000 and ₹ 80,000 respectively. At the end of the year after distribution of profit it was realised that charging of interest on capital at 12% is missed out. Write journal entry for rectification.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Ram (₹)", "Laxman (₹)", "Sita (₹)", "Total (₹)"],
+      "rows": [
+        {"part": "Interest on capital at 12%", "x": "+ 4800", "y": "+ 3600", "z": "+ 9600", "total": "+ 18,000"},
+        {"part": "Reduction in profit in equal proportion", "x": "- 6000", "y": "- 6000", "z": "- 6000", "total": "- 18,000"},
+        {"part": "Accounting treatment of difference", "x": "1200 (Debit)", "y": "2400 (Debit)", "z": "+ 3600 (Credit)", "total": "Nil"}
+      ],
+      "journal_entry": "Ram's Capital/Current A/c ... Dr. ₹ 1200\nLaxman's Capital/Current A/c ... Dr. ₹ 2400\n    To Sita's Capital/Current A/c ... ₹ 3600"
+    },
+    {
+      "example_no": 8,
+      "title": "Rectification for Omitted Interest on Drawings",
+      "problem": "Bhalchandra, Darshana and Ankit are partners sharing profit-loss in the ratio of 5:3:2. At the end of the year after the preparation of final account it is realised that, computation of interest on drawings is missed out. Interest on drawings were ₹ 1000, ₹ 800 and ₹ 600 respectively. Write journal entry for rectifications.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Bhalchandra (₹)", "Darshana (₹)", "Ankit (₹)", "Total (₹)"],
+      "rows": [
+        {"part": "Increase in profit equal to interest (5:3:2)", "x": "+ 1200", "y": "+ 720", "z": "+ 480", "total": "+ 2400"},
+        {"part": "Interest on drawings", "x": "1000", "y": "800", "z": "600", "total": "2400"},
+        {"part": "Accounting treatment to Capital Account", "x": "+ 200 (Credit)", "y": "80 (Debit)", "z": "120 (Debit)", "total": "Nil"}
+      ],
+      "journal_entry": "Darshana's Capital/current A/c ... Dr. ₹ 80\nAnkit's Capital/current A/c ... Dr. ₹ 120\n    To Bhalchandra's Capital/Current A/c ... ₹ 200"
+    },
+    {
+      "example_no": 9,
+      "title": "Guarantee of Minimum Profit",
+      "problem": "Yusuf, Harun and Kodawala are partners sharing profit-loss in the proportion of 3:2:1. Yusuf and Harun have given assurance to Kodawala to give minimum ₹ 36,000 from profit. If for the year ending on 31-3-16 total profit of the firm was ₹ 1,80,000, how profit will be distributed among the partners?",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Yusuf (₹)", "Harun (₹)", "Kodawala (₹)", "Total (₹)"],
+      "rows": [
+        {"part": "Distribution of profit in ratio (3:2:1)", "x": "90,000", "y": "60,000", "z": "30,000", "total": "1,80,000"},
+        {"part": "Payable and receivable amount", "x": "- 3600", "y": "- 2400", "z": "+ 6000", "total": "Nil"},
+        {"part": "Actual distribution of profit", "x": "86,400", "y": "57,600", "z": "36,000", "total": "1,80,000"}
+      ],
+      "journal_entry": "PROFIT DISTRIBUTION SUMMARY:\nYusuf ₹ 86,400, Harun ₹ 57,600, Kodawala ₹ 36,000."
+    },
+    {
+      "example_no": 10,
+      "title": "Opening Capital from Closing Capital",
+      "problem": "The closing capital of a partner Girish is ₹ 96,000 after giving effect of drawings of ₹ 6000 and divisible profit of ₹ 9000. Calculate 8% p.a. interest on capital.",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Calculation Formula", "Amount (₹)"],
+      "rows": [
+        {"part": "Closing capital", "x": "Given", "y": "", "z": "", "total": "₹ 96,000"},
+        {"part": "Add: Drawings A/c", "x": "+ ₹ 6000", "y": "", "z": "", "total": "₹ 1,02,000"},
+        {"part": "Less: Profit and Loss A/c (profit)", "x": "- ₹ 9000", "y": "", "z": "", "total": "₹ 93,000 (Opening capital)"},
+        {"part": "Interest on capital", "x": "₹ 93,000 × (8 / 100)", "y": "", "z": "", "total": "₹ 7440"}
+      ],
+      "journal_entry": "Interest on Capital A/c ... Dr. ₹ 7440\n    To Girish's Capital/Current A/c ... ₹ 7440"
+    },
+    {
+      "example_no": 11,
+      "title": "Profit Including Interest on Capital",
+      "problem": "Jennet, Akshra and Sapna are partners sharing profit-loss in equal proportion. Their total capital is of ₹ 3,00,000. The proportion of their capital is 2:3:5. Firm pays 6% interest p.a. on the capital. Partner Akshra received ₹ 45,400 including interest on capital. Compute what amount inclusive of interest is received by Jennet and Sapna?",
+      "ledger_type": "analytical_table",
+      "columns": ["Particulars", "Jennet (₹)", "Akshra (₹)", "Sapna (₹)"],
+      "rows": [
+        {"part": "Capital in proportion of 2:3:5", "x": "60,000", "y": "90,000", "z": "1,50,000"},
+        {"part": "Interest on capital at 6% p.a.", "x": "3600", "y": "5400", "z": "9000"},
+        {"part": "Divisible profit (1:1:1)", "x": "+ 40,000", "y": "+ 40,000", "z": "+ 40,000"},
+        {"part": "Profit including interest on capital", "x": "43,600", "y": "45,400", "z": "49,000"}
+      ],
+      "journal_entry": "Jennet receives ₹ 43,600 and Sapna receives ₹ 49,000 inclusive of interest on capital."
+    },
+    {
+      "example_no": 12,
+      "title": "Comprehensive Final Accounts & Fluctuating Capital",
+      "problem": "Sharda and Jamna are partners of a firm. Their capital as on 1-4-2016 was ₹ 30,000 and ₹ 40,000 respectively. During the year Sharda has withdrawn ₹ 6000 on 1-4-2016 while Jamna ₹ 8000 on 1-1-2017. Provisions: interest on capital 10% p.a., interest on drawings 12% p.a., monthly salary ₹ 500 to Sharda, annual commission ₹ 3000 to Jamna. Sharda gave loan of ₹ 6000 on 1-10-2016. Profit for the year ending on 31-3-2017 before consideration of above provision and interest on loan of Sharda was ₹ 39,820. Prepare P&L Appropriation Account and Partners' Capital Accounts.",
+      "ledger_type": "analytical_table",
+      "columns": ["Accounting Step", "Procedures & Ledger Rules", "Status"],
+      "rows": [
+        {"part": "Step 1: Net Profit adjusted for loan interest", "x": "₹ 39,820 + Drawings Interest (Sharda ₹ 720, Jamna ₹ 240) = ₹ 40,780", "y": "", "z": "", "total": "Verified"},
+        {"part": "Step 2: Appropriations", "x": "Interest on Capital (₹ 7000), Salary (₹ 6000), Commission (₹ 3000)", "y": "", "z": "", "total": "Verified"},
+        {"part": "Step 3: Divisible Profit", "x": "Distributed equally (Sharda ₹ 12,390, Jamna ₹ 12,390)", "y": "", "z": "", "total": "Completed"}
+      ],
+      "journal_entry": "Sharda Capital Closing Balance: ₹ 44,670; Jamna Capital Closing Balance: ₹ 51,150."
+    },
+    {
+      "example_no": 13,
+      "title": "Fixed Capital Method with Current Accounts",
+      "problem": "Sudhanshu and Sarvesh are partners of a firm. Their profit-loss sharing ratio is 3:2. Capital as on 1-4-2016 was ₹ 90,000 in proportion of 5:4 (Fixed Capital). Drawings: Sudhanshu ₹ 6000 on 1-7-2016, Sarvesh ₹ 4000 on 1-10-2016. Provisions: 8% p.a. interest on capital, 12% p.a. interest on drawings, opening current balances ₹ 3000 credit (Sudhanshu) and ₹ 2000 debit (Sarvesh), 6% p.a. interest on opening current balances, 5% commission on profit after deduction to Sudhanshu. Profit before adjustments ₹ 37,770.",
+      "ledger_type": "analytical_table",
+      "columns": ["Ledger Account", "Debit Total (₹)", "Credit Total (₹)", "Closing Balance (₹)"],
+      "rows": [
+        {"part": "Sudhanshu's Current A/c", "x": "₹ 6,540", "y": "₹ 26,550", "z": "₹ 20,010 (Credit)"},
+        {"part": "Sarvesh's Current A/c", "x": "₹ 6,360", "y": "₹ 15,120", "z": "₹ 8,760 (Credit)"},
+        {"part": "Sudhanshu's Capital A/c", "x": "₹ 50,000", "y": "₹ 50,000", "z": "₹ 50,000 (Fixed)"},
+        {"part": "Sarvesh's Capital A/c", "x": "₹ 40,000", "y": "₹ 40,000", "z": "₹ 40,000 (Fixed)"}
+      ],
+      "journal_entry": "Sudhanshu Commission = ₹ 1490; Divisible Profit: Sudhanshu ₹ 17,880, Sarvesh ₹ 11,920."
+    },
+    {
+      "example_no": 14,
+      "title": "Reserve Fund & Dual Profit Sharing",
+      "problem": "Saksham, Samarth and Shrey are partners of firm. Their capital on 1-4-2016 was ₹ 1,00,000, ₹ 60,000 and ₹ 40,000 respectively. Provisions: 8% p.a. interest on capital, 10% p.a. interest on drawings, monthly salary of ₹ 600 to Samarth, half profit shared equally and remaining half in opening capital proportion. Drawings on 1-1-2017: Saksham ₹ 5000, Shrey ₹ 4000. 10% of divisible profit transferred to general reserve. Profit before adjustments ₹ 34,975.",
+      "ledger_type": "analytical_table",
+      "columns": ["Partner", "Equal Share (1/2)", "Capital Ratio Share (1/2)", "Total Divisible Profit (₹)"],
+      "rows": [
+        {"part": "Saksham", "x": "₹ 1800", "y": "₹ 2700", "z": "₹ 4500"},
+        {"part": "Samarth", "x": "₹ 1800", "y": "₹ 1620", "z": "₹ 3420"},
+        {"part": "Shrey", "x": "₹ 1800", "y": "₹ 1080", "z": "₹ 2880"}
+      ],
+      "journal_entry": "General Reserve = ₹ 1200; Profit and Loss Appropriation A/c ... Dr. ₹ 1200 To General Reserve A/c ... ₹ 1200"
+    },
+    {
+      "example_no": 15,
+      "title": "Comprehensive Fixed Method with Development Fund",
+      "problem": "Shruti, Kashvi and Mary are partners of a firm. Total fixed capital on 1-4-2016 was ₹ 2,50,000 in proportion of 2:2:1. Current balances: Shruti ₹ 24,000 (credit), Kashvi ₹ 18,000 (debit), Mary ₹ 12,000 (credit). Provisions: 3/5 profit in 3:2:1 and remaining in opening capital proportion, 10% interest on capital, 8% interest on current balances, monthly salary ₹ 500 to Kashvi, 12% interest on drawings (Shruti ₹ 18,000 on 1-2-2017, Kashvi ₹ 12,000 on 30-11-2016, Mary ₹ 20,000 on 1-10-2016), Mary introduced additional capital ₹ 24,000 on 1-1-2017, 5% of net profit transferred to development fund (max ₹ 6000), 10% commission after deduction to Mary. Net profit after drawings interest before adjustments was ₹ 1,71,040.",
+      "ledger_type": "analytical_table",
+      "columns": ["Ledger Account", "Debit Total (₹)", "Credit Total (₹)", "Closing Balance (₹)"],
+      "rows": [
+        {"part": "Shruti's Current A/c", "x": "₹ 18,360", "y": "₹ 91,120", "z": "₹ 72,760 (Credit)"},
+        {"part": "Kashvi's Current A/c", "x": "₹ 31,920", "y": "₹ 59,200", "z": "₹ 27,280 (Credit)"},
+        {"part": "Mary's Current A/c", "x": "₹ 21,200", "y": "₹ 52,160", "z": "₹ 30,960 (Credit)"}
+      ],
+      "journal_entry": "Development Fund = ₹ 6000 (Capped); Mary's Commission = ₹ 12,000."
+    },
+    {
+      "example_no": 16,
+      "title": "Net Loss, Drawings Accounts & Capital Restructuring",
+      "problem": "On 1-4-2016 Ranjana, Sushma and Joseph introduced capital of ₹ 1,28,000, ₹ 96,000 and ₹ 80,000 respectively and commenced a business. Sushma has withdrawn ₹ 8000 on 1-10-2016. While Ranjana has withdrawn ₹ 1200 at the end of each month. As per the partnership deed : (1) Provide 5 % p.a. interest on capital and charge 10 % p.a. interest on drawings (2) Profit-loss sharing ratio among partner is 5:3:2. After incorporation of the above mentioned adjustment 2 % bonus is to be paid to Ranjana from the surplus of profit. On 31-3-2017 partners have decided that total capital of the firm, after the incorporation of the above mentioned adjustments, will be of ₹ 3,00,000. Their credit balance of capital accounts will be in the ratio of 2:2:1. For this adjustment necessary amount will be introduced or withdrawn by the partners. Net loss of the firm for the year ending on 31-3-2017 was of ₹ 45,860. From the above information prepare profit and loss appropriation account for the year ending on 31-3-2017 as well as partners' capital accounts and drawings accounts.",
+      "ledger_type": "analytical_table",
+      "columns": ["Partner", "Opening Capital / Cash", "Divisible Loss Share", "Restructured Capital Target (₹)"],
+      "rows": [
+        {"part": "Ranjana", "x": "₹ 1,28,000 + ₹ 30,660 (Cash)", "y": "₹ 30,000", "z": "₹ 1,20,000"},
+        {"part": "Sushma", "x": "₹ 96,000 + ₹ 45,600 (Cash)", "y": "₹ 18,000", "z": "₹ 1,20,000"},
+        {"part": "Joseph", "x": "₹ 80,000", "y": "₹ 12,000", "z": "₹ 60,000 (Withdrawal ₹ 20,000 total / adjusted)"}
+      ],
+      "journal_entry": "Cash/Bank A/c ... Dr. ₹ 76,260\n    To Ranjana's Capital A/c ... ₹ 30,660\n    To Sushma's Capital A/c ... ₹ 45,600"
+    }
+  ]
+}

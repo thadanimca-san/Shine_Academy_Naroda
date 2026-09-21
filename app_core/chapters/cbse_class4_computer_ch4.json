@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "id": "cbse_class4_computer_ch4",
+    "title": "Chapter 4: Chapter 4 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand core computer operations and data management",
+      "Master the role of [DICT_GRADE_STORAGE|Storage] devices",
+      "Identify the function of [DICT_GRADE_SOFTWARE|Software] and [DICT_GRADE_HARDWARE|Hardware]"
+    ],
+    "core_concepts": [
+      "DICT_GRADE_STORAGE",
+      "DICT_GRADE_SOFTWARE",
+      "DICT_GRADE_HARDWARE"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide students with a comprehensive understanding of how data moves through a computer system, distinguishing between physical parts and invisible instructions.",
+      "common_misconceptions": [
+        "Thinking software is a physical object you can touch",
+        "Believing computer memory and storage are the exact same thing"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Invisible Workshop",
+      "body": "Imagine you walk into a magical kitchen where the chef is invisible, but every time you whisper a recipe into a shiny metal box, delicious pancakes fly out through a slot. How does the box know what to do? Who mixes the batter? Inside our computers, a similar kind of magic happens every single day. Millions of tiny helpers work together in complete silence, transforming your typed letters into colorful pictures, games, and homework assignments. Welcome to the engine room of technology, where we are going to unlock the secrets of how computers think, remember, and create!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What makes the computer able to show games and pictures when you press keys?",
+      "options": [
+        "Magic elves living inside the screen",
+        "Millions of tiny helpers and instructions working together silently",
+        "The computer plugged into the sun"
+      ],
+      "correct_index": 1,
+      "explanation": "Just like a workshop, computers rely on structured parts and instructions working together to process what you type.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Tangible Body of the Machine",
+      "body": "Every computer you see, whether it sits on a school desk or fits in your backpack, is split into two massive worlds. The first world is called [DICT_GRADE_HARDWARE|Hardware]. Hardware refers to all the physical, touchable parts of the computer. Think of your keyboard, your mouse, the monitor glass, and the heavy plastic CPU box hiding under the table. Without hardware, the computer would literally be a ghost—nothing to touch, nothing to hold. Every time you press the spacebar with your finger or plug in your headphones, you are interacting directly with hardware components that have been carefully engineered to pass tiny electrical signals back and forth.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "question": "What is the term for the physical, touchable parts of a computer system?",
+      "answer": "Hardware",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "The Touch Test",
+      "body": "Look around your study area right now. Touch three computer items. If you can physically touch them with your hands, you are touching hardware! Name them out loud.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Invisible Mind and Rules",
+      "body": "Having a body is wonderful, but a body needs a brain and instructions on how to move. This brings us to the second world: [DICT_GRADE_SOFTWARE|Software]. Software is the set of instructions, programs, and data that tells the hardware what to do. You cannot touch software with your fingers; you cannot put it in your pocket because it is made of code—pure logic written by human programmers. When you open a drawing app to sketch a dinosaur, the colorful brushes and the erasing tools are software. The operating system that wakes up the computer when you press the power button is also software. Hardware is the instrument, and software is the sheet music!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which of the following is an example of software rather than hardware?",
+      "options": [
+        "A computer mouse",
+        "A paint and drawing application",
+        "A keyboard"
+      ],
+      "correct_index": 1,
+      "explanation": "A paint application is a program made of code that runs on the computer, making it software, whereas mice and keyboards are physical hardware.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: Keeping Safe Archives",
+      "body": "Computers do an incredible amount of thinking, but what happens when you turn the machine off? If you wrote a wonderful story about a space adventure, where does it go so you can read it tomorrow? This is where [DICT_GRADE_STORAGE|Storage] comes to the rescue. Storage devices are special hardware components like hard disk drives, solid-state drives, and USB flash drives that safely hold your files, games, and photos even when the electricity is completely switched off. Think of storage as a giant library filing cabinet where books stay put on shelves for months or years until someone walks in to read them.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "question": "Do storage devices lose your saved data when the computer is turned off?",
+      "answer": "No, storage devices keep your files safe even when the power is off.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "The School Backpack Analogy",
+      "body": "Compare your school backpack to computer storage. Your brain while studying is like short-term memory, but your school locker or home bookshelf is permanent storage where your notebooks wait safely overnight.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Deep Dive: How Input Becomes Output",
+      "body": "Let us trace a single moment in the life of data. When you type the letter 'A' on your keyboard, your finger touches a piece of hardware. That hardware sends an electrical impulse into the computer's central processing unit. The CPU consults the software instructions to know that this electrical pulse means 'A'. Then, the software tells the monitor hardware to light up tiny red, green, and blue dots in the exact shape of an 'A' right before your eyes. Input turns into processing, and processing turns into output in less than a blink of an eye!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "What is the correct order of data flow in a computer system?",
+      "options": [
+        "Output -> Input -> Processing",
+        "Processing -> Output -> Input",
+        "Input -> Processing -> Output"
+      ],
+      "correct_index": 2,
+      "explanation": "Data always starts with Input (what you do), goes through Processing (what the computer calculates), and ends with Output (what you see or hear).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "Act It Out!",
+      "body": "Pretend you are a computer! Ask a friend to whisper a math problem in your ear (Input). Do the math in your head (Processing). Shout out the answer (Output).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "The Importance of Operating Systems",
+      "body": "Imagine a giant orchestra with fifty musicians playing violins, drums, and flutes, but there is no conductor. The music would sound like loud noise! In a computer, the [DICT_GRADE_SOFTWARE|Software] category includes a very special boss called the Operating System. Windows, macOS, and Linux are operating systems that act like the master conductor. They make sure the keyboard, the mouse, the printer, and your games all share the computer's attention politely without crashing into each other.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "question": "What special type of software acts like a master conductor for all other programs and hardware?",
+      "answer": "Operating System",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Peripherals: The Extended Family",
+      "body": "Not all [DICT_GRADE_HARDWARE|Hardware] lives inside the main computer box. Devices like webcams, microphones, external speakers, and printers are known as peripherals. The word 'peripheral' simply means 'attached to the outside.' These clever tools extend what the computer can do, allowing it to hear your voice through a microphone, print your digital paintings on real paper, or let you video call grandparents living across the ocean.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Which of these is considered a peripheral hardware device?",
+      "options": [
+        "A printer plugged into the outside of the computer",
+        "The invisible code of a video game",
+        "The electricity flowing inside a wall plug"
+      ],
+      "correct_index": 0,
+      "explanation": "Printers attach to the outside of the computer system, making them peripheral hardware.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Why Software Needs Updates",
+      "body": "Have you ever noticed your tablet or computer asking to install an update? Why do programmers keep changing [DICT_GRADE_SOFTWARE|Software]? Just like bicycles need occasional oiling and tightening of bolts, software needs updates to fix tiny mistakes called bugs, make programs run faster, and protect against security threats. Every update makes your digital experience smoother and safer.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "question": "What are tiny mistakes or errors in software code called?",
+      "answer": "Bugs",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "The Evolution of Storage: From Tape to Cloud",
+      "body": "Years ago, [DICT_GRADE_STORAGE|Storage] devices were huge magnetic reels that looked like old movie film. Today, we have tiny microchips and even 'Cloud Storage'—which means storing your files on powerful computers far away connected through the internet. This lets you access your homework from any computer in the world without carrying a USB drive in your pocket!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "What is Cloud Storage?",
+      "options": [
+        "Storing your files inside rain clouds in the sky",
+        "Storing your files on remote computers accessible via the internet",
+        "Storing files inside an unplugged mouse"
+      ],
+      "correct_index": 1,
+      "explanation": "Cloud storage uses powerful remote servers connected via the internet to save data securely away from your local device.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "teacher_tip",
+      "title": "Cloud Discussion",
+      "body": "Ask a parent or teacher how they used to save photos when they were your age versus how photos are saved on phones today.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Putting It All Together",
+      "body": "As we wrap up our journey through Chapter 4 concepts, remember that [DICT_GRADE_HARDWARE|Hardware], [DICT_GRADE_SOFTWARE|Software], and [DICT_GRADE_STORAGE|Storage] form an unbeatable team. Without hardware, software has nowhere to run. Without software, hardware is just an expensive paperweight. And without storage, all our wonderful creations would vanish the second we turn off the power switch. Together, they create the digital universe we explore every day!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "Why is hardware useless without software?",
+      "options": [
+        "Because hardware needs instructions and programs to know what to do",
+        "Because hardware cannot be plugged into walls",
+        "Because hardware is too heavy to lift"
+      ],
+      "correct_index": 0,
+      "explanation": "Hardware is just physical material; it needs software instructions to perform any useful tasks.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "flashcard",
+      "question": "Can hardware function properly without software?",
+      "answer": "No, hardware requires software instructions to operate.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

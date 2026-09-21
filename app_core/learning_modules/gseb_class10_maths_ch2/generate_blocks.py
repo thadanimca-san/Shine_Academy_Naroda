@@ -1,0 +1,299 @@
+import json
+
+blocks = []
+
+def add_block(b):
+    blocks.append(b)
+
+# 1. Introduction & Identities
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_HOOK_001",
+    "type": "hook",
+    "title": "Welcome to Polynomials!",
+    "title_hi": "बहुपद में आपका स्वागत है!",
+    "body": "Have you ever wondered how engineers design roller coasters or how economists predict market trends? The secret lies in a special kind of algebraic expression called a Polynomial! Let's dive in.",
+    "body_hi": "क्या आपने कभी सोचा है कि इंजीनियर रोलर कोस्टर कैसे डिज़ाइन करते हैं या अर्थशास्त्री बाज़ार के रुझान की भविष्यवाणी कैसे करते हैं? इसका रहस्य एक विशेष प्रकार के बीजगणितीय व्यंजक में छिपा है जिसे बहुपद कहते हैं! आइए शुरू करें।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_SOCRATIC_001",
+    "type": "socratic_question",
+    "question": "Before we begin, do you remember the algebraic identities we studied in earlier classes? Like (a+b)², (a-b)²?",
+    "question_hi": "शुरू करने से पहले, क्या आपको वे बीजगणितीय सर्वसमिकाएँ याद हैं जो हमने पिछली कक्षाओं में पढ़ी थीं? जैसे (a+b)², (a-b)²?",
+    "options": ["Yes, completely!", "Vaguely...", "No, I forgot."],
+    "options_hi": ["हाँ, पूरी तरह से!", "थोड़ा-थोड़ा...", "नहीं, मैं भूल गया।"],
+    "correct_index": 0,
+    "explanation": "Great! We will use them here. (a+b)² = a² + 2ab + b².",
+    "explanation_hi": "बहुत बढ़िया! हम यहाँ उनका उपयोग करेंगे। (a+b)² = a² + 2ab + b²।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_REVISION_001",
+    "type": "revision",
+    "title": "Recall: Identities Studied Earlier",
+    "title_hi": "पुनरावृत्ति: पहले पढ़ी गई सर्वसमिकाएँ",
+    "body": "Identity 1: (a+b)² = a² + 2ab + b²\nIdentity 2: (a-b)² = a² - 2ab + b²\nIdentity 3: a² - b² = (a+b)(a-b)\nIdentity 4: (x+a)(x+b) = x² + (a+b)x + ab",
+    "body_hi": "सर्वसमिका 1: (a+b)² = a² + 2ab + b²\nसर्वसमिका 2: (a-b)² = a² - 2ab + b²\nसर्वसमिका 3: a² - b² = (a+b)(a-b)\nसर्वसमिका 4: (x+a)(x+b) = x² + (a+b)x + ab"
+})
+
+# 2. Degree of a Polynomial
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_DISCOVERY_001",
+    "type": "discovery",
+    "title": "What is the 'Degree'?",
+    "title_hi": "'घात' क्या है?",
+    "body": "Imagine a polynomial as a team of athletes, where the 'x' variable is an athlete and the power is their strength level. The strength of the entire team is defined by the strongest athlete. Look at p(x) = 4x³ + 2x² - x + 5. What is the highest power of x?",
+    "body_hi": "बहुपद की कल्पना एथलीटों की एक टीम के रूप में करें, जहाँ 'x' चर एक एथलीट है और घात उसकी ताकत का स्तर है। पूरी टीम की ताकत सबसे मजबूत एथलीट द्वारा परिभाषित की जाती है। p(x) = 4x³ + 2x² - x + 5 को देखें। x की अधिकतम घात क्या है?"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_DEF_001",
+    "type": "definition",
+    "title": "Degree of a Polynomial",
+    "title_hi": "बहुपद की घात (Degree of a Polynomial)",
+    "body": "The highest power of the variable x in a polynomial p(x) is called the degree of the polynomial. For example, in 4x + 2, the degree is 1 (Linear). In 2x² + 3x, the degree is 2 (Quadratic).",
+    "body_hi": "किसी बहुपद p(x) में चर x की अधिकतम घात को बहुपद की घात (Degree) कहते हैं। उदाहरण के लिए, 4x + 2 में घात 1 है (रैखिक)। 2x² + 3x में घात 2 है (द्विघात)।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_001",
+    "type": "mcq",
+    "question": "What is the degree of the polynomial p(x) = 5x⁴ - 3x² + 2?",
+    "question_hi": "बहुपद p(x) = 5x⁴ - 3x² + 2 की घात क्या है?",
+    "options": ["2", "3", "4", "5"],
+    "options_hi": ["2", "3", "4", "5"],
+    "correct_index": 2,
+    "explanation": "The highest power of x in the given polynomial is 4. So, the degree is 4.",
+    "explanation_hi": "दिए गए बहुपद में x की अधिकतम घात 4 है। इसलिए, घात 4 है।"
+})
+
+# 3. Value of a Polynomial p(x) at x=k
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_THEO_001",
+    "type": "theory",
+    "title": "Value of a Polynomial at x = k",
+    "title_hi": "x = k पर बहुपद का मान",
+    "body": "If p(x) is a polynomial in x, and if 'k' is any real number, then the value obtained by replacing x by k in p(x) is called the value of p(x) at x = k, and is denoted by p(k).",
+    "body_hi": "यदि p(x) x में एक बहुपद है, और यदि 'k' कोई वास्तविक संख्या है, तो p(x) में x को k से प्रतिस्थापित करने पर प्राप्त मान को x = k पर p(x) का मान कहा जाता है, और इसे p(k) द्वारा दर्शाया जाता है।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_WORKED_001",
+    "type": "worked_example",
+    "title": "Finding the Value",
+    "title_hi": "मान ज्ञात करना",
+    "body": "Let p(x) = x² - 3x - 4.\nLet's find the value at x = 2.\np(2) = (2)² - 3(2) - 4\n= 4 - 6 - 4\n= -6",
+    "body_hi": "मान लीजिए p(x) = x² - 3x - 4.\nआइए x = 2 पर मान ज्ञात करें।\np(2) = (2)² - 3(2) - 4\n= 4 - 6 - 4\n= -6"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_002",
+    "type": "mcq",
+    "question": "If p(x) = x² - 2x + 1, what is the value of p(1)?",
+    "question_hi": "यदि p(x) = x² - 2x + 1 है, तो p(1) का मान क्या है?",
+    "options": ["-1", "0", "1", "2"],
+    "options_hi": ["-1", "0", "1", "2"],
+    "correct_index": 1,
+    "explanation": "p(1) = (1)² - 2(1) + 1 = 1 - 2 + 1 = 0.",
+    "explanation_hi": "p(1) = (1)² - 2(1) + 1 = 1 - 2 + 1 = 0."
+})
+
+# 4. Zero of a Polynomial
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_SOCRATIC_002",
+    "type": "socratic_question",
+    "question": "In the previous quiz, we saw that p(1) became 0. What do you think such a special value of x is called?",
+    "question_hi": "पिछले प्रश्नोत्तरी में, हमने देखा कि p(1) 0 हो गया। आपको क्या लगता है कि x के ऐसे विशेष मान को क्या कहा जाता है?",
+    "options": ["A Hero", "A Zero", "A Variable", "A Coefficient"],
+    "options_hi": ["एक नायक", "एक शून्यक (Zero)", "एक चर", "एक गुणांक"],
+    "correct_index": 1,
+    "explanation": "Spot on! Any value of x that makes the polynomial's value equal to 0 is called its 'Zero'.",
+    "explanation_hi": "बिल्कुल सही! x का कोई भी मान जो बहुपद के मान को 0 के बराबर कर दे, उसका 'शून्यक' (Zero) कहलाता है।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_DEF_002",
+    "type": "definition",
+    "title": "Zero of a Polynomial",
+    "title_hi": "बहुपद का शून्यक (Zero of a Polynomial)",
+    "body": "A real number 'k' is said to be a zero of a polynomial p(x), if p(k) = 0. It is the value of x that 'kills' the polynomial and makes it zero!",
+    "body_hi": "एक वास्तविक संख्या 'k' को बहुपद p(x) का शून्यक कहा जाता है, यदि p(k) = 0 हो। यह x का वह मान है जो बहुपद को शून्य बना देता है!"
+})
+
+# 5. Geometric Meaning of Zeroes
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_HOOK_002",
+    "type": "hook",
+    "title": "Can you 'see' a Zero?",
+    "title_hi": "क्या आप शून्यक को 'देख' सकते हैं?",
+    "body": "We know how to calculate zeroes algebraically, but how do they look on a graph? Imagine a road intersecting a river. The points where the road touches the river are crucial. In math, the river is the X-axis!",
+    "body_hi": "हम जानते हैं कि शून्यक की गणना बीजगणितीय रूप से कैसे की जाती है, लेकिन ग्राफ पर वे कैसे दिखते हैं? कल्पना कीजिए कि एक सड़क एक नदी को पार कर रही है। जिन बिंदुओं पर सड़क नदी को छूती है वे महत्वपूर्ण हैं। गणित में, वह नदी X-अक्ष है!"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_THEO_002",
+    "type": "theory",
+    "title": "Geometric Meaning of Zeroes",
+    "title_hi": "शून्यकों का ज्यामितीय अर्थ",
+    "body": "For a polynomial y = p(x), the zeroes are precisely the x-coordinates of the points where the graph of y = p(x) intersects the X-axis.",
+    "body_hi": "बहुपद y = p(x) के लिए, शून्यक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ y = p(x) का ग्राफ X-अक्ष को प्रतिच्छेद करता है (काटता है)।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_ANIMATED_001",
+    "type": "animated_diagram",
+    "title": "Graph intersecting X-axis",
+    "title_hi": "X-अक्ष को काटता हुआ ग्राफ",
+    "paths": [
+        "M 10 50 L 90 50", 
+        "M 50 10 L 50 90", 
+        "M 20 80 Q 50 10 80 80"
+    ],
+    "description": "Notice how the U-shaped curve (Parabola) cuts the horizontal line (X-axis) at two points. These two points are the zeroes of the quadratic polynomial.",
+    "description_hi": "ध्यान दें कि कैसे U-आकार का वक्र (परवलय) क्षैतिज रेखा (X-अक्ष) को दो बिंदुओं पर काटता है। ये दो बिंदु द्विघात बहुपद के शून्यक हैं।"
+})
+
+# 6. Number of Zeroes
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_THEO_003",
+    "type": "theory",
+    "title": "Number of Zeroes",
+    "title_hi": "शून्यकों की संख्या",
+    "body": "A polynomial of degree 'n' can have at most 'n' zeroes. So, a linear polynomial (degree 1) has 1 zero, a quadratic (degree 2) has at most 2 zeroes, and a cubic (degree 3) has at most 3 zeroes.",
+    "body_hi": "'n' घात वाले बहुपद के अधिकतम 'n' शून्यक हो सकते हैं। इसलिए, एक रैखिक बहुपद (घात 1) में 1 शून्यक होता है, एक द्विघात (घात 2) में अधिकतम 2 शून्यक होते हैं, और एक त्रिघात (घात 3) में अधिकतम 3 शून्यक होते हैं।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_003",
+    "type": "mcq",
+    "question": "A cubic polynomial can have at most how many zeroes?",
+    "question_hi": "एक त्रिघात बहुपद के अधिकतम कितने शून्यक हो सकते हैं?",
+    "options": ["1", "2", "3", "4"],
+    "options_hi": ["1", "2", "3", "4"],
+    "correct_index": 2,
+    "explanation": "A cubic polynomial has a degree of 3. Therefore, it can have at most 3 zeroes.",
+    "explanation_hi": "त्रिघात बहुपद की घात 3 होती है। इसलिए, इसके अधिकतम 3 शून्यक हो सकते हैं।"
+})
+
+# 7. Relationship between zeros and coefficient of a polynomial
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_DISCOVERY_002",
+    "type": "discovery",
+    "title": "Is there a secret relationship?",
+    "title_hi": "क्या कोई गुप्त संबंध है?",
+    "body": "Let's take a quadratic polynomial: ax² + bx + c. If its zeroes are α (alpha) and β (beta), did you know that adding them or multiplying them directly relates to a, b, and c without even finding the zeroes?",
+    "body_hi": "आइए एक द्विघात बहुपद लें: ax² + bx + c। यदि इसके शून्यक α (अल्फा) और β (बीटा) हैं, तो क्या आप जानते हैं कि उन्हें जोड़ने या गुणा करने का सीधा संबंध a, b और c से होता है, बिना शून्यक ज्ञात किए?"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_FORMULA_001",
+    "type": "formula",
+    "title": "Quadratic Polynomial Zeroes Relationship",
+    "title_hi": "द्विघात बहुपद शून्यकों का संबंध",
+    "body": "For p(x) = ax² + bx + c, with zeroes α and β:\n1. Sum of Zeroes (α + β) = -b/a = -(Coefficient of x) / (Coefficient of x²)\n2. Product of Zeroes (αβ) = c/a = (Constant term) / (Coefficient of x²)",
+    "body_hi": "p(x) = ax² + bx + c के लिए, जिसके शून्यक α और β हैं:\n1. शून्यकों का योग (α + β) = -b/a = -(x का गुणांक) / (x² का गुणांक)\n2. शून्यकों का गुणनफल (αβ) = c/a = (अचर पद) / (x² का गुणांक)"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_004",
+    "type": "mcq",
+    "question": "For the polynomial p(x) = 2x² - 8x + 6, what is the sum of its zeroes?",
+    "question_hi": "बहुपद p(x) = 2x² - 8x + 6 के लिए, इसके शून्यकों का योग क्या है?",
+    "options": ["-8", "4", "3", "8"],
+    "options_hi": ["-8", "4", "3", "8"],
+    "correct_index": 1,
+    "explanation": "Here, a=2, b=-8. Sum of zeroes = -b/a = -(-8)/2 = 8/2 = 4.",
+    "explanation_hi": "यहाँ, a=2, b=-8 है। शून्यकों का योग = -b/a = -(-8)/2 = 8/2 = 4।"
+})
+
+# 8. Cubic Polynomial
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_THEO_004",
+    "type": "theory",
+    "title": "What about Cubic Polynomials?",
+    "title_hi": "त्रिघात बहुपदों के बारे में क्या?",
+    "body": "For a cubic polynomial ax³ + bx² + cx + d, with zeroes α, β, and γ (gamma):\n1. α + β + γ = -b/a\n2. αβ + βγ + γα = c/a\n3. αβγ = -d/a",
+    "body_hi": "एक त्रिघात बहुपद ax³ + bx² + cx + d के लिए, जिसके शून्यक α, β, और γ (गामा) हैं:\n1. α + β + γ = -b/a\n2. αβ + βγ + γα = c/a\n3. αβγ = -d/a"
+})
+
+# 9. Zeroes and factors of a polynomial
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_CONNECTION_001",
+    "type": "connection",
+    "title": "Connection: Zeroes and Factors",
+    "title_hi": "संबंध: शून्यक और गुणनखंड",
+    "body": "If x = k is a zero of polynomial p(x), then (x - k) is a factor of p(x). For example, if 2 is a zero, then (x - 2) is a factor. This helps us factorize large polynomials!",
+    "body_hi": "यदि x = k बहुपद p(x) का एक शून्यक है, तो (x - k) p(x) का एक गुणनखंड होगा। उदाहरण के लिए, यदि 2 एक शून्यक है, तो (x - 2) एक गुणनखंड है। यह हमें बड़े बहुपदों के गुणनखंड करने में मदद करता है!"
+})
+
+# 10. Lots of Sums in Earn/Practice Section
+# Generating multiple MCQs and worked examples
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_WORKED_002",
+    "type": "worked_example",
+    "title": "Find Zeroes of x² - 2x - 8",
+    "title_hi": "x² - 2x - 8 के शून्यक ज्ञात करें",
+    "body": "Step 1: Factorize x² - 2x - 8 by splitting the middle term.\nStep 2: We need two numbers that multiply to -8 and add to -2. They are -4 and +2.\nStep 3: x² - 4x + 2x - 8 = x(x - 4) + 2(x - 4) = (x - 4)(x + 2).\nStep 4: Equate to zero: (x - 4) = 0 => x = 4, (x + 2) = 0 => x = -2.\nZeroes are 4 and -2.",
+    "body_hi": "चरण 1: मध्य पद को विभक्त करके x² - 2x - 8 के गुणनखंड करें।\nचरण 2: हमें दो ऐसी संख्याएँ चाहिए जिनका गुणनफल -8 हो और योग -2 हो। वे -4 और +2 हैं।\nचरण 3: x² - 4x + 2x - 8 = x(x - 4) + 2(x - 4) = (x - 4)(x + 2)।\nचरण 4: शून्य के बराबर करें: (x - 4) = 0 => x = 4, (x + 2) = 0 => x = -2।\nशून्यक 4 और -2 हैं।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_005",
+    "type": "mcq",
+    "question": "What are the zeroes of the polynomial p(x) = x² - 3?",
+    "question_hi": "बहुपद p(x) = x² - 3 के शून्यक क्या हैं?",
+    "options": ["3, -3", "√3, -√3", "9, -9", "0, 3"],
+    "options_hi": ["3, -3", "√3, -√3", "9, -9", "0, 3"],
+    "correct_index": 1,
+    "explanation": "p(x) = x² - 3 = (x - √3)(x + √3). So the zeroes are √3 and -√3.",
+    "explanation_hi": "p(x) = x² - 3 = (x - √3)(x + √3). इसलिए शून्यक √3 और -√3 हैं।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_006",
+    "type": "mcq",
+    "question": "If α and β are the zeroes of the polynomial f(x) = x² + x + 1, then 1/α + 1/β = ?",
+    "question_hi": "यदि α और β बहुपद f(x) = x² + x + 1 के शून्यक हैं, तो 1/α + 1/β = ?",
+    "options": ["1", "-1", "0", "None of these"],
+    "options_hi": ["1", "-1", "0", "इनमें से कोई नहीं"],
+    "correct_index": 1,
+    "explanation": "Here, α+β = -1/1 = -1 and αβ = 1/1 = 1. Now, 1/α + 1/β = (β+α)/(αβ) = -1 / 1 = -1.",
+    "explanation_hi": "यहाँ, α+β = -1/1 = -1 और αβ = 1/1 = 1 है। अब, 1/α + 1/β = (β+α)/(αβ) = -1 / 1 = -1।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_007",
+    "type": "mcq",
+    "question": "If the sum of zeroes of the polynomial p(x) = kx² - 3x + 5 is 1, write the value of k.",
+    "question_hi": "यदि बहुपद p(x) = kx² - 3x + 5 के शून्यकों का योग 1 है, तो k का मान लिखिए।",
+    "options": ["1", "3", "-3", "5"],
+    "options_hi": ["1", "3", "-3", "5"],
+    "correct_index": 1,
+    "explanation": "Sum of zeroes = -b/a = -(-3)/k = 3/k. Given, 3/k = 1, so k = 3.",
+    "explanation_hi": "शून्यकों का योग = -b/a = -(-3)/k = 3/k. दिया गया है, 3/k = 1, इसलिए k = 3।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MCQ_008",
+    "type": "mcq",
+    "question": "If one zero of the polynomial (a²+9)x² + 13x + 6a is reciprocal of the other, find the value of a.",
+    "question_hi": "यदि बहुपद (a²+9)x² + 13x + 6a का एक शून्यक दूसरे का व्युत्क्रम (reciprocal) है, तो a का मान ज्ञात कीजिए।",
+    "options": ["2", "3", "4", "5"],
+    "options_hi": ["2", "3", "4", "5"],
+    "correct_index": 1,
+    "explanation": "If zeroes are α and 1/α, product = α * (1/α) = 1. Product of zeroes = c/a = 6a / (a²+9). So, 6a / (a²+9) = 1 => a² - 6a + 9 = 0 => (a-3)² = 0 => a = 3.",
+    "explanation_hi": "यदि शून्यक α और 1/α हैं, तो गुणनफल = α * (1/α) = 1 होगा। शून्यकों का गुणनफल = c/a = 6a / (a²+9)। इसलिए, 6a / (a²+9) = 1 => a² - 6a + 9 = 0 => (a-3)² = 0 => a = 3।"
+})
+
+add_block({
+    "id": "KOBJ_C10_MATH_CH2_MASTERY_001",
+    "type": "mastery",
+    "title": "Mastery Challenge!",
+    "title_hi": "महारत चुनौती!",
+    "body": "Congratulations on completing the Polynomials chapter! You learned about degrees, calculating zeroes, their geometric meaning on graphs, and the secret sum & product relationships. Review the practice questions again to build total mastery.",
+    "body_hi": "बहुपद अध्याय पूरा करने पर बधाई! आपने घातों, शून्यकों की गणना, ग्राफ पर उनके ज्यामितीय अर्थ, और गुप्त योग और गुणनफल संबंधों के बारे में सीखा। पूर्ण महारत हासिल करने के लिए अभ्यास प्रश्नों को फिर से दोहराएं।"
+})
+
+with open('/home/ubuntu/Shine_Academy_Naroda/app_core/learning_modules/gseb_class10_maths_ch2/blocks.json', 'w', encoding='utf-8') as f:
+    json.dump(blocks, f, indent=2, ensure_ascii=False)

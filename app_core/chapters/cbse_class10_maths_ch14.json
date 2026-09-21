@@ -1,0 +1,310 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_01",
+    "type": "theory",
+    "title": "A Tale of Two Cricket Players",
+    "title_hi": "दो क्रिकेट खिलाड़ियों की कहानी",
+    "body": "Imagine two cricket players, Virat and Rohit. Virat scored 0, 100, 0, 100 in 4 matches. Rohit scored 50, 50, 50, 50. Who is a more reliable player? Statistics helps us answer questions like this by analyzing data in different ways.",
+    "body_hi": "कल्पना करें कि दो क्रिकेट खिलाड़ी हैं, विराट और रोहित। विराट ने 4 मैचों में 0, 100, 0, 100 रन बनाए। रोहित ने 50, 50, 50, 50 रन बनाए। कौन अधिक विश्वसनीय खिलाड़ी है? सांख्यिकी हमें डेटा का विभिन्न तरीकों से विश्लेषण करके इस तरह के सवालों के जवाब देने में मदद करती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_02",
+    "type": "socratic_question",
+    "question": "If you have 10 chocolates and want to share them equally among 5 friends, how many will each get? What is this 'equal share' called mathematically?",
+    "question_hi": "यदि आपके पास 10 चॉकलेट हैं और आप उन्हें 5 दोस्तों में समान रूप से बांटना चाहते हैं, तो प्रत्येक को कितनी मिलेगी? इस 'समान हिस्से' को गणितीय रूप से क्या कहा जाता है?",
+    "options": [
+      "Total",
+      "Difference",
+      "Average (Mean)",
+      "Product"
+    ],
+    "options_hi": [
+      "कुल (Total)",
+      "अंतर (Difference)",
+      "औसत (Mean)",
+      "गुणनफल (Product)"
+    ],
+    "correct_index": 2,
+    "explanation": "You divide the total chocolates by the number of friends (10/5 = 2). This equal share is called the Average or Mean.",
+    "explanation_hi": "आप कुल चॉकलेट को दोस्तों की संख्या से विभाजित करते हैं (10/5 = 2)। इस समान हिस्से को औसत या माध्य कहा जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_03",
+    "type": "theory",
+    "title": "Finding the Balance Point",
+    "title_hi": "संतुलन बिंदु ढूँढना",
+    "body": "Think of a weighing scale. The mean is the exact center balance point of your data. If you have numbers 2, 4, and 6, the middle balance point is 4. For grouped data (like marks of 50 students in intervals 0-10, 10-20), calculating this balance point requires a special method.",
+    "body_hi": "एक तराजू के बारे में सोचें। माध्य आपके डेटा का सटीक केंद्र संतुलन बिंदु है। यदि आपके पास संख्या 2, 4 और 6 है, तो मध्य संतुलन बिंदु 4 है। समूहीकृत डेटा के लिए (जैसे 0-10, 10-20 अंतराल में 50 छात्रों के अंक), इस संतुलन बिंदु की गणना करने के लिए एक विशेष विधि की आवश्यकता होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_04",
+    "type": "theory",
+    "title": "The Mean (माध्य)",
+    "title_hi": "माध्य (The Mean)",
+    "body": "The Mean (Average) of grouped data can be found using three methods: 1. Direct Method (Σfixi / Σfi), 2. Assumed Mean Method (a + Σfidi / Σfi), 3. Step-Deviation Method.",
+    "body_hi": "समूहीकृत डेटा का माध्य (औसत) तीन विधियों का उपयोग करके पाया जा सकता है: 1. प्रत्यक्ष विधि (Σfixi / Σfi), 2. कल्पित माध्य विधि (a + Σfidi / Σfi), 3. पग-विचलन विधि।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_05",
+    "type": "quiz",
+    "question": "Which method is best for calculating the mean when the values of xi and fi are very large?",
+    "question_hi": "जब xi और fi के मान बहुत बड़े हों, तो माध्य की गणना के लिए कौन सी विधि सबसे अच्छी है?",
+    "options": [
+      "Direct Method",
+      "Step-Deviation Method",
+      "Both are equally good",
+      "None of these"
+    ],
+    "options_hi": [
+      "प्रत्यक्ष विधि (Direct Method)",
+      "पग-विचलन विधि (Step-Deviation Method)",
+      "दोनों समान रूप से अच्छे हैं",
+      "इनमें से कोई नहीं"
+    ],
+    "correct_index": 1,
+    "explanation": "Step-Deviation Method simplifies calculations by making the numbers smaller.",
+    "explanation_hi": "पग-विचलन विधि संख्याओं को छोटा करके गणना को सरल बनाती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_06",
+    "type": "theory",
+    "title": "When Mean is Misleading",
+    "title_hi": "जब माध्य भ्रामक होता है",
+    "body": "Imagine a class where 9 students get ₹10 pocket money and 1 gets ₹1000. The mean is ₹109. Does this represent the class well? No! This is why we need other measures like Median and Mode.",
+    "body_hi": "एक ऐसी कक्षा की कल्पना करें जहाँ 9 छात्रों को ₹10 पॉकेट मनी मिलती है और 1 को ₹1000 मिलती है। माध्य ₹109 है। क्या यह कक्षा का सही प्रतिनिधित्व करता है? नहीं! इसलिए हमें माध्यिका (Median) और बहुलक (Mode) जैसे अन्य मापों की आवश्यकता होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_07",
+    "type": "theory",
+    "title": "Meeting the Mode and Median",
+    "title_hi": "बहुलक और माध्यिका से मिलना",
+    "body": "Mode is simply the most popular value (what happens most often). Median is the exact middle value when you line everyone up from shortest to tallest. Together, Mean, Median, and Mode are called Measures of Central Tendency.",
+    "body_hi": "बहुलक (Mode) केवल सबसे लोकप्रिय मान है (जो सबसे अधिक बार होता है)। माध्यिका (Median) सटीक मध्य मान है जब आप सभी को सबसे छोटे से सबसे लंबे तक लाइन में खड़ा करते हैं। एक साथ, माध्य, माध्यिका और बहुलक को केंद्रीय प्रवृत्ति के माप कहा जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_08",
+    "type": "socratic_question",
+    "question": "A shoe store wants to know which shoe size to stock the most. Should they calculate the mean, median, or mode of their sales?",
+    "question_hi": "एक जूते की दुकान यह जानना चाहती है कि किस आकार के जूते का सबसे अधिक स्टॉक रखा जाए। क्या उन्हें अपनी बिक्री के माध्य, माध्यिका या बहुलक की गणना करनी चाहिए?",
+    "options": [
+      "Mean",
+      "Median",
+      "Mode",
+      "Any of them"
+    ],
+    "options_hi": [
+      "माध्य (Mean)",
+      "माध्यिका (Median)",
+      "बहुलक (Mode)",
+      "इनमें से कोई भी"
+    ],
+    "correct_index": 2,
+    "explanation": "They need to know the most popular shoe size, which is the Mode.",
+    "explanation_hi": "उन्हें सबसे लोकप्रिय जूते के आकार को जानने की जरूरत है, जो कि बहुलक (Mode) है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_09",
+    "type": "theory",
+    "title": "The Mode Formula",
+    "title_hi": "बहुलक सूत्र (The Mode Formula)",
+    "body": "For grouped data, the mode lies in the 'modal class' (the class with maximum frequency). Formula: Mode = l + [ (f1 - f0) / (2f1 - f0 - f2) ] * h, where 'l' is the lower limit of the modal class.",
+    "body_hi": "समूहीकृत डेटा के लिए, बहुलक 'बहुलक वर्ग' (अधिकतम आवृत्ति वाला वर्ग) में होता है। सूत्र: बहुलक = l + [ (f1 - f0) / (2f1 - f0 - f2) ] * h, जहाँ 'l' बहुलक वर्ग की निचली सीमा है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_10",
+    "type": "quiz",
+    "question": "In the mode formula, what does 'f1' represent?",
+    "question_hi": "बहुलक सूत्र में, 'f1' क्या दर्शाता है?",
+    "options": [
+      "Frequency of the modal class",
+      "Frequency of class before modal class",
+      "Frequency of class after modal class",
+      "Class size"
+    ],
+    "options_hi": [
+      "बहुलक वर्ग की आवृत्ति",
+      "बहुलक वर्ग से पहले के वर्ग की आवृत्ति",
+      "बहुलक वर्ग के बाद के वर्ग की आवृत्ति",
+      "वर्ग का आकार"
+    ],
+    "correct_index": 0,
+    "explanation": "f1 is the frequency of the modal class itself.",
+    "explanation_hi": "f1 स्वयं बहुलक वर्ग की आवृत्ति है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_11",
+    "type": "socratic_question",
+    "question": "If you arrange 11 students by height, the height of the 6th student is the Median. What happens if there are 10 students?",
+    "question_hi": "यदि आप 11 छात्रों को ऊंचाई के अनुसार व्यवस्थित करते हैं, तो 6वें छात्र की ऊंचाई माध्यिका है। यदि 10 छात्र हों तो क्या होगा?",
+    "options": [
+      "There is no median",
+      "The 5th student is the median",
+      "Average of 5th and 6th student's height",
+      "The 6th student is the median"
+    ],
+    "options_hi": [
+      "कोई माध्यिका नहीं है",
+      "5वां छात्र माध्यिका है",
+      "5वें और 6वें छात्र की ऊंचाई का औसत",
+      "6वां छात्र माध्यिका है"
+    ],
+    "correct_index": 2,
+    "explanation": "For an even number of observations, the median is the average of the two middle values.",
+    "explanation_hi": "सम संख्या वाले अवलोकनों के लिए, माध्यिका दो मध्य मानों का औसत होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_12",
+    "type": "theory",
+    "title": "The Median Formula",
+    "title_hi": "माध्यिका सूत्र (The Median Formula)",
+    "body": "For grouped data, we find the cumulative frequencies and the 'median class' (where n/2 lies). Formula: Median = l + [ (n/2 - cf) / f ] * h.",
+    "body_hi": "समूहीकृत डेटा के लिए, हम संचयी आवृत्तियों और 'माध्यिका वर्ग' (जहाँ n/2 स्थित है) का पता लगाते हैं। सूत्र: माध्यिका = l + [ (n/2 - cf) / f ] * h."
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_13",
+    "type": "theory",
+    "title": "The Empirical Relationship",
+    "title_hi": "अनुभवजन्य संबंध (The Empirical Relationship)",
+    "body": "There is a magical formula that connects all three! 3 Median = Mode + 2 Mean. This is known as the empirical relationship between the three measures of central tendency.",
+    "body_hi": "एक जादुई सूत्र है जो तीनों को जोड़ता है! 3 माध्यिका = बहुलक + 2 माध्य। इसे केंद्रीय प्रवृत्ति के तीन मापों के बीच अनुभवजन्य संबंध के रूप में जाना जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_14",
+    "type": "quiz",
+    "question": "If the Mode is 12 and the Mean is 15, what is the Median using the empirical formula?",
+    "question_hi": "यदि बहुलक 12 है और माध्य 15 है, तो अनुभवजन्य सूत्र का उपयोग करके माध्यिका क्या होगी?",
+    "options": [
+      "12",
+      "14",
+      "15",
+      "16"
+    ],
+    "options_hi": [
+      "12",
+      "14",
+      "15",
+      "16"
+    ],
+    "correct_index": 1,
+    "explanation": "3 Median = Mode + 2 Mean = 12 + 2(15) = 12 + 30 = 42. So, Median = 42/3 = 14.",
+    "explanation_hi": "3 माध्यिका = बहुलक + 2 माध्य = 12 + 2(15) = 12 + 30 = 42। इसलिए, माध्यिका = 42/3 = 14।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_15",
+    "type": "theory",
+    "title": "Mastery Challenge: Become the Analyst",
+    "title_hi": "महारत चुनौती: विश्लेषक बनें",
+    "body": "Look around your home. Find the ages of all your family members. Calculate the Mean, Median, and Mode of their ages. Which measure describes your family's age the best? You are now a statistician!",
+    "body_hi": "अपने घर के चारों ओर देखें। अपने परिवार के सभी सदस्यों की उम्र का पता लगाएं। उनकी उम्र के माध्य, माध्यिका और बहुलक की गणना करें। कौन सा माप आपके परिवार की उम्र का सबसे अच्छा वर्णन करता है? अब आप एक सांख्यिकीविद् हैं!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If the mean of a frequency distribution is 8.1 and Σfᵢxᵢ = 132 + 5k, Σfᵢ = 20, then what is the value of k?",
+    "question_hi": "यदि एक बारंबारता बंटन का माध्य 8.1 है और Σfᵢxᵢ = 132 + 5k, Σfᵢ = 20 है, तो k का मान क्या है?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "options_hi": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct_index": 3,
+    "explanation": "Mean = Σfᵢxᵢ / Σfᵢ\n8.1 = (132 + 5k) / 20\n8.1 × 20 = 132 + 5k\n162 = 132 + 5k\n5k = 162 - 132 = 30\nk = 6",
+    "explanation_hi": "माध्य = Σfᵢxᵢ / Σfᵢ\n8.1 = (132 + 5k) / 20\n8.1 × 20 = 132 + 5k\n162 = 132 + 5k\n5k = 162 - 132 = 30\nk = 6"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The median of a given grouped frequency distribution is found graphically with the help of which of the following?",
+    "question_hi": "किसी दिए गए समूहीकृत बारंबारता बंटन की माध्यिका को ग्राफिक रूप से निम्नलिखित में से किसकी सहायता से ज्ञात किया जाता है?",
+    "options": [
+      "Histogram",
+      "Frequency Curve",
+      "Frequency Polygon",
+      "Ogive"
+    ],
+    "options_hi": [
+      "आयतचित्र (Histogram)",
+      "बारंबारता वक्र (Frequency Curve)",
+      "बारंबारता बहुभुज (Frequency Polygon)",
+      "तोरण (Ogive)"
+    ],
+    "correct_index": 3,
+    "explanation": "An ogive (cumulative frequency curve) is used to find the median of a grouped data distribution. The intersection of less than and more than ogives gives the median.",
+    "explanation_hi": "तोरण (संचयी बारंबारता वक्र) का उपयोग समूहीकृत डेटा बंटन की माध्यिका ज्ञात करने के लिए किया जाता है। 'से कम' और 'से अधिक' प्रकार के तोरणों का प्रतिच्छेदन बिंदु माध्यिका देता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "Consider the following frequency distribution: [0-5: 10], [5-10: 15], [10-15: 12], [15-20: 20], [20-25: 9]. What is the upper limit of the median class?",
+    "question_hi": "निम्नलिखित बारंबारता बंटन पर विचार करें: [0-5: 10], [5-10: 15], [10-15: 12], [15-20: 20], [20-25: 9]। माध्यिका वर्ग की ऊपरी सीमा क्या है?",
+    "options": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "options_hi": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "correct_index": 1,
+    "explanation": "Total frequency N = 10 + 15 + 12 + 20 + 9 = 66.\nN/2 = 66/2 = 33.\nThe cumulative frequencies are 10, 25, 37, 57, 66.\nThe cumulative frequency just greater than 33 is 37, which corresponds to the class 10-15.\nTherefore, the median class is 10-15, and its upper limit is 15.",
+    "explanation_hi": "कुल बारंबारता N = 10 + 15 + 12 + 20 + 9 = 66.\nN/2 = 66/2 = 33.\nसंचयी आवृत्तियां 10, 25, 37, 57, 66 हैं।\n33 से ठीक बड़ी संचयी आवृत्ति 37 है, जो वर्ग 10-15 से मेल खाती है।\nइसलिए, माध्यिका वर्ग 10-15 है, और इसकी ऊपरी सीमा 15 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "For a perfectly symmetrical distribution, which of the following relationships is true?",
+    "question_hi": "एक पूर्ण सममित बंटन (perfectly symmetrical distribution) के लिए, निम्नलिखित में से कौन सा संबंध सत्य है?",
+    "options": [
+      "Mean > Median > Mode",
+      "Mean < Median < Mode",
+      "Mean = Median = Mode",
+      "Mean = 2 Median - Mode"
+    ],
+    "options_hi": [
+      "माध्य > माध्यिका > बहुलक",
+      "माध्य < माध्यिका < बहुलक",
+      "माध्य = माध्यिका = बहुलक",
+      "माध्य = 2 माध्यिका - बहुलक"
+    ],
+    "correct_index": 2,
+    "explanation": "In a perfectly symmetrical distribution (like a normal curve), the mean, median, and mode all lie at the exact center and are equal to each other.",
+    "explanation_hi": "एक पूर्ण सममित बंटन (जैसे एक सामान्य वक्र) में, माध्य, माध्यिका और बहुलक सभी ठीक केंद्र में स्थित होते हैं और एक दूसरे के बराबर होते हैं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH14_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The class marks of a continuous distribution are given as 1.04, 1.14, 1.24, 1.34, 1.44, 1.54. What is the class size of the distribution?",
+    "question_hi": "एक सतत बंटन के वर्ग चिह्न (class marks) 1.04, 1.14, 1.24, 1.34, 1.44, 1.54 के रूप में दिए गए हैं। बंटन का वर्ग आकार (class size) क्या है?",
+    "options": [
+      "0.1",
+      "0.01",
+      "1.1",
+      "0.2"
+    ],
+    "options_hi": [
+      "0.1",
+      "0.01",
+      "1.1",
+      "0.2"
+    ],
+    "correct_index": 0,
+    "explanation": "The class size (h) is the difference between any two consecutive class marks.\nClass size = 1.14 - 1.04 = 0.10 or 0.1.",
+    "explanation_hi": "वर्ग का आकार (h) किन्हीं दो लगातार वर्ग चिह्नों के बीच का अंतर होता है।\nवर्ग का आकार = 1.14 - 1.04 = 0.10 या 0.1."
+  }
+]

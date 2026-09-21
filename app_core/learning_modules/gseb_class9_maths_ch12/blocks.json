@@ -1,0 +1,222 @@
+[
+  {
+    "id": "B_STAT_01",
+    "type": "theory",
+    "title": "Introduction to Statistics",
+    "content": "Statistics is the branch of mathematics that deals with the collection, organization, analysis, interpretation, and presentation of data. It helps us make sense of the vast amounts of information we encounter every day.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_02",
+    "type": "definition",
+    "title": "What is Data?",
+    "content": "Data is a collection of facts, such as numbers, words, measurements, observations, or even just descriptions of things. In statistics, data is typically numeric and gathered for analysis.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "B_STAT_03",
+    "type": "theory",
+    "title": "Primary vs. Secondary Data",
+    "content": "When an investigator gathers data firsthand for a specific purpose, it is called **Primary Data**. When data is collected by someone else and the investigator merely uses it, it is called **Secondary Data**.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 4,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_04",
+    "type": "real_world_example",
+    "title": "Data Collection in Real Life",
+    "content": "If you count the number of students in each class of your school, that's primary data. If you use the school's attendance register to find out the same information, that's secondary data.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "B_STAT_05",
+    "type": "theory",
+    "title": "Presentation of Data: Ungrouped and Grouped",
+    "content": "Raw data can be difficult to interpret. We organize it using **frequency distribution tables**. \n- **Ungrouped Frequency Distribution**: Lists each individual value and its frequency.\n- **Grouped Frequency Distribution**: Groups values into class intervals (e.g., 0-10, 10-20) and records the frequency for each group.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_06",
+    "type": "formula",
+    "title": "Class Mark",
+    "content": "The midpoint of a class interval is used in calculations like the mean. It is called the class mark.\n\n**Class Mark = (Upper Class Limit + Lower Class Limit) / 2**",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "B_STAT_07",
+    "type": "worked_example",
+    "title": "Calculating Class Mark",
+    "content": "**Question**: Find the class mark for the interval 30-40.\n**Solution**:\nLower Limit = 30\nUpper Limit = 40\nClass Mark = (30 + 40) / 2\n= 70 / 2\n= 35.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "B_STAT_08",
+    "type": "common_mistakes",
+    "title": "Class Size vs. Class Mark",
+    "content": "Students often confuse **Class Size** with **Class Mark**.\n- Class Size (or Width) is the difference: Upper Limit - Lower Limit.\n- Class Mark is the average: (Upper Limit + Lower Limit) / 2.\nDon't subtract when you need the midpoint!",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_09",
+    "type": "theory",
+    "title": "Graphical Representation: Bar Graphs",
+    "content": "A bar graph is a pictorial representation of data in which usually independent variables are plotted on the x-axis and dependent variables (like frequencies) are plotted on the y-axis. The bars have uniform width and equal spacing between them.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_10",
+    "type": "theory",
+    "title": "Graphical Representation: Histograms",
+    "content": "A histogram is like a bar graph but used for **continuous grouped data**. Because the data is continuous, there are **no gaps** between the consecutive rectangles.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_11",
+    "type": "common_mistakes",
+    "title": "Bar Graph vs. Histogram",
+    "content": "A very common error is drawing a histogram when a bar graph is needed, or vice-versa.\n- **Bar Graph**: Used for discrete categories (e.g., Blood types, car colors). Has gaps between bars.\n- **Histogram**: Used for continuous numerical intervals (e.g., heights 150-160 cm, weights 40-50 kg). No gaps between bars.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Analyze"
+    }
+  },
+  {
+    "id": "B_STAT_12",
+    "type": "theory",
+    "title": "Graphical Representation: Frequency Polygons",
+    "content": "A frequency polygon can be drawn by joining the midpoints (class marks) of the upper sides of the rectangles in a histogram. It can also be drawn independently without a histogram by plotting the frequency against the class mark.",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_13",
+    "type": "theory",
+    "title": "Measures of Central Tendency",
+    "content": "A measure of central tendency is a single value that attempts to describe a set of data by identifying the central position within that set of data. The three main measures are Mean, Median, and Mode.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    }
+  },
+  {
+    "id": "B_STAT_14",
+    "type": "formula",
+    "title": "Mean of Ungrouped Data",
+    "content": "The mean (or average) is the sum of all observations divided by the total number of observations.\n\n**Mean (x̄) = (Σxi) / n**\nwhere Σxi is the sum of all 'n' values.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "B_STAT_15",
+    "type": "worked_example",
+    "title": "Calculating the Mean",
+    "content": "**Question**: The marks obtained by 5 students are 12, 18, 15, 20, and 10. Find the mean marks.\n**Solution**:\nSum of marks = 12 + 18 + 15 + 20 + 10 = 75\nNumber of students (n) = 5\nMean = 75 / 5 = 15.\nThe mean mark is 15.",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "B_STAT_16",
+    "type": "formula",
+    "title": "Median of Ungrouped Data",
+    "content": "The median is the middlemost value of the arranged data (ascending or descending order).\n- If n is odd: **Median = ((n + 1) / 2)th observation**\n- If n is even: **Median = Average of the (n / 2)th and ((n / 2) + 1)th observations**",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "B_STAT_17",
+    "type": "common_mistakes",
+    "title": "Finding the Median without Sorting",
+    "content": "The biggest mistake students make with the median is picking the middle number **before** arranging the data in ascending or descending order. The data MUST be sorted first!",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "B_STAT_18",
+    "type": "worked_example",
+    "title": "Calculating the Median (Even n)",
+    "content": "**Question**: Find the median of 8, 3, 12, 5, 9, 10.\n**Solution**:\n1. Sort the data: 3, 5, 8, 9, 10, 12\n2. Count n: n = 6 (even)\n3. Identify middle terms: (6/2)th = 3rd term (which is 8), and the 4th term (which is 9).\n4. Median = (8 + 9) / 2 = 17 / 2 = 8.5.",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 4,
+      "bloom": "Apply"
+    }
+  },
+  {
+    "id": "B_STAT_19",
+    "type": "theory",
+    "title": "Mode of Ungrouped Data",
+    "content": "The mode is the value that appears most frequently in a dataset. A dataset may have one mode, more than one mode, or no mode at all.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    }
+  },
+  {
+    "id": "B_STAT_20",
+    "type": "worked_example",
+    "title": "Finding the Mode",
+    "content": "**Question**: Find the mode of the numbers: 2, 4, 2, 5, 6, 4, 2, 8.\n**Solution**:\nLet's count the frequencies:\n- 2 appears 3 times.\n- 4 appears 2 times.\n- 5, 6, 8 each appear 1 time.\nSince 2 has the highest frequency, the Mode is 2.",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Apply"
+    }
+  }
+]

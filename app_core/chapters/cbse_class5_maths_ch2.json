@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "id": "cbse_grade_unknown_maths_ch2",
+    "title": "Chapter 2: Addition",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Master the process of single-digit, double-digit, and multi-digit addition with and without regrouping.",
+      "Understand the properties of addition including commutative and associative properties.",
+      "Apply addition to solve complex word problems and everyday scenarios."
+    ],
+    "core_concepts": [
+      "DICT_MATH_ADDITION",
+      "DICT_MATH_CARRYOVER",
+      "DICT_MATH_SUM",
+      "DICT_MATH_COMMUTATIVE"
+    ],
+    "ai_context": {
+      "learning_goal": "Students should gain complete fluency in vertical and horizontal addition of large numbers, understanding the underlying place value mechanics rather than just memorizing mechanical rules.",
+      "common_misconceptions": [
+        "Forgetting to add the carried-over number into the next place value column.",
+        "Aligning numbers by the left edge instead of the right edge (place value alignment error).",
+        "Believing the order of addition changes the total (violating the commutative property)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Grand Library Inventory",
+      "body": "Imagine walking into the ancient Alexandria Library, where millions of scrolls are scattered across the floor. The head librarian, Master Elian, needs to catalog them before sunset. In the east wing, there are 3,452 historical manuscripts. In the west wing, another 2,891 mathematical treatises arrive in dusty crates. Master Elian cannot simply guess how many total scrolls he has to protect; he needs a powerful mathematical spell—[DICT_MATH_ADDITION|Addition]—to combine these quantities into a single grand total. Without this foundational tool, the ancient knowledge would be lost in chaos. Today, we step into Master Elian's shoes to master the art of combining numbers safely and accurately.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why does Master Elian need to use addition in the library scenario?",
+      "options": [
+        "To separate the scrolls into smaller piles",
+        "To find the total number of scrolls by combining both wings",
+        "To measure how long each scroll is"
+      ],
+      "correct_index": 1,
+      "explanation": "Addition is the mathematical operation used to combine two or more quantities into a single total or sum.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Addition and the Concept of Sum",
+      "body": "At its core, [DICT_MATH_ADDITION|Addition] is the process of bringing two or more numbers (or items) together to make a new total, known as the [DICT_MATH_SUM|Sum]. Think of it as physical collection: if you have 3 apples and your friend gives you 4 more, you push them together into one basket to count them all. Every time we add, we are moving forward on the number line. The numbers we are adding together are called 'addends', and the result of their combination is the sum. Understanding that addition represents merging collections is the bedrock of all arithmetic. Whether we are adding single digits or millions, the underlying philosophy remains identical: counting everything as one unified group.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Counter Analogy",
+      "body": "Grab 5 pencils and 3 erasers. Place them on your desk in separate groups. Now push them together. Count them out loud. You just proved that 5 + 3 = 8 by physically enacting the concept of a sum!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What do we call the numbers that are being added together in an addition problem?",
+      "back": "Addends! (And the result is called the sum).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Magic of Place Value Alignment",
+      "body": "When numbers grow larger than single digits, we cannot simply count them on our fingers. We must write them down vertically. This is where [DICT_MATH_ADDITION|Addition] requires strict discipline: place value alignment. Every digit lives in a specific house—the Ones house, the Tens house, the Hundreds house, and the Thousands house. When setting up an addition problem, you must align the rightmost edges so that Ones are stacked directly over Ones, Tens over Tens, and so forth. If you misalign your columns, you might end up adding Tens to Ones, which is like trying to add oranges to spaceships! Always stack your columns neatly before drawing your answer line underneath.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "When setting up a vertical addition problem like 45 + 123, how should the numbers be aligned?",
+      "options": [
+        "Aligned by the left side (4 under 1)",
+        "Aligned by the right side so Ones line up with Ones",
+        "It doesn't matter how they are aligned"
+      ],
+      "correct_index": 1,
+      "explanation": "You must always align numbers by their rightmost edge so that corresponding place values (Ones with Ones, Tens with Tens) match up.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: Addition Without Regrouping (Simple Addition)",
+      "body": "Once your columns are neatly aligned, executing [DICT_MATH_ADDITION|Addition] is a straightforward journey from right to left. We always begin in the Ones column. Suppose we are adding 342 and 125. First, we look at the Ones column: 2 + 5 = 7. Next, we move one step left to the Tens column: 4 + 2 = 6. Finally, we look at the Hundreds column: 3 + 1 = 4. Putting it all together, our [DICT_MATH_SUM|Sum] is 467. Because none of our individual column additions exceeded 9, we did not need to exchange or move any values to the neighboring column. This is known as addition without regrouping. It is clean, peaceful, and orderly.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "quiz",
+      "question": "Calculate the sum: 412 + 334 =",
+      "options": [
+        "746",
+        "756",
+        "646"
+      ],
+      "correct_index": 0,
+      "explanation": "Ones: 2+4=6. Tens: 1+3=4. Hundreds: 4+3=7. The total sum is 746.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "Right-to-Left Rule",
+      "body": "Remind students that while we read books from left to right, we always do arithmetic operations (addition, subtraction, multiplication) from right to left because of place value dependencies!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 4: The Mystery of Regrouping (Carrying Over)",
+      "body": "What happens when a column's total reaches 10 or more? In our base-10 number system, a single column can only hold digits from 0 to 9. If you have 8 apples and add 5 more, you get 13 apples. You cannot write the number '13' inside a single Ones column! This is where [DICT_MATH_CARRYOVER|Carryover] (or regrouping) comes to life. You keep the 3 in the Ones column, but the '1' representing a group of ten must pack its bags and move to the next column on the left as an extra guest. This process ensures our place value houses never become overcrowded.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "flashcard",
+      "front": "What must you do when the sum of a single column is 10 or greater?",
+      "back": "Regroup! Write down the units digit in the current column and carry over the tens digit to the next column on the left.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Step-by-Step Execution of Carryover",
+      "body": "Let us walk through an addition problem with [DICT_MATH_CARRYOVER|Carryover]: 457 + 286. Step 1: Look at the Ones column. 7 + 6 = 13. We write down 3 in the Ones place and carry over a tiny '1' to the top of the Tens column. Step 2: Now look at the Tens column. We have 5, 8, AND our carried-over 1. Adding them up: 1 + 5 + 8 = 14. We write down 4 in the Tens place and carry over a '1' to the Hundreds column. Step 3: In the Hundreds column, we add 4 + 2 + our carried-over 1, which equals 7. Our final [DICT_MATH_SUM|Sum] is 743. Notice how the carried-over digit acts like a bridge connecting our place values.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "In the problem 457 + 286, what number was carried over from the Ones column to the Tens column?",
+      "options": [
+        "3",
+        "1",
+        "7"
+      ],
+      "correct_index": 1,
+      "explanation": "Since 7 + 6 = 13, the '3' stays in the Ones column and the '1' (representing one ten) is carried over.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "teacher_tip",
+      "title": "The Tiny Number Habit",
+      "body": "Encourage students to write their carried-over numbers small and neatly right above the target column line so they never forget to add them in!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 5: Multiple Regroupings and Large Numbers",
+      "body": "As numbers scale up to thousands, ten-thousands, and beyond, you may encounter multiple regroupings in a single problem. For example, adding 6,874 + 3,569 requires carrying over from the Ones to the Tens, from the Tens to the Hundreds, and potentially from the Hundreds to the Thousands. The secret here is patience and precision. Never rush. Treat each column as its own mini-puzzle before moving left. Master Elian frequently faces this when counting tens of thousands of scrolls in the grand archives. Each successful carryover is a victory of organization over chaos.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "Calculate the sum: 6,874 + 3,569 =",
+      "options": [
+        "10,443",
+        "10,433",
+        "9,433"
+      ],
+      "correct_index": 0,
+      "explanation": "4+9=13 (carry 1). 7+6+1=14 (carry 1). 8+5+1=14 (carry 1). 6+3+1=10. Total is 10,443.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 6: The Commutative Property of Addition",
+      "body": "Did you know that numbers have a secret superpower regarding friendship? This is known as the [DICT_MATH_COMMUTATIVE|Commutative Property] of addition. It states that changing the order of the addends does not change the final sum. For instance, 5 + 3 equals 8, and 3 + 5 also equals 8. Whether you put 5 apples in a bag first and add 3 more, or put 3 apples in first and add 5 more, you end up with exactly 8 apples. This property is immensely useful when checking your work or rearranging long lists of numbers to find easy combinations that add up to 10.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "What does the Commutative Property state about addition?",
+      "back": "Changing the order of the addends does not change the sum (e.g., A + B = B + A).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 7: The Associative Property and Zero Property",
+      "body": "Addition also possesses the Associative Property, which deals with grouping. When you are adding three or more numbers, the way you group them with parentheses does not change the sum: (2 + 3) + 4 is the exact same as 2 + (3 + 4). Both equal 9. Furthermore, we have the Zero Property of addition (also called the Identity Property): adding zero to any number leaves that number completely unchanged (e.g., 45 + 0 = 45). Zero is like an invisible mirror that reflects the number right back to you.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "Which mathematical property is demonstrated by the equation: (12 + 5) + 8 = 12 + (5 + 8)?",
+      "options": [
+        "Commutative Property",
+        "Associative Property",
+        "Zero Property"
+      ],
+      "correct_index": 1,
+      "explanation": "The Associative Property governs how numbers are grouped using parentheses without altering the final sum.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Concept 8: Estimating Sums Before Calculating",
+      "body": "Before Master Elian calculates the exact sum of thousands of scrolls, he often performs an estimate to check if his final answer makes sense. Estimation involves rounding each addend to the nearest ten, hundred, or thousand before adding them. For example, if we want to estimate 489 + 312, we round 489 to 500 and 312 to 300. 500 + 300 = 800. Our actual calculation will be very close to 800. If our exact calculation comes out to 8,012, we immediately know we made a place value alignment error because 8,012 is nowhere near 800!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "teacher_tip",
+      "title": "The Estimation Shield",
+      "body": "Always teach students to estimate first. It acts as a safety shield against careless calculation errors in exams and real life.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Concept 9: Real-World Word Problems in Addition",
+      "body": "Maths is not just numbers on a chalkboard; it is the language of the physical world. Word problems translate real-life situations into equations. Keywords like 'total', 'combined', 'altogether', 'sum', and 'increased by' are strong signals that [DICT_MATH_ADDITION|Addition] is required. When solving a word problem, always follow three steps: 1) Read the story carefully and identify what you know. 2) Identify what you need to find. 3) Set up your vertical addition columns and solve. Let us help Master Elian: If the library had 1,200 books on Monday and received 450 more on Tuesday, how many books do they have altogether?",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Based on the word problem above, what is the total number of books in the library now?",
+      "options": [
+        "1,650",
+        "1,750",
+        "1,250"
+      ],
+      "correct_index": 0,
+      "explanation": "1,200 + 450 = 1,650 books altogether.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Concept 10: Multi-Step Addition Scenarios",
+      "body": "Sometimes life presents puzzles that require more than one addition step. Imagine a bakery that bakes 1,200 cookies in the morning, 850 cookies in the afternoon, and 1,500 cookies at night. To find the total daily production, we must combine all three numbers. You can add the first two numbers together (1,200 + 850 = 2,050) and then add the third number to that result (2,050 + 1,500 = 3,550). Alternatively, you can stack all three numbers vertically, aligning their place values carefully. Both methods lead to the exact same [DICT_MATH_SUM|Sum].",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "What are some common keywords in word problems that indicate you need to use addition?",
+      "back": "Total, combined, altogether, sum, plus, increased by.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Mastering the Final Challenge: Speed and Accuracy",
+      "body": "As you practice [DICT_MATH_ADDITION|Addition], your brain builds neural pathways that make calculations feel effortless. Professional mathematicians do not calculate faster because they have magic brains; they calculate faster because they respect the rules of place value, double-check their [DICT_MATH_CARRYOVER|Carryover] digits, and use estimation to catch mistakes early. Master Elian successfully cataloged all his scrolls before sunset, keeping the ancient wisdom safe for generations to come. Now, armed with these foundational principles, you are ready to tackle any addition challenge placed before you.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "quiz",
+      "question": "What is the ultimate benefit of mastering both place value alignment and carryover in addition?",
+      "options": [
+        "It allows you to solve complex multi-digit addition problems accurately and efficiently.",
+        "It eliminates the need for numbers.",
+        "It only works for single-digit numbers."
+      ],
+      "correct_index": 0,
+      "explanation": "Mastering these techniques ensures accuracy and speed across all levels of arithmetic and real-world problem solving.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    }
+  ]
+}

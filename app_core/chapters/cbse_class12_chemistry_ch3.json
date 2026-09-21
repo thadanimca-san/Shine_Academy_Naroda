@@ -1,0 +1,767 @@
+{
+  "metadata": {
+    "id": "cbse_class12_chemistry_ch3",
+    "title": "Chapter 3: Chemical Kinetics",
+    "subject": "Chemistry",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_001",
+      "type": "hook",
+      "title": "The Speed of Chemical Change: Fireworks vs Rust",
+      "title_hi": "रासायनिक परिवर्तन की गति: पटाखे बनाम जंग लगना",
+      "title_gu": "રાસાયણિક ફેરફારની ઝડપ: ફટાકડા વિરુદ્ધ કાટ લાગવો",
+      "body": "Why does a diamond remain unchanged for millions of years, an iron nail rusts over months, while a firecracker explodes in milliseconds? Chemistry is not just about what forms, but how FAST it forms. Welcome to Chemical Kinetics—the branch of chemistry that controls everything from food spoilage to life-saving drug delivery!",
+      "body_hi": "एक हीरा लाखों वर्षों तक अपरिवर्तित क्यों रहता है, लोहे की कील में महीनों में जंग लगती है, जबकि एक पटाखा मिलीसेकंड में विस्फोट कर जाता है? रसायन विज्ञान केवल इस बारे में नहीं है कि क्या बनता है, बल्कि यह भी है कि यह कितनी तेज़ बनता है। रासायनिक बलगतिकी में आपका स्वागत है—रसायन विज्ञान की वह शाखा जो भोजन के खराब होने से लेकर जीवन रक्षक दवाओं के प्रभाव तक सब कुछ नियंत्रित करती है!",
+      "body_gu": "શા માટે હીરો લાખો વર્ષો સુધી અપરિવર્તિત રહે છે, લોખંડની ખીલી મહિનાઓમાં કાટ ખાય છે, જ્યારે ફટાકડો મિલિસેકન્ડમાં ફૂટે છે? રસાયણશાસ્ત્ર માત્ર શું બને છે તે વિશે નથી, પરંતુ તે કેટલું ઝડપથી બને છે તે વિશે પણ છે. રાસાયણિક બલગતિકીમાં આપનું સ્વાગત છે—રસાયણશાસ્ત્રની તે શાખા જે ખોરાક બગાડવાથી લઈને જીવનરક્ષક દવાઓના વિતરણ સુધીની દરેક બાબતને નિયંત્રિત કરે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_002",
+      "type": "socratic_question",
+      "question": "If reactant concentration decreases over time during a chemical reaction, how should we express the rate of reaction in terms of the change in concentration of reactant Δ[R] over time interval Δt?",
+      "question_hi": "यदि किसी रासायनिक अभिक्रिया के दौरान अभिकारक की सांद्रता समय के साथ घटती है, तो समय अंतराल Δt में अभिकारक की सांद्रता Δ[R] में परिवर्तन के रूप में अभिक्रिया की दर को कैसे व्यक्त किया जाना चाहिए?",
+      "question_gu": "જો રાસાયણિક પ્રક્રિયા દરમિયાન સમય સાથે પ્રક્રિયકની સાંદ્રતા ઘટે છે, તો સમયગાળા Δt માં પ્રક્રિયકની સાંદ્રતા Δ[R] માં ફેરફારના સંદર્ભમાં પ્રક્રિયાના દરને કેવી રીતે દર્શાવવો જોઈએ?",
+      "options": [
+        "Rate = + Δ[R] / Δt (since concentration is positive)",
+        "Rate = - Δ[R] / Δt (a minus sign is added to make the rate a positive quantity)",
+        "Rate = Δ[R] × Δt",
+        "Rate = 1 / (Δ[R] · Δt)"
+      ],
+      "options_hi": [
+        "दर = + Δ[R] / Δt (चूंकि सांद्रता धनात्मक होती है)",
+        "दर = - Δ[R] / Δt (दर को धनात्मक राशि बनाने के लिए ऋण चिन्ह जोड़ा जाता है)",
+        "दर = Δ[R] × Δt",
+        "दर = 1 / (Δ[R] · Δt)"
+      ],
+      "options_gu": [
+        "દર = + Δ[R] / Δt (સાંદ્રતા ધન હોવાથી)",
+        "દર = - Δ[R] / Δt (દરને ધન રાશિ બનાવવા માટે ઋણ નિશાની ઉમેરવામાં આવે છે)",
+        "દર = Δ[R] × Δt",
+        "દર = 1 / (Δ[R] · Δt)"
+      ],
+      "correct_index": 1,
+      "explanation": "Because [R] decreases with time, Δ[R] = [R2] - [R1] is a negative quantity. Multiplying by -1 ensures that the rate of reaction is always expressed as a positive number.",
+      "explanation_hi": "चूंकि समय के साथ [R] घटता है, इसलिए Δ[R] = [R2] - [R1] एक ऋणात्मक राशि है। -1 से गुणा करने पर यह सुनिश्चित होता है कि अभिक्रिया की दर हमेशा धनात्मक संख्या के रूप में व्यक्त हो।",
+      "explanation_gu": "સમય સાથે [R] ઘટતું હોવાથી, Δ[R] = [R2] - [R1] એ ઋણ રાશિ છે. -1 વડે ગુણવાથી ખાતરી થાય છે કે પ્રક્રિયાનો દર હંમેશા ધન સંખ્યા તરીકે વ્યક્ત થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_003",
+      "type": "discovery",
+      "title": "Uncovering the Order & Rate Law",
+      "title_hi": "अभिक्रिया की कोटि और दर नियम की खोज",
+      "title_gu": "પ્રક્રિયાનો ક્રમ અને દર નિયમની શોધ",
+      "body": "Consider a general reaction: aA + bB → cC + dD. Experimentally, we observe that Rate ∝ [A]^x [B]^y, or Rate = k [A]^x [B]^y, where 'k' is the rate constant. Key Discovery: The exponents x and y are NOT necessarily equal to stoichiometric coefficients 'a' and 'b'. The overall order of reaction n = x + y. Order is strictly an EXPERIMENTAL quantity—it can be 0, 1, 2, 3, or even a fraction!",
+      "body_hi": "एक सामान्य अभिक्रिया पर विचार करें: aA + bB → cC + dD। प्रयोगात्मक रूप से, हम देखते हैं कि दर ∝ [A]^x [B]^y, या दर = k [A]^x [B]^y, जहाँ 'k' दर स्थिरांक है। मुख्य खोज: घातांक x और y अनिवार्य रूप से स्टोइकियोमीट्री गुणांक 'a' और 'b' के बराबर नहीं होते हैं। कुल अभिक्रिया की कोटि n = x + y। कोटि पूरी तरह से एक प्रयोगात्मक राशि है—यह 0, 1, 2, 3 या भिन्न (fraction) भी हो सकती है!",
+      "body_gu": "એક સામાન્ય પ્રક્રિયા ધ્યાનમાં લો: aA + bB → cC + dD. પ્રાયોગિક રીતે, આપણે જોઈએ છીએ કે દર ∝ [A]^x [B]^y, અથવા દર = k [A]^x [B]^y, જ્યાં 'k' એ દર અચળાંક છે. મુખ્ય શોધ: ઘાતાંક x અને y એ સ્ટોઇકિયોમેટ્રિક ગુણાંક 'a' અને 'b' ની સમાન હોવા જરૂરી નથી. એકંદર પ્રક્રિયાનો ક્રમ n = x + y. ક્રમ એ સંપૂર્ણપણે પ્રાયોગિક રાશી છે—તે 0, 1, 2, 3 અથવા અપૂર્ણાંક પણ હોઈ શકે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_004",
+      "type": "theory",
+      "title": "Core Concepts: Integrated Rate Equations, Half-Life & Arrhenius Equation",
+      "title_hi": "मुख्य अवधारणाएँ: एकीकृत दर समीकरण, अर्ध-आयु और आरहेनियस समीकरण",
+      "title_gu": "મુખ્ય ખ્યાલો: સંકલિત દર સમીકરણો, અર્ધ-આયુષ્ય અને આર્હેનિયસ સમીકરણ",
+      "body": "1. Zero-Order Reaction: Rate = k[A]^0 = k. Integrated form: [A] = [A]_0 - kt. Half-life t_1/2 = [A]_0 / (2k).\n2. First-Order Reaction: Rate = k[A]. Integrated form: k = (2.303 / t) log([A]_0 / [A]). Half-life t_1/2 = 0.693 / k (independent of initial concentration!).\n3. Pseudo First-Order Reaction: Reactions that are second-order but behave as first-order because one reactant is present in large excess (e.g., acid hydrolysis of ethyl acetate).\n4. Temperature Dependence (Arrhenius Equation): k = A · e^(-Ea / RT) or log(k2/k1) = (Ea / 2.303 R) · [(T2 - T1) / (T1 · T2)].\n5. Molecularity: The number of reacting species colliding simultaneously in an elementary step. It is always a positive integer (1, 2, or 3) and never zero or fractional.",
+      "body_hi": "1. शून्य-कोटि अभिक्रिया: दर = k[A]^0 = k। एकीकृत रूप: [A] = [A]_0 - kt। अर्ध-आयु t_1/2 = [A]_0 / (2k)।\n2. प्रथम-कोटि अभिक्रिया: दर = k[A]। एकीकृत रूप: k = (2.303 / t) log([A]_0 / [A])। अर्ध-आयु t_1/2 = 0.693 / k (प्रारंभिक सांद्रता पर निर्भर नहीं है!)।\n3. छद्म प्रथम-कोटि अभिक्रिया: ऐसी अभिक्रियाएँ जो द्वितीय-कोटि की होती हैं लेकिन प्रथम-कोटि की तरह व्यवहार करती हैं क्योंकि एक अभिकारक अत्यधिक मात्रा में उपस्थित होता है (जैसे, एथिल एसीटेट का अम्ल जलअपघटन)।\n4. ताप पर निर्भरता (आरहेनियस समीकरण): k = A · e^(-Ea / RT) या log(k2/k1) = (Ea / 2.303 R) · [(T2 - T1) / (T1 · T2)]।\n5. आण्विकता: प्राथमिक पद में एक साथ टकराने वाली अभिक्रियाशील प्रजातियों की संख्या। यह हमेशा एक धनात्मक पूर्णांक (1, 2, या 3) होती है और कभी भी शून्य या भिन्न नहीं होती है।",
+      "body_gu": "1. શૂન્ય-ક્રમની પ્રક્રિયા: દર = k[A]^0 = k. સંકલિત સ્વરૂપ: [A] = [A]_0 - kt. અર્ધ-આયુષ્ય t_1/2 = [A]_0 / (2k).\n2. પ્રથમ-ક્રમની પ્રક્રિયા: દર = k[A]. સંકલિત સ્વરૂપ: k = (2.303 / t) log([A]_0 / [A]). અર્ધ-આયુષ્ય t_1/2 = 0.693 / k (પ્રારંભિક સાંદ્રતાથી સ્વતંત્ર!).\n3. આભાસી પ્રથમ-ક્રમની પ્રક્રિયા: એવી પ્રક્રિયાઓ જે દ્વિતીય-ક્રમની હોય પણ પ્રથમ-ક્રમ જેવી વર્તે છે કારણ કે એક પ્રક્રિયક મોટી માત્રામાં હાજર હોય છે (દા.ત. એથિલ એસિટેટનું એસિડ જળવિભાજન).\n4. તાપમાન પર નિર્ભરતા (આર્હેનિયસ સમીકરણ): k = A · e^(-Ea / RT) અથવા log(k2/k1) = (Ea / 2.303 R) · [(T2 - T1) / (T1 · T2)].\n5. આણ્વિકતા: એક જ સમયે અથડાતી પ્રક્રિયાશીલ સ્પીસીઝની સંખ્યા. તે હંમેશા ધન પૂર્ણાંક (1, 2, અથવા 3) હોય છે અને ક્યારેય શૂન્ય કે અપૂર્ણાંક હોતી નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_005",
+      "type": "mcq",
+      "question": "Which of the following statements correctly distinguishes between Order and Molecularity of a reaction?",
+      "question_hi": "निम्नलिखित में से कौन सा कथन अभिक्रिया की कोटि और आण्विकता के बीच सही अंतर बताता है?",
+      "question_gu": "નીચેનામાંથી કયું વિધાન પ્રક્રિયાના ક્રમ અને આણ્વિકતા વચ્ચેનો સાચો તફાવત દર્શાવે છે?",
+      "options": [
+        "Order can be zero or fractional, whereas molecularity is always a positive integer.",
+        "Molecularity is applicable to complex reactions as a whole, whereas order is not.",
+        "Order is a theoretical quantity, while molecularity is determined experimentally.",
+        "Molecularity can be zero for photochemical reactions."
+      ],
+      "options_hi": [
+        "कोटि शून्य या भिन्नात्मक हो सकती है, जबकि आण्विकता हमेशा एक धनात्मक पूर्णांक होती है।",
+        "आण्विकता समग्र रूप से जटिल अभिक्रियाओं पर लागू होती है, जबकि कोटि नहीं।",
+        "कोटि एक सैद्धांतिक राशि है, जबकि आण्विकता प्रयोगात्मक रूप से निर्धारित की जाती है।",
+        "प्रकाश-रासायनिक अभिक्रियाओं के लिए आण्विकता शून्य हो सकती है।"
+      ],
+      "options_gu": [
+        "ક્રમ શૂન્ય અથવા અપૂર્ણાંક હોઈ શકે છે, જ્યારે આણ્વિકતા હંમેશા ધન પૂર્ણાંક હોય છે.",
+        "આણ્વિકતા સમગ્ર જટિલ પ્રક્રિયાઓને લાગુ પડે છે, જ્યારે ક્રમ નહીં.",
+        "ક્રમ એ સૈદ્ધાંતિક રાશી છે, જ્યારે આણ્વિકતા પ્રાયોગિક રીતે નક્કી થાય છે.",
+        "પ્રકાશ-રાસાયણિક પ્રક્રિયાઓ માટે આણ્વિકતા શૂન્ય હોઈ શકે છે."
+      ],
+      "correct_index": 0,
+      "explanation": "Order is an experimentally derived quantity that can be zero, fractional, or negative. Molecularity represents the number of reacting species in an elementary step and must be a non-zero positive integer (1, 2, 3).",
+      "explanation_hi": "कोटि एक प्रयोगात्मक रूप से प्राप्त राशि है जो शून्य, भिन्नात्मक या ऋणात्मक हो सकती है। आण्विकता एक प्राथमिक पद में अभिक्रियाशील प्रजातियों की संख्या का प्रतिनिधित्व करती है और इसे गैर-शून्य धनात्मक पूर्णांक (1, 2, 3) होना चाहिए।",
+      "explanation_gu": "ક્રમ એ પ્રાયોગિક રીતે મેળવેલ રાશી છે જે શૂન્ય, અપૂર્ણાંક અથવા ઋણ હોઈ શકે છે. આણ્વિકતા પ્રાથમિક તબક્કામાં પ્રક્રિયા કરતી સ્પીસીઝની સંખ્યા દર્શાવે છે અને તે બિન-શૂન્ય ધન પૂર્ણાંક (1, 2, 3) હોવી જોઈએ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_006",
+      "type": "reflection",
+      "title": "Deep Thinking: Why doesn't Half-Life depend on Initial Concentration for 1st Order?",
+      "title_hi": "गहन चिंतन: प्रथम कोटि के लिए अर्ध-आयु प्रारंभिक सांद्रता पर निर्भर क्यों नहीं करती?",
+      "title_gu": "ઊંડાણપૂર્વક વિચાર: પ્રથમ ક્રમ માટે અર્ध-આયુષ્ય શા માટે પ્રારંભિક સાંદ્રતા પર આધાર રાખતું નથી?",
+      "body": "For a first-order reaction, doubling the initial concentration doubles the rate of reaction. Since the reaction moves twice as fast when there are twice as many molecules, the time required to consume 50% of the starting material remains EXACTLY the same! (t_1/2 = 0.693 / k). This property makes first-order kinetics crucial in radioactive decay and pharmacokinetics.",
+      "body_hi": "प्रथम-कोटि की अभिक्रिया के लिए, प्रारंभिक सांद्रता को दोगुना करने से अभिक्रिया की दर दोगुनी हो जाती है। चूंकि दोगुने अणुओं की उपस्थिति में अभिक्रिया दोगुनी तेजी से आगे बढ़ती है, इसलिए 50% शुरुआती पदार्थ को खपत करने में लगने वाला समय बिल्कुल समान रहता है! (t_1/2 = 0.693 / k)। यह गुण रेडियोधर्मी क्षय और फार्माकोकिनेटिक्स में प्रथम-कोटि की बलगतिकी को अत्यंत महत्वपूर्ण बनाता है।",
+      "body_gu": "પ્રથમ-ક્રમની પ્રક્રિયા માટે, પ્રારંભિક સાંદ્રતા બમણી કરવાથી પ્રક્રિયાનો દર બમણો થાય છે. બમણા અણુઓ હોય ત્યારે પ્રક્રિયા બમણી ઝડપથી આગળ વધતી હોવાથી, 50% શરૂઆતનો પદાર્થ વપરાઈ જવા માટે લાગતો સમય બરાબર સમાન રહે છે! (t_1/2 = 0.693 / k). આ ગુણધર્મ રેડિયોએક્ટિવ ક્ષય અને ફાર્માકોકાઇનેટિક્સમાં પ્રથમ-ક્રમની બલગતિકીને ખૂબ મહત્વપૂર્ણ બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_007",
+      "type": "connection",
+      "title": "Real World Connection: Refrigerators, Catalytic Converters, & Expiry Dates",
+      "title_hi": "वास्तविक दुनिया से संबंध: रेफ्रिजरेटर, उत्प्रेरक कनवर्टर, और समाप्ति तिथियां",
+      "title_gu": "વાસ્તવિક વિશ્વ જોડાણ: રેફ્રિજરેટર, કેટેલિટિક કન્વર્ટર અને એક્સપાયરી ડેટ્સ",
+      "body": "Why do we keep food in a refrigerator? According to the Arrhenius equation, lowering temperature decreases the rate constant 'k' exponentially, slowing down bacterial decomposition reactions! Similarly, medicine expiration dates are calculated using first-order degradation kinetics at room temperature.",
+      "body_hi": "हम भोजन को रेफ्रिजरेटर में क्यों रखते हैं? आरहेनियस समीकरण के अनुसार, तापमान कम करने से दर स्थिरांक 'k' चरघातांकी रूप से घट जाता है, जिससे जीवाणु अपघटन अभिक्रियाएँ धीमी हो जाती हैं! इसी तरह, कमरे के तापमान पर प्रथम-कोटि के क्षरण बलगतिकी का उपयोग करके दवाओं की समाप्ति तिथियों की गणना की जाती है।",
+      "body_gu": "આપણે ખોરાકને રેફ્રિજરેટરમાં કેમ રાખીએ છીએ? આર્હેનિયસ સમીકરણ અનુસાર, તાપમાન ઘટાડવાથી દર અચળાંક 'k' ઘાતાંકીય રીતે ઘટે છે, જે બેક્ટેરિયાના વિઘટનની પ્રક્રિયાઓને ધીમી પાડે છે! તેવી જ રીતે, ઓરડાના તાપમાને પ્રથમ-ક્રમના વિઘટન બલગતિકીનો ઉપયોગ કરીને દવાની એક્સપાયરી ડેટ્સની ગણતરી કરવામાં આવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_008",
+      "type": "mcq",
+      "question": "A first-order reaction has a rate constant k = 1.15 × 10^-3 s^-1. How long will 5 g of this reactant take to reduce to 3 g?",
+      "question_hi": "एक प्रथम-कोटि की अभिक्रिया का दर स्थिरांक k = 1.15 × 10^-3 s^-1 है। इस अभिकारक के 5 g को घटकर 3 g होने में कितना समय लगेगा?",
+      "question_gu": "પ્રથમ-ક્રમની પ્રક્રિયા માટે દર અચળાંક k = 1.15 × 10^-3 s^-1 છે. આ પ્રક્રિયકના 5 g માંથી ઘટીને 3 g થવા માટે કેટલો સમય લાગશે?",
+      "options": [
+        "444 s",
+        "500 s",
+        "220 s",
+        "693 s"
+      ],
+      "options_hi": [
+        "444 s",
+        "500 s",
+        "220 s",
+        "693 s"
+      ],
+      "options_gu": [
+        "444 s",
+        "500 s",
+        "220 s",
+        "693 s"
+      ],
+      "correct_index": 0,
+      "explanation": "t = (2.303 / k) * log([A]_0 / [A]) = (2.303 / 1.15 × 10^-3) * log(5 / 3) = 2002.6 * log(1.667) = 2002.6 * 0.2218 ≈ 444 s.",
+      "explanation_hi": "t = (2.303 / k) * log([A]_0 / [A]) = (2.303 / 1.15 × 10^-3) * log(5 / 3) = 2002.6 * log(1.667) = 2002.6 * 0.2218 ≈ 444 s।",
+      "explanation_gu": "t = (2.303 / k) * log([A]_0 / [A]) = (2.303 / 1.15 × 10^-3) * log(5 / 3) = 2002.6 * log(1.667) = 2002.6 * 0.2218 ≈ 444 s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_009",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.1] From the rate expression Rate = k[A]^1/2 [B]^2, what is the overall order of reaction?",
+      "question_hi": "[NCERT Ex 3.1] दर व्यंजक दर = k[A]^1/2 [B]^2 से, अभिक्रिया की कुल कोटि क्या है?",
+      "question_gu": "[NCERT Ex 3.1] દર અભિવ્યક્તિ દર = k[A]^1/2 [B]^2 પરથી, પ્રક્રિયાનો એકંદર ક્રમ શું છે?",
+      "options": [
+        "2.5 (or 5/2)",
+        "1.5",
+        "2",
+        "3"
+      ],
+      "options_hi": [
+        "2.5 (या 5/2)",
+        "1.5",
+        "2",
+        "3"
+      ],
+      "options_gu": [
+        "2.5 (અથવા 5/2)",
+        "1.5",
+        "2",
+        "3"
+      ],
+      "correct_index": 0,
+      "explanation": "Overall order n = sum of powers = 1/2 + 2 = 2.5 (or 5/2).",
+      "explanation_hi": "कुल कोटि n = घातों का योग = 1/2 + 2 = 2.5 (या 5/2)।",
+      "explanation_gu": "એકંદર ક્રમ n = ઘાતાંકોનો સરવાળો = 1/2 + 2 = 2.5 (અથવા 5/2)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_010",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.1b] What is the overall order for rate expression Rate = k[A]^3/2 [B]^-1?",
+      "question_hi": "[NCERT Ex 3.1b] दर व्यंजक दर = k[A]^3/2 [B]^-1 के लिए कुल कोटि क्या है?",
+      "question_gu": "[NCERT Ex 3.1b] દર અભિવ્યક્તિ દર = k[A]^3/2 [B]^-1 માટે એકંદર ક્રમ શું છે?",
+      "options": [
+        "0.5 (or 1/2)",
+        "1.5",
+        "-1",
+        "2.5"
+      ],
+      "options_hi": [
+        "0.5 (या 1/2)",
+        "1.5",
+        "-1",
+        "2.5"
+      ],
+      "options_gu": [
+        "0.5 (અથવા 1/2)",
+        "1.5",
+        "-1",
+        "2.5"
+      ],
+      "correct_index": 0,
+      "explanation": "Overall order n = 3/2 + (-1) = 1/2 = 0.5.",
+      "explanation_hi": "कुल कोटि n = 3/2 + (-1) = 1/2 = 0.5।",
+      "explanation_gu": "એકંદર ક્રમ n = 3/2 + (-1) = 1/2 = 0.5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_011",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.2] Identify the units of rate constant for a second-order reaction.",
+      "question_hi": "[NCERT Ex 3.2] द्वितीय-कोटि की अभिक्रिया के लिए दर स्थिरांक की इकाई पहचानें।",
+      "question_gu": "[NCERT Ex 3.2] દ્વિતીય-ક્રમની પ્રક્રિયા માટે દર અચળાંકના એકમો ઓળખો.",
+      "options": [
+        "mol^-1 L s^-1",
+        "s^-1",
+        "mol L^-1 s^-1",
+        "mol^-2 L^2 s^-1"
+      ],
+      "options_hi": [
+        "mol^-1 L s^-1",
+        "s^-1",
+        "mol L^-1 s^-1",
+        "mol^-2 L^2 s^-1"
+      ],
+      "options_gu": [
+        "mol^-1 L s^-1",
+        "s^-1",
+        "mol L^-1 s^-1",
+        "mol^-2 L^2 s^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "Units of k = (mol L^-1)^(1-n) s^-1. For n = 2, k units are (mol L^-1)^(-1) s^-1 = mol^-1 L s^-1.",
+      "explanation_hi": "k की इकाई = (mol L^-1)^(1-n) s^-1। n = 2 के लिए, k की इकाई (mol L^-1)^(-1) s^-1 = mol^-1 L s^-1 है।",
+      "explanation_gu": "k ના એકમો = (mol L^-1)^(1-n) s^-1. n = 2 માટે, k ના એકમો (mol L^-1)^(-1) s^-1 = mol^-1 L s^-1 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_012",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.3] The decomposition of NH3 on platinum surface is a zero order reaction. What are the rates of production of N2 and H2 if k = 2.5 × 10^-4 mol L^-1 s^-1?",
+      "question_hi": "[NCERT Ex 3.3] प्लैटिनम सतह पर NH3 का अपघटन शून्य कोटि की अभिक्रिया है। यदि k = 2.5 × 10^-4 mol L^-1 s^-1 है, तो N2 और H2 के उत्पादन की दर क्या है?",
+      "question_gu": "[NCERT Ex 3.3] પ્લેટિનમ સપાટી પર NH3 નું વિઘટન એ શૂન્ય ક્રમની પ્રક્રિયા છે. જો k = 2.5 × 10^-4 mol L^-1 s^-1 હોય, તો N2 અને H2 ના ઉત્પાદનનો દર કેટલો હશે?",
+      "options": [
+        "Rate(N2) = 2.5 × 10^-4 mol L^-1 s^-1, Rate(H2) = 7.5 × 10^-4 mol L^-1 s^-1",
+        "Rate(N2) = 5.0 × 10^-4 mol L^-1 s^-1, Rate(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "Rate(N2) = 2.5 × 10^-4 mol L^-1 s^-1, Rate(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "Rate(N2) = 1.25 × 10^-4 mol L^-1 s^-1, Rate(H2) = 3.75 × 10^-4 mol L^-1 s^-1"
+      ],
+      "options_hi": [
+        "दर(N2) = 2.5 × 10^-4 mol L^-1 s^-1, दर(H2) = 7.5 × 10^-4 mol L^-1 s^-1",
+        "दर(N2) = 5.0 × 10^-4 mol L^-1 s^-1, दर(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "दर(N2) = 2.5 × 10^-4 mol L^-1 s^-1, दर(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "दर(N2) = 1.25 × 10^-4 mol L^-1 s^-1, दर(H2) = 3.75 × 10^-4 mol L^-1 s^-1"
+      ],
+      "options_gu": [
+        "દર(N2) = 2.5 × 10^-4 mol L^-1 s^-1, દર(H2) = 7.5 × 10^-4 mol L^-1 s^-1",
+        "દર(N2) = 5.0 × 10^-4 mol L^-1 s^-1, દર(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "દર(N2) = 2.5 × 10^-4 mol L^-1 s^-1, દર(H2) = 2.5 × 10^-4 mol L^-1 s^-1",
+        "દર(N2) = 1.25 × 10^-4 mol L^-1 s^-1, દર(H2) = 3.75 × 10^-4 mol L^-1 s^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "2NH3 → N2 + 3H2. Rate = -1/2 d[NH3]/dt = d[N2]/dt = 1/3 d[H2]/dt = k. Thus d[N2]/dt = k = 2.5 × 10^-4, and d[H2]/dt = 3k = 7.5 × 10^-4 mol L^-1 s^-1.",
+      "explanation_hi": "2NH3 → N2 + 3H2। दर = -1/2 d[NH3]/dt = d[N2]/dt = 1/3 d[H2]/dt = k। इसलिए d[N2]/dt = k = 2.5 × 10^-4, और d[H2]/dt = 3k = 7.5 × 10^-4 mol L^-1 s^-1।",
+      "explanation_gu": "2NH3 → N2 + 3H2. દર = -1/2 d[NH3]/dt = d[N2]/dt = 1/3 d[H2]/dt = k. તેથી d[N2]/dt = k = 2.5 × 10^-4, અને d[H2]/dt = 3k = 7.5 × 10^-4 mol L^-1 s^-1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_013",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.4] The decomposition of dimethyl ether leads to the formation of CH4, H2 and CO and has rate law = k [CH3OCH3]^3/2. If pressure is measured in bar, units of rate constant k are:",
+      "question_hi": "[NCERT Ex 3.4] डाइमेथिल ईथर का अपघटन CH4, H2 और CO का निर्माण करता है और दर नियम = k [CH3OCH3]^3/2 है। यदि दाब बार (bar) में मापा जाता है, तो दर स्थिरांक k की इकाइयाँ हैं:",
+      "question_gu": "[NCERT Ex 3.4] ડાઇમિથાઇલ ઇથરના વિઘટનથી CH4, H2 અને CO બને છે અને દર નિયમ = k [CH3OCH3]^3/2 છે. જો દબાણ બાર (bar) માં માપવામાં આવે, તો દર અચળાંક k ના એકમો છે:",
+      "options": [
+        "bar^-1/2 s^-1",
+        "bar^1/2 s^-1",
+        "bar^-1 s^-1",
+        "bar s^-1"
+      ],
+      "options_hi": [
+        "bar^-1/2 s^-1",
+        "bar^1/2 s^-1",
+        "bar^-1 s^-1",
+        "bar s^-1"
+      ],
+      "options_gu": [
+        "bar^-1/2 s^-1",
+        "bar^1/2 s^-1",
+        "bar^-1 s^-1",
+        "bar s^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "Rate = bar s^-1 = k (bar)^3/2 ⇒ k = (bar s^-1) / (bar^3/2) = bar^-1/2 s^-1.",
+      "explanation_hi": "दर = bar s^-1 = k (bar)^3/2 ⇒ k = (bar s^-1) / (bar^3/2) = bar^-1/2 s^-1।",
+      "explanation_gu": "દર = bar s^-1 = k (bar)^3/2 ⇒ k = (bar s^-1) / (bar^3/2) = bar^-1/2 s^-1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_014",
+      "type": "true_false",
+      "question": "[NCERT Ex 3.5] True or False: For a zero order reaction, the time required for 100% completion is equal to [A]_0 / k.",
+      "question_hi": "[NCERT Ex 3.5] सत्य या असत्य: एक शून्य-कोटि की अभिक्रिया के लिए, 100% पूर्णता के लिए आवश्यक समय [A]_0 / k के बराबर है।",
+      "question_gu": "[NCERT Ex 3.5] સાચું કે ખોટું: શૂન્ય ક્રમની પ્રક્રિયા માટે, 100% પૂર્ણ થવા માટે જરૂરી સમય [A]_0 / k ની બરાબર છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "For zero order reaction: [A] = [A]_0 - kt. When reaction is 100% complete, [A] = 0 ⇒ t = [A]_0 / k.",
+      "explanation_hi": "शून्य-कोटि अभिक्रिया के लिए: [A] = [A]_0 - kt। जब अभिक्रिया 100% पूर्ण हो जाती है, [A] = 0 ⇒ t = [A]_0 / k।",
+      "explanation_gu": "શૂન્ય ક્રમની પ્રક્રિયા માટે: [A] = [A]_0 - kt. જ્યારે પ્રક્રિયા 100% પૂર્ણ થાય છે, [A] = 0 ⇒ t = [A]_0 / k."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_015",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.6] A reaction is second order with respect to a reactant. How is the rate of reaction affected if the concentration of the reactant is reduced to half?",
+      "question_hi": "[NCERT Ex 3.6] एक अभिक्रिया एक अभिकारक के संबंध में द्वितीय कोटि की है। यदि अभिकारक की सांद्रता आधी कर दी जाए तो अभिक्रिया की दर कैसे प्रभावित होगी?",
+      "question_gu": "[NCERT Ex 3.6] એક પ્રક્રિયા પ્રક્રિયકના સંદર્ભમાં દ્વિતીય ક્રમની છે. જો પ્રક્રિયકની સાંદ્રતા અડધી કરવામાં આવે તો પ્રક્રિયાના દર પર શું અસર થાય?",
+      "options": [
+        "Decreases to 1/4th of original rate",
+        "Decreases to 1/2 of original rate",
+        "Increases by 4 times",
+        "Remains unchanged"
+      ],
+      "options_hi": [
+        "मूल दर के 1/4 भाग तक घट जाती है",
+        "मूल दर के 1/2 भाग तक घट जाती है",
+        "4 गुना बढ़ जाती है",
+        "अपरिवर्तित रहती है"
+      ],
+      "options_gu": [
+        "મૂળ દરના 1/4 ગણો ઘટી જાય છે",
+        "મૂળ દરના 1/2 ગણો ઘટી જાય છે",
+        "4 ગણો વધી જાય છે",
+        "અપરિવર્તિત રહે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Rate = k[A]^2. If [A] becomes [A]/2, new Rate' = k([A]/2)^2 = 1/4 k[A]^2 = 1/4 Rate.",
+      "explanation_hi": "दर = k[A]^2। यदि [A], [A]/2 हो जाता है, नई दर' = k([A]/2)^2 = 1/4 k[A]^2 = 1/4 दर।",
+      "explanation_gu": "દર = k[A]^2. જો [A] એ [A]/2 થાય, નવો દર' = k([A]/2)^2 = 1/4 k[A]^2 = 1/4 દર."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_016",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.7] What is the effect of temperature on the rate constant of a reaction? Generally, for a 10° rise in temperature, rate constant becomes:",
+      "question_hi": "[NCERT Ex 3.7] किसी अभिक्रिया के दर स्थिरांक पर ताप का क्या प्रभाव पड़ता है? सामान्यतः, ताप में 10° की वृद्धि के लिए, दर स्थिरांक हो जाता है:",
+      "question_gu": "[NCERT Ex 3.7] પ્રક્રિયાના દર અચળાંક પર તાપમાનની શું અસર થાય છે? સામાન્ય રીતે, તાપમાનમાં 10° ના વધારા માટે, દર અચળાંક થાય છે:",
+      "options": [
+        "Nearly doubled (2 to 3 times)",
+        "Half of initial value",
+        "Increases by 10 times",
+        "Remains constant"
+      ],
+      "options_hi": [
+        "लगभग दोगुना (2 से 3 गुना)",
+        "प्रारंभिक मान का आधा",
+        "10 गुना बढ़ जाता है",
+        "स्थिर रहता है"
+      ],
+      "options_gu": [
+        "લગભગ બમણો (2 થી 3 ગણો)",
+        "પ્રારંભિક મૂલ્યનો અડધો",
+        "10 ગણો વધી જાય છે",
+        "અચળ રહે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "For every 10°C rise in temperature, the rate constant approximately doubles (Temperature Coefficient ≈ 2 to 3).",
+      "explanation_hi": "तापमान में प्रत्येक 10°C की वृद्धि के लिए, दर स्थिरांक लगभग दोगुना हो जाता है (तापमान गुणांक ≈ 2 से 3)।",
+      "explanation_gu": "તાપમાનમાં દરેક 10°C ના વધારા માટે, દર અચળાંક લગભગ બમણો થઈ જાય છે (તાપમાન ગુણાંક ≈ 2 થી 3)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_017",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.8] In pseudo first order hydrolysis of ester in water, why is the reaction first-order despite having two reactants?",
+      "question_hi": "[NCERT Ex 3.8] जल में एस्टर के छद्म प्रथम कोटि जलअपघटन में, दो अभिकारक होने के बावजूद अभिक्रिया प्रथम-कोटि की क्यों होती है?",
+      "question_gu": "[NCERT Ex 3.8] પાણીમાં એસ્ટરના આભાસી પ્રથમ-ક્રમના જળવિભાજનમાં, બે પ્રક્રિયકો હોવા છતાં પ્રક્રિયા પ્રથમ-ક્રમની શા માટે હોય છે?",
+      "options": [
+        "Water is present in large excess, so its concentration remains practically constant",
+        "Ester concentration is negligible",
+        "Water acts as a catalyst",
+        "The temperature is kept very low"
+      ],
+      "options_hi": [
+        "जल अत्यधिक मात्रा में उपस्थित होता है, इसलिए इसकी सांद्रता व्यावहारिक रूप से स्थिर रहती है",
+        "एस्टर की सांद्रता नगण्य है",
+        "जल एक उत्प्रेरक के रूप में कार्य करता है",
+        "तापमान बहुत कम रखा जाता है"
+      ],
+      "options_gu": [
+        "પાણી મોટી માત્રામાં હાજર હોય છે, તેથી તેની સાંદ્રતા વ્યવહારીક રીતે અચળ રહે છે",
+        "એસ્ટરની સાંદ્રતા નગણ્ય છે",
+        "પાણી ઉદ્દીપક તરીકે કાર્ય કરે છે",
+        "તાપમાન ખૂબ નીચું રાખવામાં આવે છે"
+      ],
+      "correct_index": 0,
+      "explanation": "When water is present in huge excess, [H2O] doesn't change appreciably during the reaction. Hence Rate = k'[Ester][H2O] becomes Rate = k[Ester].",
+      "explanation_hi": "जब जल अत्यधिक मात्रा में उपस्थित होता है, तो अभिक्रिया के दौरान [H2O] में कोई खास बदलाव नहीं होता है। अतः दर = k'[Ester][H2O] बदलकर दर = k[Ester] हो जाती है।",
+      "explanation_gu": "જ્યારે પાણી ખૂબ મોટી માત્રામાં હાજર હોય છે, ત્યારે પ્રક્રિયા દરમિયાન [H2O] માં ખાસ ફેરફાર થતો નથી. તેથી દર = k'[Ester][H2O] ઘટીને દર = k[Ester] થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_018",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.9] A reaction is first order in A and second order in B. Write the differential rate equation.",
+      "question_hi": "[NCERT Ex 3.9] एक अभिक्रिया A में प्रथम कोटि की और B में द्वितीय कोटि की है। अवकल दर समीकरण लिखें।",
+      "question_gu": "[NCERT Ex 3.9] એક પ્રક્રિયા A ના સંદર્ભમાં પ્રથમ ક્રમની અને B ના સંદર્ભમાં દ્વિતીય ક્રમની છે. વિકલનીય દર સમીકરણ લખો.",
+      "options": [
+        "Rate = -d[R]/dt = k [A] [B]^2",
+        "Rate = k [A]^2 [B]",
+        "Rate = k [A]^2 [B]^2",
+        "Rate = k [A] / [B]^2"
+      ],
+      "options_hi": [
+        "दर = -d[R]/dt = k [A] [B]^2",
+        "दर = k [A]^2 [B]",
+        "दर = k [A]^2 [B]^2",
+        "दर = k [A] / [B]^2"
+      ],
+      "options_gu": [
+        "દર = -d[R]/dt = k [A] [B]^2",
+        "દર = k [A]^2 [B]",
+        "દર = k [A]^2 [B]^2",
+        "દર = k [A] / [B]^2"
+      ],
+      "correct_index": 0,
+      "explanation": "Since order w.r.t A is 1 and w.r.t B is 2, Rate = -d[R]/dt = k[A]^1 [B]^2.",
+      "explanation_hi": "चूंकि A के संबंध में कोटि 1 और B के संबंध में 2 है, दर = -d[R]/dt = k[A]^1 [B]^2।",
+      "explanation_gu": "A ના સંદર્ભમાં ક્રમ 1 અને B ના સંદર્ભમાં 2 હોવાથી, દર = -d[R]/dt = k[A]^1 [B]^2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_019",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.10] Calculate the half-life of a first order reaction from its rate constant given as k = 200 s^-1.",
+      "question_hi": "[NCERT Ex 3.10] k = 200 s^-1 के रूप में दिए गए दर स्थिरांक से प्रथम कोटि की अभिक्रिया की अर्ध-आयु की गणना करें।",
+      "question_gu": "[NCERT Ex 3.10] k = 200 s^-1 તરીકે આપેલા દર અચળાંક પરથી પ્રથમ ક્રમની પ્રક્રિયાના અર્ધ-આયુષ્યની ગણતરી કરો.",
+      "options": [
+        "3.465 × 10^-3 s",
+        "1.386 × 10^-3 s",
+        "0.693 s",
+        "2.00 × 10^-3 s"
+      ],
+      "options_hi": [
+        "3.465 × 10^-3 s",
+        "1.386 × 10^-3 s",
+        "0.693 s",
+        "2.00 × 10^-3 s"
+      ],
+      "options_gu": [
+        "3.465 × 10^-3 s",
+        "1.386 × 10^-3 s",
+        "0.693 s",
+        "2.00 × 10^-3 s"
+      ],
+      "correct_index": 0,
+      "explanation": "t_1/2 = 0.693 / k = 0.693 / 200 = 3.465 × 10^-3 s.",
+      "explanation_hi": "t_1/2 = 0.693 / k = 0.693 / 200 = 3.465 × 10^-3 s।",
+      "explanation_gu": "t_1/2 = 0.693 / k = 0.693 / 200 = 3.465 × 10^-3 s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_020",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.11] The half-life for radioactive decay of 14C is 5730 years. An archaeological artifact containing wood had only 80% of the 14C found in a living tree. Estimate the age of the sample.",
+      "question_hi": "[NCERT Ex 3.11] 14C के रेडियोधर्मी क्षय की अर्ध-आयु 5730 वर्ष है। लकड़ी वाले एक पुरातात्विक अवशेष में जीवित वृक्ष में पाए जाने वाले 14C का केवल 80% था। नमूने की आयु का अनुमान लगाएं।",
+      "question_gu": "[NCERT Ex 3.11] 14C ના રેડિયોએક્ટિવ ક્ષયનું અર્ધ-આયુષ્ય 5730 વર્ષ છે. લાકડું ધરાવતા એક પુરાતત્વીય અવશેષમાં જીવંત વૃક્ષમાં મળતા 14C નું માત્ર 80% જ હતું. નમૂનાની ઉંમરનો અંદાજ લગાવો.",
+      "options": [
+        "1845 years",
+        "2865 years",
+        "5730 years",
+        "11460 years"
+      ],
+      "options_hi": [
+        "1845 वर्ष",
+        "2865 वर्ष",
+        "5730 वर्ष",
+        "11460 वर्ष"
+      ],
+      "options_gu": [
+        "1845 વર્ષ",
+        "2865 વર્ષ",
+        "5730 વર્ષ",
+        "11460 વર્ષ"
+      ],
+      "correct_index": 0,
+      "explanation": "k = 0.693 / 5730 = 1.209 × 10^-4 year^-1. t = (2.303 / k) log(100/80) = (2.303 / 1.209 × 10^-4) × 0.0969 ≈ 1845 years.",
+      "explanation_hi": "k = 0.693 / 5730 = 1.209 × 10^-4 year^-1। t = (2.303 / k) log(100/80) = (2.303 / 1.209 × 10^-4) × 0.0969 ≈ 1845 वर्ष।",
+      "explanation_gu": "k = 0.693 / 5730 = 1.209 × 10^-4 year^-1. t = (2.303 / k) log(100/80) = (2.303 / 1.209 × 10^-4) × 0.0969 ≈ 1845 વર્ષ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_021",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.12] The rate constant for a first order reaction is 60 s^-1. How much time will it take to reduce the initial concentration of the reactant to its 1/16th value?",
+      "question_hi": "[NCERT Ex 3.12] प्रथम कोटि की अभिक्रिया के लिए दर स्थिरांक 60 s^-1 है। अभिकारक की प्रारंभिक सांद्रता को इसके 1/16वें मान तक घटाने में कितना समय लगेगा?",
+      "question_gu": "[NCERT Ex 3.12] પ્રથમ ક્રમની પ્રક્રિયા માટે દર અચળાંક 60 s^-1 છે. પ્રક્રિયકની પ્રારંભિક સાંદ્રતા ઘટીને તેના 1/16મા ભાગ સુધી પહોંચવા માટે કેટલો સમય લાગશે?",
+      "options": [
+        "4.62 × 10^-2 s",
+        "2.31 × 10^-2 s",
+        "1.15 × 10^-2 s",
+        "9.24 × 10^-2 s"
+      ],
+      "options_hi": [
+        "4.62 × 10^-2 s",
+        "2.31 × 10^-2 s",
+        "1.15 × 10^-2 s",
+        "9.24 × 10^-2 s"
+      ],
+      "options_gu": [
+        "4.62 × 10^-2 s",
+        "2.31 × 10^-2 s",
+        "1.15 × 10^-2 s",
+        "9.24 × 10^-2 s"
+      ],
+      "correct_index": 0,
+      "explanation": "t = 4 × t_1/2 (since 1 -> 1/2 -> 1/4 -> 1/8 -> 1/16). t_1/2 = 0.693 / 60 = 0.01155 s. Total t = 4 × 0.01155 = 4.62 × 10^-2 s.",
+      "explanation_hi": "t = 4 × t_1/2 (चूंकि 1 -> 1/2 -> 1/4 -> 1/8 -> 1/16)। t_1/2 = 0.693 / 60 = 0.01155 s। कुल t = 4 × 0.01155 = 4.62 × 10^-2 s।",
+      "explanation_gu": "t = 4 × t_1/2 (જ્યાં 1 -> 1/2 -> 1/4 -> 1/8 -> 1/16). t_1/2 = 0.693 / 60 = 0.01155 s. કુલ t = 4 × 0.01155 = 4.62 × 10^-2 s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_022",
+      "type": "true_false",
+      "question": "[NCERT Ex 3.13] True or False: For a first order reaction, time required for 99% completion is twice the time required for the completion of 90% of reaction.",
+      "question_hi": "[NCERT Ex 3.13] सत्य या असत्य: प्रथम कोटि की अभिक्रिया के लिए, 99% पूर्णता के लिए आवश्यक समय अभिक्रिया के 90% पूर्ण होने में लगने वाले समय का दोगुना होता है।",
+      "question_gu": "[NCERT Ex 3.13] સાચું કે ખોટું: પ્રથમ ક્રમની પ્રક્રિયા માટે, 99% પૂર્ણ થવા માટે જરૂરી સમય એ પ્રક્રિયાના 90% પૂર્ણ થવા માટે જરૂરી સમય કરતાં બમણો છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "t_99% = (2.303/k) log(100/1) = 2.303/k × 2. t_90% = (2.303/k) log(100/10) = 2.303/k × 1. Therefore, t_99% = 2 × t_90%.",
+      "explanation_hi": "t_99% = (2.303/k) log(100/1) = 2.303/k × 2। t_90% = (2.303/k) log(100/10) = 2.303/k × 1। इसलिए, t_99% = 2 × t_90%।",
+      "explanation_gu": "t_99% = (2.303/k) log(100/1) = 2.303/k × 2. t_90% = (2.303/k) log(100/10) = 2.303/k × 1. તેથી, t_99% = 2 × t_90%."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_023",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.14] A first order reaction takes 40 min for 30% decomposition. Calculate its t_1/2.",
+      "question_hi": "[NCERT Ex 3.14] एक प्रथम कोटि की अभिक्रिया 30% अपघटन के लिए 40 मिनट लेती है। इसके t_1/2 की गणना करें।",
+      "question_gu": "[NCERT Ex 3.14] પ્રથમ ક્રમની પ્રક્રિયાને 30% વિઘટન માટે 40 મિનિટ લાગે છે. તેના t_1/2 ની ગણતરી કરો.",
+      "options": [
+        "77.7 min",
+        "52.3 min",
+        "40.0 min",
+        "120.5 min"
+      ],
+      "options_hi": [
+        "77.7 मिनट",
+        "52.3 मिनट",
+        "40.0 मिनट",
+        "120.5 मिनट"
+      ],
+      "options_gu": [
+        "77.7 મિનિટ",
+        "52.3 મિનિટ",
+        "40.0 મિનિટ",
+        "120.5 મિનિટ"
+      ],
+      "correct_index": 0,
+      "explanation": "k = (2.303 / 40) log(100 / 70) = 0.057575 × 0.1549 = 8.918 × 10^-3 min^-1. t_1/2 = 0.693 / k = 0.693 / 8.918 × 10^-3 ≈ 77.7 min.",
+      "explanation_hi": "k = (2.303 / 40) log(100 / 70) = 0.057575 × 0.1549 = 8.918 × 10^-3 min^-1। t_1/2 = 0.693 / k = 0.693 / 8.918 × 10^-3 ≈ 77.7 मिनट।",
+      "explanation_gu": "k = (2.303 / 40) log(100 / 70) = 0.057575 × 0.1549 = 8.918 × 10^-3 min^-1. t_1/2 = 0.693 / k = 0.693 / 8.918 × 10^-3 ≈ 77.7 મિનિટ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_024",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.15] For the decomposition of azoisopropane to hexane and nitrogen at 543 K, the total pressure is observed to be 35.0 mm Hg at t=0 and 54.0 mm Hg at t=360 s. Calculate the rate constant k.",
+      "question_hi": "[NCERT Ex 3.15] 543 K पर हेक्सेन और नाइट्रोजन में एजोआइसोप्रोपेन के अपघटन के लिए, कुल दाब t=0 पर 35.0 mm Hg और t=360 s पर 54.0 mm Hg देखा जाता है। दर स्थिरांक k की गणना करें।",
+      "question_gu": "[NCERT Ex 3.15] 543 K તાપમાને એઝોઆઇસોપ્રોપેનનું હેક્ઝેન અને નાઇટ્રોજનમાં વિઘટન માટે, કુલ દબાણ t=0 સમયે 35.0 mm Hg અને t=360 s સમયે 54.0 mm Hg નોંધાય છે. દર અચળાંક k ની ગણતરી કરો.",
+      "options": [
+        "2.20 × 10^-3 s^-1",
+        "1.10 × 10^-3 s^-1",
+        "4.40 × 10^-3 s^-1",
+        "3.30 × 10^-3 s^-1"
+      ],
+      "options_hi": [
+        "2.20 × 10^-3 s^-1",
+        "1.10 × 10^-3 s^-1",
+        "4.40 × 10^-3 s^-1",
+        "3.30 × 10^-3 s^-1"
+      ],
+      "options_gu": [
+        "2.20 × 10^-3 s^-1",
+        "1.10 × 10^-3 s^-1",
+        "4.40 × 10^-3 s^-1",
+        "3.30 × 10^-3 s^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "P_0 = 35 mm Hg. P_total = P_0 + p = 54 ⇒ p = 19 mm Hg. P_A = P_0 - p = 35 - 19 = 16 mm Hg. k = (2.303 / 360) log(35 / 16) = (2.303 / 360) × 0.3401 ≈ 2.20 × 10^-3 s^-1.",
+      "explanation_hi": "P_0 = 35 mm Hg। P_total = P_0 + p = 54 ⇒ p = 19 mm Hg। P_A = P_0 - p = 35 - 19 = 16 mm Hg। k = (2.303 / 360) log(35 / 16) = (2.303 / 360) × 0.3401 ≈ 2.20 × 10^-3 s^-1।",
+      "explanation_gu": "P_0 = 35 mm Hg. P_total = P_0 + p = 54 ⇒ p = 19 mm Hg. P_A = P_0 - p = 35 - 19 = 16 mm Hg. k = (2.303 / 360) log(35 / 16) = (2.303 / 360) × 0.3401 ≈ 2.20 × 10^-3 s^-1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_025",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.16] The rate of a reaction quadruples when the temperature changes from 293 K to 313 K. Calculate the activation energy (Ea) of the reaction. (R = 8.314 J K^-1 mol^-1)",
+      "question_hi": "[NCERT Ex 3.16] जब तापमान 293 K से 313 K में बदलता है तो एक अभिक्रिया की दर चौगुनी हो जाती है। अभिक्रिया की सक्रियण ऊर्जा (Ea) की गणना करें। (R = 8.314 J K^-1 mol^-1)",
+      "question_gu": "[NCERT Ex 3.16] જ્યારે તાપમાન 293 K થી વધીને 313 K થાય છે ત્યારે પ્રક્રિયાનો દર ચાર ગણો વધી જાય છે. પ્રક્રિયાની સક્રિયકરણ ઉર્જા (Ea) ની ગણતરી કરો. (R = 8.314 J K^-1 mol^-1)",
+      "options": [
+        "52.85 kJ/mol",
+        "105.7 kJ/mol",
+        "26.4 kJ/mol",
+        "80.2 kJ/mol"
+      ],
+      "options_hi": [
+        "52.85 kJ/mol",
+        "105.7 kJ/mol",
+        "26.4 kJ/mol",
+        "80.2 kJ/mol"
+      ],
+      "options_gu": [
+        "52.85 kJ/mol",
+        "105.7 kJ/mol",
+        "26.4 kJ/mol",
+        "80.2 kJ/mol"
+      ],
+      "correct_index": 0,
+      "explanation": "log(k2/k1) = log(4) = 0.6021. log(k2/k1) = (Ea / 2.303 R) * [(T2 - T1) / (T1 * T2)]. 0.6021 = (Ea / (2.303 * 8.314)) * (20 / (293 * 313)) ⇒ Ea ≈ 52,850 J/mol = 52.85 kJ/mol.",
+      "explanation_hi": "log(k2/k1) = log(4) = 0.6021। log(k2/k1) = (Ea / 2.303 R) * [(T2 - T1) / (T1 * T2)]। 0.6021 = (Ea / (2.303 * 8.314)) * (20 / (293 * 313)) ⇒ Ea ≈ 52,850 J/mol = 52.85 kJ/mol।",
+      "explanation_gu": "log(k2/k1) = log(4) = 0.6021. log(k2/k1) = (Ea / 2.303 R) * [(T2 - T1) / (T1 * T2)]. 0.6021 = (Ea / (2.303 * 8.314)) * (20 / (293 * 313)) ⇒ Ea ≈ 52,850 J/mol = 52.85 kJ/mol."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_026",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.17] The activation energy for the reaction 2 HI(g) → H2(g) + I2(g) is 209.5 kJ mol^-1 at 581K. Calculate the fraction of molecules of reactants having energy equal to or greater than activation energy.",
+      "question_hi": "[NCERT Ex 3.17] 581K पर अभिक्रिया 2 HI(g) → H2(g) + I2(g) के लिए सक्रियण ऊर्जा 209.5 kJ mol^-1 है। सक्रियण ऊर्जा के बराबर या उससे अधिक ऊर्जा वाले अभिकारकों के अणुओं के अंश की गणना करें।",
+      "question_gu": "[NCERT Ex 3.17] 581K તાપમાને પ્રક્રિયા 2 HI(g) → H2(g) + I2(g) માટે સક્રિયકરણ ઉર્જા 209.5 kJ mol^-1 છે. સક્રિયકરણ ઉર્જા જેટલી અથવા તેથી વધુ ઉર્જા ધરાવતા પ્રક્રિયકના અણુઓના અંશની ગણતરી કરો.",
+      "options": [
+        "1.47 × 10^-19",
+        "2.52 × 10^-10",
+        "3.12 × 10^-5",
+        "9.81 × 10^-12"
+      ],
+      "options_hi": [
+        "1.47 × 10^-19",
+        "2.52 × 10^-10",
+        "3.12 × 10^-5",
+        "9.81 × 10^-12"
+      ],
+      "options_gu": [
+        "1.47 × 10^-19",
+        "2.52 × 10^-10",
+        "3.12 × 10^-5",
+        "9.81 × 10^-12"
+      ],
+      "correct_index": 0,
+      "explanation": "Fraction x = e^(-Ea / RT). log(x) = -Ea / (2.303 R T) = -209500 / (2.303 * 8.314 * 581) = -18.8323. x = antilog(-18.8323) = 1.47 × 10^-19.",
+      "explanation_hi": "अंश x = e^(-Ea / RT)। log(x) = -Ea / (2.303 R T) = -209500 / (2.303 * 8.314 * 581) = -18.8323। x = antilog(-18.8323) = 1.47 × 10^-19।",
+      "explanation_gu": "અંશ x = e^(-Ea / RT). log(x) = -Ea / (2.303 R T) = -209500 / (2.303 * 8.314 * 581) = -18.8323. x = antilog(-18.8323) = 1.47 × 10^-19."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_027",
+      "type": "true_false",
+      "question": "[NCERT Ex 3.18] True or False: A catalyst increases the rate of reaction by providing an alternative pathway with a lower activation energy, without affecting Gibbs energy ΔG of the reaction.",
+      "question_hi": "[NCERT Ex 3.18] सत्य या असत्य: एक उत्प्रेरक अभिक्रिया के गिब्स ऊर्जा ΔG को प्रभावित किए बिना, कम सक्रियण ऊर्जा के साथ एक वैकल्पिक मार्ग प्रदान करके अभिक्रिया की दर को बढ़ाता है।",
+      "question_gu": "[NCERT Ex 3.18] સાચું કે ખોટું: ઉદ્દીપક પ્રક્રિયાની ગિબ્સ ઉર્જા ΔG ને અસર કર્યા વગર, નીચી સક્રિયકરણ ઉર્જા ધરાવતો વૈકલ્પિક માર્ગ પૂરો પાડીને પ્રક્રિયાનો દર વધારે છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "A catalyst lowers Ea by giving an alternate mechanism. It does NOT alter ΔG, nor does it shift the equilibrium state.",
+      "explanation_hi": "एक उत्प्रेरक एक वैकल्पिक तंत्र देकर Ea को कम करता है। यह ΔG को नहीं बदलता है, और न ही यह साम्यावस्था को स्थानांतरित करता है।",
+      "explanation_gu": "ઉદ્દીપક વૈકલ્પિક મિકેનિઝમ આપીને Ea ઘટાડે છે. તે ΔG માં ફેરફાર કરતું નથી, કે તે સંતુલન સ્થિતિને બદલતું નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_028",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.19] The rate equation for a reaction is k = 4.5 × 10^11 e^(-28000 K / T). What is the activation energy Ea of the reaction?",
+      "question_hi": "[NCERT Ex 3.19] किसी अभिक्रिया के लिए दर समीकरण k = 4.5 × 10^11 e^(-28000 K / T) है। अभिक्रिया की सक्रियण ऊर्जा Ea क्या है?",
+      "question_gu": "[NCERT Ex 3.19] એક પ્રક્રિયા માટે દર સમીકરણ k = 4.5 × 10^11 e^(-28000 K / T) છે. પ્રક્રિયાની સક્રિયકરણ ઉર્જા Ea કેટલી હશે?",
+      "options": [
+        "232.79 kJ mol^-1",
+        "116.4 kJ mol^-1",
+        "28.0 kJ mol^-1",
+        "450.2 kJ mol^-1"
+      ],
+      "options_hi": [
+        "232.79 kJ mol^-1",
+        "116.4 kJ mol^-1",
+        "28.0 kJ mol^-1",
+        "450.2 kJ mol^-1"
+      ],
+      "options_gu": [
+        "232.79 kJ mol^-1",
+        "116.4 kJ mol^-1",
+        "28.0 kJ mol^-1",
+        "450.2 kJ mol^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "Comparing with k = A e^(-Ea / RT): Ea / R = 28000 K ⇒ Ea = 28000 K × 8.314 J K^-1 mol^-1 = 232,792 J mol^-1 = 232.79 kJ mol^-1.",
+      "explanation_hi": "k = A e^(-Ea / RT) से तुलना करने पर: Ea / R = 28000 K ⇒ Ea = 28000 K × 8.314 J K^-1 mol^-1 = 232,792 J mol^-1 = 232.79 kJ mol^-1।",
+      "explanation_gu": "k = A e^(-Ea / RT) સાથે સરખામણી કરતા: Ea / R = 28000 K ⇒ Ea = 28000 K × 8.314 J K^-1 mol^-1 = 232,792 J mol^-1 = 232.79 kJ mol^-1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_029",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.20] The rate constant for the first order decomposition of H2O2 is given by log k = 14.34 - (1.25 × 10^4 K) / T. Calculate Ea for this reaction.",
+      "question_hi": "[NCERT Ex 3.20] H2O2 के प्रथम कोटि अपघटन के लिए दर स्थिरांक log k = 14.34 - (1.25 × 10^4 K) / T द्वारा दिया गया है। इस अभिक्रिया के लिए Ea की गणना करें।",
+      "question_gu": "[NCERT Ex 3.20] H2O2 ના પ્રથમ ક્રમના વિઘટન માટે દર અચળાંક log k = 14.34 - (1.25 × 10^4 K) / T દ્વારા આપવામાં આવે છે. આ પ્રક્રિયા માટે Ea ની ગણતરી કરો.",
+      "options": [
+        "239.34 kJ mol^-1",
+        "125.0 kJ mol^-1",
+        "14.34 kJ mol^-1",
+        "310.2 kJ mol^-1"
+      ],
+      "options_hi": [
+        "239.34 kJ mol^-1",
+        "125.0 kJ mol^-1",
+        "14.34 kJ mol^-1",
+        "310.2 kJ mol^-1"
+      ],
+      "options_gu": [
+        "239.34 kJ mol^-1",
+        "125.0 kJ mol^-1",
+        "14.34 kJ mol^-1",
+        "310.2 kJ mol^-1"
+      ],
+      "correct_index": 0,
+      "explanation": "Comparing with log k = log A - Ea / (2.303 R T): Ea / (2.303 R) = 1.25 × 10^4 K ⇒ Ea = 1.25 × 10^4 × 2.303 × 8.314 = 239,339 J mol^-1 = 239.34 kJ mol^-1.",
+      "explanation_hi": "log k = log A - Ea / (2.303 R T) से तुलना करने पर: Ea / (2.303 R) = 1.25 × 10^4 K ⇒ Ea = 1.25 × 10^4 × 2.303 × 8.314 = 239,339 J mol^-1 = 239.34 kJ mol^-1।",
+      "explanation_gu": "log k = log A - Ea / (2.303 R T) સાથે સરખામણી કરતા: Ea / (2.303 R) = 1.25 × 10^4 K ⇒ Ea = 1.25 × 10^4 × 2.303 × 8.314 = 239,339 J mol^-1 = 239.34 kJ mol^-1."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH3_030",
+      "type": "mcq",
+      "question": "[NCERT Ex 3.21] The decomposition of A into product has value of k = 4.5 × 10^3 s^-1 at 10°C and energy of activation 60 kJ mol^-1. At what temperature would k be 1.5 × 10^4 s^-1?",
+      "question_hi": "[NCERT Ex 3.21] उत्पाद में A का अपघटन 10°C पर k = 4.5 × 10^3 s^-1 और सक्रियण ऊर्जा 60 kJ mol^-1 का मान रखता है। किस तापमान पर k = 1.5 × 10^4 s^-1 होगा?",
+      "question_gu": "[NCERT Ex 3.21] નીપજમાં A નું વિઘટન 10°C પર k = 4.5 × 10^3 s^-1 અને સક્રિયકરણ ઉર્જા 60 kJ mol^-1 મૂલ્ય ધરાવે છે. કયા તાપમાને k = 1.5 × 10^4 s^-1 થશે?",
+      "options": [
+        "297 K (or 24°C)",
+        "310 K (or 37°C)",
+        "283 K (or 10°C)",
+        "325 K (or 52°C)"
+      ],
+      "options_hi": [
+        "297 K (या 24°C)",
+        "310 K (या 37°C)",
+        "283 K (या 10°C)",
+        "325 K (या 52°C)"
+      ],
+      "options_gu": [
+        "297 K (અથવા 24°C)",
+        "310 K (અથવા 37°C)",
+        "283 K (અથવા 10°C)",
+        "325 K (અથવા 52°C)"
+      ],
+      "correct_index": 0,
+      "explanation": "T1 = 283 K. log(1.5×10^4 / 4.5×10^3) = log(3.333) = 0.5229. 0.5229 = (60000 / (2.303 * 8.314)) * [(T2 - 283) / (283 * T2)]. Solving yields T2 ≈ 297 K (24°C).",
+      "explanation_hi": "T1 = 283 K। log(1.5×10^4 / 4.5×10^3) = log(3.333) = 0.5229। 0.5229 = (60000 / (2.303 * 8.314)) * [(T2 - 283) / (283 * T2)]। हल करने पर T2 ≈ 297 K (24°C) प्राप्त होता है।",
+      "explanation_gu": "T1 = 283 K. log(1.5×10^4 / 4.5×10^3) = log(3.333) = 0.5229. 0.5229 = (60000 / (2.303 * 8.314)) * [(T2 - 283) / (283 * T2)]. ઉકેલતા T2 ≈ 297 K (24°C) મળે છે."
+    }
+  ]
+}

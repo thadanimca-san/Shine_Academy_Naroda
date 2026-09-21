@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "id": "GSEB_SCI_08_CH06",
+    "title": "Combustion and Flame",
+    "subject": "Science",
+    "grade": "8",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the chemical process of combustion and its necessary conditions.",
+      "Differentiate between types of fuels and calculate calorific values.",
+      "Analyze the structure of a flame and zones of combustion.",
+      "Explain principles of fire control and safety measures."
+    ],
+    "core_concepts": [
+      "DICT_SCI_08_COMBUSTION",
+      "DICT_SCI_08_IGNITION_TEMP",
+      "DICT_SCI_08_CALORIFIC_VALUE",
+      "DICT_SCI_08_FLAME"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide a comprehensive, textbook-level mastery of combustion, fire safety, and the chemistry of burning.",
+      "common_misconceptions": [
+        "All substances catch fire at room temperature.",
+        "A flame is solid fire rather than glowing hot gas.",
+        "Water can be used to extinguish all types of fires."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Prometheus Spark",
+      "body": "Imagine you are stranded on a cold, dark island during a stormy night. You have a magnifying glass, a piece of dry wood, and a heap of damp leaves. The wind is howling, and the temperature is plummeting. You know that if you can just harness fire, you will have light, warmth, and a way to cook food. But how does a cold piece of wood suddenly transform into roaring, dancing tongues of yellow and blue light? What is actually happening at an invisible, molecular level when something burns? Step inside the fascinating world of chemical reactions, heat, and light as we unravel the mysteries of [DICT_SCI_08_COMBUSTION|combustion]!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What primary transformation occurs during the process of burning or combustion?",
+      "options": [
+        "Chemical energy is converted into heat and light energy",
+        "Mechanical energy is converted into sound energy",
+        "Electrical energy is converted into magnetic energy"
+      ],
+      "correct_index": 0,
+      "explanation": "Combustion is a chemical process where a substance reacts with oxygen to release energy, primarily as heat and light.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Combustion?",
+      "body": "At its core, [DICT_SCI_08_COMBUSTION|combustion] is a chemical reaction in which a substance reacts with oxygen to give off heat and light. The substance that undergoes combustion is said to be combustible—also known as a fuel. Fuel can be solid (like coal, wood, or paper), liquid (like kerosene, petrol, or diesel), or gas (like LPG, CNG, or natural gas). During this process, oxygen acts as the supporter of combustion. Without oxygen, most fires instantly suffocate. When fuels burn, they typically react with oxygen from the air to form carbon dioxide, water vapor, and energy. Interestingly, our own bodies undergo a slow form of combustion called cellular respiration, where food we eat combines with oxygen inside our cells to release energy, maintaining our body temperature without producing a blazing flame!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Candle in a Jar Experiment",
+      "body": "Light a small candle and place it on a table. Cover it with an inverted glass tumbler. Observe what happens after a minute. The flame flickers and eventually goes out. Why? Because the oxygen trapped inside the glass is consumed by the burning wax, proving that oxygen is essential for combustion!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What are the three essential requirements for combustion to take place?",
+      "back": "1. Fuel, 2. Air (Oxygen), 3. Heat (to attain ignition temperature).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Magic of Ignition Temperature",
+      "body": "Have you ever wondered why a matchstick does not catch fire on its own while sitting in a matchbox, but bursts into flames the moment you strike it against the rough side of the box? This brings us to the critical concept of [DICT_SCI_08_IGNITION_TEMP|ignition temperature]. The lowest temperature at which a substance catches fire is called its ignition temperature. Different substances have different ignition temperatures. Kerosene has a lower ignition temperature than wood, which is why kerosene catches fire much more easily than a large log. Substances that have a very low ignition temperature and can easily catch fire with a flame are called inflammable substances (e.g., petrol, alcohol, Liquefied Petroleum Gas). To burn anything, you must supply enough heat to raise its temperature up to or above its ignition temperature.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Why does a paper cup filled with water not burn when placed over a candle flame?",
+      "options": [
+        "Paper is non-combustible.",
+        "Water absorbs the heat, keeping the paper's temperature below its ignition temperature.",
+        "The flame is too weak to heat paper."
+      ],
+      "correct_index": 1,
+      "explanation": "The heat supplied to the paper cup is transferred to the water by conduction. This keeps the temperature of the paper below its ignition temperature, preventing it from burning.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: How Do We Control Fire?",
+      "body": "Fire can be a wonderful servant, but it is a terrible master. Controlling or extinguishing a fire relies on removing one or more of the essential requirements for combustion: fuel, oxygen, or heat. Water is the most common fire extinguisher. How does water work? When water is poured on a fire, it cools the combustible material below its ignition temperature, preventing the fire from spreading. The water vapor also surrounds the burning substance, cutting off the supply of air (oxygen). However, water cannot be used for electrical fires or fires involving oil and petrol. Water is heavier than oil, so it sinks to the bottom while the oil floats on top and continues to burn. Furthermore, water conducts electricity and can shock someone trying to put out an electrical appliance fire. For electrical and oil fires, carbon dioxide ($CO_2$) is the best extinguisher. $CO_2$ is heavier than oxygen and covers the fire like a blanket, cutting off the oxygen supply and cooling the fuel down rapidly.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Baking Soda and Vinegar Fire Extinguisher Demo",
+      "body": "Mix baking soda and vinegar in a small container placed inside a larger bowl with a lit birthday candle. The chemical reaction produces carbon dioxide gas. Pour (tilt) just the invisible gas over the candle, and watch it instantly extinguish without spilling any liquid!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "Why is carbon dioxide ($CO_2$) ideal for extinguishing electrical fires?",
+      "back": "$CO_2$ is heavier than oxygen, blankets the fire to cut off oxygen supply, and does not conduct electricity.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 4: Types of Combustion",
+      "body": "Not all fires burn in the same way. Scientists classify combustion into three main types based on how fast and how violently they occur: 1. Rapid Combustion: The gas burns rapidly and produces heat and light. Examples include turning on a gas stove or striking a matchstick. 2. Spontaneous Combustion: A type of combustion in which a material suddenly bursts into flames, without the application of any apparent cause or external heat. For example, phosphorus burns spontaneously at room temperature. Forest fires sometimes start due to the heat of the sun or lightning striking dry leaves, leading to spontaneous combustion of dry undergrowth. 3. Explosion: A sudden reaction that takes place with the evolution of heat, light, and sound, accompanied by the release of a large amount of gas. Firecrackers are a classic example; when a spark is applied, a sudden explosion occurs due to rapid gas expansion.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "Which type of combustion occurs when coal dust accumulates in coal mines and catches fire spontaneously?",
+      "options": [
+        "Rapid combustion",
+        "Spontaneous combustion",
+        "Slow combustion only with no heat"
+      ],
+      "correct_index": 1,
+      "explanation": "Spontaneous combustion happens when a substance builds up heat internally until it reaches its ignition temperature without external ignition.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 5: Anatomy of a [DICT_SCI_08_FLAME|Flame]",
+      "body": "Have you ever observed a candle [DICT_SCI_08_FLAME|flame] closely? Substances that vaporize during burning produce flames. For example, kerosene wax and molten wax rise through the wick and vaporize during burning, forming a flame. Charcoal, on the other hand, does not vaporize and therefore does not produce a flame. A candle flame consists of three distinct zones: 1. Outer Zone (Blue): This is the hottest part of the flame, where complete combustion takes place due to an abundant supply of oxygen. It is blue in color. 2. Middle Zone (Luminous, Yellow): This is where partial combustion of fuel occurs with moderate oxygen supply. It is bright yellow and is moderately hot. 3. Innermost Zone (Dark, Black): This is the coldest part of the flame, located near the base of the wick, containing unburnt vaporized wax particles.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Gold Smith's Blowpipe Analogy",
+      "body": "Goldsmiths blow air through a metallic blowpipe into the outermost zone of a candle flame to melt gold and silver. Why the outermost zone? Because it is the hottest zone of the flame where complete combustion occurs!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "Which zone of a candle flame is the hottest and why?",
+      "back": "The outer zone, because complete combustion takes place there due to a rich supply of oxygen.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 6: What Makes a Good Fuel? [DICT_SCI_08_CALORIFIC_VALUE|Calorific Value]",
+      "body": "A domestic or industrial fuel is a material burned to obtain heat energy. An ideal fuel is cheap, readily available, burns easily in air at a moderate rate, produces a large amount of heat, and does not leave behind undesirable residues or pollutants. To compare how efficient different fuels are, we use a metric called [DICT_SCI_08_CALORIFIC_VALUE|calorific value]. The amount of heat energy produced on complete combustion of 1 kg of a fuel is called its calorific value. The calorific value of a fuel is expressed in a unit called kilojoule per kg ($kJ/kg$). For instance, hydrogen gas has a massive calorific value of about $150,000 kJ/kg$, whereas cow dung cakes have a calorific value of only $6,000–8,000 kJ/kg$. This means burning 1 kg of hydrogen releases vastly more heat than burning 1 kg of cow dung.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "If Fuel X has a calorific value of $55,000 kJ/kg$ and Fuel Y has $20,000 kJ/kg$, which fuel is more efficient in terms of heat output?",
+      "options": [
+        "Fuel X",
+        "Fuel Y",
+        "Both are equally efficient"
+      ],
+      "correct_index": 0,
+      "explanation": "Fuel X has a higher calorific value, meaning it produces more heat energy per kilogram burned.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 7: Harmful Effects of Burning Fuels",
+      "body": "While fuels power our modern civilization, their excessive and uncontrolled use leads to severe environmental consequences. 1. Carbon fuels like wood, coal, and petroleum release unburnt carbon particles. These fine particles are dangerous pollutants causing respiratory diseases like asthma. 2. Incomplete combustion of these fuels gives off carbon monoxide ($CO$) gas, which is a poisonous gas. It is dangerous to burn coal in a closed room because the carbon monoxide produced can kill persons sleeping in that room by binding with hemoglobin in the blood, replacing oxygen. 3. Combustion of most fuels releases carbon dioxide ($CO_2$) into the environment. Increased concentration of $CO_2$ in the air is believed to cause global warming, heating up the Earth's atmosphere. 4. Burning of coal and diesel releases sulfur dioxide gas. Petrol gives off oxides of nitrogen. These gases dissolve in rainwater to form acids, falling as acid rain, which is extremely harmful to crops, buildings, and soil aquatic life.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "Why is burning coal in a closed room extremely dangerous?",
+      "back": "It produces poisonous carbon monoxide gas, which can suffocate and kill anyone in the room.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "Which gas is primarily responsible for global warming due to fossil fuel combustion?",
+      "options": [
+        "Oxygen ($O_2$)",
+        "Carbon dioxide ($CO_2$)",
+        "Nitrogen ($N_2$)"
+      ],
+      "correct_index": 1,
+      "explanation": "Carbon dioxide traps heat in the atmosphere, driving global climate change.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "teacher_tip",
+      "title": "Eco-Friendly Fuel Alternatives",
+      "body": "Discuss with students why CNG (Compressed Natural Gas) is considered a cleaner fuel for automobiles compared to petrol and diesel. CNG undergoes cleaner combustion, producing fewer unburnt carbon particles and sulfur dioxide.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "What causes acid rain?",
+      "back": "Oxides of sulfur and nitrogen released from burning fossil fuels dissolving in rainwater.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "What is the primary reason why wood is being replaced by LPG as a domestic cooking fuel?",
+      "options": [
+        "LPG is cheaper and harder to store.",
+        "LPG has a higher calorific value, produces no smoke, and leaves no ash.",
+        "Wood does not catch fire easily."
+      ],
+      "correct_index": 1,
+      "explanation": "LPG burns cleanly with a high calorific value, unlike wood which produces heavy smoke and residues.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Chapter Synthesis & Review",
+      "body": "We have journeyed through the chemistry of fire and combustion. We learned that combustion requires fuel, oxygen, and heat. We explored how ignition temperatures determine whether substances catch fire easily and how we manipulate these conditions to put out dangerous fires using water or carbon dioxide. We dissected candle flames to discover the blue outer zone of complete combustion and the yellow middle zone of partial combustion. Finally, we analyzed how fuel choices impact our planet through calorific values and environmental pollutants like carbon monoxide and sulfur dioxide. Mastering these concepts gives us the scientific power to harness energy safely and sustainably.",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    }
+  ]
+}

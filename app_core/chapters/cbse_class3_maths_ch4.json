@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "id": "cbse_class3_maths_ch4",
+    "title": "Chapter 4: Multiplication",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand multiplication as repeated addition",
+      "Learn and memorize multiplication tables up to 10",
+      "Apply properties of multiplication like commutative and identity properties",
+      "Solve 2-digit by 1-digit word problems using columns"
+    ],
+    "core_concepts": [
+      "DICT_MATH_MULTIPLICATION",
+      "DICT_MATH_REPEATED_ADDITION",
+      "DICT_MATH_PRODUCT",
+      "DICT_MATH_COMMUTATIVE"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the foundational concept of multiplication as shortcut addition and build computational fluency.",
+      "common_misconceptions": [
+        "Confusing multiplication with addition when grouping items",
+        "Believing that changing the order of numbers changes the product",
+        "Forgetting to carry over numbers during column multiplication"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Bakery Mystery",
+      "body": "Welcome to 'Sweet Treats Bakery', where Maya is preparing boxes of delicious cookies. She has 5 big boxes, and inside each box, she places exactly 4 chocolate chip cookies. Maya's friend Leo walks in and asks, 'How many cookies are there in total?' Leo immediately starts counting them one by one: '1, 2, 3, 4, 5, 6...' Maya smiles and says, 'Wait! There is a magical mathematical shortcut that lets me find the total in just one second without counting them all.' What is this magical shortcut, and how does it work? Let's dive in and unlock the secrets of [DICT_MATH_MULTIPLICATION|multiplication]!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If Maya has 5 boxes with 4 cookies in each box, what is Leo trying to find?",
+      "options": [
+        "The total weight of the cookies",
+        "The total number of cookies",
+        "The number of empty boxes"
+      ],
+      "correct_index": 1,
+      "explanation": "Leo wants to know the total amount of cookies combined from all 5 boxes.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Multiplication?",
+      "body": "Before we learn the shortcut, let's look at what is happening behind the scenes. When Maya has 5 boxes of 4 cookies, she is actually adding the number 4 over and over again: 4 + 4 + 4 + 4 + 4. This is called [DICT_MATH_REPEATED_ADDITION|repeated addition]. While addition is great when you have small numbers, imagine if Maya had 50 boxes with 12 cookies each! Writing 50 fours would take forever and lead to messy mistakes. This is where [DICT_MATH_MULTIPLICATION|multiplication] comes to our rescue. Multiplication is simply fast, repeated addition. Instead of writing 4 + 4 + 4 + 4 + 4 = 20, we write a multiplication sentence: 5 × 4 = 20. The cross sign (×) means 'groups of'. So, 5 × 4 means '5 groups of 4'.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Try this at home!",
+      "body": "Grab 3 small plates or bowls. Place 5 dry beans or buttons on each plate. Say out loud: '3 groups of 5 beans equals 15 beans!' Now write it down as both addition (5 + 5 + 5 = 15) and multiplication (3 × 5 = 15). Notice how much faster the multiplication sentence is!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What does the symbol '×' represent in multiplication?",
+      "back": "It represents 'groups of' or 'lots of'. For example, 3 × 4 means 3 groups of 4.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Anatomy of a Multiplication Problem",
+      "body": "Every multiplication expression tells a story about groups and items. Let's examine the math sentence: 6 × 3 = 18. The number 6 tells us *how many groups* we have. The number 3 tells us *how many items are inside each group*. The result of our multiplication is called the [DICT_MATH_PRODUCT|product]. Therefore, 18 is the [DICT_MATH_PRODUCT|product] of 6 and 3. The numbers that we multiply together (6 and 3) are also known as factors. Understanding factors and products helps us talk about math like true scientists and architects of numbers!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "In the equation 7 × 2 = 14, what is the number 14 called?",
+      "options": [
+        "A factor",
+        "The product",
+        "The divisor"
+      ],
+      "correct_index": 1,
+      "explanation": "The result of multiplying numbers together is called the product.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The Magic Tables",
+      "body": "To become a multiplication master, you need to be friends with your times tables. Think of multiplication tables as the secret codes to unlock math puzzles instantly. Let's look at the Table of 2. Every time you step up in the table, you add another group of 2. 1 × 2 = 2, 2 × 2 = 4, 3 × 2 = 6, all the way to 10 × 2 = 20. Notice a fun pattern? All answers in the 2 times table are even numbers! They always end in 0, 2, 4, 6, or 8. Patterns like this make learning tables feel like discovering hidden treasure maps.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Skip Counting Rhythm",
+      "body": "Practice skip counting to master your tables! Clap your hands while counting by 5s: 5, 10, 15, 20, 25, 30. This rhythm burns the multiplication facts directly into your memory banks.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is the pattern of the answers in the 2 times table?",
+      "back": "They are all even numbers and always end in 0, 2, 4, 6, or 8.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "The Power of Zero and One",
+      "body": "Numbers have special superpowers when interacting with 0 and 1. First, let's look at the Identity Property of 1: Any number multiplied by 1 stays the exact same. If you have 7 boxes, and each box has only 1 apple, you have 7 apples in total (7 × 1 = 7). The number 1 preserves the identity of the other number. Now, let's look at the Zero Property of Multiplication: Whenever you multiply any number by 0, the answer is always 0. Imagine having 5 boxes, but each box is completely empty (0 items). How many items do you have? Zero! 5 × 0 = 0. Zero acts like a black hole, swallowing everything and turning it into zero.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "What is 456 × 0?",
+      "options": [
+        "456",
+        "1",
+        "0"
+      ],
+      "correct_index": 2,
+      "explanation": "Any number multiplied by zero always equals zero because you have zero groups of items.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: The Flip Trick (Commutative Property)",
+      "body": "Here is one of the coolest secrets in all of mathematics: the [DICT_MATH_COMMUTATIVE|Commutative Property]. It states that changing the order of the factors does not change the product. For example, if you arrange chairs in rows, 3 rows of 4 chairs gives you 12 chairs (3 × 4 = 12). If you turn the room around and arrange them as 4 rows of 3 chairs, you still have 12 chairs (4 × 3 = 12). The numbers just danced and swapped places, but the final answer remained identical. Knowing this means that if you forget what 4 × 6 is, you can just flip it to 6 × 4 if you know that one better!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Array Detective",
+      "body": "Draw a grid of dots that is 3 dots wide and 5 dots tall. Count the total dots (15). Now rotate your paper sideways so it is 5 dots wide and 3 dots tall. The dots didn't change, proving 3 × 5 = 5 × 3!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "flashcard",
+      "front": "According to the Commutative Property, if 5 × 8 = 40, what does 8 × 5 equal?",
+      "back": "40. Changing the order of factors does not change the product.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 4: Multiplying Larger Numbers (Column Method)",
+      "body": "What happens when we want to multiply larger numbers, like 24 × 2? We use the vertical column method, just like we did in addition! First, we write the larger number on top and the single-digit multiplier underneath, aligning the ones column carefully. Step 1: Multiply the multiplier by the digit in the **ones** place. Here, 2 × 4 ones = 8 ones. We write 8 in the ones column below. Step 2: Multiply the multiplier by the digit in the **tens** place. Here, 2 × 2 tens = 4 tens. We write 4 in the tens column below. Our final answer is 48! Breaking problems down by place value makes big multiplication feel easy.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "When multiplying 32 by 3 using the column method, what do you multiply first?",
+      "options": [
+        "The tens digit (3 × 3)",
+        "The ones digit (3 × 2)",
+        "It doesn't matter"
+      ],
+      "correct_index": 1,
+      "explanation": "Always start by multiplying the ones place before moving to the tens place.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "teacher_tip",
+      "title": "Place Value Grid Game",
+      "body": "Draw a simple Tens and Ones table on a whiteboard. Solve 31 × 3 by placing counters in the columns to visualize how multiplying the ones and tens separately builds the final number.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Multiplication with Carrying over",
+      "body": "Sometimes, when multiplying the ones column, the answer is 10 or more! For example, let's solve 26 × 3. Step 1: Multiply the ones: 3 × 6 = 18. Since 18 has 8 ones and 1 ten, we write down 8 in the ones place and **carry over** the 1 ten to the top of the tens column. Step 2: Multiply the tens: 3 × 2 tens = 6 tens. Step 3: Add the carried-over ten: 6 tens + 1 ten = 7 tens. We write 7 in the tens column. Our final answer is 78! Carrying over is like packing extra items into a special backpack before moving to the next column.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "In the problem 15 × 4, what is the first multiplication step in the ones column?",
+      "options": [
+        "4 × 5 = 20",
+        "4 × 1 = 4",
+        "5 × 1 = 5"
+      ],
+      "correct_index": 0,
+      "explanation": "You multiply 4 by the ones digit (5), which gives 20.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "When your ones multiplication gives you a two-digit number (like 14), what do you do with the tens digit?",
+      "back": "You write down the ones digit in the answer row and carry over the tens digit to the top of the tens column.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Word Problems in Real Life",
+      "body": "Math is not just numbers on a page; it is happening all around us! Word problems test our ability to translate real-life scenarios into math equations. Let's look at an example: 'Sara has 4 packs of colored pencils. Each pack contains 12 pencils. How many pencils does Sara have in total?' To solve this, we identify our key information. We have 4 groups (packs), and each group has 12 items (pencils). This means our operation is multiplication: 4 × 12. Using our column method: 4 × 2 ones = 8 ones, and 4 × 1 ten = 4 tens. Sara has 48 colored pencils in total! Always remember to read the question twice and look for keywords like 'each', 'total', and 'groups of'.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Liam buys 3 bags of marbles. Each bag has 15 marbles. Which equation represents this situation?",
+      "options": [
+        "15 + 3 = 18",
+        "3 × 15 = 45",
+        "15 - 3 = 12"
+      ],
+      "correct_index": 1,
+      "explanation": "3 bags with 15 marbles each means 3 groups of 15, which is written as 3 × 15 = 45.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "teacher_tip",
+      "title": "Create Your Own Word Problem",
+      "body": "Challenge a friend or family member to solve a multiplication word problem you write yourself about your favorite toys or snacks!",
+      "bloom": "Create",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Fun Shortcut: Multiplying by 10",
+      "body": "There is a wonderful ninja trick when multiplying any whole number by 10. Whenever you multiply a number by 10, you simply attach a zero (0) to the end of that number! Why does this work? Because multiplying by 10 shifts every digit one place value to the left on our place-value chart. For example, 7 × 10 = 70. 34 × 10 = 340. Try it with your favorite number right now and watch the magic happen instantly!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "flashcard",
+      "front": "What is the shortcut for multiplying any whole number by 10?",
+      "back": "Write the number down and attach a zero (0) to the end of it.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "What is 89 × 10?",
+      "options": [
+        "89",
+        "890",
+        "980"
+      ],
+      "correct_index": 1,
+      "explanation": "Attaching a zero to 89 gives us 890.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "theory",
+      "title": "Chapter Review: You Are a Multiplication Master",
+      "body": "Look how far you've come! You started by exploring Maya's bakery and discovered that [DICT_MATH_MULTIPLICATION|multiplication] is the ultimate [DICT_MATH_REPEATED_ADDITION|repeated addition] shortcut. You learned about factors, the [DICT_MATH_PRODUCT|product], the magic of zero and one, the [DICT_MATH_COMMUTATIVE|Commutative Property] of flipping numbers, and how to conquer column multiplication with carrying over. Multiplication unlocks doors to advanced math, science, engineering, and everyday shopping. Keep practicing your tables, stay curious, and keep exploring the wonderful universe of numbers!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

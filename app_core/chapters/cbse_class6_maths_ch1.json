@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_ch1",
+    "title": "Chapter 1: Knowing Our Numbers",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Compare large numbers up to digits of millions and billions.",
+      "Understand and apply Indian and International systems of numeration.",
+      "Estimate numbers using rounding off techniques.",
+      "Use brackets and apply operations with estimation."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_PLACE_VALUE",
+      "DICT_GRADE_ESTIMATION",
+      "DICT_GRADE_INTERNATIONAL_SYSTEM"
+    ],
+    "ai_context": {
+      "learning_goal": "Master reading, writing, comparing, and estimating large numbers in daily life contexts.",
+      "common_misconceptions": [
+        "Confusing comma placements between Indian and International systems.",
+        "Thinking rounding off always means rounding down."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Stargazer",
+      "body": "Imagine you are peering through a powerful telescope at Shine Observatory. You spot a distant galaxy glowing with approximately 100,000,000,000 stars. How do human beings even begin to read, write, and make sense of numbers this massive? Long ago, early humans used tally marks on bones to count sheep, but as civilizations grew, counting grew too. Today, numbers form the invisible architecture of everything around us—from the cost of a rocket ship to the number of cells in your body. Welcome to the grand exploration of numbers!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What was one of the earliest tools humans used to count before written numbers existed?",
+      "options": [
+        "Calculators",
+        "Tally marks on bones",
+        "Digital spreadsheets"
+      ],
+      "correct_index": 1,
+      "explanation": "Archaeological evidence shows ancient humans used tally marks carved into bones to keep track of quantities like livestock.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Comparing Numbers",
+      "body": "Before we build grand numerical castles, we must know which number reigns supreme. When comparing two numbers, the golden rule is simple: **Digit Count Wins**. A number with more digits is always greater than a number with fewer digits. For example, 9,482 has four digits, while 10,500 has five digits. Instantly, 10,500 is larger because it reaches the [DICT_GRADE_PLACE_VALUE|ten thousands] place, whereas 9,482 stops at thousands. What happens if both numbers have the exact same number of digits? We compare from left to right, digit by digit, until we find a mismatch. The number with the larger digit at that first point of disagreement wins the comparison!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Alligator Mouth Trick",
+      "body": "Remember the inequality symbols (< and >) by imagining them as hungry alligators. The alligator's open mouth always faces toward the larger number because it wants to eat the bigger meal! Example: 452 < 542.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "Which is greater: 89,431 or 9,843?",
+      "back": "89,431 is greater because it has 5 digits, whereas 9,843 only has 4 digits.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Making Greatest and Smallest Numbers",
+      "body": "Mathematics allows us to play master builder with digits. Suppose you are given the digits 4, 9, 2, and 7, and you are asked to form the greatest and smallest possible 4-digit numbers without repeating any digit. To form the **greatest number**, arrange the given digits in descending order from left to right: 9, 7, 4, 2, giving us 9,742. To form the **smallest number**, arrange them in ascending order: 2, 4, 7, 9, giving us 2,479. But watch out for the trickster zero! If zero is in your digit pool (e.g., 5, 0, 8, 2), zero can never lead a number on the extreme left because a number like 0258 is actually a 3-digit number (258). Instead, place the smallest non-zero digit first, followed immediately by zero, and continue ascending.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Using the digits 3, 0, 9, 4 once, what is the smallest 4-digit number you can make?",
+      "options": [
+        "0349",
+        "3049",
+        "3409"
+      ],
+      "correct_index": 1,
+      "explanation": "Since zero cannot lead a 4-digit number, we start with the next smallest non-zero digit (3), place zero second, and then continue ascending with 4 and 9 to get 3,049.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: Shifting Digits and Pattern Play",
+      "body": "Numbers are dynamic creatures. What happens when you swap digits around? Take the number 385. If you shift the hundreds digit to the units place and slide the others, you get 853 or 538. Notice how the value changes dramatically depending on where a digit sits! This brings us to the core engine of our number system: [DICT_GRADE_PLACE_VALUE|place value]. Every position represents a power of 10. Moving one step to the left multiplies the value by 10. Understanding this shifting behavior allows us to decode how calculators and computers process numbers at lightning speeds.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Digit Swap Challenge",
+      "body": "Write down a 3-digit number where all digits are different. Find the difference between the largest possible number and the smallest possible number you can make with those three digits. Try it with 725. You'll discover a fascinating mathematical pattern!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Concept 4: Introduction to Place Value",
+      "body": "In our base-ten system, the position of a digit determines its total weight. Consider the number 78,924. The digit 4 is in the ones place ($4 \\times 1$), 2 is in the tens place ($2 \\times 10 = 20$), 9 is in the hundreds place ($9 \\times 100 = 900$), 8 is in the thousands place ($8 \\times 1,000 = 8,000$), and 7 is in the ten-thousands place ($7 \\times 10,000 = 70,000$). Expanded notation writes this sum out loud: $70,000 + 8,000 + 900 + 20 + 4$. Without [DICT_GRADE_PLACE_VALUE|place value], writing large numbers would require thousands of unique symbols, making arithmetic impossible!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What is the place value of the digit 6 in the number 563,120?",
+      "options": [
+        "6,000",
+        "60,000",
+        "600,000"
+      ],
+      "correct_index": 1,
+      "explanation": "In 563,120, the digit 6 is in the ten-thousands place. Therefore, its place value is $6 \\times 10,000 = 60,000$.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 5: The Indian System of Numeration",
+      "body": "Different cultures developed unique ways to group and read large numbers. In the Indian System of Numeration, commas are used strategically to make reading effortless. Starting from the right, the first comma comes after three digits (marking hundreds), and thereafter, commas appear after every **two** digits. Let's look at the periods: Ones, Thousands, Lakhs, and Crores. For instance, the number 50,801,592 in Indian notation is written as **5,08,01,592** and read aloud as *Five crore eight lakh one thousand five hundred ninety-two*. Notice how the groupings transition from hundreds to thousands, then leaps of ten-thousands into lakhs, ten-lakhs, crores, and ten-crores.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "flashcard",
+      "front": "How many zeros are in one Lakh (Indian System)?",
+      "back": "5 zeros! 1,00,000 has five zeros.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Concept 6: The International System of Numeration",
+      "body": "When speaking across global borders, scientists and bankers use the [DICT_GRADE_INTERNATIONAL_SYSTEM|International System of Numeration]. Unlike the Indian system which groups by twos after the thousands, the international system groups digits in **threes** consistently across the board. The periods are Ones, Thousands, Millions, Billions, and Trillions. For example, the number 50801592 is written with commas as **50,801,592** and read as *Fifty million eight hundred one thousand five hundred ninety-two*. Notice how 1 million equals 10 lakhs, and 10 million equals 1 crore!",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "How many lakhs are equal to 1 Million?",
+      "options": [
+        "5 Lakhs",
+        "10 Lakhs",
+        "100 Lakhs"
+      ],
+      "correct_index": 1,
+      "explanation": "1 Million = 1,000,000 while 1 Lakh = 100,000. Therefore, 10 Lakhs make up 1 Million.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 7: Large Numbers in Practice",
+      "body": "In real life, numbers are rarely isolated digits; they represent physical quantities like kilometers, rupees, kilograms, and liters. It is crucial to remember metric conversions when working with large numbers. For instance, $1 \\text{ meter} = 100 \\text{ centimeters}$. Therefore, if a cloth mill produces 4 meters of cloth for each uniform and has 40,000 centimeters of fabric, we must convert units before dividing or multiplying. Mastery of large numbers enables engineers to calculate bridge loads, economists to track national budgets, and astronomers to measure interstellar distances in light-years.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "Newspaper Number Hunt",
+      "body": "Grab today's newspaper or check an online news article. Find three numbers greater than 100,000. Write them down in both figures and words using the Indian or International system.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 8: The Art of Estimation",
+      "body": "Do we always need exact numbers? If someone asks how many people attended a massive music concert, saying \"about 50,000 people\" is much more useful than saying \"48,932 people.\" This is where [DICT_GRADE_ESTIMATION|estimation] (rounding off) comes to rescue our brains from unnecessary clutter. Estimation gives us a quick, reasonable approximation of a quantity or result. To round a number, we look at the digit to the *immediate right* of the target place value. If that digit is 0, 1, 2, 3, or 4, we round down (keep the target digit the same and turn everything to its right into zeros). If the digit is 5, 6, 7, 8, or 9, we round up (add 1 to the target digit and turn everything to its right into zeros).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "Round the number 7,632 to the nearest hundreds place.",
+      "options": [
+        "7,600",
+        "7,700",
+        "8,000"
+      ],
+      "correct_index": 0,
+      "explanation": "To round to the nearest hundred (6), we look at the digit to its immediate right, which is 3. Since 3 is less than 5, we round down, keeping the 6 and replacing the remaining digits with zeros to get 7,600.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 9: Estimating Sums and Differences",
+      "body": "Estimation isn't just for single numbers; it helps us quickly check if our arithmetic is reasonable. Suppose you go shopping and buy a jacket for ₹4,890 and shoes for ₹3,120. Instead of adding exact change in your head, you can estimate: ₹4,890 rounds to ₹5,000, and ₹3,120 rounds to ₹3,000. $5,000 + 3,000 = ₹8,000$. Now you know instantly that your bill should be roughly ₹8,000. If the cashier asks for ₹15,000, your mental [DICT_GRADE_ESTIMATION|estimation] alarm bells will ring immediately, catching potential errors before they happen!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "Estimate the product of 38 and 52 by rounding each factor to the nearest tens.",
+      "back": "38 rounds to 40, and 52 rounds to 50. $40 \\times 50 = 2,000$.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Concept 10: Using Brackets in Expressions",
+      "body": "As mathematical expressions grow longer, clarity becomes essential. Suppose you write $7 + 4 \\times 2$. Does this mean $(7 + 4) \\times 2 = 22$, or does it mean $7 + (4 \\times 2) = 15$? To avoid absolute chaos, mathematicians invented **Brackets** (parentheses). Brackets tell us precisely which calculation to perform first, overriding standard operational priority. For example, $5 \\times (12 - 3)$ means we must subtract 3 from 12 first to get 9, and then multiply by 5 to get 45. Using brackets allows us to write complex word problems into clean, single-line mathematical expressions.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Evaluate the expression: $6 \\times (5 + 3)$",
+      "options": [
+        "48",
+        "33",
+        "28"
+      ],
+      "correct_index": 0,
+      "explanation": "Solve inside the brackets first: $5 + 3 = 8$. Then multiply by 6: $6 \\times 8 = 48$.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Concept 11: Expanding Brackets and Word Problems",
+      "body": "Word problems often disguise brackets in everyday language. Consider this: *Sohail bought 6 notebooks costing ₹20 each and 4 pens costing ₹15 each. Write an expression for the total cost and calculate it.* We can write this as $(6 \\times 20) + (4 \\times 15) = 120 + 60 = 180$. Brackets help organize our thoughts into neat mathematical compartments. When dealing with multi-step manufacturing or ticket sales problems, breaking down the problem using brackets ensures zero calculation errors.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Bracket Engineering",
+      "body": "Create your own math puzzle using at least two sets of brackets, addition, and multiplication. Swap it with a classmate and see if they can solve it following the correct order of operations!",
+      "bloom": "Create",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Concept 12: Introduction to Roman Numerals",
+      "body": "Long before our modern Hindu-Arabic base-ten system was adopted worldwide, the ancient Romans built an empire using a fascinating system of letters. Roman numerals use seven basic symbols: I (1), V (5), X (10), L (50), C (100), D (500), and M (1,000). There is no zero in Roman numerals! Instead, values are combined through addition (e.g., VI = $5 + 1 = 6$) or subtraction (e.g., IV = $5 - 1 = 4$, where a smaller symbol placed before a larger symbol subtracts its value). While we don't use Roman numerals for heavy accounting today, you still see them on clock faces, book chapters, movie sequels, and monumental cornerstones.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "flashcard",
+      "front": "What does the Roman numeral 'XIX' represent in Hindu-Arabic numbers?",
+      "back": "19 ($10 + 9$, where IX is $10 - 1 = 9$).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "Which of the following is an invalid Roman numeral combination?",
+      "options": [
+        "XII",
+        "VV",
+        "IX"
+      ],
+      "correct_index": 1,
+      "explanation": "Symbols V, L, and D are never repeated in Roman numerals. To represent 10, we use X, not VV.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "theory",
+      "title": "Chapter Summary & Reflection",
+      "body": "Look how far you've journeyed! We started with ancient tally marks and scaled galaxies of numbers. You have mastered comparing numbers, organizing them with [DICT_GRADE_PLACE_VALUE|place value], translating between the Indian and International numbering systems, simplifying calculations with [DICT_GRADE_ESTIMATION|estimation], unlocking expressions with brackets, and reading ancient Roman symbols. Numbers are the universal language of reality. As you continue your mathematical journey at Shine Academy, remember that every large number is simply a collection of friendly single digits working together in harmony!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

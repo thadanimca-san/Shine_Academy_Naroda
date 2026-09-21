@@ -1,0 +1,145 @@
+[
+  {
+    "id": "KOBJ_STAT_CH3_4_001",
+    "type": "theory",
+    "title": "Error in Estimation (Note)",
+    "title_hi": "अनुमान में त्रुटि (नोट)",
+    "title_gu": "અંદાજમાં ભૂલ (નોંધ)",
+    "body": "Error $e = y - \\hat{y} = 50 - 53.57 = -3.57$ marks. \n\n**Note:** It is necessary to keep in mind that the error can be obtained only for those values of independent variable (X), for which the observed value of dependent variable (Y) are known. In this example, we cannot obtain the error in estimating Y for X = 120 because the observed value of Y when X = 120 is not known.",
+    "body_hi": "त्रुटि $e = y - \\hat{y} = 50 - 53.57 = -3.57$ अंक। \n\n**नोट:** यह ध्यान रखना आवश्यक है कि त्रुटि केवल स्वतंत्र चर (X) के उन मानों के लिए प्राप्त की जा सकती है, जिनके लिए आश्रित चर (Y) का प्रेक्षित मान ज्ञात है। इस उदाहरण में, हम X = 120 के लिए Y का अनुमान लगाने में त्रुटि प्राप्त नहीं कर सकते क्योंकि X = 120 होने पर Y का प्रेक्षित मान ज्ञात नहीं है।",
+    "body_gu": "ભૂલ $e = y - \\hat{y} = 50 - 53.57 = -3.57$ ગુણ. \n\n**નોંધ:** એ ધ્યાનમાં રાખવું જરૂરી છે કે ભૂલ ફક્ત સ્વતંત્ર ચલ (X) ના તે મૂલ્યો માટે જ મેળવી શકાય છે, જેના માટે આશ્રિત ચલ (Y) નું અવલોકન કરેલ મૂલ્ય જાણીતું છે. આ ઉદાહરણમાં, આપણે X = 120 માટે Y નો અંદાજ કાઢવામાં ભૂલ મેળવી શકતા નથી કારણ કે જ્યારે X = 120 હોય ત્યારે Y નું અવલોકન કરેલ મૂલ્ય જાણીતું નથી."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_002",
+    "type": "worked_example",
+    "title": "Illustration 7",
+    "title_hi": "उदाहरण 7",
+    "title_gu": "ઉદાહરણ 7",
+    "question": "From the data and calculation of illustration 12 of the chapter of linear correlation, obtain the regression line of profit on the sales. Estimate the profit when sales is ₹ 3 crore.",
+    "question_hi": "रैखिक सहसंबंध के अध्याय के उदाहरण 12 के डेटा और गणना से, बिक्री पर लाभ की प्रतिगमन रेखा प्राप्त करें। जब बिक्री ₹ 3 करोड़ हो तो लाभ का अनुमान लगाएं।",
+    "question_gu": "સુરેખ સહસંબંધ પ્રકરણના ઉદાહરણ 12 ની માહિતી અને ગણતરી પરથી, વેચાણ પર નફાની નિયતસંબંધ રેખા મેળવો. જ્યારે વેચાણ ₹ 3 કરોડ હોય ત્યારે નફાનો અંદાજ મેળવો.",
+    "explanation": "From the illustration, we know that:\n$u = \\frac{x - A}{c_x} = \\frac{x - 24}{10}$ and $v = \\frac{y - B}{c_y} = \\frac{y - 5600}{100}$\n$\\therefore c_x = 10$ and $c_y = 100$\nNote that $c_x$ is the divisor of $(x-A)$. So, though we have multiplied $(x-A)$ by 10 for simplicity of calculation, $c_x$ is $\\frac{1}{10} = 0.1$.\nNow, $b = \\frac{n\\sum uv - (\\sum u)(\\sum v)}{n\\sum u^2 - (\\sum u)^2} \\times \\frac{c_y}{c_x}$\n$b = \\frac{9(121) - (0)(1)}{9(60) - (0)^2} \\times \\frac{100}{0.1}$\n$b = \\frac{1089}{540} \\times 1000 = 2016.6667 \\approx 2016.67$\nNow, $a = \\bar{y} - b\\bar{x}$\n$a = 5611.11 - 2016.67(2) = 5611.11 - 4033.34 = 1577.77$\nSo, the regression line of profit (Y) on sales (X) is:\n$\\hat{y} = a + bx$\n$\\hat{y} = 1577.77 + 2016.67x$\nPutting X = 3,\n$\\hat{y} = 1577.77 + 2016.67(3) = 1577.77 + 6050.01 = 7627.78$\nSo, when sales is ₹ 3 crore, the estimated profit is 7627.78 (thousand ₹).",
+    "explanation_hi": "उदाहरण से, हम जानते हैं कि:\n$u = \\frac{x - A}{c_x} = \\frac{x - 24}{10}$ और $v = \\frac{y - B}{c_y} = \\frac{y - 5600}{100}$\n$\\therefore c_x = 10$ (परन्तु 10 से गुणा का अर्थ 0.1 से भाग है, अतः $c_x = 0.1$) और $c_y = 100$\n$b = \\frac{n\\sum uv - (\\sum u)(\\sum v)}{n\\sum u^2 - (\\sum u)^2} \\times \\frac{c_y}{c_x}$\n$b = \\frac{9(121) - (0)(1)}{9(60) - (0)^2} \\times \\frac{100}{0.1}$\n$b = 2016.6667 \\approx 2016.67$\n$a = \\bar{y} - b\\bar{x} = 5611.11 - 2016.67(2) = 1577.77$\nप्रतिगमन रेखा:\n$\\hat{y} = 1577.77 + 2016.67x$\nX = 3 रखने पर,\n$\\hat{y} = 1577.77 + 2016.67(3) = 7627.78$\nअतः, जब बिक्री ₹ 3 करोड़ है तो अनुमानित लाभ 7627.78 (हजार ₹) है।",
+    "explanation_gu": "ઉદાહરણ પરથી, આપણે જાણીએ છીએ કે:\n$u = \\frac{x - A}{c_x} = \\frac{x - 24}{10}$ અને $v = \\frac{y - B}{c_y} = \\frac{y - 5600}{100}$\n$\\therefore c_x = 0.1$ (કારણ કે 10 વડે ગુણવું એ 0.1 વડે ભાગવા સમાન છે) અને $c_y = 100$\n$b = \\frac{n\\sum uv - (\\sum u)(\\sum v)}{n\\sum u^2 - (\\sum u)^2} \\times \\frac{c_y}{c_x}$\n$b = \\frac{9(121) - (0)(1)}{9(60) - (0)^2} \\times \\frac{100}{0.1}$\n$b = 2016.6667 \\approx 2016.67$\n$a = \\bar{y} - b\\bar{x} = 5611.11 - 2016.67(2) = 1577.77$\nનિયતસંબંધ રેખા:\n$\\hat{y} = 1577.77 + 2016.67x$\nX = 3 મૂકતાં,\n$\\hat{y} = 1577.77 + 2016.67(3) = 7627.78$\nતેથી, જ્યારે વેચાણ ₹ 3 કરોડ હોય, ત્યારે અંદાજિત નફો 7627.78 (હજાર ₹) છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_003",
+    "type": "practice_question",
+    "question_type": "subjective",
+    "question": "**Activity:** Collect the information of monthly income and monthly expenditure of your family from June to December of a year in which you are studying in standard 12. Obtain the regression line of monthly expenditure on the monthly income. Estimate the monthly expenditure of January of the successive year. Check the actual expenditure at the end of January and find the error in your estimation.",
+    "question_hi": "**गतिविधि:** उस वर्ष के जून से दिसंबर तक अपने परिवार की मासिक आय और मासिक व्यय की जानकारी एकत्र करें जिसमें आप 12वीं कक्षा में पढ़ रहे हैं। मासिक आय पर मासिक व्यय की प्रतिगमन रेखा प्राप्त करें। अगले वर्ष के जनवरी के मासिक व्यय का अनुमान लगाएं। जनवरी के अंत में वास्तविक व्यय की जांच करें और अपने अनुमान में त्रुटि ज्ञात करें।",
+    "question_gu": "**પ્રવૃત્તિ:** જે વર્ષમાં તમે ધોરણ 12 માં અભ્યાસ કરી રહ્યા છો તે વર્ષના જૂનથી ડિસેમ્બર સુધીના તમારા પરિવારની માસિક આવક અને માસિક ખર્ચની માહિતી એકત્રિત કરો. માસિક આવક પર માસિક ખર્ચની નિયતસંબંધ રેખા મેળવો. પછીના વર્ષના જાન્યુઆરીના માસિક ખર્ચનો અંદાજ મેળવો. જાન્યુઆરીના અંતે વાસ્તવિક ખર્ચ તપાસો અને તમારા અંદાજમાં ભૂલ શોધો.",
+    "answer": "This is a student activity. The answers will vary based on the data collected by the individual student.",
+    "answer_hi": "यह एक छात्र गतिविधि है। व्यक्तिगत छात्र द्वारा एकत्र किए गए डेटा के आधार पर उत्तर अलग-अलग होंगे।",
+    "answer_gu": "આ વિદ્યાર્થીની પ્રવૃત્તિ છે. દરેક વિદ્યાર્થીએ એકત્રિત કરેલા ડેટાના આધારે જવાબો અલગ-અલગ હશે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_004",
+    "type": "socratic_question",
+    "question": "What if we don't have all the raw data points (x, y), but only summary measures like mean, variance, and covariance? Can we still find the regression line?",
+    "question_hi": "क्या होगा यदि हमारे पास सभी कच्चे डेटा बिंदु (x, y) नहीं हैं, बल्कि केवल माध्य, प्रसरण और सहप्रसरण जैसे सारांश उपाय हैं? क्या हम अभी भी प्रतिगमन रेखा पा सकते हैं?",
+    "question_gu": "જો આપણી પાસે બધા કાચા ડેટા બિંદુઓ (x, y) ન હોય, પણ માત્ર મધ્યક, વિચરણ અને સહવિચરણ જેવા સારાંશ માપો હોય તો શું? શું આપણે હજુ પણ નિયતસંબંધ રેખા શોધી શકીએ છીએ?",
+    "options": [
+      "Yes, using special formulas.",
+      "No, raw data is always needed."
+    ],
+    "options_hi": [
+      "हाँ, विशेष सूत्रों का उपयोग करके।",
+      "नहीं, कच्चे डेटा की हमेशा आवश्यकता होती है।"
+    ],
+    "options_gu": [
+      "હા, ખાસ સૂત્રોનો ઉપયોગ કરીને.",
+      "ના, કાચા ડેટાની હંમેશા જરૂર પડે છે."
+    ],
+    "correct_index": 0,
+    "explanation": "Yes! We can find the regression coefficients directly from the summary measures like covariance and standard deviation without needing the raw data points.",
+    "explanation_hi": "हाँ! हम कच्चे डेटा बिंदुओं की आवश्यकता के बिना सहप्रसरण और मानक विचलन जैसे सारांश उपायों से सीधे प्रतिगमन गुणांक प्राप्त कर सकते हैं।",
+    "explanation_gu": "હા! આપણે કાચા ડેટા બિંદુઓની જરૂર વગર સહવિચરણ અને પ્રમાણિત વિચલન જેવા સારાંશ માપો પરથી સીધા જ નિયતસંબંધાંક મેળવી શકીએ છીએ."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_005",
+    "type": "theory",
+    "title": "3.5 Regression coefficient from covariance and correlation coefficient",
+    "title_hi": "3.5 सहप्रसरण और सहसंबंध गुणांक से प्रतिगमन गुणांक",
+    "title_gu": "3.5 સહવિચરણ અને સહસંબંધાંક પરથી નિયતસંબંધાંક",
+    "body": "When the summary measures like mean, standard deviation (or variance), covariance, correlation coefficient are known for bivariate data of two variables X and Y, regression coefficient and the line of regression can be obtained as follows.\n\n**(1) When the measures like $\\bar{x}, \\bar{y}, s_x$ (or $s_x^2$), $s_y$ (or $s_y^2$) and $Cov(x, y)$ are known:**\n$b = \\frac{Cov(x, y)}{s_x^2}$\nand $a = \\bar{y} - b\\bar{x}$\nwhere, $Cov(x, y) = \\frac{\\sum (x-\\bar{x})(y-\\bar{y})}{n} = \\frac{\\sum xy - n\\bar{x}\\bar{y}}{n}$\n$s_x^2 = \\frac{\\sum (x-\\bar{x})^2}{n} = \\frac{\\sum x^2 - n\\bar{x}^2}{n}$\n\n**(2) When the measures like $\\bar{x}, \\bar{y}, r, s_x$ (or $s_x^2$), and $s_y$ (or $s_y^2$) are known:**\n$b = r \\cdot \\frac{s_y}{s_x}$\nand $a = \\bar{y} - b\\bar{x}$\n\nThe regression line of Y on X i.e. $\\hat{y} = a + bx$ can be obtained by putting the values of a and b.",
+    "body_hi": "जब दो चर X और Y के द्विचर डेटा के लिए माध्य, मानक विचलन (या प्रसरण), सहप्रसरण, सहसंबंध गुणांक जैसे सारांश उपाय ज्ञात होते हैं, तो प्रतिगमन गुणांक और प्रतिगमन रेखा को निम्नानुसार प्राप्त किया जा सकता है।\n\n**(1) जब $\\bar{x}, \\bar{y}, s_x$ (या $s_x^2$), $s_y$ (या $s_y^2$) और $Cov(x, y)$ ज्ञात हों:**\n$b = \\frac{Cov(x, y)}{s_x^2}$\nऔर $a = \\bar{y} - b\\bar{x}$\n\n**(2) जब $\\bar{x}, \\bar{y}, r, s_x$ (या $s_x^2$), और $s_y$ (या $s_y^2$) ज्ञात हों:**\n$b = r \\cdot \\frac{s_y}{s_x}$\nऔर $a = \\bar{y} - b\\bar{x}$\n\nX पर Y की प्रतिगमन रेखा अर्थात् $\\hat{y} = a + bx$ को a और b के मान रखकर प्राप्त किया जा सकता है।",
+    "body_gu": "જ્યારે બે ચલ X અને Y ની દ્વિચલ માહિતી માટે મધ્યક, પ્રમાણિત વિચલન (અથવા વિચરણ), સહવિચરણ, સહસંબંધાંક જેવા સારાંશ માપો જાણીતા હોય, ત્યારે નિયતસંબંધાંક અને નિયતસંબંધ રેખા નીચે મુજબ મેળવી શકાય છે.\n\n**(1) જ્યારે $\\bar{x}, \\bar{y}, s_x$ (અથવા $s_x^2$), $s_y$ (અથવા $s_y^2$) અને $Cov(x, y)$ જાણીતા હોય:**\n$b = \\frac{Cov(x, y)}{s_x^2}$\nઅને $a = \\bar{y} - b\\bar{x}$\n\n**(2) જ્યારે $\\bar{x}, \\bar{y}, r, s_x$ (અથવા $s_x^2$), અને $s_y$ (અથવા $s_y^2$) જાણીતા હોય:**\n$b = r \\cdot \\frac{s_y}{s_x}$\nઅને $a = \\bar{y} - b\\bar{x}$\n\nX પર Y ની નિયતસંબંધ રેખા એટલે કે $\\hat{y} = a + bx$ ને a અને b ની કિંમતો મૂકીને મેળવી શકાય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_006",
+    "type": "worked_example",
+    "title": "Illustration 8",
+    "title_hi": "उदाहरण 8",
+    "title_gu": "ઉદાહરણ 8",
+    "question": "The following measures are obtained to study the relation between rainfall in cm (X) and yield of Bajri in Quintal per Hectare (Y) in ten different regions during monsoon.\n$n=10, \\bar{x}=40, \\bar{y}=175, s_x=12, Cov(x, y)=360$\nObtain the regression line of yield Y on rainfall X.",
+    "question_hi": "मानसून के दौरान दस अलग-अलग क्षेत्रों में बारिश (सेमी में, X) और बाजरी की उपज (क्विंटल प्रति हेक्टेयर, Y) के बीच संबंध का अध्ययन करने के लिए निम्नलिखित उपाय प्राप्त किए गए हैं।\n$n=10, \\bar{x}=40, \\bar{y}=175, s_x=12, Cov(x, y)=360$\nबारिश X पर उपज Y की प्रतिगमन रेखा प्राप्त करें।",
+    "question_gu": "ચોમાસા દરમિયાન દસ અલગ-અલગ પ્રદેશોમાં વરસાદ (સેમીમાં, X) અને બાજરીની ઉપજ (ક્વિન્ટલ પ્રતિ હેક્ટર, Y) વચ્ચેના સંબંધનો અભ્યાસ કરવા માટે નીચેના માપો મેળવવામાં આવ્યા છે.\n$n=10, \\bar{x}=40, \\bar{y}=175, s_x=12, Cov(x, y)=360$\nવરસાદ X પર ઉપજ Y ની નિયતસંબંધ રેખા મેળવો.",
+    "explanation": "Here, $Cov(x, y) = 360$ and $s_x = 12 \\implies s_x^2 = 144$\n$b = \\frac{Cov(x, y)}{s_x^2} = \\frac{360}{144} = 2.5$\nAnd $a = \\bar{y} - b\\bar{x} = 175 - 2.5(40) = 175 - 100 = 75$\nSo, the regression line of Y on X is:\n$\\hat{y} = a + bx$\n$\\hat{y} = 75 + 2.5x$",
+    "explanation_hi": "यहाँ, $Cov(x, y) = 360$ और $s_x = 12 \\implies s_x^2 = 144$\n$b = \\frac{Cov(x, y)}{s_x^2} = \\frac{360}{144} = 2.5$\nऔर $a = \\bar{y} - b\\bar{x} = 175 - 2.5(40) = 175 - 100 = 75$\nअतः, X पर Y की प्रतिगमन रेखा है:\n$\\hat{y} = a + bx$\n$\\hat{y} = 75 + 2.5x$",
+    "explanation_gu": "અહીં, $Cov(x, y) = 360$ અને $s_x = 12 \\implies s_x^2 = 144$\n$b = \\frac{Cov(x, y)}{s_x^2} = \\frac{360}{144} = 2.5$\nઅને $a = \\bar{y} - b\\bar{x} = 175 - 2.5(40) = 175 - 100 = 75$\nતેથી, X પર Y ની નિયતસંબંધ રેખા છે:\n$\\hat{y} = a + bx$\n$\\hat{y} = 75 + 2.5x$"
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_007",
+    "type": "worked_example",
+    "title": "Illustration 9",
+    "title_hi": "उदाहरण 9",
+    "title_gu": "ઉદાહરણ 9",
+    "question": "To study the relation between two variables, yearly income (X) of a family and their yearly investment (Y) in mutual funds, the following information is shown for a sample of 100 families of a city.\nX = Annual income of a family (lakh ₹)\nY = Annual investment in mutual fund of a family (thousand ₹)\n$\\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8, r=0.65$\nObtain the regression line of annual investment in mutual fund of a family on their annual income. Estimate the annual investment in mutual fund of a family whose annual income is ₹ 4.5 lakh.",
+    "question_hi": "एक परिवार की वार्षिक आय (X) और म्यूचुअल फंड में उनके वार्षिक निवेश (Y) के बीच संबंध का अध्ययन करने के लिए, एक शहर के 100 परिवारों के नमूने के लिए निम्नलिखित जानकारी दिखाई गई है।\nX = एक परिवार की वार्षिक आय (लाख ₹)\nY = एक परिवार का म्यूचुअल फंड में वार्षिक निवेश (हजार ₹)\n$\\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8, r=0.65$\nपरिवार की वार्षिक आय पर म्यूचुअल फंड में वार्षिक निवेश की प्रतिगमन रेखा प्राप्त करें। उस परिवार के म्यूचुअल फंड में वार्षिक निवेश का अनुमान लगाएं जिसकी वार्षिक आय ₹ 4.5 लाख है।",
+    "question_gu": "કુટુંબની વાર્ષિક આવક (X) અને મ્યુચ્યુઅલ ફંડમાં તેમના વાર્ષિક રોકાણ (Y) વચ્ચેના સંબંધનો અભ્યાસ કરવા માટે, શહેરના 100 પરિવારોના નમૂના માટે નીચેની માહિતી દર્શાવેલ છે.\nX = કુટુંબની વાર્ષિક આવક (લાખ ₹)\nY = કુટુંબનું મ્યુચ્યુઅલ ફંડમાં વાર્ષિક રોકાણ (હજાર ₹)\n$\\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8, r=0.65$\nકુટુંબની વાર્ષિક આવક પર મ્યુચ્યુઅલ ફંડમાં વાર્ષિક રોકાણની નિયતસંબંધ રેખા મેળવો. જે કુટુંબની વાર્ષિક આવક ₹ 4.5 લાખ હોય તેના મ્યુચ્યુઅલ ફંડમાં વાર્ષિક રોકાણનો અંદાજ મેળવો.",
+    "explanation": "Here, $n=100, \\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8$ and $r=0.65$\nNow, $b = r \\cdot \\frac{s_y}{s_x} = 0.65 \\times \\frac{12.8}{1.2} = 6.9333 \\approx 6.93$\nAnd $a = \\bar{y} - b\\bar{x} = 40.5 - 6.93(5.5) = 40.5 - 38.115 = 2.385 \\approx 2.39$\nSo, the regression line of Y on X is:\n$\\hat{y} = a + bx = 2.39 + 6.93x$\nPutting X = 4.5,\n$\\hat{y} = 2.39 + 6.93(4.5) = 2.39 + 31.185 = 33.575 \\approx 33.58$\nSo, when annual income of a family is ₹ 4.5 lakh then estimated investment in mutual fund is 33.58 thousand ₹.",
+    "explanation_hi": "यहाँ, $n=100, \\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8$ और $r=0.65$\n$b = r \\cdot \\frac{s_y}{s_x} = 0.65 \\times \\frac{12.8}{1.2} = 6.9333 \\approx 6.93$\nऔर $a = \\bar{y} - b\\bar{x} = 40.5 - 6.93(5.5) = 40.5 - 38.115 = 2.385 \\approx 2.39$\nअतः, X पर Y की प्रतिगमन रेखा है:\n$\\hat{y} = 2.39 + 6.93x$\nX = 4.5 रखने पर,\n$\\hat{y} = 2.39 + 6.93(4.5) = 33.575 \\approx 33.58$\nअतः, जब परिवार की वार्षिक आय ₹ 4.5 लाख है तो म्यूचुअल फंड में अनुमानित निवेश 33.58 हजार ₹ है।",
+    "explanation_gu": "અહીં, $n=100, \\bar{x}=5.5, \\bar{y}=40.5, s_x=1.2, s_y=12.8$ અને $r=0.65$\n$b = r \\cdot \\frac{s_y}{s_x} = 0.65 \\times \\frac{12.8}{1.2} = 6.9333 \\approx 6.93$\nઅને $a = \\bar{y} - b\\bar{x} = 40.5 - 6.93(5.5) = 40.5 - 38.115 = 2.385 \\approx 2.39$\nતેથી, X પર Y ની નિયતસંબંધ રેખા છે:\n$\\hat{y} = 2.39 + 6.93x$\nX = 4.5 મૂકતાં,\n$\\hat{y} = 2.39 + 6.93(4.5) = 33.575 \\approx 33.58$\nતેથી, જ્યારે કુટુંબની વાર્ષિક આવક ₹ 4.5 લાખ હોય ત્યારે મ્યુચ્યુઅલ ફંડમાં અંદાજિત રોકાણ 33.58 હજાર ₹ છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_008",
+    "type": "worked_example",
+    "title": "Illustration 10",
+    "title_hi": "उदाहरण 10",
+    "title_gu": "ઉદાહરણ 10",
+    "question": "The information of price (in ₹) of a ballpen and the supply of ballpen (in units) at the end of each month of a year for a company making ball pen is given below. Estimate the supply of ballpen when its price is ₹ 40.\n\n| Detail | Price (X) | Supply (Y) |\n|---|---|---|\n| Average | 30 | 500 |\n| Variance | 25 | 10,000 |\n\n$r = 0.8$",
+    "question_hi": "बॉलपेन बनाने वाली कंपनी के लिए एक वर्ष के प्रत्येक महीने के अंत में बॉलपेन की कीमत (₹ में) और बॉलपेन की आपूर्ति (इकाइयों में) की जानकारी नीचे दी गई है। जब इसकी कीमत ₹ 40 हो तो बॉलपेन की आपूर्ति का अनुमान लगाएं।\n\n| विवरण | कीमत (X) | आपूर्ति (Y) |\n|---|---|---|\n| औसत | 30 | 500 |\n| प्रसरण | 25 | 10,000 |\n\n$r = 0.8$",
+    "question_gu": "બોલપેન બનાવતી કંપની માટે વર્ષના દરેક મહિનાના અંતે બોલપેનની કિંમત (₹ માં) અને બોલપેનના પુરવઠા (એકમોમાં) ની માહિતી નીચે મુજબ છે. જ્યારે તેની કિંમત ₹ 40 હોય ત્યારે બોલપેનના પુરવઠાનો અંદાજ મેળવો.\n\n| વિગત | કિંમત (X) | પુરવઠો (Y) |\n|---|---|---|\n| સરેરાશ | 30 | 500 |\n| વિચરણ | 25 | 10,000 |\n\n$r = 0.8$",
+    "explanation": "Here, $\\bar{x}=30, \\bar{y}=500, s_x^2=25, s_y^2=10000$ and $r=0.8$\nSince $s_x^2=25, s_x=5$\nSince $s_y^2=10000, s_y=100$\nSince the supply Y is to be estimated for the price X = 40, we shall obtain the regression line of Y on X.\n$b = r \\cdot \\frac{s_y}{s_x} = 0.8 \\times \\frac{100}{5} = 16$\n$a = \\bar{y} - b\\bar{x} = 500 - 16(30) = 500 - 480 = 20$\nSo, the regression line of Y on X is:\n$\\hat{y} = a + bx = 20 + 16x$\nPutting X = 40,\n$\\hat{y} = 20 + 16(40) = 20 + 640 = 660$ units\nSo, when the price is ₹ 40, the estimate of supply is 660 units.",
+    "explanation_hi": "यहाँ, $\\bar{x}=30, \\bar{y}=500, s_x^2=25, s_y^2=10000$ और $r=0.8$\nचूँकि $s_x^2=25, s_x=5$\nचूँकि $s_y^2=10000, s_y=100$\nहमें X = 40 के लिए आपूर्ति Y का अनुमान लगाना है, इसलिए हम X पर Y की प्रतिगमन रेखा प्राप्त करेंगे।\n$b = r \\cdot \\frac{s_y}{s_x} = 0.8 \\times \\frac{100}{5} = 16$\n$a = \\bar{y} - b\\bar{x} = 500 - 16(30) = 20$\nअतः, प्रतिगमन रेखा है: $\\hat{y} = 20 + 16x$\nX = 40 रखने पर, $\\hat{y} = 20 + 16(40) = 660$ इकाइयाँ\nअतः, जब कीमत ₹ 40 है, तो आपूर्ति का अनुमान 660 इकाइयाँ है।",
+    "explanation_gu": "અહીં, $\\bar{x}=30, \\bar{y}=500, s_x^2=25, s_y^2=10000$ અને $r=0.8$\nકારણ કે $s_x^2=25, s_x=5$\nકારણ કે $s_y^2=10000, s_y=100$\nઆપણે X = 40 માટે પુરવઠા Y નો અંદાજ મેળવવાનો હોવાથી, આપણે X પર Y ની નિયતસંબંધ રેખા મેળવીશું.\n$b = r \\cdot \\frac{s_y}{s_x} = 0.8 \\times \\frac{100}{5} = 16$\n$a = \\bar{y} - b\\bar{x} = 500 - 16(30) = 20$\nતેથી, નિયતસંબંધ રેખા છે: $\\hat{y} = 20 + 16x$\nX = 40 મૂકતાં, $\\hat{y} = 20 + 16(40) = 660$ એકમો\nતેથી, જ્યારે કિંમત ₹ 40 હોય, ત્યારે પુરવઠાનો અંદાજ 660 એકમો છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_009",
+    "type": "worked_example",
+    "title": "Illustration 11",
+    "title_hi": "उदाहरण 11",
+    "title_gu": "ઉદાહરણ 11",
+    "question": "A person in a state of South India produces spoons from eatable materials. It can be eaten after using it. He launched such spoons for the purpose of selling in a state on an experimental level. The following results are obtained for the average price (in ₹) and its demand (in hundred units) for the last six months.\n$n=6, \\sum x = 45, \\sum y = 122, \\sum x^2 = 439, \\sum xy = 605$\nObtain the regression line of the demand (Y) of spoons on the price (X) and estimate the demand of spoons when the price of a spoon is ₹ 10.",
+    "question_hi": "दक्षिण भारत के एक राज्य में एक व्यक्ति खाने योग्य सामग्री से चम्मच बनाता है। इसे इस्तेमाल करने के बाद खाया जा सकता है। उसने एक राज्य में प्रायोगिक स्तर पर बेचने के उद्देश्य से ऐसे चम्मच लॉन्च किए। पिछले छह महीनों के लिए औसत मूल्य (₹ में) और उसकी मांग (सौ इकाइयों में) के लिए निम्नलिखित परिणाम प्राप्त किए गए हैं।\n$n=6, \\sum x = 45, \\sum y = 122, \\sum x^2 = 439, \\sum xy = 605$\nकीमत (X) पर चम्मच की मांग (Y) की प्रतिगमन रेखा प्राप्त करें और जब चम्मच की कीमत ₹ 10 हो तो चम्मच की मांग का अनुमान लगाएं।",
+    "question_gu": "દક્ષિણ ભારતના એક રાજ્યમાં એક વ્યક્તિ ખાવાલાયક સામગ્રીમાંથી ચમચી બનાવે છે. તેનો ઉપયોગ કર્યા પછી તેને ખાઈ શકાય છે. તેણે પ્રાયોગિક ધોરણે એક રાજ્યમાં વેચવાના હેતુથી આવી ચમચીઓ લોન્ચ કરી. છેલ્લા છ મહિના માટે સરેરાશ કિંમત (₹ માં) અને તેની માંગ (સો એકમોમાં) માટે નીચેના પરિણામો મેળવવામાં આવ્યા છે.\n$n=6, \\sum x = 45, \\sum y = 122, \\sum x^2 = 439, \\sum xy = 605$\nકિંમત (X) પર ચમચીની માંગ (Y) ની નિયતસંબંધ રેખા મેળવો અને જ્યારે ચમચીની કિંમત ₹ 10 હોય ત્યારે ચમચીની માંગનો અંદાજ મેળવો.",
+    "explanation": "Here, $\\bar{x} = \\frac{\\sum x}{n} = \\frac{45}{6} = 7.5$, $\\bar{y} = \\frac{\\sum y}{n} = \\frac{122}{6} = 20.33$\n$b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2}$\n$b = \\frac{6(605) - (45)(122)}{6(439) - (45)^2} = \\frac{3630 - 5490}{2634 - 2025} = \\frac{-1860}{609} = -3.0542 \\approx -3.05$\n$a = \\bar{y} - b\\bar{x} = 20.33 - (-3.05)(7.5) = 20.33 + 22.875 = 43.205 \\approx 43.21$\nSo, the regression line of Y on X is:\n$\\hat{y} = a + bx = 43.21 - 3.05x$\nPutting X = 10,\n$\\hat{y} = 43.21 - 3.05(10) = 43.21 - 30.5 = 12.71$\nSo, when the price is ₹ 10, estimated demand is 12.71 (hundred units).",
+    "explanation_hi": "यहाँ, $\\bar{x} = 7.5, \\bar{y} = 20.33$\n$b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2} = \\frac{6(605) - (45)(122)}{6(439) - (45)^2} = \\frac{-1860}{609} = -3.05$\n$a = \\bar{y} - b\\bar{x} = 20.33 - (-3.05)(7.5) = 43.21$\nअतः, प्रतिगमन रेखा है: $\\hat{y} = 43.21 - 3.05x$\nX = 10 रखने पर, $\\hat{y} = 43.21 - 3.05(10) = 12.71$\nअतः, जब कीमत ₹ 10 है, तो अनुमानित मांग 12.71 (सौ इकाइयाँ) है।",
+    "explanation_gu": "અહીં, $\\bar{x} = 7.5, \\bar{y} = 20.33$\n$b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2} = \\frac{6(605) - (45)(122)}{6(439) - (45)^2} = \\frac{-1860}{609} = -3.05$\n$a = \\bar{y} - b\\bar{x} = 20.33 - (-3.05)(7.5) = 43.21$\nતેથી, નિયતસંબંધ રેખા છે: $\\hat{y} = 43.21 - 3.05x$\nX = 10 મૂકતાં, $\\hat{y} = 43.21 - 3.05(10) = 12.71$\nતેથી, જ્યારે કિંમત ₹ 10 હોય, ત્યારે અંદાજિત માંગ 12.71 (સો એકમો) છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_010",
+    "type": "worked_example",
+    "title": "Illustration 12",
+    "title_hi": "उदाहरण 12",
+    "title_gu": "ઉદાહરણ 12",
+    "question": "The electricity is generated by windmill manufactured by a company. The following information is obtained by recording five observations regarding the velocity of wind (km per hour) and generation of electricity (in Watts) by a unit of the company.\nVelocity of Wind = X km per hour\nElectricity Generation = Y Watts\n$n=5, \\bar{x}=20, \\bar{y}=186, \\sum xy = 23200, s_x^2 = 50$\nObtain the regression line of electricity generation (Y) on velocity of wind (X). Estimate the electricity generation if the velocity of wind is 25 km per hour.",
+    "question_hi": "एक कंपनी द्वारा निर्मित पवनचक्की द्वारा बिजली उत्पन्न की जाती है। कंपनी की एक इकाई द्वारा हवा के वेग (किमी प्रति घंटे) और बिजली उत्पादन (वाट में) के संबंध में पांच अवलोकनों को रिकॉर्ड करके निम्नलिखित जानकारी प्राप्त की जाती है।\nहवा का वेग = X किमी प्रति घंटा\nबिजली उत्पादन = Y वाट\n$n=5, \\bar{x}=20, \\bar{y}=186, \\sum xy = 23200, s_x^2 = 50$\nहवा के वेग (X) पर बिजली उत्पादन (Y) की प्रतिगमन रेखा प्राप्त करें। यदि हवा का वेग 25 किमी प्रति घंटा है तो बिजली उत्पादन का अनुमान लगाएं।",
+    "question_gu": "કંપની દ્વારા ઉત્પાદિત વિન્ડમિલ દ્વારા વીજળી ઉત્પન્ન થાય છે. કંપનીના એક એકમ દ્વારા પવનનો વેગ (કિમી પ્રતિ કલાક) અને વીજળી ઉત્પાદન (વૉટ્સમાં) સંબંધિત પાંચ અવલોકનો નોંધીને નીચેની માહિતી મેળવવામાં આવી છે.\nપવનનો વેગ = X કિમી પ્રતિ કલાક\nવીજળી ઉત્પાદન = Y વૉટ્સ\n$n=5, \\bar{x}=20, \\bar{y}=186, \\sum xy = 23200, s_x^2 = 50$\nપવનના વેગ (X) પર વીજળી ઉત્પાદન (Y) ની નિયતસંબંધ રેખા મેળવો. જો પવનનો વેગ 25 કિમી પ્રતિ કલાક હોય તો વીજળી ઉત્પાદનનો અંદાજ મેળવો.",
+    "explanation": "Here, $n=5, \\sum xy = 23200, \\bar{x}=20, \\bar{y}=186$ and $s_x^2=50$\nNow, $b = \\frac{Cov(x, y)}{s_x^2} = \\frac{\\frac{\\sum xy - n\\bar{x}\\bar{y}}{n}}{s_x^2} = \\frac{\\sum xy - n\\bar{x}\\bar{y}}{n \\cdot s_x^2}$\n$b = \\frac{23200 - 5(20)(186)}{5(50)} = \\frac{23200 - 18600}{250} = \\frac{4600}{250} = 18.4$\n$a = \\bar{y} - b\\bar{x} = 186 - 18.4(20) = 186 - 368 = -182$\nSo, the regression line of Y on X is:\n$\\hat{y} = a + bx = -182 + 18.4x$\nPutting X = 25,\n$\\hat{y} = -182 + 18.4(25) = -182 + 460 = 278$\nSo, when the velocity of wind is 25 km per hour, approximately 278 watts electricity is generated.",
+    "explanation_hi": "यहाँ, $n=5, \\sum xy = 23200, \\bar{x}=20, \\bar{y}=186$ और $s_x^2=50$\n$b = \\frac{\\sum xy - n\\bar{x}\\bar{y}}{n \\cdot s_x^2} = \\frac{23200 - 5(20)(186)}{5(50)} = \\frac{4600}{250} = 18.4$\n$a = \\bar{y} - b\\bar{x} = 186 - 18.4(20) = -182$\nअतः, प्रतिगमन रेखा है: $\\hat{y} = -182 + 18.4x$\nX = 25 रखने पर, $\\hat{y} = -182 + 18.4(25) = 278$\nअतः, जब हवा का वेग 25 किमी प्रति घंटा होता है, तो लगभग 278 वाट बिजली उत्पन्न होती है।",
+    "explanation_gu": "અહીં, $n=5, \\sum xy = 23200, \\bar{x}=20, \\bar{y}=186$ અને $s_x^2=50$\n$b = \\frac{\\sum xy - n\\bar{x}\\bar{y}}{n \\cdot s_x^2} = \\frac{23200 - 5(20)(186)}{5(50)} = \\frac{4600}{250} = 18.4$\n$a = \\bar{y} - b\\bar{x} = 186 - 18.4(20) = -182$\nતેથી, નિયતસંબંધ રેખા છે: $\\hat{y} = -182 + 18.4x$\nX = 25 મૂકતાં, $\\hat{y} = -182 + 18.4(25) = 278$\nતેથી, જ્યારે પવનનો વેગ 25 કિમી પ્રતિ કલાક હોય, ત્યારે આશરે 278 વૉટ્સ વીજળી ઉત્પન્ન થાય છે."
+  },
+  {
+    "id": "KOBJ_STAT_CH3_4_011",
+    "type": "practice_question",
+    "question_type": "subjective",
+    "question": "**Exercise 3.2**\n1. The following information is obtained from a study to know the effect of use of fertilizer on the yield of cotton.\n\n| Consumption of fertilizer (10kg) X | 28 | 35 | 25 | 24 | 20 | 25 | 20 |\n|---|---|---|---|---|---|---|---|\n| Yield of cotton per hectare (Quintals) Y | 128 | 140 | 115 | 120 | 105 | 122 | 100 |\n\n(Find the regression line of Y on X based on this data)",
+    "question_hi": "**प्रश्नावली 3.2**\n1. कपास की उपज पर उर्वरक के उपयोग के प्रभाव को जानने के लिए किए गए अध्ययन से निम्नलिखित जानकारी प्राप्त होती है।\n\n| उर्वरक की खपत (10 किग्रा) X | 28 | 35 | 25 | 24 | 20 | 25 | 20 |\n|---|---|---|---|---|---|---|---|\n| कपास की प्रति हेक्टेयर उपज (क्विंटल) Y | 128 | 140 | 115 | 120 | 105 | 122 | 100 |\n\n(इस डेटा के आधार पर X पर Y की प्रतिगमन रेखा ज्ञात कीजिए)",
+    "question_gu": "**સ્વાધ્યાય 3.2**\n1. કપાસની ઉપજ પર ખાતરના ઉપયોગની અસર જાણવા માટેના અભ્યાસમાંથી નીચેની માહિતી મેળવવામાં આવી છે.\n\n| ખાતરનો વપરાશ (10 કિગ્રા) X | 28 | 35 | 25 | 24 | 20 | 25 | 20 |\n|---|---|---|---|---|---|---|---|\n| હેક્ટર દીઠ કપાસની ઉપજ (ક્વિન્ટલ) Y | 128 | 140 | 115 | 120 | 105 | 122 | 100 |\n\n(આ માહિતી પરથી X પર Y ની નિયતસંબંધ રેખા મેળવો)",
+    "answer": "Regression line can be found by calculating means of X and Y, followed by finding regression coefficients b and a.",
+    "answer_hi": "X और Y के माध्य की गणना करके, उसके बाद प्रतिगमन गुणांक b और a ज्ञात करके प्रतिगमन रेखा पाई जा सकती है।",
+    "answer_gu": "X અને Y ના મધ્યકની ગણતરી કરીને, અને ત્યારબાદ નિયતસંબંધાંક b અને a મેળવીને નિયતસંબંધ રેખા શોધી શકાય છે."
+  }
+]

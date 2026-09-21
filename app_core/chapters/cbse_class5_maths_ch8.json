@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch8",
+    "title": "Chapter 8: Money",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the decimal notation of money and conversion between rupees and paise.",
+      "Perform addition and subtraction of large sums of money in column form.",
+      "Calculate multiplication and division of money for unitary methods and bill preparation.",
+      "Create, read, and interpret simple cash memos and bills."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_CURRENCY",
+      "DICT_GRADE_UNITARY",
+      "DICT_GRADE_CASHMEMO"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the arithmetic operations of money, including bill estimation, unit conversions, and solving real-world financial word problems.",
+      "common_misconceptions": [
+        "Forgetting to align decimal points when adding or subtracting money amounts.",
+        "Confusing rupees and paise conversions, leading to misplaced decimal places.",
+        "Multiplying the total amount by quantity instead of finding the unit cost first."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Market Mystery",
+      "body": "Imagine stepping into the grand Shine Bazaar on a bustling Saturday morning. The air is thick with the sweet aroma of roasted peanuts, the chatter of eager shoppers, and the cheerful clinking of coins. You walk up to a colourful stall filled with storybooks, art supplies, and delicious snacks. You want to buy a comic book priced at ₹125.50 and a paintbrush set for ₹75.25. You hand a crisp ₹500 note to the shopkeeper. How does she instantly calculate your change? Is it magic? No, it is the magnificent science of mathematics applied to [DICT_GRADE_CURRENCY|money]! Let's embark on a journey to master the ways currency powers our daily lives.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If you buy items worth ₹125.50 and ₹75.25, what is the total cost before getting your change from ₹500?",
+      "options": [
+        "₹190.75",
+        "₹200.75",
+        "₹210.50"
+      ],
+      "correct_index": 1,
+      "explanation": "Adding ₹125.50 and ₹75.25 gives ₹200.75. Always align the decimal points carefully!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Anatomy of Currency and Decimal Notation",
+      "body": "Long before paper notes and shiny metal coins existed, humans used a system called barter, trading goods directly—like giving a bag of wheat for a pair of shoes. As societies grew, this became too complicated. Enter [DICT_GRADE_CURRENCY|currency], a standardized medium of exchange. In India, our currency consists of Rupees (₹) and Paise (p). Because 1 Rupee equals 100 Paise, we use a decimal point to separate rupees from paise. For example, ₹45.75 means 45 whole rupees and 75 paise. The dot is not just a punctuation mark; it is a mathematical wall that keeps the whole units on the left and the fractional parts on the right. Understanding this notation is the absolute foundation of all financial calculations.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Real-World Exploration",
+      "body": "Grab three different price tags from grocery items in your kitchen. Notice how every single price uses a decimal point. Why do you think shops use decimals instead of writing '5000 paise' for a ₹50 item? Discuss this with a friend or parent!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "How many paise make one Rupee?",
+      "back": "100 Paise = 1 Rupee (₹1 = 100p)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Converting Rupees to Paise and Vice Versa",
+      "body": "To convert rupees into paise, you multiply the rupee amount by 100. Why? Because every single rupee contains 100 paise. For instance, to convert ₹14.25 into paise, you multiply 14 by 100 (getting 1400p) and add the remaining 25 paise, resulting in 1425 paise. Conversely, when converting paise into rupees, you divide the total paise by 100, which simply means shifting the decimal point two places to the left. Thus, 3450 paise becomes ₹34.50. Mastering this conversion prevents costly errors when dealing with electronic transactions and international exchanges.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Convert 4850 paise into rupees.",
+      "options": [
+        "₹4.85",
+        "₹48.50",
+        "₹485.0"
+      ],
+      "correct_index": 1,
+      "explanation": "Divide 4850 by 100 by moving the decimal two places to the left, resulting in ₹48.50.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Adding Money: The Column Method",
+      "body": "When you go shopping and buy multiple items, you must add their prices together. The golden rule of adding money is alignment: you must always line up the decimal points in a straight vertical column. Write 'Rupees' in one column and 'Paise' in another, separated by the decimal dot. If you are adding ₹145.75 and ₹89.50, place the decimal points directly under each other. Add the paise first. If the sum of paise reaches 100 or more, remember to carry over 1 rupee to the rupee column, exactly like standard column addition with regrouping. Precision here ensures you never overpay or underpay.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The Alignment Check",
+      "body": "When writing vertical columns for money, draw a faint dashed line down the decimal points. If your decimal points are crooked, your calculation will fail!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "Find the sum: ₹234.60 + ₹115.45",
+      "options": [
+        "₹349.05",
+        "₹350.05",
+        "₹350.15"
+      ],
+      "correct_index": 1,
+      "explanation": "60p + 45p = 105p (which is ₹1 and 5p). Write down 05p, carry over ₹1. Then 234 + 115 + 1 = ₹350. Total is ₹350.05.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Subtracting Money: Calculating Change",
+      "body": "Subtraction of money is most commonly used when you need to calculate your change. If you purchase items worth ₹312.25 and pay with a ₹500 note, the shopkeeper must find the difference: ₹500.00 - ₹312.25. Notice how we write ₹500 as ₹500.00 so that the decimal places match! When borrowing across the decimal point, treat the rupee and paise columns with care. Borrow 1 rupee (which becomes 100 paise) for the paise column when needed. Practicing this builds confidence for every trip to the market.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "flashcard",
+      "front": "How should you write ₹500 when subtracting a decimal amount like ₹42.50?",
+      "back": "Write it as ₹500.00 to align the decimal places properly.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "quiz",
+      "question": "Subtract ₹145.20 from ₹300.00.",
+      "options": [
+        "₹154.80",
+        "₹155.80",
+        "₹164.80"
+      ],
+      "correct_index": 0,
+      "explanation": "₹300.00 - ₹145.20 = ₹154.80 after borrowing correctly across decimal places.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Concept 2: Multiplication and the [DICT_GRADE_UNITARY|Unitary Method]",
+      "body": "What happens when you want to buy 5 identical notebooks, and each notebook costs ₹42.50? You could add ₹42.50 five times, but multiplication is much faster and smarter! To multiply money by a whole number, ignore the decimal point temporarily, multiply the numbers as if they were whole numbers, and then place the decimal point in the product two places from the right. This ties directly into the [DICT_GRADE_UNITARY|unitary method], a powerful mathematical tool where you first find the value of a single unit, and then multiply to find the value of many units—or vice versa. Whether buying apples by the kilo or pens by the dozen, this is the method professionals use.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "teacher_tip",
+      "title": "The Shortcut Trick",
+      "body": "When multiplying a decimal amount by 10, 100, or 1000, you don't need formal column multiplication! Just shift the decimal point to the right by 1, 2, or 3 places. Try multiplying ₹12.35 by 100 mentally!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "If one pencil box costs ₹35.75, what is the cost of 4 such pencil boxes?",
+      "options": [
+        "₹142.00",
+        "₹143.00",
+        "₹145.50"
+      ],
+      "correct_index": 1,
+      "explanation": "₹35.75 × 4 = ₹143.00. (35 × 4 = 140, and 0.75 × 4 = 3, so 140 + 3 = 143).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Division of Money: Sharing Costs Fairly",
+      "body": "Division of money is essential when a group of friends shares a bill, or when you need to find the unit price of an item from a bulk purchase. Suppose 4 friends buy a pizza party package costing ₹642.00 and want to split the cost equally. To divide money by a whole number, set up long division. Place the decimal point in the quotient directly above the decimal point in the dividend. Divide step by step from left to right. If there is a remainder in the rupees, it converts naturally into paise as you cross the decimal barrier. Fair division ensures transparency and keeps friendships harmonious!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "flashcard",
+      "front": "Where do you place the decimal point in the quotient during division of money?",
+      "back": "Directly above the decimal point in the dividend.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "If 6 notebooks cost ₹270.00, what is the cost of 1 notebook?",
+      "options": [
+        "₹40.00",
+        "₹45.00",
+        "₹50.00"
+      ],
+      "correct_index": 1,
+      "explanation": "₹270.00 ÷ 6 = ₹45.00. (6 × 45 = 270).",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 3: Reading and Preparing a [DICT_GRADE_CASHMEMO|Cash Memo]",
+      "body": "Have you ever looked closely at the slip of paper a shopkeeper hands you after a purchase? That is a [DICT_GRADE_CASHMEMO|cash memo] (or bill). It serves as an official receipt of transaction. A proper cash memo contains specific columns: Serial Number, Item Name, Quantity, Rate (price per unit), and Amount (Quantity multiplied by Rate). At the very bottom, all individual amounts are added together to display the Grand Total. Learning to read and create a cash memo helps you verify that you were charged correctly and teaches you structured record-keeping, an invaluable life skill for budgeting.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "teacher_tip",
+      "title": "Play Storekeeper",
+      "body": "Create a pretend stationery shop at home. Write a cash memo for 3 items bought by a family member, calculate the individual amounts, and sum them up to find the Grand Total. Check your work twice!",
+      "bloom": "Create",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "In a cash memo, if the rate of 1 pen is ₹15.00 and you buy 3 pens, what is the 'Amount' column entry for those pens?",
+      "options": [
+        "₹15.00",
+        "₹30.00",
+        "₹45.00"
+      ],
+      "correct_index": 2,
+      "explanation": "Amount = Quantity × Rate = 3 × ₹15.00 = ₹45.00.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Estimating Bills and Smart Budgeting",
+      "body": "In the real world, before you reach the cash counter, it is a brilliant habit to estimate your bill mentally. If you are buying a geometry box for ₹78.00, a water bottle for ₹112.50, and a notebook for ₹49.00, you can round each number to the nearest ten or hundred to get a quick estimate: ₹80 + ₹110 + ₹50 = ₹240. This mental check prevents unpleasant surprises at the register when your total exceeds the pocket money you brought. Estimation is the secret weapon of smart shoppers and financial planners.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "Why is estimating a bill before reaching the cash counter useful?",
+      "back": "It helps you check if you have enough money and prevents surprises at checkout.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Estimate the total of ₹195.00 + ₹308.00 by rounding to the nearest ten.",
+      "options": [
+        "₹500.00",
+        "₹510.00",
+        "₹520.00"
+      ],
+      "correct_index": 1,
+      "explanation": "₹195 rounds to ₹200 (or nearest ten ₹200), and ₹308 rounds to ₹310. ₹200 + ₹310 = ₹510.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Solving Complex Word Problems in Money",
+      "body": "Word problems test your ability to translate everyday situations into mathematical expressions. When reading a multi-step money problem, ask yourself three questions: What do I know? What do I need to find out? Which operations (addition, subtraction, multiplication, or division) are required in what order? For instance, if Rohan earns ₹500.00 per week, spends ₹320.50 on food, and saves the rest, how much does he save in 4 weeks? First, find weekly savings (500 - 320.50 = 179.50), then multiply by 4. Breaking problems down into bite-sized steps guarantees success every time.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "teacher_tip",
+      "title": "Problem-Solving Strategy",
+      "body": "Underline the numbers and circle the key action words (like 'total', 'left', 'each', 'split equally') in any word problem before you start calculating.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "quiz",
+      "question": "A packet of crayons costs ₹62.50. Priya bought 3 packets and gave a ₹500 note to the shopkeeper. How much change did she get back?",
+      "options": [
+        "₹187.50",
+        "₹312.50",
+        "₹437.50"
+      ],
+      "correct_index": 1,
+      "explanation": "Cost of 3 packets = ₹62.50 × 3 = ₹187.50. Change = ₹500.00 - ₹187.50 = ₹312.50.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "theory",
+      "title": "Chapter Review: The Power of Financial Literacy",
+      "body": "Congratulations on journeying through the mathematics of money! We began with the simple concept of [DICT_GRADE_CURRENCY|currency] and decimal notation, learned how to convert rupees and paise seamlessly, mastered column addition and subtraction for change calculations, explored multiplication and division via the [DICT_GRADE_UNITARY|unitary method], and finally designed our own [DICT_GRADE_CASHMEMO|cash memos]. Money management is more than just numbers on a page—it is a life skill that empowers you to be responsible, generous, and wise with your resources.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "quiz",
+      "question": "Which mathematical operation is used in the unitary method to find the cost of many items once the unit cost is known?",
+      "options": [
+        "Addition",
+        "Multiplication",
+        "Division"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplication is used to scale up from a single unit cost to multiple units.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

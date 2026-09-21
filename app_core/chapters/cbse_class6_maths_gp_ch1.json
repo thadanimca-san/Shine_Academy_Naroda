@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_gp_ch1",
+    "title": "Patterns in Mathematics",
+    "title_hi": "गणित में पैटर्न (Patterns)",
+    "subject": "Maths",
+    "grade": "6",
+    "difficulty": "Beginner",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Identify and predict visual and numerical patterns in nature and mathematics.",
+      "Understand the concept of symmetry in daily life and geometry.",
+      "Apply the rules of repeating patterns to solve logical puzzles.",
+      "Discover the Fibonacci sequence and its presence in the real world."
+    ],
+    "ai_context": {
+      "learning_goal": "The student should develop an intuitive sense for recognizing mathematical patterns in their environment, moving from visual patterns to numerical sequences.",
+      "common_misconceptions": [
+        "Students often think mathematics is only about calculations, missing that it is fundamentally the study of patterns.",
+        "Students might confuse repeating patterns with growing sequences."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "CH1_HOOK_01",
+      "type": "hook",
+      "title": "The Hidden Language of the Universe",
+      "title_hi": "ब्रह्मांड की गुप्त भाषा (Hidden Language of the Universe)",
+      "body": "Have you ever looked closely at a sunflower, a honeycomb, or a zebra's stripes? If you pay attention, you will notice something magical: nature loves to repeat itself in predictable, beautiful ways. Mathematics is not just about crunching numbers in a notebook; it is the study of these hidden patterns. Ancient Indian mathematicians observed the stars, the seasons, and the rhythms of music (Taal) and realized that everything in the universe follows a secret mathematical rhythm. Today, we are going to learn how to decode this secret language!",
+      "body_hi": "क्या आपने कभी सूरजमुखी (Sunflower), मधुमक्खी के छत्ते (Honeycomb), या ज़ेबरा की धारियों को ध्यान से देखा है? यदि आप ध्यान देंगे, तो आपको कुछ जादुई दिखाई देगा: प्रकृति खुद को सुंदर और अनुमान लगाने योग्य तरीकों से दोहराना पसंद करती है। गणित केवल नोटबुक में संख्याओं को हल करना नहीं है; यह इन छिपे हुए पैटर्न का अध्ययन है। प्राचीन भारतीय गणितज्ञों ने तारों, मौसमों और संगीत की लय (ताल) को देखा और महसूस किया कि ब्रह्मांड में सब कुछ एक गुप्त गणितीय लय का पालन करता है। आज, हम इस गुप्त भाषा को समझना सीखेंगे!"
+    },
+    {
+      "id": "CH1_SOC_01",
+      "type": "socratic",
+      "question": "Imagine you are arranging tiles on a floor in this order: Red, Blue, Green, Red, Blue, Green... What color will the 10th tile be?",
+      "question_hi": "कल्पना करें कि आप फर्श पर इस क्रम में टाइलें लगा रहे हैं: लाल, नीला, हरा, लाल, नीला, हरा... 10वीं टाइल का रंग क्या होगा?",
+      "options": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ],
+      "options_hi": [
+        "लाल (Red)",
+        "नीला (Blue)",
+        "हरा (Green)",
+        "पीला (Yellow)"
+      ],
+      "correct_index": 0,
+      "explanation": "Let's count it out: The pattern repeats every 3 tiles (Red, Blue, Green). Tile 3 is Green, Tile 6 is Green, and Tile 9 is Green. Therefore, the very next tile, Tile 10, must start the pattern over again at Red!",
+      "explanation_hi": "आइए इसे गिनें: पैटर्न हर 3 टाइलों के बाद दोहराता है (लाल, नीला, हरा)। तीसरी टाइल हरी है, छठी टाइल हरी है, और 9वीं टाइल हरी है। इसलिए, अगली टाइल, यानी 10वीं टाइल, फिर से लाल रंग से शुरू होनी चाहिए!"
+    },
+    {
+      "id": "CH1_DISC_01",
+      "type": "discovery",
+      "title": "Visualizing Repeating Patterns",
+      "title_hi": "दोहराए जाने वाले पैटर्न की कल्पना (Visualizing Repeating Patterns)",
+      "body": "A pattern is simply a rule that repeats. Think of the days of the week: Monday, Tuesday, Wednesday... it always repeats every 7 days. In geometry, we can create visual patterns by repeating shapes. Imagine a rangoli design at your doorstep during Diwali. The beauty of the rangoli comes from its mathematical symmetry and repeating shapes—triangles following circles, followed by triangles again. By understanding the 'rule' of the pattern, we can predict exactly what comes next, even if the pattern goes on forever!",
+      "body_hi": "पैटर्न (Pattern) एक ऐसा नियम है जो खुद को दोहराता है। सप्ताह के दिनों के बारे में सोचें: सोमवार, मंगलवार, बुधवार... यह हमेशा हर 7 दिनों में दोहराता है। ज्यामिति (Geometry) में, हम आकृतियों को दोहराकर दृश्य पैटर्न बना सकते हैं। दिवाली के दौरान अपने दरवाजे पर बनी रंगोली (Rangoli) की कल्पना करें। रंगोली की सुंदरता इसकी गणितीय समरूपता (Symmetry) और दोहराई जाने वाली आकृतियों से आती है—सर्कल के बाद त्रिभुज, और फिर त्रिभुज। पैटर्न के 'नियम' को समझकर, हम ठीक से भविष्यवाणी कर सकते हैं कि आगे क्या होगा, भले ही पैटर्न हमेशा चलता रहे!"
+    },
+    {
+      "id": "CH1_THEORY_01",
+      "type": "theory",
+      "title": "Types of Patterns",
+      "title_hi": "पैटर्न के प्रकार (Types of Patterns)",
+      "body": "There are two main types of patterns we study in mathematics:\n\n1. **Repeating Patterns:** These patterns follow a strict sequence that loops over and over. (Example: A, B, A, B, A, B...)\n2. **Growing Patterns (Sequences):** These patterns don't just repeat; they change according to a specific mathematical rule, like adding a number each time. (Example: 2, 4, 6, 8, 10... where the rule is 'Add 2').\n\nWhen we find the rule, we unlock the power to predict the future of the sequence!",
+      "body_hi": "गणित में हम मुख्य रूप से दो प्रकार के पैटर्न का अध्ययन करते हैं:\n\n1. **दोहराए जाने वाले पैटर्न (Repeating Patterns):** ये पैटर्न एक सख्त क्रम का पालन करते हैं जो बार-बार लूप करता है। (उदाहरण: A, B, A, B, A, B...)\n2. **बढ़ने वाले पैटर्न (Growing Patterns/Sequences):** ये पैटर्न सिर्फ दोहराते नहीं हैं; वे एक विशिष्ट गणितीय नियम के अनुसार बदलते हैं, जैसे हर बार एक संख्या जोड़ना। (उदाहरण: 2, 4, 6, 8, 10... जहाँ नियम है '2 जोड़ें')।\n\nजब हम नियम ढूंढ लेते हैं, तो हम अनुक्रम (Sequence) के भविष्य की भविष्यवाणी करने की शक्ति को अनलॉक कर लेते हैं!"
+    },
+    {
+      "id": "CH1_KC_01",
+      "type": "knowledge_check",
+      "question": "Look at this number sequence: 5, 10, 15, 20, 25... What is the rule of this growing pattern?",
+      "question_hi": "इस संख्या अनुक्रम (Number Sequence) को देखें: 5, 10, 15, 20, 25... इस बढ़ते हुए पैटर्न का नियम क्या है?",
+      "options": [
+        "Multiply by 2",
+        "Add 5",
+        "Subtract 5",
+        "Add 10"
+      ],
+      "options_hi": [
+        "2 से गुणा करें (Multiply by 2)",
+        "5 जोड़ें (Add 5)",
+        "5 घटाएं (Subtract 5)",
+        "10 जोड़ें (Add 10)"
+      ],
+      "correct_index": 1,
+      "explanation": "To get from 5 to 10, we add 5. To get from 10 to 15, we add 5. The rule is 'Add 5' every time!",
+      "explanation_hi": "5 से 10 तक जाने के लिए, हम 5 जोड़ते हैं। 10 से 15 तक जाने के लिए, हम 5 जोड़ते हैं। नियम यह है कि हर बार '5 जोड़ें'!"
+    },
+    {
+      "id": "CH1_TIP_01",
+      "type": "teacher_tip",
+      "title": "Teacher's Secret Trick",
+      "title_hi": "शिक्षक की गुप्त ट्रिक (Teacher's Secret Trick)",
+      "body": "Whenever you see a number sequence and you don't know the rule, always start by subtracting the first number from the second number. If $10 - 5 = 5$, check if that same difference applies to the next pair ($15 - 10 = 5$). If the difference is the same, you've found the secret rule!",
+      "body_hi": "जब भी आप कोई संख्या अनुक्रम देखते हैं और आपको नियम नहीं पता होता है, तो हमेशा दूसरी संख्या से पहली संख्या को घटाकर शुरुआत करें। यदि $10 - 5 = 5$ है, तो जांचें कि क्या वही अंतर अगले जोड़े ($15 - 10 = 5$) पर लागू होता है। यदि अंतर समान है, तो आपको गुप्त नियम मिल गया है!"
+    },
+    {
+      "id": "CH1_HOOK_02",
+      "type": "hook",
+      "title": "The Golden Spiral in Nature",
+      "title_hi": "प्रकृति में गोल्डन स्पाइरल (The Golden Spiral in Nature)",
+      "body": "In ancient India, a mathematician named Pingala was studying the poetic meters of Sanskrit poetry when he discovered a fascinating sequence of numbers. Hundreds of years later, an Italian mathematician named Fibonacci made the same discovery by counting the breeding patterns of rabbits! This sequence is so powerful that it controls the spiral of galaxies, the shape of hurricanes, and the way leaves grow on a stem.",
+      "body_hi": "प्राचीन भारत में, पिंगल (Pingala) नाम के एक गणितज्ञ संस्कृत कविता के काव्यात्मक मीटर (Poetic Meters) का अध्ययन कर रहे थे, जब उन्होंने संख्याओं के एक आकर्षक अनुक्रम की खोज की। सैकड़ों साल बाद, फिबोनाची (Fibonacci) नाम के एक इतालवी गणितज्ञ ने खरगोशों के प्रजनन पैटर्न की गिनती करके यही खोज की! यह अनुक्रम इतना शक्तिशाली है कि यह आकाशगंगाओं (Galaxies) के सर्पिल (Spiral), तूफानों (Hurricanes) के आकार, और तने पर पत्तियों के बढ़ने के तरीके को नियंत्रित करता है।"
+    },
+    {
+      "id": "CH1_SOC_02",
+      "type": "socratic",
+      "question": "Here is the beginning of the famous Fibonacci sequence: 1, 1, 2, 3, 5, 8... Can you guess the secret rule to find the next number?",
+      "question_hi": "प्रसिद्ध फिबोनाची अनुक्रम (Fibonacci Sequence) की शुरुआत इस प्रकार है: 1, 1, 2, 3, 5, 8... क्या आप अगली संख्या खोजने के गुप्त नियम का अनुमान लगा सकते हैं?",
+      "options": [
+        "Add 2 to the last number.",
+        "Multiply the last number by 2.",
+        "Add the last TWO numbers together.",
+        "Add 3 to the last number."
+      ],
+      "options_hi": [
+        "अंतिम संख्या में 2 जोड़ें।",
+        "अंतिम संख्या को 2 से गुणा करें।",
+        "अंतिम दो (TWO) संख्याओं को एक साथ जोड़ें।",
+        "अंतिम संख्या में 3 जोड़ें।"
+      ],
+      "correct_index": 2,
+      "explanation": "Exactly! 1+1=2. 1+2=3. 2+3=5. 3+5=8. To find the next number, we just add the two previous numbers together ($5+8=13$).",
+      "explanation_hi": "बिल्कुल सही! 1+1=2. 1+2=3. 2+3=5. 3+5=8. अगली संख्या खोजने के लिए, हम बस पिछली दो संख्याओं को एक साथ जोड़ते हैं ($5+8=13$)।"
+    },
+    {
+      "id": "CH1_CONN_01",
+      "type": "connection",
+      "title": "Connecting Math to the Real World",
+      "title_hi": "गणित को वास्तविक दुनिया से जोड़ना (Connecting Math to the Real World)",
+      "body": "The next time you eat a pineapple or a pinecone, count the spirals going around the fruit. You will find that the number of spirals is almost always a Fibonacci number (like 8, 13, or 21)! Mathematics is not invented; it is discovered. It is the operating system of the natural world.",
+      "body_hi": "अगली बार जब आप अनानास (Pineapple) या देवदार का फल (Pinecone) खाएं, तो फल के चारों ओर जाने वाले सर्पिलों (Spirals) की गिनती करें। आप पाएंगे कि सर्पिलों की संख्या लगभग हमेशा एक फिबोनाची संख्या (जैसे 8, 13, या 21) होती है! गणित का आविष्कार नहीं किया गया है; इसकी खोज की गई है। यह प्राकृतिक दुनिया का ऑपरेटिंग सिस्टम है।"
+    },
+    {
+      "id": "CH1_KC_02",
+      "type": "knowledge_check",
+      "question": "Based on the Fibonacci rule (add the last two numbers together), what comes after 8? (Remember the sequence is 1, 1, 2, 3, 5, 8...)",
+      "question_hi": "फिबोनाची नियम (अंतिम दो संख्याओं को एक साथ जोड़ें) के आधार पर, 8 के बाद क्या आता है? (याद रखें कि अनुक्रम 1, 1, 2, 3, 5, 8... है)",
+      "options": [
+        "10",
+        "12",
+        "13",
+        "15"
+      ],
+      "options_hi": [
+        "10",
+        "12",
+        "13",
+        "15"
+      ],
+      "correct_index": 2,
+      "explanation": "We add the last two numbers: $5 + 8 = 13$!",
+      "explanation_hi": "हम अंतिम दो संख्याएं जोड़ते हैं: $5 + 8 = 13$!"
+    }
+  ]
+}

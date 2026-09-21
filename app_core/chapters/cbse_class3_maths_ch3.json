@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "id": "cbse_class3_maths_ch3",
+    "title": "Chapter 3: Subtraction",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand subtraction as taking away and finding the difference",
+      "Master 2-digit and 3-digit subtraction with and without borrowing",
+      "Apply mental math strategies for quick subtraction",
+      "Solve real-world word problems involving subtraction"
+    ],
+    "core_concepts": [
+      "DICT_MATH_SUBTRACTION",
+      "DICT_MATH_MINUEND",
+      "DICT_MATH_SUBTRAHEND",
+      "DICT_MATH_DIFFERENCE",
+      "DICT_MATH_BORROWING"
+    ],
+    "ai_context": {
+      "learning_goal": "To build complete fluency in subtraction mechanics, recognizing when to subtract in daily life, and mastering regrouping.",
+      "common_misconceptions": [
+        "Subtracting the smaller digit from the larger digit regardless of its top/bottom position in columns",
+        "Confusing the minuend and subtrahend",
+        "Forgetting to reduce the neighboring column value when borrowing"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "SUB_B01",
+      "type": "hook",
+      "title": "The Mystery of the Missing Marbles",
+      "body": "Aarav sat on his porch, staring at his prized glass marble collection glittering in the evening sun. Yesterday, he had counted exactly 84 marbles in his special wooden box. Today, after playing with his friends in the courtyard, he dumped the box onto the rug to sort them by color. He counted again and his heart skipped a beat—only 57 marbles remained! Where did the rest go? Did they roll under the couch? Did he leave some at the park? To solve this mystery, Aarav doesn't need a magnifying glass; he needs the powerful mathematical art of [DICT_MATH_SUBTRACTION|subtraction].",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B02",
+      "type": "quiz",
+      "question": "Based on Aarav's story, how many marbles does he need to account for (find the difference between what he had and what he has now)?",
+      "options": [
+        "84 marbles",
+        "27 marbles",
+        "141 marbles"
+      ],
+      "correct_index": 1,
+      "explanation": "To find out how many marbles are missing, we subtract the remaining marbles (57) from the starting total (84). 84 - 57 = 27.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B03",
+      "type": "theory",
+      "title": "Concept 1: What is Subtraction?",
+      "body": "At its core, [DICT_MATH_SUBTRACTION|subtraction] is the mathematical operation of taking one quantity away from another to see what is left over. While addition is about bringing things together to grow a total, subtraction is about shrinking, comparing, or finding gaps. Imagine you have 5 delicious apples and you give 2 to your hungry sister. You are not just 'losing' apples; you are mathematically reducing your set from 5 to 3. In every subtraction sentence, there are three primary characters: the [DICT_MATH_MINUEND|minuend] (the starting amount), the [DICT_MATH_SUBTRAHEND|subtrahend] (the amount being taken away), and the [DICT_MATH_DIFFERENCE|difference] (what is left over after the action is complete). Understanding these terms transforms subtraction from a dry school chore into a clear story about quantities changing over time.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "SUB_B04",
+      "type": "teacher_tip",
+      "title": "The Cookie Jar Experiment",
+      "body": "Grab 10 small objects like counters, buttons, or dry beans. Place them in a bowl. This is your [DICT_MATH_MINUEND|minuend]. Now, close your eyes and take away 4 items. This is your [DICT_MATH_SUBTRAHEND|subtrahend]. Count what remains on the table. That final count is your [DICT_MATH_DIFFERENCE|difference]! Physical manipulation builds deep neural pathways for mathematical logic.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B05",
+      "type": "flashcard",
+      "front": "What do we call the starting number in a subtraction problem?",
+      "back": "The Minuend! It is the total amount you start with before any items are taken away.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B06",
+      "type": "flashcard",
+      "front": "What do we call the result of a subtraction problem?",
+      "back": "The Difference! It tells us how much is left over or how far apart two numbers are.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B07",
+      "type": "theory",
+      "title": "Concept 2: Column Subtraction Without Borrowing",
+      "body": "When working with larger numbers, mental math can become tricky, so mathematicians use vertical alignment, or column subtraction. Just like in addition, we must always keep our place values strictly organized: Ones under Ones, Tens under Tens, and Hundreds under Hundreds. When you subtract numbers without [DICT_MATH_BORROWING|borrowing], life is wonderfully peaceful. You simply process each column independently, starting from the rightmost column (the Ones place) and moving left. For example, if you want to subtract 23 from 65, you write 65 on top and 23 directly beneath it. Look at the Ones column: 5 minus 3 gives you 2. Next, look at the Tens column: 6 minus 2 gives you 4. Combine them, and your final answer is 42. Always remember the golden rule of arithmetic operations: never mix your place values!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "SUB_B08",
+      "type": "quiz",
+      "question": "Calculate 78 - 34 using vertical column alignment. What is the digit in the Ones place of the answer?",
+      "options": [
+        "4",
+        "5",
+        "3"
+      ],
+      "correct_index": 0,
+      "explanation": "In the Ones place, 8 - 4 = 4. In the Tens place, 7 - 3 = 4. The total difference is 44, so the Ones digit is 4.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B09",
+      "type": "theory",
+      "title": "Concept 3: The Drama of Borrowing (Regrouping)",
+      "body": "What happens when you go to the store to buy a toy that costs 8 dollars, but you only have a 5-dollar bill in your pocket? You cannot pay unless you break a larger bill into smaller ones! This exact scenario happens in mathematics when we encounter problems where the top digit in a column is smaller than the bottom digit. This is where [DICT_MATH_BORROWING|borrowing]—also known as regrouping—comes to the rescue. Imagine you are solving 52 minus 28. Look at the Ones column: you need to subtract 8 from 2. But you cannot take 8 items away when you only have 2! So, you must knock on your neighbor's door—the Tens place—which currently has a 5. You politely ask to borrow 1 Ten. The 5 becomes a 4, and that 1 Ten moves over to the Ones place, turning your 2 into a 12. Now, you can easily calculate 12 minus 8, which equals 4. Move to the Tens place: 4 minus 2 equals 2. Your final answer is 24. Regrouping is simply rearranging the value between adjacent place values without changing the total value of the number!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "SUB_B10",
+      "type": "teacher_tip",
+      "title": "The 'Knock on the Door' Visualization",
+      "body": "When teaching or practicing borrowing, draw a little house around your vertical math problem. The Ones live in the right room, the Tens live in the middle room, and the Hundreds live on the left. If the Ones children don't have enough candy, they must knock on the Tens room door to ask for a packet of 10 candies to be unwrapped and shared!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B11",
+      "type": "quiz",
+      "question": "Solve 63 - 27. What is the result in the Ones place after you borrow?",
+      "options": [
+        "6",
+        "3",
+        "13"
+      ],
+      "correct_index": 0,
+      "explanation": "In 63 - 27, the Ones column has 3 - 7. Since 3 is smaller than 7, we borrow 1 Ten from 6 (making it 5). The 3 becomes 13. Then, 13 - 7 = 6.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B12",
+      "type": "flashcard",
+      "front": "What must you do to the neighboring place-value digit when you borrow from it?",
+      "back": "You must decrease its value by 1! (e.g., if you borrow from a 6, it becomes a 5).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B13",
+      "type": "theory",
+      "title": "Concept 4: Subtraction Across Zeros",
+      "body": "One of the most thrilling challenges in elementary mathematics is subtracting across zeros, such as solving 200 minus 74. Let's set this up in vertical columns. In the Ones place, we need to subtract 4 from 0. We cannot do this, so we look to the neighbor in the Tens place for help. But oh no! The Tens place has a 0 as well—it has nothing to give! What happens now? The Tens place must first borrow from the Hundreds place! The 2 in the Hundreds place becomes a 1, and the 0 in the Tens place becomes a 10. Now that the Tens place is rich with a 10, the Ones place can finally borrow from it! The 10 in the Tens place drops down to a 9, and the 0 in the Ones place becomes a 10. Now every column is ready: in the Ones place, 10 - 4 = 6. In the Tens place, 9 - 7 = 2. In the Hundreds place, 1 - 0 = 1. The final answer is 126. Mastering this domino effect of borrowing makes you a true subtraction wizard.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "SUB_B14",
+      "type": "quiz",
+      "question": "What does a zero in the Tens place become when the Ones place needs to borrow from it, assuming the Tens place already borrowed from the Hundreds place?",
+      "options": [
+        "It stays 0",
+        "It becomes 9",
+        "It becomes 10, then drops to 9"
+      ],
+      "correct_index": 2,
+      "explanation": "The zero temporarily receives 10 from the Hundreds place, making it 10. Then, when the Ones place borrows from it, it loses 1 and becomes 9.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B15",
+      "type": "theory",
+      "title": "Concept 5: Checking Your Work with Addition",
+      "body": "Did you know that addition and subtraction are best friends who live on opposite sides of the same street? They are inverse operations, meaning they undo each other. This is your secret weapon for checking tests and homework. If you calculate 93 minus 38 and get 55, how can you be 100% sure you didn't make a mistake? Simple! Take your answer (the [DICT_MATH_DIFFERENCE|difference], which is 55) and add it back to the [DICT_MATH_SUBTRAHEND|subtrahend] (38). If your addition results in your original [DICT_MATH_MINUEND|minuend] (93), then your subtraction is bulletproof! Let's test it: 55 + 38 = 93. It matches! Using addition to check subtraction saves students from careless errors and builds absolute confidence in their problem-solving abilities.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "SUB_B16",
+      "type": "teacher_tip",
+      "title": "The Inverse Check Routine",
+      "body": "Encourage students to write a tiny 'Check' note at the bottom of their page. Whenever they finish a subtraction problem, draw an arrow pointing from the answer back up to the top number using addition. It turns math into a self-correcting puzzle game.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B17",
+      "type": "quiz",
+      "question": "You subtract 85 - 29 and get 56. How do you check if this is correct using addition?",
+      "options": [
+        "Add 56 + 29",
+        "Add 85 + 56",
+        "Subtract 85 - 56"
+      ],
+      "correct_index": 0,
+      "explanation": "To check subtraction, add the difference (56) to the subtrahend (29). If 56 + 29 equals the minuend (85), your math is correct!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B18",
+      "type": "theory",
+      "title": "Concept 6: Mental Math Subtraction Strategies",
+      "body": "You don't always need a pencil and paper to subtract efficiently. Master mathematicians use mental tricks to calculate on the fly. One favorite strategy is 'Counting Up' (or the Landlord Method). If you need to find 72 minus 68, instead of doing messy borrowing in your head, start at 68 and count up to 72: 69, 70, 71, 72. That is just 4 steps! Another powerful strategy is 'Compensation'. If you are subtracting 39 from 84, subtract 40 instead (which is super easy: 84 - 40 = 44), and then since you took away one too many, add 1 back to get 45. Mental math turns everyday shopping trips and game scores into fun mental workouts.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "SUB_B19",
+      "type": "flashcard",
+      "front": "What is the mental math trick when subtracting a number close to a ten, like subtracting 29?",
+      "back": "Subtract 30 instead, and then add 1 back to your result because you subtracted one extra!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B20",
+      "type": "theory",
+      "title": "Concept 7: Solving Real-World Word Problems",
+      "body": "Mathematics truly comes alive when applied to real-world scenarios. Word problems are mini-mysteries where the operation isn't explicitly named with a minus sign; you have to deduce it from context clues. Keywords like 'left over', 'remains', 'how much more', 'difference', 'lost', 'spent', or 'gave away' are all neon signs pointing directly to [DICT_MATH_SUBTRAHEND|subtraction]. Imagine a library has 450 storybooks. On Monday, eager students check out 175 books. To find out how many books are available on the shelves for Tuesday, we must extract our numbers, set up our columns with proper borrowing across zeros, and compute the difference. Translating English sentences into clean mathematical equations is one of the most valuable life skills you will ever learn.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "SUB_B21",
+      "type": "quiz",
+      "question": "Priya has 125 stickers. She gives 48 stickers to her younger brother. Which phrase in the problem tells us we need to subtract?",
+      "options": [
+        "Priya has 125 stickers",
+        "She gives 48 stickers",
+        "Younger brother"
+      ],
+      "correct_index": 1,
+      "explanation": "Giving items away means they are being removed or taken away from the total, which is the definition of subtraction.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B22",
+      "type": "teacher_tip",
+      "title": "The 4-Step Word Problem Master Plan",
+      "body": "Whenever faced with a math word problem, teach students to follow 4 clear steps:\n1. Read and highlight the numbers.\n2. Find the question being asked.\n3. Choose the operation (Addition or Subtraction?).\n4. Solve and check your work with inverse addition!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "SUB_B23",
+      "type": "flashcard",
+      "front": "True or False: In subtraction, the order of numbers matters (e.g., 5 - 3 is the same as 3 - 5).",
+      "back": "False! Subtraction is not commutative. Changing the order completely changes the result (5 - 3 = 2, but 3 - 5 gives a negative number).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "SUB_B24",
+      "type": "quiz",
+      "question": "What is 500 minus 237?",
+      "options": [
+        "273",
+        "263",
+        "363"
+      ],
+      "correct_index": 1,
+      "explanation": "Let's borrow across zeros: 500 becomes 4 in hundreds, 9 in tens, and 10 in ones. 10-7=3, 9-3=6, 4-2=2. The difference is 263.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "SUB_B25",
+      "type": "theory",
+      "title": "Chapter Summary: The Master Subtractor",
+      "body": "Congratulations! You have journeyed deep into the mechanics of [DICT_MATH_SUBTRAHEND|subtraction]. You now know that subtraction is taking away or finding the gap between two numbers. You can identify the [DICT_MATH_MINUEND|minuend], the [DICT_MATH_SUBTRAHEND|subtrahend], and calculate the [DICT_MATH_DIFFERENCE|difference] with ease. Whether you are performing simple column subtraction, executing delicate [DICT_MATH_BORROWING|borrowing] across stubborn zeros, or checking your answers using inverse addition, you possess the mathematical toolkit of a champion. Keep practicing, stay curious, and remember that every math problem is just a puzzle waiting for your brilliant mind to unlock!",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "id": "cbse_grade4_maths_ch3",
+    "title": "Chapter 3: Subtraction",
+    "subject": "Maths",
+    "grade": "Grade 4",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand subtraction as taking away and finding the difference",
+      "Master regrouping (borrowing) across 4-digit numbers",
+      "Solve real-world word problems involving multi-step subtraction",
+      "Verify subtraction results using addition"
+    ],
+    "core_concepts": [
+      "DICT_G4_MINUEND",
+      "DICT_G4_SUBTRAHEND",
+      "DICT_G4_DIFFERENCE",
+      "DICT_G4_REGROUPING"
+    ],
+    "ai_context": {
+      "learning_goal": "Students will master multi-digit subtraction with and without regrouping, understanding the fundamental relationship between addition and subtraction.",
+      "common_misconceptions": [
+        "Subtracting the smaller digit from the larger digit regardless of top/bottom position (e.g., 3 - 8 = 5).",
+        "Forgetting to reduce the neighbor's value when borrowing across zeros."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Starlight",
+      "body": "Imagine you are an astronomer aboard a grand space station orbiting a distant planet. Your mission log shows that your ship's battery holds 4,520 units of solar energy. To power the life support systems through a long, dark cosmic eclipse, you must use 1,875 units. How do you find out exactly how much emergency energy remains? Subtraction is not just a math rule in a textbook—it is the ultimate cosmic tool for calculating what stays behind when things are taken away, spent, or lost in the vastness of space!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In our space station story, why do we need subtraction?",
+      "options": [
+        "To combine all the energy units together",
+        "To find out how much energy is left after some is used",
+        "To measure how fast the space station is flying"
+      ],
+      "correct_index": 1,
+      "explanation": "Subtraction is used to find the remaining amount after a part is taken away or used.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Anatomy of a Subtraction Problem",
+      "body": "Before we dive into heavy calculations, we must learn the special names mathematicians use. When we subtract, we work with three main parts. The number you start with—the total amount before anything is removed—is called the [DICT_G4_MINUEND|minuend]. The amount that is being taken away or removed from the total is called the [DICT_G4_SUBTRAHEND|subtrahend]. Finally, the result that you get after you finish subtracting is called the [DICT_G4_DIFFERENCE|difference]. For example, if you have 9 apples and eat 4, 9 is the minuend, 4 is the subtrahend, and 5 is the difference. Always remember: the minuend must always be larger than or equal to the subtrahend in basic whole-number subtraction!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: The Result of Subtraction",
+      "front": "What is the name of the final answer obtained after subtracting one number from another?",
+      "back": "The Difference",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "Subtraction Without Regrouping (Column Method)",
+      "body": "When numbers get larger, we line them up vertically by their place values: Ones, Tens, Hundreds, and Thousands. To subtract without [DICT_G4_REGROUPING|regrouping], you simply start at the Ones place on the far right and work your way left. Ask yourself: 'Can I subtract the bottom digit from the top digit?' If the top digit is bigger than or equal to the bottom digit, you are in luck! There is no need to borrow. For instance, in 5,876 minus 2,431: Ones place is 6 - 1 = 5. Tens place is 7 - 3 = 4. Hundreds place is 8 - 4 = 4. Thousands place is 5 - 2 = 3. Put it all together, and your difference is 3,445. Always align your columns neatly to avoid silly mistakes!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "quiz",
+      "question": "What is 7,896 minus 3,452?",
+      "options": [
+        "4,444",
+        "4,344",
+        "5,444"
+      ],
+      "correct_index": 0,
+      "explanation": "Ones: 6-2=4; Tens: 9-5=4; Hundreds: 8-4=4; Thousands: 7-3=4. The answer is 4,444.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "teacher_tip",
+      "title": "The Alignment Habit",
+      "body": "Encourage students to use grid paper or draw vertical dotted lines between place value columns. Misaligned numbers are the #1 cause of calculation errors in multi-digit subtraction.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "The Need for Regrouping (When the Top is Too Small)",
+      "body": "What happens when you go to the store with 5 dollars, but the toy you want costs 8 dollars? You cannot do it directly! In mathematics, when the top digit in a column is smaller than the bottom digit, we must perform [DICT_G4_REGROUPING|regrouping], commonly known as 'borrowing'. Instead of panicking, our top digit knocks on the door of its neighbor to the immediate left (the next higher place value) and asks to borrow 1 group. That neighbor gives 1, reducing its own value by 1, and transforms into 10 extra units for our struggling column. This clever system keeps the true mathematical value of the number completely intact while letting us subtract easily.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Flashcard: What is Borrowing?",
+      "front": "What action do you take when the top digit in a subtraction column is smaller than the bottom digit?",
+      "back": "Regroup (or borrow) from the neighbor column on the left.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "Step-by-Step Regrouping with 2-Digit and 3-Digit Numbers",
+      "object": "Let's walk through 83 minus 47. Step 1: Look at the Ones column. We have 3 minus 7. Since 3 is smaller than 7, we must regroup. Step 2: Go to the Tens column, which is 8. Reduce 8 by 1 to become 7. Give that 10 to the Ones place. Now our Ones place has 13 instead of 3. Step 3: Subtract the Ones: 13 - 7 = 6. Step 4: Move to the Tens place. We now have 7 minus 4, which equals 3. The final difference is 36. This exact same logic applies whether you are working with hundreds, thousands, or millions!",
+      "body": "Let's walk through 83 minus 47. Step 1: Look at the Ones column. We have 3 minus 7. Since 3 is smaller than 7, we must regroup. Step 2: Go to the Tens column, which is 8. Reduce 8 by 1 to become 7. Give that 10 to the Ones place. Now our Ones place has 13 instead of 3. Step 3: Subtract the Ones: 13 - 7 = 6. Step 4: Move to the Tens place. We now have 7 minus 4, which equals 3. The final difference is 36. This exact same logic applies whether you are working with hundreds, thousands, or millions!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "In 83 - 47, after borrowing 1 ten from 8, what does the 8 become?",
+      "options": [
+        "7",
+        "9",
+        "8"
+      ],
+      "correct_index": 0,
+      "explanation": "When you borrow 1 from 8, it decreases by 1 to become 7.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Scaling Up: 4-Digit Subtraction with Regrouping",
+      "body": "Now let's tackle a grander challenge: 5,342 minus 2,785. Step 1 (Ones): 2 - 5. We cannot do this! We borrow 1 from the Tens column (4 becomes 3), making the Ones 12. 12 - 5 = 7. Step 2 (Tens): We now have 3 in the Tens column minus 8. Still too small! We borrow 1 from the Hundreds column (3 becomes 2), making our Tens 13. 13 - 8 = 5. Step 3 (Hundreds): We have 2 minus 7. Too small again! We borrow 1 from the Thousands column (5 becomes 4), making our Hundreds 12. 12 - 7 = 5. Step 4 (Thousands): 4 - 2 = 2. Our final answer is 2,557. Notice how chain borrowing works smoothly across adjacent columns!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Cross-Out Habit",
+      "body": "Teach students to cross out old numbers neatly and write the new borrowed values directly above them. Messy scratchwork leads to dropped digits and incorrect differences.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "What is 5,342 - 2,785?",
+      "options": [
+        "2,557",
+        "2,657",
+        "3,557"
+      ],
+      "correct_index": 0,
+      "explanation": "Through careful regrouping across columns, 5,342 - 2,785 equals 2,557.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "The Tricky Zero: Borrowing Across Zeros",
+      "body": "One of the most exciting puzzles in subtraction is when you need to borrow, but the immediate neighbor is a zero! Imagine calculating 1,000 minus 364. The Ones place has 0, and its neighbor is 0. Its Hundreds place is also 0! How do the Ones borrow from a string of zeros? Think of it like a chain of friends. The Ones go to the Tens—zero! The Tens go to the Hundreds—zero! Finally, the Ones, Tens, and Hundreds go together to knock on the Thousands door (1). The Thousands become 0, and gives 10 to the Hundreds. Then the Hundreds become 9, and passes 10 to the Tens. Then the Tens become 9, and passes 10 to the Ones! Now your top number reads 9 in the Hundreds, 9 in the Tens, and 10 in the Ones. You are ready to subtract effortlessly!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Flashcard: Borrowing Across Zero",
+      "front": "When borrowing across a zero, what does that zero temporarily turn into before passing help along?",
+      "back": "It temporarily becomes a 9 after receiving from its left neighbor.",
+      "bloom": "Understand",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What is 1,000 minus 427?",
+      "options": [
+        "573",
+        "673",
+        "583"
+      ],
+      "correct_index": 0,
+      "explanation": "1000 - 427: Ones 10-7=3; Tens 9-2=7; Hundreds 9-4=5; Thousands 0. Result is 573.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Checking Your Work: The Magic of Addition",
+      "body": "How do professional mathematicians and engineers know their subtraction is 100% correct? They use the ultimate superpower: the inverse relationship between addition and subtraction! Subtraction and addition are mirror images of each other. If you subtract the subtrahend from the minuend and get a difference, you can check your work by adding that difference back to the subtrahend. If your sum equals the original minuend, your calculation is flawless! For example, if 10 - 4 = 6, then checking means 6 + 4 = 10. If the numbers match, celebrate—you solved it perfectly!",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "If you calculate 500 - 215 = 285, how do you check if it is correct?",
+      "options": [
+        "Add 285 and 215 to see if you get 500",
+        "Subtract 285 from 215",
+        "Multiply 285 by 2"
+      ],
+      "correct_index": 0,
+      "explanation": "Adding the difference (285) to the subtrahend (215) should give the minuend (500).",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Word Problems: Subtraction in the Real World",
+      "body": "Math comes alive when applied to everyday stories. Word problems test our ability to read carefully and extract the right numbers. Key phrases like 'how many are left', 'what is the difference', 'how much more', 'took away', or 'spent' are major clues that subtraction is required. When solving a word problem, always follow three golden steps: 1) Read the problem twice and identify what is given. 2) Determine what needs to be found and set up your math equation. 3) Perform the calculation (with or without regrouping) and write the final answer with its proper unit label (like apples, rupees, or kilometers).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "teacher_tip",
+      "title": "Label Every Answer",
+      "body": "Remind students that in word problems, a number without a label is incomplete. If the question asks about books, the answer must say '145 books', not just '145'.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "A library had 4,250 books. 1,324 books were lent out to students. How many books remain in the library?",
+      "options": [
+        "2,926 books",
+        "3,936 books",
+        "2,826 books"
+      ],
+      "correct_index": 0,
+      "explanation": "4,250 - 1,324 = 2,926 books remaining.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Mental Math Subtraction Tricks",
+      "body": "You don't always need a pencil and paper to subtract! Master mathematicians use smart mental shortcuts. One powerful trick is 'Counting Up'. If you need to subtract 48 from 100, instead of messy borrowing, count up from 48 to the nearest nice round number: add 2 to get to 50, then add 50 to get to 100. Combine your jumps: 2 + 50 = 52! Another trick is 'Compensation': if you are subtracting 39, subtract 40 instead (which is super easy), and then just add 1 back to your final answer because you took away one too many. Practicing these mental strategies turns you into a math wizard!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "title": "Flashcard: Compensation Trick",
+      "front": "If you want to subtract 29 from 85, what easier number can you subtract instead, and what do you do at the end?",
+      "back": "Subtract 30 instead of 29, then add 1 back to the result.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Use mental math: What is 200 - 147 using the counting up method?",
+      "options": [
+        "53",
+        "63",
+        "43"
+      ],
+      "correct_index": 0,
+      "explanation": "Count up from 147 to 150 (+3), then from 150 to 200 (+50). Total = 3 + 50 = 53.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    }
+  ]
+}

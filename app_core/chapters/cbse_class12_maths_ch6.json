@@ -1,0 +1,528 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch6",
+    "title": "Chapter 6: Application of Derivatives",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_001",
+      "type": "hook",
+      "title": "Predicting the Future: How Rates of Change Power Science & Tech",
+      "title_hi": "ભવિષ્યની આગાહી: પરિવર્તનના દર વિજ્ઞાન અને ટેકનોલોજીને કેવી રીતે સંચાલિત કરે છે",
+      "title_gu": "ભવિષ્યની આગાહી: પરિવર્તનના દર વિજ્ઞાન અને ટેકનોલોજીને કેવી રીતે સંચાલિત કરે છે",
+      "body": "When a rocket launches into space, its altitude, mass, and velocity change every millisecond. How do engineers calculate the exact moment of maximum speed or optimal fuel efficiency? By using the Application of Derivatives! From optimizing profits in business to predicting the spread of viruses and designing aerodynamic cars, calculus allows us to measure rates of change and find optimal outcomes in real time.",
+      "body_hi": "जब कोई रॉकेट अंतरिक्ष में लॉन्च होता है, तो उसकी ऊंचाई, द्रव्यमान और वेग हर मिलीसेकंड में बदलते हैं। इंजीनियर अधिकतम गति या इष्टतम ईंधन दक्षता के सटीक क्षण की गणना कैसे करते हैं? अवकलज के अनुप्रयोगों (Application of Derivatives) का उपयोग करके! व्यवसाय में लाभ को अधिकतम करने से लेकर महामारी के प्रसार की भविष्यवाणी करने तक, कैल्क्युलस हमें परिवर्तन की दर मापने और सर्वोत्तम परिणाम खोजने में सक्षम बनाता है।",
+      "body_gu": "જ્યારે કોઈ રોકેટ અવકાશમાં લોન્ચ થાય છે, ત્યારે તેની ઊંચાઈ, દળ અને વેગ દર મિલિસેકન્ડે બદલાય છે. ઇજનેરો મહત્તમ ઝડપ અથવા શ્રેષ્ઠ બળતણ કાર્યક્ષમતાની ચોક્કસ ક્ષણની ગણતરી કેવી રીતે કરે છે? અવકલજના ઉપયોગો વડે! વ્યવસાયમાં નફાને મહત્તમ કરવાથી લઈને વાયરસના ફેલાવાની આગાહી કરવા સુધી, કેલ્ક્યુલસ આપણને પરિવર્તનના દર માપવા અને શ્રેષ્ઠ પરિણામો શોધવા માટે સક્ષમ બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_002",
+      "type": "socratic_question",
+      "title": "What Does a Derivative Measure?",
+      "title_hi": "अवकलज क्या मापता है?",
+      "title_gu": "અવકલજ શું માપે છે?",
+      "question": "If $s(t)$ represents the distance traveled by an electric car at time $t$, what does the derivative $\\frac{ds}{dt}$ physically represent at $t = 5\\text{ seconds}$?",
+      "question_hi": "यदि $s(t)$ समय $t$ पर एक इलेक्ट्रिक कार द्वारा तय की गई दूरी का प्रतिनिधित्व करता है, तो $t = 5\\text{ सेकंड}$ पर अवकलज $\\frac{ds}{dt}$ भौतिक रूप से क्या दर्शाता है?",
+      "question_gu": "જો $s(t)$ એ સમય $t$ પર ઇલેક્ટ્રિક કાર દ્વારા કાપેલું અંતર દર્શાવતું હોય, તો $t = 5\\text{ સેકન્ડ}$ પર અવકલજ $\\frac{ds}{dt}$ ભૌતિક રીતે શું દર્શાવે છે?",
+      "options": [
+        "The instantaneous velocity of the car at exactly t = 5 seconds",
+        "The average speed of the car over the entire journey",
+        "The total distance traveled by the car in 5 seconds",
+        "The rate of change of acceleration of the car"
+      ],
+      "options_hi": [
+        "ठीक t = 5 सेकंड पर कार का तात्कालिक वेग (Instantaneous Velocity)",
+        "पूरी यात्रा के दौरान कार की औसत गति (Average Speed)",
+        "5 सेकंड में कार द्वारा तय की गई कुल दूरी",
+        "कार के त्वरण (Acceleration) के परिवर्तन की दर"
+      ],
+      "options_gu": [
+        "બરાબર t = 5 સેકન્ડે કારનો તત્કાલીન વેગ (Instantaneous Velocity)",
+        "સમગ્ર મુસાફરી દરમિયાન કારની સરેરાશ ઝડપ",
+        "5 સેકન્ડમાં કાર દ્વારા કાપેલું કુલ અંતર",
+        "કારના પ્રવેગના ફેરફારનો દર"
+      ],
+      "correct_index": 0,
+      "explanation": "The derivative dy/dx measures the instantaneous rate of change of y with respect to x. Thus, ds/dt gives the instantaneous velocity at that precise moment t = 5s.",
+      "explanation_hi": "अवकलज dy/dx, x के सापेक्ष y के परिवर्तन की तात्कालिक दर को मापता है। इसलिए, ds/dt ठीक उसी क्षण (t = 5s) पर तात्कालिक वेग देता है।",
+      "explanation_gu": "અવકલજ dy/dx એ x ની સાપેક્ષે y ના ફેરફારનો તત્કાલીન દર માપે છે. તેથી, ds/dt તે ચોક્કસ ક્ષણે (t = 5s) તત્કાલીન વેગ આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_003",
+      "type": "discovery",
+      "title": "Visualizing Monotonicity and Tangent Slopes",
+      "title_hi": "एकदिष्टता और स्पर्श रेखा ढाल की कल्पना",
+      "title_gu": "એકદિષ્ટતા અને સ્પર્શકના ઢાળની કલ્પના",
+      "body": "Imagine walking along a hilly path represented by $y = f(x)$. When walking uphill from left to right, the slope of the tangent $f'(x)$ is positive ($f'(x) > 0$). The function is INCREASING. At the peak of the hill, the tangent is horizontal, so $f'(x) = 0$. Walking downhill, the slope $f'(x)$ is negative ($f'(x) < 0$), meaning the function is DECREASING. Thus, the sign of the derivative reveals the direction of the curve!",
+      "body_hi": "एक पहाड़ी रास्ते की कल्पना करें जिसे $y = f(x)$ द्वारा दर्शाया गया है। जब आप बाएं से दाएं ऊपर की ओर चलते हैं, तो स्पर्श रेखा का ढाल $f'(x)$ धनात्मक होता है ($f'(x) > 0$)। फलन वर्धमान (INCREASING) है। पहाड़ी के शीर्ष पर, स्पर्श रेखा क्षैतिज होती है, इसलिए $f'(x) = 0$। नीचे की ओर चलते समय, ढाल $f'(x)$ ऋणात्मक होता है ($f'(x) < 0$), जिसका अर्थ है कि फलन ह्रासमान (DECREASING) है।",
+      "body_gu": "એક ટેકરીના રસ્તાની કલ્પના કરો જે $y = f(x)$ દ્વારા દર્શાવવામાં આવ્યો છે. જ્યારે તમે ડાબેથી જમણે ઉપર તરફ જાઓ છો, ત્યારે સ્પર્શકનો ઢાળ $f'(x)$ ધન હોય છે ($f'(x) > 0$). વિધેય વધતું (INCREASING) છે. ટેકરીની ટોચ પર, સ્પર્શક ક્ષૈતિજ હોય છે, તેથી $f'(x) = 0$. નીચે તરફ જતાં, ઢાળ $f'(x)$ ઋણ હોય છે ($f'(x) < 0$), જે દર્શાવે છે કે વિધેય ઘટતું (DECREASING) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_004",
+      "type": "theory",
+      "title": "Core Theory: Applications of Derivatives",
+      "title_hi": "मूल सिद्धांत: अवकलज के अनुप्रयोग",
+      "title_gu": "મૂળભૂત સિદ્ધાંત: અવકલજના ઉપયોગો",
+      "body": "1. RATE OF CHANGE: If a quantity $y$ varies with $x$ according to $y = f(x)$, then $\\frac{dy}{dx} = f'(x)$ represents the rate of change of $y$ with respect to $x$. If two variables $x$ and $y$ depend on time $t$, then $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$.\n\n2. INCREASING AND DECREASING FUNCTIONS:\nLet $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$:\n- $f$ is strictly increasing in $(a, b)$ if $f'(x) > 0$ for all $x \\in (a, b)$.\n- $f$ is strictly decreasing in $(a, b)$ if $f'(x) < 0$ for all $x \\in (a, b)$.\n- $f$ is constant in $(a, b)$ if $f'(x) = 0$ for all $x \\in (a, b)$.\n\n3. MAXIMA AND MINIMA:\n- First Derivative Test: Let $c$ be a critical point where $f'(c) = 0$.\n  * If $f'(x)$ changes sign from positive to negative as $x$ increases through $c$, then $c$ is a point of local maximum.\n  * If $f'(x)$ changes sign from negative to positive, then $c$ is a point of local minimum.\n  * If $f'(x)$ does not change sign, $c$ is a point of inflection.\n- Second Derivative Test:\n  * If $f'(c) = 0$ and $f''(c) < 0$, then $x = c$ is a local maximum.\n  * If $f'(c) = 0$ and $f''(c) > 0$, then $x = c$ is a local minimum.\n- Absolute Maxima/Minima in $[a, b]$: Evaluate $f(x)$ at critical points AND endpoints $a, b$. The highest value is absolute maximum, lowest is absolute minimum.",
+      "body_hi": "1. परिवर्तन की दर: यदि $y = f(x)$ है, तो $\\frac{dy}{dx} = f'(x)$, $x$ के सापेक्ष $y$ के परिवर्तन की दर दर्शाता है। यदि $x$ और $y$ समय $t$ पर निर्भर हैं, तो $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$।\n\n2. वर्धमान और ह्रासमान फलन:\nमान लीजिए $f$, $[a, b]$ में सतत और $(a, b)$ में अवकलनीय है:\n- $f$ निरंतर वर्धमान (strictly increasing) है यदि सभी $x \\in (a, b)$ के लिए $f'(x) > 0$।\n- $f$ निरंतर ह्रासमान (strictly decreasing) है यदि सभी $x \\in (a, b)$ के लिए $f'(x) < 0$।\n\n3. उच्चतम और निम्नतम (Maxima & Minima):\n- प्रथम अवकलज परीक्षण: यदि $f'(c) = 0$ है:\n  * यदि $f'(x)$ धनात्मक से ऋणात्मक में बदलता है, तो $c$ स्थानीय उच्चतम (Local Max) बिंदु है।\n  * यदि $f'(x)$ ऋणात्मक से धनात्मक में बदलता है, तो $c$ स्थानीय निम्नतम (Local Min) बिंदु है।\n- द्वितीय अवकलज परीक्षण:\n  * यदि $f'(c) = 0$ और $f''(c) < 0$, तो $x = c$ स्थानीय उच्चतम है।\n  * यदि $f'(c) = 0$ और $f''(c) > 0$, तो $x = c$ स्थानीय निम्नतम है।",
+      "body_gu": "૧. ફેરફારનો દર: જો $y = f(x)$ હોય, તો $\\frac{dy}{dx} = f'(x)$ એ $x$ ની સાપેક્ષે $y$ ના ફેરફારનો દર દર્શાવે છે. જો $x$ અને $y$ સમય $t$ પર આધારિત હોય, તો $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$.\n\n૨. વધતાં અને ઘટતાં વિધેયો:\nધારો કે $f$ એ $[a, b]$ પર સતત અને $(a, b)$ પર વિકલનીય છે:\n- જો તમામ $x \\in (a, b)$ માટે $f'(x) > 0$ હોય, તો $f$ ચુસ્ત વધતું વિધેય છે.\n- જો તમામ $x \\in (a, b)$ માટે $f'(x) < 0$ હોય, તો $f$ ચુસ્ત ઘટતું વિધેય છે.\n\n૩. મહત્તમ અને ન્યૂનતમ મૂલ્યો:\n- પ્રથમ વિકલિત કસોટી: જો $f'(c) = 0$ હોય:\n  * જો $f'(x)$ નો સંકેત ધનથી ઋણ બદલાય, તો $c$ સ્થાનીય મહત્તમ બિંદુ છે.\n  * જો $f'(x)$ નો સંકેત ઋણથી ધન બદલાય, તો $c$ સ્થાનીય ન્યૂનતમ બિંદુ છે.\n- દ્વિતીય વિકલિત કસોટી:\n  * જો $f'(c) = 0$ અને $f''(c) < 0$ હોય, તો $x = c$ સ્થાનીય મહત્તમ છે.\n  * જો $f'(c) = 0$ અને $f''(c) > 0$ હોય, તો $x = c$ સ્થાનીય ન્યૂનતમ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_005",
+      "type": "mcq",
+      "title": "Knowledge Check: Rate of Change",
+      "title_hi": "ज्ञान की जांच: परिवर्तन की दर",
+      "title_gu": "જ્ઞાન ચકાસણી: ફેરફારનો દર",
+      "question": "The rate of change of the area of a circle with respect to its radius $r$ when $r = 5\\text{ cm}$ is:",
+      "question_hi": "त्रिज्या $r$ के सापेक्ष वृत्त के क्षेत्रफल के परिवर्तन की दर ज्ञात कीजिए जब $r = 5\\text{ cm}$ हो:",
+      "question_gu": "જ્યારે $r = 5\\text{ cm}$ હોય ત્યારે વર્તુળના ક્ષેત્રફળમાં તેની ત્રિજ્યા $r$ ની સાપેક્ષે થતા ફેરફારનો દર શોધો:",
+      "options": [
+        "10π cm²/cm",
+        "25π cm²/cm",
+        "5π cm²/cm",
+        "20π cm²/cm"
+      ],
+      "options_hi": [
+        "10π cm²/cm",
+        "25π cm²/cm",
+        "5π cm²/cm",
+        "20π cm²/cm"
+      ],
+      "options_gu": [
+        "10π cm²/cm",
+        "25π cm²/cm",
+        "5π cm²/cm",
+        "20π cm²/cm"
+      ],
+      "correct_index": 0,
+      "explanation": "Area A = πr². Differentiation with respect to r gives dA/dr = 2πr. At r = 5 cm, dA/dr = 2π(5) = 10π cm²/cm.",
+      "explanation_hi": "क्षेत्रफल A = πr²। r के सापेक्ष अवकलन करने पर dA/dr = 2πr प्राप्त होता है। r = 5 cm पर, dA/dr = 2π(5) = 10π cm²/cm।",
+      "explanation_gu": "ક્ષેત્રફળ A = πr². r ની સાપેક્ષે વિકલન કરતા dA/dr = 2πr મળે. r = 5 cm આગળ, dA/dr = 2π(5) = 10π cm²/cm."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_006",
+      "type": "reflection",
+      "title": "Reflection: Curvature and Optimality",
+      "title_hi": "चिंतन: वक्रता और इष्टतमता",
+      "title_gu": "વિચાર-મંથન: વક્રતા અને શ્રેષ્ઠતા",
+      "body": "Why does $f''(c) < 0$ indicate a MAXIMUM? Think of the second derivative as measuring concavity. When $f''(x) < 0$, the graph curves downwards (like an open umbrella or a cave face down). The turning point at the top of this curve must naturally be a high point—a maximum! Conversely, $f''(x) > 0$ forms a cup shape holding water, making the critical point the lowest point—a minimum.",
+      "body_hi": "द्वितीय अवकलज $f''(c) < 0$ अधिकतम (MAXIMUM) का संकेत क्यों देता है? द्वितीय अवकलज को अवतलता (concavity) को मापने के रूप में सोचें। जब $f''(x) < 0$ होता है, तो ग्राफ नीचे की ओर मुड़ता है। इस वक्र का उच्चतम मोड़ बिंदु स्वाभाविक रूप से एक उच्चतम बिंदु होना चाहिए! इसके विपरीत, $f''(x) > 0$ एक कटोरे का आकार बनाता है, जिससे महत्वपूर्ण बिंदु न्यूनतम बिंदु बन जाता है।",
+      "body_gu": "શા માટે $f''(c) < 0$ એ મહત્તમ મૂલ્ય દર્શાવે છે? દ્વિતીય વિકલિતને વક્રતા માપવાના સાધન તરીકે વિચારો. જ્યારે $f''(x) < 0$ હોય, ત્યારે ગ્રાફ નીચે તરફ નમેલો હોય છે (છત્રી જેવો). આ વક્રની ટોચનું બિંદુ સ્વાભાવિક રીતે મહત્તમ બિંદુ બને છે! આનાથી વિપરીત, $f''(x) > 0$ એ કપ જેવો આકાર બનાવે છે, જેથી તે ન્યૂનતમ બિંદુ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_007",
+      "type": "connection",
+      "title": "Real-World Connection: Business Economics & Optimization",
+      "title_hi": "वास्तविक दुनिया से संबंध: व्यावसायिक अर्थशास्त्र और इष्टतमीकरण",
+      "title_gu": "વાસ્તવિક વિશ્વ સાથે જોડાણ: વ્યાપારી અર્થશાસ્ત્ર અને ઓપ્ટિમાઇઝેશન",
+      "body": "In economics, companies model Total Cost $C(x)$ and Total Revenue $R(x)$ for producing $x$ units. Marginal Cost (MC) is $\\frac{dC}{dx}$ and Marginal Revenue (MR) is $\\frac{dR}{dx}$. To maximize Profit $P(x) = R(x) - C(x)$, we set $P'(x) = 0 \\implies R'(x) = C'(x) \\implies \\text{MR} = \\text{MC}$. Thus, profit is maximized precisely when Marginal Revenue equals Marginal Cost!",
+      "body_hi": "अर्थशास्त्र में, कंपनियां $x$ इकाइयों के उत्पादन के लिए कुल लागत $C(x)$ और कुल राजस्व $R(x)$ का मॉडल तैयार करती हैं। सीमांत लागत (MC) $\\frac{dC}{dx}$ है और सीमांत राजस्व (MR) $\\frac{dR}{dx}$ है। लाभ $P(x) = R(x) - C(x)$ को अधिकतम करने के लिए, हम $P'(x) = 0 \\implies \\text{MR} = \\text{MC}$ सेट करते हैं। अतः लाभ तब अधिकतम होता है जब सीमांत राजस्व सीमांत लागत के बराबर होता है!",
+      "body_gu": "અર્થશાસ્ત્રમાં, કંપનીઓ $x$ એકમોના ઉત્પાદન માટે કુલ ખર્ચ $C(x)$ અને કુલ આવક $R(x)$ નો મોડેલ બનાવે છે. સીમાંત ખર્ચ (MC) એ $\\frac{dC}{dx}$ છે અને સીમાંત આવક (MR) એ $\\frac{dR}{dx}$ છે. નફો $P(x) = R(x) - C(x)$ મહત્તમ કરવા માટે, $P'(x) = 0 \\implies \\text{MR} = \\text{MC}$ થાય છે. તેથી, જ્યારે સીમાંત આવક અને સીમાંત ખર્ચ સમાન થાય ત્યારે નફો મહત્તમ બને છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_008",
+      "type": "mastery",
+      "title": "Mastery Challenge: Absolute Maximum Value",
+      "title_hi": "मास्टरी चुनौती: निरपेक्ष उच्चतम मान",
+      "title_gu": "માસ્ટરી ચેલેન્જ: નિરપેક્ષ મહત્તમ મૂલ્ય",
+      "question": "Find the absolute maximum value of the function $f(x) = x^3 - 3x + 3$ on the closed interval $[0, 2]$.",
+      "question_hi": "बंद अंतराल $[0, 2]$ पर फलन $f(x) = x^3 - 3x + 3$ का निरपेक्ष उच्चतम मान ज्ञात कीजिए।",
+      "question_gu": "બંધ અંતરાલ $[0, 2]$ પર વિધેય $f(x) = x^3 - 3x + 3$ નું નિરપેક્ષ મહત્તમ મૂલ્ય શોધો.",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "4"
+      ],
+      "options_hi": [
+        "5",
+        "3",
+        "1",
+        "4"
+      ],
+      "options_gu": [
+        "5",
+        "3",
+        "1",
+        "4"
+      ],
+      "correct_index": 0,
+      "explanation": "f'(x) = 3x² - 3 = 3(x² - 1) = 0 => x = 1 in [0, 2]. Evaluate f(x) at endpoints {0, 2} and critical point {1}:\nf(0) = 3\nf(1) = 1³ - 3(1) + 3 = 1\nf(2) = 2³ - 3(2) + 3 = 8 - 6 + 3 = 5.\nThe absolute maximum value is 5 (at x = 2).",
+      "explanation_hi": "f'(x) = 3x² - 3 = 0 => x = 1। अंतराल [0, 2] में बिंदुओं {0, 1, 2} पर मान जांचें:\nf(0) = 3, f(1) = 1, f(2) = 5। अतः निरपेक्ष उच्चतम मान 5 है।",
+      "explanation_gu": "f'(x) = 3x² - 3 = 0 => x = 1. અંતરાલ [0, 2] ના બિંદુઓ {0, 1, 2} પર મૂલ્ય શોધો:\nf(0) = 3, f(1) = 1, f(2) = 5. તેથી નિરપેક્ષ મહત્તમ મૂલ્ય 5 છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_009",
+      "type": "mcq",
+      "title": "Textbook Exercise: Rate of Change of Area",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: क्षेत्रफल के परिवर्तन की दर",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: ક્ષેત્રફળના ફેરફારનો દર",
+      "question": "The rate of change of the area of a circle with respect to its radius $r$ at $r = 6\\text{ cm}$ is:",
+      "question_hi": "त्रिज्या $r = 6\\text{ cm}$ पर इसके त्रिज्या $r$ के सापेक्ष वृत्त के क्षेत्रफल के परिवर्तन की दर है:",
+      "question_gu": "જ્યારે $r = 6\\text{ cm}$ હોય ત્યારે ત્રિજ્યા $r$ ની સાપેક્ષે વર્તુળના ક્ષેત્રફળના ફેરફારનો દર શોધો:",
+      "options": [
+        "12π cm²/cm",
+        "10π cm²/cm",
+        "36π cm²/cm",
+        "6π cm²/cm"
+      ],
+      "options_hi": [
+        "12π cm²/cm",
+        "10π cm²/cm",
+        "36π cm²/cm",
+        "6π cm²/cm"
+      ],
+      "options_gu": [
+        "12π cm²/cm",
+        "10π cm²/cm",
+        "36π cm²/cm",
+        "6π cm²/cm"
+      ],
+      "correct_index": 0,
+      "explanation": "A = πr² => dA/dr = 2πr. At r = 6 cm, dA/dr = 2π(6) = 12π cm²/cm.",
+      "explanation_hi": "A = πr² => dA/dr = 2πr। r = 6 cm पर, dA/dr = 2π(6) = 12π cm²/cm।",
+      "explanation_gu": "A = πr² => dA/dr = 2πr. r = 6 cm આગળ, dA/dr = 2π(6) = 12π cm²/cm."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_010",
+      "type": "mcq",
+      "title": "Textbook Exercise: Rate of Change of Surface Area of Cube",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: घन के पृष्ठ क्षेत्रफल के परिवर्तन की दर",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: ઘનની સપાટીના ક્ષેત્રફળના ફેરફારનો દર",
+      "question": "The volume of a cube is increasing at the rate of $8\\text{ cm}^3/\\text{s}$. How fast is the surface area increasing when the length of an edge is $12\\text{ cm}$?",
+      "question_hi": "एक घन का आयतन $8\\text{ cm}^3/\\text{s}$ की दर से बढ़ रहा है। जब किनारे की लंबाई $12\\text{ cm}$ है, तो इसका पृष्ठ क्षेत्रफल किस दर से बढ़ रहा है?",
+      "question_gu": "એક ઘનનું કદ $8\\text{ cm}^3/\\text{s}$ ના દરે વધી રહ્યું છે. જ્યારે ધારની લંબાઈ $12\\text{ cm}$ હોય, ત્યારે તેની સપાટીનું ક્ષેત્રફળ કેટલા દરે વધશે?",
+      "options": [
+        "8/3 cm²/s",
+        "4/3 cm²/s",
+        "2 cm²/s",
+        "16/3 cm²/s"
+      ],
+      "options_hi": [
+        "8/3 cm²/s",
+        "4/3 cm²/s",
+        "2 cm²/s",
+        "16/3 cm²/s"
+      ],
+      "options_gu": [
+        "8/3 cm²/s",
+        "4/3 cm²/s",
+        "2 cm²/s",
+        "16/3 cm²/s"
+      ],
+      "correct_index": 0,
+      "explanation": "V = x³, dV/dt = 3x² (dx/dt) = 8 => dx/dt = 8/(3x²). Surface Area S = 6x² => dS/dt = 12x (dx/dt) = 12x * (8 / 3x²) = 32/x. At x = 12 cm, dS/dt = 32/12 = 8/3 cm²/s.",
+      "explanation_hi": "V = x³, dV/dt = 3x²(dx/dt) = 8 => dx/dt = 8/(3x²)। पृष्ठ क्षेत्रफल S = 6x² => dS/dt = 12x(dx/dt) = 32/x। x = 12 पर dS/dt = 32/12 = 8/3 cm²/s।",
+      "explanation_gu": "V = x³, dV/dt = 3x²(dx/dt) = 8 => dx/dt = 8/(3x²). પૃષ્ઠફળ S = 6x² => dS/dt = 12x(dx/dt) = 32/x. x = 12 આગળ dS/dt = 32/12 = 8/3 cm²/s."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_011",
+      "type": "mcq",
+      "title": "Textbook Exercise: Increasing Intervals",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: वर्धमान अंतराल",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: વધતા અંતરાલ",
+      "question": "Find the intervals in which the function $f(x) = 2x^3 - 3x^2 - 36x + 7$ is strictly increasing.",
+      "question_hi": "वह अंतराल ज्ञात कीजिए जिसमें फलन $f(x) = 2x^3 - 3x^2 - 36x + 7$ निरंतर वर्धमान है।",
+      "question_gu": "જે અંતરાલમાં વિધેય $f(x) = 2x^3 - 3x^2 - 36x + 7$ ચુસ્ત વધતું હોય તે અંતરાલ શોધો.",
+      "options": [
+        "(-∞, -2) ∪ (3, ∞)",
+        "(-2, 3)",
+        "(-∞, -3) ∪ (2, ∞)",
+        "(-3, 2)"
+      ],
+      "options_hi": [
+        "(-∞, -2) ∪ (3, ∞)",
+        "(-2, 3)",
+        "(-∞, -3) ∪ (2, ∞)",
+        "(-3, 2)"
+      ],
+      "options_gu": [
+        "(-∞, -2) ∪ (3, ∞)",
+        "(-2, 3)",
+        "(-∞, -3) ∪ (2, ∞)",
+        "(-3, 2)"
+      ],
+      "correct_index": 0,
+      "explanation": "f'(x) = 6x² - 6x - 36 = 6(x² - x - 6) = 6(x - 3)(x + 2). f'(x) > 0 when x < -2 or x > 3. So strictly increasing on (-∞, -2) ∪ (3, ∞).",
+      "explanation_hi": "f'(x) = 6(x - 3)(x + 2)। f'(x) > 0 जब x < -2 या x > 3 हो। अतः अंतराल (-∞, -2) ∪ (3, ∞) में फलन निरंतर वर्धमान है।",
+      "explanation_gu": "f'(x) = 6(x - 3)(x + 2). f'(x) > 0 જ્યારે x < -2 અથવા x > 3 હોય. તેથી અંતરાલ (-∞, -2) ∪ (3, ∞) પર વિધેય ચુસ્ત વધતું છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_012",
+      "type": "mcq",
+      "title": "Textbook Exercise: Decreasing Interval of Quadratic",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: द्विघात फलन का ह्रासमान अंतराल",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: દ્વિઘાત વિધેયનો ઘટતો અંતરાલ",
+      "question": "The interval in which $f(x) = x^2 - 4x + 6$ is strictly decreasing is:",
+      "question_hi": "वह अंतराल जिसमें $f(x) = x^2 - 4x + 6$ निरंतर ह्रासमान है:",
+      "question_gu": "જે અંતરાલમાં $f(x) = x^2 - 4x + 6$ ચુસ્ત ઘટતું હોય તે અંતરાલ:",
+      "options": [
+        "(-∞, 2)",
+        "(2, ∞)",
+        "(-∞, ∞)",
+        "(0, 2)"
+      ],
+      "options_hi": [
+        "(-∞, 2)",
+        "(2, ∞)",
+        "(-∞, ∞)",
+        "(0, 2)"
+      ],
+      "options_gu": [
+        "(-∞, 2)",
+        "(2, ∞)",
+        "(-∞, ∞)",
+        "(0, 2)"
+      ],
+      "correct_index": 0,
+      "explanation": "f'(x) = 2x - 4 = 2(x - 2). For strictly decreasing, f'(x) < 0 => 2(x - 2) < 0 => x < 2. Thus, (-∞, 2).",
+      "explanation_hi": "f'(x) = 2(x - 2)। निरंतर ह्रासमान के लिए f'(x) < 0 => x < 2। अतः अंतराल (-∞, 2) है।",
+      "explanation_gu": "f'(x) = 2(x - 2). ચુસ્ત ઘટતા વિધેય માટે f'(x) < 0 => x < 2. તેથી અંતરાલ (-∞, 2) છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_013",
+      "type": "mcq",
+      "title": "Textbook Exercise: Rectangle Inscribed in Circle",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: वृत्त में अंतर्निहित आयत",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: વર્તુળમાં અંતર્ગત લંબચોરસ",
+      "question": "Show/Find the maximum area of a rectangle inscribed in a circle of radius $R$.",
+      "question_hi": "त्रिज्या $R$ वाले वृत्त के अंतर्गत खींचे जा सकने वाले आयत का अधिकतम क्षेत्रफल ज्ञात कीजिए:",
+      "question_gu": "R ત્રિજ્યાવાળા વર્તુળમાં અંતર્ગત લંબચોરસનું મહત્તમ ક્ષેત્રફળ શોધો:",
+      "options": [
+        "2R²",
+        "R²",
+        "4R²",
+        "πR²"
+      ],
+      "options_hi": [
+        "2R²",
+        "R²",
+        "4R²",
+        "πR²"
+      ],
+      "options_gu": [
+        "2R²",
+        "R²",
+        "4R²",
+        "πR²"
+      ],
+      "correct_index": 0,
+      "explanation": "Let sides be x and y. x² + y² = (2R)² = 4R². Area A = xy. Maximum area occurs when x = y = R√2 (a square). Max Area = (R√2)(R√2) = 2R².",
+      "explanation_hi": "भुजाएं x और y हैं। x² + y² = 4R²। अधिकतम क्षेत्रफल तब होता है जब वर्ग बनता है (x = y = R√2)। अधिकतम क्षेत्रफल = 2R²।",
+      "explanation_gu": "બાજુઓ x અને y છે. x² + y² = 4R². મહત્તમ ક્ષેત્રફળ ચોરસ (x = y = R√2) માટે મળે. મહત્તમ ક્ષેત્રફળ = 2R²."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_014",
+      "type": "mcq",
+      "title": "Textbook Exercise: Minimum Value of x^x",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: x^x का न्यूनतम मान",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: x^x નું ન્યૂનતમ મૂલ્ય",
+      "question": "The minimum value of $x^x$ for $x > 0$ occurs at $x = $",
+      "question_hi": "$x > 0$ के लिए $x^x$ का न्यूनतम मान $x = $ पर होता है:",
+      "question_gu": "$x > 0$ માટે $x^x$ નું ન્યૂનતમ મૂલ્ય $x = $ આગળ મળે છે:",
+      "options": [
+        "1/e",
+        "e",
+        "1",
+        "1/√e"
+      ],
+      "options_hi": [
+        "1/e",
+        "e",
+        "1",
+        "1/√e"
+      ],
+      "options_gu": [
+        "1/e",
+        "e",
+        "1",
+        "1/√e"
+      ],
+      "correct_index": 0,
+      "explanation": "Let y = x^x => ln y = x ln x. Differentiating: (1/y) y' = 1 + ln x = 0 => ln x = -1 => x = e^(-1) = 1/e.",
+      "explanation_hi": "y = x^x => ln y = x ln x। अवकलन करने पर: 1 + ln x = 0 => ln x = -1 => x = 1/e।",
+      "explanation_gu": "y = x^x => ln y = x ln x. વિકલન કરતા: 1 + ln x = 0 => ln x = -1 => x = 1/e."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_015",
+      "type": "true_false",
+      "title": "Textbook Concept Check: Extreme Value Theorem",
+      "title_hi": "पाठ्यपुस्तक अवधारणा जांच: चरम मान प्रमेय",
+      "title_gu": "પાઠ્યપુસ્તક સંકલ્પના ચકાસણી: અંતિમ મૂલ્ય પ્રમેય",
+      "question": "True or False: Every continuous function defined on a closed interval $[a, b]$ has an absolute maximum and an absolute minimum on that interval.",
+      "question_hi": "सत्य या असत्य: बंद अंतराल $[a, b]$ पर परिभाषित प्रत्येक सतत फलन का उस अंतराल पर एक निरपेक्ष उच्चतम और एक निरपेक्ष निम्नतम मान होता है।",
+      "question_gu": "ખરું કે ખોટું: બંધ અંતરાલ $[a, b]$ પર વ્યાખ્યાયિત દરેક સતત વિધેય તે અંતરાલ પર નિરપેક્ષ મહત્તમ અને નિરપેક્ષ ન્યૂનતમ મૂલ્ય ધરાવે છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "ખરું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "By the Extreme Value Theorem, if f is continuous on a closed bounded interval [a, b], then f attains an absolute maximum and an absolute minimum in [a, b].",
+      "explanation_hi": "चरम मान प्रमेय (Extreme Value Theorem) के अनुसार, यदि f एक बंद अंतराल [a, b] पर सतत है, तो यह निश्चित रूप से निरपेक्ष उच्चतम और निम्नतम मान प्राप्त करता है।",
+      "explanation_gu": "અંતિમ મૂલ્ય પ્રમેય (Extreme Value Theorem) અનુસાર, જો f એ બંધ અંતરાલ [a, b] પર સતત હોય, તો તે નિરપેક્ષ મહત્તમ અને ન્યૂનતમ મૂલ્ય મેળવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_016",
+      "type": "mcq",
+      "title": "Textbook Exercise: Local Maximum of Trigonometric Function",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: त्रिकोणमितीय फलन का स्थानीय उच्चतम",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: ત્રિકોણમિતિય વિધેયનું સ્થાનીય મહત્તમ",
+      "question": "Find the local maximum value of $f(x) = \\sin x + \\cos x$ in the interval $(0, \\pi/2)$.",
+      "question_hi": "अंतराल $(0, \\pi/2)$ में फलन $f(x) = \\sin x + \\cos x$ का स्थानीय उच्चतम मान ज्ञात कीजिए।",
+      "question_gu": "અંતરાલ $(0, \\pi/2)$ માં વિધેય $f(x) = \\sin x + \\cos x$ નું સ્થાનીય મહત્તમ મૂલ્ય શોધો.",
+      "options": [
+        "√2",
+        "1",
+        "2",
+        "1/√2"
+      ],
+      "options_hi": [
+        "√2",
+        "1",
+        "2",
+        "1/√2"
+      ],
+      "options_gu": [
+        "√2",
+        "1",
+        "2",
+        "1/√2"
+      ],
+      "correct_index": 0,
+      "explanation": "f'(x) = cos x - sin x = 0 => tan x = 1 => x = π/4 in (0, π/2). f''(x) = -sin x - cos x. At x = π/4, f''(π/4) = -√2 < 0 (Local Max). Max value = sin(π/4) + cos(π/4) = 1/√2 + 1/√2 = √2.",
+      "explanation_hi": "f'(x) = cos x - sin x = 0 => x = π/4। f''(π/4) = -√2 < 0 (स्थानीय उच्चतम)। उच्चतम मान = sin(π/4) + cos(π/4) = √2।",
+      "explanation_gu": "f'(x) = cos x - sin x = 0 => x = π/4. f''(π/4) = -√2 < 0 (સ્થાનીય મહત્તમ). મહત્તમ મૂલ્ય = sin(π/4) + cos(π/4) = √2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_017",
+      "type": "mcq",
+      "title": "Textbook Exercise: Marginal Revenue Application",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: सीमांत राजस्व अनुप्रयोग",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: સીમાંત આવકનો ઉપયોગ",
+      "question": "The total revenue in Rupees received from the sale of $x$ units of a product is given by $R(x) = 3x^2 + 36x + 5$. Find the marginal revenue when $x = 15$.",
+      "question_hi": "किसी उत्पाद की $x$ इकाइयों की बिक्री से प्राप्त कुल आय रुपये में $R(x) = 3x^2 + 36x + 5$ द्वारा दी जाती है। जब $x = 15$ हो तो सीमांत आय (Marginal Revenue) ज्ञात कीजिए।",
+      "question_gu": "કોઈ ઉત્પાદકના $x$ એકમોના વેચાણથી મળતી કુલ આવક રૂપિયામાં $R(x) = 3x^2 + 36x + 5$ દ્વારા આપેલ છે. જ્યારે $x = 15$ હોય ત્યારે સીમાંત આવક શોધો.",
+      "options": [
+        "126",
+        "116",
+        "136",
+        "96"
+      ],
+      "options_hi": [
+        "126",
+        "116",
+        "136",
+        "96"
+      ],
+      "options_gu": [
+        "126",
+        "116",
+        "136",
+        "96"
+      ],
+      "correct_index": 0,
+      "explanation": "Marginal Revenue MR = dR/dx = d/dx (3x² + 36x + 5) = 6x + 36. At x = 15, MR = 6(15) + 36 = 90 + 36 = 126.",
+      "explanation_hi": "MR = dR/dx = 6x + 36। x = 15 पर, MR = 6(15) + 36 = 126।",
+      "explanation_gu": "MR = dR/dx = 6x + 36. x = 15 આગળ, MR = 6(15) + 36 = 126."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_018",
+      "type": "mcq",
+      "title": "Textbook Exercise: Sum of Numbers Maximizing Product",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: संख्याओं का योग और गुणनफल का उच्चतमीकरण",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: સંખ્યાઓનો સરવાળો અને ગુણાકારનું મહત્તમીકરણ",
+      "question": "Find two positive numbers $x$ and $y$ such that $x + y = 60$ and $x y^3$ is maximum.",
+      "question_hi": "ऐसी दो धनात्मक संख्याएं $x$ और $y$ ज्ञात कीजिए ताकि $x + y = 60$ और $x y^3$ उच्चतम हो।",
+      "question_gu": "બે ધન સંખ્યાઓ $x$ અને $y$ શોધો જેથી $x + y = 60$ અને $x y^3$ મહત્તમ થાય.",
+      "options": [
+        "x = 15, y = 45",
+        "x = 30, y = 30",
+        "x = 20, y = 40",
+        "x = 10, y = 50"
+      ],
+      "options_hi": [
+        "x = 15, y = 45",
+        "x = 30, y = 30",
+        "x = 20, y = 40",
+        "x = 10, y = 50"
+      ],
+      "options_gu": [
+        "x = 15, y = 45",
+        "x = 30, y = 30",
+        "x = 20, y = 40",
+        "x = 10, y = 50"
+      ],
+      "correct_index": 0,
+      "explanation": "x = 60 - y. Let P = x y³ = (60 - y) y³ = 60y³ - y⁴. dP/dy = 180y² - 4y³ = 4y²(45 - y) = 0 => y = 45 (since y ≠ 0). Then x = 60 - 45 = 15.",
+      "explanation_hi": "x = 60 - y। P = (60 - y) y³ = 60y³ - y⁴। dP/dy = 4y²(45 - y) = 0 => y = 45, x = 15।",
+      "explanation_gu": "x = 60 - y. P = (60 - y) y³ = 60y³ - y⁴. dP/dy = 4y²(45 - y) = 0 => y = 45, x = 15."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_019",
+      "type": "true_false",
+      "title": "Textbook Concept Check: Stationary Points",
+      "title_hi": "पाठ्यपुस्तक अवधारणा जांच: स्थिर बिंदु",
+      "title_gu": "પાઠ્યપુસ્તક સંકલ્પના ચકાસણી: સ્થિર બિંદુઓ",
+      "question": "True or False: If $f'(c) = 0$, then $x = c$ MUST be either a point of local maximum or local minimum.",
+      "question_hi": "सत्य या असत्य: यदि $f'(c) = 0$ है, तो $x = c$ निश्चित रूप से स्थानीय उच्चतम या स्थानीय निम्नतम बिंदु होना ही चाहिए।",
+      "question_gu": "ખરું કે ખોટું: જો $f'(c) = 0$ હોય, તો $x = c$ એ સ્થાનીય મહત્તમ અથવા સ્થાનીય ન્યૂનતમ બિંદુ હોવું જ જોઈએ.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "ખરું",
+        "ખોટું"
+      ],
+      "correct_index": 1,
+      "explanation": "False. It could also be a point of inflection! For example, for f(x) = x³, f'(0) = 0, but x = 0 is neither a local max nor local min (it is a point of inflection).",
+      "explanation_hi": "असत्य। यह नति परिवर्तन बिंदु (Point of Inflection) भी हो सकता है! उदाहरण के लिए, $f(x) = x^3$ के लिए $f'(0) = 0$, लेकिन $x = 0$ नति परिवर्तन बिंदु है।",
+      "explanation_gu": "ખોટું. તે વળાંક બિંદુ (Point of Inflection) પણ હોઈ શકે! ઉદાહરણ તરીકે, $f(x) = x^3$ માટે $f'(0) = 0$, પરંતુ $x = 0$ એ વળાંક બિંદુ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH6_020",
+      "type": "mcq",
+      "title": "Textbook Exercise: Shortest Distance Problem",
+      "title_hi": "पाठ्यपुस्तक अभ्यास: न्यूनतम दूरी की समस्या",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય: ન્યૂનતમ અંતરની સમસ્યા",
+      "question": "Find the shortest distance from the point $(0, c)$ to the parabola $y = x^2$, where $0 \\le c \\le 5$.",
+      "question_hi": "बिंदु $(0, c)$ से परवलय $y = x^2$ की न्यूनतम दूरी ज्ञात कीजिए, जहाँ $1/2 \\le c \\le 5$ हो।",
+      "question_gu": "બિંદુ $(0, c)$ થી પરવલય $y = x^2$ નું ન્યૂનતમ અંતર શોધો, જ્યાં $1/2 \\le c \\le 5$ હોય.",
+      "options": [
+        "√(c - 1/4)",
+        "c",
+        "√(c + 1/4)",
+        "√(2c - 1)"
+      ],
+      "options_hi": [
+        "√(c - 1/4)",
+        "c",
+        "√(c + 1/4)",
+        "√(2c - 1)"
+      ],
+      "options_gu": [
+        "√(c - 1/4)",
+        "c",
+        "√(c + 1/4)",
+        "√(2c - 1)"
+      ],
+      "correct_index": 0,
+      "explanation": "Distance D² = x² + (y - c)² = y + (y - c)². Differentiating wrt y: d(D²)/dy = 1 + 2(y - c) = 0 => y = c - 1/2. Minimum D² = (c - 1/2) + (1/4) = c - 1/4 => Minimum Distance = √(c - 1/4).",
+      "explanation_hi": "D² = x² + (y - c)² = y + (y - c)²। d(D²)/dy = 1 + 2(y - c) = 0 => y = c - 1/2। न्यूनतम दूरी = √(c - 1/4)।",
+      "explanation_gu": "D² = x² + (y - c)² = y + (y - c)². d(D²)/dy = 1 + 2(y - c) = 0 => y = c - 1/2. ન્યૂનતમ અંતર = √(c - 1/4)."
+    }
+  ]
+}

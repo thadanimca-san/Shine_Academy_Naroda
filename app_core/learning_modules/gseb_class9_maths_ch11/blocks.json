@@ -1,0 +1,401 @@
+[
+  {
+    "type": "theory",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_THEO_001",
+    "title": "Introduction to 3D Shapes",
+    "text": "In our daily life, we come across various solid shapes like boxes, pipes, cones, and balls. Unlike 2D figures (squares, circles) that only have length and breadth, these 3D objects have depth or height. In this chapter, we will learn how to measure the 'skin' or surface of these objects (Surface Area) and the 'space' they occupy (Volume)."
+  },
+  {
+    "type": "definition",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_DEFI_002",
+    "title": "Surface Area & Volume",
+    "terms": [
+      {
+        "term": "Surface Area (SA)",
+        "definition": "The total area that the surface of an object occupies. It is measured in square units (e.g., cm², m²). Lateral/Curved Surface Area refers to the sides, while Total Surface Area includes the top and bottom."
+      },
+      {
+        "term": "Volume (V)",
+        "definition": "The amount of 3-dimensional space occupied by a solid object. It is also referred to as capacity if the object is hollow. It is measured in cubic units (e.g., cm³, m³)."
+      }
+    ]
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_003",
+    "title": "Surface Area of Cuboid and Cube",
+    "formulas": [
+      {
+        "name": "Total Surface Area of Cuboid",
+        "expression": "2(lb + bh + hl)",
+        "variables": "l = length, b = breadth, h = height"
+      },
+      {
+        "name": "Lateral Surface Area of Cuboid",
+        "expression": "2h(l + b)",
+        "variables": "l = length, b = breadth, h = height"
+      },
+      {
+        "name": "Total Surface Area of Cube",
+        "expression": "6a²",
+        "variables": "a = edge length"
+      },
+      {
+        "name": "Lateral Surface Area of Cube",
+        "expression": "4a²",
+        "variables": "a = edge length"
+      }
+    ]
+  },
+  {
+    "type": "worked_example",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Apply"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_WORK_004",
+    "title": "Finding the Surface Area of a Cuboid",
+    "problem": "A plastic box is 1.5 m long, 1.25 m wide and 65 cm deep. It is opened at the top. Find the area of the sheet required for making the box.",
+    "steps": [
+      "First, convert all dimensions to the same unit. Length (l) = 1.5 m, Breadth (b) = 1.25 m, Depth/Height (h) = 65 cm = 0.65 m.",
+      "Since the box is open at the top, we only need the lateral surface area + the area of the base.",
+      "Area of sheet required = Lateral Surface Area + Base Area = 2h(l + b) + (l * b)",
+      "Substitute the values: 2(0.65)(1.5 + 1.25) + (1.5 * 1.25)",
+      "Calculate: 1.3(2.75) + 1.875 = 3.575 + 1.875 = 5.45 m²."
+    ],
+    "solution": "The area of the sheet required is 5.45 m²."
+  },
+  {
+    "type": "common_mistakes",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Analyze"
+    },
+    "content": {
+      "title": "Units and Terminology Traps",
+      "mistakes": [
+        {
+          "mistake": "Using inconsistent units.",
+          "correction": "Always ensure all dimensions (length, breadth, height, radius) are in the SAME unit (e.g., all in cm or all in m) before substituting them into a formula."
+        },
+        {
+          "mistake": "Confusing Lateral Surface Area (LSA) with Total Surface Area (TSA).",
+          "correction": "Read carefully! If a room needs painting, the floor is usually excluded (LSA + ceiling). If it's a closed box, it's TSA."
+        }
+      ]
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_COMM_005"
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_006",
+    "title": "Volume of Cuboid and Cube",
+    "formulas": [
+      {
+        "name": "Volume of a Cuboid",
+        "expression": "l × b × h",
+        "variables": "l = length, b = breadth, h = height"
+      },
+      {
+        "name": "Volume of a Cube",
+        "expression": "a³",
+        "variables": "a = edge length"
+      }
+    ]
+  },
+  {
+    "type": "worked_example",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4,
+      "bloom": "Apply"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_WORK_007",
+    "title": "Calculating Volume",
+    "problem": "A cuboidal water tank is 6 m long, 5 m wide and 4.5 m deep. How many litres of water can it hold? (1 m³ = 1000 litres)",
+    "steps": [
+      "Identify dimensions: l = 6 m, b = 5 m, h = 4.5 m.",
+      "Calculate Volume (V) = l × b × h = 6 × 5 × 4.5 = 135 m³.",
+      "Convert to litres: Since 1 m³ = 1000 litres, 135 m³ = 135 × 1000 = 135,000 litres."
+    ],
+    "solution": "The tank can hold 135,000 litres of water."
+  },
+  {
+    "type": "theory",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_THEO_008",
+    "title": "The Right Circular Cylinder",
+    "text": "A cylinder is a solid with two parallel circular bases of the same size. If the axis joining the centers of the bases is perpendicular to the bases, it's a 'Right Circular' Cylinder. Examples include pipes, cans, and pillars."
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_009",
+    "title": "Surface Area of a Cylinder",
+    "formulas": [
+      {
+        "name": "Curved Surface Area (CSA)",
+        "expression": "2πrh",
+        "variables": "r = radius of the base, h = height of the cylinder"
+      },
+      {
+        "name": "Total Surface Area (TSA)",
+        "expression": "2πr(r + h)",
+        "variables": "r = radius, h = height (This includes the top and bottom circles, 2πr²)"
+      }
+    ]
+  },
+  {
+    "type": "worked_example",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4,
+      "bloom": "Apply"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_WORK_010",
+    "title": "Cylinder Surface Area",
+    "problem": "Find the total surface area of a closed cylindrical tank of radius 7 m and height 3 m. (Use π = 22/7)",
+    "steps": [
+      "Identify given values: r = 7 m, h = 3 m.",
+      "Since it is a closed tank, we use the Total Surface Area formula: TSA = 2πr(r + h).",
+      "Substitute the values: TSA = 2 × (22/7) × 7 × (7 + 3).",
+      "Simplify: TSA = 2 × 22 × 10 = 44 × 10 = 440 m²."
+    ],
+    "solution": "The total surface area of the tank is 440 m²."
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_011",
+    "title": "Volume of a Cylinder",
+    "formulas": [
+      {
+        "name": "Volume of a Cylinder",
+        "expression": "πr²h",
+        "variables": "r = radius, h = height (Think of it as Base Area × Height)"
+      }
+    ]
+  },
+  {
+    "type": "theory",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_THEO_012",
+    "title": "The Right Circular Cone",
+    "text": "A cone has a circular base and a single vertex. In a right circular cone, the height (h) drops exactly to the center of the base. It also has a 'slant height' (l), which is the distance from the vertex to any point on the circumference of the base."
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_013",
+    "title": "Cone Formulas",
+    "formulas": [
+      {
+        "name": "Slant Height (l)",
+        "expression": "√(r² + h²)",
+        "variables": "Derived using Pythagoras theorem on the right triangle formed by r, h, and l."
+      },
+      {
+        "name": "Curved Surface Area (CSA)",
+        "expression": "πrl",
+        "variables": "r = radius, l = slant height"
+      },
+      {
+        "name": "Total Surface Area (TSA)",
+        "expression": "πr(l + r)",
+        "variables": "Includes the base area (πr²)"
+      },
+      {
+        "name": "Volume of a Cone",
+        "expression": "(1/3)πr²h",
+        "variables": "It is exactly one-third the volume of a cylinder with the same base and height."
+      }
+    ]
+  },
+  {
+    "type": "common_mistakes",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Analyze"
+    },
+    "content": {
+      "title": "Height vs. Slant Height",
+      "mistakes": [
+        {
+          "mistake": "Using 'h' (vertical height) instead of 'l' (slant height) for finding the Curved Surface Area.",
+          "correction": "The CSA of a cone ALWAYS requires the slant height 'l' (πrl). If you are given 'h' and 'r', you MUST calculate 'l' first using l = √(r² + h²)."
+        }
+      ]
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_COMM_014"
+  },
+  {
+    "type": "worked_example",
+    "metadata": {
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "bloom": "Apply"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_WORK_015",
+    "title": "Cone Surface Area Calculation",
+    "problem": "Find the curved surface area of a right circular cone whose slant height is 10 cm and base radius is 7 cm.",
+    "steps": [
+      "Given: l = 10 cm, r = 7 cm.",
+      "The formula for Curved Surface Area is πrl.",
+      "Substitute the values: CSA = (22/7) × 7 × 10.",
+      "The 7s cancel out, leaving: 22 × 10 = 220 cm²."
+    ],
+    "solution": "The curved surface area is 220 cm²."
+  },
+  {
+    "type": "theory",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 2,
+      "bloom": "Understand"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_THEO_016",
+    "title": "Sphere and Hemisphere",
+    "text": "A sphere is a perfectly round 3D object, like a basketball. Every point on its surface is equidistant from its center. If you slice a sphere exactly in half, you get a hemisphere (like a bowl)."
+  },
+  {
+    "type": "formula",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 4,
+      "bloom": "Remember"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_FORM_017",
+    "title": "Formulas for Spheres and Hemispheres",
+    "formulas": [
+      {
+        "name": "Surface Area of a Sphere",
+        "expression": "4πr²",
+        "variables": "A sphere has only one surface, so its CSA and TSA are the same."
+      },
+      {
+        "name": "Curved Surface Area of a Hemisphere",
+        "expression": "2πr²",
+        "variables": "Exactly half the surface area of a full sphere."
+      },
+      {
+        "name": "Total Surface Area of a Hemisphere",
+        "expression": "3πr²",
+        "variables": "Includes the curved surface (2πr²) PLUS the flat circular top (πr²)."
+      },
+      {
+        "name": "Volume of a Sphere",
+        "expression": "(4/3)πr³",
+        "variables": "r = radius"
+      },
+      {
+        "name": "Volume of a Hemisphere",
+        "expression": "(2/3)πr³",
+        "variables": "Exactly half the volume of a sphere."
+      }
+    ]
+  },
+  {
+    "type": "common_mistakes",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 3,
+      "bloom": "Evaluate"
+    },
+    "content": {
+      "title": "The Hemisphere Trap: 2πr² vs 3πr²",
+      "mistakes": [
+        {
+          "mistake": "Assuming the Total Surface Area of a hemisphere is 2πr².",
+          "correction": "A hemisphere is created by cutting a sphere. This cut creates a NEW flat circular face (like the rim of a bowl). The curved part is 2πr², but the flat circular base is πr². So, TSA = 2πr² + πr² = 3πr²."
+        },
+        {
+          "mistake": "Using Diameter instead of Radius.",
+          "correction": "Many problems give you the diameter (e.g., 'A sphere of diameter 14 cm'). ALWAYS halve it to get the radius (r = 7 cm) before using the formulas."
+        }
+      ]
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_COMM_018"
+  },
+  {
+    "type": "worked_example",
+    "metadata": {
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_WORK_019",
+    "title": "Complex Hemisphere Problem",
+    "problem": "A hemispherical bowl is made of steel, 0.25 cm thick. The inner radius of the bowl is 5 cm. Find the outer curved surface area of the bowl.",
+    "steps": [
+      "First, identify the inner radius (r) = 5 cm.",
+      "Identify the thickness of the steel = 0.25 cm.",
+      "Calculate the outer radius (R): Outer radius = Inner radius + thickness = 5 cm + 0.25 cm = 5.25 cm.",
+      "The problem asks for the OUTER Curved Surface Area, so we use the outer radius R in the CSA formula.",
+      "Outer CSA = 2πR² = 2 × (22/7) × (5.25)²",
+      "Calculate: 2 × (22/7) × 27.5625 ≈ 173.25 cm²."
+    ],
+    "solution": "The outer curved surface area of the bowl is 173.25 cm²."
+  },
+  {
+    "type": "summary",
+    "metadata": {
+      "difficulty": "Beginner",
+      "estimated_minutes": 3,
+      "bloom": "Understand"
+    },
+    "id": "KOBJ_CLAS_MATH_CH11_SUMM_020",
+    "title": "Chapter Revision Recap",
+    "points": [
+      "Cuboid: TSA = 2(lb+bh+hl), LSA = 2h(l+b), V = lbh",
+      "Cube: TSA = 6a², LSA = 4a², V = a³",
+      "Cylinder: CSA = 2πrh, TSA = 2πr(r+h), V = πr²h",
+      "Cone: CSA = πrl, TSA = πr(l+r), V = 1/3 πr²h, where l = √(r²+h²)",
+      "Sphere: SA = 4πr², V = 4/3 πr³",
+      "Hemisphere: CSA = 2πr², TSA = 3πr², V = 2/3 πr³",
+      "Pro Tip: Always check if you need the curved area (open) or total area (closed), and make sure all units match!"
+    ]
+  }
+]

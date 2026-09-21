@@ -1,0 +1,426 @@
+[
+  {
+    "id": "BLK_TRI_001",
+    "type": "real_world_example",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [],
+      "next_topics": [
+        "BLK_TRI_002"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Connect the geometric concept of triangles to real-world structural stability.",
+      "common_misconceptions": [],
+      "tutor_hint": "Ask the student to find a triangular structure around them and explain why a square might collapse but a triangle won't."
+    },
+    "title": "Why Study Triangles?",
+    "text": "Look at the Eiffel Tower, the trusses of a bridge, or a crane at a construction site. What shape do you see repeating everywhere? It's the triangle! Triangles are structurally the most rigid shape, which is why engineers rely on them. In this chapter, we will learn how to mathematically prove when two triangles are exactly the same (congruent)."
+  },
+  {
+    "id": "BLK_TRI_002",
+    "type": "theory",
+    "difficulty": "Beginner",
+    "estimated_minutes": 5,
+    "bloom": "Remember",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [],
+      "next_topics": [
+        "BLK_TRI_003"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Define congruence and the meaning of CPCT.",
+      "common_misconceptions": [
+        "Thinking 'similar' (same shape, different size) means 'congruent'."
+      ],
+      "tutor_hint": "If the student is confused, use the analogy of two identical stamps from the same printing press."
+    },
+    "title": "What is Congruence?",
+    "text": "Two figures are congruent if they have exactly the same shape and same size. For triangles, this means if you place one over the other, they will perfectly overlap. When two triangles are congruent, their corresponding parts (angles and sides) are equal. This is abbreviated as CPCT: Corresponding Parts of Congruent Triangles."
+  },
+  {
+    "id": "BLK_TRI_003",
+    "type": "dictionary_link",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1,
+    "bloom": "Remember",
+    "content": {
+      "term_id": "DICT_CONGRUENCE",
+      "text": "Click here to review the formal definition of Congruence."
+    },
+    "knowledge_graph_links": {
+      "related_topics": [
+        "DICT_SIMILARITY"
+      ],
+      "prerequisites": [],
+      "next_topics": [
+        "BLK_TRI_004"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Link to the dictionary for precise vocabulary.",
+      "common_misconceptions": [],
+      "tutor_hint": "Ensure the student knows the symbol for congruence ≅."
+    }
+  },
+  {
+    "id": "BLK_TRI_004",
+    "type": "common_mistakes",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4,
+    "bloom": "Apply",
+    "content": {
+      "title": "The Naming Trap!",
+      "text": "When writing that two triangles are congruent, the order of the letters matters immensely! If ΔABC ≅ ΔPQR, it means A corresponds to P, B to Q, and C to R. Therefore, AB=PQ, BC=QR, and AC=PR. Writing ΔABC ≅ ΔQPR would be WRONG if A corresponds to P."
+    },
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_002"
+      ],
+      "next_topics": [
+        "BLK_TRI_005"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Master the syntax of writing congruence statements with proper vertex mapping.",
+      "common_misconceptions": [
+        "Believing that ΔABC ≅ ΔBCA implies the same thing as ΔABC ≅ ΔPQR."
+      ],
+      "tutor_hint": "Give them a scenario: If AB=EF, BC=FG, CA=GE, how should we write the congruence? (ΔABC ≅ ΔEFG)."
+    }
+  },
+  {
+    "id": "BLK_TRI_005",
+    "type": "formula",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_002"
+      ],
+      "next_topics": [
+        "BLK_TRI_006"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Learn the SAS criterion.",
+      "common_misconceptions": [
+        "Ignoring the 'included' part and using any two sides and any angle."
+      ],
+      "tutor_hint": "Emphasize 'Included Angle'. It is the angle formed right between the two known sides."
+    },
+    "title": "SAS (Side-Angle-Side) Congruence Rule",
+    "formula": "Side-Angle-Side (SAS) Axiom",
+    "explanation": "Two triangles are congruent if two sides and the INCLUDED angle of one triangle are equal to the two sides and the included angle of the other triangle."
+  },
+  {
+    "id": "BLK_TRI_006",
+    "type": "worked_example",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 7,
+    "bloom": "Apply",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_005"
+      ],
+      "next_topics": [
+        "BLK_TRI_007"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Apply SAS to prove triangles congruent in a quadrilateral.",
+      "common_misconceptions": [
+        "Forgetting to use common sides (like AB) in proofs."
+      ],
+      "tutor_hint": "If they get stuck, ask: 'What sides or angles do the two triangles share?'"
+    },
+    "title": "Applying the SAS Rule",
+    "problem": "In quadrilateral ACBD, AC = AD and AB bisects ∠A. Prove that ΔABC ≅ ΔABD.",
+    "steps": [
+      "1. In ΔABC and ΔABD, it is given that AC = AD.",
+      "2. Since AB bisects ∠A, ∠CAB = ∠DAB.",
+      "3. The side AB is common to both triangles, so AB = AB.",
+      "4. By SAS rule (Side AC=AD, included Angle ∠CAB=∠DAB, Side AB=AB), ΔABC ≅ ΔABD."
+    ]
+  },
+  {
+    "id": "BLK_TRI_007",
+    "type": "common_mistakes",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3,
+    "bloom": "Analyze",
+    "content": {
+      "title": "Beware of SSA / ASS!",
+      "text": "Side-Side-Angle (SSA) is NOT a valid congruence criterion. If you know two sides and a non-included angle, you might be able to draw two completely different triangles! Always ensure the angle is INCLUDED (SAS)."
+    },
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_005"
+      ],
+      "next_topics": [
+        "BLK_TRI_008"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Recognize that SSA is an invalid criteria.",
+      "common_misconceptions": [
+        "Thinking that any 3 corresponding parts being equal is enough for congruence."
+      ],
+      "tutor_hint": "Draw an example where a side can swing to two different positions while keeping the SSA conditions identical (The ambiguous case)."
+    }
+  },
+  {
+    "id": "BLK_TRI_008",
+    "type": "formula",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_002"
+      ],
+      "next_topics": [
+        "BLK_TRI_009"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Learn the ASA and AAS criteria.",
+      "common_misconceptions": [
+        "Confusing ASA with SAS."
+      ],
+      "tutor_hint": "Remind them that as long as you have two angles and ANY side corresponding, the triangles are congruent (ASA or AAS)."
+    },
+    "title": "ASA (Angle-Side-Angle) & AAS Congruence Rules",
+    "formula": "ASA Theorem",
+    "explanation": "Two triangles are congruent if two angles and the included side of one triangle are equal to two angles and the included side of the other triangle. Note: Because the sum of angles is 180°, if two angles match, the third must too. Therefore, AAS (Angle-Angle-Side) is also a valid rule!"
+  },
+  {
+    "id": "BLK_TRI_009",
+    "type": "worked_example",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 7,
+    "bloom": "Apply",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_008"
+      ],
+      "next_topics": [
+        "BLK_TRI_010"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Apply ASA by combining it with parallel lines concepts.",
+      "common_misconceptions": [
+        "Missing the vertically opposite angles or alternate interior angles."
+      ],
+      "tutor_hint": "If a student doesn't know where to start, ask: 'What do parallel lines tell us about angles when they are cut by a transversal?'"
+    },
+    "title": "Proving Congruence with ASA",
+    "problem": "Line segment AB is parallel to another line segment CD. O is the mid-point of AD. Prove that ΔAOB ≅ ΔDOC.",
+    "steps": [
+      "1. Consider ΔAOB and ΔDOC.",
+      "2. Since AB || CD and AD is a transversal, alternate interior angles are equal: ∠OAB = ∠ODC.",
+      "3. Vertically opposite angles are equal: ∠AOB = ∠DOC.",
+      "4. Since O is the mid-point of AD, side AO = OD.",
+      "5. Therefore, by ASA congruence rule (Angle-Side-Angle), ΔAOB ≅ ΔDOC."
+    ]
+  },
+  {
+    "id": "BLK_TRI_010",
+    "type": "theory",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [],
+      "next_topics": [
+        "BLK_TRI_011"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Understand the relationship between equal sides and equal angles in a triangle.",
+      "common_misconceptions": [
+        "Thinking the base is always horizontal.",
+        "Confusing which angles are equal."
+      ],
+      "tutor_hint": "Trace the equal sides down to the angles they 'open up' to. Those are the equal angles."
+    },
+    "title": "Properties of an Isosceles Triangle",
+    "text": "An isosceles triangle is a triangle with at least two equal sides. A very important theorem states: Angles opposite to equal sides of an isosceles triangle are equal. Conversely, the sides opposite to equal angles of a triangle are equal."
+  },
+  {
+    "id": "BLK_TRI_011",
+    "type": "worked_example",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Apply",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_010"
+      ],
+      "next_topics": [
+        "BLK_TRI_012"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Calculate missing angles using isosceles triangle properties.",
+      "common_misconceptions": [],
+      "tutor_hint": "Remind the student that the angle sum of a triangle is always 180°."
+    },
+    "title": "Finding Unknown Angles in Isosceles Triangles",
+    "problem": "In ΔXYZ, XY = XZ and ∠Y = 55°. Find ∠X.",
+    "steps": [
+      "1. We know XY = XZ. Therefore, the angles opposite these sides are equal.",
+      "2. Angle opposite to XY is ∠Z. Angle opposite to XZ is ∠Y. So, ∠Z = ∠Y = 55°.",
+      "3. The sum of angles in a triangle is 180°. So, ∠X + ∠Y + ∠Z = 180°.",
+      "4. ∠X + 55° + 55° = 180° => ∠X + 110° = 180° => ∠X = 70°."
+    ]
+  },
+  {
+    "id": "BLK_TRI_012",
+    "type": "formula",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_002"
+      ],
+      "next_topics": [
+        "BLK_TRI_013"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Learn the SSS congruence criterion.",
+      "common_misconceptions": [],
+      "tutor_hint": "Can you deform a triangle made of 3 rigid sticks? No! That's why SSS works."
+    },
+    "title": "SSS (Side-Side-Side) Congruence Rule",
+    "formula": "SSS Theorem",
+    "explanation": "If three sides of one triangle are equal to the three sides of another triangle, then the two triangles are congruent. This is intuitive: if you have three sticks of fixed lengths, you can only build one unique triangle with them!"
+  },
+  {
+    "id": "BLK_TRI_013",
+    "type": "formula",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4,
+    "bloom": "Understand",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_002"
+      ],
+      "next_topics": [
+        "BLK_TRI_014"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Learn the RHS congruence criterion for right triangles.",
+      "common_misconceptions": [
+        "Applying RHS when the triangles are not right-angled.",
+        "Confusing RHS with SAS."
+      ],
+      "tutor_hint": "RHS is a special case. Always verify that a 90° angle exists before trying to apply it!"
+    },
+    "title": "RHS (Right angle-Hypotenuse-Side) Congruence Rule",
+    "formula": "RHS Theorem",
+    "explanation": "If in two right triangles the hypotenuse and one side of one triangle are equal to the hypotenuse and one side of the other triangle, then the two triangles are congruent. Note: This only applies to right-angled triangles!"
+  },
+  {
+    "id": "BLK_TRI_014",
+    "type": "worked_example",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8,
+    "bloom": "Analyze",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_013",
+        "BLK_TRI_010"
+      ],
+      "next_topics": [
+        "BLK_TRI_015"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Synthesize RHS and CPCT to prove geometric theorems.",
+      "common_misconceptions": [
+        "Trying to prove the theorem using the theorem itself (circular logic)."
+      ],
+      "tutor_hint": "Point out how powerful congruence is—we just proved a fundamental theorem from scratch!"
+    },
+    "title": "Using RHS to Prove Properties",
+    "problem": "ABC is an isosceles triangle with AB = AC. Draw AP ⊥ BC to show that ∠B = ∠C.",
+    "steps": [
+      "1. Draw altitude AP perpendicular to BC. Thus, ∠APB = ∠APC = 90°.",
+      "2. In right triangles ΔAPB and ΔAPC:",
+      "   - Hypotenuse AB = Hypotenuse AC (Given)",
+      "   - Side AP = Side AP (Common)",
+      "   - ∠APB = ∠APC = 90°",
+      "3. By RHS congruence rule, ΔAPB ≅ ΔAPC.",
+      "4. Therefore, by CPCT, ∠B = ∠C. (This proves the isosceles triangle theorem!)"
+    ]
+  },
+  {
+    "id": "BLK_TRI_015",
+    "type": "teacher_tip",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2,
+    "bloom": "Remember",
+    "content": {
+      "title": "How to choose the right rule?",
+      "text": "1. Got 3 sides? SSS.\n2. Got 2 sides and the angle between them? SAS.\n3. Got 2 angles and any side? ASA or AAS.\n4. Got a right angle and the longest side (hypotenuse)? RHS.\n5. Got 2 sides and a non-included angle? STOP! That's SSA, which is a trap!"
+    },
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [
+        "BLK_TRI_005",
+        "BLK_TRI_008",
+        "BLK_TRI_012",
+        "BLK_TRI_013"
+      ],
+      "next_topics": [
+        "BLK_TRI_016"
+      ]
+    },
+    "ai_context": {
+      "learning_goal": "Provide a mental map to select the appropriate congruence criterion.",
+      "common_misconceptions": [],
+      "tutor_hint": "Ask the student to recite this checklist when stuck on a proof."
+    }
+  },
+  {
+    "id": "BLK_TRI_016",
+    "type": "summary",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4,
+    "bloom": "Evaluate",
+    "knowledge_graph_links": {
+      "related_topics": [],
+      "prerequisites": [],
+      "next_topics": []
+    },
+    "ai_context": {
+      "learning_goal": "Summarize and solidify the entire chapter's concepts.",
+      "common_misconceptions": [],
+      "tutor_hint": "Review the summary and ensure they can define each acronym."
+    },
+    "title": "Chapter Summary: Congruence in a Nutshell",
+    "text": "We have learned that congruent triangles are identical in shape and size. We can prove congruence using 4 main rules: SAS, ASA (or AAS), SSS, and RHS. We must never use SSA or AAA. Finally, CPCT (Corresponding Parts of Congruent Triangles) allows us to state that all other matching parts are equal once congruence is proven."
+  }
+]

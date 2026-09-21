@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "id": "cbse_class9_maths_ch1",
+    "title": "Number Systems",
+    "subject": "Maths",
+    "grade": "9",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 45,
+    "learning_outcomes": [
+      "Rational and Irrational Numbers",
+      "Real Numbers and Their Decimal Expansions",
+      "Representing Real Numbers on the Number Line",
+      "Operations on Real Numbers",
+      "Laws of Exponents for Real Numbers"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the complete Gold Standard Pedagogy of this chapter.",
+      "common_misconceptions": []
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_0_1",
+      "type": "hook",
+      "title": "The Ancient Crisis of Geometry",
+      "body": "Picture yourself in ancient Greece, belonging to the secret brotherhood of Pythagoreans. You firmly believe that everything in the universe can be measured and expressed as a clean ratio of whole numbers—whole numbers are the building blocks of reality. Then, someone draws a simple square with sides of length 1 and decides to measure its diagonal using the Pythagorean theorem. Applying $a^2 + b^2 = c^2$, the diagonal is $\\sqrt{1^2 + 1^2} = \\sqrt{2}$. Suddenly, absolute panic strikes. Try as they might, no two whole numbers can be divided to give an exact value for $\\sqrt{2}$. This ghost in the numbers shook the ancient world to its core and forced mathematicians to expand their universe forever.",
+      "title_hi": "ज्यामिति का प्राचीन संकट",
+      "body_hi": "पाइथागोरस के गुप्त भाईचारे से संबंधित, प्राचीन ग्रीस में स्वयं की कल्पना करें। आपका दृढ़ विश्वास है कि ब्रह्मांड में हर चीज़ को पूर्ण संख्याओं के स्वच्छ अनुपात के रूप में मापा और व्यक्त किया जा सकता है - पूर्ण संख्याएँ वास्तविकता के निर्माण खंड हैं। फिर, कोई व्यक्ति लंबाई 1 की भुजाओं वाला एक साधारण वर्ग बनाता है और पाइथागोरस प्रमेय का उपयोग करके इसके विकर्ण को मापने का निर्णय लेता है। $a^2 + b^2 = c^2$ लगाने पर विकर्ण $\\sqrt{1^2 + 1^2} = \\sqrt{2}$ है। अचानक, पूरी तरह से दहशत फैल जाती है। चाहे जितनी कोशिश करें, किसी भी दो पूर्ण संख्याओं को $\\sqrt{2}$ का सटीक मान देने के लिए विभाजित नहीं किया जा सकता। संख्याओं के इस भूत ने प्राचीन दुनिया को अंदर तक हिलाकर रख दिया और गणितज्ञों को अपने ब्रह्मांड का हमेशा के लिए विस्तार करने के लिए मजबूर कर दिया।"
+    },
+    {
+      "id": "KOBJ_0_2",
+      "type": "socratic",
+      "question": "If you calculate the decimal expansion of $\\pi$ or $\\sqrt{2}$, it goes on forever without ever settling into a repeating pattern. Based on this, can these numbers ever be written as a simple fraction of two integers?",
+      "options": [
+        "Yes, because any decimal can eventually be turned into a fraction if we use a large enough denominator.",
+        "No, because a terminating or repeating decimal is a strict requirement for a number to be expressed as a fraction of integers.",
+        "Yes, all infinite decimals are fractions in disguise.",
+        "No, but only because we haven't found the right two integers yet."
+      ],
+      "correct_index": 1,
+      "explanation": "Precisely! A number can only be expressed as a ratio of integers (a fraction $p/q$) if its decimal expansion either terminates (stops) or non-terminates with a repeating block of digits. If it goes on forever randomly without repeating, no simple fraction can capture it."
+    },
+    {
+      "id": "KOBJ_0_3",
+      "type": "theory",
+      "title": "Rational and Irrational Numbers: Deep Dive",
+      "body": "To truly understand the real number system in Grade 9, we must partition the number line into two fundamental tribes: Rational Numbers and Irrational Numbers. A rational number is formally defined as any number that can be expressed in the form $p/q$, where $p$ and $q$ are integers and $q \\neq 0$. This definition is remarkably generous: it includes integers (like $-5$ written as $-5/1$), terminating decimals (like $0.75$ which is $3/4$), and repeating decimals (like $0.333...$ which is $1/3$). When converted to decimals, rational numbers either terminate or exhibit a repeating pattern of digits. On the flip side, we have irrational numbers—the rebels of the number line. An irrational number is a real number that cannot be written as a simple fraction $p/q$. Their decimal expansions are infinite and non-recurring. Classic examples include non-perfect square roots (like $\\sqrt{2}, \\sqrt{3}, \\sqrt{11}$), transcendental numbers like $\\pi$ (the ratio of a circle's circumference to its diameter), and Euler's number $e$. Together, rational and irrational numbers fill every single point on the continuous number line, leaving no gaps, and form the magnificent set of Real Numbers ($\\mathbb{R}$).",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "title_hi": "तर्कसंगत और अपरिमेय संख्याएँ: गहरा गोता",
+      "body_hi": "ग्रेड 9 में वास्तविक संख्या प्रणाली को सही मायने में समझने के लिए, हमें संख्या रेखा को दो मूलभूत जनजातियों में विभाजित करना होगा: तर्कसंगत संख्याएं और अपरिमेय संख्याएं। एक तर्कसंगत संख्या को औपचारिक रूप से किसी भी संख्या के रूप में परिभाषित किया जाता है जिसे $p/q$ के रूप में व्यक्त किया जा सकता है, जहां $p$ और $q$ पूर्णांक हैं और $q \\neq 0$। यह परिभाषा उल्लेखनीय रूप से उदार है: इसमें पूर्णांक (जैसे $-5$ को $-5/1$ के रूप में लिखा जाता है), अंतिम दशमलव (जैसे $0.75$ जो कि $3/4$ है), और दोहराए जाने वाले दशमलव (जैसे $0.333...$ जो कि $1/3$ है) शामिल हैं। जब दशमलव में परिवर्तित किया जाता है, तो तर्कसंगत संख्याएं या तो समाप्त हो जाती हैं या अंकों का दोहराव पैटर्न प्रदर्शित करती हैं। दूसरी ओर, हमारे पास अपरिमेय संख्याएँ हैं - संख्या रेखा के विद्रोही। एक अपरिमेय संख्या एक वास्तविक संख्या होती है जिसे साधारण भिन्न $p/q$ के रूप में नहीं लिखा जा सकता है। उनके दशमलव विस्तार अनंत और अनावर्ती हैं। क्लासिक उदाहरणों में गैर-पूर्ण वर्गमूल (जैसे $\\sqrt{2}, \\sqrt{3}, \\sqrt{11}$), पारलौकिक संख्याएँ जैसे $\\pi$ (किसी वृत्त की परिधि और उसके व्यास का अनुपात), और यूलर की संख्या $e$ शामिल हैं। साथ में, तर्कसंगत और अपरिमेय संख्याएँ निरंतर संख्या रेखा पर हर एक बिंदु को भरती हैं, कोई अंतराल नहीं छोड़ती हैं, और वास्तविक संख्याओं का शानदार सेट बनाती हैं ($\\mathbb{R}$)।"
+    },
+    {
+      "id": "KOBJ_0_4",
+      "type": "knowledge_check",
+      "question": "Which of the following statements is entirely correct regarding rational and irrational numbers?",
+      "options": [
+        "The sum of two irrational numbers is always an irrational number.",
+        "The product of a non-zero rational number and an irrational number is always irrational.",
+        "Between any two distinct rational numbers, there is only a finite number of rational numbers.",
+        "Every real number can be written as a repeating decimal."
+      ],
+      "correct_index": 1,
+      "explanation": "Correct! If you multiply a non-zero rational number (say, $3$) by an irrational number (say, $\\sqrt{2}$), the result ($3\\sqrt{2}$) is always irrational. Option A is false because $\\sqrt{2} + (-\\sqrt{2}) = 0$ (which is rational). Option C is false because there are infinitely many rational numbers between any two rational numbers (density property). Option D is false because irrational numbers have non-terminating, non-repeating decimals.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_RN_1",
+      "type": "hook",
+      "title": "The Infinite Tail of Division",
+      "body": "Imagine you are dividing a single pizza equally among three friends. You take out your calculator and punch in 1 ÷ 3. Instantly, the screen lights up with 0.33333333... You wait, wondering if the threes will ever stop, but they just keep marching across the screen like an endless army. Now, what happens if you try to divide 22 by 7? Or find the square root of 2? You step into a mysterious mathematical dimension where some numbers end cleanly, while others stretch out infinitely, sometimes repeating in strange, hypnotic loops, and sometimes hiding every single shred of a pattern.",
+      "title_hi": "विभाजन की अनंत पूँछ",
+      "body_hi": "कल्पना कीजिए कि आप एक पिज़्ज़ा को तीन दोस्तों के बीच बराबर-बराबर बाँट रहे हैं। आप अपना कैलकुलेटर निकालते हैं और 1 ÷ 3 में पंच करते हैं। तुरंत, स्क्रीन 0.33333333 के साथ चमकती है... आप इंतजार करते हैं, सोचते हैं कि क्या ये तीनों कभी रुकेंगे, लेकिन वे एक अंतहीन सेना की तरह स्क्रीन पर मार्च करते रहते हैं। अब, यदि आप 22 को 7 से विभाजित करने का प्रयास करें तो क्या होगा? या 2 का वर्गमूल ज्ञात करें? आप एक रहस्यमय गणितीय आयाम में कदम रखते हैं जहां कुछ संख्याएं सफाई से समाप्त होती हैं, जबकि अन्य अनंत रूप से फैलती हैं, कभी-कभी अजीब, सम्मोहक लूप में दोहराई जाती हैं, और कभी-कभी एक पैटर्न के हर एक टुकड़े को छुपाती हैं।"
+    },
+    {
+      "id": "KOBJ_RN_2",
+      "type": "socratic",
+      "question": "When you perform long division for fractions like 1/2, 1/4, and 1/3, what fundamentally separates their decimal outputs into different behaviors?",
+      "options": [
+        "Some decimals terminate completely, while others go on forever without ever repeating.",
+        "Some decimals terminate completely, while others go on forever with repeating patterns.",
+        "All fractions eventually terminate if you carry out the division long enough.",
+        "Fractions with odd denominators always terminate, while even denominators never terminate."
+      ],
+      "correct_index": 1,
+      "explanation": "When dividing integers, the remainders are always finite in number. This forces the long division process to either reach a remainder of zero (terminating decimal) or start repeating a previous remainder, creating a repeating (non-terminating recurring) decimal."
+    },
+    {
+      "id": "KOBJ_RN_3",
+      "type": "theory",
+      "title": "Real Numbers and Their Decimal Expansions: Deep Dive",
+      "body": "To truly understand the architecture of real numbers, we must examine what happens when we convert fractions and irrational numbers into their decimal representations through long division. Every real number is either rational or irrational, and their decimal expansions reveal their true DNA. For rational numbers (numbers of the form p/q where q ≠ 0), the decimal expansion is either terminating—meaning it comes to a complete halt after a finite number of decimal places, like 5/8 = 0.625—or non-terminating recurring, meaning it goes on forever but hits a repeating block of digits, like 1/7 = 0.142857142857... The 'why' behind this lies in the mechanics of long division: because the divisor 'q' has only a finite number of possible remainders, the remainder must eventually either become zero (terminating) or repeat a previous remainder, locking the quotient into an infinite repeating loop. Conversely, if a decimal expansion is non-terminating and non-recurring—meaning it never ends and never settles into a repeating pattern (such as 1.41421356... or 3.14159265...)—it cannot possibly be expressed as a simple fraction of two integers. These are the irrational numbers. Together, terminating and non-terminating recurring decimals represent the entire universe of rational numbers, while non-terminating non-recurring decimals fill the remaining gaps on the number line, perfectly completing the continuum of real numbers.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "title_hi": "वास्तविक संख्याएँ और उनके दशमलव विस्तार: गहरा गोता",
+      "body_hi": "वास्तविक संख्याओं की संरचना को सही मायने में समझने के लिए, हमें यह जांचना चाहिए कि जब हम अंशों और अपरिमेय संख्याओं को लंबे विभाजन के माध्यम से उनके दशमलव प्रतिनिधित्व में परिवर्तित करते हैं तो क्या होता है। प्रत्येक वास्तविक संख्या या तो तर्कसंगत या अपरिमेय होती है, और उनके दशमलव विस्तार से उनका वास्तविक डीएनए पता चलता है। तर्कसंगत संख्याओं के लिए (प्रपत्र पी/क्यू की संख्या जहां क्यू ≠ 0), दशमलव विस्तार या तो समाप्त हो रहा है - जिसका अर्थ है कि यह दशमलव स्थानों की एक सीमित संख्या के बाद पूरी तरह से रुक जाता है, जैसे 5/8 = 0.625 - या गैर-समाप्ति आवर्ती, जिसका अर्थ है कि यह हमेशा के लिए चलता रहता है लेकिन अंकों के एक दोहराव वाले ब्लॉक को हिट करता है, जैसे 1/7 = 0.142857142857 ... इसके पीछे 'क्यों' दीर्घ विभाजन की यांत्रिकी में निहित है: क्योंकि भाजक 'q' में संभावित शेषफलों की केवल एक सीमित संख्या होती है, शेष को अंततः या तो शून्य (समाप्ति) हो जाना चाहिए या पिछले शेष को दोहराना चाहिए, भागफल को एक अनंत दोहराव वाले लूप में बंद कर देना चाहिए। इसके विपरीत, यदि दशमलव विस्तार गैर-समाप्ति और गैर-आवर्ती है - जिसका अर्थ है कि यह कभी समाप्त नहीं होता है और कभी भी दोहराए जाने वाले पैटर्न में व्यवस्थित नहीं होता है (जैसे कि 1.41421356... या 3.14159265...) - इसे संभवतः दो पूर्णांकों के एक साधारण अंश के रूप में व्यक्त नहीं किया जा सकता है। ये अपरिमेय संख्याएँ हैं। एक साथ, समाप्ति और गैर-समाप्ति आवर्ती दशमलव तर्कसंगत संख्याओं के पूरे ब्रह्मांड का प्रतिनिधित्व करते हैं, जबकि गैर-समाप्ति गैर-आवर्ती दशमलव संख्या रेखा पर शेष अंतराल को भरते हैं, वास्तविक संख्याओं की निरंतरता को पूरी तरह से पूरा करते हैं।"
+    },
+    {
+      "id": "KOBJ_RN_4",
+      "type": "knowledge_check",
+      "question": "Which of the following best describes the decimal expansion of the number 7/16?",
+      "options": [
+        "Non-terminating and repeating",
+        "Terminating",
+        "Non-terminating and non-repeating",
+        "Undefined"
+      ],
+      "correct_index": 1,
+      "explanation": "A fraction p/q has a terminating decimal expansion if the prime factorization of its denominator q (in simplest form) contains only powers of 2, powers of 5, or both. Here, the denominator 16 = 2^4, which means 7/16 will terminate (specifically, 7/16 = 0.4375).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2_1",
+      "type": "hook",
+      "title": "The Infinite Zoom of the Number Line",
+      "body": "Imagine you have a powerful microscope that can magnify things infinitely. If you look at a standard number line, you see integers like 0, 1, 2, and 3 spread out cleanly. But what happens when you try to place a fraction or a decimal like 2.658 between 2 and 3? It feels like trying to squeeze a grain of sand into a narrow gap. Yet, as we will discover, that gap is actually a gateway to an infinite universe of numbers waiting to be revealed through successive magnification.",
+      "title_hi": "संख्या रेखा का अनंत ज़ूम",
+      "body_hi": "कल्पना कीजिए कि आपके पास एक शक्तिशाली माइक्रोस्कोप है जो चीजों को असीमित रूप से बड़ा कर सकता है। यदि आप एक मानक संख्या रेखा को देखते हैं, तो आपको 0, 1, 2, और 3 जैसे पूर्णांक स्पष्ट रूप से फैले हुए दिखाई देते हैं। लेकिन क्या होता है जब आप 2 और 3 के बीच 2.658 जैसे भिन्न या दशमलव को रखने का प्रयास करते हैं? ऐसा महसूस होता है जैसे रेत के एक कण को ​​एक संकीर्ण खाई में निचोड़ने की कोशिश की जा रही हो। फिर भी, जैसा कि हम पाएंगे, वह अंतर वास्तव में संख्याओं के अनंत ब्रह्मांड का प्रवेश द्वार है जो क्रमिक आवर्धन के माध्यम से प्रकट होने की प्रतीक्षा कर रहा है।"
+    },
+    {
+      "id": "KOBJ_2_2",
+      "type": "socratic",
+      "question": "If you are asked to locate the decimal number 3.765 on a number line, between which two whole numbers does it primarily lie, and how many decimal places must you zoom in to see its exact position?",
+      "options": [
+        "Between 2 and 3; zoomed in 1 time",
+        "Between 3 and 4; zoomed in 3 successive times",
+        "Between 37 and 38; zoomed in 2 times",
+        "Between 0 and 10; no zooming needed"
+      ],
+      "correct_index": 1,
+      "explanation": "3.765 is greater than 3 but less than 4, so it lies between 3 and 4. To locate it precisely down to the thousandths place (3 decimal places), we must successively magnify the interval between 3 and 4 into tenths, then hundredths, and finally thousandths."
+    },
+    {
+      "id": "KOBJ_2_3",
+      "type": "theory",
+      "title": "Representing Real Numbers on the Number Line: Deep Dive",
+      "body": "The process of visualizing real numbers on a number line is fundamentally rooted in a geometric technique known as successive magnification. Every real number has a unique decimal expansion. When dealing with terminating decimals like 2.665, or non-terminating recurring decimals that represent rational numbers, we can pinpoint their exact locations through a step-by-step zooming process. We start by looking at the whole number bounds—for instance, 2.665 lies between 2 and 3. We then divide the unit distance between 2 and 3 into ten equal parts, representing tenths (2.1, 2.2, 2.3, ...). Observing that 2.665 lies between 2.6 and 2.7, we magnify this specific interval and divide it again into ten equal parts representing hundredths (2.61, 2.62, ..., 2.7). Finally, zooming into the interval between 2.66 and 2.67 and dividing it into ten parts yields the thousandths, allowing us to accurately mark 2.665. This brilliant visualization confirms a profound mathematical truth: the geometric line is a continuous, unbroken continuum filled infinitely with real numbers, where every single point corresponds to one and only one real number, and vice versa.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "title_hi": "संख्या रेखा पर वास्तविक संख्याओं का प्रतिनिधित्व: गहरा गोता",
+      "body_hi": "किसी संख्या रेखा पर वास्तविक संख्याओं को देखने की प्रक्रिया मूल रूप से एक ज्यामितीय तकनीक में निहित है जिसे क्रमिक आवर्धन के रूप में जाना जाता है। प्रत्येक वास्तविक संख्या का एक अद्वितीय दशमलव विस्तार होता है। जब 2.665 जैसे सांत दशमलव, या गैर-समाप्ति आवर्ती दशमलव जो तर्कसंगत संख्याओं का प्रतिनिधित्व करते हैं, के साथ काम करते समय, हम चरण-दर-चरण ज़ूमिंग प्रक्रिया के माध्यम से उनके सटीक स्थानों को इंगित कर सकते हैं। हम पूर्ण संख्या सीमा को देखकर शुरू करते हैं - उदाहरण के लिए, 2.665 2 और 3 के बीच स्थित है। फिर हम 2 और 3 के बीच की इकाई दूरी को दस बराबर भागों में विभाजित करते हैं, जो दसवें (2.1, 2.2, 2.3, ...) का प्रतिनिधित्व करते हैं। यह देखते हुए कि 2.665 2.6 और 2.7 के बीच स्थित है, हम इस विशिष्ट अंतराल को बढ़ाते हैं और इसे फिर से सौवें (2.61, 2.62, ..., 2.7) का प्रतिनिधित्व करने वाले दस बराबर भागों में विभाजित करते हैं। अंत में, 2.66 और 2.67 के बीच के अंतराल को ज़ूम करके और इसे दस भागों में विभाजित करने पर हजारवां भाग प्राप्त होता है, जिससे हमें 2.665 को सटीक रूप से चिह्नित करने की अनुमति मिलती है। यह शानदार दृश्य एक गहन गणितीय सत्य की पुष्टि करता है: ज्यामितीय रेखा वास्तविक संख्याओं से अनंत रूप से भरी एक सतत, अखंड सातत्य है, जहां हर एक बिंदु एक और केवल एक वास्तविक संख्या से मेल खाता है, और इसके विपरीत।"
+    },
+    {
+      "id": "KOBJ_2_4",
+      "type": "knowledge_check",
+      "question": "During the process of visualizing 4.26̄ (where 26 repeats infinitely) on the number line up to 4 decimal places (i.e., 4.2626), between which two hundredths on the number line will you find this number in the third stage of magnification?",
+      "options": [
+        "Between 4.2 and 4.3",
+        "Between 4.26 and 4.27",
+        "Between 4.262 and 4.263",
+        "Between 4.0 and 4.5"
+      ],
+      "correct_index": 2,
+      "explanation": "To locate 4.2626, the first stage narrows it to between 4 and 5. The second stage (tenths) narrows it to between 4.2 and 4.3. The third stage (hundredths) narrows it to between 4.26 and 4.27. Finally, zooming into the thousandths to place 4.2626 means looking between 4.262 and 4.263."
+    },
+    {
+      "id": "KOBJ_2_5",
+      "type": "connection",
+      "title": "Mapping Our World: From Number Lines to GPS Coordinates",
+      "body": "Think about how digital maps and GPS navigation systems work on your smartphone. When you look at Earth from space, it's like viewing the whole number line—you see continents and countries. But as you pinch and zoom in on your screen to find a specific street or coffee shop, the map dynamically loads finer details, dividing regions into neighborhoods, streets, and finally building numbers. This digital zooming mechanism is an exact real-world application of successive magnification on a coordinate plane, proving that the abstract mathematical concept of zooming into the number line powers the technology we use to navigate our physical world every single day."
+    },
+    {
+      "id": "KOBJ_4_1",
+      "type": "hook",
+      "title": "The Astronomer's Shortcut",
+      "body": "Imagine you are an astronomer trying to write down the distance between two distant galaxies, or a computer scientist measuring the number of possible states in a quantum bit. You quickly run out of space writing long strings of zeros. Centuries ago, mathematicians devised a brilliant shorthand: instead of writing 10 × 10 × 10 × 10 × 10, write 10⁵. But what happens when we start multiplying, dividing, or raising these shorthand powers when the exponents are not just whole numbers, but real numbers? Welcome to the universe of exponents, where scaling numbers goes beyond simple repetition into a majestic dance of algebraic laws.",
+      "title_hi": "खगोलशास्त्री का शॉर्टकट",
+      "body_hi": "कल्पना कीजिए कि आप एक खगोलशास्त्री हैं जो दो दूर की आकाशगंगाओं के बीच की दूरी लिखने की कोशिश कर रहे हैं, या एक कंप्यूटर वैज्ञानिक हैं जो क्वांटम बिट में संभावित स्थितियों की संख्या माप रहे हैं। शून्य की लंबी शृंखला लिखने में आपकी जगह जल्दी ही खत्म हो जाती है। सदियों पहले, गणितज्ञों ने एक शानदार शॉर्टहैंड तैयार किया था: 10 × 10 × 10 × 10 × 10 लिखने के बजाय, 10⁵ लिखें। लेकिन क्या होता है जब हम इन आशुलिपि घातों को गुणा करना, विभाजित करना या बढ़ाना शुरू करते हैं जब घातांक केवल पूर्ण संख्याएँ नहीं, बल्कि वास्तविक संख्याएँ होती हैं? प्रतिपादकों के ब्रह्मांड में आपका स्वागत है, जहां संख्याओं का मापन सरल दोहराव से परे बीजगणितीय कानूनों के राजसी नृत्य में बदल जाता है।"
+    },
+    {
+      "id": "KOBJ_4_2",
+      "type": "socratic",
+      "question": "If you multiply 2³ by 2⁴, you are essentially multiplying three 2s by four 2s. How many 2s are being multiplied in total, and what general rule does this suggest for combining powers with the same base?",
+      "options": [
+        "You add the exponents: 2^(3+4) = 2⁷",
+        "You multiply the exponents: 2^(3×4) = 2¹²",
+        "You keep the exponents the same: 2³",
+        "You multiply the bases: 4⁷"
+      ],
+      "correct_index": 0,
+      "explanation": "When multiplying exponential expressions with the same base, you keep the base and add the exponents. 2³ × 2⁴ = (2 × 2 × 2) × (2 × 2 × 2 × 2) = 2⁷."
+    },
+    {
+      "id": "KOBJ_4_3",
+      "type": "theory",
+      "title": "Laws of Exponents for Real Numbers: Deep Dive",
+      "body": "In Grade 8, you encountered the laws of exponents for positive integers. Now, in Grade 9, we expand our horizon to real number exponents—meaning our bases are positive real numbers, and our exponents can be integers, fractions, or even irrational numbers. Let $a > 0$ be a real number and let $p$ and $q$ be rational exponents. The foundational laws governing these operations are: First, the Product Rule ($a^p \\cdot a^q = a^{p+q}$), which tells us that multiplying powers with identical bases accumulates their scaling effects by adding their exponents. Second, the Quotient Rule ($a^p / a^q = a^{p-q}$), which demonstrates that division undoes multiplication, resulting in the subtraction of exponents. Third, the Power of a Power Rule ($(a^p)^q = a^{p \\cdot q}$), revealing that repeated scaling multiplies the exponent values. Fourth, the Product to a Power Rule ($(ab)^p = a^p b^p$), showing how exponents distribute over multiplication. Understanding these laws allows mathematicians, engineers, and scientists to simplify impossibly complex expressions, solve exponential equations, and model phenomena ranging from radioactive decay to compound interest with absolute mathematical elegance.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5,
+      "title_hi": "वास्तविक संख्याओं के लिए घातांक के नियम: गहरा गोता",
+      "body_hi": "ग्रेड 8 में, आपने धनात्मक पूर्णांकों के लिए घातांक के नियमों का सामना किया। अब, ग्रेड 9 में, हम अपने क्षितिज को वास्तविक संख्या घातांक तक विस्तारित करते हैं - जिसका अर्थ है कि हमारे आधार सकारात्मक वास्तविक संख्याएँ हैं, और हमारे घातांक पूर्णांक, भिन्न या अपरिमेय संख्याएँ भी हो सकते हैं। मान लीजिए $a > 0$ एक वास्तविक संख्या है और मान लीजिए $p$ और $q$ तर्कसंगत घातांक हैं। इन परिचालनों को नियंत्रित करने वाले मूलभूत कानून हैं: सबसे पहले, उत्पाद नियम ($a^p \\cdot a^q = a^{p+q}$), जो हमें बताता है कि समान आधारों के साथ शक्तियों को गुणा करने से उनके घातांक जोड़कर उनके स्केलिंग प्रभाव जमा हो जाते हैं। दूसरा, भागफल नियम ($a^p / a^q = a^{p-q}$), जो दर्शाता है कि विभाजन गुणन को पूर्ववत करता है, जिसके परिणामस्वरूप घातांक घटते हैं। तीसरा, पावर रूल की शक्ति ($(a^p)^q = a^{p \\cdot q}$), जिससे पता चलता है कि बार-बार स्केल करने से घातांक मान कई गुना बढ़ जाते हैं। चौथा, घात नियम का गुणनफल ($(ab)^p = a^p b^p$), यह दर्शाता है कि घातांक गुणन पर कैसे वितरित होते हैं। इन कानूनों को समझने से गणितज्ञों, इंजीनियरों और वैज्ञानिकों को असंभव रूप से जटिल अभिव्यक्तियों को सरल बनाने, घातीय समीकरणों को हल करने और रेडियोधर्मी क्षय से लेकर चक्रवृद्धि ब्याज तक की घटनाओं को पूर्ण गणितीय सुंदरता के साथ मॉडल करने की अनुमति मिलती है।"
+    },
+    {
+      "id": "KOBJ_4_4",
+      "type": "knowledge_check",
+      "question": "Simplify the expression completely using the laws of exponents: (5^(2/3) × 5^(1/3))²",
+      "options": [
+        "5",
+        "25",
+        "125",
+        "5^(2/9)"
+      ],
+      "correct_index": 1,
+      "explanation": "First, apply the product rule inside the parentheses by adding the exponents: 5^(2/3 + 1/3) = 5^(3/3) = 5^1 = 5. Next, apply the power of a power rule outside the parentheses: (5^1)² = 5^(1 × 2) = 5² = 25.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    }
+  ]
+}

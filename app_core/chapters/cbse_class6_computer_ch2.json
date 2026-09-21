@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "id": "cbse_class_computer_ch2",
+    "title": "Chapter 2: Chapter 2 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand foundational computer concepts and processing logic.",
+      "Explore how digital information is stored and retrieved.",
+      "Analyze the role of software and hardware working together."
+    ],
+    "core_concepts": [
+      "DICT_COMPUTER_HARDWARE",
+      "DICT_COMPUTER_SOFTWARE",
+      "DICT_CPU_PROCESSOR"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the fundamental architecture of computer systems, differentiating between physical components and instructions.",
+      "common_misconceptions": [
+        "Thinking software has physical weight or can be touched directly.",
+        "Believing the computer thinks independently like a human brain."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Invisible Brains Inside Our Desks",
+      "body": "Imagine waking up tomorrow and every digital screen in your house has gone completely blank. Your smart lights won't turn on, your favorite games are silent, and even the kitchen refrigerator refuses to chill your milk. How did boxes made of silicon, glass, and metal become the invisible heartbeat of our modern world? Long before computers could fit in our pockets, they filled entire rooms and hummed with thousands of vacuum tubes. Today, a device smaller than your palm can calculate millions of possibilities in the blink of an eye. Step inside to discover the hidden architecture that makes all of this possible.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What primary material is used to build the tiny microchips that power modern computing devices?",
+      "options": [
+        "Wood",
+        "Silicon",
+        "Rubber"
+      ],
+      "correct_index": 1,
+      "explanation": "Silicon is a semiconductor, making it the ideal material for building microscopic transistors that control electrical signals in computers.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Tangible World of Physical Components",
+      "body": "When we interact with any computing device, the first thing we notice is its physical form. This physical foundation is known as [DICT_COMPUTER_HARDWARE|hardware]. Hardware includes everything you can physically touch, drop, connect, or break—from the heavy glass screen of a monitor to the tiny copper traces inside a motherboard. Without hardware, software would have nowhere to live. Think of hardware as the body of an athlete: bones, muscles, and nerves working together to perform physical tasks. Every piece of hardware is meticulously designed to either input data, process data, store information, or output results for the user to see and hear.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "front": "What term describes the physical, touchable parts of a computer system?",
+      "back": "Hardware",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Hardware Safari Activity",
+      "body": "Walk around your room or classroom. Find three items that count as computer hardware and identify whether they are used for input (like a keyboard) or output (like a speaker).",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 1 Extended: Input and Output Gateways",
+      "body": "Computers are essentially isolated universes unless they have ways to communicate with the outside world. This communication happens through input and output peripherals. Input devices—such as keyboards, mice, microphones, and touchscreens—act as our sensory organs, translating human actions (like tapping a key or speaking a word) into electronic pulses of zeroes and ones that the machine can understand. Conversely, output devices like monitors, printers, and headphones act as the computer's voice and expression, translating those abstract digital pulses back into glowing pixels, printed paper, or sound waves that human senses can easily interpret and enjoy.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which of the following is classified strictly as an input device?",
+      "options": [
+        "Computer monitor",
+        "Headphones",
+        "Keyboard"
+      ],
+      "correct_index": 2,
+      "explanation": "A keyboard allows a user to send data into the computer, making it an input device. Monitors and headphones display or play output.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The Invisible Mind and Instructions",
+      "body": "While hardware provides the physical body, a computer remains an inert pile of metal and plastic without instructions. This is where [DICT_COMPUTER_SOFTWARE|software] comes into play. Software is a collection of code, rules, and algorithms that tell the hardware precisely what to do, step by step. If hardware is the musical instrument, software is the sheet music. Without sheet music, a violin is just wood and strings; with it, it can produce a symphony. Software is entirely intangible—you cannot drop it on your toe or hold it in your hand. It lives as magnetic or electronic patterns stored safely on disk drives and memory chips.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "Is software considered a physical, touchable object?",
+      "back": "No, software is intangible code and instructions.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "The Recipe Analogy",
+      "body": "Explain software to a friend using a cookbook analogy. The oven and bowls are hardware, while the written recipe steps telling you how to bake a cake are the software!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 2 Extended: System Software vs. Application Software",
+      "body": "Not all software does the same job. We generally divide software into two grand categories: system software and application software. System software—such as operating systems (Windows, macOS, Linux)—manages the computer's internal hardware resources, allocates memory, and provides a stable platform for other programs to run. Application software, on the other hand, is designed to help users perform specific, goal-oriented tasks, such as writing a school essay in a word processor, painting a digital portrait, or playing a 3D racing game. Without system software, your computer wouldn't even boot up; without application software, you wouldn't have much fun using it!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "Which software is responsible for managing basic hardware operations and allowing you to boot up your computer?",
+      "options": [
+        "A video game",
+        "An operating system (System Software)",
+        "A web browser"
+      ],
+      "correct_index": 1,
+      "explanation": "The operating system is fundamental system software that manages computer hardware and provides common services for computer programs.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 3: The Grand Coordinator",
+      "body": "At the absolute center of every computing operation sits the [DICT_CPU_PROCESSOR|Central Processing Unit (CPU)]. Often nicknamed the 'brain' of the computer, the CPU is a remarkably complex microchip packed with billions of microscopic switches called transistors. Whenever you click a mouse, open a file, or render a video game frame, the CPU performs three primary actions in rapid succession: Fetch (retrieving an instruction from memory), Decode (interpreting what that instruction means), and Execute (performing the calculation or logical operation). The speed at which it performs these cycles determines how fast and responsive your entire computer system feels.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "What are the three core steps of the CPU instruction cycle?",
+      "back": "Fetch, Decode, Execute",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "teacher_tip",
+      "title": "Human CPU Simulation",
+      "body": "Have one student act as the CPU, another as memory (a notepad), and a third as an input device (handing math problems). Watch how the CPU fetches the problem, decodes it in its head, and shouts out the answer!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 3 Extended: Clock Speed and Multi-Core Power",
+      "body": "Early CPUs had only one 'core', meaning they could only focus on one instruction stream at a time, much like a person juggling a single ball. As technology advanced, engineers figured out how to place multiple processing cores onto a single piece of silicon. Dual-core, quad-core, and octa-core processors can divide complex workloads among separate workers, allowing you to listen to music while downloading a file and rendering 3D graphics simultaneously. Furthermore, clock speed—measured in Gigahertz (GHz)—determines how many billions of cycles a processor can execute per second, pushing the boundaries of lightning-fast computation.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "What does a multi-core processor allow a computer to do more efficiently?",
+      "options": [
+        "Consume electricity without working",
+        "Handle multiple tasks and workloads simultaneously",
+        "Physically expand its keyboard size"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiple cores allow different tasks or threads to be processed at the same time, greatly improving multitasking performance.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 4: Memory and Storage Architecture",
+      "body": "Computers need places to keep data—both temporarily while working on it and permanently for long-term safekeeping. This leads to a crucial distinction between volatile memory (like RAM) and non-volatile storage (like SSDs and hard disks). RAM (Random Access Memory) is lightning-fast workspace memory where active apps live. However, the moment you turn off the computer, RAM is completely wiped clean! Storage devices, on the other hand, retain your photos, documents, and games even when the power is entirely disconnected. Together, RAM and storage form a collaborative team that balances speed and safety.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "What happens to data stored in RAM when the computer is turned off?",
+      "back": "It is completely erased (volatile memory).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "Desk Analogy for Memory",
+      "body": "Compare RAM to your school desk top (where you put current books you are working on and clean off at the end of the day) and storage to your locker or backpack (where things stay safely overnight).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 4 Extended: The Evolution of Storage",
+      "body": "Storage technology has undergone a breathtaking revolution over the past several decades. Traditional Hard Disk Drives (HDDs) relied on mechanical spinning magnetic platters and moving read/write heads—much like an old record player spinning at high speeds. While HDDs offered massive capacity at a low cost, their physical moving parts made them fragile and slower. Today, Solid State Drives (SSDs) have largely replaced mechanical disks. SSDs use microscopic flash memory chips with zero moving parts, allowing data to be retrieved almost instantly, making computers boot in seconds and apps launch without delay.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "Why are Solid State Drives (SSDs) generally faster than traditional Hard Disk Drives (HDDs)?",
+      "options": [
+        "SSDs have spinning magnetic disks that spin faster",
+        "SSDs have no moving mechanical parts and use flash memory",
+        "SSDs are connected to larger external fans"
+      ],
+      "correct_index": 1,
+      "explanation": "Because SSDs use flash memory without mechanical moving parts, data access times are dramatically faster than spinning disks.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Concept 5: The Digital Language of Zeroes and Ones",
+      "body": "Beneath every gorgeous graphic, smooth video, and complex computer game lies a surprisingly simple foundation: binary code. Computers do not understand English, Spanish, or musical notes natively. Instead, they operate using electronic switches that can only be in one of two states: OFF (represented by 0) or ON (represented by 1). Each individual 0 or 1 is called a 'bit' (binary digit). When you group eight bits together, you form a 'byte'. By arranging combinations of 1s and 0s in various patterns, computers encode letters, numbers, colors, and sounds. It is like an infinite alphabet written with only two characters!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "What is the smallest unit of data in a computer, representing either 0 or 1?",
+      "back": "A bit (Binary Digit)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Binary Hand Signals",
+      "body": "Hold up a closed fist for '0' and an open palm for '1'. Practice counting from 0 to 3 using your fingers as binary bits!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Putting It All Together: From Power-On to Productivity",
+      "body": "When you press the power button on your computer, a magnificent symphony of science takes place. First, electricity flows into the motherboard, waking up the CPU. The CPU looks at permanent memory for startup instructions (the BIOS), which loads the operating system from storage into fast RAM. Once the operating system interface appears on your monitor, hardware and software unite in harmony. You move your mouse (input), the CPU calculates coordinates, updates RAM, and commands the screen to illuminate pixels (output)—all in milliseconds. Understanding this interconnected dance gives you true mastery over the digital universe.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "What happens immediately when you press the power button on a computer?",
+      "options": [
+        "The computer deletes all files for security",
+        "Electricity flows to the motherboard and wakes up the CPU",
+        "The screen turns into a touch tablet"
+      ],
+      "correct_index": 1,
+      "explanation": "Power is sent to the motherboard and components, allowing the CPU to begin fetching startup instructions.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

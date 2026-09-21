@@ -1,0 +1,712 @@
+{
+  "metadata": {
+    "id": "cbse_class12_chemistry_ch1",
+    "title": "Chapter 1: Solutions",
+    "subject": "Chemistry",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_001",
+      "type": "hook",
+      "title": "The Mystery of Scuba Divers and the Bends",
+      "title_hi": "स्कूबा गोताखोरों और 'द बेंड्स' का रहस्य",
+      "title_gu": "સ્કૂબા ડાઇવર્સ અને 'ધ બેન્ડ્સ'નું રહસ્ય",
+      "body": "When deep-sea scuba divers ascend too quickly to the surface, nitrogen dissolved in their blood forms painful and dangerous bubbles in their capillaries. Why does gas dissolve more under high pressure underwater and suddenly escape when pressure decreases? The answer lies in the fundamental chemistry of solutions!",
+      "body_hi": "जब गहरे समुद्र में तैरने वाले स्कूबा गोताखोर सतह पर बहुत तेजी से आते हैं, तो उनके रक्त में घुली नाइट्रोजन गैस केशिकाओं में दर्दनाक और खतरनाक बुलबुले बना लेती है। पानी के अंदर उच्च दाब में गैस अधिक क्यों घुलती है और दाब कम होने पर अचानक बाहर क्यों निकलती है? इसका उत्तर विलयन के मौलिक रसायन विज्ञान में छिपा है!",
+      "body_gu": "જ્યારે ઊંડા દરિયામાં તરતા સ્કૂબા ડાઇવર્સ સપાટી પર ખૂબ ઝડપથી આવે છે, ત્યારે તેમના લોહીમાં ઓગળેલો નાઇટ્રોજન વાયુ કેશિકાઓમાં ખૂબ જ દુઃખદાયક અને ખતરનાક પરપોટા બનાવે છે। પાણીની અંદર ઊંચા દબાણે વાયુ વધુ શા માટે ઓગળે છે અને દબાણ ઘટતાં અચાનક બહાર કેમ નીકળે છે? આનો જવાબ દ્રાવણોના મૂળભૂત રસાયણશાસ્ત્રમાં છુપાયેલો છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_002",
+      "type": "socratic_question",
+      "title": "Temperature vs Solubility Thought Experiment",
+      "title_hi": "तापमान बनाम घुलनशीलता विचार प्रयोग",
+      "title_gu": "તાપમાન વિરુદ્ધ દ્રાવ્યતા વિચાર પ્રયોગ",
+      "question": "If you open a cold soda bottle versus a warm soda bottle, which one fizzes out more violently, and why does temperature affect gas solubility in liquids?",
+      "question_hi": "यदि आप एक ठंडी सोडा की बोतल बनाम एक गर्म सोडा की बोतल खोलते हैं, तो कौन सी अधिक तीव्रता से उफनती है, और तापमान तरल पदार्थों में गैस की घुलनशीलता को कैसे प्रभावित करता है?",
+      "question_gu": "જો તમે એક ઠંડી સોડાની બોટલ વિરુદ્ધ ગરમ સોડાની બોટલ ખોલો છો, તો કઈ વધુ તીવ્રતાથી ઉભરાય છે, અને તાપમાન પ્રવાહીમાં વાયુની દ્રાવ્યતાને કેવી રીતે અસર કરે છે?",
+      "options": [
+        "Warm soda fizzes more because gas solubility decreases as temperature increases.",
+        "Cold soda fizzes more because high temperature increases gas solubility.",
+        "Both fizz equally because pressure inside is independent of temperature.",
+        "Warm soda fizzes less because gas turns into liquid at high temperature."
+      ],
+      "options_hi": [
+        "गर्म सोडा अधिक उफनता है क्योंकि तापमान बढ़ने पर गैस की घुलनशीलता घट जाती है।",
+        "ठंडा सोडा अधिक उफनता है क्योंकि उच्च तापमान गैस की घुलनशीलता बढ़ाता है।",
+        "दोनों समान रूप से उफनते हैं क्योंकि अंदर का दाब तापमान से स्वतंत्र होता है।",
+        "गर्म सोडा कम उफनता है क्योंकि उच्च तापमान पर गैस तरल में बदल जाती है।"
+      ],
+      "options_gu": [
+        "ગરમ સોડા વધુ ઉભરાય છે કારણ કે તાપમાન વધતાં વાયુની દ્રાવ્યતા ઘટે છે.",
+        "ઠંડો સોડા વધુ ઉભરાય છે કારણ કે ઊંચું તાપમાન વાયુની દ્રાવ્યતા વધારે છે.",
+        "બંને સરખી રીતે ઉભરાય છે કારણ કે અંદરનું દબાણ તાપમાનથી સ્વતંત્ર છે.",
+        "ગરમ સોડા ઓછો ઉભરાય છે કારણ કે ઊંચા તાપમાને વાયુ પ્રવાહીમાં ફેરવાય છે."
+      ],
+      "correct_index": 0,
+      "explanation": "Dissolution of a gas in a liquid is exothermic. According to Le Chatelier's Principle, increasing temperature shifts equilibrium to release gas, lowering solubility.",
+      "explanation_hi": "तरल में गैस का घुलना एक ऊष्माक्षेपी (exothermic) प्रक्रिया है। ला-शातेलिए के सिद्धांत के अनुसार, तापमान बढ़ाने पर संतुलन गैस छोड़ने की दिशा में विस्थापित होता है, जिससे घुलनशीलता घट जाती है।",
+      "explanation_gu": "પ્રવાહીમાં વાયુનું ઓગળવું એ ઉષ્માક્ષેપક પ્રક્રિયા છે. લી-ચેટલિયરના સિદ્ધાંત મુજબ, તાપમાન વધારતાં સંતુલન વાયુ મુક્ત કરવાની દિશામાં ખસે છે, જેથી દ્રાવ્યતા ઘટે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_003",
+      "type": "discovery",
+      "title": "Investigating Pressure and Gas Solubility (Henry's Law)",
+      "title_hi": "दाब और गैस की घुलनशीलता की जांच (हेनरी का नियम)",
+      "title_gu": "દબાણ અને વાયુની દ્રાવ્યતાની તપાસ (હેનરીનો નિયમ)",
+      "body": "Consider a container containing a liquid solvent and a gas above it at pressure P. When you compress the gas volume with a piston (increasing pressure), the number of gas molecules per unit volume above the solution increases. Consequently, more gas molecules strike the liquid surface per second and enter the solution until a new equilibrium is reached. Thus, solubility of a gas is directly proportional to its partial pressure.",
+      "body_hi": "एक पात्र पर विचार करें जिसमें एक द्रव विलायक है और उसके ऊपर दाब P पर एक गैस है। जब आप पिस्टन द्वारा गैस के आयतन को संपीड़ित करते हैं (दाब बढ़ाते हैं), तो विलयन के ऊपर प्रति इकाई आयतन में गैस अणुओं की संख्या बढ़ जाती है। परिणामस्वरूप, अधिक गैस अणु प्रति सेकंड द्रव की सतह से टकराते हैं और विलयन में प्रवेश करते हैं जब तक कि एक नया संतुलन प्राप्त न हो जाए। इस प्रकार, गैस की घुलनशीलता उसके आंशिक दाब के सीधे आनुपातिक होती है।",
+      "body_gu": "એક પાત્રનો વિચાર કરો જેમાં પ્રવાહી દ્રાવક છે અને તેની ઉપર P દબાણે વાયુ છે. જ્યારે તમે પિસ્ટન વડે વાયુનું કદ દબાવો છો (દબાણ વધારો છો), ત્યારે દ્રાવણની ઉપર પ્રતિ એકમ કદમાં વાયુના અણુઓની સંખ્યા વધે છે. પરિણામે, વધુ વાયુના અણુઓ પ્રતિ સેકન્ડ પ્રવાહીની સપાટી પર અથડાય છે અને નવું સંતુલન સ્થપાય ત્યાં સુધી દ્રાવણમાં પ્રવેશ કરે છે. આમ, વાયુની દ્રાવ્યતા તેના અંશતઃ દબાણના સીધા પ્રમાણમાં હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_004",
+      "type": "theory",
+      "title": "Types of Solutions & Concentration Units",
+      "title_hi": "विलयन के प्रकार एवं सांद्रता की इकाइयाँ",
+      "title_gu": "દ્રાવણોના પ્રકારો અને સાંદ્રતાના એકમો",
+      "body": "A solution is a homogeneous mixture of two or more substances.\n\nConcentration Modes:\n1. Mass Percentage (w/w) = (Mass of component / Total mass) × 100\n2. Mole Fraction (x) = Moles of component / Total moles of all components\n3. Molarity (M) = Moles of solute / Volume of solution in Liters\n4. Molality (m) = Moles of solute / Mass of solvent in kg\n\nNote: Molarity depends on temperature because volume changes with temperature. Molality and Mole Fraction are temperature-independent because they depend only on mass.",
+      "body_hi": "विलयन दो या दो से अधिक पदार्थों का एक समांगी मिश्रण है।\n\nसांद्रता के पद:\n1. द्रव्यमान प्रतिशत (w/w) = (घटक का द्रव्यमान / कुल द्रव्यमान) × 100\n2. मोल अंश (x) = घटक के मोल / सभी घटकों के कुल मोल\n3. मोलरता (M) = विलेय के मोल / विलयन का आयतन (लीटर में)\n4. मोललता (m) = विलेय के मोल / विलायक का द्रव्यमान (किग्रा में)\n\nध्यान दें: मोलरता तापमान पर निर्भर करती है क्योंकि आयतन तापमान के साथ बदलता है। मोललता और मोल अंश तापमान से स्वतंत्र होते हैं क्योंकि वे केवल द्रव्यमान पर निर्भर करते हैं।",
+      "body_gu": "દ્રાવણ એ બે કે તેથી વધુ પદાર્થોનું સમાંગ મિશ્રણ છે.\n\nસાંદ્રતા દર્શાવવાની રીતો:\n1. દળ ટકાવારી (w/w) = (ઘટકનું દળ / કુલ દળ) × 100\n2. મોલ-અંશ (x) = ઘટકના મોલ / તમામ ઘટકોના કુલ મોલ\n3. મોલેરિટી (M) = દ્રાવ્યના મોલ / દ્રાવણનું કદ (લિટર માં)\n4. મોલેલિટી (m) = દ્રાવ્યના મોલ / દ્રાવકનું દળ (કિલોગ્રામ માં)\n\nનોંધ: મોલેરિટી તાપમાન પર આધાર રાખે છે કારણ કે કદ તાપમાન સાથે બદલાય છે. મોલેલિટી અને મોલ-અંશ તાપમાન પર આધાર રાખતા નથી કારણ કે તે ફક્ત દળ પર આધારિત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_005",
+      "type": "knowledge_check",
+      "title": "Temperature Dependence of Concentration",
+      "title_hi": "सांद्रता की तापमान पर निर्भरता",
+      "title_gu": "સાંદ્રતાની તાપમાન પર નિર્ભરતા",
+      "question": "Which of the following concentration units changes when temperature changes?",
+      "question_hi": "तापमान में परिवर्तन होने पर निम्नलिखित में से कौन सी सांद्रता इकाई बदल जाती है?",
+      "question_gu": "તાપમાન બદલાતાં નીચેનામાંથી કયો સાંદ્રતાનો એકમ બદલાય છે?",
+      "options": [
+        "Molality (m)",
+        "Mole fraction (x)",
+        "Mass percentage (w/w)",
+        "Molarity (M)"
+      ],
+      "options_hi": [
+        "मोललता (m)",
+        "मोल अंश (x)",
+        "द्रव्यमान प्रतिशत (w/w)",
+        "मोलरता (M)"
+      ],
+      "options_gu": [
+        "મોલેલિટી (m)",
+        "મોલ-અંશ (x)",
+        "દળ ટકાવારી (w/w)",
+        "મોલેરિટી (M)"
+      ],
+      "correct_index": 3,
+      "explanation": "Molarity is defined as moles per volume of solution. Volume alters with temperature changes, whereas mass remains constant.",
+      "explanation_hi": "मोलरता को प्रति आयतन विलयन में विलेय के मोल के रूप में परिभाषित किया गया है। तापमान परिवर्तन के साथ आयतन बदलता है, जबकि द्रव्यमान स्थिर रहता है।",
+      "explanation_gu": "મોલેરિટી એ દ્રાવણના પ્રતિ કદના મોલ તરીકે વ્યાખ્યાયિત છે. તાપમાનના ફેરફાર સાથે કદ બદલાય છે, જ્યારે દળ અચળ રહે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_006",
+      "type": "theory",
+      "title": "Solubility of Gases and Henry's Law",
+      "title_hi": "गैसों की घुलनशीलता और हेनरी का नियम",
+      "title_gu": "વાયુઓની દ્રાવ્યતા અને હેનરીનો નિયમ",
+      "body": "Henry's Law states: The partial pressure of the gas in vapour phase (p) is proportional to the mole fraction of the gas (x) in the solution.\n\nMathematical Expression:\n p = K_H * x\n\nwhere K_H is Henry's law constant.\n- Higher K_H value at a given pressure means lower solubility of the gas.\n- K_H increases with an increase in temperature, hence gases are less soluble in warm liquids.",
+      "body_hi": "हेनरी का नियम: वाष्प अवस्था में गैस का आंशिक दाब (p), विलयन में गैस के मोल अंश (x) के समानुपाती होता है।\n\nगणितीय व्यंजक:\n p = K_H * x\n\nजहाँ K_H हेनरी का नियम स्थिरांक है।\n- दिए गए दाब पर उच्च K_H मान का अर्थ है गैस की कम घुलनशीलता।\n- तापमान बढ़ने पर K_H का मान बढ़ता है, इसलिए गर्म द्रवों में गैसें कम घुलनशील होती हैं।",
+      "body_gu": "હેનરીનો નિયમ: બાષ્પ કલામાં વાયુનું અંશતઃ દબાણ (p) એ દ્રાવણમાં વાયુના મોલ-અંશ (x) ના સીધા પ્રમાણમાં હોય છે.\n\nગાણિતીક સૂત્ર:\n p = K_H * x\n\nજ્યાં K_H એ હેનરીનો અચળાંક છે.\n- આપેલા દબાણે K_H નું ઊંચું મૂલ્ય વાયુની ઓછી દ્રાવ્યતા દર્શાવે છે.\n- તાપમાન વધતાં K_H નું મૂલ્ય વધે છે, તેથી ગરમ પ્રવાહીમાં વાયુઓ ઓછા દ્રાવ્ય હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_007",
+      "type": "knowledge_check",
+      "title": "Henry's Constant Interpretation",
+      "title_hi": "हेनरी के स्थिरांक की व्याख्या",
+      "title_gu": "હેનરીના અચળાંકનું અર્થઘટન",
+      "question": "If Gas A has K_H = 100 kbar and Gas B has K_H = 25 kbar at 298 K in water, which gas is more soluble at the same pressure?",
+      "question_hi": "यदि जल में 298 K पर गैस A का K_H = 100 kbar और गैस B का K_H = 25 kbar है, तो समान दाब पर कौन सी गैस अधिक घुलनशील है?",
+      "question_gu": "જો પાણીમાં 298 K તાપમાને વાયુ A માટે K_H = 100 kbar અને વાયુ B માટે K_H = 25 kbar હોય, તો સમાન દબાણે કયો વાયુ વધુ દ્રાવ્ય છે?",
+      "options": [
+        "Gas A",
+        "Gas B",
+        "Both are equally soluble",
+        "Solubility cannot be determined without knowing volume"
+      ],
+      "options_hi": [
+        "गैस A",
+        "गैस B",
+        "दोनों समान रूप से घुलनशील हैं",
+        "आयतन जाने बिना घुलनशीलता निर्धारित नहीं की जा सकती"
+      ],
+      "options_gu": [
+        "વાયુ A",
+        "વાયુ B",
+        "બંને સરખા દ્રાવ્ય છે",
+        "કદ જાણ્યા વગર દ્રાવ્યતા નક્કી કરી શકાતી નથી"
+      ],
+      "correct_index": 1,
+      "explanation": "Since p = K_H * x, mole fraction x = p / K_H. Lower K_H gives a higher mole fraction x, meaning Gas B is more soluble.",
+      "explanation_hi": "चूँकि p = K_H * x, मोल अंश x = p / K_H। कम K_H मान उच्च मोल अंश x देता है, जिसका अर्थ है कि गैस B अधिक घुलनशील है।",
+      "explanation_gu": "કારણ કે p = K_H * x, મોલ-અંશ x = p / K_H. ઓછું K_H મૂલ્ય વધુ મોલ-અંશ x આપે છે, એટલે કે વાયુ B વધુ દ્રાવ્ય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_008",
+      "type": "theory",
+      "title": "Raoult's Law and Ideal Solutions",
+      "title_hi": "राउल्ट का नियम और आदर्श विलयन",
+      "title_gu": "રાઉલ્ટનો નિયમ અને આદર્શ દ્રાવણો",
+      "body": "Raoult's Law for Volatile Liquids:\nFor a solution of volatile liquids, the partial vapour pressure of each component is directly proportional to its mole fraction in solution.\n p_A = p°_A * x_A  and  p_B = p°_B * x_B\n Total Pressure P = p_A + p_B = p°_A * x_A + p°_B * x_B\n\nIdeal Solution Characteristics:\n1. Obeys Raoult's law over entire concentration range.\n2. Δ_mix H = 0 (No heat absorbed or evolved).\n3. Δ_mix V = 0 (No expansion or contraction on mixing).\n4. Intermolecular forces A-B are identical to A-A and B-B.",
+      "body_hi": "वाष्पशील द्रवों के लिए राउल्ट का नियम:\nवाष्पशील द्रवों के विलयन में, प्रत्येक घटक का आंशिक वाष्प दाब विलयन में उसके मोल अंश के समानुपाती होता है।\n p_A = p°_A * x_A  तथा  p_B = p°_B * x_B\n कुल दाब P = p_A + p_B = p°_A * x_A + p°_B * x_B\n\nआदर्श विलयन की विशेषताएँ:\n1. सांद्रता की पूरी सीमा में राउल्ट के नियम का पालन करता है।\n2. Δ_mix H = 0 (कोई ऊष्मा अवशोषित या उत्सर्जित नहीं होती)।\n3. Δ_mix V = 0 (मिश्रण पर आयतन में कोई परिवर्तन नहीं होता)।\n4. अंतराआण्विक बल A-B, A-A और B-B के समान होते हैं।",
+      "body_gu": "બાષ્પશીલ પ્રવાહીઓ માટે રાઉલ્ટનો નિયમ:\nબાષ્પશીલ પ્રવાહીના દ્રાવણમાં, દરેક ઘટકનું અંશતઃ બાષ્પદબાણ દ્રાવણમાં તેના મોલ-અંશના સીધા પ્રમાણમાં હોય છે.\n p_A = p°_A * x_A  અને  p_B = p°_B * x_B\n કુલ દબાણ P = p_A + p_B = p°_A * x_A + p°_B * x_B\n\nઆદર્શ દ્રાવણની લાક્ષણિકતાઓ:\n1. સાંદ્રતાના સમગ્ર ગાળામાં રાઉલ્ટના નિયમનું પાલન કરે છે.\n2. Δ_mix H = 0 (ઉષ્મા શોષાતી કે મુક્ત થતી નથી).\n3. Δ_mix V = 0 (મિશ્ર કરવાથી કદમાં ફેરફાર થતો નથી).\n4. A-B ના આંતરઆણ્વીય આકર્ષણ બળો A-A અને B-B જેવા જ હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_009",
+      "type": "theory",
+      "title": "Non-Ideal Solutions and Azeotropes",
+      "title_hi": "अनादर्श विलयन और स्थिरक्वाथी (एज़ियोट्रोप्स)",
+      "title_gu": "બિન-આદર્શ દ્રાવણો અને એઝિયોટ્રોપ્સ",
+      "body": "Non-ideal solutions do not obey Raoult's law across all concentrations.\n\n1. Positive Deviation:\n- A-B forces are WEAKER than A-A and B-B.\n- Δ_mix H > 0, Δ_mix V > 0.\n- Forms Minimum Boiling Azeotrope (e.g., Ethanol + Water 95% mixture).\n\n2. Negative Deviation:\n- A-B forces are STRONGER than A-A and B-B (e.g., Hydrogen bonding between Acetone and Chloroform).\n- Δ_mix H < 0, Δ_mix V < 0.\n- Forms Maximum Boiling Azeotrope (e.g., 68% Nitric acid + Water).",
+      "body_hi": "अनादर्श विलयन सभी सांद्रताओं पर राउल्ट के नियम का पालन नहीं करते हैं।\n\n1. धनात्मक विचलन (Positive Deviation):\n- A-B बल A-A और B-B की तुलना में दुर्बल होते हैं।\n- Δ_mix H > 0, Δ_mix V > 0.\n- निम्नतम क्वथनांक स्थिरक्वाथी बनाते हैं (जैसे, एथेनॉल + जल 95% मिश्रण)।\n\n2. ऋणात्मक विचलन (Negative Deviation):\n- A-B बल A-A और B-B की तुलना में अधिक प्रबल होते हैं (जैसे, एसीटोन और क्लोरोफॉर्म के बीच हाइड्रोजन बंधन)।\n- Δ_mix H < 0, Δ_mix V < 0.\n- उच्चतम क्वथनांक स्थिरक्वाथी बनाते हैं (जैसे, 68% नाइट्रिक अम्ल + जल)।",
+      "body_gu": "બિન-આદર્શ દ્રાવણો બધી સાંદ્રતાએ રાઉલ્ટના નિયમનું પાલન કરતા નથી.\n\n1. ધન વિચલન (Positive Deviation):\n- A-B બળો A-A અને B-B કરતાં નિર્બળ હોય છે.\n- Δ_mix H > 0, Δ_mix V > 0.\n- ન્યૂનતમ ઉત્કલન એઝિયોટ્રોપ બનાવે છે (દા.ત., ઇથેનોલ + પાણી 95% મિશ્રણ).\n\n2. ઋણ विचलन (Negative Deviation):\n- A-B બળો A-A અને B-B કરતાં વધુ પ્રબળ હોય છે (દા.ત., એસીટોન અને ક્લોરોફોર્મ વચ્ચે હાઇડ્રોજન બંધન).\n- Δ_mix H < 0, Δ_mix V < 0.\n- મહત્તમ ઉત્કલન એઝિયોટ્રોપ બનાવે છે (દા.ત., 68% નાઇટ્રિક એસિડ + પાણી)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_010",
+      "type": "knowledge_check",
+      "title": "Azeotropes & Deviations",
+      "title_hi": "स्थिरक्वाथी और विचलन",
+      "title_gu": "એઝિયોટ્રોપ્સ અને વિચલનો",
+      "question": "A mixture of Acetone and Chloroform shows negative deviation from Raoult's law. What happens to heat and volume upon mixing?",
+      "question_hi": "एसीटोन और क्लोरोफॉर्म का मिश्रण राउल्ट के नियम से ऋणात्मक विचलन प्रदर्शित करता है। मिलाने पर ऊष्मा और आयतन का क्या होता है?",
+      "question_gu": "એસીટોન અને ક્લોરોફોર્મનું મિશ્રણ રાઉલ્ટના નિયમથી ઋણ વિચલન દર્શાવે છે. મિશ્ર કરતી વખતે ઉષ્મા અને કદમાં શું થાય છે?",
+      "options": [
+        "Heat is released (Δ_mix H < 0) and volume decreases (Δ_mix V < 0)",
+        "Heat is absorbed (Δ_mix H > 0) and volume increases (Δ_mix V > 0)",
+        "Heat is released (Δ_mix H < 0) and volume increases (Δ_mix V > 0)",
+        "No heat change (Δ_mix H = 0) and volume remains constant (Δ_mix V = 0)"
+      ],
+      "options_hi": [
+        "ऊष्मा उत्सर्जित होती है (Δ_mix H < 0) और आयतन घटता है (Δ_mix V < 0)",
+        "ऊष्मा अवशोषित होती है (Δ_mix H > 0) और आयतन बढ़ता है (Δ_mix V > 0)",
+        "ऊष्मा उत्सर्जित होती है (Δ_mix H < 0) और आयतन बढ़ता है (Δ_mix V > 0)",
+        "कोई ऊष्मा परिवर्तन नहीं (Δ_mix H = 0) और आयतन स्थिर रहता है (Δ_mix V = 0)"
+      ],
+      "options_gu": [
+        "ઉષ્મા મુક્ત થાય છે (Δ_mix H < 0) અને કદ ઘટે છે (Δ_mix V < 0)",
+        "ઉષ્મા શોષાય છે (Δ_mix H > 0) અને કદ વધે છે (Δ_mix V > 0)",
+        "ઉષ્મા મુક્ત થાય છે (Δ_mix H < 0) અને કદ વધે છે (Δ_mix V > 0)",
+        "ઉષ્મામાં કોઈ ફેરફાર નહીં (Δ_mix H = 0) અને કદ અચળ રહે છે (Δ_mix V = 0)"
+      ],
+      "correct_index": 0,
+      "explanation": "Negative deviation occurs due to strong intermolecular H-bonding formed between acetone and chloroform. Stronger attraction releases energy (exothermic, ΔH < 0) and pulls molecules closer together (volume contracts, ΔV < 0).",
+      "explanation_hi": "ऋणात्मक विचलन एसीटोन और क्लोरोफॉर्म के बीच बनने वाले मजबूत अंतराआण्विक H-बॉन्डिंग के कारण होता है। मजबूत आकर्षण ऊर्जा छोड़ता है (ऊष्माक्षेपी, ΔH < 0) और अणुओं को करीब लाता है (आयतन घटता है, ΔV < 0)।",
+      "explanation_gu": "એસીટોન અને ક્લોરોફોર્મ વચ્ચે રચાતા મજબૂત આંતરઆણ્વીય H-બંધને કારણે ઋણ વિચલન થાય છે. મજબૂત આકર્ષણ ઊર્જા મુક્ત કરે છે (ઉષ્માક્ષેપક, ΔH < 0) અને અણુઓને નજીક ખેંચે છે (કદ ઘટે છે, ΔV < 0)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_011",
+      "type": "theory",
+      "title": "Colligative Properties Summary",
+      "title_hi": "अणुसंख्या गुणधर्म (Colligative Properties) का सारांश",
+      "title_gu": "અણુસંખ્યાત્મક ગુણધર્મોનો સારાંશ",
+      "body": "Colligative properties depend ONLY on the number of solute particles, NOT on their nature.\n\n1. Relative Lowering of Vapour Pressure:\n (p°_1 - p_1) / p°_1 = x_2 = (w_2 * M_1) / (M_2 * w_1)\n\n2. Elevation of Boiling Point:\n ΔT_b = T_b - T°_b = K_b * m\n\n3. Depression of Freezing Point:\n ΔT_f = T°_f - T_f = K_f * m\n\n4. Osmotic Pressure:\n Π = C * R * T = (n_2 / V) * R * T",
+      "body_hi": "अणुसंख्या गुणधर्म (Colligative properties) केवल विलेय के कणों की संख्या पर निर्भर करते हैं, उनकी प्रकृति पर नहीं।\n\n1. वाष्प दाब का आपेक्षिक अवनमन:\n (p°_1 - p_1) / p°_1 = x_2 = (w_2 * M_1) / (M_2 * w_1)\n\n2. क्वथनांक का उन्नयन:\n ΔT_b = T_b - T°_b = K_b * m\n\n3. हिमांक का अवनमन:\n ΔT_f = T°_f - T_f = K_f * m\n\n4. परासरण दाब:\n Π = C * R * T = (n_2 / V) * R * T",
+      "body_gu": "અણુસંખ્યાત્મક ગુણધર્મો ફક્ત દ્રાવ્ય કણોની સંખ્યા પર આધાર રાખે છે, તેમના સ્વભાવ પર નહીં.\n\n1. બાષ્પદબાણમાં સાપેક્ષ ઘટાડો:\n (p°_1 - p_1) / p°_1 = x_2 = (w_2 * M_1) / (M_2 * w_1)\n\n2. ઉત્કલનબિંદુ ઉન્નયન:\n ΔT_b = T_b - T°_b = K_b * m\n\n3. ઠારબિંદુ અવનયન:\n ΔT_f = T°_f - T_f = K_f * m\n\n4. અભિસરણ દબાણ:\n Π = C * R * T = (n_2 / V) * R * T"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_012",
+      "type": "reflection",
+      "title": "Why is Salt Used to Clear Icy Roads?",
+      "title_hi": "बर्फीली सड़कों को साफ करने के लिए नमक का उपयोग क्यों किया जाता है?",
+      "title_gu": "બરફવાળા રસ્તાઓ સાફ કરવા માટે મીઠાનો ઉપયોગ કેમ થાય છે?",
+      "body": "When salt (NaCl or CaCl2) is sprinkled on icy roads in winter, it dissolves in the thin layer of surface water, creating a solution. Adding a non-volatile solute depresses the freezing point of water below 0°C (e.g., to -10°C). Thus, the ice melts because the ambient temperature (-2°C) is now above the new freezing point of the salt solution!",
+      "body_hi": "जब सर्दियों में बर्फीली सड़कों पर नमक (NaCl या CaCl2) छिड़का जाता है, तो यह सतह के पानी की पतली परत में घुल जाता है, जिससे एक विलयन बनता है। एक अवाष्पशील विलेय मिलाने से पानी का हिमांक 0°C से नीचे (जैसे -10°C तक) घट जाता है। इस प्रकार, बर्फ पिघल जाती है क्योंकि परिवेश का तापमान (-2°C) अब नमक के घोल के नए हिमांक से ऊपर है!",
+      "body_gu": "જ્યારે શિયાળામાં બરફવાળા રસ્તાઓ પર મીઠું (NaCl અથવા CaCl2) છાંટવામાં આવે છે, ત્યારે તે સપાટીના પાણીમાં ઓગળીને દ્રાવણ બનાવે છે. અબાષ્પશીલ દ્રાવ્ય ઉમેરવાથી પાણીનું ઠારબિંદુ 0°C થી ઘટીને નીચે જાય છે (દા.ત. -10°C સુધી). આથી, બરફ પીગળી જાય છે કારણ કે આસપાસનું તાપમાન (-2°C) હવે મીઠાના દ્રાવણના નવા ઠારબિંદુ કરતાં વધુ હોય છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_013",
+      "type": "connection",
+      "title": "Real World Connection: Reverse Osmosis (RO) Water Purification",
+      "title_hi": "वास्तविक दुनिया का संबंध: रिवर्स ऑस्मोसिस (RO) जल शोधन",
+      "title_gu": "વાસ્તવિક દુનિયા સાથે જોડાણ: રિવર્સ ઓસ્મોસિસ (RO) વોટર પ્યોરિફિકેશન",
+      "body": "Naturally, pure solvent flows across a semi-permeable membrane into a concentrated solution (Osmosis). But if a pressure GREATER than osmotic pressure is applied on the concentrated side (sea water/salty water), pure solvent molecules are forced to flow backwards from the salty side to the pure water side! This is Reverse Osmosis (RO), used worldwide to desalinate ocean water for drinking.",
+      "body_hi": "प्राकृतिक रूप से, शुद्ध विलायक एक अर्धपारगम्य झिल्ली के माध्यम से एक सांद्र विलयन में बहता है (परासरण)। लेकिन अगर सांद्र पक्ष (समुद्र के पानी) पर परासरण दाब से अधिक दाब लगाया जाता है, तो शुद्ध विलायक के अणु खारे पानी के पक्ष से शुद्ध पानी के पक्ष की ओर उल्टे बहने के लिए मजबूर हो जाते हैं! यह रिवर्स ऑस्मोसिस (RO) है, जिसका उपयोग दुनिया भर में पीने के लिए समुद्री जल के विलवणीकरण में किया जाता है।",
+      "body_gu": "કુદરતી રીતે, શુદ્ધ દ્રાવક અર્ધપારગમ્ય પડદામાંથી વધુ સાંદ્ર દ્રાવણ તરફ વહે છે (અભિસરણ). પરંતુ જો સાંદ્ર બાજુ (દરિયાના પાણી) પર અભિસરણ દબાણ કરતાં વધુ દબાણ લાગુ કરવામાં આવે, તો શુદ્ધ દ્રાવકના અણુઓ ખારા પાણી તરફથી શુદ્ધ પાણી તરફ ઊંધી દિશામાં વહેવા મજબૂર થાય છે! આ રિવર્સ ઓસ્મોસિસ (RO) છે, જેનો ઉપયોગ પીવાના પાણી માટે દરિયાના પાણીને શુદ્ધ કરવા થાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_014",
+      "type": "theory",
+      "title": "Abnormal Molar Mass & van 't Hoff Factor (i)",
+      "title_hi": "असामान्य मोलर द्रव्यमान और वांट हॉफ कारक (i)",
+      "title_gu": "અસામાન્ય મોલર દળ અને વોન્ટ હોફ અવયવ (i)",
+      "body": "When solutes undergo dissociation (e.g., NaCl -> Na+ + Cl-) or association (e.g., 2 CH3COOH -> (CH3COOH)2) in solution, measured colligative properties deviate.\n\nvan 't Hoff factor (i):\n i = (Normal molar mass) / (Abnormal molar mass)\n i = (Observed colligative property) / (Calculated colligative property)\n i = (Total moles of particles after dissociation/association) / (Moles of particles before)\n\nRules:\n- For dissociation (e.g., NaCl, KCl, K2SO4): i > 1\n- For association (e.g., Benzoic acid in benzene): i < 1\n- For non-electrolytes (Glucose, Urea, Sucrose): i = 1",
+      "body_hi": "जब विलेय विलयन में वियोजन (उदा. NaCl -> Na+ + Cl-) या संगुणन (उदा. 2 CH3COOH -> (CH3COOH)2) से गुजरते हैं, तो मापे गए अणुसंख्या गुणधर्म विचलित हो जाते हैं।\n\nवांट हॉफ कारक (i):\n i = (सामान्य मोलर द्रव्यमान) / (असामान्य मोलर द्रव्यमान)\n i = (प्रेक्षित अणुसंख्या गुणधर्म) / (परिकलित अणुसंख्या गुणधर्म)\n i = (वियोजन/संगुणन के बाद कणों के कुल मोल) / (पहले कणों के मोल)\n\nनियम:\n- वियोजन के लिए (उदा. NaCl, KCl, K2SO4): i > 1\n- संगुणन के लिए (उदा. बेंजोइक अम्ल बेंजीन में): i < 1\n- गैर-वैद्युतअपघट्य (ग्लूकोज, यूरिया, सुक्रोज) के लिए: i = 1",
+      "body_gu": "જ્યારે દ્રાવ્ય દ્રાવણમાં વિયોજન (દા.ત. NaCl -> Na+ + Cl-) અથવા સંઘટન/સંગુણન (દા.ત. 2 CH3COOH -> (CH3COOH)2) પામે છે, ત્યારે માપેલા અણુસંખ્યાત્મક ગુણધર્મો વિચલિત થાય છે.\n\nવોન્ટ હોફ અવયવ (i):\n i = (સામાન્ય મોલર દળ) / (અસામાન્ય મોલર દળ)\n i = (પ્રાયોગિક અણુસંખ્યાત્મક ગુણધર્મ) / (ગણતરી કરેલ અણુસંખ્યાત્મક ગુણધર્મ)\n i = (વિયોજન/સંગુણન પછીના કણોના કુલ મોલ) / (શરૂઆતના મોલ)\n\nનિયમો:\n- વિયોજન માટે (દા.ત. NaCl, KCl, K2SO4): i > 1\n- સંગુણન માટે (દા.ત. બેન્ઝોઇક એસિડ બેન્ઝીનમાં): i < 1\n- બિન-વિદ્યુતવિભાજ્ય માટે (ગ્લુકોઝ, યુરિયા, સુક્રોઝ): i = 1"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_015",
+      "type": "mastery",
+      "title": "van 't Hoff Calculation Problem",
+      "title_hi": "वांट हॉफ की गणना समस्या",
+      "title_gu": "વોન્ટ હોફ ગણતરી કોયડો",
+      "question": "What is the van 't Hoff factor (i) for a completely dissociated aqueous solution of K2SO4?",
+      "question_hi": "K2SO4 के पूर्णतः वियोजित जलीय विलयन के लिए वांट हॉफ कारक (i) क्या है?",
+      "question_gu": "K2SO4 ના સંપૂર્ણ વિયોજિત જલીય દ્રાવણ માટે વોન્ટ હોફ અવયવ (i) કેટલો થશે?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_hi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "options_gu": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "K2SO4 dissociates as K2SO4 -> 2 K+ + SO4(2-). Total ions produced per formula unit = 2 + 1 = 3. Since dissociation is complete (100%), i = 3.",
+      "explanation_hi": "K2SO4 इस प्रकार वियोजित होता है: K2SO4 -> 2 K+ + SO4(2-)। प्रति सूत्र इकाई उत्पादित कुल आयन = 2 + 1 = 3। चूंकि वियोजन पूर्ण (100%) है, i = 3।",
+      "explanation_gu": "K2SO4 આ રીતે વિયોજિત થાય છે: K2SO4 -> 2 K+ + SO4(2-). ઉત્પન્ન થતા કુલ આયનો = 2 + 1 = 3. વ્યુત્પન્ન સંપુર્ણ હોવાથી i = 3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_016",
+      "type": "mcq",
+      "title": "NCERT Ex 1.1: Definition of Solution",
+      "title_hi": "NCERT अभ्यास 1.1: विलयन की परिभाषा",
+      "title_gu": "NCERT સ્વાધ્યાય 1.1: દ્રાવણની વ્યાખ્યા",
+      "question": "Which statement correctly describes a binary solution?",
+      "question_hi": "कौन सा कथन द्विअंगी विलयन (binary solution) का सही वर्णन करता है?",
+      "question_gu": "કયું વિધાન દ્વિઅંગી દ્રાવણનું સાચું વર્ણન કરે છે?",
+      "options": [
+        "A homogeneous mixture containing exactly two components.",
+        "A heterogeneous mixture containing two liquids.",
+        "A liquid solution containing three dissolved salts.",
+        "A gaseous mixture of oxygen and nitrogen only."
+      ],
+      "options_hi": [
+        "एक समांगी मिश्रण जिसमें ठीक दो घटक होते हैं।",
+        "दो द्रवों वाला एक विषमांगी मिश्रण।",
+        "तीन घुले हुए लवणों वाला एक द्रव विलयन।",
+        "केवल ऑक्सीजन और नाइट्रोजन का गैसीय मिश्रण।"
+      ],
+      "options_gu": [
+        "બરાબર બે ઘટકો ધરાવતું સમાંગ મિશ્રણ.",
+        "બે પ્રવાહી ધરાવતું વિષમાંગ મિશ્રણ.",
+        "ત્રણ ઓગળેલા ક્ષારો ધરાવતું પ્રવાહી દ્રાવણ.",
+        "માત્ર ઓક્સિજન અને નાઇટ્રોજનનું વાયુ મિશ્રણ."
+      ],
+      "correct_index": 0,
+      "explanation": "A binary solution is a homogeneous mixture consisting of two components: a solute and a solvent.",
+      "explanation_hi": "द्विअंगी विलयन दो घटकों: विलेय और विलायक से बना एक समांगी मिश्रण है।",
+      "explanation_gu": "દ્વિઅંગી દ્રાવણ એ બે ઘટકો: દ્રાવ્ય અને દ્રાવકનું સમાંગ મિશ્રણ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_017",
+      "type": "mcq",
+      "title": "NCERT Ex 1.2: Solid Solution Example",
+      "title_hi": "NCERT अभ्यास 1.2: ठोस विलयन का उदाहरण",
+      "title_gu": "NCERT સ્વાધ્યાય 1.2: ઘન દ્રાવણનું ઉદાહરણ",
+      "question": "Which of the following is an example of a solid solution in which the solute is a gas?",
+      "question_hi": "निम्नलिखित में से कौन सा ठोस विलयन का एक उदाहरण है जिसमें विलेय एक गैस है?",
+      "question_gu": "નીચેનામાંથી કયું ઘન દ્રાવણનું ઉદાહરણ છે જેમાં દ્રાવ્ય વાયુ છે?",
+      "options": [
+        "Solution of Hydrogen in Palladium",
+        "Camphor in Nitrogen gas",
+        "Amalgam of Mercury with Sodium",
+        "Glucose dissolved in Water"
+      ],
+      "options_hi": [
+        "पैलेडियम में हाइड्रोजन का विलयन",
+        "नाइट्रोजन गैस में कपूर",
+        "सोडियम के साथ मर्करी का अमलगम",
+        "जल में घुला ग्लूकोज"
+      ],
+      "options_gu": [
+        "પેલેડિયમમાં હાઇડ્રોજનનું દ્રાવણ",
+        "નાઇટ્રોજન વાયુમાં કપૂર",
+        "સોડિયમ સાથે મર્ક્યુરીનું સુંગઠન (અમાલગમ)",
+        "પાણીમાં ઓગાળેલું ગ્લુકોઝ"
+      ],
+      "correct_index": 0,
+      "explanation": "Hydrogen gas absorbed on/in solid Palladium metal is a classic solid solution with gas as solute and solid metal as solvent.",
+      "explanation_hi": "ठोस पैलेडियम धातु में अवशोषित हाइड्रोजन गैस ठोस विलयन का एक क्लासिक उदाहरण है जिसमें गैस विलेय और ठोस धातु विलायक है।",
+      "explanation_gu": "ઘન પેલેડિયમ ધાતુમાં સોસાયેલો હાઇડ્રોજન વાયુ એ વાયુ દ્રાવ્ય અને ઘન ધાતુ દ્રાવક ધરાવતું ઘન દ્રાવણનું ઉત્તમ ઉદાહરણ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_018",
+      "type": "mcq",
+      "title": "NCERT Ex 1.3: Concentration Definitions",
+      "title_hi": "NCERT अभ्यास 1.3: सांद्रता की परिभाषाएं",
+      "title_gu": "NCERT સ્વાધ્યાય 1.3: સાંદ્રતાની વ્યાખ્યાઓ",
+      "question": "What is the mole fraction of solute if 1 mole of NaCl is dissolved in 9 moles of water?",
+      "question_hi": "यदि 1 मोल NaCl को 9 मोल जल में घोला जाए तो विलेय का मोल अंश क्या है?",
+      "question_gu": "જો 1 મોલ NaCl ને 9 મોલ પાણીમાં ઓગાળવામાં આવે તો દ્રાવ્યનો મોલ-અંશ કેટલો થાય?",
+      "options": [
+        "0.10",
+        "0.90",
+        "0.11",
+        "1.00"
+      ],
+      "options_hi": [
+        "0.10",
+        "0.90",
+        "0.11",
+        "1.00"
+      ],
+      "options_gu": [
+        "0.10",
+        "0.90",
+        "0.11",
+        "1.00"
+      ],
+      "correct_index": 0,
+      "explanation": "Mole fraction of solute x_NaCl = n_NaCl / (n_NaCl + n_H2O) = 1 / (1 + 9) = 1 / 10 = 0.10.",
+      "explanation_hi": "विलेय का मोल अंश x_NaCl = n_NaCl / (n_NaCl + n_H2O) = 1 / (1 + 9) = 1 / 10 = 0.10।",
+      "explanation_gu": "દ્રાવ્યનો મોલ-અંશ x_NaCl = n_NaCl / (n_NaCl + n_H2O) = 1 / (1 + 9) = 1 / 10 = 0.10."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_019",
+      "type": "mcq",
+      "title": "NCERT Ex 1.4: Concentration Calculation (Nitric Acid)",
+      "title_hi": "NCERT अभ्यास 1.4: सांद्रता की गणना (नाइट्रिक अम्ल)",
+      "title_gu": "NCERT સ્વાધ્યાય 1.4: સાંદ્રતાની ગણતરી (નાઇટ્રિક એસિડ)",
+      "question": "Concentrated nitric acid used in laboratory work is 68% HNO3 by mass in aqueous solution. What is the molarity of such a sample if density is 1.504 g/mL? (Molar mass of HNO3 = 63 g/mol)",
+      "question_hi": "प्रयोगशाला कार्य में प्रयुक्त सांद्र नाइट्रिक अम्ल जलीय विलयन में द्रव्यमान के अनुसार 68% HNO3 है। यदि घनत्व 1.504 g/mL है तो ऐसे नमूने की मोलरता क्या होगी? (HNO3 का मोलर द्रव्यमान = 63 g/mol)",
+      "question_gu": "પ્રયોગશાળામાં વપરાતો સાંદ્ર નાઇટ્રિક એસિડ જલીય દ્રાવણમાં દળથી 68% HNO3 છે. જો દ્રાવણની ઘનતા 1.504 g/mL હોય તો આ નમૂનાની મોલેરિટી કેટલી થશે? (HNO3 નું મોલર દળ = 63 g/mol)",
+      "options": [
+        "16.23 M",
+        "15.10 M",
+        "12.50 M",
+        "18.42 M"
+      ],
+      "options_hi": [
+        "16.23 M",
+        "15.10 M",
+        "12.50 M",
+        "18.42 M"
+      ],
+      "options_gu": [
+        "16.23 M",
+        "15.10 M",
+        "12.50 M",
+        "18.42 M"
+      ],
+      "correct_index": 0,
+      "explanation": "Mass of HNO3 in 100g solution = 68g. Moles = 68/63 = 1.079 mol. Volume of 100g solution = 100 / 1.504 mL = 66.49 mL = 0.06649 L. Molarity = 1.079 / 0.06649 = 16.23 M.",
+      "explanation_hi": "100 ग्राम विलयन में HNO3 का द्रव्यमान = 68 ग्राम। मोल = 68/63 = 1.079 मोल। 100 ग्राम विलयन का आयतन = 100 / 1.504 mL = 66.49 mL = 0.06649 L। मोलरता = 1.079 / 0.06649 = 16.23 M।",
+      "explanation_gu": "100g દ્રાવણમાં HNO3 નું દળ = 68g. મોલ = 68/63 = 1.079 mol. 100g દ્રાવણનું કદ = 100 / 1.504 mL = 66.49 mL = 0.06649 L. મોલેરિટી = 1.079 / 0.06649 = 16.23 M."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_020",
+      "type": "mcq",
+      "title": "NCERT Ex 1.5: KI Solution Molality Calculation",
+      "title_hi": "NCERT अभ्यास 1.5: KI विलयन की मोललता की गणना",
+      "title_gu": "NCERT સ્વાધ્યાય 1.5: KI દ્રાવણની મોલેલિટી ગણતરી",
+      "question": "A solution of KI is 20% (w/w) aqueous solution. What is the molality of KI? (Molar mass of KI = 166 g/mol)",
+      "question_hi": "KI का 20% (w/w) जलीय विलयन है। KI की मोललता क्या है? (KI का मोलर द्रव्यमान = 166 g/mol)",
+      "question_gu": "KI નું 20% (w/w) જલીય દ્રાવણ આપેલું છે. KI ની મોલેલિટી કેટલી થશે? (KI નું મોલર દળ = 166 g/mol)",
+      "options": [
+        "1.506 m",
+        "1.205 m",
+        "2.000 m",
+        "0.850 m"
+      ],
+      "options_hi": [
+        "1.506 m",
+        "1.205 m",
+        "2.000 m",
+        "0.850 m"
+      ],
+      "options_gu": [
+        "1.506 m",
+        "1.205 m",
+        "2.000 m",
+        "0.850 m"
+      ],
+      "correct_index": 0,
+      "explanation": "20g KI in 100g solution => 80g water solvent = 0.080 kg. Moles of KI = 20 / 166 = 0.1205 mol. Molality = 0.1205 / 0.080 = 1.506 m.",
+      "explanation_hi": "100 ग्राम विलयन में 20 ग्राम KI => 80 ग्राम जल विलायक = 0.080 किग्रा। KI के मोल = 20 / 166 = 0.1205 मोल। मोललता = 0.1205 / 0.080 = 1.506 m।",
+      "explanation_gu": "100g દ્રાવણમાં 20g KI => 80g પાણી દ્રાવક = 0.080 kg. KI ના મોલ = 20 / 166 = 0.1205 mol. મોલેલિટી = 0.1205 / 0.080 = 1.506 m."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_021",
+      "type": "mcq",
+      "title": "NCERT Ex 1.6: H2S Gas Henry's Law Constant",
+      "title_hi": "NCERT अभ्यास 1.6: H2S गैस का हेनरी नियम स्थिरांक",
+      "title_gu": "NCERT સ્વાધ્યાય 1.6: H2S વાયુ માટે હેનરી નિયમ અચળાંક",
+      "question": "H2S, a toxic gas with rotten egg smell, is used for qualitative analysis. If the solubility of H2S in water at STP is 0.195 m, calculate Henry's law constant.",
+      "question_hi": "सड़े हुए अंडे जैसी गंध वाली एक जहरीली गैस H2S का उपयोग गुणात्मक विश्लेषण में किया जाता है। यदि STP पर जल में H2S की घुलनशीलता 0.195 m है, तो हेनरी के नियम स्थिरांक की गणना करें।",
+      "question_gu": "ખરાબ ઈંડા જેવી વાસ ધરાવતો ઝેરી વાયુ H2S ગુણાત્મક પૃથક્કરણમાં વપરાય છે. જો STP એ પાણીમાં H2S ની દ્રાવ્યતા 0.195 m હોય, તો હેનરી નિયમ અચળાંક શોધો.",
+      "options": [
+        "282 bar",
+        "1.2 bar",
+        "500 bar",
+        "100 bar"
+      ],
+      "options_hi": [
+        "282 bar",
+        "1.2 bar",
+        "500 bar",
+        "100 bar"
+      ],
+      "options_gu": [
+        "282 bar",
+        "1.2 bar",
+        "500 bar",
+        "100 bar"
+      ],
+      "correct_index": 0,
+      "explanation": "0.195 m means 0.195 moles H2S in 1000g water (55.55 mol). x_H2S = 0.195 / (0.195 + 55.55) = 0.0035. At STP, p = 0.987 bar. K_H = p / x = 0.987 / 0.0035 = 282 bar.",
+      "explanation_hi": "0.195 m का अर्थ है 1000g जल (55.55 मोल) में 0.195 मोल H2S। x_H2S = 0.195 / (0.195 + 55.55) = 0.0035। STP पर, p = 0.987 bar। K_H = p / x = 0.987 / 0.0035 = 282 bar।",
+      "explanation_gu": "0.195 m એટલે 1000g પાણીમાં (55.55 mol) 0.195 mol H2S. x_H2S = 0.195 / (0.195 + 55.55) = 0.0035. STP એ p = 0.987 bar. K_H = p / x = 0.987 / 0.0035 = 282 bar."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_022",
+      "type": "mcq",
+      "title": "NCERT Ex 1.7: Soda Water CO2 Dissolution",
+      "title_hi": "NCERT अभ्यास 1.7: सोडा वाटर CO2 का घुलना",
+      "title_gu": "NCERT સ્વાધ્યાય 1.7: સોડા વોટરમાં CO2 નું ઓગળવું",
+      "question": "Henry's law constant for CO2 in water is 1.67 × 10^8 Pa at 298 K. Calculate the mass of CO2 in 500 mL of soda water packed under 2.5 atm CO2 pressure at 298 K. (1 atm = 1.013 × 10^5 Pa)",
+      "question_hi": "298 K पर जल में CO2 के लिए हेनरी का स्थिरांक 1.67 × 10^8 Pa है। 298 K पर 2.5 atm CO2 दाब में पैक किए गए 500 mL सोडा वाटर में CO2 के द्रव्यमान की गणना करें।",
+      "question_gu": "298 K તાપમાને પાણીમાં CO2 માટે હેનરીનો અચળાંક 1.67 × 10^8 Pa છે. 2.5 atm CO2 દબાણ હેઠળ પેક કરેલા 500 mL સોડા વોટરમાં CO2 ના દળની ગણતરી કરો.",
+      "options": [
+        "1.85 g",
+        "0.92 g",
+        "3.70 g",
+        "5.00 g"
+      ],
+      "options_hi": [
+        "1.85 g",
+        "0.92 g",
+        "3.70 g",
+        "5.00 g"
+      ],
+      "options_gu": [
+        "1.85 g",
+        "0.92 g",
+        "3.70 g",
+        "5.00 g"
+      ],
+      "correct_index": 0,
+      "explanation": "p_CO2 = 2.5 * 1.013 * 10^5 = 2.5325 * 10^5 Pa. Mole fraction x_CO2 = p / K_H = (2.5325 * 10^5) / (1.67 * 10^8) = 1.516 * 10^-3. In 500 mL (500g = 27.78 mol water), n_CO2 = 1.516 * 10^-3 * 27.78 = 0.0421 mol. Mass = 0.0421 * 44 = 1.85 g.",
+      "explanation_hi": "p_CO2 = 2.5 * 1.013 * 10^5 = 2.5325 * 10^5 Pa। मोल अंश x_CO2 = p / K_H = 1.516 * 10^-3। 500 mL जल (27.78 मोल) में, n_CO2 = 0.0421 मोल। द्रव्यमान = 0.0421 * 44 = 1.85 ग्राम।",
+      "explanation_gu": "p_CO2 = 2.5 * 1.013 * 10^5 = 2.5325 * 10^5 Pa. મોલ-અંશ x_CO2 = p / K_H = 1.516 * 10^-3. 500 mL પાણીમાં (27.78 mol), n_CO2 = 0.0421 mol. દળ = 0.0421 * 44 = 1.85 g."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_023",
+      "type": "mcq",
+      "title": "NCERT Ex 1.8: Vapour Pressure of Liquid Mixture",
+      "title_hi": "NCERT अभ्यास 1.8: द्रव मिश्रण का वाष्प दाब",
+      "title_gu": "NCERT સ્વાધ્યાય 1.8: પ્રવાહી મિશ્રણનું બાષ્પદબાણ",
+      "question": "The vapour pressure of pure liquids A and B are 450 and 700 mm Hg respectively, at 350 K. Find out the total vapour pressure if liquid mixture contains 20 mol % of A.",
+      "question_hi": "350 K पर शुद्ध द्रवों A और B का वाष्प दाब क्रमशः 450 और 700 mm Hg है। यदि द्रव मिश्रण में A का 20 mol % शामिल है तो कुल वाष्प दाब ज्ञात कीजिए।",
+      "question_gu": "350 K તાપમાને શુદ્ધ પ્રવાહી A અને B ના બાષ્પદબાણ અનુક્રમે 450 અને 700 mm Hg છે. જો પ્રવાહી મિશ્રણમાં A ના 20 mol % હોય તો કુલ બાષ્પદબાણ શોધો.",
+      "options": [
+        "650 mm Hg",
+        "575 mm Hg",
+        "525 mm Hg",
+        "610 mm Hg"
+      ],
+      "options_hi": [
+        "650 mm Hg",
+        "575 mm Hg",
+        "525 mm Hg",
+        "610 mm Hg"
+      ],
+      "options_gu": [
+        "650 mm Hg",
+        "575 mm Hg",
+        "525 mm Hg",
+        "610 mm Hg"
+      ],
+      "correct_index": 0,
+      "explanation": "x_A = 0.20, x_B = 0.80. P_total = p°_A * x_A + p°_B * x_B = 450 * 0.20 + 700 * 0.80 = 90 + 560 = 650 mm Hg.",
+      "explanation_hi": "x_A = 0.20, x_B = 0.80। P_total = p°_A * x_A + p°_B * x_B = 450 * 0.20 + 700 * 0.80 = 90 + 560 = 650 mm Hg।",
+      "explanation_gu": "x_A = 0.20, x_B = 0.80. P_total = p°_A * x_A + p°_B * x_B = 450 * 0.20 + 700 * 0.80 = 90 + 560 = 650 mm Hg."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_024",
+      "type": "true_false",
+      "title": "NCERT Ex 1.9: Raoult's Law as Special Case of Henry's Law",
+      "title_hi": "NCERT अभ्यास 1.9: राउल्ट का नियम हेनरी के नियम के एक विशेष रूप में",
+      "title_gu": "NCERT સ્વાધ્યાય 1.9: રાઉલ્ટનો નિયમ એ હેનરીના નિયમનો એક ખાસ કિસ્સો",
+      "question": "Is Raoult's law considered a special case of Henry's law where K_H equals p°_1 (vapour pressure of pure solvent)?",
+      "question_hi": "क्या राउल्ट के नियम को हेनरी के नियम का एक विशेष रूप माना जाता है जहाँ K_H, p°_1 (शुद्ध विलायक के वाष्प दाब) के बराबर होता है?",
+      "question_gu": "શું રાઉલ્ટનો નિયમ એ હેનરીના નિયમનો એક ખાસ કિસ્સો ગણાય છે જ્યાં K_H એ p°_1 (શુદ્ધ દ્રાવકનું બાષ્પદબાણ) જેટલો હોય છે?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સાચું",
+        "ખોટું"
+      ],
+      "correct_index": 0,
+      "explanation": "According to Raoult's law, p = p° * x. According to Henry's law, p = K_H * x. If K_H equals p°, both laws become identical.",
+      "explanation_hi": "राउल्ट के नियम के अनुसार, p = p° * x। हेनरी के नियम के अनुसार, p = K_H * x। यदि K_H, p° के बराबर हो जाता है, तो दोनों नियम समान हो जाते हैं।",
+      "explanation_gu": "રાઉલ્ટના નિયમ મુજબ, p = p° * x. હેનરીના નિયમ મુજબ, p = K_H * x. જો K_H = p° થાય, તો બંને નિયમો સમાન બની જાય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_025",
+      "type": "mcq",
+      "title": "NCERT Ex 1.10: Ideal vs Non-Ideal Solutions",
+      "title_hi": "NCERT अभ्यास 1.10: आदर्श बनाम अनादर्श विलयन",
+      "title_gu": "NCERT સ્વાધ્યાય 1.10: આદર્શ વિરુદ્ધ બિન-આદર્શ દ્રાવણો",
+      "question": "Which of the following mixtures forms an ideal solution?",
+      "question_hi": "निम्नलिखित में से कौन सा मिश्रण एक आदर्श विलयन बनाता है?",
+      "question_gu": "નીચેનામાંથી કયું મિશ્રણ આદર્શ દ્રાવણ બનાવે છે?",
+      "options": [
+        "n-Hexane and n-Heptane",
+        "Ethanol and Acetone",
+        "Chloroform and Acetone",
+        "Nitric acid and Water"
+      ],
+      "options_hi": [
+        "n-हेक्सेन और n-हेप्टेन",
+        "एथेनॉल और एसीटोन",
+        "क्लोरोफॉर्म और एसीटोन",
+        "नाइट्रिक अम्ल और जल"
+      ],
+      "options_gu": [
+        "n-હેક્ઝેન અને n-હેપ્ટેન",
+        "ઇથેનોલ અને એસીટોન",
+        "ક્લોરોફોર્મ અને એસીટોન",
+        "નાઇટ્રિક એસિડ અને પાણી"
+      ],
+      "correct_index": 0,
+      "explanation": "n-Hexane and n-Heptane have nearly identical molecular sizes and intermolecular forces, making their mixture an ideal solution.",
+      "explanation_hi": "n-हेक्सेन और n-हेप्टेन में लगभग समान आणविक आकार और अंतराआण्विक बल होते हैं, जिससे उनका मिश्रण एक आदर्श विलयन बनता है।",
+      "explanation_gu": "n-હેક્ઝેન અને n-હેપ્ટેનમાં લગભગ સમાન આણ્વીય કદ અને આંતરઆણ્વીય બળો હોય છે, જેથી તેમનું મિશ્રણ આદર્શ દ્રાવણ બને છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_026",
+      "type": "mcq",
+      "title": "NCERT Ex 1.11: Boiling Point Elevation Calculation",
+      "title_hi": "NCERT अभ्यास 1.11: क्वथनांक उन्नयन की गणना",
+      "title_gu": "NCERT સ્વાધ્યાય 1.11: ઉત્કલનબિંદુ ઉન્નયનની ગણતરી",
+      "question": "18 g of glucose, C6H12O6, is dissolved in 1 kg of water in a saucepan. At what temperature will water boil at 1.013 bar pressure? (K_b for water = 0.52 K kg/mol, boiling point of pure water = 373.15 K)",
+      "question_hi": "18 ग्राम ग्लूकोज (C6H12O6) को 1 किग्रा जल में घोला जाता है। 1.013 बार दाब पर जल किस तापमान पर उबलेगा? (जल के लिए K_b = 0.52 K kg/mol, शुद्ध जल का क्वथनांक = 373.15 K)",
+      "question_gu": "18 g ગ્લુકોઝ (C6H12O6) ને 1 kg પાણીમાં ઓગાળવામાં આવે છે. 1.013 bar દબાણે પાણી કયા તાપમાને ઉકળશે? (પાણી માટે K_b = 0.52 K kg/mol, શુદ્ધ પાણીનું ઉત્કલનબિંદુ = 373.15 K)",
+      "options": [
+        "373.202 K",
+        "373.150 K",
+        "373.670 K",
+        "374.000 K"
+      ],
+      "options_hi": [
+        "373.202 K",
+        "373.150 K",
+        "373.670 K",
+        "374.000 K"
+      ],
+      "options_gu": [
+        "373.202 K",
+        "373.150 K",
+        "373.670 K",
+        "374.000 K"
+      ],
+      "correct_index": 0,
+      "explanation": "Moles of glucose = 18 / 180 = 0.1 mol. Molality m = 0.1 mol / 1 kg = 0.1 m. ΔT_b = K_b * m = 0.52 * 0.1 = 0.052 K. Boiling Point = 373.15 + 0.052 = 373.202 K.",
+      "explanation_hi": "ग्लूकोज के मोल = 18 / 180 = 0.1 मोल। मोललता m = 0.1 / 1 = 0.1 m। ΔT_b = 0.52 * 0.1 = 0.052 K। क्वथनांक = 373.15 + 0.052 = 373.202 K।",
+      "explanation_gu": "ગ્લુકોઝના મોલ = 18 / 180 = 0.1 mol. મોલેલિટી m = 0.1 / 1 = 0.1 m. ΔT_b = 0.52 * 0.1 = 0.052 K. ઉત્કલનબિંદુ = 373.15 + 0.052 = 373.202 K."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_027",
+      "type": "mcq",
+      "title": "NCERT Ex 1.12: Freezing Point Depression & Molar Mass",
+      "title_hi": "NCERT अभ्यास 1.12: हिमांक अवनमन और मोलर द्रव्यमान",
+      "title_gu": "NCERT સ્વાધ્યાય 1.12: ઠારબિંદુ અવનયન અને મોલર દળ",
+      "question": "1.00 g of a non-electrolyte solute dissolved in 50 g of benzene lowered the freezing point of benzene by 0.40 K. The freezing point depression constant of benzene is 5.12 K kg/mol. Find the molar mass of the solute.",
+      "question_hi": "50 ग्राम बेंजीन में घुले 1.00 ग्राम गैर-वैद्युतअपघट्य विलेय ने बेंजीन का हिमांक 0.40 K कम कर दिया। बेंजीन का हिमांक अवनमन स्थिरांक 5.12 K kg/mol है। विलेय का मोलर द्रव्यमान ज्ञात कीजिए।",
+      "question_gu": "50 g બેન્ઝીનમાં ઓગાળેલા 1.00 g બિન-વિદ્યુતવિભાજ્ય દ્રાવ્યે બેન્ઝીનનું ઠારબિંદુ 0.40 K ઘટાડ્યું. બેન્ઝીનનો ઠારબિંદુ અવનયન અચળાંક 5.12 K kg/mol છે. દ્રાવ્યનું મોલર દળ શોધો.",
+      "options": [
+        "256 g/mol",
+        "128 g/mol",
+        "512 g/mol",
+        "64 g/mol"
+      ],
+      "options_hi": [
+        "256 g/mol",
+        "128 g/mol",
+        "512 g/mol",
+        "64 g/mol"
+      ],
+      "options_gu": [
+        "256 g/mol",
+        "128 g/mol",
+        "512 g/mol",
+        "64 g/mol"
+      ],
+      "correct_index": 0,
+      "explanation": "M_2 = (K_f * w_2 * 1000) / (ΔT_f * w_1) = (5.12 * 1.00 * 1000) / (0.40 * 50) = 5120 / 20 = 256 g/mol.",
+      "explanation_hi": "M_2 = (K_f * w_2 * 1000) / (ΔT_f * w_1) = (5.12 * 1.00 * 1000) / (0.40 * 50) = 5120 / 20 = 256 g/mol।",
+      "explanation_gu": "M_2 = (K_f * w_2 * 1000) / (ΔT_f * w_1) = (5.12 * 1.00 * 1000) / (0.40 * 50) = 5120 / 20 = 256 g/mol."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_028",
+      "type": "mcq",
+      "title": "NCERT Ex 1.13: Osmotic Pressure Polymer Solution",
+      "title_hi": "NCERT अभ्यास 1.13: परासरण दाब बहुलक (पॉलीमर) विलयन",
+      "title_gu": "NCERT સ્વાધ્યાય 1.13: પોલિમર દ્રાવણનું અભિસરણ દબાણ",
+      "question": "Calculate the osmotic pressure in pascals exerted by a solution prepared by dissolving 1.0 g of polymer of molar mass 185,000 g/mol in 450 mL of water at 37°C. (R = 8.314 Pa m^3 / (K mol))",
+      "question_hi": "37°C पर 450 mL जल में 185,000 g/mol मोलर द्रव्यमान के 1.0 ग्राम पॉलीमर को घोलकर तैयार किए गए विलयन द्वारा लगाए गए पास्कल में परासरण दाब की गणना करें।",
+      "question_gu": "37°C તાપમાને 450 mL પાણીમાં 185,000 g/mol મોલર દળ ધરાવતા 1.0 g પોલિમરને ઓગાળીને બનાવેલા દ્રાવણનું પાસ્કલમાં અભિસરણ દબાણ ગણો.",
+      "options": [
+        "30.96 Pa",
+        "125.4 Pa",
+        "309.6 Pa",
+        "3.09 Pa"
+      ],
+      "options_hi": [
+        "30.96 Pa",
+        "125.4 Pa",
+        "309.6 Pa",
+        "3.09 Pa"
+      ],
+      "options_gu": [
+        "30.96 Pa",
+        "125.4 Pa",
+        "309.6 Pa",
+        "3.09 Pa"
+      ],
+      "correct_index": 0,
+      "explanation": "n = 1.0 / 185000 = 5.405 * 10^-6 mol. V = 450 mL = 4.5 * 10^-4 m^3. T = 310.15 K. Π = (n * R * T) / V = (5.405*10^-6 * 8.314 * 310.15) / (4.5*10^-4) = 30.96 Pa.",
+      "explanation_hi": "n = 1.0 / 185000 = 5.405 * 10^-6 मोल। V = 4.5 * 10^-4 m^3। T = 310.15 K। Π = (n * R * T) / V = 30.96 Pa।",
+      "explanation_gu": "n = 1.0 / 185000 = 5.405 * 10^-6 mol. V = 4.5 * 10^-4 m^3. T = 310.15 K. Π = (n * R * T) / V = 30.96 Pa."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_CHE_CH1_029",
+      "type": "mcq",
+      "title": "NCERT Ex 1.14: Van 't Hoff Factor Determination",
+      "title_hi": "NCERT अभ्यास 1.14: वांट हॉफ कारक का निर्धारण",
+      "title_gu": "NCERT સ્વાધ્યાય 1.14: વોન્ટ હોફ અવયવનું નિર્ધારણ",
+      "question": "What is the expected van 't Hoff factor (i) for complete dissociation of K2SO4 in dilute aqueous solution?",
+      "question_hi": "तनु जलीय विलयन में K2SO4 के पूर्ण वियोजन के लिए अपेक्षित वांट हॉफ कारक (i) क्या है?",
+      "question_gu": "મંદ જલીય દ્રાવણમાં K2SO4 ના સંપૂર્ણ વિયોજન માટે અપેક્ષિત વોન્ટ હોફ અવયવ (i) કેટલો છે?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "options_hi": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "options_gu": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correct_index": 0,
+      "explanation": "K2SO4 dissociates into 2 K+ ions and 1 SO4(2-) ion, total 3 ions. Hence, i = 3.",
+      "explanation_hi": "K2SO4, 2 K+ आयनों और 1 SO4(2-) आयन में वियोजित होता है, कुल 3 आयन। इसलिए, i = 3।",
+      "explanation_gu": "K2SO4 એ 2 K+ આયનો અને 1 SO4(2-) આયનમાં વિયોજિત થાય છે, કુલ 3 આયન. તેથી, i = 3."
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch5",
+    "title": "Chapter 5: Continuity and Differentiability",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_001",
+      "type": "hook",
+      "title": "Smooth Motion vs. Quantum Jumps: The Real World of Continuity",
+      "title_hi": "सुलभ गति बनाम क्वांटम छलांग: सांतत्य की वास्तविक दुनिया",
+      "title_gu": "સરળ ગતિ વિરુદ્ધ ક્વોન્ટમ કૂદકા: સાતત્યની વાસ્તવિક દુનિયા",
+      "body": "Imagine driving a car. As you accelerate, your speedometer moves smoothly from 0 to 60 km/h without skipping any speed in between. Now imagine a light switch: it toggles instantly from OFF to ON. In calculus, 'Continuity' models continuous physical processes where small changes in input lead to small changes in output, without sudden breaks or gaps.",
+      "body_hi": "एक कार चलाने की कल्पना करें। जैसे-जैसे आप गति बढ़ाते हैं, आपका स्पीडोमीटर 0 से 60 किमी/घंटा तक बिना किसी गति को छोड़े आसानी से चलता है। अब एक लाइट स्विच की कल्पना करें: यह बंद से चालू में तुरंत बदल जाता है। कैलकुलस में, 'सांतत्य' (Continuity) निरंतर भौतिक प्रक्रियाओं का मॉडल तैयार करता है जहाँ इनपुट में छोटे बदलावों से आउटपुट में छोटे बदलाव होते हैं, बिना किसी अचानक रुकावट के।",
+      "body_gu": "એક કાર ચલાવવાની કલ્પના કરો. જેમ જેમ તમે ઝડપ વધારો છો, તેમ તમારું સ્પીડોમીટર વચ્ચેની કોઈપણ ઝડપને છોડ્યા વિના 0 થી 60 km/h સુધી સરળતાથી આગળ વધે છે. હવે લાઈટ સ્વિચની કલ્પના કરો: તે OFF થી ON માં તુરંત બદલાઈ જાય છે. કલનશાસ્ત્ર (Calculus) માં, 'સાતત્ય' (Continuity) એ સતત ભૌતિક પ્રક્રિયાઓનું મોડેલ છે જ્યાં ઇનપુટમાં નાના ફેરફારો આઉટપુટમાં નાના ફેરફારો તરફ દોરી જાય છે, કોઈ અચાનક ભંગાણ વિના."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_002",
+      "type": "socratic_question",
+      "title": "The Hole in the Graph",
+      "title_hi": "आलेख में छिद्र",
+      "title_gu": "આલેખમાં છિદ્ર",
+      "question": "Consider the function f(x) = (x^2 - 1) / (x - 1). What happens precisely at x = 1? Can we say the function is continuous at x = 1 if f(1) is undefined?",
+      "question_hi": "फलन f(x) = (x^2 - 1) / (x - 1) पर विचार करें। x = 1 पर ठीक क्या होता है? यदि f(1) अपरिभाषित है, तो क्या हम कह सकते हैं कि फलन x = 1 पर संतत है?",
+      "question_gu": "વિધેય f(x) = (x^2 - 1) / (x - 1) ધ્યાનમાં લો. x = 1 આગળ બરાબર શું થાય છે? જો f(1) અવ્યાખ્યાયિત હોય, તો શું આપણે કહી શકીએ કે વિધેય x = 1 આગળ સતત છે?",
+      "options": [
+        "Yes, because the limit exists as x approaches 1.",
+        "No, because for a function to be continuous at a point, it must be defined at that point and equal its limit.",
+        "Yes, because x^2 - 1 is continuous everywhere.",
+        "No, because the limit as x approaches 1 does not exist."
+      ],
+      "options_hi": [
+        "हाँ, क्योंकि x के 1 के पास पहुँचने पर सीमा अस्तित्व में है।",
+        "नहीं, क्योंकि किसी बिंदु पर फलन के संतत होने के लिए, इसे उस बिंदु पर परिभाषित होना चाहिए और अपनी सीमा के बराबर होना चाहिए।",
+        "हाँ, क्योंकि x^2 - 1 सभी जगह संतत है।",
+        "नहीं, क्योंकि x के 1 के पास पहुँचने पर सीमा का अस्तित्व नहीं है।"
+      ],
+      "options_gu": [
+        "હા, કારણ કે x એ 1 ની નજીક પહોંચતા લક્ષ અસ્તિત્વ ધરાવે છે.",
+        "ના, કારણ કે કોઈપણ બિંદુએ વિધેય સતત હોવા માટે, તે બિંદુએ તે વ્યાખ્યાયિત હોવું જોઈએ અને તેના લક્ષ સમાન હોવું જોઈએ.",
+        "હા, કારણ કે x^2 - 1 દરેક જગ્યાએ સતત છે.",
+        "ના, કારણ કે x એ 1 ની નજીક પહોંચતા લક્ષ અસ્તિત્વ ધરાવતું નથી."
+      ],
+      "correct_index": 1,
+      "explanation": "For continuity at x = a, three conditions must hold: 1) f(a) exists, 2) lim_{x->a} f(x) exists, and 3) lim_{x->a} f(x) = f(a). Here f(1) is undefined (0/0 form), so it is discontinuous at x = 1.",
+      "explanation_hi": "x = a पर सांतत्य के लिए तीन शर्तें पूरी होनी चाहिए: 1) f(a) का अस्तित्व हो, 2) lim_{x->a} f(x) का अस्तित्व हो, और 3) lim_{x->a} f(x) = f(a)। यहाँ f(1) अपरिभाषित (0/0 रूप) है, इसलिए यह x = 1 पर असंतत है।",
+      "explanation_gu": "x = a આગળ સાતત્ય માટે ત્રણ શરતો હોવી જોઈએ: 1) f(a) અસ્તિત્વ ધરાવે છે, 2) lim_{x->a} f(x) અસ્તિત્વ ધરાવે છે, અને 3) lim_{x->a} f(x) = f(a). અહીં f(1) અવ્યાખ્યાયિત (0/0 સ્વરૂપ) છે, તેથી તે x = 1 આગળ અસતત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_003",
+      "type": "discovery",
+      "title": "Discovering the Three Pillars of Continuity",
+      "title_hi": "सांतत्य के तीन स्तंभों की खोज",
+      "title_gu": "સાતત્યના ત્રણ સ્તંભોની શોધ",
+      "body": "To draw a graph without lifting your pencil, the path must meet three criterion at every point x = c:\n1. Left-Hand Limit (LHL): lim_{x -> c^-} f(x) - The height approached from the left.\n2. Right-Hand Limit (RHL): lim_{x -> c^+} f(x) - The height approached from the right.\n3. Exact Value: f(c) - The actual filled point on the curve.\nContinuity holds if and only if LHL = RHL = f(c).",
+      "body_hi": "बिना पेंसिल उठाए आलेख खींचने के लिए, पथ को प्रत्येक बिंदु x = c पर तीन मानदंडों को पूरा करना होगा:\n1. बायां पक्ष सीमा (LHL): lim_{x -> c^-} f(x) - बाईं ओर से आने वाली ऊँचाई।\n2. दायां पक्ष सीमा (RHL): lim_{x -> c^+} f(x) - दाईं ओर से आने वाली ऊँचाई।\n3. सटीक मान: f(c) - वक्र पर वास्तव में स्थित बिंदु।\nसांतत्य केवल और केवल तभी लागू होता है जब LHL = RHL = f(c)।",
+      "body_gu": "તમારી પેન્સિલ ઉપાડ્યા વિના આલેખ દોરવા માટે, માર્ગે દરેક બિંદુ x = c પર ત્રણ શરતો પૂર્ણ કરવી આવશ્યક છે:\n1. ડાબી બાજુનું લક્ષ (LHL): lim_{x -> c^-} f(x) - ડાબી બાજુથી નજીક આવતી ઊંચાઈ.\n2. જમણી બાજુનું લક્ષ (RHL): lim_{x -> c^+} f(x) - જમણી બાજુથી નજીક આવતી ઊંચાઈ.\n3. ચોક્કસ કિંમત: f(c) - વક્ર પર વાસ્તવિક બિંદુ.\nસાતત્ય તો જ અને તો જ જળવાય છે જો LHL = RHL = f(c) હોય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_004",
+      "type": "theory",
+      "title": "Formal Definition & Algebra of Continuous Functions",
+      "title_hi": "सांतत्य की औपचारिक परिभाषा और सतत फलनों का बीजगणित",
+      "title_gu": "સાતત્યની ઔપચારિક વ્યાખ્યા અને સતત વિધેયોનું બીજગણિત",
+      "body": "DEFINITION: A real-valued function f is continuous at a point c in its domain if lim_{x -> c} f(x) = f(c).\n\nALGEBRA OF CONTINUOUS FUNCTIONS:\nIf f and g are two continuous functions at a real number c, then:\n1. (f + g) is continuous at x = c.\n2. (f - g) is continuous at x = c.\n3. (f * g) is continuous at x = c.\n4. (f / g) is continuous at x = c, provided g(c) != 0.\n5. Composite function (f o g)(x) is continuous at c if g is continuous at c and f is continuous at g(c).",
+      "body_hi": "परिभाषा: एक वास्तविक मान फलन f अपने प्रांत में किसी बिंदु c पर संतत होता है यदि lim_{x -> c} f(x) = f(c) हो।\n\nसतत फलनों का बीजगणित:\nयदि f और g किसी वास्तविक संख्या c पर दो संतत फलन हैं, तो:\n1. (f + g) x = c पर संतत है।\n2. (f - g) x = c पर संतत है।\n3. (f * g) x = c पर संतत है।\n4. (f / g) x = c पर संतत है, बशर्ते g(c) != 0 हो।\n5. संयुक्त फलन (f o g)(x) c पर संतत है यदि g, c पर संतत है और f, g(c) पर संतत है।",
+      "body_gu": "વ્યાખ્યા: વાસ્તવિક-મૂલ્ય ધરાવતું વિધેય f તેના પ્રદેશમાં બિંદુ c આગળ સતત કહેવાય જો lim_{x -> c} f(x) = f(c) થાય.\n\nસતત વિધેયોનું બીજગણિત:\nજો f અને g વાસ્તવિક સંખ્યા c આગળ બે સતત વિધેયો હોય, તો:\n1. (f + g) x = c આગળ સતત છે.\n2. (f - g) x = c આગળ સતત છે.\n3. (f * g) x = c આગળ સતત છે.\n4. (f / g) x = c આગળ સતત છે, શરત એ કે g(c) != 0 હોય.\n5. સંયોજિત વિધેય (f o g)(x) c આગળ સતત છે જો g એ c આગળ સતત હોય અને f એ g(c) આગળ સતત હોય."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_005",
+      "type": "knowledge_check",
+      "title": "Check Point: Finding Value for Continuity",
+      "title_hi": "ज्ञान जाँच: सांतत्य के लिए मान ज्ञात करना",
+      "title_gu": "ચકાસણી બિંદુ: સાતત્ય માટે કિંમત શોધવી",
+      "question": "Find the value of k so that the function f(x) = { k*x + 1 if x <= 5; 3*x - 5 if x > 5 } is continuous at x = 5.",
+      "question_hi": "k का मान ज्ञात कीजिए ताकि फलन f(x) = { k*x + 1 यदि x <= 5; 3*x - 5 यदि x > 5 } x = 5 पर संतत हो।",
+      "question_gu": "k ની કિંમત શોધો જેથી વિધેય f(x) = { k*x + 1 જો x <= 5; 3*x - 5 જો x > 5 } x = 5 આગળ સતત થાય.",
+      "options": [
+        "k = 9/5",
+        "k = 2",
+        "k = 9",
+        "k = 10"
+      ],
+      "options_hi": [
+        "k = 9/5",
+        "k = 2",
+        "k = 9",
+        "k = 10"
+      ],
+      "options_gu": [
+        "k = 9/5",
+        "k = 2",
+        "k = 9",
+        "k = 10"
+      ],
+      "correct_index": 0,
+      "explanation": "LHL = lim_{x->5^-} (k*x + 1) = 5k + 1. RHL = lim_{x->5^+} (3*x - 5) = 3(5) - 5 = 10. For continuity, LHL = RHL => 5k + 1 = 10 => 5k = 9 => k = 9/5.",
+      "explanation_hi": "LHL = lim_{x->5^-} (k*x + 1) = 5k + 1. RHL = lim_{x->5^+} (3*x - 5) = 3(5) - 5 = 10। सांतत्य के लिए, LHL = RHL => 5k + 1 = 10 => 5k = 9 => k = 9/5।",
+      "explanation_gu": "LHL = lim_{x->5^-} (k*x + 1) = 5k + 1. RHL = lim_{x->5^+} (3*x - 5) = 3(5) - 5 = 10. સાતત્ય માટે, LHL = RHL => 5k + 1 = 10 => 5k = 9 => k = 9/5."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_006",
+      "type": "reflection",
+      "title": "Continuous but Not Differentiable: The Sharp Corner Paradox",
+      "title_hi": "संतत लेकिन अवकलनीय नहीं: तीखा मोड़ विरोधाभास",
+      "title_gu": "સતત પણ વિકલનીય નહીં: તીક્ષ્ણ ખૂણાનો વિરોધાભાસ",
+      "body": "Every differentiable function is continuous, but IS EVERY CONTINUOUS FUNCTION DIFFERENTIABLE? Consider f(x) = |x| at x = 0. The graph forms a sharp 'V' corner at x = 0. From the left, slope = -1; from the right, slope = +1. Since left-hand derivative (-1) != right-hand derivative (+1), f'(0) does not exist! Thus, continuity does not guarantee differentiability.",
+      "body_hi": "प्रत्येक अवकलनीय फलन संतत होता है, लेकिन क्या प्रत्येक संतत फलन अवकलनीय है? x = 0 पर f(x) = |x| पर विचार करें। ग्राफ x = 0 पर एक तीखा 'V' कोना बनाता है। बाईं ओर से ढाल = -1; दाईं ओर से ढाल = +1। चूंकि बायां अवकलज (-1) != दायां अवकलज (+1), f'(0) का अस्तित्व नहीं है! इस प्रकार, सांतत्य अवकलनीयता की गारंटी नहीं देता है।",
+      "body_gu": "દરેક વિકલનીય વિધેય સતત હોય છે, પરંતુ શું દરેક સતત વિધેય વિકલનીય હોય છે? x = 0 આગળ f(x) = |x| ધ્યાનમાં લો. આલેખ x = 0 આગળ તીક્ષ્ણ 'V' ખૂણો બનાવે છે. ડાબી બાજુથી ઢાળ = -1; જમણી બાજુથી ઢાળ = +1. ડાબી બાજુનું વિકલિત (-1) != જમણી બાજુનું વિકલિત (+1) હોવાથી, f'(0) અસ્તિત્વ ધરાવતું નથી! આમ, સાતત્ય એ વિકલનીયતાની બાંહેધરી આપતું નથી."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_007",
+      "type": "connection",
+      "title": "Real-World Connections: Engineering, Finance & Physics",
+      "title_hi": "वास्तविक दुनिया से संबंध: इंजीनियरिंग, वित्त और भौतिकी",
+      "title_gu": "વાસ્તવિક દુનિયા સાથે જોડાણ: એન્જિનિયરિંગ, ફાઇનાન્સ અને ભૌતિકશાસ્ત્ર",
+      "body": "1. Robotics Trajectory Planning: Robotic arms require smooth path generation (both continuous position and derivative velocity/acceleration) to prevent sudden jerky movements that damage motors.\n2. Financial Options Pricing: Black-Scholes formula relies on continuous differentiability of stock price models.\n3. Signal Processing: Fourier transforms analyze continuous signals to eliminate sudden noise spikes in audio/video streaming.",
+      "body_hi": "1. रोबोटिक्स प्रक्षेपवक्र योजना: रोबोटिक हथियारों को सुचारू पथ निर्माण (संतत स्थिति और अवकलनीय वेग/त्वरण दोनों) की आवश्यकता होती है ताकि अचानक लगने वाले झटकों को रोका जा सके जो मोटरों को नुकसान पहुंचाते हैं।\n2. वित्तीय विकल्प मूल्य निर्धारण: ब्लैक-स्कोल्स सूत्र स्टॉक मूल्य मॉडल की निरंतर अवकलनीयता पर निर्भर करता है।\n3. सिग्नल प्रोसेसिंग: फूरियर रूपांतरण ऑडियो/वीडियो स्ट्रीमिंग में अचानक शोर के स्पाइक्स को खत्म करने के लिए निरंतर सिग्नल का विश्लेषण करते हैं।",
+      "body_gu": "1. રોબોટિક્સ ટ્રેજેક્ટરી પ્લાનિંગ: રોબોટિક હાથને મોટર્સને નુકસાન પહોંચાડતા અચાનક આંચકા રોકવા માટે સરળ માર્ગ નિર્માણ (સતત સ્થાન અને વિકલનીય વેગ/પ્રવેગક બંને) ની જરૂર પડે છે.\n2. ફાઇનાન્સિયલ ઓપ્શન્સ પ્રાઇસિંગ: બ્લેક-સ્કોલ્સ સૂત્ર સ્ટોક કિંમત મોડેલોની સતત વિકલનીયતા પર આધાર રાખે છે.\n3. સિગ્નલ પ્રોસેસિંગ: ફોરિયર ટ્રાન્સફોર્મ ઓડિયો/વિડિઓ સ્ટ્રીમિંગમાં અચાનક અવાજના સ્પાઇક્સને દૂર કરવા માટે સતત સિગ્નલોનું વિશ્લેષણ કરે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_008",
+      "type": "mastery",
+      "title": "Core Rules of Differentiation: Chain Rule, Log & Parametric Forms",
+      "title_hi": "अवकलन के मुख्य नियम: श्रृंखला नियम, लघुगणकीय और प्राचलिक रूप",
+      "title_gu": "વિકલનના મુખ્યા નિયમો: સાંકળનો નિયમ, લઘુગણકીય અને પ્રાચલ સ્વરૂપો",
+      "body": "SUMMARY OF DIFFERENTIATION TOOLS:\n1. Chain Rule: d/dx [f(g(x))] = f'(g(x)) * g'(x)\n2. Implicit Differentiation: Differentiate both sides with respect to x, collecting dy/dx terms.\n3. Logarithmic Differentiation: For y = [u(x)]^[v(x)], take ln on both sides: ln y = v(x) ln u(x), then differentiate.\n4. Parametric Derivatives: If x = f(t), y = g(t), then dy/dx = (dy/dt) / (dx/dt).\n5. Second Order Derivative: d^2y/dx^2 = d/dx(dy/dx).\n6. Mean Value Theorem (MVT): If f is continuous on [a, b] and differentiable on (a, b), there exists c in (a, b) such that f'(c) = [f(b) - f(a)] / (b - a).",
+      "body_hi": "अवकलन तकनीकों का सार:\n1. श्रृंखला नियम: d/dx [f(g(x))] = f'(g(x)) * g'(x)\n2. अस्पष्ट अवकलन: दोनों पक्षों का x के सापेक्ष अवकलन करें, dy/dx पदों को एकत्र करें।\n3. लघुगणकीय अवकलन: y = [u(x)]^[v(x)] के लिए, दोनों तरफ ln लें: ln y = v(x) ln u(x), फिर अवकलन करें।\n4. प्राचलिक अवकलज: यदि x = f(t), y = g(t), तो dy/dx = (dy/dt) / (dx/dt)।\n5. द्वितीय कोटि का अवकलज: d^2y/dx^2 = d/dx(dy/dx)।\n6. मध्यमान प्रमेय (MVT): यदि f [a, b] पर संतत है और (a, b) पर अवकलनीय है, तो (a, b) में एक c का अस्तित्व है जैसे f'(c) = [f(b) - f(a)] / (b - a)।",
+      "body_gu": "વિકલન સાધનોનો સારાંશ:\n1. સાંકળનો નિયમ: d/dx [f(g(x))] = f'(g(x)) * g'(x)\n2. ગૂઢ વિધેયનું વિકલન: x પ્રત્યે બંને બાજુનું વિકલન કરો, dy/dx પદો ભેગા કરો.\n3. લઘુગણકીય વિકલન: y = [u(x)]^[v(x)] માટે, બંને બાજુ ln લો: ln y = v(x) ln u(x), પછી વિકલન કરો.\n4. પ્રાચલિક વિકલિતો: જો x = f(t), y = g(t) હોય, તો dy/dx = (dy/dt) / (dx/dt).\n5. દ્વિતીય કક્ષાનું વિકલિત: d^2y/dx^2 = d/dx(dy/dx).\n6. મધ્યકમાન પ્રમેય (MVT): જો f એ [a, b] પર સતત હોય અને (a, b) પર વિકલનીય હોય, તો (a, b) માં c એવો અસ્તિત્વ ધરાવે છે જેથી f'(c) = [f(b) - f(a)] / (b - a)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_009",
+      "type": "mcq",
+      "title": "Exercise 5.1 - Q1: Continuity of Polynomial Function",
+      "title_hi": "प्रश्नावली 5.1 - Q1: बहुपद फलन का सांतत्य",
+      "title_gu": "સ્વાધ્યાય 5.1 - Q1: બહપદી વિધેયનું સાતત્ય",
+      "question": "Prove that the function f(x) = 5x - 3 is continuous at x = 0, at x = -3 and at x = 5. What is f(-3)?",
+      "question_hi": "सिद्ध कीजिए कि फलन f(x) = 5x - 3, x = 0, x = -3 और x = 5 पर संतत है। f(-3) का मान क्या है?",
+      "question_gu": "સાબિત કરો કે વિધેય f(x) = 5x - 3 એ x = 0, x = -3 અને x = 5 આગળ સતત છે. f(-3) ની કિંમત શું છે?",
+      "options": [
+        "-18",
+        "-3",
+        "0",
+        "22"
+      ],
+      "options_hi": [
+        "-18",
+        "-3",
+        "0",
+        "22"
+      ],
+      "options_gu": [
+        "-18",
+        "-3",
+        "0",
+        "22"
+      ],
+      "correct_index": 0,
+      "explanation": "f(-3) = 5(-3) - 3 = -15 - 3 = -18. Also, lim_{x->-3} (5x - 3) = -18 = f(-3), so it is continuous.",
+      "explanation_hi": "f(-3) = 5(-3) - 3 = -15 - 3 = -18। साथ ही, lim_{x->-3} (5x - 3) = -18 = f(-3), इसलिए यह संतत है।",
+      "explanation_gu": "f(-3) = 5(-3) - 3 = -15 - 3 = -18. ઉપરાંત, lim_{x->-3} (5x - 3) = -18 = f(-3), તેથી તે સતત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_010",
+      "type": "mcq",
+      "title": "Exercise 5.1 - Q2: Continuity of Quadratic Function",
+      "title_hi": "प्रश्नावली 5.1 - Q2: द्विघात फलन का सांतत्य",
+      "title_gu": "સ્વાધ્યાય 5.1 - Q2: દ્વિઘાત વિધેયનું સાતત્ય",
+      "question": "Examine the continuity of the function f(x) = 2x^2 - 1 at x = 3.",
+      "question_hi": "x = 3 पर फलन f(x) = 2x^2 - 1 के सांतत्य की जाँच कीजिए।",
+      "question_gu": "x = 3 આગળ વિધેય f(x) = 2x^2 - 1 ના સાતત્યની ચકાસણી કરો.",
+      "options": [
+        "Discontinuous at x = 3",
+        "Continuous with value f(3) = 17",
+        "Continuous with value f(3) = 18",
+        "Undefined at x = 3"
+      ],
+      "options_hi": [
+        "x = 3 पर असंतत",
+        "f(3) = 17 मान के साथ संतत",
+        "f(3) = 18 मान के साथ संतत",
+        "x = 3 पर अपरिभाषित"
+      ],
+      "options_gu": [
+        "x = 3 આગળ અસતત",
+        "f(3) = 17 કિંમત સાથે સતત",
+        "f(3) = 18 કિંમત સાથે સતત",
+        "x = 3 આગળ અવ્યાખ્યાયિત"
+      ],
+      "correct_index": 1,
+      "explanation": "f(3) = 2(3)^2 - 1 = 2(9) - 1 = 17. lim_{x->3} (2x^2 - 1) = 17 = f(3). Hence f(x) is continuous at x = 3.",
+      "explanation_hi": "f(3) = 2(3)^2 - 1 = 2(9) - 1 = 17। lim_{x->3} (2x^2 - 1) = 17 = f(3)। अतः f(x), x = 3 पर संतत है।",
+      "explanation_gu": "f(3) = 2(3)^2 - 1 = 2(9) - 1 = 17. lim_{x->3} (2x^2 - 1) = 17 = f(3). તેથી f(x) એ x = 3 આગળ સતત છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_011",
+      "type": "mcq",
+      "title": "Exercise 5.1 - Q3: Modulus Function Continuity",
+      "title_hi": "प्रश्नावली 5.1 - Q3: मापांक फलन का सांतत्य",
+      "title_gu": "સ્વાધ્યાય 5.1 - Q3: માનાંક વિધેયનું સાતત્ય",
+      "question": "Examine the function f(x) = |x - 5| for continuity. Which statement is TRUE?",
+      "question_hi": "सांतत्य के लिए फलन f(x) = |x - 5| का परीक्षण कीजिए। कौन सा कथन सत्य है?",
+      "question_gu": "સાતત્ય માટે વિધેય f(x) = |x - 5| ચકાસો. કયું વિધાન સાચું છે?",
+      "options": [
+        "f(x) is discontinuous at x = 5",
+        "f(x) is continuous for all real x",
+        "f(x) is discontinuous at x = 0",
+        "f(x) is continuous only for x > 5"
+      ],
+      "options_hi": [
+        "f(x), x = 5 पर असंतत है",
+        "f(x) सभी वास्तविक x के लिए संतत है",
+        "f(x), x = 0 पर असंतत है",
+        "f(x) केवल x > 5 के लिए संतत है"
+      ],
+      "options_gu": [
+        "f(x) એ x = 5 આગળ અસતત છે",
+        "f(x) એ તમામ વાસ્તવિક x માટે સતત છે",
+        "f(x) એ x = 0 આગળ અસતત છે",
+        "f(x) એ ફક્ત x > 5 માટે સતત છે"
+      ],
+      "correct_index": 1,
+      "explanation": "Absolute value functions |x - c| are continuous everywhere on R.",
+      "explanation_hi": "निरपेक्ष मान फलन (मापांक फलन) |x - c| R पर हर जगह संतत होते हैं।",
+      "explanation_gu": "માનાંક વિધેયો |x - c| એ R પર દરેક જગ્યાએ સતત હોય છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_012",
+      "type": "mcq",
+      "title": "Exercise 5.1 - Q17: Finding Relationship Between Parameters",
+      "title_hi": "प्रश्नावली 5.1 - Q17: प्राचलों के बीच संबंध ज्ञात करना",
+      "title_gu": "સ્વાધ્યાય 5.1 - Q17: પ્રાચલો વચ્ચેનો સંબંધ શોધવો",
+      "question": "Find the relationship between 'a' and 'b' so that the function f defined by f(x) = { ax + 1 if x <= 3; bx + 3 if x > 3 } is continuous at x = 3.",
+      "question_hi": "'a' और 'b' के बीच संबंध ज्ञात कीजिए ताकि f(x) = { ax + 1 यदि x <= 3; bx + 3 यदि x > 3 } द्वारा परिभाषित फलन f, x = 3 पर संतत हो।",
+      "question_gu": "'a' અને 'b' વચ્ચેનો સંબંધ શોધો જેથી f(x) = { ax + 1 જો x <= 3; bx + 3 જો x > 3 } દ્વારા વ્યાખ્યાયિત વિધેય f એ x = 3 આગળ સતત થાય.",
+      "options": [
+        "a = b + 2/3",
+        "a = b + 3/2",
+        "a = 3b + 2",
+        "3a = b + 2"
+      ],
+      "options_hi": [
+        "a = b + 2/3",
+        "a = b + 3/2",
+        "a = 3b + 2",
+        "3a = b + 2"
+      ],
+      "options_gu": [
+        "a = b + 2/3",
+        "a = b + 3/2",
+        "a = 3b + 2",
+        "3a = b + 2"
+      ],
+      "correct_index": 0,
+      "explanation": "LHL at x=3 is 3a + 1. RHL at x=3 is 3b + 3. Equating LHL = RHL: 3a + 1 = 3b + 3 => 3a - 3b = 2 => a - b = 2/3 => a = b + 2/3.",
+      "explanation_hi": "x=3 पर LHL = 3a + 1। x=3 पर RHL = 3b + 3। LHL = RHL रखें: 3a + 1 = 3b + 3 => 3a - 3b = 2 => a - b = 2/3 => a = b + 2/3।",
+      "explanation_gu": "x=3 આગળ LHL = 3a + 1. x=3 આગળ RHL = 3b + 3. LHL = RHL સરખાવતા: 3a + 1 = 3b + 3 => 3a - 3b = 2 => a - b = 2/3 => a = b + 2/3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_013",
+      "type": "true_false",
+      "title": "Exercise 5.1 - Greatest Integer Function",
+      "title_hi": "प्रश्नावली 5.1 - महत्तम पूर्णांक फलन",
+      "title_gu": "સ્વાધ્યાય 5.1 - મહત્તમ પૂર્ણાંક વિધેય",
+      "question": "True or False: The greatest integer function f(x) = [x] is continuous at all integral points.",
+      "question_hi": "सत्य या असत्य: महत्तम पूर्णांक फलन f(x) = [x] सभी पूर्णांक बिंदुओं पर संतत है।",
+      "question_gu": "ખરું કે ખોટું: મહત્તમ પૂર્ણાંક વિધેય f(x) = [x] એ તમામ પૂર્ણાંક બિંદુઓ પર સતત છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "ખરું",
+        "ખોટું"
+      ],
+      "correct_index": 1,
+      "explanation": "FALSE. At any integer k, LHL = k - 1 while RHL = k, so the limit does not exist, making [x] discontinuous at every integer.",
+      "explanation_hi": "असत्य। किसी भी पूर्णांक k पर, LHL = k - 1 जबकि RHL = k, इसलिए सीमा का अस्तित्व नहीं है, जिससे [x] प्रत्येक पूर्णांक पर असंतत होता है।",
+      "explanation_gu": "ખોટું. કોઈપણ પૂર્ણાંક k આગળ, LHL = k - 1 જ્યારે RHL = k છે, તેથી લક્ષ અસ્તિત્વ ધરાવતું નથી, જે [x] ને દરેક પૂર્ણાંક આગળ અસતત બનાવે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_014",
+      "type": "mcq",
+      "title": "Exercise 5.2 - Q1: Chain Rule Differentiation",
+      "title_hi": "प्रश्नावली 5.2 - Q1: श्रृंखला नियम अवकलन",
+      "title_gu": "સ્વાધ્યાય 5.2 - Q1: સાંકળના નિયમથી વિકલન",
+      "question": "Differentiate sin(x^2 + 5) with respect to x.",
+      "question_hi": "x के सापेक्ष sin(x^2 + 5) का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે sin(x^2 + 5) નું વિકલન કરો.",
+      "options": [
+        "cos(x^2 + 5)",
+        "2x * cos(x^2 + 5)",
+        "2x * sin(x^2 + 5)",
+        "-2x * cos(x^2 + 5)"
+      ],
+      "options_hi": [
+        "cos(x^2 + 5)",
+        "2x * cos(x^2 + 5)",
+        "2x * sin(x^2 + 5)",
+        "-2x * cos(x^2 + 5)"
+      ],
+      "options_gu": [
+        "cos(x^2 + 5)",
+        "2x * cos(x^2 + 5)",
+        "2x * sin(x^2 + 5)",
+        "-2x * cos(x^2 + 5)"
+      ],
+      "correct_index": 1,
+      "explanation": "Let y = sin(u) where u = x^2 + 5. dy/dx = cos(u) * du/dx = cos(x^2 + 5) * (2x) = 2x * cos(x^2 + 5).",
+      "explanation_hi": "मान लीजिए y = sin(u) जहाँ u = x^2 + 5। dy/dx = cos(u) * du/dx = cos(x^2 + 5) * (2x) = 2x * cos(x^2 + 5)।",
+      "explanation_gu": "ધારો કે y = sin(u) જ્યાં u = x^2 + 5. dy/dx = cos(u) * du/dx = cos(x^2 + 5) * (2x) = 2x * cos(x^2 + 5)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_015",
+      "type": "mcq",
+      "title": "Exercise 5.2 - Q3: Chain Rule for Trigonometric Composition",
+      "title_hi": "प्रश्नावली 5.2 - Q3: त्रिकोणमितीय संयोजन के लिए श्रृंखला नियम",
+      "title_gu": "સ્વાધ્યાય 5.2 - Q3: ત્રિકોણમિતિ સંયોજન માટે સાંકળનો નિયમ",
+      "question": "Differentiate sin(ax + b) with respect to x.",
+      "question_hi": "x के सापेक्ष sin(ax + b) का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે sin(ax + b) નું વિકલન કરો.",
+      "options": [
+        "a * cos(ax + b)",
+        "cos(ax + b)",
+        "-a * cos(ax + b)",
+        "b * cos(ax + b)"
+      ],
+      "options_hi": [
+        "a * cos(ax + b)",
+        "cos(ax + b)",
+        "-a * cos(ax + b)",
+        "b * cos(ax + b)"
+      ],
+      "options_gu": [
+        "a * cos(ax + b)",
+        "cos(ax + b)",
+        "-a * cos(ax + b)",
+        "b * cos(ax + b)"
+      ],
+      "correct_index": 0,
+      "explanation": "d/dx [sin(ax + b)] = cos(ax + b) * d/dx(ax + b) = a * cos(ax + b).",
+      "explanation_hi": "d/dx [sin(ax + b)] = cos(ax + b) * d/dx(ax + b) = a * cos(ax + b)।",
+      "explanation_gu": "d/dx [sin(ax + b)] = cos(ax + b) * d/dx(ax + b) = a * cos(ax + b)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_016",
+      "type": "mcq",
+      "title": "Exercise 5.2 - Q6: Derivative of Product of Functions",
+      "title_hi": "प्रश्नावली 5.2 - Q6: फलनों के गुणनफल का अवकलज",
+      "title_gu": "સ્વાધ્યાય 5.2 - Q6: વિધેયોના ગુણાકારનું વિકલિત",
+      "question": "Differentiate cos(x^3) * sin^2(x^5) with respect to x.",
+      "question_hi": "x के सापेक्ष cos(x^3) * sin^2(x^5) का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે cos(x^3) * sin^2(x^5) નું વિકલન કરો.",
+      "options": [
+        "10x^4 sin(x^5) cos(x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "5x^4 sin(2x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "Both option 1 and option 2 are equivalent and correct",
+        "None of these"
+      ],
+      "options_hi": [
+        "10x^4 sin(x^5) cos(x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "5x^4 sin(2x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "विकल्प 1 और विकल्प 2 दोनों समान और सही हैं",
+        "इनमें से कोई नहीं"
+      ],
+      "options_gu": [
+        "10x^4 sin(x^5) cos(x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "5x^4 sin(2x^5) cos(x^3) - 3x^2 sin(x^3) sin^2(x^5)",
+        "વિકલ્પ 1 અને વિકલ્પ 2 બંને સમાન અને સાચા છે",
+        "આમાંથી કોઈ નહીં"
+      ],
+      "correct_index": 2,
+      "explanation": "Product rule: u'v + uv'. Here u = cos(x^3) => u' = -3x^2 sin(x^3). v = sin^2(x^5) => v' = 2 sin(x^5) cos(x^5) (5x^4) = 10x^4 sin(x^5) cos(x^5) = 5x^4 sin(2x^5). Both expressions are identical.",
+      "explanation_hi": "गुणनफल नियम: u'v + uv'। यहाँ u = cos(x^3) => u' = -3x^2 sin(x^3)। v = sin^2(x^5) => v' = 2 sin(x^5) cos(x^5) (5x^4) = 10x^4 sin(x^5) cos(x^5) = 5x^4 sin(2x^5)। दोनों व्यंजक समान हैं।",
+      "explanation_gu": "ગુણાકારનો નિયમ: u'v + uv'. અહીં u = cos(x^3) => u' = -3x^2 sin(x^3). v = sin^2(x^5) => v' = 2 sin(x^5) cos(x^5) (5x^4) = 10x^4 sin(x^5) cos(x^5) = 5x^4 sin(2x^5). બંને અભિવ્યક્તિઓ સમાન છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_017",
+      "type": "mcq",
+      "title": "Exercise 5.3 - Q1: Implicit Differentiation",
+      "title_hi": "प्रश्नावली 5.3 - Q1: अस्पष्ट फलन का अवकलन",
+      "title_gu": "સ્વાધ્યાય 5.3 - Q1: ગૂઢ વિધેયનું વિકલન",
+      "question": "Find dy/dx if 2x + 3y = sin(x).",
+      "question_hi": "यदि 2x + 3y = sin(x) हो, तो dy/dx ज्ञात कीजिए।",
+      "question_gu": "જો 2x + 3y = sin(x) હોય, તો dy/dx શોધો.",
+      "options": [
+        "(cos(x) - 2) / 3",
+        "(cos(x) + 2) / 3",
+        "(sin(x) - 2) / 3",
+        "cos(x) - 2"
+      ],
+      "options_hi": [
+        "(cos(x) - 2) / 3",
+        "(cos(x) + 2) / 3",
+        "(sin(x) - 2) / 3",
+        "cos(x) - 2"
+      ],
+      "options_gu": [
+        "(cos(x) - 2) / 3",
+        "(cos(x) + 2) / 3",
+        "(sin(x) - 2) / 3",
+        "cos(x) - 2"
+      ],
+      "correct_index": 0,
+      "explanation": "Differentiating both sides w.r.t x: 2 + 3(dy/dx) = cos(x) => 3(dy/dx) = cos(x) - 2 => dy/dx = (cos(x) - 2) / 3.",
+      "explanation_hi": "x के सापेक्ष दोनों पक्षों का अवकलन करने पर: 2 + 3(dy/dx) = cos(x) => 3(dy/dx) = cos(x) - 2 => dy/dx = (cos(x) - 2) / 3।",
+      "explanation_gu": "x પ્રત્યે બંને બાજુનું વિકલન કરતા: 2 + 3(dy/dx) = cos(x) => 3(dy/dx) = cos(x) - 2 => dy/dx = (cos(x) - 2) / 3."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_018",
+      "type": "mcq",
+      "title": "Exercise 5.3 - Q9: Inverse Trigonometric Substitution",
+      "title_hi": "प्रश्नावली 5.3 - Q9: प्रतिलोम त्रिकोणमितीय प्रतिस्थापन",
+      "title_gu": "સ્વાધ્યાય 5.3 - Q9: પ્રતિલોમ ત્રિકોણમિતિ આદેશ",
+      "question": "Find dy/dx if y = sin^-1( 2x / (1 + x^2) ).",
+      "question_hi": "यदि y = sin^-1( 2x / (1 + x^2) ) हो, तो dy/dx ज्ञात कीजिए।",
+      "question_gu": "જો y = sin^-1( 2x / (1 + x^2) ) હોય, તો dy/dx શોધો.",
+      "options": [
+        "2 / (1 + x^2)",
+        "1 / (1 + x^2)",
+        "-2 / (1 + x^2)",
+        "2x / (1 + x^2)"
+      ],
+      "options_hi": [
+        "2 / (1 + x^2)",
+        "1 / (1 + x^2)",
+        "-2 / (1 + x^2)",
+        "2x / (1 + x^2)"
+      ],
+      "options_gu": [
+        "2 / (1 + x^2)",
+        "1 / (1 + x^2)",
+        "-2 / (1 + x^2)",
+        "2x / (1 + x^2)"
+      ],
+      "correct_index": 0,
+      "explanation": "Substitute x = tan(theta). Then y = sin^-1(sin(2*theta)) = 2*theta = 2 tan^-1(x). Differentiating yields dy/dx = 2 / (1 + x^2).",
+      "explanation_hi": "x = tan(theta) रखें। फिर y = sin^-1(sin(2*theta)) = 2*theta = 2 tan^-1(x)। अवकलन करने पर dy/dx = 2 / (1 + x^2) प्राप्त होता है।",
+      "explanation_gu": "x = tan(theta) મૂકો. પછી y = sin^-1(sin(2*theta)) = 2*theta = 2 tan^-1(x). વિકલન કરતા dy/dx = 2 / (1 + x^2) મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_019",
+      "type": "mcq",
+      "title": "Exercise 5.4 - Q1: Quotient Rule with Exponentials",
+      "title_hi": "प्रश्नावली 5.4 - Q1: चरघातांकी के साथ भागफल नियम",
+      "title_gu": "સ્વાધ્યાય 5.4 - Q1: ઘાતાંકીય સાથે ભાગાકારનો નિયમ",
+      "question": "Differentiate e^x / sin(x) with respect to x.",
+      "question_hi": "x के सापेक्ष e^x / sin(x) का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે e^x / sin(x) નું વિકલન કરો.",
+      "options": [
+        "e^x (sin(x) - cos(x)) / sin^2(x)",
+        "e^x (cos(x) - sin(x)) / sin^2(x)",
+        "e^x (sin(x) + cos(x)) / sin^2(x)",
+        "e^x / cos(x)"
+      ],
+      "options_hi": [
+        "e^x (sin(x) - cos(x)) / sin^2(x)",
+        "e^x (cos(x) - sin(x)) / sin^2(x)",
+        "e^x (sin(x) + cos(x)) / sin^2(x)",
+        "e^x / cos(x)"
+      ],
+      "options_gu": [
+        "e^x (sin(x) - cos(x)) / sin^2(x)",
+        "e^x (cos(x) - sin(x)) / sin^2(x)",
+        "e^x (sin(x) + cos(x)) / sin^2(x)",
+        "e^x / cos(x)"
+      ],
+      "correct_index": 0,
+      "explanation": "Using Quotient Rule d/dx(u/v) = (u'v - uv') / v^2: [e^x * sin(x) - e^x * cos(x)] / sin^2(x) = e^x (sin(x) - cos(x)) / sin^2(x).",
+      "explanation_hi": "भागफल नियम d/dx(u/v) = (u'v - uv') / v^2 का प्रयोग करने पर: [e^x * sin(x) - e^x * cos(x)] / sin^2(x) = e^x (sin(x) - cos(x)) / sin^2(x)।",
+      "explanation_gu": "ભાગાકારનો નિયમ d/dx(u/v) = (u'v - uv') / v^2 વાપરતા: [e^x * sin(x) - e^x * cos(x)] / sin^2(x) = e^x (sin(x) - cos(x)) / sin^2(x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_020",
+      "type": "mcq",
+      "title": "Exercise 5.5 - Q1: Logarithmic Differentiation",
+      "title_hi": "प्रश्नावली 5.5 - Q1: लघुगणकीय अवकलन",
+      "title_gu": "સ્વાધ્યાય 5.5 - Q1: લઘુગણકીય વિકલન",
+      "question": "Differentiate y = cos(x) * cos(2x) * cos(3x) with respect to x.",
+      "question_hi": "x के सापेक्ष y = cos(x) * cos(2x) * cos(3x) का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે y = cos(x) * cos(2x) * cos(3x) નું વિકલન કરો.",
+      "options": [
+        "-y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "-y * [sin(x) + sin(2x) + sin(3x)]",
+        "0"
+      ],
+      "options_hi": [
+        "-y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "-y * [sin(x) + sin(2x) + sin(3x)]",
+        "0"
+      ],
+      "options_gu": [
+        "-y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "y * [tan(x) + 2 tan(2x) + 3 tan(3x)]",
+        "-y * [sin(x) + sin(2x) + sin(3x)]",
+        "0"
+      ],
+      "correct_index": 0,
+      "explanation": "Taking log on both sides: ln y = ln cos(x) + ln cos(2x) + ln cos(3x). Differentiating: (1/y) dy/dx = -tan(x) - 2 tan(2x) - 3 tan(3x). Thus dy/dx = -y [tan(x) + 2 tan(2x) + 3 tan(3x)].",
+      "explanation_hi": "दोनों पक्षों का log लेने पर: ln y = ln cos(x) + ln cos(2x) + ln cos(3x)। अवकलन करने पर: (1/y) dy/dx = -tan(x) - 2 tan(2x) - 3 tan(3x)। इसलिए dy/dx = -y [tan(x) + 2 tan(2x) + 3 tan(3x)]।",
+      "explanation_gu": "બંને બાજુ log લેતા: ln y = ln cos(x) + ln cos(2x) + ln cos(3x). વિકલન કરતા: (1/y) dy/dx = -tan(x) - 2 tan(2x) - 3 tan(3x). તેથી dy/dx = -y [tan(x) + 2 tan(2x) + 3 tan(3x)]."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_021",
+      "type": "mcq",
+      "title": "Exercise 5.5 - Q2: Function Raised to a Function",
+      "title_hi": "प्रश्नावली 5.5 - Q2: फलन की घात फलन",
+      "title_gu": "સ્વાધ્યાય 5.5 - Q2: વિધેયની ઘાતમાં વિધેય",
+      "question": "Differentiate y = x^x with respect to x.",
+      "question_hi": "x के सापेक्ष y = x^x का अवकलन कीजिए।",
+      "question_gu": "x પ્રત્યે y = x^x નું વિકલન કરો.",
+      "options": [
+        "x^x (1 + ln x)",
+        "x * x^(x-1)",
+        "x^x ln x",
+        "1 + ln x"
+      ],
+      "options_hi": [
+        "x^x (1 + ln x)",
+        "x * x^(x-1)",
+        "x^x ln x",
+        "1 + ln x"
+      ],
+      "options_gu": [
+        "x^x (1 + ln x)",
+        "x * x^(x-1)",
+        "x^x ln x",
+        "1 + ln x"
+      ],
+      "correct_index": 0,
+      "explanation": "ln y = x ln x => (1/y) dy/dx = x(1/x) + ln x * 1 = 1 + ln x => dy/dx = x^x (1 + ln x).",
+      "explanation_hi": "ln y = x ln x => (1/y) dy/dx = x(1/x) + ln x * 1 = 1 + ln x => dy/dx = x^x (1 + ln x)।",
+      "explanation_gu": "ln y = x ln x => (1/y) dy/dx = x(1/x) + ln x * 1 = 1 + ln x => dy/dx = x^x (1 + ln x)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_022",
+      "type": "mcq",
+      "title": "Exercise 5.6 - Q1: Derivative of Parametric Form",
+      "title_hi": "प्रश्नावली 5.6 - Q1: प्राचलिक रूप का अवकलज",
+      "title_gu": "સ્વાધ્યાય 5.6 - Q1: પ્રાચલ સ્વરૂપનું વિકલિત",
+      "question": "If x = 2a t^2, y = a t^4, find dy/dx.",
+      "question_hi": "यदि x = 2a t^2, y = a t^4 हो, तो dy/dx ज्ञात कीजिए।",
+      "question_gu": "જો x = 2a t^2, y = a t^4 હોય, તો dy/dx શોધો.",
+      "options": [
+        "t^2",
+        "2t",
+        "t / 2",
+        "4at^3"
+      ],
+      "options_hi": [
+        "t^2",
+        "2t",
+        "t / 2",
+        "4at^3"
+      ],
+      "options_gu": [
+        "t^2",
+        "2t",
+        "t / 2",
+        "4at^3"
+      ],
+      "correct_index": 0,
+      "explanation": "dx/dt = 4at, dy/dt = 4a t^3. Then dy/dx = (dy/dt) / (dx/dt) = (4a t^3) / (4at) = t^2.",
+      "explanation_hi": "dx/dt = 4at, dy/dt = 4a t^3। तब dy/dx = (dy/dt) / (dx/dt) = (4a t^3) / (4at) = t^2।",
+      "explanation_gu": "dx/dt = 4at, dy/dt = 4a t^3. પછી dy/dx = (dy/dt) / (dx/dt) = (4a t^3) / (4at) = t^2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_023",
+      "type": "mcq",
+      "title": "Exercise 5.6 - Q2: Trigonometric Parametric Equations",
+      "title_hi": "प्रश्नावली 5.6 - Q2: त्रिकोणमितीय प्राचलिक समीकरण",
+      "title_gu": "સ્વાધ્યાય 5.6 - Q2: ત્રિકોણમિતિય પ્રાચલ સમીકરણો",
+      "question": "If x = a cos(theta), y = b cos(theta), find dy/dx.",
+      "question_hi": "यदि x = a cos(theta), y = b cos(theta) हो, तो dy/dx ज्ञात कीजिए।",
+      "question_gu": "જો x = a cos(theta), y = b cos(theta) હોય, તો dy/dx શોધો.",
+      "options": [
+        "b / a",
+        "-b / a",
+        "a / b",
+        "-a / b"
+      ],
+      "options_hi": [
+        "b / a",
+        "-b / a",
+        "a / b",
+        "-a / b"
+      ],
+      "options_gu": [
+        "b / a",
+        "-b / a",
+        "a / b",
+        "-a / b"
+      ],
+      "correct_index": 0,
+      "explanation": "dx/d(theta) = -a sin(theta), dy/d(theta) = -b sin(theta). dy/dx = (-b sin(theta)) / (-a sin(theta)) = b / a.",
+      "explanation_hi": "dx/d(theta) = -a sin(theta), dy/d(theta) = -b sin(theta)। dy/dx = (-b sin(theta)) / (-a sin(theta)) = b / a।",
+      "explanation_gu": "dx/d(theta) = -a sin(theta), dy/d(theta) = -b sin(theta). dy/dx = (-b sin(theta)) / (-a sin(theta)) = b / a."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_024",
+      "type": "mcq",
+      "title": "Exercise 5.7 - Q1: Second Order Derivative",
+      "title_hi": "प्रश्नावली 5.7 - Q1: द्वितीय कोटि का अवकलज",
+      "title_gu": "સ્વાધ્યાય 5.7 - Q1: દ્વિતીય કક્ષાનું વિકલિત",
+      "question": "Find the second order derivative d^2y/dx^2 of y = x^2 + 3x + 2.",
+      "question_hi": "y = x^2 + 3x + 2 का द्वितीय कोटि का अवकलज d^2y/dx^2 ज्ञात कीजिए।",
+      "question_gu": "y = x^2 + 3x + 2 નું દ્વિતીય કક્ષાનું વિકલિત d^2y/dx^2 શોધો.",
+      "options": [
+        "2",
+        "2x + 3",
+        "0",
+        "6"
+      ],
+      "options_hi": [
+        "2",
+        "2x + 3",
+        "0",
+        "6"
+      ],
+      "options_gu": [
+        "2",
+        "2x + 3",
+        "0",
+        "6"
+      ],
+      "correct_index": 0,
+      "explanation": "First derivative dy/dx = 2x + 3. Second derivative d^2y/dx^2 = d/dx(2x + 3) = 2.",
+      "explanation_hi": "प्रथम अवकलज dy/dx = 2x + 3। द्वितीय अवकलज d^2y/dx^2 = d/dx(2x + 3) = 2।",
+      "explanation_gu": "પ્રથમ વિકલિત dy/dx = 2x + 3. દ્વિતીય વિકલિત d^2y/dx^2 = d/dx(2x + 3) = 2."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_025",
+      "type": "mcq",
+      "title": "Exercise 5.7 - Q2: Second Order Derivative of Power Function",
+      "title_hi": "प्रश्नावली 5.7 - Q2: घात फलन का द्वितीय कोटि अवकलज",
+      "title_gu": "સ્વાધ્યાય 5.7 - Q2: ઘાત વિધેયનું દ્વિતીય કક્ષાનું વિકલિત",
+      "question": "Find d^2y/dx^2 if y = x^20.",
+      "question_hi": "यदि y = x^20 हो, तो d^2y/dx^2 ज्ञात कीजिए।",
+      "question_gu": "જો y = x^20 હોય, તો d^2y/dx^2 શોધો.",
+      "options": [
+        "380 x^18",
+        "20 x^19",
+        "380 x^19",
+        "190 x^18"
+      ],
+      "options_hi": [
+        "380 x^18",
+        "20 x^19",
+        "380 x^19",
+        "190 x^18"
+      ],
+      "options_gu": [
+        "380 x^18",
+        "20 x^19",
+        "380 x^19",
+        "190 x^18"
+      ],
+      "correct_index": 0,
+      "explanation": "dy/dx = 20 x^19. d^2y/dx^2 = 20 * 19 x^18 = 380 x^18.",
+      "explanation_hi": "dy/dx = 20 x^19। d^2y/dx^2 = 20 * 19 x^18 = 380 x^18।",
+      "explanation_gu": "dy/dx = 20 x^19. d^2y/dx^2 = 20 * 19 x^18 = 380 x^18."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH5_026",
+      "type": "mcq",
+      "title": "Miscellaneous - Rolle's Theorem Condition",
+      "title_hi": "विविध - रोले के प्रमेय की शर्त",
+      "title_gu": "પ્રકીર્ણ - રોલના પ્રમેયની શરત",
+      "question": "What are the three conditions for Rolle's Theorem to be applicable for a function f(x) on [a, b]?",
+      "question_hi": "[a, b] पर फलन f(x) के लिए रोले का प्रमेय लागू होने की तीन शर्तें क्या हैं?",
+      "question_gu": "[a, b] પર વિધેય f(x) માટે રોલનું પ્રમેય લાગુ કરવા માટેની ત્રણ શરતો કઈ છે?",
+      "options": [
+        "f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b)",
+        "f is continuous on (a,b), differentiable on [a,b], and f(a) = f(b)",
+        "f is continuous on [a,b] and f'(a) = f'(b)",
+        "f is differentiable everywhere and f(a) = 0"
+      ],
+      "options_hi": [
+        "f [a,b] पर संतत है, (a,b) पर अवकलनीय है, और f(a) = f(b) है",
+        "f (a,b) पर संतत है, [a,b] पर अवकलनीय है, और f(a) = f(b) है",
+        "f [a,b] पर संतत है और f'(a) = f'(b) है",
+        "f हर जगह अवकलनीय है और f(a) = 0 है"
+      ],
+      "options_gu": [
+        "f એ [a,b] પર સતત છે, (a,b) પર વિકલનીય છે, અને f(a) = f(b) છે",
+        "f એ (a,b) પર સતત છે, [a,b] પર વિકલનીય છે, અને f(a) = f(b) છે",
+        "f એ [a,b] પર સતત છે અને f'(a) = f'(b) છે",
+        "f એ દરેક જગ્યાએ વિકલનીય છે અને f(a) = 0 છે"
+      ],
+      "correct_index": 0,
+      "explanation": "Rolle's Theorem states: 1) f continuous on [a, b], 2) f differentiable on (a, b), 3) f(a) = f(b). Then there exists c in (a, b) such that f'(c) = 0.",
+      "explanation_hi": "रोले का प्रमेय कहता है: 1) f [a, b] पर संतत है, 2) f (a, b) पर अवकलनीय है, 3) f(a) = f(b)। तब (a, b) में एक c ऐसा अस्तित्व में है कि f'(c) = 0।",
+      "explanation_gu": "રોલનું પ્રમેય જણાવે છે: 1) f એ [a, b] પર સતત છે, 2) f એ (a, b) પર વિકલનીય છે, 3) f(a) = f(b). પછી (a, b) માં c એવો અસ્તિત્વ ધરાવે છે જેથી f'(c) = 0."
+    }
+  ]
+}

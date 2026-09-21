@@ -1,0 +1,666 @@
+{
+  "metadata": {
+    "id": "cbse_class12_maths_ch8",
+    "title": "Chapter 8: Application of Integrals",
+    "subject": "Maths",
+    "grade": "12"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_001",
+      "type": "hook",
+      "title": "Finding Areas of Irregular Curved Regions",
+      "title_hi": "अनियमित वक्राकार क्षेत्रों के क्षेत्रफल ज्ञात करना",
+      "title_gu": "અનિયમિત વક્ર વિસ્તારોનું ક્ષેત્રફળ શોધવું",
+      "body": "How do engineers calculate the precise land area of a curved riverbank or the surface area of a futuristic curved stadium roof? Standard geometry formulas like length × width fail here! Definite integration provides the exact tool to compute areas bounded by arbitrary curves.",
+      "body_hi": "इंजीनियर किसी घुमावदार नदी के तट या भविष्य के घुमावदार स्टेडियम की छत के सटीक भूमि क्षेत्र की गणना कैसे करते हैं? लंबाई × चौड़ाई जैसे मानक ज्यामिति सूत्र यहाँ विफल हो जाते हैं! निश्चित समाकलन हमें किसी भी वक्र द्वारा घिरे क्षेत्रफल की सटीक गणना करने का साधन प्रदान करता है।",
+      "body_gu": "એન્જિનિયરો વક્ર નદી કિનારા અથવા ભાવિ વક્ર સ્ટેડિયમના છતનું સચોટ ક્ષેત્રફળ કેવી રીતે ગણે છે? લંબાઈ × પહોળાઈ જેવા પ્રમાણભૂત ભૂમિતિના સૂત્રો અહીં નિષ્ફળ જાય છે! નિશ્ચિત સંકલન આપણને કોઈપણ વક્ર દ્વારા ઘેરાયેલા ક્ષેત્રફળની સચોટ ગણતરી કરવાનું સાધન આપે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_002",
+      "type": "socratic_question",
+      "title": "Summing Infinitesimal Strips",
+      "title_hi": "सूक्ष्म पट्टियों का योग",
+      "title_gu": "અતિસૂક્ષ્મ પટ્ટીઓનો સરવાળો",
+      "question": "If you divide a region under a curve y = f(x) into infinitely thin vertical strips of width dx and height y, what does the definite integral $\\int_a^b y \\, dx$ represent geometrically?",
+      "question_hi": "यदि आप वक्र y = f(x) के नीचे के क्षेत्र को चौड़ाई dx और ऊंचाई y की अनंत रूप से पतली लंबवत पट्टियों में विभाजित करते हैं, तो निश्चित समाकलन $\\int_a^b y \\, dx$ ज्यामितीय रूप से क्या दर्शाता है?",
+      "question_gu": "જો તમે વક્ર y = f(x) નીચેના વિસ્તારને પહોળાઈ dx અને ઊંચાઈ y ની અનંત પાતળી ઊભી પટ્ટીઓમાં વિભાજિત કરો છો, તો નિશ્ચિત સંકલન $\\int_a^b y \\, dx$ ભૌમિતિક રીતે શું દર્શાવે છે?",
+      "options": [
+        "Length of the curve f(x) from x = a to x = b",
+        "Total bounded area under f(x) between x = a and x = b",
+        "Slope of the curve at x = b",
+        "Perimeter of the enclosed region"
+      ],
+      "options_hi": [
+        "x = a से x = b तक वक्र f(x) की लंबाई",
+        "x = a और x = b के बीच f(x) के अंतर्गत कुल परिबद्ध क्षेत्रफल",
+        "x = b पर वक्र की ढाल",
+        "परिबद्ध क्षेत्र का परिमाप"
+      ],
+      "options_gu": [
+        "x = a થી x = b સુધી વક્ર f(x) ની લંબાઈ",
+        "x = a અને x = b વચ્ચે f(x) ની નીચેનો કુલ ઘેરાયેલ ક્ષેત્રફળ",
+        "x = b પર વક્રનો ઢાળ",
+        "ઘેરાયેલા વિસ્તારની પરિમિતિ"
+      ],
+      "correct_index": 1,
+      "explanation": "Each thin strip has area dA = y · dx. Summing all such strips from x = a to x = b using definite integration gives the total area bounded by y = f(x), the x-axis, and lines x = a, x = b.",
+      "explanation_hi": "प्रत्येक पतली पट्टी का क्षेत्रफल dA = y · dx होता है। निश्चित समाकलन द्वारा x = a से x = b तक इन सभी पट्टियों का योग करने पर y = f(x), x-अक्ष और रेखाओं x = a, x = b द्वारा घिरा कुल क्षेत्रफल प्राप्त होता है।",
+      "explanation_gu": "દરેક પાતળી પટ્ટીનું ક્ષેત્રફળ dA = y · dx છે. નિશ્ચિત સંકલન દ્વારા x = a થી x = b સુધી આ બધી પટ્ટીઓનો સરવાળો કરવાથી y = f(x), x-અક્ષ અને રેખાઓ x = a, x = b દ્વારા ઘેરાયેલું કુલ ક્ષેત્રફળ મળે છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_003",
+      "type": "discovery",
+      "title": "Vertical vs Horizontal Strips",
+      "title_hi": "लंबवत बनाम क्षैतिज पट्टियाँ",
+      "title_gu": "ઊભી વિરુદ્ધ આડી પટ્ટીઓ",
+      "body": "When integrating with respect to x (using vertical strips y dx), we calculate area relative to the x-axis. However, if a curve is given as x = g(y), or if slicing horizontally is simpler, we can use horizontal strips of width dy and height x to get Area = $\\int_c^d x \\, dy$ between y = c and y = d. Both methods give identical numerical area!",
+      "body_hi": "जब हम x के सापेक्ष समाकलन करते हैं (लंबवत पट्टियों y dx का उपयोग करके), तो हम x-अक्ष के संदर्भ में क्षेत्रफल की गणना करते हैं। हालाँकि, यदि वक्र x = g(y) के रूप में दिया गया है, या क्षैतिज रूप से काटना सरल है, तो हम y = c और y = d के बीच क्षेत्रफल = $\\int_c^d x \\, dy$ प्राप्त करने के लिए चौड़ाई dy और ऊंचाई x की क्षैतिज पट्टियों का उपयोग कर सकते हैं। दोनों विधियाँ समान संख्यात्मक क्षेत्रफल देती हैं!",
+      "body_gu": "જ્યારે x ની સાપેક્ષે સંકલન કરવામાં આવે છે (ઊભી પટ્ટીઓ y dx નો ઉપયોગ કરીને), ત્યારે આપણે x-અક્ષની સાપેક્ષે ક્ષેત્રફળ ગણીએ છીએ. જો કે, જો વક્ર x = g(y) તરીકે આપેલ હોય, અથવા આડી પટ્ટીઓ વાપરવી સરળ હોય, તો આપણે y = c અને y = d વચ્ચે ક્ષેત્રફળ = $\\int_c^d x \\, dy$ મેળવવા માટે પહોળાઈ dy અને ઊંચાઈ x ની આડી પટ્ટીઓનો ઉપયોગ કરી શકીએ છીએ. બંને પદ્ધતિઓ સમાન ક્ષેત્રફળ આપે છે!"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_004",
+      "type": "theory",
+      "title": "Core Formulas for Bounded Area",
+      "title_hi": "परिबद्ध क्षेत्रफल के मूल सूत्र",
+      "title_gu": "ઘેરાયેલા ક્ષેત્રફળના મુખ્ય સૂત્રો",
+      "body": "Key standard results for calculating area bounded by curves:\n\n1. **Area bounded by y = f(x), x-axis, x = a, x = b:**\n   $$A = \\int_a^b |f(x)| \\, dx$$\n\n2. **Area bounded by x = g(y), y-axis, y = c, y = d:**\n   $$A = \\int_c^d |g(y)| \\, dy$$\n\n3. **Area of Standard Circle $x^2 + y^2 = a^2$:**\n   $$A = \\pi a^2$$\n\n4. **Area of Standard Ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$:**\n   $$A = \\pi a b$$\n\n5. **Standard Integration Formula:**\n   $$\\int \\sqrt{a^2 - x^2} \\, dx = \\frac{x}{2}\\sqrt{a^2 - x^2} + \\frac{a^2}{2}\\sin^{-1}\\left(\\frac{x}{a}\\right) + C$$",
+      "body_hi": "वक्रों द्वारा परिबद्ध क्षेत्रफल की गणना के लिए मुख्य मानक परिणाम:\n\n1. **y = f(x), x-अक्ष, x = a, x = b द्वारा परिबद्ध क्षेत्रफल:**\n   $$A = \\int_a^b |f(x)| \\, dx$$\n\n2. **x = g(y), y-अक्ष, y = c, y = d द्वारा परिबद्ध क्षेत्रफल:**\n   $$A = \\int_c^d |g(y)| \\, dy$$\n\n3. **मानक वृत्त $x^2 + y^2 = a^2$ का क्षेत्रफल:**\n   $$A = \\pi a^2$$\n\n4. **मानक दीर्घवृत्त $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ का क्षेत्रफल:**\n   $$A = \\pi a b$$\n\n5. **मानक समाकलन सूत्र:**\n   $$\\int \\sqrt{a^2 - x^2} \\, dx = \\frac{x}{2}\\sqrt{a^2 - x^2} + \\frac{a^2}{2}\\sin^{-1}\\left(\\frac{x}{a}\\right) + C$$",
+      "body_gu": "વક્રો દ્વારા ઘેરાયેલા ક્ષેત્રફળની ગણતરી માટેના મુખ્ય સૂત્રો:\n\n1. **y = f(x), x-અક્ષ, x = a, x = b દ્વારા ઘેરાયેલ ક્ષેત્રફળ:**\n   $$A = \\int_a^b |f(x)| \\, dx$$\n\n2. **x = g(y), y-અક્ષ, y = c, y = d દ્વારા ઘેરાયેલ ક્ષેત્રફળ:**\n   $$A = \\int_c^d |g(y)| \\, dy$$\n\n3. **પ્રમાણભૂત વર્તુળ $x^2 + y^2 = a^2$ નું ક્ષેત્રફળ:**\n   $$A = \\pi a^2$$\n\n4. **પ્રમાણભૂત ઉપવલય $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ નું ક્ષેત્રફળ:**\n   $$A = \\pi a b$$\n\n5. **પ્રમાણભૂત સંકલન સૂત્ર:**\n   $$\\int \\sqrt{a^2 - x^2} \\, dx = \\frac{x}{2}\\sqrt{a^2 - x^2} + \\frac{a^2}{2}\\sin^{-1}\\left(\\frac{x}{a}\\right) + C$$"
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_005",
+      "type": "knowledge_check",
+      "title": "Area of Ellipse Formula Check",
+      "title_hi": "दीर्घवृत्त के क्षेत्रफल का सूत्र परीक्षण",
+      "title_gu": "ઉપવલયના ક્ષેત્રફળનું સૂત્ર ચકાસણી",
+      "question": "Find the total area of the region bounded by the ellipse $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$.",
+      "question_hi": "दीर्घवृत्त $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$ द्वारा परिबद्ध क्षेत्र का कुल क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "ઉપવલય $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$ દ્વારા ઘેરાયેલા પ્રદેશનું કુલ ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$12\\pi$ sq units",
+        "$144\\pi$ sq units",
+        "$25\\pi$ sq units",
+        "$7\\pi$ sq units"
+      ],
+      "options_hi": [
+        "$12\\pi$ वर्ग इकाई",
+        "$144\\pi$ वर्ग इकाई",
+        "$25\\pi$ वर्ग इकाई",
+        "$7\\pi$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$12\\pi$ ચોરસ એકમ",
+        "$144\\pi$ ચોરસ એકમ",
+        "$25\\pi$ ચોરસ એકમ",
+        "$7\\pi$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Here $a^2 = 16 \\Rightarrow a = 4$ and $b^2 = 9 \\Rightarrow b = 3$. The area of an ellipse is given by $A = \\pi a b = \\pi \\cdot 4 \\cdot 3 = 12\\pi$ sq units.",
+      "explanation_hi": "यहाँ $a^2 = 16 \\Rightarrow a = 4$ तथा $b^2 = 9 \\Rightarrow b = 3$ है। दीर्घवृत्त का क्षेत्रफल $A = \\pi a b = \\pi \\cdot 4 \\cdot 3 = 12\\pi$ वर्ग इकाई होता है।",
+      "explanation_gu": "અહીં $a^2 = 16 \\Rightarrow a = 4$ અને $b^2 = 9 \\Rightarrow b = 3$. ઉપવલયનું ક્ષેત્રફળ $A = \\pi a b = \\pi \\cdot 4 \\cdot 3 = 12\\pi$ ચોરસ એકમ છે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_006",
+      "type": "reflection",
+      "title": "Handling Regions Below the X-Axis",
+      "title_hi": "X-अक्ष के नीचे के क्षेत्रों को संभालना",
+      "title_gu": "X-અક્ષની નીચેના વિસ્તારોની ગણતરી",
+      "body": "Why do we take absolute values when evaluating area? If a curve lies entirely or partially below the x-axis between x = a and x = b, the definite integral $\\int_a^b f(x) dx$ gives a negative value for that portion. Since geometric area is non-negative, we must take $|f(x)|$ or split the integral at points where $f(x) = 0$.",
+      "body_hi": "क्षेत्रफल का मूल्यांकन करते समय हम निरपेक्ष मान (absolute value) क्यों लेते हैं? यदि कोई वक्र x = a और x = b के बीच पूरी तरह या आंशिक रूप से x-अक्ष के नीचे स्थित है, तो निश्चित समाकलन उस भाग के लिए ऋणात्मक मान देता है। चूंकि ज्यामितीय क्षेत्रफल हमेशा धनात्मक होता है, इसलिए हमें $|f(x)|$ लेना चाहिए या समाकलन को उन बिंदुओं पर विभाजित करना चाहिए जहाँ $f(x) = 0$ हो।",
+      "body_gu": "ક્ષેત્રફળની ગણતરી કરતી વખતે આપણે શૂન્યતર ધન મૂલ્ય (માનાંક) શા માટે લઈએ છીએ? જો વક્ર x = a અને x = b વચ્ચે સંપૂર્ણ અથવા આંશિક રીતે x-અક્ષની નીચે આવેલો હોય, તો નિશ્ચિત સંકલન તે ભાગ માટે ઋણ મૂલ્ય આપે છે. કારણ કે ભૌમિતિક ક્ષેત્રફળ હંમેશા ધન હોય છે, તેથી આપણે $|f(x)|$ લેવું જોઈએ અથવા જ્યાં $f(x) = 0$ થાય ત્યાં સંકલનના ભાગ કરવા જોઈએ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_007",
+      "type": "connection",
+      "title": "Cross-Disciplinary Applications of Integration",
+      "title_hi": "समाकलन के अंतर-विषय अनुप्रयोग",
+      "title_gu": "સંકલનના આંતર-વિષય અનુપ્રયોગો",
+      "body": "The technique of finding areas using integrals connects mathematics directly to:\n- **Physics:** Work done $W = \\int F \\, dx$ (area under force-displacement graph), Center of Mass, and Moment of Inertia.\n- **Economics:** Consumer Surplus and Producer Surplus (areas between demand/supply curves and price lines).\n- **Engineering:** Computing fluid thrust on submerged dams and cross-sectional areas in civil engineering.",
+      "body_hi": "समाकलन का उपयोग करके क्षेत्रफल ज्ञात करने की तकनीक गणित को सीधे जोड़ती है:\n- **भौतिकी:** किया गया कार्य $W = \\int F \\, dx$ (बल-विस्थापन ग्राफ के अंतर्गत क्षेत्रफल), द्रव्यमान केंद्र और जड़त्व आघूर्ण।\n- **अर्थशास्त्र:** उपभोक्ता अधिशेष और उत्पादक अधिशेष।\n- **इंजीनियरिंग:** जलमग्न बांधों पर द्रव के दबाव और नागरिक निर्माण में क्रॉस-अनुभागीय क्षेत्रों की गणना।",
+      "body_gu": "સંકલનનો ઉપયોગ કરીને ક્ષેત્રફળ શોધવાની તકનીક ગણિતને સીધી રીતે જોડે છે:\n- **ભૌતિક વિજ્ઞાન:** થયેલ કાર્ય $W = \\int F \\, dx$ (બળ-સ્થાનાંતર આલેખ નીચેનું ક્ષેત્રફળ), દ્રવ્યમાન કેન્દ્ર અને જડત્વની ક્ષણ.\n- **અર્થશાસ્ત્ર:** ગ્રાહક સુખ-સમૃદ્ધિ અને ઉત્પાદક સુખ-સમૃદ્ધિ.\n- **એન્જિનિયરિંગ:** ડેમ પર પ્રવાહીનું દબાણ અને સિવિલ એન્જિનિયરિંગમાં આડછેદનું ક્ષેત્રફળ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_008",
+      "type": "mastery",
+      "title": "Mastery Strategy for Area Problems",
+      "title_hi": "क्षेत्रफल की समस्याओं के लिए महारत रणनीति",
+      "title_gu": "ક્ષેત્રફળના પ્રશ્નો માટે માસ્ટરી વ્યૂહરચના",
+      "body": "Follow these 4 essential steps for every Application of Integrals problem:\n1. **Rough Sketch:** Always draw the curve(s) and identify the enclosed region.\n2. **Intersection Points:** Solve the equations simultaneously to find upper and lower limits.\n3. **Choose Strip:** Decide whether vertical strip ($dx$) or horizontal strip ($dy$) is easier.\n4. **Evaluate & Check Units:** Integrate $|y| dx$ or $|x| dy$, apply limits, and express the final answer in 'square units'.",
+      "body_hi": "समाकलन के अनुप्रयोग की प्रत्येक समस्या के लिए इन 4 आवश्यक चरणों का पालन करें:\n1. **रफ रेखाचित्र:** हमेशा वक्र का आलेख बनाएं और परिबद्ध क्षेत्र की पहचान करें।\n2. **प्रतिच्छेदन बिंदु:** ऊपरी और निचली सीमाओं को खोजने के लिए समीकरणों को हल करें।\n3. **पट्टी का चयन:** तय करें कि लंबवत पट्टी ($dx$) या क्षैतिज पट्टी ($dy$) आसान है।\n4. **मूल्यांकन और इकाई:** $|y| dx$ या $|x| dy$ का समाकलन करें और उत्तर 'वर्ग इकाई' में लिखें।",
+      "body_gu": "સંકલનના ઉપયોગના દરેક પ્રશ્ન માટે આ 4 મહત્વપૂર્ણ પગલાં અનુસરો:\n1. **કાચી આકૃતિ:** હંમેશાં વક્ર દોરો અને ઘેરાયેલા પ્રદેશને ઓળખો.\n2. **છેદન બિંદુઓ:** સીમાઓ શોધવા માટે સમીકરણોનો ઉકેલ મેળવો.\n3. **પટ્ટીની પસંદગી:** નક્કી કરો કે ઊભી પટ્ટી ($dx$) કે આડી પટ્ટી ($dy$) સરળ છે.\n4. **ગણતરી:** $|y| dx$ અથવા $|x| dy$ નું સંકલન કરો અને 'ચોરસ એકમ' માં જવાબ લખો."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_009",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q1",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 1",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 1",
+      "question": "Find the area of the region bounded by the curve $y^2 = x$ and the lines $x = 1$, $x = 4$ and the x-axis in the first quadrant.",
+      "question_hi": "प्रथम चतुर्थांश में वक्र $y^2 = x$ और रेखाओं $x = 1$, $x = 4$ एवं x-अक्ष से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પ્રથમ ચરણમાં વક્ર $y^2 = x$ અને રેખાઓ $x = 1$, $x = 4$ તેમજ x-અક્ષ દ્વારા ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{14}{3}$ sq units",
+        "$\\frac{7}{3}$ sq units",
+        "$\\frac{28}{3}$ sq units",
+        "$\\frac{8}{3}$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{14}{3}$ वर्ग इकाई",
+        "$\\frac{7}{3}$ वर्ग इकाई",
+        "$\\frac{28}{3}$ वर्ग इकाई",
+        "$\\frac{8}{3}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{14}{3}$ ચોરસ એકમ",
+        "$\\frac{7}{3}$ ચોરસ એકમ",
+        "$\\frac{28}{3}$ ચોરસ એકમ",
+        "$\\frac{8}{3}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area $A = \\int_1^4 \\sqrt{x} \\, dx = \\left[ \\frac{2}{3} x^{3/2} \\right]_1^4 = \\frac{2}{3}(8 - 1) = \\frac{14}{3}$ sq units.",
+      "explanation_hi": "क्षेत्रफल $A = \\int_1^4 \\sqrt{x} \\, dx = \\left[ \\frac{2}{3} x^{3/2} \\right]_1^4 = \\frac{2}{3}(8 - 1) = \\frac{14}{3}$ वर्ग इकाई।",
+      "explanation_gu": "ક્ષેત્રફળ $A = \\int_1^4 \\sqrt{x} \\, dx = \\left[ \\frac{2}{3} x^{3/2} \\right]_1^4 = \\frac{2}{3}(8 - 1) = \\frac{14}{3}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_010",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q2",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 2",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 2",
+      "question": "Find the area of the region bounded by $y^2 = 9x$, $x = 2$, $x = 4$ and the x-axis in the first quadrant.",
+      "question_hi": "प्रथम चतुर्थांश में $y^2 = 9x$, $x = 2$, $x = 4$ एवं x-अक्ष से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પ્રથમ ચરણમાં $y^2 = 9x$, $x = 2$, $x = 4$ અને x-અક્ષ દ્વારા ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$16 - 4\\sqrt{2}$ sq units",
+        "$16 + 4\\sqrt{2}$ sq units",
+        "$32 - 8\\sqrt{2}$ sq units",
+        "$12 - 2\\sqrt{2}$ sq units"
+      ],
+      "options_hi": [
+        "$16 - 4\\sqrt{2}$ वर्ग इकाई",
+        "$16 + 4\\sqrt{2}$ वर्ग इकाई",
+        "$32 - 8\\sqrt{2}$ वर्ग इकाई",
+        "$12 - 2\\sqrt{2}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$16 - 4\\sqrt{2}$ ચોરસ એકમ",
+        "$16 + 4\\sqrt{2}$ ચોરસ એકમ",
+        "$32 - 8\\sqrt{2}$ ચોરસ એકમ",
+        "$12 - 2\\sqrt{2}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "$y = 3\\sqrt{x}$. Area $A = \\int_2^4 3\\sqrt{x} \\, dx = 3 \\cdot \\frac{2}{3} [x^{3/2}]_2^4 = 2 (8 - 2\\sqrt{2}) = 16 - 4\\sqrt{2}$ sq units.",
+      "explanation_hi": "$y = 3\\sqrt{x}$। क्षेत्रफल $A = \\int_2^4 3\\sqrt{x} \\, dx = 3 \\cdot \\frac{2}{3} [x^{3/2}]_2^4 = 2 (8 - 2\\sqrt{2}) = 16 - 4\\sqrt{2}$ वर्ग इकाई।",
+      "explanation_gu": "$y = 3\\sqrt{x}$. ક્ષેત્રફળ $A = \\int_2^4 3\\sqrt{x} \\, dx = 3 \\cdot \\frac{2}{3} [x^{3/2}]_2^4 = 2 (8 - 2\\sqrt{2}) = 16 - 4\\sqrt{2}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_011",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q3",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 3",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 3",
+      "question": "Find the area of the region bounded by $x^2 = 4y$, $y = 2$, $y = 4$ and the y-axis in the first quadrant.",
+      "question_hi": "प्रथम चतुर्थांश में $x^2 = 4y$, $y = 2$, $y = 4$ एवं y-अक्ष से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પ્રથમ ચરણમાં $x^2 = 4y$, $y = 2$, $y = 4$ અને y-અક્ષ દ્વારા ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{32 - 8\\sqrt{2}}{3}$ sq units",
+        "$\\frac{16 - 4\\sqrt{2}}{3}$ sq units",
+        "$\\frac{16}{3}$ sq units",
+        "$\\frac{32}{3}$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{32 - 8\\sqrt{2}}{3}$ वर्ग इकाई",
+        "$\\frac{16 - 4\\sqrt{2}}{3}$ वर्ग इकाई",
+        "$\\frac{16}{3}$ वर्ग इकाई",
+        "$\\frac{32}{3}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{32 - 8\\sqrt{2}}{3}$ ચોરસ એકમ",
+        "$\\frac{16 - 4\\sqrt{2}}{3}$ ચોરસ એકમ",
+        "$\\frac{16}{3}$ ચોરસ એકમ",
+        "$\\frac{32}{3}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "$x = 2\\sqrt{y}$. Area $A = \\int_2^4 2\\sqrt{y} \\, dy = 2 \\cdot \\frac{2}{3} [y^{3/2}]_2^4 = \\frac{4}{3}(8 - 2\\sqrt{2}) = \\frac{32 - 8\\sqrt{2}}{3}$ sq units.",
+      "explanation_hi": "$x = 2\\sqrt{y}$। क्षेत्रफल $A = \\int_2^4 2\\sqrt{y} \\, dy = 2 \\cdot \\frac{2}{3} [y^{3/2}]_2^4 = \\frac{4}{3}(8 - 2\\sqrt{2}) = \\frac{32 - 8\\sqrt{2}}{3}$ वर्ग इकाई।",
+      "explanation_gu": "$x = 2\\sqrt{y}$. ક્ષેત્રફળ $A = \\int_2^4 2\\sqrt{y} \\, dy = 2 \\cdot \\frac{2}{3} [y^{3/2}]_2^4 = \\frac{4}{3}(8 - 2\\sqrt{2}) = \\frac{32 - 8\\sqrt{2}}{3}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_012",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q4",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 4",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 4",
+      "question": "Find the area of the region bounded by the ellipse $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$.",
+      "question_hi": "दीर्घवृत्त $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "ઉપવલય $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$12\\pi$ sq units",
+        "$6\\pi$ sq units",
+        "$16\\pi$ sq units",
+        "$9\\pi$ sq units"
+      ],
+      "options_hi": [
+        "$12\\pi$ वर्ग इकाई",
+        "$6\\pi$ वर्ग इकाई",
+        "$16\\pi$ वर्ग इकाई",
+        "$9\\pi$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$12\\pi$ ચોરસ એકમ",
+        "$6\\pi$ ચોરસ એકમ",
+        "$16\\pi$ ચોરસ એકમ",
+        "$9\\pi$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Total Area $A = 4 \\times \\int_0^4 \\frac{3}{4}\\sqrt{16-x^2} \\, dx = 3 \\left[ \\frac{x}{2}\\sqrt{16-x^2} + 8 \\sin^{-1}\\left(\\frac{x}{4}\\right) \\right]_0^4 = 3 \\left( 8 \\cdot \\frac{\\pi}{2} \\right) = 12\\pi$ sq units.",
+      "explanation_hi": "कुल क्षेत्रफल $A = 4 \\times \\int_0^4 \\frac{3}{4}\\sqrt{16-x^2} \\, dx = 3 \\left( 8 \\cdot \\frac{\\pi}{2} \\right) = 12\\pi$ वर्ग इकाई।",
+      "explanation_gu": "કુલ ક્ષેત્રફળ $A = 4 \\times \\int_0^4 \\frac{3}{4}\\sqrt{16-x^2} \\, dx = 3 \\left( 8 \\cdot \\frac{\\pi}{2} \\right) = 12\\pi$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_013",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q5",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 5",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 5",
+      "question": "Find the area of the region bounded by the ellipse $\\frac{x^2}{4} + \\frac{y^2}{9} = 1$.",
+      "question_hi": "दीर्घवृत्त $\\frac{x^2}{4} + \\frac{y^2}{9} = 1$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "ઉપવલય $\\frac{x^2}{4} + \\frac{y^2}{9} = 1$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$6\\pi$ sq units",
+        "$12\\pi$ sq units",
+        "$36\\pi$ sq units",
+        "$4\\pi$ sq units"
+      ],
+      "options_hi": [
+        "$6\\pi$ वर्ग इकाई",
+        "$12\\pi$ वर्ग इकाई",
+        "$36\\pi$ वर्ग इकाई",
+        "$4\\pi$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$6\\pi$ ચોરસ એકમ",
+        "$12\\pi$ ચોરસ એકમ",
+        "$36\\pi$ ચોરસ એકમ",
+        "$4\\pi$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "For $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$, area $A = \\pi a b$. Here $a = 2, b = 3 \\Rightarrow Area = \\pi \\cdot 2 \\cdot 3 = 6\\pi$ sq units.",
+      "explanation_hi": "दीर्घवृत्त के लिए क्षेत्रफल $A = \\pi a b$ होता है। यहाँ $a = 2, b = 3 \\Rightarrow Area = \\pi \\cdot 2 \\cdot 3 = 6\\pi$ वर्ग इकाई।",
+      "explanation_gu": "ઉપવલય માટે ક્ષેત્રફળ $A = \\pi a b$. અહીં $a = 2, b = 3 \\Rightarrow Area = \\pi \\cdot 2 \\cdot 3 = 6\\pi$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_014",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q6",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 6",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 6",
+      "question": "Find the area of the region in the first quadrant enclosed by the x-axis, the line $x = \\sqrt{3}y$ and the circle $x^2 + y^2 = 4$.",
+      "question_hi": "प्रथम चतुर्थांश में x-अक्ष, रेखा $x = \\sqrt{3}y$ और वृत्त $x^2 + y^2 = 4$ द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પ્રથમ ચરણમાં x-અક્ષ, રેખા $x = \\sqrt{3}y$ અને વર્તુળ $x^2 + y^2 = 4$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{\\pi}{3}$ sq units",
+        "$\\frac{\\pi}{6}$ sq units",
+        "$\\frac{\\pi}{2}$ sq units",
+        "$\\frac{\\pi}{4}$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{\\pi}{3}$ वर्ग इकाई",
+        "$\\frac{\\pi}{6}$ वर्ग इकाई",
+        "$\\frac{\\pi}{2}$ वर्ग इकाई",
+        "$\\frac{\\pi}{4}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{\\pi}{3}$ ચોરસ એકમ",
+        "$\\frac{\\pi}{6}$ ચોરસ એકમ",
+        "$\\frac{\\pi}{2}$ ચોરસ એકમ",
+        "$\\frac{\\pi}{4}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Intersection point of $x = \\sqrt{3}y$ and $x^2 + y^2 = 4$ gives $x = \\sqrt{3}, y = 1$. Angle made with x-axis is $\\theta = 30^\\circ = \\frac{\\pi}{6}$. Area of sector = $\\frac{1}{2} r^2 \\theta = \\frac{1}{2} (4) \\left(\\frac{\\pi}{6}\\right) = \\frac{\\pi}{3}$ sq units.",
+      "explanation_hi": "प्रतिच्छेदन बिंदु $x = \\sqrt{3}, y = 1$ है। कोण $\\theta = 30^\\circ = \\frac{\\pi}{6}$। क्षेत्र का क्षेत्रफल = $\\frac{1}{2} r^2 \\theta = \\frac{1}{2} (4) \\left(\\frac{\\pi}{6}\\right) = \\frac{\\pi}{3}$ वर्ग इकाई।",
+      "explanation_gu": "છેદન બિંદુ $x = \\sqrt{3}, y = 1$ છે. ખૂણો $\\theta = 30^\\circ = \\frac{\\pi}{6}$. ક્ષેત્રફળ = $\\frac{1}{2} r^2 \\theta = \\frac{1}{2} (4) \\left(\\frac{\\pi}{6}\\right) = \\frac{\\pi}{3}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_015",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q7",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 7",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 7",
+      "question": "Find the area of the smaller part of the circle $x^2 + y^2 = a^2$ cut off by the line $x = \\frac{a}{\\sqrt{2}}$.",
+      "question_hi": "वृत्त $x^2 + y^2 = a^2$ के उस छोटे भाग का क्षेत्रफल ज्ञात कीजिए जो रेखा $x = \\frac{a}{\\sqrt{2}}$ द्वारा काटा गया है।",
+      "question_gu": "વર્તુળ $x^2 + y^2 = a^2$ ના રેખા $x = \\frac{a}{\\sqrt{2}}$ વડે કપાતા નાના ભાગનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ sq units",
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} + 1\\right)$ sq units",
+        "$a^2\\left(\\frac{\\pi}{2} - 1\\right)$ sq units",
+        "$\\frac{a^2}{4}(\\pi - 1)$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ वर्ग इकाई",
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} + 1\\right)$ वर्ग इकाई",
+        "$a^2\\left(\\frac{\\pi}{2} - 1\\right)$ वर्ग इकाई",
+        "$\\frac{a^2}{4}(\\pi - 1)$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ ચોરસ એકમ",
+        "$\\frac{a^2}{2}\\left(\\frac{\\pi}{2} + 1\\right)$ ચોરસ એકમ",
+        "$a^2\\left(\\frac{\\pi}{2} - 1\\right)$ ચોરસ એકમ",
+        "$\\frac{a^2}{4}(\\pi - 1)$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area $A = 2 \\int_{a/\\sqrt{2}}^a \\sqrt{a^2 - x^2} \\, dx = 2 \\left[ \\frac{x}{2}\\sqrt{a^2-x^2} + \\frac{a^2}{2}\\sin^{-1}\\left(\\frac{x}{a}\\right) \\right]_{a/\\sqrt{2}}^a = \\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ sq units.",
+      "explanation_hi": "क्षेत्रफल $A = 2 \\int_{a/\\sqrt{2}}^a \\sqrt{a^2 - x^2} \\, dx = \\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ वर्ग इकाई।",
+      "explanation_gu": "ક્ષેત્રફળ $A = 2 \\int_{a/\\sqrt{2}}^a \\sqrt{a^2 - x^2} \\, dx = \\frac{a^2}{2}\\left(\\frac{\\pi}{2} - 1\\right)$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_016",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q8",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 8",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 8",
+      "question": "The area between $x = y^2$ and $x = 4$ is divided into two equal parts by the line $x = a$. What is the value of $a$?",
+      "question_hi": "$x = y^2$ और $x = 4$ के बीच का क्षेत्रफल रेखा $x = a$ द्वारा दो बराबर भागों में विभाजित होता है। $a$ का मान क्या है?",
+      "question_gu": "$x = y^2$ અને $x = 4$ વચ્ચેનું ક્ષેત્રફળ રેખા $x = a$ દ્વારા બે સરખા ભાગોમાં વિભાજીત થાય છે. $a$ નું મૂલ્ય શું છે?",
+      "options": [
+        "$4^{2/3}$",
+        "$2^{4/3}$",
+        "$2^{2/3}$",
+        "$4^{1/3}$"
+      ],
+      "options_hi": [
+        "$4^{2/3}$",
+        "$2^{4/3}$",
+        "$2^{2/3}$",
+        "$4^{1/3}$"
+      ],
+      "options_gu": [
+        "$4^{2/3}$",
+        "$2^{4/3}$",
+        "$2^{2/3}$",
+        "$4^{1/3}$"
+      ],
+      "correct_index": 0,
+      "explanation": "$\\int_0^a \\sqrt{x} \\, dx = \\frac{1}{2} \\int_0^4 \\sqrt{x} \\, dx \\Rightarrow \\frac{2}{3} a^{3/2} = \\frac{1}{2} \\cdot \\frac{2}{3} (8) = \\frac{8}{3} \\Rightarrow a^{3/2} = 4 \\Rightarrow a = 4^{2/3}$.",
+      "explanation_hi": "$\\int_0^a \\sqrt{x} \\, dx = \\frac{1}{2} \\int_0^4 \\sqrt{x} \\, dx \\Rightarrow a^{3/2} = 4 \\Rightarrow a = 4^{2/3}$।",
+      "explanation_gu": "$\\int_0^a \\sqrt{x} \\, dx = \\frac{1}{2} \\int_0^4 \\sqrt{x} \\, dx \\Rightarrow a^{3/2} = 4 \\Rightarrow a = 4^{2/3}$."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_017",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q9",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 9",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 9",
+      "question": "Find the area of the region bounded by the parabola $y = x^2$ and $y = |x|$.",
+      "question_hi": "परवलय $y = x^2$ और $y = |x|$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પરવલય $y = x^2$ અને $y = |x|$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{1}{3}$ sq unit",
+        "$\\frac{1}{6}$ sq unit",
+        "$\\frac{2}{3}$ sq unit",
+        "$\\frac{1}{2}$ sq unit"
+      ],
+      "options_hi": [
+        "$\\frac{1}{3}$ वर्ग इकाई",
+        "$\\frac{1}{6}$ वर्ग इकाई",
+        "$\\frac{2}{3}$ वर्ग इकाई",
+        "$\\frac{1}{2}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{1}{3}$ ચોરસ એકમ",
+        "$\\frac{1}{6}$ ચોરસ એકમ",
+        "$\\frac{2}{3}$ ચોરસ એકમ",
+        "$\\frac{1}{2}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Due to symmetry, Area $A = 2 \\int_0^1 (x - x^2) \\, dx = 2 \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_0^1 = 2 \\left( \\frac{1}{2} - \\frac{1}{3} \\right) = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$ sq unit.",
+      "explanation_hi": "सममिति के कारण, क्षेत्रफल $A = 2 \\int_0^1 (x - x^2) \\, dx = 2 \\left( \\frac{1}{2} - \\frac{1}{3} \\right) = \\frac{1}{3}$ वर्ग इकाई।",
+      "explanation_gu": "સંમિતતાને કારણે, ક્ષેત્રફળ $A = 2 \\int_0^1 (x - x^2) \\, dx = 2 \\left( \\frac{1}{2} - \\frac{1}{3} \\right) = \\frac{1}{3}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_018",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q10",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 10",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 10",
+      "question": "Find the area bounded by the curve $x^2 = 4y$ and the line $x = 4y - 2$.",
+      "question_hi": "वक्र $x^2 = 4y$ और रेखा $x = 4y - 2$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "વક્ર $x^2 = 4y$ અને રેખા $x = 4y - 2$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{9}{8}$ sq units",
+        "$\\frac{9}{4}$ sq units",
+        "$\\frac{9}{2}$ sq units",
+        "$\\frac{3}{4}$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{9}{8}$ वर्ग इकाई",
+        "$\\frac{9}{4}$ वर्ग इकाई",
+        "$\\frac{9}{2}$ वर्ग इकाई",
+        "$\\frac{3}{4}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{9}{8}$ ચોરસ એકમ",
+        "$\\frac{9}{4}$ ચોરસ એકમ",
+        "$\\frac{9}{2}$ ચોરસ એકમ",
+        "$\\frac{3}{4}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Intersection points: $x^2 = x + 2 \\Rightarrow x^2 - x - 2 = 0 \\Rightarrow x = -1, 2$. Area $A = \\int_{-1}^2 \\left(\\frac{x+2}{4} - \\frac{x^2}{4}\\right) dx = \\frac{1}{4} \\left[ \\frac{x^2}{2} + 2x - \\frac{x^3}{3} \\right]_{-1}^2 = \\frac{9}{8}$ sq units.",
+      "explanation_hi": "प्रतिच्छेदन बिंदु: $x = -1, 2$। क्षेत्रफल $A = \\int_{-1}^2 \\left(\\frac{x+2}{4} - \\frac{x^2}{4}\\right) dx = \\frac{9}{8}$ वर्ग इकाई।",
+      "explanation_gu": "છેદન બિંદુઓ: $x = -1, 2$. ક્ષેત્રફળ $A = \\int_{-1}^2 \\left(\\frac{x+2}{4} - \\frac{x^2}{4}\\right) dx = \\frac{9}{8}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_019",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q11",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 11",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 11",
+      "question": "Find the area of the region bounded by the curve $y^2 = 4x$ and the line $x = 3$.",
+      "question_hi": "वक्र $y^2 = 4x$ और रेखा $x = 3$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "વક્ર $y^2 = 4x$ અને રેખા $x = 3$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$8\\sqrt{3}$ sq units",
+        "$4\\sqrt{3}$ sq units",
+        "$16\\sqrt{3}$ sq units",
+        "$12\\sqrt{3}$ sq units"
+      ],
+      "options_hi": [
+        "$8\\sqrt{3}$ वर्ग इकाई",
+        "$4\\sqrt{3}$ वर्ग इकाई",
+        "$16\\sqrt{3}$ वर्ग इकाई",
+        "$12\\sqrt{3}$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$8\\sqrt{3}$ ચોરસ એકમ",
+        "$4\\sqrt{3}$ ચોરસ એકમ",
+        "$16\\sqrt{3}$ ચોરસ એકમ",
+        "$12\\sqrt{3}$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area $A = 2 \\int_0^3 2\\sqrt{x} \\, dx = 4 \\left[ \\frac{2}{3} x^{3/2} \\right]_0^3 = \\frac{8}{3} (3\\sqrt{3}) = 8\\sqrt{3}$ sq units.",
+      "explanation_hi": "क्षेत्रफल $A = 2 \\int_0^3 2\\sqrt{x} \\, dx = \\frac{8}{3}(3\\sqrt{3}) = 8\\sqrt{3}$ वर्ग इकाई।",
+      "explanation_gu": "ક્ષેત્રફળ $A = 2 \\int_0^3 2\\sqrt{x} \\, dx = \\frac{8}{3}(3\\sqrt{3}) = 8\\sqrt{3}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_020",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q12 (MCQ)",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 12 (वस्तुनिष्ठ)",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 12 (MCQ)",
+      "question": "Area lying in the first quadrant and bounded by the circle $x^2 + y^2 = 4$ and the lines $x = 0$ and $x = 2$ is:",
+      "question_hi": "प्रथम चतुर्थांश में वृत्त $x^2 + y^2 = 4$ एवं रेखाओं $x = 0$ तथा $x = 2$ से घिरे क्षेत्र का क्षेत्रफल है:",
+      "question_gu": "પ્રથમ ચરણમાં વર્તુળ $x^2 + y^2 = 4$ અને રેખાઓ $x = 0$ તેમજ $x = 2$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ છે:",
+      "options": [
+        "$\\pi$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "options_hi": [
+        "$\\pi$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "options_gu": [
+        "$\\pi$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "correct_index": 0,
+      "explanation": "This is one quadrant of a circle of radius $r = 2$. Total area = $\\pi r^2 = 4\\pi$. Area in first quadrant = $\\frac{4\\pi}{4} = \\pi$ sq units.",
+      "explanation_hi": "यह त्रिज्या $r = 2$ वाले वृत्त का एक चतुर्थांश है। कुल क्षेत्रफल = $4\\pi$, प्रथम चतुर्थांश का क्षेत्रफल = $\\frac{4\\pi}{4} = \\pi$ वर्ग इकाई।",
+      "explanation_gu": "આ ત્રિજ્યા $r = 2$ વાળા વર્તુળનો એક ચરણ છે. કુલ ક્ષેત્રફળ = $4\\pi$, પ્રથમ ચરણનું ક્ષેત્રફળ = $\\frac{4\\pi}{4} = \\pi$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_021",
+      "type": "mcq",
+      "title": "Textbook Exercise 8.1 - Q13 (MCQ)",
+      "title_hi": "पाठ्यपुस्तक प्रश्नावली 8.1 - प्रश्न 13 (वस्तुनिष्ठ)",
+      "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 8.1 - પ્રશ્ન 13 (MCQ)",
+      "question": "Area of the region bounded by the curve $y^2 = 4x$, y-axis and the line $y = 3$ is:",
+      "question_hi": "वक्र $y^2 = 4x$, y-अक्ष एवं रेखा $y = 3$ से घिरे क्षेत्र का क्षेत्रफल है:",
+      "question_gu": "વક્ર $y^2 = 4x$, y-અક્ષ અને રેખા $y = 3$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ છે:",
+      "options": [
+        "$\\frac{9}{4}$",
+        "$\\frac{9}{2}$",
+        "$9$",
+        "$\\frac{3}{4}$"
+      ],
+      "options_hi": [
+        "$\\frac{9}{4}$",
+        "$\\frac{9}{2}$",
+        "$9$",
+        "$\\frac{3}{4}$"
+      ],
+      "options_gu": [
+        "$\\frac{9}{4}$",
+        "$\\frac{9}{2}$",
+        "$9$",
+        "$\\frac{3}{4}$"
+      ],
+      "correct_index": 0,
+      "explanation": "Integrating along y-axis: $x = \\frac{y^2}{4}$. Area $A = \\int_0^3 \\frac{y^2}{4} \\, dy = \\left[ \\frac{y^3}{12} \\right]_0^3 = \\frac{27}{12} = \\frac{9}{4}$ sq units.",
+      "explanation_hi": "y-अक्ष के सापेक्ष समाकलन: $x = \\frac{y^2}{4}$। क्षेत्रफल $A = \\int_0^3 \\frac{y^2}{4} \\, dy = \\frac{27}{12} = \\frac{9}{4}$ वर्ग इकाई।",
+      "explanation_gu": "y-અક્ષની સાપેક્ષે સંકલન: $x = \\frac{y^2}{4}$. ક્ષેત્રફળ $A = \\int_0^3 \\frac{y^2}{4} \\, dy = \\frac{27}{12} = \\frac{9}{4}$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_022",
+      "type": "true_false",
+      "title": "Textbook Concept True/False - Area Positivity",
+      "title_hi": "पाठ्यपुस्तक संकल्पना सत्य/असत्य - क्षेत्रफल का धनात्मक होना",
+      "title_gu": "પાઠ્યપુસ્તક વિભાવના સત્ય/અસત્ય - ક્ષેત્રફળની ધનતા",
+      "question": "True or False: The area under a curve $y = f(x)$ between $x = a$ and $x = b$ can be negative if $f(x) < 0$ in that interval.",
+      "question_hi": "सत्य या असत्य: $x = a$ और $x = b$ के बीच किसी वक्र $y = f(x)$ का क्षेत्रफल ऋणात्मक हो सकता है यदि उस अंतराल में $f(x) < 0$ हो।",
+      "question_gu": "સત્ય કે અસત્ય: જો તે અંતરાલમાં $f(x) < 0$ હોય તો $x = a$ અને $x = b$ વચ્ચેના વક્ર $y = f(x)$ નું ક્ષેત્રફળ ઋણ હોઈ શકે છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સત્ય",
+        "અસત્ય"
+      ],
+      "correct_index": 1,
+      "explanation": "False! While a definite integral $\\int_a^b f(x) dx$ can be negative, geometric area is ALWAYS non-negative. We must take $|f(x)|$ to represent area.",
+      "explanation_hi": "असत्य! यद्यपि निश्चित समाकलन ऋणात्मक हो सकता है, परंतु ज्यामितीय क्षेत्रफल सदैव धनात्मक (अ-ऋणात्मक) होता है।",
+      "explanation_gu": "અસત્ય! નિશ્ચિત સંકલન ઋણ હોઈ શકે છે, પરંતુ ભૌમિતિક ક્ષેત્રફળ હંમેશાં ધન હોય છે. ક્ષેત્રફળ દર્શાવવા માટે આપણે $|f(x)|$ લેવું જ પડે."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_023",
+      "type": "mcq",
+      "title": "Miscellaneous Chapter 8 - Area Bounded by Sine Curve",
+      "title_hi": "विविध अध्याय 8 - साइन वक्र से घिरा क्षेत्रफल",
+      "title_gu": "પ્રકીર્ણ પ્રકરણ 8 - સાઇન વક્ર વડે ઘેરાયેલ ક્ષેત્રફળ",
+      "question": "Find the area bounded by the curve $y = \\sin x$ between $x = 0$ and $x = 2\\pi$.",
+      "question_hi": "$x = 0$ और $x = 2\\pi$ के बीच वक्र $y = \\sin x$ से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "$x = 0$ અને $x = 2\\pi$ વચ્ચે વક્ર $y = \\sin x$ વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "4 sq units",
+        "0 sq units",
+        "2 sq units",
+        "1 sq unit"
+      ],
+      "options_hi": [
+        "4 वर्ग इकाई",
+        "0 वर्ग इकाई",
+        "2 वर्ग इकाई",
+        "1 वर्ग इकाई"
+      ],
+      "options_gu": [
+        "4 ચોરસ એકમ",
+        "0 ચોરસ એકમ",
+        "2 ચોરસ એકમ",
+        "1 ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area $A = \\int_0^\\pi \\sin x \\, dx + \\left| \\int_\\pi^{2\\pi} \\sin x \\, dx \\right| = [-\\cos x]_0^\\pi + |[-\\cos x]_\\pi^{2\\pi}| = (1 - (-1)) + |(-1 - 1)| = 2 + 2 = 4$ sq units.",
+      "explanation_hi": "क्षेत्रफल $A = \\int_0^\\pi \\sin x \\, dx + \\left| \\int_\\pi^{2\\pi} \\sin x \\, dx \\right| = 2 + 2 = 4$ वर्ग इकाई। (नोट: समाकलन 0 हो सकता है लेकिन क्षेत्रफल 4 है)।",
+      "explanation_gu": "ક્ષેત્રફળ $A = \\int_0^\\pi \\sin x \\, dx + \\left| \\int_\\pi^{2\\pi} \\sin x \\, dx \\right| = 2 + 2 = 4$ ચોરસ એકમ. (નોંધ: સંકલન 0 હોઈ શકે પણ ક્ષેત્રફળ 4 થાય)."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_024",
+      "type": "mcq",
+      "title": "Miscellaneous Chapter 8 - Parabola Latus Rectum Area",
+      "title_hi": "विविध अध्याय 8 - परवलय नाभिलंब क्षेत्रफल",
+      "title_gu": "પ્રકીર્ણ પ્રકરણ 8 - પરવલય નાભિલાંબ ક્ષેત્રફળ",
+      "question": "Find the area bounded by the parabola $y^2 = 4ax$ and its latus rectum ($x = a$).",
+      "question_hi": "परवलय $y^2 = 4ax$ और इसके नाभिलंब ($x = a$) से घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+      "question_gu": "પરવલય $y^2 = 4ax$ અને તેના નાભિલાંબ ($x = a$) વડે ઘેરાયેલા પ્રદેશનું ક્ષેત્રફળ શોધો.",
+      "options": [
+        "$\\frac{8}{3}a^2$ sq units",
+        "$\\frac{4}{3}a^2$ sq units",
+        "$\\frac{16}{3}a^2$ sq units",
+        "$2a^2$ sq units"
+      ],
+      "options_hi": [
+        "$\\frac{8}{3}a^2$ वर्ग इकाई",
+        "$\\frac{4}{3}a^2$ वर्ग इकाई",
+        "$\\frac{16}{3}a^2$ वर्ग इकाई",
+        "$2a^2$ वर्ग इकाई"
+      ],
+      "options_gu": [
+        "$\\frac{8}{3}a^2$ ચોરસ એકમ",
+        "$\\frac{4}{3}a^2$ ચોરસ એકમ",
+        "$\\frac{16}{3}a^2$ ચોરસ એકમ",
+        "$2a^2$ ચોરસ એકમ"
+      ],
+      "correct_index": 0,
+      "explanation": "Area $A = 2 \\int_0^a 2\\sqrt{a}\\sqrt{x} \\, dx = 4\\sqrt{a} \\left[ \\frac{2}{3} x^{3/2} \\right]_0^a = 4\\sqrt{a} \\cdot \\frac{2}{3} a^{3/2} = \\frac{8}{3}a^2$ sq units.",
+      "explanation_hi": "क्षेत्रफल $A = 2 \\int_0^a 2\\sqrt{a}\\sqrt{x} \\, dx = 4\\sqrt{a} \\left( \\frac{2}{3} a^{3/2} \\right) = \\frac{8}{3}a^2$ वर्ग इकाई।",
+      "explanation_gu": "ક્ષેત્રફળ $A = 2 \\int_0^a 2\\sqrt{a}\\sqrt{x} \\, dx = 4\\sqrt{a} \\left( \\frac{2}{3} a^{3/2} \\right) = \\frac{8}{3}a^2$ ચોરસ એકમ."
+    },
+    {
+      "id": "KOBJ_CBSE_C12_MAT_CH8_025",
+      "type": "true_false",
+      "title": "Textbook Concept - Area under Cubic Curve Symmetry",
+      "title_hi": "पाठ्यपुस्तक संकल्पना - त्रिघात वक्र के अंतर्गत क्षेत्रफल सममिति",
+      "title_gu": "પાઠ્યપુસ્તક વિભાવના - ત્રિઘાત વક્ર નીચેના ક્ષેત્રફળની સંમિતતા",
+      "question": "True or False: The total area bounded by $y = x^3$, the x-axis, and lines $x = -1$ and $x = 1$ is 0.",
+      "question_hi": "सत्य या असत्य: $y = x^3$, x-अक्ष और रेखाओं $x = -1$ तथा $x = 1$ से घिरे क्षेत्र का कुल क्षेत्रफल 0 है।",
+      "question_gu": "સત્ય કે અસત્ય: $y = x^3$, x-અક્ષ અને રેખાઓ $x = -1$ તેમજ $x = 1$ વડે ઘેરાયેલા પ્રદેશનું કુલ ક્ષેત્રફળ 0 છે.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "options_hi": [
+        "सत्य",
+        "असत्य"
+      ],
+      "options_gu": [
+        "સત્ય",
+        "અસત્ય"
+      ],
+      "correct_index": 1,
+      "explanation": "False! The integral $\\int_{-1}^1 x^3 dx = 0$, but Area $A = \\int_{-1}^0 |x^3| dx + \\int_0^1 x^3 dx = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$ sq unit.",
+      "explanation_hi": "असत्य! समाकलन का मान 0 है, लेकिन क्षेत्रफल $A = \\int_{-1}^0 |x^3| dx + \\int_0^1 x^3 dx = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$ वर्ग इकाई है।",
+      "explanation_gu": "અસત્ય! સંકલનનું મૂલ્ય 0 છે, પરંતુ ક્ષેત્રફળ $A = \\int_{-1}^0 |x^3| dx + \\int_0^1 x^3 dx = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$ ચોરસ એકમ થાય."
+    }
+  ]
+}
