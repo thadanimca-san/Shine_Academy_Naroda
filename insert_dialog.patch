@@ -1,0 +1,74 @@
+--- lib/features/assessment/question_paper_view_screen.dart
++++ lib/features/assessment/question_paper_view_screen.dart
+@@ -178,6 +178,67 @@
+       ),
+     );
+   }
++
++  void _showPdfMetadataDialog(bool isAnswerKey) {
++    final schoolNameCtrl = TextEditingController(text: 'Shine Academy Naroda');
++    final examTitleCtrl = TextEditingController(text: 'TERM EXAMINATION');
++    final timeAllowedCtrl = TextEditingController(text: '1 Hr 30 Min');
++    
++    showDialog(
++      context: context,
++      builder: (context) {
++        return AlertDialog(
++          title: Text(TrilingualService.instance.getUIText('PDF Details'), style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
++          content: SingleChildScrollView(
++            child: Column(
++              mainAxisSize: MainAxisSize.min,
++              children: [
++                TextFormField(
++                  controller: schoolNameCtrl,
++                  decoration: InputDecoration(labelText: TrilingualService.instance.getUIText('Institute Name')),
++                ),
++                TextFormField(
++                  controller: examTitleCtrl,
++                  decoration: InputDecoration(labelText: TrilingualService.instance.getUIText('Exam Title')),
++                ),
++                TextFormField(
++                  controller: timeAllowedCtrl,
++                  decoration: InputDecoration(labelText: TrilingualService.instance.getUIText('Time Allowed')),
++                ),
++              ],
++            ),
++          ),
++          actions: [
++            TextButton(
++              onPressed: () => Navigator.pop(context),
++              child: Text(TrilingualService.instance.getUIText('Cancel')),
++            ),
++            ElevatedButton(
++              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[700], foregroundColor: Colors.white),
++              onPressed: () async {
++                Navigator.pop(context);
++                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Generating PDF...'))));
++                if (isAnswerKey) {
++                  await PdfExportService.generateAndPreviewAnswerKey(
++                    widget.title, 
++                    widget.questions, 
++                    schoolName: schoolNameCtrl.text,
++                    examTitle: examTitleCtrl.text,
++                    timeAllowed: timeAllowedCtrl.text,
++                  );
++                } else {
++                  await PdfExportService.generateAndPreviewQuestionPaper(
++                    widget.title, 
++                    widget.questions, 
++                    schoolName: schoolNameCtrl.text,
++                    examTitle: examTitleCtrl.text,
++                    timeAllowed: timeAllowedCtrl.text,
++                  );
++                }
++              },
++              child: Text(TrilingualService.instance.getUIText('Generate')),
++            ),
++          ],
++        );
++      }
++    );
++  }
+ }
+ 
+ class _QuestionPaperView extends StatelessWidget {

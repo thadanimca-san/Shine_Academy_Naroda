@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "id": "cbse_class10_math_ch3",
+    "title": "Chapter 3: Linear Equations in Two Variables",
+    "subject": "Mathematics",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand and represent real-world situations using pairs of linear equations in two variables.",
+      "Solve systems of linear equations using graphical and algebraic methods (substitution, elimination).",
+      "Analyze consistency, inconsistency, and graphical intersecting properties of linear equations."
+    ],
+    "core_concepts": [
+      "DICT_GRADE_LINEAR_EQ",
+      "DICT_GRADE_CONSISTENT",
+      "DICT_GRADE_SUBSTITUTION",
+      "DICT_GRADE_ELIMINATION"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the art of translating word problems into algebraic equations and solving them systematically.",
+      "common_misconceptions": [
+        "Confusing intersecting lines with parallel lines regarding solutions.",
+        "Forgetting to distribute negative signs during algebraic substitution."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Cipher of the Arcade Tickets",
+      "body": "Imagine walking into a bustling amusement park with your friend. You decide to play two games: laser tag and bumper cars. You buy a bundle of 3 laser tag passes and 2 bumper car tickets for $25. Your friend buys 1 laser tag pass and 4 bumper car tickets for $20 at the same arcade rates. Can you figure out the exact individual price of a laser tag pass and a bumper car ticket without guessing randomly? This everyday puzzle is the gateway to mastering [DICT_GRADE_LINEAR_EQ|linear equations in two variables], a powerful tool used by economists, engineers, and game developers alike to balance unknown quantities.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Based on the arcade story, what are we actually trying to find when solving a system of linear equations?",
+      "options": [
+        "The total number of tickets bought by everyone in the park",
+        "The exact unknown values of two variables that satisfy multiple conditions simultaneously",
+        "The slope of the ticket booth counter"
+      ],
+      "correct_index": 1,
+      "explanation": "We are looking for specific values for two distinct variables (e.g., price of laser tag and price of bumper cars) that make both purchasing equations true at the same time.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Anatomy of a Linear Equation",
+      "body": "Before we can solve complex puzzles, we must understand the language of [DICT_GRADE_LINEAR_EQ|linear equations]. An equation of the form ax + by + c = 0, where a, b, and c are real numbers and a and b are not both zero, represents a straight line when plotted on a Cartesian coordinate plane. Why 'linear'? Because the exponent on both variables (x and y) is implicitly 1. When we deal with two such equations simultaneously, we call it a pair of linear equations in two variables. Every single point (x, y) that lies on the drawn line is a solution to that equation. When you have two lines on the same plane, they can either intersect at a single point, remain strictly parallel and never touch, or coincide entirely as the exact same line.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Visualizing Equations",
+      "body": "Grab a piece of graph paper and draw two different straight lines using a ruler. Look at where they cross. That single intersection point is the holy grail of algebra—it represents the one set of coordinates that satisfies both equations at the exact same time!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the standard algebraic form of a linear equation in two variables?",
+      "back": "ax + by + c = 0, where a and b are not both zero.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Graphical Method and Consistency",
+      "body": "When we graph two linear equations, we can immediately classify their relationship and determine if they are [DICT_GRADE_CONSISTENT|consistent]. If the lines intersect at one unique point, the system has a unique solution, and the pair is consistent. If the lines are parallel, they never meet, meaning there are zero solutions; this makes the system inconsistent. If one line lies directly on top of the other, they intersect at infinitely many points, creating a consistent system with infinitely many dependent solutions. By comparing the ratios of coefficients (a1/a2, b1/b2, and c1/c2), mathematicians can predict this graphical behavior without ever drawing a single axis. If a1/a2 ≠ b1/b2, the lines intersect uniquely.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If two linear equations yield parallel lines when graphed, how many solutions does the system have?",
+      "options": [
+        "One unique solution",
+        "Infinitely many solutions",
+        "Zero solutions"
+      ],
+      "correct_index": 2,
+      "explanation": "Parallel lines never intersect. Since a solution requires the lines to share a point, parallel lines mean zero solutions.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Ratio Shortcut",
+      "body": "Always check the ratios! For equations a1x + b1y + c1 = 0 and a2x + b2y + c2 = 0: if a1/a2 = b1/b2 ≠ c1/c2, the lines are parallel and inconsistent.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: The Algebraic Method - Substitution",
+      "body": "While graphs are wonderful for visualization, they are imprecise if your intersection point lands on messy fractions like 3/7 or 5.125. Enter algebraic methods, starting with [DICT_GRADE_SUBSTITUTION|substitution]. The core philosophy of substitution is isolation and replacement. Step 1: Pick one of the two equations and isolate one variable (say, get x by itself in terms of y). Step 2: Take that entire expression and substitute it directly into the *other* equation in place of x. Step 3: Solve the resulting single-variable equation for y. Step 4: Plug that numerical value back into your isolated expression to find x. This reduces a daunting two-variable tangle into a clean, sequential puzzle.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "In the substitution method, what is your primary goal after isolating a variable in the first equation?",
+      "options": [
+        "Substitute that expression into the second equation to eliminate one variable",
+        "Square both sides of the equation",
+        "Graph the equation on a coordinate plane"
+      ],
+      "correct_index": 0,
+      "explanation": "Substitution is designed to reduce a two-variable problem down to one variable by replacing one variable with an equivalent expression.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "flashcard",
+      "front": "What is the main advantage of algebraic methods over graphical methods?",
+      "back": "Algebraic methods give exact, precise numerical answers, avoiding human error or fractions that are hard to read on a hand-drawn graph.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: The Algebraic Method - Elimination",
+      "body": "Another powerhouse technique is [DICT_GRADE_ELIMINATION|elimination] (also known as addition/subtraction method). Instead of substituting expressions, elimination focuses on combining equations so that one variable completely cancels out. To do this, you may need to multiply one or both equations by strategic numbers so that the coefficients of either x or y become exact opposites (e.g., +3y and -3y). When you add the two equations together vertically, that variable vanishes! You are instantly left with a simple linear equation in one variable. Solve it, then plug back in to find the remaining variable. Elimination is often the fastest, most elegant route for equations presented in standard form.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Elimination Checklist",
+      "body": "1. Line up all x terms, y terms, and constants vertically. 2. Look for common multiples to match coefficients. 3. Subtract or add the equations carefully, paying extreme attention to negative signs!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "If you have the system: 2x + y = 10 and 2x - y = 2, which method is easiest to use immediately without multiplying anything?",
+      "options": [
+        "Elimination, by adding the two equations together",
+        "Graphical plotting only",
+        "Quadratic factoring"
+      ],
+      "correct_index": 0,
+      "explanation": "The y coefficients are +1 and -1. Adding the equations directly eliminates y: (2x + 2x) + (y - y) = 10 + 2, giving 4x = 12.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Cross-Multiplication Method (Algebraic Shortcut)",
+      "body": "For equations in standard form a1x + b1y + c1 = 0 and a2x + b2y + c2 = 0, mathematicians developed a direct formula using determinants, often called the cross-multiplication method. By arranging coefficients in a specific cyclic order (b1, c1, a1, b1 over b2, c2, a2, b2), you can write down formulas for x and y directly: x = (b1c2 - b2c1) / (a1b2 - a2b1) and y = (c1a2 - c2a1) / (a1b2 - a2b1). While it looks intimidating, it is essentially a memorized shortcut for elimination that bypasses intermediate steps once mastered.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "What condition must the denominator (a1b2 - a2b1) satisfy in the cross-multiplication formula for a unique solution to exist?",
+      "back": "It must NOT equal zero (a1b2 - a2b1 ≠ 0). If it equals zero, the lines are either parallel or coincident.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Reducible Equations: Transforming Non-Linear into Linear",
+      "body": "What happens when you encounter equations like 2/x + 3/y = 13 and 5/x - 4/y = -2? These are not strictly linear because the variables are in denominators! However, we can use a brilliant mathematical trick called 'change of variables' or reduction. By letting p = 1/x and q = 1/y, the equations instantly transform into standard linear equations: 2p + 3q = 13 and 5p - 4q = -2. You solve for p and q using substitution or elimination, and then flip your final answers back to find x and y. This technique proves that complex-looking problems can often be solved by viewing them through a simpler lens.",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "To solve 1/(2x) + 1/(3y) = 2 by reduction, what substitution should you make?",
+      "options": [
+        "Let p = x^2 and q = y^2",
+        "Let p = 1/x and q = 1/y",
+        "Let p = 2x and q = 3y"
+      ],
+      "correct_index": 1,
+      "explanation": "Substituting p = 1/x and q = 1/y turns the denominators into simple numerator variables, yielding a linear system.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "Substitution Magic",
+      "body": "Whenever variables are trapped in denominators or inside radicals, always look for a common reciprocal expression to substitute. It turns scary calculus-style algebra into middle-school linear equations!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Word Problems: Translating English to Algebra",
+      "body": "The true test of mastering linear equations is word problem translation. Real-world scenarios rarely come pre-packaged as equations. To solve them: 1. Identify the two unknown quantities and assign variables (e.g., let x be the speed of the boat, y be the speed of the stream). 2. Read sentence by sentence to build two independent equations. Common scenarios include age problems, upstream/downstream motion (where effective speed is boat + stream and boat - stream), and fractional mixtures. 3. Check your solution against the verbal constraints of the original story to ensure physical and logical feasibility.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "A boat rows downstream at speed x + y and upstream at speed x - y. If the boat's still-water speed is 15 km/h and stream speed is 3 km/h, what is the downstream speed?",
+      "options": [
+        "12 km/h",
+        "18 km/h",
+        "45 km/h"
+      ],
+      "correct_index": 1,
+      "explanation": "Downstream speed is boat speed plus stream speed: 15 + 3 = 18 km/h.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "What are the two main steps when tackling any linear equation word problem?",
+      "back": "1. Define your variables clearly. 2. Translate the verbal sentences into two distinct mathematical equations.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Graphical Interpretation of Inconsistent & Dependent Systems",
+      "body": "Deepening our graphical analysis: A system with no solution is called inconsistent, and its lines are strictly parallel. A system with infinitely many solutions is called dependent and consistent, and its equations represent the exact same line (meaning every coefficient ratio a1/a2 = b1/b2 = c1/c2 is perfectly equal). Recognizing these special cases saves you from wasting time searching for a single intersection point that either doesn't exist or has an infinite number of matching coordinates.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "If all three ratios of coefficients are equal (a1/a2 = b1/b2 = c1/c2), what can you conclude about the two lines?",
+      "options": [
+        "They are parallel",
+        "They intersect at one point",
+        "They are coincident (the same line)"
+      ],
+      "correct_index": 2,
+      "explanation": "Equal ratios across all coefficients and constants mean the equations are multiples of each other, describing identical lines.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Checking Your Work",
+      "body": "Never finish a test without plugging your final x and y values back into BOTH original equations. If one equation balances but the other fails, you made an arithmetic error or sign flip!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Summary of Master Strategies",
+      "body": "We have traveled from the basic geometry of straight lines to algebraic substitution, elimination, cross-multiplication, and reduction of non-linear forms. Whether you are balancing arcade ticket budgets, calculating travel speeds against river currents, or determining whether two business cost models ever intersect, linear equations provide the rigid framework required to uncover hidden truths in data. Practice recognizing which method fits the structure of the problem best, and algebra will become second nature.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "quiz",
+      "question": "Which algebraic method involves scaling equations so that adding or subtracting them cancels out one variable entirely?",
+      "options": [
+        "Substitution",
+        "Elimination",
+        "Graphical plotting"
+      ],
+      "correct_index": 1,
+      "explanation": "Elimination explicitly uses addition or subtraction after coefficient matching to eliminate one of the variables.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    }
+  ]
+}

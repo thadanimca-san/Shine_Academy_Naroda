@@ -1,3 +1,4 @@
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -185,9 +186,6 @@ class PdfGeneratorService {
     final baseName = chapters.length == 1
         ? '${chapters.first.chapterId}_Class$standard'
         : 'Class${standard}_MultiChapter';
-    await Printing.sharePdf(
-      bytes: bytes,
-      filename: isAnswerKey ? '${baseName}_Answer_Key.pdf' : '${baseName}_Question_Paper.pdf',
-    );
+    await PdfViewerUtil.openPdfBytes(bytes, isAnswerKey ? '${baseName}_Answer_Key.pdf' : '${baseName}_Question_Paper.pdf',);
   }
 }

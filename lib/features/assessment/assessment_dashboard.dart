@@ -21,9 +21,21 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
 
   final List<String> boards = ["GSEB", "CBSE", "NCERT"];
   final List<String> classes = [
+    "class1", "class2",
     "class3", "class4", "class5", "class6",
-    "class7", "class8", "class9", "class10", "class11"
+    "class7", "class8", "class9", "class10",
+    "class11", "class11_commerce", "class11_science", "class11_arts",
+    "class12_commerce", "class12_science", "class12_arts"
   ];
+
+  String _formatClassName(String rawClass) {
+    String formatted = rawClass.replaceAll('class', 'Class ').replaceAll('_', ' ');
+    // Capitalize words
+    return formatted.split(' ').map((word) {
+      if (word.isEmpty) return '';
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+  }
 
   List<CurriculumSubject> availableSubjects = [];
   CurriculumSubject? selectedSubject;
@@ -93,7 +105,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
           builder: (context) => QuestionSelectionScreen(
             allQuestionsPool: allAvailableQuestions,
             initialSelectedQuestions: allAvailableQuestions,
-            title: "$selectedBoard ${selectedClass.toUpperCase()} - ${selectedSubject?.title ?? 'Test'}",
+            title: "$selectedBoard ${_formatClassName(selectedClass)} - ${selectedSubject?.title ?? 'Test'}",
           ),
         ),
       );
@@ -148,7 +160,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
           items: classes
               .map((c) => DropdownMenuItem(
                     value: c,
-                    child: Text(c.toUpperCase()),
+                    child: Text(_formatClassName(c)),
                   ))
               .toList(),
           onChanged: (val) {

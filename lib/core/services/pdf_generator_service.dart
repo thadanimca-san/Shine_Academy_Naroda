@@ -1,3 +1,4 @@
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -222,7 +223,7 @@ class PdfGeneratorService {
       final id = moduleData['metadata']?['id'] ?? 'Solved_Paper';
       final filename = '${id}_$suffix.pdf';
       
-      await Printing.sharePdf(bytes: pdfBytes, filename: filename);
+      await PdfViewerUtil.openPdfBytes(pdfBytes, filename);
     } catch (e) {
       debugPrint('Error generating PDF: $e');
     }

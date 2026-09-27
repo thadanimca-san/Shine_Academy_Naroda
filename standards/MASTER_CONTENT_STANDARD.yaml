@@ -1,0 +1,39 @@
+standard_name: "EduOS Knowledge Graph (Master Standard)"
+version: "2.0.0"
+schema_requirements:
+  core_philosophy:
+    - "Everything is a reusable Knowledge Object."
+    - "Chapters do not own content; they reference Knowledge Objects."
+    - "Every object must be fully contextualized for an AI Tutor."
+    - "CRITICAL: ALL AI agents MUST strictly follow Shine_Academy_Content_Standard_v1.md when generating any new chapter."
+    - "Cultural Integration: Always connect modern science/math to ancient Indian knowledge (Vedas, Upanishads, historical texts) to create a fascinating 'Hook'."
+    - "Step-by-Step Builds: Break down complex mathematical derivations or science formulas incrementally. Never show the whole equation at once."
+    - "Etymology: Always break down complex scientific/mathematical terminology into its root words (e.g. Sanskrit or Latin roots) to aid memory."
+    - "Simplicity: Language used must be easy to understand for everyone (ELI5 style)."
+    - "Practicality: Maximum practical examples, stories, and demos should be given to show real-world effects."
+    - "Visuals: Diagrams are absolutely necessary. Include `animated_diagram` blocks for all core concepts."
+    - "Translations: For English to Hindi translation, ALWAYS write the English word in brackets next to the Hindi word so English medium students can understand better. Example: Kosh (Cell)."
+    
+  pedagogy_arc_rules:
+    - "CRITICAL: NO CONTINUOUS THEORY. You must NEVER output multiple 'theory' blocks in a row to summarize facts. This feels like a revision guide."
+    - "CRITICAL: SOCRATIC DISCOVERY. Every single sub-topic MUST follow the 5-step Socratic Discovery Arc:"
+    - "  1. The Hook: Start with a relatable mystery, story, or 'Have you ever wondered...?'"
+    - "  2. Socratic Question: Ask a question that forces the student to think before the answer is revealed."
+    - "  3. Exploration: Use an analogy or visual description to explain the mechanics of the concept."
+    - "  4. The Reveal: Introduce the formal vocabulary or scientific definition ONLY after the concept is understood intuitively."
+    - "  5. Knowledge Check: Immediately follow with a low-stakes interactive block (like a mini-quiz or true/false) before moving to the next topic."
+  
+  knowledge_object_structure:
+    id: "unique string (e.g., KOBJ_CAPITAL_001)"
+    type: "enum (theory, quiz, dictionary_term, etc.)"
+    content: "The actual educational payload."
+    
+    knowledge_graph_links:
+      related_topics: "list of Knowledge Object IDs (e.g., [KOBJ_ASSET, KOBJ_LIABILITY])"
+      prerequisites: "list of Knowledge Object IDs required before this one"
+      next_topics: "list of Knowledge Object IDs to suggest after this one"
+    
+    ai_context:
+      learning_goal: "string (What should the student master?)"
+      common_misconceptions: "list of strings (What do students usually get wrong?)"
+      tutor_hint: "string (If the student is stuck, what Socratic question should the AI ask?)"

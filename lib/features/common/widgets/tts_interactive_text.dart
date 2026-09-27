@@ -30,7 +30,6 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
   List<TextSpan> _spans = [];
   String _cleanText = '';
   String currentWord = '';
-  DateTime? _lastTapTime;
 
   @override
   void initState() {
@@ -69,16 +68,10 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
           } else {
             recognizer = DoubleTapGestureRecognizer()
               ..onDoubleTap = () async {
-                final now = DateTime.now();
-                if (_lastTapTime != null && now.difference(_lastTapTime!) < const Duration(milliseconds: 500)) {
-                  TTSService.instance.stop();
-                  if (startOffset < _cleanText.length) {
-                    String remainingText = _cleanText.substring(startOffset);
-                    await TTSService.instance.speak(remainingText);
-                  }
-                  _lastTapTime = null;
-                } else {
-                  _lastTapTime = now;
+                TTSService.instance.stop();
+                if (startOffset < _cleanText.length) {
+                  String remainingText = _cleanText.substring(startOffset);
+                  await TTSService.instance.speak(remainingText);
                 }
               };
           }

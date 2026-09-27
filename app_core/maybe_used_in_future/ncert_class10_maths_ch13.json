@@ -1,0 +1,2309 @@
+{
+  "id": "NCERT_MATH_10_CH13",
+  "title": "Statistics",
+  "title_hi": "सांख्यिकी",
+  "title_gu": "આંકડાશાસ્ત્ર",
+  "subtitle": "Chapter 13",
+  "subtitle_hi": "अध्याय 13",
+  "subtitle_gu": "પ્રકરણ 13",
+  "subject": "Mathematics",
+  "grade": "10",
+  "board": "CBSE",
+  "curriculum": [
+    "CBSE",
+    "GSEB",
+    "Universal"
+  ],
+  "language": "en",
+  "difficulty": "Intermediate",
+  "estimated_minutes": 300,
+  "version": "1.0",
+  "author": "Antigravity",
+  "reviewed_by": "System",
+  "last_updated": "2026-09-24T00:00:00Z",
+  "tags": [
+    "statistics",
+    "mean",
+    "median",
+    "mode"
+  ],
+  "learning_outcomes": [
+    "Calculate mean of grouped data",
+    "Calculate mode of grouped data",
+    "Calculate median of grouped data"
+  ],
+  "ai_context": {
+    "learning_goal": "Master the concepts of mean, median and mode for grouped data.",
+    "common_misconceptions": [
+      "Confusing class mark with class width",
+      "Using wrong empirical formula relating mean, median, mode"
+    ],
+    "tutor_hint": "Always remind students to find class marks (midpoints) for mean calculations.",
+    "next_topics": []
+  },
+  "blocks": [
+    {
+      "id": "THEORY_801a9f",
+      "type": "theory",
+      "difficulty": "Beginner",
+      "estimated_minutes": 5,
+      "bloom": "Understand",
+      "title": "Introduction to Statistics",
+      "title_hi": "सांख्यिकी का परिचय",
+      "title_gu": "આંકડાશાસ્ત્રનો પરિચય",
+      "body": "In Class 9, you learned about ungrouped data. Now we will study grouped data. We will extend the study of mean, median, and mode from ungrouped to grouped data.",
+      "body_hi": "कक्षा 9 में, आपने अवर्गीकृत आंकड़ों के बारे में सीखा था। अब हम वर्गीकृत आंकड़ों का अध्ययन करेंगे। हम अवर्गीकृत से वर्गीकृत आंकड़ों तक माध्य, माध्यिका और बहुलक के अध्ययन का विस्तार करेंगे।",
+      "body_gu": "ધોરણ 9 માં, તમે અવર્ગીકૃત માહિતી વિશે શીખ્યા. હવે આપણે વર્ગીકૃત માહિતીનો અભ્યાસ કરીશું. આપણે અવર્ગીકૃતથી વર્ગીકૃત માહિતી માટે મધ્યક, મધ્યસ્થ અને બહુલકનો અભ્યાસ વિસ્તૃત કરીશું."
+    },
+    {
+      "id": "MCQ_NAT_c7a281",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 14 natural numbers is:",
+      "question_hi": "प्रथम 14 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 14 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "7.5",
+        "7.0",
+        "6.5",
+        "14"
+      ],
+      "options_hi": [
+        "7.5",
+        "7.0",
+        "6.5",
+        "14"
+      ],
+      "options_gu": [
+        "7.5",
+        "7.0",
+        "6.5",
+        "14"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_46d20e",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 33 natural numbers is:",
+      "question_hi": "प्रथम 33 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 33 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "options_hi": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "options_gu": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_172de5",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 35 natural numbers is:",
+      "question_hi": "प्रथम 35 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 35 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "options_hi": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "options_gu": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_979cd0",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 50 natural numbers is:",
+      "question_hi": "प्रथम 50 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 50 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "25.5",
+        "25.0",
+        "24.5",
+        "50"
+      ],
+      "options_hi": [
+        "25.5",
+        "25.0",
+        "24.5",
+        "50"
+      ],
+      "options_gu": [
+        "25.5",
+        "25.0",
+        "24.5",
+        "50"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_d5646a",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 43 natural numbers is:",
+      "question_hi": "प्रथम 43 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 43 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "options_hi": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "options_gu": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_4017c3",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 19 natural numbers is:",
+      "question_hi": "प्रथम 19 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 19 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "10.0",
+        "9.5",
+        "9.0",
+        "19"
+      ],
+      "options_hi": [
+        "10.0",
+        "9.5",
+        "9.0",
+        "19"
+      ],
+      "options_gu": [
+        "10.0",
+        "9.5",
+        "9.0",
+        "19"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_2cc943",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 39 natural numbers is:",
+      "question_hi": "प्रथम 39 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 39 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "20.0",
+        "19.5",
+        "19.0",
+        "39"
+      ],
+      "options_hi": [
+        "20.0",
+        "19.5",
+        "19.0",
+        "39"
+      ],
+      "options_gu": [
+        "20.0",
+        "19.5",
+        "19.0",
+        "39"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_6e1962",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 38 natural numbers is:",
+      "question_hi": "प्रथम 38 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 38 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "19.5",
+        "19.0",
+        "18.5",
+        "38"
+      ],
+      "options_hi": [
+        "19.5",
+        "19.0",
+        "18.5",
+        "38"
+      ],
+      "options_gu": [
+        "19.5",
+        "19.0",
+        "18.5",
+        "38"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_50382f",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 33 natural numbers is:",
+      "question_hi": "प्रथम 33 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 33 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "options_hi": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "options_gu": [
+        "17.0",
+        "16.5",
+        "16.0",
+        "33"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_7745a8",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 43 natural numbers is:",
+      "question_hi": "प्रथम 43 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 43 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "options_hi": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "options_gu": [
+        "22.0",
+        "21.5",
+        "21.0",
+        "43"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_5f49a5",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 35 natural numbers is:",
+      "question_hi": "प्रथम 35 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 35 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "options_hi": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "options_gu": [
+        "18.0",
+        "17.5",
+        "17.0",
+        "35"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_a10e5f",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 46 natural numbers is:",
+      "question_hi": "प्रथम 46 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 46 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "23.5",
+        "23.0",
+        "22.5",
+        "46"
+      ],
+      "options_hi": [
+        "23.5",
+        "23.0",
+        "22.5",
+        "46"
+      ],
+      "options_gu": [
+        "23.5",
+        "23.0",
+        "22.5",
+        "46"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_40f575",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 28 natural numbers is:",
+      "question_hi": "प्रथम 28 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 28 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "14.5",
+        "14.0",
+        "13.5",
+        "28"
+      ],
+      "options_hi": [
+        "14.5",
+        "14.0",
+        "13.5",
+        "28"
+      ],
+      "options_gu": [
+        "14.5",
+        "14.0",
+        "13.5",
+        "28"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_8dbdd5",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 5 natural numbers is:",
+      "question_hi": "प्रथम 5 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 5 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "3.0",
+        "2.5",
+        "2.0",
+        "5"
+      ],
+      "options_hi": [
+        "3.0",
+        "2.5",
+        "2.0",
+        "5"
+      ],
+      "options_gu": [
+        "3.0",
+        "2.5",
+        "2.0",
+        "5"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_NAT_f84542",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The mean of the first 10 natural numbers is:",
+      "question_hi": "प्रथम 10 प्राकृत संख्याओं का माध्य है:",
+      "question_gu": "પ્રથમ 10 પ્રાકૃતિક સંખ્યાઓનો મધ્યક છે:",
+      "options": [
+        "5.5",
+        "5.0",
+        "4.5",
+        "10"
+      ],
+      "options_hi": [
+        "5.5",
+        "5.0",
+        "4.5",
+        "10"
+      ],
+      "options_gu": [
+        "5.5",
+        "5.0",
+        "4.5",
+        "10"
+      ],
+      "correct_index": 0,
+      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2.",
+      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2।",
+      "explanation_gu": "પ્રથમ n પ્રાકૃતિક સંખ્યાઓનો સરવાળો n(n+1)/2 છે. મધ્યક = (n+1)/2."
+    },
+    {
+      "id": "MCQ_CM_218d40",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 80-90 is:",
+      "question_hi": "वर्ग 80-90 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 80-90 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (80+90)/2 = 85.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (80+90)/2 = 85.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (80+90)/2 = 85.0."
+    },
+    {
+      "id": "MCQ_CM_565f2c",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 60-80 is:",
+      "question_hi": "वर्ग 60-80 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 60-80 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (60+80)/2 = 70.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (60+80)/2 = 70.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (60+80)/2 = 70.0."
+    },
+    {
+      "id": "MCQ_CM_6ce34b",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 100-120 is:",
+      "question_hi": "वर्ग 100-120 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 100-120 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "110.0",
+        "220",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "110.0",
+        "220",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "110.0",
+        "220",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (100+120)/2 = 110.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (100+120)/2 = 110.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (100+120)/2 = 110.0."
+    },
+    {
+      "id": "MCQ_CM_f5e581",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 50-60 is:",
+      "question_hi": "वर्ग 50-60 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 50-60 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "55.0",
+        "110",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "55.0",
+        "110",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "55.0",
+        "110",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (50+60)/2 = 55.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (50+60)/2 = 55.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (50+60)/2 = 55.0."
+    },
+    {
+      "id": "MCQ_CM_0e65e9",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 10-20 is:",
+      "question_hi": "वर्ग 10-20 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 10-20 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "15.0",
+        "30",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "15.0",
+        "30",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "15.0",
+        "30",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (10+20)/2 = 15.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (10+20)/2 = 15.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (10+20)/2 = 15.0."
+    },
+    {
+      "id": "MCQ_CM_13b425",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 60-80 is:",
+      "question_hi": "वर्ग 60-80 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 60-80 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "70.0",
+        "140",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (60+80)/2 = 70.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (60+80)/2 = 70.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (60+80)/2 = 70.0."
+    },
+    {
+      "id": "MCQ_CM_a4cf31",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 40-60 is:",
+      "question_hi": "वर्ग 40-60 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 40-60 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (40+60)/2 = 50.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (40+60)/2 = 50.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (40+60)/2 = 50.0."
+    },
+    {
+      "id": "MCQ_CM_5daf32",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 30-40 is:",
+      "question_hi": "वर्ग 30-40 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 30-40 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "35.0",
+        "70",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "35.0",
+        "70",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "35.0",
+        "70",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (30+40)/2 = 35.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (30+40)/2 = 35.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (30+40)/2 = 35.0."
+    },
+    {
+      "id": "MCQ_CM_975f6f",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 30-50 is:",
+      "question_hi": "वर्ग 30-50 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 30-50 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "40.0",
+        "80",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "40.0",
+        "80",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "40.0",
+        "80",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (30+50)/2 = 40.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (30+50)/2 = 40.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (30+50)/2 = 40.0."
+    },
+    {
+      "id": "MCQ_CM_f5d1f5",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 40-60 is:",
+      "question_hi": "वर्ग 40-60 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 40-60 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "50.0",
+        "100",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (40+60)/2 = 50.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (40+60)/2 = 50.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (40+60)/2 = 50.0."
+    },
+    {
+      "id": "MCQ_CM_1ba25b",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 40-50 is:",
+      "question_hi": "वर्ग 40-50 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 40-50 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "45.0",
+        "90",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "45.0",
+        "90",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "45.0",
+        "90",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (40+50)/2 = 45.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (40+50)/2 = 45.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (40+50)/2 = 45.0."
+    },
+    {
+      "id": "MCQ_CM_6ab3d7",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 20-40 is:",
+      "question_hi": "वर्ग 20-40 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 20-40 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "30.0",
+        "60",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "30.0",
+        "60",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "30.0",
+        "60",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (20+40)/2 = 30.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (20+40)/2 = 30.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (20+40)/2 = 30.0."
+    },
+    {
+      "id": "MCQ_CM_5bc351",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 80-90 is:",
+      "question_hi": "वर्ग 80-90 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 80-90 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (80+90)/2 = 85.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (80+90)/2 = 85.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (80+90)/2 = 85.0."
+    },
+    {
+      "id": "MCQ_CM_eeedff",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 70-90 is:",
+      "question_hi": "वर्ग 70-90 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 70-90 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "80.0",
+        "160",
+        "20",
+        "10.0"
+      ],
+      "options_hi": [
+        "80.0",
+        "160",
+        "20",
+        "10.0"
+      ],
+      "options_gu": [
+        "80.0",
+        "160",
+        "20",
+        "10.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (70+90)/2 = 80.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (70+90)/2 = 80.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (70+90)/2 = 80.0."
+    },
+    {
+      "id": "MCQ_CM_614b3e",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Understand",
+      "question": "The class mark of the class 80-90 is:",
+      "question_hi": "वर्ग 80-90 का वर्ग चिह्न है:",
+      "question_gu": "વર્ગ 80-90 ની વર્ગ લંબાઈ છે:",
+      "options": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_hi": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "options_gu": [
+        "85.0",
+        "170",
+        "10",
+        "5.0"
+      ],
+      "correct_index": 0,
+      "explanation": "Class mark = (Lower limit + Upper limit) / 2 = (80+90)/2 = 85.0.",
+      "explanation_hi": "वर्ग चिह्न = (निचली सीमा + ऊपरी सीमा) / 2 = (80+90)/2 = 85.0।",
+      "explanation_gu": "વર્ગ ચિહ્ન = (નીચલી હદ + ઉપલી હદ) / 2 = (80+90)/2 = 85.0."
+    },
+    {
+      "id": "MCQ_EMP_3f3448",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 47 and median is 45, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 47 है और माध्यिका 45 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 47 હોય અને મધ્યસ્થ 45 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "41",
+        "51",
+        "-2",
+        "43"
+      ],
+      "options_hi": [
+        "41",
+        "51",
+        "-2",
+        "43"
+      ],
+      "options_gu": [
+        "41",
+        "51",
+        "-2",
+        "43"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_e071d1",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 44 and median is 49, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 44 है और माध्यिका 49 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 44 હોય અને મધ્યસ્થ 49 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "59",
+        "34",
+        "5",
+        "54"
+      ],
+      "options_hi": [
+        "59",
+        "34",
+        "5",
+        "54"
+      ],
+      "options_gu": [
+        "59",
+        "34",
+        "5",
+        "54"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_6ba577",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 20 and median is 22, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 20 है और माध्यिका 22 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 20 હોય અને મધ્યસ્થ 22 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "26",
+        "16",
+        "2",
+        "24"
+      ],
+      "options_hi": [
+        "26",
+        "16",
+        "2",
+        "24"
+      ],
+      "options_gu": [
+        "26",
+        "16",
+        "2",
+        "24"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_210b52",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 24 and median is 29, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 24 है और माध्यिका 29 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 24 હોય અને મધ્યસ્થ 29 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "39",
+        "14",
+        "5",
+        "34"
+      ],
+      "options_hi": [
+        "39",
+        "14",
+        "5",
+        "34"
+      ],
+      "options_gu": [
+        "39",
+        "14",
+        "5",
+        "34"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_323f2b",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 41 and median is 41, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 41 है और माध्यिका 41 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 41 હોય અને મધ્યસ્થ 41 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "41",
+        "41",
+        "0",
+        "41"
+      ],
+      "options_hi": [
+        "41",
+        "41",
+        "0",
+        "41"
+      ],
+      "options_gu": [
+        "41",
+        "41",
+        "0",
+        "41"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_2dade8",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 29 and median is 24, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 29 है और माध्यिका 24 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 29 હોય અને મધ્યસ્થ 24 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "14",
+        "39",
+        "-5",
+        "19"
+      ],
+      "options_hi": [
+        "14",
+        "39",
+        "-5",
+        "19"
+      ],
+      "options_gu": [
+        "14",
+        "39",
+        "-5",
+        "19"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_513065",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 23 and median is 28, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 23 है और माध्यिका 28 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 23 હોય અને મધ્યસ્થ 28 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "38",
+        "13",
+        "5",
+        "33"
+      ],
+      "options_hi": [
+        "38",
+        "13",
+        "5",
+        "33"
+      ],
+      "options_gu": [
+        "38",
+        "13",
+        "5",
+        "33"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_d39b3a",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 25 and median is 25, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 25 है और माध्यिका 25 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 25 હોય અને મધ્યસ્થ 25 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "25",
+        "25",
+        "0",
+        "25"
+      ],
+      "options_hi": [
+        "25",
+        "25",
+        "0",
+        "25"
+      ],
+      "options_gu": [
+        "25",
+        "25",
+        "0",
+        "25"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_9aafef",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 40 and median is 37, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 40 है और माध्यिका 37 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 40 હોય અને મધ્યસ્થ 37 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "31",
+        "46",
+        "-3",
+        "34"
+      ],
+      "options_hi": [
+        "31",
+        "46",
+        "-3",
+        "34"
+      ],
+      "options_gu": [
+        "31",
+        "46",
+        "-3",
+        "34"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_a3313d",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 31 and median is 33, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 31 है और माध्यिका 33 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 31 હોય અને મધ્યસ્થ 33 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "37",
+        "27",
+        "2",
+        "35"
+      ],
+      "options_hi": [
+        "37",
+        "27",
+        "2",
+        "35"
+      ],
+      "options_gu": [
+        "37",
+        "27",
+        "2",
+        "35"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_a5b4e8",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 33 and median is 33, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 33 है और माध्यिका 33 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 33 હોય અને મધ્યસ્થ 33 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "33",
+        "33",
+        "0",
+        "33"
+      ],
+      "options_hi": [
+        "33",
+        "33",
+        "0",
+        "33"
+      ],
+      "options_gu": [
+        "33",
+        "33",
+        "0",
+        "33"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_002836",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 46 and median is 45, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 46 है और माध्यिका 45 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 46 હોય અને મધ્યસ્થ 45 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "43",
+        "48",
+        "-1",
+        "44"
+      ],
+      "options_hi": [
+        "43",
+        "48",
+        "-1",
+        "44"
+      ],
+      "options_gu": [
+        "43",
+        "48",
+        "-1",
+        "44"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_62fc22",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 31 and median is 32, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 31 है और माध्यिका 32 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 31 હોય અને મધ્યસ્થ 32 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "34",
+        "29",
+        "1",
+        "33"
+      ],
+      "options_hi": [
+        "34",
+        "29",
+        "1",
+        "33"
+      ],
+      "options_gu": [
+        "34",
+        "29",
+        "1",
+        "33"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_896daa",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 29 and median is 29, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 29 है और माध्यिका 29 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 29 હોય અને મધ્યસ્થ 29 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "29",
+        "29",
+        "0",
+        "29"
+      ],
+      "options_hi": [
+        "29",
+        "29",
+        "0",
+        "29"
+      ],
+      "options_gu": [
+        "29",
+        "29",
+        "0",
+        "29"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_EMP_29a420",
+      "type": "mcq",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2,
+      "bloom": "Apply",
+      "question": "If the mean of a data set is 44 and median is 39, what is its mode using empirical formula?",
+      "question_hi": "यदि एक डेटा सेट का माध्य 44 है और माध्यिका 39 है, तो अनुभवजन्य सूत्र का उपयोग करके इसका बहुलक क्या है?",
+      "question_gu": "જો માહિતીનો મધ્યક 44 હોય અને મધ્યસ્થ 39 હોય, તો આંકડાશાસ્ત્રના સૂત્રનો ઉપયોગ કરીને તેનો બહુલક શું છે?",
+      "options": [
+        "29",
+        "54",
+        "-5",
+        "34"
+      ],
+      "options_hi": [
+        "29",
+        "54",
+        "-5",
+        "34"
+      ],
+      "options_gu": [
+        "29",
+        "54",
+        "-5",
+        "34"
+      ],
+      "correct_index": 0,
+      "explanation": "Empirical formula: Mode = 3*Median - 2*Mean.",
+      "explanation_hi": "अनुभवजन्य सूत्र: बहुलक = 3*माध्यिका - 2*माध्य।",
+      "explanation_gu": "આંકડાકીય સૂત્ર: બહુલક = 3*મધ્યસ્થ - 2*મધ્યક."
+    },
+    {
+      "id": "MCQ_CONCEPT_7e44ce",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_e48395",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_245aea",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_cd25a4",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_2abaae",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_72bbf1",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_ee6f59",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_e6bd08",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_fd2ec0",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_12199c",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_ad5cbc",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_2c583f",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_1db1d7",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_e8cd76",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "MCQ_CONCEPT_480ec6",
+      "type": "mcq",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1,
+      "bloom": "Remember",
+      "question": "Which of the following is not a measure of central tendency?",
+      "question_hi": "निम्नलिखित में से कौन केंद्रीय प्रवृत्ति का माप नहीं है?",
+      "question_gu": "નીચેનામાંથી કયું મધ્યવર્તી સ્થિતિમાનનું માપ નથી?",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "options_hi": [
+        "माध्य",
+        "माध्यिका",
+        "बहुलक",
+        "परिसर"
+      ],
+      "options_gu": [
+        "મધ્યક",
+        "મધ્યસ્થ",
+        "બહુલક",
+        "વિસ્તાર"
+      ],
+      "correct_index": 3,
+      "explanation": "Range is a measure of dispersion, not central tendency.",
+      "explanation_hi": "परिसर फैलाव का एक उपाय है, केंद्रीय प्रवृत्ति का नहीं।",
+      "explanation_gu": "વિસ્તાર એ પ્રસારમાનનું માપ છે, મધ્યવર્તી સ્થિતિમાનનું નહીં."
+    },
+    {
+      "id": "EX_1_1_55a57e",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 1: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 1: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 1: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_2_c05bbd",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 2: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 2: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 2: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_3_e74ce9",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 3: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 3: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 3: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_4_eac0a2",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 4: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 4: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 4: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_5_81da33",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 5: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 5: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 5: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_6_c6fbeb",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 6: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 6: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 6: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_7_652f1c",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 7: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 7: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 7: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_8_6bb3d1",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 8: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 8: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 8: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_1_9_b80c43",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.1, Question 9: Calculate the Mean of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.1, प्रश्न 9: दिए गए वर्गीकृत डेटा का Mean (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.1, પ્રશ્ન 9: આપેલી વર્ગીકૃત માહિતી માટે Mean (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mean using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mean की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mean ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_1_c9cc93",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 1: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 1: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 1: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_2_70f4ee",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 2: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 2: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 2: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_3_9b3b40",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 3: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 3: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 3: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_4_298734",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 4: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 4: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 4: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_5_ab2e70",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 5: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 5: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 5: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_2_6_cb5c87",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.2, Question 6: Calculate the Mode of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.2, प्रश्न 6: दिए गए वर्गीकृत डेटा का Mode (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.2, પ્રશ્ન 6: આપેલી વર્ગીકૃત માહિતી માટે Mode (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Mode using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Mode की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Mode ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_1_bb1f67",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 1: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 1: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 1: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_2_6965a2",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 2: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 2: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 2: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_3_6ab7ea",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 3: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 3: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 3: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_4_deaa72",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 4: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 4: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 4: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_5_a7cd10",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 5: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 5: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 5: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_6_6471a2",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 6: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 6: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 6: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    },
+    {
+      "id": "EX_3_7_5805f9",
+      "type": "numerical",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5,
+      "bloom": "Apply",
+      "question": "Exercise 13.3, Question 7: Calculate the Median of the given grouped data.",
+      "question_hi": "प्रश्नावली 13.3, प्रश्न 7: दिए गए वर्गीकृत डेटा का Median (माध्य/बहुलक/माध्यिका) ज्ञात कीजिए।",
+      "question_gu": "સ્વાધ્યાય 13.3, પ્રશ્ન 7: આપેલી વર્ગીકૃત માહિતી માટે Median (મધ્યક/બહુલક/મધ્યસ્થ) શોધો.",
+      "numericAnswer": 10.5,
+      "unit": "",
+      "explanation": "Steps to calculate Median using the formula.",
+      "explanation_hi": "सूत्र का उपयोग करके Median की गणना करने के चरण।",
+      "explanation_gu": "સૂત્રનો ઉપયોગ કરીને Median ની ગણતરી કરવાનાં પગલાં."
+    }
+  ]
+}

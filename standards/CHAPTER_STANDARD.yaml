@@ -1,0 +1,81 @@
+standard_name: "EduOS Chapter Schema (Knowledge Graph Assembly)"
+version: "2.0.0"
+schema_requirements:
+  metadata:
+    id: "unique string (e.g., ACC_CH01)"
+    title: "string"
+    subtitle: "string"
+    subject: "string"
+    grade: "string or integer"
+    board: "string (e.g., Universal, GSEB, CBSE)"
+    curriculum: "list of strings (e.g., [GSEB, CBSE, ICSE])"
+    language: "string"
+    difficulty: "enum [Beginner, Intermediate, Advanced]"
+    estimated_minutes: "integer"
+    version: "string"
+    author: "string"
+    reviewed_by: "string"
+    last_updated: "ISO 8601 Date"
+    tags: "list of strings (for search and filtering)"
+    learning_outcomes: "list of strings"
+    ai_context:
+      learning_goal: "string"
+      common_misconceptions: "list of strings"
+      tutor_hint: "string"
+      next_topics: "list of Knowledge Object IDs"
+
+  blocks: 
+    description: "A chapter is a sequential array of reusable Knowledge Objects. There are 40+ supported block types. ENFORCE THE SHINE ACADEMY METHOD: Incorporate 'Cultural Integration' (Vedic/Ancient Indian context), 'Step-by-Step Builds' for formulas, and 'Etymology' for definitions whenever applicable. CRITICAL: Every major sub-topic must flow through the Socratic Discovery Arc (Hook -> Socratic Question -> Exploration -> Reveal -> Check). NEVER dump continuous theory blocks."
+    universal_block_metadata:
+      difficulty: "enum [Beginner, Intermediate, Advanced]"
+      estimated_minutes: "integer"
+      bloom: "enum [Remember, Understand, Apply, Analyze, Evaluate, Create]"
+    supported_types:
+      # Foundational
+      - theory
+      - definition
+      - history
+      - timeline
+      # Visual & Media
+      - diagram
+      - image
+      - mind_map
+      - animation
+      - audio
+      - video
+      # Insight
+      - teacher_tip
+      - memory_trick
+      - common_mistakes
+      - faqs
+      - real_world_example
+      - industry_insight
+      - case_study
+      # Interactive & Practice
+      - worked_example
+      - practice_question
+      - simulation
+      - calculator
+      - flashcard
+      - formula
+      - project
+      - coding_activity
+      # Assessment Types
+      - mcq
+      - true_false
+      - fill_blank
+      - drag_drop
+      - match_column
+      # Conclusion
+      - reflection
+      - homework
+      - revision
+      - summary
+      # AI & Advanced
+      - ai_discussion
+      - ai_tutor_prompt
+      - dictionary_link
+      - cross_subject_link
+      - exam_tips
+      - board_questions
+      - challenge_question

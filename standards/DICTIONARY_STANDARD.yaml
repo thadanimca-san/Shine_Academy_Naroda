@@ -1,0 +1,42 @@
+standard_name: "EduOS Dictionary Schema"
+version: "2.0.0"
+schema_requirements:
+  term:
+    english: "string (The term in English)"
+    gujarati: "string (The term in Gujarati)"
+    hindi: "string (The term in Hindi)"
+    
+  pronunciation_en: "string (English phonetic pronunciation, e.g. 'proh-test')"
+  pronunciation_hi: "string (Hindi Devnagari phonetic pronunciation, e.g. 'प्रोटेस्ट')"
+  
+  definition:
+    simple:
+      en: "string (Explain like I am 10 years old in English)"
+      hi: "string (Explain in Hindi)"
+      gu: "string (Explain in Gujarati)"
+    academic:
+      en: "string (Textbook definition in English)"
+      hi: "string (Textbook definition in Hindi)"
+      gu: "string (Textbook definition in Gujarati)"
+    
+  part_of_speech: "string (e.g., noun, verb, adjective)"
+  
+  examples: "list of objects containing {en: string, hi: string, gu: string} (Real world examples. VERY IMPORTANT: If part_of_speech == 'noun', this list MUST contain exactly 5 sentences!)"
+  
+  media:
+    image: "image pointer (optional)"
+    animation: "animation pointer (optional)"
+    audio: "audio pronunciation pointer (optional)"
+    
+  knowledge_graph_links:
+    related: "list of dictionary IDs (e.g., [DICT_MOLECULE, DICT_ELEMENT])"
+    prerequisites: "list of dictionary IDs (e.g., [DICT_MATTER])"
+    used_in: "list of chapter IDs where this term is heavily used (e.g., [SCI_CH03])"
+    
+  ai_context:
+    common_misconceptions: "list of strings (e.g., 'Goodwill is not just a good feeling, it has financial value')"
+    tutor_hint: "string"
+
+# FUTURE EDU-OS UPGRADE NOTE: 
+# Every single word in the Theory blocks will eventually be clickable. 
+# Clicking a word will trigger a search against the entire Dictionary Database using these IDs.

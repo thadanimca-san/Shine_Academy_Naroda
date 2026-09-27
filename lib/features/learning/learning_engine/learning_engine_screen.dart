@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/engine/pedagogy_engine.dart';
@@ -67,6 +68,8 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   bool _isComingSoon = false;
   bool _showDictionaryHint = true;
   bool _showBoardQuestions = false;
+  bool _isTranslating = false;
+  late String _lastLang;
   
   // Phase 6: Smart Panel Remote Control Support
   final ScrollController _scrollController = ScrollController();
@@ -75,6 +78,8 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   @override
   void initState() {
     super.initState();
+    _lastLang = TrilingualService.instance.activeViewLanguage;
+    TrilingualService.instance.addListener(_onLanguageChanged);
     _loadModule();
     // Request focus automatically so the remote works instantly
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -86,9 +91,36 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   void dispose() {
     _scrollController.dispose();
     _focusNode.dispose();
+    TrilingualService.instance.removeListener(_onLanguageChanged);
     super.dispose();
   }
 
+
+  void _onLanguageChanged() {
+    final currentLang = TrilingualService.instance.activeViewLanguage;
+    if (_lastLang != currentLang) {
+      _lastLang = currentLang;
+      if (currentLang != 'en') {
+        _translateBlocks();
+      } else {
+        if (mounted) setState(() {});
+      }
+    }
+  }
+
+  Future<void> _translateBlocks() async {
+    if (!mounted) return;
+    setState(() {
+      _isTranslating = true;
+    });
+    
+    await TrilingualService.instance.preTranslateBlocks(_blocks, isDictionary: widget.moduleId.contains('DICT'));
+    
+    if (!mounted) return;
+    setState(() {
+      _isTranslating = false;
+    });
+  }
   Future<void> _loadModule() async {
     try {
       await LocalContentManager.instance.init();
@@ -300,7 +332,8 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     if (_isComingSoon) {
       return Scaffold(
         backgroundColor: Colors.white,
-        appBar: BrandAppBar(title: widget.moduleId.split('_').join(' ').toUpperCase()),
+        appBar: BrandAppBar(
+      bottom: _isTranslating ? const PreferredSize(preferredSize: Size.fromHeight(4), child: LinearProgressIndicator(color: Colors.yellow)) : null,title: widget.moduleId.split('_').join(' ').toUpperCase()),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(32.0),
@@ -327,171 +360,177 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
-        ),
-      );
+        );
     }
-
     final rawTitle = _metadata?['title'] ?? _metadata?['term']?['english'] ?? 'Learning Module';
     final String title = rawTitle is String ? rawTitle : (rawTitle is Map ? (rawTitle['en'] ?? rawTitle['english'] ?? 'Module') : 'Module');
     final isDictionary = widget.moduleId.contains('DICT');
 
-    return Scaffold(
-      backgroundColor: Colors.grey[50],
-      appBar: BrandAppBar(
-        title: title,
-        actions: isDictionary ? null : [
-          ValueListenableBuilder<bool>(
-            valueListenable: PresentationService.isPresentationMode,
-            builder: (context, isPresentation, child) {
-              return IconButton(
-                icon: Icon(
-                  isPresentation ? Icons.desktop_windows : Icons.smartphone,
-                  color: isPresentation ? Colors.yellow : Colors.white,
-                ),
-                tooltip: isPresentation ? 'Presentation Mode: ON' : 'Presentation Mode: OFF',
+    return ListenableBuilder(
+      listenable: TrilingualService.instance,
+      builder: (context, _) {
+      return Scaffold(
+        backgroundColor: Colors.grey[50],
+        appBar: BrandAppBar(
+          title: title,
+          actions: isDictionary ? null : [
+            ValueListenableBuilder<bool>(
+              valueListenable: PresentationService.isPresentationMode,
+              builder: (context, isPresentation, child) {
+                return IconButton(
+                  icon: Icon(
+                    isPresentation ? Icons.desktop_windows : Icons.smartphone,
+                    color: isPresentation ? Colors.yellow : Colors.white,
+                  ),
+                  tooltip: isPresentation ? 'Presentation Mode: ON' : 'Presentation Mode: OFF',
+                  onPressed: () {
+                    PresentationService.toggle();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(isPresentation ? "Standard Mode Activated" : "Presentation Mode Activated (Large Text)"),
+                        duration: const Duration(seconds: 2),
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.picture_as_pdf),
+              tooltip: 'Download as PDF',
+              onPressed: () {
+                if (_metadata != null) {
+                  _showPdfMetadataDialog();
+                }
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.assignment),
+              tooltip: 'Generate Exam',
+              onPressed: () {
+                context.push('/assessment/bank/${widget.moduleId}');
+              },
+            )
+          ],
+        ),
+        body: SafeArea(
+          child: Focus(
+            focusNode: _focusNode,
+            autofocus: true,
+            onKeyEvent: (FocusNode node, KeyEvent event) {
+              if (event is KeyDownEvent || event is KeyRepeatEvent) {
+                const scrollAmount = 300.0; // Distance to jump per click
+                
+                if (event.logicalKey == LogicalKeyboardKey.arrowDown || 
+                    event.logicalKey == LogicalKeyboardKey.pageDown ||
+                    event.logicalKey == LogicalKeyboardKey.space) {
+                  _scrollController.animateTo(
+                    (_scrollController.offset + scrollAmount).clamp(
+                      0.0, _scrollController.position.maxScrollExtent
+                    ),
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeOut,
+                  );
+                  return KeyEventResult.handled;
+                }
+                
+                if (event.logicalKey == LogicalKeyboardKey.arrowUp || 
+                    event.logicalKey == LogicalKeyboardKey.pageUp) {
+                  _scrollController.animateTo(
+                    (_scrollController.offset - scrollAmount).clamp(
+                      0.0, _scrollController.position.maxScrollExtent
+                    ),
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeOut,
+                  );
+                  return KeyEventResult.handled;
+                }
+              }
+              return KeyEventResult.ignored;
+            },
+            child: isDictionary
+                ? ListView(
+                    key: ValueKey(TrilingualService.instance.activeViewLanguage),
+                    controller: _scrollController,
+                    padding: const EdgeInsets.all(20),
+                    children: [
+                      DictionaryTermWidget(data: _metadata!),
+                    ],
+                  )
+                : ListView.builder(
+                    key: ValueKey(TrilingualService.instance.activeViewLanguage),
+                    controller: _scrollController,
+                    padding: const EdgeInsets.all(20),
+                    itemCount: _blocks.length + (_showDictionaryHint ? 1 : 0) + (_boardBlocks.isNotEmpty && !_showBoardQuestions ? 1 : 0),
+                    itemBuilder: (context, index) {
+                      if (_showDictionaryHint && index == 0) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 24),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: Colors.blue.shade200),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.lightbulb_outline, color: Colors.blue),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(TrilingualService.instance.getUIText("Tip: Double-tap ANY word to start speaking from there!"),
+                                  style: TextStyle(color: Colors.blue.shade900, fontWeight: FontWeight.w500, fontSize: 15),
+                                ),
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.close, size: 20, color: Colors.blue),
+                                onPressed: () => setState(() => _showDictionaryHint = false),
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                              )
+                            ],
+                          ),
+                        );
+                      }
+  
+                      int gatewayIndex = _blocks.length + (_showDictionaryHint ? 1 : 0);
+                      if (_boardBlocks.isNotEmpty && !_showBoardQuestions && index == gatewayIndex) {
+                        return _buildBoardGateway(context);
+                      }
+  
+                      final actualIndex = _showDictionaryHint ? index - 1 : index;
+                      final block = _blocks[actualIndex];
+                      final childWidget = _buildBlock(block);
+                      return UniversalBlockWrapper(block: block, child: childWidget);
+                    },
+                  ),
+          ),
+        ),
+        floatingActionButton: (!_isLoading && _error.isEmpty && !isDictionary)
+            ? FloatingActionButton.extended(
                 onPressed: () {
-                  PresentationService.toggle();
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(isPresentation ? "Standard Mode Activated" : "Presentation Mode Activated (Large Text)"),
-                      duration: const Duration(seconds: 2),
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (context) => Padding(
+                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 40),
+                      child: AiTutorScreen(blockContext: _metadata ?? {'title': title}),
                     ),
                   );
                 },
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.picture_as_pdf),
-            tooltip: 'Download as PDF',
-            onPressed: () async {
-              if (_metadata != null) {
-                await PdfExportService.generateAndPrintChapter(_metadata!, _blocks);
-              }
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.assignment),
-            tooltip: 'Generate Exam',
-            onPressed: () {
-              context.push('/assessment/bank/${widget.moduleId}');
-            },
-          )
-        ],
-      ),
-      body: SafeArea(
-        child: Focus(
-          focusNode: _focusNode,
-          autofocus: true,
-          onKeyEvent: (FocusNode node, KeyEvent event) {
-            if (event is KeyDownEvent || event is KeyRepeatEvent) {
-              const scrollAmount = 300.0; // Distance to jump per click
-              
-              if (event.logicalKey == LogicalKeyboardKey.arrowDown || 
-                  event.logicalKey == LogicalKeyboardKey.pageDown ||
-                  event.logicalKey == LogicalKeyboardKey.space) {
-                _scrollController.animateTo(
-                  (_scrollController.offset + scrollAmount).clamp(
-                    0.0, _scrollController.position.maxScrollExtent
-                  ),
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeOut,
-                );
-                return KeyEventResult.handled;
-              }
-              
-              if (event.logicalKey == LogicalKeyboardKey.arrowUp || 
-                  event.logicalKey == LogicalKeyboardKey.pageUp) {
-                _scrollController.animateTo(
-                  (_scrollController.offset - scrollAmount).clamp(
-                    0.0, _scrollController.position.maxScrollExtent
-                  ),
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeOut,
-                );
-                return KeyEventResult.handled;
-              }
-            }
-            return KeyEventResult.ignored;
-          },
-          child: isDictionary
-              ? ListView(
-                  controller: _scrollController,
-                  padding: const EdgeInsets.all(20),
-                  children: [
-                    DictionaryTermWidget(data: _metadata!),
-                  ],
-                )
-              : ListView.builder(
-                  controller: _scrollController,
-                  padding: const EdgeInsets.all(20),
-                  itemCount: _blocks.length + (_showDictionaryHint ? 1 : 0) + (_boardBlocks.isNotEmpty && !_showBoardQuestions ? 1 : 0),
-                  itemBuilder: (context, index) {
-                    if (_showDictionaryHint && index == 0) {
-                      return Container(
-                        margin: const EdgeInsets.only(bottom: 24),
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                        decoration: BoxDecoration(
-                          color: Colors.blue.shade50,
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: Colors.blue.shade200),
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(Icons.lightbulb_outline, color: Colors.blue),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Text(TrilingualService.instance.getUIText("Tip: Double-tap ANY word to instantly look it up in the dictionary!"),
-                                style: TextStyle(color: Colors.blue.shade900, fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                            ),
-                            IconButton(
-                              icon: Icon(Icons.close, size: 20, color: Colors.blue),
-                              onPressed: () => setState(() => _showDictionaryHint = false),
-                              padding: EdgeInsets.zero,
-                              constraints: const BoxConstraints(),
-                            )
-                          ],
-                        ),
-                      );
-                    }
-
-                    int gatewayIndex = _blocks.length + (_showDictionaryHint ? 1 : 0);
-                    if (_boardBlocks.isNotEmpty && !_showBoardQuestions && index == gatewayIndex) {
-                      return _buildBoardGateway(context);
-                    }
-
-                    final actualIndex = _showDictionaryHint ? index - 1 : index;
-                    final block = _blocks[actualIndex];
-                    final childWidget = _buildBlock(block);
-                    return UniversalBlockWrapper(block: block, child: childWidget);
-                  },
-                ),
-        ),
-      ),
-      floatingActionButton: (!_isLoading && _error.isEmpty && !isDictionary)
-          ? FloatingActionButton.extended(
-              onPressed: () {
-                showModalBottomSheet(
-                  context: context,
-                  isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
-                  builder: (context) => Padding(
-                    padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 40),
-                    child: AiTutorScreen(blockContext: _metadata ?? {'title': title}),
-                  ),
-                );
-              },
-              icon: Icon(Icons.auto_awesome),
-              label: Text(TrilingualService.instance.getUIText('Ask AI Tutor')),
-              backgroundColor: Colors.purple,
-              foregroundColor: Colors.white,
-            )
-          : null,
+                icon: Icon(Icons.auto_awesome),
+                label: Text(TrilingualService.instance.getUIText('Ask AI Tutor')),
+                backgroundColor: Colors.purple,
+                foregroundColor: Colors.white,
+              )
+            : null,
+      );
+      },
     );
   }
 
@@ -567,6 +606,67 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
           )
         ],
       ),
+    );
+  }
+  void _showPdfMetadataDialog() {
+    final studentNameCtrl = TextEditingController();
+    
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(TrilingualService.instance.getUIText('PDF Details'), style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  TrilingualService.instance.getUIText('Enter the student name for watermarking to protect material.'),
+                  style: GoogleFonts.inter(fontSize: 14, color: Colors.grey.shade700),
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
+                  controller: studentNameCtrl,
+                  decoration: InputDecoration(
+                    labelText: TrilingualService.instance.getUIText('Student Name'),
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(TrilingualService.instance.getUIText('Cancel')),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[700], foregroundColor: Colors.white),
+              onPressed: () async {
+                final name = studentNameCtrl.text.trim();
+                if (name.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Please enter a valid name'))));
+                  return;
+                }
+                Navigator.pop(context);
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Generating PDF...'))));
+                try {
+                  await PdfExportService.generateAndPrintChapter(context, _metadata!, _blocks, studentName: name);
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                  }
+                } catch (e) {
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error generating PDF: $e'), backgroundColor: Colors.red));
+                  }
+                }
+              },
+              child: Text(TrilingualService.instance.getUIText('Generate')),
+            ),
+          ],
+        );
+      }
     );
   }
 }

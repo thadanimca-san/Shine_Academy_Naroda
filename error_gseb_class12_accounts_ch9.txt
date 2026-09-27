@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "id": "gseb_class12_accounts_ch9",
+    "title": "Accounting for Debentures",
+    "subject": "Accountancy",
+    "grade": "12",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the meaning and types of debentures",
+      "Record journal entries for issue of debentures at par, premium, and discount",
+      "Account for debentures issued as collateral security",
+      "Understand the terms of issue of debentures regarding redemption",
+      "Learn the writing off of discount/loss on issue of debentures"
+    ],
+    _core_concepts: [
+      "DICT_DEBENTURE",
+      "DICT_COLLATERAL_SECURITY",
+      "DICT_PAR_PREMIUM_DISCOUNT"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the comprehensive accounting treatment for issue and redemption of debentures under various conditions.",
+      "common_misconceptions": [
+        "Confusing debenture holders as owners of the company instead of creditors.",
+        "Incorrectly calculating the loss on issue when debentures are redeemable at a premium."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Billion-Dollar Expansion",
+      "body": "Imagine you run a rapidly growing tech manufacturing firm in Ahmedabad. Your automated assembly lines are running 24/7, but orders from international clients are piling up. You need ₹50 crores immediately to build a massive new plant. Your internal reserves can only cover a fraction of it, and you are hesitant to dilute your ownership by giving away more equity to shareholders. What do you do? You borrow from the public on a massive scale. Instead of going to a single bank, you divide this humongous debt into millions of small, tradable units and offer them to the public. Welcome to the world of [DICT_DEBENTURE|Debentures], where companies raise enormous capital by essentially writing formal IOU notes to the world.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "What primary relationship does a debenture holder share with the issuing company?",
+      "options": [
+        "Owner and Proprietor",
+        "Creditor and Lender",
+        "Customer and Supplier"
+      ],
+      "correct_index": 1,
+      "explanation": "Debenture holders provide long-term debt financing to the company, making them creditors (lenders) of the company, not owners.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: Definition and Distinction from Shares",
+      "body": "To master accounting for [DICT_DEBENTURE|Debentures], one must first clearly distinguish between a share and a debenture. A share represents ownership in the company; a shareholder is a co-owner who receives dividends out of profits. Conversely, a debenture is an acknowledgement of debt. The holder of a debenture is a creditor. They do not share in the profits of the enterprise; rather, they are entitled to a fixed rate of interest, commonly referred to as the coupon rate, regardless of whether the company makes a profit or incurs a loss. Furthermore, interest on debentures is a charge against profits, meaning it must be paid even if the company suffers a net loss. Legally, debentures usually carry a charge on the assets of the company, offering higher security compared to equity shares.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Analogy Check: The Landlord and the Bank",
+      "body": "Think of equity shareholders as business partners who take a cut of whatever the restaurant makes tonight—rich feast or empty plates. Think of debenture holders as the bank holding your mortgage. Whether your restaurant sells zero burgers or ten thousand, the bank collects its fixed monthly mortgage payment without fail.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "Is interest on debentures paid only when a company makes a net profit?",
+      "back": "No. Interest on debentures is a charge against profits and must be paid even if the company incurs a net loss.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Types of Debentures",
+      "body": "Companies issue various types of debentures to cater to different investor appetites and financial strategies. Broadly, they are categorized based on security, tenure, convertibility, and registration. Secured (or Mortgaged) debentures are backed by a charge on specific assets of the company, giving investors immense confidence. Unsecured (or Naked) debentures carry no such collateral security. From a convertibility standpoint, Convertible debentures give the holder an option to convert their debt instruments into equity shares after a specified period, whereas Non-convertible debentures remain debt until their redemption. Finally, Registered debentures are recorded in a register maintained by the company, and interest/principal is paid only to the registered owner, while Bearer debentures are freely transferable by mere delivery, making interest payable to whoever produces the coupon.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Which type of debentures can be transferred simply by physical delivery without formal registration?",
+      "options": [
+        "Registered Debentures",
+        "Bearer Debentures",
+        "Redeemable Debentures"
+      ],
+      "correct_index": 1,
+      "explanation": "Bearer debentures are negotiable instruments and are transferred by mere delivery; the company pays interest to the holder of the coupon.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: Issue of Debentures at Par, Premium, and Discount",
+      "body": "Just like shares, debentures can be issued at [DICT_PAR_PREMIUM_DISCOUNT|Par, Premium, or Discount]. When a debenture of ₹100 is issued at ₹100, it is issued at par. When issued above its nominal face value—say at ₹105 for a ₹100 face value—the ₹5 extra is Securities Premium, representing the high creditworthiness or market reputation of the firm. Conversely, when issued below face value—say at ₹95 for a ₹100 face value—the ₹5 shortfall is debited as 'Discount on Issue of Debentures', which is a capital loss for the company to be written off over the tenure of the debenture. The application and allotment process typically mirrors share capital accounting, utilizing separate bank and application accounts for each tranche.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "Journalizing Golden Rules for Issue",
+      "body": "Always remember the sequence: First, receive application money (Bank A/c Dr. To Debenture Application A/c). Second, transfer application money to Debenture A/c and adjust any discount or premium (Debenture Application A/c Dr., Discount on Issue Dr. To % Debentures A/c, To Securities Premium A/c). Precision in naming the specific percentage of the debenture is mandatory!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "When debentures of ₹100 face value are issued at ₹95, how is the ₹5 difference treated in accounting?",
+      "options": [
+        "Credited to Capital Reserve",
+        "Debited to Discount on Issue of Debentures Account",
+        "Credited to Securities Premium Account"
+      ],
+      "correct_index": 1,
+      "explanation": "A discount on issue represents a capital loss and is debited to the 'Discount on Issue of Debentures Account' until it is written off.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Concept 4: Issue of Debentures for Consideration Other Than Cash",
+      "body": "Companies do not always raise cash through debentures; sometimes they acquire running businesses, heavy machinery, or landed property and pay the vendor by issuing debentures instead of cash. The accounting treatment follows a two-step logic: First, record the acquisition of assets and assumption of liabilities at agreed values (Assets A/c Dr., Goodwill A/c [if purchase price exceeds net assets] Dr. To Liabilities To Vendor A/c, Capital Reserve [if net assets exceed purchase price] Cr.). Second, discharge the purchase consideration by issuing debentures (Vendor A/c Dr., Discount on Issue [if applicable] Dr. To % Debentures A/c, To Securities Premium [if applicable] Cr.). Calculating the exact number of debentures issued is crucial: Number of Debentures = Purchase Consideration ÷ Issue Price per Debenture.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "flashcard",
+      "front": "How do you calculate the number of debentures to be issued to a vendor for a given purchase consideration?",
+      "back": "Divide the total purchase consideration payable to the vendor by the issue price of one debenture (Face Value + Premium OR Face Value - Discount).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Concept 5: Issue of Debentures as Collateral Security",
+      "body": "What happens when a company takes a primary loan from a bank or financial institution, and the bank asks for additional security over and above the primary assets? The company can issue its own debentures as [DICT_COLLATERAL_SECURITY|Collateral Security]. Collateral security is a secondary security given alongside primary security. There are two primary methods to account for this. Method 1 (No entry in books): The issue of debentures is not recorded via a journal entry; instead, a descriptive note is appended to the Balance Sheet under the respective bank loan. Method 2 (Entry recorded): An entry is passed by debiting 'Debentures Suspense Account' and crediting '% Debentures Account'. On the Balance Sheet, the loan is presented, and the debentures suspense is deducted from the debentures liability to show a net zero external liability until default occurs.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Decoding Collateral Balance Sheet Presentation",
+      "body": "Under Method 2, students often panic seeing 'Debentures Suspense' on the asset side or as a deduction. Remember, it's a contra-liability. If you issue ₹10 Lakhs of debentures as collateral, you show '10% Debentures (₹10,000,000)' and directly subtract 'Less: Debentures Suspense (₹10,000,000)' to result in zero net impact on liabilities until the primary loan goes into default.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "When debentures are issued as collateral security and Method 2 is adopted, which account is debited?",
+      "options": [
+        "Bank Account",
+        "Debentures Suspense Account",
+        "Goodwill Account"
+      ],
+      "correct_index": 1,
+      "explanation": "Debentures Suspense Account is debited and % Debentures Account is credited when recording debentures issued as collateral security.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Concept 6: Terms of Issue of Debentures Regarding Redemption",
+      "body": "A fascinating and crucial section in debenture accounting involves accounting for future redemption obligations at the time of issue itself. Companies can issue debentures under six distinct conditions regarding their redemption terms: (1) Issued at par, redeemable at par; (2) Issued at premium, redeemable at par; (3) Issued at discount, redeemable at par; (4) Issued at par, redeemable at premium; (5) Issued at premium, redeemable at premium; and (6) Issued at discount, redeemable at premium. Whenever debentures are redeemable at a premium, the company incurs a future liability/loss that must be provided for immediately upon issue under the conservatism principle. This creates two vital accounts in the entry: 'Loss on Issue of Debentures Account' (debited) and 'Premium on Redemption of Debentures Account' (credited).",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "The Golden Rule for Redemption Premium",
+      "body": "Whenever you see the words 'redeemable at a premium', instantly write down 'To Premium on Redemption of Debentures' in your credit column and 'Loss on Issue of Debentures' in your debit column, equal to the redemption premium amount per debenture, regardless of how it was issued!",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "flashcard",
+      "front": "Why is 'Loss on Issue of Debentures' debited when debentures are issued at par but redeemable at a premium?",
+      "back": "Because of the prudence (conservatism) principle; the future loss payable upon redemption must be recognized and accounted for in the year of issue itself.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Concept 7: Interest on Debentures and Tax Deduction at Source (TDS)",
+      "body": "Debenture interest is a periodic financial obligation, usually paid half-yearly or annually. Since it is an expense for the company, interest is calculated on the nominal (face value) of the debentures at the specified coupon rate. However, when paying interest, the company acts as a tax withholding agent under Income Tax regulations. It must deduct Income Tax at Source ([DICT_TDS|Tax Deduction at Source - TDS]) from the gross interest payable to investors. The net amount is paid to the debenture holders, while the TDS component is deposited with the government treasury. Journal entries include: For interest due (Debenture Interest A/c Dr. To Debentureholders A/c, To Income Tax Payable/TDS A/c); For payment of interest (Debentureholders A/c Dr. To Bank A/c); and at the end of the year, transferring interest to the Statement of Profit and Loss.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "When a company pays interest on debentures, what is the accounting treatment for Tax Deduction at Source (TDS)?",
+      "options": [
+        "It is retained by the company as miscellaneous income.",
+        "It is credited to the Debentureholders Account as part of their net earning.",
+        "It is credited to Income Tax Payable / TDS Account to be deposited with the government."
+      ],
+      "correct_index": 2,
+      "explanation": "TDS deducted from debenture interest represents a liability to the government and is credited to an income tax payable account.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 8: Writing Off Discount or Loss on Issue of Debentures",
+      "body": "When a company incurs a discount or loss on the issue of debentures, it is treated as a capital loss. Because this loss provides financial benefits over the entire life of the debenture, it is not written off in a single financial year. Instead, it is amortized (written off) progressively over the tenure of the debentures. Under the Companies Act, the preferred order of writing off Discount or Loss on Issue of Debentures is: First, against Securities Premium Reserve Account (if available); second, against Capital Reserve (if available); and finally, charged as an expense against the Statement of Profit and Loss. This systematic write-off ensures that balance sheet assets do not bloat with fictitious assets over time.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "flashcard",
+      "front": "What is the primary order of sources used to write off Discount or Loss on Issue of Debentures?",
+      "back": "1. Securities Premium Reserve Account, 2. Capital Reserve Account, 3. Statement of Profit and Loss.",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Concept 9: Redemption of Debentures - Meaning and Methods",
+      "body": "Redemption of debentures means the discharge of liability by repayment of the principal amount to debenture holders. Companies can redeem debentures through various methods: (1) Payment in lump sum at maturity; (2) Payment in installments by drawing lots (annual redemption); (3) Purchase of own debentures in the open market (if bought for cancellation, it boosts EPS and eliminates debt); and (4) Conversion into equity shares or new debentures. According to SEBI guidelines and the Companies Act, when listed companies issue debentures, they must create a Debenture Redemption Reserve (DRR) out of divisible profits before redemption commences, ensuring adequate liquidity and protection for investors.",
+      "bloom": "Understand",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "What is the primary purpose of creating a Debenture Redemption Reserve (DRR)?",
+      "options": [
+        "To buy luxury assets for company directors.",
+        "To ensure availability of adequate funds and safeguard the interests of debenture holders.",
+        "To pay interim dividends to equity shareholders."
+      ],
+      "correct_index": 1,
+      "explanation": "DRR is created out of profits to ensure that the company has adequate financial backing and liquidity to redeem debentures upon maturity.",
+      "bloom": "Understand",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Mastering the Comprehensive Master Problem",
+      "body": "In board exams, look out for composite problems where a company purchases a running business, issues debentures at a discount redeemable at a premium, and simultaneously uses existing assets as collateral. Break the problem down journal entry by journal entry: Asset/Liability acquisition first, then Issue terms with loss adjustment, and finally collateral recording if applicable.",
+      "bloom": "Create",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    }
+  ]
+}

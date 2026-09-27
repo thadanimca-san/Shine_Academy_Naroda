@@ -1,0 +1,208 @@
+import json
+
+blocks = [
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_001",
+        "type": "hook",
+        "title": "A World Without Books?",
+        "title_hi": "किताबों के बिना एक दुनिया?",
+        "title_gu": "પુસ્તકો વિનાની દુનિયા?",
+        "body": "Look around you. There are printed books, newspapers, magazines, posters, and even printed calendars. But can you imagine a time when there was no print? Every single book had to be written out by hand! In the ancient world, knowledge was restricted to a few elites who could afford handwritten manuscripts. How did the invention of printing change the world? How did ink on paper cause revolutions and overthrow powerful kings?",
+        "body_hi": "अपने चारों ओर देखिए। मुद्रित (printed) किताबें, समाचार पत्र, पत्रिकाएं, पोस्टर और यहां तक ​​कि मुद्रित कैलेंडर भी हैं। लेकिन क्या आप ऐसे समय की कल्पना कर सकते हैं जब कोई छपाई (print) नहीं थी? हर एक किताब को हाथ से लिखना पड़ता था! प्राचीन काल में, ज्ञान कुछ ऐसे अभिजात वर्ग (elites) तक ही सीमित था जो हस्तलिखित (handwritten) पांडुलिपियों को खरीद सकते थे। छपाई के आविष्कार ने दुनिया को कैसे बदल दिया? कागज पर स्याही (ink) ने क्रांतियां कैसे ला दीं और शक्तिशाली राजाओं को कैसे उखाड़ फेंका?",
+        "body_gu": "તમારી આસપાસ જુઓ. ત્યાં મુદ્રિત (printed) પુસ્તકો, અખબારો, સામયિકો, પોસ્ટરો અને મુદ્રિત કૅલેન્ડર પણ છે. પરંતુ શું તમે એવા સમયની કલ્પના કરી શકો છો જ્યારે કોઈ પ્રિન્ટ નહોતી? દરેક પુસ્તક હાથથી લખવું પડતું હતું! પ્રાચીન વિશ્વમાં, જ્ઞાન એવા થોડા ઉચ્ચ વર્ગના લોકો પૂરતું જ સીમિત હતું જેઓ હસ્તલિખિત હસ્તપ્રતો (manuscripts) ખરીદી શકતા હતા. છાપકામની શોધે વિશ્વને કેવી રીતે બદલી નાખ્યું? કાગળ પરની શાહીએ ક્રાંતિ કેવી રીતે લાવી અને શક્તિશાળી રાજાઓને કેવી રીતે ઉથલાવી પાડ્યા?"
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_002",
+        "type": "theory",
+        "title": "The First Printed Books (China & Japan)",
+        "title_hi": "पहली मुद्रित पुस्तकें (चीन और जापान)",
+        "title_gu": "પ્રથમ મુદ્રિત પુસ્તકો (ચીન અને જાપાન)",
+        "body": "The earliest kind of print technology was developed in China, Japan and Korea. It was a system of hand printing. \nFrom AD 594 onwards, books in China were printed by rubbing paper against the inked surface of woodblocks. Because both sides of the thin, porous paper could not be printed, the traditional Chinese 'accordion book' was folded and stitched at the side.\nBuddhist missionaries from China introduced hand-printing technology into Japan around AD 768-770. The oldest Japanese book, printed in AD 868, is the Buddhist Diamond Sutra, containing six sheets of text and woodcut illustrations.",
+        "body_hi": "सबसे पुरानी प्रिंट तकनीक चीन, जापान और कोरिया में विकसित की गई थी। यह हैंड प्रिंटिंग (हाथ से छपाई) की एक प्रणाली थी।\nAD 594 के बाद से, चीन में किताबें लकड़ी के ब्लॉकों (woodblocks) की स्याही वाली सतह के खिलाफ कागज रगड़कर छापी जाती थीं। क्योंकि पतले, छिद्रपूर्ण कागज के दोनों किनारों को मुद्रित नहीं किया जा सकता था, पारंपरिक चीनी 'एकोर्डियन बुक' (accordion book) को मोड़ा गया था और किनारे पर सिला गया था।\nचीन के बौद्ध मिशनरियों ने AD 768-770 के आसपास जापान में हैंड-प्रिंटिंग तकनीक की शुरुआत की। AD 868 में मुद्रित सबसे पुरानी जापानी पुस्तक, बौद्ध डायमंड सूत्र है, जिसमें पाठ और वुडकट चित्रों (woodcut illustrations) की छह शीट हैं।",
+        "body_gu": "સૌથી જૂની પ્રિન્ટ ટેકનોલોજી ચીન, જાપાન અને કોરિયામાં વિકસાવવામાં આવી હતી. તે હેન્ડ પ્રિન્ટિંગની (હાથથી છાપવાની) સિસ્ટમ હતી.\nAD 594 થી, ચીનમાં લાકડાના બ્લોક્સની (woodblocks) શાહીવાળી સપાટી સામે કાગળ ઘસીને પુસ્તકો છાપવામાં આવતા હતા. કારણ કે પાતળા, છિદ્રાળુ કાગળની બંને બાજુઓ છાપી શકાતી ન હતી, પરંપરાગત ચાઇનીઝ 'એકોર્ડિયન બુક' (accordion book) ફોલ્ડ કરવામાં આવી હતી અને બાજુ પર સીવવામાં આવી હતી.\nચીનના બૌદ્ધ મિશનરીઓએ AD 768-770 ની આસપાસ જાપાનમાં હેન્ડ-પ્રિન્ટિંગ ટેકનોલોજી રજૂ કરી હતી. AD 868 માં મુદ્રિત સૌથી જૂનું જાપાનીઝ પુસ્તક, બૌદ્ધ ડાયમંડ સૂત્ર છે, જેમાં ટેક્સ્ટની છ શીટ્સ અને વુડકટ ચિત્રો (woodcut illustrations) છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_003",
+        "type": "theory",
+        "title": "Print Comes to Europe",
+        "title_hi": "यूरोप में प्रिंट का आगमन",
+        "title_gu": "યુરોપમાં પ્રિન્ટનું આગમન",
+        "body": "For centuries, silk and spices from China flowed into Europe through the silk route. In 1295, Marco Polo, a great explorer, returned to Italy after many years of exploration in China. He brought the knowledge of woodblock printing back with him.\nHowever, copying by hand and woodblock printing could not satisfy the ever-increasing demand for books.\nThe breakthrough occurred at Strasbourg, Germany, where Johann Gutenberg developed the first known printing press in the 1430s. He used his knowledge of olive presses and metal moulding to create metal types for the letters of the alphabet. The first book he printed was the Bible.",
+        "body_hi": "सदियों तक, रेशम मार्ग के माध्यम से चीन से रेशम और मसाले यूरोप आते रहे। 1295 में, मार्को पोलो, एक महान खोजकर्ता, चीन में कई वर्षों की खोज के बाद इटली लौट आए। वह अपने साथ वुडब्लॉक प्रिंटिंग का ज्ञान वापस लाए।\nहालांकि, हाथ से कॉपी करने और वुडब्लॉक प्रिंटिंग से किताबों की लगातार बढ़ती मांग को पूरा नहीं किया जा सका।\nसफलता जर्मनी के स्ट्रासबर्ग में मिली, जहां जोहान गुटेनबर्ग ने 1430 के दशक में पहला ज्ञात प्रिंटिंग प्रेस (printing press) विकसित किया। उन्होंने वर्णमाला के अक्षरों के लिए धातु के प्रकार बनाने के लिए जैतून के प्रेस (olive presses) और धातु मोल्डिंग (metal moulding) के अपने ज्ञान का उपयोग किया। उन्होंने जो पहली किताब छापी वह बाइबिल (Bible) थी।",
+        "body_gu": "સદીઓથી, સિલ્ક રૂટ દ્વારા ચીનથી રેશમ અને મસાલા યુરોપમાં આવતા હતા. 1295 માં, એક મહાન સંશોધક, માર્કો પોલો, ચીનમાં ઘણા વર્ષોના સંશોધન પછી ઇટાલી પરત ફર્યા. તે પોતાની સાથે વુડબ્લોક પ્રિન્ટિંગનું જ્ઞાન પાછું લાવ્યો.\nજો કે, હાથ વડે નકલ કરવાથી અને વુડબ્લોક પ્રિન્ટિંગથી પુસ્તકોની સતત વધતી માંગ સંતોષી શકાતી ન હતી.\nસફળતા જર્મનીના સ્ટ્રાસબર્ગમાં મળી, જ્યાં જોહાન ગુટેનબર્ગે 1430 ના દાયકામાં પ્રથમ જાણીતું પ્રિન્ટિંગ પ્રેસ (printing press) વિકસાવ્યું. તેણે મૂળાક્ષરોના અક્ષરો માટે મેટલ ટાઇપ્સ બનાવવા માટે ઓલિવ પ્રેસ (olive presses) અને મેટલ મોલ્ડિંગના (metal moulding) તેના જ્ઞાનનો ઉપયોગ કર્યો. તેણે છાપેલું પહેલું પુસ્તક બાઇબલ (Bible) હતું."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_004",
+        "type": "theory",
+        "title": "The Print Revolution and its Impact",
+        "title_hi": "प्रिंट क्रांति और उसका प्रभाव",
+        "title_gu": "પ્રિન્ટ ક્રાંતિ અને તેની અસર",
+        "body": "The printing press was not just a new way of producing books; it transformed the lives of people, changing their relationship to information and knowledge, and with institutions and authorities.\n1. A New Reading Public: Books became cheaper, and multiple copies could be produced easily. This created a new culture of reading.\n2. Religious Debates: Not everyone welcomed the printed book. Print created the possibility of wide circulation of ideas, and introduced a new world of debate and discussion. People could now read texts and question religious authorities. \nFor example, in 1517, the religious reformer Martin Luther wrote Ninety Five Theses criticizing many of the practices and rituals of the Roman Catholic Church. This led to a division within the Church and the beginning of the Protestant Reformation.",
+        "body_hi": "प्रिंटिंग प्रेस केवल किताबें बनाने का एक नया तरीका नहीं था; इसने लोगों के जीवन को बदल दिया, सूचना और ज्ञान के साथ, और संस्थानों और अधिकारियों के साथ उनके संबंधों को बदल दिया।\n1. एक नई पठन जनता (Reading Public): किताबें सस्ती हो गईं, और कई प्रतियां आसानी से बनाई जा सकती थीं। इसने पढ़ने की एक नई संस्कृति पैदा की।\n2. धार्मिक बहसें (Religious Debates): हर किसी ने मुद्रित पुस्तक का स्वागत नहीं किया। प्रिंट ने विचारों के व्यापक प्रसार की संभावना पैदा की, और बहस और चर्चा का एक नया द्वार खोला। लोग अब ग्रंथों को पढ़ सकते थे और धार्मिक अधिकारियों पर सवाल उठा सकते थे।\nउदाहरण के लिए, 1517 में, धार्मिक सुधारक मार्टिन लूथर ने रोमन कैथोलिक चर्च की कई प्रथाओं और अनुष्ठानों की आलोचना करते हुए निन्यानवे थीसिस (Ninety Five Theses) लिखीं। इससे चर्च के भीतर विभाजन हुआ और प्रोटेस्टेंट सुधार (Protestant Reformation) की शुरुआत हुई।",
+        "body_gu": "પ્રિન્ટિંગ પ્રેસ માત્ર પુસ્તકો બનાવવાની નવી રીત નહોતી; તેણે લોકોના જીવનને બદલી નાખ્યું, માહિતી અને જ્ઞાન સાથે, અને સંસ્થાઓ અને સત્તાવાળાઓ સાથેના તેમના સંબંધો બદલી નાખ્યા.\n1. એક નવો વાંચક વર્ગ (Reading Public): પુસ્તકો સસ્તા બન્યા, અને બહુવિધ નકલો સરળતાથી બનાવી શકાતી. આનાથી વાંચનની નવી સંસ્કૃતિનું નિર્માણ થયું.\n2. ધાર્મિક ચર્ચાઓ (Religious Debates): દરેક વ્યક્તિએ મુદ્રિત પુસ્તકને આવકાર્યું ન હતું. પ્રિન્ટે વિચારોના વ્યાપક પ્રસારની શક્યતા ઊભી કરી, અને ચર્ચા અને વિચાર-વિમર્શની નવી દુનિયા રજૂ કરી. લોકો હવે લખાણો વાંચી શકતા હતા અને ધાર્મિક સત્તાવાળાઓ પર સવાલ ઉઠાવી શકતા હતા.\nઉદાહરણ તરીકે, 1517 માં, ધાર્મિક સુધારક માર્ટિન લ્યુથરે રોમન કેથોલિક ચર્ચની ઘણી પ્રથાઓ અને ધાર્મિક વિધિઓની ટીકા કરતા નાઇન્ટી ફાઇવ થીસીસ (Ninety Five Theses) લખ્યા. આનાથી ચર્ચની અંદર ભાગલા પડ્યા અને પ્રોટેસ્ટન્ટ સુધારણા (Protestant Reformation) ની શરૂઆત થઈ."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_005",
+        "type": "socratic_question",
+        "title": "The Index of Prohibited Books",
+        "title_hi": "प्रतिबंधित पुस्तकों की सूची",
+        "title_gu": "પ્રતિબંધિત પુસ્તકોની સૂચિ",
+        "question": "The Roman Catholic Church became very worried about the effects of easily available printed books, especially when common people started reading and interpreting the Bible in their own way. What strict action did the Church take from 1558 to control this?",
+        "question_hi": "रोमन कैथोलिक चर्च आसानी से उपलब्ध मुद्रित पुस्तकों के प्रभाव के बारे में बहुत चिंतित हो गया, खासकर जब आम लोगों ने बाइबिल को अपने तरीके से पढ़ना और उसकी व्याख्या करना शुरू कर दिया। इसे नियंत्रित करने के लिए चर्च ने 1558 से क्या सख्त कार्रवाई की?",
+        "question_gu": "રોમન કેથોલિક ચર્ચ સરળતાથી ઉપલબ્ધ મુદ્રિત પુસ્તકોની અસરો વિશે ખૂબ જ ચિંતિત બન્યું, ખાસ કરીને જ્યારે સામાન્ય લોકોએ પોતાની રીતે બાઇબલ વાંચવાનું અને અર્થઘટન કરવાનું શરૂ કર્યું. આને નિયંત્રિત કરવા માટે ચર્ચે 1558 થી કઈ કડક કાર્યવાહી કરી?",
+        "options": [
+            "They bought all the printing presses and shut them down.",
+            "They began maintaining an 'Index of Prohibited Books', banning texts they considered anti-religious.",
+            "They forced everyone to read only books written by the Pope in Latin.",
+            "They stopped reading altogether and closed all schools in Europe."
+        ],
+        "options_hi": [
+            "उन्होंने सभी प्रिंटिंग प्रेसों को खरीद लिया और उन्हें बंद कर दिया।",
+            "उन्होंने एक 'प्रतिबंधित पुस्तकों की सूची' (Index of Prohibited Books) बनाए रखना शुरू कर दिया, उन ग्रंथों पर प्रतिबंध लगा दिया जिन्हें वे धर्म-विरोधी मानते थे।",
+            "उन्होंने सभी को लैटिन में पोप द्वारा लिखी गई किताबें ही पढ़ने के लिए मजबूर किया।",
+            "उन्होंने पूरी तरह से पढ़ना बंद कर दिया और यूरोप के सभी स्कूल बंद कर दिए।"
+        ],
+        "options_gu": [
+            "તેઓએ તમામ પ્રિન્ટિંગ પ્રેસ ખરીદ્યા અને તેમને બંધ કરી દીધા.",
+            "તેઓએ 'પ્રતિબંધિત પુસ્તકોની સૂચિ' (Index of Prohibited Books) જાળવવાનું શરૂ કર્યું, જે ગ્રંથોને તેઓ ધર્મ-વિરોધી માનતા હતા તેના પર પ્રતિબંધ મૂક્યો.",
+            "તેઓએ દરેકને લેટિનમાં પોપ દ્વારા લખાયેલા પુસ્તકો જ વાંચવાની ફરજ પાડી.",
+            "તેઓએ સંપૂર્ણપણે વાંચવાનું બંધ કરી દીધું અને યુરોપની તમામ શાળાઓ બંધ કરી દીધી."
+        ],
+        "correct_index": 1,
+        "explanation": "Troubled by such effects of popular readings and the questioning of faith, the Roman Church began a heavily restricted inquisition, imposed severe controls over publishers and booksellers, and began to maintain an Index of Prohibited Books from 1558.",
+        "explanation_hi": "लोकप्रिय रीडिंग और विश्वास पर सवाल उठाने के ऐसे प्रभावों से परेशान होकर, रोमन चर्च ने प्रकाशकों और पुस्तक विक्रेताओं पर कड़े नियंत्रण लगाए, और 1558 से प्रतिबंधित पुस्तकों की सूची (Index of Prohibited Books) बनाए रखना शुरू कर दिया।",
+        "explanation_gu": "લોકપ્રિય વાંચનની આવી અસરો અને શ્રદ્ધા પર સવાલ ઉઠાવવાને કારણે પરેશાન, રોમન ચર્ચે પ્રકાશકો અને પુસ્તક વિક્રેતાઓ પર કડક નિયંત્રણો લાદ્યા, અને 1558 થી પ્રતિબંધિત પુસ્તકોની સૂચિ (Index of Prohibited Books) જાળવવાનું શરૂ કર્યું."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_006",
+        "type": "theory",
+        "title": "India and the World of Print",
+        "title_hi": "भारत और प्रिंट की दुनिया",
+        "title_gu": "ભારત અને પ્રિન્ટની દુનિયા",
+        "body": "Before the age of print, India had a very rich and old tradition of handwritten manuscripts in Sanskrit, Arabic, Persian, as well as in various vernacular languages. Manuscripts were copied on palm leaves or on handmade paper.\nHowever, manuscripts were highly expensive, fragile, and difficult to read as the script was written in different styles. \nThe Printing Press comes to India:\nThe printing press first came to Goa with Portuguese missionaries in the mid-16th century. Catholic priests printed the first Tamil book in 1579 at Cochin.\nBy the late 18th century, English language press grew in India. James Augustus Hickey began editing the Bengal Gazette, a weekly magazine that described itself as 'a commercial paper open to all, but influenced by none'.",
+        "body_hi": "छपाई के युग से पहले, भारत में संस्कृत, अरबी, फारसी के साथ-साथ विभिन्न स्थानीय भाषाओं में हस्तलिखित पांडुलिपियों की एक बहुत समृद्ध और पुरानी परंपरा थी। पांडुलिपियों की प्रतिलिपि ताड़ के पत्तों या हस्तनिर्मित कागज पर बनाई जाती थी।\nहालाँकि, पांडुलिपियाँ अत्यधिक महंगी, नाजुक थीं और पढ़ने में मुश्किल थीं क्योंकि लिपि विभिन्न शैलियों में लिखी गई थी।\nभारत में प्रिंटिंग प्रेस का आगमन:\nप्रिंटिंग प्रेस सबसे पहले 16वीं शताब्दी के मध्य में पुर्तगाली मिशनरियों के साथ गोवा आया था। कैथोलिक पुजारियों ने 1579 में कोचीन में पहली तमिल पुस्तक छापी।\n18वीं शताब्दी के अंत तक, भारत में अंग्रेजी भाषा के प्रेस का विकास हुआ। जेम्स ऑगस्टस हिकी (James Augustus Hickey) ने बंगाल गजट (Bengal Gazette) का संपादन शुरू किया, जो एक साप्ताहिक पत्रिका थी, जिसने खुद को 'सभी के लिए खुला एक वाणिज्यिक पत्र, लेकिन किसी से प्रभावित नहीं' बताया।",
+        "body_gu": "છાપકામના યુગ પહેલા, ભારતમાં સંસ્કૃત, અરબી, ફારસી, તેમજ વિવિધ સ્થાનિક ભાષાઓમાં હસ્તલિખિત હસ્તપ્રતોની ખૂબ જ સમૃદ્ધ અને જૂની પરંપરા હતી. હસ્તપ્રતોની નકલ તાડપત્રો અથવા હાથથી બનાવેલા કાગળ પર કરવામાં આવતી હતી.\nજો કે, હસ્તપ્રતો અત્યંત ખર્ચાળ, નાજુક અને વાંચવામાં મુશ્કેલ હતી કારણ કે લિપિ વિવિધ શૈલીમાં લખાયેલી હતી.\nભારતમાં પ્રિન્ટિંગ પ્રેસનું આગમન:\nપ્રિન્ટિંગ પ્રેસ સૌપ્રથમ 16મી સદીની મધ્યમાં પોર્ટુગીઝ મિશનરીઓ સાથે ગોવા આવ્યું હતું. કેથોલિક પાદરીઓએ 1579 માં કોચીન ખાતે પ્રથમ તમિલ પુસ્તક છાપ્યું હતું.\n18મી સદીના અંત સુધીમાં ભારતમાં અંગ્રેજી ભાષાની પ્રેસનો વિકાસ થયો. જેમ્સ ઓગસ્ટસ હિકી (James Augustus Hickey) એ બંગાળ ગેઝેટ (Bengal Gazette) નું સંપાદન કરવાનું શરૂ કર્યું, જે એક સાપ્તાહિક સામયિક હતું જેણે પોતાની જાતને 'બધા માટે ખુલ્લું વાણિજ્યિક પેપર, પરંતુ કોઈના પ્રભાવ વિનાનું' ગણાવ્યું."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_007",
+        "type": "theory",
+        "title": "Print and Censorship in India",
+        "title_hi": "भारत में प्रिंट और सेंसरशिप",
+        "title_gu": "ભારતમાં પ્રિન્ટ અને સેન્સરશિપ",
+        "body": "As vernacular newspapers became assertively nationalist, the colonial government debated measures of stringent control. \nIn 1878, the Vernacular Press Act was passed, modeled on the Irish Press Laws. It provided the government with extensive rights to censor reports and editorials in the vernacular press.\nFrom now on the government kept a regular track of the vernacular newspapers. When a report was judged as seditious (anti-government), the newspaper was warned. If the warning was ignored, the press was liable to be seized and the printing machinery confiscated.",
+        "body_hi": "जैसे ही स्थानीय (vernacular) समाचार पत्र मुखर रूप से राष्ट्रवादी हो गए, औपनिवेशिक सरकार ने कड़े नियंत्रण के उपायों पर बहस की।\n1878 में, आयरिश प्रेस कानूनों की तर्ज पर वर्नाक्यूलर प्रेस एक्ट (Vernacular Press Act) पारित किया गया था। इसने सरकार को स्थानीय भाषा के प्रेस में रिपोर्ट और संपादकीय को सेंसर करने के व्यापक अधिकार प्रदान किए।\nअब से सरकार स्थानीय भाषा के अखबारों पर नियमित नजर रखने लगी। जब किसी रिपोर्ट को देशद्रोही (सरकार विरोधी) माना जाता था, तो अखबार को चेतावनी दी जाती थी। यदि चेतावनी को नज़रअंदाज़ किया गया, तो प्रेस को ज़ब्त किया जा सकता था और छपाई की मशीनरी को ज़ब्त किया जा सकता था।",
+        "body_gu": "જેમ જેમ સ્થાનિક (vernacular) અખબારો અડગપણે રાષ્ટ્રવાદી બનતા ગયા, તેમ વસાહતી સરકારે કડક નિયંત્રણના પગલાં પર ચર્ચા કરી.\n1878 માં, આઇરિશ પ્રેસ કાયદાઓની તર્જ પર વર્નાક્યુલર પ્રેસ એક્ટ (Vernacular Press Act) પસાર કરવામાં આવ્યો હતો. તેણે સરકારને સ્થાનિક ભાષાની પ્રેસમાં અહેવાલો અને સંપાદકીયોને સેન્સર કરવા માટે વ્યાપક અધિકારો પૂરા પાડ્યા.\nહવેથી સરકાર સ્થાનિક ભાષાના અખબારો પર નિયમિત નજર રાખવા લાગી. જ્યારે કોઈ અહેવાલને રાજદ્રોહી (સરકાર વિરોધી) ગણવામાં આવતો, ત્યારે અખબારને ચેતવણી આપવામાં આવતી હતી. જો ચેતવણીની અવગણના કરવામાં આવે, તો પ્રેસ જપ્ત કરવા અને પ્રિન્ટિંગ મશીનરી જપ્ત કરવા પાત્ર હતી."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_008",
+        "type": "mcq",
+        "title": "NCERT Exercise Q1a",
+        "title_hi": "NCERT अभ्यास Q1a",
+        "title_gu": "NCERT સ્વાધ્યાય Q1a",
+        "question": "Why did woodblock print only come to Europe after 1295?",
+        "question_hi": "1295 के बाद ही यूरोप में वुडब्लॉक प्रिंट (woodblock print) क्यों आया?",
+        "question_gu": "1295 પછી જ યુરોપમાં વુડબ્લોક પ્રિન્ટ (woodblock print) શા માટે આવી?",
+        "options": [
+            "Because Europe had no paper before 1295.",
+            "Because Marco Polo brought the knowledge of woodblock printing back to Italy in 1295 after exploring China for many years.",
+            "Because the Chinese Emperor gifted a printing press to the Pope in 1295.",
+            "Because Gutenberg invented the woodblock in 1295."
+        ],
+        "options_hi": [
+            "क्योंकि 1295 से पहले यूरोप में कोई कागज नहीं था।",
+            "क्योंकि मार्को पोलो ने कई वर्षों तक चीन की खोज करने के बाद 1295 में वुडब्लॉक प्रिंटिंग का ज्ञान इटली वापस लाया।",
+            "क्योंकि चीनी सम्राट ने 1295 में पोप को एक प्रिंटिंग प्रेस भेंट किया था।",
+            "क्योंकि गुटेनबर्ग ने 1295 में वुडब्लॉक का आविष्कार किया था।"
+        ],
+        "options_gu": [
+            "કારણ કે 1295 પહેલા યુરોપમાં કોઈ કાગળ ન હતો.",
+            "કારણ કે માર્કો પોલો ઘણા વર્ષો સુધી ચીનનું સંશોધન કર્યા પછી 1295 માં વુડબ્લોક પ્રિન્ટિંગનું જ્ઞાન ઇટાલી પાછો લાવ્યો હતો.",
+            "કારણ કે ચીની સમ્રાટે 1295 માં પોપને પ્રિન્ટિંગ પ્રેસ ભેટમાં આપ્યું હતું.",
+            "કારણ કે ગુટેનબર્ગે 1295 માં વુડબ્લોકની શોધ કરી હતી."
+        ],
+        "correct_index": 1,
+        "explanation": "Woodblock printing technology was developed in China. In 1295, the great explorer Marco Polo returned to Italy after a long stay in China, bringing this knowledge with him, which then spread to other parts of Europe.",
+        "explanation_hi": "चीन में वुडब्लॉक प्रिंटिंग तकनीक विकसित की गई थी। 1295 में, महान खोजकर्ता मार्को पोलो चीन में लंबे प्रवास के बाद इटली लौट आए, अपने साथ यह ज्ञान लाए, जो बाद में यूरोप के अन्य हिस्सों में फैल गया।",
+        "explanation_gu": "ચીનમાં વુડબ્લોક પ્રિન્ટિંગ ટેકનોલોજી વિકસાવવામાં આવી હતી. 1295 માં, મહાન સંશોધક માર્કો પોલો ચીનમાં લાંબા રોકાણ પછી ઇટાલી પાછા ફર્યા, આ જ્ઞાન પોતાની સાથે લાવ્યા, જે પછી યુરોપના અન્ય ભાગોમાં ફેલાઈ ગયું."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_009",
+        "type": "mcq",
+        "title": "NCERT Exercise Q1b",
+        "title_hi": "NCERT अभ्यास Q1b",
+        "title_gu": "NCERT સ્વાધ્યાય Q1b",
+        "question": "Why was Martin Luther in favour of print and spoke out in praise of it?",
+        "question_hi": "मार्टिन लूथर प्रिंट के पक्ष में क्यों थे और इसकी प्रशंसा में क्यों बोलते थे?",
+        "question_gu": "માર્ટિન લ્યુથર પ્રિન્ટની તરફેણમાં કેમ હતા અને તેના વખાણમાં કેમ બોલતા હતા?",
+        "options": [
+            "Because he owned many printing presses and made a lot of money.",
+            "Because print enabled the widespread circulation of his ideas criticizing the Church's corrupt practices, starting the Protestant Reformation.",
+            "Because print allowed him to publish scientific journals.",
+            "Because he used print to print his own currency."
+        ],
+        "options_hi": [
+            "क्योंकि वह कई प्रिंटिंग प्रेसों के मालिक थे और उन्होंने बहुत पैसा कमाया था।",
+            "क्योंकि प्रिंट ने चर्च की भ्रष्ट प्रथाओं की आलोचना करने वाले उनके विचारों को व्यापक रूप से प्रसारित करने में सक्षम बनाया, जिससे प्रोटेस्टेंट सुधार शुरू हुआ।",
+            "क्योंकि प्रिंट ने उन्हें वैज्ञानिक पत्रिकाओं को प्रकाशित करने की अनुमति दी।",
+            "क्योंकि उन्होंने अपनी खुद की मुद्रा (currency) छापने के लिए प्रिंट का इस्तेमाल किया।"
+        ],
+        "options_gu": [
+            "કારણ કે તે ઘણા પ્રિન્ટિંગ પ્રેસની માલિકી ધરાવતો હતો અને ઘણા પૈસા કમાતો હતો.",
+            "કારણ કે પ્રિન્ટ ચર્ચની ભ્રષ્ટ પ્રથાઓની ટીકા કરતા તેમના વિચારોના વ્યાપક પ્રસારને સક્ષમ કરે છે, પ્રોટેસ્ટન્ટ સુધારણા શરૂ કરે છે.",
+            "કારણ કે પ્રિન્ટે તેને વૈજ્ઞાનિક સામયિકો પ્રકાશિત કરવાની મંજૂરી આપી.",
+            "કારણ કે તેણે પોતાનું ચલણ (currency) છાપવા માટે પ્રિન્ટનો ઉપયોગ કર્યો હતો."
+        ],
+        "correct_index": 1,
+        "explanation": "Martin Luther realized the immense power of print when his 'Ninety Five Theses' criticizing the Church were printed in large numbers and read widely. He famously said, 'Printing is the ultimate gift of God and the greatest one.'",
+        "explanation_hi": "मार्टिन लूथर को प्रिंट की अपार शक्ति का एहसास तब हुआ जब चर्च की आलोचना करने वाले उनके 'निन्यानवे थीसिस' (Ninety Five Theses) बड़ी संख्या में छपे और व्यापक रूप से पढ़े गए। उन्होंने प्रसिद्ध रूप से कहा, 'मुद्रण (Printing) भगवान का अंतिम और सबसे बड़ा उपहार है।'",
+        "explanation_gu": "માર્ટિન લ્યુથરને પ્રિન્ટની અપાર શક્તિનો અહેસાસ થયો જ્યારે ચર્ચની ટીકા કરતી તેમની 'નાઇન્ટી ફાઇવ થીસીસ' મોટી સંખ્યામાં છપાઈ અને વ્યાપકપણે વંચાઈ. તેમણે પ્રખ્યાત રીતે કહ્યું, 'છાપકામ (Printing) એ ભગવાનની અંતિમ ભેટ છે અને સૌથી મોટી ભેટ છે.'"
+    },
+    {
+        "id": "KOBJ_NCERT_C10_HIST_CH5_010",
+        "type": "mcq",
+        "title": "NCERT Exercise Q2c",
+        "title_hi": "NCERT अभ्यास Q2c",
+        "title_gu": "NCERT સ્વાધ્યાય Q2c",
+        "question": "What was the purpose of the Vernacular Press Act passed in 1878 in India?",
+        "question_hi": "भारत में 1878 में पारित वर्नाक्यूलर प्रेस एक्ट का उद्देश्य क्या था?",
+        "question_gu": "ભારતમાં 1878 માં પસાર કરાયેલા વર્નાક્યુલર પ્રેસ એક્ટનો હેતુ શું હતો?",
+        "options": [
+            "To encourage Indians to print more books in local languages.",
+            "To provide the colonial government extensive rights to censor reports and editorials in vernacular (local language) newspapers to suppress nationalist ideas.",
+            "To force all newspapers to be printed only in English.",
+            "To reduce the cost of printing for Indian publishers."
+        ],
+        "options_hi": [
+            "भारतीयों को स्थानीय भाषाओं में अधिक किताबें छापने के लिए प्रोत्साहित करना।",
+            "राष्ट्रवादी विचारों को दबाने के लिए औपनिवेशिक सरकार को स्थानीय भाषा के समाचार पत्रों में रिपोर्ट और संपादकीय को सेंसर करने के व्यापक अधिकार प्रदान करना।",
+            "सभी समाचार पत्रों को केवल अंग्रेजी में छापने के लिए मजबूर करना।",
+            "भारतीय प्रकाशकों के लिए छपाई की लागत को कम करना।"
+        ],
+        "options_gu": [
+            "ભારતીયોને સ્થાનિક ભાષાઓમાં વધુ પુસ્તકો છાપવા પ્રોત્સાહિત કરવા.",
+            "રાષ્ટ્રવાદી વિચારોને દબાવવા માટે વસાહતી સરકારને સ્થાનિક ભાષાના અખબારોમાં અહેવાલો અને સંપાદકીયોને સેન્સર કરવા માટે વ્યાપક અધિકારો પ્રદાન કરવા.",
+            "તમામ અખબારોને માત્ર અંગ્રેજીમાં છાપવાની ફરજ પાડવી.",
+            "ભારતીય પ્રકાશકો માટે છાપકામનો ખર્ચ ઘટાડવો."
+        ],
+        "correct_index": 1,
+        "explanation": "Modeled on the Irish Press Laws, the Vernacular Press Act gave the British government sweeping powers to track and censor vernacular (local language) newspapers that were spreading nationalist and anti-colonial ideas.",
+        "explanation_hi": "आयरिश प्रेस कानूनों की तर्ज पर बने वर्नाक्यूलर प्रेस एक्ट ने ब्रिटिश सरकार को स्थानीय भाषा के समाचार पत्रों को ट्रैक करने और सेंसर करने की व्यापक शक्तियां दीं, जो राष्ट्रवादी और उपनिवेशवाद विरोधी विचार फैला रहे थे।",
+        "explanation_gu": "આઇરિશ પ્રેસ કાયદાઓની તર્જ પર બનેલા વર્નાક્યુલર પ્રેસ એક્ટે બ્રિટિશ સરકારને સ્થાનિક ભાષાના અખબારોને ટ્રેક અને સેન્સર કરવાની વ્યાપક સત્તાઓ આપી હતી જેઓ રાષ્ટ્રવાદી અને સંસ્થાનવાદ વિરોધી વિચારો ફેલાવતા હતા."
+    }
+]
+
+data = {
+    "metadata": {
+        "id": "ncert_class10_history_ch5",
+        "title": "History Chapter 5: Print Culture and the Modern World",
+        "subject": "Social Science",
+        "grade": "10"
+    },
+    "blocks": blocks
+}
+
+output_path = '/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_history_ch5.json'
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully wrote {len(blocks)} blocks to {output_path}")

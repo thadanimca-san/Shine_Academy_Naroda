@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "id": "shine_maths_ch1_numbers_numeration",
+    "title": "Chapter 1: Numbers and Numeration",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand 4-digit numbers and their place value structures.",
+      "Read, write, and compare numbers up to 9999.",
+      "Master standard, expanded, and word forms of numbers.",
+      "Identify predecessor, successor, and ordering rules."
+    ],
+    "core_concepts": [
+      "DICT_MATH_PLACE_VALUE",
+      "DICT_MATH_SUCCESSOR",
+      "DICT_MATH_EXPANDED_FORM",
+      "DICT_MATH_COMPARISON"
+    ],
+    "ai_context": {
+      "learning_goal": "Build absolute fluency in handling numbers up to 4 digits through storytelling, Socratic breakdowns, and deep conceptual mapping.",
+      "common_misconceptions": [
+        "Confusing place values when a zero is present in the middle (e.g., writing 405 as 45).",
+        "Assuming a longer number of digits always means a greater number without checking place positions from left to right."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Great Library of Alexandria",
+      "body": "Imagine you are the Head Royal Librarian in an ancient kingdom. One morning, a caravan arrives at the gates carrying 4,825 ancient parchment scrolls! Without a proper system to count, name, and organize these records, the palace library would instantly plunge into chaos. How would you tell the king how many scrolls arrived? How do we take a massive pile of items and represent them neatly using just ten simple digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9? Welcome to the universe of numbers and numeration, where symbols hold the power to measure our entire world.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "If the royal caravan brought 4,825 scrolls, how many individual digit symbols are used to write this entire number?",
+      5,
+      "options": [
+        "2 digits",
+        "3 digits",
+        "4 digits"
+      ],
+      "correct_index": 2,
+      "explanation": "The number 4,825 is made up of four distinct digit symbols: 4, 8, 2, and 5. This makes it a 4-digit number!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Reviewing 3-Digit Numbers and Stepping Up",
+      "body": "Before we handle thousands of scrolls, let's look back at what we already know. Numbers from 1 to 999 are 1-digit, 2-digit, and 3-digit numbers. The largest 3-digit number is 999. What happens if we add just 1 more to 999? We get a brand new mathematical milestone: 1,000! This introduces us to the fourth column in our counting system, known as [DICT_MATH_PLACE_VALUE|Place Value]. In numeration, the position of a digit dictates its actual value. A '1' in the ones place is just one, but a '1' in the thousands place represents ten hundreds bundled together!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Base-10 Bundle Experiment",
+      "body": "Grab 10 toothpicks. Tie them together with a rubber band to make a 'bundle of ten'. Now imagine 10 of those bundles—that's a 'hundred'. And 10 of those hundred-plates make a 'thousand-block'! This physical grouping is the heartbeat of all human counting.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "theory",
+      "title": "Understanding 4-Digit Numbers",
+      "body": "When we step into 4-digit numbers, we work with four distinct columns from right to left: Ones (O), Tens (T), Hundreds (H), and Thousands (Th). Let's take the number 3,425. Here, 5 is in the ones place, 2 is in the tens place, 4 is in the hundreds place, and 3 is in the thousands place. Reading this aloud is an art: we read the thousands first ('Three thousand'), then the hundreds ('four hundred'), and finally the tens and ones together ('twenty-five'). Putting it together gives us Three thousand, four hundred twenty-five.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "flashcard",
+      "front": "How do you read the number 5,062 in words?",
+      "back": "Five thousand, sixty-two (Notice there are zero hundreds, so we skip mentioning the hundreds column!).",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "theory",
+      "title": "The Magic of Place Value and Face Value",
+      "body": "Every digit in a number has two identities: its [DICT_MATH_PLACE_VALUE|Face Value] and its [DICT_MATH_PLACE_VALUE|Place Value]. The Face Value is simply the digit itself, unchanging and stubborn. For example, in the number 7,777, the face value of every digit is 7. However, the Place Value depends entirely on where that digit is sitting! The first 7 on the left is worth 7,000, the next is worth 700, the next is 70, and the last is 7. Place value tells us the true weight and magnitude of a digit within a larger number structure.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "quiz",
+      "question": "In the number 6,381, what is the exact place value of the digit 3?",
+      "options": [
+        "3",
+        "30",
+        "300",
+        "3,000"
+      ],
+      "correct_index": 2,
+      "explanation": "The digit 3 is in the hundreds place, so its place value is 300.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Expanded Form: Pulling Numbers Apart",
+      "body": "Numbers can sometimes feel like tightly packed suitcases. To see what's inside, we use [DICT_MATH_EXPANDED_FORM|Expanded Form]. Expanded form is the process of breaking a number down into the sum of the place values of each of its digits. For instance, if the Royal Library has 4,825 scrolls, its expanded form is 4,000 + 800 + 20 + 5. By stretching the number out like an accordion, we reveal the exact contribution of the thousands, hundreds, tens, and ones.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What is the expanded form of 7,042?",
+      "back": "7,000 + 40 + 2 (We skip the hundreds because there is a zero in that place!).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Standard Form: Putting the Suitcase Back Together",
+      "body": "Conversely, when we are given an expanded addition statement like 5,000 + 300 + 9, our job is to pack it back into its compact [DICT_MATH_EXPANDED_FORM|Standard Form]. We look at each place value column carefully. We place 5 in the thousands, 3 in the hundreds, 0 in the tens (since no tens are mentioned), and 9 in the ones. This gives us 5,309. Never let a missing placeholder column trick you into misplacing your digits!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "teacher_tip",
+      "title": "The Zero Trap Warning",
+      "body": "Remind students that zero is a placeholder hero! If you see '6,000 + 5', do not write 65. You must put zeros in the empty hundreds and tens houses: 6,005.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Successor and Predecessor: Neighbors on the Number Line",
+      "body": "Every number has neighbors! If you walk one step forward on the endless number line, you find the [DICT_MATH_SUCCESSOR|Successor]. The successor of any number is simply that number plus 1 (+1). For example, the successor of 4,825 is 4,826. On the flip side, if you take one step backward, you find the Predecessor. The predecessor of any number is that number minus 1 (-1). The predecessor of 4,825 is 4,824. Understanding predecessors and successors ensures we know the exact sequence of our counting journey.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "What is the successor of the largest 3-digit number (999)?",
+      "options": [
+        "998",
+        "1,000",
+        "1,001"
+      ],
+      "correct_index": 1,
+      "explanation": "The successor is found by adding 1. 999 + 1 = 1,000, which is our smallest 4-digit number!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Comparing Numbers: Who Is Greater?",
+      "body": "Back at the Royal Library, two shipment boxes arrive. Box A has 3,482 scrolls, and Box B has 3,824 scrolls. Which box has more? To perform [DICT_MATH_COMPARISON|Comparison], we follow strict rules. Rule 1: Compare the number of digits. A 4-digit number is always greater than a 3-digit number. Rule 2: If both numbers have the same number of digits (like our two boxes), compare the digits starting from the highest place value on the left! Both boxes start with 3 in the thousands. Move to the hundreds: Box A has a 4, while Box B has an 8. Since 8 is greater than 4, Box B (3,824) is the larger number! We use the alligator symbols: '>' (greater than), '<' (less than), and '=' (equal to).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "Fill in the blank with >, <, or = : 4,125 ___ 4,152",
+      "back": "4,125 < 4,152 (Comparing the tens column: 2 tens is less than 5 tens).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Ordering Numbers: Ascending and Descending",
+      "body": "What happens when the Royal Librarian has to sort five different boxes of scrolls from smallest to largest? This is called [DICT_MATH_COMPARISON|Ascending Order] (or increasing order). We hunt for the smallest number first, place it at the beginning, and work our way up to the giant maximum number. Conversely, arranging numbers from largest to smallest is called Descending Order (or decreasing order). Mastering ordering turns a messy pile of data into an organized, crystal-clear sequence.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "Which of the following shows the numbers 3,042; 3,420; 3,024 in correct ascending order?",
+      "options": [
+        "3,042; 3,420; 3,024",
+        "3,024; 3,042; 3,420",
+        "3,420; 3,042; 3,024"
+      ],
+      "correct_index": 1,
+      "explanation": "Comparing the numbers from smallest to largest: 3,024 comes first, then 3,042, and finally 3,420.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Forming Greatest and Smallest Numbers from Given Digits",
+      "body": "Suppose the royal cryptogram gives us four secret digits: 2, 7, 4, and 9. What is the greatest 4-digit number we can make without repeating any digit? To build the greatest number, we arrange the given digits in descending order from left to right: 9, 7, 4, 2, giving us 9,742. To build the smallest number, we arrange them in ascending order: 2, 4, 7, 9, giving us 2,479. But wait! What if one of the digits is a zero, like 0, 5, 3, and 8? You can never start a standard number with 0! So the smallest number would be 3,058 instead of 0,358.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "The Zero Rule for Smallest Numbers",
+      "body": "When forming the smallest number with a zero included, remind students to place the second-smallest digit first, immediately followed by zero, then the rest in increasing order!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "Using digits 1, 0, 6, 4 (no repetitions), what is the smallest 4-digit number?",
+      "back": "1,046 (Remember: we cannot put 0 first, so 1 goes first, followed immediately by 0).",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Even and Odd Numbers: The Twin Tribes",
+      "body": "As we count through our numbers, they naturally divide into two distinct tribes: Even numbers and Odd numbers. An Even number can be divided into pairs with absolutely nothing left over. All even numbers end in 0, 2, 4, 6, or 8 (e.g., 24, 1,008, 4,820). An Odd number always leaves one single item leftover when paired up. All odd numbers end in 1, 3, 5, 7, or 9 (e.g., 17, 3,421, 9,999). This pattern repeats infinitely across the entire number system!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Is the 4-digit number 4,825 an even number or an odd number?",
+      "options": [
+        "Even number",
+        "Odd number"
+      ],
+      "correct_index": 1,
+      "explanation": "Look at the ones digit! The digit is 5, which is an odd number. Therefore, 4,825 is an odd number.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Rounding Numbers: Finding the Nearest Ten or Hundred",
+      "body": "Sometimes in life, exact counts aren't necessary—we need estimates! If the Royal Library has 4,825 scrolls, we might say it has 'about 4,800' or 'about 5,000'. This process is called rounding. To round to the nearest ten, we look at the ones digit. If the ones digit is 5 or more, we round up to the next ten. If it is less than 5, we round down. The same rule applies when rounding to the nearest hundred by looking at the tens digit. Estimation is a powerful superpower used by architects, shoppers, and scientists every single day.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Chapter Summary: Masters of Numeration",
+      "body": "Look how far our journey has taken us! We started with a pile of ancient scrolls and built a complete mastery of 4-digit numbers. We explored place value and face value, unpacked numbers in expanded form, zipped them back into standard form, walked along the number line with successors and predecessors, compared and ordered quantities, built custom numbers from secret digits, and even discovered even/odd tribes and rounding. You are now fully certified as the Grand Master of Numbers and Numeration at Shine Academy!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

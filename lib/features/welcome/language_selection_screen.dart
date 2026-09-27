@@ -14,16 +14,12 @@ class LanguageSelectionScreen extends StatelessWidget {
     await TrilingualService.instance.setPrimaryLanguage(langCode);
     
     if (context.mounted) {
-      if (!ActivationService.isActivated) {
-        context.go('/activate');
-      } else {
-        bool hasProfile = await ProfileService.isProfileSet();
-        if (context.mounted) {
-          if (hasProfile) {
-            context.go('/home');
-          } else {
-            context.go('/welcome');
-          }
+      bool hasProfile = await ProfileService.isProfileSet();
+      if (context.mounted) {
+        if (hasProfile) {
+          context.go('/home');
+        } else {
+          context.go('/welcome');
         }
       }
     }

@@ -291,20 +291,16 @@ extension TrilingualTextStyle on TextStyle {
     }
 
     if (TrilingualService.instance.activeViewLanguage == 'hi') {
-      return GoogleFonts.notoSans(
+      return this.copyWith(
         fontSize: newFontSize,
-        fontWeight: this.fontWeight,
-        color: this.color,
-        height: this.height,
+        fontFamily: 'NotoSansDevanagari',
       );
     } else if (TrilingualService.instance.activeViewLanguage == 'gu') {
-      return GoogleFonts.notoSansGujarati(
+      return this.copyWith(
         fontSize: newFontSize,
-        fontWeight: this.fontWeight,
-        color: this.color,
-        height: this.height,
+        fontFamily: 'NotoSansGujarati',
       );
     }
-    return this;
+    return this.copyWith(fontSize: newFontSize);
   }
 }

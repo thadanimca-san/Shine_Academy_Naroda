@@ -1,0 +1,237 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_01",
+    "type": "hook",
+    "title": "The GPS of the World",
+    "title_hi": "दुनिया का GPS",
+    "body": "Imagine you have to find a hidden treasure in a massive desert. How would you explain its exact location to someone? Just saying 'it's near the big dune' won't work! You need exact coordinates. This is how GPS works in our phones.",
+    "body_hi": "कल्पना करें कि आपको एक विशाल रेगिस्तान में एक छिपा हुआ खजाना खोजना है। आप किसी को इसके सटीक स्थान के बारे में कैसे समझाएंगे? सिर्फ यह कहना कि 'यह बड़े टीले के पास है' काम नहीं करेगा! आपको सटीक निर्देशांक (coordinates) चाहिए। हमारे फोन में GPS इसी तरह काम करता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_02",
+    "type": "socratic",
+    "title": "What Do You Think?",
+    "title_hi": "आप क्या सोचते हैं?",
+    "question": "If you are playing chess, how do you identify a specific square on the board?",
+    "question_hi": "यदि आप शतरंज खेल रहे हैं, तो आप बोर्ड पर एक विशिष्ट वर्ग की पहचान कैसे करते हैं?",
+    "options": [
+      "By looking at the color only",
+      "By using a combination of a letter (column) and a number (row)",
+      "By counting from the center",
+      "It is impossible to tell"
+    ],
+    "options_hi": [
+      "केवल रंग देखकर",
+      "एक अक्षर (कॉलम) और एक संख्या (पंक्ति) के संयोजन का उपयोग करके",
+      "केंद्र से गिनकर",
+      "बताना असंभव है"
+    ],
+    "correct_index": 1,
+    "explanation": "Chess boards use letters (A-H) and numbers (1-8) to pinpoint exact squares, like e4 or c5. This is the basic idea behind coordinate geometry!",
+    "explanation_hi": "शतरंज बोर्ड सटीक वर्गों को इंगित करने के लिए अक्षरों (A-H) और संख्याओं (1-8) का उपयोग करते हैं, जैसे e4 या c5। निर्देशांक ज्यामिति के पीछे यही मूल विचार है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_03",
+    "type": "discovery",
+    "title": "The Cartesian System",
+    "title_hi": "कार्तीय प्रणाली",
+    "body": "Let's draw a horizontal line (x-axis) and a vertical line (y-axis) crossing each other at zero (the Origin). Any point on this flat surface (plane) can be found using two numbers: how far left/right it is, and how far up/down it is.",
+    "body_hi": "आइए एक क्षैतिज रेखा (x-अक्ष) और एक ऊर्ध्वाधर रेखा (y-अक्ष) खींचते हैं जो एक दूसरे को शून्य (मूल बिंदु) पर काटती हैं। इस समतल सतह (plane) पर कोई भी बिंदु दो संख्याओं का उपयोग करके पाया जा सकता है: यह कितना बाएँ/दाएँ है, और कितना ऊपर/नीचे है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_04",
+    "type": "reveal",
+    "title": "Distance Formula",
+    "title_hi": "दूरी सूत्र",
+    "body": "The distance between two points P(x1, y1) and Q(x2, y2) is given by the formula: √[(x2 - x1)² + (y2 - y1)²]. This is just Pythagoras' theorem applied to coordinates!",
+    "body_hi": "दो बिंदुओं P(x1, y1) और Q(x2, y2) के बीच की दूरी इस सूत्र द्वारा दी जाती है: √[(x2 - x1)² + (y2 - y1)²]। यह सिर्फ निर्देशांकों पर लागू पाइथागोरस का प्रमेय है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_05",
+    "type": "quiz",
+    "title": "Quick Check",
+    "title_hi": "त्वरित जाँच",
+    "question": "What is the distance of the point P(3, 4) from the origin O(0, 0)?",
+    "question_hi": "बिंदु P(3, 4) की मूल बिंदु O(0, 0) से दूरी क्या है?",
+    "options": [
+      "3 units",
+      "4 units",
+      "5 units",
+      "7 units"
+    ],
+    "options_hi": [
+      "3 इकाइयाँ",
+      "4 इकाइयाँ",
+      "5 इकाइयाँ",
+      "7 इकाइयाँ"
+    ],
+    "correct_index": 2,
+    "explanation": "Distance = √[(3-0)² + (4-0)²] = √[9 + 16] = √25 = 5 units.",
+    "explanation_hi": "दूरी = √[(3-0)² + (4-0)²] = √[9 + 16] = √25 = 5 इकाइयाँ।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_06",
+    "type": "reflection",
+    "title": "Think Again",
+    "title_hi": "फिर से सोचें",
+    "body": "Can the distance between any two points ever be negative? Try explaining why or why not using the distance formula.",
+    "body_hi": "क्या किन्हीं दो बिंदुओं के बीच की दूरी कभी ऋणात्मक (negative) हो सकती है? दूरी सूत्र का उपयोग करके यह समझाने का प्रयास करें कि क्यों या क्यों नहीं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_07",
+    "type": "connection",
+    "title": "Where does this fit?",
+    "title_hi": "यह कहाँ फिट बैठता है?",
+    "body": "Coordinate geometry connects Algebra with Geometry. You can solve geometric shapes (like finding if a triangle is right-angled) just by using algebraic formulas (like the distance formula) without drawing them accurately!",
+    "body_hi": "निर्देशांक ज्यामिति बीजगणित (Algebra) को ज्यामिति (Geometry) से जोड़ती है। आप ज्यामितीय आकृतियों को सटीक रूप से खींचे बिना केवल बीजगणितीय सूत्रों (जैसे दूरी सूत्र) का उपयोग करके हल कर सकते हैं (जैसे यह पता लगाना कि कोई त्रिभुज समकोण है या नहीं)!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_08",
+    "type": "mastery",
+    "title": "Section Formula Challenge",
+    "title_hi": "विभाजन सूत्र चुनौती",
+    "body": "If you have a line segment joining A(x1, y1) and B(x2, y2), the coordinates of a point P(x, y) that divides the line internally in the ratio m1:m2 are given by x = (m1x2 + m2x1)/(m1 + m2) and y = (m1y2 + m2y1)/(m1 + m2). Can you find the midpoint of (2,4) and (6,8)? (Hint: m1=1, m2=1)",
+    "body_hi": "यदि आपके पास A(x1, y1) और B(x2, y2) को मिलाने वाला एक रेखाखंड है, तो उस बिंदु P(x, y) के निर्देशांक जो रेखा को m1:m2 के अनुपात में आंतरिक रूप से विभाजित करता है, x = (m1x2 + m2x1)/(m1 + m2) और y = (m1y2 + m2y1)/(m1 + m2) द्वारा दिए जाते हैं। क्या आप (2,4) और (6,8) का मध्यबिंदु खोज सकते हैं? (संकेत: m1=1, m2=1)"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_09",
+    "type": "quiz",
+    "title": "Midpoint Check",
+    "title_hi": "मध्यबिंदु जाँच",
+    "question": "What is the midpoint of the line segment joining (2, 4) and (6, 8)?",
+    "question_hi": "(2, 4) और (6, 8) को मिलाने वाले रेखाखंड का मध्यबिंदु क्या है?",
+    "options": [
+      "(4, 6)",
+      "(8, 12)",
+      "(3, 4)",
+      "(2, 8)"
+    ],
+    "options_hi": [
+      "(4, 6)",
+      "(8, 12)",
+      "(3, 4)",
+      "(2, 8)"
+    ],
+    "correct_index": 0,
+    "explanation": "x = (2+6)/2 = 4. y = (4+8)/2 = 6. Midpoint is (4, 6).",
+    "explanation_hi": "x = (2+6)/2 = 4. y = (4+8)/2 = 6. मध्यबिंदु (4, 6) है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_10",
+    "type": "mastery",
+    "title": "Area of a Triangle",
+    "title_hi": "त्रिभुज का क्षेत्रफल",
+    "body": "The area of a triangle formed by points (x1, y1), (x2, y2), and (x3, y3) is 0.5 * |x1(y2-y3) + x2(y3-y1) + x3(y1-y2)|. If this area is zero, the three points are collinear (on a straight line)!",
+    "body_hi": "बिंदुओं (x1, y1), (x2, y2) और (x3, y3) द्वारा बनाए गए त्रिभुज का क्षेत्रफल 0.5 * |x1(y2-y3) + x2(y3-y1) + x3(y1-y2)| होता है। यदि यह क्षेत्रफल शून्य है, तो तीनों बिंदु संरेख (collinear - एक सीधी रेखा पर) होते हैं!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The point P which divides the line segment joining the points A(2, -5) and B(5, 2) in the ratio 2 : 3 lies in the...",
+    "question_hi": "वह बिंदु P जो बिंदुओं A(2, -5) और B(5, 2) को मिलाने वाले रेखाखंड को 2 : 3 के अनुपात में विभाजित करता है, कहाँ स्थित है?",
+    "options": [
+      "I quadrant",
+      "II quadrant",
+      "III quadrant",
+      "IV quadrant"
+    ],
+    "options_hi": [
+      "प्रथम चतुर्थांश (I quadrant)",
+      "द्वितीय चतुर्थांश (II quadrant)",
+      "तृतीय चतुर्थांश (III quadrant)",
+      "चतुर्थ चतुर्थांश (IV quadrant)"
+    ],
+    "correct_index": 3,
+    "explanation": "By section formula, x = (2*5 + 3*2) / (2+3) = 16/5. y = (2*2 + 3*(-5)) / (2+3) = (4 - 15) / 5 = -11/5. P is (16/5, -11/5). Here x is positive and y is negative, so it lies in the IV quadrant.",
+    "explanation_hi": "विभाजन सूत्र (section formula) द्वारा, x = (2*5 + 3*2) / (2+3) = 16/5. y = (2*2 + 3*(-5)) / (2+3) = (4 - 15) / 5 = -11/5. बिंदु P (16/5, -11/5) है। यहाँ x धनात्मक (positive) है और y ऋणात्मक (negative) है, इसलिए यह चतुर्थ चतुर्थांश (IV quadrant) में स्थित है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If the points A(1, 2), B(4, y), C(x, 6) and D(3, 5) are the vertices of a parallelogram taken in order, find x and y.",
+    "question_hi": "यदि बिंदु A(1, 2), B(4, y), C(x, 6) और D(3, 5) एक समांतर चतुर्भुज के शीर्ष (vertices) हैं जिन्हें क्रम में लिया गया है, तो x और y का मान ज्ञात करें।",
+    "options": [
+      "x = 6, y = 3",
+      "x = 3, y = 6",
+      "x = 5, y = 4",
+      "x = 4, y = 5"
+    ],
+    "options_hi": [
+      "x = 6, y = 3",
+      "x = 3, y = 6",
+      "x = 5, y = 4",
+      "x = 4, y = 5"
+    ],
+    "correct_index": 0,
+    "explanation": "The diagonals of a parallelogram bisect each other. Midpoint of AC = Midpoint of BD. Midpoint of AC is ((1+x)/2, (2+6)/2) = ((1+x)/2, 4). Midpoint of BD is ((4+3)/2, (y+5)/2) = (7/2, (y+5)/2). So, (1+x)/2 = 7/2 => 1+x = 7 => x=6. And (y+5)/2 = 4 => y+5 = 8 => y=3.",
+    "explanation_hi": "समांतर चतुर्भुज के विकर्ण (diagonals) एक-दूसरे को समद्विभाजित (bisect) करते हैं। AC का मध्यबिंदु = BD का मध्यबिंदु। AC का मध्यबिंदु है ((1+x)/2, (2+6)/2) = ((1+x)/2, 4)। BD का मध्यबिंदु है ((4+3)/2, (y+5)/2) = (7/2, (y+5)/2)। इसलिए, (1+x)/2 = 7/2 => 1+x = 7 => x=6। और (y+5)/2 = 4 => y+5 = 8 => y=3।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "Find the ratio in which the line segment joining A(1, -5) and B(-4, 5) is divided by the x-axis.",
+    "question_hi": "वह अनुपात ज्ञात कीजिए जिसमें A(1, -5) और B(-4, 5) को मिलाने वाला रेखाखंड x-अक्ष द्वारा विभाजित होता है।",
+    "options": [
+      "1 : 1",
+      "2 : 1",
+      "1 : 2",
+      "3 : 2"
+    ],
+    "options_hi": [
+      "1 : 1",
+      "2 : 1",
+      "1 : 2",
+      "3 : 2"
+    ],
+    "correct_index": 0,
+    "explanation": "Let the ratio be k:1. Any point on the x-axis has y-coordinate 0. By section formula, y = (k*5 + 1*(-5)) / (k+1). Since y = 0, 5k - 5 = 0 => 5k = 5 => k = 1. So the ratio is 1:1.",
+    "explanation_hi": "माना अनुपात k:1 है। x-अक्ष पर किसी भी बिंदु का y-निर्देशांक 0 होता है। विभाजन सूत्र से, y = (k*5 + 1*(-5)) / (k+1)। क्योंकि y = 0 है, 5k - 5 = 0 => 5k = 5 => k = 1। इसलिए अनुपात 1:1 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "A circle drawn with origin as the center passes through (13/2, 0). Does the point (-25/2, 0) lie inside, outside or on the circle?",
+    "question_hi": "मूल बिंदु को केंद्र मानकर खींचा गया एक वृत्त (13/2, 0) से होकर गुजरता है। क्या बिंदु (-25/2, 0) वृत्त के अंदर, बाहर या वृत्त पर स्थित है?",
+    "options": [
+      "Inside the circle",
+      "Outside the circle",
+      "On the circle",
+      "Cannot be determined"
+    ],
+    "options_hi": [
+      "वृत्त के अंदर",
+      "वृत्त के बाहर",
+      "वृत्त पर",
+      "निर्धारित नहीं किया जा सकता"
+    ],
+    "correct_index": 1,
+    "explanation": "Radius of circle = distance between (0,0) and (13/2, 0) = 13/2 = 6.5. Distance of point (-25/2, 0) from origin (0,0) = 25/2 = 12.5. Since 12.5 > 6.5, the point lies outside the circle.",
+    "explanation_hi": "वृत्त की त्रिज्या (Radius) = (0,0) और (13/2, 0) के बीच की दूरी = 13/2 = 6.5। बिंदु (-25/2, 0) की मूल बिंदु (0,0) से दूरी = 25/2 = 12.5। क्योंकि 12.5 > 6.5, बिंदु वृत्त के बाहर स्थित है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH7_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The vertices of a triangle are (0, 0), (3, 4), and (3, -4). What is the perimeter of the triangle?",
+    "question_hi": "एक त्रिभुज के शीर्ष (0, 0), (3, 4) और (3, -4) हैं। त्रिभुज का परिमाप (perimeter) क्या है?",
+    "options": [
+      "10 units",
+      "18 units",
+      "24 units",
+      "12 units"
+    ],
+    "options_hi": [
+      "10 इकाइयाँ",
+      "18 इकाइयाँ",
+      "24 इकाइयाँ",
+      "12 इकाइयाँ"
+    ],
+    "correct_index": 1,
+    "explanation": "Let the points be A(0,0), B(3,4) and C(3,-4). AB = √((3-0)² + (4-0)²) = √(9+16) = 5. AC = √((3-0)² + (-4-0)²) = √(9+16) = 5. BC = √((3-3)² + (-4-4)²) = √(0+64) = 8. Perimeter = AB + AC + BC = 5 + 5 + 8 = 18 units.",
+    "explanation_hi": "माना बिंदु A(0,0), B(3,4) और C(3,-4) हैं। AB = √((3-0)² + (4-0)²) = √(9+16) = 5. AC = √((3-0)² + (-4-0)²) = √(9+16) = 5. BC = √((3-3)² + (-4-4)²) = √(0+64) = 8. परिमाप (Perimeter) = AB + AC + BC = 5 + 5 + 8 = 18 इकाइयाँ।"
+  }
+]

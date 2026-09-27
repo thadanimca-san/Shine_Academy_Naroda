@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "id": "cbse_maths_ch3_subtraction",
+    "title": "Chapter 3: Subtraction",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the fundamental concept of subtraction as taking away or finding the difference.",
+      "Master 4-digit and 5-digit subtraction with and without borrowing (regrouping).",
+      "Solve real-world word problems involving multi-step subtraction.",
+      "Verify subtraction answers using addition."
+    ],
+    "core_concepts": [
+      "DICT_MATH_MINUEND",
+      "DICT_MATH_SUBTRAHEND",
+      "DICT_MATH_DIFFERENCE",
+      "DICT_MATH_REGROUPING"
+    ],
+    "ai_context": {
+      "learning_goal": "Students should deeply grasp the mechanism of regrouping across multiple place values and understand subtraction as both 'taking away' and 'comparison'.",
+      "common_misconceptions": [
+        "Subtracting the smaller digit from the larger digit blindly regardless of top or bottom position (e.g., doing 3 - 8 = 5).",
+        "Forgetting to reduce the neighbor's digit by 1 when borrowing.",
+        "Aligning numbers incorrectly by place value."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Stardust",
+      "body": "Imagine you are an interstellar space captain traveling through the Orion Nebula with 4,352 glowing crystals in your cargo hold. A band of space pirates raids your ship and makes off with 1,875 crystals before your warp drive kicks in. How do you find out exactly how many crystals you have left to power your journey back to Earth? Subtraction isn't just a boring school rule; it is the universal toolkit for figuring out what remains when things are taken away, lost, or spent. Join us on this numerical rescue mission as we explore the secrets of taking away!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In our space adventure, what operation do you need to use to find out how many crystals are left?",
+      "options": [
+        "Addition",
+        "Subtraction",
+        "Multiplication"
+      ],
+      "correct_index": 1,
+      "explanation": "We use subtraction when items are taken away or removed from a total amount to find what is left over.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Anatomy of Subtraction",
+      "body": "Before we perform complex calculations, we must understand the language of subtraction. Every standard subtraction problem consists of three main parts. The total amount you start with is called the [DICT_MATH_MINUEND|Minuend]. The amount that you are taking away or removing is called the [DICT_MATH_SUBTRAHEND|Subtrahend]. Finally, the result that is left over after you finish subtracting is known as the [DICT_MATH_DIFFERENCE|Difference]. Think of the minuend as a full pizza, the subtrahend as the slices your friends eat, and the difference as the remaining slices you get to enjoy later. Keeping these terms clear in your mind ensures you never mix up which number goes where when setting up your vertical columns.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "front": "What is the number you subtract *from* called?",
+      "back": "The Minuend! (The starting total)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "The Pizza Box Analogy",
+      "body": "Grab a piece of paper and draw 8 circles representing pepperoni slices. Cross out 3 of them. Ask your child: What is the minuend (8)? What is the subtrahend (3)? What is the difference (5)? Physical drawing anchors abstract arithmetic into concrete reality.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Subtraction Without Regrouping (Simple Column Method)",
+      "body": "When working with larger numbers, we line them up vertically by their place values: Ones, Tens, Hundreds, and Thousands. Always start subtracting from the rightmost column—the Ones place—and work your way left. If every digit in the [DICT_MATH_MINUEND|Minuend] is greater than or equal to the digit directly below it in the [DICT_MATH_SUBTRAHEND|Subtrahend], life is easy! For example, if you have 7,896 and want to subtract 4,253, you simply subtract 3 from 6 (getting 3), 5 from 9 (getting 4), 2 from 8 (getting 6), and 4 from 7 (getting 3). Your final [DICT_MATH_DIFFERENCE|Difference] is 3,643. No stress, no borrowing, just clean column arithmetic.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "When solving a vertical subtraction problem, which place value column should you always start with?",
+      "options": [
+        "The leftmost column (highest place value)",
+        "The rightmost column (Ones place)",
+        "Whichever column has the biggest numbers"
+      ],
+      "correct_index": 1,
+      "explanation": "Always start with the Ones place on the right, as this prepares you for any necessary borrowing or regrouping as you move left.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 3: The Drama of Regrouping (Borrowing)",
+      "body": "What happens when you go to the store with 53 rupees, but the toy costs 28 rupees? Look at the Ones column: you need to take 8 away from 3. But you cannot take 8 items out of a pile of only 3! This is where [DICT_MATH_REGROUPING|Regrouping] (commonly called 'borrowing') comes to the rescue. You knock on your neighbor's door—the Tens place (which has a 5). You ask to borrow 1 Ten. The 5 becomes a 4, and you hand that Ten over to the Ones place, turning your 3 into a 13. Now, you can easily do 13 minus 8, which gives you 5. Next, move to the Tens column and subtract 2 from your remaining 4, giving you 2. Your total difference is 25! Regrouping is simply breaking apart a higher place value into 10 units of the lower place value.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "What action do you take when the top digit in a column is smaller than the bottom digit?",
+      "back": "Regroup (Borrow 1 from the immediate left column neighbor)!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "If you borrow 1 Ten from the Tens place to help the Ones place, how many Ones do you add to the Ones column?",
+      "options": [
+        "1 One",
+        "5 Ones",
+        "10 Ones"
+      ],
+      "correct_index": 2,
+      "explanation": "1 Ten is always equal to 10 Ones, so you add 10 to whatever digit is already sitting in the Ones place.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "teacher_tip",
+      "title": "Base-Ten Blocks Visualization",
+      "body": "Use physical counters, matchsticks bundled in tens with rubber bands, or base-ten blocks. Show 1 long stick (10) and 3 small cubes (3). To subtract 8, untie the stick into 10 cubes. Now you have 13 cubes. Take away 8. Count what is left (5 cubes). This tactile experience eliminates confusion around borrowing.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: Subtraction Across Zeros (The Chain Reaction)",
+      "body": "One of the trickiest challenges in subtraction is dealing with zeros in the minuend. Imagine you have 3,000 apples in your orchard, and you sell 1,425 apples. You set up your problem: 3,000 on top, 1,425 on the bottom. Look at the Ones column: 0 minus 5. You need to borrow, but the Tens place is 0! You look at the Hundreds place, and it's also 0! You must travel all the way to the Thousands place where the 3 lives. The 3 becomes a 2, passing a 10 to the Hundreds place (making it 10). Then, that 10 gives 1 to the Tens place, becoming a 9 and making the Tens place a 10. Finally, that 10 gives 1 to the Ones place, becoming a 9 and making the Ones place a 10! Now you can subtract: 10 - 5 = 5; 9 - 2 = 7; 9 - 4 = 5; and 2 - 1 = 1. The result is 1,575 apples. Zeros act like dominoes waiting for a tap!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "quiz",
+      "question": "When you borrow across multiple zeros (like 1,000), what do interior zeros (like the Hundreds and Tens) temporarily turn into before passing the value along?",
+      -options": [
+        "They turn into 0 permanently",
+        "They turn into 9",
+        "They turn into 1"
+      ],
+      "correct_index": 1,
+      "explanation": "Interior zeros first become 10 when they receive a borrow, but once they lend 1 to their neighbor on the right, they become 9.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "Solve mentally: 500 - 134",
+      "back": "366 (Think: 500 - 100 = 400; 400 - 30 = 370; 370 - 4 = 366)",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 5: Checking Your Work with Addition",
+      "body": "How do you know if your subtraction answer is correct? Master mathematicians never just guess; they check their work using the superpower of addition! Subtraction and addition are inverse operations—they are exact opposites that undo each other. To check a subtraction problem, take your [DICT_MATH_DIFFERENCE|Difference] and add it back to the [DICT_MATH_SUBTRAHEND|Subtrahend]. If your calculation was correct, the sum you get will be equal to your original [DICT_MATH_MINUEND|Minuend]. For example, if 85 - 32 = 53, you check it by doing 53 + 32. Since 53 + 32 equals 85, you can celebrate knowing your subtraction was spot on!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "To verify that 9,421 - 3,105 = 6,316 is correct, which two numbers should you add together?",
+      "options": [
+        "9,421 + 3,105",
+        "6,316 + 3,105",
+        "9,421 + 6,316"
+      ],
+      "correct_index": 1,
+      "explanation": "Add the Difference (6,316) and the Subtrahend (3,105). If it equals the Minuend (9,421), your answer is correct.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "The Detective Check",
+      "body": "Turn checking work into a game of 'Detective Inspector Addition'. Give your student 3 solved subtraction problems (one correct, two with intentional errors). Have them use addition to act as forensic math detectives and catch the mistakes!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 6: Real-World Word Problems",
+      "body": "Math in the real world rarely comes neatly packaged in vertical columns; it hides inside stories and everyday challenges. When solving subtraction word problems, follow the 4-step detective method: 1) Read the entire problem carefully to understand the story. 2) Identify key phrases that signal subtraction, such as 'how many are left', 'what is the difference', 'how much more', or 'took away'. 3) Write down your numbers clearly, making sure the larger total is the minuend. 4) Perform your calculation and include the correct units in your final answer (like rupees, apples, or kilometers).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "Which of these phrases in a word problem usually indicates that you need to subtract?",
+      "options": [
+        "Altogether in total",
+        "How much more does Sarah have than John?",
+        "Combined weight of both boxes"
+      ],
+      "correct_index": 1,
+      "explanation": "'How much more' is a comparison question, which is solved by finding the difference using subtraction.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "flashcard",
+      "front": "Word Problem: A library has 4,500 books. Students checked out 1,230 books. How many remain?",
+      "back": "3,270 books (4,500 - 1,230 = 3,270)",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "theory",
+      "title": "Concept 7: Mental Math Subtraction Strategies",
+      "body": "You won't always have a pencil and paper handy when shopping or playing games. Developing mental math strategies makes you lightning-fast! One great technique is 'Counting Up' (or [DICT_MATH_DIFFERENCE|Difference] building). To solve 52 - 48, instead of borrowing, start at 48 and count up to 52: 49, 50, 51, 52—that is just 4 steps! Another technique is 'Adjusting Numbers': if you want to subtract 29 from 84, subtract 30 instead (getting 54) and then add 1 back (getting 55) because you subtracted one too many. Mastering these mental shortcuts builds profound numerical intuition.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "Using the 'Counting Up' mental strategy, what is the fastest way to find 101 - 97?",
+      -options": [
+        "Set up a 3-row borrowing column on paper",
+        "Count up from 97 to 101 (98, 99, 100, 101 = 4 steps)",
+        "Subtract 97 from 1,000"
+      ],
+      "correct_index": 1,
+      "explanation": "When numbers are very close together, counting up the tiny gap in your head is much faster than standard column borrowing.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "teacher_tip",
+      "title": "Grocery Store Math Challenge",
+      "body": "Next time you are buying snacks that cost ₹145 and you pay with a ₹500 note, ask your child to calculate your exact change in their head before the cashier hands it over. Real-world stakes make mental math exciting!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "True or False: Changing the order of numbers in subtraction (like a - b vs b - a) gives the same answer.",
+      "back": "False! Subtraction is not commutative. 5 - 3 is not the same as 3 - 5.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Chapter Summary: Master Subtractor",
+      "body": "Congratulations! You have journeyed through the universe of subtraction. You now know that subtraction involves a [DICT_MATH_MINUEND|Minuend], a [DICT_MATH_SUBTRAHEND|Subtrahend], and leaves behind a [DICT_MATH_DIFFERENCE|Difference]. You have conquered simple columns, mastered the art of [DICT_MATH_REGROUPING|Regrouping] when digits are too small, navigated treacherous chains of zeros, checked your work using addition, and tackled real-world word problems. Keep practicing these skills, and no numerical mystery will ever defeat you!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

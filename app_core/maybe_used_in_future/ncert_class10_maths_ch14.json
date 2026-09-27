@@ -1,0 +1,1116 @@
+[
+  {
+    "id": "KOBJ_M10_CH14_01",
+    "type": "theory",
+    "title": "Hook: Predicting the Unpredictable",
+    "title_hi": "हुक: अप्रत्याशित की भविष्यवाणी",
+    "title_gu": "હૂક: અણધારી આગાહી",
+    "body": "Can you predict the future? If you toss a coin, can you say for sure it will be Heads? No! But what if you toss it 10,000 times? Will you get Heads exactly 5000 times? Mathematicians have found a way to measure this uncertainty. Welcome to Probability!",
+    "body_hi": "क्या आप भविष्य की भविष्यवाणी कर सकते हैं? यदि आप एक सिक्का उछालते हैं, तो क्या आप निश्चित रूप से कह सकते हैं कि यह चित्त (Heads) ही होगा? नहीं! लेकिन क्या होगा यदि आप इसे 10,000 बार उछालें? क्या आपको ठीक 5000 बार चित्त मिलेगा? गणितज्ञों ने इस अनिश्चितता को मापने का एक तरीका खोज लिया है। प्रायिकता (Probability) में आपका स्वागत है!",
+    "body_gu": "શું તમે ભવિષ્યની આગાહી કરી શકો છો? જો તમે સિક્કો ઉછાળો, તો શું તમે ચોક્કસ કહી શકો છો કે તે છાપ (Heads) હશે? ના! પણ જો તમે તેને 10,000 વખત ઉછાળો તો શું? શું તમને બરાબર 5000 વખત છાપ મળશે? ગણિતશાસ્ત્રીઓએ આ અનિશ્ચિતતાને માપવાનો માર્ગ શોધી કાઢ્યો છે. સંભાવના (Probability) માં તમારું સ્વાગત છે!"
+  },
+  {
+    "id": "KOBJ_M10_CH14_02",
+    "type": "socratic_question",
+    "question": "If you throw a normal six-sided die, which number is most likely to come up?",
+    "question_hi": "यदि आप एक सामान्य छह-तरफा पासा फेंकते हैं, तो किस संख्या के आने की सबसे अधिक संभावना है?",
+    "question_gu": "જો તમે સામાન્ય છ-બાજુવાળો પાસો ફેંકો, તો કઈ સંખ્યા આવવાની શક્યતા સૌથી વધુ છે?",
+    "options": [
+      "6",
+      "1",
+      "They all have an equal chance",
+      "It depends on how hard you throw"
+    ],
+    "options_hi": [
+      "6",
+      "1",
+      "उन सभी के आने की समान संभावना है",
+      "यह इस बात पर निर्भर करता है कि आप कितनी जोर से फेंकते हैं"
+    ],
+    "options_gu": [
+      "6",
+      "1",
+      "તે બધાની આવવાની સમાન તક છે",
+      "તે આધાર રાખે છે કે તમે તેને કેટલી સખત ફેંકો છો"
+    ],
+    "correct_index": 2,
+    "explanation": "A standard die is symmetrical and unbiased, meaning every face (1, 2, 3, 4, 5, 6) has an exactly equal chance of landing face up.",
+    "explanation_hi": "एक मानक पासा सममित और निष्पक्ष होता है, जिसका अर्थ है कि हर फलक (1, 2, 3, 4, 5, 6) के ऊपर आने की ठीक समान संभावना है।",
+    "explanation_gu": "પ્રમાણભૂત પાસો સપ્રમાણ અને નિષ્પક્ષ હોય છે, જેનો અર્થ છે કે દરેક બાજુ (1, 2, 3, 4, 5, 6) ને ઉપર આવવાની બરાબર સમાન તક હોય છે."
+  },
+  {
+    "id": "KOBJ_M10_CH14_03",
+    "type": "theory",
+    "title": "Theoretical Probability: The Formula",
+    "title_hi": "सैद्धांतिक प्रायिकता: सूत्र",
+    "title_gu": "સૈદ્ધાંતિક સંભાવના: સૂત્ર",
+    "body": "Unlike experimental probability (doing it physically), Theoretical Probability predicts outcomes using logic. Formula: P(E) = (Number of outcomes favourable to E) / (Total number of possible outcomes). Note: This only works when all outcomes are 'equally likely'.",
+    "body_hi": "प्रायोगिक प्रायिकता (शारीरिक रूप से ऐसा करने) के विपरीत, सैद्धांतिक प्रायिकता तर्क का उपयोग करके परिणामों की भविष्यवाणी करती है। सूत्र: P(E) = (E के अनुकूल परिणामों की संख्या) / (संभव परिणामों की कुल संख्या)। ध्यान दें: यह केवल तभी काम करता है जब सभी परिणाम 'समान रूप से संभावित' (equally likely) हों।",
+    "body_gu": "પ્રાયોગિક સંભાવના (શારીરિક રીતે કરવા) થી વિપરીત, સૈદ્ધાંતિક સંભાવના તર્કનો ઉપયોગ કરીને પરિણામોની આગાહી કરે છે. સૂત્ર: P(E) = (E ની તરફેણમાં પરિણામોની સંખ્યા) / (શક્ય પરિણામોની કુલ સંખ્યા). નોંધ: આ માત્ર ત્યારે જ કામ કરે છે જ્યારે તમામ પરિણામો 'સમાન રીતે સંભવિત' (equally likely) હોય."
+  },
+  {
+    "id": "KOBJ_M10_CH14_04",
+    "type": "mcq",
+    "question": "What is the probability of an event that is CERTAIN to happen?",
+    "question_hi": "एक ऐसी घटना की प्रायिकता क्या है जिसका घटित होना निश्चित (Certain) है?",
+    "question_gu": "એવી ઘટનાની સંભાવના શું છે જે બનવાની નિશ્ચિત (Certain) છે?",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "100"
+    ],
+    "options_hi": [
+      "0",
+      "0.5",
+      "1",
+      "100"
+    ],
+    "options_gu": [
+      "0",
+      "0.5",
+      "1",
+      "100"
+    ],
+    "correct_index": 2,
+    "explanation": "A sure or certain event always has a probability of 1. Example: The sun rising tomorrow.",
+    "explanation_hi": "एक निश्चित घटना की प्रायिकता हमेशा 1 होती है। उदाहरण: कल सूरज का उगना।",
+    "explanation_gu": "નિશ્ચિત ઘટનાની સંભાવના હંમેશા 1 હોય છે. ઉદાહરણ: આવતીકાલે સૂર્ય ઊગવો."
+  },
+  {
+    "id": "KOBJ_M10_CH14_05",
+    "type": "mcq",
+    "question": "What is the probability of an IMPOSSIBLE event?",
+    "question_hi": "एक असंभव घटना की प्रायिकता क्या है?",
+    "question_gu": "અશક્ય ઘટનાની સંભાવના શું છે?",
+    "options": [
+      "0",
+      "-1",
+      "0.1",
+      "Infinity"
+    ],
+    "options_hi": [
+      "0",
+      "-1",
+      "0.1",
+      "अनंत"
+    ],
+    "options_gu": [
+      "0",
+      "-1",
+      "0.1",
+      "અનંત"
+    ],
+    "correct_index": 0,
+    "explanation": "If an event cannot happen, its favourable outcomes are 0. So, 0/Total = 0.",
+    "explanation_hi": "यदि कोई घटना घटित नहीं हो सकती है, तो उसके अनुकूल परिणाम 0 हैं। इसलिए, 0/कुल = 0।",
+    "explanation_gu": "જો કોઈ ઘટના ન બની શકે, તો તેના સાનુકૂળ પરિણામો 0 છે. તેથી, 0/કુલ = 0."
+  },
+  {
+    "id": "KOBJ_M10_CH14_06",
+    "type": "theory",
+    "title": "Complementary Events (Not E)",
+    "title_hi": "पूरक घटनाएँ (Complementary Events)",
+    "title_gu": "પૂરક ઘટનાઓ (Complementary Events)",
+    "body": "If P(E) is the probability of it raining, what is the probability of it NOT raining? It's simply 1 - P(E). The event 'not E' is called the complement of E, denoted as Ē. The golden rule is: P(E) + P(not E) = 1.",
+    "body_hi": "यदि P(E) बारिश होने की प्रायिकता है, तो बारिश न होने की प्रायिकता क्या है? यह बस 1 - P(E) है। घटना 'E नहीं' को E का पूरक कहा जाता है, जिसे Ē के रूप में दर्शाया जाता है। सुनहरा नियम है: P(E) + P(E नहीं) = 1।",
+    "body_gu": "જો P(E) વરસાદ પડવાની સંભાવના છે, તો વરસાદ ન પડવાની સંભાવના શું છે? તે ફક્ત 1 - P(E) છે. ઘટના 'E નહીં' ને E ની પૂરક કહેવામાં આવે છે, જેને Ē તરીકે દર્શાવવામાં આવે છે. સુવર્ણ નિયમ છે: P(E) + P(E નહીં) = 1."
+  },
+  {
+    "id": "KOBJ_M10_CH14_07",
+    "type": "mcq",
+    "question": "If the probability of winning a game is 0.75, what is the probability of losing it?",
+    "question_hi": "यदि किसी खेल को जीतने की प्रायिकता 0.75 है, तो उसे हारने की प्रायिकता क्या है?",
+    "question_gu": "જો રમત જીતવાની સંભાવના 0.75 છે, તો તેને હારવાની સંભાવના શું છે?",
+    "options": [
+      "0.15",
+      "0.25",
+      "0.35",
+      "1.75"
+    ],
+    "options_hi": [
+      "0.15",
+      "0.25",
+      "0.35",
+      "1.75"
+    ],
+    "options_gu": [
+      "0.15",
+      "0.25",
+      "0.35",
+      "1.75"
+    ],
+    "correct_index": 1,
+    "explanation": "P(Winning) + P(Losing) = 1. So, P(Losing) = 1 - 0.75 = 0.25.",
+    "explanation_hi": "P(जीतना) + P(हारना) = 1. अतः, P(हारना) = 1 - 0.75 = 0.25।",
+    "explanation_gu": "P(જીતવું) + P(હારવું) = 1. તેથી, P(હારવું) = 1 - 0.75 = 0.25."
+  },
+  {
+    "id": "KOBJ_M10_CH14_08",
+    "type": "theory",
+    "title": "Cards Deck: The Ultimate Probability Playground",
+    "title_hi": "ताश की गड्डी: प्रायिकता का अंतिम खेल का मैदान",
+    "title_gu": "પત્તાની ડેક: સંભાવનાનું અંતિમ રમતનું મેદાન",
+    "body": "A standard deck has 52 cards, split into 4 suits of 13 cards each: Spades (♠ Black), Clubs (♣ Black), Hearts (♥ Red), and Diamonds (♦ Red). Each suit has 1 Ace, numbers 2 to 10, and 3 Face Cards: King, Queen, and Jack. Total Face Cards = 12.",
+    "body_hi": "एक मानक गड्डी में 52 पत्ते होते हैं, जिन्हें 13-13 पत्तों के 4 सूट में बांटा जाता है: हुकुम (♠ काला), चिड़ी (♣ काला), पान (♥ लाल), और ईंट (♦ लाल)। प्रत्येक सूट में 1 इक्का (Ace), 2 से 10 तक संख्याएं, और 3 तस्वीर वाले पत्ते (Face Cards) होते हैं: बादशाह (King), बेगम (Queen), और गुलाम (Jack)। कुल तस्वीर वाले पत्ते = 12।",
+    "body_gu": "પ્રમાણભૂત ડેકમાં 52 પત્તા હોય છે, જેને દરેકમાં 13 પત્તાના 4 સૂટમાં વહેંચવામાં આવે છે: કાળી (♠ કાળો), ફુલ્લી (♣ કાળો), લાલ (♥ લાલ) અને ચરકટ (♦ લાલ). દરેક સૂટમાં 1 એક્કો (Ace), 2 થી 10 સુધીની સંખ્યાઓ અને 3 ચિત્રવાળા પત્તા (Face Cards) હોય છે: રાજા (King), રાણી (Queen) અને ગુલામ (Jack). કુલ ચિત્રવાળા પત્તા = 12."
+  },
+  {
+    "id": "KOBJ_M10_CH14_09",
+    "type": "mcq",
+    "question": "A card is drawn from a well-shuffled deck of 52 cards. What is the probability of getting a King of red colour?",
+    "question_hi": "52 पत्तों की अच्छी तरह से फेंटी गई गड्डी से एक पत्ता निकाला जाता है। लाल रंग का बादशाह मिलने की प्रायिकता क्या है?",
+    "question_gu": "52 પત્તાની સારી રીતે ચીપાયેલી ડેકમાંથી એક પત્તું કાઢવામાં આવે છે. લાલ રંગનો રાજા મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "1/26",
+      "1/13",
+      "1/52",
+      "3/26"
+    ],
+    "options_hi": [
+      "1/26",
+      "1/13",
+      "1/52",
+      "3/26"
+    ],
+    "options_gu": [
+      "1/26",
+      "1/13",
+      "1/52",
+      "3/26"
+    ],
+    "correct_index": 0,
+    "explanation": "There are exactly 2 red kings (King of Hearts and King of Diamonds). So, P = 2/52 = 1/26.",
+    "explanation_hi": "ठीक 2 लाल बादशाह होते हैं (पान का बादशाह और ईंट का बादशाह)। इसलिए, P = 2/52 = 1/26।",
+    "explanation_gu": "બરાબર 2 લાલ રાજાઓ હોય છે (લાલનો રાજા અને ચરકટનો રાજા). તેથી, P = 2/52 = 1/26."
+  },
+  {
+    "id": "KOBJ_M10_CH14_10",
+    "type": "mcq",
+    "question": "A card is drawn from a deck of 52. What is the probability of drawing a face card?",
+    "question_hi": "52 पत्तों की एक गड्डी से एक पत्ता निकाला जाता है। तस्वीर वाला पत्ता (face card) निकालने की प्रायिकता क्या है?",
+    "question_gu": "52 પત્તાની ડેકમાંથી એક પત્તું કાઢવામાં આવે છે. ચિત્રવાળું પત્તું (face card) કાઢવાની સંભાવના શું છે?",
+    "options": [
+      "3/13",
+      "4/13",
+      "1/13",
+      "1/52"
+    ],
+    "options_hi": [
+      "3/13",
+      "4/13",
+      "1/13",
+      "1/52"
+    ],
+    "options_gu": [
+      "3/13",
+      "4/13",
+      "1/13",
+      "1/52"
+    ],
+    "correct_index": 0,
+    "explanation": "Total face cards (King, Queen, Jack of 4 suits) = 3 × 4 = 12. P = 12/52 = 3/13.",
+    "explanation_hi": "कुल तस्वीर वाले पत्ते (4 सूटों के बादशाह, बेगम, गुलाम) = 3 × 4 = 12। P = 12/52 = 3/13।",
+    "explanation_gu": "કુલ ચિત્રવાળા પત્તા (4 સૂટના રાજા, રાણી, ગુલામ) = 3 × 4 = 12. P = 12/52 = 3/13."
+  },
+  {
+    "id": "KOBJ_M10_CH14_11",
+    "type": "theory",
+    "title": "Two Dice Together",
+    "title_hi": "एक साथ दो पासे",
+    "title_gu": "એકસાથે બે પાસા",
+    "body": "When you throw two dice, total possible outcomes = 6 × 6 = 36. This includes pairs like (1,1), (1,2) ... up to (6,6). The sum of numbers can range from 2 (1+1) to 12 (6+6).",
+    "body_hi": "जब आप दो पासे फेंकते हैं, तो कुल संभावित परिणाम = 6 × 6 = 36 होते हैं। इसमें (1,1), (1,2) ... से लेकर (6,6) तक के जोड़े शामिल हैं। संख्याओं का योग 2 (1+1) से 12 (6+6) तक हो सकता है।",
+    "body_gu": "જ્યારે તમે બે પાસા ફેંકો છો, ત્યારે કુલ સંભવિત પરિણામો = 6 × 6 = 36 હોય છે. તેમાં (1,1), (1,2) ... થી (6,6) સુધીની જોડીઓ સામેલ છે. સંખ્યાઓનો સરવાળો 2 (1+1) થી 12 (6+6) સુધી હોઈ શકે છે."
+  },
+  {
+    "id": "KOBJ_M10_CH14_12",
+    "type": "mcq",
+    "question": "Two dice are thrown together. What is the probability of getting a sum of 8?",
+    "question_hi": "दो पासे एक साथ फेंके जाते हैं। योग 8 आने की प्रायिकता क्या है?",
+    "question_gu": "બે પાસા એકસાથે ફેંકવામાં આવે છે. સરવાળો 8 આવવાની સંભાવના શું છે?",
+    "options": [
+      "5/36",
+      "1/6",
+      "7/36",
+      "1/12"
+    ],
+    "options_hi": [
+      "5/36",
+      "1/6",
+      "7/36",
+      "1/12"
+    ],
+    "options_gu": [
+      "5/36",
+      "1/6",
+      "7/36",
+      "1/12"
+    ],
+    "correct_index": 0,
+    "explanation": "Outcomes giving sum 8: (2,6), (3,5), (4,4), (5,3), (6,2). Total 5 outcomes. So, P = 5/36.",
+    "explanation_hi": "योग 8 देने वाले परिणाम: (2,6), (3,5), (4,4), (5,3), (6,2)। कुल 5 परिणाम। इसलिए, P = 5/36।",
+    "explanation_gu": "સરવાળો 8 આપતા પરિણામો: (2,6), (3,5), (4,4), (5,3), (6,2). કુલ 5 પરિણામો. તેથી, P = 5/36."
+  },
+  {
+    "id": "KOBJ_M10_CH14_13",
+    "type": "mcq",
+    "question": "A die is thrown once. What is the probability of getting a prime number?",
+    "question_hi": "एक पासा एक बार फेंका जाता है। अभाज्य संख्या प्राप्त होने की प्रायिकता क्या है?",
+    "question_gu": "પાસો એકવાર ફેંકવામાં આવે છે. અવિભાજ્ય સંખ્યા મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "1/6"
+    ],
+    "options_hi": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "1/6"
+    ],
+    "options_gu": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "1/6"
+    ],
+    "correct_index": 0,
+    "explanation": "Prime numbers on a die are 2, 3, 5 (Total 3). So, P = 3/6 = 1/2. Remember, 1 is NOT prime.",
+    "explanation_hi": "पासे पर अभाज्य संख्याएँ 2, 3, 5 हैं (कुल 3)। इसलिए, P = 3/6 = 1/2। याद रखें, 1 अभाज्य नहीं है।",
+    "explanation_gu": "પાસા પર અવિભાજ્ય સંખ્યાઓ 2, 3, 5 છે (કુલ 3). તેથી, P = 3/6 = 1/2. યાદ રાખો, 1 અવિભાજ્ય નથી."
+  },
+  {
+    "id": "KOBJ_M10_CH14_14",
+    "type": "mcq",
+    "question": "A box contains 3 blue, 2 white, and 4 red marbles. What is the probability that a marble drawn at random will NOT be white?",
+    "question_hi": "एक बॉक्स में 3 नीले, 2 सफेद और 4 लाल कंचे हैं। यादृच्छिक रूप से निकाले गए कंचे के सफेद न होने की प्रायिकता क्या है?",
+    "question_gu": "એક બોક્સમાં 3 વાદળી, 2 સફેદ અને 4 લાલ લખોટીઓ છે. યાદચ્છિક રીતે કાઢવામાં આવેલી લખોટી સફેદ ન હોવાની સંભાવના શું છે?",
+    "options": [
+      "7/9",
+      "2/9",
+      "5/9",
+      "1/3"
+    ],
+    "options_hi": [
+      "7/9",
+      "2/9",
+      "5/9",
+      "1/3"
+    ],
+    "options_gu": [
+      "7/9",
+      "2/9",
+      "5/9",
+      "1/3"
+    ],
+    "correct_index": 0,
+    "explanation": "Total marbles = 3 + 2 + 4 = 9. P(White) = 2/9. P(Not White) = 1 - 2/9 = 7/9. (Alternatively, 3 blue + 4 red = 7 not white).",
+    "explanation_hi": "कुल कंचे = 3 + 2 + 4 = 9। P(सफेद) = 2/9। P(सफेद नहीं) = 1 - 2/9 = 7/9। (वैकल्पिक रूप से, 3 नीले + 4 लाल = 7 सफेद नहीं)।",
+    "explanation_gu": "કુલ લખોટીઓ = 3 + 2 + 4 = 9. P(સફેદ) = 2/9. P(સફેદ નહીં) = 1 - 2/9 = 7/9. (વૈકલ્પિક રીતે, 3 વાદળી + 4 લાલ = 7 સફેદ નહીં)."
+  },
+  {
+    "id": "KOBJ_M10_CH14_15",
+    "type": "mcq",
+    "question": "If P(E) = 0.05, what is the probability of 'not E'?",
+    "question_hi": "यदि P(E) = 0.05 है, तो 'E नहीं' की प्रायिकता क्या है?",
+    "question_gu": "જો P(E) = 0.05 હોય, તો 'E નહીં' ની સંભાવના શું છે?",
+    "options": [
+      "0.95",
+      "0.5",
+      "0.05",
+      "1.0"
+    ],
+    "options_hi": [
+      "0.95",
+      "0.5",
+      "0.05",
+      "1.0"
+    ],
+    "options_gu": [
+      "0.95",
+      "0.5",
+      "0.05",
+      "1.0"
+    ],
+    "correct_index": 0,
+    "explanation": "P(not E) = 1 - P(E) = 1 - 0.05 = 0.95.",
+    "explanation_hi": "P(E नहीं) = 1 - P(E) = 1 - 0.05 = 0.95।",
+    "explanation_gu": "P(E નહીં) = 1 - P(E) = 1 - 0.05 = 0.95."
+  },
+  {
+    "id": "KOBJ_M10_CH14_16",
+    "type": "mcq",
+    "question": "A bag contains lemon flavoured candies only. Malini takes out one candy without looking. What is the probability that she takes out an orange flavoured candy?",
+    "question_hi": "एक थैले में केवल नींबू के स्वाद वाली गोलियाँ (candies) हैं। मालिनी बिना देखे एक गोली निकालती है। इसकी क्या प्रायिकता है कि वह संतरे के स्वाद वाली गोली निकालेगी?",
+    "question_gu": "એક થેલીમાં માત્ર લીંબુના સ્વાદવાળી ગોળીઓ (candies) છે. માલિની જોયા વિના એક ગોળી કાઢે છે. તે નારંગીના સ્વાદવાળી ગોળી કાઢશે તેની સંભાવના શું છે?",
+    "options": [
+      "0",
+      "1",
+      "0.5",
+      "Not defined"
+    ],
+    "options_hi": [
+      "0",
+      "1",
+      "0.5",
+      "परिभाषित नहीं"
+    ],
+    "options_gu": [
+      "0",
+      "1",
+      "0.5",
+      "વ્યાખ્યાયિત નથી"
+    ],
+    "correct_index": 0,
+    "explanation": "Since there are NO orange candies, it is an impossible event. Probability = 0.",
+    "explanation_hi": "चूँकि कोई संतरे की गोली नहीं है, यह एक असंभव घटना है। प्रायिकता = 0।",
+    "explanation_gu": "કેમ કે ત્યાં કોઈ નારંગીની ગોળી નથી, તે અશક્ય ઘટના છે. સંભાવના = 0."
+  },
+  {
+    "id": "KOBJ_M10_CH14_17",
+    "type": "mcq",
+    "question": "Which of the following cannot be the probability of an event?",
+    "question_hi": "निम्नलिखित में से कौन किसी घटना की प्रायिकता नहीं हो सकती है?",
+    "question_gu": "નીચેનામાંથી કઈ ઘટનાની સંભાવના હોઈ શકતી નથી?",
+    "options": [
+      "-1.5",
+      "2/3",
+      "15%",
+      "0.7"
+    ],
+    "options_hi": [
+      "-1.5",
+      "2/3",
+      "15%",
+      "0.7"
+    ],
+    "options_gu": [
+      "-1.5",
+      "2/3",
+      "15%",
+      "0.7"
+    ],
+    "correct_index": 0,
+    "explanation": "Probability must always be between 0 and 1 inclusive. It cannot be negative.",
+    "explanation_hi": "प्रायिकता हमेशा 0 और 1 के बीच (सहित) होनी चाहिए। यह ऋणात्मक नहीं हो सकती।",
+    "explanation_gu": "સંભાવના હંમેશા 0 અને 1 ની વચ્ચે (સહિત) હોવી જોઈએ. તે ઋણાત્મક હોઈ શકતી નથી."
+  },
+  {
+    "id": "KOBJ_M10_CH14_18",
+    "type": "mcq",
+    "question": "A box contains 5 red marbles, 8 white marbles, and 4 green marbles. Probability of taking out a NOT green marble is:",
+    "question_hi": "एक बॉक्स में 5 लाल, 8 सफेद और 4 हरे कंचे हैं। एक हरे रंग का कंचा न निकालने की प्रायिकता क्या है?",
+    "question_gu": "એક બોક્સમાં 5 લાલ, 8 સફેદ અને 4 લીલી લખોટીઓ છે. લીલી લખોટી ન કાઢવાની સંભાવના શું છે?",
+    "options": [
+      "13/17",
+      "4/17",
+      "5/17",
+      "8/17"
+    ],
+    "options_hi": [
+      "13/17",
+      "4/17",
+      "5/17",
+      "8/17"
+    ],
+    "options_gu": [
+      "13/17",
+      "4/17",
+      "5/17",
+      "8/17"
+    ],
+    "correct_index": 0,
+    "explanation": "Total = 5 + 8 + 4 = 17. Not green = Red + White = 5 + 8 = 13. P = 13/17.",
+    "explanation_hi": "कुल = 5 + 8 + 4 = 17। हरा नहीं = लाल + सफेद = 5 + 8 = 13। P = 13/17।",
+    "explanation_gu": "કુલ = 5 + 8 + 4 = 17. લીલી નહીં = લાલ + સફેદ = 5 + 8 = 13. P = 13/17."
+  },
+  {
+    "id": "KOBJ_M10_CH14_19",
+    "type": "mcq",
+    "question": "A piggy bank contains hundred 50p coins, fifty ₹1 coins, twenty ₹2 coins and ten ₹5 coins. Probability that the coin will be a 50p coin when inverted is:",
+    "question_hi": "एक गुल्लक (piggy bank) में 50p के 100 सिक्के, ₹1 के 50 सिक्के, ₹2 के 20 सिक्के और ₹5 के 10 सिक्के हैं। उल्टा करने पर 50p का सिक्का गिरने की प्रायिकता क्या है?",
+    "question_gu": "એક પિગી બેંક (piggy bank) માં 50p ના 100 સિક્કા, ₹1 ના 50 સિક્કા, ₹2 ના 20 સિક્કા અને ₹5 ના 10 સિક્કા છે. ઊંધું કરતાં 50p નો સિક્કો પડવાની સંભાવના શું છે?",
+    "options": [
+      "5/9",
+      "1/9",
+      "1/2",
+      "4/9"
+    ],
+    "options_hi": [
+      "5/9",
+      "1/9",
+      "1/2",
+      "4/9"
+    ],
+    "options_gu": [
+      "5/9",
+      "1/9",
+      "1/2",
+      "4/9"
+    ],
+    "correct_index": 0,
+    "explanation": "Total coins = 100 + 50 + 20 + 10 = 180. 50p coins = 100. P = 100/180 = 5/9.",
+    "explanation_hi": "कुल सिक्के = 100 + 50 + 20 + 10 = 180। 50p के सिक्के = 100। P = 100/180 = 5/9।",
+    "explanation_gu": "કુલ સિક્કા = 100 + 50 + 20 + 10 = 180. 50p ના સિક્કા = 100. P = 100/180 = 5/9."
+  },
+  {
+    "id": "KOBJ_M10_CH14_20",
+    "type": "mcq",
+    "question": "Gopi buys a fish from a shop. The shopkeeper takes out one fish from a tank containing 5 male fish and 8 female fish. What is the probability that the fish taken out is a male fish?",
+    "question_hi": "गोपी एक दुकान से मछली खरीदता है। दुकानदार 5 नर (male) और 8 मादा (female) मछली वाले टैंक से एक मछली निकालता है। निकाली गई मछली के नर होने की प्रायिकता क्या है?",
+    "question_gu": "ગોપી એક દુકાનમાંથી માછલી ખરીદે છે. દુકાનદાર 5 નર (male) અને 8 માદા (female) માછલીવાળા ટાંકામાંથી એક માછલી કાઢે છે. કાઢેલી માછલી નર હોવાની સંભાવના શું છે?",
+    "options": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "1/13"
+    ],
+    "options_hi": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "1/13"
+    ],
+    "options_gu": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "1/13"
+    ],
+    "correct_index": 0,
+    "explanation": "Total fish = 5 + 8 = 13. Male fish = 5. P(Male) = 5/13.",
+    "explanation_hi": "कुल मछली = 5 + 8 = 13। नर मछली = 5। P(नर) = 5/13।",
+    "explanation_gu": "કુલ માછલી = 5 + 8 = 13. નર માછલી = 5. P(નર) = 5/13."
+  },
+  {
+    "id": "KOBJ_M10_CH14_21",
+    "type": "mcq",
+    "question": "A game of chance consists of spinning an arrow which comes to rest pointing at one of the numbers 1, 2, 3, 4, 5, 6, 7, 8. What is the probability that it will point at a number greater than 2?",
+    "question_hi": "संयोग के एक खेल में एक तीर को घुमाया जाता है जो 1, 2, 3, 4, 5, 6, 7, 8 संख्याओं में से किसी एक पर रुकता है। इसकी क्या प्रायिकता है कि यह 2 से बड़ी संख्या की ओर इशारा करेगा?",
+    "question_gu": "તકની એક રમતમાં એક તીરને ફેરવવામાં આવે છે જે 1, 2, 3, 4, 5, 6, 7, 8 નંબરોમાંથી કોઈ એક પર અટકે છે. તે 2 થી મોટી સંખ્યા તરફ ઈશારો કરશે તેની સંભાવના શું છે?",
+    "options": [
+      "3/4",
+      "1/4",
+      "7/8",
+      "1/2"
+    ],
+    "options_hi": [
+      "3/4",
+      "1/4",
+      "7/8",
+      "1/2"
+    ],
+    "options_gu": [
+      "3/4",
+      "1/4",
+      "7/8",
+      "1/2"
+    ],
+    "correct_index": 0,
+    "explanation": "Numbers greater than 2 are 3, 4, 5, 6, 7, 8 (Total 6). P = 6/8 = 3/4.",
+    "explanation_hi": "2 से बड़ी संख्याएँ 3, 4, 5, 6, 7, 8 (कुल 6) हैं। P = 6/8 = 3/4।",
+    "explanation_gu": "2 થી મોટી સંખ્યાઓ 3, 4, 5, 6, 7, 8 (કુલ 6) છે. P = 6/8 = 3/4."
+  },
+  {
+    "id": "KOBJ_M10_CH14_22",
+    "type": "mcq",
+    "question": "Find the probability of getting an odd number when a die is thrown once.",
+    "question_hi": "एक पासे को एक बार फेंके जाने पर विषम संख्या (odd number) प्राप्त करने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "જ્યારે પાસો એકવાર ફેંકવામાં આવે ત્યારે એકી સંખ્યા (odd number) મેળવવાની સંભાવના શોધો.",
+    "options": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "options_hi": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "options_gu": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "correct_index": 0,
+    "explanation": "Odd numbers are 1, 3, 5 (Total 3). P = 3/6 = 1/2.",
+    "explanation_hi": "विषम संख्याएँ 1, 3, 5 (कुल 3) हैं। P = 3/6 = 1/2।",
+    "explanation_gu": "એકી સંખ્યાઓ 1, 3, 5 (કુલ 3) છે. P = 3/6 = 1/2."
+  },
+  {
+    "id": "KOBJ_M10_CH14_23",
+    "type": "mcq",
+    "question": "A card is drawn from a deck. What is the probability of getting a Jack, Queen, or King?",
+    "question_hi": "गड्डी से एक पत्ता निकाला जाता है। गुलाम (Jack), बेगम (Queen) या बादशाह (King) प्राप्त करने की प्रायिकता क्या है?",
+    "question_gu": "ડેકમાંથી એક પત્તું કાઢવામાં આવે છે. ગુલામ (Jack), રાણી (Queen) અથવા રાજા (King) મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "3/13",
+      "1/13",
+      "4/13",
+      "3/52"
+    ],
+    "options_hi": [
+      "3/13",
+      "1/13",
+      "4/13",
+      "3/52"
+    ],
+    "options_gu": [
+      "3/13",
+      "1/13",
+      "4/13",
+      "3/52"
+    ],
+    "correct_index": 0,
+    "explanation": "These are the face cards. There are 12 in total. P = 12/52 = 3/13.",
+    "explanation_hi": "ये तस्वीर वाले पत्ते हैं। कुल 12 होते हैं। P = 12/52 = 3/13।",
+    "explanation_gu": "આ ચિત્રવાળા પત્તા છે. કુલ 12 હોય છે. P = 12/52 = 3/13."
+  },
+  {
+    "id": "KOBJ_M10_CH14_24",
+    "type": "mcq",
+    "question": "What is the sum of the probabilities of all elementary events of an experiment?",
+    "question_hi": "किसी प्रयोग की सभी प्रारंभिक घटनाओं (elementary events) की प्रायिकताओं का योग क्या होता है?",
+    "question_gu": "કોઈ પ્રયોગની તમામ પ્રાથમિક ઘટનાઓ (elementary events) ની સંભાવનાઓનો સરવાળો શું હોય છે?",
+    "options": [
+      "1",
+      "0",
+      "Infinity",
+      "Depends on the experiment"
+    ],
+    "options_hi": [
+      "1",
+      "0",
+      "अनंत",
+      "प्रयोग पर निर्भर करता है"
+    ],
+    "options_gu": [
+      "1",
+      "0",
+      "અનંત",
+      "પ્રયોગ પર આધાર રાખે છે"
+    ],
+    "correct_index": 0,
+    "explanation": "The sum of the probabilities of all possible elementary events is always 1.",
+    "explanation_hi": "सभी संभव प्रारंभिक घटनाओं की प्रायिकताओं का योग हमेशा 1 होता है।",
+    "explanation_gu": "તમામ સંભવિત પ્રાથમિક ઘટનાઓની સંભાવનાઓનો સરવાળો હંમેશા 1 હોય છે."
+  },
+  {
+    "id": "KOBJ_M10_CH14_25",
+    "type": "mcq",
+    "question": "If a card is selected from a deck, what is the probability that it is the Ace of Spades?",
+    "question_hi": "यदि गड्डी से एक पत्ता चुना जाता है, तो इसके हुकुम का इक्का (Ace of Spades) होने की प्रायिकता क्या है?",
+    "question_gu": "જો ડેકમાંથી એક પત્તું પસંદ કરવામાં આવે, તો તે કાળીનો એક્કો (Ace of Spades) હોવાની સંભાવના શું છે?",
+    "options": [
+      "1/52",
+      "1/13",
+      "1/4",
+      "4/52"
+    ],
+    "options_hi": [
+      "1/52",
+      "1/13",
+      "1/4",
+      "4/52"
+    ],
+    "options_gu": [
+      "1/52",
+      "1/13",
+      "1/4",
+      "4/52"
+    ],
+    "correct_index": 0,
+    "explanation": "There is only one Ace of Spades in a 52-card deck. P = 1/52.",
+    "explanation_hi": "52 पत्तों की गड्डी में केवल एक हुकुम का इक्का होता है। P = 1/52।",
+    "explanation_gu": "52 પત્તાની ડેકમાં માત્ર એક કાળીનો એક્કો હોય છે. P = 1/52."
+  },
+  {
+    "id": "KOBJ_M10_CH14_26",
+    "type": "mcq",
+    "question": "A card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting a face card.",
+    "question_hi": "52 पत्तों की अच्छी तरह से फेंटी गई गड्डी से एक पत्ता निकाला जाता है। तस्वीर वाला पत्ता (face card) प्राप्त करने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "52 પત્તાની સારી રીતે ચીપાયેલી ડેકમાંથી એક પત્તું કાઢવામાં આવે છે. ચિત્રવાળું પત્તું (face card) મેળવવાની સંભાવના શોધો.",
+    "options": [
+      "3/13",
+      "4/13",
+      "1/2",
+      "2/13"
+    ],
+    "options_hi": [
+      "3/13",
+      "4/13",
+      "1/2",
+      "2/13"
+    ],
+    "options_gu": [
+      "3/13",
+      "4/13",
+      "1/2",
+      "2/13"
+    ],
+    "correct_index": 0,
+    "explanation": "There are 12 face cards (4 Kings, 4 Queens, 4 Jacks) in a deck of 52 cards. P(face card) = 12/52 = 3/13.",
+    "explanation_hi": "52 पत्तों की गड्डी में 12 तस्वीर वाले पत्ते (4 बादशाह, 4 बेगम, 4 गुलाम) होते हैं। P(तस्वीर वाला पत्ता) = 12/52 = 3/13।",
+    "explanation_gu": "52 પત્તાની ડેકમાં 12 ચિત્રવાળા પત્તા (4 રાજા, 4 રાણી, 4 ગુલામ) હોય છે. P(ચિત્રવાળું પત્તું) = 12/52 = 3/13."
+  },
+  {
+    "id": "KOBJ_M10_CH14_27",
+    "type": "mcq",
+    "question": "12 defective pens are accidentally mixed with 132 good ones. One pen is taken out at random from this lot. Determine the probability that the pen taken out is a good one.",
+    "question_hi": "12 खराब पेन गलती से 132 अच्छे पेनों में मिल गए हैं। इस लॉट से एक पेन यादृच्छिक रूप से निकाला जाता है। निकाले गए पेन के अच्छे होने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "12 ખામીયુક્ત પેન આકસ્મિક રીતે 132 સારી પેન સાથે ભળી ગઈ છે. આ લોટમાંથી એક પેન યાદચ્છિક રીતે કાઢવામાં આવે છે. કાઢેલી પેન સારી હોવાની સંભાવના નક્કી કરો.",
+    "options": [
+      "11/12",
+      "1/12",
+      "11/132",
+      "1/11"
+    ],
+    "options_hi": [
+      "11/12",
+      "1/12",
+      "11/132",
+      "1/11"
+    ],
+    "options_gu": [
+      "11/12",
+      "1/12",
+      "11/132",
+      "1/11"
+    ],
+    "correct_index": 0,
+    "explanation": "Total pens = 132 (good) + 12 (defective) = 144. P(good pen) = 132/144 = 11/12.",
+    "explanation_hi": "कुल पेन = 132 (अच्छे) + 12 (खराब) = 144। P(अच्छा पेन) = 132/144 = 11/12।",
+    "explanation_gu": "કુલ પેન = 132 (સારી) + 12 (ખામીયુક્ત) = 144. P(સારી પેન) = 132/144 = 11/12."
+  },
+  {
+    "id": "KOBJ_M10_CH14_28",
+    "type": "mcq",
+    "question": "A lot of 20 bulbs contains 4 defective ones. One bulb is drawn at random from the lot. What is the probability that this bulb is defective?",
+    "question_hi": "20 बल्बों के एक लॉट में 4 खराब बल्ब हैं। लॉट से एक बल्ब यादृच्छिक रूप से निकाला जाता है। इसकी क्या प्रायिकता है कि यह बल्ब खराब है?",
+    "question_gu": "20 બલ્બના લોટમાં 4 ખામીયુક્ત બલ્બ છે. લોટમાંથી એક બલ્બ યાદચ્છિક રીતે કાઢવામાં આવે છે. આ બલ્બ ખામીયુક્ત હોવાની સંભાવના શું છે?",
+    "options": [
+      "1/5",
+      "4/5",
+      "1/4",
+      "1/20"
+    ],
+    "options_hi": [
+      "1/5",
+      "4/5",
+      "1/4",
+      "1/20"
+    ],
+    "options_gu": [
+      "1/5",
+      "4/5",
+      "1/4",
+      "1/20"
+    ],
+    "correct_index": 0,
+    "explanation": "Total bulbs = 20. Defective bulbs = 4. P(defective) = 4/20 = 1/5.",
+    "explanation_hi": "कुल बल्ब = 20। खराब बल्ब = 4। P(खराब) = 4/20 = 1/5।",
+    "explanation_gu": "કુલ બલ્બ = 20. ખામીયુક્ત બલ્બ = 4. P(ખામીયુક્ત) = 4/20 = 1/5."
+  },
+  {
+    "id": "KOBJ_M10_CH14_29",
+    "type": "mcq",
+    "question": "A box contains 90 discs which are numbered from 1 to 90. If one disc is drawn at random from the box, find the probability that it bears a two-digit number.",
+    "question_hi": "एक बॉक्स में 90 डिस्क हैं जिन पर 1 से 90 तक संख्याएँ अंकित हैं। यदि बॉक्स से एक डिस्क यादृच्छिक रूप से निकाली जाती है, तो दो अंकों वाली संख्या वाली डिस्क मिलने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "એક બોક્સમાં 90 ડિસ્ક છે જેના પર 1 થી 90 સુધીના નંબરો લખેલા છે. જો બોક્સમાંથી એક ડિસ્ક યાદચ્છિક રીતે કાઢવામાં આવે, તો બે અંકોવાળી સંખ્યા ધરાવતી ડિસ્ક મળવાની સંભાવના શોધો.",
+    "options": [
+      "9/10",
+      "1/10",
+      "81/100",
+      "8/9"
+    ],
+    "options_hi": [
+      "9/10",
+      "1/10",
+      "81/100",
+      "8/9"
+    ],
+    "options_gu": [
+      "9/10",
+      "1/10",
+      "81/100",
+      "8/9"
+    ],
+    "correct_index": 0,
+    "explanation": "Total discs = 90. One-digit numbers (1-9) = 9. Two-digit numbers = 90 - 9 = 81. P(two-digit) = 81/90 = 9/10.",
+    "explanation_hi": "कुल डिस्क = 90। एक अंक वाली संख्याएँ (1-9) = 9। दो अंकों वाली संख्याएँ = 90 - 9 = 81। P(दो अंक) = 81/90 = 9/10।",
+    "explanation_gu": "કુલ ડિસ્ક = 90. એક અંકવાળી સંખ્યાઓ (1-9) = 9. બે અંકોવાળી સંખ્યાઓ = 90 - 9 = 81. P(બે અંક) = 81/90 = 9/10."
+  },
+  {
+    "id": "KOBJ_M10_CH14_30",
+    "type": "mcq",
+    "question": "A child has a die whose six faces show the letters A, B, C, D, E, A. The die is thrown once. What is the probability of getting A?",
+    "question_hi": "एक बच्चे के पास एक पासा है जिसके छह फलक अक्षर A, B, C, D, E, A दिखाते हैं। पासे को एक बार फेंका जाता है। A प्राप्त करने की प्रायिकता क्या है?",
+    "question_gu": "એક બાળક પાસે એક પાસો છે જેના છ ફલક અક્ષરો A, B, C, D, E, A બતાવે છે. પાસાને એકવાર ફેંકવામાં આવે છે. A મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "1/3",
+      "1/6",
+      "2/5",
+      "1/2"
+    ],
+    "options_hi": [
+      "1/3",
+      "1/6",
+      "2/5",
+      "1/2"
+    ],
+    "options_gu": [
+      "1/3",
+      "1/6",
+      "2/5",
+      "1/2"
+    ],
+    "correct_index": 0,
+    "explanation": "Total faces = 6. Favorable faces (A) = 2. P(A) = 2/6 = 1/3.",
+    "explanation_hi": "कुल फलक = 6। अनुकूल फलक (A) = 2। P(A) = 2/6 = 1/3।",
+    "explanation_gu": "કુલ ફલક = 6. સાનુકૂળ ફલક (A) = 2. P(A) = 2/6 = 1/3."
+  },
+  {
+    "id": "KOBJ_M10_CH14_31",
+    "type": "mcq",
+    "question": "Two coins are tossed simultaneously. What is the probability of getting exactly one head?",
+    "question_hi": "दो सिक्कों को एक साथ उछाला जाता है। ठीक एक चित्त (head) प्राप्त करने की प्रायिकता क्या है?",
+    "question_gu": "બે સિક્કા એકસાથે ઉછાળવામાં આવે છે. બરાબર એક છાપ (head) મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "1/2",
+      "1/4",
+      "3/4",
+      "0"
+    ],
+    "options_hi": [
+      "1/2",
+      "1/4",
+      "3/4",
+      "0"
+    ],
+    "options_gu": [
+      "1/2",
+      "1/4",
+      "3/4",
+      "0"
+    ],
+    "correct_index": 0,
+    "explanation": "Possible outcomes: (H,H), (H,T), (T,H), (T,T). Total 4. Outcomes with exactly one head: (H,T), (T,H). P = 2/4 = 1/2.",
+    "explanation_hi": "संभावित परिणाम: (H,H), (H,T), (T,H), (T,T)। कुल 4। ठीक एक चित्त वाले परिणाम: (H,T), (T,H)। P = 2/4 = 1/2।",
+    "explanation_gu": "સંભવિત પરિણામો: (H,H), (H,T), (T,H), (T,T). કુલ 4. બરાબર એક છાપવાળા પરિણામો: (H,T), (T,H). P = 2/4 = 1/2."
+  },
+  {
+    "id": "KOBJ_M10_CH14_32",
+    "type": "mcq",
+    "question": "What is the probability that an ordinary year has 53 Sundays?",
+    "question_hi": "एक साधारण वर्ष (ordinary year) में 53 रविवार होने की प्रायिकता क्या है?",
+    "question_gu": "સામાન્ય વર્ષ (ordinary year) માં 53 રવિવાર હોવાની સંભાવના શું છે?",
+    "options": [
+      "1/7",
+      "2/7",
+      "53/365",
+      "0"
+    ],
+    "options_hi": [
+      "1/7",
+      "2/7",
+      "53/365",
+      "0"
+    ],
+    "options_gu": [
+      "1/7",
+      "2/7",
+      "53/365",
+      "0"
+    ],
+    "correct_index": 0,
+    "explanation": "An ordinary year has 365 days = 52 weeks + 1 extra day. This extra day can be any of the 7 days of the week. So, P(Sunday) = 1/7.",
+    "explanation_hi": "एक साधारण वर्ष में 365 दिन = 52 सप्ताह + 1 अतिरिक्त दिन होता है। यह अतिरिक्त दिन सप्ताह के 7 दिनों में से कोई भी हो सकता है। इसलिए, P(रविवार) = 1/7।",
+    "explanation_gu": "સામાન્ય વર્ષમાં 365 દિવસ = 52 અઠવાડિયા + 1 વધારાનો દિવસ હોય છે. આ વધારાનો દિવસ અઠવાડિયાના 7 દિવસમાંથી કોઈ પણ હોઈ શકે છે. તેથી, P(રવિવાર) = 1/7."
+  },
+  {
+    "id": "KOBJ_M10_CH14_33",
+    "type": "mcq",
+    "question": "What is the probability that a leap year has 53 Sundays?",
+    "question_hi": "एक लीप वर्ष (leap year) में 53 रविवार होने की प्रायिकता क्या है?",
+    "question_gu": "લીપ વર્ષ (leap year) માં 53 રવિવાર હોવાની સંભાવના શું છે?",
+    "options": [
+      "2/7",
+      "1/7",
+      "53/366",
+      "2/366"
+    ],
+    "options_hi": [
+      "2/7",
+      "1/7",
+      "53/366",
+      "2/366"
+    ],
+    "options_gu": [
+      "2/7",
+      "1/7",
+      "53/366",
+      "2/366"
+    ],
+    "correct_index": 0,
+    "explanation": "A leap year has 366 days = 52 weeks + 2 extra days. The possible combinations for these 2 days are (Sun,Mon), (Mon,Tue), (Tue,Wed), (Wed,Thu), (Thu,Fri), (Fri,Sat), (Sat,Sun). Total 7 combinations. Two of these contain Sunday. P = 2/7.",
+    "explanation_hi": "एक लीप वर्ष में 366 दिन = 52 सप्ताह + 2 अतिरिक्त दिन होते हैं। इन 2 दिनों के लिए संभावित संयोजन (रवि,सोम), (सोम,मंगल), (मंगल,बुध), (बुध,गुरु), (गुरु,शुक्र), (शुक्र,शनि), (शनि,रवि) हैं। कुल 7 संयोजन। इनमें से दो में रविवार है। P = 2/7।",
+    "explanation_gu": "લીપ વર્ષમાં 366 દિવસ = 52 અઠવાડિયા + 2 વધારાના દિવસ હોય છે. આ 2 દિવસો માટે સંભવિત સંયોજનો (રવિ,સોમ), (સોમ,મંગળ), (મંગળ,બુધ), (બુધ,ગુરુ), (ગુરુ,શુક્ર), (શુક્ર,શનિ), (શનિ,રવિ) છે. કુલ 7 સંયોજનો. આમાંથી બેમાં રવિવાર છે. P = 2/7."
+  },
+  {
+    "id": "KOBJ_M10_CH14_34",
+    "type": "mcq",
+    "question": "Cards marked with numbers 2 to 101 are placed in a box and mixed thoroughly. One card is drawn. Find the probability that the number on the card is a perfect square.",
+    "question_hi": "2 से 101 तक संख्या वाले पत्तों को एक बॉक्स में रखा जाता है और अच्छी तरह मिलाया जाता है। एक पत्ता निकाला जाता है। प्रायिकता ज्ञात कीजिए कि पत्ते पर मौजूद संख्या एक पूर्ण वर्ग (perfect square) है।",
+    "question_gu": "2 થી 101 સુધીની સંખ્યાવાળા પત્તા એક બોક્સમાં મૂકવામાં આવે છે અને સારી રીતે મિશ્ર કરવામાં આવે છે. એક પત્તું કાઢવામાં આવે છે. પત્તા પરની સંખ્યા પૂર્ણ વર્ગ (perfect square) હોય તેની સંભાવના શોધો.",
+    "options": [
+      "9/100",
+      "1/10",
+      "10/101",
+      "9/101"
+    ],
+    "options_hi": [
+      "9/100",
+      "1/10",
+      "10/101",
+      "9/101"
+    ],
+    "options_gu": [
+      "9/100",
+      "1/10",
+      "10/101",
+      "9/101"
+    ],
+    "correct_index": 0,
+    "explanation": "Total cards from 2 to 101 = 100. Perfect squares between 2 and 101 are 4, 9, 16, 25, 36, 49, 64, 81, 100. (Total 9). P = 9/100.",
+    "explanation_hi": "2 से 101 तक कुल पत्ते = 100। 2 और 101 के बीच पूर्ण वर्ग 4, 9, 16, 25, 36, 49, 64, 81, 100 हैं। (कुल 9)। P = 9/100।",
+    "explanation_gu": "2 થી 101 સુધી કુલ પત્તા = 100. 2 અને 101 ની વચ્ચે પૂર્ણ વર્ગો 4, 9, 16, 25, 36, 49, 64, 81, 100 છે. (કુલ 9). P = 9/100."
+  },
+  {
+    "id": "KOBJ_M10_CH14_35",
+    "type": "mcq",
+    "question": "A box contains 90 discs, numbered from 1 to 90. If one disc is drawn at random, find the probability that it bears a number divisible by 5.",
+    "question_hi": "एक बॉक्स में 90 डिस्क हैं, जिन पर 1 से 90 तक संख्याएँ हैं। यदि एक डिस्क यादृच्छिक रूप से निकाली जाती है, तो 5 से विभाज्य संख्या वाली डिस्क मिलने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "એક બોક્સમાં 90 ડિસ્ક છે, જેના પર 1 થી 90 સુધીની સંખ્યાઓ છે. જો એક ડિસ્ક યાદચ્છિક રીતે કાઢવામાં આવે, તો 5 વડે વિભાજ્ય સંખ્યા ધરાવતી ડિસ્ક મળવાની સંભાવના શોધો.",
+    "options": [
+      "1/5",
+      "1/9",
+      "9/50",
+      "1/10"
+    ],
+    "options_hi": [
+      "1/5",
+      "1/9",
+      "9/50",
+      "1/10"
+    ],
+    "options_gu": [
+      "1/5",
+      "1/9",
+      "9/50",
+      "1/10"
+    ],
+    "correct_index": 0,
+    "explanation": "Total discs = 90. Numbers divisible by 5 are 5, 10, 15 ... 90. There are 90/5 = 18 such numbers. P = 18/90 = 1/5.",
+    "explanation_hi": "कुल डिस्क = 90। 5 से विभाज्य संख्याएँ 5, 10, 15 ... 90 हैं। ऐसी 90/5 = 18 संख्याएँ हैं। P = 18/90 = 1/5।",
+    "explanation_gu": "કુલ ડિસ્ક = 90. 5 વડે વિભાજ્ય સંખ્યાઓ 5, 10, 15 ... 90 છે. આવી 90/5 = 18 સંખ્યાઓ છે. P = 18/90 = 1/5."
+  },
+  {
+    "id": "KOBJ_M10_CH14_36",
+    "type": "mcq",
+    "question": "In a family of 3 children, what is the probability of having exactly 2 girls?",
+    "question_hi": "3 बच्चों वाले परिवार में, ठीक 2 लड़कियाँ होने की प्रायिकता क्या है?",
+    "question_gu": "3 બાળકોના પરિવારમાં, બરાબર 2 છોકરીઓ હોવાની સંભાવના શું છે?",
+    "options": [
+      "3/8",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "options_hi": [
+      "3/8",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "options_gu": [
+      "3/8",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "correct_index": 0,
+    "explanation": "Possible outcomes for 3 children (B=Boy, G=Girl): BBB, BBG, BGB, GBB, BGG, GBG, GGB, GGG (Total 8). Exactly 2 girls: BGG, GBG, GGB (Total 3). P = 3/8.",
+    "explanation_hi": "3 बच्चों के लिए संभावित परिणाम (B=लड़का, G=लड़की): BBB, BBG, BGB, GBB, BGG, GBG, GGB, GGG (कुल 8)। ठीक 2 लड़कियाँ: BGG, GBG, GGB (कुल 3)। P = 3/8।",
+    "explanation_gu": "3 બાળકો માટે સંભવિત પરિણામો (B=છોકરો, G=છોકરી): BBB, BBG, BGB, GBB, BGG, GBG, GGB, GGG (કુલ 8). બરાબર 2 છોકરીઓ: BGG, GBG, GGB (કુલ 3). P = 3/8."
+  },
+  {
+    "id": "KOBJ_M10_CH14_37",
+    "type": "mcq",
+    "question": "Two different dice are tossed together. Find the probability that the product of the two numbers on the top of the dice is 6.",
+    "question_hi": "दो अलग-अलग पासों को एक साथ उछाला जाता है। इसकी प्रायिकता ज्ञात कीजिए कि पासों के ऊपर की दो संख्याओं का गुणनफल 6 हो।",
+    "question_gu": "બે અલગ-અલગ પાસા એકસાથે ઉછાળવામાં આવે છે. પાસાની ઉપરની બે સંખ્યાઓનો ગુણાકાર 6 હોય તેની સંભાવના શોધો.",
+    "options": [
+      "1/9",
+      "1/6",
+      "1/12",
+      "4/9"
+    ],
+    "options_hi": [
+      "1/9",
+      "1/6",
+      "1/12",
+      "4/9"
+    ],
+    "options_gu": [
+      "1/9",
+      "1/6",
+      "1/12",
+      "4/9"
+    ],
+    "correct_index": 0,
+    "explanation": "Total outcomes = 36. Outcomes where product is 6: (1,6), (2,3), (3,2), (6,1). Total 4 outcomes. P = 4/36 = 1/9.",
+    "explanation_hi": "कुल परिणाम = 36। ऐसे परिणाम जहाँ गुणनफल 6 है: (1,6), (2,3), (3,2), (6,1)। कुल 4 परिणाम। P = 4/36 = 1/9।",
+    "explanation_gu": "કુલ પરિણામો = 36. પરિણામો જ્યાં ગુણાકાર 6 છે: (1,6), (2,3), (3,2), (6,1). કુલ 4 પરિણામો. P = 4/36 = 1/9."
+  },
+  {
+    "id": "KOBJ_M10_CH14_38",
+    "type": "theory",
+    "title": "Mastery Challenge: The Game of Chances",
+    "title_hi": "महारत चुनौती: संयोग का खेल",
+    "title_gu": "મહારત પડકાર: તકની રમત",
+    "body": "Design your own game of chance! Take 3 coins and toss them 20 times. Record the outcomes (0, 1, 2, or 3 heads). Compare your experimental probability with the theoretical probability (which says 3 heads should occur 1/8 of the time). Do they match perfectly? The more you toss, the closer they get!",
+    "body_hi": "संयोग का अपना खेल डिज़ाइन करें! 3 सिक्के लें और उन्हें 20 बार उछालें। परिणामों को रिकॉर्ड करें (0, 1, 2, या 3 चित्त)। अपनी प्रायोगिक प्रायिकता की तुलना सैद्धांतिक प्रायिकता से करें (जो कहती है कि 3 चित्त 1/8 बार आने चाहिए)। क्या वे पूरी तरह मेल खाते हैं? आप जितना अधिक उछालेंगे, वे उतने ही करीब आएँगे!",
+    "body_gu": "તમારી પોતાની તકની રમત બનાવો! 3 સિક્કા લો અને તેમને 20 વખત ઉછાળો. પરિણામો રેકોર્ડ કરો (0, 1, 2, અથવા 3 છાપ). તમારી પ્રાયોગિક સંભાવનાની સૈદ્ધાંતિક સંભાવના સાથે સરખામણી કરો (જે કહે છે કે 3 છાપ 1/8 વખત આવવી જોઈએ). શું તેઓ સંપૂર્ણપણે મેળ ખાય છે? તમે જેટલું વધુ ઉછાળશો, તેટલા જ તે નજીક આવશે!"
+  },
+  {
+    "id": "KOBJ_M10_CH14_39",
+    "type": "mcq",
+    "question": "Exercise 15.1: Complete the statement: Probability of an event E + Probability of the event 'not E' = ___.",
+    "question_hi": "प्रश्नावली 15.1: कथन पूरा करें: घटना E की प्रायिकता + घटना 'E नहीं' की प्रायिकता = ___।",
+    "question_gu": "સ્વાધ્યાય 15.1: વિધાન પૂર્ણ કરો: ઘટના E ની સંભાવના + ઘટના 'E નહીં' ની સંભાવના = ___.",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "2"
+    ],
+    "options_hi": [
+      "1",
+      "0",
+      "-1",
+      "2"
+    ],
+    "options_gu": [
+      "1",
+      "0",
+      "-1",
+      "2"
+    ],
+    "correct_index": 0,
+    "explanation": "P(E) + P(not E) = 1 for any event.",
+    "explanation_hi": "किसी भी घटना के लिए P(E) + P(E नहीं) = 1।",
+    "explanation_gu": "કોઈપણ ઘટના માટે P(E) + P(E નહીં) = 1."
+  },
+  {
+    "id": "KOBJ_M10_CH14_40",
+    "type": "mcq",
+    "question": "Exercise 15.1: The probability of an event that cannot happen is ___.",
+    "question_hi": "प्रश्नावली 15.1: उस घटना की प्रायिकता जो घटित नहीं हो सकती है ___ है।",
+    "question_gu": "સ્વાધ્યાય 15.1: એવી ઘટનાની સંભાવના જે બની શકતી નથી તે ___ છે.",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Undefined"
+    ],
+    "options_hi": [
+      "0",
+      "1",
+      "-1",
+      "अपरिभाषित"
+    ],
+    "options_gu": [
+      "0",
+      "1",
+      "-1",
+      "અવ્યાખ્યાયિત"
+    ],
+    "correct_index": 0,
+    "explanation": "An impossible event has probability 0.",
+    "explanation_hi": "एक असंभव घटना की प्रायिकता 0 होती है।",
+    "explanation_gu": "અશક્ય ઘટનાની સંભાવના 0 છે."
+  },
+  {
+    "id": "KOBJ_M10_CH14_41",
+    "type": "mcq",
+    "question": "Exercise 15.1: A coin is tossed twice. What is the probability of getting at least one head?",
+    "question_hi": "प्रश्नावली 15.1: एक सिक्का दो बार उछाला जाता है। कम से कम एक चित्त (head) प्राप्त करने की प्रायिकता क्या है?",
+    "question_gu": "સ્વાધ્યાય 15.1: સિક્કો બે વાર ઉછાળવામાં આવે છે. ઓછામાં ઓછી એક છાપ (head) મેળવવાની સંભાવના શું છે?",
+    "options": [
+      "3/4",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "options_hi": [
+      "3/4",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "options_gu": [
+      "3/4",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "correct_index": 0,
+    "explanation": "Outcomes: HH, HT, TH, TT. At least one head means HH, HT, TH. Total 3 favorable outcomes. P = 3/4.",
+    "explanation_hi": "परिणाम: HH, HT, TH, TT। कम से कम एक चित्त का अर्थ है HH, HT, TH। कुल 3 अनुकूल परिणाम। P = 3/4।",
+    "explanation_gu": "પરિણામો: HH, HT, TH, TT. ઓછામાં ઓછી એક છાપનો અર્થ HH, HT, TH છે. કુલ 3 સાનુકૂળ પરિણામો. P = 3/4."
+  },
+  {
+    "id": "KOBJ_M10_CH14_42",
+    "type": "mcq",
+    "question": "Exercise 15.1: Which of the following arguments are correct? If two coins are tossed simultaneously there are three possible outcomes—two heads, two tails, or one of each. Therefore, for each of these outcomes, the probability is 1/3.",
+    "question_hi": "प्रश्नावली 15.1: निम्नलिखित में से कौन सा तर्क सही है? यदि दो सिक्के एक साथ उछाले जाते हैं, तो तीन संभावित परिणाम हैं—दो चित्त, दो पट, या प्रत्येक का एक। इसलिए, इनमें से प्रत्येक परिणाम की प्रायिकता 1/3 है।",
+    "question_gu": "સ્વાધ્યાય 15.1: નીચેનામાંથી કઈ દલીલ સાચી છે? જો બે સિક્કા એકસાથે ઉછાળવામાં આવે, તો ત્રણ સંભવિત પરિણામો છે—બે છાપ, બે કાંટા, અથવા દરેકમાં એક. તેથી, આ દરેક પરિણામ માટે, સંભાવના 1/3 છે.",
+    "options": [
+      "Incorrect",
+      "Correct",
+      "Partially Correct",
+      "Cannot be determined"
+    ],
+    "options_hi": [
+      "गलत",
+      "सही",
+      "आंशिक रूप से सही",
+      "निर्धारित नहीं किया जा सकता"
+    ],
+    "options_gu": [
+      "ખોટું",
+      "સાચું",
+      "આંશિક રીતે સાચું",
+      "નક્કી કરી શકાતું નથી"
+    ],
+    "correct_index": 0,
+    "explanation": "Incorrect. Getting 'one of each' (HT, TH) has probability 2/4 = 1/2, whereas HH is 1/4 and TT is 1/4. They are not equally likely.",
+    "explanation_hi": "गलत। 'प्रत्येक का एक' (HT, TH) प्राप्त करने की प्रायिकता 2/4 = 1/2 है, जबकि HH 1/4 है और TT 1/4 है। वे समान रूप से संभावित नहीं हैं।",
+    "explanation_gu": "ખોટું. 'દરેકમાં એક' (HT, TH) મેળવવાની સંભાવના 2/4 = 1/2 છે, જ્યારે HH 1/4 છે અને TT 1/4 છે. તેઓ સમાન રીતે સંભવિત નથી."
+  },
+  {
+    "id": "KOBJ_M10_CH14_43",
+    "type": "theory",
+    "title": "Chapter Summary: Probability",
+    "title_hi": "अध्याय का सारांश: प्रायिकता",
+    "title_gu": "પ્રકરણનો સારાંશ: સંભાવના",
+    "body": "Probability measures uncertainty. Formula: P(E) = Favourable / Total. Sure event = 1, Impossible event = 0. Range: 0 ≤ P(E) ≤ 1. Complementary events: P(E) + P(not E) = 1. A standard deck has 52 cards.",
+    "body_hi": "प्रायिकता अनिश्चितता को मापती है। सूत्र: P(E) = अनुकूल / कुल। निश्चित घटना = 1, असंभव घटना = 0। सीमा: 0 ≤ P(E) ≤ 1। पूरक घटनाएँ: P(E) + P(E नहीं) = 1। एक मानक गड्डी में 52 पत्ते होते हैं।",
+    "body_gu": "સંભાવના અનિશ્ચિતતાને માપે છે. સૂત્ર: P(E) = સાનુકૂળ / કુલ. નિશ્ચિત ઘટના = 1, અશક્ય ઘટના = 0. શ્રેણી: 0 ≤ P(E) ≤ 1. પૂરક ઘટનાઓ: P(E) + P(E નહીં) = 1. પ્રમાણભૂત ડેકમાં 52 પત્તા હોય છે."
+  }
+]

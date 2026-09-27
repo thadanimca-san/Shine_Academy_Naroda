@@ -419,15 +419,18 @@ class AssessmentEngine {
                     contentMap['question_text'] ??
                     contentMap['question'] ??
                     contentMap['front'] ??
+                    contentMap['body'] ??
                     'Missing Question',
                 questionHi:
                     contentMap['question_hi'] ??
                     contentMap['question_text_hi'] ??
-                    contentMap['front_hi'],
+                    contentMap['front_hi'] ??
+                    contentMap['body_hi'],
                 questionGu:
                     contentMap['question_gu'] ??
                     contentMap['question_text_gu'] ??
-                    contentMap['front_gu'],
+                    contentMap['front_gu'] ??
+                    contentMap['body_gu'],
                 paragraph: contentMap['paragraph'],
                 paragraphHi: contentMap['paragraph_hi'],
                 paragraphGu: contentMap['paragraph_gu'],

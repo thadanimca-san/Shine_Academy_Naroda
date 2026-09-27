@@ -3,6 +3,7 @@ import 'dart:math';
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 
 class ActivationService {
   static const String _keyActivated = 'is_activated';
@@ -26,11 +27,33 @@ class ActivationService {
     final prefs = await SharedPreferences.getInstance();
     _isActivated = prefs.getBool(_keyActivated) ?? false;
     
-    _deviceCode = prefs.getString(_keyDeviceCode) ?? '';
-    if (_deviceCode.isEmpty) {
-      _deviceCode = _generateRandomDeviceCode();
-      await prefs.setString(_keyDeviceCode, _deviceCode);
+    // Always regenerate device code deterministically so it survives uninstalls
+    _deviceCode = await _getHardwareDeviceCode();
+    await prefs.setString(_keyDeviceCode, _deviceCode);
+  }
+
+  static Future<String> _getHardwareDeviceCode() async {
+    final DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+    String hardwareId = '';
+
+    try {
+      if (Platform.isAndroid) {
+        final androidInfo = await deviceInfo.androidInfo;
+        hardwareId = androidInfo.id; // Unique Android ID (stable across uninstalls)
+      } else if (Platform.isIOS) {
+        final iosInfo = await deviceInfo.iosInfo;
+        hardwareId = iosInfo.identifierForVendor ?? _generateRandomDeviceCode();
+      } else {
+        hardwareId = _generateRandomDeviceCode();
+      }
+    } catch (e) {
+      hardwareId = _generateRandomDeviceCode();
     }
+
+    // Hash the hardware ID and return an 8-character device code
+    final bytes = utf8.encode(hardwareId + "ShineHardwareSalt");
+    final digest = sha256.convert(bytes);
+    return digest.toString().substring(0, 8).toUpperCase();
   }
 
   static String _generateRandomDeviceCode() {

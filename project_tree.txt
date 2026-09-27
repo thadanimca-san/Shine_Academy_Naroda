@@ -1,0 +1,1704 @@
+.
+├── analysis_options.yaml
+├── android
+│   ├── app
+│   │   ├── build.gradle.kts
+│   │   └── src
+│   │       ├── debug
+│   │       │   └── AndroidManifest.xml
+│   │       ├── main
+│   │       │   ├── AndroidManifest.xml
+│   │       │   ├── java
+│   │       │   │   └── io
+│   │       │   │       └── flutter
+│   │       │   │           └── plugins
+│   │       │   │               └── GeneratedPluginRegistrant.java
+│   │       │   ├── kotlin
+│   │       │   │   └── com
+│   │       │   │       └── shineacademy
+│   │       │   │           └── shine_academy_naroda
+│   │       │   │               └── MainActivity.kt
+│   │       │   └── res
+│   │       │       ├── drawable
+│   │       │       │   └── launch_background.xml
+│   │       │       ├── drawable-v21
+│   │       │       │   └── launch_background.xml
+│   │       │       ├── mipmap-hdpi
+│   │       │       │   └── ic_launcher.png
+│   │       │       ├── mipmap-mdpi
+│   │       │       │   └── ic_launcher.png
+│   │       │       ├── mipmap-xhdpi
+│   │       │       │   └── ic_launcher.png
+│   │       │       ├── mipmap-xxhdpi
+│   │       │       │   └── ic_launcher.png
+│   │       │       ├── mipmap-xxxhdpi
+│   │       │       │   └── ic_launcher.png
+│   │       │       ├── values
+│   │       │       │   └── styles.xml
+│   │       │       └── values-night
+│   │       │           └── styles.xml
+│   │       └── profile
+│   │           └── AndroidManifest.xml
+│   ├── build.gradle.kts
+│   ├── .gitignore
+│   ├── .gradle
+│   │   ├── 9.1.0
+│   │   │   ├── checksums
+│   │   │   │   └── checksums.lock
+│   │   │   ├── executionHistory
+│   │   │   │   ├── executionHistory.bin
+│   │   │   │   └── executionHistory.lock
+│   │   │   ├── expanded
+│   │   │   ├── fileChanges
+│   │   │   │   └── last-build.bin
+│   │   │   ├── fileHashes
+│   │   │   │   ├── fileHashes.bin
+│   │   │   │   ├── fileHashes.lock
+│   │   │   │   └── resourceHashesCache.bin
+│   │   │   ├── gc.properties
+│   │   │   └── vcsMetadata
+│   │   ├── buildOutputCleanup
+│   │   │   ├── buildOutputCleanup.lock
+│   │   │   ├── cache.properties
+│   │   │   └── outputFiles.bin
+│   │   ├── file-system.probe
+│   │   ├── noVersion
+│   │   │   └── buildLogic.lock
+│   │   └── vcs-1
+│   │       └── gc.properties
+│   ├── gradle
+│   │   └── wrapper
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── .kotlin
+│   │   └── sessions
+│   ├── local.properties
+│   ├── settings.gradle.kts
+│   └── shine_academy_naroda_android.iml
+├── app_config
+│   └── settings.json
+├── app_core
+│   ├── 01_School_KG_to_10th
+│   │   ├── Class_6_to_8
+│   │   ├── Class_9_to_10
+│   │   └── KG_to_5th
+│   ├── 02_Senior_Secondary_11_12
+│   │   ├── Commerce_Stream
+│   │   │   └── Class_12
+│   │   │       ├── Accountancy
+│   │   │       │   └── chapter_01_template.json
+│   │   │       ├── OCM
+│   │   │       ├── SPCC
+│   │   │       └── Statistics
+│   │   └── Science_Stream
+│   ├── 03_Higher_Education
+│   │   ├── Computer_Languages
+│   │   └── Professional_Skills
+│   ├── 04_Competitive_Exams
+│   │   ├── SSC
+│   │   └── UPSC
+│   ├── app_router.json
+│   ├── chapters
+│   │   ├── ch1_exercises.json
+│   │   ├── ch1_illustrations.json
+│   │   ├── ch1_pyqs.json
+│   │   ├── ch1_theory.json
+│   │   └── gseb_class12_ch1_partnership.json
+│   ├── dictionary
+│   │   ├── accounts_batch_01.json
+│   │   ├── accounts_batch_02.json
+│   │   ├── accounts_batch_03.json
+│   │   ├── accounts_batch_04.json
+│   │   ├── accounts_batch_05.json
+│   │   ├── accounts_batch_06.json
+│   │   ├── accounts_batch_07.json
+│   │   ├── accounts_batch_08.json
+│   │   ├── accounts_batch_09.json
+│   │   ├── accounts_batch_10.json
+│   │   └── accounts_dictionary.json
+│   ├── languages
+│   │   ├── en.json
+│   │   ├── gu.json
+│   │   └── hi.json
+│   └── user_profiles.json
+├── assets
+│   ├── app_icon.png
+│   ├── branding
+│   │   └── logo.jpg
+│   ├── fonts
+│   │   ├── DejaVuSans-Bold.ttf
+│   │   ├── DejaVuSans.ttf
+│   │   ├── NotoSansGujarati-Bold.ttf
+│   │   └── NotoSansGujarati-Regular.ttf
+│   ├── icon
+│   │   ├── app_icon.png
+│   │   ├── icon_foreground.png
+│   │   ├── icon.png
+│   │   ├── logo.png
+│   │   └── sanicon.png
+│   ├── images
+│   │   └── logo.png
+│   └── lottie
+│       ├── atom_orbit.json
+│       ├── ball.json
+│       ├── bar_magnet.json
+│       ├── battery.json
+│       ├── bulb.json
+│       ├── candle.json
+│       ├── capacitor_plates.json
+│       ├── car.json
+│       ├── concave_lens.json
+│       ├── convex_lens.json
+│       ├── electron.json
+│       ├── flame.json
+│       ├── ice_cube.json
+│       ├── mirror_concave.json
+│       ├── molecule.json
+│       ├── neutron.json
+│       ├── pendulum_bob.json
+│       ├── photon.json
+│       ├── planet_earth.json
+│       ├── prism.json
+│       ├── proton.json
+│       ├── rocket.json
+│       ├── satellite.json
+│       ├── spring.json
+│       └── success_check.json
+├── database_sheets
+│   └── master_syllabus_index.csv
+├── .flutter-plugins-dependencies
+├── .gitignore
+├── ios
+│   ├── Flutter
+│   │   ├── AppFrameworkInfo.plist
+│   │   ├── Debug.xcconfig
+│   │   ├── ephemeral
+│   │   │   ├── flutter_lldb_helper.py
+│   │   │   ├── flutter_lldbinit
+│   │   │   ├── flutter_native_integration.env
+│   │   │   └── Packages
+│   │   │       ├── FlutterGeneratedPluginSwiftPackage
+│   │   │       │   ├── Package.swift
+│   │   │       │   └── Sources
+│   │   │       │       └── FlutterGeneratedPluginSwiftPackage
+│   │   │       │           └── FlutterGeneratedPluginSwiftPackage.swift
+│   │   │       └── .packages
+│   │   ├── flutter_export_environment.sh
+│   │   ├── Generated.xcconfig
+│   │   └── Release.xcconfig
+│   ├── .gitignore
+│   ├── Runner
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets
+│   │   │   ├── AppIcon.appiconset
+│   │   │   │   ├── Contents.json
+│   │   │   │   ├── Icon-App-1024x1024@1x.png
+│   │   │   │   ├── Icon-App-20x20@1x.png
+│   │   │   │   ├── Icon-App-20x20@2x.png
+│   │   │   │   ├── Icon-App-20x20@3x.png
+│   │   │   │   ├── Icon-App-29x29@1x.png
+│   │   │   │   ├── Icon-App-29x29@2x.png
+│   │   │   │   ├── Icon-App-29x29@3x.png
+│   │   │   │   ├── Icon-App-40x40@1x.png
+│   │   │   │   ├── Icon-App-40x40@2x.png
+│   │   │   │   ├── Icon-App-40x40@3x.png
+│   │   │   │   ├── Icon-App-50x50@1x.png
+│   │   │   │   ├── Icon-App-50x50@2x.png
+│   │   │   │   ├── Icon-App-57x57@1x.png
+│   │   │   │   ├── Icon-App-57x57@2x.png
+│   │   │   │   ├── Icon-App-60x60@2x.png
+│   │   │   │   ├── Icon-App-60x60@3x.png
+│   │   │   │   ├── Icon-App-72x72@1x.png
+│   │   │   │   ├── Icon-App-72x72@2x.png
+│   │   │   │   ├── Icon-App-76x76@1x.png
+│   │   │   │   ├── Icon-App-76x76@2x.png
+│   │   │   │   └── Icon-App-83.5x83.5@2x.png
+│   │   │   └── LaunchImage.imageset
+│   │   │       ├── Contents.json
+│   │   │       ├── LaunchImage@2x.png
+│   │   │       ├── LaunchImage@3x.png
+│   │   │       ├── LaunchImage.png
+│   │   │       └── README.md
+│   │   ├── Base.lproj
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── GeneratedPluginRegistrant.h
+│   │   ├── GeneratedPluginRegistrant.m
+│   │   ├── Info.plist
+│   │   ├── Runner-Bridging-Header.h
+│   │   └── SceneDelegate.swift
+│   ├── RunnerTests
+│   │   └── RunnerTests.swift
+│   ├── Runner.xcodeproj
+│   │   ├── project.pbxproj
+│   │   ├── project.xcworkspace
+│   │   │   ├── contents.xcworkspacedata
+│   │   │   └── xcshareddata
+│   │   │       ├── IDEWorkspaceChecks.plist
+│   │   │       └── WorkspaceSettings.xcsettings
+│   │   └── xcshareddata
+│   │       └── xcschemes
+│   │           └── Runner.xcscheme
+│   └── Runner.xcworkspace
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata
+│           ├── IDEWorkspaceChecks.plist
+│           └── WorkspaceSettings.xcsettings
+├── lib
+│   ├── administration
+│   ├── assessment
+│   │   ├── assessment_home.dart
+│   │   ├── mock_test
+│   │   ├── practice
+│   │   ├── progress
+│   │   ├── pyq
+│   │   └── quiz
+│   ├── community
+│   │   └── community_home.dart
+│   ├── core
+│   │   ├── app.dart
+│   │   ├── constants
+│   │   ├── routes
+│   │   └── theme
+│   ├── features
+│   │   ├── dashboard
+│   │   │   └── home_screen.dart
+│   │   ├── dictionary
+│   │   ├── learning
+│   │   ├── profile
+│   │   ├── splash
+│   │   └── welcome
+│   ├── foundation
+│   │   ├── ai
+│   │   ├── localization
+│   │   ├── navigation
+│   │   │   ├── app_router.dart
+│   │   │   └── app_shell.dart
+│   │   ├── settings
+│   │   └── theme
+│   │       ├── app_theme.dart
+│   │       └── brand_app_bar.dart
+│   ├── learning
+│   │   ├── college
+│   │   ├── competitive_exams
+│   │   ├── higher_secondary
+│   │   │   ├── commerce_accounts
+│   │   │   │   ├── commerce_main.dart
+│   │   │   │   ├── data
+│   │   │   │   │   ├── branding.dart
+│   │   │   │   │   └── chart_of_accounts.dart
+│   │   │   │   ├── models
+│   │   │   │   │   ├── account_model.dart
+│   │   │   │   │   ├── brs_model.dart
+│   │   │   │   │   ├── cash_book_model.dart
+│   │   │   │   │   ├── cash_flow_model.dart
+│   │   │   │   │   ├── company_accounts_model.dart
+│   │   │   │   │   ├── depreciation_model.dart
+│   │   │   │   │   ├── dissolution_model.dart
+│   │   │   │   │   ├── final_accounts_model.dart
+│   │   │   │   │   ├── medium_model.dart
+│   │   │   │   │   ├── partnership_model.dart
+│   │   │   │   │   ├── problem_model.dart
+│   │   │   │   │   ├── rectification_model.dart
+│   │   │   │   │   └── solution_model.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── accounting_solver.dart
+│   │   │   │   │   ├── brs_generator.dart
+│   │   │   │   │   ├── brs_solver.dart
+│   │   │   │   │   ├── cash_book_generator.dart
+│   │   │   │   │   ├── cash_book_solver.dart
+│   │   │   │   │   ├── cash_flow_generator.dart
+│   │   │   │   │   ├── cash_flow_solver.dart
+│   │   │   │   │   ├── company_accounts_generator.dart
+│   │   │   │   │   ├── company_accounts_solver.dart
+│   │   │   │   │   ├── depreciation_generator.dart
+│   │   │   │   │   ├── depreciation_solver.dart
+│   │   │   │   │   ├── dissolution_generator.dart
+│   │   │   │   │   ├── dissolution_solver.dart
+│   │   │   │   │   ├── final_accounts_generator.dart
+│   │   │   │   │   ├── final_accounts_solver.dart
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   ├── localization_service.dart
+│   │   │   │   │   ├── paper_pdf_service.dart
+│   │   │   │   │   ├── partnership_generator.dart
+│   │   │   │   │   ├── partnership_solver.dart
+│   │   │   │   │   ├── problem_generator.dart
+│   │   │   │   │   ├── progress_service.dart
+│   │   │   │   │   └── rectification_generator.dart
+│   │   │   │   ├── views
+│   │   │   │   │   ├── activation_screen.dart
+│   │   │   │   │   ├── brs_practice_screen.dart
+│   │   │   │   │   ├── cash_book_practice_screen.dart
+│   │   │   │   │   ├── cash_flow_practice_screen.dart
+│   │   │   │   │   ├── company_accounts_practice_screen.dart
+│   │   │   │   │   ├── depreciation_practice_screen.dart
+│   │   │   │   │   ├── final_accounts_practice_screen.dart
+│   │   │   │   │   ├── home_screen.dart
+│   │   │   │   │   ├── mock_test_screen.dart
+│   │   │   │   │   ├── partnership_practice_screen.dart
+│   │   │   │   │   ├── progress_screen.dart
+│   │   │   │   │   ├── rectification_practice_screen.dart
+│   │   │   │   │   ├── student_practice_screen.dart
+│   │   │   │   │   ├── student_topic_screen.dart
+│   │   │   │   │   └── teacher_paper_screen.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── branding_header_widget.dart
+│   │   │   │       ├── capital_accounts_widget.dart
+│   │   │   │       ├── cash_book_table_widget.dart
+│   │   │   │       ├── cash_flow_statement_widget.dart
+│   │   │   │       ├── depreciation_schedule_widget.dart
+│   │   │   │       ├── final_accounts_widget.dart
+│   │   │   │       ├── journal_attempt_widget.dart
+│   │   │   │       ├── ledger_table_widget.dart
+│   │   │   │       ├── realisation_account_widget.dart
+│   │   │   │       ├── self_check_widget.dart
+│   │   │   │       ├── share_issue_steps_widget.dart
+│   │   │   │       ├── solution_reveal_widget.dart
+│   │   │   │       └── trial_balance_widget.dart
+│   │   │   ├── english_simulation
+│   │   │   │   ├── data
+│   │   │   │   │   ├── chapters
+│   │   │   │   │   │   ├── class11
+│   │   │   │   │   │   │   ├── advertisement_writing_chapter.dart
+│   │   │   │   │   │   │   ├── business_letters_chapter.dart
+│   │   │   │   │   │   │   ├── clauses_advanced_chapter.dart
+│   │   │   │   │   │   │   ├── determiners_advanced_chapter.dart
+│   │   │   │   │   │   │   ├── dialogue_writing_chapter.dart
+│   │   │   │   │   │   │   ├── editing_omission_advanced_chapter.dart
+│   │   │   │   │   │   │   ├── email_writing_chapter.dart
+│   │   │   │   │   │   │   ├── letters_formal_informal_chapter.dart
+│   │   │   │   │   │   │   ├── modals_advanced_chapter.dart
+│   │   │   │   │   │   │   ├── notice_writing_chapter.dart
+│   │   │   │   │   │   │   ├── sentence_transformation_chapter.dart
+│   │   │   │   │   │   │   └── tenses_integrated_chapter.dart
+│   │   │   │   │   │   └── class12
+│   │   │   │   │   │       ├── article_writing_chapter.dart
+│   │   │   │   │   │       ├── clauses_board_chapter.dart
+│   │   │   │   │   │       ├── determiners_board_chapter.dart
+│   │   │   │   │   │       ├── editing_omission_board_chapter.dart
+│   │   │   │   │   │       ├── essay_writing_chapter.dart
+│   │   │   │   │   │       ├── letter_writing_chapter.dart
+│   │   │   │   │   │       ├── modals_board_chapter.dart
+│   │   │   │   │   │       ├── reported_speech_board_chapter.dart
+│   │   │   │   │   │       ├── report_writing_chapter.dart
+│   │   │   │   │   │       ├── speech_writing_chapter.dart
+│   │   │   │   │   │       └── vocabulary_board_chapter.dart
+│   │   │   │   │   └── sample_chapters.dart
+│   │   │   │   ├── eng_sim_main.dart
+│   │   │   │   ├── models
+│   │   │   │   │   └── chapter_model.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   └── pdf_generator_service.dart
+│   │   │   │   ├── simulations
+│   │   │   │   │   ├── class11
+│   │   │   │   │   │   ├── advertisement_writing_models_widget.dart
+│   │   │   │   │   │   ├── advertisement_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── business_letters_models_widget.dart
+│   │   │   │   │   │   ├── business_letters_simulation_widget.dart
+│   │   │   │   │   │   ├── clauses_advanced_simulation_widget.dart
+│   │   │   │   │   │   ├── determiners_advanced_simulation_widget.dart
+│   │   │   │   │   │   ├── dialogue_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── editing_omission_advanced_simulation_widget.dart
+│   │   │   │   │   │   ├── email_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── letters_formal_informal_models_widget.dart
+│   │   │   │   │   │   ├── letters_formal_informal_simulation_widget.dart
+│   │   │   │   │   │   ├── modals_advanced_simulation_widget.dart
+│   │   │   │   │   │   ├── notice_writing_models_widget.dart
+│   │   │   │   │   │   ├── notice_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── sentence_transformation_simulation_widget.dart
+│   │   │   │   │   │   └── tenses_integrated_simulation_widget.dart
+│   │   │   │   │   ├── class12
+│   │   │   │   │   │   ├── article_writing_models_widget.dart
+│   │   │   │   │   │   ├── article_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── clauses_board_simulation_widget.dart
+│   │   │   │   │   │   ├── determiners_board_simulation_widget.dart
+│   │   │   │   │   │   ├── editing_omission_board_simulation_widget.dart
+│   │   │   │   │   │   ├── essay_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── letter_writing_models_widget.dart
+│   │   │   │   │   │   ├── letter_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── modals_board_simulation_widget.dart
+│   │   │   │   │   │   ├── reported_speech_board_simulation_widget.dart
+│   │   │   │   │   │   ├── report_writing_models_widget.dart
+│   │   │   │   │   │   ├── report_writing_simulation_widget.dart
+│   │   │   │   │   │   ├── speech_writing_models_widget.dart
+│   │   │   │   │   │   ├── speech_writing_simulation_widget.dart
+│   │   │   │   │   │   └── vocabulary_board_simulation_widget.dart
+│   │   │   │   │   └── common
+│   │   │   │   │       ├── choose_completion_widget.dart
+│   │   │   │   │       ├── classify_example_widget.dart
+│   │   │   │   │       ├── graph_painter.dart
+│   │   │   │   │       ├── sim_frame.dart
+│   │   │   │   │       └── writing_skill_widget.dart
+│   │   │   │   ├── views
+│   │   │   │   │   ├── activation_view.dart
+│   │   │   │   │   ├── chapter_detail_view.dart
+│   │   │   │   │   └── multi_chapter_pdf_view.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── fill_in_blank_quiz.dart
+│   │   │   │       ├── formula_section.dart
+│   │   │   │       ├── numerical_problem_set.dart
+│   │   │   │       └── website_promo_card.dart
+│   │   │   ├── physics_sandbox
+│   │   │   │   ├── data
+│   │   │   │   │   ├── lessons
+│   │   │   │   │   │   ├── ac_circuits_lesson.dart
+│   │   │   │   │   │   ├── ampere_solenoid_lesson.dart
+│   │   │   │   │   │   ├── angular_momentum_lesson.dart
+│   │   │   │   │   │   ├── biot_savart_lesson.dart
+│   │   │   │   │   │   ├── bohr_model_lesson.dart
+│   │   │   │   │   │   ├── calorimetry_lesson.dart
+│   │   │   │   │   │   ├── capacitor_networks_lesson.dart
+│   │   │   │   │   │   ├── capacitors_lesson.dart
+│   │   │   │   │   │   ├── center_of_mass_lesson.dart
+│   │   │   │   │   │   ├── charge_in_field_lesson.dart
+│   │   │   │   │   │   ├── circular_motion_lesson.dart
+│   │   │   │   │   │   ├── collisions_lesson.dart
+│   │   │   │   │   │   ├── communication_systems_lesson.dart
+│   │   │   │   │   │   ├── coulombs_law_lesson.dart
+│   │   │   │   │   │   ├── damped_forced_lesson.dart
+│   │   │   │   │   │   ├── diffraction_lesson.dart
+│   │   │   │   │   │   ├── doppler_effect_lesson.dart
+│   │   │   │   │   │   ├── electric_field_lesson.dart
+│   │   │   │   │   │   ├── electric_potential_lesson.dart
+│   │   │   │   │   │   ├── energy_lesson.dart
+│   │   │   │   │   │   ├── entropy_lesson.dart
+│   │   │   │   │   │   ├── escape_velocity_lesson.dart
+│   │   │   │   │   │   ├── faraday_lenz_lesson.dart
+│   │   │   │   │   │   ├── first_law_lesson.dart
+│   │   │   │   │   │   ├── friction_lesson.dart
+│   │   │   │   │   │   ├── gas_laws_lesson.dart
+│   │   │   │   │   │   ├── gauss_law_lesson.dart
+│   │   │   │   │   │   ├── gravitation_lesson.dart
+│   │   │   │   │   │   ├── heat_engines_lesson.dart
+│   │   │   │   │   │   ├── heating_effect_lesson.dart
+│   │   │   │   │   │   ├── heat_transfer_lesson.dart
+│   │   │   │   │   │   ├── inclined_plane_lesson.dart
+│   │   │   │   │   │   ├── interference_lesson.dart
+│   │   │   │   │   │   ├── kinetic_theory_lesson.dart
+│   │   │   │   │   │   ├── kirchhoff_laws_lesson.dart
+│   │   │   │   │   │   ├── lenses_lesson.dart
+│   │   │   │   │   │   ├── logic_gates_lesson.dart
+│   │   │   │   │   │   ├── magnetic_force_lesson.dart
+│   │   │   │   │   │   ├── meter_bridge_lesson.dart
+│   │   │   │   │   │   ├── moment_inertia_lesson.dart
+│   │   │   │   │   │   ├── momentum_impulse_lesson.dart
+│   │   │   │   │   │   ├── motion_1d_lesson.dart
+│   │   │   │   │   │   ├── motion_2d_lesson.dart
+│   │   │   │   │   │   ├── nuclear_physics_lesson.dart
+│   │   │   │   │   │   ├── ohms_law_drift_lesson.dart
+│   │   │   │   │   │   ├── optical_instruments_lesson.dart
+│   │   │   │   │   │   ├── pendulum_energy_lesson.dart
+│   │   │   │   │   │   ├── photoelectric_effect_lesson.dart
+│   │   │   │   │   │   ├── planetary_orbits_lesson.dart
+│   │   │   │   │   │   ├── polarization_lesson.dart
+│   │   │   │   │   │   ├── power_lesson.dart
+│   │   │   │   │   │   ├── prism_dispersion_lesson.dart
+│   │   │   │   │   │   ├── pseudo_forces_lesson.dart
+│   │   │   │   │   │   ├── pulley_lesson.dart
+│   │   │   │   │   │   ├── radioactivity_lesson.dart
+│   │   │   │   │   │   ├── reflection_mirrors_lesson.dart
+│   │   │   │   │   │   ├── refraction_lesson.dart
+│   │   │   │   │   │   ├── relative_motion_lesson.dart
+│   │   │   │   │   │   ├── rolling_motion_lesson.dart
+│   │   │   │   │   │   ├── rotational_kinematics_lesson.dart
+│   │   │   │   │   │   ├── second_law_lesson.dart
+│   │   │   │   │   │   ├── semiconductor_diodes_lesson.dart
+│   │   │   │   │   │   ├── shm_duel_lesson.dart
+│   │   │   │   │   │   ├── shm_lesson.dart
+│   │   │   │   │   │   ├── sound_waves_lesson.dart
+│   │   │   │   │   │   ├── standing_waves_lesson.dart
+│   │   │   │   │   │   ├── superposition_beats_lesson.dart
+│   │   │   │   │   │   ├── thermal_expansion_lesson.dart
+│   │   │   │   │   │   ├── thermo_processes_lesson.dart
+│   │   │   │   │   │   ├── third_law_lesson.dart
+│   │   │   │   │   │   ├── torque_lesson.dart
+│   │   │   │   │   │   ├── transformers_lesson.dart
+│   │   │   │   │   │   ├── units_dimensions_lesson.dart
+│   │   │   │   │   │   ├── variation_of_g_lesson.dart
+│   │   │   │   │   │   ├── vectors_lesson.dart
+│   │   │   │   │   │   ├── wave_basics_lesson.dart
+│   │   │   │   │   │   └── work_energy_theorem_lesson.dart
+│   │   │   │   │   └── syllabus_data.dart
+│   │   │   │   ├── models
+│   │   │   │   │   ├── lesson.dart
+│   │   │   │   │   └── syllabus.dart
+│   │   │   │   ├── physics_main.dart
+│   │   │   │   ├── screens
+│   │   │   │   │   ├── activation_screen.dart
+│   │   │   │   │   ├── home_screen.dart
+│   │   │   │   │   ├── onboarding_screen.dart
+│   │   │   │   │   ├── sandbox_screen.dart
+│   │   │   │   │   ├── sim_host.dart
+│   │   │   │   │   └── splash_screen.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── greeting_engine.dart
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   ├── profile_service.dart
+│   │   │   │   │   └── progress_service.dart
+│   │   │   │   ├── simulators
+│   │   │   │   │   ├── ac_circuits_sandbox.dart
+│   │   │   │   │   ├── ampere_solenoid_sandbox.dart
+│   │   │   │   │   ├── angular_momentum_sandbox.dart
+│   │   │   │   │   ├── biot_savart_sandbox.dart
+│   │   │   │   │   ├── bohr_model_sandbox.dart
+│   │   │   │   │   ├── calorimetry_sim.dart
+│   │   │   │   │   ├── capacitor_networks_sandbox.dart
+│   │   │   │   │   ├── capacitors_sandbox.dart
+│   │   │   │   │   ├── center_of_mass_sandbox.dart
+│   │   │   │   │   ├── charge_in_field_sandbox.dart
+│   │   │   │   │   ├── circular_motion_sandbox.dart
+│   │   │   │   │   ├── collision_lab_sim.dart
+│   │   │   │   │   ├── communication_systems_sandbox.dart
+│   │   │   │   │   ├── coulombs_law_sandbox.dart
+│   │   │   │   │   ├── damped_forced_sandbox.dart
+│   │   │   │   │   ├── diffraction_sandbox.dart
+│   │   │   │   │   ├── doppler_effect_sandbox.dart
+│   │   │   │   │   ├── electric_field_sandbox.dart
+│   │   │   │   │   ├── electric_potential_sandbox.dart
+│   │   │   │   │   ├── energy_sim.dart
+│   │   │   │   │   ├── entropy_sandbox.dart
+│   │   │   │   │   ├── escape_velocity_sim.dart
+│   │   │   │   │   ├── faraday_lenz_sandbox.dart
+│   │   │   │   │   ├── first_law_sandbox.dart
+│   │   │   │   │   ├── first_law_sim.dart
+│   │   │   │   │   ├── friction_sim.dart
+│   │   │   │   │   ├── gas_laws_sim.dart
+│   │   │   │   │   ├── gauss_law_sandbox.dart
+│   │   │   │   │   ├── gravitation_sim.dart
+│   │   │   │   │   ├── gravity_variation_sim.dart
+│   │   │   │   │   ├── heat_engines_sim.dart
+│   │   │   │   │   ├── heating_effect_sandbox.dart
+│   │   │   │   │   ├── heat_transfer_sim.dart
+│   │   │   │   │   ├── inclined_plane_sim.dart
+│   │   │   │   │   ├── interference_sandbox.dart
+│   │   │   │   │   ├── kinetic_theory_sandbox.dart
+│   │   │   │   │   ├── kirchhoff_laws_sandbox.dart
+│   │   │   │   │   ├── lenses_sandbox.dart
+│   │   │   │   │   ├── logic_gates_sandbox.dart
+│   │   │   │   │   ├── magnetic_force_sandbox.dart
+│   │   │   │   │   ├── meter_bridge_sandbox.dart
+│   │   │   │   │   ├── moment_inertia_lab_sim.dart
+│   │   │   │   │   ├── motion_1d_sandbox.dart
+│   │   │   │   │   ├── motion_2d_sandbox.dart
+│   │   │   │   │   ├── nuclear_physics_sandbox.dart
+│   │   │   │   │   ├── ohms_law_drift_sandbox.dart
+│   │   │   │   │   ├── optical_instruments_sandbox.dart
+│   │   │   │   │   ├── oscillations_waves_sim.dart
+│   │   │   │   │   ├── pendulum_energy_sim.dart
+│   │   │   │   │   ├── photoelectric_effect_sandbox.dart
+│   │   │   │   │   ├── planetary_motion_sim.dart
+│   │   │   │   │   ├── polarization_sandbox.dart
+│   │   │   │   │   ├── power_sandbox.dart
+│   │   │   │   │   ├── prism_dispersion_sandbox.dart
+│   │   │   │   │   ├── pseudo_forces_sandbox.dart
+│   │   │   │   │   ├── pulley_sim.dart
+│   │   │   │   │   ├── radioactivity_sandbox.dart
+│   │   │   │   │   ├── reflection_mirrors_sandbox.dart
+│   │   │   │   │   ├── refraction_sandbox.dart
+│   │   │   │   │   ├── relative_motion_sandbox.dart
+│   │   │   │   │   ├── rolling_motion_sim.dart
+│   │   │   │   │   ├── rotational_motion_sim.dart
+│   │   │   │   │   ├── satellite_motion_sandbox.dart
+│   │   │   │   │   ├── second_law_sandbox.dart
+│   │   │   │   │   ├── second_law_sim.dart
+│   │   │   │   │   ├── semiconductor_diodes_sandbox.dart
+│   │   │   │   │   ├── shm_duel_sim.dart
+│   │   │   │   │   ├── sound_waves_sandbox.dart
+│   │   │   │   │   ├── standing_waves_sim.dart
+│   │   │   │   │   ├── superposition_beats_sandbox.dart
+│   │   │   │   │   ├── thermal_expansion_sandbox.dart
+│   │   │   │   │   ├── thermo_processes_sim.dart
+│   │   │   │   │   ├── third_law_sim.dart
+│   │   │   │   │   ├── torque_workbench_sim.dart
+│   │   │   │   │   ├── transformers_sandbox.dart
+│   │   │   │   │   ├── units_dimensions_sandbox.dart
+│   │   │   │   │   ├── vectors_sandbox.dart
+│   │   │   │   │   ├── wave_basics_sim.dart
+│   │   │   │   │   └── work_energy_theorem_sim.dart
+│   │   │   │   ├── theme
+│   │   │   │   │   ├── app_theme.dart
+│   │   │   │   │   └── tokens.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── about_sheet.dart
+│   │   │   │       ├── bevel_button.dart
+│   │   │   │       ├── chapter_card.dart
+│   │   │   │       ├── fx
+│   │   │   │       │   ├── confetti_burst.dart
+│   │   │   │       │   ├── lottie_fx.dart
+│   │   │   │       │   ├── lottie_sprite.dart
+│   │   │   │       │   ├── pop_counter.dart
+│   │   │   │       │   └── stage_backdrop.dart
+│   │   │   │       ├── lesson
+│   │   │   │       │   ├── block_view.dart
+│   │   │   │       │   ├── lesson_screen.dart
+│   │   │   │       │   └── practice_view.dart
+│   │   │   │       ├── progress_ring.dart
+│   │   │   │       ├── sim_controls.dart
+│   │   │   │       ├── sim_kit.dart
+│   │   │   │       ├── soft_card.dart
+│   │   │   │       └── topic_tile.dart
+│   │   │   └── statistics
+│   │   │       ├── data
+│   │   │       │   └── branding.dart
+│   │   │       ├── models
+│   │   │       │   ├── board_model.dart
+│   │   │       │   ├── central_tendency_model.dart
+│   │   │       │   ├── correlation_model.dart
+│   │   │       │   ├── data_series_model.dart
+│   │   │       │   ├── dispersion_model.dart
+│   │   │       │   ├── index_number_model.dart
+│   │   │       │   └── regression_model.dart
+│   │   │       ├── services
+│   │   │       │   ├── central_tendency_generator.dart
+│   │   │       │   ├── central_tendency_solver.dart
+│   │   │       │   ├── correlation_generator.dart
+│   │   │       │   ├── correlation_solver.dart
+│   │   │       │   ├── dispersion_generator.dart
+│   │   │       │   ├── dispersion_solver.dart
+│   │   │       │   ├── index_number_generator.dart
+│   │   │       │   ├── index_number_solver.dart
+│   │   │       │   ├── license_service.dart
+│   │   │       │   ├── paper_pdf_service.dart
+│   │   │       │   ├── progress_service.dart
+│   │   │       │   ├── regression_generator.dart
+│   │   │       │   └── regression_solver.dart
+│   │   │       ├── stats_main.dart
+│   │   │       ├── views
+│   │   │       │   ├── activation_screen.dart
+│   │   │       │   ├── central_tendency_practice_screen.dart
+│   │   │       │   ├── correlation_practice_screen.dart
+│   │   │       │   ├── dispersion_practice_screen.dart
+│   │   │       │   ├── home_screen.dart
+│   │   │       │   ├── index_number_practice_screen.dart
+│   │   │       │   ├── progress_screen.dart
+│   │   │       │   ├── regression_practice_screen.dart
+│   │   │       │   ├── student_topic_screen.dart
+│   │   │       │   └── teacher_paper_screen.dart
+│   │   │       └── widgets
+│   │   │           ├── branding_header_widget.dart
+│   │   │           ├── commodity_table_widget.dart
+│   │   │           ├── data_series_widget.dart
+│   │   │           ├── solution_reveal_widget.dart
+│   │   │           └── xy_pairs_widget.dart
+│   │   ├── learning_home.dart
+│   │   ├── pre_school
+│   │   ├── school
+│   │   │   ├── english3to6
+│   │   │   │   ├── data
+│   │   │   │   │   ├── chapter_class3_bookfair.dart
+│   │   │   │   │   ├── chapter_class3.dart
+│   │   │   │   │   ├── chapter_class3_grandpasgarden.dart
+│   │   │   │   │   ├── chapter_class3_kite.dart
+│   │   │   │   │   ├── chapter_class3_lostkitten.dart
+│   │   │   │   │   ├── chapter_class3_lunchbox.dart
+│   │   │   │   │   ├── chapter_class3_marketday.dart
+│   │   │   │   │   ├── chapter_class3_rainyday.dart
+│   │   │   │   │   ├── chapter_class3_strayanddog.dart
+│   │   │   │   │   ├── chapter_class3_waterdrop.dart
+│   │   │   │   │   ├── chapter_class4.dart
+│   │   │   │   │   ├── chapter_class4_drain.dart
+│   │   │   │   │   ├── chapter_class4_elephant.dart
+│   │   │   │   │   ├── chapter_class4_kalpana.dart
+│   │   │   │   │   ├── chapter_class4_kite.dart
+│   │   │   │   │   ├── chapter_class4_lunchbox.dart
+│   │   │   │   │   ├── chapter_class4_mela.dart
+│   │   │   │   │   ├── chapter_class4_potter.dart
+│   │   │   │   │   ├── chapter_class4_recycle.dart
+│   │   │   │   │   ├── chapter_class4_sciencefair.dart
+│   │   │   │   │   ├── chapter_class5_astronomer.dart
+│   │   │   │   │   ├── chapter_class5_bridge.dart
+│   │   │   │   │   ├── chapter_class5.dart
+│   │   │   │   │   ├── chapter_class5_garba.dart
+│   │   │   │   │   ├── chapter_class5_invention.dart
+│   │   │   │   │   ├── chapter_class5_kite.dart
+│   │   │   │   │   ├── chapter_class5_mystery.dart
+│   │   │   │   │   ├── chapter_class5_race.dart
+│   │   │   │   │   ├── chapter_class5_river.dart
+│   │   │   │   │   ├── chapter_class5_wellrepair.dart
+│   │   │   │   │   ├── chapter_class6_biography.dart
+│   │   │   │   │   ├── chapter_class6_conservation.dart
+│   │   │   │   │   ├── chapter_class6.dart
+│   │   │   │   │   ├── chapter_class6_drought.dart
+│   │   │   │   │   ├── chapter_class6_lighthouse.dart
+│   │   │   │   │   ├── chapter_class6_railway.dart
+│   │   │   │   │   ├── chapter_class6_reef.dart
+│   │   │   │   │   ├── chapter_class6_scientist.dart
+│   │   │   │   │   ├── chapter_class6_sports.dart
+│   │   │   │   │   ├── chapter_class6_technology.dart
+│   │   │   │   │   ├── chapters.dart
+│   │   │   │   │   ├── class3_animals.dart
+│   │   │   │   │   ├── class3_body.dart
+│   │   │   │   │   ├── class3_clothes.dart
+│   │   │   │   │   ├── class3_colours_shapes.dart
+│   │   │   │   │   ├── class3_family.dart
+│   │   │   │   │   ├── class3_feelings.dart
+│   │   │   │   │   ├── class3_food.dart
+│   │   │   │   │   ├── class3_nature.dart
+│   │   │   │   │   ├── class3_numbers.dart
+│   │   │   │   │   ├── class3_occupations.dart
+│   │   │   │   │   ├── class3_school.dart
+│   │   │   │   │   ├── class3_science.dart
+│   │   │   │   │   ├── class3_social_studies.dart
+│   │   │   │   │   ├── class3_sports.dart
+│   │   │   │   │   ├── class3_time.dart
+│   │   │   │   │   ├── class3_transport.dart
+│   │   │   │   │   ├── class3_weather.dart
+│   │   │   │   │   ├── class4_animals.dart
+│   │   │   │   │   ├── class4_body.dart
+│   │   │   │   │   ├── class4_clothes.dart
+│   │   │   │   │   ├── class4_colours_shapes.dart
+│   │   │   │   │   ├── class4_family.dart
+│   │   │   │   │   ├── class4_feelings.dart
+│   │   │   │   │   ├── class4_food.dart
+│   │   │   │   │   ├── class4_nature.dart
+│   │   │   │   │   ├── class4_numbers.dart
+│   │   │   │   │   ├── class4_occupations.dart
+│   │   │   │   │   ├── class4_school.dart
+│   │   │   │   │   ├── class4_science.dart
+│   │   │   │   │   ├── class4_social_studies.dart
+│   │   │   │   │   ├── class4_sports.dart
+│   │   │   │   │   ├── class4_time.dart
+│   │   │   │   │   ├── class4_transport.dart
+│   │   │   │   │   ├── class4_weather.dart
+│   │   │   │   │   ├── class5_animals.dart
+│   │   │   │   │   ├── class5_body.dart
+│   │   │   │   │   ├── class5_clothes.dart
+│   │   │   │   │   ├── class5_colours_shapes.dart
+│   │   │   │   │   ├── class5_family.dart
+│   │   │   │   │   ├── class5_feelings.dart
+│   │   │   │   │   ├── class5_food.dart
+│   │   │   │   │   ├── class5_nature.dart
+│   │   │   │   │   ├── class5_numbers.dart
+│   │   │   │   │   ├── class5_occupations.dart
+│   │   │   │   │   ├── class5_school.dart
+│   │   │   │   │   ├── class5_science.dart
+│   │   │   │   │   ├── class5_social_studies.dart
+│   │   │   │   │   ├── class5_sports.dart
+│   │   │   │   │   ├── class5_time.dart
+│   │   │   │   │   ├── class5_transport.dart
+│   │   │   │   │   ├── class5_weather.dart
+│   │   │   │   │   ├── class6_animals.dart
+│   │   │   │   │   ├── class6_body.dart
+│   │   │   │   │   ├── class6_clothes.dart
+│   │   │   │   │   ├── class6_colours_shapes.dart
+│   │   │   │   │   ├── class6_family.dart
+│   │   │   │   │   ├── class6_feelings.dart
+│   │   │   │   │   ├── class6_food.dart
+│   │   │   │   │   ├── class6_nature.dart
+│   │   │   │   │   ├── class6_numbers.dart
+│   │   │   │   │   ├── class6_occupations.dart
+│   │   │   │   │   ├── class6_school.dart
+│   │   │   │   │   ├── class6_science.dart
+│   │   │   │   │   ├── class6_social_studies.dart
+│   │   │   │   │   ├── class6_sports.dart
+│   │   │   │   │   ├── class6_time.dart
+│   │   │   │   │   ├── class6_transport.dart
+│   │   │   │   │   ├── class6_weather.dart
+│   │   │   │   │   ├── dictionary_topics.dart
+│   │   │   │   │   ├── figures_of_speech_11_12.dart
+│   │   │   │   │   ├── figures_of_speech.dart
+│   │   │   │   │   ├── figures_of_speech_practice.dart
+│   │   │   │   │   ├── phonetics_class3.dart
+│   │   │   │   │   ├── phonetics_class4.dart
+│   │   │   │   │   ├── phonetics_class5.dart
+│   │   │   │   │   ├── phonetics_class6.dart
+│   │   │   │   │   ├── phonetics_topics.dart
+│   │   │   │   │   ├── practice_class3_adjectives.dart
+│   │   │   │   │   ├── practice_class3_nouns.dart
+│   │   │   │   │   ├── practice_class3_prepositions.dart
+│   │   │   │   │   ├── practice_class3_singular_plural.dart
+│   │   │   │   │   ├── practice_class3_verbs.dart
+│   │   │   │   │   ├── practice_class4_articles.dart
+│   │   │   │   │   ├── practice_class4_nouns.dart
+│   │   │   │   │   ├── practice_class4_prepositions.dart
+│   │   │   │   │   ├── practice_class4_pronouns.dart
+│   │   │   │   │   ├── practice_class4_tenses.dart
+│   │   │   │   │   ├── practice_class5_adjectives.dart
+│   │   │   │   │   ├── practice_class5_adverbs.dart
+│   │   │   │   │   ├── practice_class5_conjunctions.dart
+│   │   │   │   │   ├── practice_class5_punctuation.dart
+│   │   │   │   │   ├── practice_class5_sentence_types.dart
+│   │   │   │   │   ├── practice_class6_clauses.dart
+│   │   │   │   │   ├── practice_class6_determiners.dart
+│   │   │   │   │   ├── practice_class6_modal_verbs.dart
+│   │   │   │   │   ├── practice_class6_speech.dart
+│   │   │   │   │   ├── practice_class6_voice.dart
+│   │   │   │   │   ├── practice_topics.dart
+│   │   │   │   │   ├── question_paper_sources.dart
+│   │   │   │   │   ├── reading_class3.dart
+│   │   │   │   │   ├── reading_class4.dart
+│   │   │   │   │   ├── reading_class5.dart
+│   │   │   │   │   ├── reading_class6.dart
+│   │   │   │   │   ├── reading_topics.dart
+│   │   │   │   │   ├── writing_class3.dart
+│   │   │   │   │   ├── writing_class4.dart
+│   │   │   │   │   ├── writing_class5.dart
+│   │   │   │   │   ├── writing_class6.dart
+│   │   │   │   │   └── writing_topics.dart
+│   │   │   │   ├── eng3to6_main.dart
+│   │   │   │   ├── models
+│   │   │   │   │   ├── chapter.dart
+│   │   │   │   │   ├── dictionary_word.dart
+│   │   │   │   │   ├── figure_of_speech.dart
+│   │   │   │   │   ├── phonetics.dart
+│   │   │   │   │   ├── practice_question.dart
+│   │   │   │   │   ├── practice_session.dart
+│   │   │   │   │   ├── question_paper.dart
+│   │   │   │   │   ├── reading_passage.dart
+│   │   │   │   │   └── writing_prompt.dart
+│   │   │   │   ├── screens
+│   │   │   │   │   ├── activation_screen.dart
+│   │   │   │   │   ├── chapter_list_screen.dart
+│   │   │   │   │   ├── chapter_reader_screen.dart
+│   │   │   │   │   ├── dictionary_search_screen.dart
+│   │   │   │   │   ├── dictionary_topic_list_screen.dart
+│   │   │   │   │   ├── dictionary_words_screen.dart
+│   │   │   │   │   ├── figures_of_speech_screen.dart
+│   │   │   │   │   ├── home_screen.dart
+│   │   │   │   │   ├── phonetics_screen.dart
+│   │   │   │   │   ├── practice_session_screen.dart
+│   │   │   │   │   ├── practice_topic_list_screen.dart
+│   │   │   │   │   ├── question_paper_preview_screen.dart
+│   │   │   │   │   ├── question_paper_setup_screen.dart
+│   │   │   │   │   ├── reading_list_screen.dart
+│   │   │   │   │   ├── reading_passage_screen.dart
+│   │   │   │   │   ├── teacher_dashboard_screen.dart
+│   │   │   │   │   ├── writing_list_screen.dart
+│   │   │   │   │   └── writing_prompt_screen.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   ├── question_paper_builder.dart
+│   │   │   │   │   ├── question_paper_pdf.dart
+│   │   │   │   │   └── speech_service.dart
+│   │   │   │   ├── theme
+│   │   │   │   │   └── app_theme.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── dictionary_word_widgets.dart
+│   │   │   │       ├── glossed_text.dart
+│   │   │   │       └── read_aloud_button.dart
+│   │   │   ├── english_simulation
+│   │   │   │   ├── data
+│   │   │   │   │   ├── chapter_class10_ai_ethics.dart
+│   │   │   │   │   ├── chapter_class10_ancientscript.dart
+│   │   │   │   │   ├── chapter_class10_climaterefugees.dart
+│   │   │   │   │   ├── chapter_class10_entrepreneur.dart
+│   │   │   │   │   ├── chapter_class10_organdonation.dart
+│   │   │   │   │   ├── chapter_class10_wrongfulconviction.dart
+│   │   │   │   │   ├── chapter_class7_chandrayaan.dart
+│   │   │   │   │   ├── chapter_class7_cricket.dart
+│   │   │   │   │   ├── chapter_class7_folkmusic.dart
+│   │   │   │   │   ├── chapter_class7_freedomfighter.dart
+│   │   │   │   │   ├── chapter_class7_internetsafety.dart
+│   │   │   │   │   ├── chapter_class7_lostletter.dart
+│   │   │   │   │   ├── chapter_class7_mystery.dart
+│   │   │   │   │   ├── chapter_class7_paralympian.dart
+│   │   │   │   │   ├── chapter_class7_scienceexpo.dart
+│   │   │   │   │   ├── chapter_class7_treeplantation.dart
+│   │   │   │   │   ├── chapter_class7_waterfilter.dart
+│   │   │   │   │   ├── chapter_class8_debate.dart
+│   │   │   │   │   ├── chapter_class8_farmerdaughter.dart
+│   │   │   │   │   ├── chapter_class8_himalayanrescue.dart
+│   │   │   │   │   ├── chapter_class8_oldmap.dart
+│   │   │   │   │   ├── chapter_class8_robotics.dart
+│   │   │   │   │   ├── chapter_class8_streetplay.dart
+│   │   │   │   │   ├── chapter_class9_archive.dart
+│   │   │   │   │   ├── chapter_class9_courtroom.dart
+│   │   │   │   │   ├── chapter_class9_dialect.dart
+│   │   │   │   │   ├── chapter_class9_mountaineer.dart
+│   │   │   │   │   ├── chapter_class9_startup.dart
+│   │   │   │   │   ├── chapter_class9_watershed.dart
+│   │   │   │   │   ├── chapters
+│   │   │   │   │   │   ├── class10
+│   │   │   │   │   │   │   ├── board_editing_omission_chapter.dart
+│   │   │   │   │   │   │   ├── clauses_mixed_chapter.dart
+│   │   │   │   │   │   │   ├── determiners_prepositions_chapter.dart
+│   │   │   │   │   │   │   ├── dialogue_completion_chapter.dart
+│   │   │   │   │   │   │   ├── idioms_phrasal_verbs_board_chapter.dart
+│   │   │   │   │   │   │   ├── integrated_grammar_chapter.dart
+│   │   │   │   │   │   │   ├── modals_voice_chapter.dart
+│   │   │   │   │   │   │   ├── reported_speech_mixed_chapter.dart
+│   │   │   │   │   │   │   ├── sentence_reordering_chapter.dart
+│   │   │   │   │   │   │   └── vocabulary_building_chapter.dart
+│   │   │   │   │   │   ├── class7
+│   │   │   │   │   │   │   ├── adjectives_chapter.dart
+│   │   │   │   │   │   │   ├── adverbs_chapter.dart
+│   │   │   │   │   │   │   ├── articles_chapter.dart
+│   │   │   │   │   │   │   ├── conjunctions_chapter.dart
+│   │   │   │   │   │   │   ├── future_tense_chapter.dart
+│   │   │   │   │   │   │   ├── kinds_of_sentences_chapter.dart
+│   │   │   │   │   │   │   ├── nouns_chapter.dart
+│   │   │   │   │   │   │   ├── past_tense_chapter.dart
+│   │   │   │   │   │   │   ├── prepositions_chapter.dart
+│   │   │   │   │   │   │   ├── present_tense_chapter.dart
+│   │   │   │   │   │   │   ├── pronouns_chapter.dart
+│   │   │   │   │   │   │   ├── punctuation_chapter.dart
+│   │   │   │   │   │   │   ├── subject_verb_agreement_chapter.dart
+│   │   │   │   │   │   │   ├── synonyms_antonyms_chapter.dart
+│   │   │   │   │   │   │   └── verbs_chapter.dart
+│   │   │   │   │   │   ├── class8
+│   │   │   │   │   │   │   ├── active_passive_voice_chapter.dart
+│   │   │   │   │   │   │   ├── auxiliary_modal_verbs_chapter.dart
+│   │   │   │   │   │   │   ├── clauses_chapter.dart
+│   │   │   │   │   │   │   ├── conjunctions_chapter.dart
+│   │   │   │   │   │   │   ├── degrees_comparison_chapter.dart
+│   │   │   │   │   │   │   ├── determiners_chapter.dart
+│   │   │   │   │   │   │   ├── direct_indirect_speech_chapter.dart
+│   │   │   │   │   │   │   ├── homophones_homonyms_chapter.dart
+│   │   │   │   │   │   │   ├── idioms_phrases_chapter.dart
+│   │   │   │   │   │   │   ├── kinds_of_pronouns_chapter.dart
+│   │   │   │   │   │   │   ├── nouns_number_gender_chapter.dart
+│   │   │   │   │   │   │   ├── perfect_tenses_chapter.dart
+│   │   │   │   │   │   │   ├── prefixes_suffixes_chapter.dart
+│   │   │   │   │   │   │   ├── prepositions_chapter.dart
+│   │   │   │   │   │   │   ├── punctuation_capitalisation_chapter.dart
+│   │   │   │   │   │   │   └── question_tags_chapter.dart
+│   │   │   │   │   │   └── class9
+│   │   │   │   │   │       ├── active_passive_all_tenses_chapter.dart
+│   │   │   │   │   │       ├── adjective_clauses_chapter.dart
+│   │   │   │   │   │       ├── advanced_punctuation_chapter.dart
+│   │   │   │   │   │       ├── adverb_clauses_chapter.dart
+│   │   │   │   │   │       ├── determiners_advanced_chapter.dart
+│   │   │   │   │   │       ├── editing_omission_chapter.dart
+│   │   │   │   │   │       ├── modals_chapter.dart
+│   │   │   │   │   │       ├── noun_clauses_chapter.dart
+│   │   │   │   │   │       ├── one_word_substitution_chapter.dart
+│   │   │   │   │   │       ├── phrasal_verbs_chapter.dart
+│   │   │   │   │   │       ├── reported_speech_commands_chapter.dart
+│   │   │   │   │   │       ├── reported_speech_questions_chapter.dart
+│   │   │   │   │   │       ├── reported_speech_statements_chapter.dart
+│   │   │   │   │   │       ├── sentence_transformation_chapter.dart
+│   │   │   │   │   │       └── subject_verb_concord_chapter.dart
+│   │   │   │   │   ├── chapters.dart
+│   │   │   │   │   ├── class10_academic_words.dart
+│   │   │   │   │   ├── class10_idioms_phrasal_verbs.dart
+│   │   │   │   │   ├── class10_synonyms_antonyms.dart
+│   │   │   │   │   ├── class7_academic_words.dart
+│   │   │   │   │   ├── class7_exam_vocabulary.dart
+│   │   │   │   │   ├── class7_idioms_phrasal_verbs.dart
+│   │   │   │   │   ├── class7_synonyms_antonyms.dart
+│   │   │   │   │   ├── class8_academic_words.dart
+│   │   │   │   │   ├── class8_idioms_phrasal_verbs.dart
+│   │   │   │   │   ├── class8_synonyms_antonyms.dart
+│   │   │   │   │   ├── class9_academic_words.dart
+│   │   │   │   │   ├── class9_idioms_phrasal_verbs.dart
+│   │   │   │   │   ├── class9_synonyms_antonyms.dart
+│   │   │   │   │   ├── dictionary_topics.dart
+│   │   │   │   │   ├── figures_of_speech.dart
+│   │   │   │   │   ├── figures_of_speech_practice.dart
+│   │   │   │   │   ├── phonetics_class10.dart
+│   │   │   │   │   ├── phonetics_class7.dart
+│   │   │   │   │   ├── phonetics_class8.dart
+│   │   │   │   │   ├── phonetics_class9.dart
+│   │   │   │   │   ├── phonetics_topics.dart
+│   │   │   │   │   ├── practice_class10_determiners_conjunctions.dart
+│   │   │   │   │   ├── practice_class10_integrated_grammar.dart
+│   │   │   │   │   ├── practice_class10_nonfinites.dart
+│   │   │   │   │   ├── practice_class10_reported_speech.dart
+│   │   │   │   │   ├── practice_class10_voice.dart
+│   │   │   │   │   ├── practice_class7_nonfinites.dart
+│   │   │   │   │   ├── practice_class7_prepositions.dart
+│   │   │   │   │   ├── practice_class7_reported_speech.dart
+│   │   │   │   │   ├── practice_class7_subject_verb_concord.dart
+│   │   │   │   │   ├── practice_class7_voice.dart
+│   │   │   │   │   ├── practice_class8_conjunctions.dart
+│   │   │   │   │   ├── practice_class8_determiners.dart
+│   │   │   │   │   ├── practice_class8_modal_verbs.dart
+│   │   │   │   │   ├── practice_class8_nonfinites.dart
+│   │   │   │   │   ├── practice_class8_voice.dart
+│   │   │   │   │   ├── practice_class9_clauses.dart
+│   │   │   │   │   ├── practice_class9_conditionals.dart
+│   │   │   │   │   ├── practice_class9_editing.dart
+│   │   │   │   │   ├── practice_class9_prepositions.dart
+│   │   │   │   │   ├── practice_class9_reported_speech.dart
+│   │   │   │   │   ├── practice_topics.dart
+│   │   │   │   │   ├── question_paper_sources.dart
+│   │   │   │   │   ├── reading_class10.dart
+│   │   │   │   │   ├── reading_class7.dart
+│   │   │   │   │   ├── reading_class8.dart
+│   │   │   │   │   ├── reading_class9.dart
+│   │   │   │   │   ├── reading_topics.dart
+│   │   │   │   │   ├── sample_chapters.dart
+│   │   │   │   │   ├── writing_class10.dart
+│   │   │   │   │   ├── writing_class7.dart
+│   │   │   │   │   ├── writing_class8.dart
+│   │   │   │   │   ├── writing_class9.dart
+│   │   │   │   │   └── writing_topics.dart
+│   │   │   │   ├── english_main.dart
+│   │   │   │   ├── models
+│   │   │   │   │   ├── chapter.dart
+│   │   │   │   │   ├── chapter_model.dart
+│   │   │   │   │   ├── dictionary_word.dart
+│   │   │   │   │   ├── figure_of_speech.dart
+│   │   │   │   │   ├── phonetics.dart
+│   │   │   │   │   ├── practice_question.dart
+│   │   │   │   │   ├── practice_session.dart
+│   │   │   │   │   ├── question_paper.dart
+│   │   │   │   │   ├── reading_passage.dart
+│   │   │   │   │   └── writing_prompt.dart
+│   │   │   │   ├── screens
+│   │   │   │   │   ├── chapter_list_screen.dart
+│   │   │   │   │   ├── chapter_reader_screen.dart
+│   │   │   │   │   ├── dictionary_search_screen.dart
+│   │   │   │   │   ├── dictionary_topic_list_screen.dart
+│   │   │   │   │   ├── dictionary_words_screen.dart
+│   │   │   │   │   ├── figures_of_speech_screen.dart
+│   │   │   │   │   ├── home_screen.dart
+│   │   │   │   │   ├── phonetics_screen.dart
+│   │   │   │   │   ├── practice_session_screen.dart
+│   │   │   │   │   ├── practice_topic_list_screen.dart
+│   │   │   │   │   ├── question_paper_preview_screen.dart
+│   │   │   │   │   ├── question_paper_setup_screen.dart
+│   │   │   │   │   ├── reading_list_screen.dart
+│   │   │   │   │   ├── reading_passage_screen.dart
+│   │   │   │   │   ├── teacher_dashboard_screen.dart
+│   │   │   │   │   ├── writing_list_screen.dart
+│   │   │   │   │   └── writing_prompt_screen.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   ├── pdf_generator_service.dart
+│   │   │   │   │   ├── question_paper_builder.dart
+│   │   │   │   │   ├── question_paper_pdf.dart
+│   │   │   │   │   └── speech_service.dart
+│   │   │   │   ├── simulations
+│   │   │   │   │   ├── class10
+│   │   │   │   │   │   ├── board_editing_omission_simulation_widget.dart
+│   │   │   │   │   │   ├── clauses_mixed_simulation_widget.dart
+│   │   │   │   │   │   ├── determiners_prepositions_simulation_widget.dart
+│   │   │   │   │   │   ├── dialogue_completion_simulation_widget.dart
+│   │   │   │   │   │   ├── idioms_phrasal_verbs_board_simulation_widget.dart
+│   │   │   │   │   │   ├── integrated_grammar_simulation_widget.dart
+│   │   │   │   │   │   ├── modals_voice_simulation_widget.dart
+│   │   │   │   │   │   ├── reported_speech_mixed_simulation_widget.dart
+│   │   │   │   │   │   ├── sentence_reordering_simulation_widget.dart
+│   │   │   │   │   │   └── vocabulary_building_simulation_widget.dart
+│   │   │   │   │   ├── class7
+│   │   │   │   │   │   ├── adjectives_simulation_widget.dart
+│   │   │   │   │   │   ├── adverbs_simulation_widget.dart
+│   │   │   │   │   │   ├── articles_simulation_widget.dart
+│   │   │   │   │   │   ├── conjunctions_simulation_widget.dart
+│   │   │   │   │   │   ├── future_tense_simulation_widget.dart
+│   │   │   │   │   │   ├── kinds_of_sentences_simulation_widget.dart
+│   │   │   │   │   │   ├── nouns_simulation_widget.dart
+│   │   │   │   │   │   ├── past_tense_simulation_widget.dart
+│   │   │   │   │   │   ├── prepositions_simulation_widget.dart
+│   │   │   │   │   │   ├── present_tense_simulation_widget.dart
+│   │   │   │   │   │   ├── pronouns_simulation_widget.dart
+│   │   │   │   │   │   ├── punctuation_simulation_widget.dart
+│   │   │   │   │   │   ├── subject_verb_agreement_simulation_widget.dart
+│   │   │   │   │   │   ├── synonyms_antonyms_simulation_widget.dart
+│   │   │   │   │   │   └── verbs_simulation_widget.dart
+│   │   │   │   │   ├── class8
+│   │   │   │   │   │   ├── active_passive_voice_simulation_widget.dart
+│   │   │   │   │   │   ├── auxiliary_modal_verbs_simulation_widget.dart
+│   │   │   │   │   │   ├── clauses_simulation_widget.dart
+│   │   │   │   │   │   ├── conjunctions_simulation_widget.dart
+│   │   │   │   │   │   ├── degrees_comparison_simulation_widget.dart
+│   │   │   │   │   │   ├── determiners_simulation_widget.dart
+│   │   │   │   │   │   ├── direct_indirect_speech_simulation_widget.dart
+│   │   │   │   │   │   ├── homophones_homonyms_simulation_widget.dart
+│   │   │   │   │   │   ├── idioms_phrases_simulation_widget.dart
+│   │   │   │   │   │   ├── kinds_of_pronouns_simulation_widget.dart
+│   │   │   │   │   │   ├── nouns_number_gender_simulation_widget.dart
+│   │   │   │   │   │   ├── perfect_tenses_simulation_widget.dart
+│   │   │   │   │   │   ├── prefixes_suffixes_simulation_widget.dart
+│   │   │   │   │   │   ├── prepositions_simulation_widget.dart
+│   │   │   │   │   │   ├── punctuation_capitalisation_simulation_widget.dart
+│   │   │   │   │   │   └── question_tags_simulation_widget.dart
+│   │   │   │   │   ├── class9
+│   │   │   │   │   │   ├── active_passive_all_tenses_simulation_widget.dart
+│   │   │   │   │   │   ├── adjective_clauses_simulation_widget.dart
+│   │   │   │   │   │   ├── advanced_punctuation_simulation_widget.dart
+│   │   │   │   │   │   ├── adverb_clauses_simulation_widget.dart
+│   │   │   │   │   │   ├── determiners_advanced_simulation_widget.dart
+│   │   │   │   │   │   ├── editing_omission_simulation_widget.dart
+│   │   │   │   │   │   ├── modals_simulation_widget.dart
+│   │   │   │   │   │   ├── noun_clauses_simulation_widget.dart
+│   │   │   │   │   │   ├── one_word_substitution_simulation_widget.dart
+│   │   │   │   │   │   ├── phrasal_verbs_simulation_widget.dart
+│   │   │   │   │   │   ├── reported_speech_commands_simulation_widget.dart
+│   │   │   │   │   │   ├── reported_speech_questions_simulation_widget.dart
+│   │   │   │   │   │   ├── reported_speech_statements_simulation_widget.dart
+│   │   │   │   │   │   ├── sentence_transformation_simulation_widget.dart
+│   │   │   │   │   │   └── subject_verb_concord_simulation_widget.dart
+│   │   │   │   │   └── common
+│   │   │   │   │       ├── choose_completion_widget.dart
+│   │   │   │   │       ├── classify_example_widget.dart
+│   │   │   │   │       ├── graph_painter.dart
+│   │   │   │   │       └── sim_frame.dart
+│   │   │   │   ├── theme
+│   │   │   │   │   └── app_theme.dart
+│   │   │   │   ├── views
+│   │   │   │   │   ├── activation_view.dart
+│   │   │   │   │   ├── assessment_hub_view.dart
+│   │   │   │   │   ├── chapter_detail_view.dart
+│   │   │   │   │   └── multi_chapter_pdf_view.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── dictionary_word_widgets.dart
+│   │   │   │       ├── fill_in_blank_quiz.dart
+│   │   │   │       ├── formula_section.dart
+│   │   │   │       ├── glossed_text.dart
+│   │   │   │       ├── numerical_problem_set.dart
+│   │   │   │       ├── read_aloud_button.dart
+│   │   │   │       └── video_promo_card.dart
+│   │   │   ├── maths3to6
+│   │   │   │   ├── data
+│   │   │   │   │   ├── concepts_class3.dart
+│   │   │   │   │   ├── concepts_class4.dart
+│   │   │   │   │   ├── concepts_class5.dart
+│   │   │   │   │   ├── concepts_class6.dart
+│   │   │   │   │   ├── concept_topics.dart
+│   │   │   │   │   ├── math_class3_addition.dart
+│   │   │   │   │   ├── math_class3_data_handling.dart
+│   │   │   │   │   ├── math_class3_measurement.dart
+│   │   │   │   │   ├── math_class3_multiplication.dart
+│   │   │   │   │   ├── math_class3_numbers.dart
+│   │   │   │   │   ├── math_class3_shapes.dart
+│   │   │   │   │   ├── math_class3_subtraction.dart
+│   │   │   │   │   ├── math_class3_time_money.dart
+│   │   │   │   │   ├── math_class4_addition.dart
+│   │   │   │   │   ├── math_class4_division.dart
+│   │   │   │   │   ├── math_class4_fractions.dart
+│   │   │   │   │   ├── math_class4_geometry.dart
+│   │   │   │   │   ├── math_class4_measurement.dart
+│   │   │   │   │   ├── math_class4_multiplication.dart
+│   │   │   │   │   ├── math_class4_subtraction.dart
+│   │   │   │   │   ├── math_class4_time_money.dart
+│   │   │   │   │   ├── math_class5_data_handling.dart
+│   │   │   │   │   ├── math_class5_division.dart
+│   │   │   │   │   ├── math_class5_fractions_decimals.dart
+│   │   │   │   │   ├── math_class5_large_numbers.dart
+│   │   │   │   │   ├── math_class5_multiplication.dart
+│   │   │   │   │   ├── math_class5_patterns_geometry.dart
+│   │   │   │   │   ├── math_class5_perimeter_area.dart
+│   │   │   │   │   ├── math_class5_time_money.dart
+│   │   │   │   │   ├── math_class6_algebra.dart
+│   │   │   │   │   ├── math_class6_data_handling.dart
+│   │   │   │   │   ├── math_class6_fractions_decimals.dart
+│   │   │   │   │   ├── math_class6_geometry.dart
+│   │   │   │   │   ├── math_class6_integers.dart
+│   │   │   │   │   ├── math_class6_mensuration.dart
+│   │   │   │   │   ├── math_class6_percentages.dart
+│   │   │   │   │   ├── math_class6_ratio_proportion.dart
+│   │   │   │   │   └── math_topics.dart
+│   │   │   │   ├── maths_main.dart
+│   │   │   │   ├── models
+│   │   │   │   │   ├── concept.dart
+│   │   │   │   │   ├── math_question.dart
+│   │   │   │   │   └── math_session.dart
+│   │   │   │   ├── screens
+│   │   │   │   │   ├── concept_list_screen.dart
+│   │   │   │   │   ├── concept_search_screen.dart
+│   │   │   │   │   ├── home_screen.dart
+│   │   │   │   │   ├── math_session_screen.dart
+│   │   │   │   │   └── math_topic_list_screen.dart
+│   │   │   │   ├── services
+│   │   │   │   ├── theme
+│   │   │   │   │   └── app_theme.dart
+│   │   │   │   └── widgets
+│   │   │   │       └── concept_widgets.dart
+│   │   │   ├── maths_simulation
+│   │   │   │   ├── data
+│   │   │   │   │   ├── chapters
+│   │   │   │   │   │   ├── class10
+│   │   │   │   │   │   │   ├── applications_trigonometry_chapter.dart
+│   │   │   │   │   │   │   ├── areas_related_circles_chapter.dart
+│   │   │   │   │   │   │   ├── arithmetic_progressions_chapter.dart
+│   │   │   │   │   │   │   ├── circles_chapter.dart
+│   │   │   │   │   │   │   ├── constructions_chapter.dart
+│   │   │   │   │   │   │   ├── coordinate_geometry_chapter.dart
+│   │   │   │   │   │   │   ├── pair_linear_equations_chapter.dart
+│   │   │   │   │   │   │   ├── polynomials_chapter.dart
+│   │   │   │   │   │   │   ├── probability_chapter.dart
+│   │   │   │   │   │   │   ├── quadratic_equations_chapter.dart
+│   │   │   │   │   │   │   ├── real_numbers_chapter.dart
+│   │   │   │   │   │   │   ├── statistics_chapter.dart
+│   │   │   │   │   │   │   ├── surface_areas_volumes_chapter.dart
+│   │   │   │   │   │   │   ├── triangles_chapter.dart
+│   │   │   │   │   │   │   └── trigonometry_chapter.dart
+│   │   │   │   │   │   ├── class7
+│   │   │   │   │   │   │   ├── algebraic_expressions_chapter.dart
+│   │   │   │   │   │   │   ├── comparing_quantities_chapter.dart
+│   │   │   │   │   │   │   ├── congruence_chapter.dart
+│   │   │   │   │   │   │   ├── data_handling_chapter.dart
+│   │   │   │   │   │   │   ├── exponents_powers_chapter.dart
+│   │   │   │   │   │   │   ├── fractions_decimals_chapter.dart
+│   │   │   │   │   │   │   ├── integers_chapter.dart
+│   │   │   │   │   │   │   ├── lines_angles_chapter.dart
+│   │   │   │   │   │   │   ├── perimeter_area_chapter.dart
+│   │   │   │   │   │   │   ├── practical_geometry_chapter.dart
+│   │   │   │   │   │   │   ├── rational_numbers_chapter.dart
+│   │   │   │   │   │   │   ├── simple_equations_chapter.dart
+│   │   │   │   │   │   │   ├── solid_shapes_chapter.dart
+│   │   │   │   │   │   │   ├── symmetry_chapter.dart
+│   │   │   │   │   │   │   └── triangle_properties_chapter.dart
+│   │   │   │   │   │   ├── class8
+│   │   │   │   │   │   │   ├── algebraic_identities_chapter.dart
+│   │   │   │   │   │   │   ├── comparing_quantities_chapter.dart
+│   │   │   │   │   │   │   ├── cubes_cube_roots_chapter.dart
+│   │   │   │   │   │   │   ├── data_handling_chapter.dart
+│   │   │   │   │   │   │   ├── exponents_powers_chapter.dart
+│   │   │   │   │   │   │   ├── factorisation_chapter.dart
+│   │   │   │   │   │   │   ├── introduction_graphs_chapter.dart
+│   │   │   │   │   │   │   ├── linear_equations_chapter.dart
+│   │   │   │   │   │   │   ├── mensuration_chapter.dart
+│   │   │   │   │   │   │   ├── playing_numbers_chapter.dart
+│   │   │   │   │   │   │   ├── practical_geometry_chapter.dart
+│   │   │   │   │   │   │   ├── proportions_chapter.dart
+│   │   │   │   │   │   │   ├── quadrilaterals_chapter.dart
+│   │   │   │   │   │   │   ├── rational_numbers_chapter.dart
+│   │   │   │   │   │   │   ├── solid_shapes_chapter.dart
+│   │   │   │   │   │   │   └── squares_square_roots_chapter.dart
+│   │   │   │   │   │   └── class9
+│   │   │   │   │   │       ├── areas_parallelograms_triangles_chapter.dart
+│   │   │   │   │   │       ├── circles_chapter.dart
+│   │   │   │   │   │       ├── constructions_chapter.dart
+│   │   │   │   │   │       ├── coordinate_geometry_chapter.dart
+│   │   │   │   │   │       ├── euclids_geometry_chapter.dart
+│   │   │   │   │   │       ├── herons_formula_chapter.dart
+│   │   │   │   │   │       ├── linear_equations_two_variables_chapter.dart
+│   │   │   │   │   │       ├── lines_angles_chapter.dart
+│   │   │   │   │   │       ├── number_systems_chapter.dart
+│   │   │   │   │   │       ├── polynomials_chapter.dart
+│   │   │   │   │   │       ├── probability_chapter.dart
+│   │   │   │   │   │       ├── quadrilaterals_chapter.dart
+│   │   │   │   │   │       ├── statistics_chapter.dart
+│   │   │   │   │   │       ├── surface_areas_volumes_chapter.dart
+│   │   │   │   │   │       └── triangles_chapter.dart
+│   │   │   │   │   └── sample_chapters.dart
+│   │   │   │   ├── maths_sim_main.dart
+│   │   │   │   ├── models
+│   │   │   │   │   └── chapter_model.dart
+│   │   │   │   ├── services
+│   │   │   │   │   ├── license_service.dart
+│   │   │   │   │   └── pdf_generator_service.dart
+│   │   │   │   ├── simulations
+│   │   │   │   │   ├── class10
+│   │   │   │   │   │   ├── applications_trigonometry_simulation_widget.dart
+│   │   │   │   │   │   ├── areas_related_circles_simulation_widget.dart
+│   │   │   │   │   │   ├── arithmetic_progressions_simulation_widget.dart
+│   │   │   │   │   │   ├── circles_simulation_widget.dart
+│   │   │   │   │   │   ├── constructions_simulation_widget.dart
+│   │   │   │   │   │   ├── coordinate_geometry_simulation_widget.dart
+│   │   │   │   │   │   ├── pair_linear_equations_simulation_widget.dart
+│   │   │   │   │   │   ├── polynomials_simulation_widget.dart
+│   │   │   │   │   │   ├── probability_simulation_widget.dart
+│   │   │   │   │   │   ├── quadratic_equations_simulation_widget.dart
+│   │   │   │   │   │   ├── real_numbers_simulation_widget.dart
+│   │   │   │   │   │   ├── statistics_simulation_widget.dart
+│   │   │   │   │   │   ├── surface_areas_volumes_simulation_widget.dart
+│   │   │   │   │   │   ├── triangles_simulation_widget.dart
+│   │   │   │   │   │   └── trigonometry_simulation_widget.dart
+│   │   │   │   │   ├── class7
+│   │   │   │   │   │   ├── algebraic_expressions_simulation_widget.dart
+│   │   │   │   │   │   ├── comparing_quantities_simulation_widget.dart
+│   │   │   │   │   │   ├── congruence_simulation_widget.dart
+│   │   │   │   │   │   ├── data_handling_simulation_widget.dart
+│   │   │   │   │   │   ├── exponents_powers_simulation_widget.dart
+│   │   │   │   │   │   ├── fractions_decimals_simulation_widget.dart
+│   │   │   │   │   │   ├── integers_simulation_widget.dart
+│   │   │   │   │   │   ├── lines_angles_simulation_widget.dart
+│   │   │   │   │   │   ├── perimeter_area_simulation_widget.dart
+│   │   │   │   │   │   ├── practical_geometry_simulation_widget.dart
+│   │   │   │   │   │   ├── rational_numbers_simulation_widget.dart
+│   │   │   │   │   │   ├── simple_equations_simulation_widget.dart
+│   │   │   │   │   │   ├── solid_shapes_simulation_widget.dart
+│   │   │   │   │   │   ├── symmetry_simulation_widget.dart
+│   │   │   │   │   │   └── triangle_properties_simulation_widget.dart
+│   │   │   │   │   ├── class8
+│   │   │   │   │   │   ├── algebraic_identities_simulation_widget.dart
+│   │   │   │   │   │   ├── comparing_quantities_simulation_widget.dart
+│   │   │   │   │   │   ├── cubes_cube_roots_simulation_widget.dart
+│   │   │   │   │   │   ├── data_handling_simulation_widget.dart
+│   │   │   │   │   │   ├── exponents_powers_simulation_widget.dart
+│   │   │   │   │   │   ├── factorisation_simulation_widget.dart
+│   │   │   │   │   │   ├── introduction_graphs_simulation_widget.dart
+│   │   │   │   │   │   ├── linear_equations_simulation_widget.dart
+│   │   │   │   │   │   ├── mensuration_simulation_widget.dart
+│   │   │   │   │   │   ├── playing_numbers_simulation_widget.dart
+│   │   │   │   │   │   ├── practical_geometry_simulation_widget.dart
+│   │   │   │   │   │   ├── proportions_simulation_widget.dart
+│   │   │   │   │   │   ├── quadrilaterals_simulation_widget.dart
+│   │   │   │   │   │   ├── rational_numbers_simulation_widget.dart
+│   │   │   │   │   │   ├── solid_shapes_simulation_widget.dart
+│   │   │   │   │   │   └── squares_square_roots_simulation_widget.dart
+│   │   │   │   │   ├── class9
+│   │   │   │   │   │   ├── areas_parallelograms_triangles_simulation_widget.dart
+│   │   │   │   │   │   ├── circles_simulation_widget.dart
+│   │   │   │   │   │   ├── constructions_simulation_widget.dart
+│   │   │   │   │   │   ├── coordinate_geometry_simulation_widget.dart
+│   │   │   │   │   │   ├── euclids_geometry_simulation_widget.dart
+│   │   │   │   │   │   ├── herons_formula_simulation_widget.dart
+│   │   │   │   │   │   ├── linear_equations_two_variables_simulation_widget.dart
+│   │   │   │   │   │   ├── lines_angles_simulation_widget.dart
+│   │   │   │   │   │   ├── number_systems_simulation_widget.dart
+│   │   │   │   │   │   ├── polynomials_simulation_widget.dart
+│   │   │   │   │   │   ├── probability_simulation_widget.dart
+│   │   │   │   │   │   ├── quadrilaterals_simulation_widget.dart
+│   │   │   │   │   │   ├── statistics_simulation_widget.dart
+│   │   │   │   │   │   ├── surface_areas_volumes_simulation_widget.dart
+│   │   │   │   │   │   └── triangles_simulation_widget.dart
+│   │   │   │   │   └── common
+│   │   │   │   │       ├── graph_painter.dart
+│   │   │   │   │       └── sim_frame.dart
+│   │   │   │   ├── views
+│   │   │   │   │   ├── activation_view.dart
+│   │   │   │   │   ├── chapter_detail_view.dart
+│   │   │   │   │   └── multi_chapter_pdf_view.dart
+│   │   │   │   └── widgets
+│   │   │   │       ├── fill_in_blank_quiz.dart
+│   │   │   │       ├── formula_section.dart
+│   │   │   │       ├── numerical_problem_set.dart
+│   │   │   │       └── video_promo_card.dart
+│   │   │   └── sci_simulation
+│   │   │       ├── data
+│   │   │       │   ├── chapters
+│   │   │       │   │   ├── atomic_structure_chapter.dart
+│   │   │       │   │   ├── atoms_chapter.dart
+│   │   │       │   │   ├── cell_chapter.dart
+│   │   │       │   │   ├── class10
+│   │   │       │   │   │   ├── acids_bases_salts_chapter.dart
+│   │   │       │   │   │   ├── carbon_compounds_chapter.dart
+│   │   │       │   │   │   ├── chemical_reactions_chapter.dart
+│   │   │       │   │   │   ├── control_coordination_chapter.dart
+│   │   │       │   │   │   ├── electricity_chapter.dart
+│   │   │       │   │   │   ├── heredity_evolution_chapter.dart
+│   │   │       │   │   │   ├── human_eye_chapter.dart
+│   │   │       │   │   │   ├── life_processes_chapter.dart
+│   │   │       │   │   │   ├── light_reflection_refraction_chapter.dart
+│   │   │       │   │   │   ├── magnetic_effects_chapter.dart
+│   │   │       │   │   │   ├── metals_nonmetals_chapter.dart
+│   │   │       │   │   │   ├── our_environment_chapter.dart
+│   │   │       │   │   │   ├── periodic_classification_chapter.dart
+│   │   │       │   │   │   ├── reproduction_chapter.dart
+│   │   │       │   │   │   ├── sources_energy_chapter.dart
+│   │   │       │   │   │   └── sustainable_management_chapter.dart
+│   │   │       │   │   ├── class7
+│   │   │       │   │   │   ├── acids_bases_salts_chapter.dart
+│   │   │       │   │   │   ├── electric_current_effects_chapter.dart
+│   │   │       │   │   │   ├── fibre_fabric_chapter.dart
+│   │   │       │   │   │   ├── forests_lifeline_chapter.dart
+│   │   │       │   │   │   ├── heat_chapter.dart
+│   │   │       │   │   │   ├── light_chapter7.dart
+│   │   │       │   │   │   ├── motion_time_chapter.dart
+│   │   │       │   │   │   ├── nutrition_animals_chapter.dart
+│   │   │       │   │   │   ├── nutrition_plants_chapter.dart
+│   │   │       │   │   │   ├── physical_chemical_changes_chapter.dart
+│   │   │       │   │   │   ├── reproduction_plants_chapter.dart
+│   │   │       │   │   │   ├── respiration_chapter.dart
+│   │   │       │   │   │   ├── soil_chapter.dart
+│   │   │       │   │   │   ├── transportation_chapter.dart
+│   │   │       │   │   │   ├── wastewater_chapter.dart
+│   │   │       │   │   │   ├── water_resource_chapter.dart
+│   │   │       │   │   │   ├── weather_climate_chapter.dart
+│   │   │       │   │   │   └── winds_storms_cyclones_chapter.dart
+│   │   │       │   │   ├── class8
+│   │   │       │   │   │   ├── adolescence_chapter.dart
+│   │   │       │   │   │   ├── cell_structure_chapter.dart
+│   │   │       │   │   │   ├── chemical_effects_current_chapter.dart
+│   │   │       │   │   │   ├── coal_petroleum_chapter.dart
+│   │   │       │   │   │   ├── combustion_flame_chapter.dart
+│   │   │       │   │   │   ├── conservation_chapter.dart
+│   │   │       │   │   │   ├── crop_production_chapter.dart
+│   │   │       │   │   │   ├── earth_unique_planet_chapter.dart
+│   │   │       │   │   │   ├── electricity_magnetic_heating_chapter.dart
+│   │   │       │   │   │   ├── exploring_forces_chapter.dart
+│   │   │       │   │   │   ├── force_pressure_chapter.dart
+│   │   │       │   │   │   ├── friction_chapter.dart
+│   │   │       │   │   │   ├── health_chapter.dart
+│   │   │       │   │   │   ├── invisible_world_chapter.dart
+│   │   │       │   │   │   ├── keeping_time_skies_chapter.dart
+│   │   │       │   │   │   ├── light_chapter8.dart
+│   │   │       │   │   │   ├── light_mirrors_lenses_chapter.dart
+│   │   │       │   │   │   ├── materials_metals_chapter.dart
+│   │   │       │   │   │   ├── microorganisms_chapter.dart
+│   │   │       │   │   │   ├── natural_phenomena_chapter.dart
+│   │   │       │   │   │   ├── nature_harmony_chapter.dart
+│   │   │       │   │   │   ├── nature_of_matter_chapter.dart
+│   │   │       │   │   │   ├── particulate_matter_chapter.dart
+│   │   │       │   │   │   ├── pollution_chapter.dart
+│   │   │       │   │   │   ├── pressure_winds_cyclones_chapter.dart
+│   │   │       │   │   │   ├── reproduction_animals_chapter.dart
+│   │   │       │   │   │   ├── solutions_density_chapter.dart
+│   │   │       │   │   │   ├── sound_chapter8.dart
+│   │   │       │   │   │   ├── stars_solar_system_chapter.dart
+│   │   │       │   │   │   └── synthetic_fibres_chapter.dart
+│   │   │       │   │   ├── classification_chapter.dart
+│   │   │       │   │   ├── earth_system_chapter.dart
+│   │   │       │   │   ├── food_resources_chapter.dart
+│   │   │       │   │   ├── force_chapter.dart
+│   │   │       │   │   ├── gravitation_chapter.dart
+│   │   │       │   │   ├── matter_chapter.dart
+│   │   │       │   │   ├── motion_chapter.dart
+│   │   │       │   │   ├── pure_matter_chapter.dart
+│   │   │       │   │   ├── reproduction_chapter.dart
+│   │   │       │   │   ├── sound_chapter.dart
+│   │   │       │   │   ├── tissues_chapter.dart
+│   │   │       │   │   └── work_energy_chapter.dart
+│   │   │       │   └── sample_chapters.dart
+│   │   │       ├── models
+│   │   │       │   └── chapter_model.dart
+│   │   │       ├── sci_main.dart
+│   │   │       ├── services
+│   │   │       │   ├── license_service.dart
+│   │   │       │   └── pdf_generator_service.dart
+│   │   │       ├── simulations
+│   │   │       │   ├── albedo_simulation_widget.dart
+│   │   │       │   ├── atomic_structure_simulation_widget.dart
+│   │   │       │   ├── biogeochemical_cycle_widget.dart
+│   │   │       │   ├── cell_simulation_widget.dart
+│   │   │       │   ├── chemistry_3d_simulation_widget.dart
+│   │   │       │   ├── class10
+│   │   │       │   │   ├── acids_bases_salts_simulation_widget.dart
+│   │   │       │   │   ├── carbon_compounds_simulation_widget.dart
+│   │   │       │   │   ├── chemical_reactions_simulation_widget.dart
+│   │   │       │   │   ├── control_coordination_simulation_widget.dart
+│   │   │       │   │   ├── electricity_simulation_widget.dart
+│   │   │       │   │   ├── heredity_evolution_simulation_widget.dart
+│   │   │       │   │   ├── human_eye_simulation_widget.dart
+│   │   │       │   │   ├── life_processes_simulation_widget.dart
+│   │   │       │   │   ├── light_reflection_refraction_simulation_widget.dart
+│   │   │       │   │   ├── magnetic_effects_simulation_widget.dart
+│   │   │       │   │   ├── metals_nonmetals_simulation_widget.dart
+│   │   │       │   │   ├── our_environment_simulation_widget.dart
+│   │   │       │   │   ├── periodic_classification_simulation_widget.dart
+│   │   │       │   │   ├── reproduction_simulation_widget.dart
+│   │   │       │   │   ├── sources_energy_simulation_widget.dart
+│   │   │       │   │   └── sustainable_management_simulation_widget.dart
+│   │   │       │   ├── class7
+│   │   │       │   │   ├── acids_bases_salts_simulation_widget.dart
+│   │   │       │   │   ├── electric_current_effects_simulation_widget.dart
+│   │   │       │   │   ├── fibre_fabric_simulation_widget.dart
+│   │   │       │   │   ├── forests_lifeline_simulation_widget.dart
+│   │   │       │   │   ├── heat_simulation_widget.dart
+│   │   │       │   │   ├── light_simulation_widget7.dart
+│   │   │       │   │   ├── motion_time_simulation_widget.dart
+│   │   │       │   │   ├── nutrition_animals_simulation_widget.dart
+│   │   │       │   │   ├── nutrition_plants_simulation_widget.dart
+│   │   │       │   │   ├── physical_chemical_changes_simulation_widget.dart
+│   │   │       │   │   ├── reproduction_plants_simulation_widget.dart
+│   │   │       │   │   ├── respiration_simulation_widget.dart
+│   │   │       │   │   ├── soil_simulation_widget.dart
+│   │   │       │   │   ├── transportation_simulation_widget.dart
+│   │   │       │   │   ├── wastewater_simulation_widget.dart
+│   │   │       │   │   ├── water_resource_simulation_widget.dart
+│   │   │       │   │   ├── weather_climate_simulation_widget.dart
+│   │   │       │   │   └── winds_storms_cyclones_simulation_widget.dart
+│   │   │       │   ├── class8
+│   │   │       │   │   ├── adolescence_simulation_widget.dart
+│   │   │       │   │   ├── cell_structure_simulation_widget.dart
+│   │   │       │   │   ├── chemical_effects_simulation_widget.dart
+│   │   │       │   │   ├── coal_petroleum_simulation_widget.dart
+│   │   │       │   │   ├── combustion_flame_simulation_widget.dart
+│   │   │       │   │   ├── conservation_simulation_widget.dart
+│   │   │       │   │   ├── crop_production_simulation_widget.dart
+│   │   │       │   │   ├── electromagnet_simulation_widget.dart
+│   │   │       │   │   ├── food_web_simulation_widget.dart
+│   │   │       │   │   ├── force_pressure_simulation_widget.dart
+│   │   │       │   │   ├── friction_simulation_widget.dart
+│   │   │       │   │   ├── light_simulation_widget.dart
+│   │   │       │   │   ├── materials_metals_simulation_widget.dart
+│   │   │       │   │   ├── microbe_explorer_simulation_widget.dart
+│   │   │       │   │   ├── microorganisms_simulation_widget.dart
+│   │   │       │   │   ├── mirror_lens_simulation_widget.dart
+│   │   │       │   │   ├── natural_phenomena_simulation_widget.dart
+│   │   │       │   │   ├── pollution_simulation_widget.dart
+│   │   │       │   │   ├── reproduction_animals_simulation_widget.dart
+│   │   │       │   │   ├── sound_simulation_widget8.dart
+│   │   │       │   │   ├── stars_solar_system_simulation_widget.dart
+│   │   │       │   │   └── synthetic_fibres_simulation_widget.dart
+│   │   │       │   ├── classification_tree_widget.dart
+│   │   │       │   ├── common
+│   │   │       │   │   ├── diagram_helpers.dart
+│   │   │       │   │   ├── graph_painter.dart
+│   │   │       │   │   ├── organelle_diagram.dart
+│   │   │       │   │   └── sim_frame.dart
+│   │   │       │   ├── food_resources_simulation_widget.dart
+│   │   │       │   ├── force_simulation_widget.dart
+│   │   │       │   ├── gravitation_simulation_widget.dart
+│   │   │       │   ├── human_reproductive_system_widget.dart
+│   │   │       │   ├── joints_simulation_widget.dart
+│   │   │       │   ├── motion_simulation_widget.dart
+│   │   │       │   ├── osmosis_simulation_widget.dart
+│   │   │       │   ├── pollination_simulation_widget.dart
+│   │   │       │   ├── solution_simulation_widget.dart
+│   │   │       │   ├── sound_simulation_widget.dart
+│   │   │       │   ├── states_of_matter_simulation_widget.dart
+│   │   │       │   ├── tissues_simulation_widget.dart
+│   │   │       │   └── work_energy_simulation_widget.dart
+│   │   │       ├── views
+│   │   │       │   ├── activation_view.dart
+│   │   │       │   ├── chapter_detail_view.dart
+│   │   │       │   └── multi_chapter_pdf_view.dart
+│   │   │       └── widgets
+│   │   │           ├── fill_in_blank_quiz.dart
+│   │   │           ├── formula_section.dart
+│   │   │           ├── numerical_problem_set.dart
+│   │   │           ├── revision_notes_section.dart
+│   │   │           └── video_promo_card.dart
+│   │   └── skill_development
+│   ├── main.dart
+│   ├── parents
+│   ├── screens
+│   │   ├── chapter_detail_screen.dart
+│   │   └── dictionary_screen.dart
+│   ├── shared
+│   │   ├── models
+│   │   ├── services
+│   │   ├── utils
+│   │   └── widgets
+│   └── teachers
+├── linux
+│   ├── CMakeLists.txt
+│   ├── flutter
+│   │   ├── CMakeLists.txt
+│   │   ├── ephemeral
+│   │   │   ├── flutter_linux
+│   │   │   │   ├── fl_application.h
+│   │   │   │   ├── fl_basic_message_channel.h
+│   │   │   │   ├── fl_binary_codec.h
+│   │   │   │   ├── fl_binary_messenger.h
+│   │   │   │   ├── fl_dart_project.h
+│   │   │   │   ├── fl_engine.h
+│   │   │   │   ├── fl_event_channel.h
+│   │   │   │   ├── fl_json_message_codec.h
+│   │   │   │   ├── fl_json_method_codec.h
+│   │   │   │   ├── fl_message_codec.h
+│   │   │   │   ├── fl_method_call.h
+│   │   │   │   ├── fl_method_channel.h
+│   │   │   │   ├── fl_method_codec.h
+│   │   │   │   ├── fl_method_response.h
+│   │   │   │   ├── fl_pixel_buffer_texture.h
+│   │   │   │   ├── fl_plugin_registrar.h
+│   │   │   │   ├── fl_plugin_registry.h
+│   │   │   │   ├── fl_standard_message_codec.h
+│   │   │   │   ├── fl_standard_method_codec.h
+│   │   │   │   ├── fl_string_codec.h
+│   │   │   │   ├── fl_texture_gl.h
+│   │   │   │   ├── fl_texture.h
+│   │   │   │   ├── fl_texture_registrar.h
+│   │   │   │   ├── flutter_linux.h
+│   │   │   │   ├── fl_value.h
+│   │   │   │   └── fl_view.h
+│   │   │   ├── generated_config.cmake
+│   │   │   ├── icudtl.dat
+│   │   │   ├── libflutter_linux_gtk.so
+│   │   │   └── .plugin_symlinks
+│   │   │       ├── path_provider_linux -> /home/ubuntu/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.2/
+│   │   │       ├── printing -> /home/ubuntu/.pub-cache/hosted/pub.dev/printing-5.15.0/
+│   │   │       ├── shared_preferences_linux -> /home/ubuntu/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+│   │   │       └── url_launcher_linux -> /home/ubuntu/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.2/
+│   │   ├── generated_plugin_registrant.cc
+│   │   ├── generated_plugin_registrant.h
+│   │   └── generated_plugins.cmake
+│   ├── .gitignore
+│   └── runner
+│       ├── CMakeLists.txt
+│       ├── main.cc
+│       ├── my_application.cc
+│       └── my_application.h
+├── macos
+│   ├── Flutter
+│   │   ├── ephemeral
+│   │   │   ├── flutter_export_environment.sh
+│   │   │   ├── Flutter-Generated.xcconfig
+│   │   │   ├── flutter_native_integration.env
+│   │   │   └── Packages
+│   │   │       ├── FlutterGeneratedPluginSwiftPackage
+│   │   │       │   ├── Package.swift
+│   │   │       │   └── Sources
+│   │   │       │       └── FlutterGeneratedPluginSwiftPackage
+│   │   │       │           └── FlutterGeneratedPluginSwiftPackage.swift
+│   │   │       └── .packages
+│   │   ├── Flutter-Debug.xcconfig
+│   │   ├── Flutter-Release.xcconfig
+│   │   └── GeneratedPluginRegistrant.swift
+│   ├── .gitignore
+│   ├── Runner
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets
+│   │   │   └── AppIcon.appiconset
+│   │   │       ├── app_icon_1024.png
+│   │   │       ├── app_icon_128.png
+│   │   │       ├── app_icon_16.png
+│   │   │       ├── app_icon_256.png
+│   │   │       ├── app_icon_32.png
+│   │   │       ├── app_icon_512.png
+│   │   │       ├── app_icon_64.png
+│   │   │       └── Contents.json
+│   │   ├── Base.lproj
+│   │   │   └── MainMenu.xib
+│   │   ├── Configs
+│   │   │   ├── AppInfo.xcconfig
+│   │   │   ├── Debug.xcconfig
+│   │   │   ├── Release.xcconfig
+│   │   │   └── Warnings.xcconfig
+│   │   ├── DebugProfile.entitlements
+│   │   ├── Info.plist
+│   │   ├── MainFlutterWindow.swift
+│   │   └── Release.entitlements
+│   ├── RunnerTests
+│   │   └── RunnerTests.swift
+│   ├── Runner.xcodeproj
+│   │   ├── project.pbxproj
+│   │   ├── project.xcworkspace
+│   │   │   └── xcshareddata
+│   │   │       └── IDEWorkspaceChecks.plist
+│   │   └── xcshareddata
+│   │       └── xcschemes
+│   │           └── Runner.xcscheme
+│   └── Runner.xcworkspace
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata
+│           └── IDEWorkspaceChecks.plist
+├── .metadata
+├── project_tree.txt
+├── pubspec.lock
+├── pubspec.yaml
+├── README.md
+├── shine_academy_naroda.iml
+├── test
+│   └── widget_test.dart
+├── web
+│   ├── favicon.png
+│   ├── icons
+│   │   ├── Icon-192.png
+│   │   ├── Icon-512.png
+│   │   ├── Icon-maskable-192.png
+│   │   └── Icon-maskable-512.png
+│   ├── index.html
+│   └── manifest.json
+└── windows
+    ├── CMakeLists.txt
+    ├── flutter
+    │   ├── CMakeLists.txt
+    │   ├── ephemeral
+    │   │   └── .plugin_symlinks
+    │   │       ├── flutter_tts -> /home/ubuntu/.pub-cache/hosted/pub.dev/flutter_tts-4.2.5/
+    │   │       ├── path_provider_windows -> /home/ubuntu/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+    │   │       ├── printing -> /home/ubuntu/.pub-cache/hosted/pub.dev/printing-5.15.0/
+    │   │       ├── shared_preferences_windows -> /home/ubuntu/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+    │   │       └── url_launcher_windows -> /home/ubuntu/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.5/
+    │   ├── generated_plugin_registrant.cc
+    │   ├── generated_plugin_registrant.h
+    │   └── generated_plugins.cmake
+    ├── .gitignore
+    └── runner
+        ├── CMakeLists.txt
+        ├── flutter_window.cpp
+        ├── flutter_window.h
+        ├── main.cpp
+        ├── resource.h
+        ├── resources
+        │   └── app_icon.ico
+        ├── runner.exe.manifest
+        ├── Runner.rc
+        ├── utils.cpp
+        ├── utils.h
+        ├── win32_window.cpp
+        └── win32_window.h
+
+277 directories, 1424 files

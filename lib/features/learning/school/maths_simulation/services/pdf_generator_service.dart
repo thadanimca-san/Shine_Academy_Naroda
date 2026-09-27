@@ -1,3 +1,4 @@
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -172,9 +173,6 @@ class PdfGeneratorService {
 
     // Save PDF bytes and open directly with the system's default PDF reader
     final bytes = await pdf.save();
-    await Printing.sharePdf(
-      bytes: bytes,
-      filename: isAnswerKey ? 'Class9_Answer_Key.pdf' : 'Class9_Question_Paper.pdf',
-    );
+    await PdfViewerUtil.openPdfBytes(bytes, isAnswerKey ? 'Class9_Answer_Key.pdf' : 'Class9_Question_Paper.pdf',);
   }
 }

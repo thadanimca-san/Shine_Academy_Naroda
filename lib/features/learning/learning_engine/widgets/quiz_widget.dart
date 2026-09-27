@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/services/streak_manager_service.dart';
 import '../../../../core/widgets/presentation_builder.dart';
 import '../../../dictionary/dictionary_popup.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../../../../foundation/theme/app_typography.dart';
 
 class QuizWidget extends StatefulWidget {
   final Map<String, dynamic> data;
@@ -214,11 +216,88 @@ class _QuizWidgetState extends State<QuizWidget> {
                 );
               }),
               const SizedBox(height: 12),
+              
+              if (options.isEmpty && (widget.data['explanation'] != null || widget.data['explanation_${TrilingualService.instance.activeViewLanguage}'] != null || widget.data['answer'] != null || widget.data['solution'] != null || widget.data['solution_${TrilingualService.instance.activeViewLanguage}'] != null))
+                _buildSubjectiveSolution(scale),
 
             ],
           ),
         );
       }
+    );
+  }
+
+  Widget _buildSubjectiveSolution(double scale) {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    String explanation = widget.data['explanation_$lang'] ?? widget.data['explanation'] ?? widget.data['solution_$lang'] ?? widget.data['solution'] ?? widget.data['answer'] ?? '';
+
+    if (explanation.isEmpty) return const SizedBox.shrink();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        if (!_hasSubmitted)
+          ElevatedButton.icon(
+            onPressed: () {
+              setState(() {
+                _hasSubmitted = true;
+              });
+            },
+            icon: const Icon(Icons.visibility),
+            label: Text("Show Solution", style: GoogleFonts.inter(fontSize: 16 * scale, fontWeight: FontWeight.bold)),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.teal,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            ),
+          ),
+        if (_hasSubmitted) ...[
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.teal.shade50,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.teal.shade200, width: 1.5),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.check_circle, color: Colors.teal.shade700),
+                    const SizedBox(width: 8),
+                    Text(
+                      TrilingualService.instance.getUIText("Solution"),
+                      style: GoogleFonts.poppins(
+                        fontSize: 16 * scale,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal.shade900,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                MarkdownBody(
+                  data: explanation,
+                  selectable: true,
+                  styleSheet: MarkdownStyleSheet(
+                    p: AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface).copyWith(height: 1.6),
+                    tableBody: AppTypography.bodySmall(context, color: Theme.of(context).colorScheme.onSurface),
+                    tableHead: AppTypography.bodySmall(context, color: Colors.teal.shade900).copyWith(fontWeight: FontWeight.bold),
+                    tableBorder: TableBorder.all(
+                      color: Colors.teal.shade300,
+                      width: 1,
+                    ),
+                    tableCellsPadding: const EdgeInsets.all(8),
+                    tableColumnWidth: const IntrinsicColumnWidth(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ],
     );
   }
 }

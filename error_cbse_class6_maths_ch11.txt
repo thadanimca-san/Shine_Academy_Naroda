@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "id": "cbse_grade6_maths_ch11",
+    "title": "Chapter 11: Algebra",
+    "subject": "Maths",
+    "grade": "6",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the transition from arithmetic to algebra using unknowns.",
+      "Write algebraic expressions from everyday verbal statements.",
+      "Evaluate simple algebraic expressions for given numerical values.",
+      "Solve basic linear equations using logical trial-and-error and balance methods."
+    ],
+    "core_concepts": [
+      "DICT_GRADE6_ALGEBRA",
+      "DICT_GRADE6_VARIABLE",
+      "DICT_GRADE6_EXPRESSION",
+      "DICT_GRADE6_EQUATION"
+    ],
+    "ai_context": {
+      "learning_goal": "To master the concept of the unknown, represent unknown quantities using letters, and form algebraic expressions and equations.",
+      "common_misconceptions": [
+        "Students often think a letter like 'x' always stands for the same fixed number across all problems.",
+        "Confusing expressions with equations (thinking an expression needs an equals sign)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Secret Box Mystery",
+      "body": "Imagine you walk into a magic arcade where prizes are won using mysterious wooden boxes. A game master drops 3 identical tokens into a wooden box and hands you 2 extra tokens outside the box. When you count them all together, you have 17 tokens. How many tokens were hidden inside the wooden box? You don't know the exact contents of the box yet, but you know how it interacts with the numbers around it. Welcome to [DICT_GRADE6_ALGEBRA|Algebra], the branch of mathematics where numbers wear disguises and letters help us solve everyday puzzles!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "In our arcade mystery, if there are 2 extra tokens and a total of 17 tokens, what represents the unknown quantity we are trying to find?",
+      "options": [
+        "The number 17",
+        "The number of tokens hidden inside the wooden box",
+        "The number 2"
+      ],
+      "correct_index": 1,
+      "explanation": "The unknown quantity is what is hidden inside the box, which we need to figure out using the clues given.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "From Arithmetic to Letters",
+      "body": "Up until now, you have done arithmetic—working entirely with known numbers like 5, 12, or 345. But real life often presents missing information. Instead of drawing little boxes every time, mathematicians use letters of the English alphabet (like $x$, $y$, $a$, or $n$) to represent unknown numbers. These letters are called [DICT_GRADE6_VARIABLE|variables] because their value can vary or change depending on the problem. Think of a variable as an empty container or a placeholder waiting for its true numerical value to be discovered.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Quick Check: Variable",
+      "body": "Front: What is a variable?\nBack: A letter used to represent an unknown number whose value can change or vary.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "Think Like a Detective",
+      "body": "Whenever you see a letter in algebra, don't panic! Whisper to yourself: 'This is just a mystery number wearing a costume.' It helps remove the fear of letters in math.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Matchsticks and Patterns",
+      "body": "Let's build shapes using matchsticks to see algebra in action. Suppose you want to make the letter 'L'. Each 'L' requires 2 matchsticks. If you make 1 'L', you need $2 \\times 1 = 2$ matchsticks. If you make 2 'L's, you need $2 \\times 2 = 4$ matchsticks. If you make 10 'L's, you need $2 \\times 10 = 20$ matchsticks. What if you want to make '$n$' number of 'L's, where '$n$' can be any quantity? The rule becomes $2 \\times n$, or simply written compactly as $2n$. Notice how multiplication signs are often dropped in algebra when a number sits right next to a letter!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If making one triangle requires 3 matchsticks, how many matchsticks are needed to make 't' triangles?",
+      options": [
+        "t + 3",
+        "3t",
+        "t / 3"
+      ],
+      "correct_index": 1,
+      "explanation": "Since each triangle takes 3 matchsticks, making 't' triangles means multiplying 3 by 't', which is written as 3t.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Building Algebraic Expressions",
+      "body": "When we combine numbers, variables, and operations (like addition, subtraction, multiplication, and division), we form an [DICT_GRADE6_EXPRESSION|algebraic expression]. For example, 'add 5 to a number $x$' is written as $x + 5$. 'Subtract 7 from $y$' is written as $y - 7$. 'Three times a number $p$ increased by 4' is written as $3p + 4$. Crucially, an expression does NOT have an equals sign (=). It is just a phrase in the language of mathematics, whereas a sentence with an equals sign is an equation.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "title": "Expression vs Equation",
+      "body": "Front: What is the main difference between an algebraic expression and an equation?\nBack: An expression has no equals sign (it's a phrase), while an equation has an equals sign (it's a complete sentence showing equality).",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "teacher_tip",
+      "title": "Translation Station",
+      "body": "Practice translating English sentences into math. 'Product' means multiply, 'sum' means add, 'difference' means subtract, and 'quotient' means divide. Words like 'more than' mean addition, and 'less than' mean subtraction.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "Which of the following represents the statement: '12 subtracted from twice a number y'?",
+      options": [
+        "12 - 2y",
+        "2y - 12",
+        "y - 12"
+      ],
+      "correct_index": 1,
+      "explanation": "'Twice a number y' is 2y. '12 subtracted from' means we take 12 away from 2y, giving 2y - 12.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Evaluating Expressions",
+      "body": "What happens when the mystery is solved and we finally know what the variable equals? We call this evaluating the expression. Suppose we have the expression $4x + 3$, and someone tells us that $x = 5$. To evaluate it, we substitute the number 5 in place of $x$. Remember that $4x$ means $4 \\times x$. So, $4 \\times 5 = 20$. Then, add 3 to get $23$. Substitution turns an abstract algebraic phrase into a concrete arithmetic answer.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "quiz",
+      "question": "Evaluate the expression $10 - 2m$ when $m = 3$.",
+      options": [
+        "24",
+        "4",
+        "16"
+      ],
+      "correct_index": 1,
+      "explanation": "Substitute m = 3 into 2m to get 2 * 3 = 6. Then calculate 10 - 6 = 4.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "teacher_tip",
+      "title": "Use Parentheses on Substitution",
+      "body": "When substituting a number into an expression, always put parentheses around the substituted number (e.g., write $4(5)$ instead of $45$). This prevents silly multiplication errors!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Entering the World of Equations",
+      "body": "An [DICT_GRADE6_EQUATION|equation] is a condition on a variable. It consists of two expressions separated by an equals sign (=), stating that the value on the left side is equal to the value on the right side. Think of it like a perfectly balanced weighing scale. If the left pan holds $x + 5$ and the right pan holds 12, the scale balances only when $x$ has one specific value. Solving an equation means finding that exact value of the variable that makes the balance true.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "title": "Anatomy of an Equation",
+      "body": "Front: What are the two sides of an equation called separated by the equals sign?\nBack: The Left-Hand Side (LHS) and the Right-Hand Side (RHS).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "theory",
+      "title": "Solving Equations by Trial and Error",
+      "body": "One straightforward way to solve an equation is the trial-and-error method. Let's solve $x + 4 = 10$. We test different values for $x$: \n- If $x = 1$, LHS = $1 + 4 = 5$ (Not equal to 10).\n- If $x = 3$, LHS = $3 + 4 = 7$ (Not equal to 10).\n- If $x = 6$, LHS = $6 + 4 = 10$ (Matches RHS!).\nTherefore, $x = 6$ is the solution. While trial and error is great for simple puzzles, mathematicians prefer systematic balance methods for tougher equations.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "Which value of y satisfies the equation $3y = 15$?",
+      options": [
+        "y = 3",
+        "y = 5",
+        "y = 12"
+      ],
+      "correct_index": 1,
+      "explanation": "Test y = 5: 3 * 5 = 15, which matches the right side of the equation.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Balance Beam Analogy",
+      "body": "Always visualize an equation as a physical seesaw or balance scale. Whatever operation you perform on one side (like adding 3), you MUST perform on the other side to keep it equal and balanced.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Solving Equations Using Balance (Inverse Operations)",
+      "body": "To solve an equation efficiently, we isolate the variable by performing inverse operations. If a number is added to the variable, we subtract it from both sides. If a number is multiplied by the variable, we divide both sides by it. For example, to solve $x - 3 = 7$, we add 3 to both sides: $x - 3 + 3 = 7 + 3$, which simplifies to $x = 10$. Inverse operations act like undo buttons in mathematics.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "title": "Inverse Operations",
+      "body": "Front: What is the inverse operation of addition?\nBack: Subtraction. (And multiplication's inverse is division).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "quiz",
+      "question": "To solve the equation $x + 8 = 20$, what should you do to both sides?",
+      options": [
+        "Subtract 8 from both sides",
+        "Add 8 to both sides",
+        "Multiply by 8 on both sides"
+      ],
+      "correct_index": 0,
+      "explanation": "Since 8 is added to x, we use the inverse operation (subtracting 8) to isolate x.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "theory",
+      "title": "Real-World Word Problems with Equations",
+      "body": "Algebra's true superpower is solving word problems. Suppose Riya has some chocolates. Her friend gives her 5 more, and now she has a total of 12 chocolates. How many did she start with? Let Riya's initial chocolates be $c$. The equation is $c + 5 = 12$. By subtracting 5 from both sides, we find $c = 7$. Riya started with 7 chocolates! By converting words into math equations, complicated stories become simple puzzles.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "quiz",
+      "question": "A number increased by 7 is 22. Which equation represents this statement and its solution?",
+      options": [
+        "x - 7 = 22, x = 29",
+        "x + 7 = 22, x = 15",
+        "7x = 22, x = 3"
+      ],
+      "correct_index": 1,
+      "explanation": "'A number increased by 7' is x + 7, equal to 22. Subtracting 7 from 22 gives x = 15.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "teacher_tip",
+      "title": "Check Your Answer",
+      "body": "Always plug your final solution back into the original equation. If LHS equals RHS, you are 100% guaranteed to be correct. Self-checking is the hallmark of a great mathematician.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

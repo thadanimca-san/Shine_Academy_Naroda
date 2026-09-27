@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "module_id": "com.shine.class12.accounts.ch1",
+    "subject_domain": "Accountancy",
+    "target_audience": ["Class 12", "Commerce", "GSEB", "Board Exams"],
+    "version": "1.0.0",
+    "last_updated": "2026-08-05",
+    "difficulty_level": "Intermediate",
+    "estimated_learning_time_minutes": 120,
+    "keywords": ["Partnership", "Deed", "Capital Account", "Profit Sharing", "Appropriation"],
+    "search_tags": ["Introduction to Partnership", "Class 12 Accounts Chapter 1", "Partnership Deed format"],
+    "supported_languages": ["en", "gu", "hi"],
+    "features_enabled": {
+      "ai_tutor": true,
+      "voice_reading": true,
+      "offline_learning": true,
+      "adaptive_learning": true,
+      "speech_recognition": false
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [
+      "Understand the meaning, characteristics, and necessity of a partnership.",
+      "Explain the importance and contents of a Partnership Deed.",
+      "Apply the provisions of the Indian Partnership Act, 1932 in the absence of a deed.",
+      "Prepare Partners' Capital Accounts using Fixed and Fluctuating methods.",
+      "Prepare the Profit and Loss Appropriation Account."
+    ],
+    "prerequisite_knowledge": [
+      {
+        "concept": "Final Accounts of a Sole Proprietorship",
+        "module_ref": "com.shine.class11.accounts.final_accounts"
+      }
+    ],
+    "learning_outcomes": [
+      "Students can calculate interest on capital and drawings accurately.",
+      "Students can distribute net profit among partners according to legal provisions."
+    ],
+    "future_learning_path": [
+      "com.shine.class12.accounts.ch2"
+    ]
+  },
+  "content": [
+    {
+      "type": "concept_block",
+      "id": "concept_intro",
+      "title": "What is a Partnership?",
+      "multilingual_text": {
+        "en": "According to Section 4 of the Indian Partnership Act, 1932: 'Partnership is the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all.'",
+        "gu": "ભારતીય ભાગીદારી કાયદા, ૧૯૩૨ ની કલમ ૪ મુજબ: 'ભાગીદારી એ એવી વ્યક્તિઓ વચ્ચેનો સંબંધ છે...'"
+      },
+      "visuals": [
+        {
+          "type": "illustration",
+          "url": "assets/images/partnership_intro.png",
+          "alt_text": "Two people shaking hands representing partnership."
+        }
+      ],
+      "interactive_elements": [
+        {
+          "type": "animation",
+          "url": "assets/lottie/handshake.json",
+          "trigger": "on_scroll"
+        }
+      ],
+      "teaching_aids": {
+        "teacher_tips": "Start with a relatable example, like two students pooling money to open a school canteen.",
+        "common_mistakes": "Students often confuse partnership with a Joint Hindu Family business. Emphasize the 'contractual' nature of partnership.",
+        "memory_tricks": "Remember 'CLP' - Contract, Lawful business, Profit motive.",
+        "real_life_applications": "Law firms, small accounting firms, and local retail shops often operate as partnerships."
+      },
+      "vocabulary": [
+        {
+          "word": "Deed",
+          "meaning": "A written legal document containing the terms of agreement.",
+          "pronunciation_audio": "assets/audio/vocab/deed.mp3"
+        }
+      ]
+    },
+    {
+      "type": "case_study",
+      "id": "case_1",
+      "title": "The Silent Deed Dispute",
+      "multilingual_text": {
+        "en": "Ram and Shyam started a business without a written agreement. Ram invested ₹5,00,000 and Shyam invested ₹1,00,000. At year-end, Ram demands 80% of the profits. Is he legally correct?"
+      },
+      "solution": {
+        "en": "No. According to the Indian Partnership Act 1932, in the absence of a deed, profits must be shared equally, regardless of capital contribution."
+      }
+    },
+    {
+      "type": "worked_example",
+      "id": "example_1",
+      "title": "Calculating Interest on Drawings (Fixed Monthly)",
+      "problem_statement": {
+        "en": "A partner withdraws ₹1,000 at the beginning of every month. The interest rate is 10% p.a. Calculate the total interest on drawings for the year."
+      },
+      "step_by_step_solution": [
+        {
+          "step_number": 1,
+          "explanation": "Identify the monthly drawing amount and rate.",
+          "formula": "Monthly Drawing = ₹1,000, Rate = 10%"
+        },
+        {
+          "step_number": 2,
+          "explanation": "Since withdrawal is at the beginning of every month, use 78 months for calculation.",
+          "formula": "Total Interest = (1000 * 10 / 100) * (78 / 12)"
+        },
+        {
+          "step_number": 3,
+          "explanation": "Calculate the final value.",
+          "formula": "100 * 6.5 = ₹650"
+        }
+      ],
+      "final_answer": "₹650"
+    }
+  ],
+  "assessments": {
+    "practice_questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "question": {
+          "en": "What is the maximum number of partners allowed in an ordinary business firm as per the Companies Act, 2013?"
+        },
+        "options": {
+          "en": ["10", "20", "50", "100"]
+        },
+        "correct_answer_index": 2,
+        "explanation": {
+          "en": "Rule 10 of Companies (Miscellaneous) Rules, 2014 restricts the maximum number of partners to 50."
+        },
+        "difficulty": "Easy",
+        "tags": ["Act", "Limit"]
+      },
+      {
+        "id": "q2",
+        "type": "true_false",
+        "question": {
+          "en": "A written partnership deed is legally compulsory."
+        },
+        "correct_answer": false,
+        "explanation": {
+          "en": "It can be oral or written, though written is highly advisable."
+        },
+        "difficulty": "Easy"
+      },
+      {
+        "id": "q3",
+        "type": "numerical",
+        "question": {
+          "en": "Calculate interest on a partner's loan of ₹50,000 for 6 months if the partnership deed is silent."
+        },
+        "correct_answer": "1500",
+        "explanation": {
+          "en": "Interest = 50,000 * (6/100) * (6/12) = ₹1,500. Rate is 6% p.a. by default."
+        }
+      }
+    ],
+    "previous_year_questions": [
+      {
+        "year": "March 2023",
+        "board": "GSEB",
+        "type": "short_answer",
+        "question": {
+          "en": "Explain the difference between Fixed Capital Method and Fluctuating Capital Method."
+        },
+        "marks_weightage": 3
+      }
+    ]
+  },
+  "resources": {
+    "revision_notes_url": "assets/docs/class12/accounts/ch1_revision.pdf",
+    "mind_maps_url": "assets/images/mindmaps/ch1_partnership.png",
+    "summary": {
+      "en": "Partnership is an agreement between two or more persons to carry on a legal business and share profits. The Partnership Deed governs their relationship. In its absence, the Indian Partnership Act, 1932 applies. Partners' capital can be maintained using Fixed or Fluctuating methods, and profits are distributed via the P&L Appropriation Account."
+    },
+    "faqs": [
+      {
+        "question": {
+          "en": "Is registration of a partnership firm compulsory?"
+        },
+        "answer": {
+          "en": "No, registration is optional but beneficial."
+        }
+      }
+    ],
+    "external_resources": [
+      {
+        "title": "Indian Partnership Act 1932 - Bare Act",
+        "url": "https://www.mca.gov.in/Ministry/actsbills/pdf/Partnership_Act_1932.pdf"
+      }
+    ]
+  },
+  "analytics_and_gamification": {
+    "base_completion_points": 150,
+    "accuracy_multiplier_enabled": true,
+    "badges_unlockable": ["Partnership Pioneer", "First Steps in Accounts"],
+    "milestone_triggers": [
+      "first_chapter_completed",
+      "class12_accounts_started"
+    ]
+  }
+}

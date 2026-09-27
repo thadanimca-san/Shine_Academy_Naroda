@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_ch14",
+    "title": "Chapter 14: Practical Geometry",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Master the construction of line segments of given lengths using a ruler and compass.",
+      "Construct perpendicular lines and perpendicular bisectors accurately.",
+      "Understand and construct angles of various measures using a protractor and compass.",
+      "Construct standard angles like 60°, 30°, 120°, 90°, and 45° using purely geometric tools."
+    ],
+    "core_concepts": [
+      "DICT_GEO_CIRCLE",
+      "DICT_GEO_BISECTOR",
+      "DICT_GEO_PROTRACTOR",
+      "DICT_GEO_PERPENDICULAR"
+    ],
+    "ai_context": {
+      "learning_goal": "Students will develop precision in geometric construction, transitioning from rough sketches to exact mathematical drawings.",
+      "common_misconceptions": [
+        "Measuring a line segment starting from the 1 cm mark instead of the 0 cm mark on a ruler.",
+        "Confusing the inner and outer scales of a protractor when measuring or drawing angles.",
+        "Assuming a rough sketch is sufficient without verifying measurements with a compass and ruler."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Master Architect's Blueprint",
+      "body": "Imagine you are an ancient architect tasked with building a magnificent royal palace. You cannot just guess where the pillars go; if a single angle is off by even one tiny degree, the entire roof could collapse over the throne room! To prevent disaster, master builders throughout history relied on special tools: a sharp stylus, a stretched cord, and a bronze [DICT_GEO_CIRCLE|circle]-making instrument. Today, we step into the shoes of these master builders. We are going to explore practical geometry, where we stop merely looking at shapes and learn how to construct them with absolute, breathtaking precision using simple tools like a ruler, a compass, and a protractor.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why did ancient architects and modern mathematicians rely heavily on precise geometric construction tools rather than freehand sketching?",
+      "options": [
+        "Because freehand drawings are illegal in mathematics.",
+        "Because precise construction ensures structural integrity and mathematical accuracy.",
+        "Because rulers and compasses are the only colored tools available."
+      ],
+      "correct_index": 1,
+      "explanation": "Precise construction guarantees that shapes meet exact mathematical conditions, preventing errors that accumulate in large-scale designs.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Foundation - Line Segments",
+      "body": "Before we can build complex polygons, we must master the absolute fundamental building block of geometry: the line segment. A line has no endpoints, but a line segment has two fixed endpoints, giving it a definite, measurable length. There are two primary ways to draw a line segment of a given length, say 7.3 cm. The first method uses a standard ruler. You place the zero mark of the ruler exactly aligned with your starting point, look down the scale until you reach 7.3 cm, and make your second point. However, rulers can be tricky; parallax error—looking at the ruler from an angle—can skew your measurement. The second, far more accurate method uses a compass and a ruler together. You draw a long reference line, measure 7.3 cm by opening your [DICT_GEO_CIRCLE|compass] against the ruler, place the metal tip on your starting point, and swing an arc to cut the line. This guarantees perfection.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Pencil Sharpness Rule",
+      "body": "When working with a compass, make sure your pencil lead and the metal pointer are at the exact same height when closed together. A dull pencil lead will add a 0.5 mm error to every single measurement, ruining your geometric proofs!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is the primary advantage of using a compass over a ruler alone when transferring a length?",
+      "back": "A compass eliminates measuring errors from scale markings and allows exact transfer of distances without reading numbers.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Copying a Line Segment",
+      "body": "Often in geometry, you are given a line segment 'AB' and asked to construct another line segment 'CD' that is of exactly equal length without being told the numerical measurement in centimeters. How do we achieve this? We use the compass as a direct copying device. First, draw a long, arbitrary line with your straightedge and mark a starting point 'C'. Next, open your compass so that the metal tip is precisely on 'A' and the pencil tip is on 'B'. Without changing the spread of the compass—this is critical—lift it up, place the metal tip on point 'C', and swing an arc that intersects your long line. Label that intersection 'D'. You have now successfully duplicated a geometric length purely through mechanical transference, mirroring the techniques used by stone-cutters for millennia.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "If you open your compass to match segment PQ, and then accidentally squeeze the compass narrower before drawing your arc on the new line, what happens?",
+      "options": [
+        "The new line segment will be shorter than PQ.",
+        "The new line segment will be longer than PQ.",
+        "The length will remain unaffected because compasses auto-lock."
+      ],
+      "correct_index": 0,
+      "explanation": "A compass holds its radius only by friction. Squeezing it changes the radius, resulting in a shorter distance being transferred.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: Perpendiculars and Bisectors",
+      "body": "In our architectural journey, walls must stand straight up from the ground at an exact 90-degree angle; otherwise, gravity will win. In geometry, a line that meets another at a right angle is called a [DICT_GEO_PERPENDICULAR|perpendicular] line. But how do we construct a perpendicular line without a protractor? We use the symmetry of circles! To find the midpoint of a line segment and cut it at a right angle, we draw a [DICT_GEO_BISECTOR|perpendicular bisector]. You open your compass to a radius that is visibly greater than half the length of your line segment. With the metal tip on one endpoint, draw an arc above and below the line. Without changing the compass width, repeat the process from the other endpoint. When you connect the two intersection points of these arcs with a straight line, you have created a line that cuts your original segment into two perfectly equal halves at a pristine 90-degree angle.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The 'More Than Half' Secret",
+      "body": "Why must the compass radius be greater than half the segment when drawing a perpendicular bisector? If the radius is less than half, the arcs above and below the line will never meet each other! Try it out and observe what happens.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "front": "What are the two defining properties of a perpendicular bisector of a line segment?",
+      "back": "1. It divides the line segment into two equal halves (bisector). 2. It forms a 90-degree right angle with the line segment (perpendicular).",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Constructing a Perpendicular Through a Point on a Line",
+      "body": "Sometimes, the engineering challenge requires building a vertical wall directly on top of a specific marker on the floor. Suppose you have a line 'l' and a point 'P' lying directly *on* that line. To erect a perpendicular at point 'P' using only a compass and ruler, follow these steps: Place the metal tip of your compass at point 'P' and draw two arcs of equal radius on either side of 'P' along line 'l', cutting the line at points 'A' and 'B'. Now, open your compass to a radius slightly larger than the distance from 'A' to 'P'. Place the metal tip at 'A' and draw an arc above the line. Keeping the exact same radius, place the metal tip at 'B' and draw another arc that intersects your first arc at a new point, say 'Q'. Draw a straight line connecting 'P' and 'Q'. Voila! Line PQ is completely perpendicular to line 'l' right at point 'P'.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "quiz",
+      "question": "When constructing a perpendicular to a line from a point ON the line, what is the purpose of the first two arcs made from point P?",
+      "options": [
+        "To make the paper look symmetrical.",
+        "To establish two equidistant reference points (A and B) on either side of P.",
+        "To measure the exact thickness of the pencil lead."
+      ],
+      "correct_index": 1,
+      "explanation": "Equidistant points A and B ensure that when we draw crossing arcs from them, the resulting intersection point is centered directly above P.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Constructing a Perpendicular from a Point Outside a Line",
+      "body": "What if your point 'P' floats somewhere *above* the line, like a ceiling anchor point from which you need to drop a plumb line? Let's solve this classic geometric puzzle. Let 'l' be our line and 'P' be the point outside it. Step 1: Place the metal tip of your compass at point 'P' and open it wide enough so that when you swing an arc downwards, it cuts the line 'l' in two distinct places. Label these intersection points 'A' and 'B'. Step 2: Now, with the compass set to any convenient radius greater than half the distance between 'A' and 'B', place the metal tip at 'A' and draw an arc on the opposite side of line 'l' (away from P). Step 3: Keeping the exact same radius, place the metal tip at 'B' and draw an arc to intersect the previous one. Label this intersection point 'Q'. Step 4: Draw a straight line connecting 'P' and 'Q'. This line passes through 'P' and meets line 'l' at a 90-degree angle.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "flashcard",
+      "front": "When dropping a perpendicular from an external point to a line, why do we draw an arc that intersects the line in two places first?",
+      "back": "To create two symmetrical anchor points on the line from which we can construct intersecting construction arcs.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 3: The World of Angles and the Protractor",
+      "body": "An angle is formed when two rays diverge from a common endpoint called the vertex. To measure angles, civilization invented the [DICT_GEO_PROTRACTOR|protractor], a semicircular tool graduated from 0 degrees to 180 degrees. The protractor has a crucial feature: the center point (often marked with a cross or a small line) and the baseline. To measure or draw an angle correctly, you must align the center of the protractor precisely over the angle's vertex, and ensure the baseline rests flat along one of the angle's arms. The greatest trap for students is the dual scale on the protractor: one running clockwise, the other counter-clockwise. Always ask yourself: 'Is this angle acute (less than 90 degrees) or obtuse (greater than 90 degrees)?' Let that logic guide you on which number to read off the scale, preventing silly errors where a 60-degree angle is misread as 120 degrees.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "quiz",
+      "question": "You are measuring an angle that clearly looks wide and open (obtuse). Your protractor shows numbers 50° and 130° near the arm. Which one should you select?",
+      ><options": [
+        "50°, because smaller numbers are always safer.",
+        "130°, because obtuse angles measure greater than 90°.",
+        "You should average them to get 90°."
+      ],
+      "correct_index": 1,
+      "explanation": "An obtuse angle is greater than 90°. Therefore, 130° is the correct reading on the appropriate scale.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "teacher_tip",
+      "title": "The Zero-Error Habit",
+      "body": "When drawing an angle from scratch with a protractor: 1) Draw a ray first. 2) Place the protractor center on the endpoint. 3) Make a tiny dot at the required degree mark. 4) Remove the protractor and use your straightedge to connect the endpoint through the dot. Never draw lines directly along the plastic edge of a protractor with a sharp knife-like cutter!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Copying an Angle",
+      "body": "Just as we copied line segments without knowing their exact numerical degrees, we can copy any angle using only a compass and a straightedge. Suppose you are given angle 'A' with vertex 'O'. Step 1: Draw a new ray with endpoint 'O''. Step 2: Place your compass metal tip at vertex 'O' and draw an arc of any convenient radius that cuts both arms of angle 'A' at points 'B' and 'C'. Step 3: With the same compass radius, place the metal tip at 'O'' and draw a similar arc cutting your new ray at point 'B''. Step 4: Now, measure the exact distance between 'B' and 'C' using your compass. Step 5: Place the compass metal tip at 'B'' and swing an arc to intersect your previous arc at point 'C''. Step 6: Draw a ray from 'O'' through 'C''. You have now duplicated the exact angle with pure geometry!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "flashcard",
+      "front": "When copying an angle using a compass, why is the distance between points B and C (on the arms of the original angle) measured and transferred?",
+      "back": "To maintain the exact opening width (spread) of the two arms at that specific radius from the vertex.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Concept 4: Constructing Special Angles Without a Protractor",
+      "body": "Long before plastic protractors were manufactured, mathematicians discovered magical geometric properties that allowed them to construct exact angles using only a compass and straightedge. The granddaddy of all special angles is the 60-degree angle. Why 60 degrees? Because of equilateral triangles! If you draw any circle arc from a vertex, and then—without changing the compass radius—place the compass tip on where that arc crosses your line and swing a second arc to intersect the first, you have formed the three vertices of an equilateral triangle. Every angle in an equilateral triangle measures exactly 60 degrees! From this single 60-degree construction, a cascade of other angles unlocks: bisecting 60° gives you 30°; doubling it gives you 120°; bisecting a 90° angle gives you 45°. Let's examine how master geometricians construct a 60-degree angle step by step.",
+      "bloom": "Understand",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "What geometric figure is secretly created when you construct a 60° angle using intersecting compass arcs of equal radius?",
+      "options": [
+        "A right-angled triangle",
+        "An equilateral triangle",
+        "A regular pentagon"
+      ],
+      "correct_index": 1,
+      "explanation": "An equilateral triangle has three equal sides (all equal to the compass radius) and three equal interior angles of 60° each.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Step-by-Step Construction of 60° and 120° Angles",
+      "body": "Let's construct a 60° angle at vertex 'O' on a ray 'OA'. 1) With 'O' as the center and any convenient radius, draw a semi-circular arc that cuts ray 'OA' at a point, let's call it 'B'. 2) Keeping the compass radius exactly the same, place the metal tip at point 'B' and draw an arc that cuts your first semi-circular arc at a new point, let's call it 'C'. 3) Draw a ray from 'O' passing through 'C'. Measure angle COA with a protractor—it will be exactly 60 degrees! Now, what about 120 degrees? If you keep the compass tip at point 'C' (instead of stopping) and swing one more arc along the semicircle to a point 'D', and draw a ray through 'D', you have built an angle of 120 degrees (which is 60° + 60°). This is the elegance of geometric construction.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "teacher_tip",
+      "title": "The Chain Reaction",
+      "body": "Notice how 60° leads to 120° (2x60), which leads to 180° (3x60, a straight line!). Compasses allow you to step across the circle in equal chord lengths equal to the radius.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "How do you construct a 120° angle using a compass starting from a 60° construction?",
+      "back": "By making a second consecutive arc along the semi-circular path from the 60° intersection point using the same compass radius.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "theory",
+      "title": "Constructing a 90-Degree Angle (Right Angle)",
+      "body": "A 90-degree angle is essential for construction, carpentry, and engineering. While we know how to construct perpendiculars, we can also construct a standalone 90° angle at a ray's endpoint using angle construction principles. Here is one classic method: 1) Draw a ray 'OA'. 2) With 'O' as center, draw a large arc cutting ray 'OA' at 'B'. 3) With center 'B' and the same radius, cut the arc at point 'C' (this is your 60° mark). 4) With center 'C' and the same radius, cut the arc further at point 'D' (this is your 120° mark). 5) Now, you have 60° (at C) and 120° (at D). If you place your compass metal tip at 'C' and draw an arc above, and then place it at 'D' and draw an arc to intersect it, you have found the exact halfway point between 60° and 120°. Halfway between 60° and 120° is 60 + (120-60)/2 = 60 + 30 = 90 degrees! Draw a ray from 'O' through this intersection point, and you have a perfect right angle.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "quiz",
+      "question": "Why does finding the point exactly halfway between 60° and 120° result in a 90° angle?",
+      "options": [
+        "Because 60 plus half of 60 (which is 30) equals 90.",
+        "Because 90 is an even number.",
+        "Because right angles are required by law."
+      ],
+      "correct_index": 0,
+      "explanation": "The difference between 120° and 60° is 60°. Half of that difference is 30°. Adding 30° to the starting 60° gives exactly 90°.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "theory",
+      "title": "Angle Bisectors: Splitting Angles in Half",
+      "body": "What if you need an angle of 45°? You know how to make 90°; now you just need to split it in half! Splitting an angle into two equal halves is called constructing an [DICT_GEO_BISECTOR|angle bisector]. Let's learn the universal technique for bisecting any angle 'POQ'. Step 1: Place the metal tip of your compass at vertex 'O' and draw a convenient arc that cuts both arms 'OP' and 'OQ' at points 'X' and 'Y'. Step 2: Place the compass metal tip at point 'X' and draw an arc out in the interior of the angle. Step 3: Keeping the exact same radius, place the metal tip at point 'Y' and draw an arc that intersects your previous arc. Label this intersection point 'Z'. Step 4: Draw a ray from vertex 'O' through point 'Z'. Ray 'OZ' is the angle bisector, dividing angle 'POQ' into two identical smaller angles. By bisecting a 90° angle, you get 45°. By bisecting a 60° angle, you get 30°!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_28",
+      "type": "flashcard",
+      "front": "How can you construct a 45° angle using only a compass and straightedge?",
+      "back": "First construct a 90° right angle, and then construct its angle bisector to divide it into two 45° angles.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_29",
+      "type": "quiz",
+      "question": "If you start with an angle of 60° and construct its angle bisector, what is the measure of each resulting angle?",
+      "options": [
+        "30°",
+        "15°",
+        "120°"
+      ],
+      "correct_index": 0,
+      "explanation": "An angle bisector splits an angle into two equal halves. Half of 60° is 30°.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_30",
+      "type": "theory",
+      "title": "Mastery Summary: The Toolkit of Practical Geometry",
+      "body": "Congratulations! You have journeyed through the core principles of practical geometry. You now possess the skills of ancient master builders and modern engineers. Let us review your master toolkit: 1) **Line Segments:** Measured accurately with rulers or duplicated with compasses without numerical error. 2) **Perpendicular Bisectors:** Found by swinging intersecting arcs greater than half the segment length, creating symmetry and 90-degree lines. 3) **Protractor Measurement:** Utilizing inner and outer scales carefully while keeping track of acute vs. obtuse classifications. 4) **Standard Angle Construction:** Building 60°, 120°, 90°, and 45° angles purely through the intersection of circles and arcs without touching a protractor scale. With these tools in hand, no blueprint is too complex, and no geometric puzzle is beyond your grasp!",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

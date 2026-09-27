@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../core/services/activation_service.dart';
 import '../../foundation/theme/app_colors.dart';
 import '../../foundation/theme/brand_app_bar.dart';
 import '../learning/learning_engine/services/pdf_export_service.dart';
@@ -75,21 +76,12 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
     final colorString = _subjectData!['color_hex'] ?? _subjectData!['color'] ?? '0xFF2196F3';
     final color = Color(int.parse(colorString.replaceAll('0x', ''), radix: 16));
     final chapters = _subjectData!['chapters'] as List;
+    final isActivated = ActivationService.isActivated;
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: BrandAppBar(
         title: subjectName,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.picture_as_pdf),
-            tooltip: 'Download Subject as PDF',
-            onPressed: () async {
-              // Note: The UI might freeze slightly while building large PDFs.
-              await PdfExportService.generateAndPrintSubject(_subjectData!);
-            },
-          ),
-        ],
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(20),
@@ -98,21 +90,34 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
           final chapter = chapters[index];
           final moduleId = chapter['module_id'] ?? chapter['id'];
           final isAvailable = chapter['is_available'] == true || moduleId != null || chapter.containsKey('data_file');
-          final chapterNum = chapter['chapter_number'] ?? chapter['chapter_no'] ?? index + 1;
+          final rawChapterNum = chapter['chapter_number'] ?? chapter['chapter_no'];
+          final chapterNum = rawChapterNum ?? index + 1;
           
+          bool isLocked = false;
+          if (!isActivated) {
+            final parsedNum = int.tryParse(rawChapterNum.toString());
+            if (parsedNum == 1 || parsedNum == 2) {
+              isLocked = false;
+            } else {
+              isLocked = true;
+            }
+          }
+          
+          final effectiveIsAvailable = isAvailable && !isLocked;
+
           return Card(
             elevation: isAvailable ? 2 : 0,
-            color: isAvailable ? Colors.white : Colors.grey.shade100,
+            color: isAvailable ? (isLocked ? Colors.orange.shade50 : Colors.white) : Colors.grey.shade100,
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: isLocked ? BorderSide(color: Colors.orange.shade200, width: 1) : BorderSide.none),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ListTile(
                   contentPadding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 4),
                   leading: CircleAvatar(
-                    backgroundColor: isAvailable ? color.withValues(alpha: 0.1) : Colors.grey.shade300,
-                    child: Text(
+                    backgroundColor: isAvailable ? (isLocked ? Colors.orange.withValues(alpha: 0.1) : color.withValues(alpha: 0.1)) : Colors.grey.shade300,
+                    child: isLocked ? const Icon(Icons.lock, color: Colors.orange) : Text(
                       '$chapterNum',
                       style: TextStyle(
                         color: isAvailable ? color : Colors.grey,
@@ -127,12 +132,34 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                       color: isAvailable ? AppColors.textPrimary : Colors.grey,
                     ),
                   ),
-                  subtitle: isAvailable 
-                      ? Text(TrilingualService.instance.getUIText('Interactive content ready'), style: TextStyle(color: Colors.green, fontSize: 12))
-                      : Text(TrilingualService.instance.getUIText('Coming soon'), style: TextStyle(color: Colors.grey, fontSize: 12)),
-                  trailing: !isAvailable ? Icon(Icons.lock_outline, color: Colors.grey) : null,
+                  subtitle: isLocked 
+                      ? Text(TrilingualService.instance.getUIText('Premium Content - Requires Activation'), style: TextStyle(color: Colors.orange.shade800, fontSize: 12, fontWeight: FontWeight.bold))
+                      : (isAvailable 
+                          ? Text(TrilingualService.instance.getUIText('Interactive content ready'), style: TextStyle(color: Colors.green, fontSize: 12))
+                          : Text(TrilingualService.instance.getUIText('Coming soon'), style: TextStyle(color: Colors.grey, fontSize: 12))),
+                  trailing: !isAvailable ? const Icon(Icons.hourglass_empty, color: Colors.grey) : (isLocked ? const Icon(Icons.lock, color: Colors.orange) : null),
                 ),
-                if (isAvailable)
+                if (isLocked && isAvailable)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.orange,
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                          ),
+                          onPressed: () {
+                            context.push('/activate');
+                          },
+                          icon: const Icon(Icons.vpn_key, color: Colors.white, size: 20),
+                          label: Text(TrilingualService.instance.getUIText('Activate to Unlock'), style: const TextStyle(color: Colors.white)),
+                        ),
+                      ],
+                    ),
+                  )
+                else if (effectiveIsAvailable)
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
                     child: Row(
@@ -149,8 +176,8 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                                 context.push('/assessment/engine/$moduleId');
                               }
                             },
-                            icon: Icon(Icons.assignment, color: Colors.white, size: 20),
-                            label: Text(TrilingualService.instance.getUIText('Practice'), style: TextStyle(color: Colors.white)),
+                            icon: const Icon(Icons.assignment, color: Colors.white, size: 20),
+                            label: Text(TrilingualService.instance.getUIText('Practice'), style: const TextStyle(color: Colors.white)),
                           ),
                         if (moduleId == null || !moduleId.startsWith('sci_sim:'))
                           const SizedBox(width: 8),
@@ -170,8 +197,8 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                               context.push('/curriculum/${widget.curriculumId}/${widget.subjectId}/chapter/${chapter['chapter_id']}');
                             }
                           },
-                          icon: Icon(Icons.play_circle_fill, color: Colors.white),
-                          label: Text(TrilingualService.instance.getUIText('Learn'), style: TextStyle(color: Colors.white)),
+                          icon: const Icon(Icons.play_circle_fill, color: Colors.white),
+                          label: Text(TrilingualService.instance.getUIText('Learn'), style: const TextStyle(color: Colors.white)),
                         ),
                       ],
                     ),

@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "id": "cbse_class6_maths_ch13",
+    "title": "Chapter 13: Symmetry",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand the intuitive meaning of line symmetry and mirror halves.",
+      "Identify lines of symmetry in various 2D geometrical shapes.",
+      "Construct symmetrical figures using paper folding and ink blots.",
+      "Understand rotational symmetry and order of rotation for common shapes."
+    ],
+    "core_concepts": [
+      "DICT_LINE_SYMMETRY",
+      "DICT_LINE_OF_SYMMETRY",
+      "DICT_ROTATIONAL_SYMMETRY",
+      "DICT_MIRROR_REFLECTION"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the principles of line and rotational symmetry in 2D shapes through geometric analysis and hands-on visualization.",
+      "common_misconceptions": [
+        "Believing a shape can only have one line of symmetry if it looks balanced.",
+        "Confusing diagonal symmetry with horizontal and vertical symmetry.",
+        "Assuming all regular polygons have lines of symmetry equal to half their number of sides."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mystery of the Mirror",
+      "body": "Imagine walking through a dense, enchanted forest at dawn. You come across a glassy, completely still forest lake. As you peer over the edge, you notice that the towering pine trees, the drifting clouds, and the brilliant orange sunrise are mirrored perfectly on the water's surface. If you were to fold the world along the shoreline, the top half would match the bottom half down to the very last needle. Nature is filled with this miraculous balance—from the delicate wings of a butterfly to the petals of a flower. This balanced perfection is known in mathematics as symmetry, a concept that not only pleases our eyes but governs the architecture of the universe itself.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Which of the following natural objects best demonstrates the concept of visual balance or mirroring seen in the opening story?",
+      "options": [
+        "A jagged, irregularly shaped rock",
+        "A butterfly with identical patterns on both wings",
+        "A winding river flowing through a valley"
+      ],
+      "correct_index": 1,
+      "explanation": "A butterfly displays clear matching patterns on both its left and right sides when viewed from the center, mirroring the concept of visual balance.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Introduction to Line Symmetry",
+      "body": "In mathematics, an object has [DICT_LINE_SYMMETRY|line symmetry] if it can be divided into two identical halves that fit perfectly on top of each other when folded along a specific straight line. This dividing line is known as the [DICT_LINE_OF_SYMMETRY|line of symmetry] or the axis of symmetry. Think of it like a page in a notebook: if you draw a shape, fold the paper right down the crease, and the ink on one side matches the ink on the other side completely, that crease is your line of symmetry. Every point on one side has a corresponding point directly opposite to it across the line, maintaining an exact perpendicular distance. This relationship is deeply connected to [DICT_MIRROR_REFLECTION|mirror reflection], where the line of symmetry acts like a double-sided mirror reflecting the shape back onto itself.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "Try this! The Ink-Blot Test",
+      "body": "Take a plain sheet of paper and fold it neatly down the middle. Unfold it, place a few drops of wet ink or water-based paint near the crease, and fold it back up quickly. Press down gently with your fingers. When you unfold the paper, examine the resulting pattern. You will see two identical shapes mirroring each other across the center crease. That crease is your very own hand-made line of symmetry!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What is another common name for the line of symmetry?",
+      "back": "Axis of symmetry, or mirror line.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Identifying Lines of Symmetry in Geometric Shapes",
+      "body": "Not all shapes possess symmetry, and among those that do, the number of lines of symmetry can vary dramatically. Let us investigate standard geometrical figures. An equilateral triangle, which has three equal sides and three equal angles, possesses exactly three lines of symmetry, each passing through a vertex and bisecting the opposite side. A square has four lines of symmetry: two passing horizontally and vertically through opposite midpoints, and two running diagonally from corner to corner. A rectangle, despite having four sides like a square, only possesses two lines of symmetry—one horizontal and one vertical. Diagonal lines do NOT work for a rectangle because when folded along a diagonal, the corners do not match up! This teaches us a vital lesson: symmetry depends strictly on equal lengths and angles.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Why does a rectangle have only 2 lines of symmetry while a square has 4?",
+      "options": [
+        "A rectangle has curved corners.",
+        "A square has all sides equal, allowing diagonal folding, whereas a rectangle's unequal adjacent sides prevent diagonal overlap.",
+        "A rectangle is larger in area than a square."
+      ],
+      "correct_index": 1,
+      "explanation": "Because a square's sides are all equal, folding it diagonally aligns all adjacent corners. A rectangle's sides are of different lengths, so folding diagonally causes the corners to miss each other.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Symmetry in Alphabets and Digits",
+      "body": "Symmetry is all around us in the letters we write and the numbers we use every day. Capital English alphabets are a fantastic sandbox for testing lines of symmetry. Consider the letter 'A': if you draw a vertical line straight down the middle from the apex, the left side matches the right side. Thus, 'A' has one vertical line of symmetry. Now look at the letter 'B': a horizontal line drawn across its middle splits it into an upper and lower half that match perfectly. The letter 'H' boasts both a vertical and a horizontal line of symmetry! Conversely, letters like 'G', 'J', and 'F' have no lines of symmetry at all because no matter how you fold or slice them, the halves refuse to match. Analyzing letters helps us train our eyes to spot axes of symmetry instantly.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "flashcard",
+      "front": "Which capital letter has both a horizontal and a vertical line of symmetry?",
+      "back": "H (as well as I, O, and X)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "How many lines of symmetry does the capital letter 'M' have?",
+      - "options": ["0", "1", "2"],
+      "correct_index": 1,
+      "explanation": "The capital letter 'M' has exactly 1 vertical line of symmetry running down its central valley/peak.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "theory",
+      "title": "Symmetry in Triangles: A Deeper Look",
+      "body": "Triangles are wonderful subjects for studying symmetry because their properties dictate their symmetry lines entirely. An equilateral triangle, where all three sides are equal in length, has 3 lines of symmetry. An isosceles triangle, which has exactly two equal sides and two equal angles, has only 1 line of symmetry—the line passing through the vertex connecting the equal sides down to the midpoint of the base. If you try to draw symmetry lines from the other two vertices in an isosceles triangle, you will find they fail because the opposite sides are of different lengths. Finally, a scalene triangle, where all three sides have different lengths, has 0 lines of symmetry. It is completely asymmetric, proving that asymmetry is just as common in geometry as symmetry.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "teacher_tip",
+      "title": "Paper Cutout Challenge",
+      "body": "Cut out paper triangles of various types: scalene, isosceles, and equilateral. Challenge yourself to fold them physically to confirm the exact count of symmetry lines. Physical manipulation cements geometric theory into permanent memory!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "flashcard",
+      "front": "How many lines of symmetry does a scalene triangle have?",
+      "back": "Zero (0)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "theory",
+      "title": "Circles: The Ultimate Symmetric Shape",
+      "body": "If triangles and squares have restricted numbers of symmetry lines, what about a circle? A circle is perfectly round, meaning every point on its boundary is equidistant from its center. Because of this absolute uniformity, a circle has an infinite number of lines of symmetry! Every single straight line that passes through the center of the circle (which we call a diameter) acts as a valid line of symmetry. No matter how you tilt, rotate, or slice a circle through its center, the two resulting halves will mirror each other with absolute precision. This property makes the circle unique among basic 2D geometric shapes.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "quiz",
+      "question": "How many lines of symmetry does a circle have?",
+      "options": ["1", "360", "Infinite"],
+      "correct_index": 2,
+      "explanation": "A circle has an infinite number of lines of symmetry because every diameter divides it into two identical halves.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "theory",
+      "title": "Introduction to Rotational Symmetry",
+      "body": "Line symmetry is all about folding and reflecting across a static line. But what happens when an object is spun around in a circle? This brings us to [DICT_ROTATIONAL_SYMMETRY|rotational symmetry]. An object has rotational symmetry if, when you rotate it around a fixed central point by less than a full 360-degree turn, it looks exactly the same as it did in its starting position. Imagine a ceiling fan with three blades. If you rotate the fan by 120 degrees, blade one moves to where blade two was, blade two moves to where blade three was, and blade three moves to blade one. To your eyes, the fan looks completely unchanged! The fixed point around which you rotate the shape is called the center of rotation, and the number of times a shape matches itself during a full 360-degree rotation is called its order of rotational symmetry.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What is the 'center of rotation'?",
+      "back": "The fixed central point around which an object is turned to test for rotational symmetry.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "quiz",
+      "question": "If a shape fits onto itself 4 times during a complete 360-degree turn, what is its order of rotational symmetry?",
+      "options": ["2", "4", "360"],
+      "correct_index": 1,
+      "explanation": "The order of rotational symmetry is the total number of times the shape matches its original appearance during one full 360-degree rotation.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "theory",
+      "title": "Rotational Symmetry of Regular Polygons",
+      "body": "Regular polygons—shapes with all sides and interior angles equal—exhibit a wonderful harmony between their side count and their rotational symmetry. For any regular polygon with '$n$' sides, its order of rotational symmetry is also '$n$'. For example, an equilateral triangle ($n=3$) has an order of rotational symmetry of 3. A square ($n=4$) has an order of 4. A regular pentagon ($n=5$) has an order of 5, and a regular hexagon ($n=6$) has an order of 6. Furthermore, the exact angle of rotation for each match can be calculated easily by dividing 360 degrees by '$n$'. For a square, 360 divided by 4 gives a minimum angle of rotation of 90 degrees.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "teacher_tip",
+      "title": "Pinwheel Experiment",
+      "body": "Draw a regular hexagon on cardboard, cut it out, and stick a pin directly through its exact center. Rotate it slowly and count how many times it clicks into an identical visual position before completing one full circle. You will find it matches 6 times!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "flashcard",
+      "front": "What is the angle of rotation for a regular pentagon (5 sides)?",
+      "back": "360° / 5 = 72°",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Relationship Between Line and Rotational Symmetry",
+      "body": "Students often wonder: if a shape has line symmetry, must it also have rotational symmetry? And vice-versa? Let us investigate. A square has 4 lines of symmetry and an order of rotational symmetry of 4. An equilateral triangle has 3 lines of symmetry and an order of rotational symmetry of 3. In most regular shapes, both types of symmetry go hand in hand. However, there are fascinating exceptions! Consider the English capital letter 'S'. Does it have line symmetry? If you try to fold it horizontally or vertically, the curves do not match. It has zero lines of symmetry! Yet, if you rotate the letter 'S' by 180 degrees, it turns upside down and looks identical to its starting state. Thus, the letter 'S' has rotational symmetry of order 2, despite having no line symmetry at all. This proves that line symmetry and rotational symmetry are distinct geometric properties.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "quiz",
+      "question": "Can a shape have rotational symmetry without having any lines of symmetry?",
+      "options": [
+        "No, if a shape has rotational symmetry, it must always have lines of symmetry.",
+        "Yes, shapes like the letter 'S' or certain pinwheels can have rotational symmetry without line symmetry.",
+        "Only if the shape is a circle."
+      ],
+      "correct_index": 1,
+      "explanation": "Yes! The letter 'S' has rotational symmetry of order 2, but zero lines of symmetry, proving the two concepts are independent.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "theory",
+      "title": "Symmetry in Everyday Life, Art, and Architecture",
+      "body": "Symmetry is far more than a textbook exercise; it is a foundational principle in human art, engineering, and the natural world. Look at the Taj Mahal, Gothic cathedrals, or modern skyscraper designs—architects rely heavily on line and rotational symmetry to create structures that feel stable, harmonious, and aesthetically breathtaking to the human eye. In biology, human faces and animal bodies exhibit approximate bilateral symmetry, which scientists associate with health and evolutionary fitness. Even in chemistry, molecular structures often form symmetrical geometric lattices. Understanding symmetry gives us a universal lens through which we can decode both beauty and mathematical order in our surroundings.",
+      "bloom": "Synthesize",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Why do architects and designers frequently use symmetry in building structures?",
+      "options": [
+        "It makes buildings heavier.",
+        "It provides structural visual balance, aesthetic harmony, and even distribution of load.",
+        "It is required by law for all triangular buildings."
+      ],
+      "correct_index": 1,
+      "explanation": "Symmetry creates aesthetic balance and helps distribute structural loads evenly, making buildings both visually pleasing and structurally sound.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "flashcard",
+      "front": "What is the order of rotational symmetry for a circle?",
+      "back": "Infinite (since it matches itself at any angle of rotation around its center).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_27",
+      "type": "teacher_tip",
+      "title": "Nature Walk Challenge",
+      "body": "Step outside into a garden or park. Find 3 fallen leaves or flower petals. Bring them back inside, place them under tracing paper, and sketch their lines of symmetry. You will be amazed at how precise geometry is in living organisms!",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    }
+  ]
+}

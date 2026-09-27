@@ -1,0 +1,15 @@
+standard_name: "Universal Media Protocol"
+version: "1.0.0"
+schema_requirements:
+  image_needed: "boolean (true if visual aid is critical)"
+  image_specs: "object (alt text, resolution requirements)"
+  animation_needed: "boolean (true if motion explains it better)"
+  animation_type: "enum [Lottie, Rive, GIF]"
+  voice_needed: "boolean (true for pronunciation or accessibility)"
+  video_needed: "boolean (true for complex real-world footage)"
+  simulation_needed: "boolean (true for sandbox environments like physics/math)"
+  diagram_needed: "boolean (true for structural/flowcharts)"
+  interactive_activity_needed: "boolean (true for tactile learning)"
+accessibility:
+  alt_text_required: true
+  closed_captions_required: true

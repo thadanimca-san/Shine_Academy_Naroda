@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/services/activation_service.dart';
 import '../../../foundation/theme/app_colors.dart';
@@ -48,6 +49,20 @@ class _ActivationScreenState extends State<ActivationScreen> {
     }
   }
 
+  Future<void> _sendWhatsAppMessage() async {
+    final String message = "Hello Govind Sir, my Shine Academy EduOS Device Code is: *${ActivationService.deviceCode}*\n\nPlease provide my Activation Code.";
+    // wa.me without phone number opens contact picker in WhatsApp
+    final Uri url = Uri.parse("https://wa.me/?text=${Uri.encodeComponent(message)}");
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Could not open WhatsApp. Please install it first.')));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,72 +98,94 @@ class _ActivationScreenState extends State<ActivationScreen> {
                     ),
                     const SizedBox(height: 32),
                     
-                    // Device Code Display
+                    // STEP 1
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: Colors.green.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.shade300),
+                        border: Border.all(color: Colors.green.shade300),
                       ),
                       child: Column(
                         children: [
-                          Text(TrilingualService.instance.getUIText('Your Device Code'), style: GoogleFonts.inter(fontSize: 12, color: Colors.grey.shade600)),
+                          Text("STEP 1", style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.green.shade700)),
                           const SizedBox(height: 8),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                ActivationService.deviceCode,
-                                style: GoogleFonts.robotoMono(fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: 4, color: AppColors.primary),
+                          Text(
+                            TrilingualService.instance.getUIText('Send your Device Code to Govind Sir on WhatsApp to receive the Activation Code.'),
+                            style: GoogleFonts.inter(fontSize: 12, color: AppColors.textSecondary),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            ActivationService.deviceCode,
+                            style: GoogleFonts.robotoMono(fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: 4, color: AppColors.textPrimary),
+                          ),
+                          const SizedBox(height: 16),
+                          SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF25D366), // WhatsApp Green
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                               ),
-                              const SizedBox(width: 8),
-                              IconButton(
-                                icon: Icon(Icons.copy, size: 20, color: AppColors.primary),
-                                onPressed: () {
-                                  Clipboard.setData(ClipboardData(text: ActivationService.deviceCode));
-                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Copied to clipboard'))));
-                                },
-                              )
-                            ],
+                              icon: const Icon(Icons.chat),
+                              label: Text("Share via WhatsApp", style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+                              onPressed: _sendWhatsAppMessage,
+                            ),
                           ),
                         ],
                       ),
                     ),
                     const SizedBox(height: 32),
                     
-                    // Input Field
-                    TextField(
-                      controller: _codeController,
-                      textCapitalization: TextCapitalization.characters,
-                      style: GoogleFonts.robotoMono(fontSize: 20, letterSpacing: 2),
-                      decoration: InputDecoration(
-                        labelText: 'Activation Code',
-                        hintText: 'ENTER 8 DIGIT CODE',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: AppColors.primary, width: 2)),
+                    // STEP 2
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade50,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.grey.shade300),
                       ),
-                    ),
-                    
-                    if (_errorMessage.isNotEmpty) ...[
-                      const SizedBox(height: 16),
-                      Text(_errorMessage, style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-                    ],
-                    
-                    const SizedBox(height: 32),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 56,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.primary,
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                        ),
-                        onPressed: _isLoading ? null : _handleActivation,
-                        child: _isLoading 
-                            ? const CircularProgressIndicator(color: Colors.white)
-                            : Text(TrilingualService.instance.getUIText('Activate App'), style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.bold)),
+                      child: Column(
+                        children: [
+                          Text("STEP 2", style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.bold, color: AppColors.primary)),
+                          const SizedBox(height: 16),
+                          TextField(
+                            controller: _codeController,
+                            textCapitalization: TextCapitalization.characters,
+                            style: GoogleFonts.robotoMono(fontSize: 20, letterSpacing: 2),
+                            decoration: InputDecoration(
+                              labelText: 'Enter Activation Code Here',
+                              hintText: 'ENTER 8 DIGIT CODE',
+                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: AppColors.primary, width: 2)),
+                            ),
+                          ),
+                          
+                          if (_errorMessage.isNotEmpty) ...[
+                            const SizedBox(height: 12),
+                            Text(_errorMessage, style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                          ],
+                          
+                          const SizedBox(height: 24),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 56,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: AppColors.primary,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                              ),
+                              onPressed: _isLoading ? null : _handleActivation,
+                              child: _isLoading 
+                                  ? const CircularProgressIndicator(color: Colors.white)
+                                  : Text(TrilingualService.instance.getUIText('Activate App'), style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

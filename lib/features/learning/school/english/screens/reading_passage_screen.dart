@@ -175,7 +175,7 @@ class _ReadingPassageScreenState extends State<ReadingPassageScreen> {
           const SizedBox(height: 12),
           Padding(
             padding: EdgeInsets.only(bottom: 10),
-            child: Text(TrilingualService.instance.getUIText('💡 Tip: Double-tap ANY word to search in the dictionary.'),
+            child: Text(TrilingualService.instance.getUIText('💡 Tip: Double-tap ANY word to start speaking from there.'),
               style: TextStyle(fontSize: 12.5, color: AppColors.inkFaint, fontStyle: FontStyle.italic, fontWeight: FontWeight.w600),
             ),
           ),

@@ -434,17 +434,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (stage.contains('Higher Secondary')) {
       final isCommerce = (userProfile?['class'] ?? '').toLowerCase().contains('commerce');
+      final isClass11 = (userProfile?['class'] ?? '').toLowerCase().contains('11');
       
       Widget hsBanner;
       List<Widget> hsCards = [];
       
       if (isCommerce) {
+        final title = isClass11 ? "Class 11 Commerce" : "Class 12 Commerce";
+        final route = isClass11 ? '/curriculum/gseb_class11' : '/curriculum/gseb_class12_commerce';
+
         hsBanner = Card(
           elevation: 4,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           child: InkWell(
             borderRadius: BorderRadius.circular(16),
-            onTap: () => context.push('/curriculum/gseb_class12_commerce'),
+            onTap: () => context.push(route),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
@@ -467,7 +471,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(TrilingualService.instance.getUIText("Class 12 Commerce"), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                        Text(TrilingualService.instance.getUIText(title), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                         const SizedBox(height: 4),
                         Text(TrilingualService.instance.getUIText("Complete Course (GSEB)"), style: GoogleFonts.inter(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
                       ],

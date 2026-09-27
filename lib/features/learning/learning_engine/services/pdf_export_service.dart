@@ -1,11 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:shine_academy_naroda/core/utils/pdf_branding_util.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 
 class PdfExportService {
   static Future<void> generateAndPrintSubject(Map<String, dynamic> subjectData) async {
@@ -52,7 +54,6 @@ class PdfExportService {
             pageTheme: pageTheme,
             build: (pw.Context context) {
               return [
-                // Chapter Title Header
                 pw.Header(
                   level: 0,
                   child: pw.Column(
@@ -92,11 +93,7 @@ class PdfExportService {
                     ],
                   ),
                 ),
-                
-                // Generate content blocks
                 ...blocks.map((block) => _buildPdfBlock(block)).toList(),
-                
-                // Footer
                 pw.SizedBox(height: 40),
                 pw.Divider(color: PdfColors.grey300),
                 pw.SizedBox(height: 8),
@@ -127,7 +124,6 @@ class PdfExportService {
         );
       } catch (e) {
         debugPrint('Error loading chapter $chapterId for PDF: $e');
-        // Continue to next chapter, failing silently is acceptable as it just skips missing files
       }
     }
 
@@ -137,106 +133,325 @@ class PdfExportService {
       filename: '${subjectName.replaceAll(' ', '_')}_study_material.pdf',
     );
   }
-  static Future<void> generateAndPrintChapter(Map<String, dynamic> metadata, List<dynamic> blocks) async {
-    final pdf = pw.Document();
 
-    // Load high-quality Unicode fonts to prevent crossed-boxes in math/science
-    final fontBase = await PdfGoogleFonts.notoSansRegular();
-    final fontBold = await PdfGoogleFonts.notoSansBold();
-    final fontTheme = pw.ThemeData.withFont(base: fontBase, bold: fontBold);
+  static Future<void> generateAndPrintChapter(
+      BuildContext context,
+      Map<String, dynamic> metadata,
+      List<dynamic> blocks,
+      {String? studentName}) async {
+    ValueNotifier<int> progressNotifier = ValueNotifier<int>(0);
+    BuildContext? dialogCtx;
 
-    // Get branded page theme (logo watermark) and inject the custom font theme
-    final pageTheme = await PdfBrandingUtil.getPageTheme(
-      pageFormat: PdfPageFormat.a4,
-      theme: fontTheme,
-    );
+    try {
+      final title = metadata['title'] ?? 'Chapter Study Material';
+      final pdf = pw.Document();
 
-    pdf.addPage(
-      pw.MultiPage(
-        pageTheme: pageTheme,
-        build: (pw.Context context) {
-          return [
-            // Chapter Title Header
-            pw.Header(
-              level: 0,
-              child: pw.Column(
-                crossAxisAlignment: pw.CrossAxisAlignment.start,
-                children: [
-                  pw.Text(TrilingualService.instance.getUIText('Shine Academy Naroda'),
-                    style: pw.TextStyle(
-                      fontSize: 14,
-                      color: PdfColors.grey700,
-                      fontWeight: pw.FontWeight.bold,
-                    ),
-                  ),
-                  pw.SizedBox(height: 8),
-                  pw.Text(
-                    metadata['title'] ?? 'Chapter',
-                    style: pw.TextStyle(
-                      fontSize: 28,
-                      fontWeight: pw.FontWeight.bold,
-                      color: PdfColors.indigo900,
-                    ),
-                  ),
-                  if (metadata['subtitle'] != null) ...[
-                    pw.SizedBox(height: 4),
-                    pw.Text(
-                      metadata['subtitle'],
-                      style: pw.TextStyle(
-                        fontSize: 16,
-                        color: PdfColors.grey600,
-                        fontStyle: pw.FontStyle.italic,
+      final fontBase = await PdfGoogleFonts.notoSansRegular();
+      final fontBold = await PdfGoogleFonts.notoSansBold();
+      final fontTheme = pw.ThemeData.withFont(base: fontBase, bold: fontBold);
+
+      final pageTheme = await PdfBrandingUtil.getPageTheme(
+        pageFormat: PdfPageFormat.a4, 
+        studentName: studentName,
+        theme: fontTheme,
+      );
+
+      final validBlocks = blocks.whereType<Map>().toList();
+      
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (ctx) {
+            dialogCtx = ctx;
+            return AlertDialog(
+              title: Text(TrilingualService.instance.getUIText('Generating PDF')),
+              content: ValueListenableBuilder<int>(
+                valueListenable: progressNotifier,
+                builder: (context, currentBlock, child) {
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const CircularProgressIndicator(),
+                      const SizedBox(height: 16),
+                      Text('${TrilingualService.instance.getUIText('Processing block')} $currentBlock / ${validBlocks.length}'),
+                      const SizedBox(height: 8),
+                      Text(TrilingualService.instance.getUIText('Please wait. Formatting document...'),
+                        style: const TextStyle(fontSize: 12, color: Colors.grey),
+                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ],
-                  pw.SizedBox(height: 16),
-                  pw.Divider(color: PdfColors.indigo, thickness: 2),
-                  pw.SizedBox(height: 24),
-                ],
+                    ],
+                  );
+                }
               ),
-            ),
-            
-            // Generate content blocks
-            ...blocks.map((block) => _buildPdfBlock(block)).toList(),
-            
-            // Footer
-            pw.SizedBox(height: 40),
-            pw.Divider(color: PdfColors.grey300),
-            pw.SizedBox(height: 8),
-            pw.Row(
-              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text(TrilingualService.instance.getUIText('Contact: 9408721039 | 9408154333'),
-                  style: const pw.TextStyle(fontSize: 10, color: PdfColors.grey700),
-                ),
-                pw.Text(TrilingualService.instance.getUIText('Shine Academy Naroda'),
-                  style: pw.TextStyle(fontSize: 10, color: PdfColors.grey500, fontStyle: pw.FontStyle.italic),
-                ),
-                pw.UrlLink(
-                  destination: 'https://sites.google.com/view/shine-academy-naroda/home',
-                  child: pw.Text(TrilingualService.instance.getUIText('Website: shine-academy-naroda'),
-                    style: const pw.TextStyle(
-                      fontSize: 10,
-                      color: PdfColors.blue,
-                      decoration: pw.TextDecoration.underline,
+            );
+          }
+        );
+      }
+
+      List<pw.Widget> pdfBlocks = [];
+      for (int i = 0; i < validBlocks.length; i++) {
+        final block = validBlocks[i];
+        progressNotifier.value = i + 1;
+        
+        // Add a small delay to allow UI to update
+        await Future.delayed(const Duration(milliseconds: 2));
+        
+        pdfBlocks.addAll(_buildNativePdfWidgets(block));
+      }
+
+      if (dialogCtx != null && dialogCtx!.mounted) {
+        Navigator.of(dialogCtx!).pop();
+        dialogCtx = null;
+      }
+      
+      pdf.addPage(
+        pw.MultiPage(
+          pageTheme: pageTheme,
+          header: (pw.Context context) => pw.Column(
+            children: [
+              pw.Header(
+                level: 0,
+                child: pw.Center(
+                  child: pw.Text(
+                    title,
+                    style: pw.TextStyle(
+                      fontSize: 24,
+                      fontWeight: pw.FontWeight.bold,
+                      color: PdfColor.fromHex('#1565C0'),
                     ),
                   ),
                 ),
-              ],
-            ),
-          ];
-        },
-      ),
-    );
+              ),
+              pw.SizedBox(height: 20),
+            ],
+          ),
+          build: (pw.Context context) {
+            return pdfBlocks;
+          },
+        ),
+      );
 
-    // Trigger the native share/save dialog
-    final bytes = await pdf.save();
-    await Printing.sharePdf(
-      bytes: bytes,
-      filename: '${metadata['id'] ?? 'chapter'}_study_material.pdf',
+      final bytes = await pdf.save();
+      await PdfViewerUtil.openPdfBytes(bytes, '${metadata['id'] ?? 'chapter'}_study_material.pdf');
+    } catch (e, stack) {
+      if (dialogCtx != null && dialogCtx!.mounted) {
+        Navigator.of(dialogCtx!).pop();
+      }
+      debugPrint('PDF Error: $e');
+      debugPrint(stack.toString());
+      rethrow;
+    }
+  }
+
+  // Uses purely native pw.Widgets to ensure it works on all Android devices
+  // Returns a List<pw.Widget> to allow MultiPage to break massive texts across pages.
+  static List<pw.Widget> _buildNativePdfWidgets(Map block) {
+    final type = block['type']?.toString() ?? 'unknown';
+    final payload = block.containsKey('content') && block['content'] is Map 
+        ? block['content'] as Map 
+        : block;
+
+    final title = _getTitle(payload);
+    List<pw.Widget> widgets = [];
+
+    switch (type) {
+      case 'theory':
+      case 'hook':
+      case 'discovery':
+      case 'short_note':
+      case 'text':
+        if (title != null) {
+          widgets.add(
+            pw.Padding(
+              padding: const pw.EdgeInsets.only(bottom: 8, top: 12),
+              child: pw.Text(
+                title,
+                style: pw.TextStyle(fontSize: 18, fontWeight: pw.FontWeight.bold, color: PdfColor.fromHex('#0D47A1')),
+              ),
+            )
+          );
+        }
+        final body = _getLoc(payload, ['body', 'content', 'text']);
+        widgets.addAll(_buildParagraphs(body));
+        widgets.add(pw.SizedBox(height: 16));
+        return widgets;
+
+      case 'socratic':
+      case 'mcq':
+      case 'numerical':
+      case 'quiz':
+      case 'practice_question':
+      case 'board_questions':
+      case 'knowledge_check':
+        widgets.add(pw.SizedBox(height: 12));
+        widgets.add(
+          pw.Text('QUESTION', style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: PdfColors.grey600))
+        );
+        widgets.add(pw.SizedBox(height: 4));
+        widgets.add(
+          _buildRichText(_getLoc(payload, ['question']), isBold: true)
+        );
+        widgets.add(pw.SizedBox(height: 8));
+
+        final options = _getLocList(payload, ['options']);
+        if (options.isNotEmpty) {
+          for (var opt in options) {
+            widgets.add(
+              pw.Padding(
+                padding: const pw.EdgeInsets.only(left: 16, bottom: 4),
+                child: pw.Row(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.Text('• ', style: const pw.TextStyle(fontSize: 12)),
+                    pw.Expanded(child: _buildRichText(opt.toString())),
+                  ],
+                ),
+              )
+            );
+          }
+        }
+
+        final solution = _getLoc(payload, ['solution', 'answer', 'explanation']);
+        if (solution.isNotEmpty) {
+          widgets.add(pw.SizedBox(height: 12));
+          widgets.add(
+            pw.Text('SOLUTION / ANSWER', style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: PdfColors.green700))
+          );
+          widgets.add(pw.SizedBox(height: 4));
+          widgets.addAll(_buildParagraphs(solution));
+        }
+        widgets.add(pw.SizedBox(height: 24));
+        return widgets;
+
+      case 'common_mistakes':
+      case 'teacher_tip':
+      case 'insight':
+      case 'memory_trick':
+        final label = type == 'common_mistakes' ? 'COMMON MISTAKE' : (type == 'memory_trick' ? 'MEMORY TRICK' : 'TEACHER TIP');
+        final color = type == 'memory_trick' ? PdfColors.purple900 : PdfColors.amber900;
+        
+        widgets.add(pw.SizedBox(height: 12));
+        widgets.add(
+          pw.Text(label, style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: color))
+        );
+        widgets.add(pw.SizedBox(height: 4));
+        widgets.addAll(_buildParagraphs(_getLoc(payload, ['content', 'text']), textColor: color));
+        widgets.add(pw.SizedBox(height: 24));
+        return widgets;
+
+      default:
+        final fallbackContent = _getLoc(payload, ['body', 'content', 'text', 'question']);
+        if (fallbackContent.isNotEmpty) {
+          if (title != null) {
+            widgets.add(
+              pw.Padding(
+                padding: const pw.EdgeInsets.only(bottom: 8, top: 12),
+                child: pw.Text(
+                  title,
+                  style: pw.TextStyle(fontSize: 16, fontWeight: pw.FontWeight.bold, color: PdfColors.grey900),
+                ),
+              )
+            );
+          }
+          widgets.addAll(_buildParagraphs(fallbackContent));
+          widgets.add(pw.SizedBox(height: 16));
+        }
+        return widgets;
+    }
+  }
+
+  // Splits long text blocks by double-newlines to allow MultiPage to break between paragraphs safely.
+  static List<pw.Widget> _buildParagraphs(String text, {PdfColor? textColor}) {
+    final paragraphs = text.split('\n\n');
+    List<pw.Widget> widgets = [];
+    for (var p in paragraphs) {
+      if (p.trim().isEmpty) continue;
+      // Also split by single newline to respect formatting
+      final lines = p.split('\n');
+      for (var line in lines) {
+         if(line.trim().isEmpty) continue;
+         widgets.add(
+           pw.Padding(
+             padding: const pw.EdgeInsets.only(bottom: 4),
+             child: _buildRichText(line, color: textColor ?? PdfColors.grey900),
+           )
+         );
+      }
+      widgets.add(pw.SizedBox(height: 8));
+    }
+    return widgets;
+  }
+
+  static pw.RichText _buildRichText(String text, {bool isBold = false, PdfColor color = PdfColors.grey900}) {
+    final RegExp boldRegex = RegExp(r'\*\*(.*?)\*\*');
+    final List<pw.InlineSpan> spans = [];
+    int lastMatchEnd = 0;
+
+    for (final match in boldRegex.allMatches(text)) {
+      if (match.start > lastMatchEnd) {
+        spans.add(pw.TextSpan(text: text.substring(lastMatchEnd, match.start)));
+      }
+      spans.add(pw.TextSpan(text: match.group(1), style: pw.TextStyle(fontWeight: pw.FontWeight.bold)));
+      lastMatchEnd = match.end;
+    }
+
+    if (lastMatchEnd < text.length) {
+      spans.add(pw.TextSpan(text: text.substring(lastMatchEnd)));
+    }
+
+    return pw.RichText(
+      text: pw.TextSpan(
+        style: pw.TextStyle(fontSize: 12, color: color, fontWeight: isBold ? pw.FontWeight.bold : pw.FontWeight.normal),
+        children: spans,
+      ),
     );
   }
 
+  static String _getLoc(Map payload, List<String> baseKeys) {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    for (final key in baseKeys) {
+      if (lang != 'en') {
+        final locKey = '${key}_$lang';
+        if (payload[locKey] != null && payload[locKey].toString().isNotEmpty) {
+          return payload[locKey].toString();
+        }
+      }
+      if (payload[key] != null && payload[key].toString().isNotEmpty) {
+        return payload[key].toString();
+      }
+    }
+    return '';
+  }
+
+  static List<dynamic> _getLocList(Map payload, List<String> baseKeys) {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    for (final key in baseKeys) {
+      if (lang != 'en') {
+        final locKey = '${key}_$lang';
+        if (payload[locKey] != null && payload[locKey] is List && (payload[locKey] as List).isNotEmpty) {
+          return payload[locKey] as List;
+        }
+      }
+      if (payload[key] != null && payload[key] is List) {
+        return payload[key] as List;
+      }
+    }
+    return [];
+  }
+
+  static String? _getTitle(Map payload) {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    if (lang != 'en') {
+      final locKey = 'title_$lang';
+      if (payload[locKey] != null && payload[locKey].toString().isNotEmpty) {
+        return payload[locKey].toString();
+      }
+    }
+    return payload['title']?.toString();
+  }
+
+  // Kept for backward compatibility with generateAndPrintSubject
   static pw.Widget _buildPdfBlock(dynamic block) {
     if (block == null || block is! Map) return pw.SizedBox();
     
@@ -272,7 +487,6 @@ class PdfExportService {
         );
 
       case 'media':
-        // For media we just output the caption or a placeholder in PDF since downloading the image is tricky in this pure PDF generator.
         return pw.Container(
           margin: const pw.EdgeInsets.only(bottom: 20),
           padding: const pw.EdgeInsets.all(16),
@@ -404,7 +618,6 @@ class PdfExportService {
         final paths = payload['paths'] as List<dynamic>? ?? [];
         final strokeColor = payload['stroke_color'] ?? '#000000';
         
-        // Construct a standard SVG string from the path data
         String svgPaths = '';
         for (var p in paths) {
           svgPaths += '<path d="$p" stroke="$strokeColor" fill="none" stroke-width="2"/>';
@@ -522,7 +735,6 @@ class PdfExportService {
         );
 
       default:
-        // Fallback for unknown block types
         final fallbackContent = payload['content'] ?? payload['text'];
         if (fallbackContent != null) {
           return pw.Container(

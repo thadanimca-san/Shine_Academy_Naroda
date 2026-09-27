@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "id": "gseb_class10_maths_ch3",
+    "title": "Chapter 3: Pair of Linear Equations in Two Variables",
+    "title_hi": "अध्याय 3: दो चर वाले रैखिक समीकरण युग्म",
+    "description": "Learn to formulate, graph, and solve pairs of linear equations.",
+    "description_hi": "रैखिक समीकरणों के युग्म बनाना, उनका ग्राफ बनाना और उन्हें हल करना सीखें।",
+    "subject": "Mathematics",
+    "class_level": "Class 10",
+    "board": "GSEB",
+    "estimated_time_minutes": 90,
+    "version": "1.0.0"
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_C10_MATH_CH3_HOOK",
+      "type": "hook",
+      "title": "The Fair Puzzle",
+      "title_hi": "मेले की पहेली",
+      "body": "Akhila went to a fair in her village. She wanted to enjoy rides on the Giant Wheel and play Hoopla (a game in which you throw a ring on the items kept in a stall, and if the ring completely covers any item, you get it). The number of times she played Hoopla is half the number of rides she had on the Giant Wheel. If each ride costs ₹3, and a game of Hoopla costs ₹4, how would you find out the number of rides she had and how many times she played Hoopla, provided she spent ₹20?",
+      "body_hi": "अखिला अपने गाँव के एक मेले में गई। वह जायंट व्हील (विशाल पहिया) की सवारी का आनंद लेना चाहती थी और हूपला (एक खेल जिसमें आप एक स्टॉल में रखी वस्तुओं पर एक अंगूठी फेंकते हैं, और यदि अंगूठी किसी भी वस्तु को पूरी तरह से कवर करती है, तो आपको वह मिलती है) खेलना चाहती थी। उसने जितनी बार हूपला खेला, वह जायंट व्हील पर की गई सवारी की संख्या का आधा है। यदि प्रत्येक सवारी की कीमत ₹3 है, और हूपला के एक खेल की कीमत ₹4 है, तो आप कैसे पता लगाएंगे कि उसने कितनी सवारी की और उसने कितनी बार हूपला खेला, बशर्ते उसने ₹20 खर्च किए हों?",
+      "body_gu": "અખિલા તેના ગામમાં મેળામાં ગઈ હતી.તે જાયન્ટ વ્હીલ પર સવારીનો આનંદ માણવા માંગતી હતી અને હૂપલા (એક રમત જેમાં તમે સ્ટોલમાં રાખવામાં આવેલી વસ્તુઓ પર રિંગ ફેંકી દો છો અને જો રિંગ કોઈપણ વસ્તુને સંપૂર્ણપણે આવરી લે છે, તો તમને તે મળશે).તેણીએ જેટલી વખત હૂપલા રમી હતી તે જાયન્ટ વ્હીલ પર તેણીની સવારીની સંખ્યા કરતાં અડધી છે.જો દરેક રાઈડની કિંમત ₹3 હોય, અને હૂપલાની રમતની કિંમત ₹4 હોય, તો તમે કેવી રીતે શોધી શકશો કે તેણી પાસે કેટલી રાઈડ હતી અને તેણીએ કેટલી વખત હૂપ્લા રમી હતી, જો કે તેણીએ ₹20 ખર્ચ્યા હોય?",
+      "title_gu": "ધ ફેર પઝલ"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_SOC_1",
+      "type": "socratic_question",
+      "question": "If we let 'x' be the number of rides and 'y' be the number of times she played Hoopla, what does 'x' and 'y' represent?",
+      "question_hi": "यदि हम 'x' को सवारी की संख्या और 'y' को हूपला खेलने की संख्या मान लें, तो 'x' और 'y' क्या दर्शाते हैं?",
+      "options": [
+        "Fixed numbers",
+        "Variables (Unknown quantities)",
+        "Prices of the games"
+      ],
+      "options_hi": [
+        "निश्चित संख्याएँ",
+        "चर (अज्ञात मात्राएँ)",
+        "खेलों की कीमतें"
+      ],
+      "correct_index": 1,
+      "explanation": "Since we don't know the exact number of rides or games played, they are variables.",
+      "explanation_hi": "चूंकि हमें सवारी या खेले गए खेलों की सटीक संख्या नहीं पता है, इसलिए वे चर हैं।",
+      "question_gu": "જો આપણે 'x' ને રાઈડ્સની સંખ્યા અને 'y'ને તેણીએ હૂપલા વગાડેલી સંખ્યા ગણીએ, તો 'x' અને 'y' શું દર્શાવે છે?"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_FORMULATION",
+      "type": "theory",
+      "title": "Formulation of a Pair of Linear Equations",
+      "title_hi": "रैखिक समीकरणों के युग्म का निरूपण",
+      "body": "Let x be the number of Giant Wheel rides and y be the number of Hoopla games.\n1. The number of times she played Hoopla is half the number of rides:\n   y = (1/2)x  =>  x - 2y = 0\n\n2. She spent ₹20 in total (₹3 per ride, ₹4 per Hoopla):\n   3x + 4y = 20\n\nThese two linear equations are in the same two variables (x and y). This is called a **pair of linear equations in two variables**.",
+      "body_hi": "माना कि x जायंट व्हील की सवारी की संख्या है और y हूपला खेलों की संख्या है।\n1. हूपला खेलने की संख्या सवारी की संख्या की आधी है:\n   y = (1/2)x  =>  x - 2y = 0\n\n2. उसने कुल ₹20 खर्च किए (₹3 प्रति सवारी, ₹4 प्रति हूपला):\n   3x + 4y = 20\n\nये दोनों रैखिक समीकरण एक ही दो चरों (x और y) में हैं। इसे **दो चर वाले रैखिक समीकरणों का युग्म** कहा जाता है।",
+      "body_gu": "ચાલો x એ જાયન્ટ વ્હીલ રાઇડ્સની સંખ્યા અને y હૂપ્લા રમતોની સંખ્યા છે.\n1. તેણીએ જેટલી વખત હૂપ્લા ભજવ્યું તે સંખ્યા રાઇડ્સની અડધી છે:\ny = (1/2)x => x - 2y = 0\n2. તેણીએ કુલ ₹20 ખર્ચ્યા (રાઈડ દીઠ ₹3, હૂપ્લા દીઠ ₹4):\n3x + 4y = 20\nઆ બે રેખીય સમીકરણો સમાન બે ચલો (x અને y) માં છે.આને **બે ચલોમાં રેખીય સમીકરણોની જોડી** કહેવાય છે.",
+      "title_gu": "રેખીય સમીકરણોની જોડીની રચના"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_DEF",
+      "type": "definition",
+      "title": "General Form",
+      "title_hi": "सामान्य रूप",
+      "term": "Pair of Linear Equations",
+      "term_hi": "रैखिक समीकरणों का युग्म",
+      "meaning": "The general form for a pair of linear equations in two variables x and y is:\na₁x + b₁y + c₁ = 0\na₂x + b₂y + c₂ = 0\nWhere a₁, b₁, c₁, a₂, b₂, c₂ are all real numbers and a₁² + b₁² ≠ 0, a₂² + b₂² ≠ 0.",
+      "meaning_hi": "दो चर x और y में रैखिक समीकरणों के युग्म का सामान्य रूप है:\na₁x + b₁y + c₁ = 0\na₂x + b₂y + c₂ = 0\nजहाँ a₁, b₁, c₁, a₂, b₂, c₂ सभी वास्तविक संख्याएँ हैं और a₁² + b₁² ≠ 0, a₂² + b₂² ≠ 0।",
+      "title_gu": "સામાન્ય ફોર્મ",
+      "term_gu": "રેખીય સમીકરણોની જોડી"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_GRAPH_DISC",
+      "type": "discovery",
+      "title": "Graphical Meaning",
+      "title_hi": "ग्राफिक अर्थ",
+      "body": "We know that a linear equation in two variables geometrically represents a straight line. So, a pair of linear equations will represent two straight lines on a graph. What can happen when we draw two lines on a single paper?",
+      "body_hi": "हम जानते हैं कि दो चरों में एक रैखिक समीकरण ज्यामितीय रूप से एक सीधी रेखा को दर्शाता है। इसलिए, रैखिक समीकरणों का एक युग्म ग्राफ पर दो सीधी रेखाओं को दर्शाएगा। जब हम एक ही कागज पर दो रेखाएँ खींचते हैं तो क्या हो सकता है?",
+      "body_gu": "આપણે જાણીએ છીએ કે બે ચલોમાં એક રેખીય સમીકરણ ભૌમિતિક રીતે સીધી રેખા દર્શાવે છે.તેથી, રેખીય સમીકરણોની જોડી ગ્રાફ પર બે સીધી રેખાઓનું પ્રતિનિધિત્વ કરશે.જ્યારે આપણે એક કાગળ પર બે લીટીઓ દોરીએ ત્યારે શું થઈ શકે?",
+      "title_gu": "ગ્રાફિકલ અર્થ"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_GRAPH_POSSIBILITIES",
+      "type": "theory",
+      "title": "Three Graphical Possibilities",
+      "title_hi": "तीन ग्राफिक संभावनाएँ",
+      "body": "When you have two lines in a plane, only one of the following three possibilities can happen:\n1. The two lines will intersect at one point.\n2. The two lines will not intersect, i.e., they are parallel.\n3. The two lines will be coincident (they will lie on top of each other).",
+      "body_hi": "जब आपके पास एक तल में दो रेखाएँ होती हैं, तो निम्नलिखित तीन संभावनाओं में से केवल एक ही हो सकती है:\n1. दोनों रेखाएँ एक बिंदु पर प्रतिच्छेद करेंगी।\n2. दोनों रेखाएँ प्रतिच्छेद नहीं करेंगी, अर्थात वे समानांतर हैं।\n3. दोनों रेखाएँ संपाती होंगी (वे एक दूसरे के ऊपर स्थित होंगी)।",
+      "body_gu": "જ્યારે તમારી પાસે પ્લેનમાં બે લીટીઓ હોય, ત્યારે નીચેની ત્રણ શક્યતાઓમાંથી માત્ર એક જ થઈ શકે છે:\n1. બે રેખાઓ એક બિંદુ પર છેદશે.\n2. બે રેખાઓ છેદશે નહીં, એટલે કે, તેઓ સમાંતર છે.\n3. બે રેખાઓ એકરૂપ હશે (તેઓ એકબીજાની ટોચ પર રહેશે).",
+      "title_gu": "ત્રણ ગ્રાફિકલ શક્યતાઓ"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_TYPES",
+      "type": "theory",
+      "title": "Types of Pair of Linear Equations",
+      "title_hi": "रैखिक समीकरण युग्म के प्रकार",
+      "body": "Based on the graphical possibilities, we classify the pairs:\n\n1. **Consistent Pair (संगत युग्म):** A pair of linear equations that has at least one solution (intersecting or coincident lines).\n2. **Inconsistent Pair (असंगत युग्म):** A pair of linear equations that has no solution (parallel lines).\n3. **Dependent Pair (आश्रित युग्म):** A pair of linear equations that has infinitely many solutions (coincident lines). A dependent pair is always consistent.",
+      "body_hi": "ग्राफिक संभावनाओं के आधार पर, हम युग्मों को वर्गीकृत करते हैं:\n\n1. **संगत युग्म (Consistent Pair):** रैखिक समीकरणों का एक युग्म जिसका कम से कम एक हल होता है (प्रतिच्छेदी या संपाती रेखाएँ)।\n2. **असंगत युग्म (Inconsistent Pair):** रैखिक समीकरणों का एक युग्म जिसका कोई हल नहीं होता है (समानांतर रेखाएँ)।\n3. **आश्रित युग्म (Dependent Pair):** रैखिक समीकरणों का एक युग्म जिसके असीम रूप से कई हल होते हैं (संपाती रेखाएँ)। एक आश्रित युग्म हमेशा संगत होता है।",
+      "body_gu": "ગ્રાફિકલ શક્યતાઓના આધારે, અમે જોડીને વર્ગીકૃત કરીએ છીએ:\n1. **સતત જોડી (संगत युग्म):** રેખીય સમીકરણોની જોડી કે જેમાં ઓછામાં ઓછું એક ઉકેલ હોય (છેદતી અથવા સંયોગ રેખાઓ).\n2. **અસંગત જોડી (असंगत युग्म):** રેખીય સમીકરણોની જોડી કે જેનો કોઈ ઉકેલ નથી (સમાંતર રેખાઓ).\n3. **આશ્રિત યુગ્મ (आश्रित युग्म):** રેખીય સમીકરણોની જોડી જેમાં અનંત રીતે ઘણા ઉકેલો (સંયોગી રેખાઓ) હોય છે.આશ્રિત જોડી હંમેશા સુસંગત હોય છે.",
+      "title_gu": "લીનિયર સમીકરણોની જોડીના પ્રકાર"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_COEFF",
+      "type": "theory",
+      "title": "Relation between Coefficients and Type of Pair",
+      "title_hi": "गुणांकों और युग्म के प्रकार के बीच संबंध",
+      "body": "Without drawing the graph, we can find out the nature of the lines by comparing the ratios of their coefficients (a₁/a₂, b₁/b₂, c₁/c₂):\n\n**1. Intersecting Lines (Exactly One Solution / Consistent):**\nIf a₁/a₂ ≠ b₁/b₂\n\n**2. Coincident Lines (Infinitely Many Solutions / Dependent & Consistent):**\nIf a₁/a₂ = b₁/b₂ = c₁/c₂\n\n**3. Parallel Lines (No Solution / Inconsistent):**\nIf a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+      "body_hi": "ग्राफ खींचे बिना, हम उनके गुणांकों (a₁/a₂, b₁/b₂, c₁/c₂) के अनुपात की तुलना करके रेखाओं की प्रकृति का पता लगा सकते हैं:\n\n**1. प्रतिच्छेदी रेखाएँ (ठीक एक हल / संगत):**\nयदि a₁/a₂ ≠ b₁/b₂\n\n**2. संपाती रेखाएँ (अपरिमित रूप से अनेक हल / आश्रित और संगत):**\nयदि a₁/a₂ = b₁/b₂ = c₁/c₂\n\n**3. समानांतर रेखाएँ (कोई हल नहीं / असंगत):**\nयदि a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+      "body_gu": "આલેખ દોર્યા વિના, આપણે તેના ગુણોત્તર (a₁/a₂, b₁/b₂, c₁/c₂) ના ગુણોત્તરની તુલના કરીને રેખાઓની પ્રકૃતિ શોધી શકીએ છીએ:\n**1.છેદતી રેખાઓ (બરાબર એક ઉકેલ / સુસંગત):**\nજો a₁/a₂ ≠ b₁/b₂\n**2.સંયોગ રેખાઓ (અનંત ઘણા ઉકેલો / નિર્ભર અને સુસંગત):**\nજો a₁/a₂ = b₁/b₂ = c₁/c₂\n**3.સમાંતર રેખાઓ (કોઈ ઉકેલ નથી / અસંગત):**\nજો a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+      "title_gu": "ગુણાંક અને જોડીના પ્રકાર વચ્ચેનો સંબંધ"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_MCQ_1",
+      "type": "mcq",
+      "question": "For the equations: 5x - 4y + 8 = 0 and 7x + 6y - 9 = 0, compare the ratios. The lines are:",
+      "question_hi": "समीकरणों के लिए: 5x - 4y + 8 = 0 और 7x + 6y - 9 = 0, अनुपातों की तुलना करें। रेखाएँ हैं:",
+      "options": [
+        "Intersecting at a point (एक बिंदु पर प्रतिच्छेदी)",
+        "Parallel (समानांतर)",
+        "Coincident (संपाती)"
+      ],
+      "options_hi": [
+        "एक बिंदु पर प्रतिच्छेदी",
+        "समानांतर",
+        "संपाती"
+      ],
+      "correct_index": 0,
+      "explanation": "Here, a₁/a₂ = 5/7, b₁/b₂ = -4/6 = -2/3. Since a₁/a₂ ≠ b₁/b₂, the lines intersect at a point.",
+      "explanation_hi": "यहाँ, a₁/a₂ = 5/7, b₁/b₂ = -4/6 = -2/3। चूँकि a₁/a₂ ≠ b₁/b₂, रेखाएँ एक बिंदु पर प्रतिच्छेद करती हैं।",
+      "question_gu": "સમીકરણો માટે: 5x - 4y + 8 = 0 અને 7x + 6y - 9 = 0, ગુણોત્તરની તુલના કરો.લીટીઓ છે:"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_MCQ_2",
+      "type": "mcq",
+      "question": "Check whether the pair of equations is consistent or inconsistent: 2x - 3y = 8 ; 4x - 6y = 9",
+      "question_hi": "जाँच करें कि क्या समीकरणों का युग्म संगत है या असंगत: 2x - 3y = 8 ; 4x - 6y = 9",
+      "options": [
+        "Consistent (संगत)",
+        "Inconsistent (असंगत)"
+      ],
+      "options_hi": [
+        "संगत",
+        "असंगत"
+      ],
+      "correct_index": 1,
+      "explanation": "a₁/a₂ = 2/4 = 1/2. b₁/b₂ = -3/-6 = 1/2. c₁/c₂ = 8/9. Here, a₁/a₂ = b₁/b₂ ≠ c₁/c₂. This means the lines are parallel, so there is no solution (Inconsistent).",
+      "explanation_hi": "a₁/a₂ = 2/4 = 1/2. b₁/b₂ = -3/-6 = 1/2. c₁/c₂ = 8/9. यहाँ, a₁/a₂ = b₁/b₂ ≠ c₁/c₂। इसका अर्थ है कि रेखाएँ समानांतर हैं, इसलिए कोई हल नहीं है (असंगत)।",
+      "question_gu": "તપાસો કે સમીકરણોની જોડી સુસંગત છે કે અસંગત છે: 2x - 3y = 8 ;4x - 6y = 9"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_EX_1",
+      "type": "worked_example",
+      "title": "Solving graphically",
+      "title_hi": "ग्राफीय विधि से हल करना",
+      "question": "Check graphically whether the pair of equations is consistent: x + 3y = 6 and 2x - 3y = 12. If so, solve them graphically.",
+      "question_hi": "ग्राफीय विधि से जाँच करें कि क्या समीकरणों का युग्म संगत है: x + 3y = 6 और 2x - 3y = 12. यदि हाँ, तो उन्हें ग्राफीय रूप से हल करें।",
+      "steps": [
+        "Step 1: For equation x + 3y = 6, find two points. Let x=0, y=2 -> (0,2). Let x=6, y=0 -> (6,0).",
+        "Step 2: For equation 2x - 3y = 12, find two points. Let x=0, y=-4 -> (0,-4). Let x=6, y=0 -> (6,0).",
+        "Step 3: Plot the points on a graph and draw the lines.",
+        "Step 4: The lines intersect at the point (6,0).",
+        "Conclusion: Since they intersect, the pair is consistent, and the solution is x = 6, y = 0."
+      ],
+      "steps_hi": [
+        "चरण 1: समीकरण x + 3y = 6 के लिए, दो बिंदु खोजें। माना x=0, y=2 -> (0,2)। माना x=6, y=0 -> (6,0)।",
+        "चरण 2: समीकरण 2x - 3y = 12 के लिए, दो बिंदु खोजें। माना x=0, y=-4 -> (0,-4)। माना x=6, y=0 -> (6,0)।",
+        "चरण 3: ग्राफ पर बिंदुओं को आलेखित करें और रेखाएँ खींचें।",
+        "चरण 4: रेखाएँ बिंदु (6,0) पर प्रतिच्छेद करती हैं।",
+        "निष्कर्ष: चूँकि वे प्रतिच्छेद करते हैं, युग्म संगत है, और हल x = 6, y = 0 है।"
+      ],
+      "title_gu": "ગ્રાફિકલી ઉકેલો",
+      "question_gu": "ગ્રાફિકલી તપાસો કે સમીકરણોની જોડી સુસંગત છે કે કેમ: x + 3y = 6 અને 2x - 3y = 12. જો એમ હોય, તો તેમને ગ્રાફિકલી ઉકેલો."
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_EX_2",
+      "type": "worked_example",
+      "title": "Finding Unknown Variable",
+      "title_hi": "अज्ञात चर ढूँढना",
+      "question": "For what value of k will the following pair of linear equations have infinitely many solutions? kx + 3y - (k - 3) = 0 ; 12x + ky - k = 0",
+      "question_hi": "k के किस मान के लिए निम्नलिखित रैखिक समीकरणों के युग्म के अपरिमित रूप से अनेक हल होंगे? kx + 3y - (k - 3) = 0 ; 12x + ky - k = 0",
+      "steps": [
+        "Condition for infinitely many solutions is: a₁/a₂ = b₁/b₂ = c₁/c₂",
+        "Here, a₁ = k, b₁ = 3, c₁ = -(k-3)",
+        "a₂ = 12, b₂ = k, c₂ = -k",
+        "So, k/12 = 3/k = -(k-3)/-k",
+        "From first two parts: k/12 = 3/k => k² = 36 => k = 6 or k = -6",
+        "From last two parts: 3/k = (k-3)/k => 3k = k(k-3) => 3k = k² - 3k => k² - 6k = 0 => k(k-6) = 0 => k = 0 or k = 6",
+        "The common value that satisfies both conditions is k = 6."
+      ],
+      "steps_hi": [
+        "अपरिमित रूप से अनेक हल के लिए शर्त है: a₁/a₂ = b₁/b₂ = c₁/c₂",
+        "यहाँ, a₁ = k, b₁ = 3, c₁ = -(k-3)",
+        "a₂ = 12, b₂ = k, c₂ = -k",
+        "इसलिए, k/12 = 3/k = -(k-3)/-k",
+        "पहले दो भागों से: k/12 = 3/k => k² = 36 => k = 6 या k = -6",
+        "अंतिम दो भागों से: 3/k = (k-3)/k => 3k = k(k-3) => 3k = k² - 3k => k² - 6k = 0 => k(k-6) = 0 => k = 0 या k = 6",
+        "दोनों शर्तों को पूरा करने वाला सामान्य मान k = 6 है।"
+      ],
+      "title_gu": "અજ્ઞાત ચલ શોધવી",
+      "question_gu": "k ના કયા મૂલ્ય માટે રેખીય સમીકરણોની નીચેની જોડીમાં અનંત ઘણા ઉકેલો હશે?kx + 3y - (k - 3) = 0 ;12x + ky - k = 0"
+    },
+    {
+      "id": "KOBJ_C10_MATH_CH3_MCQ_3",
+      "type": "mcq",
+      "question": "The pair of equations y = 0 and y = -7 has:",
+      "question_hi": "समीकरणों y = 0 और y = -7 के युग्म में हैं:",
+      "options": [
+        "One solution",
+        "Two solutions",
+        "Infinitely many solutions",
+        "No solution"
+      ],
+      "options_hi": [
+        "एक हल",
+        "दो हल",
+        "अपरिमित रूप से अनेक हल",
+        "कोई हल नहीं"
+      ],
+      "correct_index": 3,
+      "explanation": "y = 0 is the x-axis. y = -7 is a line parallel to the x-axis. Since these two lines are parallel, they never intersect. Thus, there is no solution.",
+      "explanation_hi": "y = 0 x-अक्ष है। y = -7 x-अक्ष के समानांतर एक रेखा है। चूँकि ये दोनों रेखाएँ समानांतर हैं, इसलिए वे कभी प्रतिच्छेद नहीं करती हैं। इस प्रकार, कोई हल नहीं है।",
+      "question_gu": "સમીકરણોની જોડી y = 0 અને y = -7 ધરાવે છે:"
+    }
+  ]
+}

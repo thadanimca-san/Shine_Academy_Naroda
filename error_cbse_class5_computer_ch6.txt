@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "id": "cbse_class5_computer_ch6",
+    "title": "Chapter 6: Chapter 6 Concepts",
+    "subject": "Computer",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 35,
+    "learning_outcomes": [
+      "Understand core computer science concepts in detail",
+      "Master digital logic and terminology through immersive exploration"
+    ],
+    "core_concepts": [
+      "DICT_COMPUTER_ALGORITHM",
+      "DICT_COMPUTER_DEBUGGING",
+      "DICT_COMPUTER_LOOP"
+    ],
+    "ai_context": {
+      "learning_goal": "To provide a comprehensive textbook replacement covering advanced introductory computer science principles.",
+      "common_misconceptions": [
+        "Thinking computers can think independently without human instructions",
+        "Believing coding is only about writing text without logic"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Mysterious Machine in the Attic",
+      "body": "Imagine finding an old, dusty mechanical brass box in your grandparents' attic. When you turn a small crank on the side, a series of intricately connected internal gears begin to spin, levers click into place, and a tiny metal arm draws a perfect star on a piece of paper. The machine has no brain, no eyes, and no feelings, yet it performs this complex task flawlessly every single time you turn the crank. How does it know what to do? The secret lies not in magic, but in a precise set of hidden rules and physical instructions built right into its metal heart. Welcome to the invisible world of computing, where logic and structured steps bring lifeless machines to life.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "How did the mechanical box in the story know how to draw a star?",
+      $options: [
+        "It used artificial intelligence and felt creative",
+        "It followed a precise set of hidden rules and physical instructions",
+        "It guessed what you wanted to draw by reading your mind"
+      ],
+      "correct_index": 1,
+      "explanation": "The machine followed pre-determined physical instructions built into its gears, showing that complex tasks are achieved through structured steps rather than magic.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Anatomy of Instructions",
+      "body": "At the very foundation of all digital systems and programming lies the concept of a step-by-step procedure. Just like following a recipe to bake a delicious chocolate cake, a computer cannot guess what you want it to achieve. Every single action must be broken down into microscopic, unambiguous commands. This sequence of logical steps is formally known as an [DICT_COMPUTER_ALGORITHM|algorithm]. When we design these instructions, we must anticipate every possible scenario. If a step is missing or out of order, the entire operation halts or produces unexpected results, much like putting frosting on a cake before it has even been baked in the oven.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "flashcard",
+      "title": "Flashcard: Algorithm",
+      "front": "What is an algorithm?",
+      "back": "A step-by-step set of instructions designed to solve a specific problem or perform a task.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "teacher_tip",
+      "title": "The Peanut Butter Sandwich Challenge",
+      "body": "Try giving a friend literal, robotic instructions to make a peanut butter sandwich. If you say 'put peanut butter on the bread' without telling them to open the jar or use a knife first, watch them literally place the closed jar on top of the bread! This teaches why exactness matters in computer science.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: Spotting and Fixing Errors",
+      "body": "Even the greatest architects and programmers make mistakes. In the digital universe, an error or flaw in your instructions is affectionately called a 'bug'—a term famously popularized when an actual moth got trapped inside an early electromechanical computer. The process of tracking down these logical mistakes, analyzing why the system is misbehaving, and rewriting the code to work correctly is known as [DICT_COMPUTER_DEBUGGING|debugging]. Debugging requires immense patience and detective work. You have to trace execution line by line, testing hypotheses until the anomaly is completely eradicated.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "Why is fixing a mistake in computer instructions called 'debugging'?",
+      "options": [
+        "Because computers attract insects in warm rooms",
+        "Because a real moth got trapped in an early computer and caused a malfunction",
+        "Because it sounds like a fun gaming term"
+      ],
+      "correct_index": 1,
+      "explanation": "The term originated when an actual moth (bug) caused a hardware failure in an early computer system.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Detective Mindset",
+      "body": "When your code or project doesn't work, don't panic! Treat it like a mystery novel. Clues are hidden in the error messages or unexpected outputs. Celebrate finding bugs because every bug found makes you a stronger computer scientist.",
+      "bloom": "Evaluate",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: Repetition and Efficiency",
+      "body": "Imagine you need to draw one hundred identical blue circles across your computer screen. Writing out a separate command for every single circle would be exhausting and inefficient. Instead, computer scientists use a powerful structural pattern called a [DICT_COMPUTER_LOOP|loop]. A loop allows a specific block of instructions to repeat automatically either a set number of times or until a certain condition is met. Loops drastically reduce the amount of code we need to write, saving time, memory, and reducing the chances of introducing human errors.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "flashcard",
+      "title": "Flashcard: Loop",
+      "front": "What is the main purpose of a loop in programming?",
+      "back": "To repeat a set of instructions multiple times without rewriting the same code over and over.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "If you want a character in a game to jump up and down 50 times, what is the best programming tool to use?",
+      "options": [
+        "Writing 50 separate jump commands",
+        "A loop that repeats the jump command 50 times",
+        "A debugging tool"
+      ],
+      "correct_index": 1,
+      "explanation": "A loop is designed specifically to handle repetitive tasks efficiently without redundant code.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Putting It All Together: The Grand Design",
+      "body": "When we combine algorithms, debugging, and loops, we unlock the full potential of computational thinking. Computers become extensions of our creativity. Whether you are building an interactive video game, designing a digital art canvas, or launching a rocket into space, the underlying principles remain identical. You break big problems into small chunks, organize them logically, test your logic, and optimize repetitive actions. You are no longer just a user of technology; you are its creator.",
+      "bloom": "Synthesize",
+      "difficulty": "Beginner",
+      "estimated_minutes": 3
+    }
+  ]
+}

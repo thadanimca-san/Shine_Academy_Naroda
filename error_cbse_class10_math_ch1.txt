@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "id": "cbse_class10_math_ch1",
+    "title": "Chapter 1: Real Numbers",
+    "subject": "Mathematics",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand and apply the Fundamental Theorem of Arithmetic.",
+      "Compute HCF and LCM of integers using prime factorization.",
+      "Prove the irrationality of numbers like sqrt(2) and sqrt(5).",
+      "Analyze rational numbers and their decimal expansions."
+    ],
+    "core_concepts": [
+      "DICT_MATH_REAL_NUMBERS",
+      "DICT_MATH_EUCLID_DIVISION",
+      "DICT_MATH_PRIME_FACTORIZATION",
+      "DICT_MATH_IRRATIONAL_NUMBERS"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the arithmetic of real numbers, prime factorization properties, and rigorous algebraic proofs of irrationality.",
+      "common_misconceptions": [
+        "Confusing HCF and LCM calculations with prime factors.",
+        "Assuming all non-terminating decimals are irrational.",
+        "Believing that the sum of two irrational numbers is always irrational."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Infinite Tapestry of Numbers",
+      "body": "Imagine you are an ancient architect tasked with tiling a massive temple floor using only two sizes of stone slabs. How do you ensure they fit perfectly without gaps? Long before modern computers, ancient mathematicians pondered not just how to count sheep or measure grain, but the unbreakable laws governing numbers themselves. Every single quantity we can measure in the physical universe—from the speed of light to the microscopic width of a DNA strand—lives inside a grand mathematical continuum known as [DICT_MATH_REAL_NUMBERS|Real Numbers]. Today, we unlock the hidden cogs and wheels that make this numeric universe tick.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Which of the following best describes the scope of Real Numbers?",
+      "options": [
+        "Only positive whole numbers used for counting.",
+        "All rational numbers combined with all irrational numbers, filling the entire number line.",
+        "Only numbers that can be expressed as terminating decimals."
+      ],
+      "correct_index": 1,
+      "explanation": "Real numbers encompass every rational and irrational number, representing every possible point on a continuous, unbroken number line.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: The Engine of Arithmetic - Euclid's Division Lemma",
+      "body": "At the heart of number theory lies a deceptively simple observation about division that you have used since elementary school: when you divide one integer by another, you get a quotient and a remainder. Formally known as [DICT_MATH_EUCLID_DIVISION|Euclid's Division Lemma], this theorem states that for any two given positive integers $a$ and $b$, there exist unique integers $q$ and $r$ satisfying the equation $a = bq + r$, where $0 \\le r < b$. Think of $a$ as a total number of items, $b$ as the size of each pack you are making, $q$ as the number of full packs, and $r$ as the leftover items. This lemma is not just about division; it is an algorithmic powerhouse. By repeatedly applying this lemma, we can find the Highest Common Factor (HCF) of any two large numbers with astonishing speed, a process famously known as the Euclidean Algorithm.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Box of Chocolates Analogy",
+      "body": "Imagine you have 75 chocolates ($a = 75$) and you pack them in boxes of 7 ($b = 7$). You can make 10 full boxes ($q = 10$) and you will have 5 chocolates left over ($r = 5$). Thus, $75 = 7 \\times 10 + 5$. Notice how the remainder 5 is strictly less than the divisor 7. That is Euclid's Division Lemma in action!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "In the equation $a = bq + r$, what are the strict mathematical boundaries for the remainder $r$?",
+      "back": "$0 \\le r < b$. The remainder must be greater than or equal to zero and strictly less than the divisor $b$.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Applying the Euclidean Algorithm for HCF",
+      "body": "Let us see how Euclid's lemma solves practical problems. Suppose we want to find the HCF of 455 and 42. We start by applying the lemma to the larger number: $455 = 42 \\times 10 + 35$. Notice that the remainder is 35, which is not zero. We now take our previous divisor (42) and our new remainder (35) and apply the lemma again: $42 = 35 \\times 1 + 7$. Once more, the remainder is 7 (not zero). We repeat the process with 35 and 7: $35 = 7 \\times 5 + 0$. Eureka! The remainder is now 0. The divisor at this final stage—which is 7—is the HCF of 455 and 42. This step-by-step reduction transforms complex factorization into a predictable, mechanical sequence.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 3
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "When using the Euclidean Algorithm to find the HCF of two numbers, when do you stop?",
+      soptions": [
+        "When the quotient becomes zero.",
+        "When the remainder becomes zero, and the last non-zero remainder (or divisor at that step) is the HCF.",
+        "When the numbers cannot be divided further without decimals."
+      ],
+      "options": [
+        "When the quotient becomes zero.",
+        "When the remainder becomes zero, and the last divisor is the HCF.",
+        "When the numbers cannot be divided further."
+      ],
+      "correct_index": 1,
+      "explanation": "The algorithm terminates the exact moment the remainder hits 0. The divisor that produced this 0 remainder is your HCF.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "theory",
+      "title": "Concept 2: The DNA of Numbers - Prime Factorization",
+      "body": "Every composite number can be thought of as a molecule made up of atomic building blocks. These building blocks are prime numbers—integers greater than 1 that can only be divided by 1 and themselves. Through the process of [DICT_MATH_PRIME_FACTORIZATION|Prime Factorization], any composite integer can be broken down into a unique product of prime numbers. For instance, the number 360 can be systematically broken down by dividing by the smallest possible primes: $360 \\div 2 = 180$, $180 \\div 2 = 90$, $90 \\div 2 = 45$, $45 \\div 3 = 15$, $15 \\div 3 = 5$, and $5 \\div 5 = 1$. Collecting all these prime factors gives us $2^3 \\times 3^2 \\times 5^1$. This is the mathematical 'DNA' of 360.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "teacher_tip",
+      "title": "The Factor Tree Visualization",
+      "body": "When teaching or learning prime factorization, draw a 'Factor Tree'. Put 360 at the top, branch it out into $2$ and $180$. Branch $180$ into $2$ and $90$, and keep going until every single leaf at the bottom of the tree is a prime number. It turns abstract arithmetic into a visual puzzle!",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "theory",
+      "title": "The Fundamental Theorem of Arithmetic",
+      "body": "The cornerstone of all number theory is the [DICT_MATH_PRIME_FACTORIZATION|Fundamental Theorem of Arithmetic]. It states that every composite number can be factorized as a product of primes, and this factorization is unique, apart from the order in which the prime factors occur. No matter how you choose to factorize 360—whether you start dividing by 3 first or 2 first—you will always end up with exactly three 2s, two 3s, and one 5. This theorem guarantees stability in mathematics. It is also the secret weapon for finding the HCF and LCM of large numbers quickly: HCF is the product of the smallest power of each common prime factor, while LCM is the product of the greatest power of each prime factor involved.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "quiz",
+      "question": "What is the prime factorization of 504?",
+      "options": [
+        "2^3 * 3^2 * 7",
+        "2^2 * 3^3 * 7",
+        "2^3 * 3 * 7^2"
+      ],
+      "correct_index": 0,
+      "explanation": "504 divided by 2 is 252, by 2 is 126, by 2 is 63, by 3 is 21, by 3 is 7, by 7 is 1. Thus, 2^3 * 3^2 * 7.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "flashcard",
+      "front": "For any two positive integers $a$ and $b$, what is the relationship between their HCF, LCM, and the numbers themselves?",
+      "back": "HCF(a, b) * LCM(a, b) = a * b. (Note: This property strictly holds for pairs of numbers, not three or more numbers!)",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "theory",
+      "title": "Exploring Prime Factorization Applications",
+      "body": "Let us apply our newfound theorem to check a fascinating property: Can any number of the form $6^n$ end with the digit 0 for any natural number $n$? To answer this using prime factorization, recall that a number ends with 0 if and only if it is divisible by 5 (and therefore by 2 as well). The prime factorization of $6^n$ is $(2 \\times 3)^n = 2^n \\times 3^n$. Notice that the prime factors of $6^n$ are only 2 and 3. The prime factor 5 is completely missing! By the Fundamental Theorem of Arithmetic, this prime factorization is unique. Because 5 is not in the factorization, there is no value of $n$ for which $6^n$ can ever end with the digit zero. Pure logic triumphs over blind guessing!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "Why can the number $4^n$ never end with the digit zero for any natural number $n$?",
+      "options": [
+        "Because 4 is an even number.",
+        "Because the prime factorization of $4^n$ contains only the prime 2, and lacks the prime factor 5.",
+        "Because $n$ can only be a small integer."
+      ],
+      "correct_index": 1,
+      "explanation": "For a number to end in 0, its prime factorization must include both 2 and 5. Since $4^n = (2^2)^n = 2^{2n}$, the prime 5 is absent.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 3: Crossing the Infinite Chasm - Rational vs. Irrational Numbers",
+      "body": "For centuries, ancient Greek mathematicians believed that every number in existence could be expressed as a ratio of two integers—a [DICT_MATH_REAL_NUMBERS|Rational Number] like $3/4$ or $-7/1$. But this worldview was shattered by the discovery of [DICT_MATH_IRRATIONAL_NUMBERS|Irrational Numbers]—numbers that cannot be written in the form $p/q$, where $p$ and $q$ are integers and $q \\neq 0$. When geometrically constructing a square with a side length of 1, the diagonal measures $\\sqrt{2}$. When ancient scholars tried to write $\\sqrt{2}$ as a fraction, they failed infinitely. Its decimal expansion goes on forever without repeating ($1.4142135...$). Irrational numbers represent the infinite, unbroken texture of the number line that simple fractions can never fully capture.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "teacher_tip",
+      "title": "The Decimal Pattern Test",
+      "body": "Teach students to spot the difference instantly through decimals: Rational numbers either have *terminating* decimals (like $1/4 = 0.25$) or *non-terminating repeating* decimals (like $1/3 = 0.333...$). Irrational numbers ALWAYS have decimals that are *non-terminating and non-repeating*.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "flashcard",
+      "front": "What are the two distinct types of decimal expansions that classify a number as Rational?",
+      "back": "1. Terminating decimals (e.g., 0.125)\n2. Non-terminating repeating (recurring) decimals (e.g., 0.666...)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Proving Irrationality: The Power of Contradiction",
+      "body": "How do we prove mathematically that a number like $\\sqrt{2}$ is irrational? We use one of the most elegant techniques in mathematics: [DICT_MATH_IRRATIONAL_NUMBERS|Proof by Contradiction] (Reductio ad Absurdum). We start by assuming the exact opposite of what we want to prove—that $\\sqrt{2}$ IS a rational number. If it is rational, it can be expressed in the simplest form $p/q$, where $p$ and $q$ are integers with no common factors other than 1 (coprime). Therefore, $\\sqrt{2} = p/q$. Squaring both sides gives $2 = p^2 / q^2$, or $p^2 = 2q^2$. This tells us that $p^2$ is an even number, which means $p$ itself must also be even. We can then substitute $p = 2m$ into our equation, leading us to discover that $q$ must also be even! But wait—if both $p$ and $q$ are even, they share a common factor of 2, which directly contradicts our initial assumption that $p$ and $q$ had no common factors. Since our assumption led to a logical impossibility, the assumption must be false. Thus, $\\sqrt{2}$ is definitively irrational!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "quiz",
+      "question": "In a proof by contradiction showing that $\\sqrt{2}$ is irrational, what initial assumption is made?",
+      "options": [
+        "That $\\sqrt{2}$ is a prime number.",
+        "That $\\sqrt{2}$ is a rational number expressible as $p/q$ in simplest form.",
+        "That $\\sqrt{2}$ has a terminating decimal expansion."
+      ],
+      "correct_index": 1,
+      "explanation": "We always assume the negation of our goal—assuming it is rational—and follow logical steps until we hit an undeniable contradiction.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "theory",
+      "title": "Extending Proofs: Proving Sums and Compounds Are Irrational",
+      "body": "Once we establish that fundamental roots like $\\sqrt{2}$ or $\\sqrt{5}$ are irrational, we can use algebra to prove that more complex expressions—like $3 + 2\\sqrt{5}$—are also irrational. Let us prove $3 + 2\\sqrt{5}$ is irrational using contradiction. Assume $3 + 2\\sqrt{5}$ is a rational number equal to $a/b$. By rearranging the equation, we get $2\\sqrt{5} = (a/b) - 3$, and further simplifying gives $\\sqrt{5} = \\frac{a - 3b}{2b}$. Look closely at the right side of this equation: since $a, b, 3,$ and $2$ are all integers, the expression $\\frac{a - 3b}{2b}$ must be a rational number! However, we already know from prior proofs that $\\sqrt{5}$ is an irrational number. This gives us an impossible statement: an irrational number equals a rational number ($\\text{Irrational} = \\text{Rational}$). This contradiction proves that our original assumption was false. Therefore, $3 + 2\\sqrt{5}$ is strictly irrational.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_21",
+      "type": "quiz",
+      "question": "If $x$ is a rational number and $y$ is an irrational number, what can we definitively say about their sum $x + y$?",
+      "options": [
+        "It is always rational.",
+        "It is always irrational.",
+        "It depends on the specific numbers."
+      ],
+      "correct_index": 1,
+      "explanation": "The sum of a rational number and an irrational number is always irrational. If it were rational, subtracting the rational part would force the irrational number to become rational, creating a contradiction.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_22",
+      "type": "theory",
+      "title": "Concept 4: Deciphering Decimals - When Do Fractions Terminate?",
+      "body": "Have you ever wondered why some fractions result in clean, terminating decimals while others stretch on forever in repeating loops? For example, $3/8 = 0.375$ (terminates), while $1/3 = 0.3333...$ (repeating). The secret lies entirely in the denominator of the fraction when expressed in its simplest form! Let $x = p/q$ be a rational number such that the prime factorization of $q$ is of the form $2^n 5^m$, where $n$ and $m$ are non-negative integers. If $q$ has prime factors *only* of 2 and/or 5, then $x$ will have a **terminating** decimal expansion. Why? Because our number system is base-10, and $10 = 2 \\times 5$. If $q$ contains any prime factor other than 2 or 5 (such as 3, 7, 11), those factors cannot be cancelled out to form powers of 10, resulting in a **non-terminating repeating** decimal expansion.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_23",
+      "type": "teacher_tip",
+      "title": "The Base-10 Connection",
+      "body": "Remind students of our base-10 counting system. To make a fraction's denominator a power of 10 (like 10, 100, 1000), the prime factors of that denominator can *only* be 2 and 5 ($2 \\times 5 = 10$). If a 3 or a 7 sneaks in, you can never multiply it to get a pure power of 10!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_24",
+      "type": "flashcard",
+      "front": "Without actually dividing, how can you determine if the rational number $13/3125$ has a terminating or non-terminating decimal expansion?",
+      "back": "Examine the denominator $3125$. Its prime factorization is $5^5$. Since the prime factors contain only 5 (and no other primes), the decimal expansion is terminating.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_25",
+      "type": "quiz",
+      "question": "Which of the following rational numbers has a non-terminating repeating decimal expansion?",
+      "options": [
+        "7 / 80",
+        "13 / 125",
+        "17 / 45"
+      ],
+      "correct_index": 2,
+      "explanation": "Denominator 45 factors into $3^2 \\times 5$. Because of the prime factor 3 (which is neither 2 nor 5), the decimal expansion does not terminate.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_26",
+      "type": "theory",
+      "title": "Putting It All Together: The Grand Architecture of Real Numbers",
+      "body": "As we conclude our journey through Chapter 1, we see that numbers are not merely random digits on a page; they form a deeply structured, elegant hierarchy. From [DICT_MATH_EUCLID_DIVISION|Euclid's Division Lemma] providing algorithmic order to division, to the [DICT_MATH_PRIME_FACTORIZATION|Fundamental Theorem of Arithmetic] acting as the unalterable DNA code of integers, and finally to the profound distinction between [DICT_MATH_REAL_NUMBERS|Rational and Irrational Numbers], we have mapped the foundational bedrock of mathematics. Whether you are designing cryptographic security algorithms using prime numbers or engineering structural tolerances that rely on irrational square roots, real numbers are the ultimate language of reality.",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 3
+    }
+  ]
+}

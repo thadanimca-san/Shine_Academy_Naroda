@@ -1,0 +1,517 @@
+import json
+
+blocks = [
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_001",
+        "type": "hook",
+        "title": "The Instant Reaction",
+        "title_hi": "त्वरित प्रतिक्रिया",
+        "title_gu": "ત્વરિત પ્રતિક્રિયા",
+        "body": "Imagine accidentally touching a hot pan. In a fraction of a second, before you even realize the pain, your hand pulls away. How did your body know what to do so quickly without you even 'thinking' about it? This incredible speed is the magic of your body's control and coordination system!",
+        "body_hi": "कल्पना कीजिए कि गलती से किसी गर्म तवे को छू लिया जाए। एक सेकंड के एक अंश में, इससे पहले कि आपको दर्द का एहसास हो, आपका हाथ दूर हट जाता है। आपके 'सोचे' बिना ही आपके शरीर को इतनी जल्दी कैसे पता चल गया कि क्या करना है? यह अविश्वसनीय गति आपके शरीर की नियंत्रण और समन्वय प्रणाली का जादू है!",
+        "body_gu": "કલ્પના કરો કે ભૂલથી કોઈ ગરમ તવાને અડી જવાય છે. એક સેકન્ડના પણ ઓછા સમયમાં, તમને પીડાનો અહેસાસ થાય તે પહેલાં જ, તમારો હાથ દૂર હટી જાય છે. તમે 'વિચાર્યા' વિના જ તમારા શરીરને આટલી ઝડપથી શું કરવું તે કેવી રીતે ખબર પડી? આ અકલ્પનીય ગતિ એ તમારા શરીરના નિયંત્રણ અને સહનિયમન તંત્રનો જાદુ છે!"
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_002",
+        "type": "discovery",
+        "title": "Control and Coordination",
+        "title_hi": "नियंत्रण एवं समन्वय",
+        "title_gu": "નિયંત્રણ અને સહનિયમન",
+        "body": "In multicellular organisms, different organs must work together in a systematic, controlled, and coordinated manner to sustain life. \nIn animals, this is achieved by two systems:\n1. The Nervous System: Uses rapid electrical impulses for quick, short-lived responses.\n2. The Endocrine System: Uses chemical messengers (hormones) for slower, long-lasting responses.",
+        "body_hi": "बहुकोशिकीय जीवों में, जीवन को बनाए रखने के लिए विभिन्न अंगों को एक व्यवस्थित, नियंत्रित और समन्वित तरीके से एक साथ काम करना चाहिए।\nजानवरों में, यह दो प्रणालियों द्वारा प्राप्त किया जाता है:\n1. तंत्रिका तंत्र (Nervous System): त्वरित, अल्पकालिक प्रतिक्रियाओं के लिए तेज़ विद्युत आवेगों का उपयोग करता है।\n2. अंतःस्रावी तंत्र (Endocrine System): धीमी, लंबे समय तक चलने वाली प्रतिक्रियाओं के लिए रासायनिक दूतों (हार्मोन) का उपयोग करता है।",
+        "body_gu": "બહુકોષીય સજીવોમાં, જીવન ટકાવી રાખવા માટે વિવિધ અંગોએ વ્યવસ્થિત, નિયંત્રિત અને સંકલિત રીતે એકસાથે કામ કરવું જોઈએ.\nપ્રાણીઓમાં, આ બે તંત્રો દ્વારા થાય છે:\n1. ચેતાતંત્ર (Nervous System): ઝડપી, ટૂંકા ગાળાના પ્રતિભાવો માટે વિદ્યુત આવેગોનો ઉપયોગ કરે છે.\n2. અંતઃસ્ત્રાવી તંત્ર (Endocrine System): ધીમા, લાંબા ગાળાના પ્રતિભાવો માટે રાસાયણિક સંદેશાવાહકો (અંતઃસ્ત્રાવો) નો ઉપયોગ કરે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_003",
+        "type": "theory",
+        "title": "The Neuron: The Information Highway",
+        "title_hi": "तंत्रिका कोशिका (न्यूरॉन): सूचना का राजमार्ग",
+        "title_gu": "ચેતાકોષ (Neuron): માહિતીનો ધોરીમાર્ગ",
+        "body": "The nervous system is made of highly specialized cells called Neurons. A neuron has three main parts:\n1. Dendrites: Branch-like structures that acquire information.\n2. Cell Body (Soma) & Axon: The information travels as an electrical impulse from the cell body along the long axon.\n3. Nerve Ending: Where the electrical impulse triggers the release of chemicals to pass the signal to the next neuron.",
+        "body_hi": "तंत्रिका तंत्र तंत्रिका कोशिका (न्यूरॉन) नामक अत्यधिक विशिष्ट कोशिकाओं से बना होता है। एक न्यूरॉन के तीन मुख्य भाग होते हैं:\n1. द्रुमिका (Dendrites): शाखा जैसी संरचनाएं जो सूचना प्राप्त करती हैं।\n2. कोशिका काय और तंत्रिकाक्ष (Axon): सूचना कोशिका काय से लंबे तंत्रिकाक्ष के साथ एक विद्युत आवेग के रूप में यात्रा करती है।\n3. तंत्रिका का अंतिम सिरा: जहां विद्युत आवेग अगले न्यूरॉन तक संकेत भेजने के लिए रसायनों की रिहाई को ट्रिगर करता है।",
+        "body_gu": "ચેતાતંત્ર એ ચેતાકોષો નામના અત્યંત વિશિષ્ટ કોષોનું બનેલું છે. ચેતાકોષના ત્રણ મુખ્ય ભાગો છે:\n1. શિખાતંતુ (Dendrites): શાખા જેવી રચનાઓ જે માહિતી મેળવે છે.\n2. કોષકાય અને અક્ષતંતુ (Axon): માહિતી કોષકાયથી લાંબા અક્ષતંતુ દ્વારા વિદ્યુત આવેગ સ્વરૂપે વહન પામે છે.\n3. ચેતાંત: જ્યાં વિદ્યુત આવેગ રસાયણોને મુક્ત કરે છે જેથી સંદેશો આગલા ચેતાકોષ સુધી પહોંચી શકે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_004",
+        "type": "socratic_question",
+        "title": "Crossing the Gap",
+        "title_hi": "अंतराल को पार करना",
+        "title_gu": "ખાલી જગ્યા પાર કરવી",
+        "question": "Neurons do not touch each other; there is a microscopic gap between them. How does an electrical signal cross this empty gap?",
+        "question_hi": "न्यूरॉन एक दूसरे को नहीं छूते हैं; उनके बीच एक सूक्ष्म अंतर (gap) होता है। एक विद्युत संकेत इस खाली स्थान को कैसे पार करता है?",
+        "question_gu": "ચેતાકોષો એકબીજાને અડકતા નથી; તેમની વચ્ચે એક સૂક્ષ્મ ખાલી જગ્યા હોય છે. વિદ્યુત સંદેશો આ ખાલી જગ્યા કેવી રીતે પાર કરે છે?",
+        "options": [
+            "The electrical spark jumps across the gap like lightning.",
+            "The electrical impulse is converted into a chemical signal (neurotransmitter) that diffuses across the gap.",
+            "The gap closes temporarily to let the signal pass.",
+            "Water in the gap conducts the electricity."
+        ],
+        "options_hi": [
+            "विद्युत चिंगारी बिजली की तरह अंतराल के पार कूद जाती है।",
+            "विद्युत आवेग एक रासायनिक संकेत (न्यूरोट्रांसमीटर) में परिवर्तित हो जाता है जो अंतराल में फैल जाता है।",
+            "संकेत को पारित करने के लिए अंतराल अस्थायी रूप से बंद हो जाता है।",
+            "अंतराल में मौजूद पानी बिजली का संचालन करता है।"
+        ],
+        "options_gu": [
+            "વિદ્યુત તણખો વીજળીની જેમ ખાલી જગ્યા કૂદી જાય છે.",
+            "વિદ્યુત આવેગ એક રાસાયણિક સંદેશા (ન્યુરોટ્રાન્સમીટર) માં ફેરવાય છે જે ખાલી જગ્યામાં પ્રસરણ પામે છે.",
+            "સંદેશો પસાર કરવા ખાલી જગ્યા કામચલાઉ રીતે બંધ થઈ જાય છે.",
+            "ખાલી જગ્યામાં રહેલું પાણી વિદ્યુતનું વહન કરે છે."
+        ],
+        "correct_index": 1,
+        "explanation": "At the synapse (the gap between neurons), the electrical impulse triggers the release of chemicals called neurotransmitters. These chemicals cross the gap and start a similar electrical impulse in the next neuron's dendrite.",
+        "explanation_hi": "सिनैप्स (न्यूरॉन्स के बीच का अंतराल) पर, विद्युत आवेग न्यूरोट्रांसमीटर नामक रसायनों की रिहाई को ट्रिगर करता है। ये रसायन अंतराल को पार करते हैं और अगले न्यूरॉन की द्रुमिका में एक समान विद्युत आवेग शुरू करते हैं।",
+        "explanation_gu": "ચેતોપાગમ (ચેતાકોષો વચ્ચેની ખાલી જગ્યા) પર, વિદ્યુત આવેગ ન્યુરોટ્રાન્સમીટર નામના રસાયણો મુક્ત કરે છે. આ રસાયણો જગ્યા પાર કરીને આગલા ચેતાકોષના શિખાતંતુમાં સમાન વિદ્યુત આવેગ શરૂ કરે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_005",
+        "type": "theory",
+        "title": "Reflex Action and Reflex Arc",
+        "title_hi": "प्रतिवर्ती क्रिया और प्रतिवर्ती चाप",
+        "title_gu": "પરાવર્તી ક્રિયા અને પરાવર્ती કમાન",
+        "body": "A reflex action is a sudden, involuntary, and almost instantaneous response to a stimulus (like pulling your hand away from a hot object). \nThe pathway taken by the nerve impulses in a reflex action is called a Reflex Arc. \nPath: Receptor (skin) -> Sensory Neuron -> Spinal Cord (relay neuron) -> Motor Neuron -> Effector (muscle).\nNotice that the signal goes to the Spinal Cord and back, WITHOUT waiting for the brain to think. This protects the body from immediate harm.",
+        "body_hi": "प्रतिवर्ती क्रिया किसी उत्तेजना (जैसे गर्म वस्तु से अपना हाथ खींचना) के प्रति अचानक, अनैच्छिक और लगभग तात्कालिक प्रतिक्रिया है।\nप्रतिवर्ती क्रिया में तंत्रिका आवेगों द्वारा लिए गए मार्ग को प्रतिवर्ती चाप कहा जाता है।\nमार्ग: रिसेप्टर (त्वचा) -> संवेदी तंत्रिका -> मेरुदंड (रिले तंत्रिका) -> मोटर तंत्रिका -> प्रभावक (मांसपेशी)।\nध्यान दें कि संकेत मस्तिष्क के सोचने की प्रतीक्षा किए बिना, मेरुदंड तक जाता है और वापस आ जाता है। यह शरीर को तत्काल नुकसान से बचाता है।",
+        "body_gu": "પરાવર્તી ક્રિયા એ કોઈપણ ઉત્તેજના (જેમ કે ગરમ વસ્તુ પરથી હાથ ખેંચી લેવો) સામે અચાનક, અનૈચ્છિક અને ખૂબ જ ઝડપી પ્રતિક્રિયા છે.\nપરાવર્તી ક્રિયામાં ચેતા આવેગો દ્વારા લેવામાં આવતા માર્ગને પરાવર્તી કમાન કહે છે.\nમાર્ગ: ગ્રાહી અંગ (ચામડી) -> સંવેદી ચેતાકોષ -> કરોડરજ્જુ (રિલે ચેતાકોષ) -> ચાલક ચેતાકોષ -> પ્રતિચારક અંગ (સ્નાયુ).\nનોંધ કરો કે સંદેશો મગજના વિચારવાની રાહ જોયા વિના, સીધો કરોડરજ્જુમાં જઈને પાછો ફરે છે. આ શરીરને તાત્કાલિક નુકસานથી બચાવે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_006",
+        "type": "theory",
+        "title": "The Human Brain",
+        "title_hi": "मानव मस्तिष्क",
+        "title_gu": "માનવ મગજ",
+        "body": "The brain is the main coordinating center of the body. It has three major parts:\n1. Fore-brain: The main thinking part. It receives sensory impulses, stores memory, and controls voluntary actions.\n2. Mid-brain: Controls involuntary actions like the change in pupil size and reflex movements of the head, neck, and trunk.\n3. Hind-brain: Consists of the Pons, Medulla (controls involuntary actions like blood pressure, salivation, vomiting), and Cerebellum (controls posture, balance, and precision of voluntary actions like riding a bicycle).",
+        "body_hi": "मस्तिष्क शरीर का मुख्य समन्वय केंद्र है। इसके तीन प्रमुख भाग हैं:\n1. अग्रमस्तिष्क (Fore-brain): मुख्य सोचने वाला भाग। यह संवेदी आवेग प्राप्त करता है, स्मृति संग्रहीत करता है और ऐच्छिक क्रियाओं को नियंत्रित करता है।\n2. मध्यमस्तिष्क (Mid-brain): पुतली के आकार में परिवर्तन और सिर, गर्दन की प्रतिवर्ती गतियों जैसी अनैच्छिक क्रियाओं को नियंत्रित करता है।\n3. पश्चमस्तिष्क (Hind-brain): इसमें पोंस, मेडुला (रक्तचाप, लार आना, उल्टी जैसी अनैच्छिक क्रियाओं को नियंत्रित करता है) और सेरिबैलम (साइकिल चलाने जैसी ऐच्छिक क्रियाओं की मुद्रा, संतुलन और सटीकता को नियंत्रित करता है) शामिल हैं।",
+        "body_gu": "મગજ એ શરીરનું મુખ્ય સંકલન કેન્દ્ર છે. તેના ત્રણ મુખ્ય ભાગો છે:\n1. અગ્રમગજ (Fore-brain): મુખ્ય વિચારવા વાળો ભાગ. તે સંવેદી આવેગો મેળવે છે, યાદશક્તિ સાચવે છે અને ઐચ્છિક ક્રિયાઓનું નિયંત્રણ કરે છે.\n2. મધ્યમગજ (Mid-brain): આંખની કીકીના કદમાં ફેરફાર અને માથા, ગરદનની પરાવર્તી ગતિ જેવી અનૈચ્છિક ક્રિયાઓનું નિયંત્રણ કરે છે.\n3. પશ્વમગજ (Hind-brain): તેમાં પોન્સ, લંબમજ્જા (બ્લડ પ્રેશર, લાળ પડવી, ઉલટી જેવી અનૈચ્છિક ક્રિયાઓ નિયંત્રિત કરે છે) અને અનુમસ્તિષ્ક (સાયકલ ચલાવવા જેવી ઐચ્છિક ક્રિયાઓનું સંતુલન અને ચોકસાઈ જાળવે છે) નો સમાવેશ થાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_007",
+        "type": "theory",
+        "title": "Coordination in Plants: Movements",
+        "title_hi": "पौधों में समन्वय: गतियां",
+        "title_gu": "વનસ્પતિમાં સંકલન: હલનચલન",
+        "body": "Plants do not have a nervous system, but they still respond to stimuli.\n1. Dependent on Growth (Tropic Movements): Directional movements in response to a stimulus. \n   - Phototropism (towards light)\n   - Geotropism (towards gravity)\n   - Hydrotropism (towards water)\n   - Chemotropism (towards chemicals, e.g., pollen tube towards ovule).\n2. Independent of Growth (Nastic Movements): Non-directional fast responses, like the folding up of leaves of the 'Touch-me-not' (Mimosa pudica) plant when touched. This happens by changing the amount of water in the cells, causing them to shrink or swell.",
+        "body_hi": "पौधों में तंत्रिका तंत्र नहीं होता है, लेकिन फिर भी वे उत्तेजनाओं के प्रति प्रतिक्रिया करते हैं।\n1. वृद्धि पर निर्भर (अनुवर्तन गतियां - Tropic): किसी उत्तेजना के जवाब में दिशात्मक गतियां।\n   - प्रकाशानुवर्तन (प्रकाश की ओर)\n   - गुरुत्वानुवर्तन (गुरुत्वाकर्षण की ओर)\n   - जलानुवर्तन (जल की ओर)\n   - रसायनानुवर्तन (रसायनों की ओर, जैसे पराग नली का बीजांड की ओर)।\n2. वृद्धि से स्वतंत्र (Nastic Movements): गैर-दिशात्मक तेज़ प्रतिक्रियाएं, जैसे छूने पर 'छुई-मुई' (Mimosa pudica) पौधे की पत्तियों का सिकुड़ना। यह कोशिकाओं में पानी की मात्रा को बदलने से होता है, जिससे वे सिकुड़ती या फूलती हैं।",
+        "body_gu": "વનસ્પતિમાં ચેતાતંત્ર હોતું નથી, છતાં તે ઉત્તેજના સામે પ્રતિભાવ આપે છે.\n1. વૃદ્ધિ આધારિત (આવર્તન હલનચલન - Tropic): ઉત્તેજનાની દિશામાં થતું હલનચલન.\n   - પ્રકાશાવર્તન (પ્રકાશ તરફ)\n   - ભૂ-આવર્તન (ગુરુત્વાકર્ષણ તરફ)\n   - જલાવર્તન (પાણી તરફ)\n   - રસાયણાવર્તન (રસાયણો તરફ, દા.ત. પરાગનલિકાનું અંડક તરફ જવું).\n2. વૃદ્ધિથી મુક્ત (નાસ્ટિક હલનચલન): દિશાહીન ઝડપી પ્રતિભાવ, જેમ કે અડકવાથી 'લજામણી' (Mimosa pudica) ના પર્ણો બીડાઈ જવા. કોષોમાં પાણીના પ્રમાણમાં ફેરફાર થવાથી કોષો ફૂલે છે અથવા સંકોચાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_008",
+        "type": "theory",
+        "title": "Chemical Coordination: Plant Hormones",
+        "title_hi": "रासायनिक समन्वय: पादप हार्मोन",
+        "title_gu": "રાસાયણિક સંકલન: વનસ્પતિ અંતઃસ્ત્રાવો",
+        "body": "Plants use chemical compounds called phytohormones to coordinate growth, development, and responses to the environment.\n1. Auxin: Synthesized at the shoot tip, it helps cells grow longer. It is responsible for phototropism.\n2. Gibberellins: Help in the growth of the stem.\n3. Cytokinins: Promote rapid cell division (found in fruits and seeds).\n4. Abscisic Acid (ABA): A growth inhibitor. It is responsible for the wilting of leaves and closing of stomata during stress.",
+        "body_hi": "पौधे वृद्धि, विकास और पर्यावरण के प्रति प्रतिक्रियाओं के समन्वय के लिए फाइटोहार्मोन नामक रासायनिक यौगिकों का उपयोग करते हैं।\n1. ऑक्सिन (Auxin): प्ररोह के अग्र भाग में संश्लेषित, यह कोशिकाओं को लंबा होने में मदद करता है। यह प्रकाशानुवर्तन के लिए जिम्मेदार है।\n2. जिबरेलिन (Gibberellins): तने की वृद्धि में मदद करते हैं।\n3. साइटोकाइनिन (Cytokinins): तेजी से कोशिका विभाजन को बढ़ावा देते हैं (फलों और बीजों में पाए जाते हैं)।\n4. एब्सिसिक एसिड (ABA): एक वृद्धि अवरोधक। यह पत्तियों के मुरझाने और तनाव के दौरान रंध्रों के बंद होने के लिए जिम्मेदार है।",
+        "body_gu": "વનસ્પતિ વૃદ્ધિ, વિકાસ અને પર્યાવરણ સામેના પ્રતિભાવોના સંકલન માટે ફાઇટોહોર્મોન્સ (વનસ્પતિ અંતઃસ્ત્રાવો) નો ઉપયોગ કરે છે.\n1. ઓક્સિન (Auxin): પ્રરોહની ટોચ પર બને છે, કોષોની લંબાઈમાં વધારો કરે છે. તે પ્રકાશાવર્તન માટે જવાબદાર છે.\n2. જીબરેલીન્સ (Gibberellins): પ્રકાંડની વૃદ્ધિમાં મદદ કરે છે.\n3. સાયટોકાઇનીન (Cytokinins): ઝડપી કોષવિભાજનને ઉત્તેજે છે (ફળો અને બીજમાં વધુ જોવા મળે છે).\n4. એબ્સિસિક એસિડ (ABA): વૃદ્ધિ અવરોધક અંતઃસ્ત્રાવ. તે પર્ણોના કરમાવા માટે અને પ્રતિકૂળ સંજોગોમાં પર્ણરંધ્રો બંધ કરવા માટે જવાબદાર છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_009",
+        "type": "theory",
+        "title": "Hormones in Animals",
+        "title_hi": "जंतुओं में हार्मोन",
+        "title_gu": "પ્રાણીઓમાં અંતઃસ્ત્રાવો",
+        "body": "Animal hormones are secreted by endocrine glands directly into the blood.\n1. Adrenaline (Adrenal Gland): Prepares the body for 'Fight or Flight' by increasing heart rate and blood supply to muscles.\n2. Thyroxin (Thyroid Gland): Regulates carbohydrate, protein, and fat metabolism. Requires Iodine; its deficiency causes Goitre.\n3. Growth Hormone (Pituitary Gland - The Master Gland): Regulates growth. Deficiency causes dwarfism; excess causes gigantism.\n4. Insulin (Pancreas): Regulates blood sugar levels. Deficiency causes Diabetes.\n5. Testosterone (Testes) & Oestrogen (Ovaries): Responsible for changes associated with puberty.",
+        "body_hi": "जंतु हार्मोन अंतःस्रावी ग्रंथियों द्वारा सीधे रक्त में स्रावित होते हैं।\n1. एड्रेनालाईन (अधिवृक्क ग्रंथि): हृदय गति और मांसपेशियों में रक्त की आपूर्ति बढ़ाकर शरीर को 'लड़ने या भागने (Fight or Flight)' के लिए तैयार करता है।\n2. थायरोक्सिन (थायरॉयड ग्रंथि): कार्बोहाइड्रेट, प्रोटीन और वसा चयापचय को नियंत्रित करता है। इसके लिए आयोडीन की आवश्यकता होती है; इसकी कमी से घेंघा (Goitre) रोग होता है।\n3. वृद्धि हार्मोन (पीयूष ग्रंथि - मास्टर ग्रंथि): विकास को नियंत्रित करता है। कमी से बौनापन होता है; अधिकता से विशालकायता होती है।\n4. इंसुलिन (अग्न्याशय): रक्त शर्करा के स्तर को नियंत्रित करता है। कमी से मधुमेह (Diabetes) होता है।",
+        "body_gu": "પ્રાણી અંતઃસ્ત્રાવો અંતઃસ્ત્રાવી ગ્રંથિઓ દ્વારા સીધા લોહીમાં મુક્ત થાય છે.\n1. એડ્રિનાલિન (એડ્રિનલ ગ્રંથિ): હૃદયના ધબકારા અને સ્નાયુઓમાં લોહીનો પુરવઠો વધારીને શરીરને 'લડો યા ભાગો' (Fight or Flight) ની સ્થિતિ માટે તૈયાર કરે છે.\n2. થાયરોક્સિન (થાઇરોઇડ ગ્રંથિ): કાર્બોદિત, પ્રોટીન અને ચરબીના ચયાપચયનું નિયમન કરે છે. આયોડિન જરૂરી છે; તેની ઉણપથી ગોઇટર (Goitre) નામનો રોગ થાય છે.\n3. ગ્રોથ હોર્મોન (પિટ્યુટરી ગ્રંથિ): વૃદ્ધિનું નિયમન કરે છે. ઉણપથી વામનતા; વધારાથી વિરાટતા આવે છે.\n4. ઇન્સ્યુલિન (સ્વાદુપિંડ): રુધિરમાં શર્કરાનું પ્રમાણ જાળવે છે. ઉણપથી ડાયાબિટીસ થાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_010",
+        "type": "mcq",
+        "title": "NCERT Exercise Q1",
+        "title_hi": "NCERT अभ्यास Q1",
+        "title_gu": "NCERT સ્વાધ્યાય Q1",
+        "question": "Which of the following is a plant hormone?",
+        "question_hi": "निम्नलिखित में से कौन सा पादप हार्मोन है?",
+        "question_gu": "નીચેનામાંથી કયો વનસ્પતિ અંતઃસ્ત્રાવ છે?",
+        "options": [
+            "Insulin",
+            "Thyroxin",
+            "Oestrogen",
+            "Cytokinin"
+        ],
+        "options_hi": [
+            "इंसुलिन",
+            "थायरोक्सिन",
+            "एस्ट्रोजन",
+            "साइटोकाइनिन"
+        ],
+        "options_gu": [
+            "ઇન્સ્યુલિન",
+            "થાયરોક્સિન",
+            "ઇસ્ટ્રોજન",
+            "સાયટોકાઇનીન"
+        ],
+        "correct_index": 3,
+        "explanation": "Insulin, thyroxin, and oestrogen are animal hormones. Cytokinin is a plant hormone that promotes cell division.",
+        "explanation_hi": "इंसुलिन, थायरोक्सिन और एस्ट्रोजन जंतु हार्मोन हैं। साइटोकाइनिन एक पादप हार्मोन है जो कोशिका विभाजन को बढ़ावा देता है।",
+        "explanation_gu": "ઇન્સ્યુલિન, થાયરોક્સિન અને ઇસ્ટ્રોજન પ્રાણીઓના અંતઃસ્ત્રાવો છે. સાયટોકાઇનીન એ વનસ્પતિ અંતઃસ્ત્રાવ છે જે કોષવિભાજનને ઉત્તેજે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_011",
+        "type": "mcq",
+        "title": "NCERT Exercise Q2",
+        "title_hi": "NCERT अभ्यास Q2",
+        "title_gu": "NCERT સ્વાધ્યાય Q2",
+        "question": "The gap between two neurons is called a:",
+        "question_hi": "दो न्यूरॉन्स के बीच के खाली स्थान को क्या कहा जाता है?",
+        "question_gu": "બે ચેતાકોષો વચ્ચેની ખાલી જગ્યાને શું કહેવાય છે?",
+        "options": [
+            "Dendrite",
+            "Synapse",
+            "Axon",
+            "Impulse"
+        ],
+        "options_hi": [
+            "द्रुमिका (Dendrite)",
+            "सिनैप्स (अंतर्ग्रथन)",
+            "तंत्रिकाक्ष (Axon)",
+            "आवेग (Impulse)"
+        ],
+        "options_gu": [
+            "શિખાતંતુ (Dendrite)",
+            "ચેતોપાગમ (Synapse)",
+            "અક્ષતંતુ (Axon)",
+            "આવેગ (Impulse)"
+        ],
+        "correct_index": 1,
+        "explanation": "The microscopic gap between the axon terminal of one neuron and the dendrite of the next is called a synapse. Neurotransmitters carry the signal across this gap.",
+        "explanation_hi": "एक न्यूरॉन के अक्षतंतु टर्मिनल और अगले की द्रुमिका के बीच सूक्ष्म अंतर को सिनैप्स कहा जाता है। न्यूरोट्रांसमीटर इस अंतर के पार संकेत ले जाते हैं।",
+        "explanation_gu": "એક ચેતાકોષના ચેતાંત અને આગલા ચેતાકોષના શિખાતંતુ વચ્ચેની સૂક્ષ્મ જગ્યાને ચેતોપાગમ (Synapse) કહે છે. ન્યુરોટ્રાન્સમીટર આ જગ્યા મારફતે સંદેશો પહોંચાડે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_012",
+        "type": "mcq",
+        "title": "NCERT Exercise Q3",
+        "title_hi": "NCERT अभ्यास Q3",
+        "title_gu": "NCERT સ્વાધ્યાય Q3",
+        "question": "The brain is responsible for:",
+        "question_hi": "मस्तिष्क किसके लिए जिम्मेदार है?",
+        "question_gu": "મગજ શાના માટે જવાબદાર છે?",
+        "options": [
+            "Thinking",
+            "Regulating the heart beat",
+            "Balancing the body",
+            "All of the above"
+        ],
+        "options_hi": [
+            "सोचने के लिए",
+            "हृदय गति को नियंत्रित करने के लिए",
+            "शरीर को संतुलित करने के लिए",
+            "उपरोक्त सभी"
+        ],
+        "options_gu": [
+            "વિચારવા માટે",
+            "હૃદયના ધબકારાના નિયમન માટે",
+            "શરીરનું સંતુલન જાળવવા માટે",
+            "આપેલ તમામ"
+        ],
+        "correct_index": 3,
+        "explanation": "The fore-brain is for thinking, the hind-brain (medulla) regulates heart beat, and the hind-brain (cerebellum) is responsible for balancing the body. Hence, all of the above.",
+        "explanation_hi": "अग्रमस्तिष्क सोचने के लिए है, पश्चमस्तिष्क (मेडुला) हृदय गति को नियंत्रित करता है, और पश्चमस्तिष्क (सेरिबैलम) शरीर को संतुलित करने के लिए जिम्मेदार है। अतः उपरोक्त सभी।",
+        "explanation_gu": "અગ્રમગજ વિચારવા માટે છે, પશ્વમગજ (લંબમજ્જા) હૃદયના ધબકારા નિયંત્રિત કરે છે, અને પશ્વમગજ (અનુમસ્તિષ્ક) શરીરનું સંતુલન જાળવે છે. તેથી, આપેલ તમામ."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_013",
+        "type": "mcq",
+        "title": "NCERT Exercise Q4",
+        "title_hi": "NCERT अभ्यास Q4",
+        "title_gu": "NCERT સ્વાધ્યાય Q4",
+        "question": "What is the function of receptors in our body?",
+        "question_hi": "हमारे शरीर में रिसेप्टर्स (ग्राहियों) का क्या कार्य है?",
+        "question_gu": "આપણા શરીરમાં ગ્રાહી અંગો (Receptors) નું કાર્ય શું છે?",
+        "options": [
+            "To pump blood to the organs.",
+            "To detect information from the environment (like heat, sound, taste) and convert it into electrical impulses.",
+            "To secrete hormones into the blood.",
+            "To digest food in the stomach."
+        ],
+        "options_hi": [
+            "अंगों में रक्त पंप करने के लिए।",
+            "पर्यावरण से जानकारी (जैसे गर्मी, ध्वनि, स्वाद) का पता लगाने और इसे विद्युत आवेगों में बदलने के लिए।",
+            "रक्त में हार्मोन स्रावित करने के लिए।",
+            "आमाशय में भोजन पचाने के लिए।"
+        ],
+        "options_gu": [
+            "અંગોમાં લોહી પમ્પ કરવા માટે.",
+            "પર્યાવરણમાંથી માહિતી (જેમ કે ગરમી, અવાજ, સ્વાદ) પારખવા અને તેને વિદ્યુત આવેગમાં ફેરવવા માટે.",
+            "લોહીમાં અંતઃસ્ત્રાવો મુક્ત કરવા માટે.",
+            "જઠરમાં ખોરાક પચાવવા માટે."
+        ],
+        "correct_index": 1,
+        "explanation": "Receptors are specialized cells located in our sense organs (eyes, ears, skin, nose, tongue) that detect external stimuli and initiate electrical impulses in sensory neurons.",
+        "explanation_hi": "रिसेप्टर्स हमारे ज्ञानेंद्रियों (आंख, कान, त्वचा, नाक, जीभ) में स्थित विशेष कोशिकाएं हैं जो बाहरी उत्तेजनाओं का पता लगाती हैं और संवेदी न्यूरॉन्स में विद्युत आवेगों को शुरू करती हैं।",
+        "explanation_gu": "ગ્રાહી અંગો એ આપણી જ્ઞાનેન્દ્રિયો (આંખ, કાન, ચામડી, નાક, જીભ) માં આવેલા વિશિષ્ટ કોષો છે જે બાહ્ય ઉત્તેજનાઓ ઓળખે છે અને સંવેદી ચેતાકોષોમાં વિદ્યુત આવેગ શરૂ કરે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_014",
+        "type": "mcq",
+        "title": "NCERT Exercise Q5",
+        "title_hi": "NCERT अभ्यास Q5",
+        "title_gu": "NCERT સ્વાધ્યાય Q5",
+        "question": "In the structure of a neuron, where is the information acquired and through which part does it travel as an electrical impulse?",
+        "question_hi": "न्यूरॉन की संरचना में, जानकारी कहाँ से प्राप्त की जाती है और किस भाग के माध्यम से यह एक विद्युत आवेग के रूप में यात्रा करती है?",
+        "question_gu": "ચેતાકોષની રચનામાં, માહિતી ક્યાંથી મેળવવામાં આવે છે અને તે કયા ભાગ દ્વારા વિદ્યુત આવેગ તરીકે મુસાફરી કરે છે?",
+        "options": [
+            "Acquired at Dendrite; travels through Axon.",
+            "Acquired at Axon; travels through Dendrite.",
+            "Acquired at Nucleus; travels through Cell Body.",
+            "Acquired at Nerve Ending; travels through Synapse."
+        ],
+        "options_hi": [
+            "द्रुमिका (Dendrite) पर प्राप्त होती है; तंत्रिकाक्ष (Axon) से यात्रा करती है।",
+            "तंत्रिकाक्ष (Axon) पर प्राप्त होती है; द्रुमिका से यात्रा करती है।",
+            "केंद्रक पर प्राप्त होती है; कोशिका काय से यात्रा करती है।",
+            "तंत्रिका अंत पर प्राप्त होती है; सिनैप्स से यात्रा करती है।"
+        ],
+        "options_gu": [
+            "શિખાતંતુ (Dendrite) દ્વારા મેળવાય છે; અક્ષતંતુ (Axon) દ્વારા મુસાફરી કરે છે.",
+            "અક્ષતંતુ દ્વારા મેળવાય છે; શિખાતંતુ દ્વારા મુસાફરી કરે છે.",
+            "કોષકેન્દ્ર દ્વારા મેળવાય છે; કોષકાય દ્વારા મુસાફરી કરે છે.",
+            "ચેતાંત દ્વારા મેળવાય છે; ચેતોપાગમ દ્વારા મુસાફરી કરે છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Information is acquired at the tips of the dendrites. A chemical reaction sets off an electrical impulse that travels from the dendrite to the cell body, and then along the axon to its end.",
+        "explanation_hi": "जानकारी द्रुमिका के सिरों पर प्राप्त होती है। एक रासायनिक प्रतिक्रिया एक विद्युत आवेग को जन्म देती है जो द्रुमिका से कोशिका काय तक, और फिर तंत्रिकाक्ष के साथ उसके अंत तक जाती है।",
+        "explanation_gu": "માહિતી શિખાતંતુના છેડા પર મેળવવામાં આવે છે. રાસાયણિક પ્રક્રિયા વિદ્યુત આવેગ પેદા કરે છે જે શિખાતંતુથી કોષકાય અને ત્યાંથી અક્ષતંતુ દ્વારા તેના છેડા સુધી જાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_015",
+        "type": "mcq",
+        "title": "NCERT Exercise Q6",
+        "title_hi": "NCERT अभ्यास Q6",
+        "title_gu": "NCERT સ્વાધ્યાય Q6",
+        "question": "How does phototropism occur in plants?",
+        "question_hi": "पौधों में प्रकाशानुवर्तन (phototropism) कैसे होता है?",
+        "question_gu": "વનસ્પતિમાં પ્રકાશાવર્તન કેવી રીતે થાય છે?",
+        "options": [
+            "Plant stems physically reach out and grab light.",
+            "The hormone Auxin diffuses towards the shady side of the shoot. This concentration of auxin stimulates cells to grow longer on the shady side, causing the plant to bend towards light.",
+            "Roots pull the plant towards the sun.",
+            "Water in the stem boils and pushes the plant."
+        ],
+        "options_hi": [
+            "पौधे के तने शारीरिक रूप से प्रकाश को पकड़ने के लिए बाहर निकलते हैं।",
+            "हार्मोन ऑक्सिन प्ररोह के छायादार भाग की ओर फैलता है। ऑक्सिन की यह सांद्रता छायादार तरफ कोशिकाओं को लंबा होने के लिए उत्तेजित करती है, जिससे पौधा प्रकाश की ओर झुक जाता है।",
+            "जड़ें पौधे को सूर्य की ओर खींचती हैं।",
+            "तने में पानी उबलता है और पौधे को धकेलता है।"
+        ],
+        "options_gu": [
+            "વનસ્પતિના પ્રકાંડ શારીરિક રીતે પ્રકાશને પકડવા લંબાય છે.",
+            "ઓક્સિન અંતઃસ્ત્રાવ પ્રરોહની છાયાવાળી બાજુ તરફ પ્રસરણ પામે છે. ઓક્સિનની આ સાંદ્રતા છાયાવાળી બાજુના કોષોને વધુ લાંબા થવા ઉત્તેજે છે, જેથી વનસ્પતિ પ્રકાશ તરફ વળે છે.",
+            "મૂળ વનસ્પતિને સૂર્ય તરફ ખેંચે છે.",
+            "પ્રકાંડમાં પાણી ઉકળે છે અને વનસ્પતિને ધક્કો મારે છે."
+        ],
+        "correct_index": 1,
+        "explanation": "When light comes from one direction, auxin synthesized at the shoot tip diffuses towards the shady side. More auxin on the shady side makes those cells grow longer faster, resulting in the bending of the shoot towards light.",
+        "explanation_hi": "जब प्रकाश एक दिशा से आता है, तो प्ररोह के शीर्ष पर संश्लेषित ऑक्सिन छायादार पक्ष की ओर फैलता है। छायादार भाग पर अधिक ऑक्सिन उन कोशिकाओं को तेजी से लंबा बनाता है, जिसके परिणामस्वरूप प्ररोह प्रकाश की ओर झुक जाता है।",
+        "explanation_gu": "જ્યારે પ્રકાશ એક દિશામાંથી આવે છે, ત્યારે પ્રરોહાગ્ર પર બનતો ઓક્સિન છાયાવાળા ભાગ તરફ જાય છે. છાયાવાળા ભાગમાં વધુ ઓક્સિન તે કોષોને વધુ લાંબા કરે છે, જેના પરિણામે પ્રકાંડ પ્રકાશ તરફ વળે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_016",
+        "type": "mcq",
+        "title": "NCERT Exercise Q7",
+        "title_hi": "NCERT अभ्यास Q7",
+        "title_gu": "NCERT સ્વાધ્યાય Q7",
+        "question": "Which signals will get disrupted in case of a spinal cord injury?",
+        "question_hi": "रीढ़ की हड्डी (Spinal cord) में चोट लगने की स्थिति में कौन से संकेत बाधित होंगे?",
+        "question_gu": "કરોડરજ્જુમાં ઈજા થવાના કિસ્સામાં કયા સંકેતો (સિગ્નલો) ખોરવાઈ જશે?",
+        "options": [
+            "Only signals related to digestion.",
+            "Reflex actions and signals passing from receptors to the brain, as well as motor signals from the brain to the body muscles.",
+            "Signals between the eyes and the brain.",
+            "Signals controlling the heartbeat."
+        ],
+        "options_hi": [
+            "केवल पाचन से संबंधित संकेत।",
+            "प्रतिवर्ती क्रियाएं और रिसेप्टर्स से मस्तिष्क तक जाने वाले संकेत, साथ ही मस्तिष्क से शरीर की मांसपेशियों तक जाने वाले मोटर संकेत।",
+            "आंखों और मस्तिष्क के बीच के संकेत।",
+            "हृदय गति को नियंत्रित करने वाले संकेत।"
+        ],
+        "options_gu": [
+            "માત્ર પાચન સંબંધિત સિગ્નલો.",
+            "પરાવર્તી ક્રિયાઓ અને ગ્રાહી અંગોથી મગજ તરફ જતા સંકેતો, તેમજ મગજથી શરીરના સ્નાયુઓ તરફ જતા ચાલક સંકેતો.",
+            "આંખો અને મગજ વચ્ચેના સંકેતો.",
+            "હૃદયના ધબકારા નિયંત્રિત કરતા સંકેતો."
+        ],
+        "correct_index": 1,
+        "explanation": "The spinal cord is the main pathway connecting the brain to the rest of the body. An injury will disrupt reflex arcs located there, and block sensory inputs travelling up to the brain and motor commands travelling down.",
+        "explanation_hi": "रीढ़ की हड्डी मस्तिष्क को शरीर के बाकी हिस्सों से जोड़ने वाला मुख्य मार्ग है। एक चोट वहां स्थित प्रतिवर्ती चापों को बाधित करेगी, और मस्तिष्क तक जाने वाले संवेदी इनपुट और नीचे जाने वाले मोटर कमांड को अवरुद्ध करेगी।",
+        "explanation_gu": "કરોડરજ્જુ એ મગજને બાકીના શરીર સાથે જોડતો મુખ્ય માર્ગ છે. ઈજા ત્યાં આવેલી પરાવર્તી કમાનોને ખોરવી નાખશે, અને મગજ સુધી જતી સંવેદી માહિતી અને નીચે આવતા ચાલક આદેશોને અવરોધશે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_017",
+        "type": "mcq",
+        "title": "NCERT Exercise Q8",
+        "title_hi": "NCERT अभ्यास Q8",
+        "title_gu": "NCERT સ્વાધ્યાય Q8",
+        "question": "How does chemical coordination occur in plants?",
+        "question_hi": "पौधों में रासायनिक समन्वय कैसे होता है?",
+        "question_gu": "વનસ્પતિમાં રાસાયણિક સંકલન કેવી રીતે થાય છે?",
+        "options": [
+            "Through a complex nervous system with a brain.",
+            "Through plant hormones (phytohormones) synthesized in one part of the plant and diffusing to the site of action.",
+            "Through pumping of blood by a heart.",
+            "Through electrical impulses generated by leaves."
+        ],
+        "options_hi": [
+            "मस्तिष्क के साथ एक जटिल तंत्रिका तंत्र के माध्यम से।",
+            "पौधे के एक हिस्से में संश्लेषित और कार्य स्थल तक फैलने वाले पादप हार्मोन (फाइटोहार्मोन) के माध्यम से।",
+            "हृदय द्वारा रक्त पंप करने के माध्यम से।",
+            "पत्तियों द्वारा उत्पन्न विद्युत आवेगों के माध्यम से।"
+        ],
+        "options_gu": [
+            "મગજ સાથેના જટિલ ચેતાતંત્ર દ્વારા.",
+            "વનસ્પતિના એક ભાગમાં ઉત્પન્ન થતા અને કાર્યસ્થળ સુધી પ્રસરણ પામતા વનસ્પતિ અંતઃસ્ત્રાવો (ફાઇટોહોર્મોન્સ) દ્વારા.",
+            "હૃદય દ્વારા લોહીના પમ્પિંગ મારફતે.",
+            "પર્ણો દ્વારા ઉત્પન્ન થતા વિદ્યુત આવેગો દ્વારા."
+        ],
+        "correct_index": 1,
+        "explanation": "Plants do not have nerves. They coordinate their behavior using phytohormones (like Auxin, Gibberellin, Cytokinin, ABA) which are produced in specific regions and diffuse to other areas to regulate growth and responses.",
+        "explanation_hi": "पौधों में तंत्रिकाएं नहीं होती हैं। वे फाइटोहार्मोन (जैसे ऑक्सिन, जिबरेलिन, साइटोकाइनिन, एबीए) का उपयोग करके अपने व्यवहार का समन्वय करते हैं जो विशिष्ट क्षेत्रों में उत्पन्न होते हैं और वृद्धि और प्रतिक्रियाओं को विनियमित करने के लिए अन्य क्षेत्रों में फैलते हैं।",
+        "explanation_gu": "વનસ્પતિમાં ચેતાઓ હોતી નથી. તેઓ ફાઇટોહોર્મોન્સ (જેમ કે ઓક્સિન, જીબરેલીન, સાયટોકાઇનીન, ABA) નો ઉપયોગ કરીને તેમના વર્તનનું સંકલન કરે છે જે ચોક્કસ ભાગમાં બને છે અને વૃદ્ધિનું નિયમન કરવા અન્ય વિસ્તારોમાં પ્રસરણ પામે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_018",
+        "type": "mcq",
+        "title": "NCERT Exercise Q9",
+        "title_hi": "NCERT अभ्यास Q9",
+        "title_gu": "NCERT સ્વાધ્યાય Q9",
+        "question": "What is the need for a system of control and coordination in an organism?",
+        "question_hi": "किसी जीव में नियंत्रण और समन्वय प्रणाली की क्या आवश्यकता है?",
+        "question_gu": "કોઈપણ સજીવમાં નિયંત્રણ અને સહનિયમન તંત્રની શી જરૂર છે?",
+        "options": [
+            "To make the organism look good.",
+            "To ensure that all millions of cells, tissues, and organs work together in a synchronized manner to respond correctly to environmental changes and sustain life.",
+            "To digest food completely.",
+            "To absorb sunlight for photosynthesis."
+        ],
+        "options_hi": [
+            "जीव को अच्छा दिखाने के लिए।",
+            "यह सुनिश्चित करने के लिए कि लाखों कोशिकाएं, ऊतक और अंग पर्यावरणीय परिवर्तनों का सही ढंग से जवाब देने और जीवन को बनाए रखने के लिए एक साथ सिंक्रनाइज़ तरीके से काम करते हैं।",
+            "भोजन को पूरी तरह से पचाने के लिए।",
+            "प्रकाश संश्लेषण के लिए सूर्य के प्रकाश को अवशोषित करने के लिए।"
+        ],
+        "options_gu": [
+            "સજીવને સુંદર દેખાડવા માટે.",
+            "તે સુનિશ્ચિત કરવા માટે કે લાખો કોષો, પેશીઓ અને અંગો પર્યાવરણીય ફેરફારો સામે યોગ્ય પ્રતિભાવ આપવા અને જીવન ટકાવી રાખવા માટે સંકલિત રીતે એકસાથે કામ કરે છે.",
+            "ખોરાકનું સંપૂર્ણ પાચન કરવા માટે.",
+            "પ્રકાશસંશ્લેષણ માટે સૂર્યપ્રકાશનું શોષણ કરવા."
+        ],
+        "correct_index": 1,
+        "explanation": "Multicellular organisms have complex bodies. Without a central coordinating system, the organs would act randomly. Control and coordination systems (Nervous and Endocrine) integrate all body functions and provide appropriate responses to stimuli.",
+        "explanation_hi": "बहुकोशिकीय जीवों का शरीर जटिल होता है। केंद्रीय समन्वय प्रणाली के बिना, अंग बेतरतीब ढंग से कार्य करेंगे। नियंत्रण और समन्वय प्रणाली (तंत्रिका और अंतःस्रावी) शरीर के सभी कार्यों को एकीकृत करते हैं और उत्तेजनाओं के लिए उचित प्रतिक्रियाएं प्रदान करते हैं।",
+        "explanation_gu": "બહુકોષીય સજીવો જટિલ શરીર ધરાવે છે. કેન્દ્રીય સંકલન તંત્ર વિના, અંગો અસ્તવ્યસ્ત રીતે કાર્ય કરશે. નિયંત્રણ અને સંકલન તંત્રો (ચેતા અને અંતઃસ્ત્રાવી) શરીરના તમામ કાર્યોને જોડે છે અને ઉત્તેજના સામે યોગ્ય પ્રતિભાવ આપે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_019",
+        "type": "mcq",
+        "title": "NCERT Exercise Q10",
+        "title_hi": "NCERT अभ्यास Q10",
+        "title_gu": "NCERT સ્વાધ્યાય Q10",
+        "question": "How are involuntary actions and reflex actions different?",
+        "question_hi": "अनैच्छिक क्रियाएं और प्रतिवर्ती क्रियाएं कैसे भिन्न हैं?",
+        "question_gu": "અનૈચ્છિક ક્રિયાઓ અને પરાવર્તી ક્રિયાઓ કેવી રીતે અલગ છે?",
+        "options": [
+            "Reflex actions are very fast responses to emergency stimuli (controlled mostly by the spinal cord), while involuntary actions are continuous routine life processes like heartbeat and digestion (controlled by the mid/hind-brain).",
+            "Reflex actions are controlled by our conscious will, whereas involuntary actions are not.",
+            "Involuntary actions happen only in plants, reflex actions happen in animals.",
+            "There is absolutely no difference; they are the same thing."
+        ],
+        "options_hi": [
+            "प्रतिवर्ती क्रियाएं आपातकालीन उत्तेजनाओं के लिए बहुत तेज़ प्रतिक्रियाएं हैं (अधिकतर रीढ़ की हड्डी द्वारा नियंत्रित), जबकि अनैच्छिक क्रियाएं दिल की धड़कन और पाचन (मध्य/पश्च-मस्तिष्क द्वारा नियंत्रित) जैसी निरंतर नियमित जीवन प्रक्रियाएं हैं।",
+            "प्रतिवर्ती क्रियाएं हमारी सचेत इच्छा से नियंत्रित होती हैं, जबकि अनैच्छिक क्रियाएं नहीं।",
+            "अनैच्छिक क्रियाएं केवल पौधों में होती हैं, प्रतिवर्ती क्रियाएं जंतुओं में होती हैं।",
+            "बिल्कुल कोई अंतर नहीं है; वे एक ही चीज हैं।"
+        ],
+        "options_gu": [
+            "પરાવર્તી ક્રિયાઓ એ કટોકટીના ઉત્તેજના (મોટેભાગે કરોડરજ્જુ દ્વારા નિયંત્રિત) સામે ખૂબ જ ઝડપી પ્રતિક્રિયાઓ છે, જ્યારે અનૈચ્છિક ક્રિયાઓ હૃદયના ધબકારા અને પાચન (મધ્ય/પશ્વ-મગજ દ્વારા નિયંત્રિત) જેવી સતત ચાલતી નિયમિત જીવન પ્રક્રિયાઓ છે.",
+            "પરાવર્તી ક્રિયાઓ આપણી સભાન ઇચ્છા દ્વારા નિયંત્રિત થાય છે, જ્યારે અનૈચ્છિક ક્રિયાઓ નથી થતી.",
+            "અનૈચ્છિક ક્રિયાઓ માત્ર વનસ્પતિમાં થાય છે, પરાવર્તી ક્રિયાઓ પ્રાણીઓમાં થાય છે.",
+            "બિલકુલ કોઈ તફાવત નથી; બંને એક જ વસ્તુ છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Reflex actions (like pulling a hand from fire) are sudden defense mechanisms routed through the spinal cord. Involuntary actions (like pupil size change, heart beating) are normal ongoing body functions controlled by the brain without our conscious thought.",
+        "explanation_hi": "प्रतिवर्ती क्रियाएं (जैसे आग से हाथ खींचना) रीढ़ की हड्डी के माध्यम से होने वाले अचानक रक्षा तंत्र हैं। अनैच्छिक क्रियाएं (जैसे पुतली के आकार में परिवर्तन, दिल की धड़कन) सामान्य शरीर के कार्य हैं जो हमारे सचेत विचार के बिना मस्तिष्क द्वारा नियंत्रित होते हैं।",
+        "explanation_gu": "પરાવર્તી ક્રિયાઓ (જેમ કે આગ પરથી હાથ ખેંચવો) એ કરોડરજ્જુ દ્વારા થતી અચાનક રક્ષણાત્મક પ્રક્રિયાઓ છે. અનૈચ્છિક ક્રિયાઓ (જેમ કે હૃદયના ધબકારા) એ મગજ દ્વારા નિયંત્રિત શરીરના સામાન્ય કાર્યો છે જેના પર આપણો સભાન કાબૂ નથી."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_020",
+        "type": "mcq",
+        "title": "NCERT Exercise Q11",
+        "title_hi": "NCERT अभ्यास Q11",
+        "title_gu": "NCERT સ્વાધ્યાય Q11",
+        "question": "Compare and contrast nervous and hormonal mechanisms for control and coordination.",
+        "question_hi": "नियंत्रण और समन्वय के लिए तंत्रिका (nervous) और हार्मोनल (hormonal) तंत्र की तुलना करें।",
+        "question_gu": "નિયંત્રણ અને સહનિયમન માટે ચેતાતંત્ર અને અંતઃસ્ત્રાવી તંત્રની સરખામણી કરો.",
+        "options": [
+            "Nervous control is fast, uses electrical impulses, and has short-lasting effects. Hormonal control is slower, uses chemical messengers in the blood, and has long-lasting effects.",
+            "Nervous control uses hormones; hormonal control uses electrical impulses.",
+            "Nervous control is only found in plants; hormonal control only in animals.",
+            "Both are exactly the same in speed and mechanism."
+        ],
+        "options_hi": [
+            "तंत्रिका नियंत्रण तेज होता है, विद्युत आवेगों का उपयोग करता है, और इसका प्रभाव अल्पकालिक होता है। हार्मोनल नियंत्रण धीमा होता है, रक्त में रासायनिक दूतों का उपयोग करता है, और इसका प्रभाव लंबे समय तक रहता है।",
+            "तंत्रिका नियंत्रण हार्मोन का उपयोग करता है; हार्मोनल नियंत्रण विद्युत आवेगों का उपयोग करता है।",
+            "तंत्रिका नियंत्रण केवल पौधों में पाया जाता है; हार्मोनल नियंत्रण केवल जंतुओं में।",
+            "गति और तंत्र में दोनों बिल्कुल समान हैं।"
+        ],
+        "options_gu": [
+            "ચેતા નિયંત્રણ ઝડપી છે, વિદ્યુત આવેગનો ઉપયોગ કરે છે, અને ટૂંકા ગાળાની અસર ધરાવે છે. અંતઃસ્ત્રાવી નિયંત્રણ ધીમું છે, રુધિરમાં રાસાયણિક સંદેશાવાહકોનો ઉપયોગ કરે છે, અને લાંબા ગાળાની અસર ધરાવે છે.",
+            "ચેતા નિયંત્રણ અંતઃસ્ત્રાવો વાપરે છે; અંતઃસ્ત્રાવી નિયંત્રણ વિદ્યુત આવેગો વાપરે છે.",
+            "ચેતા નિયંત્રણ માત્ર વનસ્પતિમાં જોવા મળે છે; અંતઃસ્ત્રાવી નિયંત્રણ માત્ર પ્રાણીઓમાં.",
+            "ઝડપ અને પ્રક્રિયામાં બંને બરાબર સમાન છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Nervous system: Fast transmission (electrical impulses via neurons), highly targeted, short-lived effect. \nEndocrine system: Slower transmission (chemical hormones via blood), widespread targets, long-lasting effect.",
+        "explanation_hi": "तंत्रिका तंत्र: तेज संचरण (न्यूरॉन्स के माध्यम से विद्युत आवेग), अत्यधिक लक्षित, अल्पकालिक प्रभाव।\nअंतःस्रावी तंत्र: धीमा संचरण (रक्त के माध्यम से रासायनिक हार्मोन), व्यापक लक्ष्य, लंबे समय तक चलने वाला प्रभाव।",
+        "explanation_gu": "ચેતાતંત્ર: ઝડપી વહન (ચેતાકોષો દ્વારા વિદ્યુત આવેગ), ચોક્કસ લક્ષ્ય, ટૂંકા ગાળાની અસર.\nઅંતઃસ્ત્રાવી તંત્ર: ધીમું વહન (રુધિર દ્વારા રાસાયણિક અંતઃસ્ત્રાવો), વ્યાપક લક્ષ્ય, લાંબા ગાળાની અસર."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH6_021",
+        "type": "mcq",
+        "title": "NCERT Exercise Q12",
+        "title_hi": "NCERT अभ्यास Q12",
+        "title_gu": "NCERT સ્વાધ્યાય Q12",
+        "question": "What is the difference between the manner in which movement takes place in a sensitive plant and the movement in our legs?",
+        "question_hi": "संवेदनशील पौधे (छुई-मुई) में होने वाली गति और हमारे पैरों में होने वाली गति के तरीके में क्या अंतर है?",
+        "question_gu": "લજામણી (સંવેદનશીલ વનસ્પતિ) માં થતું હલનચલન અને આપણા પગમાં થતા હલનચલન વચ્ચે શો તફાવત છે?",
+        "options": [
+            "Plant movement relies on changing water content in cells (swelling/shrinking), while leg movement is controlled by specialized muscle proteins responding to electrical nerve impulses.",
+            "Plant movement is controlled by a brain, while leg movement is completely automatic.",
+            "Plant movement uses muscle proteins, while our legs use changes in water pressure.",
+            "There is no difference; both use nerves and muscles."
+        ],
+        "options_hi": [
+            "पौधों की गति कोशिकाओं में पानी की मात्रा (सूजन/सिकुड़न) बदलने पर निर्भर करती है, जबकि पैरों की गति विद्युत तंत्रिका आवेगों का जवाब देने वाले विशेष मांसपेशी प्रोटीन द्वारा नियंत्रित होती है।",
+            "पौधों की गति मस्तिष्क द्वारा नियंत्रित होती है, जबकि पैरों की गति पूरी तरह से स्वचालित होती है।",
+            "पौधों की गति मांसपेशी प्रोटीन का उपयोग करती है, जबकि हमारे पैर पानी के दबाव में बदलाव का उपयोग करते हैं।",
+            "कोई अंतर नहीं है; दोनों नसों और मांसपेशियों का उपयोग करते हैं।"
+        ],
+        "options_gu": [
+            "વનસ્પતિની ગતિ કોષોમાં પાણીના પ્રમાણમાં ફેરફાર (ફૂલવા/સંકોચાવા) પર આધાર રાખે છે, જ્યારે પગની ગતિ વિદ્યુત ચેતા આવેગોનો પ્રતિભાવ આપતા વિશિષ્ટ સ્નાયુ પ્રોટીન દ્વારા નિયંત્રિત થાય છે.",
+            "વનસ્પતિની ગતિ મગજ દ્વારા નિયંત્રિત થાય છે, જ્યારે પગની ગતિ સંપૂર્ણપણે સ્વયંચાલિત છે.",
+            "વનસ્પતિની ગતિ સ્નાયુ પ્રોટીનનો ઉપયોગ કરે છે, જ્યારે આપણા પગ પાણીના દબાણમાં ફેરફારનો ઉપયોગ કરે છે.",
+            "કોઈ તફાવત નથી; બંને ચેતાઓ અને સ્નાયુઓનો ઉપયોગ કરે છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Sensitive plants lack muscles and nerves; their cells change shape by altering water content. Human legs have specialized muscle tissues containing contractile proteins that change shape and arrangement when triggered by a nerve electrical impulse.",
+        "explanation_hi": "संवेदनशील पौधों में मांसपेशियों और नसों की कमी होती है; उनकी कोशिकाएं पानी की मात्रा को बदलकर आकार बदलती हैं। मानव पैरों में विशेष मांसपेशी ऊतक होते हैं जिनमें सिकुड़ने वाले प्रोटीन होते हैं जो तंत्रिका विद्युत आवेग से ट्रिगर होने पर आकार और व्यवस्था बदलते हैं।",
+        "explanation_gu": "સંવેદનશીલ વનસ્પતિમાં સ્નાયુઓ અને ચેતાઓ હોતી નથી; તેમના કોષો પાણીનું પ્રમાણ બદલીને આકાર બદલે છે. માનવ પગમાં સંકોચનશીલ પ્રોટીન ધરાવતી વિશિષ્ટ સ્નાયુ પેશીઓ હોય છે જે ચેતા વિદ્યુત આવેગ મળતા આકાર અને ગોઠવણ બદલે છે."
+    }
+]
+
+
+data = {
+    "metadata": {
+        "id": "ncert_class10_science_ch6",
+        "title": "Chapter 6: Control and Coordination",
+        "subject": "Science",
+        "grade": "10"
+    },
+    "blocks": blocks
+}
+
+output_path = '/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_science_ch6.json'
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully wrote {len(blocks)} blocks to {output_path}")

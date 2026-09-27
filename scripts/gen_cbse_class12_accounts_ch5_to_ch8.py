@@ -1,0 +1,231 @@
+import json
+import os
+
+def save_json(file_path, data):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"Generated {file_path} successfully!")
+
+def gen_ch5():
+    data = {
+        "metadata": {
+            "id": "cbse_class12_accounts_ch5",
+            "title": "Retirement and Death of a Partner",
+            "title_hi": "एक साझेदार की सेवानिवृत्ति और मृत्यु",
+            "title_gu": "ભાગીદારની નિવૃત્તિ અને મૃત્યુ",
+            "subject": "Accountancy",
+            "subject_hi": "लेखाशास्त्र",
+            "subject_gu": "નામાનાં મૂળતત્ત્વો",
+            "grade": "12",
+            "board": "CBSE",
+            "curriculum": ["CBSE"],
+            "difficulty": "Advanced",
+            "estimated_minutes": 120,
+            "learning_outcomes": [
+                "Calculate Gaining Ratio upon retirement/death.",
+                "Calculate the retiring/deceased partner's share of Goodwill and profit.",
+                "Prepare Executor's Account in case of death.",
+                "Adjust Capital Accounts of continuing partners."
+            ],
+            "learning_outcomes_hi": [
+                "सेवानिवृत्ति/मृत्यु पर लाभ प्राप्ति अनुपात (Gaining Ratio) की गणना करें।",
+                "सेवानिवृत्त/मृत भागीदार की ख्याति और लाभ के हिस्से की गणना करें।",
+                "मृत्यु के मामले में निष्पादक खाता (Executor's Account) तैयार करें।",
+                "निरंतर भागीदारों के पूंजी खातों को समायोजित करें।"
+            ],
+            "learning_outcomes_gu": [
+                "નિવૃત્તિ/મૃત્યુ પર લાભના પ્રમાણ (Gaining Ratio) ની ગણતરી કરો.",
+                "નિવૃત્ત/મૃત ભાગીદારના પાઘડી અને નફાના હિસ્સાની ગણતરી કરો.",
+                "મૃત્યુના કિસ્સામાં એક્ઝિક્યુટરનું ખાતું (Executor's Account) તૈયાર કરો.",
+                "ચાલુ ભાગીદારોના મૂડી ખાતામાં હવાલા નાખો."
+            ],
+            "core_concepts": [
+                "Retirement of Partner",
+                "Death of Partner",
+                "Gaining Ratio",
+                "Executor's Account",
+                "Profit up to date of death",
+                "Joint Life Policy (JLP)"
+            ],
+            "ai_context": {
+                "learning_goal": "Master the financial settlement process when a partner leaves a firm due to retirement or death, ensuring the leaving partner (or their estate) receives their fair share of accumulated wealth.",
+                "common_misconceptions": [
+                    "Confusing Sacrificing Ratio (used in Admission) with Gaining Ratio (used in Retirement).",
+                    "Forgetting to calculate the deceased partner's share of profit from the start of the year to the EXACT date of death."
+                ]
+            }
+        },
+        "blocks": [
+            {
+                "type": "theory",
+                "content": "Imagine you, Amar, and Akbar have run a successful clothing store for 40 years. Now, Akbar is 65 years old, tired, and wants to stop working. He decides to leave the business. This is called the **Retirement of a Partner**. \nBut Akbar can't just walk out empty-handed! Over 40 years, he helped build the shop's Goodwill, bought assets, and saved money in reserves. Before he leaves, you must calculate exactly how much the business owes him.",
+                "content_hi": "कल्पना कीजिए कि आपने, अमर और अकबर ने 40 वर्षों तक कपड़े का एक सफल स्टोर चलाया है। अब, अकबर 65 वर्ष का है, थका हुआ है, और काम करना बंद करना चाहता है। वह व्यवसाय छोड़ने का फैसला करता है। इसे **एक साझेदार की सेवानिवृत्ति (Retirement)** कहा जाता है।\nलेकिन अकबर खाली हाथ बाहर नहीं जा सकता! 40 वर्षों में, उसने दुकान की ख्याति बनाने, संपत्ति खरीदने और भंडार (Reserves) में पैसा बचाने में मदद की। उसके जाने से पहले, आपको गणना करनी चाहिए कि व्यवसाय पर उसका कितना बकाया है।",
+                "content_gu": "કલ્પના કરો કે તમે, અમર અને અકબરે 40 વર્ષથી કપડાંનો સફળ સ્ટોર ચલાવ્યો છે. હવે, અકબર 65 વર્ષનો છે, થાકી ગયો છે, અને કામ કરવાનું બંધ કરવા માંગે છે. તે વ્યવસાય છોડવાનું નક્કી કરે છે. આને **ભાગીદારની નિવૃત્તિ (Retirement)** કહેવામાં આવે છે.\nપરંતુ અકબર માત્ર ખાલી હાથે બહાર જઈ શકે નહીં! 40 વર્ષોમાં, તેણે દુકાનની પાઘડી બનાવવામાં, મિલકતો ખરીદવામાં અને અનામતો (Reserves) માં નાણાં બચાવવામાં મદદ કરી. તે જાય તે પહેલાં, તમારે બરાબર ગણતરી કરવી જોઈએ કે વ્યવસાય તેના પર કેટલું દેવું ધરાવે છે.",
+                "id": "KOBJ_CBSE_ACC12_CH5_THEO_001"
+            },
+            {
+                "type": "quiz",
+                "question": "When Akbar retires, what happens to his share of future profits?",
+                "question_hi": "जब अकबर सेवानिवृत्त होता है, तो उसके भविष्य के मुनाफे के हिस्से का क्या होता है?",
+                "question_gu": "જ્યારે અકબર નિવૃત્ત થાય છે, ત્યારે તેના ભવિષ્યના નફાના હિસ્સાનું શું થાય છે?",
+                "options": [
+                    "It is given to the government.",
+                    "It is destroyed.",
+                    "It is taken over (Gained) by the continuing partners (You and Amar).",
+                    "Akbar continues to receive it forever."
+                ],
+                "options_hi": [
+                    "यह सरकार को दे दिया जाता है।",
+                    "यह नष्ट हो जाता है।",
+                    "इसे निरंतर भागीदारों (आप और अमर) द्वारा ले लिया जाता है (लाभ प्राप्त किया जाता है)।",
+                    "अकबर को यह हमेशा के लिए मिलता रहता है।"
+                ],
+                "options_gu": [
+                    "તે સરકારને આપવામાં આવે છે.",
+                    "તે નાશ પામે છે.",
+                    "તે ચાલુ ભાગીદારો (તમે અને અમર) દ્વારા લઈ લેવામાં આવે છે (લાભ મેળવવામાં આવે છે).",
+                    "અકબરને તે હંમેશ માટે મળતું રહે છે."
+                ],
+                "correct_index": 2,
+                "explanation": "The continuing partners GAIN the retiring partner's share. Hence, we calculate the Gaining Ratio (New Ratio - Old Ratio).",
+                "explanation_hi": "निरंतर भागीदार सेवानिवृत्त होने वाले भागीदार का हिस्सा प्राप्त करते हैं (Gain)। इसलिए, हम लाभ प्राप्ति अनुपात (नया अनुपात - पुराना अनुपात) की गणना करते हैं।",
+                "explanation_gu": "ચાલુ ભાગીદારો નિવૃત્ત ભાગીદારનો હિસ્સો મેળવે છે (Gain). આથી, આપણે લાભના પ્રમાણની (નવું પ્રમાણ - જૂનું પ્રમાણ) ગણતરી કરીએ છીએ.",
+                "id": "KOBJ_CBSE_ACC12_CH5_QUIZ_002"
+            },
+            {
+                "type": "theory",
+                "content": "**Difference Between Retirement and Death**\nRetirement is usually planned. A partner retires at the end of the financial year (e.g., 31st March). \nDeath is unpredictable. A partner can die on any day of the year (e.g., 12th August). If a partner dies in the middle of the year, his legal heirs (Executors) are entitled to his share of profit earned from 1st April to the exact date of his death (12th August).",
+                "content_hi": "**सेवानिवृत्ति और मृत्यु के बीच अंतर**\nसेवानिवृत्ति की आमतौर पर योजना बनाई जाती है। एक भागीदार वित्तीय वर्ष के अंत (जैसे, 31 मार्च) में सेवानिवृत्त होता है।\nमृत्यु अप्रत्याशित है। एक साथी की मृत्यु वर्ष के किसी भी दिन (जैसे, 12 अगस्त) हो सकती है। यदि वर्ष के मध्य में किसी भागीदार की मृत्यु हो जाती है, तो उसके कानूनी उत्तराधिकारी (Executors) 1 अप्रैल से उसकी मृत्यु की सही तारीख (12 अगस्त) तक अर्जित लाभ में उसके हिस्से के हकदार होते हैं।",
+                "content_gu": "**નિવૃત્તિ અને મૃત્યુ વચ્ચેનો તફાવત**\nનિવૃત્તિનું સામાન્ય રીતે આયોજન કરવામાં આવે છે. ભાગીદાર નાણાકીય વર્ષના અંતે (દા.ત., 31 માર્ચ) નિવૃત્ત થાય છે.\nમૃત્યુ અણધારી છે. ભાગીદારનું મૃત્યુ વર્ષના કોઈપણ દિવસે (દા.ત., 12મી ઓગસ્ટે) થઈ શકે છે. જો વર્ષની મધ્યમાં ભાગીદારનું મૃત્યુ થાય છે, તો તેના કાનૂની વારસદારો (Executors) 1લી એપ્રિલથી તેના મૃત્યુની ચોક્કસ તારીખ (12મી ઓગસ્ટ) સુધીના નફામાં તેના હિસ્સાના હકદાર છે.",
+                "id": "KOBJ_CBSE_ACC12_CH5_THEO_003"
+            },
+            {
+                "type": "numerical",
+                "question": "A, B, and C were partners sharing profits in the ratio of 3:2:1. The firm's financial year ends on 31st March. C died on 30th June 2023. Under the partnership deed, the deceased partner's share of profit till the date of death is to be calculated on the basis of the average profit of the last 3 years.\nThe profits for the last 3 years were: ₹40,000, ₹50,000, and ₹60,000.\nCalculate C's share of profit till his death and pass the necessary journal entry.",
+                "question_hi": "A, B और C 3:2:1 के अनुपात में लाभ साझा करने वाले भागीदार थे। फर्म का वित्तीय वर्ष 31 मार्च को समाप्त होता है। C की मृत्यु 30 जून 2023 को हुई। साझेदारी संलेख के तहत, मृत्यु की तारीख तक मृत भागीदार के लाभ के हिस्से की गणना पिछले 3 वर्षों के औसत लाभ के आधार पर की जानी है।\nपिछले 3 वर्षों का लाभ था: ₹40,000, ₹50,000, और ₹60,000।\nC की मृत्यु तक उसके लाभ के हिस्से की गणना करें और आवश्यक जर्नल प्रविष्टि पारित करें।",
+                "question_gu": "A, B, અને C 3:2:1 ના પ્રમાણમાં નફો વહેંચતા ભાગીદારો હતા. પેઢીનું નાણાકીય વર્ષ 31 માર્ચે પૂરું થાય છે. 30 જૂન 2023 ના રોજ C નું મૃત્યુ થયું. ભાગીદારી કરારનામા હેઠળ, મૃત્યુની તારીખ સુધી મૃત ભાગીદારના નફાના હિસ્સાની ગણતરી છેલ્લા 3 વર્ષના સરેરાશ નફાના આધારે કરવાની છે.\nછેલ્લા 3 વર્ષનો નફો હતો: ₹40,000, ₹50,000 અને ₹60,000.\nC ના મૃત્યુ સુધી તેના નફાના હિસ્સાની ગણતરી કરો અને જરૂરી આમનોંધ પસાર કરો.",
+                "solution": "Step 1: Calculate Average Profit\nAverage Profit = (40,000 + 50,000 + 60,000) / 3 = 1,50,000 / 3 = **₹50,000**\n\nStep 2: Calculate the time period (from 1st April to 30th June)\nTime = April, May, June = **3 months**\n\nStep 3: Calculate C's share of Profit for 3 months\nC's Share of Profit = Average Profit × C's Ratio × (Time / 12)\nC's Share = 50,000 × (1/6) × (3/12)\nC's Share = 50,000 × (1/6) × (1/4) = 50,000 / 24 = **₹2,083.33** (approx)\n\nStep 4: Journal Entry\n| Date | Particulars | Debit (₹) | Credit (₹) |\n| :--- | :--- | :--- | :--- |\n| 2023 June 30 | Profit and Loss Suspense A/c ... Dr. | 2,083 | |\n| |    To C's Capital A/c | | 2,083 |\n| | (Being C's share of profit up to date of death credited) | | |",
+                "solution_hi": "(अंग्रेजी समाधान के समान, गणितीय गणना देखें। P&L Suspense A/c डेबिट होगा, और C's Capital A/c क्रेडिट होगा।)",
+                "solution_gu": "(અંગ્રેજી ઉકેલ સમાન, ગાણિતિક ગણતરી જુઓ. P&L Suspense A/c ઉધાર થશે, અને C's Capital A/c જમા થશે.)",
+                "id": "KOBJ_CBSE_ACC12_CH5_NUME_004"
+            }
+        ]
+    }
+    save_json('app_core/chapters/cbse_class12_accounts_ch5.json', data)
+
+def gen_ch6():
+    data = {
+        "metadata": {
+            "id": "cbse_class12_accounts_ch6",
+            "title": "Dissolution of a Partnership Firm",
+            "title_hi": "साझेदारी फर्म का विघटन",
+            "title_gu": "ભાગીદારી પેઢીનું વિસર્જન",
+            "subject": "Accountancy",
+            "subject_hi": "लेखाशास्त्र",
+            "subject_gu": "નામાનાં મૂળતત્ત્વો",
+            "grade": "12",
+            "board": "CBSE",
+            "curriculum": ["CBSE"],
+            "difficulty": "Advanced",
+            "estimated_minutes": 90,
+            "learning_outcomes": [
+                "Differentiate between Dissolution of Partnership and Dissolution of Firm.",
+                "Prepare Realisation Account.",
+                "Settle accounts according to Section 48 of the Indian Partnership Act.",
+                "Understand the treatment of unrecorded assets and liabilities."
+            ]
+        },
+        "blocks": [
+            {
+                "type": "theory",
+                "content": "**Game Over!**\nEverything has an end. When partners decide to completely shut down the business, sell off all assets, pay off all outside liabilities, and go their separate ways permanently, it is called the **Dissolution of a Partnership Firm**.\n*Note:* This is different from 'Dissolution of Partnership' (which happens during admission/retirement where the business CONTINUES). In Dissolution of a FIRM, the business CLOSES.",
+                "content_hi": "**खेल खत्म!**\nहर चीज का एक अंत होता है। जब साझेदार व्यवसाय को पूरी तरह से बंद करने, सभी संपत्तियों को बेचने, सभी बाहरी देनदारियों का भुगतान करने और स्थायी रूप से अलग होने का फैसला करते हैं, तो इसे **साझेदारी फर्म का विघटन (Dissolution)** कहा जाता है।",
+                "content_gu": "**રમત સમાપ્ત!**\nદરેક વસ્તુનો અંત હોય છે. જ્યારે ભાગીદારો વ્યવસાયને સંપૂર્ણપણે બંધ કરવાનું, બધી મિલકતો વેચી દેવાનું, બહારની તમામ જવાબદારીઓ ચૂકવવાનું અને કાયમી ધોરણે અલગ થવાનું નક્કી કરે છે, ત્યારે તેને **ભાગીદારી પેઢીનું વિસર્જન (Dissolution)** કહેવામાં આવે છે.",
+                "id": "KOBJ_CBSE_ACC12_CH6_THEO_001"
+            },
+            {
+                "type": "teacher_tip",
+                "content": "To close the books of accounts, we open a special temporary account called the **Realisation Account** (NOT Revaluation Account). \nStep 1: Transfer ALL assets (except Cash/Bank) to the Debit side of Realisation A/c.\nStep 2: Transfer ALL outside liabilities to the Credit side of Realisation A/c.\nStep 3: Sell the assets (Bank A/c Dr to Realisation A/c).\nStep 4: Pay the liabilities (Realisation A/c Dr to Bank A/c).",
+                "content_hi": "खातों की किताबों को बंद करने के लिए, हम **वसूली खाता (Realisation Account)** नामक एक विशेष अस्थायी खाता खोलते हैं (पुनर्मूल्यांकन खाता नहीं)।",
+                "content_gu": "હિસાબી ચોપડા બંધ કરવા માટે, અમે **માલ-મિલકત નિકાલ ખાતું (Realisation Account)** નામનું વિશેષ અસ્થાયી ખાતું ખોલીએ છીએ (પુનઃમૂલ્યાંકન ખાતું નહીં).",
+                "id": "KOBJ_CBSE_ACC12_CH6_TEAC_002"
+            }
+        ]
+    }
+    save_json('app_core/chapters/cbse_class12_accounts_ch6.json', data)
+
+def gen_ch7():
+    data = {
+        "metadata": {
+            "id": "cbse_class12_accounts_ch7",
+            "title": "Accounting for Share Capital",
+            "title_hi": "शेयर पूंजी के लिए लेखांकन",
+            "title_gu": "શેર મૂડીના હિસાબો",
+            "subject": "Accountancy",
+            "grade": "12",
+            "board": "CBSE",
+            "curriculum": ["CBSE"],
+            "difficulty": "Master",
+            "estimated_minutes": 180,
+            "learning_outcomes": [
+                "Understand the features of a Joint Stock Company and types of shares.",
+                "Pass journal entries for issue of shares at par and at premium.",
+                "Handle Calls-in-Arrears and Calls-in-Advance.",
+                "Master the concept of Pro-rata allotment in case of over-subscription.",
+                "Pass journal entries for Forfeiture and Re-issue of Shares."
+            ]
+        },
+        "blocks": [
+            {
+                "type": "theory",
+                "content": "A Partnership Firm has a major flaw: It can only raise capital from a few partners (maximum 50). But what if you want to build a gigantic factory worth ₹1,000 Crores (like Reliance or Tata)? You need money from lakhs of people!\nSo, a **Joint Stock Company** is formed. The total massive capital (₹1,000 Crores) is broken down into tiny equal units (say, ₹10 each). These tiny units are called **Shares**. The people who buy these shares are the public, and they become the **Shareholders** (part-owners) of the company.",
+                "content_hi": "एक साझेदारी फर्म में एक बड़ी खामी है: यह केवल कुछ भागीदारों (अधिकतम 50) से पूंजी जुटा सकती है। लेकिन क्या होगा यदि आप ₹1,000 करोड़ का एक विशाल कारखाना (रिलायंस या टाटा की तरह) बनाना चाहते हैं? आपको लाखों लोगों से पैसे की जरूरत है!\nइसलिए, एक **संयुक्त स्टॉक कंपनी (Joint Stock Company)** बनाई जाती है। कुल विशाल पूंजी (₹1,000 करोड़) को छोटी समान इकाइयों (मान लीजिए, ₹10 प्रत्येक) में तोड़ दिया जाता है। इन छोटी इकाइयों को **शेयर (Shares)** कहा जाता है।",
+                "content_gu": "ભાગીદારી પેઢીમાં એક મોટી ખામી છે: તે માત્ર થોડા ભાગીદારો (મહત્તમ 50) પાસેથી મૂડી એકત્ર કરી શકે છે. પરંતુ જો તમે ₹1,000 કરોડની વિશાળ ફેક્ટરી (જેમ કે રિલાયન્સ અથવા ટાટા) બનાવવા માંગતા હો તો શું? તમારે લાખો લોકો પાસેથી પૈસાની જરૂર છે!\nતેથી, **જોઈન્ટ સ્ટોક કંપની (Joint Stock Company)** ની રચના કરવામાં આવે છે. કુલ વિશાળ મૂડી (₹1,000 કરોડ) ને નાના સમાન એકમોમાં (ધારો કે, પ્રત્યેક ₹10) તોડવામાં આવે છે. આ નાના એકમોને **શેર (Shares)** કહેવામાં આવે છે.",
+                "id": "KOBJ_CBSE_ACC12_CH7_THEO_001"
+            },
+            {
+                "type": "teacher_tip",
+                "content": "To make it easy for the public to pay, a company doesn't ask for the full ₹10 at once. It asks in installments:\n1st Installment (to apply for the share): **Application Money**\n2nd Installment (when the share is confirmed): **Allotment Money**\n3rd Installment (when the company needs more money): **First Call**\n4th Installment: **Final Call**",
+                "content_hi": "जनता के लिए भुगतान करना आसान बनाने के लिए, एक कंपनी एक साथ पूरे ₹10 नहीं मांगती है। यह किश्तों में मांगती है:\nपहली किश्त: आवेदन राशि (Application Money)\nदूसरी किश्त: आबंटन राशि (Allotment Money)\nतीसरी किश्त: प्रथम कॉल (First Call)",
+                "content_gu": "જનતા માટે ચૂકવણી કરવાનું સરળ બનાવવા માટે, કંપની એક જ સમયે આખા ₹10 માંગતી નથી. તે હપ્તામાં માંગે છે:\nપહેલો હપ્તો: અરજીની રકમ (Application Money)\nબીજો હપ્તો: મંજૂરીની રકમ (Allotment Money)\nત્રીજો હપ્તો: પ્રથમ હપ્તો (First Call)",
+                "id": "KOBJ_CBSE_ACC12_CH7_TEAC_002"
+            }
+        ]
+    }
+    save_json('app_core/chapters/cbse_class12_accounts_ch7.json', data)
+
+def gen_ch8():
+    data = {
+        "metadata": {
+            "id": "cbse_class12_accounts_ch8",
+            "title": "Accounting for Debentures",
+            "title_hi": "ऋणपत्रों के लिए लेखांकन",
+            "title_gu": "ડિબેન્ચરના હિસાબો",
+            "subject": "Accountancy",
+            "grade": "12",
+            "board": "CBSE",
+            "curriculum": ["CBSE"],
+            "difficulty": "Intermediate",
+            "estimated_minutes": 60,
+            "learning_outcomes": [
+                "Understand the meaning of Debentures and difference from Shares.",
+                "Pass journal entries for issue of debentures with terms of redemption."
+            ]
+        },
+        "blocks": [
+            {
+                "type": "theory",
+                "content": "Sometimes a company needs money, but it doesn't want to make the public 'owners' by issuing shares. Instead, it asks the public for a **LOAN**.\nIn return for the loan, the company issues a certificate acknowledging the debt, with a promise to pay a fixed rate of interest (e.g., 9% p.a.) and repay the principal amount after a certain period (e.g., 5 years). This certificate is called a **Debenture**.",
+                "content_hi": "कभी-कभी किसी कंपनी को पैसे की आवश्यकता होती है, लेकिन वह शेयर जारी करके जनता को 'मालिक' नहीं बनाना चाहती। इसके बजाय, यह जनता से **ऋण (LOAN)** मांगती है। इस प्रमाण पत्र को **ऋणपत्र (Debenture)** कहा जाता है।",
+                "content_gu": "કેટલીકવાર કંપનીને પૈસાની જરૂર હોય છે, પરંતુ તે શેર બહાર પાડીને જનતાને 'માલિક' બનાવવા માંગતી નથી. તેના બદલે, તે જનતા પાસે **લોન (LOAN)** માંગે છે. આ પ્રમાણપત્રને **ડિબેન્ચર (Debenture)** કહેવામાં આવે છે.",
+                "id": "KOBJ_CBSE_ACC12_CH8_THEO_001"
+            }
+        ]
+    }
+    save_json('app_core/chapters/cbse_class12_accounts_ch8.json', data)
+
+if __name__ == "__main__":
+    gen_ch5()
+    gen_ch6()
+    gen_ch7()
+    gen_ch8()

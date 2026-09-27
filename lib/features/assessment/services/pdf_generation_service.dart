@@ -1,3 +1,4 @@
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -63,10 +64,7 @@ class PdfGenerationService {
       ),
     );
 
-    await Printing.layoutPdf(
-      onLayout: (PdfPageFormat format) async => pdf.save(),
-      name: 'Question_Paper_${title.replaceAll(' ', '_')}.pdf',
-    );
+    await PdfViewerUtil.openPdfBytes(await pdf.save(), 'Question_Paper_${title.replaceAll(' ', '_')}.pdf',);
   }
 
   Future<void> generateSolutionsPDF(String title, List<dynamic> questions) async {
@@ -135,9 +133,6 @@ class PdfGenerationService {
       ),
     );
 
-    await Printing.layoutPdf(
-      onLayout: (PdfPageFormat format) async => pdf.save(),
-      name: 'Solutions_${title.replaceAll(' ', '_')}.pdf',
-    );
+    await PdfViewerUtil.openPdfBytes(await pdf.save(), 'Solutions_${title.replaceAll(' ', '_')}.pdf',);
   }
 }

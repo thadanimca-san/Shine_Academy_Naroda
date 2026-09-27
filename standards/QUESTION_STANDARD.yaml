@@ -1,0 +1,25 @@
+standard_name: "EduOS Assessment Schema"
+version: "2.0.0"
+schema_requirements:
+  universal_fields:
+    id: "unique string (e.g., Q001)"
+    chapter_id: "string pointer"
+    topic_id: "string pointer to Knowledge Graph"
+    type: "enum (mcq, true_false, fill_blank, match_column, numerical, practical)"
+    difficulty: "enum [Beginner, Intermediate, Advanced]"
+    board: "list of strings (e.g., [GSEB, CBSE, ICSE])"
+    marks: "integer"
+    bloom_taxonomy: "enum [Remembering, Understanding, Applying, Analyzing, Evaluating, Creating]"
+    keywords: "list of concept pointers"
+    estimated_time_minutes: "integer"
+    exam_frequency: "enum [Low, Medium, High]"
+    
+    question_text: "string (multilingual support)"
+    answer: "string or object (depends on type)"
+    explanation: "string (detailed breakdown of the correct answer)"
+    distractor_rationale: "string (why the wrong options are wrong - crucial for AI tutoring)"
+    
+    ai_context:
+      learning_goal: "string"
+      common_misconceptions: "list of strings"
+      hint: "string"

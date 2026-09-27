@@ -1,0 +1,272 @@
+import json
+
+blocks = [
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_001",
+        "type": "hook",
+        "title": "Why Do We Look Like Our Parents?",
+        "title_hi": "हम अपने माता-पिता की तरह क्यों दिखते हैं?",
+        "title_gu": "આપણે આપણા માતા-પિતા જેવા શા માટે દેખાઈએ છીએ?",
+        "body": "Have you ever wondered why cats always give birth to kittens and never to puppies? Or why you might have your mother's eyes and your father's nose? This passing of traits from one generation to the next is not magic; it's a strictly controlled biological program called Heredity, driven by microscopic instruction manuals in our cells called Genes.",
+        "body_hi": "क्या आपने कभी सोचा है कि बिल्लियाँ हमेशा बिल्ली के बच्चों को ही जन्म क्यों देती हैं, पिल्लों को कभी क्यों नहीं? या ऐसा क्यों है कि आपकी आंखें आपकी मां जैसी और नाक आपके पिता जैसी हो सकती है? एक पीढ़ी से दूसरी पीढ़ी तक लक्षणों का यह स्थानांतरण कोई जादू नहीं है; यह एक कड़ाई से नियंत्रित जैविक कार्यक्रम है जिसे आनुवंशिकता (Heredity) कहा जाता है, जो हमारी कोशिकाओं में जीन (Genes) नामक सूक्ष्म निर्देश पुस्तिकाओं द्वारा संचालित होता है।",
+        "body_gu": "શું તમે ક્યારેય વિચાર્યું છે કે બિલાડીઓ હંમેશા બિલાડીના બચ્ચાંને જ કેમ જન્મ આપે છે અને ગલુડિયાઓને ક્યારેય કેમ નહીં? અથવા તમારી આંખો તમારી માતા જેવી અને નાક તમારા પિતા જેવું કેમ હોઈ શકે છે? એક પેઢીમાંથી બીજી પેઢીમાં લક્ષણોનું આ વહન કોઈ જાદુ નથી; તે એક કડક રીતે નિયંત્રિત જૈવિક પ્રોગ્રામ છે જેને આનુવંશિકતા (Heredity) કહેવાય છે, જે આપણા કોષોમાં રહેલી જનીનો (Genes) નામની સૂક્ષ્મ માર્ગદર્શિકાઓ દ્વારા સંચાલિત થાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_002",
+        "type": "discovery",
+        "title": "Accumulation of Variation",
+        "title_hi": "विभिन्नताओं का संचय",
+        "title_gu": "ભિન્નતાઓનો સંચય",
+        "body": "When organisms reproduce, the offspring look similar to the parents but are never exactly identical (especially in sexual reproduction). Small differences, called Variations, appear in each generation. Over many generations, these small variations accumulate. This is why you look slightly different from your parents, and completely different from your ancestors from 10,000 years ago. Variations help a species survive if the environment changes drastically.",
+        "body_hi": "जब जीव प्रजनन करते हैं, तो संताने माता-पिता के समान दिखती हैं लेकिन कभी भी बिल्कुल समान नहीं होती हैं (विशेषकर लैंगिक प्रजनन में)। प्रत्येक पीढ़ी में छोटे अंतर दिखाई देते हैं, जिन्हें विभिन्नताएं (Variations) कहा जाता है। कई पीढ़ियों में, ये छोटी विभिन्नताएं जमा हो जाती हैं। यही कारण है कि आप अपने माता-पिता से थोड़े अलग दिखते हैं, और 10,000 साल पहले के अपने पूर्वजों से बिल्कुल अलग दिखते हैं। पर्यावरण के काफी बदलने पर विभिन्नताएं एक प्रजाति को जीवित रहने में मदद करती हैं।",
+        "body_gu": "જ્યારે સજીવો પ્રજનન કરે છે, ત્યારે સંતતિ માતા-પિતા સમાન દેખાય છે પરંતુ ક્યારેય સંપૂર્ણ આબેહૂબ હોતી નથી (ખાસ કરીને લિંગી પ્રજનનમાં). દરેક પેઢીમાં નાના તફાવતો જોવા મળે છે, જેને ભિન્નતા (Variations) કહે છે. ઘણી પેઢીઓ દરમિયાન, આ નાની ભિન્નતાઓ એકઠી થાય છે. આ જ કારણ છે કે તમે તમારા માતાપિતાથી થોડા અલગ દેખાઓ છો, અને 10,000 વર્ષ પહેલાંના તમારા પૂર્વજોથી સાવ અલગ. જો પર્યાવરણ મોટા પ્રમાણમાં બદલાય તો ભિન્નતાઓ જાતિને ટકી રહેવામાં મદદ કરે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_003",
+        "type": "theory",
+        "title": "Mendel's Experiments: The Father of Genetics",
+        "title_hi": "मेंडल के प्रयोग: आनुवंशिकी के जनक",
+        "title_gu": "મેન્ડલના પ્રયોગો: જનીનવિદ્યાના પિતા",
+        "body": "Gregor Mendel, an Austrian monk, discovered the rules of inheritance by growing thousands of pea plants (Pisum sativum) in his garden. He chose pea plants because:\n1. They have clearly contrasting, visible characters (e.g., Tall vs Short, Round vs Wrinkled seeds, Violet vs White flowers).\n2. They have a short life cycle, allowing him to study multiple generations quickly.\n3. They normally self-pollinate, but can easily be cross-pollinated manually.",
+        "body_hi": "एक ऑस्ट्रियाई भिक्षु ग्रेगर मेंडल ने अपने बगीचे में हजारों मटर के पौधे (पाइसम सैटिवम) उगाकर विरासत के नियमों की खोज की। उन्होंने मटर के पौधों को इसलिए चुना क्योंकि:\n1. उनमें स्पष्ट रूप से विपरीत, दृश्यमान लक्षण होते हैं (जैसे, लंबा बनाम छोटा, गोल बनाम झुर्रीदार बीज, बैंगनी बनाम सफेद फूल)।\n2. उनका जीवन चक्र छोटा होता है, जिससे वह कई पीढ़ियों का जल्दी से अध्ययन कर सकते थे।\n3. वे सामान्य रूप से स्व-परागण करते हैं, लेकिन उन्हें आसानी से मैन्युअल रूप से पर-परागण किया जा सकता है।",
+        "body_gu": "ઑસ્ટ્રિયન સાધુ ગ્રેગર મેન્ડલે તેમના બગીચામાં હજારો વટાણાના છોડ (Pisum sativum) ઉગાડીને આનુવંશિકતાના નિયમો શોધી કાઢ્યા. તેમણે વટાણાના છોડ પસંદ કર્યા કારણ કે:\n1. તેઓમાં સ્પષ્ટ રીતે વિરોધાભાસી, દેખીતા લક્ષણો છે (દા.ત., ઊંચા વિ. નીચા, ગોળ વિ. ખરબચડા બીજ, જાંબલી વિ. સફેદ ફૂલો).\n2. તેમનું જીવનચક્ર ટૂંકું હોય છે, જેથી તેઓ ઝડપથી અનેક પેઢીઓનો અભ્યાસ કરી શકે.\n3. તેઓ સામાન્ય રીતે સ્વ-પરાગનયન કરે છે, પરંતુ તેમને સરળતાથી જાતે પર-પરાગનયન કરી શકાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_004",
+        "type": "socratic_question",
+        "title": "The Mystery of the Missing Short Plants",
+        "title_hi": "गायब हुए छोटे पौधों का रहस्य",
+        "title_gu": "ગાયબ થયેલા નીચા છોડનું રહસ्य",
+        "question": "When Mendel crossed a pure Tall pea plant (TT) with a pure Short pea plant (tt), what do you think the height of the first generation (F1) offspring was?",
+        "question_hi": "जब मेंडल ने एक शुद्ध लंबे मटर के पौधे (TT) का शुद्ध छोटे मटर के पौधे (tt) के साथ संकरण कराया, तो आपको क्या लगता है कि पहली पीढ़ी (F1) की संतानों की ऊंचाई क्या थी?",
+        "question_gu": "જ્યારે મેન્ડલે શુદ્ધ ઊંચા વટાણાના છોડ (TT) નું શુદ્ધ નીચા વટાણાના છોડ (tt) સાથે સંકરણ કરાવ્યું, ત્યારે તમને શું લાગે છે કે પ્રથમ પેઢી (F1) ની સંતતિની ઊંચાઈ કેટલી હતી?",
+        "options": [
+            "All plants were medium-sized (a mix of tall and short).",
+            "Half of the plants were tall, and half were short.",
+            "All the plants were completely tall.",
+            "All the plants were completely short."
+        ],
+        "options_hi": [
+            "सभी पौधे मध्यम आकार के थे (लंबे और छोटे का मिश्रण)।",
+            "आधे पौधे लंबे थे, और आधे छोटे थे।",
+            "सभी पौधे पूरी तरह से लंबे थे।",
+            "सभी पौधे पूरी तरह से छोटे थे।"
+        ],
+        "options_gu": [
+            "બધા છોડ મધ્યમ કદના હતા (ઊંચા અને નીચાનું મિશ્રણ).",
+            "અડધા છોડ ઊંચા હતા અને અડધા નીચા હતા.",
+            "બધા જ છોડ સંપૂર્ણપણે ઊંચા હતા.",
+            "બધા જ છોડ સંપૂર્ણપણે નીચા હતા."
+        ],
+        "correct_index": 2,
+        "explanation": "To Mendel's surprise, there were no medium plants and no short plants! All the F1 plants were Tall. This proved that the 'Tall' trait is DOMINANT over the 'Short' trait (which is recessive).",
+        "explanation_hi": "मेंडल के आश्चर्य की बात थी कि कोई भी मध्यम पौधा और कोई छोटा पौधा नहीं था! सभी F1 पौधे लंबे थे। इससे यह साबित हुआ कि 'लंबा' गुण 'छोटे' गुण (जो कि अप्रभावी है) पर प्रभावी (DOMINANT) है।",
+        "explanation_gu": "મેન્ડલને આશ્ચર્ય થયું કે ત્યાં કોઈ મધ્યમ છોડ કે કોઈ નીચો છોડ નહોતો! બધા જ F1 છોડ ઊંચા હતા. આનાથી સાબિત થયું કે 'ઊંચા' હોવાનું લક્ષણ 'નીચા' લક્ષણ (જે પ્રચ્છન્ન છે) પર પ્રભાવી (DOMINANT) છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_005",
+        "type": "theory",
+        "title": "Monohybrid Cross: The Reappearance",
+        "title_hi": "एकल संकरण: लक्षणों का फिर से प्रकट होना",
+        "title_gu": "એકસંકરણ: લક્ષણોનું ફરીથી દેખાવું",
+        "body": "After getting all Tall plants in the F1 generation (genotype Tt), Mendel allowed these F1 plants to self-pollinate to produce the F2 generation. \nResult: Out of 4 plants, 3 were Tall and 1 was Short! (A 3:1 ratio). \nConclusion: The 'short' trait was not lost or destroyed in the F1 generation; it was just hidden by the dominant 'tall' trait. A recessive trait (shortness, tt) only expresses itself when both copies of the gene are recessive.",
+        "body_hi": "F1 पीढ़ी (जीनोटाइप Tt) में सभी लंबे पौधे प्राप्त करने के बाद, मेंडल ने इन F1 पौधों को F2 पीढ़ी के उत्पादन के लिए स्व-परागण करने दिया।\nपरिणाम: 4 पौधों में से 3 लंबे थे और 1 छोटा था! (3:1 का अनुपात)।\nनिष्कर्ष: F1 पीढ़ी में 'छोटा' लक्षण खोया या नष्ट नहीं हुआ था; यह सिर्फ प्रमुख 'लंबे' लक्षण द्वारा छिपाया गया था। एक अप्रभावी लक्षण (छोटापन, tt) केवल तभी खुद को व्यक्त करता है जब जीन की दोनों प्रतियां अप्रभावी हों।",
+        "body_gu": "F1 પેઢીમાં બધા જ ઊંચા છોડ (જનીનસ્વરૂપ Tt) મેળવ્યા પછી, મેન્ડલે F2 પેઢી ઉત્પન્ન કરવા માટે આ F1 છોડમાં સ્વ-પરાગનયન થવા દીધું.\nપરિણામ: 4 છોડમાંથી, 3 ઊંચા અને 1 નીચો હતો! (3:1 નો ગુણોત્તર).\nનિષ્કર્ષ: F1 પેઢીમાં 'નીચા' હોવાનું લક્ષણ નષ્ટ કે ગાયબ થયું ન હતું; તે માત્ર પ્રભાવી 'ઊંચા' લક્ષણ દ્વારા ઢંકાઈ ગયું હતું. પ્રચ્છન્ન લક્ષણ (નીચાપણું, tt) ત્યારે જ વ્યક્ત થાય છે જ્યારે જનીનની બંને નકલો પ્રચ્છન્ન હોય."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_006",
+        "type": "theory",
+        "title": "How Do Traits Get Expressed?",
+        "title_hi": "लक्षण कैसे व्यक्त होते हैं?",
+        "title_gu": "લક્ષણો કેવી રીતે વ્યક્ત થાય છે?",
+        "body": "How exactly does a 'T' gene make a plant tall? \nCellular DNA is the information source for making proteins. A section of DNA that provides information for one protein is called a Gene.\nFor example, plant height depends on a growth hormone. \n1. If the gene for the hormone-producing enzyme works perfectly (Dominant T), lots of hormone is produced, and the plant grows Tall.\n2. If the gene is altered and produces a less efficient enzyme (Recessive t), less hormone is produced, and the plant remains Short.",
+        "body_hi": "आखिर एक 'T' जीन पौधे को लंबा कैसे बनाता है?\nकोशिकीय डीएनए प्रोटीन बनाने का सूचना स्रोत है। डीएनए का वह हिस्सा जो एक प्रोटीन के लिए जानकारी प्रदान करता है, जीन कहलाता है।\nउदाहरण के लिए, पौधे की ऊंचाई वृद्धि हार्मोन पर निर्भर करती है।\n1. यदि हार्मोन-उत्पादक एंजाइम का जीन पूरी तरह से काम करता है (प्रभावी T), तो बहुत अधिक हार्मोन का उत्पादन होता है, और पौधा लंबा बढ़ता है।\n2. यदि जीन में परिवर्तन होता है और कम कुशल एंजाइम पैदा होता है (अप्रभावी t), तो कम हार्मोन का उत्पादन होता है, और पौधा छोटा रहता है।",
+        "body_gu": "એક 'T' જનીન ખરેખર છોડને ઊંચો કેવી રીતે બનાવે છે?\nકોષીય ડીએનએ પ્રોટીન બનાવવા માટેનો માહિતી સ્ત્રોત છે. ડીએનએ નો એવો ભાગ જે એક પ્રોટીન માટે માહિતી પૂરી પાડે છે તેને જનીન કહે છે.\nઉદાહરણ તરીકે, છોડની ઊંચાઈ વૃદ્ધિ અંતઃસ્ત્રાવ પર આધાર રાખે છે.\n1. જો અંતઃસ્ત્રાવ ઉત્પન્ન કરતા ઉત્સેચક માટેનું જનીન સંપૂર્ણ રીતે કામ કરે (પ્રભાવી T), તો ઘણો અંતઃસ્ત્રાવ ઉત્પન્ન થાય છે, અને છોડ ઊંચો થાય છે.\n2. જો જનીન બદલાઈ ગયું હોય અને ઓછો કાર્યક્ષમ ઉત્સેચક બનાવે (પ્રચ્છન્ન t), તો ઓછો અંતઃસ્ત્રાવ બને છે, અને છોડ નીચો રહે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_007",
+        "type": "theory",
+        "title": "Sex Determination in Humans",
+        "title_hi": "मनुष्यों में लिंग निर्धारण",
+        "title_gu": "મનુષ્યમાં લિંગ નિશ્ચયન",
+        "body": "In human beings, sex is determined by genetics, specifically by a pair of chromosomes called Sex Chromosomes. Humans have 23 pairs of chromosomes. \n- Females have a perfect pair of sex chromosomes: XX.\n- Males have a mismatched pair: XY.\nA child receives an X chromosome from the mother regardless. Therefore, the sex of the child is entirely determined by what chromosome the father contributes:\n- If father contributes X -> Baby is XX (Girl)\n- If father contributes Y -> Baby is XY (Boy)\nThe chance of a boy or a girl is always 50%.",
+        "body_hi": "मनुष्यों में, लिंग आनुवंशिकी द्वारा निर्धारित होता है, विशेष रूप से सेक्स क्रोमोसोम नामक गुणसूत्रों की एक जोड़ी द्वारा। मनुष्यों में गुणसूत्रों के 23 जोड़े होते हैं।\n- महिलाओं में सेक्स क्रोमोसोम की एक आदर्श जोड़ी होती है: XX।\n- पुरुषों में एक बेमेल जोड़ी होती है: XY।\nएक बच्चे को मां से हमेशा X गुणसूत्र मिलता है। इसलिए, बच्चे का लिंग पूरी तरह से इस बात पर निर्भर करता है कि पिता कौन सा गुणसूत्र देता है:\n- यदि पिता X देता है -> बच्चा XX (लड़की) है\n- यदि पिता Y देता है -> बच्चा XY (लड़का) है\nलड़का या लड़की होने की संभावना हमेशा 50% होती है।",
+        "body_gu": "મનુષ્યમાં, લિંગ જનીનવિદ્યા દ્વારા નક્કી થાય છે, ખાસ કરીને લિંગી રંગસૂત્રોની જોડ દ્વારા. મનુષ્યમાં રંગસૂત્રોની 23 જોડ હોય છે.\n- સ્ત્રીઓમાં લિંગી રંગસૂત્રોની સંપૂર્ણ જોડ હોય છે: XX.\n- પુરુષોમાં અસમાન જોડ હોય છે: XY.\nબાળકને માતા તરફથી હંમેશા X રંગસૂત્ર મળે છે. તેથી, બાળકનું લિંગ સંપૂર્ણપણે પિતા કયું રંગસૂત્ર આપે છે તેના પર નિર્ભર છે:\n- જો પિતા X આપે -> બાળક XX (છોકરી) છે\n- જો પિતા Y આપે -> બાળક XY (છોકરો) છે\nછોકરો કે છોકરી થવાની સંભાવના હંમેશા 50% હોય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_008",
+        "type": "mcq",
+        "title": "NCERT Exercise Q1",
+        "title_hi": "NCERT अभ्यास Q1",
+        "title_gu": "NCERT સ્વાધ્યાય Q1",
+        "question": "A Mendelian experiment consisted of breeding tall pea plants bearing violet flowers with short pea plants bearing white flowers. The progeny all bore violet flowers, but almost half of them were short. This suggests that the genetic make-up of the tall parent can be depicted as:",
+        "question_hi": "मेंडल के एक प्रयोग में लंबे मटर के पौधे जिनके बैंगनी फूल थे, का संकरण बौने पौधों जिनके सफेद फूल थे, से कराया गया। इनकी संतति के सभी पौधों में बैंगनी फूल थे। परंतु उनमें से लगभग आधे बौने थे। इससे कहा जा सकता है कि लंबे जनक पौधे की आनुवंशिक रचना निम्न थी:",
+        "question_gu": "મેન્ડલના એક પ્રયોગમાં જાંબલી ફૂલોવાળા ઊંચા વટાણાના છોડનું સંકરણ સફેદ ફૂલોવાળા નીચા છોડ સાથે કરવામાં આવ્યું. તેમની તમામ સંતતિમાં જાંબલી ફૂલો હતા, પરંતુ તેમાંથી લગભગ અડધા નીચા હતા. આ દર્શાવે છે કે ઊંચા પિતૃ છોડનું જનીન બંધારણ આવું હોઈ શકે:",
+        "options": [
+            "TTWW",
+            "TTww",
+            "TtWW",
+            "TtWw"
+        ],
+        "options_hi": [
+            "TTWW",
+            "TTww",
+            "TtWW",
+            "TtWw"
+        ],
+        "options_gu": [
+            "TTWW",
+            "TTww",
+            "TtWW",
+            "TtWw"
+        ],
+        "correct_index": 2,
+        "explanation": "All flowers were violet, meaning the parent must be pure dominant for color (WW). Half were short (recessive 'tt'), meaning the tall parent must have carried a recessive short gene to pass on, making it heterozygous for height (Tt). Therefore, the genotype is TtWW.",
+        "explanation_hi": "सभी फूल बैंगनी थे, जिसका अर्थ है कि जनक पौधे का रंग (WW) के लिए शुद्ध प्रभावी होना चाहिए। आधे छोटे (अप्रभावी 'tt') थे, जिसका अर्थ है कि लंबे जनक के पास पास करने के लिए एक अप्रभावी छोटा जीन होना चाहिए, जिससे यह ऊंचाई (Tt) के लिए विषमयुग्मजी (heterozygous) बन जाता है। इसलिए, जीनोटाइप TtWW है।",
+        "explanation_gu": "બધા ફૂલો જાંબલી હતા, મતલબ કે પિતૃ રંગ માટે શુદ્ધ પ્રભાવી (WW) હોવા જોઈએ. અડધા છોડ નીચા (પ્રચ્છન્ન 'tt') હતા, મતલબ કે ઊંચા પિતૃ પાસે સંતતિને આપવા માટે એક પ્રચ્છન્ન નીચાપણાનું જનીન હોવું જોઈએ, જે તેને ઊંચાઈ (Tt) માટે વિષમયુગ્મી બનાવે છે. તેથી, જનીનસ્વરૂપ TtWW છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_009",
+        "type": "mcq",
+        "title": "NCERT Exercise Q2",
+        "title_hi": "NCERT अभ्यास Q2",
+        "title_gu": "NCERT સ્વાધ્યાય Q2",
+        "question": "A study found that children with light-coloured eyes are likely to have parents with light-coloured eyes. On this basis, can we say definitely whether the light eye colour trait is dominant or recessive?",
+        "question_hi": "एक अध्ययन में पाया गया कि हल्के रंग की आंखों वाले बच्चों के माता-पिता की आंखें भी हल्के रंग की होती हैं। इस आधार पर, क्या हम निश्चित रूप से कह सकते हैं कि हल्के रंग की आंख का लक्षण प्रभावी है या अप्रभावी?",
+        "question_gu": "એક અભ્યાસમાં જાણવા મળ્યું કે આછા રંગની આંખોવાળા બાળકોના માતાપિતાની આંખો પણ આછા રંગની હોય તેવી શક્યતા છે. આના આધારે, શું આપણે ચોક્કસ કહી શકીએ કે આછા રંગની આંખનું લક્ષણ પ્રભાવી છે કે પ્રચ્છન્ન?",
+        "options": [
+            "Yes, it is definitely dominant because children inherited it.",
+            "Yes, it is definitely recessive because light colours are always recessive.",
+            "No, we cannot say whether it is dominant or recessive. We would need to see the cross between light-coloured and dark-coloured eyes to determine which trait dominates in the F1 generation.",
+            "No, because eye colour is not an inherited trait."
+        ],
+        "options_hi": [
+            "हाँ, यह निश्चित रूप से प्रभावी है क्योंकि बच्चों को यह विरासत में मिला है।",
+            "हाँ, यह निश्चित रूप से अप्रभावी है क्योंकि हल्के रंग हमेशा अप्रभावी होते हैं।",
+            "नहीं, हम यह नहीं कह सकते कि यह प्रभावी है या अप्रभावी। यह निर्धारित करने के लिए कि F1 पीढ़ी में कौन सा लक्षण हावी है, हमें हल्के रंग और गहरे रंग की आंखों के बीच संकरण देखने की आवश्यकता होगी।",
+            "नहीं, क्योंकि आंखों का रंग आनुवंशिक लक्षण नहीं है।"
+        ],
+        "options_gu": [
+            "હા, તે ચોક્કસપણે પ્રભાવી છે કારણ કે બાળકોને તે વારસામાં મળ્યું છે.",
+            "હા, તે ચોક્કસપણે પ્રચ્છન્ન છે કારણ કે આછા રંગો હંમેશા પ્રચ્છન્ન હોય છે.",
+            "ના, આપણે કહી શકતા નથી કે તે પ્રભાવી છે કે પ્રચ્છન્ન. F1 પેઢીમાં કયું લક્ષણ પ્રભાવી થાય છે તે નક્કી કરવા માટે આપણે આછા અને ઘાટા રંગની આંખો વચ્ચેનું સંકરણ જોવાની જરૂર પડશે.",
+            "ના, કારણ કે આંખનો રંગ આનુવંશિક લક્ષણ નથી."
+        ],
+        "correct_index": 2,
+        "explanation": "If two light-eyed parents have a light-eyed child, it proves inheritance, but it could mean both parents have pure recessive genes (bb x bb = bb) OR pure dominant genes (BB x BB = BB). Without knowing what happens when a dark-eyed person mates with a light-eyed person, we cannot decide dominance.",
+        "explanation_hi": "यदि दो हल्की आंखों वाले माता-पिता का बच्चा हल्की आंखों वाला होता है, तो यह आनुवंशिकता को साबित करता है, लेकिन इसका मतलब यह हो सकता है कि माता-पिता दोनों के पास शुद्ध अप्रभावी जीन (bb x bb = bb) या शुद्ध प्रभावी जीन (BB x BB = BB) हैं। यह जाने बिना कि जब गहरे रंग की आंखों वाला व्यक्ति हल्की आंखों वाले व्यक्ति के साथ संकरण करता है तो क्या होता है, हम प्रभावशीलता (dominance) तय नहीं कर सकते।",
+        "explanation_gu": "જો બે આછી આંખોવાળા માતાપિતાનું બાળક આછી આંખોવાળું હોય, તો તે આનુવંશિકતા સાબિત કરે છે, પરંતુ તેનો અર્થ એવો થઈ શકે કે બંને પિતૃઓ શુદ્ધ પ્રચ્છન્ન જનીનો (bb x bb = bb) અથવા શુદ્ધ પ્રભાવી જનીનો (BB x BB = BB) ધરાવે છે. ઘાટી આંખવાળી વ્યક્તિ આછી આંખવાળી વ્યક્તિ સાથે પ્રજનન કરે ત્યારે શું થાય છે તે જાણ્યા વિના આપણે પ્રભાવીપણું નક્કી કરી શકતા નથી."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_010",
+        "type": "mcq",
+        "title": "NCERT Exercise Q3",
+        "title_hi": "NCERT अभ्यास Q3",
+        "title_gu": "NCERT સ્વાધ્યાય Q3",
+        "question": "How is the sex of the child determined in human beings?",
+        "question_hi": "मानवों में बच्चे का लिंग निर्धारण कैसे होता है?",
+        "question_gu": "મનુષ્યમાં બાળકના લિંગનું નિશ્ચયન કેવી રીતે થાય છે?",
+        "options": [
+            "By the mother's chromosomes (she can give X or Y).",
+            "By the father's chromosomes. The mother always gives an X chromosome. If the father's sperm carries an X chromosome, it will be a girl (XX). If it carries a Y chromosome, it will be a boy (XY).",
+            "By environmental temperature during pregnancy.",
+            "By the type of food the mother eats."
+        ],
+        "options_hi": [
+            "माँ के गुणसूत्रों द्वारा (वह X या Y दे सकती है)।",
+            "पिता के गुणसूत्रों द्वारा। माँ हमेशा एक X गुणसूत्र देती है। यदि पिता के शुक्राणु में X गुणसूत्र है, तो लड़की (XX) होगी। यदि इसमें Y गुणसूत्र है, तो लड़का (XY) होगा।",
+            "गर्भावस्था के दौरान पर्यावरणीय तापमान से।",
+            "माँ किस प्रकार का भोजन करती है इसके द्वारा।"
+        ],
+        "options_gu": [
+            "માતાના રંગસૂત્રો દ્વારા (તે X અથવા Y આપી શકે છે).",
+            "પિતાના રંગસૂત્રો દ્વારા. માતા હંમેશા X રંગસૂત્ર જ આપે છે. જો પિતાનો શુક્રકોષ X રંગસૂત્ર લાવે, તો છોકરી (XX) થશે. જો તે Y રંગસૂત્ર લાવે, તો છોકરો (XY) થશે.",
+            "ગર્ભાવસ્થા દરમિયાન પર્યાવરણીય તાપમાન દ્વારા.",
+            "માતા કેવો ખોરાક ખાય છે તેના દ્વારા."
+        ],
+        "correct_index": 1,
+        "explanation": "Human females are XX and males are XY. A child inherits one X from the mother. The father's sperm determines the sex: an X-bearing sperm creates a female (XX), and a Y-bearing sperm creates a male (XY).",
+        "explanation_hi": "मानव मादाएं XX हैं और नर XY हैं। एक बच्चे को मां से एक X विरासत में मिलता है। पिता का शुक्राणु लिंग निर्धारित करता है: X-वाहक शुक्राणु एक मादा (XX) बनाता है, और Y-वाहक शुक्राणु एक नर (XY) बनाता है।",
+        "explanation_gu": "માદા મનુષ્ય XX છે અને નર XY છે. બાળકને માતા તરફથી એક X વારસામાં મળે છે. પિતાનો શુક્રકોષ લિંગ નક્કી કરે છે: X ધરાવતો શુક્રકોષ માદા (XX) બનાવે છે, અને Y ધરાવતો શુક્રકોષ નર (XY) બનાવે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_011",
+        "type": "mcq",
+        "title": "NCERT Exercise Q4",
+        "title_hi": "NCERT अभ्यास Q4",
+        "title_gu": "NCERT સ્વાધ્યાય Q4",
+        "question": "Explain how sexual reproduction gives rise to more viable variations than asexual reproduction.",
+        "question_hi": "समझाइए कि कैसे लैंगिक जनन, अलैंगिक जनन की तुलना में अधिक जीवनक्षम विभिन्नताएं (viable variations) उत्पन्न करता है।",
+        "question_gu": "સમજાવો કે કેવી રીતે લિંગી પ્રજનન, અલિંગી પ્રજનનની સરખામણીમાં વધુ જીવંત ભિન્નતાઓ ઉત્પન્ન કરે છે.",
+        "options": [
+            "Asexual reproduction combines DNA from two parents, which is safer.",
+            "In sexual reproduction, DNA from two different individuals combines. Errors during DNA copying and new combinations of maternal and paternal genes lead to significant, diverse variations that help the population adapt to environmental changes.",
+            "Sexual reproduction eliminates all variations to keep the species exactly the same.",
+            "There is no difference in the amount of variation produced by both methods."
+        ],
+        "options_hi": [
+            "अलैंगिक प्रजनन दो माता-पिता से डीएनए को मिलाता है, जो सुरक्षित है।",
+            "लैंगिक प्रजनन में, दो अलग-अलग व्यक्तियों के डीएनए मिलते हैं। डीएनए नकल के दौरान त्रुटियां और मातृ एवं पितृ जीन के नए संयोजन महत्वपूर्ण, विविध विभिन्नताओं को जन्म देते हैं जो आबादी को पर्यावरणीय परिवर्तनों के अनुकूल होने में मदद करते हैं।",
+            "प्रजातियों को बिल्कुल वैसा ही रखने के लिए लैंगिक प्रजनन सभी विभिन्नताओं को समाप्त कर देता है।",
+            "दोनों विधियों द्वारा उत्पन्न विभिन्नता की मात्रा में कोई अंतर नहीं है।"
+        ],
+        "options_gu": [
+            "અલિંગી પ્રજનન બે માતાપિતાના ડીએનએ જોડે છે, જે વધુ સુરક્ષિત છે.",
+            "લિંગી પ્રજનનમાં, બે અલગ અલગ વ્યક્તિઓના ડીએનએ જોડાય છે. ડીએનએ નકલ દરમિયાન ભૂલો અને માતા તથા પિતાના જનીનોના નવા સંયોજનો નોંધપાત્ર, વૈવિધ્યસભર ભિન્નતાઓ તરફ દોરી જાય છે જે વસ્તીને પર્યાવરણીય ફેરફારો સામે અનુકૂલન સાધવામાં મદદ કરે છે.",
+            "જાતિને બરાબર એ જ રાખવા માટે લિંગી પ્રજનન તમામ ભિન્નતાઓને દૂર કરે છે.",
+            "બંને પદ્ધતિઓ દ્વારા ઉત્પન્ન થતી ભિન્નતાની માત્રામાં કોઈ તફાવત નથી."
+        ],
+        "correct_index": 1,
+        "explanation": "Asexual reproduction only relies on rare DNA copying errors for variation. Sexual reproduction actively combines different gene pools from two parents, shuffling traits like a deck of cards, creating massive and highly viable diversity in the offspring.",
+        "explanation_hi": "अलैंगिक प्रजनन केवल विभिन्नता के लिए दुर्लभ डीएनए नकल त्रुटियों पर निर्भर करता है। लैंगिक प्रजनन सक्रिय रूप से दो माता-पिता से अलग-अलग जीन पूल को जोड़ता है, ताश के पत्तों की तरह लक्षणों में फेरबदल करता है, संतानों में बड़े पैमाने पर और अत्यधिक जीवनक्षम विविधता पैदा करता है।",
+        "explanation_gu": "અલિંગી પ્રજનન ભિન્નતા માટે માત્ર જવલ્લે થતી ડીએનએ નકલની ભૂલો પર આધાર રાખે છે. લિંગી પ્રજનન સક્રિયપણે બે પિતૃઓમાંથી અલગ અલગ જનીનો જોડે છે, પત્તાની જેમ લક્ષણોને શફલ કરે છે, અને સંતતિમાં મોટા પાયે અને અત્યંત જીવંત વિવિધતા પેદા કરે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH8_012",
+        "type": "mcq",
+        "title": "NCERT Exercise Q5",
+        "title_hi": "NCERT अभ्यास Q5",
+        "title_gu": "NCERT સ્વાધ્યાય Q5",
+        "question": "How is the equal genetic contribution of male and female parents ensured in the progeny?",
+        "question_hi": "संतति में नर एवं मादा जनकों द्वारा आनुवंशिक योगदान में बराबर की भागीदारी किस प्रकार सुनिश्चित की जाती है?",
+        "question_gu": "સંતતિમાં નર અને માદા પિતૃઓ દ્વારા આનુવંશિક યોગદાનમાં સમાન ભાગીદારી કેવી રીતે સુનિશ્ચિત કરવામાં આવે છે?",
+        "options": [
+            "The male contributes more DNA because sperm cells are faster.",
+            "During gamete formation (meiosis), the number of chromosomes is halved. Both the sperm (male) and egg (female) carry exactly half (23) the number of human chromosomes. When they fuse, the normal number (46) is restored in the zygote.",
+            "The mother contributes 100% of the DNA because the baby grows inside her.",
+            "Blood mixing between the parents ensures equal genetic contribution."
+        ],
+        "options_hi": [
+            "नर अधिक डीएनए का योगदान देता है क्योंकि शुक्राणु कोशिकाएं तेज होती हैं।",
+            "युग्मक निर्माण (अर्धसूत्रीविभाजन) के दौरान, गुणसूत्रों की संख्या आधी हो जाती है। शुक्राणु (नर) और अंडे (मादा) दोनों में मानव गुणसूत्रों की संख्या ठीक आधी (23) होती है। जब वे संलयित (fuse) होते हैं, तो युग्मनज में सामान्य संख्या (46) बहाल हो जाती है।",
+            "माँ 100% डीएनए का योगदान देती है क्योंकि बच्चा उसके अंदर बढ़ता है।",
+            "माता-पिता के बीच रक्त मिश्रण समान आनुवंशिक योगदान सुनिश्चित करता है।"
+        ],
+        "options_gu": [
+            "નર વધુ ડીએનએ આપે છે કારણ કે શુક્રકોષો ઝડપી હોય છે.",
+            "જન્યુ નિર્માણ (અર્ધીકરણ) દરમિયાન, રંગસૂત્રોની સંખ્યા અડધી થઈ જાય છે. શુક્રકોષ (નર) અને અંડકોષ (માદા) બંને માનવ રંગસૂત્રોની બરાબર અડધી (23) સંખ્યા ધરાવે છે. જ્યારે તેઓ જોડાય છે, ત્યારે યુગ્મનજમાં સામાન્ય સંખ્યા (46) પુનઃસ્થાપિત થાય છે.",
+            "માતા 100% ડીએનએ આપે છે કારણ કે બાળક તેની અંદર ઉછરે છે.",
+            "માતાપિતા વચ્ચે લોહીનું મિશ્રણ સમાન આનુવંશિક યોગદાન સુનિશ્ચિત કરે છે."
+        ],
+        "correct_index": 1,
+        "explanation": "Human cells have 46 chromosomes. If male and female gave 46 each, the baby would have 92! To fix this, special cell division (meiosis) creates gametes with exactly 23 chromosomes. 23 from father + 23 from mother = 46 for the child.",
+        "explanation_hi": "मानव कोशिकाओं में 46 गुणसूत्र होते हैं। यदि नर और मादा प्रत्येक 46 देते, तो बच्चे में 92 हो जाते! इसे ठीक करने के लिए, विशेष कोशिका विभाजन (अर्धसूत्रीविभाजन) बिल्कुल 23 गुणसूत्रों के साथ युग्मक बनाता है। पिता से 23 + माता से 23 = बच्चे के लिए 46।",
+        "explanation_gu": "માનવ કોષોમાં 46 રંગસૂત્રો છે. જો નર અને માદા દરેકે 46 આપ્યા હોત, તો બાળકમાં 92 રંગસૂત્રો હોત! આને ઉકેલવા, વિશેષ કોષવિભાજન (અર્ધીકરણ) બરાબર 23 રંગસૂત્રો સાથે જન્યુઓ બનાવે છે. પિતા પાસેથી 23 + માતા પાસેથી 23 = બાળક માટે 46."
+    }
+]
+
+data = {
+    "metadata": {
+        "id": "ncert_class10_science_ch8",
+        "title": "Chapter 8: Heredity",
+        "subject": "Science",
+        "grade": "10"
+    },
+    "blocks": blocks
+}
+
+output_path = '/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_science_ch8.json'
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully wrote {len(blocks)} blocks to {output_path}")

@@ -1,0 +1,284 @@
+import json
+
+blocks = [
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_001",
+        "type": "hook",
+        "title": "The Invisible Connection",
+        "title_hi": "अदृश्य संबंध",
+        "title_gu": "અદૃશ્ય જોડાણ",
+        "body": "In 1820, Hans Christian Oersted accidentally discovered that a compass needle deflected when placed near a wire carrying an electric current. This accidental discovery changed the world! It proved that Electricity and Magnetism are not separate forces, but two sides of the same coin. An electric current actually creates a magnetic field around it.",
+        "body_hi": "1820 में, हैंस क्रिश्चियन ओर्स्टेड ने गलती से खोजा कि विद्युत धारा ले जाने वाले तार के पास रखे जाने पर एक कंपास सुई विक्षेपित (deflect) हो जाती है। इस आकस्मिक खोज ने दुनिया को बदल दिया! इसने साबित कर दिया कि बिजली और चुंबकत्व अलग-अलग बल नहीं हैं, बल्कि एक ही सिक्के के दो पहलू हैं। एक विद्युत धारा वास्तव में अपने चारों ओर एक चुंबकीय क्षेत्र बनाती है।",
+        "body_gu": "1820 માં, હેન્સ ક્રિશ્ચિયન ઓર્સ્ટેડે આકસ્મિક રીતે શોધી કાઢ્યું કે જ્યારે હોકાયંત્રની સોયને વિદ્યુતપ્રવાહ વહેતો હોય તેવા વાયરની નજીક રાખવામાં આવે ત્યારે તે આવર્તન (deflect) દર્શાવે છે. આ આકસ્મિક શોઘે દુનિયા બદલી નાખી! તેણે સાબિત કર્યું કે વિદ્યુત અને ચુંબકત્વ એ અલગ અલગ બળો નથી, પરંતુ એક જ સિક્કાની બે બાજુઓ છે. વિદ્યુતપ્રવાહ ખરેખર તેની આસપાસ ચુંબકીય ક્ષેત્ર બનાવે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_002",
+        "type": "theory",
+        "title": "Magnetic Field and Field Lines",
+        "title_hi": "चुंबकीय क्षेत्र और क्षेत्र रेखाएं",
+        "title_gu": "ચુંબકીય ક્ષેत्र અને ક્ષેત્ર રેખાઓ",
+        "body": "A magnet creates a Magnetic Field in the space around it, where its force can be felt. We represent this field using Magnetic Field Lines.\nProperties of Field Lines:\n1. They emerge from the North pole and merge at the South pole (outside the magnet).\n2. Inside the magnet, they go from South to North, forming closed loops.\n3. The closer the lines, the stronger the magnetic field.\n4. Two magnetic field lines NEVER intersect each other.",
+        "body_hi": "एक चुंबक अपने चारों ओर के स्थान में एक चुंबकीय क्षेत्र बनाता है, जहां इसके बल को महसूस किया जा सकता है। हम चुंबकीय क्षेत्र रेखाओं का उपयोग करके इस क्षेत्र का प्रतिनिधित्व करते हैं।\nक्षेत्र रेखाओं के गुण:\n1. वे उत्तरी ध्रुव से निकलती हैं और दक्षिणी ध्रुव पर विलीन हो जाती हैं (चुंबक के बाहर)।\n2. चुंबक के अंदर, वे दक्षिण से उत्तर की ओर जाती हैं, जिससे बंद लूप बनते हैं।\n3. रेखाएं जितनी करीब होंगी, चुंबकीय क्षेत्र उतना ही मजबूत होगा।\n4. दो चुंबकीय क्षेत्र रेखाएं कभी भी एक दूसरे को नहीं काटती हैं।",
+        "body_gu": "ચુંબક તેની આસપાસના અવકાશમાં ચુંબકીય ક્ષેત્ર ઉત્પન્ન કરે છે, જ્યાં તેના બળનો અનુભવ કરી શકાય છે. આપણે ચુંબકીય ક્ષેત્ર રેખાઓનો ઉપયોગ કરીને આ ક્ષેત્રને દર્શાવીએ છીએ.\nક્ષેત્ર રેખાઓના ગુણધર્મો:\n1. તેઓ ઉત્તર ધ્રુવમાંથી બહાર નીકળે છે અને દક્ષિણ ધ્રુવમાં પ્રવેશે છે (ચુંબકની બહાર).\n2. ચુંબકની અંદર, તેઓ દક્ષિણથી ઉત્તર તરફ જાય છે અને બંધ ગાળા રચે છે.\n3. રેખાઓ જેટલી નજીક હોય, ચુંબકીય ક્ષેત્ર તેટલું જ મજબૂત હોય છે.\n4. બે ચુંબકીય ક્ષેત્ર રેખાઓ ક્યારેય એકબીજાને છેદતી નથી."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_003",
+        "type": "theory",
+        "title": "Magnetic Field due to a Current",
+        "title_hi": "विद्युत धारा के कारण चुंबकीय क्षेत्र",
+        "title_gu": "વિદ્યુતપ્રવાહને કારણે ઉદ્ભવતું ચુંબકીય ક્ષેત્ર",
+        "body": "1. Straight Wire: The magnetic field lines are concentric circles around the wire. The direction is given by the Right-Hand Thumb Rule (if your thumb points in the direction of current, your curled fingers show the direction of the magnetic field).\n2. Circular Loop: Field lines pass straight through the center of the loop.\n3. Solenoid: A coil of many circular turns of insulated copper wire. The magnetic field inside a current-carrying solenoid is uniform (parallel straight lines) and is identical to a bar magnet.",
+        "body_hi": "1. सीधा तार: तार के चारों ओर चुंबकीय क्षेत्र रेखाएं संकेंद्रित वृत्त (concentric circles) होती हैं। दिशा दक्षिण-हस्त अंगुष्ठ नियम (Right-Hand Thumb Rule) द्वारा दी जाती है (यदि आपका अंगूठा धारा की दिशा में इशारा करता है, तो आपकी मुड़ी हुई उंगलियां चुंबकीय क्षेत्र की दिशा दिखाती हैं)।\n2. वृत्ताकार लूप (Circular Loop): क्षेत्र रेखाएं लूप के केंद्र से सीधे गुजरती हैं।\n3. परिनालिका (Solenoid): विद्युतरोधी तांबे के तार के कई गोलाकार फेरों की एक कुंडली। धारावाही परिनालिका के अंदर चुंबकीय क्षेत्र एकसमान (समानांतर सीधी रेखाएं) होता है और छड़ चुंबक के समान होता है।",
+        "body_gu": "1. સીધો વાયર: વાયરની આસપાસ ચુંબકીય ક્ષેત્ર રેખાઓ સમકેન્દ્રીય વર્તુળો હોય છે. દિશા જમણા હાથના અંગૂઠાના નિયમ (Right-Hand Thumb Rule) દ્વારા આપવામાં આવે છે (જો તમારો અંગૂઠો પ્રવાહની દિશામાં નિર્દેશ કરે, તો તમારી વળેલી આંગળીઓ ચુંબકીય ક્ષેત્રની દિશા દર્શાવે છે).\n2. વર્તુળાકાર લૂપ: ક્ષેત્ર રેખાઓ લૂપના કેન્દ્રમાંથી સીધી પસાર થાય છે.\n3. સોલેનોઇડ: અવાહક પડ ચઢાવેલા તાંબાના તારના ઘણા વર્તુળાકાર આંટાઓ ધરાવતું ગૂંચળું. વિદ્યુતપ્રવાહ ધારિત સોલેનોઇડની અંદર ચુંબકીય ક્ષેત્ર સમાન (સમાંતર સીધી રેખાઓ) હોય છે અને તે ગજિયા ચુંબક જેવું જ હોય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_004",
+        "type": "socratic_question",
+        "title": "Force on a Current-Carrying Conductor",
+        "title_hi": "धारावाही चालक पर बल",
+        "title_gu": "વિદ્યુતપ્રવાહ ધારિત વાહક પર લાગતું બળ",
+        "question": "If an electric current creates a magnetic field, what will happen if we place a current-carrying wire inside an external magnetic field (like between the poles of a strong magnet)?",
+        "question_hi": "यदि विद्युत धारा चुंबकीय क्षेत्र उत्पन्न करती है, तो क्या होगा यदि हम धारावाही तार को बाहरी चुंबकीय क्षेत्र (जैसे किसी मजबूत चुंबक के ध्रुवों के बीच) के अंदर रख दें?",
+        "question_gu": "જો વિદ્યુતપ્રવાહ ચુંબકીય ક્ષેત્ર ઉત્પન્ન કરે છે, તો જો આપણે વિદ્યુતપ્રવાહ ધારિત વાયરને બાહ્ય ચુંબકીય ક્ષેત્રની અંદર (જેમ કે મજબૂત ચુંબકના ધ્રુવો વચ્ચે) મૂકીએ તો શું થશે?",
+        "options": [
+            "The wire will melt.",
+            "The wire will experience a mechanical force and move.",
+            "The external magnetic field will disappear.",
+            "Nothing will happen."
+        ],
+        "options_hi": [
+            "तार पिघल जाएगा।",
+            "तार एक यांत्रिक बल का अनुभव करेगा और आगे बढ़ेगा।",
+            "बाहरी चुंबकीय क्षेत्र गायब हो जाएगा।",
+            "कुछ नहीं होगा।"
+        ],
+        "options_gu": [
+            "વાયર ઓગળી જશે.",
+            "વાયર એક યાંત્રિક બળનો અનુભવ કરશે અને ગતિ કરશે.",
+            "બાહ્ય ચુંબકીય ક્ષેત્ર અદૃશ્ય થઈ જશે.",
+            "કંઈ થશે નહિ."
+        ],
+        "correct_index": 1,
+        "explanation": "A current-carrying wire produces its own magnetic field, which interacts with the external magnetic field. This interaction pushes the wire, causing it to move! This incredible principle is used to build electric motors. The direction of this force is given by Fleming's Left-Hand Rule.",
+        "explanation_hi": "एक धारावाही तार अपना स्वयं का चुंबकीय क्षेत्र पैदा करता है, जो बाहरी चुंबकीय क्षेत्र के साथ संपर्क करता है। यह अंतःक्रिया (interaction) तार को धकेलती है, जिससे वह चलता है! इस अविश्वसनीय सिद्धांत का उपयोग इलेक्ट्रिक मोटर बनाने के लिए किया जाता है। इस बल की दिशा फ्लेमिंग के वामहस्त (बाएं हाथ) नियम द्वारा दी गई है।",
+        "explanation_gu": "વિદ્યુતપ્રવાહ ધારિત વાયર પોતાનું ચુંબકીય ક્ષેત્ર ઉત્પન્ન કરે છે, જે બાહ્ય ચુંબકીય ક્ષેત્ર સાથે આંતરક્રિયા કરે છે. આ આંતરક્રિયા વાયરને ધક્કો મારે છે, જેના કારણે તે ગતિ કરે છે! આ અદ્ભુત સિદ્ધાંતનો ઉપયોગ ઇલેક્ટ્રિક મોટર્સ બનાવવા માટે થાય છે. આ બળની દિશા ફ્લેમિંગના ડાબા હાથના નિયમ દ્વારા આપવામાં આવે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_005",
+        "type": "theory",
+        "title": "Domestic Electric Circuits",
+        "title_hi": "घरेलू विद्युत परिपथ",
+        "title_gu": "ઘરેલું વિદ્યુત પરિપથ",
+        "body": "Power enters our homes through three wires:\n1. Live Wire (Red insulation): Carries the high voltage (220V in India).\n2. Neutral Wire (Black insulation): Completes the circuit, kept at 0V.\n3. Earth Wire (Green insulation): Connected to a metal plate deep in the earth. If there is a leakage of current to the metallic body of an appliance, the Earth wire provides a low-resistance path to the ground, preventing a severe electric shock.\nShort Circuit occurs when the live and neutral wires directly touch, causing a massive increase in current.",
+        "body_hi": "हमारे घरों में बिजली तीन तारों से होकर प्रवेश करती है:\n1. विद्युन्मय तार (लाल रंग): उच्च वोल्टेज (भारत में 220V) ले जाता है।\n2. उदासीन तार (काले रंग): परिपथ पूरा करता है, 0V पर रखा जाता है।\n3. भू-संपर्क तार (हरे रंग): पृथ्वी के अंदर गहराई में एक धातु की प्लेट से जुड़ा होता है। यदि किसी उपकरण के धातु के आवरण में धारा का रिसाव होता है, तो भू-संपर्क तार जमीन तक कम-प्रतिरोध वाला मार्ग प्रदान करता है, जिससे गंभीर बिजली का झटका लगने से बचाव होता है।\nलघुपथन (Short Circuit) तब होता है जब लाइव और न्यूट्रल तार सीधे छूते हैं, जिससे धारा में भारी वृद्धि होती है।",
+        "body_gu": "આપણા ઘરોમાં વીજળી ત્રણ વાયરો દ્વારા પ્રવેશે છે:\n1. લાઇવ વાયર (લાલ પડ): ઉચ્ચ વોલ્ટેજ વહન કરે છે (ભારતમાં 220V).\n2. ન્યુટ્રલ વાયર (કાળું પડ): પરિપથ પૂર્ણ કરે છે, 0V પર રાખવામાં આવે છે.\n3. અર્થિંગ વાયર (લીલું પડ): પૃથ્વીમાં ઊંડે રહેલી ધાતુની પ્લેટ સાથે જોડાયેલ છે. જો ઉપકરણના ધાતુના આવરણમાં વિદ્યુતપ્રવાહ લીક થાય, તો અર્થિંગ વાયર જમીનમાં પ્રવાહ જવા માટે ઓછો અવરોધવાળો માર્ગ પૂરો પાડે છે, જેનાથી ગંભીર ઇલેક્ટ્રિક આંચકો લાગતો અટકાવે છે.\nશોર્ટ સર્કિટ ત્યારે થાય છે જ્યારે લાઇવ અને ન્યુટ્રલ વાયર સીધા એકબીજાને અડે છે, જેના કારણે વિદ્યુતપ્રવાહમાં ભારે વધારો થાય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_006",
+        "type": "mcq",
+        "title": "NCERT Exercise Q1",
+        "title_hi": "NCERT अभ्यास Q1",
+        "title_gu": "NCERT સ્વાધ્યાય Q1",
+        "question": "Which of the following correctly describes the magnetic field near a long straight wire?",
+        "question_hi": "निम्नलिखित में से कौन किसी लंबे सीधे तार के पास चुंबकीय क्षेत्र का सही वर्णन करता है?",
+        "question_gu": "નીચેનામાંથી કયું લાંબા સીધા વાયરની નજીક ચુંબકીય ક્ષેત્રનું સાચું વર્ણન કરે છે?",
+        "options": [
+            "The field consists of straight lines perpendicular to the wire.",
+            "The field consists of straight lines parallel to the wire.",
+            "The field consists of radial lines originating from the wire.",
+            "The field consists of concentric circles centred on the wire."
+        ],
+        "options_hi": [
+            "क्षेत्र में तार के लंबवत सीधी रेखाएं होती हैं।",
+            "क्षेत्र में तार के समानांतर सीधी रेखाएं होती हैं।",
+            "क्षेत्र में तार से उत्पन्न होने वाली रेडियल रेखाएं होती हैं।",
+            "क्षेत्र में तार पर केंद्रित संकेंद्रित वृत्त (concentric circles) होते हैं।"
+        ],
+        "options_gu": [
+            "ક્ષેત્ર વાયરને લંબ સીધી રેખાઓ ધરાવે છે.",
+            "ક્ષેત્ર વાયરને સમાંતર સીધી રેખાઓ ધરાવે છે.",
+            "ક્ષેત્ર વાયરમાંથી નીકળતી ત્રિજ્યાવર્તી રેખાઓ ધરાવે છે.",
+            "ક્ષેત્ર વાયર પર કેન્દ્રિત સમકેન્દ્રીય વર્તુળો ધરાવે છે."
+        ],
+        "correct_index": 3,
+        "explanation": "According to the Right-Hand Thumb Rule, the magnetic field lines around a long straight current-carrying wire form closed concentric circles with the wire as the center.",
+        "explanation_hi": "दक्षिण-हस्त अंगुष्ठ नियम के अनुसार, एक लंबे सीधे धारावाही तार के चारों ओर चुंबकीय क्षेत्र रेखाएं तार को केंद्र मानकर बंद संकेंद्रित वृत्त (concentric circles) बनाती हैं।",
+        "explanation_gu": "જમણા હાથના અંગૂઠાના નિયમ મુજબ, લાંબા સીધા વિદ્યુતપ્રવાહ ધારિત વાયરની આસપાસ ચુંબકીય ક્ષેત્ર રેખાઓ વાયરને કેન્દ્ર તરીકે રાખીને બંધ સમકેન્દ્રીય વર્તુળો બનાવે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_007",
+        "type": "mcq",
+        "title": "NCERT Exercise Q2",
+        "title_hi": "NCERT अभ्यास Q2",
+        "title_gu": "NCERT સ્વાધ્યાય Q2",
+        "question": "At the time of short circuit, the current in the circuit:",
+        "question_hi": "लघुपथन (Short Circuit) के समय, परिपथ में विद्युत धारा:",
+        "question_gu": "શોર્ટ સર્કિટના સમયે, પરિપથમાં વિદ્યુતપ્રવાહ:",
+        "options": [
+            "reduces substantially.",
+            "does not change.",
+            "increases heavily.",
+            "vary continuously."
+        ],
+        "options_hi": [
+            "काफी कम हो जाती है।",
+            "परिवर्तित नहीं होती है।",
+            "भारी मात्रा में बढ़ जाती है।",
+            "लगातार बदलती है।"
+        ],
+        "options_gu": [
+            "નોંધપાત્ર રીતે ઘટી જાય છે.",
+            "બદલાતો નથી.",
+            "ભારે માત્રામાં વધે છે.",
+            "સતત બદલાય છે."
+        ],
+        "correct_index": 2,
+        "explanation": "During a short circuit, the live wire and neutral wire come into direct contact. This creates a path of extremely low resistance, causing the current to increase heavily, which can lead to fires.",
+        "explanation_hi": "लघुपथन (short circuit) के दौरान, लाइव तार और न्यूट्रल तार सीधे संपर्क में आते हैं। यह अत्यंत कम प्रतिरोध का मार्ग बनाता है, जिससे धारा भारी मात्रा में बढ़ जाती है, जिससे आग लग सकती है।",
+        "explanation_gu": "શોર્ટ સર્કિટ દરમિયાન, લાઇવ વાયર અને ન્યુટ્રલ વાયર સીધા સંપર્કમાં આવે છે. આ અત્યંત ઓછા અવરોધવાળો માર્ગ બનાવે છે, જેના કારણે પ્રવાહ ભારે માત્રામાં વધે છે, જે આગનું કારણ બની શકે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_008",
+        "type": "mcq",
+        "title": "NCERT Exercise Q3 (Modified)",
+        "title_hi": "NCERT अभ्यास Q3 (संशोधित)",
+        "title_gu": "NCERT સ્વાધ્યાય Q3 (સુધારેલ)",
+        "question": "Which of the following statements is true regarding an electric supply?",
+        "question_hi": "विद्युत आपूर्ति के संबंध में निम्नलिखित में से कौन सा कथन सत्य है?",
+        "question_gu": "વિદ્યુત સપ્લાય અંગે નીચેનામાંથી કયું વિધાન સાચું છે?",
+        "options": [
+            "A wire with a green insulation is usually the live wire.",
+            "The field at the centre of a long circular coil carrying current is composed of parallel straight lines.",
+            "The neutral wire is usually red.",
+            "Two magnetic field lines can intersect each other."
+        ],
+        "options_hi": [
+            "हरे रंग के आवरण वाला तार आमतौर पर लाइव (विद्युन्मय) तार होता है।",
+            "विद्युत धारा ले जाने वाली लंबी गोलाकार कुंडली के केंद्र में चुंबकीय क्षेत्र समानांतर सीधी रेखाओं से बना होता है।",
+            "न्यूट्रल तार आमतौर पर लाल रंग का होता है।",
+            "दो चुंबकीय क्षेत्र रेखाएं एक दूसरे को काट सकती हैं।"
+        ],
+        "options_gu": [
+            "લીલા રંગના આવરણવાળો વાયર સામાન્ય રીતે લાઇવ વાયર હોય છે.",
+            "વિદ્યુતપ્રવાહ વહન કરતી લાંબી વર્તુળાકાર કોઈલના કેન્દ્રમાં ચુંબકીય ક્ષેત્ર સમાંતર સીધી રેખાઓનું બનેલું હોય છે.",
+            "ન્યુટ્રલ વાયર સામાન્ય રીતે લાલ હોય છે.",
+            "બે ચુંબકીય ક્ષેત્ર રેખાઓ એકબીજાને છેદી શકે છે."
+        ],
+        "correct_index": 1,
+        "explanation": "At the exact center of a circular coil (or a solenoid), the magnetic field lines become uniform, meaning they appear as parallel straight lines. Green is for earth, red is for live, and black is for neutral.",
+        "explanation_hi": "गोलाकार कुंडली (या परिनालिका) के ठीक केंद्र में, चुंबकीय क्षेत्र रेखाएं एकसमान हो जाती हैं, जिसका अर्थ है कि वे समानांतर सीधी रेखाओं के रूप में दिखाई देती हैं। हरा अर्थ (भू-संपर्क) के लिए है, लाल लाइव के लिए है, और काला न्यूट्रल के लिए है।",
+        "explanation_gu": "વર્તુળાકાર કોઈલ (અથવા સોલેનોઇડ) ના બરાબર કેન્દ્રમાં, ચુંબકીય ક્ષેત્ર રેખાઓ સમાન બની જાય છે, એટલે કે તે સમાંતર સીધી રેખાઓ તરીકે દેખાય છે. લીલો રંગ અર્થિંગ માટે છે, લાલ લાઇવ માટે છે, અને કાળો ન્યુટ્રલ માટે છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_009",
+        "type": "mcq",
+        "title": "NCERT Exercise Q5",
+        "title_hi": "NCERT अभ्यास Q5",
+        "title_gu": "NCERT સ્વાધ્યાય Q5",
+        "question": "When is the force experienced by a current-carrying conductor placed in a magnetic field largest?",
+        "question_hi": "चुंबकीय क्षेत्र में रखे किसी धारावाही चालक पर बल सबसे अधिक कब होता है?",
+        "question_gu": "ચુંબકીય ક્ષેત્રમાં મૂકેલા વિદ્યુતપ્રવાહ ધારિત વાહક પર લાગતું બળ સૌથી વધુ ક્યારે હોય છે?",
+        "options": [
+            "When the direction of current is parallel to the direction of the magnetic field.",
+            "When the direction of current is at a 45-degree angle to the magnetic field.",
+            "When the direction of current is perpendicular to the direction of the magnetic field.",
+            "The force is always the same regardless of the angle."
+        ],
+        "options_hi": [
+            "जब धारा की दिशा चुंबकीय क्षेत्र की दिशा के समानांतर (parallel) होती है।",
+            "जब धारा की दिशा चुंबकीय क्षेत्र से 45 डिग्री के कोण पर होती है।",
+            "जब धारा की दिशा चुंबकीय क्षेत्र की दिशा के लंबवत (perpendicular) होती है।",
+            "कोण की परवाह किए बिना बल हमेशा समान होता है।"
+        ],
+        "options_gu": [
+            "જ્યારે પ્રવાહની દિશા ચુંબકીય ક્ષેત્રની દિશાને સમાંતર (parallel) હોય છે.",
+            "જ્યારે પ્રવાહની દિશા ચુંબકીય ક્ષેત્ર સાથે 45-ડિગ્રીના ખૂણે હોય છે.",
+            "જ્યારે પ્રવાહની દિશા ચુંબકીય ક્ષેત્રની દિશાને લંબ (perpendicular) હોય છે.",
+            "ખૂણાને ધ્યાનમાં લીધા વગર બળ હંમેશા સમાન રહે છે."
+        ],
+        "correct_index": 2,
+        "explanation": "According to Fleming's Left-Hand Rule, the force on a conductor is maximum when the direction of electric current and the direction of the magnetic field are mutually perpendicular to each other.",
+        "explanation_hi": "फ्लेमिंग के वामहस्त (बाएं हाथ) नियम के अनुसार, एक चालक पर बल अधिकतम होता है जब विद्युत धारा की दिशा और चुंबकीय क्षेत्र की दिशा एक दूसरे के परस्पर लंबवत (perpendicular) होती है।",
+        "explanation_gu": "ફ્લેમિંગના ડાબા હાથના નિયમ મુજબ, જ્યારે વિદ્યુતપ્રવાહની દિશા અને ચુંબકીય ક્ષેત્રની દિશા એકબીજાને પરસ્પર લંબ (perpendicular) હોય ત્યારે વાહક પર લાગતું બળ મહત્તમ હોય છે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_010",
+        "type": "mcq",
+        "title": "NCERT Exercise Q6",
+        "title_hi": "NCERT अभ्यास Q6",
+        "title_gu": "NCERT સ્વાધ્યાય Q6",
+        "question": "Imagine that you are sitting in a chamber with your back to one wall. An electron beam, moving horizontally from back wall towards the front wall, is deflected by a strong magnetic field to your right side. What is the direction of magnetic field?",
+        "question_hi": "कल्पना कीजिए कि आप एक कमरे में बैठे हैं और आपकी पीठ एक दीवार की ओर है। पीछे की दीवार से सामने की दीवार की ओर क्षैतिज रूप से (horizontally) चलने वाली एक इलेक्ट्रॉन बीम एक मजबूत चुंबकीय क्षेत्र द्वारा आपके दाईं ओर विक्षेपित (deflect) होती है। चुंबकीय क्षेत्र की दिशा क्या है?",
+        "question_gu": "કલ્પના કરો કે તમે એક ઓરડામાં એક દીવાલ તરફ પીઠ રાખીને બેઠા છો. પાછળની દીવાલથી આગળની દીવાલ તરફ સમક્ષિતિજ રીતે (horizontally) આવતું ઇલેક્ટ્રોન બીમ એક મજબૂત ચુંબકીય ક્ષેત્ર દ્વારા તમારી જમણી બાજુએ આવર્તન (deflect) પામે છે. ચુંબકીય ક્ષેત્રની દિશા કઈ છે?",
+        "options": [
+            "Upwards",
+            "Downwards",
+            "To your left",
+            "Towards you"
+        ],
+        "options_hi": [
+            "ऊपर की ओर",
+            "नीचे की ओर",
+            "आपकी बाईं ओर",
+            "आपकी ओर"
+        ],
+        "options_gu": [
+            "ઉપર તરફ",
+            "નીચે તરફ",
+            "તમારી ડાબી બાજુએ",
+            "તમારી તરફ"
+        ],
+        "correct_index": 1,
+        "explanation": "Electrons flow from back to front, meaning current (I) is from front to back (towards you). The force (F) is to your right. Using Fleming's Left-Hand Rule: Middle finger (I) towards you, Thumb (F) to the right, your Forefinger (Magnetic Field) will naturally point Downwards.",
+        "explanation_hi": "इलेक्ट्रॉन पीछे से आगे की ओर प्रवाहित होते हैं, जिसका अर्थ है कि धारा (I) आगे से पीछे (आपकी ओर) है। बल (F) आपके दाईं ओर है। फ्लेमिंग के वामहस्त नियम का उपयोग करते हुए: मध्यमा उंगली (I) आपकी ओर, अंगूठा (F) दाईं ओर, आपकी तर्जनी (चुंबकीय क्षेत्र) स्वाभाविक रूप से नीचे की ओर इशारा करेगी।",
+        "explanation_gu": "ઇલેક્ટ્રોન પાછળથી આગળ તરફ વહે છે, જેનો અર્થ છે કે પ્રવાહ (I) આગળથી પાછળ (તમારી તરફ) છે. બળ (F) તમારી જમણી બાજુએ છે. ફ્લેમિંગના ડાબા હાથના નિયમનો ઉપયોગ કરતા: વચલી આંગળી (I) તમારી તરફ, અંગૂઠો (F) જમણી તરફ, તમારી તર્જની (ચુંબકીય ક્ષેત્ર) સ્વાભાવિક રીતે નીચે તરફ નિર્દેશ કરશે."
+    },
+    {
+        "id": "KOBJ_NCERT_C10_SCI_CH12_011",
+        "type": "mcq",
+        "title": "NCERT Exercise Q8",
+        "title_hi": "NCERT अभ्यास Q8",
+        "title_gu": "NCERT સ્વાધ્યાય Q8",
+        "question": "What is the primary function of an earth wire in domestic circuits?",
+        "question_hi": "घरेलू परिपथों में भू-संपर्क तार (earth wire) का प्राथमिक कार्य क्या है?",
+        "question_gu": "ઘરેલું પરિપથમાં અર્થિંગ વાયરનું પ્રાથમિક કાર્ય શું છે?",
+        "options": [
+            "To supply high voltage power to the appliance.",
+            "To increase the resistance of the circuit to save electricity.",
+            "To provide a low-resistance conducting path for leakage current to the ground, preventing electric shocks.",
+            "To convert AC current to DC current."
+        ],
+        "options_hi": [
+            "उपकरण को उच्च वोल्टेज बिजली की आपूर्ति करना।",
+            "बिजली बचाने के लिए परिपथ का प्रतिरोध बढ़ाना।",
+            "रिसाव धारा (leakage current) को जमीन तक ले जाने के लिए कम-प्रतिरोध वाला मार्ग प्रदान करना, जिससे बिजली के झटके से बचा जा सके।",
+            "AC करंट को DC करंट में बदलना।"
+        ],
+        "options_gu": [
+            "ઉપકરણને ઉચ્ચ વોલ્ટેજ પાવર પૂરો પાડવા.",
+            "વીજળી બચાવવા માટે પરિપથનો અવરોધ વધારવા.",
+            "લીકેજ પ્રવાહને જમીનમાં જવા માટે ઓછો અવરોધવાળો માર્ગ પૂરો પાડવા, જેથી ઇલેક્ટ્રિક આંચકાથી બચી શકાય.",
+            "AC પ્રવાહને DC પ્રવાહમાં રૂપાંતરિત કરવા."
+        ],
+        "correct_index": 2,
+        "explanation": "The earth wire is connected to a metal plate deep in the ground. If the live wire accidentally touches the metal body of an appliance, the current safely flows to the ground through the low-resistance earth wire instead of flowing through a person's body.",
+        "explanation_hi": "भू-संपर्क तार जमीन के अंदर गहराई में एक धातु की प्लेट से जुड़ा होता है। यदि लाइव तार गलती से किसी उपकरण के धातु आवरण को छू लेता है, तो धारा किसी व्यक्ति के शरीर से बहने के बजाय कम प्रतिरोध वाले अर्थ तार के माध्यम से सुरक्षित रूप से जमीन में प्रवाहित हो जाती है।",
+        "explanation_gu": "અર્થિંગ વાયર જમીનમાં ઊંડે રહેલી ધાતુની પ્લેટ સાથે જોડાયેલ છે. જો લાઇવ વાયર આકસ્મિક રીતે ઉપકરણના ધાતુના આવરણને અડી જાય, તો પ્રવાહ વ્યક્તિના શરીરમાંથી વહેવાને બદલે ઓછા અવરોધવાળા અર્થિંગ વાયર દ્વારા સુરક્ષિત રીતે જમીનમાં વહી જાય છે."
+    }
+]
+
+data = {
+    "metadata": {
+        "id": "ncert_class10_science_ch12",
+        "title": "Chapter 12: Magnetic Effects of Electric Current",
+        "subject": "Science",
+        "grade": "10"
+    },
+    "blocks": blocks
+}
+
+output_path = '/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_science_ch12.json'
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully wrote {len(blocks)} blocks to {output_path}")

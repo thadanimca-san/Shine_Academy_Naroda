@@ -1,0 +1,41 @@
+import '../../../models/chapter_model.dart';
+final ChapterModel class10TrigonometryChapter = ChapterModel(
+  standard: 10, subject: "Mathematics", chapterId: "cls10_math_trigonometry", chapterName: "Introduction to Trigonometry",
+  concepts: ["Trigonometric ratios of an acute angle in a right triangle.", "Trigonometric ratios of specific angles (0°, 30°, 45°, 60°, 90°).", "Trigonometric identities."],
+  formulas: [
+    FormulaDerivation(formulaName: "Pythagorean Identity", expression: "sin²θ + cos²θ = 1", derivationSteps: [
+      "In a right triangle with hypotenuse h, opposite side o, and adjacent side a: sinθ = o/h and cosθ = a/h.",
+      "By the Pythagoras Theorem, o² + a² = h².",
+      "Dividing throughout by h²: (o/h)² + (a/h)² = 1, which gives sin²θ + cos²θ = 1.",
+    ]),
+  ],
+  fillInTheBlanks: [
+    QuestionItem(id: "tg1", question: "In a right triangle, sin θ = [ opposite/hypotenuse / adjacent/hypotenuse ].", answer: "opposite/hypotenuse"),
+    QuestionItem(id: "tg2", question: "In a right triangle, cos θ = [ adjacent/hypotenuse / opposite/hypotenuse ].", answer: "adjacent/hypotenuse"),
+    QuestionItem(id: "tg3", question: "In a right triangle, tan θ = [ opposite/adjacent / adjacent/opposite ].", answer: "opposite/adjacent"),
+    QuestionItem(id: "tg4", question: "tan θ can also be written as [ sin θ / cos θ / cos θ / sin θ ].", answer: "sin θ / cos θ"),
+    QuestionItem(id: "tg5", question: "The reciprocal of sin θ is called [ cosec θ / sec θ ].", answer: "cosec θ"),
+    QuestionItem(id: "tg6", question: "The reciprocal of cos θ is called [ sec θ / cosec θ ].", answer: "sec θ"),
+    QuestionItem(id: "tg7", question: "The reciprocal of tan θ is called [ cot θ / sec θ ].", answer: "cot θ"),
+    QuestionItem(id: "tg8", question: "sin 0° = [ 0 / 1 ].", answer: "0"),
+    QuestionItem(id: "tg9", question: "sin 90° = [ 1 / 0 ].", answer: "1"),
+    QuestionItem(id: "tg10", question: "sin 45° = cos 45° = [ 1/√2 / 1 ].", answer: "1/√2"),
+    QuestionItem(id: "tg11", question: "tan 45° = [ 1 / 0 ].", answer: "1"),
+    QuestionItem(id: "tg12", question: "The identity sin²θ + cos²θ = [ 1 / 0 ] holds for all values of θ.", answer: "1"),
+    QuestionItem(id: "tg13", question: "1 + tan²θ = [ sec²θ / cosec²θ ].", answer: "sec²θ"),
+    QuestionItem(id: "tg14", question: "1 + cot²θ = [ cosec²θ / sec²θ ].", answer: "cosec²θ"),
+    QuestionItem(id: "tg15", question: "As θ increases from 0° to 90°, the value of sin θ [ increases / decreases ].", answer: "increases"),
+  ],
+  numericalProblems: [
+    NumericalProblem(id: "tgn1", question: "In a right triangle, the opposite side is 3 and the hypotenuse is 5. Find sin θ.", given: ["opposite=3, hyp=5"], solutionSteps: ["sin θ = opposite/hypotenuse", "= 3/5", "= 0.6"], numericAnswer: 0.6, unit: ""),
+    NumericalProblem(id: "tgn2", question: "If sin θ = 3/5, find cos θ using sin²θ + cos²θ = 1.", given: ["sin θ = 3/5"], solutionSteps: ["cos²θ = 1 − (3/5)² = 1 − 9/25 = 16/25", "cos θ = 4/5", "= 0.8"], numericAnswer: 0.8, unit: ""),
+    NumericalProblem(id: "tgn3", question: "Find the value of tan 60° × cot 60° (they are reciprocals, so this should always be 1).", given: ["tan 60° × cot 60°"], solutionSteps: ["cot θ = 1/tan θ", "tan 60° × (1/tan 60°)", "= 1"], numericAnswer: 1, unit: ""),
+    NumericalProblem(id: "tgn4", question: "Find the value of sin 30° + cos 60°.", given: ["sin 30° = 0.5", "cos 60° = 0.5"], solutionSteps: ["sin 30° + cos 60°", "= 0.5 + 0.5", "= 1"], numericAnswer: 1, unit: ""),
+    NumericalProblem(id: "tgn5", question: "Find the value of 2 sin 45° × cos 45°.", given: ["sin 45° = cos 45° = 1/√2 ≈ 0.707"], solutionSteps: ["2 × 0.707 × 0.707", "= 2 × 0.5", "= 1"], numericAnswer: 1, unit: ""),
+    NumericalProblem(id: "tgn6", question: "If tan θ = 4/3, find sec θ using 1 + tan²θ = sec²θ.", given: ["tan θ = 4/3"], solutionSteps: ["sec²θ = 1 + (4/3)² = 1 + 16/9 = 25/9", "sec θ = 5/3", "≈ 1.667"], numericAnswer: 1.667, unit: "(= 5/3)"),
+    NumericalProblem(id: "tgn7", question: "Find the value of sin²60° + cos²60°.", given: ["sin 60° ≈ 0.866", "cos 60° = 0.5"], solutionSteps: ["By the Pythagorean identity, sin²θ + cos²θ = 1 always.", "Result = 1"], numericAnswer: 1, unit: ""),
+    NumericalProblem(id: "tgn8", question: "In a right triangle, the adjacent side is 12 and hypotenuse is 13. Find cos θ.", given: ["adjacent=12, hyp=13"], solutionSteps: ["cos θ = adjacent/hypotenuse", "= 12/13", "≈ 0.923"], numericAnswer: 0.923, unit: ""),
+    NumericalProblem(id: "tgn9", question: "Find the value of (sec²30° − 1) using the identity sec²θ − 1 = tan²θ, given tan 30° ≈ 0.577.", given: ["tan 30° ≈ 0.577"], solutionSteps: ["sec²θ − 1 = tan²θ", "= (0.577)²", "≈ 0.333"], numericAnswer: 0.333, unit: ""),
+    NumericalProblem(id: "tgn10", question: "Find the value of tan 30° × tan 60°.", given: ["tan 30° = 1/√3 ≈ 0.577", "tan 60° = √3 ≈ 1.732"], solutionSteps: ["tan 30° × tan 60° = (1/√3) × √3", "= 1"], numericAnswer: 1, unit: ""),
+  ],
+);

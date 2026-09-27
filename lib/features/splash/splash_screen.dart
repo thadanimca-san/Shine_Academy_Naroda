@@ -51,10 +51,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           return;
         }
 
-        if (!ActivationService.isActivated) {
-          context.go('/activate');
-          return;
-        }
+        // Freemium Model: Let users enter the app without activation
+        // We will lock content dynamically in the Chapter List instead.
 
         bool hasProfile = await ProfileService.isProfileSet();
         if (mounted) {

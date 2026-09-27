@@ -21,6 +21,7 @@ import '../../features/learning/learning_engine/widgets/dialogue_widget.dart';
 import '../../features/learning/learning_engine/widgets/worked_example_widget.dart';
 import '../../features/learning/learning_engine/widgets/phonics_blender_widget.dart';
 import '../../features/learning/learning_engine/widgets/abacus_simulation_widget.dart';
+import '../../features/learning/learning_engine/widgets/markdown_table_widget.dart';
 
 // Pedagogy Arc Widgets
 import '../../features/learning/learning_engine/widgets/hook_widget.dart';
@@ -28,6 +29,7 @@ import '../../features/learning/learning_engine/widgets/socratic_widget.dart';
 import '../../features/learning/learning_engine/widgets/discovery_widget.dart';
 import '../../features/learning/learning_engine/widgets/reflection_widget.dart';
 import '../../features/learning/learning_engine/widgets/mastery_widget.dart';
+import '../../features/learning/learning_engine/widgets/heading_widget.dart';
 
 void registerDefaultBlocks() {
   final registry = BlockRegistry.instance;
@@ -40,7 +42,7 @@ void registerDefaultBlocks() {
   final theoryLikeTypes = [
     // Core content types
     'theory', 'formula', 'real_world_example', 'definition',
-    'history', 'summary', 'memory_trick',
+    'history', 'summary', 'memory_trick', 'short_note',
     // Remaining Gold Pedagogy types mapped to theory for now
     'reveal', 'connection', 'match_column',
     // Visual / media fallback types
@@ -48,7 +50,12 @@ void registerDefaultBlocks() {
     'animation', 'revision',
     // Knowledge / research types
     'etymology', 'timeline', 'mind_map', 'board_questions',
-    'calculator', 'analogy',
+    'calculator', 'analogy', 'knowledge_connection', 'story',
+    'story_hook',
+    // Fallback for AI-generated unregistered types
+    'concept', 'vocabulary', 'task', 'confidence_task', 'practice_speaking',
+    'practical', 'practice', 'translation_exercise', 'exercise', 'example_sentences',
+    'paragraph', 'dictionary_term', 'examples', 'table', 'vocabulary_table', 'faqs'
   ];
 
   for (final type in theoryLikeTypes) {
@@ -62,12 +69,26 @@ void registerDefaultBlocks() {
   }
 
   // ─────────────────────────────────────────────────────────────────
+  // MARKDOWN TABLE BLOCK → MarkdownTableWidget
+  // ─────────────────────────────────────────────────────────────────
+  registry.register(
+    BlockDefinition(
+      type: 'markdown_table',
+      validator: (block) {}, // Soft validator
+      builder: (block) => MarkdownTableWidget(block: block),
+    ),
+  );
+
+  // ─────────────────────────────────────────────────────────────────
   // MCQ / KNOWLEDGE CHECK → QuizWidget
   // All question-answer types use the same quiz widget.
   // ─────────────────────────────────────────────────────────────────
   final quizLikeTypes = [
     'quiz', 'mcq', 'knowledge_check', 'true_false', 'quiz_multiple_choice',
-    'practice_question', 'challenge_question',
+    'practice_question', 'challenge_question', 'challenge', 'mastery_challenge',
+    'quiz_mcq', 'quiz_question', 'numerical',
+    // AI-generated unregistered types
+    'subjective', 'fill_blank', 'question'
   ];
 
   for (final type in quizLikeTypes) {
@@ -105,11 +126,14 @@ void registerDefaultBlocks() {
     builder: (block) => HookWidget(block: block),
   ));
 
-  registry.register(BlockDefinition(
-    type: 'socratic_question',
-    validator: (block) {},
-    builder: (block) => SocraticWidget(block: block),
-  ));
+  final socraticTypes = ['socratic', 'socratic_question', 'socratic_thinking', 'question_socratic'];
+  for (final type in socraticTypes) {
+    registry.register(BlockDefinition(
+      type: type,
+      validator: (block) {},
+      builder: (block) => SocraticWidget(block: block),
+    ));
+  }
 
   registry.register(BlockDefinition(
     type: 'discovery',
@@ -185,13 +209,16 @@ void registerDefaultBlocks() {
   // ─────────────────────────────────────────────────────────────────
   // ACTIVITY
   // ─────────────────────────────────────────────────────────────────
-  registry.register(
-    BlockDefinition(
-      type: 'activity',
-      validator: (block) {},
-      builder: (block) => ActivityWidget(data: block),
-    ),
-  );
+  final activityTypes = ['activity', 'interactive_activity'];
+  for (final type in activityTypes) {
+    registry.register(
+      BlockDefinition(
+        type: type,
+        validator: (block) {},
+        builder: (block) => ActivityWidget(data: block),
+      ),
+    );
+  }
 
   // ─────────────────────────────────────────────────────────────────
   // FLASHCARD
@@ -207,7 +234,7 @@ void registerDefaultBlocks() {
   // ─────────────────────────────────────────────────────────────────
   // TEACHER TIP / COMMON MISTAKES / EXAM TIPS
   // ─────────────────────────────────────────────────────────────────
-  final tipTypes = ['teacher_tip', 'common_mistakes', 'exam_tips'];
+  final tipTypes = ['teacher_tip', 'common_mistakes', 'exam_tips', 'teacher_tp', 'tip'];
 
   for (final type in tipTypes) {
     registry.register(
@@ -215,6 +242,20 @@ void registerDefaultBlocks() {
         type: type,
         validator: (block) {},
         builder: (block) => TeacherTipWidget(block: block),
+      ),
+    );
+  }
+
+  // ─────────────────────────────────────────────────────────────────
+  // HEADING
+  // ─────────────────────────────────────────────────────────────────
+  final headingTypes = ['heading', 'chapter_title'];
+  for (final type in headingTypes) {
+    registry.register(
+      BlockDefinition(
+        type: type,
+        validator: (block) => BlockValidationUtils.require(block, 'title', String),
+        builder: (block) => HeadingWidget(data: block),
       ),
     );
   }

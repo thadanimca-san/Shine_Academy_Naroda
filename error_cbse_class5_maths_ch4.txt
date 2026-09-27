@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "id": "cbse_class5_maths_ch4",
+    "title": "Chapter 4: Multiplication",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand multiplication as repeated addition",
+      "Multiply 3-digit numbers by 2-digit numbers using standard algorithms",
+      "Apply properties of multiplication to solve complex word problems",
+      "Estimate products and verify answers using inverse operations"
+    ],
+    _core_concepts: [
+      "DICT_MATH_PRODUCT",
+      "DICT_MATH_FACTOR",
+      "DICT_MATH_ARRAY",
+      "DICT_MATH_DISTRIBUTIVE"
+    ],
+    "ai_context": {
+      "learning_goal": "Master the structural mechanics of multi-digit multiplication, recognizing it as efficient grouping rather than rote memorization.",
+      "common_misconceptions": [
+        "Forgetting to place a zero placeholder when multiplying by the tens digit in standard algorithms.",
+        "Confusing factors with the product.",
+        "Thinking multiplication always results in a larger number (forgetting zero and fractions)."
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "KOBJ_1",
+      "type": "hook",
+      "title": "The Grand Archaeological Mystery",
+      "body": "Imagine walking through the ancient ruins of an abandoned temple deep in the jungle. On the stone floor, you discover giant mosaic tiles arranged in massive squares: 24 rows, with 36 sparkling emerald jewels embedded in every single row! Your explorer companion immediately pulls out a notebook and starts adding: 36 plus 36 is 72, plus another 36 is 108... but wait, there are 24 rows! If they keep adding one by one, the temple traps will close before they finish counting. How can our explorer instantly calculate the total number of jewels without dying of exhaustion? The secret weapon is not addition; it is the glorious power of [DICT_MATH_ARRAY|multiplication]!",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_2",
+      "type": "quiz",
+      "question": "Why would repeated addition fail our explorer in the ancient temple scenario?",
+      "options": [
+        "Addition only works with numbers smaller than 10.",
+        "Repeated addition takes too long and increases the risk of making careless calculation errors with large numbers.",
+        "Adding jewels causes them to disappear according to temple physics."
+      ],
+      "correct_index": 1,
+      "explanation": "While addition works, repeating it 24 times is painfully slow and prone to errors. Multiplication acts as an ultra-fast shortcut for equal group additions.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_3",
+      "type": "theory",
+      "title": "Concept 1: What is Multiplication Really?",
+      "body": "At its core, multiplication is simply repeated addition streamlined for speed and elegance. When we write 4 × 3, we are saying 'add the number 4 three times' (4 + 4 + 4 = 12) or 'add the number 3 four times' (3 + 3 + 3 + 3 = 12). The numbers we multiply together are known as [DICT_MATH_FACTOR|factors], and the final result of our operation is called the [DICT_MATH_PRODUCT|product]. Visualizing this as an [DICT_MATH_ARRAY|array]—rows and columns of objects—unlocks our brain's ability to see geometry and arithmetic working together in harmony. If you have 5 rows of chairs with 6 chairs in each row, you don't count them one by one. You multiply 5 by 6 to instantly arrive at a product of 30 chairs.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_4",
+      "type": "teacher_tip",
+      "title": "The Living Array Experiment",
+      "body": "Stop reading for a moment and look around your room. Find a tiled floor, a bookshelf, or an egg carton. Count how many items are in one row, then count how many rows there are. Multiply them in your head. You just used mathematical mapping in real life!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_5",
+      "type": "flashcard",
+      "front": "What do we call the numbers that are multiplied together to find a product?",
+      "back": "Factors! (For example, in 4 × 5 = 20, the numbers 4 and 5 are the factors, and 20 is the product.)",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_6",
+      "type": "theory",
+      "title": "Concept 2: The Magic Properties of Numbers",
+      "body": "Numbers have rules and personalities, and multiplication showcases some of the most fascinating laws in mathematics. First, let's look at the Commutative Property: changing the order of the [DICT_MATH_FACTOR|factors] never changes the [DICT_MATH_PRODUCT|product]. Whether you calculate 7 × 8 or 8 × 7, you always get 56. Imagine rotating a grid of dots 90 degrees; the total number of dots remains identical! Second, we have the Associative Property, which tells us that when multiplying three or more numbers, grouping them differently won't alter the outcome: (2 × 3) × 4 is exactly the same as 2 × (3 × 4). Finally, the Identity Property states that multiplying any number by 1 leaves it completely unchanged, while multiplying any number by 0 obliterates it down to 0, earning zero the nickname of 'The Black Hole' of arithmetic.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "KOBJ_7",
+      "type": "quiz",
+      "question": "According to the Commutative Property, which expression is equal to 14 × 25?",
+      "options": [
+        "14 + 25",
+        "25 × 14",
+        "14 ÷ 25"
+      ],
+      "correct_index": 1,
+      "explanation": "The Commutative Property states that changing the order of factors does not change the product. Therefore, 14 × 25 is identical in value to 25 × 14.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_8",
+      "type": "teacher_tip",
+      "title": "Zero Trick Insight",
+      "body": "When multiplying numbers that end in zeros (like 400 × 30), ignore the zeros first! Multiply the core non-zero digits (4 × 3 = 12), then count and tack on all the trailing zeros from both factors (giving you 12,000).",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_9",
+      "type": "theory",
+      "title": "Concept 3: Unlocking the [DICT_MATH_DISTRIBUTIVE|Distributive Property]",
+      "body": "What happens when you need to multiply a large, intimidating number like 6 by 14, but your brain freezes? Enter the superhero of mental math: the [DICT_MATH_DISTRIBUTIVE|Distributive Property]. This property states that multiplying a number by a sum is the same as doing each multiplication separately and then adding the results together. Mathematically, $a \\times (b + c) = (a \\times b) + (a \\times c)$. Let's break down 6 × 14. We can split 14 into friendly, bite-sized pieces: 10 and 4. Now, multiply 6 by 10 (which is 60) and 6 by 4 (which is 24). Finally, add those partial products together: 60 + 24 = 84! This exact strategy forms the hidden engine behind all multi-digit multiplication algorithms.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_10",
+      "type": "quiz",
+      "question": "Using the Distributive Property, how can you rewrite 8 × 23?",
+      "options": [
+        "(8 × 20) + (8 × 3)",
+        "(8 + 20) × (8 + 3)",
+        "(8 × 2) + (8 × 3)"
+      ],
+      "correct_index": 0,
+      "explanation": "23 is split into 20 + 3. Distributing the 8 gives us (8 × 20) + (8 × 3).",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_11",
+      "type": "flashcard",
+      "front": "What does the Distributive Property allow you to do with a tough multiplication problem?",
+      "back": "Break a large factor into smaller, manageable parts, multiply each part separately, and then add the partial products together.",
+      "bloom": "Understand",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_12",
+      "type": "theory",
+      "title": "Concept 4: Stepping Up to 2-Digit Multiplication",
+      "body": "Now we are ready for the big leagues: multiplying a 3-digit number by a 2-digit number, such as 345 × 24. How do master mathematicians tackle this? They use columns and place values to keep everything organized. Step 1: Multiply the top number (345) by the ones digit of the bottom number (4). 4 × 5 = 20 (write 0, carry over 2). 4 × 4 = 16 + 2 = 18 (write 8, carry over 1). 4 × 3 = 12 + 1 = 13. Our first partial product is 1,380. Step 2: Because we are now multiplying by the tens digit (2, which represents 20), we must drop a 'placeholder zero' in the ones column! Step 3: Multiply 345 by 2. 2 × 5 = 10 (write 0, carry 1), 2 × 4 = 8 + 1 = 9, 2 × 3 = 6. Our second partial product is 6,900. Step 4: Add the two partial products together: 1,380 + 6,900 = 8,280. You have successfully conquered advanced multiplication!",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 6
+    },
+    {
+      "id": "KOBJ_13",
+      "type": "teacher_tip",
+      "title": "The Placeholder Zero Reminder",
+      "body": "The #1 mistake students make when multiplying by a two-digit number is forgetting the placeholder zero on the second line. Think of that zero as an anchor holding your place value secure before you start multiplying the tens column!",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_14",
+      "type": "quiz",
+      "question": "When multiplying by the tens digit in a standard multi-digit algorithm, what must you always place in the ones column first?",
+      "options": [
+        "A placeholder zero",
+        "The carry-over number",
+        "A decimal point"
+      ],
+      "correct_index": 0,
+      "explanation": "A placeholder zero is mandatory because you are multiplying by tens, shifting all resulting values one place value to the left.",
+      "bloom": "Remember",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_15",
+      "type": "theory",
+      "title": "Concept 5: Estimation and Checking Your Work",
+      "body": "Even the best mathematicians make calculation slips. That is why professional accountants, architects, and rocket scientists never trust a raw number without checking it first using estimation. Estimation involves rounding your factors to the nearest clean number (usually the nearest ten or hundred) to get a ballpark figure. If you are calculating 392 × 48, round 392 to 400 and 48 to 50. Multiply 400 × 50 in your head (4 × 5 = 20, plus three zeros = 20,000). If your actual calculated product comes out to 2,136 or 189,000, you know instantly that a stray decimal or misplaced carry-over has sabotaged your math. Your estimated benchmark of 20,000 acts as a safety net, ensuring your final answer makes logical sense.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_16",
+      "type": "flashcard",
+      "front": "Why is estimation crucial before solving a heavy multiplication problem?",
+      "back": "It provides a realistic ballpark figure so you can catch wild calculation errors and verify if your final answer makes sense.",
+      "bloom": "Analyze",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_17",
+      "type": "quiz",
+      "question": "If you estimate the product of 512 × 29 by rounding to the nearest hundred and ten respectively, what calculation do you perform?",
+      "options": [
+        "500 × 30",
+        "510 × 20",
+        "600 × 30"
+      ],
+      "correct_index": 0,
+      "explanation": "512 rounds down to 500, and 29 rounds up to 30. The estimated expression is 500 × 30.",
+      "bloom": "Apply",
+      "difficulty": "Advanced",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "KOBJ_18",
+      "type": "theory",
+      "title": "Concept 6: Real-World Word Problems and Multi-Step Logic",
+      "body": "Math in the wild rarely looks like a clean vertical equation on a chalkboard; it arrives disguised as a story. Consider this scenario: A wildlife sanctuary rescues sea turtles. Each turtle eats 14 kilograms of kelp per week. If the sanctuary houses 125 turtles, and operates for 8 weeks during the summer season, how much kelp must they stockpile in total? To solve multi-step multiplication problems, do not panic. Break the narrative into manageable chapters. First, find out how much kelp all turtles consume in a single week: 125 turtles × 14 kg = 1,750 kg per week. Second, multiply that weekly total by the number of weeks (8): 1,750 × 8 = 14,000 kg of kelp! By treating word problems like puzzle quests, multiplication transforms from a chore into a powerful tool for solving grand logistical challenges.",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "KOBJ_19",
+      "type": "teacher_tip",
+      "title": "The Highlight Method for Word Problems",
+      "body": "When facing a dense word problem, grab a pencil and underline the numbers while boxing the action words (like 'each', 'total', 'per week'). This filters out background noise and reveals the exact multiplication steps required.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "KOBJ_20",
+      "type": "quiz",
+      "question": "A baker makes 45 boxes of cookies every day. Each box contains 12 cookies. How many cookies does the baker make in 10 days?",
+      "options": [
+        "5,400 cookies",
+        "540 cookies",
+        "4,500 cookies"
+      ],
+      "correct_index": 0,
+      "explanation": "Step 1: 45 boxes × 12 cookies = 540 cookies per day. Step 2: 540 cookies × 10 days = 5,400 cookies.",
+      "bloom": "Synthesize",
+      "difficulty": "Advanced",
+      "estimated_minutes": 2
+    }
+  ]
+}

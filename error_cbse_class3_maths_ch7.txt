@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "id": "cbse_grade_maths_ch7_decimals",
+    "title": "Chapter 7: Decimals",
+    "subject": "Maths",
+    "grade": "Unknown",
+    "difficulty": "Beginner",
+    "estimated_minutes": 40,
+    "learning_outcomes": [
+      "Understand decimals as fractions with denominators of 10, 100, and 1000",
+      "Read, write, and represent decimal numbers accurately",
+      "Compare and order decimal numbers up to three decimal places",
+      "Convert between fractions, decimals, and everyday units of measurement"
+    ],
+    "core_concepts": [
+      "DICT_DECIMAL_POINT",
+      "DICT_TENTHS",
+      "DICT_HUNDREDTHS",
+      "DICT_PLACE_VALUE_DECIMAL"
+    ],
+    "ai_context": {
+      "learning_goal": "To master the concept of decimals as extensions of our base-10 number system, enabling students to handle fractional parts of whole numbers seamlessly.",
+      "common_misconceptions": [
+        "Thinking that 0.45 is greater than 0.5 because 45 is greater than 5",
+        "Ignoring the decimal point and treating the decimal part as a regular whole number",
+        "Believing that adding zeros to the end of a decimal changes its value (e.g., thinking 0.3 is different from 0.30)"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "id": "DEC_B1",
+      "type": "hook",
+      "title": "The Mystery of the Missing Coin",
+      "body": "Imagine you walk into your favorite bookstore to buy a brand new comic book priced at $4.75. You reach into your pocket and pull out a handful of dollar bills and coins: four crisp one-dollar bills, three shiny dimes, and five gleaming pennies. You hand over the four dollars, but how do you pay for the remaining seventy-five cents? Whole numbers alone are not enough when we enter the world of money, measurements, and precision engineering. This is where [DICT_DECIMAL_POINT|decimals] come to the rescue! They allow us to represent parts of a whole with absolute mathematical elegance.",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "DEC_B2",
+      "type": "quiz",
+      "question": "Why do we need decimals in everyday life when we already have whole numbers?",
+      "options": [
+        "To make math problems longer and harder",
+        "To represent amounts that are part whole, such as money or precise measurements",
+        "Because whole numbers do not exist past 100"
+      ],
+      "correct_index": 1,
+      "explanation": "Decimals are specifically designed to bridge the gap between whole numbers, allowing us to express quantities that fall in between, like $4.75.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B3",
+      "type": "theory",
+      "title": "Concept 1: Understanding Fractions as Decimals",
+      "body": "Before diving into decimals, let us revisit fractions. Our number system is built on powers of 10: ones, tens, hundreds, and thousands. When we go smaller than one, we continue this pattern by dividing a whole into 10, 100, or 1000 equal parts. If you take a strip of paper and cut it into 10 equal slices, each slice is one-tenth ($\frac{1}{10}$). In decimal notation, we write this as $0.1$. The dot separating the whole number from the fractional part is known as the [DICT_DECIMAL_POINT|decimal point]. Every digit to the right of this point represents a fraction whose denominator is a power of 10. Understanding this relationship is the master key to unlocking all decimal operations.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "DEC_B4",
+      "type": "teacher_tip",
+      "title": "The Ruler Visualization",
+      "body": "Grab a standard metric ruler. Look at the space between $0$ and $1$ centimeter. You will see 10 tiny subdivisions. Each tiny line represents one millimeter, which is $\frac{1}{10}$ of a centimeter, or $0.1$ cm. Measuring objects around your room in centimeters using decimals builds instant physical intuition!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "DEC_B5",
+      "type": "flashcard",
+      "front": "How do you write the fraction $\frac{3}{10}$ as a decimal?",
+      "back": "0.3 (read as 'zero point three' or 'three-tenths')",
+      "bloom": "Remember",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B6",
+      "type": "theory",
+      "title": "Concept 2: Exploring Tenths and Hundredths",
+      "body": "As we move further right past the decimal point, the value of each place shrinks by a factor of 10. The first position immediately to the right of the decimal point is called the place of [DICT_TENTHS|tenths]. For example, $0.7$ means 7 parts out of 10. If we take one of those tenths and slice it into 10 smaller pieces, we get 100 tiny squares out of a whole. This second position is known as [DICT_HUNDREDTHS|hundredths]. Thus, $0.45$ represents forty-five hundredths, or $\frac{45}{100}$. Notice how the name of the place value directly matches the denominator of its fractional equivalent. This systematic naming prevents confusion and keeps our calculations organized.",
+      "bloom": "Analyze",
+      "difficulty": "Beginner",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "DEC_B7",
+      "type": "quiz",
+      "question": "In the decimal number $3.82$, what is the place value of the digit 2?",
+      "options": [
+        "Ones",
+        "Tenths",
+        "Hundredths"
+      ],
+      "correct_index": 2,
+      "explanation": "The first digit after the decimal point (8) is in the tenths place, and the second digit (2) is in the hundredths place.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B8",
+      "type": "theory",
+      "title": "Concept 3: The Anatomy of [DICT_PLACE_VALUE_DECIMAL|Decimal Place Value]",
+      "body": "Let us examine the grand structure of our [DICT_PLACE_VALUE_DECIMAL|decimal place value] chart. Moving left from the decimal point, we have familiar territory: Ones, Tens, Hundreds, Thousands. Moving right, the pattern mirrors itself with a slight twist (there is no 'oneths' place!). We have Tenths ($\frac{1}{10}$), Hundredths ($\frac{1}{100}$), and Thousandths ($\frac{1}{1000}$). Consider the number $428.357$. Here, $4$ is in the hundreds place ($400$), $2$ is in the tens place ($20$), $8$ is in the ones place ($8$), $3$ is three-tenths ($0.3$), $5$ is five-hundredths ($0.05$), and $7$ is seven-thousandths ($0.007$). Expanded form helps us see this clearly: $400 + 20 + 8 + 0.3 + 0.05 + 0.007$.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "DEC_B9",
+      "type": "teacher_tip",
+      "title": "The 'Th-' Suffix Rule",
+      "body": "Remind students to listen to the ends of words! Whole number place values end in standard names (ones, tens, hundreds). Decimal place values always end in '-ths' (tenths, hundredths, thousandths). If you forget the 'ths', you might accidentally talk about whole numbers instead of fractional parts!",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "DEC_B10",
+      "type": "flashcard",
+      "front": "What does the 'th' at the end of 'thousandths' tell us about the number?",
+      "back": "It tells us that the digit represents a fractional part out of 1,000, located to the right of the decimal point.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B11",
+      "type": "theory",
+      "title": "Concept 4: Reading and Writing Decimals Correctly",
+      "body": "How do mathematicians say numbers like $56.34$ out loud? Saying 'fifty-six point three four' is common in casual conversation, but the mathematically precise way is to say 'fifty-six and thirty-four hundredths.' The word 'and' replaces the decimal point when speaking. Furthermore, when writing decimals in word form, we always name the place value of the final digit on the right. For instance, $0.008$ is read as 'eight-thousandths' because the $8$ sits in the thousandths column. Mastering correct pronunciation reinforces structural understanding and prevents common reading errors.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "DEC_B12",
+      "type": "quiz",
+      "question": "How should you correctly read the decimal number $7.09$?",
+      "options": [
+        "Seven and nine tenths",
+        "Seven and nine hundredths",
+        "Seven point zero nine"
+      ],
+      "correct_index": 1,
+      "explanation": "Since the 9 is in the hundredths place (two places after the decimal), the correct formal reading is 'seven and nine hundredths'.",
+      "bloom": "Understand",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B13",
+      "type": "theory",
+      "title": "Concept 5: Comparing and Ordering Decimals",
+      "body": "One of the trickiest traps in mathematics is comparing decimals. Which is larger: $0.4$ or $0.38$? Many students mistakenly think $0.38$ is larger because $38$ is greater than $4$. However, if we align them by place value or add a placeholder zero to make them the same length, we get $0.40$ and $0.38$. Now it is crystal clear that $0.40$ is greater! To compare any two decimals, always start by comparing the whole number parts. If they are equal, compare the tenths digits. If the tenths are equal, move to the hundredths digits, and so on, working strictly from left to right.",
+      "bloom": "Evaluate",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "DEC_B14",
+      "type": "teacher_tip",
+      "title": "The Padding Zero Trick",
+      "body": "Teach students to pad shorter decimals with zeros on the right so all numbers being compared have the exact same number of decimal digits (e.g., compare $0.5$ and $0.48$ by writing them as $0.50$ and $0.48$). This eliminates visual bias instantly!",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "DEC_B15",
+      "type": "quiz",
+      "question": "Which of the following inequality statements is true?",
+      "options": [
+        "0.6 > 0.58",
+        "0.25 > 0.3",
+        "0.09 > 0.1"
+      ],
+      "correct_index": 0,
+      "explanation": "Comparing 0.6 (or 0.60) to 0.58 shows that 60 hundredths is greater than 58 hundredths.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B16",
+      "type": "theory",
+      "title": "Concept 6: Converting Fractions to Decimals (Denominator 10 and 100)",
+      "body": "Converting fractions whose denominators are powers of 10 into decimals is a straightforward mechanical process. For any fraction with a denominator of 10, simply take the numerator and place a decimal point so there is exactly one digit to its right ($\frac{7}{10} = 0.7$). For fractions with a denominator of 100, ensure there are two digits to the right of the decimal point. If your numerator is a single digit like $5$, you must insert a placeholder zero: $\frac{5}{100} = 0.05$. This placeholder zero is vital because without it, $0.5$ would represent five-tenths instead of five-hundredths!",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "DEC_B17",
+      "type": "flashcard",
+      "front": "Convert the fraction $\frac{34}{100}$ into a decimal.",
+      "back": "0.34",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B18",
+      "type": "theory",
+      "title": "Concept 7: Converting Decimals Back to Fractions",
+      "body": "Going in reverse is just as satisfying. To convert any decimal into a fraction, read the decimal aloud using its proper place value name. For example, $0.62$ is read as 'sixty-two hundredths.' Therefore, its fractional form is simply $\frac{62}{100}$. Once you have written the fraction, you can simplify it by dividing the numerator and denominator by their greatest common divisor. In this case, dividing both by 2 gives us $\frac{31}{50}$. Every decimal is nothing more than a disguised fraction waiting to be simplified!",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "DEC_B19",
+      "type": "quiz",
+      "question": "What is the simplest fractional form of the decimal $0.75$?",
+      "options": [
+        "$\frac{75}{10}$",
+        "$\frac{3}{4}$",
+        "$\frac{7}{5}$"
+      ],
+      "correct_index": 1,
+      "explanation": "0.75 is seventy-five hundredths ($\frac{75}{100}$). Dividing both numerator and denominator by 25 yields $\frac{3}{4}$.",
+      "bloom": "Analyze",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B20",
+      "type": "theory",
+      "title": "Concept 8: Decimals in Money and Measurement Units",
+      "body": "Decimals are the backbone of currency and metric measurements. Since there are 100 cents in one dollar, every cent is $\frac{1}{100}$ of a dollar, making $45$ cents equal to $\$0.45$. Similarly, in the metric system, $1$ meter equals $100$ centimeters, meaning $1$ centimeter is $0.01$ meters. When we measure $1$ meter and $45$ centimeters, we write it cleanly as $1.45$ meters. This seamless integration of units prevents us from having to deal with awkward mixed fractions and makes addition and subtraction across units remarkably fast.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 4
+    },
+    {
+      "id": "DEC_B21",
+      "type": "teacher_tip",
+      "title": "Grocery Store Challenge",
+      "body": "Take students on a mental trip to the supermarket. Ask them to add up prices like $1.99, $2.50, and $0.75. Emphasize aligning decimal points vertically so that dollars line up with dollars and cents line up with cents.",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 2
+    },
+    {
+      "id": "DEC_B22",
+      "type": "flashcard",
+      "front": "How many meters is 3 meters and 25 centimeters written as a decimal?",
+      "back": "3.25 meters",
+      "bloom": "Apply",
+      "difficulty": "Beginner",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B23",
+      "type": "theory",
+      "title": "Concept 9: Addition and Subtraction of Decimals",
+      "body": "Adding and subtracting decimals follows the exact same golden rule as whole numbers: [DICT_PLACE_VALUE_DECIMAL|align your place values]! When you set up an addition problem like $14.2 + 3.65$, you must align the decimal points vertically, not the right-hand edges of the numbers. If one number has fewer decimal places, use placeholder zeros so both numbers match in length ($14.20 + 3.65 = 17.85$). Carrying over and borrowing work in the exact same way as in whole number arithmetic. The decimal point simply drops straight down into the final sum or difference like an anchor.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 5
+    },
+    {
+      "id": "DEC_B24",
+      "type": "quiz",
+      "question": "What is the correct sum of $12.4$ and $3.15$?",
+      "options": [
+        "15.55",
+        "4.55",
+        "15.29"
+      ],
+      "correct_index": 0,
+      "explanation": "Writing 12.4 as 12.40 and adding 3.15 gives 12.40 + 3.15 = 15.55.",
+      "bloom": "Apply",
+      "difficulty": "Intermediate",
+      "estimated_minutes": 1
+    },
+    {
+      "id": "DEC_B25",
+      "type": "theory",
+      "title": "Concept 10: Real-World Problem Solving with Decimals",
+      "body": "Let us put our decimal mastery to the test with a real-world scenario. Maya is training for a track meet. On Monday, she runs $3.75$ kilometers. On Tuesday, she runs $4.2$ kilometers. How much total distance has she covered in those two days? To solve this, we set up our addition problem, pad the shorter decimal, and calculate: $3.75 + 4.20 = 7.95$ kilometers. Whether calculating fuel efficiency for a car trip, measuring ingredients for a science experiment, or splitting a restaurant bill among friends, decimals empower us to navigate quantitative reality with precision and confidence.",
+      "bloom": "Evaluate",
+      "difficulty": "Advanced",
+      "estimated_minutes": 5
+    }
+  ]
+}
