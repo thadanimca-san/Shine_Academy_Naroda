@@ -53,19 +53,20 @@ class UniversalPdfEngine {
     final pdf = pw.Document();
     final screenshotController = ScreenshotController();
 
-    final List<Uint8List> capturedImages = [];
+    // Combine ALL widgets into a single Column and capture ONCE.
+    // This reduces JNI calls from N (one per block) to 1.
+    final combinedWidget = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: widgets,
+    );
 
-    for (final widget in widgets) {
-      final img = await screenshotController.captureFromWidget(
-        _wrapInTheme(widget),
-        // 500 ms gives HarfBuzz enough time to shape Gujarati glyphs AND
-        // flutter_math_fork's KaTeX fonts time to load.
-        delay: const Duration(milliseconds: 500),
-        // High pixel ratio so text is crisp when embedded in PDF at 72 DPI.
-        pixelRatio: 2.0,
-      );
-      capturedImages.add(img);
-    }
+    final img = await screenshotController.captureFromWidget(
+      _wrapInTheme(combinedWidget),
+      delay: const Duration(milliseconds: 500),
+      pixelRatio: 2.0,
+    );
+    final capturedImages = [img];
 
     pdf.addPage(
       pw.MultiPage(
