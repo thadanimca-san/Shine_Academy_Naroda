@@ -1,138 +1,101 @@
-import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
-import 'package:flutter/services.dart';
-import 'package:pdf/pdf.dart';
-import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
-import 'package:shine_academy_naroda/core/utils/pdf_branding_util.dart';
+import 'package:flutter/material.dart';
+import 'package:shine_academy_naroda/core/engine/universal_pdf_engine.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import 'package:shine_academy_naroda/features/common/widgets/tts_interactive_text.dart';
 
 class PdfGenerationService {
-  Future<pw.ImageProvider> _getLogoImage() async {
-    final ByteData bytes = await rootBundle.load('assets/shineacademynarodalogo.jpg');
-    final Uint8List byteList = bytes.buffer.asUint8List();
-    return pw.MemoryImage(byteList);
-  }
-
   Future<void> generateQuestionPaperPDF(String title, List<dynamic> questions) async {
-    final pdf = pw.Document();
-    final pageTheme = await PdfBrandingUtil.getPageTheme(pageFormat: PdfPageFormat.a4);
-    final logoImage = await _getLogoImage();
-
-    pdf.addPage(
-      pw.MultiPage(
-        pageTheme: pageTheme,
-        header: (pw.Context context) {
-          return pw.Column(
-            children: [
-              pw.Row(
-                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-                children: [
-                  pw.Image(logoImage, height: 50),
-                  pw.Text(TrilingualService.instance.getUIText('Shine Academy Naroda'), style: pw.TextStyle(fontSize: 24, fontWeight: pw.FontWeight.bold, color: PdfColors.teal800)),
-                ],
-              ),
-              pw.SizedBox(height: 10),
-              pw.Divider(),
-              pw.SizedBox(height: 10),
-              pw.Center(
-                child: pw.Text(title, style: pw.TextStyle(fontSize: 20, fontWeight: pw.FontWeight.bold)),
-              ),
-              pw.SizedBox(height: 20),
-            ],
-          );
-        },
-        build: (pw.Context context) {
-          return [
-            ...questions.map((q) {
-              return pw.Container(
-                margin: const pw.EdgeInsets.only(bottom: 20),
-                child: pw.Row(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Text('Q${q['q_no']}. ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
-                    pw.Expanded(
-                      child: pw.Text(q['question'], style: const pw.TextStyle(fontSize: 14)),
-                    ),
-                    pw.SizedBox(width: 10),
-                    pw.Text('[${q['marks']}]', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
-                  ],
-                ),
-              );
-            }),
-          ];
-        },
+    List<Widget> widgets = [];
+    
+    // Add title header manually since we're using widgets
+    widgets.add(
+      Center(
+        child: TtsInteractiveText(
+          text: title,
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
       ),
     );
+    widgets.add(const SizedBox(height: 20));
 
-    await PdfViewerUtil.openPdfBytes(await pdf.save(), 'Question_Paper_${title.replaceAll(' ', '_')}.pdf',);
+    for (final q in questions) {
+      widgets.add(
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TtsInteractiveText(text: 'Q${q['q_no']}. ', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              Expanded(
+                child: TtsInteractiveText(text: q['question'], style: const TextStyle(fontSize: 14)),
+              ),
+              const SizedBox(width: 10),
+              TtsInteractiveText(text: '[${q['marks']}]', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            ],
+          ),
+        ),
+      );
+    }
+
+    await UniversalPdfEngine.generatePdfFromWidgets(
+      title: title,
+      widgets: widgets,
+      isAnswerKey: false,
+    );
   }
 
   Future<void> generateSolutionsPDF(String title, List<dynamic> questions) async {
-    final pdf = pw.Document();
-    final pageTheme = await PdfBrandingUtil.getPageTheme(pageFormat: PdfPageFormat.a4);
-    final logoImage = await _getLogoImage();
+    List<Widget> widgets = [];
 
-    pdf.addPage(
-      pw.MultiPage(
-        pageTheme: pageTheme,
-        header: (pw.Context context) {
-          return pw.Column(
-            children: [
-              pw.Row(
-                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-                children: [
-                  pw.Image(logoImage, height: 50),
-                  pw.Text(TrilingualService.instance.getUIText('Shine Academy Naroda'), style: pw.TextStyle(fontSize: 24, fontWeight: pw.FontWeight.bold, color: PdfColors.teal800)),
-                ],
-              ),
-              pw.SizedBox(height: 10),
-              pw.Divider(),
-              pw.SizedBox(height: 10),
-              pw.Center(
-                child: pw.Text('$title (Solutions)', style: pw.TextStyle(fontSize: 20, fontWeight: pw.FontWeight.bold)),
-              ),
-              pw.SizedBox(height: 20),
-            ],
-          );
-        },
-        build: (pw.Context context) {
-          return [
-            ...questions.map((q) {
-              return pw.Container(
-                margin: const pw.EdgeInsets.only(bottom: 20),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Row(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
-                      children: [
-                        pw.Text('Q${q['q_no']}. ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
-                        pw.Expanded(
-                          child: pw.Text(q['question'], style: const pw.TextStyle(fontSize: 14)),
-                        ),
-                        pw.SizedBox(width: 10),
-                        pw.Text('[${q['marks']}]', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14)),
-                      ],
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Container(
-                      padding: const pw.EdgeInsets.all(10),
-                      decoration: pw.BoxDecoration(
-                        color: PdfColors.grey100,
-                        border: pw.Border.all(color: PdfColors.grey300),
-                        borderRadius: const pw.BorderRadius.all(pw.Radius.circular(5)),
-                      ),
-                      child: pw.Text('Answer: \n${q['solution']}', style: const pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-              );
-            }),
-          ];
-        },
+    widgets.add(
+      Center(
+        child: TtsInteractiveText(
+          text: '$title (Solutions)',
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
       ),
     );
+    widgets.add(const SizedBox(height: 20));
 
-    await PdfViewerUtil.openPdfBytes(await pdf.save(), 'Solutions_${title.replaceAll(' ', '_')}.pdf',);
+    for (final q in questions) {
+      widgets.add(
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TtsInteractiveText(text: 'Q${q['q_no']}. ', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  Expanded(
+                    child: TtsInteractiveText(text: q['question'], style: const TextStyle(fontSize: 14)),
+                  ),
+                  const SizedBox(width: 10),
+                  TtsInteractiveText(text: '[${q['marks']}]', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  border: Border.all(color: Colors.grey[300]!),
+                  borderRadius: const BorderRadius.all(Radius.circular(5)),
+                ),
+                child: TtsInteractiveText(text: 'Answer: \n${q['solution']}', style: const TextStyle(fontSize: 12)),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    await UniversalPdfEngine.generatePdfFromWidgets(
+      title: title,
+      widgets: widgets,
+      isAnswerKey: true,
+    );
   }
 }
+

@@ -1,6 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
+import 'package:markdown/markdown.dart' as md;
 import '../../../core/services/tts_service.dart';
 import '../../../foundation/theme/app_typography.dart';
 
@@ -27,7 +30,7 @@ class TtsInteractiveText extends StatefulWidget {
 }
 
 class _TtsInteractiveTextState extends State<TtsInteractiveText> {
-  List<TextSpan> _spans = [];
+  List<InlineSpan> _spans = [];
   String _cleanText = '';
   String currentWord = '';
 
@@ -98,6 +101,78 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
     for (int i = 0; i < widget.text.length; i++) {
       String char = widget.text[i];
 
+      if (char == '\$') {
+        _commitWord(isBold, isItalic);
+        bool isBlock = false;
+        int j = i + 1;
+        if (j < widget.text.length && widget.text[j] == '\$') {
+           isBlock = true;
+           j++;
+        }
+        int start = j;
+        int end = -1;
+        while (j < widget.text.length) {
+           if (widget.text[j] == '\$') {
+              if (isBlock && j + 1 < widget.text.length && widget.text[j+1] == '\$') {
+                  end = j;
+                  j += 2;
+                  break;
+              } else if (!isBlock) {
+                  end = j;
+                  j++;
+                  break;
+              }
+           }
+           j++;
+        }
+        
+        if (end != -1) {
+           String mathContent = widget.text.substring(start, end);
+           // Fix JSON parsing bug where \not becomes a newline + ot
+           mathContent = mathContent.replaceAll('\n', '\\n');
+           
+           // Fix flutter_math_fork crash when \not is used with \implies
+           mathContent = mathContent.replaceAll(r'\not\implies', r'\not\Rightarrow');
+           mathContent = mathContent.replaceAll(r'\not \implies', r'\not \Rightarrow');
+           
+           String fullMathString = isBlock ? '\$\$$mathContent\$\$' : '\$$mathContent\$';
+           
+           _cleanText += ' '; // Add space for TTS to skip it smoothly
+           
+           _spans.add(WidgetSpan(
+              alignment: PlaceholderAlignment.middle,
+              child: Builder(
+                builder: (context) {
+                  return MediaQuery(
+                    data: MediaQuery.of(context).copyWith(
+                      // Prevent double scaling (AppTypography already scales)
+                      textScaler: TextScaler.noScaling,
+                    ),
+                    child: MarkdownBody(
+                      data: fullMathString,
+                      builders: {
+                        'latex': LatexElementBuilder(
+                           textStyle: widget.style ?? AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface),
+                        ),
+                      },
+                      extensionSet: md.ExtensionSet(
+                        [LatexBlockSyntax()],
+                        [LatexInlineSyntax()],
+                      ),
+                      styleSheet: MarkdownStyleSheet(
+                         p: widget.style ?? AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface),
+                         pPadding: EdgeInsets.zero,
+                      ),
+                  ),
+                  );
+                }
+              ),
+           ));
+           i = j - 1; // Advance outer loop
+           continue;
+        }
+      }
+
       if (char == '*') {
         if (i + 1 < widget.text.length && widget.text[i+1] == '*') {
           _commitWord(isBold, isItalic);
@@ -166,34 +241,39 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         int currentOffset = 0;
 
         for (var span in _spans) {
-          TextStyle? spanStyle = span.style;
+          if (span is TextSpan) {
+            TextStyle? spanStyle = span.style;
 
-          if (span.text != null && span.text!.trim().isNotEmpty && !RegExp(r'''^[.,!?;:()\[\]"'-]+$''').hasMatch(span.text!)) {
-            if (highlightStart != -1 && highlightEnd != -1) {
-              if (currentOffset >= highlightStart && currentOffset < highlightEnd) {
-                spanStyle = (spanStyle ?? widget.style)?.copyWith(
-                  backgroundColor: widget.highlightColor,
-                  color: Colors.black, // High contrast on yellow
-                );
+            if (span.text != null && span.text!.trim().isNotEmpty && !RegExp(r'''^[.,!?;:()\[\]"'-]+$''').hasMatch(span.text!)) {
+              if (highlightStart != -1 && highlightEnd != -1) {
+                if (currentOffset >= highlightStart && currentOffset < highlightEnd) {
+                  spanStyle = (spanStyle ?? widget.style)?.copyWith(
+                    backgroundColor: widget.highlightColor,
+                    color: Colors.black, // High contrast on yellow
+                  );
+                }
               }
             }
-          }
 
-          if (span.text != null) {
-            currentOffset += span.text!.length;
-          }
+            if (span.text != null) {
+              currentOffset += span.text!.length;
+            }
 
-          builtSpans.add(TextSpan(
-            text: span.text,
-            style: spanStyle,
-            recognizer: span.recognizer,
-          ));
+            builtSpans.add(TextSpan(
+              text: span.text,
+              style: spanStyle,
+              recognizer: span.recognizer,
+            ));
+          } else {
+            // Forward WidgetSpan directly
+            builtSpans.add(span);
+          }
         }
 
         return RichText(
           textAlign: widget.textAlign,
           text: TextSpan(
-            style: widget.style,
+            style: DefaultTextStyle.of(context).style.merge(widget.style),
             children: builtSpans,
           ),
         );
