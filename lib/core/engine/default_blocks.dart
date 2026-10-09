@@ -22,6 +22,7 @@ import '../../features/learning/learning_engine/widgets/worked_example_widget.da
 import '../../features/learning/learning_engine/widgets/phonics_blender_widget.dart';
 import '../../features/learning/learning_engine/widgets/abacus_simulation_widget.dart';
 import '../../features/learning/learning_engine/widgets/markdown_table_widget.dart';
+import '../../features/learning/learning_engine/widgets/factor_tree_widget.dart';
 
 // Pedagogy Arc Widgets
 import '../../features/learning/learning_engine/widgets/hook_widget.dart';
@@ -367,6 +368,17 @@ void registerDefaultBlocks() {
       type: 'phonics_blender',
       validator: (block) => BlockValidationUtils.require(block, 'parts', List),
       builder: (block) => PhonicsBlenderWidget(data: block),
+    ),
+  );
+
+  // ─────────────────────────────────────────────────────────────────
+  // FACTOR TREE (animated prime factorisation)
+  // ─────────────────────────────────────────────────────────────────
+  registry.register(
+    BlockDefinition(
+      type: 'factor_tree',
+      validator: (block) => BlockValidationUtils.require(block, 'number', int),
+      builder: (block) => FactorTreeWidget(data: block),
     ),
   );
 
