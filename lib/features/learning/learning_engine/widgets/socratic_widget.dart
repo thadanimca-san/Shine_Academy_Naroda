@@ -191,8 +191,9 @@ class _SocraticWidgetState extends State<SocraticWidget> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      options[index],
+                    TtsInteractiveText(
+                      text: options[index],
+                      enableWordTap: false,
                       style: AppTypography.bodySmall(context, color: Theme.of(context).colorScheme.onSurface, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal),
                     ),
                   ],
@@ -221,8 +222,8 @@ class _SocraticWidgetState extends State<SocraticWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          _selectedIndex == correctIndex 
+                        TtsInteractiveText(
+                          text: _selectedIndex == correctIndex
                               ? correctFeedback
                               : incorrectFeedback,
                           style: AppTypography.bodySmall(context, color: Theme.of(context).colorScheme.onSurface),

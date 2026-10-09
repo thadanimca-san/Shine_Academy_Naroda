@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'curriculum_database.dart';
+import 'content_repository.dart';
 
 class CurriculumChapter {
   final String id;
@@ -77,6 +78,42 @@ class AssessmentQuestion {
     this.marks = 1,
     this.section,
   });
+
+  /// Question types in the new question bank that have options to choose from.
+  static const Set<String> objectiveBankTypes = {'mcq', 'assertion_reason', 'true_false'};
+
+  /// Converts a question from a new-format `questions.json`
+  /// (see docs/CONTENT_FORMAT_DESIGN.md) into the model the practice and
+  /// paper screens use. Objective questions become `quiz`; written ones become
+  /// `descriptive` with the model answer as the expected answer.
+  factory AssessmentQuestion.fromBankQuestion(Map<String, dynamic> q, String moduleId) {
+    final type = q['type'] as String? ?? '';
+    final marks = (q['marks'] as num?)?.toInt() ?? 1;
+    final markingScheme = (q['marking_scheme'] as List?)?.join('\n');
+
+    if (objectiveBankTypes.contains(type)) {
+      return AssessmentQuestion(
+        moduleId: moduleId,
+        type: 'quiz',
+        question: q['question'] as String? ?? '',
+        options: List<String>.from(q['options'] ?? const []),
+        correctIndexOrAnswer: q['correct_index'] ?? 0,
+        explanationEn: q['explanation'] as String?,
+        marks: marks,
+      );
+    }
+
+    final steps = (q['answer_steps'] as List?)?.join('\n');
+    return AssessmentQuestion(
+      moduleId: moduleId,
+      type: 'descriptive',
+      question: q['question'] as String? ?? '',
+      options: const [],
+      correctIndexOrAnswer: steps ?? q['answer'] ?? '',
+      explanationEn: markingScheme,
+      marks: marks,
+    );
+  }
 
   AssessmentQuestion copyWith({
     String? moduleId,
@@ -364,6 +401,16 @@ class AssessmentEngine {
   ) async {
     List<AssessmentQuestion> questions = [];
     try {
+      // New-format question bank takes priority over questions found in blocks.
+      final bankQuestions = await ContentRepository.instance.loadQuestions(moduleId);
+      if (bankQuestions != null && bankQuestions.isNotEmpty) {
+        return bankQuestions
+            .map((q) => AssessmentQuestion.fromBankQuestion(q, moduleId))
+            .where((q) => allowedTypes.contains(q.type) ||
+                (q.type == 'descriptive' && allowedTypes.contains('short_note')))
+            .toList();
+      }
+
       List<dynamic>? rawBlocks;
       
       // 1. Try local file system for newly generated chapters

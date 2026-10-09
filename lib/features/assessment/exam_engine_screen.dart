@@ -14,6 +14,7 @@ import '../../core/engine/assessment_engine.dart';
 import '../../core/services/gamification_service.dart';
 import '../gamification/widgets/mast_hai_dialog.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../../core/engine/content_repository.dart';
 
 class ExamEngineScreen extends StatefulWidget {
   final String moduleId;
@@ -71,9 +72,18 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
 
     try {
       List<AssessmentQuestion> allQuestions = [];
-      
+
+      // 0. New-format question bank (app_core/content/): objective questions only,
+      //    since this screen checks answers automatically.
+      final bankQuestions = await ContentRepository.instance.loadQuestions(widget.moduleId);
+      if (bankQuestions != null) {
+        allQuestions.addAll(bankQuestions
+            .where((q) => AssessmentQuestion.objectiveBankTypes.contains(q['type']))
+            .map((q) => AssessmentQuestion.fromBankQuestion(q, widget.moduleId)));
+      }
+
       // 1. Try to load Gold Standard Assessment JSON first
-      try {
+      if (allQuestions.isEmpty) try {
         final jsonString = await rootBundle.loadString('app_core/assessment/${widget.moduleId}_questions.json');
         final dynamic assessmentData = json.decode(jsonString);
         

@@ -41,6 +41,7 @@ import '../../../core/services/presentation_service.dart';
 
 import 'widgets/worked_example_widget.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../../../core/engine/content_repository.dart';
 
 class LearningEngineScreen extends StatefulWidget {
   final String moduleId;
@@ -148,6 +149,20 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
             return rawData as Map<String, dynamic>;
           }
           return {};
+        }
+
+        // ── Priority 0: New content format (app_core/content/) ────────────────
+        final newFormatChapter = await ContentRepository.instance.loadChapter(widget.moduleId);
+        if (newFormatChapter != null) {
+          final rawBlocks = newFormatChapter.blocks;
+          setState(() {
+            _metadata = newFormatChapter.metadata;
+            _standardBlocks = rawBlocks.where((b) => b['is_board_challenge'] != true).toList();
+            _boardBlocks = rawBlocks.where((b) => b['is_board_challenge'] == true).toList();
+            _blocks = _showBoardQuestions ? rawBlocks : _standardBlocks;
+            _isLoading = false;
+          });
+          return;
         }
 
         // ── Priority 1: Check LocalContentManager (catches editor-saved changes) ──

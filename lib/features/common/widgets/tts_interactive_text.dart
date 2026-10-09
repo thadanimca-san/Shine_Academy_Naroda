@@ -13,6 +13,10 @@ class TtsInteractiveText extends StatefulWidget {
   final void Function(String word, String meaning)? onInlineGlossTap;
   final bool isPdfMode;
 
+  /// Double-tap a word to read aloud from there. Turn off when the text sits
+  /// inside something tappable (an answer option, a flashcard) so taps reach it.
+  final bool enableWordTap;
+
   const TtsInteractiveText({
     super.key,
     required this.text,
@@ -22,6 +26,7 @@ class TtsInteractiveText extends StatefulWidget {
     this.textAlign = TextAlign.start,
     this.onInlineGlossTap,
     this.isPdfMode = false,
+    this.enableWordTap = true,
   });
 
   @override
@@ -63,7 +68,7 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         _cleanText += wordToCommit;
 
         GestureRecognizer? recognizer;
-        if (wordToCommit.trim().isNotEmpty) {
+        if (wordToCommit.trim().isNotEmpty && widget.enableWordTap) {
           if (widget.onInlineGlossTap != null) {
             recognizer = TapGestureRecognizer()
               ..onTap = () {

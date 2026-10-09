@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/widgets/presentation_builder.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../../../common/widgets/tts_interactive_text.dart';
 
 class WorkedExampleWidget extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -74,8 +75,8 @@ class WorkedExampleWidget extends StatelessWidget {
                   children: [
                     // Problem Statement
                     if (problem.isNotEmpty) ...[
-                      Text(
-                        problem,
+                      TtsInteractiveText(
+                        text: problem,
                         style: GoogleFonts.inter(
                           fontSize: 16 * scale,
                           fontWeight: FontWeight.bold,
@@ -91,8 +92,8 @@ class WorkedExampleWidget extends StatelessWidget {
                     if (given != null && given.toString().isNotEmpty) ...[
                       _buildSectionLabel('GIVEN:', scale),
                       const SizedBox(height: 4),
-                      Text(
-                        given.toString(),
+                      TtsInteractiveText(
+                        text: given.toString(),
                         style: GoogleFonts.inter(fontSize: 15 * scale, color: Theme.of(context).colorScheme.onSurface),
                       ),
                       const SizedBox(height: 16),
@@ -109,9 +110,9 @@ class WorkedExampleWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(color: Colors.blue.shade100),
                         ),
-                        child: Text(
-                          formula.toString(),
-                          style: GoogleFonts.firaCode(fontSize: 14 * scale, color: Colors.blue.shade900),
+                        child: TtsInteractiveText(
+                          text: formula.toString(),
+                          style: GoogleFonts.inter(fontSize: 14 * scale, color: Colors.blue.shade900),
                         ),
                       ),
                       const SizedBox(height: 16),
@@ -136,7 +137,7 @@ class WorkedExampleWidget extends StatelessWidget {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '\${entry.key + 1}',
+                                    '${entry.key + 1}',
                                     style: GoogleFonts.poppins(
                                       fontSize: 12 * scale,
                                       fontWeight: FontWeight.bold,
@@ -149,8 +150,8 @@ class WorkedExampleWidget extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: EdgeInsets.only(top: 2 * scale),
-                                  child: Text(
-                                    entry.value.toString(),
+                                  child: TtsInteractiveText(
+                                    text: entry.value.toString(),
                                     style: GoogleFonts.inter(
                                       fontSize: 15 * scale,
                                       color: Theme.of(context).colorScheme.onSurface,
@@ -190,8 +191,8 @@ class WorkedExampleWidget extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 4),
-                            Text(
-                              answer.toString(),
+                            TtsInteractiveText(
+                              text: answer.toString(),
                               style: GoogleFonts.inter(
                                 fontSize: 16 * scale,
                                 fontWeight: FontWeight.bold,

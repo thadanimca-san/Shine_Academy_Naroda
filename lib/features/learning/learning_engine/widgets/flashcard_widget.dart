@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../common/widgets/tts_interactive_text.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final Map<String, dynamic> data;
@@ -55,10 +56,12 @@ class _FlashcardWidgetState extends State<FlashcardWidget> {
               ],
             ),
             const SizedBox(height: 20),
-            Text(
-              _isFlipped 
-                  ? (widget.data['back'] ?? widget.data['definition'] ?? '') 
-                  : (widget.data['front'] ?? widget.data['term'] ?? ''),
+            TtsInteractiveText(
+              text: (_isFlipped
+                      ? (widget.data['back'] ?? widget.data['definition'] ?? '')
+                      : (widget.data['front'] ?? widget.data['term'] ?? ''))
+                  .toString(),
+              enableWordTap: false,
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18,
