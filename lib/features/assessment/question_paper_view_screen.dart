@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/engine/assessment_engine.dart';
-import '../../../core/widgets/presentation_builder.dart';
+import 'widgets/paper_question_tile.dart';
 import 'services/pdf_export_service.dart';
 import 'exam_engine_screen.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
@@ -257,101 +257,17 @@ class _QuestionPaperViewScreenState extends State<QuestionPaperViewScreen> with 
   }
 }
 
-String _getLocalizedQuestion(AssessmentQuestion q) {
-  final lang = TrilingualService.instance.activeViewLanguage;
-  if (lang == 'hi' && q.questionHi != null && q.questionHi!.isNotEmpty) return q.questionHi!;
-  if (lang == 'gu' && q.questionGu != null && q.questionGu!.isNotEmpty) return q.questionGu!;
-  return q.question;
-}
-
-String? _getLocalizedExplanation(AssessmentQuestion q) {
-  final lang = TrilingualService.instance.activeViewLanguage;
-  if (lang == 'hi' && q.explanationHi != null && q.explanationHi!.isNotEmpty) return q.explanationHi!;
-  if (lang == 'gu' && q.explanationGu != null && q.explanationGu!.isNotEmpty) return q.explanationGu!;
-  return q.explanationEn;
-}
-
-List<String> _getLocalizedOptions(AssessmentQuestion q) {
-  final lang = TrilingualService.instance.activeViewLanguage;
-  if (lang == 'hi' && q.optionsHi != null && q.optionsHi!.isNotEmpty) return q.optionsHi!;
-  if (lang == 'gu' && q.optionsGu != null && q.optionsGu!.isNotEmpty) return q.optionsGu!;
-  return q.options;
-}
-
 class _QuestionPaperView extends StatelessWidget {
   final List<AssessmentQuestion> questions;
   const _QuestionPaperView({required this.questions});
 
   @override
   Widget build(BuildContext context) {
-    return PresentationBuilder(
-      builder: (context, scaleFactor) {
-        int globalQNum = 1;
-        return ListView.builder(
-          padding: const EdgeInsets.all(24),
-          itemCount: questions.length,
-          itemBuilder: (context, index) {
-            final q = questions[index];
-            
-            if (q.type == 'section_header') {
-              return Padding(
-                padding: EdgeInsets.only(top: 24 * scaleFactor, bottom: 16 * scaleFactor),
-                child: Text(
-                  _getLocalizedQuestion(q),
-                  style: GoogleFonts.poppins(fontSize: 18 * scaleFactor, fontWeight: FontWeight.bold, color: Colors.blue[900]),
-                  textAlign: TextAlign.center,
-                ),
-              );
-            }
-
-            final currentQNum = globalQNum++;
-            final localizedOpts = _getLocalizedOptions(q);
-
-            return Padding(
-              padding: EdgeInsets.only(bottom: 24 * scaleFactor),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Q$currentQNum. ", style: GoogleFonts.inter(fontSize: 16 * scaleFactor, fontWeight: FontWeight.w700, color: Colors.blue[900])),
-                      Expanded(
-                        child: Text(_getLocalizedQuestion(q), style: GoogleFonts.inter(fontSize: 16 * scaleFactor, fontWeight: FontWeight.w600, color: Colors.black87)),
-                      ),
-                      Text("[${q.marks}]", style: GoogleFonts.inter(fontSize: 14 * scaleFactor, fontWeight: FontWeight.w500, color: Colors.grey[600])),
-                    ],
-                  ),
-                if (q.type == 'quiz')
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0, left: 32.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: List.generate(
-                        localizedOpts.length,
-                        (j) => Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Text(
-                            '${String.fromCharCode(65 + j)}. ${localizedOpts[j]}',
-                            style: GoogleFonts.inter(fontSize: 14 * scaleFactor, color: Colors.black87),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                if (q.type == 'descriptive')
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0, left: 32.0),
-                    child: SizedBox(
-                      height: 100 * scaleFactor, // Empty space for writing
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
+    final tiles = buildPaperTiles(questions);
+    return ListView.builder(
+      padding: const EdgeInsets.all(24),
+      itemCount: tiles.length,
+      itemBuilder: (context, index) => tiles[index],
     );
   }
 }
@@ -362,75 +278,11 @@ class _AnswerKeyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PresentationBuilder(
-      builder: (context, scaleFactor) {
-        int globalQNum = 1;
-        return ListView.builder(
-          padding: const EdgeInsets.all(24),
-          itemCount: questions.length,
-          itemBuilder: (context, index) {
-            final q = questions[index];
-            
-            if (q.type == 'section_header') {
-              return Padding(
-                padding: EdgeInsets.only(top: 24 * scaleFactor, bottom: 8 * scaleFactor),
-                child: Text(
-                  _getLocalizedQuestion(q),
-                  style: GoogleFonts.poppins(fontSize: 14 * scaleFactor, fontWeight: FontWeight.bold, color: Colors.grey[600]),
-                  textAlign: TextAlign.center,
-                ),
-              );
-            }
-
-            final currentQNum = globalQNum++;
-            final localizedOpts = _getLocalizedOptions(q);
-            
-            // Format answer display
-            String answerDisplay = "";
-            if (q.type == 'quiz') {
-              final correctIdx = q.correctIndexOrAnswer as int;
-              answerDisplay = '(${String.fromCharCode(65 + correctIdx)}) ${localizedOpts[correctIdx]}';
-            } else {
-              answerDisplay = q.correctIndexOrAnswer.toString();
-            }
-
-            final explanation = _getLocalizedExplanation(q);
-
-            return Padding(
-              padding: EdgeInsets.only(bottom: 24 * scaleFactor),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Q$currentQNum. ", style: GoogleFonts.inter(fontSize: 15 * scaleFactor, fontWeight: FontWeight.w700, color: Colors.grey[700])),
-                      Expanded(
-                        child: Text(_getLocalizedQuestion(q), style: GoogleFonts.inter(fontSize: 15 * scaleFactor, fontWeight: FontWeight.w600, color: Colors.grey[800])),
-                      ),
-                    ],
-                  ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0, left: 32.0),
-                  child: Text(
-                    "Ans: $answerDisplay",
-                    style: GoogleFonts.inter(fontSize: 15 * scaleFactor, fontWeight: FontWeight.w700, color: Colors.green[700]),
-                  ),
-                ),
-                if (explanation != null && explanation.isNotEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4.0, left: 32.0),
-                    child: Text(
-                      "Solution: $explanation",
-                      style: GoogleFonts.inter(fontSize: 14 * scaleFactor, fontStyle: FontStyle.italic, color: Colors.grey[700]),
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
+    final tiles = buildPaperTiles(questions, showAnswers: true);
+    return ListView.builder(
+      padding: const EdgeInsets.all(24),
+      itemCount: tiles.length,
+      itemBuilder: (context, index) => tiles[index],
     );
   }
 }

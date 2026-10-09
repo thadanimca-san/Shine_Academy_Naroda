@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'local_content_manager.dart';
+import 'paper_generator.dart';
 
 /// One chapter listed in `app_core/content/index.json`.
 class ContentIndexEntry {
@@ -148,6 +149,23 @@ class ContentRepository {
         .cast<Map<String, dynamic>>()
         .where((q) => _isVisible(q['status'] as String?))
         .toList();
+  }
+
+  /// The board paper pattern for a curriculum subject (e.g. `cbse_class10_math`),
+  /// or null if none is defined yet.
+  Future<PaperBlueprint?> blueprintForSubject(String subjectId) async {
+    try {
+      final data = await LocalContentManager.instance.readLocalJson(indexPath);
+      for (final entry in (data?['paper_blueprints'] as List? ?? const []).cast<Map<String, dynamic>>()) {
+        if ((entry['subject_ids'] as List).contains(subjectId)) {
+          final blueprint = await LocalContentManager.instance.readLocalJson(entry['path'] as String);
+          return PaperBlueprint.fromJson(blueprint as Map<String, dynamic>);
+        }
+      }
+    } catch (e) {
+      debugPrint('ContentRepository: could not load paper blueprint for $subjectId: $e');
+    }
+    return null;
   }
 
   bool _isVisible(String? status) => status == 'approved' || showUnapprovedContent;

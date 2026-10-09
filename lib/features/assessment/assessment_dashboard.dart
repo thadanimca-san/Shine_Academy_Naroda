@@ -134,7 +134,21 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
     }
 
     List<AssessmentQuestion> initialQuestions = [];
-    if (generationMode == 'preset') {
+    // Subjects with an official board blueprint get a paper in the exact board pattern.
+    final blueprintPaper = generationMode == 'preset' && selectedSubject != null
+        ? await AssessmentEngine.instance.generateFromBlueprint(selectedModuleIds.toList(), selectedSubject!.id)
+        : null;
+    if (blueprintPaper != null && blueprintPaper.items.isNotEmpty) {
+      initialQuestions = blueprintPaper.items;
+      if (!blueprintPaper.isComplete && mounted) {
+        final missing = blueprintPaper.shortfalls.map((s) => 'Section ${s.section}: ${s.found}/${s.wanted}').join(', ');
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          duration: const Duration(seconds: 8),
+          content: Text('${TrilingualService.instance.getUIText('Not enough questions yet for a full board paper')} '
+              '(${blueprintPaper.totalMarks}/${blueprintPaper.blueprint.totalMarks} marks). $missing'),
+        ));
+      }
+    } else if (generationMode == 'preset') {
       initialQuestions = await AssessmentEngine.instance.generateBoardPatternPaper(
         selectedModuleIds.toList(),
         targetSecA: blueprintSecA,

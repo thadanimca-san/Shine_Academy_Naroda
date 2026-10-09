@@ -1,9 +1,11 @@
+import 'dart:math';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'curriculum_database.dart';
 import 'content_repository.dart';
+import 'paper_generator.dart';
 
 class CurriculumChapter {
   final String id;
@@ -233,6 +235,21 @@ class AssessmentEngine {
 
     allQuestions.shuffle();
     return allQuestions.take(totalQuestions).toList();
+  }
+
+  /// Builds a paper following the board blueprint for [subjectId] from the
+  /// new-format question banks of [moduleIds]. Returns null when the subject
+  /// has no blueprint, so callers can use the older pattern instead.
+  Future<GeneratedPaper?> generateFromBlueprint(List<String> moduleIds, String subjectId, {Random? random}) async {
+    final blueprint = await ContentRepository.instance.blueprintForSubject(subjectId);
+    if (blueprint == null) return null;
+
+    final pool = <BankQuestion>[];
+    for (final moduleId in moduleIds) {
+      final questions = await ContentRepository.instance.loadQuestions(moduleId);
+      pool.addAll((questions ?? const []).map((q) => BankQuestion(moduleId, q)));
+    }
+    return PaperGenerator.generate(blueprint: blueprint, pool: pool, random: random ?? Random());
   }
 
   /// Generates a structured 10th Standard Board Pattern Paper

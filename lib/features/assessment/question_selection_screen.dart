@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/engine/assessment_engine.dart';
 import 'question_paper_view_screen.dart';
+import '../common/widgets/tts_interactive_text.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class QuestionSelectionScreen extends StatefulWidget {
@@ -205,16 +206,18 @@ class _QuestionSelectionScreenState extends State<QuestionSelectionScreen> {
                       }
                     });
                   },
-                  title: Text(
-                    _getLocalizedQuestion(q),
+                  title: TtsInteractiveText(
+                    text: _getLocalizedQuestion(q),
+                    enableWordTap: false,
                     style: GoogleFonts.inter(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                     ),
                   ),
                   subtitle: q.type == 'quiz'
-                      ? Text(
-                          q.options.join(" | "),
+                      ? TtsInteractiveText(
+                          text: q.options.join(" | "),
+                          enableWordTap: false,
                           style: TextStyle(color: Colors.grey),
                         )
                       : Text(
