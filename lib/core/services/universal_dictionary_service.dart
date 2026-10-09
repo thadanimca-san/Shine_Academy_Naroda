@@ -6,6 +6,7 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'app_version_service.dart';
 
 class UniversalDictionaryService {
   static final UniversalDictionaryService instance = UniversalDictionaryService._internal();
@@ -28,15 +29,27 @@ class UniversalDictionaryService {
       final appDocDir = await getApplicationDocumentsDirectory();
       final dbPath = p.join(appDocDir.path, 'universal_dictionary.db');
 
-      // Always copy from assets on init for this phase to ensure latest terms.
-      // In production Phase 3, we would check versions.
-      try {
-        final byteData = await rootBundle.load('assets/dictionary/universal_dictionary.db');
-        final file = File(dbPath);
-        await file.writeAsBytes(byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
-      } catch (e) {
-        debugPrint('Error copying dictionary DB from assets: $e');
-        // If it fails to copy, we try to open it anyway (might have been copied previously)
+      // The database is about 90 MB, so copy it only when it is missing or the
+      // app was updated (which may ship new terms), not on every launch.
+      await AppVersionService.init();
+      final dbFile = File(dbPath);
+      if (forceReload || AppVersionService.isNewVersion || !await dbFile.exists()) {
+        try {
+          final byteData = await rootBundle.load('assets/dictionary/universal_dictionary.db');
+          // Write to a temporary file first so an interrupted copy never
+          // leaves a half-written database behind.
+          final tempFile = File('$dbPath.tmp');
+          await tempFile.writeAsBytes(
+            byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes),
+            flush: true,
+          );
+          await _db?.close();
+          _db = null;
+          await tempFile.rename(dbPath);
+        } catch (e) {
+          debugPrint('Error copying dictionary DB from assets: $e');
+          // Fall through and open the previously copied database, if any.
+        }
       }
 
       _db = await openDatabase(dbPath, version: 1);

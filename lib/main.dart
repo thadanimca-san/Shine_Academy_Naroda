@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
 import 'core/app.dart';
 import 'core/services/activation_service.dart';
@@ -26,9 +27,10 @@ void main() async {
   await KnowledgeGraphService.instance.buildGraph();
   
   if (Platform.isAndroid || Platform.isIOS) {
-    // For Phase 2 Beta Testing, we can set this to false to allow debugging/screenshots.
-    // For Phase 3 Public Launch, set enableProtection to true.
-    await SecurityService.instance.init(enableProtection: false);
+    // Screenshots and screen recording are blocked in every build students
+    // install (release). Debug builds stay open so developers can capture
+    // screens while testing.
+    await SecurityService.instance.init(enableProtection: kReleaseMode);
   }
   
   registerDefaultBlocks();

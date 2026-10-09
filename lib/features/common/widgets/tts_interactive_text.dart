@@ -1,9 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
-import 'package:markdown/markdown.dart' as md;
+import 'package:flutter_math_fork/flutter_math.dart';
 import '../../../core/services/tts_service.dart';
 import '../../../foundation/theme/app_typography.dart';
 
@@ -37,8 +34,10 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
   String currentWord = '';
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Parsing needs the theme and MediaQuery for the default text style,
+    // which are not available yet in initState.
     _parseText();
   }
 
@@ -99,23 +98,24 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
 
     bool isBold = false;
     bool isItalic = false;
+    final text = normalizeMarkdownLines(widget.text);
 
-    for (int i = 0; i < widget.text.length; i++) {
-      String char = widget.text[i];
+    for (int i = 0; i < text.length; i++) {
+      String char = text[i];
 
       if (char == '\$') {
         _commitWord(isBold, isItalic);
         bool isBlock = false;
         int j = i + 1;
-        if (j < widget.text.length && widget.text[j] == '\$') {
+        if (j < text.length && text[j] == '\$') {
            isBlock = true;
            j++;
         }
         int start = j;
         int end = -1;
-        while (j < widget.text.length) {
-           if (widget.text[j] == '\$') {
-              if (isBlock && j + 1 < widget.text.length && widget.text[j+1] == '\$') {
+        while (j < text.length) {
+           if (text[j] == '\$') {
+              if (isBlock && j + 1 < text.length && text[j+1] == '\$') {
                   end = j;
                   j += 2;
                   break;
@@ -129,66 +129,21 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         }
         
         if (end != -1) {
-           String mathContent = widget.text.substring(start, end);
-           // Fix JSON parsing bug where \not becomes a newline + ot
-           mathContent = mathContent.replaceAll('\n', '\\n');
-           
-           // Fix flutter_math_fork crash when \not is used with \implies
-           mathContent = mathContent.replaceAll(r'\not\implies', r'\not\Rightarrow');
-           mathContent = mathContent.replaceAll(r'\not \implies', r'\not \Rightarrow');
-           
-           if (widget.isPdfMode) {
-              _cleanText += ' ';
-              // In PDF mode, MarkdownBody with flutter_math_fork hangs the offstage renderer
-              // because KaTeX fonts aren't globally pre-loaded. We fallback to plain text.
-              _spans.add(TextSpan(
-                 text: ' ' + mathContent + ' ', 
-                 style: widget.style?.copyWith(fontWeight: FontWeight.bold) ?? const TextStyle(fontWeight: FontWeight.bold),
-              ));
-              i = j - 1;
-              continue;
-           }
-
-           String fullMathString = isBlock ? '\$\$$mathContent\$\$' : '\$$mathContent\$';
-           
-           _cleanText += ' '; // Add space for TTS to skip it smoothly
-           
+           final tex = repairLatexEscapes(text.substring(start, end));
+           _cleanText += ' '; // TTS skips formulas
+           if (isBlock) _spans.add(TextSpan(text: '\n', style: widget.style));
            _spans.add(WidgetSpan(
               alignment: PlaceholderAlignment.middle,
-              child: Builder(
-                builder: (context) {
-                  return MediaQuery(
-                    data: MediaQuery.of(context).copyWith(
-                      // Prevent double scaling (AppTypography already scales)
-                      textScaler: TextScaler.noScaling,
-                    ),
-                    child: MarkdownBody(
-                      data: fullMathString,
-                      builders: {
-                        'latex': LatexElementBuilder(
-                           textStyle: widget.style ?? AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface),
-                        ),
-                      },
-                      extensionSet: md.ExtensionSet(
-                        [LatexBlockSyntax()],
-                        [LatexInlineSyntax()],
-                      ),
-                      styleSheet: MarkdownStyleSheet(
-                         p: widget.style ?? AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface),
-                         pPadding: EdgeInsets.zero,
-                      ),
-                  ),
-                  );
-                }
-              ),
+              child: _buildMath(tex, isDisplay: isBlock),
            ));
+           if (isBlock) _spans.add(TextSpan(text: '\n', style: widget.style));
            i = j - 1; // Advance outer loop
            continue;
         }
       }
 
       if (char == '*') {
-        if (i + 1 < widget.text.length && widget.text[i+1] == '*') {
+        if (i + 1 < text.length && text[i+1] == '*') {
           _commitWord(isBold, isItalic);
           isBold = !isBold;
           i++;
@@ -196,7 +151,7 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
           _commitWord(isBold, isItalic);
           isItalic = !isItalic;
         }
-      } else if (char == '_' && (i + 1 < widget.text.length && widget.text[i+1] == '_')) {
+      } else if (char == '_' && (i + 1 < text.length && text[i+1] == '_')) {
         _commitWord(isBold, isItalic);
         isBold = !isBold;
         i++;
@@ -213,6 +168,23 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
       }
     }
     _commitWord(isBold, isItalic, force: true);
+  }
+
+  Widget _buildMath(String tex, {required bool isDisplay}) {
+    final style = widget.style ?? AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface);
+    return MediaQuery(
+      // AppTypography already scales the font size; avoid scaling twice.
+      data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+      child: Math.tex(
+        tex,
+        mathStyle: isDisplay ? MathStyle.display : MathStyle.text,
+        textStyle: style,
+        onErrorFallback: (error) {
+          debugPrint('TtsInteractiveText: cannot render formula "$tex": ${error.message}');
+          return Text(tex, style: style);
+        },
+      ),
+    );
   }
 
   @override
@@ -315,4 +287,44 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
       },
     );
   }
+}
+
+
+final _markdownHeading = RegExp(r'^\s{0,3}#{1,6}\s+(.+)$');
+final _markdownBullet = RegExp(r'^(\s*)[-*+]\s+');
+
+/// Turns line-level Markdown that this widget cannot draw into text it can:
+/// headings become bold lines and `-`, `*` or `+` bullets become "•".
+/// Lines inside `$$ ... $$` formulas are left untouched.
+String normalizeMarkdownLines(String text) {
+  var insideDisplayMath = false;
+  return text.split('\n').map((line) {
+    final wasInsideDisplayMath = insideDisplayMath;
+    if ('\$\$'.allMatches(line).length.isOdd) {
+      insideDisplayMath = !insideDisplayMath;
+    }
+    if (wasInsideDisplayMath) return line;
+
+    final heading = _markdownHeading.firstMatch(line);
+    if (heading != null) return '**${heading.group(1)!.trim()}**';
+    return line.replaceFirstMapped(_markdownBullet, (m) => '${m.group(1)}• ');
+  }).join('\n');
+}
+
+final _brokenNewlineCommand = RegExp(r'\n(?=(eq|e|ot|abla|eg|u|i|mid|exists|ewline|leq|geq|parallel|subseteq|subset)(?![a-z]))');
+final _brokenReturnCommand = RegExp(r'\r(?=[a-z])');
+
+/// Repairs LaTeX that was damaged by JSON escaping: when content is written
+/// with a single backslash, `\frac` becomes a form feed + "rac", `\times` a
+/// tab + "imes", `\neq` a newline + "eq", and so on.
+String repairLatexEscapes(String tex) {
+  var repaired = tex
+      .replaceAll('\t', r'\t')
+      .replaceAll('\f', r'\f')
+      .replaceAll('\b', r'\b')
+      .replaceAll(_brokenNewlineCommand, r'\n')
+      .replaceAll(_brokenReturnCommand, r'\r');
+  // flutter_math_fork cannot negate \implies.
+  repaired = repaired.replaceAll(RegExp(r'\\not\s*\\implies'), r'\not\Rightarrow');
+  return repaired;
 }

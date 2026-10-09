@@ -6,6 +6,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../utils/pdf_branding_util.dart';
 
 class PdfGeneratorService {
   
@@ -40,28 +41,9 @@ final baseData = await rootBundle.load('assets/fonts/DejaVuSans.ttf');
       ),
     );
 
-    // Load watermark image
-    final watermarkImageBytes = await rootBundle.load('assets/shineacademynarodalogo.jpg');
-    final watermarkImage = pw.MemoryImage(watermarkImageBytes.buffer.asUint8List());
-
-    // Define watermark decoration
-    final pageTheme = pw.PageTheme(
-      pageFormat: PdfPageFormat.a4,
-      margin: const pw.EdgeInsets.all(32),
-      buildBackground: (pw.Context context) {
-        return pw.FullPage(
-          ignoreMargins: false,
-          child: pw.Center(
-            child: pw.Opacity(
-              opacity: 0.15,
-              child: pw.SizedBox(
-                width: 200, // Visiting card size
-                child: pw.Image(watermarkImage, fit: pw.BoxFit.contain),
-              ),
-            ),
-          ),
-        );
-      },
+    // Shared branding: logo, confidential watermark and the do-not-copy footer.
+    final pageTheme = await PdfBrandingUtil.getPageTheme(
+      theme: pw.ThemeData.withFont(base: fontBase, bold: fontBold),
     );
 
     pdf.addPage(

@@ -232,6 +232,14 @@ class _ContentEditorScreenState extends State<ContentEditorScreen> {
                 setState(() => _isLoading = true);
                 final targetAsset = widget.assetPath ?? 'app_core/learning_modules/master_curriculum.json';
                 final fileName = targetAsset.split('/').last;
+                if (LocalContentManager.instance.isDesktopSourceMode) {
+                  // Desktop edits are the source files themselves; undo them with git instead.
+                  setState(() => _isLoading = false);
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('On desktop, edits are saved to the source files. Undo them with git.'))));
+                  }
+                  return;
+                }
                 await LocalContentManager.instance.deleteLocalJson(targetAsset);
                 if (fileName == 'master_curriculum.json') {
                   await CurriculumDatabase.instance.load(forceReload: true);

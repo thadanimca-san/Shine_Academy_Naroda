@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -6,6 +7,7 @@ import 'package:open_filex/open_filex.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:screenshot/screenshot.dart';
+import '../utils/pdf_branding_util.dart';
 
 class UniversalPdfEngine {
   /// Whether we have already loaded fonts into dart:ui's global registry.
@@ -35,6 +37,27 @@ class UniversalPdfEngine {
     final hindiLoader = FontLoader('NotoSansDevanagari');
     hindiLoader.addFont(rootBundle.load('assets/fonts/NotoSansDevanagari-Regular.ttf'));
     await hindiLoader.load();
+
+    await _registerMathFonts();
+  }
+
+  /// Registers the KaTeX fonts used by flutter_math_fork, read from the font
+  /// manifest so every family the package ships is covered.
+  static Future<void> _registerMathFonts() async {
+    try {
+      final manifest = json.decode(await rootBundle.loadString('FontManifest.json')) as List<dynamic>;
+      for (final family in manifest.cast<Map<String, dynamic>>()) {
+        final familyName = family['family'] as String;
+        if (!familyName.startsWith('packages/flutter_math_fork/')) continue;
+        final loader = FontLoader(familyName);
+        for (final font in (family['fonts'] as List<dynamic>).cast<Map<String, dynamic>>()) {
+          loader.addFont(rootBundle.load(font['asset'] as String));
+        }
+        await loader.load();
+      }
+    } catch (e) {
+      debugPrint('UniversalPdfEngine: could not register math fonts: $e');
+    }
   }
 
   /// Generates a PDF by rendering Flutter widgets to PNG images then embedding
@@ -79,7 +102,9 @@ class UniversalPdfEngine {
       final img = await screenshotController.captureFromWidget(
         _wrapInTheme(combinedChunk),
         delay: const Duration(milliseconds: 100),
-        pixelRatio: 1.2, // Reduce from 2.0 to 1.5 to save memory and prevent OOM
+        // About 190 DPI on A4: sharp enough for printed formulas and small
+        // Gujarati matras. Each capture is a single block, so memory stays low.
+        pixelRatio: 2.0,
       );
       capturedImages.add(img);
     }
@@ -87,28 +112,13 @@ class UniversalPdfEngine {
       onProgress(widgets.length, widgets.length);
     }
 
-    ByteData? logoData;
-    try {
-      logoData = await rootBundle.load('assets/branding/logo.jpg');
-    } catch (e) {
-      debugPrint("Watermark Warning: $e");
-    }
     
+    // Every PDF carries the shared Shine Academy branding and copy warning.
+    final brandedPageTheme = await PdfBrandingUtil.getPageTheme(theme: pdf.theme);
+
     pdf.addPage(
       pw.MultiPage(
-        pageTheme: pw.PageTheme(
-          pageFormat: PdfPageFormat.a4,
-          margin: const pw.EdgeInsets.all(32),
-          buildBackground: (pw.Context context) {
-            if (logoData == null) return pw.SizedBox();
-            return pw.Center(
-              child: pw.Opacity(
-                opacity: 0.15,
-                child: pw.Image(pw.MemoryImage(logoData.buffer.asUint8List()), width: 300),
-              ),
-            );
-          },
-        ),
+        pageTheme: brandedPageTheme,
         header: (pw.Context ctx) => _buildBasicHeader(title, isAnswerKey),
         build: (pw.Context ctx) {
           return capturedImages.map<pw.Widget>((imgBytes) {
@@ -156,28 +166,13 @@ class UniversalPdfEngine {
       ),
     );
 
-    ByteData? logoData;
-    try {
-      logoData = await rootBundle.load('assets/branding/logo.jpg');
-    } catch (e) {
-      debugPrint("Watermark Warning: $e");
-    }
     
+    // Every PDF carries the shared Shine Academy branding and copy warning.
+    final brandedPageTheme = await PdfBrandingUtil.getPageTheme(theme: pdf.theme);
+
     pdf.addPage(
       pw.MultiPage(
-        pageTheme: pw.PageTheme(
-          pageFormat: PdfPageFormat.a4,
-          margin: const pw.EdgeInsets.all(32),
-          buildBackground: (pw.Context context) {
-            if (logoData == null) return pw.SizedBox();
-            return pw.Center(
-              child: pw.Opacity(
-                opacity: 0.15,
-                child: pw.Image(pw.MemoryImage(logoData.buffer.asUint8List()), width: 300),
-              ),
-            );
-          },
-        ),
+        pageTheme: brandedPageTheme,
         header: (pw.Context ctx) => _buildBasicHeader(title, isAnswerKey),
         build: (pw.Context ctx) {
           return widgets;

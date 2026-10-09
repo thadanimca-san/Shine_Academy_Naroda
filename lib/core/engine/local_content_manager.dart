@@ -3,143 +3,146 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter/foundation.dart';
+import '../services/app_version_service.dart';
 
+/// Reads and writes educational JSON content.
+///
+/// Bundled assets are the source of truth. A local file only exists when
+/// content was edited on the device (Content Editor / admin edit button); such
+/// a file overrides the bundled asset.
+///
+/// - Desktop (development): reads and writes the project files directly, so
+///   editor changes land in the source tree and can be committed.
+/// - Mobile: edits are stored under `<documents>/content_overrides/<assetPath>`.
+///   All overrides are discarded when the app is updated, so students always
+///   get the content shipped with the version they installed.
 class LocalContentManager {
   static final LocalContentManager _instance = LocalContentManager._internal();
   static LocalContentManager get instance => _instance;
 
   LocalContentManager._internal();
 
-  late Directory _documentsDir;
-  bool _isInitialized = false;
+  static const String _overridesFolderName = 'content_overrides';
+
+  late Directory _rootDir;
+  Future<void>? _initFuture;
   bool _isDesktopSourceMode = false;
 
-  Future<void> init({bool force = false}) async {
-    if (_isInitialized && !force) return;
-    
-    // Check if we are running on Desktop (Linux, macOS, Windows) in development mode
+  /// True when running on desktop, where edits go straight into the project files.
+  bool get isDesktopSourceMode => _isDesktopSourceMode;
+
+  Future<void> init({bool force = false}) {
+    if (force) _initFuture = null;
+    return _initFuture ??= _initialize();
+  }
+
+  Future<void> _initialize() async {
     if (!kIsWeb && (Platform.isLinux || Platform.isMacOS || Platform.isWindows)) {
       _isDesktopSourceMode = true;
-      // On desktop, the current directory is usually the project root!
-      _documentsDir = Directory(Directory.current.path);
-      debugPrint("LocalContentManager: Running in Desktop Source Mode at ${_documentsDir.path}");
-    } else {
-      _isDesktopSourceMode = false;
-      _documentsDir = await getApplicationDocumentsDirectory();
-      debugPrint("LocalContentManager: Running in Mobile Sandboxed Mode at ${_documentsDir.path}");
+      // On desktop the current directory is the project root.
+      _rootDir = Directory.current;
+      debugPrint("LocalContentManager: Desktop Source Mode at ${_rootDir.path}");
+      return;
     }
-    
-    _isInitialized = true;
-    
-    // Check and copy default curriculum database if it doesn't exist locally
-    await ensureFileExists('app_core/learning_modules/master_curriculum.json');
-  }
 
-  /// Helper to get the correct absolute file path.
-  /// In Desktop Source Mode, we preserve the full assetPath (e.g. app_core/chapters/file.json).
-  /// In Mobile Sandbox Mode, we historically flattened to just the filename to avoid folder creation complexity,
-  /// but going forward we should use full paths if possible. For safety with legacy data, we flatten on mobile.
-  File _getFileFor(String assetPath) {
-    if (_isDesktopSourceMode) {
-      // Direct source code override
-      return File('${_documentsDir.path}/$assetPath');
-    } else {
-      // Mobile sandbox uses just the filename
-      final fileName = assetPath.split('/').last;
-      return File('${_documentsDir.path}/$fileName');
+    _isDesktopSourceMode = false;
+    final documentsDir = await getApplicationDocumentsDirectory();
+    _rootDir = Directory('${documentsDir.path}/$_overridesFolderName');
+    debugPrint("LocalContentManager: Mobile Mode, overrides at ${_rootDir.path}");
+
+    await AppVersionService.init();
+    if (AppVersionService.isNewVersion) {
+      await _discardOverrides(documentsDir);
     }
   }
 
-  Future<void> ensureFileExists(String assetPath) async {
-    final localFile = _getFileFor(assetPath);
-    
-    if (!await localFile.exists()) {
-      debugPrint("Copying $assetPath from assets to local storage...");
-      try {
-        final byteData = await rootBundle.load(assetPath);
-        // Ensure parent directory exists in case of Desktop Source Mode
-        if (!await localFile.parent.exists()) {
-          await localFile.parent.create(recursive: true);
-        }
-        await localFile.writeAsBytes(byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
-        debugPrint("Successfully copied to local storage: ${localFile.path}");
-      } catch (e) {
-        debugPrint("Error copying $assetPath: $e");
-      }
-    }
-  }
+  File _localFileFor(String assetPath) => File('${_rootDir.path}/$assetPath');
 
-  /// Read JSON from the local directory using the full asset path.
+  /// Returns the content for [assetPath]: the local override if one exists,
+  /// otherwise the bundled asset. Returns null if neither can be read.
   Future<dynamic> readLocalJson(String assetPath) async {
+    await init();
     try {
-      await ensureFileExists(assetPath);
-      final localFile = _getFileFor(assetPath);
-      
+      final localFile = _localFileFor(assetPath);
       if (await localFile.exists()) {
-        final content = await localFile.readAsString();
-        return json.decode(content);
+        return json.decode(await localFile.readAsString());
       }
     } catch (e) {
-      debugPrint("Error reading local JSON $assetPath: $e");
+      debugPrint("LocalContentManager: error reading local copy of $assetPath: $e");
     }
-    return null;
+
+    try {
+      return json.decode(await rootBundle.loadString(assetPath));
+    } catch (e) {
+      debugPrint("LocalContentManager: error reading bundled asset $assetPath: $e");
+      return null;
+    }
   }
 
-  /// Write JSON to the local directory using the full asset path
+  /// Saves [data] as the local version of [assetPath].
   Future<bool> writeLocalJson(String assetPath, Map<String, dynamic> data) async {
+    await init();
     try {
-      final localFile = _getFileFor(assetPath);
-      
-      // Ensure parent folder exists (critical for desktop source mode)
-      if (!await localFile.parent.exists()) {
-        await localFile.parent.create(recursive: true);
-      }
-      
-      // Format the JSON nicely for source code commits!
+      final localFile = _localFileFor(assetPath);
+      await localFile.parent.create(recursive: true);
+
+      // Indented so desktop edits produce readable diffs in the source tree.
       const encoder = JsonEncoder.withIndent('  ');
-      final formattedContent = encoder.convert(data);
-      
-      await localFile.writeAsString(formattedContent);
-      debugPrint("Successfully wrote to ${localFile.path}");
+      await localFile.writeAsString(encoder.convert(data));
+      debugPrint("LocalContentManager: wrote ${localFile.path}");
       return true;
     } catch (e) {
-      debugPrint("Error writing to local JSON $assetPath: $e");
+      debugPrint("LocalContentManager: error writing $assetPath: $e");
       return false;
     }
   }
 
-  /// Delete JSON from local documents to allow reloading from assets
+  /// Removes the local version of [assetPath] so the bundled asset is used again.
+  /// In Desktop Source Mode this would delete the source file itself, so it is refused.
   Future<bool> deleteLocalJson(String assetPath) async {
+    await init();
+    if (_isDesktopSourceMode) {
+      debugPrint("LocalContentManager: refusing to delete source file $assetPath in Desktop Source Mode.");
+      return false;
+    }
     try {
-      final localFile = _getFileFor(assetPath);
+      final localFile = _localFileFor(assetPath);
       if (await localFile.exists()) {
         await localFile.delete();
-        debugPrint("Successfully deleted ${localFile.path}");
+        debugPrint("LocalContentManager: deleted ${localFile.path}");
         return true;
       }
       return false;
     } catch (e) {
-      debugPrint("Error deleting local JSON $assetPath: $e");
+      debugPrint("LocalContentManager: error deleting $assetPath: $e");
       return false;
     }
   }
 
-  /// Wipes all cached JSON files from the mobile sandbox.
-  /// This forces the app to reload fresh data from the bundled assets on the next read.
+  /// Discards every on-device edit so all content comes from the bundled assets.
   Future<void> wipeAllCache() async {
+    await init();
+    if (_isDesktopSourceMode) {
+      debugPrint("LocalContentManager: nothing to wipe in Desktop Source Mode.");
+      return;
+    }
+    await _discardOverrides(_rootDir.parent);
+  }
+
+  Future<void> _discardOverrides(Directory documentsDir) async {
     try {
-      if (await _documentsDir.exists()) {
-        final List<FileSystemEntity> entities = await _documentsDir.list().toList();
-        for (FileSystemEntity entity in entities) {
-          if (entity is File && entity.path.endsWith('.json')) {
-            await entity.delete();
-            debugPrint("Deleted cached file: ${entity.path}");
-          }
-        }
-        debugPrint("Successfully wiped all JSON cache from sandbox.");
+      if (await _rootDir.exists()) {
+        await _rootDir.delete(recursive: true);
       }
+      // Older versions copied every JSON file flat into the documents folder.
+      await for (final entity in documentsDir.list()) {
+        if (entity is File && entity.path.endsWith('.json')) {
+          await entity.delete();
+        }
+      }
+      debugPrint("LocalContentManager: discarded local content copies.");
     } catch (e) {
-      debugPrint("Error wiping cache: $e");
+      debugPrint("LocalContentManager: error discarding local content copies: $e");
     }
   }
 }

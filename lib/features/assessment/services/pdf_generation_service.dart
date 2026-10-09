@@ -91,8 +91,7 @@ class PdfGenerationService {
                   border: pw.Border.all(color: PdfColors.grey300),
                   borderRadius: const pw.BorderRadius.all(pw.Radius.circular(5)),
                 ),
-                child: pw.Text('Answer: 
-${q['solution'].toString().replaceAll(RegExp(r'\$'), '')}', style: const pw.TextStyle(fontSize: 12)),
+                child: pw.Text('Answer:\n${q['solution'].toString().replaceAll(RegExp(r'\$'), '')}', style: const pw.TextStyle(fontSize: 12)),
               ),
             ],
           ),
