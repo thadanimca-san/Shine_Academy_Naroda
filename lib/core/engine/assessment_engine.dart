@@ -77,6 +77,56 @@ class AssessmentQuestion {
     this.marks = 1,
     this.section,
   });
+
+  AssessmentQuestion copyWith({
+    String? moduleId,
+    String? type,
+    String? question,
+    String? questionHi,
+    String? questionGu,
+    String? paragraph,
+    String? paragraphHi,
+    String? paragraphGu,
+    List<String>? options,
+    List<String>? optionsHi,
+    List<String>? optionsGu,
+    dynamic correctIndexOrAnswer,
+    String? explanationEn,
+    String? explanationHi,
+    String? explanationGu,
+    String? distractorRationaleEn,
+    String? distractorRationaleHi,
+    String? distractorRationaleGu,
+    String? bloomTaxonomy,
+    String? aiHint,
+    int? marks,
+    String? section,
+  }) {
+    return AssessmentQuestion(
+      moduleId: moduleId ?? this.moduleId,
+      type: type ?? this.type,
+      question: question ?? this.question,
+      questionHi: questionHi ?? this.questionHi,
+      questionGu: questionGu ?? this.questionGu,
+      paragraph: paragraph ?? this.paragraph,
+      paragraphHi: paragraphHi ?? this.paragraphHi,
+      paragraphGu: paragraphGu ?? this.paragraphGu,
+      options: options ?? this.options,
+      optionsHi: optionsHi ?? this.optionsHi,
+      optionsGu: optionsGu ?? this.optionsGu,
+      correctIndexOrAnswer: correctIndexOrAnswer ?? this.correctIndexOrAnswer,
+      explanationEn: explanationEn ?? this.explanationEn,
+      explanationHi: explanationHi ?? this.explanationHi,
+      explanationGu: explanationGu ?? this.explanationGu,
+      distractorRationaleEn: distractorRationaleEn ?? this.distractorRationaleEn,
+      distractorRationaleHi: distractorRationaleHi ?? this.distractorRationaleHi,
+      distractorRationaleGu: distractorRationaleGu ?? this.distractorRationaleGu,
+      bloomTaxonomy: bloomTaxonomy ?? this.bloomTaxonomy,
+      aiHint: aiHint ?? this.aiHint,
+      marks: marks ?? this.marks,
+      section: section ?? this.section,
+    );
+  }
 }
 
 class AssessmentEngine {
@@ -150,10 +200,15 @@ class AssessmentEngine {
 
   /// Generates a structured 10th Standard Board Pattern Paper
   Future<List<AssessmentQuestion>> generateBoardPatternPaper(
-    List<String> targetModuleIds,
-  ) async {
-    List<AssessmentQuestion> allObjectives = []; // 1 mark
-    List<AssessmentQuestion> allSubjectives = []; // multi-mark
+    List<String> targetModuleIds, {
+    int targetSecA = 16,
+    int targetSecB = 8,
+    int targetSecC = 6,
+    int targetSecD = 5,
+  }) async {
+    try {
+      List<AssessmentQuestion> allObjectives = []; // 1 mark
+      List<AssessmentQuestion> allSubjectives = []; // multi-mark
 
     for (String moduleId in targetModuleIds) {
       // Fetch all questions from the module
@@ -182,8 +237,8 @@ class AssessmentEngine {
 
     List<AssessmentQuestion> paper = [];
 
-    // SECTION A: 1 Mark (Objectives) - typically 12-16 questions. Let's aim for 16.
-    int secACount = allObjectives.length > 16 ? 16 : allObjectives.length;
+    // SECTION A: 1 Mark (Objectives)
+    int secACount = allObjectives.length > targetSecA ? targetSecA : allObjectives.length;
     if (secACount > 0) {
       paper.add(
         AssessmentQuestion(
@@ -199,12 +254,7 @@ class AssessmentEngine {
         allObjectives
             .take(secACount)
             .map(
-              (q) => AssessmentQuestion(
-                moduleId: q.moduleId,
-                type: q.type,
-                question: q.question,
-                options: q.options,
-                correctIndexOrAnswer: q.correctIndexOrAnswer,
+              (q) => q.copyWith(
                 marks: 1,
                 section: 'A',
               ),
@@ -216,9 +266,9 @@ class AssessmentEngine {
     // randomly among Sections B (2m), C (3m), and D (4/5m).
     int remainingSubj = allSubjectives.length;
 
-    // SECTION B: 2 Marks (Very Short Answer) - typically 6-10 questions. Let's aim for 8.
-    int secBCount = remainingSubj > 8
-        ? 8
+    // SECTION B: 2 Marks (Very Short Answer)
+    int secBCount = remainingSubj > targetSecB
+        ? targetSecB
         : (remainingSubj > 2 ? (remainingSubj ~/ 3) : remainingSubj);
     if (secBCount > 0) {
       paper.add(
@@ -235,12 +285,7 @@ class AssessmentEngine {
         allSubjectives
             .take(secBCount)
             .map(
-              (q) => AssessmentQuestion(
-                moduleId: q.moduleId,
-                type: q.type,
-                question: q.question,
-                options: q.options,
-                correctIndexOrAnswer: q.correctIndexOrAnswer,
+              (q) => q.copyWith(
                 marks: 2,
                 section: 'B',
               ),
@@ -250,9 +295,9 @@ class AssessmentEngine {
       remainingSubj = allSubjectives.length;
     }
 
-    // SECTION C: 3 Marks (Short Answer) - typically 6-8 questions. Let's aim for 6.
-    int secCCount = remainingSubj > 6
-        ? 6
+    // SECTION C: 3 Marks (Short Answer)
+    int secCCount = remainingSubj > targetSecC
+        ? targetSecC
         : (remainingSubj > 1 ? (remainingSubj ~/ 2) : remainingSubj);
     if (secCCount > 0) {
       paper.add(
@@ -269,12 +314,7 @@ class AssessmentEngine {
         allSubjectives
             .take(secCCount)
             .map(
-              (q) => AssessmentQuestion(
-                moduleId: q.moduleId,
-                type: q.type,
-                question: q.question,
-                options: q.options,
-                correctIndexOrAnswer: q.correctIndexOrAnswer,
+              (q) => q.copyWith(
                 marks: 3,
                 section: 'C',
               ),
@@ -284,8 +324,8 @@ class AssessmentEngine {
       remainingSubj = allSubjectives.length;
     }
 
-    // SECTION D: 4/5 Marks (Long Answer) - typically 4-5 questions. Let's aim for 5.
-    int secDCount = remainingSubj > 5 ? 5 : remainingSubj;
+    // SECTION D: 4/5 Marks (Long Answer)
+    int secDCount = remainingSubj > targetSecD ? targetSecD : remainingSubj;
     if (secDCount > 0) {
       paper.add(
         AssessmentQuestion(
@@ -301,12 +341,7 @@ class AssessmentEngine {
         allSubjectives
             .take(secDCount)
             .map(
-              (q) => AssessmentQuestion(
-                moduleId: q.moduleId,
-                type: q.type,
-                question: q.question,
-                options: q.options,
-                correctIndexOrAnswer: q.correctIndexOrAnswer,
+              (q) => q.copyWith(
                 marks: 4,
                 section: 'D',
               ),
@@ -315,6 +350,11 @@ class AssessmentEngine {
     }
 
     return paper;
+    } catch (e, stackTrace) {
+      debugPrint('Error generating board pattern paper: $e');
+      debugPrint(stackTrace.toString());
+      return [];
+    }
   }
 
   /// Loads a single module's blocks.json and extracts allowed blocks
@@ -361,27 +401,27 @@ class AssessmentEngine {
         for (var block in rawBlocks) {
           String originalType = block['type'] ?? '';
 
-          // Map knowledge checks and practice questions to 'quiz' type internally
-          // since the UI expects 'quiz' for MCQs.
+          final contentMap = block['content'] != null
+              ? block['content']
+              : block;
+
+          bool hasOptions = contentMap['options'] != null && (contentMap['options'] as List).isNotEmpty;
+
           String blockType = originalType;
-          if (allowedTypes.contains('quiz') &&
-              (originalType == 'knowledge_check' ||
-                  originalType == 'practice_question' ||
-                  originalType == 'mcq' ||
-                  originalType == 'socratic')) {
+          if (originalType == 'knowledge_check' || originalType == 'mcq' || originalType == 'socratic') {
             blockType = 'quiz';
-          }
-          if (allowedTypes.contains('short_note') &&
-              (originalType == 'flashcard')) {
+          } else if (originalType == 'practice_question' || originalType == 'challenge_question') {
+            if (hasOptions) {
+              blockType = 'quiz';
+            } else {
+              blockType = 'descriptive';
+            }
+          } else if (originalType == 'flashcard') {
             blockType = 'short_note';
           }
 
-          if (allowedTypes.contains(blockType)) {
-            // Check if data is nested inside 'content' key
-            final contentMap = block['content'] != null
-                ? block['content']
-                : block;
-
+          // If the mapped type is in allowedTypes or the original type is
+          if (allowedTypes.contains(blockType) || allowedTypes.contains(originalType)) {
             // Extract options based on block type
             List<String> options = [];
             if (blockType == 'quiz' && contentMap['options'] != null) {

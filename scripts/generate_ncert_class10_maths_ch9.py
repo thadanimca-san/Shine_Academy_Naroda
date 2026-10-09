@@ -1,0 +1,1424 @@
+import os
+import json
+
+def make_quiz(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Apply", diff="Intermediate", mins=2):
+    return {
+        "id": id_str,
+        "type": "quiz",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_socratic(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Apply", diff="Beginner", mins=2):
+    return {
+        "id": id_str,
+        "type": "socratic_question",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_theory(id_str, title_en, title_hi, title_gu, body_en, body_hi, body_gu, btype="theory", bloom="Understand", diff="Beginner", mins=3):
+    return {
+        "id": id_str,
+        "type": btype,
+        "title": title_en,
+        "body": body_en,
+        "title_hi": title_hi,
+        "body_hi": body_hi,
+        "title_gu": title_gu,
+        "body_gu": body_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def get_metadata():
+    return {
+        "id": "ncert_class10_maths_ch9",
+        "title": "Chapter 9: Some Applications of Trigonometry",
+        "title_hi": "अध्याय 9: त्रिकोणमिति के कुछ अनुप्रयोग",
+        "title_gu": "પ્રકરણ 9: ત્રિકોણમિતિના કેટલાક ઉપયોગો",
+        "subject": "Mathematics",
+        "grade": "10",
+        "board": "CBSE/GSEB",
+        "curriculum": ["CBSE", "NCERT", "GSEB"],
+        "language": "English, Hindi, Gujarati",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 180,
+        "version": "2.0.0",
+        "author": "Shine Academy EduOS",
+        "last_updated": "2026-10-01",
+        "tags": [
+            "heights_and_distances",
+            "angle_of_elevation",
+            "angle_of_depression",
+            "line_of_sight",
+            "trigonometry_applications",
+            "exercise_9_1",
+            "board_exam"
+        ]
+    }
+
+# =========================================================================
+# PART 1: 8-STEP PEDAGOGICAL FOUNDATIONS & CORE PRINCIPLES
+# =========================================================================
+def get_part1_blocks():
+    blocks = []
+
+    # 1. Hook (Step 1)
+    blocks.append(make_theory(
+        "C10M_CH9_1",
+        "Measuring the Giants: How Trigonometry Touches What Hands Cannot Reach",
+        "विशालकाय संरचनाओं की माप: कैसे त्रिकोणमिति उसे मापती है जिसे हाथ छू नहीं सकते",
+        "વિરાટ કાયાઓનું માપન: જેને હાથ ન અડી શકે તેને ત્રિકોણમિતિ કેવી રીતે માપે છે",
+        "In 1852, an extraordinary Indian mathematician and surveyor named **Radhanath Sikdar** calculated the exact height of the world's tallest peak — Peak XV (later named Mount Everest, 8,848 m) — while sitting at a desk in Dehradun, over 240 kilometers away!\n\nNo human had ever set foot on its icy summit. No measuring tape was ever unfurled down its colossal cliffs. How did he accomplish one of the greatest feats in geographical history?\n\nThe answer is **Heights and Distances (Trigonometry in Action)**. By measuring baseline ground distances and the tiny upward tilt of optical instruments called *Theodolites*, right-angled triangles spanning across mountains were unlocked using the exact trigonometric ratios you mastered in Chapter 8!\n\nWhether guiding jetliners onto runway glideslopes, positioning telecommunication satellites, navigating ocean supertankers near coastal lighthouses, or determining the height of historical monuments, trigonometry turns the invisible into the precisely measurable.",
+        "1852 में, **राधानाथ सिकदर** नामक एक असाधारण भारतीय गणितज्ञ और सर्वेक्षक ने 240 किलोमीटर से अधिक दूर देहरादून में एक मेज पर बैठकर दुनिया की सबसे ऊँची चोटी — पीक XV (जिसे बाद में माउंट एवरेस्ट नाम दिया गया, 8,848 मीटर) — की सटीक ऊँचाई की गणना की थी!\n\nतब तक किसी भी मनुष्य ने उसकी बर्फीली चोटी पर पैर नहीं रखा था। न ही उसकी विशाल चट्टानों से कोई फीता नीचे गिराया गया था। फिर उन्होंने भौगोलिक इतिहास के इस महानतम कारनामे को कैसे अंजाम दिया?\n\nइसका उत्तर है **ऊँचाई और दूरियाँ (त्रिकोणमिति का व्यावहारिक अनुप्रयोग)**। जमीन पर आधार दूरी और *थियोडोलाइट (Theodolite)* नामक प्रकाशीय उपकरण द्वारा ऊपर देखने के कोण को मापकर, पहाड़ों तक फैले समकोण त्रिभुजों को उन्हीं त्रिकोणमितीय अनुपातों से हल किया गया जिन्हें आपने अध्याय 8 में सीखा है!\n\nचाहे हवाई जहाजों को रनवे पर सुरक्षित उतारना हो, उपग्रहों को अंतरिक्ष में स्थापित करना हो, समुद्र में जहाजों को लाइटहाउस से सुरक्षित दूरी पर रखना हो, या ऐतिहासिक इमारतों की ऊँचाई नापना हो — त्रिकोणमिति अदृश्य को भी पूरी सटीकता से मापने की शक्ति देती है।",
+        "1852 માં, **રાધાનાથ સિકદર** નામના એક અસાધારણ ભારતીય ગણિતશાસ્ત્રી અને સર્વેક્ષકે 240 કિલોમીટરથી વધુ દૂર દેહરાદૂનમાં ટેબલ પર બેસીને વિશ્વના સૌથી ઊંચા શિખર — પીક XV (પાછળથી માઉન્ટ એવરેસ્ટ, 8,848 મીટર) — ની સચોટ ઊંચાઈની ગણતરી કરી હતી!\n\nત્યાં સુધી કોઈ માનવીએ તેના બરફીલા શિખર પર પગ મૂક્યો ન હતો કે ન તો તેની વિશાળ ભેખડો પરથી કોઈ મેઝરિંગ ટેપ લટકાવવામાં આવી હતી. તો પછી તેમણે ભૌગોલિક ઇતિહાસની આ અદ્ભુત સિદ્ધિ કેવી રીતે હાંસલ કરી?\n\nઆનો ઉત્તર છે **ઊંચાઈ અને અંતર (ત્રિકોણમિતિનો વ્યવહારિક ઉપયોગ)**. જમીન પરનું અંતર અને *થિયોડોલાઇટ (Theodolite)* નામના ઓપ્ટિકલ સાધન વડે ઉપર જોવાનો ખૂણો માપીને, પર્વતો સુધી બનતા કાટકોણ ત્રિકોણોને એ જ ત્રિકોણમિતીય ગુણોત્તરોથી ઉકેલવામાં આવ્યા જે તમે પ્રકરણ 8 માં શીખ્યા છો!\n\nવિમાનને રનવે પર ઉતારતી વખતે, ઉપગ્રહોને ભ્રમણકક્ષામાં ગોઠવતી વખતે, દરિયામાં દીવાદાંડીથી વહાણનું અંતર જાણતી વખતે કે ઐતિહાસિક સ્મારકોની ઊંચાઈ માપતી વખતે — ત્રિકોણમિતિ અશક્ય લાગતા માપનને શક્ય બનાવે છે.",
+        btype="hook",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 2. Socratic Question (Step 2)
+    blocks.append(make_socratic(
+        "C10M_CH9_2",
+        "Imagine you are standing 50 meters away from a tall mobile antenna tower, gazing up at its top. If you walk 25 meters closer to the tower, what happens to the angle at which you must tilt your eyes upward to see the top?",
+        "कल्पना कीजिए कि आप एक ऊँचे मोबाइल टॉवर से 50 मीटर दूर खड़े हैं और उसके शिखर को देख रहे हैं। यदि आप टॉवर की ओर 25 मीटर और आगे बढ़ते हैं, तो शिखर को देखने के लिए आपकी आँखों को ऊपर उठाने वाले कोण में क्या परिवर्तन होगा?",
+        "કલ્પના કરો કે તમે એક ઊંચા મોબાઈલ ટાવરથી 50 મીટર દૂર ઊભા રહીને તેની ટોચ તરફ જોઈ રહ્યા છો. જો તમે ટાવર તરફ 25 મીટર આગળ ચાલો છો, તો ટોચ જોવા માટે તમારી આંખોને ઉપર તરફ જે ખૂણે વાળવી પડે છે તેમાં શું ફેરફાર થશે?",
+        [
+            "The angle increases (you must tilt your head higher)",
+            "The angle decreases (you look more horizontally)",
+            "The angle remains exactly the same",
+            "The angle becomes 0 degrees"
+        ],
+        [
+            "कोण बढ़ जाता है (आपको अपना सिर और ऊँचा उठाना पड़ता है)",
+            "कोण घट जाता है (आप अधिक क्षैतिज रूप से देखते हैं)",
+            "कोण बिल्कुल समान रहता है",
+            "कोण 0 डिग्री हो जाता है"
+        ],
+        [
+            "ખૂણો વધી જાય છે (તમારે માથું વધુ ઊંચું કરવું પડે છે)",
+            "ખૂણો ઘટી જાય છે (તમારે ઓછું ઊંચે જોવું પડે છે)",
+            "ખૂણો બિલકુલ સમાન રહે છે",
+            "ખૂણો 0 ડિગ્રી થઈ જાય છે"
+        ],
+        0,
+        "As you approach the vertical object, the horizontal distance (base) decreases while the height (perpendicular) remains constant. Since tan θ = Height / Distance, a smaller denominator makes tan θ larger, which means the angle θ increases! When you stand directly beneath it, the angle approaches 90°.",
+        "जैसे-जैसे आप ऊर्ध्वाधर वस्तु के पास जाते हैं, क्षैतिज दूरी (आधार) घटती जाती है जबकि ऊँचाई (लंब) स्थिर रहती है। चूँकि tan θ = ऊँचाई / दूरी, छोटा हर tan θ के मान को बड़ा बना देता है, जिसका अर्थ है कि कोण θ बढ़ जाता है! जब आप ठीक नीचे खड़े होते हैं, तो यह कोण 90° के करीब पहुँच जाता है।",
+        "જેમ જેમ તમે શિરોલંબ પદાર્થની નજીક જાઓ છો, તેમ સમક્ષિતિજ અંતર (પાયો) ઘટે છે જ્યારે ઊંચાઈ (લંબ) અચળ રહે છે. tan θ = ઊંચાઈ / અંતર હોવાથી, છેદ નાનો થતાં tan θ નું મૂલ્ય વધે છે, એટલે કે ખૂણો θ મોટો થાય છે! જ્યારે તમે બરાબર નીચે આવી જાઓ ત્યારે ખૂણો 90° ની નજીક પહોંચી જાય છે.",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 3. Discovery: The Right-Angled Framework of Sight (Step 3)
+    blocks.append(make_theory(
+        "C10M_CH9_3",
+        "Discovery: Constructing the Right-Angled Sight Triangle",
+        "खोज: दृष्टि के समकोण त्रिभुज का निर्माण",
+        "શોધ: દ્રષ્ટિના કાટકોણ ત્રિકોણની રચના",
+        "Whenever an observer looks at an object in the real world, nature constructs an invisible right-angled triangle in space:\n\n1. **Horizontal Line (क्षैतिज रेखा / સમક્ષિતિજ રેખા):** The straight flat line drawn from the observer's eye parallel to the level ground.\n2. **Line of Sight (दृष्टि रेखा / દ્રષ્ટિ રેખા):** The straight line passing directly from the observer's eye to the specific target point on the object.\n3. **Vertical Height (ऊर्ध्वाधर ऊँचाई / શિરોલંબ ઊંચાઈ):** The perpendicular dropped from the target object to the horizontal line.\n\nBecause buildings, poles, trees, and towers stand vertically upright ($90^\\circ$ to the ground), this configuration forms a **Right-Angled Triangle**! In this triangle:\n- The Horizontal Distance is the **Base (Adjacent)**.\n- The Height is the **Perpendicular (Opposite)**.\n- The Line of Sight is the **Hypotenuse**.\n\nThus, knowing just ONE angle and ONE length allows us to calculate every other dimension using simple trigonometric ratios!",
+        "जब भी कोई प्रेक्षक वास्तविक दुनिया में किसी वस्तु को देखता है, तो प्रकृति अंतरिक्ष में एक अदृश्य समकोण त्रिभुज का निर्माण करती है:\n\n1. **क्षैतिज रेखा (Horizontal Line):** प्रेक्षक की आँख से समतल जमीन के समानांतर खींची गई सीधी समतल रेखा।\n2. **दृष्टि रेखा (Line of Sight):** प्रेक्षक की आँख से वस्तु पर स्थित लक्ष्य बिंदु तक खींची गई सीधी रेखा।\n3. **ऊर्ध्वाधर ऊँचाई (Vertical Height):** लक्ष्य वस्तु से क्षैतिज रेखा पर डाला गया लंब।\n\nचूँकि इमारतें, खंभे, पेड़ और टॉवर जमीन पर लंबवत ($90^\\circ$) खड़े होते हैं, यह रचना एक **समकोण त्रिभुज** बनाती है! इस त्रिभुज में:\n- क्षैतिज दूरी **आधार (संलग्न भुजा)** है।\n- ऊँचाई **लंब (सम्मुख भुजा)** है।\n- दृष्टि रेखा **कर्ण** है।\n\nइस प्रकार, केवल एक कोण और एक भुजा की लंबाई जानकर, हम सरल त्रिकोणमितीय अनुपातों का उपयोग करके अन्य सभी मापों की गणना कर सकते हैं!",
+        "વાસ્તવિક દુનિયામાં જ્યારે કોઈ નિરીક્ષક કોઈ વસ્તુ તરફ જુએ છે, ત્યારે અવકાશમાં એક અદ્રશ્ય કાટકોણ ત્રિકોણ રચાય છે:\n\n1. **સમક્ષિતિજ રેખા (Horizontal Line):** નિરીક્ષકની આંખમાંથી જમીનને સમાંતર પસાર થતી સીધી આડી રેખા.\n2. **દ્રષ્ટિ રેખા (Line of Sight):** નિરીક્ષકની આંખથી પદાર્થના ચોક્કસ બિંદુ સુધી દોરાતી સીધી રેખા.\n3. **શિરોલંબ ઊંચાઈ (Vertical Height):** લક્ષ્ય પદાર્થ પરથી સમક્ષિતિજ રેખા પર દોરેલો લંબ.\n\nઇમારતો, થાંભલા, વૃક્ષો અને ટાવર જમીન સાથે કાટખૂણે ($90^\\circ$) ઊભા હોવાથી આ આકૃતિ હંમેશા **કાટકોણ ત્રિકોણ** બને છે! આ ત્રિકોણમાં:\n- સમક્ષિતિજ અંતર એ **પાયો (પાસેની બાજુ)** છે.\n- ઊંચાઈ એ **લંબ / વેધ (સામેની બાજુ)** છે.\n- દ્રષ્ટિ રેખા એ **કર્ણ** છે.\n\nઆમ, માત્ર એક ખૂણો અને એક લંબાઈ જાણીતી હોય તો પણ ત્રિકોણમિતિના સરળ ગુણોત્તરોથી બાકીના તમામ માપ શોધી શકાય છે!",
+        btype="discovery",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 4. Reveal / Theory: Formal Definitions (Step 4)
+    blocks.append(make_theory(
+        "C10M_CH9_4",
+        "Formal Definitions: Line of Sight, Angle of Elevation & Angle of Depression",
+        "औपचारिक परिभाषाएँ: दृष्टि रेखा, उन्नयन कोण और अवनमन कोण",
+        "ઔપચારિક વ્યાખ્યાઓ: દ્રષ્ટિ રેખા, ઉત્સેધકોણ અને અવસેધકોણ",
+        "### 1. Line of Sight (दृष्टि रेखा / દ્રષ્ટિ રેખા)\nThe line drawn from the eye of an observer to the point in the object viewed by the observer.\n\n### 2. Angle of Elevation (उन्नयन कोण / ઉત્સેધકોણ)\nThe angle formed by the line of sight with the horizontal level when the target point is **ABOVE** the horizontal level (i.e., the case when we raise our head to look up at the object).\n$$\\text{Angle of Elevation} = \\angle(\\text{Horizontal Line}, \\text{Line of Sight looking UP})$$\n\n### 3. Angle of Depression (अवनमन कोण / અવસેધકોણ)\nThe angle formed by the line of sight with the horizontal level when the target point is **BELOW** the horizontal level (i.e., the case when we lower our head to look down at the object).\n$$\\text{Angle of Depression} = \\angle(\\text{Horizontal Line}, \\text{Line of Sight looking DOWN})$$\n\n### 4. The Fundamental Theorem of Equal Angles\nImagine an observer at top of a cliff $A$ looking down at a boat $B$ with an angle of depression $\\beta$.\nA person on the boat $B$ looks up at the observer $A$ with an angle of elevation $\\alpha$.\nSince the horizontal line at $A$ and the horizontal water surface at $B$ are parallel lines, the line of sight $AB$ acts as a **transversal**!\nBy the alternate interior angles theorem:\n$$\\text{Angle of Depression } (\\beta) = \\text{Angle of Elevation } (\\alpha)$$\n*This golden rule means you can immediately transfer any angle of depression into the bottom triangle on the ground!*",
+        "### 1. दृष्टि रेखा (Line of Sight)\nप्रेक्षक की आँख से उस वस्तु पर देखे जा रहे बिंदु को मिलाने वाली सीधी रेखा को दृष्टि रेखा कहते हैं।\n\n### 2. उन्नयन कोण (Angle of Elevation)\nजब देखा जाने वाला बिंदु क्षैतिज स्तर से **ऊपर** होता है (अर्थात जब हमें वस्तु को देखने के लिए सिर ऊपर उठाना पड़ता है), तो दृष्टि रेखा और क्षैतिज रेखा के बीच बने कोण को **उन्नयन कोण** कहते हैं।\n$$\\text{उन्नयन कोण} = \\text{क्षैतिज रेखा और ऊपर की ओर दृष्टि रेखा के बीच का कोण}$$\n\n### 3. अवनमन कोण (Angle of Depression)\nजब देखा जाने वाला बिंदु क्षैतिज स्तर से **नीचे** होता है (अर्थात जब हमें वस्तु को देखने के लिए सिर नीचे झुकाना पड़ता है), तो दृष्टि रेखा और क्षैतिज रेखा के बीच बने कोण को **अवनमन कोण** कहते हैं।\n$$\\text{अवनमन कोण} = \\text{क्षैतिज रेखा और नीचे की ओर दृष्टि रेखा के बीच का कोण}$$\n\n### 4. समान कोणों का मूलभूत प्रमेय\nमान लीजिए कि एक चट्टान $A$ के शिखर पर खड़ा व्यक्ति नीचे नाव $B$ को $\\beta$ अवनमन कोण से देखता है।\nनाव $B$ में बैठा व्यक्ति चट्टान के शिखर $A$ को $\\alpha$ उन्नयन कोण से देखता है।\nचूँकि $A$ पर क्षैतिज रेखा और $B$ पर जल की क्षैतिज सतह दो समांतर रेखाएँ हैं, इसलिए दृष्टि रेखा $AB$ एक **तिर्यक रेखा (transversal)** का कार्य करती है!\nएकांतर अंतःकोण प्रमेय के अनुसार:\n$$\\text{अवनमन कोण } (\\beta) = \\text{उन्नयन कोण } (\\alpha)$$\n*इस नियम का अर्थ है कि किसी भी अवनमन कोण को तुरंत जमीन वाले समकोण त्रिभुज के आधार कोण में स्थानांतरित किया जा सकता है!*",
+        "### 1. દ્રષ્ટિ રેખા (Line of Sight)\nનિરીક્ષકની આંખમાંથી જે પદાર્થને જોવામાં આવે છે તે બિંદુને જોડતી સીધી રેખાને દ્રષ્ટિ રેખા કહે છે.\n\n### 2. ઉત્સેધકોણ (Angle of Elevation)\nજ્યારે જોવા મળતું બિંદુ સમક્ષિતિજ સ્તરથી **ઉપર** હોય (એટલે કે જ્યારે આપણે ઊંચે જોવા માટે માથું ઊંચું કરીએ), ત્યારે દ્રષ્ટિ રેખા અને સમક્ષિતિજ રેખા વચ્ચે બનતા ખૂણાને **ઉત્સેધકોણ** કહે છે.\n$$\\text{ઉત્સેધકોણ} = \\text{સમક્ષિતિજ રેખા અને ઉપર તરફની દ્રષ્ટિ રેખા વચ્ચેનો ખૂણો}$$\n\n### 3. અવસેધકોણ (Angle of Depression)\nજ્યારે જોવા મળતું બિંદુ સમક્ષિતિજ સ્તરથી **નીચે** હોય (એટલે કે જ્યારે આપણે નીચે જોવા માટે માથું નીચું કરીએ), ત્યારે દ્રષ્ટિ રેખા અને સમક્ષિતિજ રેખા વચ્ચે બનતા ખૂણાને **અવસેધકોણ** કહે છે.\n$$\\text{અવસેધકોણ} = \\text{સમક્ષિતિજ રેખા અને નીચે તરફની દ્રષ્ટિ રેખા વચ્ચેનો ખૂણો}$$\n\n### 4. સમાન ખૂણાઓનો મૂળભૂત પ્રમેય\nધારો કે ટેકરીની ટોચ $A$ પરથી કોઈ વ્યક્તિ દરિયામાં રહેલી હોડી $B$ તરફ $\\beta$ ના અવસેધકોણે જુએ છે.\nતે જ સમયે હોડી $B$ માંથી ટેકરીની ટોચ $A$ તરફ જોતાં ઉત્સેધકોણ $\\alpha$ બને છે.\n$A$ આગળની સમક્ષિતિજ રેખા અને $B$ આગળની પાણીની સપાટી પરસ્પર સમાંતર હોવાથી દ્રષ્ટિ રેખા $AB$ છેદિકા બને છે!\nયુગ્મકોણની શરત મુજબ:\n$$\\text{અવસેધકોણ } (\\beta) = \\text{ઉત્સેધકોણ } (\\alpha)$$\n*આ સુવર્ણ નિયમથી તમે કોઈપણ અવસેધકોણને સીધો જ જમીન પરના કાટકોણ ત્રિકોણમાં ફેરવી શકો છો!*",
+        btype="theory",
+        bloom="Remember",
+        diff="Beginner",
+        mins=4
+    ))
+
+    # 5. Teacher Tip: The 3 Special Triangles (Step 5)
+    blocks.append(make_theory(
+        "C10M_CH9_5",
+        "Teacher Tip: The 3 'Super Shortcut' Triangles of Trigonometry",
+        "शिक्षक युक्ति: त्रिकोणमिति के 3 'सुपर शॉर्टकट' त्रिभुज",
+        "શિક્ષકની સલાહ: ત્રિકોણમિતિના 3 'સુપર શોર્ટકટ' ત્રિકોણ",
+        "In board exams, 99% of heights and distances problems involve angles of $30^\\circ, 45^\\circ,$ or $60^\\circ$. Memorize these 3 geometric patterns to solve problems in seconds:\n\n### 1. The $45^\\circ - 45^\\circ - 90^\\circ$ Triangle (Ratio $1 : 1 : \\sqrt{2}$)\n- Since $\\tan 45^\\circ = 1$, **Height = Base**!\n- If distance from tower is 20 m and elevation angle is $45^\\circ$, tower height is automatically **20 m**!\n\n### 2. The $30^\\circ - 60^\\circ - 90^\\circ$ Triangle (Ratio $1 : \\sqrt{3} : 2$)\n- Side opposite to $30^\\circ$ is $x$.\n- Side opposite to $60^\\circ$ is $x\\sqrt{3}$.\n- Hypotenuse is $2x$.\n- *Shortcut:* If base is given and angle is $30^\\circ$, height $= \\text{Base} / \\sqrt{3}$. If angle is $60^\\circ$, height $= \\text{Base} \\times \\sqrt{3}$.\n\n### 3. Key Values Table to Keep Handy\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\approx 0.577$\n- $\\tan 45^\\circ = 1$\n- $\\tan 60^\\circ = \\sqrt{3} \\approx 1.732$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$",
+        "बोर्ड परीक्षाओं में 99% प्रश्न $30^\\circ, 45^\\circ,$ या $60^\\circ$ के कोणों पर आधारित होते हैं। प्रश्नों को सेकंडों में हल करने के लिए इन 3 ज्यामितीय पैटर्नों को याद रखें:\n\n### 1. $45^\\circ - 45^\\circ - 90^\\circ$ त्रिभुज (अनुपात $1 : 1 : \\sqrt{2}$)\n- चूँकि $\\tan 45^\\circ = 1$, अतः **ऊँचाई = आधार**!\n- यदि टॉवर से दूरी 20 मीटर है और उन्नयन कोण $45^\\circ$ है, तो टॉवर की ऊँचाई सीधे **20 मीटर** होगी!\n\n### 2. $30^\\circ - 60^\\circ - 90^\\circ$ त्रिभुज (अनुपात $1 : \\sqrt{3} : 2$)\n- $30^\\circ$ के सामने वाली भुजा $x$ होती है।\n- $60^\\circ$ के सामने वाली भुजा $x\\sqrt{3}$ होती है।\n- कर्ण हमेशा $2x$ होता है।\n- *शॉर्टकट:* यदि आधार दिया है और कोण $30^\\circ$ है, तो ऊँचाई $= \\text{आधार} / \\sqrt{3}$। यदि कोण $60^\\circ$ है, तो ऊँचाई $= \\text{आधार} \\times \\sqrt{3}$।\n\n### 3. महत्वपूर्ण मान सारणी\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\approx 0.577$\n- $\\tan 45^\\circ = 1$\n- $\\tan 60^\\circ = \\sqrt{3} \\approx 1.732$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$",
+        "બોર્ડ પરીક્ષાઓમાં 99% દાખલાઓ $30^\\circ, 45^\\circ,$ કે $60^\\circ$ ના ખૂણા પર જ પૂછાય છે. આંખના પલકારામાં ઉકેલ મેળવવા આ 3 ગુણોત્તર યાદ રાખો:\n\n### 1. $45^\\circ - 45^\\circ - 90^\\circ$ ત્રિકોણ (ગુણોત્તર $1 : 1 : \\sqrt{2}$)\n- $\\tan 45^\\circ = 1$ હોવાથી, **ઊંચાઈ = પાયો**!\n- જો ટાવરથી અંતર 20 મીટર હોય અને ઉત્સેધકોણ $45^\\circ$ હોય, તો ટાવરની ઊંચાઈ સીધી જ **20 મીટર** થાય!\n\n### 2. $30^\\circ - 60^\\circ - 90^\\circ$ ત્રિકોણ (ગુણોત્તર $1 : \\sqrt{3} : 2$)\n- $30^\\circ$ ની સામેની બાજુ $x$ હોય.\n- $60^\\circ$ ની સામેની બાજુ $x\\sqrt{3}$ હોય.\n- કર્ણ હંમેશા $2x$ હોય.\n- *શોર્ટકટ:* પાયો આપ્યો હોય અને ખૂણો $30^\\circ$ હોય તો ઊંચાઈ $= \\text{પાયો} / \\sqrt{3}$. જો ખૂણો $60^\\circ$ હોય તો ઊંચાઈ $= \\text{પાયો} \\times \\sqrt{3}$.\n\n### 3. મહત્વના મૂલ્યોની યાદી\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\approx 0.577$\n- $\\tan 45^\\circ = 1$\n- $\\tan 60^\\circ = \\sqrt{3} \\approx 1.732$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$",
+        btype="teacher_tip",
+        bloom="Remember",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 6. Common Mistakes to Avoid (Step 5)
+    blocks.append(make_theory(
+        "C10M_CH9_6",
+        "Common Mistakes: 3 Fatal Traps in Board Exam Heights & Distances",
+        "सामान्य गलतियाँ: बोर्ड परीक्षा में ऊँचाई और दूरी के 3 घातक जाल",
+        "સામાન્ય ભૂલો: બોર્ડ પરીક્ષામાં ઊંચાઈ અને અંતરની 3 જીવલેણ ભૂલો",
+        "Watch out for these 3 mistakes that cost thousands of students full marks:\n\n1. **Drawing Angle with the Vertical instead of Horizontal:**\n   - *Wrong:* Marking the angle between the building wall and line of sight.\n   - *Right:* The angle of elevation/depression is **ALWAYS** measured relative to the horizontal line passing through the observer's eye!\n\n2. **Ignoring the Height of the Observer:**\n   - If the problem says *'A 1.5 m tall boy looks at a 30 m tall building'*, the right-angled triangle sits **above** the boy's eye level!\n   - The perpendicular of the triangle is $30 - 1.5 = 28.5\\text{ m}$. Don't forget to subtract or add back the observer's height!\n\n3. **Leaving Surds in Denominators:**\n   - Writing $h = \\frac{30}{\\sqrt{3}}$ may lose 0.5 marks.\n   - Always rationalize: $\\frac{30}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}} = \\frac{30\\sqrt{3}}{3} = 10\\sqrt{3}\\text{ m}$.",
+        "इन 3 सामान्य गलतियों से सावधान रहें जो बोर्ड परीक्षा में विद्यार्थियों के अंक काटती हैं:\n\n1. **क्षैतिज के बजाय ऊर्ध्वाधर से कोण बनाना:**\n   - *गलत:* इमारत की दीवार और दृष्टि रेखा के बीच कोण दर्शाना।\n   - *सही:* उन्नयन या अवनमन कोण **हमेशा** प्रेक्षक की आँख से गुजरने वाली क्षैतिज रेखा के सापेक्ष ही मापा जाता है!\n\n2. **प्रेक्षक की ऊँचाई को भूल जाना:**\n   - यदि प्रश्न में कहा गया है कि *'एक 1.5 मीटर लंबा लड़का 30 मीटर ऊँची इमारत को देखता है'*, तो समकोण त्रिभुज लड़के की आँख के स्तर के **ऊपर** बनता है!\n   - त्रिभुज का लंब $30 - 1.5 = 28.5$ मीटर होगा। प्रेक्षक की ऊँचाई को घटाना या अंत में जोड़ना न भूलें!\n\n3. **हर में अपरिमेय संख्या छोड़ देना:**\n   - $h = \\frac{30}{\\sqrt{3}}$ छोड़ देने पर आधा अंक कट सकता है।\n   - हमेशा परिमेयकरण करें: $\\frac{30}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}} = \\frac{30\\sqrt{3}}{3} = 10\\sqrt{3}$ मीटर।",
+        "આ 3 ભૂલોથી ખાસ બચો જે બોર્ડ પરીક્ષામાં વિદ્યાર્થીઓના ગુણ કાપી નાખે છે:\n\n1. **સમક્ષિતિજના બદલે શિરોલંબ સાથે ખૂણો દોરવો:**\n   - *ખોટું:* દીવાલ અને દ્રષ્ટિ રેખા વચ્ચેનો ખૂણો દર્શાવવો.\n   - *સાચું:* ઉત્સેધકોણ કે અવસેધકોણ **હંમેશા** આંખમાંથી નીકળતી આડી સમક્ષિતિજ રેખા સાથે જ બને છે!\n\n2. **નિરીક્ષકની ઊંચાઈ ભૂલી જવી:**\n   - જો રકમમાં આપ્યું હોય કે *'1.5 મીટર ઊંચો છોકરો 30 મીટર ઊંચી ઇમારત તરફ જુએ છે'*, તો કાટકોણ ત્રિકોણ છોકરાની આંખના સ્તરની **ઉપર** રચાય છે!\n   - ત્રિકોણનો લંબ $30 - 1.5 = 28.5$ મીટર થાય. નિરીક્ષકની ઊંચાઈની ગણતરી કરવી અનિવાર્ય છે!\n\n3. **છેદમાં અસંમેય સંખ્યા મૂકી રાખવી:**\n   - જવાબ $h = \\frac{30}{\\sqrt{3}}$ લખીને છોડી દેશો તો ગુણ કપાઈ શકે છે.\n   - છેદનું સંમેયીકરણ અવશ્ય કરો: $\\frac{30}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}} = \\frac{30\\sqrt{3}}{3} = 10\\sqrt{3}$ મીટર.",
+        btype="common_mistakes",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 7. Quick Check 1 (Step 5)
+    blocks.append(make_quiz(
+        "C10M_CH9_7",
+        "If a vertical pole of height 6 m casts a shadow of 6 m on the level ground, what is the angle of elevation of the Sun?",
+        "यदि 6 मीटर ऊँचा एक ऊर्ध्वाधर खंभा समतल जमीन पर 6 मीटर लंबी छाया डालता है, तो सूर्य का उन्नयन कोण क्या है?",
+        "જો 6 મીટર ઊંચો શિરોલંબ થાંભલો સમતલ જમીન પર 6 મીટર લાંબો પડછાયો પાડતો હોય, તો સૂર્યનો ઉત્સેધકોણ કેટલો થાય?",
+        [
+            "45°",
+            "30°",
+            "60°",
+            "90°"
+        ],
+        [
+            "45°",
+            "30°",
+            "60°",
+            "90°"
+        ],
+        [
+            "45°",
+            "30°",
+            "60°",
+            "90°"
+        ],
+        0,
+        "Let the angle of elevation of the Sun be θ. In right triangle formed by pole, shadow, and sunray:\ntan θ = Height of pole / Length of shadow = 6 / 6 = 1.\nSince tan 45° = 1, θ = 45°.",
+        "माना सूर्य का उन्नयन कोण θ है। खंभे, छाया और सूर्य की किरण द्वारा बने समकोण त्रिभुज में:\ntan θ = खंभे की ऊँचाई / छाया की लंबाई = 6 / 6 = 1।\nचूँकि tan 45° = 1 होता है, अतः θ = 45°।",
+        "ધારો કે સૂર્યનો ઉત્સેધકોણ θ છે. થાંભલો, પડછાયો અને સૂર્યકિરણથી બનતા કાટકોણ ત્રિકોણમાં:\ntan θ = થાંભલાની ઊંચાઈ / પડછાયાની લંબાઈ = 6 / 6 = 1.\ntan 45° = 1 હોવાથી, θ = 45° થાય.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # 8. Quick Check 2 (Step 5)
+    blocks.append(make_quiz(
+        "C10M_CH9_8",
+        "An observer on top of a 50 m cliff spots a sailboat in the sea. The angle of depression of the boat is 30°. What is the angle of elevation of the observer as seen from the sailboat?",
+        "50 मीटर ऊँची चट्टान के शिखर पर खड़ा एक प्रेक्षक समुद्र में एक नाव देखता है। नाव का अवनमन कोण 30° है। नाव से देखे जाने पर प्रेक्षक का उन्नयन कोण क्या होगा?",
+        "50 મીટર ઊંચી ટેકરીની ટોચ પર ઊભેલો નિરીક્ષક દરિયામાં એક હોડી જુએ છે. હોડીનો અવસેધકોણ 30° છે. હોડી પરથી જોતાં નિરીક્ષકનો ઉત્સેધકોણ કેટલો હશે?",
+        [
+            "30°",
+            "60°",
+            "45°",
+            "15°"
+        ],
+        [
+            "30°",
+            "60°",
+            "45°",
+            "15°"
+        ],
+        [
+            "30°",
+            "60°",
+            "45°",
+            "15°"
+        ],
+        0,
+        "By the theorem of alternate interior angles formed by parallel horizontal lines cut by the line of sight transversal, the angle of depression of the boat from the cliff is strictly equal to the angle of elevation of the cliff from the boat: θ = 30°.",
+        "प्रेक्षक की आँख से गुजरने वाली क्षैतिज रेखा और समुद्र की क्षैतिज सतह दो समांतर रेखाएँ हैं। दृष्टि रेखा तिर्यक रेखा है। एकांतर अंतःकोण नियम से, चट्टान से नाव का अवनमन कोण और नाव से चट्टान का उन्नयन कोण सदैव समान होते हैं: θ = 30°।",
+        "નિરીક્ષકની આંખ આગળની સમક્ષિતિજ રેખા અને દરિયાની સમક્ષિતિજ સપાટી પરસ્પર સમાંતર છે. દ્રષ્ટિ રેખા છેદિકા હોવાથી યુગ્મકોણના નિયમ મુજબ હોડીનો અવસેધકોણ અને હોડી પરથી ટેકરીનો ઉત્સેધકોણ બરાબર સમાન થાય: θ = 30°.",
+        bloom="Understand",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # 9. Reflection: Why Tangent is King in Heights and Distances (Step 6)
+    blocks.append(make_theory(
+        "C10M_CH9_9",
+        "Reflection: Why Tangent (tan θ) Dominates 90% of Height and Distance Problems",
+        "चिंतन: ऊँचाई और दूरी के 90% प्रश्नों में टैन (tan θ) का ही बोलबाला क्यों है?",
+        "મનન-ચિંતન: ઊંચાઈ અને અંતરના 90% દાખલાઓમાં ટેન્જેન્ટ (tan θ) જ કેમ મોખરે રહે છે?",
+        "Did you notice that almost every heights and distances problem uses $\\tan\\theta$ rather than $\\sin\\theta$ or $\\cos\\theta$? Why is that?\n\n- In everyday life on Earth, measuring **horizontal ground distance** (walking with a tape or odometer) is easy.\n- Measuring **vertical height** (how tall a tower or mountain is) is what we usually want to discover.\n- The **tangent ratio** ($\\tan\\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{\\text{Height}}{\\text{Distance}}$) directly links the vertical height to horizontal ground distance without needing the hypotenuse!\n\n**When do we use $\\sin\\theta$ or $\\cos\\theta$?**\nOnly when the problem explicitly involves the **Hypotenuse**:\n- Length of a leaning ladder ($BC$)\n- Length of a kite's taut string ($AC$)\n- Length of a circus artist's climbing rope\n- Direct line-of-sight aircraft distance.",
+        "क्या आपने गौर किया कि ऊँचाई और दूरी के लगभग हर प्रश्न में $\\sin\\theta$ या $\\cos\\theta$ के बजाय $\\tan\\theta$ का उपयोग होता है? ऐसा क्यों है?\n\n- पृथ्वी पर दैनिक जीवन में, **क्षैतिज जमीनी दूरी** (फीते या कदमों से चलना) मापना बहुत आसान है।\n- **ऊर्ध्वाधर ऊँचाई** (टॉवर या पहाड़ कितना ऊँचा है) वह मान है जिसे हम ज्ञात करना चाहते हैं।\n- **टैन अनुपात** ($\\tan\\theta = \\frac{\\text{लंब}}{\\text{आधार}} = \\frac{\\text{ऊँचाई}}{\\text{दूरी}}$) बिना कर्ण की आवश्यकता के सीधे ऊर्ध्वाधर ऊँचाई और जमीनी दूरी को जोड़ देता है!\n\n**हम $\\sin\\theta$ या $\\cos\\theta$ का उपयोग कब करते हैं?**\nकेवल तब जब प्रश्न में स्पष्ट रूप से **कर्ण** शामिल हो:\n- दीवार से टिकी सीढ़ी की लंबाई\n- पतंग की तनी हुई डोरी की लंबाई\n- सर्कस कलाकार द्वारा चढ़ी जाने वाली डोरी की लंबाई\n- प्रेक्षक और वस्तु के बीच की सीधी दृष्टि दूरी।",
+        "શું તમે નોંધ્યું કે ઊંચાઈ અને અંતરના લગભગ દરેક દાખલામાં $\\sin\\theta$ કે $\\cos\\theta$ કરતાં $\\tan\\theta$ નો વધુ ઉપયોગ થાય છે? આવું કેમ?\n\n- પૃથ્વી પર જમીન પરનું **સમક્ષિતિજ અંતર** (ચાલવું કે માપપટ્ટીથી માપવું) ખૂબ જ સરળ છે.\n- **શિરોલંબ ઊંચાઈ** (ટાવર કે પર્વત કેટલો ઊંચો છે) એ આપણે શોધવાની હોય છે.\n- **ટેન્જેન્ટ ગુણોત્તર** ($\\tan\\theta = \\frac{\\text{સામેની બાજુ}}{\\text{પાસેની બાજુ}} = \\frac{\\text{ઊંચાઈ}}{\\text{અંતર}}$) કર્ણની જરૂર વગર સીધા ઊંચાઈ અને જમીનના અંતરને સાંકળે છે!\n\n**આપણે $\\sin\\theta$ કે $\\cos\\theta$ નો ક્યારે ઉપયોગ કરીએ છીએ?**\nમાત્ર ત્યારે જ જ્યારે દાખલામાં સ્પષ્ટપણે **કર્ણ** સંકળાયેલો હોય:\n- દીવાલને ટેકવેલી નિસરણીની લંબાઈ\n- પતંગની ખેંચાયેલી દોરીની લંબાઈ\n- સર્કસના કલાકારના ચઢવાના દોરડાની લંબાઈ\n- હવાઈ જહાજનું સીધું દ્રષ્ટિ અંતર.",
+        btype="reflection",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 10. Connection: Cross-Curricular Real-World Links (Step 7)
+    blocks.append(make_theory(
+        "C10M_CH9_10",
+        "Connection: Heights and Distances Across Modern Science & Technology",
+        "जोड़ाव: आधुनिक विज्ञान और प्रौद्योगिकी में ऊँचाई और दूरी का उपयोग",
+        "જોડાણ: આધુનિક વિજ્ઞાન અને ટેક્નોલોજીમાં ઊંચાઈ અને અંતરનો વ્યાપક ઉપયોગ",
+        "Heights and distances form the operating system of numerous critical modern technologies:\n\n- **Aviation (ILS Landing System):** When commercial airplanes land, the Instrument Landing System (ILS) guides pilots along an exact $3^\\circ$ angle of descent (glide slope) to land smoothly on runway centerlines.\n- **Astronomy (Stellar Parallax):** Astronomers calculate the distance to nearby stars by measuring tiny angle shifts as Earth orbits from one side of the Sun to the other across a 300 million kilometer baseline!\n- **Civil Engineering & Surveying:** Total Stations and laser LIDAR devices use pulsed infrared lasers and micro-angle sensors to create 3D maps of bridges, highways, and skyscrapers with millimeter accuracy.\n- **Physics (Projectile Motion):** Launching artillery, rocket boosters, or kicking a football at angle $\\theta$ breaks velocity into horizontal ($v\\cos\\theta$) and vertical ($v\\sin\\theta$) vectors.",
+        "ऊँचाई और दूरी अनेक महत्वपूर्ण आधुनिक तकनीकों की रीढ़ हैं:\n\n- **विमानन (ILS लैंडिंग सिस्टम):** जब वाणिज्यिक विमान उतरते हैं, तो उपकरण लैंडिंग प्रणाली (ILS) पायलटों को रनवे पर सुचारू रूप से उतरने के लिए ठीक $3^\\circ$ के अवनमन कोण (ग्लाइड स्लोप) पर निर्देशित करती है।\n- **खगोल विज्ञान (तारकीय लंबन):** खगोलविद पृथ्वी की सूर्य के चारों ओर 30 करोड़ किलोमीटर की कक्षा के आधार पर तारों के कोण में सूक्ष्म विस्थापन को मापकर तारों की दूरियाँ निकालते हैं!\n- **सिविल इंजीनियरिंग और सर्वेक्षण:** टोटल स्टेशन और लेजर लिडार (LIDAR) उपकरण मिलीमीटर स्तर की सटीकता के साथ पुलों, राजमार्गों और गगनचुंबी इमारतों के 3D नक्शे बनाने के लिए कोण और दूरी का उपयोग करते हैं।\n- **भौतिकी (प्रक्षेप्य गति):** रॉकेट प्रक्षेपण या फुटबॉल किक में वेग को क्षैतिज ($v\\cos\\theta$) और ऊर्ध्वाधर ($v\\sin\\theta$) घटकों में वियोजित किया जाता है।",
+        "ઊંચાઈ અને અંતર એ ઘણી આધુનિક ટેકનોલોજીનો મુખ્ય પાયો છે:\n\n- **વિમાન વ્યવહાર (ILS લેન્ડિંગ સિસ્ટમ):** વિમાનોના સુરક્ષિત ઉતરાણ માટે ઇન્સ્ટ્રુમેન્ટ લેન્ડિંગ સિસ્ટમ પાયલોટને બરાબર $3^\\circ$ ના ઢાળ (ગ્લાઈડ સ્લોપ) પર રનવે તરફ દોરી જાય છે.\n- **ખગોળશાસ્ત્ર (તારાઓનું દ્રષ્ટિભેદ અંતર):** સૂર્યની આસપાસ પૃથ્વીની 30 કરોડ કિમીની કક્ષાને પાયો બનાવીને વૈજ્ઞાનિકો ખૂણાના સૂક્ષ્મ ફેરફારો પરથી તારાઓનું અંતર માપે છે!\n- **સિવિલ એન્જિનિયરિંગ અને સર્વેક્ષણ:** ટોટલ સ્ટેશન અને LIDAR સાધનો લેસર અને ખૂણાના માપન દ્વારા પુલ, હાઇવે અને ગગનચુંબી ઇમારતોનું મિલિમીટર સુધીનું સચોટ 3D મેપિંગ કરે છે.\n- **ભૌતિક વિજ્ઞાન (પ્રક્ષિપ્ત ગતિ):** રોકેટ પ્રક્ષેપણ કે રમતગમતમાં વેગના સમક્ષિતિજ ($v\\cos\\theta$) અને શિરોલંબ ($v\\sin\\theta$) ઘટકો પાડવામાં આ જ સંકલ્પના વપરાય છે.",
+        btype="connection",
+        bloom="Understand",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 11. Mastery: Universal 4-Step Problem-Solving Algorithm (Step 8)
+    blocks.append(make_theory(
+        "C10M_CH9_11",
+        "Mastery: The Universal 4-Step Height & Distance Solving Algorithm",
+        "मास्टरी: ऊँचाई और दूरी के प्रश्नों को हल करने का 4-चरणीय सार्वभौमिक एल्गोरिदम",
+        "માસ્ટરી: ઊંચાઈ અને અંતરના કોઈપણ દાખલાને ઉકેલવા માટેનું સાર્વત્રિક 4-પગલાનું અલ્ગોરિધમ",
+        "Follow these 4 golden steps to solve ANY word problem flawlessly:\n\n### Step 1: Draw a Clean, Accurate Diagram First!\n- Always draw the ground as a horizontal line.\n- Draw upright vertical structures (poles, towers, trees) at $90^\\circ$ to the ground.\n- Draw the horizontal sight line from the observer's eye.\n- Mark the angles of elevation/depression clearly relative to horizontal lines.\n\n### Step 2: Identify Right-Angled Triangle(s)\n- If there is 1 observer angle $\\implies$ 1 right triangle.\n- If there are 2 observer angles (e.g., walking closer, two ships, pedestal + statue) $\\implies$ 2 overlapping right triangles!\n\n### Step 3: Set Up Trigonometric Equations\n- For each right triangle, choose the ratio connecting known side and unknown side (usually $\\tan\\theta$).\n- In double triangle problems, express the common side (usually the base $x$ or height $h$) from the first triangle and substitute into the second triangle.\n\n### Step 4: Solve & Rationalize\n- Cross-multiply to solve for the target unknown.\n- If $\\sqrt{3}$ remains in the denominator, rationalize it.\n- If $\\sqrt{3} = 1.732$ is given in question, substitute it and calculate to two decimal places.\n- Attach correct units (m, cm, km/h)!",
+        "किसी भी प्रश्न को बिना किसी त्रुटि के हल करने के लिए इन 4 चरणों का पालन करें:\n\n### चरण 1: सबसे पहले स्वच्छ और सटीक चित्र बनाएँ!\n- जमीन को सदैव एक क्षैतिज रेखा के रूप में बनाएँ।\n- खंभों, टॉवरों, पेड़ों को जमीन पर $90^\\circ$ समकोण पर खड़ा दिखाएँ।\n- प्रेक्षक की आँख से क्षैतिज दृष्टि रेखा अवश्य बनाएँ।\n- उन्नयन या अवनमन कोण को क्षैतिज रेखा के सापेक्ष स्पष्ट अंकित करें।\n\n### चरण 2: समकोण त्रिभुज(ओं) की पहचान करें\n- यदि 1 कोण दिया है $\\implies$ 1 समकोण त्रिभुज।\n- यदि 2 कोण दिए हैं (जैसे आगे चलना, दो जहाज, पेडस्टल + मूर्ति) $\\implies$ 2 परस्पर जुड़े समकोण त्रिभुज!\n\n### चरण 3: त्रिकोणमितीय समीकरण स्थापित करें\n- प्रत्येक समकोण त्रिभुज के लिए, ज्ञात और अज्ञात भुजा को जोड़ने वाला अनुपात चुनें (प्रायः $\\tan\\theta$)।\n- दोहरे त्रिभुज वाले प्रश्नों में, उभयनिष्ठ भुजा (प्रायः आधार $x$ या ऊँचाई $h$) का मान पहले त्रिभुज से निकालकर दूसरे में प्रतिस्थापित करें।\n\n### चरण 4: हल करें और परिमेयकरण करें\n- अज्ञात राशि ज्ञात करने के लिए वज्र-गुणन करें।\n- यदि हर में $\\sqrt{3}$ रहे, तो परिमेयकरण करें।\n- यदि $\\sqrt{3} = 1.732$ दिया हो, तो मान रखकर दो दशमलव स्थानों तक गणना करें।\n- अंत में उचित इकाई (मीटर, सेमी, किमी/घंटा) अवश्य लिखें!",
+        "કોઈપણ કૂટપ્રશ્નને સચોટ રીતે ઉકેલવા આ 4 સુવર્ણ પગલાં અનુસરો:\n\n### પગલું 1: સૌથી પહેલાં સ્વચ્છ અને સચોટ આકૃતિ દોરો!\n- જમીનને હંમેશા સમક્ષિતિજ આડી રેખા તરીકે દર્શાવો.\n- થાંભલા, ટાવર, વૃક્ષોને જમીન પર $90^\\circ$ ના કાટખૂણે સીધા દર્શાવો.\n- નિરીક્ષકની આંખમાંથી સમક્ષિતિજ રેખા દોરો.\n- ઉત્સેધકોણ કે અવસેધકોણને સમક્ષિતિજ રેખા સાથે સ્પષ્ટપણે દર્શાવો.\n\n### પગલું 2: કાટકોણ ત્રિકોણ(ઓ) ઓળખો\n- જો 1 ખૂણો આપેલો હોય $\\implies$ 1 કાટકોણ ત્રિકોણ.\n- જો 2 ખૂણા આપેલા હોય (જેમ કે આગળ ચાલવું, બે વહાણ, પેડેસ્ટલ + પ્રતિમા) $\\implies$ 2 પરસ્પર જોડાયેલા કાટકોણ ત્રિકોણ!\n\n### પગલું 3: ત્રિકોણમિતીય સમીકરણ બનાવો\n- દરેક કાટકોણ ત્રિકોણ માટે જાણીતી અને અજ્ઞાત બાજુને જોડતો ગુણોત્તર (સામાન્ય રીતે $\\tan\\theta$) પસંદ કરો.\n- બે ત્રિકોણવાળા દાખલામાં સામાન્ય બાજુ (પાયો $x$ કે ઊંચાઈ $h$) નું મૂલ્ય પ્રથમ ત્રિકોણમાંથી મેળવી બીજામાં મૂકો.\n\n### પગલું 4: સાદુરૂપ અને સંમેયીકરણ\n- ચોકડી ગુણાકાર કરી અજ્ઞાત કિંમત શોધો.\n- છેદમાં $\\sqrt{3}$ આવે તો છેદનું સંમેયીકરણ કરો.\n- જો પ્રશ્નમાં $\\sqrt{3} = 1.732$ આપેલ હોય તો મૂલ્ય મૂકી બે દશાંશ સ્થળ સુધી જવાબ લાવો.\n- યોગ્ય એકમ (મીટર, સેમી, કિમી/કલાક) લખવાનું ક્યારેય ચૂકશો નહીં!",
+        btype="mastery",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 2: ALL 7 NCERT TEXTBOOK EXAMPLES
+# =========================================================================
+def get_part2_blocks():
+    blocks = []
+
+    # 12. NCERT Example 1
+    blocks.append(make_quiz(
+        "C10M_CH9_EG1",
+        "NCERT Example 1: A tower stands vertically on the ground. From a point on the ground, which is 15 m away from the foot of the tower, the angle of elevation of the top of the tower is found to be 60°. Find the height of the tower.",
+        "NCERT उदाहरण 1: धरती पर एक मीनार ऊर्ध्वाधर खड़ी है। धरती के एक बिंदु से, जो मीनार के पाद-बिंदु से 15 मीटर दूर है, मीनार के शिखर का उन्नयन कोण 60° है। मीनार की ऊँचाई ज्ञात कीजिए।",
+        "NCERT ઉદાહરણ 1: જમીન પર એક ટાવર શિરોલંબ ઊભો છે. ટાવરના પાયાથી 15 મીટર દૂર રહેલા જમીન પરના એક બિંદુથી ટાવરની ટોચનો ઉત્સેધકોણ 60° છે. ટાવરની ઊંચાઈ શોધો.",
+        [
+            "15√3 m",
+            "15 m",
+            "5√3 m",
+            "30 m"
+        ],
+        [
+            "15√3 मीटर",
+            "15 मीटर",
+            "5√3 मीटर",
+            "30 मीटर"
+        ],
+        [
+            "15√3 મીટર",
+            "15 મીટર",
+            "5√3 મીટર",
+            "30 મીટર"
+        ],
+        0,
+        "Let AB be the tower of height h and C be the point on ground. BC = 15 m, ∠ACB = 60°.\nIn right triangle ABC:\ntan 60° = AB / BC = h / 15.\nSince tan 60° = √3:\n√3 = h / 15  =>  h = 15√3 m.\nThus, the height of the tower is 15√3 m.",
+        "माना AB मीनार की ऊँचाई h है और C जमीन पर स्थित बिंदु है। BC = 15 मीटर, ∠ACB = 60°।\nसमकोण त्रिभुज ABC में:\ntan 60° = AB / BC = h / 15।\nचूँकि tan 60° = √3 होता है:\n√3 = h / 15  =>  h = 15√3 मीटर।\nअतः मीनार की ऊँचाई 15√3 मीटर है।",
+        "ધારો કે AB ટાવરની ઊંચાઈ h છે અને C જમીન પરનું બિંદુ છે. BC = 15 મીટર, ∠ACB = 60°.\nકાટકોણ ત્રિકોણ ABC માં:\ntan 60° = AB / BC = h / 15.\ntan 60° = √3 હોવાથી:\n√3 = h / 15  =>  h = 15√3 મીટર.\nઆમ, ટાવરની ઊંચાઈ 15√3 મીટર છે.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 13. NCERT Example 2
+    blocks.append(make_quiz(
+        "C10M_CH9_EG2",
+        "NCERT Example 2: An electrician has to repair an electric fault on a pole of height 5 m. She needs to reach a point 1.3 m below the top of the pole to undertake repair work. What should be the length of the ladder that she should use which, when inclined at an angle of 60° to the horizontal, enables her to reach the required position? Also, how far from the foot of the pole should she place the foot of the ladder? (Take √3 = 1.73)",
+        "NCERT उदाहरण 2: एक बिजली मिस्त्री को एक 5 मीटर ऊँचे खंभे पर आ गई खराबी की मरम्मत करनी है। मरम्मत का काम करने के लिए उसे खंभे के शिखर से 1.3 मीटर नीचे एक बिंदु तक पहुँचना है। यहाँ तक पहुँचने के लिए प्रयुक्त सीढ़ी की लंबाई कितनी होनी चाहिए जिससे कि क्षैतिज से 60° के कोण पर झुकने पर वह अभीष्ट स्थिति तक पहुँच जाए? और यह भी बताइए कि खंभे के पाद से कितनी दूरी पर सीढ़ी के पाद को रखना चाहिए? (√3 = 1.73 लीजिए)",
+        "NCERT ઉદાહરણ 2: એક ઇલેક્ટ્રિશિયને 5 મીટર ઊંચા થાંભલા પર વીજળીના વાયરનું સમારકામ કરવાનું છે. તેણે થાંભલાની ટોચથી 1.3 મીટર નીચેના બિંદુ સુધી પહોંચવું છે. આ માટે તેણે સમક્ષિતિજ સાથે 60° નો ખૂણો બનાવતી કેટલી લંબાઈની નિસરણી વાપરવી પડશે જેથી તે જરૂરી જગ્યાએ પહોંચી શકે? તથા નિસરણીના પાયાને થાંભલાના પાયાથી કેટલે દૂર રાખવો પડશે? (√3 = 1.73 લો)",
+        [
+            "Ladder length = 4.28 m, Foot distance = 2.14 m",
+            "Ladder length = 5.00 m, Foot distance = 2.50 m",
+            "Ladder length = 4.00 m, Foot distance = 2.00 m",
+            "Ladder length = 4.28 m, Foot distance = 3.70 m"
+        ],
+        [
+            "सीढ़ी की लंबाई = 4.28 मीटर, पाद की दूरी = 2.14 मीटर",
+            "सीढ़ी की लंबाई = 5.00 मीटर, पाद की दूरी = 2.50 मीटर",
+            "सीढ़ी की लंबाई = 4.00 मीटर, पाद की दूरी = 2.00 मीटर",
+            "सीढ़ी की लंबाई = 4.28 मीटर, पाद की दूरी = 3.70 मीटर"
+        ],
+        [
+            "નિસરણીની લંબાઈ = 4.28 મીટર, પાયાનું અંતર = 2.14 મીટર",
+            "નિસરણીની લંબાઈ = 5.00 મીટર, પાયાનું અંતર = 2.50 મીટર",
+            "નિસરણીની લંબાઈ = 4.00 મીટર, પાયાનું અંતર = 2.00 મીટર",
+            "નિસરણીની લંબાઈ = 4.28 મીટર, પાયાનું અંતર = 3.70 મીટર"
+        ],
+        0,
+        "Total height AD = 5 m. Reaching point B is 1.3 m below A, so BD = 5 - 1.3 = 3.7 m.\nIn right triangle BDC, ∠BCD = 60°:\n1. Length of ladder (BC):\nsin 60° = BD / BC => √3/2 = 3.7 / BC => BC = (3.7 * 2) / √3 = 7.4 / 1.73 ≈ 4.28 m.\n2. Distance of foot (DC):\ncot 60° = DC / BD => 1/√3 = DC / 3.7 => DC = 3.7 / 1.73 ≈ 2.14 m.",
+        "खंभे की कुल ऊँचाई AD = 5 मीटर। बिंदु B शिखर से 1.3 मीटर नीचे है, अतः BD = 5 - 1.3 = 3.7 मीटर।\nसमकोण त्रिभुज BDC में, ∠BCD = 60°:\n1. सीढ़ी की लंबाई (BC):\nsin 60° = BD / BC => √3/2 = 3.7 / BC => BC = 7.4 / 1.73 ≈ 4.28 मीटर।\n2. पाद की दूरी (DC):\ncot 60° = DC / BD => 1/√3 = DC / 3.7 => DC = 3.7 / 1.73 ≈ 2.14 मीटर।",
+        "થાંભલાની કુલ ઊંચાઈ AD = 5 મીટર. જરૂરી બિંદુ B ટોચથી 1.3 મીટર નીચે છે, તેથી BD = 5 - 1.3 = 3.7 મીટર.\nકાટકોણ ત્રિકોણ BDC માં, ∠BCD = 60°:\n1. નિસરણીની લંબાઈ (BC):\nsin 60° = BD / BC => √3/2 = 3.7 / BC => BC = 7.4 / 1.73 ≈ 4.28 મીટર.\n2. પાયાનું અંતર (DC):\ncot 60° = DC / BD => 1/√3 = DC / 3.7 => DC = 3.7 / 1.73 ≈ 2.14 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 14. NCERT Example 3
+    blocks.append(make_quiz(
+        "C10M_CH9_EG3",
+        "NCERT Example 3: An observer 1.5 m tall is 28.5 m away from a chimney. The angle of elevation of the top of the chimney from her eyes is 45°. What is the height of the chimney?",
+        "NCERT उदाहरण 3: 1.5 मीटर लंबा एक प्रेक्षक एक चिमनी से 28.5 मीटर की दूरी पर है। उसकी आँखों से चिमनी के शिखर का उन्नयन कोण 45° है। चिमनी की ऊँचाई बताइए।",
+        "NCERT ઉદાહરણ 3: 1.5 મીટર ઊંચાઈવાળો એક નિરીક્ષક ચીમનીથી 28.5 મીટર દૂર ઊભો છે. તેની આંખથી ચીમનીની ટોચનો ઉત્સેધકોણ 45° છે. ચીમનીની ઊંચાઈ કેટલી હશે?",
+        [
+            "30 m",
+            "28.5 m",
+            "31.5 m",
+            "27 m"
+        ],
+        [
+            "30 मीटर",
+            "28.5 मीटर",
+            "31.5 मीटर",
+            "27 मीटर"
+        ],
+        [
+            "30 મીટર",
+            "28.5 મીટર",
+            "31.5 મીટર",
+            "27 મીટર"
+        ],
+        0,
+        "Let AB be the chimney and CD be observer = 1.5 m. Distance CB = 28.5 m.\nDraw horizontal line DE parallel to CB, so DE = 28.5 m and BE = CD = 1.5 m.\nIn right triangle ADE:\ntan 45° = AE / DE => 1 = AE / 28.5 => AE = 28.5 m.\nTotal height of chimney AB = AE + EB = 28.5 + 1.5 = 30 m.",
+        "माना AB चिमनी और CD प्रेक्षक = 1.5 मीटर है। दूरी CB = 28.5 मीटर।\nक्षैतिज रेखा DE खींचें जो CB के समांतर हो, अतः DE = 28.5 मीटर और BE = CD = 1.5 मीटर।\nसमकोण त्रिभुज ADE में:\ntan 45° = AE / DE => 1 = AE / 28.5 => AE = 28.5 मीटर।\nचिमनी की कुल ऊँचाई AB = AE + EB = 28.5 + 1.5 = 30 मीटर।",
+        "ધારો કે AB ચીમની અને CD નિરીક્ષક = 1.5 મીટર છે. અંતર CB = 28.5 મીટર.\nCB ને સમાંતર સમક્ષિતિજ રેખા DE દોરો, જેથી DE = 28.5 મીટર અને BE = CD = 1.5 મીટર થાય.\nકાટકોણ ત્રિકોણ ADE માં:\ntan 45° = AE / DE => 1 = AE / 28.5 => AE = 28.5 મીટર.\nચીમનીની કુલ ઊંચાઈ AB = AE + EB = 28.5 + 1.5 = 30 મીટર.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 15. NCERT Example 4
+    blocks.append(make_quiz(
+        "C10M_CH9_EG4",
+        "NCERT Example 4: From a point P on the ground, the angle of elevation of the top of a 10 m tall building is 30°. A flag is hoisted at the top of the building and the angle of elevation of the top of the flagstaff from P is 45°. Find the length of the flagstaff and the distance of the building from the point P. (Take √3 = 1.732)",
+        "NCERT उदाहरण 4: भूमि के एक बिंदु P से एक 10 मीटर ऊँचे भवन के शिखर का उन्नयन कोण 30° है। भवन के शिखर पर एक ध्वज को लहराया गया है और P से ध्वज के शिखर का उन्नयन कोण 45° है। ध्वजदंड की लंबाई और बिंदु P से भवन की दूरी ज्ञात कीजिए। (√3 = 1.732 लीजिए)",
+        "NCERT ઉદાહરણ 4: જમીન પરના એક બિંદુ P થી 10 મીટર ઊંચી ઇમારતની ટોચનો ઉત્સેધકોણ 30° છે. ઇમારતની ટોચ પર એક ધ્વજદંડ ફરકાવેલો છે અને P થી ધ્વજદંડની ટોચનો ઉત્સેધકોણ 45° છે. ધ્વજદંડની લંબાઈ અને બિંદુ P થી ઇમારતનું અંતર શોધો. (√3 = 1.732 લો)",
+        [
+            "Flagstaff length = 7.32 m, Building distance = 17.32 m",
+            "Flagstaff length = 10.00 m, Building distance = 17.32 m",
+            "Flagstaff length = 7.32 m, Building distance = 10.00 m",
+            "Flagstaff length = 5.77 m, Building distance = 20.00 m"
+        ],
+        [
+            "ध्वजदंड की लंबाई = 7.32 मीटर, भवन की दूरी = 17.32 मीटर",
+            "ध्वजदंड की लंबाई = 10.00 मीटर, भवन की दूरी = 17.32 मीटर",
+            "ध्वजदंड की लंबाई = 7.32 मीटर, भवन की दूरी = 10.00 मीटर",
+            "ध्वजदंड की लंबाई = 5.77 मीटर, भवन की दूरी = 20.00 मीटर"
+        ],
+        [
+            "ધ્વજદંડની લંબાઈ = 7.32 મીટર, ઇમારતનું અંતર = 17.32 મીટર",
+            "ધ્વજદંડની લંબાઈ = 10.00 મીટર, ઇમારતનું અંતર = 17.32 મીટર",
+            "ધ્વજદંડની લંબાઈ = 7.32 મીટર, ઇમારતનું અંતર = 10.00 મીટર",
+            "ધ્વજદંડની લંબાઈ = 5.77 મીટર, ઇમારતનું અંતર = 20.00 મીટર"
+        ],
+        0,
+        "Let AB be building = 10 m, BD be flagstaff = h, and P be the point on ground.\nIn right triangle PAB:\ntan 30° = AB / AP => 1/√3 = 10 / AP => AP = 10√3 = 10 * 1.732 = 17.32 m.\nIn right triangle PAD:\ntan 45° = AD / AP => 1 = (10 + h) / AP => AP = 10 + h.\nEquating AP:\n10 + h = 10√3 => h = 10(√3 - 1) = 10(1.732 - 1) = 7.32 m.",
+        "माना भवन AB = 10 मीटर, ध्वजदंड BD = h और बिंदु P है।\nसमकोण त्रिभुज PAB में:\ntan 30° = AB / AP => 1/√3 = 10 / AP => AP = 10√3 = 17.32 मीटर।\nसमकोण त्रिभुज PAD में:\ntan 45° = AD / AP => 1 = (10 + h) / AP => AP = 10 + h।\nअतः 10 + h = 10√3 => h = 10(√3 - 1) = 10 * 0.732 = 7.32 मीटर।",
+        "ધારો કે ઇમારત AB = 10 મીટર, ધ્વજદંડ BD = h અને જમીન પરનું બિંદુ P છે.\nકાટકોણ ત્રિકોણ PAB માં:\ntan 30° = AB / AP => 1/√3 = 10 / AP => AP = 10√3 = 17.32 મીટર.\nકાટકોણ ત્રિકોણ PAD માં:\ntan 45° = AD / AP => 1 = (10 + h) / AP => AP = 10 + h.\nઆથી 10 + h = 10√3 => h = 10(√3 - 1) = 10 * 0.732 = 7.32 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 16. NCERT Example 5
+    blocks.append(make_quiz(
+        "C10M_CH9_EG5",
+        "NCERT Example 5: The shadow of a tower standing on a level ground is found to be 40 m longer when the Sun's altitude is 30° than when it is 60°. Find the height of the tower.",
+        "NCERT उदाहरण 5: एक समतल जमीन पर खड़ी मीनार की छाया उस स्थिति में 40 मीटर अधिक लंबी हो जाती है जब सूर्य का उन्नतांश (altitude) 60° से घटकर 30° हो जाता है। मीनार की ऊँचाई ज्ञात कीजिए।",
+        "NCERT ઉદાહરણ 5: સમતલ જમીન પર ઊભેલા ટાવરનો પડછાયો, સૂર્યનો ઉત્સેધકોણ 60° થી ઘટીને 30° થાય ત્યારે 40 મીટર વધુ લાંબો જણાય છે. ટાવરની ઊંચાઈ શોધો.",
+        [
+            "20√3 m",
+            "40√3 m",
+            "20 m",
+            "40 m"
+        ],
+        [
+            "20√3 मीटर",
+            "40√3 मीटर",
+            "20 मीटर",
+            "40 मीटर"
+        ],
+        [
+            "20√3 મીટર",
+            "40√3 મીટર",
+            "20 મીટર",
+            "40 મીટર"
+        ],
+        0,
+        "Let tower height AB = h. Let BC = x when angle is 60°, and BD = x + 40 when angle is 30°.\nIn right triangle ABC:\ntan 60° = h / x => √3 = h / x => x = h / √3.\nIn right triangle ABD:\ntan 30° = h / (x + 40) => 1/√3 = h / (x + 40) => x + 40 = h√3.\nSubstitute x = h / √3:\nh / √3 + 40 = h√3\n40 = h√3 - h / √3 = h(√3 - 1/√3) = h(2 / √3)\n2h = 40√3 => h = 20√3 m.",
+        "माना मीनार की ऊँचाई AB = h है। 60° पर छाया BC = x और 30° पर छाया BD = x + 40 मीटर है।\nसमकोण त्रिभुज ABC में:\ntan 60° = h / x => x = h / √3।\nसमकोण त्रिभुज ABD में:\ntan 30° = h / (x + 40) => x + 40 = h√3।\nx का मान रखने पर:\nh / √3 + 40 = h√3 => 40 = h√3 - h / √3 = 2h / √3\n2h = 40√3 => h = 20√3 मीटर।",
+        "ધારો કે ટાવરની ઊંચાઈ AB = h છે. 60° માટે પડછાયો BC = x અને 30° માટે BD = x + 40 મીટર છે.\nકાટકોણ ત્રિકોણ ABC માં:\ntan 60° = h / x => x = h / √3.\nકાટકોણ ત્રિકોણ ABD માં:\ntan 30° = h / (x + 40) => x + 40 = h√3.\nx નું મૂલ્ય મૂકતાં:\nh / √3 + 40 = h√3 => 40 = 2h / √3\n2h = 40√3 => h = 20√3 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 17. NCERT Example 6
+    blocks.append(make_quiz(
+        "C10M_CH9_EG6",
+        "NCERT Example 6: The angles of depression of the top and the bottom of an 8 m tall building from the top of a multi-storeyed building are 30° and 45°, respectively. Find the height of the multi-storeyed building and the distance between the two buildings.",
+        "NCERT उदाहरण 6: एक बहुमंजिला भवन के शिखर से देखने पर एक 8 मीटर ऊँचे भवन के शिखर और पाद के अवनमन कोण क्रमशः 30° और 45° हैं। बहुमंजिला भवन की ऊँचाई और दोनों भवनों के बीच की दूरी ज्ञात कीजिए।",
+        "NCERT ઉદાહરણ 6: એક બહુમાળી ઇમારતની ટોચ પરથી જોતાં 8 મીટર ઊંચી ઇમારતની ટોચ અને તળિયાના અવસેધકોણ અનુક્રમે 30° અને 45° જણાય છે. બહુમાળી ઇમારતની ઊંચાઈ અને બંને ઇમારતો વચ્ચેનું અંતર શોધો.",
+        [
+            "Height = 4(3 + √3) m, Distance = 4(3 + √3) m",
+            "Height = 8(√3 + 1) m, Distance = 8 m",
+            "Height = 4(3 - √3) m, Distance = 4(3 - √3) m",
+            "Height = 12√3 m, Distance = 12 m"
+        ],
+        [
+            "ऊँचाई = 4(3 + √3) मीटर, दूरी = 4(3 + √3) मीटर",
+            "ऊँचाई = 8(√3 + 1) मीटर, दूरी = 8 मीटर",
+            "ऊँचाई = 4(3 - √3) मीटर, दूरी = 4(3 - √3) मीटर",
+            "ऊँचाई = 12√3 मीटर, दूरी = 12 मीटर"
+        ],
+        [
+            "ઊંચાઈ = 4(3 + √3) મીટર, અંતર = 4(3 + √3) મીટર",
+            "ઊંચાઈ = 8(√3 + 1) મીટર, અંતર = 8 મીટર",
+            "ઊંચાઈ = 4(3 - √3) મીટર, અંતર = 4(3 - √3) મીટર",
+            "ઊંચાઈ = 12√3 મીટર, અંતર = 12 મીટર"
+        ],
+        0,
+        "Let multi-storeyed building PC = H and small building AB = 8 m. Distance AC = BD = d.\nIn right triangle PAC:\ntan 45° = PC / AC => 1 = H / d => d = H.\nIn right triangle PBD:\nPD = PC - CD = H - 8.\ntan 30° = PD / BD => 1/√3 = (H - 8) / H  (since d = H)\nH = √3(H - 8) => H√3 - H = 8√3 => H(√3 - 1) = 8√3\nH = 8√3 / (√3 - 1) = 8√3(√3 + 1) / 2 = 4√3(√3 + 1) = 4(3 + √3) m.\nSince d = H, distance is also 4(3 + √3) m.",
+        "माना बहुमंजिला भवन PC = H और छोटा भवन AB = 8 मीटर है। दोनों के बीच दूरी AC = BD = d।\nसमकोण त्रिभुज PAC में:\ntan 45° = PC / AC => 1 = H / d => d = H।\nसमकोण त्रिभुज PBD में:\nPD = H - 8, tan 30° = PD / BD => 1/√3 = (H - 8) / H\nH = √3(H - 8) => H(√3 - 1) = 8√3\nH = 8√3 / (√3 - 1) = 8√3(√3 + 1) / 2 = 4(3 + √3) मीटर।\nचूँकि d = H, दूरी भी 4(3 + √3) मीटर है।",
+        "ધારો કે બહુમાળી ઇમારત PC = H અને નાની ઇમારત AB = 8 મીટર છે. વચ્ચેનું અંતર AC = BD = d.\nકાટકોણ ત્રિકોણ PAC માં:\ntan 45° = PC / AC => 1 = H / d => d = H.\nકાટકોણ ત્રિકોણ PBD માં:\nPD = H - 8, tan 30° = PD / BD => 1/√3 = (H - 8) / H\nH = √3(H - 8) => H(√3 - 1) = 8√3\nH = 8√3 / (√3 - 1) = 4(3 + √3) મીટર.\nd = H હોવાથી અંતર પણ 4(3 + √3) મીટર થાય.",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    # 18. NCERT Example 7
+    blocks.append(make_quiz(
+        "C10M_CH9_EG7",
+        "NCERT Example 7: From a point on a bridge across a river, the angles of depression of the banks on opposite sides of the river are 30° and 45°, respectively. If the bridge is at a height of 3 m from the banks, find the width of the river.",
+        "NCERT उदाहरण 7: एक नदी के पुल के एक बिंदु से नदी के सम्मुख किनारों के अवनमन कोण क्रमशः 30° और 45° हैं। यदि पुल किनारों से 3 मीटर की ऊँचाई पर हो, तो नदी की चौड़ाई ज्ञात कीजिए।",
+        "NCERT ઉદાહરણ 7: એક નદી પરના પુલના એક બિંદુથી નદીના સામસામેના કિનારાના અવસેધકોણ અનુક્રમે 30° અને 45° જણાય છે. જો પુલ કિનારાથી 3 મીટરની ઊંચાઈ પર હોય, તો નદીની પહોળાઈ શોધો.",
+        [
+            "3(1 + √3) m",
+            "3(√3 - 1) m",
+            "6√3 m",
+            "3√3 m"
+        ],
+        [
+            "3(1 + √3) मीटर",
+            "3(√3 - 1) मीटर",
+            "6√3 मीटर",
+            "3√3 मीटर"
+        ],
+        [
+            "3(1 + √3) મીટર",
+            "3(√3 - 1) મીટર",
+            "6√3 મીટર",
+            "3√3 મીટર"
+        ],
+        0,
+        "Let P be the point on the bridge and height PD = 3 m. A and B are opposite banks.\nIn right triangle PDA:\ntan 30° = PD / AD => 1/√3 = 3 / AD => AD = 3√3 m.\nIn right triangle PDB:\ntan 45° = PD / DB => 1 = 3 / DB => DB = 3 m.\nWidth of the river AB = AD + DB = 3√3 + 3 = 3(√3 + 1) m.",
+        "माना पुल पर बिंदु P है और ऊँचाई PD = 3 मीटर है। A और B नदी के दोनों किनारे हैं।\nसमकोण त्रिभुज PDA में:\ntan 30° = PD / AD => 1/√3 = 3 / AD => AD = 3√3 मीटर।\nसमकोण त्रिभुज PDB में:\ntan 45° = PD / DB => 1 = 3 / DB => DB = 3 मीटर।\nनदी की चौड़ाई AB = AD + DB = 3√3 + 3 = 3(1 + √3) मीटर।",
+        "ધારો કે પુલ પરનું બિંદુ P છે અને ઊંચાઈ PD = 3 મીટર છે. A અને B નદીના બે સામસામેના કિનારા છે.\nકાટકોણ ત્રિકોણ PDA માં:\ntan 30° = PD / AD => 1/√3 = 3 / AD => AD = 3√3 મીટર.\nકાટકોણ ત્રિકોણ PDB માં:\ntan 45° = PD / DB => 1 = 3 / DB => DB = 3 મીટર.\nનદીની પહોળાઈ AB = AD + DB = 3√3 + 3 = 3(1 + √3) મીટર.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 3: ALL 16 EXERCISE 9.1 QUESTIONS (COMPLETE TEXTBOOK EXERCISE)
+# =========================================================================
+def get_part3_blocks():
+    blocks = []
+
+    # 19. Exercise 9.1 Q1
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q01",
+        "NCERT Exercise 9.1 Q1: A circus artist is climbing a 20 m long rope, which is tightly stretched and tied from the top of a vertical pole to the ground. Find the height of the pole, if the angle made by the rope with the ground level is 30°.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 1: सर्कस का एक कलाकार एक 20 मीटर लंबी डोरी पर चढ़ रहा है, जो अच्छी तरह से तनी हुई है और भूमि पर सीधे लगे खंभे के शिखर से बंधी हुई है। यदि भूमि स्तर के साथ डोरी द्वारा बनाया गया कोण 30° का हो, तो खंभे की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 1: સર્કસનો એક કલાકાર 20 મીટર લાંબા દોરડા પર ચઢી રહ્યો છે, જે ચુસ્ત રીતે ખેંચાયેલું છે અને શિરોલંબ થાંભલાની ટોચથી જમીન સાથે બાંધેલું છે. જો દોરડા દ્વારા જમીન સાથે બનેલો ખૂણો 30° હોય, તો થાંભલાની ઊંચાઈ શોધો.",
+        [
+            "10 m",
+            "10√3 m",
+            "20 m",
+            "5 m"
+        ],
+        [
+            "10 मीटर",
+            "10√3 मीटर",
+            "20 मीटर",
+            "5 मीटर"
+        ],
+        [
+            "10 મીટર",
+            "10√3 મીટર",
+            "20 મીટર",
+            "5 મીટર"
+        ],
+        0,
+        "Let AB be the vertical pole of height h, and AC be the rope = 20 m. Angle ∠ACB = 30°.\nIn right triangle ABC:\nsin 30° = AB / AC = h / 20.\nSince sin 30° = 1/2:\n1/2 = h / 20  =>  h = 20 / 2 = 10 m.\nHence, the height of the pole is 10 m.",
+        "माना AB खंभे की ऊँचाई h और AC डोरी की लंबाई = 20 मीटर है। ∠ACB = 30°।\nसमकोण त्रिभुज ABC में:\nsin 30° = AB / AC = h / 20।\nचूँकि sin 30° = 1/2 होता है:\n1/2 = h / 20  =>  h = 10 मीटर।\nअतः खंभे की ऊँचाई 10 मीटर है।",
+        "ધારો કે AB થાંભલાની ઊંચાઈ h અને AC દોરડાની લંબાઈ = 20 મીટર છે. ∠ACB = 30°.\nકાટકોણ ત્રિકોણ ABC માં:\nsin 30° = AB / AC = h / 20.\nsin 30° = 1/2 હોવાથી:\n1/2 = h / 20  =>  h = 10 મીટર.\nઆમ, થાંભલાની ઊંચાઈ 10 મીટર છે.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 20. Exercise 9.1 Q2
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q02",
+        "NCERT Exercise 9.1 Q2: A tree breaks due to storm and the broken part bends so that the top of the tree touches the ground making an angle 30° with it. The distance between the foot of the tree to the point where the top touches the ground is 8 m. Find the height of the tree.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 2: आँधी आने से एक पेड़ टूट जाता है और टूटा हुआ भाग इस तरह मुड़ जाता है कि पेड़ का शिखर जमीन को छूने लगता है और इसके साथ 30° का कोण बनाता है। पेड़ के पाद-बिंदु से उस बिंदु की दूरी जहाँ पेड़ का शिखर जमीन को छूता है, 8 मीटर है। पेड़ की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 2: વાવાઝોડાને કારણે એક ઝાડ તૂટી જાય છે અને તૂટેલો ભાગ એવી રીતે વળે છે જેથી તેની ટોચ જમીન સાથે 30° નો ખૂણો બનાવીને જમીનને અડકે છે. ઝાડના થડથી ટોચ જમીનને અડકે તે બિંદુનું અંતર 8 મીટર છે. ઝાડની ઊંચાઈ શોધો.",
+        [
+            "8√3 m",
+            "16√3 m",
+            "24 m",
+            "8 m"
+        ],
+        [
+            "8√3 मीटर",
+            "16√3 मीटर",
+            "24 मीटर",
+            "8 मीटर"
+        ],
+        [
+            "8√3 મીટર",
+            "16√3 મીટર",
+            "24 મીટર",
+            "8 મીટર"
+        ],
+        0,
+        "Let the standing part of the tree be AB = x, and the broken bent part be AC = y.\nTotal height of the tree = x + y.\nDistance from foot BC = 8 m, ∠ACB = 30°.\nIn right triangle ABC:\n1. tan 30° = AB / BC => 1/√3 = x / 8 => x = 8 / √3 m.\n2. cos 30° = BC / AC => √3/2 = 8 / y => y = 16 / √3 m.\nTotal height = x + y = 8/√3 + 16/√3 = 24 / √3 = (24√3) / 3 = 8√3 m.",
+        "माना पेड़ का खड़ा भाग AB = x और टूटा भाग AC = y है। पेड़ की कुल ऊँचाई = x + y।\nपाद से दूरी BC = 8 मीटर, ∠ACB = 30°।\nसमकोण त्रिभुज ABC में:\n1. tan 30° = AB / BC => 1/√3 = x / 8 => x = 8 / √3 मीटर।\n2. cos 30° = BC / AC => √3/2 = 8 / y => y = 16 / √3 मीटर।\nपेड़ की कुल ऊँचाई = x + y = 8/√3 + 16/√3 = 24 / √3 = 8√3 मीटर।",
+        "ધારો કે ઝાડનો ઊભો ભાગ AB = x અને તૂટેલો વળેલો ભાગ AC = y છે. ઝાડની કુલ ઊંચાઈ = x + y.\nપાયાથી અંતર BC = 8 મીટર, ∠ACB = 30°.\nકાટકોણ ત્રિકોણ ABC માં:\n1. tan 30° = AB / BC => 1/√3 = x / 8 => x = 8 / √3 મીટર.\n2. cos 30° = BC / AC => √3/2 = 8 / y => y = 16 / √3 મીટર.\nઝાડની કુલ ઊંચાઈ = x + y = 8/√3 + 16/√3 = 24 / √3 = 8√3 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 21. Exercise 9.1 Q3
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q03",
+        "NCERT Exercise 9.1 Q3: A contractor plans to install two slides for children in a park. For children below 5 years, she prefers a slide with top at height 1.5 m inclined at 30° to the ground. For elder children, she wants a steep slide at height 3 m inclined at 60°. What should be the length of the slide in each case?",
+        "NCERT प्रश्नावली 9.1 प्रश्न 3: एक ठेकेदार बच्चों के खेलने के लिए एक पार्क में दो फिसलपट्टी लगाना चाहती है। 5 वर्ष से कम उम्र के बच्चों के लिए वह ऐसी फिसलपट्टी लगाना चाहती है जिसका शिखर 1.5 मीटर की ऊँचाई पर हो और भूमि के साथ 30° के कोण पर झुका हो। जबकि इससे अधिक उम्र के बच्चों के लिए वह 3 मीटर की ऊँचाई पर एक अधिक ढाल की फिसलपट्टी लगाना चाहती है जो भूमि के साथ 60° का कोण बनाती हो। प्रत्येक स्थिति में फिसलपट्टी की लंबाई क्या होनी चाहिए?",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 3: એક કોન્ટ્રાક્ટર બાળકો માટે બગીચામાં બે લપસણી લગાવવાનું આયોજન કરે છે. 5 વર્ષથી ઓછી ઉંમરના બાળકો માટે તે એવી લપસણી પસંદ કરે છે જેની ટોચ 1.5 મીટરની ઊંચાઈ પર હોય અને જમીન સાથે 30° નો ખૂણો બનાવે. મોટી ઉંમરના બાળકો માટે તે 3 મીટરની ઊંચાઈ પર 60° ના ખૂણે નમેલી લપસણી લગાવવા માંગે છે. દરેક કિસ્સામાં લપસણીની લંબાઈ કેટલી હોવી જોઈએ?",
+        [
+            "Case 1 = 3 m, Case 2 = 2√3 m",
+            "Case 1 = 1.5 m, Case 2 = 3 m",
+            "Case 1 = 3 m, Case 2 = 3√3 m",
+            "Case 1 = 2√3 m, Case 2 = 3 m"
+        ],
+        [
+            "स्थिति 1 = 3 मीटर, स्थिति 2 = 2√3 मीटर",
+            "स्थिति 1 = 1.5 मीटर, स्थिति 2 = 3 मीटर",
+            "स्थिति 1 = 3 मीटर, स्थिति 2 = 3√3 मीटर",
+            "स्थिति 1 = 2√3 मीटर, स्थिति 2 = 3 मीटर"
+        ],
+        [
+            "કિસ્સો 1 = 3 મીટર, કિસ્સો 2 = 2√3 મીટર",
+            "કિસ્સો 1 = 1.5 મીટર, કિસ્સો 2 = 3 મીટર",
+            "કિસ્સો 1 = 3 મીટર, કિસ્સો 2 = 3√3 મીટર",
+            "કિસ્સો 1 = 2√3 મીટર, કિસ્સો 2 = 3 મીટર"
+        ],
+        0,
+        "Case 1 (Below 5 years): Height h1 = 1.5 m, θ1 = 30°.\nsin 30° = h1 / L1 => 1/2 = 1.5 / L1 => L1 = 3 m.\nCase 2 (Elder children): Height h2 = 3 m, θ2 = 60°.\nsin 60° = h2 / L2 => √3/2 = 3 / L2 => L2 = 6 / √3 = 2√3 m.\nHence, slide lengths are 3 m and 2√3 m.",
+        "स्थिति 1 (5 वर्ष से कम): ऊँचाई h1 = 1.5 मीटर, θ1 = 30°।\nsin 30° = 1.5 / L1 => 1/2 = 1.5 / L1 => L1 = 3 मीटर।\nस्थिति 2 (बड़े बच्चे): ऊँचाई h2 = 3 मीटर, θ2 = 60°।\nsin 60° = 3 / L2 => √3/2 = 3 / L2 => L2 = 6 / √3 = 2√3 मीटर।\nअतः फिसलपट्टियों की लंबाई क्रमशः 3 मीटर और 2√3 मीटर है।",
+        "કિસ્સો 1 (5 વર્ષથી નાના): ઊંચાઈ h1 = 1.5 મીટર, θ1 = 30°.\nsin 30° = 1.5 / L1 => 1/2 = 1.5 / L1 => L1 = 3 મીટર.\nકિસ્સો 2 (મોટા બાળકો): ઊંચાઈ h2 = 3 મીટર, θ2 = 60°.\nsin 60° = 3 / L2 => √3/2 = 3 / L2 => L2 = 6 / √3 = 2√3 મીટર.\nઆમ, લપસણીની લંબાઈ અનુક્રમે 3 મીટર અને 2√3 મીટર છે.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 22. Exercise 9.1 Q4
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q04",
+        "NCERT Exercise 9.1 Q4: The angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of the tower, is 30°. Find the height of the tower.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 4: भूमि के एक बिंदु से, जो मीनार के पाद-बिंदु से 30 मीटर की दूरी पर है, मीनार के शिखर का उन्नयन कोण 30° है। मीनार की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 4: ટાવરના પાયાથી 30 મીટર દૂર રહેલા જમીન પરના એક બિંદુથી ટાવરની ટોચનો ઉત્સેધકોણ 30° છે. ટાવરની ઊંચાઈ શોધો.",
+        [
+            "10√3 m",
+            "30√3 m",
+            "15 m",
+            "10 m"
+        ],
+        [
+            "10√3 मीटर",
+            "30√3 मीटर",
+            "15 मीटर",
+            "10 मीटर"
+        ],
+        [
+            "10√3 મીટર",
+            "30√3 મીટર",
+            "15 મીટર",
+            "10 મીટર"
+        ],
+        0,
+        "Let tower height be h. Base distance = 30 m, angle θ = 30°.\nIn the right triangle:\ntan 30° = h / 30.\nSince tan 30° = 1/√3:\n1/√3 = h / 30  =>  h = 30 / √3 = (30√3) / 3 = 10√3 m.",
+        "माना मीनार की ऊँचाई h है। आधार दूरी = 30 मीटर, कोण θ = 30°।\nसमकोण त्रिभुज में:\ntan 30° = h / 30।\nचूँकि tan 30° = 1/√3 होता है:\n1/√3 = h / 30  =>  h = 30 / √3 = 10√3 मीटर।",
+        "ધારો કે ટાવરની ઊંચાઈ h છે. પાયાનું અંતર = 30 મીટર, ખૂણો θ = 30°.\nકાટકોણ ત્રિકોણમાં:\ntan 30° = h / 30.\ntan 30° = 1/√3 હોવાથી:\n1/√3 = h / 30  =>  h = 30 / √3 = 10√3 મીટર.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 23. Exercise 9.1 Q5
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q05",
+        "NCERT Exercise 9.1 Q5: A kite is flying at a height of 60 m above the ground. The string attached to the kite is temporarily tied to a point on the ground. The inclination of the string with the ground is 60°. Find the length of the string, assuming that there is no slack in the string.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 5: भूमि से 60 मीटर की ऊँचाई पर एक पतंग उड़ रही है। पतंग में लगी डोरी को अस्थायी रूप से भूमि के एक बिंदु से बाँध दिया गया है। भूमि के साथ डोरी का झुकाવ 60° है। यह मानकर कि डोरी में कोई ढील नहीं है, डोरी की लंबाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 5: એક પતંગ જમીનથી 60 મીટરની ઊંચાઈ પર ઊડી રહી છે. પતંગ સાથે જોડાયેલી દોરીને જમીન પરના એક બિંદુ સાથે કામચલાઉ બાંધી દીધી છે. દોરીનો જમીન સાથેનો ઝુકાવ 60° છે. દોરીમાં કોઈ ઢીલ નથી તેમ માનીને દોરીની લંબાઈ શોધો.",
+        [
+            "40√3 m",
+            "20√3 m",
+            "60 m",
+            "120 m"
+        ],
+        [
+            "40√3 मीटर",
+            "20√3 मीटर",
+            "60 मीटर",
+            "120 मीटर"
+        ],
+        [
+            "40√3 મીટર",
+            "20√3 મીટર",
+            "60 મીટર",
+            "120 મીટર"
+        ],
+        0,
+        "Let the length of the string (hypotenuse) be L. Vertical height h = 60 m, angle θ = 60°.\nIn the right triangle:\nsin 60° = Opposite / Hypotenuse = 60 / L.\nSince sin 60° = √3 / 2:\n√3 / 2 = 60 / L  =>  L = (60 * 2) / √3 = 120 / √3 = (120√3) / 3 = 40√3 m.",
+        "माना डोरी की लंबाई (कर्ण) L है। ऊर्ध्वाधर ऊँचाई h = 60 मीटर, कोण θ = 60°।\nसमकोण त्रिभुज में:\nsin 60° = लंब / कर्ण = 60 / L।\nचूँकि sin 60° = √3 / 2:\n√3 / 2 = 60 / L  =>  L = 120 / √3 = 40√3 मीटर।",
+        "ધારો કે દોરીની લંબાઈ (કર્ણ) L છે. શિરોલંબ ઊંચાઈ h = 60 મીટર, ખૂણો θ = 60°.\nકાટકોણ ત્રિકોણમાં:\nsin 60° = સામેની બાજુ / કર્ણ = 60 / L.\nsin 60° = √3 / 2 હોવાથી:\n√3 / 2 = 60 / L  =>  L = 120 / √3 = 40√3 મીટર.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 24. Exercise 9.1 Q6
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q06",
+        "NCERT Exercise 9.1 Q6: A 1.5 m tall boy is standing at some distance from a 30 m tall building. The angle of elevation from his eyes to the top of the building increases from 30° to 60° as he walks towards the building. Find the distance he walked towards the building.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 6: 1.5 मीटर लंबा एक लड़का 30 मीटर ऊँचे एक भवन से कुछ दूरी पर खड़ा है। जब वह ऊँचे भवन की ओर जाता है तब उसकी आँख से भवन के शिखर का उन्नयन कोण 30° से 60° हो जाता है। बताइए कि वह भवन की ओर कितनी दूरी तक चलकर गया है।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 6: 1.5 મીટર ઊંચો એક છોકરો 30 મીટર ઊંચી ઇમારતથી અમુક અંતરે ઊભો છે. જ્યારે તે ઇમારત તરફ ચાલે છે ત્યારે તેની આંખથી ઇમારતની ટોચનો ઉત્સેધકોણ 30° થી વધીને 60° થાય છે. તે ઇમારત તરફ કેટલું અંતર ચાલ્યો હશે તે શોધો.",
+        [
+            "19√3 m",
+            "28.5 m",
+            "19 m",
+            "28.5√3 m"
+        ],
+        [
+            "19√3 मीटर",
+            "28.5 मीटर",
+            "19 मीटर",
+            "28.5√3 मीटर"
+        ],
+        [
+            "19√3 મીટર",
+            "28.5 મીટર",
+            "19 મીટર",
+            "28.5√3 મીટર"
+        ],
+        0,
+        "Total height of building = 30 m, boy's height = 1.5 m.\nEffective height above eye level = 30 - 1.5 = 28.5 m.\nLet initial distance from building be (x + y) where x is distance walked, and final distance be y.\n1. When angle is 60°:\ntan 60° = 28.5 / y => √3 = 28.5 / y => y = 28.5 / √3 = 9.5√3 m.\n2. When angle is 30°:\ntan 30° = 28.5 / (x + y) => 1/√3 = 28.5 / (x + y) => x + y = 28.5√3 m.\nDistance walked x = (x + y) - y = 28.5√3 - 9.5√3 = 19√3 m.",
+        "भवन की कुल ऊँचाई = 30 मीटर, लड़के की ऊँचाई = 1.5 मीटर।\nआँख के स्तर से प्रभावी ऊँचाई = 30 - 1.5 = 28.5 मीटर।\nमाना प्रारंभिक दूरी (x + y) और अंतिम दूरी y है, जहाँ x चली गई दूरी है।\n1. 60° के लिए: tan 60° = 28.5 / y => y = 28.5 / √3 = 9.5√3 मीटर।\n2. 30° के लिए: tan 30° = 28.5 / (x + y) => x + y = 28.5√3 मीटर।\nचली गई दूरी x = 28.5√3 - 9.5√3 = 19√3 मीटर।",
+        "ઇમારતની કુલ ઊંચાઈ = 30 મીટર, છોકરાની ઊંચાઈ = 1.5 મીટર.\nઆંખની સપાટીથી ઊંચાઈ = 30 - 1.5 = 28.5 મીટર.\nધારો કે કાપેલું અંતર x અને બાકીનું અંતર y છે.\n1. 60° માટે: tan 60° = 28.5 / y => y = 28.5 / √3 = 9.5√3 મીટર.\n2. 30° માટે: tan 30° = 28.5 / (x + y) => x + y = 28.5√3 મીટર.\nકાપેલું અંતર x = 28.5√3 - 9.5√3 = 19√3 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 25. Exercise 9.1 Q7
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q07",
+        "NCERT Exercise 9.1 Q7: From a point on the ground, the angles of elevation of the bottom and the top of a transmission tower fixed at the top of a 20 m high building are 45° and 60° respectively. Find the height of the tower.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 7: भूमि के एक बिंदु से एक 20 मीटर ऊँचे भवन के शिखर पर लगी एक संचार मीनार के तल और शिखर के उन्नयन कोण क्रमशः 45° और 60° हैं। मीनार की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 7: જમીન પરના એક બિંદુથી 20 મીટર ઊંચી ઇમારતની ટોચ પર લગાવેલા ટ્રાન્સમિશન ટાવરના તળિયા અને ટોચના ઉત્સેધકોણ અનુક્રમે 45° અને 60° છે. ટાવરની ઊંચાઈ શોધો.",
+        [
+            "20(√3 - 1) m",
+            "20(√3 + 1) m",
+            "20√3 m",
+            "40 m"
+        ],
+        [
+            "20(√3 - 1) मीटर",
+            "20(√3 + 1) मीटर",
+            "20√3 मीटर",
+            "40 मीटर"
+        ],
+        [
+            "20(√3 - 1) મીટર",
+            "20(√3 + 1) મીટર",
+            "20√3 મીટર",
+            "40 મીટર"
+        ],
+        0,
+        "Let building height AB = 20 m, transmission tower AD = h, and distance on ground be x.\nIn right triangle CAB (angle 45°):\ntan 45° = AB / x => 1 = 20 / x => x = 20 m.\nIn right triangle CAD (angle 60°):\ntan 60° = (AB + AD) / x => √3 = (20 + h) / 20\n20 + h = 20√3 => h = 20√3 - 20 = 20(√3 - 1) m.",
+        "माना भवन AB = 20 मीटर, संचार मीनार AD = h और जमीन पर दूरी x है।\nसमकोण त्रिभुज CAB (कोण 45°) में:\ntan 45° = 20 / x => x = 20 मीटर।\nसमकोण त्रिभुज CAD (कोण 60°) में:\ntan 60° = (20 + h) / x => √3 = (20 + h) / 20\n20 + h = 20√3 => h = 20(√3 - 1) मीटर।",
+        "ધારો કે ઇમારત AB = 20 મીટર, ટાવર AD = h અને જમીન પરનું અંતર x છે.\nકાટકોણ ત્રિકોણ CAB (45°) માં:\ntan 45° = 20 / x => x = 20 મીટર.\nકાટકોણ ત્રિકોણ CAD (60°) માં:\ntan 60° = (20 + h) / x => √3 = (20 + h) / 20\n20 + h = 20√3 => h = 20(√3 - 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 26. Exercise 9.1 Q8
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q08",
+        "NCERT Exercise 9.1 Q8: A statue, 1.6 m tall, stands on the top of a pedestal. From a point on the ground, the angle of elevation of the top of the statue is 60° and from the same point the angle of elevation of the top of the pedestal is 45°. Find the height of the pedestal.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 8: एक पेडस्टल के शिखर पर एक 1.6 मीटर ऊँची मूर्ति लगी है। भूमि के एक बिंदु से मूर्ति के शिखर का उन्नयन कोण 60° है और उसी बिंदु से पेडस्टल के शिखर का उन्नयन कोण 45° है। पेडस्टल की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 8: એક પેડેસ્ટલ (બેઠક) ની ટોચ પર 1.6 મીટર ઊંચી પ્રતિમા મૂકેલી છે. જમીન પરના એક બિંદુથી પ્રતિમાની ટોચનો ઉત્સેધકોણ 60° અને તે જ બિંદુથી પેડેસ્ટલની ટોચનો ઉત્સેધકોણ 45° છે. પેડેસ્ટલની ઊંચાઈ શોધો.",
+        [
+            "0.8(√3 + 1) m",
+            "1.6(√3 - 1) m",
+            "0.8(√3 - 1) m",
+            "1.6(√3 + 1) m"
+        ],
+        [
+            "0.8(√3 + 1) मीटर",
+            "1.6(√3 - 1) मीटर",
+            "0.8(√3 - 1) मीटर",
+            "1.6(√3 + 1) मीटर"
+        ],
+        [
+            "0.8(√3 + 1) મીટર",
+            "1.6(√3 - 1) મીટર",
+            "0.8(√3 - 1) મીટર",
+            "1.6(√3 + 1) મીટર"
+        ],
+        0,
+        "Let pedestal height be h, statue height = 1.6 m, and ground distance be x.\nIn right triangle for pedestal top (45°):\ntan 45° = h / x => 1 = h / x => x = h.\nIn right triangle for statue top (60°):\ntan 60° = (h + 1.6) / x => √3 = (h + 1.6) / h  (since x = h)\nh√3 = h + 1.6 => h(√3 - 1) = 1.6\nh = 1.6 / (√3 - 1) = 1.6(√3 + 1) / (3 - 1) = 1.6(√3 + 1) / 2 = 0.8(√3 + 1) m.",
+        "माना पेडस्टल की ऊँचाई h, मूर्ति की ऊँचाई = 1.6 मीटर और दूरी x है।\n45° कोण वाले त्रिभुज में:\ntan 45° = h / x => x = h।\n60° कोण वाले त्रिभुज में:\ntan 60° = (h + 1.6) / x => √3 = (h + 1.6) / h\nh√3 - h = 1.6 => h(√3 - 1) = 1.6\nh = 1.6 / (√3 - 1) = 1.6(√3 + 1) / 2 = 0.8(√3 + 1) मीटर।",
+        "ધારો કે પેડેસ્ટલની ઊંચાઈ h, પ્રતિમા = 1.6 મીટર અને અંતર x છે.\n45° ના ત્રિકોણમાં:\ntan 45° = h / x => x = h.\n60° ના ત્રિકોણમાં:\ntan 60° = (h + 1.6) / x => √3 = (h + 1.6) / h\nh(√3 - 1) = 1.6 => h = 1.6 / (√3 - 1) = 1.6(√3 + 1) / 2 = 0.8(√3 + 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 27. Exercise 9.1 Q9
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q09",
+        "NCERT Exercise 9.1 Q9: The angle of elevation of the top of a building from the foot of the tower is 30° and the angle of elevation of the top of the tower from the foot of the building is 60°. If the tower is 50 m high, find the height of the building.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 9: एक मीनार के पाद-बिंदु से एक भवन के शिखर का उन्नयन कोण 30° है और भवन के पाद-बिंदु से मीनार के शिखर का उन्नयन कोण 60° है। यदि मीनार 50 मीटर ऊँची हो, तो भवन की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 9: એક ટાવરના પાયાથી ઇમારતની ટોચનો ઉત્સેધકોણ 30° છે અને ઇમારતના પાયાથી ટાવરની ટોચનો ઉત્સેધકોણ 60° છે. જો ટાવર 50 મીટર ઊંચો હોય, તો ઇમારતની ઊંચાઈ શોધો.",
+        [
+            "16 2/3 m (or 50/3 m)",
+            "25 m",
+            "50√3 m",
+            "20 m"
+        ],
+        [
+            "16 2/3 मीटर (या 50/3 मीटर)",
+            "25 मीटर",
+            "50√3 मीटर",
+            "20 मीटर"
+        ],
+        [
+            "16 2/3 મીટર (અથવા 50/3 મીટર)",
+            "25 મીટર",
+            "50√3 મીટર",
+            "20 મીટર"
+        ],
+        0,
+        "Let tower AB = 50 m and building CD = h. Let distance between feet BC = d.\nIn right triangle ABC (from building foot to tower top at 60°):\ntan 60° = AB / d => √3 = 50 / d => d = 50 / √3 m.\nIn right triangle DCB (from tower foot to building top at 30°):\ntan 30° = CD / d => 1/√3 = h / d => h = d / √3.\nSubstitute d = 50 / √3:\nh = (50 / √3) / √3 = 50 / 3 = 16 2/3 m ≈ 16.67 m.",
+        "माना मीनार AB = 50 मीटर और भवन CD = h है। पादों के बीच दूरी BC = d।\nसमकोण त्रिभुज ABC में:\ntan 60° = 50 / d => d = 50 / √3 मीटर।\nसमकोण त्रिभुज DCB में:\ntan 30° = h / d => h = d / √3।\nd का मान रखने पर:\nh = (50 / √3) / √3 = 50 / 3 = 16 2/3 मीटर (या 16.67 मीटर)।",
+        "ધારો કે ટાવર AB = 50 મીટર અને ઇમારત CD = h છે. વચ્ચેનું અંતર BC = d.\nકાટકોણ ત્રિકોણ ABC માં:\ntan 60° = 50 / d => d = 50 / √3 મીટર.\nકાટકોણ ત્રિકોણ DCB માં:\ntan 30° = h / d => h = d / √3.\nd નું મૂલ્ય મૂકતાં:\nh = (50 / √3) / √3 = 50 / 3 = 16 2/3 મીટર (અથવા 16.67 મીટર).",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 28. Exercise 9.1 Q10
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q10",
+        "NCERT Exercise 9.1 Q10: Two poles of equal heights are standing opposite each other on either side of the road, which is 80 m wide. From a point between them on the road, the angles of elevation of the top of the poles are 60° and 30°, respectively. Find the height of the poles and the distances of the point from the poles.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 10: एक 80 मीटर चौड़ी सड़क के दोनों ओर आमने-सामने समान लंबाई वाले दो खंभे लगे हुए हैं। इन दोनों खंभों के बीच सड़क के एक बिंदु से खंभों के शिखर के उन्नयन कोण क्रमशः 60° और 30° हैं। खंभों की ऊँचाई और खंभों से बिंदु की दूरियाँ ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 10: 80 મીટર પહોળા રસ્તાની બંને બાજુએ સામસામે સમાન ઊંચાઈના બે થાંભલા ઊભા છે. રસ્તા પરના તેમની વચ્ચેના એક બિંદુથી થાંભલાઓની ટોચના ઉત્સેધકોણ અનુક્રમે 60° અને 30° જણાય છે. થાંભલાઓની ઊંચાઈ અને બિંદુથી થાંભલાઓનાં અંતર શોધો.",
+        [
+            "Height = 20√3 m, Distances = 20 m and 60 m",
+            "Height = 10√3 m, Distances = 40 m and 40 m",
+            "Height = 40√3 m, Distances = 20 m and 60 m",
+            "Height = 20 m, Distances = 30 m and 50 m"
+        ],
+        [
+            "ऊँचाई = 20√3 मीटर, दूरियाँ = 20 मीटर और 60 मीटर",
+            "ऊँचाई = 10√3 मीटर, दूरियाँ = 40 मीटर और 40 मीटर",
+            "ऊँचाई = 40√3 मीटर, दूरियाँ = 20 मीटर और 60 मीटर",
+            "ऊँचाई = 20 मीटर, दूरियाँ = 30 मीटर और 50 मीटर"
+        ],
+        [
+            "ઊંચાઈ = 20√3 મીટર, અંતર = 20 મીટર અને 60 મીટર",
+            "ઊંચાઈ = 10√3 મીટર, અંતર = 40 મીટર અને 40 મીટર",
+            "ઊંચાઈ = 40√3 મીટર, અંતર = 20 મીટર અને 60 મીટર",
+            "ઊંચાઈ = 20 મીટર, અંતર = 30 મીટર અને 50 મીટર"
+        ],
+        0,
+        "Let both poles have height h. Road width = 80 m. Point P is x m from first pole and (80 - x) m from second pole.\n1. First pole (60°): tan 60° = h / x => √3 = h / x => h = x√3.\n2. Second pole (30°): tan 30° = h / (80 - x) => 1/√3 = h / (80 - x) => h = (80 - x) / √3.\nEquating h:\nx√3 = (80 - x) / √3 => 3x = 80 - x => 4x = 80 => x = 20 m.\nDistances are x = 20 m and 80 - x = 60 m.\nHeight h = x√3 = 20√3 m.",
+        "माना दोनों खंभों की ऊँचाई h है। सड़क की चौड़ाई = 80 मीटर। बिंदु P पहले खंभे से x और दूसरे से (80 - x) मीटर दूर है।\n1. पहले खंभे के लिए: tan 60° = h / x => h = x√3।\n2. दूसरे खंभे के लिए: tan 30° = h / (80 - x) => h = (80 - x) / √3।\nh के मान बराबर करने पर:\nx√3 = (80 - x) / √3 => 3x = 80 - x => 4x = 80 => x = 20 मीटर।\nदूरियाँ 20 मीटर और 60 मीटर हैं।\nऊँचाई h = 20√3 मीटर है।",
+        "ધારો કે બંને થાંભલાની ઊંચાઈ h છે. રસ્તાની પહોળાઈ = 80 મીટર. બિંદુ P નું અંતર x અને (80 - x) મીટર છે.\n1. પ્રથમ થાંભલા માટે: tan 60° = h / x => h = x√3.\n2. બીજા થાંભલા માટે: tan 30° = h / (80 - x) => h = (80 - x) / √3.\nh સરખાવતાં:\nx√3 = (80 - x) / √3 => 3x = 80 - x => 4x = 80 => x = 20 મીટર.\nઅંતર 20 મીટર અને 60 મીટર છે.\nઊંચાઈ h = 20√3 મીટર છે.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 29. Exercise 9.1 Q11
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q11",
+        "NCERT Exercise 9.1 Q11: A TV tower stands vertically on a bank of a canal. From a point on the other bank directly opposite the tower, the angle of elevation of the top of the tower is 60°. From another point 20 m away from this point on the line joining this point to the foot of the tower, the angle of elevation of the top of the tower is 30°. Find the height of the tower and the width of the canal.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 11: एक नहर के एक तट पर एक टीवी टॉवर ऊर्ध्वाधर खड़ा है। टॉवर के ठीक सामने दूसरे तट के एक बिंदु से टॉवर के शिखर का उन्नयन कोण 60° है। इसी तट पर इस बिंदु से 20 मीटर दूर और इस बिंदु को मीनार के पाद से मिलाने वाली रेखा पर स्थित एक अन्य बिंदु से टॉवर के शिखर का उन्नयन कोण 30° है। टॉवर की ऊँचाई और नहर की चौड़ाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 11: એક નહેરના કાંઠે એક ટીવી ટાવર શિરોલંબ ઊભો છે. ટાવરની સામેના બીજા કાંઠા પરના એક બિંદુથી ટાવરની ટોચનો ઉત્સેધકોણ 60° છે. આ બિંદુથી 20 મીટર દૂર અને આ બિંદુને ટાવરના પાયા સાથે જોડતી રેખા પર આવેલા બીજા બિંદુથી ટાવરની ટોચનો ઉત્સેધકોણ 30° છે. ટાવરની ઊંચાઈ અને નહેરની પહોળાઈ શોધો.",
+        [
+            "Height = 10√3 m, Width = 10 m",
+            "Height = 20√3 m, Width = 20 m",
+            "Height = 10 m, Width = 10√3 m",
+            "Height = 30 m, Width = 15 m"
+        ],
+        [
+            "ऊँचाई = 10√3 मीटर, चौड़ाई = 10 मीटर",
+            "ऊँचाई = 20√3 मीटर, चौड़ाई = 20 मीटर",
+            "ऊँचाई = 10 मीटर, चौड़ाई = 10√3 मीटर",
+            "ऊँचाई = 30 मीटर, चौड़ाई = 15 मीटर"
+        ],
+        [
+            "ઊંચાઈ = 10√3 મીટર, પહોળાઈ = 10 મીટર",
+            "ઊંચાઈ = 20√3 મીટર, પહોળાઈ = 20 મીટર",
+            "ઊંચાઈ = 10 મીટર, પહોળાઈ = 10√3 મીટર",
+            "ઊંચાઈ = 30 મીટર, પહોળાઈ = 15 મીટર"
+        ],
+        0,
+        "Let tower height AB = h and canal width BC = x. Distance CD = 20 m, BD = x + 20.\n1. In right triangle ABC:\ntan 60° = h / x => √3 = h / x => h = x√3.\n2. In right triangle ABD:\ntan 30° = h / (x + 20) => 1/√3 = h / (x + 20) => h = (x + 20) / √3.\nEquating h:\nx√3 = (x + 20) / √3 => 3x = x + 20 => 2x = 20 => x = 10 m (canal width).\nHeight of tower h = x√3 = 10√3 m.",
+        "माना टॉवर की ऊँचाई AB = h और नहर की चौड़ाई BC = x है। CD = 20 मीटर।\n1. समकोण त्रिभुज ABC में: tan 60° = h / x => h = x√3।\n2. समकोण त्रिभुज ABD में: tan 30° = h / (x + 20) => h = (x + 20) / √3।\nh के मान बराबर करने पर:\nx√3 = (x + 20) / √3 => 3x = x + 20 => 2x = 20 => x = 10 मीटर (नहर की चौड़ाई)।\nटॉवर की ऊँचाई h = 10√3 मीटर।",
+        "ધારો કે ટાવરની ઊંચાઈ AB = h અને નહેરની પહોળાઈ BC = x છે. CD = 20 મીટર.\n1. કાટકોણ ત્રિકોણ ABC માં: tan 60° = h / x => h = x√3.\n2. કાટકોણ ત્રિકોણ ABD માં: tan 30° = h / (x + 20) => h = (x + 20) / √3.\nh સરખાવતાં:\nx√3 = (x + 20) / √3 => 3x = x + 20 => 2x = 20 => x = 10 મીટર (નહેરની પહોળાઈ).\nટાવરની ઊંચાઈ h = 10√3 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 30. Exercise 9.1 Q12
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q12",
+        "NCERT Exercise 9.1 Q12: From the top of a 7 m high building, the angle of elevation of the top of a cable tower is 60° and the angle of depression of its foot is 45°. Determine the height of the tower.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 12: 7 मीटर ऊँचे भवन के शिखर से एक केबल टॉवर के शिखर का उन्नयन कोण 60° है और इसके पाद का अवनमन कोण 45° है। टॉवर की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 12: 7 મીટર ઊંચી ઇમારતની ટોચ પરથી એક કેબલ ટાવરની ટોચનો ઉત્સેધકોણ 60° અને તેના પાયાનો અવસેધકોણ 45° છે. ટાવરની ઊંચાઈ શોધો.",
+        [
+            "7(√3 + 1) m",
+            "7(√3 - 1) m",
+            "14 m",
+            "7√3 m"
+        ],
+        [
+            "7(√3 + 1) मीटर",
+            "7(√3 - 1) मीटर",
+            "14 मीटर",
+            "7√3 मीटर"
+        ],
+        [
+            "7(√3 + 1) મીટર",
+            "7(√3 - 1) મીટર",
+            "14 મીટર",
+            "7√3 મીટર"
+        ],
+        0,
+        "Let building AB = 7 m and cable tower CD = H. Distance between them AC = d.\nDraw horizontal line BE parallel to AC, so BE = d and EC = AB = 7 m.\nIn right triangle ABC (depression to foot is 45°):\ntan 45° = AB / AC => 1 = 7 / d => d = 7 m.\nIn right triangle BED (elevation to top is 60°):\ntan 60° = DE / BE => √3 = DE / 7 => DE = 7√3 m.\nTotal height of tower CD = DE + EC = 7√3 + 7 = 7(√3 + 1) m.",
+        "माना भवन AB = 7 मीटर और केबल टॉवर CD = H है। दोनों के बीच दूरी AC = d।\nBE क्षैतिज रेखा खींचें, अतः BE = d और EC = 7 मीटर।\nसमकोण त्रिभुज ABC में (पाद का अवनमन कोण 45°):\ntan 45° = AB / AC => 1 = 7 / d => d = 7 मीटर।\nसमकोण त्रिभुज BED में (शिखर का उन्नयन कोण 60°):\ntan 60° = DE / BE => √3 = DE / 7 => DE = 7√3 मीटर।\nटॉवर की कुल ऊँचाई CD = DE + EC = 7√3 + 7 = 7(√3 + 1) मीटर।",
+        "ધારો કે ઇમારત AB = 7 મીટર અને ટાવર CD = H છે. વચ્ચેનું અંતર AC = d.\nBE સમક્ષિતિજ રેખા દોરો, જેથી BE = d અને EC = 7 મીટર થાય.\nકાટકોણ ત્રિકોણ ABC માં (પાયાનો અવસેધકોણ 45°):\ntan 45° = 7 / d => d = 7 મીટર.\nકાટકોણ ત્રિકોણ BED માં (ટોચનો ઉત્સેધકોણ 60°):\ntan 60° = DE / BE => √3 = DE / 7 => DE = 7√3 મીટર.\nટાવરની કુલ ઊંચાઈ CD = DE + EC = 7√3 + 7 = 7(√3 + 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 31. Exercise 9.1 Q13
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q13",
+        "NCERT Exercise 9.1 Q13: As observed from the top of a 75 m high lighthouse from the sea-level, the angles of depression of two ships are 30° and 45°. If one ship is exactly behind the other on the same side of the lighthouse, find the distance between the two ships.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 13: समुद्र-तल से 75 मीटर ऊँची लाइट हाउस के शिखर से देखने पर दो समुद्री जहाजों के अवनमन कोण 30° और 45° हैं। यदि लाइट हाउस के एक ही ओर एक जहाज दूसरे जहाज के ठीक पीछे हो, तो दोनों जहाजों के बीच की दूरी ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 13: દરિયાની સપાટીથી 75 મીટર ઊંચી દીવાદાંડીની ટોચ પરથી જોતાં બે વહાણોના અવસેધકોણ 30° અને 45° જણાય છે. જો દીવાદાંડીની એક જ બાજુએ એક વહાણ બીજા વહાણની બરાબર પાછળ હોય, તો બંને વહાણો વચ્ચેનું અંતર શોધો.",
+        [
+            "75(√3 - 1) m",
+            "75(√3 + 1) m",
+            "75√3 m",
+            "75 m"
+        ],
+        [
+            "75(√3 - 1) मीटर",
+            "75(√3 + 1) मीटर",
+            "75√3 मीटर",
+            "75 मीटर"
+        ],
+        [
+            "75(√3 - 1) મીટર",
+            "75(√3 + 1) મીટર",
+            "75√3 મીટર",
+            "75 મીટર"
+        ],
+        0,
+        "Let lighthouse AB = 75 m. Ship 1 is at C (closer, angle 45°) and Ship 2 is at D (farther, angle 30°).\nIn right triangle ABC:\ntan 45° = AB / BC => 1 = 75 / BC => BC = 75 m.\nIn right triangle ABD:\ntan 30° = AB / BD => 1/√3 = 75 / BD => BD = 75√3 m.\nDistance between ships CD = BD - BC = 75√3 - 75 = 75(√3 - 1) m.",
+        "माना लाइटहाउस AB = 75 मीटर है। जहाज 1 बिंदु C पर (45°) और जहाज 2 बिंदु D पर (30°) है।\nसमकोण त्रिभुज ABC में:\ntan 45° = 75 / BC => BC = 75 मीटर।\nसमकोण त्रिभुज ABD में:\ntan 30° = 75 / BD => BD = 75√3 मीटर।\nदोनों जहाजों के बीच की दूरी CD = BD - BC = 75√3 - 75 = 75(√3 - 1) मीटर।",
+        "ધારો કે દીવાદાંડી AB = 75 મીટર છે. વહાણ 1 બિંદુ C આગળ (45°) અને વહાણ 2 બિંદુ D આગળ (30°) છે.\nકાટકોણ ત્રિકોણ ABC માં:\ntan 45° = 75 / BC => BC = 75 મીટર.\nકાટકોણ ત્રિકોણ ABD માં:\ntan 30° = 75 / BD => BD = 75√3 મીટર.\nબંને વહાણો વચ્ચેનું અંતર CD = BD - BC = 75√3 - 75 = 75(√3 - 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 32. Exercise 9.1 Q14
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q14",
+        "NCERT Exercise 9.1 Q14: A 1.2 m tall girl spots a balloon moving with the wind in a horizontal line at a height of 88.2 m from the ground. The angle of elevation of the balloon from the eyes of the girl at any instant is 60°. After some time, the angle of elevation reduces to 30°. Find the distance travelled by the balloon during the interval.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 14: 1.2 मीटर लंबी एक लड़की भूमि से 88.2 मीटर की ऊँचाई पर एक क्षैतिज रेखा में हवा में उड़ रहे गुब्बारे को देखती है। किसी भी क्षण लड़की की आँख से गुब्बारे का उन्नयन कोण 60° है। कुछ समय बाद उन्नयन कोण घटकर 30° हो जाता है। इस अंतराल के दौरान गुब्बारे द्वारा तय की गई दूरी ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 14: 1.2 મીટર ઊંચાઈવાળી એક છોકરી જમીનથી 88.2 મીટર ઊંચાઈ પર પવન સાથે સમક્ષિતિજ રેખામાં ઊડતા ફુગ્ગાને જુએ છે. કોઈ એક ક્ષણે તેની આંખથી ફુગ્ગાનો ઉત્સેધકોણ 60° છે. થોડા સમય પછી ઉત્સેધકોણ ઘટીને 30° થાય છે. આ સમયગાળા દરમિયાન ફુગ્ગાએ કાપેલું અંતર શોધો.",
+        [
+            "58√3 m",
+            "87√3 m",
+            "29√3 m",
+            "58 m"
+        ],
+        [
+            "58√3 मीटर",
+            "87√3 मीटर",
+            "29√3 मीटर",
+            "58 मीटर"
+        ],
+        [
+            "58√3 મીટર",
+            "87√3 મીટર",
+            "29√3 મીટર",
+            "58 મીટર"
+        ],
+        0,
+        "Total height from ground = 88.2 m, girl's height = 1.2 m.\nEffective vertical height above eye level = 88.2 - 1.2 = 87 m.\nLet initial horizontal distance from eye be x and final horizontal distance be y.\n1. At 60° angle:\ntan 60° = 87 / x => √3 = 87 / x => x = 87 / √3 = 29√3 m.\n2. At 30° angle:\ntan 30° = 87 / y => 1/√3 = 87 / y => y = 87√3 m.\nDistance travelled by balloon = y - x = 87√3 - 29√3 = 58√3 m.",
+        "भूमि से कुल ऊँचाई = 88.2 मीटर, लड़की की ऊँचाई = 1.2 मीटर।\nआँख के स्तर से प्रभावी ऊँचाई = 88.2 - 1.2 = 87 मीटर।\nमाना प्रारंभिक क्षैतिज दूरी x और अंतिम क्षैतिज दूरी y है।\n1. 60° कोण पर: tan 60° = 87 / x => x = 87 / √3 = 29√3 मीटर।\n2. 30° कोण पर: tan 30° = 87 / y => y = 87√3 मीटर।\nगुब्बारे द्वारा तय की गई दूरी = y - x = 87√3 - 29√3 = 58√3 मीटर।",
+        "જમીનથી કુલ ઊંચાઈ = 88.2 મીટર, છોકરીની ઊંચાઈ = 1.2 મીટર.\nઆંખના સ્તરથી અસરકારક ઊંચાઈ = 88.2 - 1.2 = 87 મીટર.\nધારો કે પ્રારંભિક અંતર x અને અંતિમ અંતર y છે.\n1. 60° ખૂણા માટે: tan 60° = 87 / x => x = 87 / √3 = 29√3 મીટર.\n2. 30° ખૂણા માટે: tan 30° = 87 / y => y = 87√3 મીટર.\nફુગ્ગાએ કાપેલું અંતર = y - x = 87√3 - 29√3 = 58√3 મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 33. Exercise 9.1 Q15
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q15",
+        "NCERT Exercise 9.1 Q15: A straight highway leads to the foot of a tower. A man standing at the top of the tower observes a car at an angle of depression of 30°, which is approaching the foot of the tower with a uniform speed. Six seconds later, the angle of depression of the car is found to be 60°. Find the time taken by the car to reach the foot of the tower from this point.",
+        "NCERT प्रश्नावली 9.1 प्रश्न 15: एक सीधा राजमार्ग एक मीनार के पाद तक जाता है। मीनार के शिखर पर खड़ा एक आदमी एक कार को 30° के अवनमन कोण पर देखता है जो कि मीनार के पाद की ओर एक समान चाल से जाती है। छः सेकंड बाद कार का अवनमन कोण 60° हो गया। इस बिंदु से मीनार के पाद तक पहुँचने में कार द्वारा लिया गया समय ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 15: એક સીધો હાઇવે ટાવરના પાયા સુધી જાય છે. ટાવરની ટોચ પર ઊભેલો એક માણસ એક કારને 30° ના અવસેધકોણે જુએ છે, જે સમાન ઝડપે ટાવરના પાયા તરફ આવી રહી છે. છ સેકન્ડ પછી કારનો અવસેધકોણ 60° જણાય છે. આ બિંદુથી ટાવરના પાયા સુધી પહોંચવા માટે કારે લીધેલો સમય શોધો.",
+        [
+            "3 seconds",
+            "6 seconds",
+            "2 seconds",
+            "4 seconds"
+        ],
+        [
+            "3 सेकंड",
+            "6 सेकंड",
+            "2 सेकंड",
+            "4 सेकंड"
+        ],
+        [
+            "3 સેકન્ડ",
+            "6 સેકન્ડ",
+            "2 સેકન્ડ",
+            "4 સેકન્ડ"
+        ],
+        0,
+        "Let tower height be h. Let initial distance be d1 (at 30°) and distance after 6 seconds be d2 (at 60°).\n1. tan 30° = h / d1 => d1 = h√3.\n2. tan 60° = h / d2 => d2 = h / √3.\nDistance travelled in 6 seconds:\nΔd = d1 - d2 = h√3 - h / √3 = 2h / √3.\nSince speed is uniform:\nSpeed v = Distance / Time = (2h / √3) / 6 = h / (3√3).\nTime to cover remaining distance d2:\nTime = Distance / Speed = (h / √3) / [h / (3√3)] = 3 seconds.\nNotice the remaining distance (h/√3) is exactly HALF the distance covered in 6 seconds (2h/√3), so it takes half the time: 6 / 2 = 3 seconds!",
+        "माना मीनार की ऊँचाई h है। 30° पर दूरी d1 और 60° पर दूरी d2 है।\n1. tan 30° = h / d1 => d1 = h√3।\n2. tan 60° = h / d2 => d2 = h / √3।\n6 सेकंड में तय की गई दूरी:\nΔd = d1 - d2 = h√3 - h / √3 = 2h / √3।\nचूँकि चाल समान है, बची हुई दूरी (h/√3) तय की गई दूरी (2h/√3) की ठीक आधी है!\nअतः लगा समय भी आधा होगा: 6 / 2 = 3 सेकंड।",
+        "ધારો કે ટાવરની ઊંચાઈ h છે. 30° આગળ અંતર d1 અને 60° આગળ અંતર d2 છે.\n1. tan 30° = h / d1 => d1 = h√3.\n2. tan 60° = h / d2 => d2 = h / √3.\n6 સેકન્ડમાં કપાયેલું અંતર = d1 - d2 = 2h / √3.\nઝડપ અચળ હોવાથી, બાકી રહેલું અંતર (h/√3) એ કાપેલા અંતર (2h/√3) કરતાં બરાબર અડધું છે!\nતેથી બાકીનું અંતર કાપતાં પણ અડધો સમય લાગશે: 6 / 2 = 3 સેકન્ડ.",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    # 34. Exercise 9.1 Q16
+    blocks.append(make_quiz(
+        "C10M_CH9_EX1_Q16",
+        "NCERT Exercise 9.1 Q16: The angles of elevation of the top of a tower from two points at a distance of 4 m and 9 m from the base of the tower and in the same straight line with it are complementary. What is the height of the tower?",
+        "NCERT प्रश्नावली 9.1 प्रश्न 16: मीनार के आधार से और एक ही सरल रेखा में 4 मीटर और 9 मीटर की दूरी पर स्थित दो बिंदुओं से मीनार के शिखर के उन्नयन कोण पूरक कोण हैं। मीनार की ऊँचाई ज्ञात कीजिए।",
+        "NCERT સ્વાધ્યાય 9.1 પ્રશ્ન 16: ટાવરના પાયામાંથી પસાર થતી સીધી રેખા પર પાયાથી 4 મીટર અને 9 મીટર અંતરે આવેલાં બે બિંદુઓથી ટાવરની ટોચના ઉત્સેધકોણ એકબીજાના કોટિકોણ છે. ટાવરની ઊંચાઈ કેટલી હશે?",
+        [
+            "6 m",
+            "36 m",
+            "5 m",
+            "13 m"
+        ],
+        [
+            "6 मीटर",
+            "36 मीटर",
+            "5 मीटर",
+            "13 मीटर"
+        ],
+        [
+            "6 મીટર",
+            "36 મીટર",
+            "5 મીટર",
+            "13 મીટર"
+        ],
+        0,
+        "Let tower height be h. Complementary angles sum to 90°, so let the two angles be θ and (90° - θ).\n1. From point at distance 4 m:\ntan θ = h / 4.\n2. From point at distance 9 m:\ntan(90° - θ) = h / 9 => cot θ = h / 9.\nMultiplying equation (1) and equation (2):\ntan θ * cot θ = (h / 4) * (h / 9)\nSince tan θ * cot θ = 1:\n1 = h² / 36  =>  h² = 36  =>  h = 6 m (taking positive value for height).\nHence, the height of the tower is 6 m.",
+        "माना मीनार की ऊँचाई h है। पूरक कोणों का योग 90° होता है, अतः कोण θ और (90° - θ) हैं।\n1. 4 मीटर दूरी से: tan θ = h / 4।\n2. 9 मीटर दूरी से: tan(90° - θ) = cot θ = h / 9।\nदोनों समीकरणों का गुणा करने पर:\ntan θ * cot θ = (h / 4) * (h / 9)\nचूँकि tan θ * cot θ = 1 होता है:\n1 = h² / 36  =>  h² = 36  =>  h = 6 मीटर।\nअतः मीनार की ऊँचाई 6 मीटर है।",
+        "ધારો કે ટાવરની ઊંચાઈ h છે. કોટિકોણનો સરવાળો 90° હોવાથી ખૂણા θ અને (90° - θ) છે.\n1. 4 મીટર અંતરેથી: tan θ = h / 4.\n2. 9 મીટર અંતરેથી: tan(90° - θ) = cot θ = h / 9.\nબંને સમીકરણોનો ગુણાકાર કરતાં:\ntan θ * cot θ = (h / 4) * (h / 9)\ntan θ * cot θ = 1 હોવાથી:\n1 = h² / 36  =>  h² = 36  =>  h = 6 મીટર.\nઆમ, ટાવરની ઊંચાઈ 6 મીટર છે.",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 4: HIGH-YIELD BOARD EXAM MCQS, HOTS & CASE STUDIES
+# =========================================================================
+def get_part4_blocks():
+    blocks = []
+
+    # 35. HOTS 1: Aircraft Velocity Problem
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_01",
+        "Board Exam Challenge: An aeroplane flying horizontally at a constant altitude of 3000 m is observed from a point on the ground. The angle of elevation is 60°. After 15 seconds, the angle of elevation reduces to 30°. Find the speed of the aeroplane in km/h. (Take √3 = 1.732)",
+        "बोर्ड परीक्षा चुनौती: 3000 मीटर की स्थिर ऊँचाई पर क्षैतिज रूप से उड़ रहे एक हवाई जहाज को जमीन के एक बिंदु से देखा जाता है। उन्नयन कोण 60° है। 15 सेकंड बाद उन्नयन कोण घटकर 30° हो जाता है। हवाई जहाज की चाल किमी/घंटा में ज्ञात कीजिए। (√3 = 1.732 लीजिए)",
+        "બોર્ડ પરીક્ષા પડકાર: 3000 મીટરની અચળ ઊંચાઈ પર સમક્ષિતિજ ઊડી રહેલા એક વિમાનને જમીન પરના બિંદુથી જોતાં ઉત્સેધકોણ 60° છે. 15 સેકન્ડ પછી ઉત્સેધકોણ ઘટીને 30° થાય છે. વિમાનની ઝડપ કિમી/કલાકમાં શોધો. (√3 = 1.732 લો)",
+        [
+            "831.36 km/h (or 480√3 km/h)",
+            "720.00 km/h",
+            "480.00 km/h",
+            "650.50 km/h"
+        ],
+        [
+            "831.36 किमी/घंटा (या 480√3 किमी/घंटा)",
+            "720.00 किमी/घंटा",
+            "480.00 किमी/घंटा",
+            "650.50 किमी/घंटा"
+        ],
+        [
+            "831.36 કિમી/કલાક (અથવા 480√3 કિમી/કલાક)",
+            "720.00 કિમી/કલાક",
+            "480.00 કિમી/કલાક",
+            "650.50 કિમી/કલાક"
+        ],
+        0,
+        "Height h = 3000 m. Let ground distances at 60° and 30° be d1 and d2.\n1. tan 60° = 3000 / d1 => √3 = 3000 / d1 => d1 = 3000 / √3 = 1000√3 m.\n2. tan 30° = 3000 / d2 => 1/√3 = 3000 / d2 => d2 = 3000√3 m.\nDistance travelled in 15 s: d = d2 - d1 = 3000√3 - 1000√3 = 2000√3 m.\nSpeed in m/s = 2000√3 / 15 = (400√3) / 3 m/s.\nConvert to km/h by multiplying with 18/5:\nSpeed = [(400√3) / 3] * (18 / 5) = 480√3 km/h = 480 * 1.732 = 831.36 km/h.",
+        "ऊँचाई h = 3000 मीटर। 60° और 30° पर क्षैतिज दूरियाँ d1 और d2 हैं।\n1. tan 60° = 3000 / d1 => d1 = 1000√3 मीटर।\n2. tan 30° = 3000 / d2 => d2 = 3000√3 मीटर।\n15 सेकंड में तय दूरी: d = 3000√3 - 1000√3 = 2000√3 मीटर।\nचाल (m/s) = 2000√3 / 15 = (400√3) / 3 m/s।\nकिमी/घंटा में बदलने के लिए 18/5 से गुणा करें:\nचाल = [(400√3) / 3] * (18 / 5) = 480√3 = 480 * 1.732 = 831.36 किमी/घंटा।",
+        "ઊંચાઈ h = 3000 મીટર. 60° અને 30° આગળ સમક્ષિતિજ અંતર d1 અને d2 છે.\n1. tan 60° = 3000 / d1 => d1 = 1000√3 મીટર.\n2. tan 30° = 3000 / d2 => d2 = 3000√3 મીટર.\n15 સેકન્ડમાં કાપેલું અંતર: d = 3000√3 - 1000√3 = 2000√3 મીટર.\nઝડપ (m/s) = 2000√3 / 15 = (400√3) / 3 m/s.\nકિમી/કલાકમાં ફેરવવા માટે 18/5 વડે ગુણતાં:\nઝડપ = 480√3 = 480 * 1.732 = 831.36 કિમી/કલાક.",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    # 36. HOTS 2: Ships on Opposite Sides
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_02",
+        "From the top of a 100 m high lighthouse, two ships are observed on OPPOSITE sides of the lighthouse. The angles of depression of the ships are 30° and 45°. What is the distance between the two ships?",
+        "100 मीटर ऊँचे लाइटहाउस के शिखर से, लाइटहाउस के विपरीत दिशाओं (सामने और पीछे) में दो जहाजों को देखा जाता है। जहाजों के अवनमन कोण 30° और 45° हैं। दोनों जहाजों के बीच की दूरी क्या है?",
+        "100 મીટર ઊંચી દીવાદાંડીની ટોચ પરથી, દીવાદાંડીની પરસ્પર વિરુદ્ધ બાજુએ રહેલા બે વહાણો જોવામાં આવે છે. વહાણોના અવસેધકોણ 30° અને 45° છે. બંને વહાણો વચ્ચેનું અંતર કેટલું થશે?",
+        [
+            "100(√3 + 1) m",
+            "100(√3 - 1) m",
+            "100√3 m",
+            "200 m"
+        ],
+        [
+            "100(√3 + 1) मीटर",
+            "100(√3 - 1) मीटर",
+            "100√3 मीटर",
+            "200 मीटर"
+        ],
+        [
+            "100(√3 + 1) મીટર",
+            "100(√3 - 1) મીટર",
+            "100√3 મીટર",
+            "200 મીટર"
+        ],
+        0,
+        "Because the ships are on OPPOSITE sides of the lighthouse (unlike NCERT Q13 where they are on the same side), the total distance is the SUM of their distances from the base:\nShip 1 (at 45°): d1 = 100 / tan 45° = 100 m.\nShip 2 (at 30°): d2 = 100 / tan 30° = 100√3 m.\nTotal distance between ships = d1 + d2 = 100 + 100√3 = 100(√3 + 1) m.",
+        "चूँकि जहाज लाइटहाउस के विपरीत किनारों पर हैं (NCERT प्रश्न 13 के विपरीत जहाँ वे एक ही तरफ थे), कुल दूरी दोनों की आधार से दूरियों का योग होगी:\nजहाज 1 (45° पर): d1 = 100 / tan 45° = 100 मीटर।\nजहाज 2 (30° पर): d2 = 100 / tan 30° = 100√3 मीटर।\nदोनों जहाजों के बीच की कुल दूरी = d1 + d2 = 100 + 100√3 = 100(√3 + 1) मीटर।",
+        "વહાણો દીવાદાંડીની સામસામેની વિરુદ્ધ બાજુએ હોવાથી કુલ અંતર બંને અંતરોના સરવાળા જેટલું થશે:\nવહાણ 1 (45°): d1 = 100 / tan 45° = 100 મીટર.\nવહાણ 2 (30°): d2 = 100 / tan 30° = 100√3 મીટર.\nબંને વહાણો વચ્ચેનું કુલ અંતર = d1 + d2 = 100 + 100√3 = 100(√3 + 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 37. HOTS 3: Ratio of Tower Heights
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_03",
+        "Two towers of heights h1 and h2 subtend angles of 30° and 60° respectively at the midpoint of the line segment joining their feet on level ground. What is the ratio h1 : h2?",
+        "h1 और h2 ऊँचाई की दो मीनारें उनके पादों को मिलाने वाले रेखाखंड के मध्य-बिंदु पर क्रमशः 30° और 60° के कोण अंतरित करती हैं। अनुपात h1 : h2 क्या है?",
+        "h1 અને h2 ઊંચાઈના બે ટાવર તેમના પાયાને જોડતા રેખાખંડના મધ્યબિંદુ આગળ અનુક્રમે 30° અને 60° નો ખૂણો આંતરે છે. ગુણોત્તર h1 : h2 કેટલો થશે?",
+        [
+            "1 : 3",
+            "3 : 1",
+            "1 : √3",
+            "√3 : 1"
+        ],
+        [
+            "1 : 3",
+            "3 : 1",
+            "1 : √3",
+            "√3 : 1"
+        ],
+        [
+            "1 : 3",
+            "3 : 1",
+            "1 : √3",
+            "√3 : 1"
+        ],
+        0,
+        "Let the distance from each tower foot to the midpoint be x.\nFor first tower: tan 30° = h1 / x => h1 = x * (1/√3).\nFor second tower: tan 60° = h2 / x => h2 = x * √3.\nRatio h1 / h2 = [x / √3] / [x√3] = 1 / (√3 * √3) = 1/3 = 1 : 3.",
+        "माना प्रत्येक मीनार के पाद से मध्य-बिंदु की दूरी x है।\nपहली मीनार के लिए: tan 30° = h1 / x => h1 = x / √3।\nदूसरी मीनार के लिए: tan 60° = h2 / x => h2 = x√3।\nअनुपात h1 / h2 = (x / √3) / (x√3) = 1 / 3 = 1 : 3।",
+        "ધારો કે દરેક ટાવરના પાયાથી મધ્યબિંદુનું અંતર x છે.\nપ્રથમ ટાવર માટે: tan 30° = h1 / x => h1 = x / √3.\nબીજા ટાવર માટે: tan 60° = h2 / x => h2 = x√3.\nગુણોત્તર h1 / h2 = (x / √3) / (x√3) = 1 / 3 = 1 : 3.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 38. HOTS 4: Pole and Shadow Ratio
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_04",
+        "If the height of a vertical pole is √3 times the length of its shadow on the ground, what is the angle of elevation of the Sun?",
+        "यदि किसी ऊर्ध्वाधर खंभे की ऊँचाई जमीन पर उसकी छाया की लंबाई की √3 गुना है, तो सूर्य का उन्नयन कोण क्या है?",
+        "જો કોઈ શિરોલંબ થાંભલાની ઊંચાઈ તેના જમીન પરના પડછાયાની લંબાઈ કરતાં √3 ગણી હોય, તો સૂર્યનો ઉત્સેધકોણ કેટલો થાય?",
+        [
+            "60°",
+            "30°",
+            "45°",
+            "90°"
+        ],
+        [
+            "60°",
+            "30°",
+            "45°",
+            "90°"
+        ],
+        [
+            "60°",
+            "30°",
+            "45°",
+            "90°"
+        ],
+        0,
+        "Let shadow length be s. Then height of pole h = s√3.\ntan θ = Height / Shadow = (s√3) / s = √3.\nSince tan 60° = √3, the angle of elevation of the Sun is 60°.",
+        "माना छाया की लंबाई s है। तब खंभे की ऊँचाई h = s√3।\ntan θ = ऊँचाई / छाया = (s√3) / s = √3।\nचूँकि tan 60° = √3 होता है, अतः सूर्य का उन्नयन कोण 60° है।",
+        "ધારો કે પડછાયાની લંબાઈ s છે. તેથી થાંભલાની ઊંચાઈ h = s√3.\ntan θ = ઊંચાઈ / પડછાયો = (s√3) / s = √3.\ntan 60° = √3 હોવાથી સૂર્યનો ઉત્સેધકોણ 60° થાય.",
+        bloom="Remember",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # 39. HOTS 5: Case Study Drone Problem
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_05",
+        "Case Study Problem: A security surveillance drone is hovering at an altitude of 120 m directly above a highway checkpoint. It tracks two suspicious vehicles parked in the same direction on the straight highway. The angles of depression of the vehicles are 45° and 30°. What is the distance between the two vehicles?",
+        "केस स्टडी प्रश्न: एक सुरक्षा निगरानी ड्रोन एक राजमार्ग चेकपॉइंट के ठीक ऊपर 120 मीटर की ऊँचाई पर मँडरा रहा है। यह सीधी सड़क पर एक ही दिशा में खड़े दो संदिग्ध वाहनों को ट्रैक करता है। वाहनों के अवनमन कोण 45° और 30° हैं। दोनों वाहनों के बीच की दूरी क्या है?",
+        "કેસ સ્ટડી પ્રશ્ન: એક સુરક્ષા સર્વેલન્સ ડ્રોન હાઇવે ચેકપોઇન્ટની બરાબર ઉપર 120 મીટરની ઊંચાઈ પર સ્થિર ઊભું છે. તે સીધા હાઇવે પર એક જ દિશામાં પાર્ક કરેલા બે શંકાસ્પદ વાહનોને ટ્રેક કરે છે. આ વાહનોના અવસેધકોણ 45° અને 30° છે. બંને વાહનો વચ્ચેનું અંતર કેટલું થશે?",
+        [
+            "120(√3 - 1) m",
+            "120(√3 + 1) m",
+            "120√3 m",
+            "60√3 m"
+        ],
+        [
+            "120(√3 - 1) मीटर",
+            "120(√3 + 1) मीटर",
+            "120√3 मीटर",
+            "60√3 मीटर"
+        ],
+        [
+            "120(√3 - 1) મીટર",
+            "120(√3 + 1) મીટર",
+            "120√3 મીટર",
+            "60√3 મીટર"
+        ],
+        0,
+        "Altitude h = 120 m.\nVehicle 1 (nearer, 45°): d1 = 120 / tan 45° = 120 m.\nVehicle 2 (farther, 30°): d2 = 120 / tan 30° = 120√3 m.\nDistance between vehicles = d2 - d1 = 120√3 - 120 = 120(√3 - 1) m.",
+        "ड्रोन की ऊँचाई h = 120 मीटर।\nवाहन 1 (निकट, 45°): d1 = 120 / tan 45° = 120 मीटर।\nवाहन 2 (दूर, 30°): d2 = 120 / tan 30° = 120√3 मीटर।\nवाहनों के बीच की दूरी = d2 - d1 = 120√3 - 120 = 120(√3 - 1) मीटर।",
+        "ડ્રોનની ઊંચાઈ h = 120 મીટર.\nવાહન 1 (નજીક, 45°): d1 = 120 / tan 45° = 120 મીટર.\nવાહન 2 (દૂર, 30°): d2 = 120 / tan 30° = 120√3 મીટર.\nવાહનો વચ્ચેનું અંતર = d2 - d1 = 120√3 - 120 = 120(√3 - 1) મીટર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 40. HOTS 6: Ladder Problem
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_06",
+        "A 14 m long fire rescue ladder leans against a vertical building wall, making an angle of 60° with the horizontal ground. How high up the wall does the ladder reach?",
+        "14 मीटर लंबी एक अग्निशमन बचाव सीढ़ी एक ऊर्ध्वाधर भवन की दीवार से टिकी हुई है, जो क्षैतिज जमीन के साथ 60° का कोण बनाती है। सीढ़ी दीवार पर कितनी ऊँचाई तक पहुँचती है?",
+        "14 મીટર લાંબી ફાયર રેસ્ક્યુ નિસરણી એક ઊભી દીવાલ સાથે સમક્ષિતિજ જમીન સાથે 60° નો ખૂણો બનાવીને ટેકવેલી છે. નિસરણી દીવાલ પર કેટલી ઊંચાઈ સુધી પહોંચશે?",
+        [
+            "7√3 m",
+            "7 m",
+            "14√3 m",
+            "14 m"
+        ],
+        [
+            "7√3 मीटर",
+            "7 मीटर",
+            "14√3 मीटर",
+            "14 मीटर"
+        ],
+        [
+            "7√3 મીટર",
+            "7 મીટર",
+            "14√3 મીટર",
+            "14 મીટર"
+        ],
+        0,
+        "Length of ladder (hypotenuse) = 14 m, angle θ = 60°.\nsin 60° = Height / Ladder = h / 14.\n√3 / 2 = h / 14  =>  h = (14 * √3) / 2 = 7√3 m.",
+        "सीढ़ी की लंबाई (कर्ण) = 14 मीटर, कोण θ = 60°।\nsin 60° = ऊँचाई / सीढ़ी = h / 14।\n√3 / 2 = h / 14  =>  h = (14 * √3) / 2 = 7√3 मीटर।",
+        "નિસરણીની લંબાઈ (કર્ણ) = 14 મીટર, ખૂણો θ = 60°.\nsin 60° = ઊંચાઈ / નિસરણી = h / 14.\n√3 / 2 = h / 14  =>  h = (14 * √3) / 2 = 7√3 મીટર.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 41. HOTS 7: Variation of Shadow Length
+    blocks.append(make_socratic(
+        "C10M_CH9_HOTS_07",
+        "Conceptual Challenge: If the angle of elevation of the Sun decreases from 60° to 30° during an afternoon, what happens to the length of the shadow cast by a vertical pole?",
+        "वैचारिक चुनौती: दोपहर के समय यदि सूर्य का उन्नयन कोण 60° से घटकर 30° हो जाता है, तो किसी ऊर्ध्वाधर खंभे की छाया की लंबाई पर क्या प्रभाव पड़ेगा?",
+        "વૈચારિક પડકાર: બપોર પછી જો સૂર્યનો ઉત્સેધકોણ 60° થી ઘટીને 30° થાય, તો શિરોલંબ થાંભલાના પડછાયાની લંબાઈ પર શું અસર થશે?",
+        [
+            "The shadow length increases",
+            "The shadow length decreases",
+            "The shadow length remains unchanged",
+            "The shadow completely vanishes"
+        ],
+        [
+            "छाया की लंबाई बढ़ जाती है",
+            "छाया की लंबाई घट जाती है",
+            "छाया की लंबाई अपरिवर्तित रहती है",
+            "छाया पूरी तरह गायब हो जाती है"
+        ],
+        [
+            "પડછાયાની લંબાઈ વધી જાય છે",
+            "પડછાયાની લંબાઈ ઘટી જાય છે",
+            "પડછાયાની લંબાઈ અપરિવર્તિત રહે છે",
+            "પડછાયો સંપૂર્ણપણે અદ્રશ્ય થઈ જાય છે"
+        ],
+        0,
+        "Since cot θ = Shadow / Height, as θ decreases from 60° to 30°, cot θ increases from 1/√3 to √3. Because the pole height is constant, the shadow length increases significantly as the Sun goes down towards the horizon!",
+        "चूँकि cot θ = छाया / ऊँचाई होता है, जैसे-जैसे कोण θ 60° से घटकर 30° होता है, cot θ का मान 1/√3 से बढ़कर √3 हो जाता है। चूँकि खंभे की ऊँचाई स्थिर है, अतः जैसे-जैसे सूर्य क्षितिज की ओर नीचे झुकता है, छाया की लंबाई बढ़ती जाती है!",
+        "cot θ = પડછાયો / ઊંચાઈ હોવાથી, ખૂણો θ 60° થી ઘટીને 30° થાય ત્યારે cot θ નું મૂલ્ય 1/√3 થી વધીને √3 થાય છે. થાંભલાની ઊંચાઈ અચળ હોવાથી સૂર્ય આથમવા તરફ જાય તેમ પડછાયાની લંબાઈ વધે છે!",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 42. HOTS 8: Cloud and Reflection Problem
+    blocks.append(make_quiz(
+        "C10M_CH9_HOTS_08",
+        "Advanced HOTS: If the angle of elevation of a cloud from a point h metres above a calm lake is 30° and the angle of depression of its reflection in the lake is 60°, what is the height of the cloud above the surface of the lake?",
+        "उन्नत HOTS: यदि एक शांत झील की सतह से h मीटर ऊँचाई पर स्थित बिंदु से किसी बादल का उन्नयन कोण 30° है और झील में उसके प्रतिबिंब का अवनमन कोण 60° है, तो झील की सतह से बादल की ऊँचाई क्या है?",
+        "ઉચ્ચ સ્તરીય HOTS: જો શાંત સરોવરની સપાટીથી h મીટર ઊંચાઈએ આવેલા બિંદુથી વાદળનો ઉત્સેધકોણ 30° હોય અને સરોવરમાં તેના પ્રતિબિંબનો અવસેધકોણ 60° હોય, તો સરોવરની સપાટીથી વાદળની ઊંચાઈ કેટલી થશે?",
+        [
+            "2h metres",
+            "h metres",
+            "3h metres",
+            "4h metres"
+        ],
+        [
+            "2h मीटर",
+            "h मीटर",
+            "3h मीटर",
+            "4h मीटर"
+        ],
+        [
+            "2h મીટર",
+            "h મીટર",
+            "3h મીટર",
+            "4h મીટર"
+        ],
+        0,
+        "Let the cloud be at height H above water surface. By laws of reflection, its image is H metres BELOW the water surface.\nObserver is h metres above water.\nHeight of cloud above observer = H - h.\nDepth of image below observer = H + h.\nLet horizontal distance be x.\n1. tan 30° = (H - h) / x => x = (H - h)√3.\n2. tan 60° = (H + h) / x => x = (H + h) / √3.\nEquating x:\n(H - h)√3 = (H + h) / √3 => 3(H - h) = H + h => 3H - 3h = H + h => 2H = 4h => H = 2h metres!",
+        "माना बादल झील की सतह से H मीटर ऊपर है। परावर्तन के नियम से, उसका प्रतिबिंब पानी की सतह से H मीटर नीचे होगा।\nप्रेक्षक झील से h मीटर ऊपर है।\nप्रेक्षक से बादल की ऊँचाई = H - h।\nप्रेक्षक से प्रतिबिंब की गहराई = H + h।\n1. tan 30° = (H - h) / x => x = (H - h)√3।\n2. tan 60° = (H + h) / x => x = (H + h) / √3।\nदोनों x को बराबर करने पर:\n3(H - h) = H + h => 3H - 3h = H + h => 2H = 4h => H = 2h मीटर!",
+        "ધારો કે વાદળ તળાવની સપાટીથી H મીટર ઊંચે છે. પરાવર્તનના નિયમ મુજબ પ્રતિબિંબ સપાટીથી H મીટર નીચે હશે.\nનિરીક્ષક સપાટીથી h મીટર ઉપર છે.\nનિરીક્ષકથી વાદળની ઊંચાઈ = H - h.\nનિરીક્ષકથી પ્રતિબિંબનું અંતર = H + h.\n1. tan 30° = (H - h) / x => x = (H - h)√3.\n2. tan 60° = (H + h) / x => x = (H + h) / √3.\nx સરખાવતાં:\n3(H - h) = H + h => 2H = 4h => H = 2h મીટર!",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 5: SUMMARY MATRIX & BOARD EXAM BLUEPRINT
+# =========================================================================
+def get_part5_blocks():
+    blocks = []
+
+    # 43. Summary Matrix
+    blocks.append(make_theory(
+        "C10M_CH9_REV_01",
+        "Rapid Revision: The Heights & Distances Formula & Ratio Matrix",
+        "त्वरित पुनरावृत्ति: ऊँचाई और दूरी के सूत्रों और अनुपातों का मास्टर चार्ट",
+        "ઝડપી પુનરાવર્તન: ઊંચાઈ અને અંતરના સૂત્રો અને ગુણોત્તરોનો માસ્ટર ચાર્ટ",
+        "### 1. Trigonometric Ratios Used in Applications\n| Ratio | Formula | Best Used For |\n|---|---|---|\n| $\\tan\\theta$ | $\\frac{\\text{Perpendicular}}{\\text{Base}} = \\frac{\\text{Height}}{\\text{Ground Distance}}$ | 90% of all problems (Tower, Tree, Building, Shadow) |\n| $\\sin\\theta$ | $\\frac{\\text{Perpendicular}}{\\text{Hypotenuse}} = \\frac{\\text{Height}}{\\text{Length}}$ | Ladders, Kites, Circus ropes, Slanted hills |\n| $\\cos\\theta$ | $\\frac{\\text{Base}}{\\text{Hypotenuse}} = \\frac{\\text{Ground Distance}}{\\text{Length}}$ | Finding ladder foot distance or broken tree hypotenuse |\n\n### 2. Standard Values Table\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}, \\quad \\tan 45^\\circ = 1, \\quad \\tan 60^\\circ = \\sqrt{3}$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$\n- $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}, \\quad \\cos 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\cos 60^\\circ = \\frac{1}{2}$\n\n### 3. Key Golden Theorems\n- **Angle of Depression = Angle of Elevation** (Alternate interior angles between parallel horizontals).\n- As an observer moves **closer** to an object, the angle of elevation **increases**.\n- When Sun's elevation is $45^\\circ$, **Length of shadow = Height of object**.\n- If angles are complementary from distances $a$ and $b$, height $h = \\sqrt{ab}$.",
+        "### 1. अनुप्रयोगों में प्रयुक्त त्रिकोणमितीय अनुपात\n| अनुपात | सूत्र | उपयोग |\n|---|---|---|\n| $\\tan\\theta$ | $\\frac{\\text{लंब}}{\\text{आधार}} = \\frac{\\text{ऊँचाई}}{\\text{जमीनी दूरी}}$ | 90% प्रश्नों में (मीनार, पेड़, भवन, छाया) |\n| $\\sin\\theta$ | $\\frac{\\text{लंब}}{\\text{कर्ण}} = \\frac{\\text{ऊँचाई}}{\\text{लंबाई}}$ | सीढ़ी, पतंग, सर्कस की डोरी, ढलान |\n| $\\cos\\theta$ | $\\frac{\\text{आधार}}{\\text{कर्ण}} = \\frac{\\text{जमीनी दूरी}}{\\text{लंबाई}}$ | सीढ़ी के पाद की दूरी या टूटे पेड़ का कर्ण |\n\n### 2. मानक मान सारणी\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}, \\quad \\tan 45^\\circ = 1, \\quad \\tan 60^\\circ = \\sqrt{3}$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$\n- $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}, \\quad \\cos 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\cos 60^\\circ = \\frac{1}{2}$\n\n### 3. प्रमुख महत्वपूर्ण नियम\n- **अवनमन कोण = उन्नयन कोण** (समांतर क्षैतिज रेखाओं के बीच एकांतर अंतःकोण)।\n- जब प्रेक्षक वस्तु के **पास** जाता है, तो उन्नयन कोण **बढ़ता** है।\n- जब सूर्य का उन्नयन कोण $45^\\circ$ होता है, तो **छाया की लंबाई = वस्तु की ऊँचाई**।\n- यदि दूरियाँ $a$ और $b$ से कोण पूरक हों, तो ऊँचाई $h = \\sqrt{ab}$ होती है।",
+        "### 1. વ્યવહારમાં વપરાતા ત્રિકોણમિતીય ગુણોત્તરો\n| ગુણોત્તર | સૂત્ર | ક્યારે વાપરવો |\n|---|---|---|\n| $\\tan\\theta$ | $\\frac{\\text{સામેની બાજુ}}{\\text{પાસેની બાજુ}} = \\frac{\\text{ઊંચાઈ}}{\\text{જમીનનું અંતર}}$ | 90% દાખલાઓમાં (ટાવર, વૃક્ષ, ઇમારત, પડછાયો) |\n| $\\sin\\theta$ | $\\frac{\\text{સામેની બાજુ}}{\\text{કર્ણ}} = \\frac{\\text{ઊંચાઈ}}{\\text{લંબાઈ}}$ | નિસરણી, પતંગ, સર્કસનું દોરડું, ઢાળ |\n| $\\cos\\theta$ | $\\frac{\\text{પાસેની બાજુ}}{\\text{કર્ણ}} = \\frac{\\text{જમીનનું અંતર}}{\\text{લંબાઈ}}$ | નિસરણીના પાયાનું અંતર કે તૂટેલા ઝાડનો કર્ણ |\n\n### 2. પ્રમાણિત મૂલ્યોનું કોષ્ટક\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}, \\quad \\tan 45^\\circ = 1, \\quad \\tan 60^\\circ = \\sqrt{3}$\n- $\\sin 30^\\circ = \\frac{1}{2}, \\quad \\sin 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$\n- $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}, \\quad \\cos 45^\\circ = \\frac{1}{\\sqrt{2}}, \\quad \\cos 60^\\circ = \\frac{1}{2}$\n\n### 3. મુખ્ય સુવર્ણ નિયમો\n- **અવસેધકોણ = ઉત્સેધકોણ** (સમાંતર સમક્ષિતિજ રેખાઓ વચ્ચેના યુગ્મકોણ).\n- નિરીક્ષક પદાર્થની **નજીક** જાય તેમ ઉત્સેધકોણ **વધે** છે.\n- જ્યારે સૂર્યનો ઉત્સેધકોણ $45^\\circ$ હોય ત્યારે **પડછાયાની લંબાઈ = પદાર્થની ઊંચાઈ**.\n- જો $a$ અને $b$ અંતરેથી ખૂણા કોટિકોણ હોય તો ઊંચાઈ $h = \\sqrt{ab}$ થાય.",
+        btype="theory",
+        bloom="Remember",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 44. Mastery Blueprint
+    blocks.append(make_theory(
+        "C10M_CH9_REV_02",
+        "Mastery Blueprint: Guaranteed 100% Board Exam Success Strategy",
+        "मास्टरी ब्लूप्रिंट: बोर्ड परीक्षा में शत-प्रतिशत अंक प्राप्त करने की अचूक रणनीति",
+        "માસ્ટરી બ્લુપ્રિન્ટ: બોર્ડ પરીક્ષામાં સંપૂર્ણ ગુણ મેળવવાની શ્રેષ્ઠ રણનીતિ",
+        "To score full marks (100%) in Chapter 9 in your Class 10 Board Exam (CBSE/GSEB):\n\n1. **Diagram carries 1 full mark:** Never solve a heights and distances problem without drawing the diagram. Examiners award 1 mark just for a neatly labeled triangle with vertices ($A, B, C$), right angle symbol, and angles marked.\n2. **Always State the Representation:** Write one opening line declaring what variables represent, e.g., *'Let AB be the tower of height h metres and BC be the ground distance'*. This prevents ambiguity.\n3. **Identify the Right Triangle Explicitly:** Always write *'In right triangle ABC, right-angled at B:'* before applying trigonometric formulas.\n4. **Rationalize Denominators:** Do not leave fractions like $\\frac{60}{\\sqrt{3}}$ in the final answer. Write $20\\sqrt{3}\\text{ m}$.\n5. **Substitute Values at the Very End:** If the question states *'Take √3 = 1.732'*, do the algebraic simplification first and only substitute $\\sqrt{3}$ in the final step to avoid rounding errors.\n6. **Double Check the Unit:** Always append units (m, cm, km/h, s) to your final answer. A missing unit loses 0.5 marks!",
+        "कक्षा 10 की बोर्ड परीक्षा (CBSE/GSEB) में अध्याय 9 में पूरे अंक प्राप्त करने की महत्वपूर्ण रणनीतियाँ:\n\n1. **चित्र के 1 पूरे अंक होते हैं:** कभी भी बिना चित्र बनाए प्रश्न हल न करें। परीक्षक शीर्षों ($A, B, C$), समकोण चिह्न और कोणों के साथ स्वच्छ नामांकित चित्र के लिए 1 अंक निर्धारित करते हैं।\n2. **प्रतीकों की घोषणा करें:** शुरुआत में एक पंक्ति अवश्य लिखें, जैसे *'माना AB मीनार की ऊँचाई h मीटर है और BC जमीनी दूरी है'*\n3. **समकोण त्रिभुज का नाम स्पष्ट लिखें:** त्रिकोणमितीय सूत्र लगाने से पहले सदैव लिखें: *'समकोण त्रिभुज ABC में, जिसका कोण B समकोण है:'*\n4. **हर का परिमेयकरण करें:** अंतिम उत्तर में $\\frac{60}{\\sqrt{3}}$ जैसे मान न छोड़ें। इसे $20\\sqrt{3}$ मीटर लिखें।\n5. **दशमलव मान अंत में रखें:** यदि प्रश्न में *'√3 = 1.732 लीजिए'* लिखा हो, तो पहले बीजगणितीय सरलीकरण करें और अंतिम चरण में ही $\\sqrt{3}$ का मान रखें ताकि गणना सटीक रहे।\n6. **इकाई अवश्य लिखें:** अंतिम उत्तर के साथ इकाई (मीटर, सेमी, किमी/घंटा, सेकंड) अवश्य लिखें। इकाई न लिखने पर आधा अंक कट जाता है!",
+        "ધોરણ 10 બોર્ડ પરીક્ષા (CBSE/GSEB) માં પ્રકરણ 9 માં પૂરા ગુણ મેળવવાની ચાવીરૂપ વ્યૂહરચના:\n\n1. **આકૃતિનો પૂરો 1 ગુણ હોય છે:** ક્યારેય આકૃતિ દોર્યા વગર દાખલો ન ગણો. શિરોબિંદુઓ ($A, B, C$), કાટખૂણો અને ખૂણાઓ દર્શાવતી સ્વચ્છ આકૃતિનો સીધો 1 ગુણ મળે છે.\n2. **ચલની સ્પષ્ટતા કરો:** શરૂઆતમાં એક વાક્ય લખો, જેમ કે *'ધારો કે AB ટાવરની ઊંચાઈ h મીટર છે અને BC જમીનનું અંતર છે'*.\n3. **કાટકોણ ત્રિકોણનું નામ સ્પષ્ટ લખો:** સૂત્ર મૂકતાં પહેલાં હંમેશા લખો: *'કાટકોણ ત્રિકોણ ABC માં, જ્યાં ખૂણો B કાટખૂણો છે:'*\n4. **છેદનું સંમેયીકરણ અવશ્ય કરો:** અંતિમ જવાબમાં $\\frac{60}{\\sqrt{3}}$ ન છોડો. તેને $20\\sqrt{3}$ મીટર લખો.\n5. **મૂલ્યો છેલ્લે મૂકો:** જો રકમમાં *'√3 = 1.732 લો'* આપેલું હોય તો છેલ્લી ગણતરીમાં જ કિંમત મૂકો જેથી દશાંશની ભૂલ ન થાય.\n6. **એકમ લખવાનું ચૂકશો નહીં:** અંતિમ જવાબ સાથે એકમ (મીટર, સેમી, કિમી/કલાક, સેકન્ડ) અવશ્ય દર્શાવો. એકમ ન લખવાથી અડધો ગુણ કપાઈ શકે છે!",
+        btype="mastery",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# GENERATE ALL BLOCKS & WRITE TO JSON
+# =========================================================================
+def generate_blocks():
+    return (
+        get_part1_blocks() +
+        get_part2_blocks() +
+        get_part3_blocks() +
+        get_part4_blocks() +
+        get_part5_blocks()
+    )
+
+def generate_chapter():
+    chapter_data = {
+        "metadata": get_metadata(),
+        "blocks": generate_blocks()
+    }
+    
+    output_dir = 'app_core/chapters'
+    os.makedirs(output_dir, exist_ok=True)
+    target_path = os.path.join(output_dir, 'ncert_class10_maths_ch9.json')
+    
+    with open(target_path, 'w', encoding='utf-8') as f:
+        json.dump(chapter_data, f, indent=2, ensure_ascii=False)
+        
+    print(f"Generated {target_path} successfully with {len(chapter_data['blocks'])} blocks!")
+
+if __name__ == "__main__":
+    generate_chapter()

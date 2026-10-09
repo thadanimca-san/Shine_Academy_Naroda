@@ -277,7 +277,7 @@ class _ChapterDetailViewState extends State<ChapterDetailView> {
                   child: ElevatedButton.icon(
                     onPressed: _generatingPdf
                         ? null
-                        : () => _generate(PdfGeneratorService.generateQuestionPaperPDF),
+                        : () => _generate((ch, [_]) => PdfGeneratorService.generateQuestionPaperPDF(context, ch)),
                     icon: Icon(Icons.picture_as_pdf),
                     label: Text(TrilingualService.instance.getUIText('Download Question Paper')),
                     style: ElevatedButton.styleFrom(
@@ -291,7 +291,7 @@ class _ChapterDetailViewState extends State<ChapterDetailView> {
                   child: ElevatedButton.icon(
                     onPressed: _generatingPdf
                         ? null
-                        : () => _generate(PdfGeneratorService.generateAnswerKeyPDF),
+                        : () => _generate((ch, [_]) => PdfGeneratorService.generateAnswerKeyPDF(context, ch)),
                     icon: Icon(Icons.task_alt),
                     label: Text(TrilingualService.instance.getUIText('Download Answer Key')),
                     style: ElevatedButton.styleFrom(

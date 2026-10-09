@@ -1,0 +1,1224 @@
+import os
+import json
+
+def make_quiz(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Apply", diff="Intermediate", mins=2):
+    return {
+        "id": id_str,
+        "type": "quiz",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_socratic(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Analyze", diff="Beginner", mins=2):
+    return {
+        "id": id_str,
+        "type": "socratic_question",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_theory(id_str, title_en, title_hi, title_gu, body_en, body_hi, body_gu, btype="theory", bloom="Understand", diff="Beginner", mins=3):
+    return {
+        "id": id_str,
+        "type": btype,
+        "title": title_en,
+        "body": body_en,
+        "title_hi": title_hi,
+        "body_hi": body_hi,
+        "title_gu": title_gu,
+        "body_gu": body_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def get_metadata():
+    return {
+        "id": "ncert_class10_maths_ch13",
+        "title": "Chapter 13: Statistics",
+        "title_hi": "अध्याय 13: सांख्यिकी",
+        "title_gu": "પ્રકરણ 13: આંકડાશાસ્ત્ર",
+        "subject": "Mathematics",
+        "grade": "10",
+        "board": "CBSE/GSEB",
+        "curriculum": ["CBSE", "NCERT", "GSEB"],
+        "language": "English, Hindi, Gujarati",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 240,
+        "version": "2.0.0",
+        "author": "Shine Academy EduOS",
+        "last_updated": "2026-10-01",
+        "tags": [
+            "statistics",
+            "mean_of_grouped_data",
+            "direct_method",
+            "assumed_mean_method",
+            "mode_of_grouped_data",
+            "modal_class",
+            "median_of_grouped_data",
+            "cumulative_frequency",
+            "median_class",
+            "empirical_relationship",
+            "exercise_13_1",
+            "exercise_13_2",
+            "exercise_13_3",
+            "board_exam"
+        ]
+    }
+
+# =========================================================================
+# PART 1: FOUNDATIONS OF GROUPED DATA & MEAN (PEDAGOGY STEPS 1 TO 5)
+# =========================================================================
+def get_part1_blocks():
+    blocks = []
+
+    # 1. Step 1: Hook
+    blocks.append(make_theory(
+        "C10M_CH13_001",
+        "From Cricket Batting Averages to Census & Medicine: The Power of Statistics",
+        "क्रिकेट के बल्लेबाजी औसत से लेकर जनगणना और चिकित्सा तक: सांख्यिकी की असीम शक्ति",
+        "ક્રિકેટના બેટિંગ સરેરાશથી લઈને વસ્તી ગણતરી અને દવાઓ સુધી: આંકડાશાસ્ત્રની અદ્ભુત શક્તિ",
+        "Every single day, the modern world generates billions of numbers: a cricket player's batting average across 300 matches, the daily rainfall across 500 districts, the pulse rates of 10,000 hospital patients, or the monthly incomes of millions of citizens.\n\nIf you inspect raw, unorganized numbers one by one, your brain is quickly overwhelmed! This is why humans invented **Statistics** — the mathematical science of collecting, organizing, analyzing, and interpreting numerical data.\n\nIn Class 9, you studied ungrouped data. In Class 10, we step into the real world: **Grouped Data**. When data is grouped into classes (like scores 0-10, 10-20, 20-30), individual observations are masked. How then can we find:\n1. The single central balance point? (**Mean**)\n2. The most frequent observation? (**Mode**)\n3. The exact middle value dividing the group in half? (**Median**)\n\nLet us begin our journey into the three great measures of central tendency!",
+        "प्रत्येक दिन हमारी आधुनिक दुनिया अरबों संख्याएं उत्पन्न करती है: 300 मैचों में किसी बल्लेबाज का औसत, 500 जिलों में दैनिक वर्षा के आंकड़े, किसी अस्पताल के 10,000 मरीजों की नब्ज की दर, या करोड़ों नागरिकों की मासिक आय।\n\nयदि आप इन असंगठित, कच्चे आंकड़ों को एक-एक करके देखें, तो आपका दिमाग चकरा जाएगा! यही कारण है कि मानव ने **सांख्यिकी (Statistics)** की खोज की — संख्याओं को एकत्र करने, व्यवस्थित करने, विश्लेषण करने और उनसे अर्थ निकालने का गणितीय विज्ञान।\n\nकक्षा 9 में आपने अवर्गीकृत आंकड़ों का अध्ययन किया था। कक्षा 10 में हम वास्तविक जीवन के आंकड़ों का सामना करते हैं: **वर्गीकृत आंकड़े (Grouped Data)**। जब आंकड़ों को वर्गों (जैसे 0-10, 10-20, 20-30) में समूहीकृत किया जाता है, तो व्यक्तिगत संख्याएं छिप जाती हैं। तब हम कैसे ज्ञात करें:\n1. पूरे समूह का केंद्रीय संतुलन बिंदु? (**माध्य / Mean**)\n2. सबसे अधिक बार आने वाला मान? (**बहुलक / Mode**)\n3. ठीक बीचों-बीच स्थित मान जो समूह को दो बराबर भागों में बांटता है? (**माध्यक / Median**)\n\nआइए केंद्रीय प्रवृत्ति के इन तीन महान मापकों की खोज शुरू करें!",
+        "દરરોજ આપણું આધુનિક વિશ્વ અબજો આંકડાઓ પેદા કરે છે: 300 મેચોમાં બેટ્સમેનની સરેરાશ, 500 જિલ્લાઓમાં દૈનિક વરસાદ, હોસ્પિટલના 10,000 દર્દીઓના ધબકારા, કે લાખો નાગરિકોની માસિક આવક.\n\nજો તમે આ અસંગઠિત કાચી માહિતીને એક પછી એક જોવા બેસો, તો તમારું મગજ થાકી જશે! એટલા માટે ગણિતશાસ્ત્રીઓએ **આંકડાશાસ્ત્ર (Statistics)** ની રચના કરી — સંખ્યાઓનું એકત્રીકરણ, વર્ગીકરણ, વિશ્લેષણ અને અર્થઘટન કરવાનું ગણિત.\n\nધોરણ 9 માં તમે અવર્ગીકૃત માહિતી શીખ્યા હતા. ધોરણ 10 માં આપણે વાસ્તવિક દુનિયાની માહિતી શીખીશું: **વર્ગીકૃત માહિતી (Grouped Data)**. જ્યારે માહિતીને વર્ગોમાં (જેવા કે 0-10, 10-20, 20-30) વહેંચવામાં આવે, ત્યારે દરેક વ્યક્તિગત અવલોકન અદ્રશ્ય થઈ જાય છે. ત્યારે આપણે કેવી રીતે શોધી શકીએ:\n1. સમગ્ર માહિતીનું કેન્દ્રીય સંતુલન બિંદુ? (**મધ્યક / Mean**)\n2. સૌથી વધુ વાર પુનરાવર્તિત થતું મૂલ્ય? (**બહુલક / Mode**)\n3. માહિતીના બરાબર વચ્ચે આવેલું મૂલ્ય? (**મધ્યસ્થ / Median**)\n\nચાલો કેન્દ્રીય સ્થિતિના આ ત્રણ આધારસ્તંભો શીખવાની શરૂઆત કરીએ!",
+        btype="hook",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 2. Step 2: Socratic Question
+    blocks.append(make_socratic(
+        "C10M_CH13_002",
+        "Why can't we simply add the midpoints of the class intervals and divide by the number of classes to find the mean of grouped data?",
+        "वर्गीकृत आंकड़ों का माध्य निकालने के लिए हम केवल वर्ग अंतरालों के मध्यबिंदुओं को जोड़कर वर्गों की कुल संख्या से भाग क्यों नहीं दे सकते?",
+        "વર્ગીકૃત માહિતીનો મધ્યક શોધવા માટે આપણે ફક્ત વર્ગ અંતરાલોની મધ્યકિંમતોનો સરવાળો કરી વર્ગોની સંખ્યા વડે ભાગ કેમ ન આપી શકીએ?",
+        [
+            "Because different classes have different numbers of observations (frequencies)",
+            "Because class midpoints are always imprecise fractions",
+            "Because the number of class intervals must always be an odd number",
+            "Because class intervals do not possess mathematical midpoints"
+        ],
+        [
+            "क्योंकि अलग-अलग वर्गों में प्रेक्षणों की संख्या (बारंबारता) भिन्न-भिन्न होती है",
+            "क्योंकि वर्ग के मध्यबिंदु हमेशा अशुद्ध भिन्न होते हैं",
+            "क्योंकि वर्ग अंतरालों की संख्या हमेशा एक विषम संख्या होनी चाहिए",
+            "क्योंकि वर्ग अंतरालों के कोई गणितीय मध्यबिंदु नहीं होते"
+        ],
+        [
+            "કારણ કે અલગ-અલગ વર્ગોમાં અવલોકનોની સંખ્યા (આવૃત્તિ) જુદી-જુદી હોય છે",
+            "કારણ કે વર્ગની મધ્યકિંમતો હંમેશા અશુદ્ધ અપૂર્ણાંક હોય છે",
+            "કારણ કે વર્ગ અંતરાલોની સંખ્યા હંમેશા એકી સંખ્યા હોવી જોઈએ",
+            "કારણ કે વર્ગ અંતરાલોની કોઈ ગાણિતિક મધ્યકિંમત હોતી નથી"
+        ],
+        0,
+        "Every class interval represents a specific frequency (fᵢ). If Class A has 50 students and Class B has only 1 student, giving them equal weight would produce a heavily biased result. The mean must be a weighted average where each class midpoint is multiplied by its frequency: Σ(fᵢxᵢ) / Σfᵢ.",
+        "प्रत्येक वर्ग अंतराल में प्रेक्षणों की एक निश्चित संख्या (बारंबारता fᵢ) होती है। यदि वर्ग A में 50 विद्यार्थी हैं और वर्ग B में केवल 1 विद्यार्थी है, तो दोनों को बराबर महत्व देने से परिणाम पूरी तरह गलत हो जाएगा। माध्य एक भारित औसत (weighted average) होना चाहिए, जिसमें प्रत्येक मध्यबिंदु को उसकी बारंबारता से गुणा किया जाता है: Σ(fᵢxᵢ) / Σfᵢ।",
+        "દરેક વર્ગ અંતરાલ એક ચોક્કસ આવૃત્તિ (fᵢ) ધરાવે છે. જો વર્ગ A માં 50 વિદ્યાર્થીઓ હોય અને વર્ગ B માં ફક્ત 1 વિદ્યાર્થી હોય, તો બંનેને સમાન ગણવાથી સાચો જવાબ ન મળે. મધ્યક હંમેશા ભારિત સરેરાશ (weighted average) હોવો જોઈએ, જેમાં દરેક મધ્યકિંમતને તેની આવૃત્તિ વડે ગુણવામાં આવે છે: Σ(fᵢxᵢ) / Σfᵢ.",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 3. Step 3: Theory - Class Mark & Terminology
+    blocks.append(make_theory(
+        "C10M_CH13_003",
+        "Foundations: Class Interval, Class Mark (xᵢ), and Class Size (h)",
+        "मूल सिद्धांत: वर्ग अंतराल, वर्ग चिन्ह (xᵢ), और वर्ग माप (h)",
+        "પાયાના સિદ્ધાંતો: વર્ગ અંતરાલ, મધ્યકિંમત (xᵢ), અને વર્ગ લંબાઈ (h)",
+        "When dealing with grouped data, we use standard mathematical notations:\n\n### 1. Class Limits\n- For a class interval like $10 - 20$, $10$ is the **Lower Class Limit** and $20$ is the **Upper Class Limit**.\n\n### 2. Class Mark ($x_i$)\n- Since we do not know the exact values inside each class, we assume the observations are centered around the midpoint:\n$$\\text{Class Mark } x_i = \\frac{\\text{Upper Class Limit} + \\text{Lower Class Limit}}{2}$$\n*Example:* For $10 - 25$, $x_i = \\frac{10 + 25}{2} = 17.5$.\n\n### 3. Class Size / Width ($h$)\n- The difference between the upper and lower limits of a continuous class interval:\n$$h = \\text{Upper Limit} - \\text{Lower Limit}$$\n\n### 4. Continuous vs. Discontinuous Classes\n- If classes are discontinuous (e.g., $50-52, 53-55$), there is a gap of $1$ unit. We subtract $0.5$ from each lower limit and add $0.5$ to each upper limit to make them continuous: $49.5-52.5, 52.5-55.5$.",
+        "वर्गीकृत आंकड़ों का अध्ययन करते समय हम निम्नलिखित मानक शब्दावली का उपयोग करते हैं:\n\n### 1. वर्ग सीमाएं (Class Limits)\n- $10 - 20$ जैसे वर्ग अंतराल के लिए, $10$ को **निम्न वर्ग सीमा** और $20$ को **उच्च वर्ग सीमा** कहा जाता है।\n\n### 2. वर्ग चिन्ह ($x_i$)\n- चूँकि हमें वर्ग के भीतर के प्रत्येक प्रेक्षण का सही मान ज्ञात नहीं होता, हम मानते हैं कि सभी प्रेक्षण वर्ग के मध्यबिंदु पर केंद्रित हैं:\n$$\\text{वर्ग चिन्ह } x_i = \\frac{\\text{उच्च वर्ग सीमा} + \\text{निम्न वर्ग सीमा}}{2}$$\n*उदाहरण:* $10 - 25$ के लिए, $x_i = \\frac{10 + 25}{2} = 17.5$।\n\n### 3. वर्ग माप / चौड़ाई ($h$)\n- किसी सतत वर्ग अंतराल की उच्च सीमा और निम्न सीमा का अंतर:\n$$h = \\text{उच्च सीमा} - \\text{निम्न सीमा}$$\n\n### 4. सतत बनाम असतत वर्ग अंतराल\n- यदि वर्ग असतत हों (जैसे $50-52, 53-55$), तो उनके बीच $1$ का अंतर होता है। इसे सतत बनाने के लिए निम्न सीमा में से $0.5$ घटाते हैं और उच्च सीमा में $0.5$ जोड़ते हैं: $49.5-52.5, 52.5-55.5$।",
+        "વર્ગીકૃત માહિતીનો અભ્યાસ કરતી વખતે આપણે નીચેના ગાણિતિક પદોનો ઉપયોગ કરીએ છીએ:\n\n### 1. વર્ગ સીમાઓ (Class Limits)\n- $10 - 20$ જેવા વર્ગ માટે, $10$ એ **અધઃસીમા (Lower Limit)** અને $20$ એ **ઉર્ધ્વસીમા (Upper Limit)** કહેવાય છે.\n\n### 2. મધ્યકિંમત ($x_i$)\n- વર્ગમાં રહેલા દરેક અવલોકનનું ચોક્કસ મૂલ્ય આપણી પાસે ન હોવાથી, આપણે ધારી લઈએ છીએ કે બધા જ અવલોકનો વર્ગના મધ્યબિંદુ પર કેન્દ્રિત છે:\n$$\\text{મધ્યકિંમત } x_i = \\frac{\\text{ઉર્ધ્વસીમા} + \\text{અધઃસીમા}}{2}$$\n*ઉદાહરણ:* $10 - 25$ માટે, $x_i = \\frac{10 + 25}{2} = 17.5$.\n\n### 3. વર્ગ લંબાઈ ($h$)\n- સતત વર્ગ અંતરાલ માટે ઉર્ધ્વસીમા અને અધઃસીમા વચ્ચેનો તફાવત:\n$$h = \\text{ઉર્ધ્વસીમા} - \\text{અધઃસીમા}$$\n\n### 4. સતત અને અસતત વર્ગો\n- જો વર્ગો અસતત હોય (જેવા કે $50-52, 53-55$), તો તેમની વચ્ચે $1$ નો તફાવત હોય છે. તેને સતત બનાવવા અધઃસીમામાંથી $0.5$ બાદ કરવામાં આવે છે અને ઉર્ધ્વસીમામાં $0.5$ ઉમેરવામાં આવે છે: $49.5-52.5, 52.5-55.5$.",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 4. Step 4: Theory - Direct Method & Assumed Mean Method
+    blocks.append(make_theory(
+        "C10M_CH13_004",
+        "Methods to Calculate Mean: Direct Method & Assumed Mean Method",
+        "माध्य ज्ञात करने की विधियां: प्रत्यक्ष विधि और कल्पित माध्य विधि",
+        "મધ્યક શોધવાની પદ્ધતિઓ: સીધી (પ્રત્યક્ષ) રીત અને ધારેલા મધ્યકની રીત",
+        "According to the rationalized NCERT 2023-24 syllabus, there are two official algebraic methods to calculate the Mean of Grouped Data:\n\n### Method 1: The Direct Method\n- Best suited when numerical values of $x_i$ and $f_i$ are small.\n$$\\bar{x} = \\frac{\\sum_{i=1}^n f_i x_i}{\\sum_{i=1}^n f_i}$$\n- Here, $\\sum f_i$ is the total frequency ($N$).\n\n### Method 2: The Assumed Mean Method\n- When $x_i$ and $f_i$ are large numbers (e.g. hundreds or thousands), direct multiplication becomes slow and calculation errors happen easily.\n- We choose a convenient central value from the $x_i$ column as the **Assumed Mean ($a$)**.\n- Calculate the deviation of each class mark from $a$:\n$$d_i = x_i - a$$\n- Then calculate the mean using the formula:\n$$\\bar{x} = a + \\frac{\\sum_{i=1}^n f_i d_i}{\\sum_{i=1}^n f_i}$$\n\n*Proof Intuition:* $\\sum f_i d_i = \\sum f_i(x_i - a) = \\sum f_i x_i - a\\sum f_i$. Dividing both sides by $\\sum f_i$ yields $\\frac{\\sum f_i d_i}{\\sum f_i} = \\bar{x} - a$, which gives $\\bar{x} = a + \\frac{\\sum f_i d_i}{\\sum f_i}$!",
+        "एनसीईआरटी के नवीनतम पाठ्यक्रम (2023-24) के अनुसार, वर्गीकृत आंकड़ों का माध्य ज्ञात करने की दो आधिकारिक विधियां हैं:\n\n### विधि 1: प्रत्यक्ष विधि (Direct Method)\n- तब सबसे उपयुक्त जब $x_i$ और $f_i$ के मान छोटे हों।\n$$\\bar{x} = \\frac{\\sum_{i=1}^n f_i x_i}{\\sum_{i=1}^n f_i}$$\n- यहाँ $\\sum f_i$ कुल बारंबारता ($N$) है।\n\n### विधि 2: कल्पित माध्य विधि (Assumed Mean Method)\n- जब $x_i$ और $f_i$ बहुत बड़ी संख्याएं हों (सैकड़ों या हजारों में), तो प्रत्यक्ष गुणा करने में समय लगता है और गलतियों की संभावना बढ़ जाती है।\n- हम $x_i$ वाले स्तंभ के ठीक बीच में से किसी सुविधाजनक मान को **कल्पित माध्य ($a$)** चुनते हैं।\n- प्रत्येक वर्ग चिन्ह का $a$ से विचलन निकालते हैं:\n$$d_i = x_i - a$$\n- फिर माध्य का सूत्र प्रयोग करते हैं:\n$$\\bar{x} = a + \\frac{\\sum_{i=1}^n f_i d_i}{\\sum_{i=1}^n f_i}$$\n\n*सूत्र का सत्यापन:* $\\sum f_i d_i = \\sum f_i(x_i - a) = \\sum f_i x_i - a\\sum f_i$। दोनों पक्षों को $\\sum f_i$ से भाग देने पर हमें मिलता है: $\\frac{\\sum f_i d_i}{\\sum f_i} = \\bar{x} - a$, जिससे $\\bar{x} = a + \\frac{\\sum f_i d_i}{\\sum f_i}$ सिद्ध होता है!",
+        "NCERT 2023-24 રેશનલાઈઝ્ડ અભ્યાસક્રમ મુજબ, વર્ગીકૃત માહિતીનો મધ્યક શોધવા માટે બે સત્તાવાર પદ્ધતિઓ છે:\n\n### પદ્ધતિ 1: પ્રત્યક્ષ (સીધી) રીત (Direct Method)\n- જ્યારે $x_i$ અને $f_i$ ની કિંમતો નાની સંખ્યાઓ હોય ત્યારે આ રીત સૌથી શ્રેષ્ઠ છે.\n$$\\bar{x} = \\frac{\\sum_{i=1}^n f_i x_i}{\\sum_{i=1}^n f_i}$$\n- અહીં $\\sum f_i$ એ કુલ આવૃત્તિ ($N$) દર્શાવે છે.\n\n### પદ્ધતિ 2: ધારેલા મધ્યકની રીત (Assumed Mean Method)\n- જ્યારે $x_i$ અને $f_i$ ની સંખ્યાઓ ખૂબ મોટી હોય (સેંકડો કે હજારોમાં), ત્યારે ગુણાકાર કરવો મુશ્કેલ બને છે અને ભૂલ થવાની સંભાવના રહે છે.\n- આપણે $x_i$ ના સ્તંભમાંથી બરાબર વચ્ચે આવતી કોઈ એક અનુકૂળ કિંમતને **ધારેલો મધ્યક ($a$)** તરીકે પસંદ કરીએ છીએ.\n- દરેક મધ્યકિંમતમાંથી $a$ બાદ કરી વિચલન શોધીએ છીએ:\n$$d_i = x_i - a$$\n- ત્યારબાદ આ સૂત્ર વડે મધ્યક મેળવીએ છીએ:\n$$\\bar{x} = a + \\frac{\\sum_{i=1}^n f_i d_i}{\\sum_{i=1}^n f_i}$$\n\n*સૂત્રની સાબિતી:* $\\sum f_i d_i = \\sum f_i(x_i - a) = \\sum f_i x_i - a\\sum f_i$. બંને બાજુ $\\sum f_i$ વડે ભાગતાં આપણને મળે છે: $\\frac{\\sum f_i d_i}{\\sum f_i} = \\bar{x} - a$, જે સાબિત કરે છે કે $\\bar{x} = a + \\frac{\\sum f_i d_i}{\\sum f_i}$!",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 5. Step 5: Teacher Tip - Assumed Mean Selection & Missing Frequencies
+    blocks.append(make_theory(
+        "C10M_CH13_005",
+        "Teacher Tip: Golden Guidelines for Choosing 'a' and Handling Missing Frequencies",
+        "शिक्षक युक्ति: कल्पित माध्य 'a' के चयन और अज्ञात बारंबारता को हल करने के नियम",
+        "શિક્ષકની સલાહ: ધારેલો મધ્યક 'a' પસંદ કરવાની શ્રેષ્ઠ રીત અને અજ્ઞાત આવૃત્તિ શોધવાની યુક્તિ",
+        "### 1. How to Choose Assumed Mean 'a'\n- Always pick $a$ from the **middle** of the $x_i$ column. If there are 5 classes, pick the 3rd class mark. If there are 6 classes, you may choose either the 3rd or 4th class mark.\n- Choosing a central value keeps deviations ($d_i$) balanced with positive and negative numbers, making the sum $\\sum f_i d_i$ very small and quick to calculate!\n\n### 2. Handling Negative Deviations\n- In the $f_i d_i$ column, values above $a$ will be negative, and values below $a$ will be positive.\n- **Crucial Exam Tip:** Always calculate the sum of all negative entries separately and the sum of all positive entries separately before finding the net total. This avoids 90% of sign errors!\n\n### 3. Missing Frequency Problems (e.g. Exercise 13.1 Q3)\n- When the mean $\\bar{x}$ is already given and a frequency $f$ is missing, express $\\sum f_i$ as $(\\text{constant} + f)$ and $\\sum f_i d_i$ as $(\\text{constant} + c \\cdot f)$. Cross-multiply carefully to solve for $f$.",
+        "### 1. कल्पित माध्य 'a' का चयन कैसे करें?\n- हमेशा $x_i$ वाले स्तंभ के **मध्य** से $a$ चुनें। यदि 5 वर्ग हैं, तो तीसरा वर्ग चिन्ह चुनें। यदि 6 वर्ग हैं, तो तीसरे या चौथे में से कोई भी चुन सकते हैं।\n- बीच का मान चुनने से विचलन ($d_i$) धनात्मक और ऋणात्मक दोनों में संतुलित रहते हैं, जिससे $\\sum f_i d_i$ का योग बहुत छोटा हो जाता है और गणना तुरंत हो जाती है!\n\n### 2. ऋणात्मक विचलनों का ध्यान रखें\n- $f_i d_i$ स्तंभ में $a$ से ऊपर के मान ऋणात्मक होंगे और नीचे के मान धनात्मक होंगे।\n- **परीक्षा टिप:** सभी ऋणात्मक पदों का योग अलग करें और सभी धनात्मक पदों का योग अलग करें, फिर दोनों को जोड़ें। इससे चिन्ह की गलतियां नहीं होतीं!\n\n### 3. अज्ञात बारंबारता वाले प्रश्न (जैसे प्रश्नावली 13.1 प्रश्न 3)\n- जब माध्य $\\bar{x}$ पहले से दिया हो और कोई बारंबारता $f$ अज्ञात हो, तो $\\sum f_i$ को $(\\text{अचर} + f)$ तथा $\\sum f_i d_i$ को $(\\text{अचर} + c \\cdot f)$ के रूप में लिखें और पक्षांतरण करके $f$ का मान प्राप्त करें।",
+        "### 1. ધારેલો મધ્યક 'a' કઈ રીતે પસંદ કરવો?\n- હંમેશા $x_i$ ના સ્તંભમાંથી **બરાબર વચ્ચેનું** મૂલ્ય $a$ તરીકે લો. જો 5 વર્ગો હોય તો 3જી મધ્યકિંમત લો. જો 6 વર્ગો હોય તો 3જી કે 4થી બંનેમાંથી કોઈ પણ લઈ શકો.\n- વચ્ચેનું મૂલ્ય લેવાથી ધન અને ઋણ વિચલનો સંતુલિત રહે છે અને $\\sum f_i d_i$ નો સરવાળો નાનો થઈ જાય છે જેથી ગણતરી ઝડપી બને છે!\n\n### 2. ઋણ ચિહ્નોની કાળજી રાખો\n- $f_i d_i$ ના ખાનામાં $a$ થી ઉપરની કિંમતો ઋણ આવશે અને નીચેની કિંમતો ધન આવશે.\n- **પરીક્ષા માટે ખાસ સલાહ:** બધા જ ઋણ પદોનો સરવાળો અલગ કરો અને બધા ધન પદોનો સરવાળો અલગ કરો, પછી જ બંનેનો ચોખ્ખો સરવાળો કરો!\n\n### 3. ખૂટતી આવૃત્તિ વાળા દાખલા (સ્વાધ્યાય 13.1 પ્રશ્ન 3)\n- જ્યારે મધ્યક $\\bar{x}$ આપેલો હોય અને કોઈ આવૃત્તિ $f$ શોધવાની હોય, ત્યારે $\\sum f_i = (\\text{અચળ} + f)$ અને $\\sum f_i d_i = (\\text{અચળ} + c \\cdot f)$ લખીને સાદુરૂપ આપો.",
+        btype="teacher_tip",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 6. Step 6: Prerequisite Knowledge Check
+    blocks.append(make_quiz(
+        "C10M_CH13_006",
+        "For the class intervals 10-25, 25-40, 40-55, 55-70, 70-85, what is the class mark of the interval 40-55, and what is the class size h?",
+        "वर्ग अंतरालों 10-25, 25-40, 40-55, 55-70, 70-85 के लिए, वर्ग अंतराल 40-55 का वर्ग चिन्ह और वर्ग माप h क्या है?",
+        "વર્ગ અંતરાલો 10-25, 25-40, 40-55, 55-70, 70-85 માટે, વર્ગ 40-55 ની મધ્યકિંમત અને વર્ગ લંબાઈ h કેટલી છે?",
+        [
+            "Class Mark = 47.5, Class Size h = 15",
+            "Class Mark = 45.0, Class Size h = 10",
+            "Class Mark = 47.5, Class Size h = 10",
+            "Class Mark = 50.0, Class Size h = 15"
+        ],
+        [
+            "वर्ग चिन्ह = 47.5, वर्ग माप h = 15",
+            "वर्ग चिन्ह = 45.0, वर्ग माप h = 10",
+            "वर्ग चिन्ह = 47.5, वर्ग माप h = 10",
+            "वर्ग चिन्ह = 50.0, वर्ग माप h = 15"
+        ],
+        [
+            "મધ્યકિંમત = 47.5, વર્ગ લંબાઈ h = 15",
+            "મધ્યકિંમત = 45.0, વર્ગ લંબાઈ h = 10",
+            "મધ્યકિંમત = 47.5, વર્ગ લંબાઈ h = 10",
+            "મધ્યકિંમત = 50.0, વર્ગ લંબાઈ h = 15"
+        ],
+        0,
+        "Class Mark = (Upper Limit + Lower Limit) / 2 = (40 + 55) / 2 = 95 / 2 = 47.5. Class Size h = Upper Limit - Lower Limit = 55 - 40 = 15.",
+        "वर्ग चिन्ह = (उच्च सीमा + निम्न सीमा) / 2 = (40 + 55) / 2 = 95 / 2 = 47.5। वर्ग माप h = उच्च सीमा - निम्न सीमा = 55 - 40 = 15।",
+        "મધ્યકિંમત = (ઉર્ધ્વસીમા + અધઃસીમા) / 2 = (40 + 55) / 2 = 95 / 2 = 47.5. વર્ગ લંબાઈ h = ઉર્ધ્વસીમા - અધઃસીમા = 55 - 40 = 15.",
+        bloom="Understand",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 2: EXERCISE 13.1 (MEAN OF GROUPED DATA: QUESTIONS 1 TO 9)
+# =========================================================================
+def get_part2_blocks():
+    blocks = []
+
+    # 7. Exercise 13.1 Q1
+    blocks.append(make_quiz(
+        "C10M_CH13_007",
+        "Exercise 13.1 Q1: A survey on environment awareness collected data on the number of plants in 20 houses:\nPlants: 0-2 (1), 2-4 (2), 4-6 (1), 6-8 (5), 8-10 (6), 10-12 (2), 12-14 (3).\nFind the mean number of plants per house.",
+        "प्रश्नावली 13.1 प्रश्न 1: पर्यावरण चेतना अभियान के अंतर्गत 20 घरों में लगे पौधों की संख्या के आंकड़े निम्नानुसार हैं:\nपौधे: 0-2 (1), 2-4 (2), 4-6 (1), 6-8 (5), 8-10 (6), 10-12 (2), 12-14 (3)।\nप्रति घर माध्य पौधों की संख्या ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 1: પર્યાવરણ જાગૃતિ અભિયાન હેઠળ 20 ઘરોમાં વાવેલા છોડની સંખ્યાની વિગત નીચે મુજબ છે:\nછોડ: 0-2 (1), 2-4 (2), 4-6 (1), 6-8 (5), 8-10 (6), 10-12 (2), 12-14 (3).\nઘરદીઠ છોડની સંખ્યાનો મધ્યક શોધો.",
+        [
+            "8.1 plants",
+            "7.8 plants",
+            "8.5 plants",
+            "9.0 plants"
+        ],
+        [
+            "8.1 पौधे",
+            "7.8 पौधे",
+            "8.5 पौधे",
+            "9.0 पौधे"
+        ],
+        [
+            "8.1 છોડ",
+            "7.8 છોડ",
+            "8.5 છોડ",
+            "9.0 છોડ"
+        ],
+        0,
+        "Step 1: Class marks xᵢ are: 1, 3, 5, 7, 9, 11, 13.\nStep 2: Calculate fᵢxᵢ:\n1×1 = 1, 2×3 = 6, 1×5 = 5, 5×7 = 35, 6×9 = 54, 2×11 = 22, 3×13 = 39.\nStep 3: Σfᵢ = 20, Σfᵢxᵢ = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162.\nStep 4: Mean x̄ = Σfᵢxᵢ / Σfᵢ = 162 / 20 = 8.1 plants.\n(Direct method was used because values of fᵢ and xᵢ are small).",
+        "चरण 1: वर्ग चिन्ह xᵢ हैं: 1, 3, 5, 7, 9, 11, 13।\nचरण 2: fᵢxᵢ की गणना करें:\n1×1 = 1, 2×3 = 6, 1×5 = 5, 5×7 = 35, 6×9 = 54, 2×11 = 22, 3×13 = 39।\nचरण 3: Σfᵢ = 20, Σfᵢxᵢ = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162।\nचरण 4: माध्य x̄ = Σfᵢxᵢ / Σfᵢ = 162 / 20 = 8.1 पौधे।\n(यहाँ प्रत्यक्ष विधि का प्रयोग किया गया क्योंकि fᵢ और xᵢ के संख्यात्मक मान बहुत छोटे हैं)।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 1, 3, 5, 7, 9, 11, 13.\nપગલું 2: fᵢxᵢ ની ગણતરી:\n1×1 = 1, 2×3 = 6, 1×5 = 5, 5×7 = 35, 6×9 = 54, 2×11 = 22, 3×13 = 39.\nપગલું 3: Σfᵢ = 20, Σfᵢxᵢ = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162.\nપગલું 4: મધ્યક x̄ = Σfᵢxᵢ / Σfᵢ = 162 / 20 = 8.1 છોડ.\n(અહીં સીધી રીત વાપરવામાં આવી કારણ કે fᵢ અને xᵢ ના મૂલ્યો નાના છે).",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 8. Exercise 13.1 Q2
+    blocks.append(make_quiz(
+        "C10M_CH13_008",
+        "Exercise 13.1 Q2: Daily wages of 50 factory workers:\nWages (₹): 500-520 (12), 520-540 (14), 540-560 (8), 560-580 (6), 580-600 (10).\nFind the mean daily wages of the workers using an appropriate method.",
+        "प्रश्नावली 13.1 प्रश्न 2: किसी कारखाने के 50 श्रमिकों की दैनिक मजदूरी:\nमजदूरी (₹): 500-520 (12), 520-540 (14), 540-560 (8), 560-580 (6), 580-600 (10)।\nउपयुक्त विधि द्वारा श्रमिकों की माध्य दैनिक मजदूरी ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 2: એક કારખાનાના 50 મજૂરોનું દૈનિક વેતન:\nવેતન (₹): 500-520 (12), 520-540 (14), 540-560 (8), 560-580 (6), 580-600 (10).\nયોગ્ય રીતનો ઉપયોગ કરીને મજૂરોના દૈનિક વેતનનો મધ્યક શોધો.",
+        [
+            "₹545.20",
+            "₹552.40",
+            "₹540.00",
+            "₹548.60"
+        ],
+        [
+            "₹545.20",
+            "₹552.40",
+            "₹540.00",
+            "₹548.60"
+        ],
+        [
+            "₹545.20",
+            "₹552.40",
+            "₹540.00",
+            "₹548.60"
+        ],
+        0,
+        "Step 1: Class marks xᵢ are: 510, 530, 550, 570, 590.\nStep 2: Let assumed mean a = 550. Deviations dᵢ = xᵢ - 550: -40, -20, 0, 20, 40.\nStep 3: Calculate fᵢdᵢ:\n12×(-40) = -480, 14×(-20) = -280, 8×0 = 0, 6×20 = 120, 10×40 = 400.\nStep 4: Σfᵢ = 50. Σfᵢdᵢ = (-480 - 280) + (120 + 400) = -760 + 520 = -240.\nStep 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 550 + (-240 / 50) = 550 - 4.80 = ₹545.20.",
+        "चरण 1: वर्ग चिन्ह xᵢ हैं: 510, 530, 550, 570, 590।\nचरण 2: कल्पित माध्य a = 550 मान लें। विचलन dᵢ = xᵢ - 550: -40, -20, 0, 20, 40।\nचरण 3: fᵢdᵢ की गणना करें:\n12×(-40) = -480, 14×(-20) = -280, 8×0 = 0, 6×20 = 120, 10×40 = 400।\nचरण 4: Σfᵢ = 50. Σfᵢdᵢ = (-760) + 520 = -240।\nचरण 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 550 + (-240 / 50) = 550 - 4.80 = ₹545.20।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 510, 530, 550, 570, 590.\nપગલું 2: ધારેલો મધ્યક a = 550. વિચલન dᵢ = xᵢ - 550: -40, -20, 0, 20, 40.\nપગલું 3: fᵢdᵢ ની ગણતરી:\n12×(-40) = -480, 14×(-20) = -280, 8×0 = 0, 6×20 = 120, 10×40 = 400.\nપગલું 4: Σfᵢ = 50. Σfᵢdᵢ = -760 + 520 = -240.\nપગલું 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 550 + (-240 / 50) = 550 - 4.80 = ₹545.20.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 9. Exercise 13.1 Q3
+    blocks.append(make_quiz(
+        "C10M_CH13_009",
+        "Exercise 13.1 Q3: Daily pocket allowance of children in a locality shows a mean allowance of ₹18:\nAllowance (₹): 11-13 (7), 13-15 (6), 15-17 (9), 17-19 (13), 19-21 (f), 21-23 (5), 23-25 (4).\nFind the missing frequency f.",
+        "प्रश्नावली 13.1 प्रश्न 3: किसी मोहल्ले के बच्चों का माध्य दैनिक जेब भत्ता ₹18 है:\nजेब भत्ता (₹): 11-13 (7), 13-15 (6), 15-17 (9), 17-19 (13), 19-21 (f), 21-23 (5), 23-25 (4)।\nलुप्त बारंबारता f ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 3: એક વિસ્તારના બાળકોનું દૈનિક ખિસ્સાભથ્થું દર્શાવતી માહિતીમાં મધ્યક ખિસ્સાભથ્થું ₹18 છે:\nખિસ્સાભથ્થું (₹): 11-13 (7), 13-15 (6), 15-17 (9), 17-19 (13), 19-21 (f), 21-23 (5), 23-25 (4).\nખૂટતી આવૃત્તિ f શોધો.",
+        [
+            "f = 20",
+            "f = 18",
+            "f = 22",
+            "f = 16"
+        ],
+        [
+            "f = 20",
+            "f = 18",
+            "f = 22",
+            "f = 16"
+        ],
+        [
+            "f = 20",
+            "f = 18",
+            "f = 22",
+            "f = 16"
+        ],
+        0,
+        "Step 1: Class marks xᵢ: 12, 14, 16, 18, 20, 22, 24.\nStep 2: Choose assumed mean a = 18 (matches the given mean!).\nDeviations dᵢ = xᵢ - 18: -6, -4, -2, 0, 2, 4, 6.\nStep 3: Calculate fᵢdᵢ:\n7×(-6) = -42, 6×(-4) = -24, 9×(-2) = -18, 13×0 = 0, f×2 = 2f, 5×4 = 20, 4×6 = 24.\nStep 4: Σfᵢ = 44 + f.\nΣfᵢdᵢ = (-42 - 24 - 18) + (2f + 20 + 24) = -84 + 44 + 2f = 2f - 40.\nStep 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) => 18 = 18 + (2f - 40) / (44 + f).\n=> (2f - 40) / (44 + f) = 0 => 2f - 40 = 0 => 2f = 40 => f = 20.",
+        "चरण 1: वर्ग चिन्ह xᵢ: 12, 14, 16, 18, 20, 22, 24।\nचरण 2: कल्पित माध्य a = 18 चुनें (जो दिए गए माध्य के समान है!)।\nविचलन dᵢ = xᵢ - 18: -6, -4, -2, 0, 2, 4, 6।\nचरण 3: fᵢdᵢ की गणना करें:\n7×(-6) = -42, 6×(-4) = -24, 9×(-2) = -18, 13×0 = 0, f×2 = 2f, 5×4 = 20, 4×6 = 24।\nचरण 4: Σfᵢ = 44 + f।\nΣfᵢdᵢ = (-84) + 44 + 2f = 2f - 40।\nचरण 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) => 18 = 18 + (2f - 40) / (44 + f)।\n=> 2f - 40 = 0 => 2f = 40 => f = 20।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 12, 14, 16, 18, 20, 22, 24.\nપગલું 2: ધારેલો મધ્યક a = 18 લો.\nવિચલન dᵢ = xᵢ - 18: -6, -4, -2, 0, 2, 4, 6.\nપગલું 3: fᵢdᵢ:\n7×(-6) = -42, 6×(-4) = -24, 9×(-2) = -18, 13×0 = 0, f×2 = 2f, 5×4 = 20, 4×6 = 24.\nપગલું 4: Σfᵢ = 44 + f.\nΣfᵢdᵢ = -84 + 44 + 2f = 2f - 40.\nપગલું 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) => 18 = 18 + (2f - 40) / (44 + f).\n=> 2f - 40 = 0 => 2f = 40 => f = 20.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 10. Exercise 13.1 Q4
+    blocks.append(make_quiz(
+        "C10M_CH13_010",
+        "Exercise 13.1 Q4: Heart beats per minute were recorded for 30 women:\nBeats/min: 65-68 (2), 68-71 (4), 71-74 (3), 74-77 (8), 77-80 (7), 80-83 (4), 83-86 (2).\nFind the mean heart beats per minute for these women.",
+        "प्रश्नावली 13.1 प्रश्न 4: किसी अस्पताल में एक डॉक्टर द्वारा 30 महिलाओं के हृदय स्पंदन की प्रति मिनट संख्या जाँची गई:\nस्पंदन/मिनट: 65-68 (2), 68-71 (4), 71-74 (3), 74-77 (8), 77-80 (7), 80-83 (4), 83-86 (2)।\nइन महिलाओं के हृदय स्पंदन की प्रति मिनट माध्य संख्या ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 4: એક હોસ્પિટલમાં 30 મહિલાઓના હૃદયના ધબકારાની પ્રતિ મિનિટ નોંધ કરવામાં આવી:\nધબકારા/મિનિટ: 65-68 (2), 68-71 (4), 71-74 (3), 74-77 (8), 77-80 (7), 80-83 (4), 83-86 (2).\nઆ મહિલાઓના હૃદયના ધબકારાનો મધ્યક શોધો.",
+        [
+            "75.9 beats/min",
+            "76.5 beats/min",
+            "75.3 beats/min",
+            "74.8 beats/min"
+        ],
+        [
+            "75.9 धड़कन/मिनट",
+            "76.5 धड़कन/मिनट",
+            "75.3 धड़कन/मिनट",
+            "74.8 धड़कन/मिनट"
+        ],
+        [
+            "75.9 ધબકારા/મિનિટ",
+            "76.5 ધબકારા/મિનિટ",
+            "75.3 ધબકારા/મિનિટ",
+            "74.8 ધબકારા/મિનિટ"
+        ],
+        0,
+        "Step 1: Class marks xᵢ are: 66.5, 69.5, 72.5, 75.5, 78.5, 81.5, 84.5.\nStep 2: Let assumed mean a = 75.5. Deviations dᵢ = xᵢ - 75.5: -9, -6, -3, 0, 3, 6, 9.\nStep 3: Calculate fᵢdᵢ:\n2×(-9) = -18, 4×(-6) = -24, 3×(-3) = -9, 8×0 = 0, 7×3 = 21, 4×6 = 24, 2×9 = 18.\nStep 4: Σfᵢ = 30. Σfᵢdᵢ = (-18 - 24 - 9) + (21 + 24 + 18) = -51 + 63 = 12.\nStep 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 75.5 + (12 / 30) = 75.5 + 0.40 = 75.9 beats per minute.",
+        "चरण 1: वर्ग चिन्ह xᵢ हैं: 66.5, 69.5, 72.5, 75.5, 78.5, 81.5, 84.5।\nचरण 2: कल्पित माध्य a = 75.5 मान लें। विचलन dᵢ = xᵢ - 75.5: -9, -6, -3, 0, 3, 6, 9।\nचरण 3: fᵢdᵢ की गणना करें:\n2×(-9) = -18, 4×(-6) = -24, 3×(-3) = -9, 8×0 = 0, 7×3 = 21, 4×6 = 24, 2×9 = 18।\nचरण 4: Σfᵢ = 30. Σfᵢdᵢ = -51 + 63 = 12।\nचरण 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 75.5 + (12 / 30) = 75.5 + 0.40 = 75.9 धड़कन प्रति मिनट।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 66.5, 69.5, 72.5, 75.5, 78.5, 81.5, 84.5.\nપગલું 2: ધારેલો મધ્યક a = 75.5. વિચલન dᵢ = xᵢ - 75.5: -9, -6, -3, 0, 3, 6, 9.\nપગલું 3: fᵢdᵢ ની ગણતરી:\n2×(-9) = -18, 4×(-6) = -24, 3×(-3) = -9, 8×0 = 0, 7×3 = 21, 4×6 = 24, 2×9 = 18.\nપગલું 4: Σfᵢ = 30. Σfᵢdᵢ = -51 + 63 = 12.\nપગલું 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 75.5 + (12 / 30) = 75.5 + 0.40 = 75.9 ધબકારા પ્રતિ મિનિટ.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 11. Exercise 13.1 Q5
+    blocks.append(make_quiz(
+        "C10M_CH13_011",
+        "Exercise 13.1 Q5: Number of mangoes kept in 400 packing boxes:\nMangoes: 50-52 (15), 53-55 (110), 56-58 (135), 59-61 (115), 62-64 (25).\nFind the mean number of mangoes kept in a packing box.",
+        "प्रश्नावली 13.1 प्रश्न 5: किसी फुटकर बाज़ार में फल विक्रेता पेटियों में आम बेच रहे थे जिनमें आमों की संख्या निम्नानुसार थी:\nआमों की संख्या: 50-52 (15), 53-55 (110), 56-58 (135), 59-61 (115), 62-64 (25)।\nएक पेटी में रखे आमों की माध्य संख्या ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 5: વેપારીઓ ખોખામાં કેરીઓ પેક કરીને વેચતા હતા. 400 પેકિંગ બોક્સમાં કેરીઓની સંખ્યા:\nકેરીઓની સંખ્યા: 50-52 (15), 53-55 (110), 56-58 (135), 59-61 (115), 62-64 (25).\nએક બોક્સમાં રાખેલી કેરીઓની સંખ્યાનો મધ્યક શોધો.",
+        [
+            "57.19 mangoes",
+            "56.85 mangoes",
+            "58.20 mangoes",
+            "57.50 mangoes"
+        ],
+        [
+            "57.19 आम",
+            "56.85 आम",
+            "58.20 आम",
+            "57.50 आम"
+        ],
+        [
+            "57.19 કેરી",
+            "56.85 કેરી",
+            "58.20 કેરી",
+            "57.50 કેરી"
+        ],
+        0,
+        "Step 1: The classes are discontinuous (gap of 1). Continuous limits are 49.5-52.5, 52.5-55.5, 55.5-58.5, 58.5-61.5, 61.5-64.5.\nStep 2: Class marks xᵢ: 51, 54, 57, 60, 63.\nStep 3: Choose assumed mean a = 57. Deviations dᵢ = xᵢ - 57: -6, -3, 0, 3, 6.\nStep 4: Calculate fᵢdᵢ:\n15×(-6) = -90, 110×(-3) = -330, 135×0 = 0, 115×3 = 345, 25×6 = 150.\nStep 5: Σfᵢ = 400. Σfᵢdᵢ = (-90 - 330) + (345 + 150) = -420 + 495 = 75.\nStep 6: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 57 + (75 / 400) = 57 + 0.1875 ≈ 57.19 mangoes.",
+        "चरण 1: वर्ग असतत हैं (1 का अंतर)। सतत सीमाएं: 49.5-52.5, 52.5-55.5, 55.5-58.5, 58.5-61.5, 61.5-64.5।\nचरण 2: वर्ग चिन्ह xᵢ: 51, 54, 57, 60, 63।\nचरण 3: कल्पित माध्य a = 57 चुनें। विचलन dᵢ = xᵢ - 57: -6, -3, 0, 3, 6।\nचरण 4: fᵢdᵢ:\n15×(-6) = -90, 110×(-3) = -330, 135×0 = 0, 115×3 = 345, 25×6 = 150।\nचरण 5: Σfᵢ = 400. Σfᵢdᵢ = -420 + 495 = 75।\nचरण 6: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 57 + (75 / 400) = 57 + 0.1875 ≈ 57.19 आम।",
+        "પગલું 1: વર્ગો અસતત છે (1 નો ગાળો). સતત વર્ગસીમાઓ: 49.5-52.5, 52.5-55.5, 55.5-58.5, 58.5-61.5, 61.5-64.5.\nપગલું 2: મધ્યકિંમતો xᵢ: 51, 54, 57, 60, 63.\nપગલું 3: ધારેલો મધ્યક a = 57. વિચલન dᵢ = xᵢ - 57: -6, -3, 0, 3, 6.\nપગલું 4: fᵢdᵢ ની ગણતરી:\n15×(-6) = -90, 110×(-3) = -330, 135×0 = 0, 115×3 = 345, 25×6 = 150.\nપગલું 5: Σfᵢ = 400. Σfᵢdᵢ = -420 + 495 = 75.\nપગલું 6: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 57 + (75 / 400) = 57 + 0.1875 ≈ 57.19 કેરી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 12. Exercise 13.1 Q6
+    blocks.append(make_quiz(
+        "C10M_CH13_012",
+        "Exercise 13.1 Q6: Daily food expenditure of 25 households in a locality:\nExpenditure (₹): 100-150 (4), 150-200 (5), 200-250 (12), 250-300 (2), 300-350 (2).\nFind the mean daily expenditure on food by a suitable method.",
+        "प्रश्नावली 13.1 प्रश्न 6: किसी मोहल्ले के 25 परिवारों में भोजन पर हुआ दैनिक व्यय:\nदैनिक व्यय (₹): 100-150 (4), 150-200 (5), 200-250 (12), 250-300 (2), 300-350 (2)।\nभोजन पर हुआ माध्य दैनिक व्यय एक उपयुक्त विधि द्वारा ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 6: એક વિસ્તારના 25 પરિવારોનો ખોરાક પાછળ થતો દૈનિક ખર્ચ:\nદૈનિક ખર્ચ (₹): 100-150 (4), 150-200 (5), 200-250 (12), 250-300 (2), 300-350 (2).\nયોગ્ય રીતનો ઉપયોગ કરીને ખોરાક પાછળ થતા દૈનિક ખર્ચનો મધ્યક શોધો.",
+        [
+            "₹211",
+            "₹215",
+            "₹208",
+            "₹220"
+        ],
+        [
+            "₹211",
+            "₹215",
+            "₹208",
+            "₹220"
+        ],
+        [
+            "₹211",
+            "₹215",
+            "₹208",
+            "₹220"
+        ],
+        0,
+        "Step 1: Class marks xᵢ: 125, 175, 225, 275, 325.\nStep 2: Let assumed mean a = 225. Deviations dᵢ = xᵢ - 225: -100, -50, 0, 50, 100.\nStep 3: Calculate fᵢdᵢ:\n4×(-100) = -400, 5×(-50) = -250, 12×0 = 0, 2×50 = 100, 2×100 = 200.\nStep 4: Σfᵢ = 25. Σfᵢdᵢ = (-400 - 250) + (100 + 200) = -650 + 300 = -350.\nStep 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 225 + (-350 / 25) = 225 - 14 = ₹211.",
+        "चरण 1: वर्ग चिन्ह xᵢ: 125, 175, 225, 275, 325।\nचरण 2: कल्पित माध्य a = 225 मान लें। विचलन dᵢ = xᵢ - 225: -100, -50, 0, 50, 100।\nचरण 3: fᵢdᵢ की गणना करें:\n4×(-100) = -400, 5×(-50) = -250, 12×0 = 0, 2×50 = 100, 2×100 = 200।\nचरण 4: Σfᵢ = 25. Σfᵢdᵢ = -650 + 300 = -350।\nचरण 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 225 + (-350 / 25) = 225 - 14 = ₹211।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 125, 175, 225, 275, 325.\nપગલું 2: ધારેલો મધ્યક a = 225. વિચલન dᵢ = xᵢ - 225: -100, -50, 0, 50, 100.\nપગલું 3: fᵢdᵢ:\n4×(-100) = -400, 5×(-50) = -250, 12×0 = 0, 2×50 = 100, 2×100 = 200.\nપગલું 4: Σfᵢ = 25. Σfᵢdᵢ = -650 + 300 = -350.\nપગલું 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 225 + (-350 / 25) = 225 - 14 = ₹211.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 13. Exercise 13.1 Q7
+    blocks.append(make_quiz(
+        "C10M_CH13_013",
+        "Exercise 13.1 Q7: Concentration of sulfur dioxide (SO₂) in air (ppm) for 30 localities:\nSO₂ (ppm): 0.00-0.04 (4), 0.04-0.08 (9), 0.08-0.12 (9), 0.12-0.16 (2), 0.16-0.20 (4), 0.20-0.24 (2).\nFind the mean concentration of SO₂ in the air.",
+        "प्रश्नावली 13.1 प्रश्न 7: किसी शहर के 30 मोहल्लों में वायु में सल्फर डाइऑक्साइड (SO₂) की सांद्रता (भाग प्रति मिलियन - ppm में):\nSO₂ (ppm): 0.00-0.04 (4), 0.04-0.08 (9), 0.08-0.12 (9), 0.12-0.16 (2), 0.16-0.20 (4), 0.20-0.24 (2)।\nवायु में SO₂ की सांद्रता का माध्य ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 7: એક શહેરના 30 વિસ્તારોમાં હવામાં સલ્ફર ડાયોક્સાઇડ (SO₂) ની સાંદ્રતા (ppm માં) નીચે મુજબ છે:\nSO₂ (ppm): 0.00-0.04 (4), 0.04-0.08 (9), 0.08-0.12 (9), 0.12-0.16 (2), 0.16-0.20 (4), 0.20-0.24 (2).\nહવામાં SO₂ ની સાંદ્રતાનો મધ્યક શોધો.",
+        [
+            "0.099 ppm",
+            "0.088 ppm",
+            "0.104 ppm",
+            "0.095 ppm"
+        ],
+        [
+            "0.099 ppm",
+            "0.088 ppm",
+            "0.104 ppm",
+            "0.095 ppm"
+        ],
+        [
+            "0.099 ppm",
+            "0.088 ppm",
+            "0.104 ppm",
+            "0.095 ppm"
+        ],
+        0,
+        "Step 1: Class marks xᵢ: 0.02, 0.06, 0.10, 0.14, 0.18, 0.22.\nStep 2: Calculate fᵢxᵢ using direct method:\n4×0.02 = 0.08\n9×0.06 = 0.54\n9×0.10 = 0.90\n2×0.14 = 0.28\n4×0.18 = 0.72\n2×0.22 = 0.44\nStep 3: Σfᵢ = 30. Σfᵢxᵢ = 0.08 + 0.54 + 0.90 + 0.28 + 0.72 + 0.44 = 2.96.\nStep 4: x̄ = Σfᵢxᵢ / Σfᵢ = 2.96 / 30 = 0.09866... ≈ 0.099 ppm.",
+        "चरण 1: वर्ग चिन्ह xᵢ: 0.02, 0.06, 0.10, 0.14, 0.18, 0.22।\nचरण 2: प्रत्यक्ष विधि से fᵢxᵢ की गणना:\n4×0.02 = 0.08\n9×0.06 = 0.54\n9×0.10 = 0.90\n2×0.14 = 0.28\n4×0.18 = 0.72\n2×0.22 = 0.44\nचरण 3: Σfᵢ = 30. Σfᵢxᵢ = 0.08 + 0.54 + 0.90 + 0.28 + 0.72 + 0.44 = 2.96।\nचरण 4: x̄ = Σfᵢxᵢ / Σfᵢ = 2.96 / 30 = 0.09866... ≈ 0.099 ppm।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 0.02, 0.06, 0.10, 0.14, 0.18, 0.22.\nપગલું 2: fᵢxᵢ ની સીધી ગણતરી:\n4×0.02 = 0.08, 9×0.06 = 0.54, 9×0.10 = 0.90, 2×0.14 = 0.28, 4×0.18 = 0.72, 2×0.22 = 0.44.\nપગલું 3: Σfᵢ = 30. Σfᵢxᵢ = 2.96.\nપગલું 4: x̄ = 2.96 / 30 ≈ 0.099 ppm.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 14. Exercise 13.1 Q8
+    blocks.append(make_quiz(
+        "C10M_CH13_014",
+        "Exercise 13.1 Q8: Number of days 40 students were absent during a term (unequal class intervals):\nDays: 0-6 (11), 6-10 (10), 10-14 (7), 14-20 (4), 20-28 (4), 28-38 (3), 38-40 (1).\nFind the mean number of days a student was absent.",
+        "प्रश्नावली 13.1 प्रश्न 8: किसी कक्षा में 40 विद्यार्थियों की अनुपस्थिति के दिन (असमान वर्ग माप वाले वर्ग अंतराल):\nदिन: 0-6 (11), 6-10 (10), 10-14 (7), 14-20 (4), 20-28 (4), 28-38 (3), 38-40 (1)।\nएक विद्यार्थी जितने दिन अनुपस्थित रहा उनका माध्य ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 8: એક સત્ર દરમિયાન 40 વિદ્યાર્થીઓની ગેરહાજરીના દિવસોની સંખ્યા (અસમાન વર્ગ લંબાઈ ધરાવતા વર્ગો):\nદિવસો: 0-6 (11), 6-10 (10), 10-14 (7), 14-20 (4), 20-28 (4), 28-38 (3), 38-40 (1).\nવિદ્યાર્થીઓની ગેરહાજરીના દિવસોનો મધ્યક શોધો.",
+        [
+            "12.48 days",
+            "11.85 days",
+            "13.20 days",
+            "12.00 days"
+        ],
+        [
+            "12.48 दिन",
+            "11.85 दिन",
+            "13.20 दिन",
+            "12.00 दिन"
+        ],
+        [
+            "12.48 દિવસ",
+            "11.85 દિવસ",
+            "13.20 દિવસ",
+            "12.00 દિવસ"
+        ],
+        0,
+        "Step 1: Notice class widths h vary (6, 4, 4, 6, 8, 10, 2). Calculate class marks xᵢ individually:\n(0+6)/2 = 3; (6+10)/2 = 8; (10+14)/2 = 12; (14+20)/2 = 17; (20+28)/2 = 24; (28+38)/2 = 33; (38+40)/2 = 39.\nStep 2: Calculate fᵢxᵢ:\n11×3 = 33\n10×8 = 80\n7×12 = 84\n4×17 = 68\n4×24 = 96\n3×33 = 99\n1×39 = 39\nStep 3: Σfᵢ = 40. Σfᵢxᵢ = 33 + 80 + 84 + 68 + 96 + 99 + 39 = 499.\nStep 4: x̄ = Σfᵢxᵢ / Σfᵢ = 499 / 40 = 12.475 ≈ 12.48 days.",
+        "चरण 1: ध्यान दें कि यहाँ वर्ग चौड़ाई h असमान है (6, 4, 4, 6, 8, 10, 2)। प्रत्येक वर्ग का वर्ग चिन्ह xᵢ अलग-अलग निकालें:\n(0+6)/2 = 3; (6+10)/2 = 8; (10+14)/2 = 12; (14+20)/2 = 17; (20+28)/2 = 24; (28+38)/2 = 33; (38+40)/2 = 39।\nचरण 2: fᵢxᵢ की गणना करें:\n11×3 = 33, 10×8 = 80, 7×12 = 84, 4×17 = 68, 4×24 = 96, 3×33 = 99, 1×39 = 39।\nचरण 3: Σfᵢ = 40. Σfᵢxᵢ = 33 + 80 + 84 + 68 + 96 + 99 + 39 = 499।\nचरण 4: x̄ = Σfᵢxᵢ / Σfᵢ = 499 / 40 = 12.475 ≈ 12.48 दिन।",
+        "પગલું 1: અહીં વર્ગ લંબાઈ h અસમાન છે (6, 4, 4, 6, 8, 10, 2). દરેક વર્ગની મધ્યકિંમત xᵢ શોધો:\n(0+6)/2 = 3, (6+10)/2 = 8, (10+14)/2 = 12, (14+20)/2 = 17, (20+28)/2 = 24, (28+38)/2 = 33, (38+40)/2 = 39.\nપગલું 2: fᵢxᵢ ની ગણતરી:\n11×3 = 33, 10×8 = 80, 7×12 = 84, 4×17 = 68, 4×24 = 96, 3×33 = 99, 1×39 = 39.\nપગલું 3: Σfᵢ = 40. Σfᵢxᵢ = 499.\nપગલું 4: x̄ = 499 / 40 = 12.475 ≈ 12.48 દિવસ.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 15. Exercise 13.1 Q9
+    blocks.append(make_quiz(
+        "C10M_CH13_015",
+        "Exercise 13.1 Q9: Literacy rate (in %) in 35 cities:\nLiteracy (%): 45-55 (3), 55-65 (10), 65-75 (11), 75-85 (8), 85-95 (3).\nFind the mean literacy rate.",
+        "प्रश्नावली 13.1 प्रश्न 9: निम्नलिखित सारणी 35 नगरों की साक्षरता दर (प्रतिशत में) दर्शाती है:\nसाक्षरता दर (%): 45-55 (3), 55-65 (10), 65-75 (11), 75-85 (8), 85-95 (3)।\nमाध्य साक्षरता दर ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.1 પ્રશ્ન 9: નીચેની સારણી 35 શહેરોમાં સાક્ષરતા દર (ટકામાં) દર્શાવે છે:\nસાક્ષરતા દર (%): 45-55 (3), 55-65 (10), 65-75 (11), 75-85 (8), 85-95 (3).\nસાક્ષરતા દરનો મધ્યક શોધો.",
+        [
+            "69.43%",
+            "70.25%",
+            "68.50%",
+            "71.10%"
+        ],
+        [
+            "69.43%",
+            "70.25%",
+            "68.50%",
+            "71.10%"
+        ],
+        [
+            "69.43%",
+            "70.25%",
+            "68.50%",
+            "71.10%"
+        ],
+        0,
+        "Step 1: Class marks xᵢ: 50, 60, 70, 80, 90.\nStep 2: Let assumed mean a = 70. Deviations dᵢ = xᵢ - 70: -20, -10, 0, 10, 20.\nStep 3: Calculate fᵢdᵢ:\n3×(-20) = -60, 10×(-10) = -100, 11×0 = 0, 8×10 = 80, 3×20 = 60.\nStep 4: Σfᵢ = 35. Σfᵢdᵢ = (-60 - 100) + (80 + 60) = -160 + 140 = -20.\nStep 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 70 + (-20 / 35) = 70 - 4/7 = 70 - 0.5714 ≈ 69.43%.",
+        "चरण 1: वर्ग चिन्ह xᵢ: 50, 60, 70, 80, 90।\nचरण 2: कल्पित माध्य a = 70 मान लें। विचलन dᵢ = xᵢ - 70: -20, -10, 0, 10, 20।\nचरण 3: fᵢdᵢ:\n3×(-20) = -60, 10×(-10) = -100, 11×0 = 0, 8×10 = 80, 3×20 = 60।\nचरण 4: Σfᵢ = 35. Σfᵢdᵢ = -160 + 140 = -20।\nचरण 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 70 + (-20 / 35) = 70 - 0.5714 ≈ 69.43%।",
+        "પગલું 1: મધ્યકિંમતો xᵢ: 50, 60, 70, 80, 90.\nપગલું 2: ધારેલો મધ્યક a = 70. વિચલન dᵢ = xᵢ - 70: -20, -10, 0, 10, 20.\nપગલું 3: fᵢdᵢ:\n3×(-20) = -60, 10×(-10) = -100, 11×0 = 0, 8×10 = 80, 3×20 = 60.\nપગલું 4: Σfᵢ = 35. Σfᵢdᵢ = -160 + 140 = -20.\nપગલું 5: x̄ = a + (Σfᵢdᵢ / Σfᵢ) = 70 + (-20 / 35) = 70 - 0.5714 ≈ 69.43%.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 3: MODE OF GROUPED DATA & EXERCISE 13.2 (QUESTIONS 1 TO 6)
+# =========================================================================
+def get_part3_blocks():
+    blocks = []
+
+    # 16. Step 1: Socratic Question on Mode
+    blocks.append(make_socratic(
+        "C10M_CH13_016",
+        "In ungrouped data, Mode is simply the observation that appears most often. In grouped data, if the modal class is 30-40, why isn't the Mode necessarily equal to 35 (the midpoint)?",
+        "अवर्गीकृत आंकड़ों में बहुलक वह प्रेक्षण होता है जो सबसे अधिक बार आता है। वर्गीकृत आंकड़ों में, यदि बहुलक वर्ग 30-40 है, तो बहुलक ठीक 35 (मध्यबिंदु) होना क्यों आवश्यक नहीं है?",
+        "અવર્ગીકૃત માહિતીમાં બહુલક એટલે સૌથી વધુ વખત આવતું અવલોકન. વર્ગીકૃત માહિતીમાં જો બહુલકીય વર્ગ 30-40 હોય, તો બહુલક 35 (મધ્યકિંમત) જ હોય તે શા માટે જરૂરી નથી?",
+        [
+            "Because the frequencies of the neighbouring classes pull the peak towards the side with the higher frequency",
+            "Because the midpoint formula is only valid for calculating the Mean",
+            "Because the modal class always has zero frequency on one side",
+            "Because the mode cannot lie inside the modal class"
+        ],
+        [
+            "क्योंकि पड़ोसी वर्गों की बारंबारताएं शिखर को उस तरफ खींचती हैं जिस तरफ बारंबारता अधिक होती है",
+            "क्योंकि मध्यबिंदु का सूत्र केवल माध्य निकालने के लिए मान्य है",
+            "क्योंकि बहुलक वर्ग की एक तरफ हमेशा शून्य बारंबारता होती है",
+            "क्योंकि बहुलक कभी भी बहुलक वर्ग के भीतर नहीं हो सकता"
+        ],
+        [
+            "કારણ કે આજુબાજુના વર્ગોની આવૃત્તિઓ બહુલકને જે બાજુ વધુ આવૃત્તિ હોય તે તરફ ખેંચે છે",
+            "કારણ કે મધ્યકિંમતનું સૂત્ર માત્ર મધ્યક શોધવા માટે જ માન્ય છે",
+            "કારણ કે બહુલકીય વર્ગની એક તરફ હંમેશા શૂન્ય આવૃત્તિ હોય છે",
+            "કારણ કે બહુલક ક્યારેય બહુલકીય વર્ગની અંદર હોઈ શકતો નથી"
+        ],
+        0,
+        "If the preceding class (20-30) has a much higher frequency than the succeeding class (40-50), more observations are concentrated in the lower half of the modal class, pulling the mode below 35. The mode formula mathematically accounts for this gravitational pull of frequencies f₀ and f₂ on either side of f₁!",
+        "यदि पूर्ववर्ती वर्ग (20-30) की बारंबारता परवर्ती वर्ग (40-50) की तुलना में बहुत अधिक है, तो बहुलक वर्ग के निचले हिस्से में अधिक संख्याएँ जमा होंगी, जिससे बहुलक 35 से कम हो जाएगा। बहुलक सूत्र f₁ के दोनों ओर f₀ और f₂ के इस प्रभाव को सटीकता से मापता है!",
+        "જો આગળના વર્ગ (20-30) ની આવૃત્તિ પાછળના વર્ગ (40-50) કરતાં ઘણી વધારે હોય, તો બહુલકીય વર્ગના નીચેના ભાગમાં અવલોકનો વધુ હશે અને બહુલક 35 થી નીચે સરકી જશે. બહુલકનું સૂત્ર f₀ અને f₂ ની આ ખેંચાણ શક્તિને બરાબર ધ્યાનમાં લે છે!",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 17. Step 2: Theory - Mode Formula & Definitions
+    blocks.append(make_theory(
+        "C10M_CH13_017",
+        "Mode of Grouped Data: Formula, Modal Class & Variable Definitions",
+        "वर्गीकृत आंकड़ों का बहुलक: सूत्र, बहुलक वर्ग और पदों की परिभाषाएं",
+        "વર્ગીકૃત માહિતીનો બહુલક: સૂત્ર, બહુલકીય વર્ગ અને પદોની સમજૂતી",
+        "### 1. What is the Modal Class?\nThe class interval with the **maximum frequency** is called the **Modal Class**.\n\n### 2. The Mode Formula\n$$\\text{Mode} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n\nWhere:\n- $l$ = Lower limit of the modal class\n- $h$ = Size of the class interval (assuming all class sizes to be equal)\n- $f_1$ = Frequency of the modal class\n- $f_0$ = Frequency of the class *preceding* the modal class\n- $f_2$ = Frequency of the class *succeeding* the modal class\n\n### 3. Understanding the Denominator\nNotice that the denominator can be rewritten as:\n$$2f_1 - f_0 - f_2 = (f_1 - f_0) + (f_1 - f_2)$$\nSince $f_1$ is the maximum frequency, both $(f_1 - f_0) \\ge 0$ and $(f_1 - f_2) \\ge 0$. Thus, the fraction $\\frac{f_1 - f_0}{(f_1 - f_0) + (f_1 - f_2)}$ always lies between $0$ and $1$, guaranteeing that the calculated Mode will **always fall inside the modal class $[l, l + h]$**!",
+        "### 1. बहुलक वर्ग (Modal Class) क्या है?\n**अधिकतम बारंबारता** वाले वर्ग अंतराल को **बहुलक वर्ग** कहा जाता है।\n\n### 2. बहुलक का सूत्र\n$$\\text{Mode (बहुलक)} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n\nजहाँ:\n- $l$ = बहुलक वर्ग की निम्न सीमा\n- $h$ = वर्ग अंतराल का माप (वर्ग चौड़ाई)\n- $f_1$ = बहुलक वर्ग की बारंबारता\n- $f_0$ = बहुलक वर्ग से ठीक *पहले* वाले वर्ग की बारंबारता\n- $f_2$ = बहुलक वर्ग के ठीक *बाद* वाले वर्ग की बारंबारता\n\n### 3. हर (Denominator) की संरचना\nध्यान दें कि हर को ऐसे लिखा जा सकता है:\n$$2f_1 - f_0 - f_2 = (f_1 - f_0) + (f_1 - f_2)$$\nचूँकि $f_1$ अधिकतम बारंबारता है, इसलिए $(f_1 - f_0) \\ge 0$ और $(f_1 - f_2) \\ge 0$ दोनों धनात्मक होंगे। अतः भिन्न हमेशा $0$ और $1$ के बीच रहेगा, जो यह सुनिश्चित करता है कि प्राप्त बहुलक **हमेशा बहुलक वर्ग $[l, l + h]$ के भीतर ही रहेगा**!",
+        "### 1. બહુલકીય વર્ગ (Modal Class) એટલે શું?\nજે વર્ગની **આવૃત્તિ સૌથી મહત્તમ (સૌથી મોટી)** હોય તે વર્ગને **બહુલકીય વર્ગ** કહેવાય છે。\n\n### 2. બહુલકનું સૂત્ર\n$$\\text{બહુલક (Mode)} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n\nજ્યાં:\n- $l$ = બહુલકીય વર્ગની અધઃસીમા\n- $h$ = વર્ગ લંબાઈ\n- $f_1$ = બહુલકીય વર્ગની આવૃત્તિ\n- $f_0$ = બહુલકીય વર્ગના આગળના (પહેલાના) વર્ગની આવૃત્તિ\n- $f_2$ = બહુલકીય વર્ગના પાછળના (પછીના) વર્ગની આવૃત્તિ\n\n### 3. છેદની સમજૂતી\nછેદને નીચે મુજબ લખી શકાય:\n$$2f_1 - f_0 - f_2 = (f_1 - f_0) + (f_1 - f_2)$$\n$f_1$ એ સૌથી મોટી આવૃત્તિ હોવાથી $(f_1 - f_0)$ અને $(f_1 - f_2)$ બંને ધન જ રહે. આથી બહુલકનો જવાબ **હંમેશા બહુલકીય વર્ગની અંદર જ આવશે**!",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 18. Step 3: Teacher Tip - Indexing 0, 1, 2
+    blocks.append(make_theory(
+        "C10M_CH13_018",
+        "Teacher Tip: The 0-1-2 Memory Rule for Modal Frequencies",
+        "शिक्षक युक्ति: बहुलक बारंबारता के लिए 0-1-2 का याद रखने का नियम",
+        "શિક્ષકની સલાહ: બહુલકીય આવૃત્તિઓ માટે 0-1-2 નો યાદ રાખવાનો નિયમ",
+        "Students frequently mix up $f_0, f_1,$ and $f_2$ during exams. Use this foolproof memory anchor:\n\n1. **Think of Whole Numbers:** $0, 1, 2$.\n2. **1 is the Champion (Modal Class):** $f_1$ is the highest frequency (First place).\n3. **0 comes Before 1:** $f_0$ is the class directly above (preceding).\n4. **2 comes After 1:** $f_2$ is the class directly below (succeeding).\n\n*Sanity Check in Exams:* If your calculated mode comes out to be $38.4$ and your modal class was $20-30$, you made an arithmetic error! The Mode must always lie within the modal class boundaries $[l, l + h]$.",
+        "परीक्षा में विद्यार्थी अक्सर $f_0, f_1,$ और $f_2$ में भ्रमित हो जाते हैं। इस सरल नियम को याद रखें:\n\n1. **पूर्ण संख्याएं सोचें:** $0, 1, 2$।\n2. **1 विजेता (विजेता वर्ग) है:** $f_1$ सबसे बड़ी बारंबारता है (प्रथम स्थान)।\n3. **0 आता है 1 से पहले:** $f_0$ ठीक ऊपर वाले (पूर्ववर्ती) वर्ग की बारंबारता है।\n4. **2 आता है 1 के बाद:** $f_2$ ठीक नीचे वाले (परवर्ती) वर्ग की बारंबारता है।\n\n*परीक्षा में उत्तर की जांच:* यदि आपका बहुलक $38.4$ आया और आपका बहुलक वर्ग $20-30$ था, तो समझ जाएं कि गणना में गलती हुई है! बहुलक हमेशा बहुलक वर्ग की सीमाओं के भीतर ही आना चाहिए।",
+        "પરીક્ષામાં વિદ્યાર્થીઓ ઘણીવાર $f_0, f_1,$ અને $f_2$ માં ભૂલ કરે છે. આ સરળ ટ્રીક યાદ રાખો:\n\n1. **ક્રમિક અંકો વિચારો:** $0, 1, 2$.\n2. **1 એટલે વિજેતા (મુખ્ય વર્ગ):** $f_1$ સૌથી મોટી આવૃત્તિ છે (પ્રથમ નંબર).\n3. **0 એ 1 ની પહેલાં આવે:** $f_0$ એટલે બહુલકીય વર્ગની બરાબર આગળના વર્ગની આવૃત્તિ.\n4. **2 એ 1 ની પછી આવે:** $f_2$ એટલે બહુલકીય વર્ગની બરાબર પાછળના વર્ગની આવૃત્તિ.\n\n*જવાબની ચકાસણી:* જો તમારો બહુલક $38.4$ આવે અને બહુલકીય વર્ગ $20-30$ હોય, તો ગણતરીમાં ભૂલ થઈ છે તે તરત સમજી જવું! બહુલક હંમેશા બહુલકીય વર્ગની વચ્ચે જ આવે.",
+        btype="teacher_tip",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 19. Exercise 13.2 Q1
+    blocks.append(make_quiz(
+        "C10M_CH13_019",
+        "Exercise 13.2 Q1: Ages of patients admitted in a hospital during a year:\nAge (years): 5-15 (6), 15-25 (11), 25-35 (21), 35-45 (23), 45-55 (14), 55-65 (5).\nFind the Mode and the Mean of the data.",
+        "प्रश्नावली 13.2 प्रश्न 1: किसी अस्पताल में एक विशेष वर्ष में भर्ती हुए रोगियों की आयु:\nआयु (वर्षों में): 5-15 (6), 15-25 (11), 25-35 (21), 35-45 (23), 45-55 (14), 55-65 (5)।\nउपर्युक्त आंकड़ों के बहुलक और माध्य ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 1: એક દવાખાનામાં એક વર્ષ દરમિયાન દાખલ થયેલા દર્દીઓની ઉંમર:\nઉંમર (વર્ષમાં): 5-15 (6), 15-25 (11), 25-35 (21), 35-45 (23), 45-55 (14), 55-65 (5).\nઆ માહિતીનો બહુલક અને મધ્યક શોધો.",
+        [
+            "Mode = 36.82 years, Mean = 35.37 years",
+            "Mode = 35.50 years, Mean = 36.80 years",
+            "Mode = 38.20 years, Mean = 34.50 years",
+            "Mode = 36.82 years, Mean = 38.00 years"
+        ],
+        [
+            "बहुलक = 36.82 वर्ष, माध्य = 35.37 वर्ष",
+            "बहुलक = 35.50 वर्ष, माध्य = 36.80 वर्ष",
+            "बहुलक = 38.20 वर्ष, माध्य = 34.50 वर्ष",
+            "बहुलक = 36.82 वर्ष, माध्य = 38.00 वर्ष"
+        ],
+        [
+            "બહુલક = 36.82 વર્ષ, મધ્યક = 35.37 વર્ષ",
+            "બહુલક = 35.50 વર્ષ, મધ્યક = 36.80 વર્ષ",
+            "બહુલક = 38.20 વર્ષ, મધ્યક = 34.50 વર્ષ",
+            "બહુલક = 36.82 વર્ષ, મધ્યક = 38.00 વર્ષ"
+        ],
+        0,
+        "Step 1: Modal Class has maximum frequency 23 => Modal class = 35-45.\nl = 35, h = 10, f₁ = 23, f₀ = 21, f₂ = 14.\nStep 2: Mode = l + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × h\nMode = 35 + [(23 - 21) / (2×23 - 21 - 14)] × 10 = 35 + [2 / (46 - 35)] × 10 = 35 + 20/11 = 35 + 1.82 = 36.82 years.\nStep 3: For Mean, class marks xᵢ: 10, 20, 30, 40, 50, 60.\nΣfᵢ = 80. Σfᵢxᵢ = 60 + 220 + 630 + 920 + 700 + 300 = 2830.\nMean = 2830 / 80 = 35.375 ≈ 35.37 years.\n(Interpretation: Maximum patients admitted are 36.82 years old, while average patient age is 35.37 years).",
+        "चरण 1: अधिकतम बारंबारता 23 है => बहुलक वर्ग = 35-45।\nl = 35, h = 10, f₁ = 23, f₀ = 21, f₂ = 14।\nचरण 2: बहुलक = 35 + [(23 - 21) / (46 - 21 - 14)] × 10 = 35 + (2/11) × 10 = 35 + 1.82 = 36.82 वर्ष।\nचरण 3: माध्य के लिए, xᵢ: 10, 20, 30, 40, 50, 60. Σfᵢ = 80, Σfᵢxᵢ = 2830।\nमाध्य = 2830 / 80 = 35.375 ≈ 35.37 वर्ष।",
+        "પગલું 1: મહત્તમ આવૃત્તિ 23 છે => બહુલકીય વર્ગ = 35-45.\nl = 35, h = 10, f₁ = 23, f₀ = 21, f₂ = 14.\nપગલું 2: બહુલક = 35 + [(23 - 21) / (46 - 35)] × 10 = 35 + 20/11 = 35 + 1.82 = 36.82 વર્ષ.\nપગલું 3: મધ્યક માટે, Σfᵢ = 80, Σfᵢxᵢ = 2830 => મધ્યક = 2830 / 80 = 35.37 વર્ષ.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 20. Exercise 13.2 Q2
+    blocks.append(make_quiz(
+        "C10M_CH13_020",
+        "Exercise 13.2 Q2: Lifetimes (in hours) of 225 electrical components:\nLifetime (hours): 0-20 (10), 20-40 (35), 40-60 (52), 60-80 (61), 80-100 (38), 100-120 (29).\nDetermine the modal lifetime of the components.",
+        "प्रश्नावली 13.2 प्रश्न 2: 225 बिजली के उपकरणों के जीवनकाल (घंटों में) के आंकड़े:\nजीवनकाल (घंटे): 0-20 (10), 20-40 (35), 40-60 (52), 60-80 (61), 80-100 (38), 100-120 (29)।\nउपकरणों का बहुलक जीवनकाल ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 2: 225 વીજ ઉપકરણોના આયુષ્ય (કલાકોમાં) ની વિગત:\nઆયુષ્ય (કલાક): 0-20 (10), 20-40 (35), 40-60 (52), 60-80 (61), 80-100 (38), 100-120 (29).\nઉપકરણોના આયુષ્યનો બહુલક શોધો.",
+        [
+            "65.625 hours",
+            "66.250 hours",
+            "64.800 hours",
+            "67.500 hours"
+        ],
+        [
+            "65.625 घंटे",
+            "66.250 घंटे",
+            "64.800 घंटे",
+            "67.500 घंटे"
+        ],
+        [
+            "65.625 કલાક",
+            "66.250 કલાક",
+            "64.800 કલાક",
+            "67.500 કલાક"
+        ],
+        0,
+        "Step 1: Maximum frequency is 61 => Modal class is 60-80.\nl = 60, h = 20, f₁ = 61, f₀ = 52, f₂ = 38.\nStep 2: Mode = l + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × h\nMode = 60 + [(61 - 52) / (2×61 - 52 - 38)] × 20\n= 60 + [9 / (122 - 90)] × 20\n= 60 + [9 / 32] × 20 = 60 + 180 / 32 = 60 + 5.625 = 65.625 hours.",
+        "चरण 1: अधिकतम बारंबारता 61 है => बहुलक वर्ग = 60-80।\nl = 60, h = 20, f₁ = 61, f₀ = 52, f₂ = 38।\nचरण 2: बहुलक = 60 + [(61 - 52) / (122 - 52 - 38)] × 20\n= 60 + (9 / 32) × 20 = 60 + 5.625 = 65.625 घंटे।",
+        "પગલું 1: મહત્તમ આવૃત્તિ 61 છે => બહુલકીય વર્ગ = 60-80.\nl = 60, h = 20, f₁ = 61, f₀ = 52, f₂ = 38.\nપગલું 2: બહુલક = 60 + [(61 - 52) / (122 - 90)] × 20 = 60 + (9/32) × 20 = 60 + 5.625 = 65.625 કલાક.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 21. Exercise 13.2 Q3
+    blocks.append(make_quiz(
+        "C10M_CH13_021",
+        "Exercise 13.2 Q3: Monthly household expenditure of 200 families:\nExpenditure (₹): 1000-1500 (24), 1500-2000 (40), 2000-2500 (33), 2500-3000 (28), 3000-3500 (30), 3500-4000 (22), 4000-4500 (16), 4500-5000 (7).\nFind the modal monthly expenditure and the mean monthly expenditure.",
+        "प्रश्नावली 13.2 प्रश्न 3: 200 परिवारों के कुल मासिक घरेलू व्यय के आंकड़े:\nमासिक व्यय (₹): 1000-1500 (24), 1500-2000 (40), 2000-2500 (33), 2500-3000 (28), 3000-3500 (30), 3500-4000 (22), 4000-4500 (16), 4500-5000 (7)।\nबहुलक मासिक व्यय और माध्य मासिक व्यय ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 3: એક ગામના 200 પરિવારોનો માસિક ઘરખર્ચ:\nમાસિક ખર્ચ (₹): 1000-1500 (24), 1500-2000 (40), 2000-2500 (33), 2500-3000 (28), 3000-3500 (30), 3500-4000 (22), 4000-4500 (16), 4500-5000 (7).\nપરિવારોના માસિક ખર્ચનો બહુલક અને મધ્યક શોધો.",
+        [
+            "Mode = ₹1847.83, Mean = ₹2662.50",
+            "Mode = ₹1820.00, Mean = ₹2650.00",
+            "Mode = ₹1847.83, Mean = ₹2700.50",
+            "Mode = ₹1860.50, Mean = ₹2662.50"
+        ],
+        [
+            "बहुलक = ₹1847.83, माध्य = ₹2662.50",
+            "बहुलक = ₹1820.00, माध्य = ₹2650.00",
+            "बहुलक = ₹1847.83, माध्य = ₹2700.50",
+            "बहुलक = ₹1860.50, माध्य = ₹2662.50"
+        ],
+        [
+            "બહુલક = ₹1847.83, મધ્યક = ₹2662.50",
+            "બહુલક = ₹1820.00, મધ્યક = ₹2650.00",
+            "બહુલક = ₹1847.83, મધ્યક = ₹2700.50",
+            "બહુલક = ₹1860.50, મધ્યક = ₹2662.50"
+        ],
+        0,
+        "Step 1: Modal Class = 1500-2000 (max frequency f₁ = 40).\nl = 1500, h = 500, f₁ = 40, f₀ = 24, f₂ = 33.\nMode = 1500 + [(40 - 24) / (2×40 - 24 - 33)] × 500\n= 1500 + [16 / (80 - 57)] × 500 = 1500 + (8000 / 23) = 1500 + 347.83 = ₹1847.83.\nStep 2: For Mean, let assumed mean a = 2750, h = 500.\nCalculated Σfᵢdᵢ = -17500 for Σfᵢ = 200.\nMean x̄ = 2750 + (-17500 / 200) = 2750 - 87.50 = ₹2662.50.",
+        "चरण 1: अधिकतम बारंबारता 40 है => बहुलक वर्ग = 1500-2000।\nl = 1500, h = 500, f₁ = 40, f₀ = 24, f₂ = 33।\nबहुलक = 1500 + [(40 - 24) / (80 - 57)] × 500 = 1500 + (16/23) × 500 = 1500 + 347.83 = ₹1847.83।\nचरण 2: माध्य के लिए, कल्पित माध्य a = 2750 लेने पर Σfᵢdᵢ = -17500, Σfᵢ = 200।\nमाध्य = 2750 + (-17500 / 200) = 2750 - 87.50 = ₹2662.50।",
+        "પગલું 1: મહત્તમ આવૃત્તિ 40 છે => બહુલકીય વર્ગ = 1500-2000.\nl = 1500, h = 500, f₁ = 40, f₀ = 24, f₂ = 33.\nબહુલક = 1500 + [(40 - 24) / (80 - 57)] × 500 = 1500 + 347.83 = ₹1847.83.\nપગલું 2: મધ્યક માટે a = 2750 લેતાં, Σfᵢdᵢ = -17500, Σfᵢ = 200.\nમધ્યક = 2750 - 87.50 = ₹2662.50.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 22. Exercise 13.2 Q4
+    blocks.append(make_quiz(
+        "C10M_CH13_022",
+        "Exercise 13.2 Q4: State-wise teacher-student ratio in higher secondary schools:\nStudents/Teacher: 15-20 (3), 20-25 (8), 25-30 (9), 30-35 (10), 35-40 (3), 40-45 (0), 45-50 (0), 50-55 (2).\nFind the Mode and the Mean of this data.",
+        "प्रश्नावली 13.2 प्रश्न 4: भारत के उच्चतर माध्यमिक विद्यालयों में राज्यों के अनुसार शिक्षक-विद्यार्थी अनुपात:\nविद्यार्थी/शिक्षक: 15-20 (3), 20-25 (8), 25-30 (9), 30-35 (10), 35-40 (3), 40-45 (0), 45-50 (0), 50-55 (2)।\nइन आंकड़ों के बहुलक और माध्य ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 4: ભારતના ઉચ્ચતર માધ્યમિક શાળાઓમાં રાજ્યવાર શિક્ષક-વિદ્યાર્થી ગુણોત્તર:\nવિદ્યાર્થી/શિક્ષક: 15-20 (3), 20-25 (8), 25-30 (9), 30-35 (10), 35-40 (3), 40-45 (0), 45-50 (0), 50-55 (2).\nઆ માહિતીનો બહુલક અને મધ્યક શોધો.",
+        [
+            "Mode = 30.6, Mean = 29.2",
+            "Mode = 31.5, Mean = 28.5",
+            "Mode = 30.0, Mean = 29.8",
+            "Mode = 29.6, Mean = 30.2"
+        ],
+        [
+            "बहुलक = 30.6, माध्य = 29.2",
+            "बहुलक = 31.5, माध्य = 28.5",
+            "बहुलक = 30.0, माध्य = 29.8",
+            "बहुलक = 29.6, माध्य = 30.2"
+        ],
+        [
+            "બહુલક = 30.6, મધ્યક = 29.2",
+            "બહુલક = 31.5, મધ્યક = 28.5",
+            "બહુલક = 30.0, મધ્યક = 29.8",
+            "બહુલક = 29.6, મધ્યક = 30.2"
+        ],
+        0,
+        "Step 1: Modal class = 30-35 (max frequency f₁ = 10).\nl = 30, h = 5, f₁ = 10, f₀ = 9, f₂ = 3.\nMode = 30 + [(10 - 9) / (2×10 - 9 - 3)] × 5 = 30 + [1 / (20 - 12)] × 5 = 30 + 5/8 = 30 + 0.625 ≈ 30.6.\nStep 2: For Mean, Σfᵢ = 35. Σfᵢxᵢ = 3(17.5) + 8(22.5) + 9(27.5) + 10(32.5) + 3(37.5) + 0 + 0 + 2(52.5) = 1022.5.\nMean = 1022.5 / 35 = 29.21 ≈ 29.2.\n(Interpretation: Most states have 30.6 students per teacher, while national average is 29.2).",
+        "चरण 1: बहुलक वर्ग = 30-35 (अधिकतम बारंबारता f₁ = 10)।\nl = 30, h = 5, f₁ = 10, f₀ = 9, f₂ = 3।\nबहुलक = 30 + [(10 - 9) / (20 - 12)] × 5 = 30 + 5/8 = 30.625 ≈ 30.6।\nचरण 2: माध्य के लिए, Σfᵢ = 35, Σfᵢxᵢ = 1022.5।\nमाध्य = 1022.5 / 35 = 29.21 ≈ 29.2।",
+        "પગલું 1: બહુલકીય વર્ગ = 30-35 (મહત્તમ આવૃત્તિ f₁ = 10).\nl = 30, h = 5, f₁ = 10, f₀ = 9, f₂ = 3.\nબહુલક = 30 + [(10 - 9) / (20 - 12)] × 5 = 30 + 5/8 = 30.625 ≈ 30.6.\nપગલું 2: મધ્યક માટે, Σfᵢ = 35, Σfᵢxᵢ = 1022.5 => મધ્યક = 29.21 ≈ 29.2.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 23. Exercise 13.2 Q5
+    blocks.append(make_quiz(
+        "C10M_CH13_023",
+        "Exercise 13.2 Q5: Runs scored by some top batsmen of the world in one-day international cricket matches:\nRuns: 3000-4000 (4), 4000-5000 (18), 5000-6000 (9), 6000-7000 (7), 7000-8000 (6), 8000-9000 (3), 9000-10000 (1), 10000-11000 (1).\nFind the mode of the data.",
+        "प्रश्नावली 13.2 प्रश्न 5: विश्व के कुछ शीर्ष बल्लेबाजों द्वारा एकदिवसीय अंतरराष्ट्रीय क्रिकेट मैचों में बनाए गए रन:\nरन: 3000-4000 (4), 4000-5000 (18), 5000-6000 (9), 6000-7000 (7), 7000-8000 (6), 8000-9000 (3), 9000-10000 (1), 10000-11000 (1)।\nइन आंकड़ों का बहुलक ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 5: વિશ્વના કેટલાક શ્રેષ્ઠ બેટ્સમેનો દ્વારા એકદિવસીય આંતરરાષ્ટ્રીય ક્રિકેટમાં કરેલા રન:\nરન: 3000-4000 (4), 4000-5000 (18), 5000-6000 (9), 6000-7000 (7), 7000-8000 (6), 8000-9000 (3), 9000-10000 (1), 10000-11000 (1).\nઆ માહિતીનો બહુલક શોધો.",
+        [
+            "4608.7 runs",
+            "4650.0 runs",
+            "4580.5 runs",
+            "4710.2 runs"
+        ],
+        [
+            "4608.7 रन",
+            "4650.0 रन",
+            "4580.5 रन",
+            "4710.2 रन"
+        ],
+        [
+            "4608.7 રન",
+            "4650.0 રન",
+            "4580.5 રન",
+            "4710.2 રન"
+        ],
+        0,
+        "Step 1: Modal class = 4000-5000 (max frequency f₁ = 18).\nl = 4000, h = 1000, f₁ = 18, f₀ = 4, f₂ = 9.\nStep 2: Mode = l + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × h\nMode = 4000 + [(18 - 4) / (2×18 - 4 - 9)] × 1000\n= 4000 + [14 / (36 - 13)] × 1000\n= 4000 + (14000 / 23) = 4000 + 608.695 ≈ 4608.7 runs.",
+        "चरण 1: बहुलक वर्ग = 4000-5000 (अधिकतम बारंबारता f₁ = 18)।\nl = 4000, h = 1000, f₁ = 18, f₀ = 4, f₂ = 9।\nचरण 2: बहुलक = 4000 + [(18 - 4) / (36 - 13)] × 1000\n= 4000 + (14 / 23) × 1000 = 4000 + 608.695 ≈ 4608.7 रन।",
+        "પગલું 1: બહુલકીય વર્ગ = 4000-5000 (મહત્તમ આવૃત્તિ f₁ = 18).\nl = 4000, h = 1000, f₁ = 18, f₀ = 4, f₂ = 9.\nપગલું 2: બહુલક = 4000 + [(18 - 4) / (36 - 13)] × 1000 = 4000 + (14000/23) ≈ 4608.7 રન.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 24. Exercise 13.2 Q6
+    blocks.append(make_quiz(
+        "C10M_CH13_024",
+        "Exercise 13.2 Q6: A student noted the number of cars passing through a spot on a road for 100 periods of 3 minutes each:\nCars: 0-10 (7), 10-20 (14), 20-30 (13), 30-40 (12), 40-50 (20), 50-60 (11), 60-70 (15), 70-80 (8).\nFind the mode of the data.",
+        "प्रश्नावली 13.2 प्रश्न 6: एक विद्यार्थी ने एक सड़क के किसी स्थान से होकर जाती हुई कारों की संख्या 100 अवधियों (प्रत्येक 3 मिनट) के लिए नोट की:\nकारों की संख्या: 0-10 (7), 10-20 (14), 20-30 (13), 30-40 (12), 40-50 (20), 50-60 (11), 60-70 (15), 70-80 (8)।\nइन आंकड़ों का बहुलक ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.2 પ્રશ્ન 6: એક વિદ્યાર્થીએ રસ્તા પરથી પસાર થતી કારની સંખ્યા 100 સમયગાળાઓ (દરેક 3 મિનિટ) માટે નોંધી:\nકારની સંખ્યા: 0-10 (7), 10-20 (14), 20-30 (13), 30-40 (12), 40-50 (20), 50-60 (11), 60-70 (15), 70-80 (8).\nઆ માહિતીનો બહુલક શોધો.",
+        [
+            "44.7 cars",
+            "45.2 cars",
+            "43.8 cars",
+            "46.0 cars"
+        ],
+        [
+            "44.7 कारें",
+            "45.2 कारें",
+            "43.8 कारें",
+            "46.0 कारें"
+        ],
+        [
+            "44.7 કાર",
+            "45.2 કાર",
+            "43.8 કાર",
+            "46.0 કાર"
+        ],
+        0,
+        "Step 1: Modal class = 40-50 (maximum frequency f₁ = 20).\nl = 40, h = 10, f₁ = 20, f₀ = 12, f₂ = 11.\nStep 2: Mode = l + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × h\nMode = 40 + [(20 - 12) / (2×20 - 12 - 11)] × 10\n= 40 + [8 / (40 - 23)] × 10\n= 40 + (80 / 17) = 40 + 4.705 ≈ 44.7 cars.",
+        "चरण 1: बहुलक वर्ग = 40-50 (अधिकतम बारंबारता f₁ = 20)।\nl = 40, h = 10, f₁ = 20, f₀ = 12, f₂ = 11।\nचरण 2: बहुलक = 40 + [(20 - 12) / (40 - 23)] × 10\n= 40 + (8 / 17) × 10 = 40 + 4.705 ≈ 44.7 कारें।",
+        "પગલું 1: બહુલકીય વર્ગ = 40-50 (મહત્તમ આવૃત્તિ f₁ = 20).\nl = 40, h = 10, f₁ = 20, f₀ = 12, f₂ = 11.\nપગલું 2: બહુલક = 40 + [(20 - 12) / (40 - 23)] × 10 = 40 + (80/17) = 40 + 4.705 ≈ 44.7 કાર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 4: MEDIAN OF GROUPED DATA & EXERCISE 13.3 (QUESTIONS 1 TO 7)
+# =========================================================================
+def get_part4_blocks():
+    blocks = []
+
+    # 25. Step 1: Socratic Question on Median
+    blocks.append(make_socratic(
+        "C10M_CH13_025",
+        "If 60 students are lined up in order of their test scores, the median score is between the 30th and 31st student. In grouped frequency data, how can we find which class interval contains this middle student?",
+        "यदि 60 विद्यार्थियों को उनके परीक्षा अंकों के क्रम में खड़ा किया जाए, तो माध्यक अंक 30वें और 31वें विद्यार्थी के बीच होगा। वर्गीकृत बारंबारता आंकड़ों में, हम कैसे पता लगाते हैं कि यह मध्य विद्यार्थी किस वर्ग अंतराल में है?",
+        "જો 60 વિદ્યાર્થીઓને તેમના ગુણના ચડતા ક્રમમાં ગોઠવવામાં આવે, તો મધ્યસ્થ ગુણ 30મા અને 31મા વિદ્યાર્થીની વચ્ચે આવે. વર્ગીકૃત માહિતીમાં, આ વચ્ચેનો વિદ્યાર્થી કયા વર્ગમાં છે તે આપણે કઈ રીતે જાણી શકીએ?",
+        [
+            "By accumulating the frequencies from the start (Cumulative Frequency) until the sum reaches or exceeds n/2 = 30",
+            "By choosing the class with the maximum frequency",
+            "By dividing the highest score by 2",
+            "By picking the middle row of the frequency table regardless of frequencies"
+        ],
+        [
+            "शुरू से बारंबारताओं को जोड़ते हुए (संचयी बारंबारता) जब तक कि योग n/2 = 30 तक या उससे अधिक न पहुँच जाए",
+            "अधिकतम बारंबारता वाले वर्ग को चुनकर",
+            "उच्चतम अंक को 2 से भाग देकर",
+            "बारंबारता की परवाह किए बिना सारणी की ठीक बीच वाली पंक्ति को चुनकर"
+        ],
+        [
+            "શરૂઆતથી આવૃત્તિઓનો સરવાળો (સંચયી આવૃત્તિ) કરતાં જઈને જ્યાં સુધી સરવાળો n/2 = 30 કે તેથી વધુ ન થાય ત્યાં સુધી",
+            "સૌથી મોટી આવૃત્તિ ધરાવતો વર્ગ પસંદ કરીને",
+            "સૌથી મોટા પ્રાપ્તાંકને 2 વડે ભાગીને",
+            "આવૃત્તિ જોયા વગર સીધા જ વચ્ચેની હરોળ પસંદ કરીને"
+        ],
+        0,
+        "By tracking the cumulative frequency (cf), we know exactly how many observations lie below each upper class boundary. The class whose cumulative frequency is greater than (and nearest to) n/2 is called the Median Class!",
+        "संचयी बारंबारता (cf) जोड़कर हमें पता चलता है कि प्रत्येक वर्ग सीमा के नीचे कितने प्रेक्षण हैं। जिस वर्ग की संचयी बारंबारता n/2 से ठीक बड़ी या उसके बराबर होती है, उसे 'माध्यक वर्ग (Median Class)' कहा जाता है!",
+        "સંચયી આવૃત્તિ (cf) ની મદદથી આપણને ચોક્કસ ખબર પડે છે કે દરેક વર્ગસીમાથી નીચે કેટલા અવલોકનો છે. જે વર્ગની સંચયી આવૃત્તિ n/2 થી તરત જ મોટી હોય તેને 'મધ્યસ્થ વર્ગ (Median Class)' કહેવાય છે!",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 26. Step 2: Theory - Median Formula & Empirical Relationship
+    blocks.append(make_theory(
+        "C10M_CH13_026",
+        "Median of Grouped Data: Formula, Median Class & Empirical Relationship",
+        "वर्गीकृत आंकड़ों का माध्यक: सूत्र, माध्यक वर्ग और आनुभविक संबंध",
+        "વર્ગીકૃત માહિતીનો મધ્યસ્થ: સૂત્ર, મધ્યસ્થ વર્ગ અને પ્રયોગમૂલક સંબંધ",
+        "### 1. Cumulative Frequency and Median Class\n1. Find the total number of observations $n = \\sum f_i$.\n2. Compute $n/2$.\n3. Locate the class whose cumulative frequency ($cf$) is greater than (and nearest to) $n/2$. This is the **Median Class**.\n\n### 2. The Median Formula\n$$\\text{Median} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n\nWhere:\n- $l$ = Lower limit of the median class\n- $n$ = Number of observations ($\\sum f_i$)\n- $cf$ = Cumulative frequency of the class *preceding* the median class\n- $f$ = Simple frequency of the median class itself\n- $h$ = Class size (Upper limit - Lower limit)\n\n### 3. The Empirical Relationship Between Mean, Median, and Mode\nFor moderately skewed frequency distributions, the three measures of central tendency are connected by Karl Pearson's empirical formula:\n$$\\text{Mode} = 3\\text{ Median} - 2\\text{ Mean}$$\nor equivalently:\n$$3\\text{ Median} = \\text{Mode} + 2\\text{ Mean}$$\n\n*Board Exam Tip:* If you are given any two of (Mean, Median, Mode), you can calculate the third directly using this relationship!",
+        "### 1. संचयी बारंबारता और माध्यक वर्ग\n1. कुल प्रेक्षणों की संख्या $n = \\sum f_i$ ज्ञात करें।\n2. $n/2$ का मान निकालें।\n3. वह वर्ग खोजें जिसकी संचयी बारंबारता ($cf$) $n/2$ से ठीक बड़ी है। यह **माध्यक वर्ग (Median Class)** कहलाता है।\n\n### 2. माध्यक का सूत्र\n$$\\text{माध्यक (Median)} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n\nजहाँ:\n- $l$ = माध्यक वर्ग की निम्न सीमा\n- $n$ = प्रेक्षणों की कुल संख्या ($\\sum f_i$)\n- $cf$ = माध्यक वर्ग से ठीक *पहले* वाले वर्ग की संचयी बारंबारता\n- $f$ = स्वयं माध्यक वर्ग की बारंबारता\n- $h$ = वर्ग माप (वर्ग चौड़ाई)\n\n### 3. माध्य, माध्यक और बहुलक में आनुभविक संबंध\nसामान्य असममित बंटनों के लिए, केंद्रीय प्रवृत्ति के तीनों मापकों में यह प्रसिद्ध संबंध होता है:\n$$\\text{बहुलक (Mode)} = 3\\text{ माध्यक (Median)} - 2\\text{ माध्य (Mean)}$$\nया:\n$$3\\text{ माध्यक} = \\text{बहुलक} + 2\\text{ माध्य}$$\n\n*बोर्ड परीक्षा टिप:* यदि आपको माध्य, माध्यक और बहुलक में से कोई दो मान दिए गए हों, तो आप इस सूत्र से तीसरा मान सीधे ज्ञात कर सकते हैं!",
+        "### 1. સંચયી આવૃત્તિ અને મધ્યસ્થ વર્ગ\n1. કુલ આવૃત્તિ $n = \\sum f_i$ મેળવો.\n2. $n/2$ ની કિંમત શોધો.\n3. જે વર્ગની સંચયી આવૃત્તિ ($cf$) $n/2$ કરતાં તરત જ મોટી હોય તે વર્ગને **મધ્યસ્થ વર્ગ** કહે છે。\n\n### 2. મધ્યસ્થનું સૂત્ર\n$$\\text{મધ્યસ્થ (Median)} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n\nજ્યાં:\n- $l$ = મધ્યસ્થ વર્ગની અધઃસીમા\n- $n$ = કુલ અવલોકનોની સંખ્યા ($\\sum f_i$)\n- $cf$ = મધ્યસ્થ વર્ગના *આગળના* વર્ગની સંચયી આવૃત્તિ\n- $f$ = મધ્યસ્થ વર્ગની પોતાની આવૃત્તિ\n- $h$ = વર્ગ લંબાઈ\n\n### 3. મધ્યક, મધ્યસ્થ અને બહુલક વચ્ચેનો પ્રયોગમૂલક સંબંધ\nઆ ત્રણેય માપો વચ્ચે ખૂબ જ અગત્યનો ગાણિતિક સંબંધ રહેલો છે:\n$$\\text{બહુલક (Mode)} = 3\\text{ મધ્યસ્થ (Median)} - 2\\text{ મધ્યક (Mean)}$$\nઅથવા:\n$$3\\text{ મધ્યસ્થ} = \\text{બહુલક} + 2\\text{ મધ્યક}$$\n\n*બોર્ડ પરીક્ષા ટિપ:* પરીક્ષામાં કોઈપણ બે માપ આપેલા હોય તો આ સંબંધની મદદથી ત્રીજું માપ સરળતાથી શોધી શકાય છે!",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 27. Step 3: Teacher Tip - Preceding cf vs Current f
+    blocks.append(make_theory(
+        "C10M_CH13_027",
+        "Teacher Tip: Avoid the #1 Trap in the Median Formula",
+        "शिक्षक युक्ति: माध्यक सूत्र की सबसे बड़ी गलती से बचें",
+        "શિક્ષકની સલાહ: મધ્યસ્થના સૂત્રમાં થતી સૌથી સામાન્ય ભૂલથી બચો",
+        "Over 80% of student marks lost in Median questions occur due to one specific confusion between $cf$ and $f$:\n\n1. **$cf$ is from the PRECEDING class:** The formula subtracts the observations that already accumulated *before* entering the median class. If you accidentally take the $cf$ of the median class itself, $(\\frac{n}{2} - cf)$ will become negative, which is impossible!\n2. **$f$ is from the CURRENT median class:** $f$ is the simple (individual) frequency of the median class in the denominator.\n3. **Discontinuous Intervals (e.g. Exercise 13.3 Q4):** If classes are $118-126, 127-135$, you MUST convert them to continuous limits $117.5-126.5, 126.5-135.5$ before reading off $l$ and $h$. The lower limit $l$ would be $144.5$, NOT $145$!",
+        "माध्यक के प्रश्नों में 80% से अधिक अंक $cf$ और $f$ के बीच के भ्रम के कारण कटते हैं:\n\n1. **$cf$ हमेशा पहले वाले वर्ग का होता है:** सूत्र उन प्रेक्षणों को घटाता है जो माध्यक वर्ग में प्रवेश करने से पहले ही जुड़ चुके हैं। यदि आपने भूल से माध्यक वर्ग की ही $cf$ ले ली, तो $(\\frac{n}{2} - cf)$ ऋणात्मक हो जाएगा, जो असंभव है!\n2. **$f$ स्वयं माध्यक वर्ग की बारंबारता है:** हर (denominator) में हमेशा माध्यक वर्ग की ही सरल बारंबारता रखी जाती है।\n3. **असतत वर्ग अंतराल (जैसे प्रश्न 4):** यदि वर्ग $118-126, 127-135$ जैसे हों, तो $l$ और $h$ का मान लेने से पहले उन्हें $117.5-126.5, 126.5-135.5$ में अवश्य बदलें। निम्न सीमा $l = 144.5$ होगी, न कि $145$!",
+        "મધ્યસ્થના દાખલાઓમાં 80% ભૂલો $cf$ અને $f$ મૂકવામાં થાય છે:\n\n1. **$cf$ હંમેશા આગળના (પહેલાંના) વર્ગની લેવી:** સૂત્રમાં મધ્યસ્થ વર્ગ શરૂ થયો તે પહેલાંના અવલોકનો બાદ કરવાના હોય છે. જો તમે મધ્યસ્થ વર્ગની જ સંચયી આવૃત્તિ લેશો તો કૌંસ ઋણ થઈ જશે જે તદ્દન ખોટું છે!\n2. **$f$ મધ્યસ્થ વર્ગની પોતાની આવૃત્તિ છે:** છેદમાં ફક્ત મધ્યસ્થ વર્ગની જ આવૃત્તિ આવે.\n3. **અસતત વર્ગો (જેમ કે પ્રશ્ન 4):** જો વર્ગ $118-126, 127-135$ હોય તો અધઃસીમા $l$ લેતાં પહેલાં તેને $117.5-126.5$ માં ફેરવો. અધઃસીમા $144.5$ થશે, $145$ નહીં!",
+        btype="teacher_tip",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 28. Exercise 13.3 Q1
+    blocks.append(make_quiz(
+        "C10M_CH13_028",
+        "Exercise 13.3 Q1: Monthly electricity consumption of 68 consumers in a locality:\nUnits: 65-85 (4), 85-105 (5), 105-125 (13), 125-145 (20), 145-165 (14), 165-185 (8), 185-205 (4).\nFind the Median, Mean, and Mode of the data.",
+        "प्रश्नावली 13.3 प्रश्न 1: किसी मोहल्ले के 68 उपभोक्ताओं की बिजली की मासिक खपत:\nमासिक खपत (इकाइयों में): 65-85 (4), 85-105 (5), 105-125 (13), 125-145 (20), 145-165 (14), 165-185 (8), 185-205 (4)।\nइन आंकड़ों के माध्यक, माध्य और बहुलक ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 1: એક વિસ્તારના 68 ગ્રાહકોનો માસિક વીજ વપરાશ:\nવીજ વપરાશ (એકમ): 65-85 (4), 85-105 (5), 105-125 (13), 125-145 (20), 145-165 (14), 165-185 (8), 185-205 (4).\nઆ માહિતીનો મધ્યસ્થ, મધ્યક અને બહુલક શોધો.",
+        [
+            "Median = 137 units, Mean = 137.05 units, Mode = 135.77 units",
+            "Median = 135 units, Mean = 138.20 units, Mode = 136.00 units",
+            "Median = 137 units, Mean = 135.00 units, Mode = 138.50 units",
+            "Median = 139 units, Mean = 137.05 units, Mode = 135.77 units"
+        ],
+        [
+            "माध्यक = 137 इकाइयाँ, माध्य = 137.05 इकाइयाँ, बहुलक = 135.77 इकाइयाँ",
+            "माध्यक = 135 इकाइयाँ, माध्य = 138.20 इकाइयाँ, बहुलक = 136.00 इकाइयाँ",
+            "माध्यक = 137 इकाइयाँ, माध्य = 135.00 इकाइयाँ, बहुलक = 138.50 इकाइयाँ",
+            "माध्यक = 139 इकाइयाँ, माध्य = 137.05 इकाइयाँ, बहुलक = 135.77 इकाइयाँ"
+        ],
+        [
+            "મધ્યસ્થ = 137 એકમ, મધ્યક = 137.05 એકમ, બહુલક = 135.77 એકમ",
+            "મધ્યસ્થ = 135 એકમ, મધ્યક = 138.20 એકમ, બહુલક = 136.00 એકમ",
+            "મધ્યસ્થ = 137 એકમ, મધ્યક = 135.00 એકમ, બહુલક = 138.50 એકમ",
+            "મધ્યસ્થ = 139 એકમ, મધ્યક = 137.05 એકમ, બહુલક = 135.77 એકમ"
+        ],
+        0,
+        "Step 1: Calculate cf: 4, 9, 22, 42, 56, 64, 68. Total n = 68 => n/2 = 34.\ncf just greater than 34 is 42 => Median Class is 125-145.\nl = 125, h = 20, f = 20, cf = 22.\nMedian = 125 + [(34 - 22) / 20] × 20 = 125 + 12 = 137 units.\nStep 2: Modal Class = 125-145 (f₁ = 20, f₀ = 13, f₂ = 14).\nMode = 125 + [(20 - 13) / (40 - 13 - 14)] × 20 = 125 + [7/13] × 20 = 125 + 10.77 = 135.77 units.\nStep 3: Mean x̄ = a + (Σfᵢdᵢ/n) = 135 + (140/68) = 135 + 2.0588 = 137.05 units.\n(All three measures are approximately equal).",
+        "चरण 1: संचयी बारंबारता cf: 4, 9, 22, 42, 56, 64, 68। n = 68 => n/2 = 34।\n34 से ठीक बड़ी cf 42 है => माध्यक वर्ग = 125-145।\nl = 125, h = 20, f = 20, cf = 22।\nमाध्यक = 125 + [(34 - 22) / 20] × 20 = 125 + 12 = 137 इकाइयाँ।\nचरण 2: बहुलक = 125 + [(20 - 13) / (40 - 27)] × 20 = 125 + 10.77 = 135.77 इकाइयाँ।\nचरण 3: माध्य = 135 + (140 / 68) = 137.05 इकाइयाँ।",
+        "પગલું 1: cf ની ગણતરી: 4, 9, 22, 42, 56, 64, 68. n = 68 => n/2 = 34.\nમધ્યસ્થ વર્ગ = 125-145. l = 125, cf = 22, f = 20, h = 20.\nમધ્યસ્થ = 125 + [(34 - 22)/20] × 20 = 125 + 12 = 137 એકમ.\nપગલું 2: બહુલક = 125 + [7/13] × 20 = 135.77 એકમ.\nપગલું 3: મધ્યક = 135 + 2.0588 = 137.05 એકમ.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 29. Exercise 13.3 Q2
+    blocks.append(make_quiz(
+        "C10M_CH13_029",
+        "Exercise 13.3 Q2: The median of the distribution of 60 observations is 28.5:\nClass: 0-10 (5), 10-20 (x), 20-30 (20), 30-40 (15), 40-50 (y), 50-60 (5). Total = 60.\nFind the missing values of x and y.",
+        "प्रश्नावली 13.3 प्रश्न 2: 60 प्रेक्षणों वाले बंटन का माध्यक 28.5 है:\nवर्ग: 0-10 (5), 10-20 (x), 20-30 (20), 30-40 (15), 40-50 (y), 50-60 (5)। कुल = 60।\nx और y के मान ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 2: 60 અવલોકનો ધરાવતી માહિતીનો મધ્યસ્થ 28.5 છે:\nવર્ગ: 0-10 (5), 10-20 (x), 20-30 (20), 30-40 (15), 40-50 (y), 50-60 (5). કુલ = 60.\nx અને y ના મૂલ્યો શોધો.",
+        [
+            "x = 8, y = 7",
+            "x = 7, y = 8",
+            "x = 9, y = 6",
+            "x = 6, y = 9"
+        ],
+        [
+            "x = 8, y = 7",
+            "x = 7, y = 8",
+            "x = 9, y = 6",
+            "x = 6, y = 9"
+        ],
+        [
+            "x = 8, y = 7",
+            "x = 7, y = 8",
+            "x = 9, y = 6",
+            "x = 6, y = 9"
+        ],
+        0,
+        "Step 1: Total frequency n = 60 => 5 + x + 20 + 15 + y + 5 = 60 => 45 + x + y = 60 => x + y = 15. (Equation 1)\nStep 2: Median is given as 28.5, which lies in interval 20-30 => Median class is 20-30.\nl = 20, h = 10, f = 20, cf = 5 + x, n/2 = 30.\nStep 3: Median = l + [(n/2 - cf) / f] × h\n28.5 = 20 + [(30 - (5 + x)) / 20] × 10\n8.5 = (25 - x) / 2\n17 = 25 - x => x = 8.\nStep 4: From Eq 1, y = 15 - 8 = 7. Thus, x = 8, y = 7.",
+        "चरण 1: कुल बारंबारता n = 60 => 45 + x + y = 60 => x + y = 15। (समीकरण 1)\nचरण 2: दिया गया माध्यक 28.5 वर्ग 20-30 में आता है => माध्यक वर्ग = 20-30।\nl = 20, h = 10, f = 20, cf = 5 + x, n/2 = 30।\nचरण 3: 28.5 = 20 + [(30 - (5 + x)) / 20] × 10\n8.5 = (25 - x) / 2 => 17 = 25 - x => x = 8।\nचरण 4: y = 15 - 8 = 7। अतः x = 8, y = 7।",
+        "પગલું 1: કુલ આવૃત્તિ 60 છે => 45 + x + y = 60 => x + y = 15. (સમીકરણ 1)\nપગલું 2: મધ્યસ્થ 28.5 એ 20-30 માં આવે છે => મધ્યસ્થ વર્ગ = 20-30.\nl = 20, h = 10, f = 20, cf = 5 + x, n/2 = 30.\nપગલું 3: 28.5 = 20 + [(30 - (5 + x))/20] × 10\n8.5 = (25 - x) / 2 => 17 = 25 - x => x = 8.\nપગલું 4: y = 15 - 8 = 7. આમ, x = 8, y = 7.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 30. Exercise 13.3 Q3
+    blocks.append(make_quiz(
+        "C10M_CH13_030",
+        "Exercise 13.3 Q3: Life insurance agent recorded policy holders' ages (in years):\nBelow 20 (2), Below 25 (6), Below 30 (24), Below 35 (45), Below 40 (78), Below 45 (89), Below 50 (92), Below 55 (98), Below 60 (100).\nFind the median age.",
+        "प्रश्नावली 13.3 प्रश्न 3: एक जीवन बीमा एजेंट ने 100 पॉलिसी धारकों की आयु के आंकड़े ज्ञात किए:\n20 से कम (2), 25 से कम (6), 30 से कम (24), 35 से कम (45), 40 से कम (78), 45 से कम (89), 50 से कम (92), 55 से कम (98), 60 से कम (100)।\nमाध्यक आयु ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 3: એક જીવન વીમા એજન્ટે 100 પોલિસી ધારકોની ઉંમરની વિગત એકઠી કરી:\n20 થી ઓછી (2), 25 થી ઓછી (6), 30 થી ઓછી (24), 35 થી ઓછી (45), 40 થી ઓછી (78), 45 થી ઓછી (89), 50 થી ઓછી (92), 55 થી ઓછી (98), 60 થી ઓછી (100).\nમધ્યસ્થ ઉંમર શોધો.",
+        [
+            "35.76 years",
+            "36.25 years",
+            "34.80 years",
+            "35.00 years"
+        ],
+        [
+            "35.76 वर्ष",
+            "36.25 वर्ष",
+            "34.80 वर्ष",
+            "35.00 वर्ष"
+        ],
+        [
+            "35.76 વર્ષ",
+            "36.25 વર્ષ",
+            "34.80 વર્ષ",
+            "35.00 વર્ષ"
+        ],
+        0,
+        "Step 1: Convert cumulative data to class intervals and simple frequencies:\n15-20: 2; 20-25: 4; 25-30: 18; 30-35: 21; 35-40: 33; 40-45: 11; 45-50: 3; 50-55: 6; 55-60: 2.\nStep 2: Total n = 100 => n/2 = 50.\ncf just greater than 50 is 78 => Median class = 35-40.\nl = 35, h = 5, f = 33, cf = 45.\nStep 3: Median = 35 + [(50 - 45) / 33] × 5 = 35 + (25 / 33) = 35 + 0.7575 ≈ 35.76 years.",
+        "चरण 1: संचयी आंकड़ों को वर्ग अंतरालों और बारंबारता में बदलें:\n15-20: 2; 20-25: 4; 25-30: 18; 30-35: 21; 35-40: 33; 40-45: 11; 45-50: 3; 50-55: 6; 55-60: 2।\nचरण 2: n = 100 => n/2 = 50। 50 से ठीक बड़ी cf 78 है => माध्यक वर्ग = 35-40।\nl = 35, h = 5, f = 33, cf = 45।\nचरण 3: माध्यक = 35 + [(50 - 45) / 33] × 5 = 35 + 25/33 ≈ 35.76 वर्ष।",
+        "પગલું 1: સાદી આવૃત્તિ શોધો:\n15-20: 2, 20-25: 4, 25-30: 18, 30-35: 21, 35-40: 33, 40-45: 11, 45-50: 3, 50-55: 6, 55-60: 2.\nપગલું 2: n/2 = 50. મધ્યસ્થ વર્ગ = 35-40. l = 35, cf = 45, f = 33, h = 5.\nપગલું 3: મધ્યસ્થ = 35 + [(50 - 45)/33] × 5 = 35 + 25/33 ≈ 35.76 વર્ષ.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 31. Exercise 13.3 Q4
+    blocks.append(make_quiz(
+        "C10M_CH13_031",
+        "Exercise 13.3 Q4: Length of 40 leaves of a plant measured in mm (discontinuous class intervals):\nLength: 118-126 (3), 127-135 (5), 136-144 (9), 145-153 (12), 154-162 (5), 163-171 (4), 172-180 (2).\nFind the median length of the leaves.",
+        "प्रश्नावली 13.3 प्रश्न 4: एक पौधे की 40 पत्तियों की लंबाई मिलीमीटर (मिमी) में मापी गई:\nलंबाई: 118-126 (3), 127-135 (5), 136-144 (9), 145-153 (12), 154-162 (5), 163-171 (4), 172-180 (2)।\nपत्तियों की माध्यक लंबाई ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 4: એક છોડના 40 પાંદડાઓની લંબાઈ મિલીમીટર (મીમી) માં માપવામાં આવી:\nલંબાઈ: 118-126 (3), 127-135 (5), 136-144 (9), 145-153 (12), 154-162 (5), 163-171 (4), 172-180 (2).\nપાંદડાઓની મધ્યસ્થ લંબાઈ શોધો.",
+        [
+            "146.75 mm",
+            "147.25 mm",
+            "145.50 mm",
+            "148.00 mm"
+        ],
+        [
+            "146.75 मिमी",
+            "147.25 मिमी",
+            "145.50 मिमी",
+            "148.00 मिमी"
+        ],
+        [
+            "146.75 મીમી",
+            "147.25 મીમી",
+            "145.50 મીમી",
+            "148.00 મીમી"
+        ],
+        0,
+        "Step 1: Convert discontinuous classes to continuous: 117.5-126.5 (3, cf=3), 126.5-135.5 (5, cf=8), 135.5-144.5 (9, cf=17), 144.5-153.5 (12, cf=29), 153.5-162.5 (5, cf=34), 162.5-171.5 (4, cf=38), 171.5-180.5 (2, cf=40).\nStep 2: Total n = 40 => n/2 = 20.\ncf just greater than 20 is 29 => Median class = 144.5-153.5.\nl = 144.5, h = 9, f = 12, cf = 17.\nStep 3: Median = 144.5 + [(20 - 17) / 12] × 9 = 144.5 + (3/12) × 9 = 144.5 + 2.25 = 146.75 mm.",
+        "चरण 1: असतत वर्गों को सतत में बदलें: 117.5-126.5 (cf=3), 126.5-135.5 (cf=8), 135.5-144.5 (cf=17), 144.5-153.5 (cf=29), 153.5-162.5 (cf=34), 162.5-171.5 (cf=38), 171.5-180.5 (cf=40)।\nचरण 2: n = 40 => n/2 = 20। 20 से ठीक बड़ी cf 29 है => माध्यक वर्ग = 144.5-153.5।\nl = 144.5, h = 9, f = 12, cf = 17।\nचरण 3: माध्यक = 144.5 + [(20 - 17) / 12] × 9 = 144.5 + 2.25 = 146.75 मिमी।",
+        "પગલું 1: સતત વર્ગો: 117.5-126.5 (cf=3), 126.5-135.5 (cf=8), 135.5-144.5 (cf=17), 144.5-153.5 (cf=29), ...\nપગલું 2: n/2 = 20. મધ્યસ્થ વર્ગ = 144.5-153.5.\nl = 144.5, h = 9, f = 12, cf = 17.\nપગલું 3: મધ્યસ્થ = 144.5 + [(20 - 17)/12] × 9 = 144.5 + 2.25 = 146.75 મીમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 32. Exercise 13.3 Q5
+    blocks.append(make_quiz(
+        "C10M_CH13_032",
+        "Exercise 13.3 Q5: Life time of 400 neon lamps:\nLife time (hours): 1500-2000 (14), 2000-2500 (56), 2500-3000 (60), 3000-3500 (86), 3500-4000 (74), 4000-4500 (62), 4500-5000 (48).\nFind the median life time of a lamp.",
+        "प्रश्नावली 13.3 प्रश्न 5: 400 नियॉन लैंपों के जीवनकाल:\nजीवनकाल (घंटे): 1500-2000 (14), 2000-2500 (56), 2500-3000 (60), 3000-3500 (86), 3500-4000 (74), 4000-4500 (62), 4500-5000 (48)।\nएक लैंप का माध्यक जीवनकाल ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 5: 400 નિયોન ગોળાનું આયુષ્ય:\nઆયુષ્ય (કલાક): 1500-2000 (14), 2000-2500 (56), 2500-3000 (60), 3000-3500 (86), 3500-4000 (74), 4000-4500 (62), 4500-5000 (48).\nગોળાઓના આયુષ્યનો મધ્યસ્થ શોધો.",
+        [
+            "3406.98 hours",
+            "3412.50 hours",
+            "3395.20 hours",
+            "3420.00 hours"
+        ],
+        [
+            "3406.98 घंटे",
+            "3412.50 घंटे",
+            "3395.20 घंटे",
+            "3420.00 घंटे"
+        ],
+        [
+            "3406.98 કલાક",
+            "3412.50 કલાક",
+            "3395.20 કલાક",
+            "3420.00 કલાક"
+        ],
+        0,
+        "Step 1: Calculate cf: 14, 70, 130, 216, 290, 352, 400. Total n = 400 => n/2 = 200.\nStep 2: cf just greater than 200 is 216 => Median class = 3000-3500.\nl = 3000, h = 500, f = 86, cf = 130.\nStep 3: Median = 3000 + [(200 - 130) / 86] × 500\n= 3000 + [70 / 86] × 500 = 3000 + (35000 / 86) = 3000 + 406.976 ≈ 3406.98 hours.",
+        "चरण 1: संचयी बारंबारता cf: 14, 70, 130, 216, 290, 352, 400। n = 400 => n/2 = 200।\nचरण 2: 200 से ठीक बड़ी cf 216 है => माध्यक वर्ग = 3000-3500।\nl = 3000, h = 500, f = 86, cf = 130।\nचरण 3: माध्यक = 3000 + [(200 - 130) / 86] × 500 = 3000 + 35000/86 ≈ 3406.98 घंटे।",
+        "પગલું 1: cf ની ગણતરી: 14, 70, 130, 216, 290, 352, 400. n = 400 => n/2 = 200.\nપગલું 2: મધ્યસ્થ વર્ગ = 3000-3500. l = 3000, cf = 130, f = 86, h = 500.\nપગલું 3: મધ્યસ્થ = 3000 + [(200 - 130)/86] × 500 = 3000 + 406.98 = 3406.98 કલાક.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 33. Exercise 13.3 Q6
+    blocks.append(make_quiz(
+        "C10M_CH13_033",
+        "Exercise 13.3 Q6: 100 surnames randomly picked from a local telephone directory:\nLetters: 1-4 (6), 4-7 (30), 7-10 (40), 10-13 (16), 13-16 (4), 16-19 (4).\nFind the median number of letters, the mean number of letters, and the modal size of the surnames.",
+        "प्रश्नावली 13.3 प्रश्न 6: एक टेलीफोन डायरेक्टरी से 100 उपनाम यदृच्छया लिए गए:\nअक्षरों की संख्या: 1-4 (6), 4-7 (30), 7-10 (40), 10-13 (16), 13-16 (4), 16-19 (4)।\nउपनामों में अक्षरों की संख्या का माध्यक, माध्य और बहुलक ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 6: ટેલિફોન ડિરેક્ટરીમાંથી યાદચ્છિક રીતે 100 અટક પસંદ કરવામાં આવી:\nઅક્ષરોની સંખ્યા: 1-4 (6), 4-7 (30), 7-10 (40), 10-13 (16), 13-16 (4), 16-19 (4).\nઅટકોમાં અક્ષરોની સંખ્યાનો મધ્યસ્થ, મધ્યક અને બહુલક શોધો.",
+        [
+            "Median = 8.05 letters, Mode = 7.88 letters, Mean = 8.32 letters",
+            "Median = 8.25 letters, Mode = 8.00 letters, Mean = 8.10 letters",
+            "Median = 7.95 letters, Mode = 7.88 letters, Mean = 8.50 letters",
+            "Median = 8.05 letters, Mode = 8.15 letters, Mean = 8.32 letters"
+        ],
+        [
+            "माध्यक = 8.05 अक्षर, बहुलक = 7.88 अक्षर, माध्य = 8.32 अक्षर",
+            "माध्यक = 8.25 अक्षर, बहुलक = 8.00 अक्षर, माध्य = 8.10 अक्षर",
+            "माध्यक = 7.95 अक्षर, बहुलक = 7.88 अक्षर, माध्य = 8.50 अक्षर",
+            "माध्यक = 8.05 अक्षर, बहुलक = 8.15 अक्षर, माध्य = 8.32 अक्षर"
+        ],
+        [
+            "મધ્યસ્થ = 8.05 અક્ષર, બહુલક = 7.88 અક્ષર, મધ્યક = 8.32 અક્ષર",
+            "મધ્યસ્થ = 8.25 અક્ષર, બહુલક = 8.00 અક્ષર, મધ્યક = 8.10 અક્ષર",
+            "મધ્યસ્થ = 7.95 અક્ષર, બહુલક = 7.88 અક્ષર, મધ્યક = 8.50 અક્ષર",
+            "મધ્યસ્થ = 8.05 અક્ષર, બહુલક = 8.15 અક્ષર, મધ્યક = 8.32 અક્ષર"
+        ],
+        0,
+        "Step 1: For Median, cf: 6, 36, 76, 92, 96, 100. n = 100 => n/2 = 50.\nMedian class = 7-10. l = 7, h = 3, f = 40, cf = 36.\nMedian = 7 + [(50 - 36) / 40] × 3 = 7 + (14×3 / 40) = 7 + 1.05 = 8.05 letters.\nStep 2: For Mode, modal class = 7-10 (max f₁ = 40, f₀ = 30, f₂ = 16, l = 7, h = 3).\nMode = 7 + [(40 - 30) / (2×40 - 30 - 16)] × 3 = 7 + [10 / 34] × 3 = 7 + 30/34 ≈ 7 + 0.88 = 7.88 letters.\nStep 3: For Mean, class marks xᵢ: 2.5, 5.5, 8.5, 11.5, 14.5, 17.5. Σfᵢxᵢ = 832.\nMean = 832 / 100 = 8.32 letters.",
+        "चरण 1: माध्यक के लिए, cf: 6, 36, 76, 92, 96, 100। n/2 = 50। माध्यक वर्ग = 7-10।\nमाध्यक = 7 + [(50 - 36) / 40] × 3 = 7 + 1.05 = 8.05 अक्षर।\nचरण 2: बहुलक के लिए, f₁ = 40, f₀ = 30, f₂ = 16, l = 7, h = 3।\nबहुलक = 7 + [(10) / (80 - 46)] × 3 = 7 + 30/34 ≈ 7.88 अक्षर।\nचरण 3: माध्य के लिए, Σfᵢxᵢ = 832, Σfᵢ = 100 => माध्य = 8.32 अक्षर।",
+        "પગલું 1: મધ્યસ્થ માટે cf: 6, 36, 76, 92, 96, 100. n/2 = 50. મધ્યસ્થ વર્ગ = 7-10.\nમધ્યસ્થ = 7 + [(50 - 36)/40] × 3 = 7 + 1.05 = 8.05 અક્ષર.\nપગલું 2: બહુલક = 7 + [(40 - 30)/(80 - 46)] × 3 = 7 + 0.88 = 7.88 અક્ષર.\nપગલું 3: મધ્યક = 832 / 100 = 8.32 અક્ષર.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 34. Exercise 13.3 Q7
+    blocks.append(make_quiz(
+        "C10M_CH13_034",
+        "Exercise 13.3 Q7: Distribution gives the weights of 30 students of a class:\nWeight (kg): 40-45 (2), 45-50 (3), 50-55 (8), 55-60 (6), 60-65 (6), 65-70 (3), 70-75 (2).\nFind the median weight of the students.",
+        "प्रश्नावली 13.3 प्रश्न 7: नीचे दिया हुआ बंटन कक्षा के 30 विद्यार्थियों के भार दर्शाता है:\nभार (किग्रा): 40-45 (2), 45-50 (3), 50-55 (8), 55-60 (6), 60-65 (6), 65-70 (3), 70-75 (2)।\nविद्यार्थियों का माध्यक भार ज्ञात कीजिए।",
+        "સ્વાધ્યાય 13.3 પ્રશ્ન 7: નીચેનું વિતરણ 30 વિદ્યાર્થીઓનું વજન દર્શાવે છે:\nવજન (કિગ્રા): 40-45 (2), 45-50 (3), 50-55 (8), 55-60 (6), 60-65 (6), 65-70 (3), 70-75 (2).\nવિદ્યાર્થીઓના વજનનો મધ્યસ્થ શોધો.",
+        [
+            "56.67 kg",
+            "55.80 kg",
+            "57.25 kg",
+            "56.00 kg"
+        ],
+        [
+            "56.67 किग्रा",
+            "55.80 किग्रा",
+            "57.25 किग्रा",
+            "56.00 किग्रा"
+        ],
+        [
+            "56.67 કિગ્રા",
+            "55.80 કિગ્રા",
+            "57.25 કિગ્રા",
+            "56.00 કિગ્રા"
+        ],
+        0,
+        "Step 1: Calculate cf: 2, 5, 13, 19, 25, 28, 30. Total n = 30 => n/2 = 15.\nStep 2: cf just greater than 15 is 19 => Median class = 55-60.\nl = 55, h = 5, f = 6, cf = 13.\nStep 3: Median = 55 + [(15 - 13) / 6] × 5 = 55 + (2/6) × 5 = 55 + 5/3 = 55 + 1.667 ≈ 56.67 kg.",
+        "चरण 1: संचयी बारंबारता cf: 2, 5, 13, 19, 25, 28, 30। n = 30 => n/2 = 15।\nचरण 2: 15 से ठीक बड़ी cf 19 है => माध्यक वर्ग = 55-60।\nl = 55, h = 5, f = 6, cf = 13।\nचरण 3: माध्यक = 55 + [(15 - 13) / 6] × 5 = 55 + 5/3 = 55 + 1.667 ≈ 56.67 किग्रा।",
+        "પગલું 1: cf ની ગણતરી: 2, 5, 13, 19, 25, 28, 30. n/2 = 15.\nપગલું 2: મધ્યસ્થ વર્ગ = 55-60. l = 55, cf = 13, f = 6, h = 5.\nપગલું 3: મધ્યસ્થ = 55 + [(15 - 13)/6] × 5 = 55 + 5/3 ≈ 56.67 કિગ્રા.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 5: SYNTHESIS, CONNECTIONS, REFLECTION & BOARD EXAM BLUEPRINT
+# =========================================================================
+def get_part5_blocks():
+    blocks = []
+
+    # 35. Empirical Relationship Board Question Quiz
+    blocks.append(make_quiz(
+        "C10M_CH13_035",
+        "Mastery Challenge: In a frequency distribution, if the Mean is 24 and the Median is 26, find the Mode using Pearson's empirical formula.",
+        "मास्टरी चुनौती: एक बारंबारता बंटन में यदि माध्य 24 और माध्यक 26 है, तो आनुभविक संबंध का प्रयोग करके बहुलक ज्ञात कीजिए।",
+        "માસ્ટરી પડકાર: એક આવૃત્તિ વિતરણમાં જો મધ્યક 24 અને મધ્યસ્થ 26 હોય, તો પ્રયોગમૂલક સૂત્રનો ઉપયોગ કરીને બહુલક શોધો.",
+        [
+            "Mode = 30",
+            "Mode = 28",
+            "Mode = 32",
+            "Mode = 25"
+        ],
+        [
+            "बहुलक = 30",
+            "बहुलक = 28",
+            "बहुलक = 32",
+            "बहुलक = 25"
+        ],
+        [
+            "બહુલક = 30",
+            "બહુલક = 28",
+            "બહુલક = 32",
+            "બહુલક = 25"
+        ],
+        0,
+        "Using Pearson's empirical relationship:\nMode = 3(Median) - 2(Mean)\nMode = 3(26) - 2(24) = 78 - 48 = 30.",
+        "आनुभविक संबंध के अनुसार:\nबहुलक = 3(माध्यक) - 2(माध्य)\nबहुलक = 3(26) - 2(24) = 78 - 48 = 30।",
+        "પ્રયોગમૂલક સંબંધના સૂત્ર મુજબ:\nબહુલક = 3(મધ્યસ્થ) - 2(મધ્યક)\nબહુલક = 3(26) - 2(24) = 78 - 48 = 30.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # 36. Step 6: Reflection - Real-Life Choice of Central Tendency
+    blocks.append(make_theory(
+        "C10M_CH13_036",
+        "Reflection: Which Measure Should You Trust? Real-Life Selection Guide",
+        "चिंतन: आपको किस माप पर भरोसा करना चाहिए? वास्तविक जीवन में चयन मार्गदर्शिका",
+        "મનન-ચિંતન: તમારે કયા માપ પર વિશ્વાસ કરવો જોઈએ? વાસ્તવિક જીવનની પસંદગી માર્ગદર્શિકા",
+        "Why do we have three different measures of central tendency instead of just one? Each measure has a distinct personality and purpose in the real world:\n\n### 1. When to Use MEAN:\n- **Best suited for:** Symmetric data with no extreme outliers (e.g. students' test averages, factory machine output, daily temperature).\n- **Weakness:** Highly sensitive to extreme values. If 9 people earn ₹20,000/month and 1 billionaire joins the room earning ₹10,00,00,000, the Mean shoots up to ₹1 crore, presenting an absurdly distorted picture of typical income!\n\n### 2. When to Use MEDIAN:\n- **Best suited for:** Skewed data with extreme outliers (e.g. household income, real estate house prices, wealth distribution).\n- **Strength:** Robust against outliers. Even with the billionaire in the room, the median remains exactly ₹20,000!\n\n### 3. When to Use MODE:\n- **Best suited for:** Business manufacturing and inventory decisions (e.g. shoe manufacturer deciding which shoe sizes to produce, clothing stores stocking T-shirt sizes, fast-food menus).\n- **Strength:** Represents the most popular, high-demand category.",
+        "हमारे पास केवल एक के बजाय केंद्रीय प्रवृत्ति के तीन अलग-अलग माप क्यों हैं? वास्तविक जीवन में प्रत्येक माप का अपना एक विशेष महत्व और उद्देश्य है:\n\n### 1. माध्य (Mean) का उपयोग कब करें:\n- **सबसे उपयुक्त:** जब आंकड़े सममित हों और उनमें कोई अत्यधिक बड़ा या छोटा मान न हो (जैसे परीक्षा के अंक, कारखाने का उत्पादन, तापमान)।\n- **कमजोरी:** यह चरम मानों (outliers) से बहुत जल्दी प्रभावित होता है। यदि 9 व्यक्ति ₹20,000 कमाते हैं और 1 अरबपति कमरे में आ जाता है जो ₹10 करोड़ कमाता है, तो माध्य बढ़कर ₹1 करोड़ हो जाएगा, जो सामान्य स्थिति का बिल्कुल गलत चित्र प्रस्तुत करता है!\n\n### 2. माध्यक (Median) का उपयोग कब करें:\n- **सबसे उपयुक्त:** जब आंकड़ों में बहुत बड़े या छोटे मान हों (जैसे पारिवारिक आय, मकानों की कीमतें, राष्ट्रीय संपत्ति)।\n- **ताकत:** यह चरम मानों से अप्रभावित रहता है। अरबपति के आने पर भी माध्यक ₹20,000 ही रहेगा!\n\n### 3. बहुलक (Mode) का उपयोग कब करें:\n- **सबसे उपयुक्त:** व्यापार और उत्पादन संबंधी निर्णयों के लिए (जैसे जूता निर्माता को किस आकार के जूते सबसे अधिक बनाने चाहिए, कपड़ों की दुकान पर सबसे अधिक बिकने वाला टी-शर्ट साइज)।\n- **ताकत:** यह सर्वाधिक लोकप्रिय और मांग वाली श्रेणी को दर्शाता है।",
+        "આપણી પાસે કેન્દ્રીય સ્થિતિના માત્ર એકને બદલે ત્રણ જુદા જુદા માપ શા માટે છે? વાસ્તવિક જીવનમાં દરેક માપનો પોતાનો એક અલગ હેતુ છે:\n\n### 1. મધ્યક (Mean) ક્યારે વાપરવો:\n- **સૌથી શ્રેષ્ઠ:** જ્યારે માહિતીમાં કોઈ અસામાન્ય મોટા કે નાના મૂલ્યો ન હોય (જેમ કે પરીક્ષાના સરેરાશ ગુણ, મશીનનું ઉત્પાદન, દૈનિક તાપમાન).\n- **મર્યાદા:** તે ખૂબ મોટા મૂલ્યોથી તરત પ્રભાવિત થઈ જાય છે. જો 9 લોકો ₹20,000 કમાતા હોય અને 1 અબજોપતિ આવે જે ₹10 કરોડ કમાતો હોય, તો સરેરાશ ₹1 કરોડ થઈ જાય જે સામાન્ય આવકનું ખોટું ચિત્ર રજૂ કરે છે!\n\n### 2. મધ્યસ્થ (Median) ક્યારે વાપરવો:\n- **સૌથી શ્રેષ્ઠ:** જ્યારે માહિતીમાં વિષમતા હોય અને ખૂબ મોટા આંકડા હોય (જેમ કે લોકોની આવક, મકાનોની કિંમત).\n- **તાકાત:** તેના પર અસામાન્ય આંકડાઓની કોઈ અસર થતી નથી. અબજોપતિ આવે તો પણ મધ્યસ્થ આવક ₹20,000 જ રહે છે!\n\n### 3. બહુલક (Mode) ક્યારે વાપરવો:\n- **સૌથી શ્રેષ્ઠ:** વેપાર, ઉદ્યોગ અને સ્ટોકની ગણતરીમાં (જેમ કે બૂટની ફેક્ટરીએ કઈ સાઈઝના બૂટ વધુ બનાવવા, કાપડની દુકાને સૌથી વધુ વેચાતી સાઈઝ).\n- **તાકાત:** સૌથી વધુ માંગ ધરાવતી વસ્તુ દર્શાવે છે.",
+        btype="reflection",
+        bloom="Evaluate",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 37. Step 7: Connection - Knowledge Graph & Higher Mathematics
+    blocks.append(make_theory(
+        "C10M_CH13_037",
+        "Connection: Knowledge Graph & Higher Mathematics / Machine Learning Links",
+        "संबंध: ज्ञान का जाल (Knowledge Graph) और उच्च गणित / मशीन लर्निंग से संबंध",
+        "સંબંધ: જ્ઞાનનો સંબંધ (Knowledge Graph) અને ઉચ્ચ ગણિત / આર્ટિફિશિયલ ઇન્ટેલિજન્સ સાથે જોડાણ",
+        "Statistics does not end with Class 10. It is the absolute foundational bedrock of Data Science and Modern Computing:\n\n### 1. Class 11 Statistics (Measures of Dispersion)\n- Central tendency tells you where the center is, but not how widely the numbers are spread around that center!\n- In Class 11, you will study **Mean Deviation, Variance, and Standard Deviation** ($\\sigma$), which quantify data scatter and risk.\n\n### 2. Artificial Intelligence and Machine Learning\n- **Loss Functions:** When training an AI model, the error is minimized using Mean Squared Error ($L_2$ Loss, derived from Mean) or Mean Absolute Error ($L_1$ Loss, derived from Median).\n- **Clustering Algorithms:** Algorithms like $k$-means clustering group customer data by iteratively computing centroids using the direct mean formula $\\sum f_i x_i / N$!\n\n### 3. Economics and Physics\n- **GDP & Gini Coefficient:** Income inequality across nations is measured by comparing the cumulative distribution curve against perfect equality.\n- **Maxwell-Boltzmann Distribution:** In thermal physics, the speeds of billions of gas molecules are modeled using root mean square speed, mean speed, and most probable speed (Mode)!",
+        "सांख्यिकी केवल कक्षा 10 तक सीमित नहीं है। यह आधुनिक डेटा साइंस और कंप्यूटर विज्ञान की सबसे मजबूत नींव है:\n\n### 1. कक्षा 11 सांख्यिकी (प्रकीर्णन के माप - Measures of Dispersion)\n- केंद्रीय प्रवृत्ति केवल केंद्र बताती है, लेकिन यह नहीं बताती कि आंकड़े केंद्र से कितनी दूर तक फैले हुए हैं!\n- कक्षा 11 में आप **माध्य विचलन, प्रसरण (Variance), और मानक विचलन (Standard Deviation)** पढ़ेंगे, जो आंकड़ों के फैलाव और जोखिम को मापते हैं।\n\n### 2. आर्टिफिशियल इंटेलिजेंस (AI) और मशीन लर्निंग\n- **हानि फलन (Loss Functions):** AI मॉडल को प्रशिक्षित करते समय माध्य वर्ग त्रुटि ($L_2$ Loss, जो माध्य पर आधारित है) या माध्य निरपेक्ष त्रुटि ($L_1$ Loss, जो माध्यक पर आधारित है) द्वारा त्रुटि को न्यूनतम किया जाता है।\n- **क्लस्टरिंग (k-means):** ग्राहकों के आंकड़ों को वर्गीकृत करने के लिए $k$-means एल्गोरिदम बार-बार $\\sum f_i x_i / N$ सूत्र का उपयोग करता है!\n\n### 3. अर्थशास्त्र और भौतिकी\n- **मैक्सवेल-बोल्ट्जमान वितरण:** भौतिकी में गैस के अणुओं की गति का विश्लेषण करते समय वर्ग-माध्य-मूल चाल, माध्य चाल और सर्वाधिक प्रायिक चाल (बहुलक) का प्रयोग किया जाता है!",
+        "આંકડાશાસ્ત્ર માત્ર ધોરણ 10 પૂરતું સીમિત નથી. તે આજના ડેટા સાયન્સ અને કમ્પ્યુટર વિજ્ઞાનનો મજબૂત પાયો છે:\n\n### 1. ધોરણ 11 આંકડાશાસ્ત્ર (પ્રસારમાનના માપ)\n- કેન્દ્રીય સ્થિતિ માત્ર કેન્દ્ર બતાવે છે, પરંતુ માહિતી કેટલી ફેલાયેલી છે તે નથી દર્શાવતી!\n- ધોરણ 11 માં તમે **સરેરાશ વિચલન, વિચરણ (Variance) અને પ્રમાણિત વિચલન (Standard Deviation)** શીખશો જે માહિતીના જોખમ અને ફેલાવાને માપે છે.\n\n### 2. આર્ટિફિશિયલ ઇન્ટેલિજન્સ (AI) અને મશીન લર્નિંગ\n- **Loss Functions:** AI મોડેલ તૈયાર કરતી વખતે ભૂલ ઘટાડવા માટે Mean Squared Error ($L_2$) અથવા Mean Absolute Error ($L_1$, મધ્યસ્થ પર આધારિત) વપરાય છે.\n- **k-means Clustering:** ગ્રાહકોની પસંદગીના જૂથ બનાવવા માટે કમ્પ્યુટર સતત મધ્યકના સૂત્ર $\\sum f_i x_i / N$ નો ઉપયોગ કરે છે!\n\n### 3. ભૌતિક વિજ્ઞાન અને અર્થશાસ્ત્ર\n- વાયુના અણુઓની ઝડપ માપવા માટે સરેરાશ ઝડપ (Mean), મહત્તમ સંભાવ્ય ઝડપ (Mode) જેવી સંકલ્પનાઓ આંકડાશાસ્ત્ર પરથી જ આવે છે!",
+        btype="connection",
+        bloom="Understand",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 38. Step 8: Mastery Blueprint - Board Exam Scoring Strategy
+    blocks.append(make_theory(
+        "C10M_CH13_038",
+        "Mastery Blueprint: 4-Step Board Exam Full Marks Strategy for Statistics",
+        "मास्टरी ब्लूप्रिंट: सांख्यिकी में शत-प्रतिशत अंक प्राप्त करने की 4-चरणीय बोर्ड परीक्षा रणनीति",
+        "માસ્ટરી બ્લુપ્રિન્ટ: આંકડાશાસ્ત્રમાં બોર્ડ પરીક્ષામાં સંપૂર્ણ ગુણ મેળવવાની 4-પગલાંવાળી રણનીતિ",
+        "Examiners look for rigorous tabular presentation and transparent calculation steps. Follow these 4 golden rules to guarantee full marks in Statistics:\n\n1. **Step 1: Construct Clean, Labeled Tables (Use Pencil & Ruler)**\n   - Always write clear column headers ($x_i, f_i, d_i = x_i - a, cf$).\n   - Double check that $\\sum f_i$ matches the total given in the question (e.g. 50 workers, 100 surnames).\n\n2. **Step 2: Explicitly State the Formula with All Variables Defined**\n   - Before substituting numbers, always write the general formula:\n     $$\\text{Mode} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n     $$\\text{Median} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n   - Explicitly write: $l = 35, h = 10, f_1 = 23, f_0 = 21, f_2 = 14$.\n\n3. **Step 3: Keep Exact Fractions Until the Very End**\n   - Avoid premature rounding of decimals in intermediate steps. Round only your final answer to two decimal places.\n\n4. **Step 4: Check Reasonableness & Write Units**\n   - Does your Mode or Median fall strictly inside the modal/median class? If not, stop and re-check!\n   - Never forget units: ₹ for wages, years for ages, hours for lifetimes, kg for weights, mm for lengths. Always write a neat closing sentence: *'Hence, the modal lifetime of the components is 65.625 hours.'*",
+        "बोर्ड परीक्षा में परीक्षक व्यवस्थित सारणी और स्पष्ट गणना के अंक देते हैं। सांख्यिकी में पूरे अंक प्राप्त करने के 4 स्वर्णिम नियम:\n\n1. **चरण 1: पेंसिल और स्केल से स्पष्ट सारणी बनाएं**\n   - स्तंभों के नाम स्पष्ट लिखें ($x_i, f_i, d_i = x_i - a, cf$)।\n   - सुनिश्चित करें कि $\\sum f_i$ का योग प्रश्न में दिए गए कुल प्रेक्षणों के बराबर है।\n\n2. **चरण 2: मान रखने से पहले पूरा सूत्र और पद लिखें**\n   - पहले सूत्र लिखें और सभी चर स्पष्ट रूप से दर्शाएं:\n     $$\\text{बहुलक} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n     $$\\text{माध्यक} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n   - अलग से लिखें: $l = 35, h = 10, f_1 = 23, f_0 = 21, f_2 = 14$।\n\n3. **चरण 3: अंतिम चरण तक भिन्नों को न काटें**\n   - बीच की गणना में दशमलव में बदलने से बचें। अंतिम उत्तर को ही दशमलव के दो स्थानों तक लिखें।\n\n4. **चरण 4: उत्तर की तार्किक जांच और मात्रक**\n   - क्या आपका बहुलक या माध्यक अपने वर्ग के भीतर आ रहा है? यदि नहीं, तो तुरंत पुनः जांचें!\n   - मात्रक अवश्य लिखें: रुपये, वर्ष, घंटे, किग्रा, मिमी। अंत में एक स्पष्ट निष्कर्ष वाक्य लिखें: *'अतः उपकरणों का बहुलक जीवनकाल 65.625 घंटे है।'*",
+        "બોર્ડ પરીક્ષામાં પૂરા ગુણ મેળવવા માટે પરીક્ષક દ્વારા પ્રમાણિત 4 પગલાંવાળી રણનીતિ:\n\n1. **પગલું 1: પેન્સિલ અને ફૂટપટ્ટીથી સ્વચ્છ કોષ્ટક બનાવો**\n   - ખાનાના નામ સ્પષ્ટ લખો ($x_i, f_i, d_i = x_i - a, cf$).\n   - ચકાસી લો કે $\\sum f_i$ નો સરવાળો રકમમાં આપેલી કુલ સંખ્યા જેટલો જ થાય છે.\n\n2. **પગલું 2: કિંમતો મૂકતા પહેલાં સ્પષ્ટ સૂત્ર અને પદો લખો**\n   - સૂત્ર લખીને બાજુમાં દરેક પદની કિંમત દર્શાવો:\n     $$\\text{બહુલક} = l + \\left( \\frac{f_1 - f_0}{2f_1 - f_0 - f_2} \\right) \\times h$$\n     $$\\text{મધ્યસ્થ} = l + \\left( \\frac{\\frac{n}{2} - cf}{f} \\right) \\times h$$\n   - અલગથી લખો: $l = 35, h = 10, f_1 = 23, f_0 = 21, f_2 = 14$.\n\n3. **પગલું 3: છેલ્લે સુધી સાદુરૂપ જાળવી રાખો**\n   - વચ્ચેથી પોઈન્ટમાં ન ફેરવો. છેલ્લે જ બે દશાંશ સ્થળ સુધી રાઉન્ડ ઓફ કરો.\n\n4. **પગલું 4: જવાબની ચકાસણી અને યોગ્ય એકમ**\n   - શું તમારો જવાબ જે તે વર્ગની અંદર આવે છે? જો ન આવતો હોય તો ગણતરી ફરી ચેક કરો.\n   - એકમ અવશ્ય લખો: ₹, વર્ષ, કલાક, કિગ્રા, મીમી. છેલ્લે સ્પષ્ટ વાક્ય લખો: *'આમ, ઉપકરણોના આયુષ્યનો બહુલક 65.625 કલાક થાય.'*",
+        btype="mastery",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# GENERATE ALL BLOCKS & WRITE TO JSON
+# =========================================================================
+def generate_blocks():
+    return (
+        get_part1_blocks() +
+        get_part2_blocks() +
+        get_part3_blocks() +
+        get_part4_blocks() +
+        get_part5_blocks()
+    )
+
+def generate_chapter():
+    chapter_data = {
+        "metadata": get_metadata(),
+        "blocks": generate_blocks()
+    }
+    
+    output_dir = 'app_core/chapters'
+    os.makedirs(output_dir, exist_ok=True)
+    target_path = os.path.join(output_dir, 'ncert_class10_maths_ch13.json')
+    
+    with open(target_path, 'w', encoding='utf-8') as f:
+        json.dump(chapter_data, f, indent=2, ensure_ascii=False)
+        
+    print(f"Generated {target_path} successfully with {len(chapter_data['blocks'])} blocks!")
+
+    # Synchronize to GSEB path as well (CBSE and GSEB Class 10 share the exact same curriculum)
+    gseb_data = dict(chapter_data)
+    gseb_data["metadata"] = dict(chapter_data["metadata"])
+    gseb_data["metadata"]["id"] = "gseb_class10_maths_ch13"
+    gseb_path = os.path.join(output_dir, 'gseb_class10_maths_ch13.json')
+    with open(gseb_path, 'w', encoding='utf-8') as f:
+        json.dump(gseb_data, f, indent=2, ensure_ascii=False)
+    print(f"Synchronized to {gseb_path} successfully!")
+
+if __name__ == "__main__":
+    generate_chapter()

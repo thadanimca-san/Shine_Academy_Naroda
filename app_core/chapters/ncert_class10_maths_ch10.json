@@ -1,398 +1,195 @@
 {
   "metadata": {
-    "id": "ncert_class10_maths_ch10",
-    "title": "Chapter 10: Circles",
-    "subtitle": "The Ultimate Board Exam Mastery Guide",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "NCERT/CBSE",
-    "curriculum": [
-      "Universal"
-    ],
-    "language": "English/Hindi/Gujarati (Bilingual)",
-    "difficulty": "Advanced",
-    "estimated_minutes": 180,
-    "version": "3.0.0-SUPREME-MATHS",
-    "author": "Antigravity Supreme Intelligence",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "circles",
-      "tangents",
-      "board_special",
-      "bilingual"
-    ],
-    "learning_outcomes": [
-      "Understand the concept of a tangent to a circle.",
-      "Prove that the tangent at any point of a circle is perpendicular to the radius through the point of contact.",
-      "Prove that the lengths of tangents drawn from an external point to a circle are equal.",
-      "Solve complex geometrical problems involving circles."
-    ],
-    "ai_context": {
-      "learning_goal": "Make abstract circle properties visual and intuitive. Use the 'Socratic Discovery Arc' to build intuition for tangents.",
-      "common_misconceptions": [
-        "Students confuse a secant and a tangent.",
-        "Students assume tangent theorems apply to intersecting lines from inside the circle."
-      ]
-    }
+    "module_id": "ncert_class10_maths_ch10",
+    "title": "Ncert Class10 Maths Ch10",
+    "title_hi": "Ncert Class10 Maths Ch10",
+    "title_gu": "Ncert Class10 Maths Ch10",
+    "board": "NCERT/GSEB",
+    "subject": "",
+    "chapter_number": "",
+    "language": "trilingual"
   },
   "blocks": [
     {
+      "id": "C10_MATH_CH10_HOOK_1",
       "type": "hook",
-      "content": "Have you ever observed the wheels of a moving bicycle? Or a coin spinning on a table? A circle is perfectly symmetric. But what happens when a straight line tries to touch a circle without crossing it? That single point of contact is the birthplace of the **Tangent (स्पर्श रेखा / સ્પર્શક)**!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "title": "The Perfect Touch",
+      "title_hi": "सटीक स्पर्श",
+      "title_gu": "ચોક્કસ સ્પર્શ",
+      "body": "Imagine you are riding a bicycle on a perfectly flat road. The wheels of your bicycle are circles, and the road is a straight line. At any given moment, the wheel touches the road at exactly one single, tiny point. This is not just a coincidence; it's a fundamental concept in geometry! A line that just 'kisses' the edge of a circle at exactly one point is called a **Tangent**. From designing gears in a watch to calculating the orbits of satellites around the Earth, the mathematics of circles and their tangents is what keeps our world spinning smoothly.",
+      "body_hi": "कल्पना कीजिए कि आप एक बिल्कुल सपाट सड़क पर साइकिल चला रहे हैं। आपकी साइकिल के पहिए वृत्त हैं, और सड़क एक सीधी रेखा है। किसी भी क्षण, पहिया सड़क को ठीक एक एकल, छोटे से बिंदु पर छूता है। यह केवल एक संयोग नहीं है; यह ज्यामिति में एक मूलभूत अवधारणा है! एक रेखा जो किसी वृत्त के किनारे को ठीक एक बिंदु पर 'चूमती' (स्पर्श करती) है, उसे **स्पर्श रेखा (Tangent)** कहा जाता है। घड़ी में गियर डिजाइन करने से लेकर पृथ्वी के चारों ओर उपग्रहों की कक्षाओं की गणना करने तक, वृत्तों और उनकी स्पर्श रेखाओं का गणित ही हमारी दुनिया को सुचारू रूप से घुमाता है।",
+      "body_gu": "કલ્પના કરો કે તમે એકદમ સપાટ રસ્તા પર સાયકલ ચલાવી રહ્યા છો. તમારી સાયકલના પૈડાં વર્તુળ છે, અને રસ્તો એક સીધી રેખા છે. કોઈપણ ક્ષણે, પૈડું રસ્તાને બરાબર એક જ નાના બિંદુએ સ્પર્શે છે. આ માત્ર કોઈ સંયોગ નથી; ભૂમિતિમાં આ એક મૂળભૂત ખ્યાલ છે! એક રેખા જે વર્તુળની ધારને બરાબર એક જ બિંદુએ 'ચુંબન' કરે (સ્પર્શે) છે, તેને **સ્પર્શક (Tangent)** કહેવાય છે. ઘડિયાળમાં ગિયર ડિઝાઇન કરવાથી લઈને પૃથ્વીની આસપાસ ઉપગ્રહોની ભ્રમણકક્ષાની ગણતરી કરવા સુધી, વર્તુળો અને તેમના સ્પર્શકોનું ગણિત જ આપણી દુનિયાને સરળતાથી ફરતી રાખે છે."
     },
     {
-      "type": "diagram",
-      "content": "A line crossing a circle at two points is a Secant. But a line just 'kissing' the edge at one point is a Tangent.",
-      "image_url": "assets/images/maths_ch10_secant_tangent.jpg",
-      "alt_text": "A circle showing secant cutting through and tangent touching the edge."
+      "id": "C10_MATH_CH10_SOCRATIC_1",
+      "type": "socratic_question",
+      "question": "If you hold a ruler against a basketball, the ruler touches the ball at one point. If you draw a line from the center of the ball straight to that touching point, what angle do you think that line makes with the ruler?",
+      "question_hi": "यदि आप बास्केटबॉल के खिलाफ एक रूलर (पैमाना) पकड़ते हैं, तो रूलर गेंद को एक बिंदु पर छूता है। यदि आप गेंद के केंद्र से सीधे उस स्पर्श बिंदु तक एक रेखा खींचते हैं, तो आपको क्या लगता है कि वह रेखा रूलर के साथ क्या कोण बनाती है?",
+      "question_gu": "જો તમે બાસ્કેટબોલ સામે ફૂટપટ્ટી પકડી રાખો છો, તો ફૂટપટ્ટી બોલને એક બિંદુ પર સ્પર્શે છે. જો તમે બોલના કેન્દ્રમાંથી સીધી તે સ્પર્શ બિંદુ સુધી એક રેખા દોરો છો, તો તમને શું લાગે છે કે તે રેખા ફૂટપટ્ટી સાથે કેટલાનો ખૂણો બનાવે છે?",
+      "hint": "Think about standing straight up on the ground. Your body is the radius, and the ground is the tangent line. What angle are you standing at?",
+      "hint_hi": "जमीन पर सीधे खड़े होने के बारे में सोचें। आपका शरीर त्रिज्या है, और जमीन स्पर्श रेखा है। आप किस कोण पर खड़े हैं?",
+      "hint_gu": "જમીન પર સીધા ઉભા રહેવા વિશે વિચારો. તમારું શરીર ત્રિજ્યા છે, અને જમીન સ્પર્શક રેખા છે. તમે કયા ખૂણે ઉભા છો?",
+      "bloom": "Analyze",
+      "difficulty": "Easy",
+      "estimated_minutes": 2
     },
     {
+      "id": "C10_MATH_CH10_THEO_1",
       "type": "theory",
-      "content": "**Theorem 10.1 (प्रमेय 10.1):**\nThe tangent at any point of a circle is perpendicular (लम्ब) to the radius through the point of contact.\n\n*Proof Idea:* The shortest distance from the center to the tangent line is the perpendicular distance, and no point on the tangent other than the point of contact can be closer than the radius.",
-      "difficulty": "Intermediate",
-      "bloom": "Remember"
+      "title": "Tangent to a Circle",
+      "title_hi": "वृत्त की स्पर्श रेखा",
+      "title_gu": "વર્તુળનો સ્પર્શક",
+      "body": "A line and a circle can interact in three ways:\n1. **Non-intersecting line**: The line goes past the circle without touching it.\n2. **Secant**: The line cuts through the circle, intersecting it at exactly two points.\n3. **Tangent**: The line touches the circle at exactly ONE point.\n\nThe word 'tangent' comes from the Latin word 'tangere', which means 'to touch'. The single point where the tangent touches the circle is called the **point of contact**.",
+      "body_hi": "एक रेखा और एक वृत्त तीन तरह से परस्पर क्रिया कर सकते हैं:\n1. **अप्रतिच्छेदी रेखा (Non-intersecting line)**: रेखा वृत्त को छुए बिना ही उसके पास से गुजर जाती है।\n2. **छेदक रेखा (Secant)**: रेखा वृत्त को काटते हुए निकलती है, जो इसे ठीक दो बिंदुओं पर प्रतिच्छेद करती है।\n3. **स्पर्श रेखा (Tangent)**: रेखा वृत्त को ठीक एक बिंदु पर छूती है।\n\n'टेंजेंट' शब्द लैटिन शब्द 'टेंजेरे (tangere)' से आया है, जिसका अर्थ है 'छूना'। वह एकल बिंदु जहाँ स्पर्श रेखा वृत्त को छूती है, **स्पर्श बिंदु (point of contact)** कहलाता है।",
+      "body_gu": "એક રેખા અને વર્તુળ ત્રણ રીતે ક્રિયા-પ્રતિક્રિયા કરી શકે છે:\n1. **છેદતી ન હોય તેવી રેખા (Non-intersecting line)**: રેખા વર્તુળને સ્પર્શ કર્યા વિના તેની પાસેથી પસાર થાય છે.\n2. **છેદિકા (Secant)**: રેખા વર્તુળને કાપીને પસાર થાય છે, જે તેને બરાબર બે બિંદુઓ પર છેદે છે.\n3. **સ્પર્શક (Tangent)**: રેખા વર્તુળને બરાબર એક જ બિંદુએ સ્પર્શે છે.\n\n'ટેન્જેન્ટ' શબ્દ લેટિન શબ્દ 'ટેન્જેરે (tangere)' પરથી આવ્યો છે, જેનો અર્થ થાય છે 'સ્પર્શ કરવું'. તે એક બિંદુ જ્યાં સ્પર્શક વર્તુળને સ્પર્શે છે તેને **સ્પર્શ બિંદુ (point of contact)** કહેવાય છે."
     },
     {
-      "type": "teacher_tip",
-      "content": "💡 **Teacher's Secret:** Whenever you see a tangent and a radius meeting at the edge of the circle, instantly draw a 90° right angle symbol. It unlocks almost every circle problem using Pythagoras theorem!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
-    },
-    {
-      "type": "diagram",
-      "content": "Imagine standing outside a circular stadium and throwing two laser beams that just graze the stadium walls on either side. Those laser beams are exactly the same length!",
-      "image_url": "assets/images/maths_ch10_external_tangents.jpg",
-      "alt_text": "Two tangents drawn from an external point to a circle, showing equal lengths."
-    },
-    {
+      "id": "C10_MATH_CH10_THEO_2",
       "type": "theory",
-      "content": "**Theorem 10.2 (प्रमेय 10.2):**\nThe lengths of tangents drawn from an external point to a circle are equal.\n\n*Important Proof:* Draw a line from the external point P to center O. Draw radii to the points of contact. You get two right-angled triangles. They are congruent (RHS congruence). Therefore, tangents are equal!",
-      "difficulty": "Advanced",
-      "bloom": "Evaluate"
+      "title": "Theorem 10.1: Radius and Tangent are Perpendicular",
+      "title_hi": "प्रमेय 10.1: त्रिज्या और स्पर्श रेखा लंबवत होते हैं",
+      "title_gu": "પ્રમેય 10.1: ત્રિજ્યા અને સ્પર્શક લંબ હોય છે",
+      "body": "**Theorem:** *The tangent at any point of a circle is perpendicular to the radius through the point of contact.*\nThis means if you draw a circle with center O, and a tangent line XY that touches the circle at point P, then the radius OP will always make exactly a **90-degree angle** with the line XY.\n*Why is this true?* Because the shortest distance from a point (the center) to a line (the tangent) is always the perpendicular distance. Any other point on the tangent line would be outside the circle, making that distance longer than the radius.",
+      "body_hi": "**प्रमेय:** *वृत्त के किसी बिंदु पर स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है।*\nइसका मतलब है कि यदि आप केंद्र O वाला एक वृत्त बनाते हैं, और एक स्पर्श रेखा XY बनाते हैं जो वृत्त को बिंदु P पर छूती है, तो त्रिज्या OP हमेशा रेखा XY के साथ बिल्कुल **90-डिग्री का कोण** बनाएगी।\n*यह सच क्यों है?* क्योंकि किसी बिंदु (केंद्र) से किसी रेखा (स्पर्श रेखा) की सबसे छोटी दूरी हमेशा लंबवत दूरी होती है। स्पर्श रेखा पर कोई भी अन्य बिंदु वृत्त के बाहर होगा, जिससे वह दूरी त्रिज्या से अधिक लंबी हो जाएगी।",
+      "body_gu": "**પ્રમેય:** *વર્તુળના કોઈ પણ બિંદુએ દોરેલો સ્પર્શક સ્પર્શ બિંદુમાંથી પસાર થતી ત્રિજ્યાને લંબ હોય છે.*\nઆનો અર્થ એ છે કે જો તમે O કેન્દ્રવાળું વર્તુળ દોરો, અને સ્પર્શક રેખા XY દોરો જે વર્તુળને P બિંદુએ સ્પર્શે છે, તો ત્રિજ્યા OP હંમેશા રેખા XY સાથે બરાબર **90-અંશનો ખૂણો** બનાવશે.\n*આ સાચું શા માટે છે?* કારણ કે કોઈ બિંદુ (કેન્દ્ર) થી રેખા (સ્પર્શક) નું સૌથી ટૂંકું અંતર હંમેશા લંબ અંતર હોય છે. સ્પર્શક રેખા પરનું બીજું કોઈ પણ બિંદુ વર્તુળની બહાર હશે, જેનાથી તે અંતર ત્રિજ્યા કરતા મોટું થશે."
     },
     {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Quadrilateral Trick\n\nIf a quadrilateral circumscribes a circle (touches it from all sides), then the sum of opposite sides are equal:\n**AB + CD = AD + BC**\n\n*Board Trick:* They will give you 3 sides and ask for the 4th. Just use this result directly (which is derived from Theorem 10.2)!",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "id": "C10_MATH_CH10_THEO_3",
+      "type": "theory",
+      "title": "Number of Tangents from a Point",
+      "title_hi": "किसी बिंदु से स्पर्श रेखाओं की संख्या",
+      "title_gu": "બિંદુમાંથી સ્પર્શકોની સંખ્યા",
+      "body": "How many tangents can you draw to a circle from a specific point?\n*   **Case 1: Point is INSIDE the circle**: You can draw **Zero** tangents. Any line drawn through a point inside will always be a secant, cutting the circle at two points.\n*   **Case 2: Point is ON the circle**: You can draw exactly **One** tangent at that point.\n*   **Case 3: Point is OUTSIDE the circle**: You can draw exactly **Two** tangents from an external point to the circle.",
+      "body_hi": "आप किसी विशिष्ट बिंदु से वृत्त पर कितनी स्पर्श रेखाएँ खींच सकते हैं?\n*   **स्थिति 1: बिंदु वृत्त के अंदर (INSIDE) है**: आप **शून्य** स्पर्श रेखाएँ खींच सकते हैं। अंदर के किसी बिंदु से खींची गई कोई भी रेखा हमेशा एक छेदक रेखा होगी, जो वृत्त को दो बिंदुओं पर काटेगी।\n*   **स्थिति 2: बिंदु वृत्त पर (ON) है**: आप उस बिंदु पर ठीक **एक** स्पर्श रेखा खींच सकते हैं।\n*   **स्थिति 3: बिंदु वृत्त के बाहर (OUTSIDE) है**: आप किसी बाह्य बिंदु से वृत्त पर ठीक **दो** स्पर्श रेखाएँ खींच सकते हैं।",
+      "body_gu": "તમે કોઈ ચોક્કસ બિંદુથી વર્તુળ પર કેટલા સ્પર્શકો દોરી શકો છો?\n*   **કિસ્સો 1: બિંદુ વર્તુળની અંદર (INSIDE) છે**: તમે **શૂન્ય** સ્પર્શકો દોરી શકો છો. અંદરના બિંદુમાંથી પસાર થતી દોરેલી કોઈપણ રેખા હંમેશા છેદિકા હશે, જે વર્તુળને બે બિંદુઓ પર કાપશે.\n*   **કિસ્સો 2: બિંદુ વર્તુળ પર (ON) છે**: તમે તે બિંદુએ બરાબર **એક** સ્પર્શક દોરી શકો છો.\n*   **કિસ્સો 3: બિંદુ વર્તુળની બહાર (OUTSIDE) છે**: તમે વર્તુળની બહારના બિંદુમાંથી વર્તુળ પર બરાબર **બે** સ્પર્શકો દોરી શકો છો."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_1",
-      "type": "quiz",
-      "question": "If a line intersects a circle at two distinct points, what is the line called?",
-      "question_hi": "यदि एक रेखा वृत्त को दो भिन्न बिंदुओं पर प्रतिच्छेद करती है, तो रेखा को क्या कहा जाता है?",
-      "options": [
-        "Tangent",
-        "Secant",
-        "Chord",
-        "Diameter"
-      ],
-      "options_hi": [
-        "स्पर्श रेखा",
-        "छेदक रेखा",
-        "जीवा",
-        "व्यास"
-      ],
-      "correct_index": 1,
-      "explanation": "A line that intersects a circle at two distinct points is called a secant. A tangent touches at one point, and a chord is a line segment whose endpoints lie on the circle.",
-      "explanation_hi": "एक रेखा जो वृत्त को दो भिन्न बिंदुओं पर काटती है उसे छेदक रेखा (secant) कहा जाता है। स्पर्श रेखा केवल एक बिंदु पर छूती है, और जीवा एक रेखाखंड है जिसके दोनों सिरे वृत्त पर होते हैं।"
+      "id": "C10_MATH_CH10_THEO_4",
+      "type": "theory",
+      "title": "Theorem 10.2: Lengths of Tangents from an External Point",
+      "title_hi": "प्रमेय 10.2: बाह्य बिंदु से स्पर्श रेखाओं की लंबाइयाँ",
+      "title_gu": "પ્રમેય 10.2: બહારના બિંદુથી દોરેલા સ્પર્શકોની લંબાઈ",
+      "body": "**Theorem:** *The lengths of tangents drawn from an external point to a circle are equal.*\nIf you have a point P outside a circle, and you draw two tangents that touch the circle at points A and B, then the length of segment **PA is exactly equal to PB**.\nThis is a very powerful theorem for solving problems! It is proved by drawing radii to A and B (creating two right angles) and showing that the two triangles formed with the center are congruent by RHS congruence.",
+      "body_hi": "**प्रमेय:** *बाह्य बिंदु से वृत्त पर खींची गई स्पर्श रेखाओं की लंबाइयाँ बराबर होती हैं।*\nयदि आपके पास वृत्त के बाहर एक बिंदु P है, और आप दो स्पर्श रेखाएँ खींचते हैं जो वृत्त को बिंदु A और B पर छूती हैं, तो रेखाखंड **PA की लंबाई ठीक PB के बराबर होती है**।\nसमस्याओं को हल करने के लिए यह एक बहुत ही शक्तिशाली प्रमेय है! यह A और B पर त्रिज्याएँ खींचकर (दो समकोण बनाकर) और यह दिखा कर सिद्ध किया जाता है कि केंद्र के साथ बने दोनों त्रिभुज RHS (समकोण कर्ण भुजा) सर्वांगसमता द्वारा सर्वांगसम हैं।",
+      "body_gu": "**પ્રમેય:** *વર્તુળની બહારના બિંદુમાંથી વર્તુળ પર દોરેલા સ્પર્શકોની લંબાઈ સમાન હોય છે.*\nજો તમારી પાસે વર્તુળની બહાર બિંદુ P છે, અને તમે બે સ્પર્શકો દોરો છો જે વર્તુળને A અને B બિંદુઓએ સ્પર્શે છે, તો રેખાખંડ **PA ની લંબાઈ બરાબર PB જેટલી જ હોય છે**.\nદાખલા ઉકેલવા માટે આ એક ખૂબ જ શક્તિશાળી પ્રમેય છે! આ A અને B પર ત્રિજ્યાઓ દોરીને (બે કાટખૂણા બનાવીને) અને કેન્દ્ર સાથે બનતા બંને ત્રિકોણો કાકબા (કાટખૂણો કર્ણ બાજુ) એકરૂપતા દ્વારા એકરૂપ છે તેમ દર્શાવીને સાબિત કરવામાં આવે છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_2",
-      "type": "quiz",
-      "question": "How many parallel tangents can a circle have at the most?",
-      "question_hi": "एक वृत्त की अधिकतम कितनी समांतर स्पर्श रेखाएँ हो सकती हैं?",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "Infinite"
-      ],
-      "options_hi": [
-        "1",
-        "2",
-        "3",
-        "अनंत"
-      ],
-      "correct_index": 1,
-      "explanation": "A circle can have at most two parallel tangents. They will be at opposite ends of a diameter.",
-      "explanation_hi": "एक वृत्त की अधिकतम दो समांतर स्पर्श रेखाएँ हो सकती हैं। वे एक व्यास के विपरीत सिरों पर होंगी।"
+      "id": "C10_MATH_CH10_PRACTICE_1",
+      "type": "practice_question",
+      "question": "How many tangents can a circle have?",
+      "question_hi": "एक वृत्त की कितनी स्पर्श रेखाएँ हो सकती हैं?",
+      "question_gu": "વર્તુળને કેટલા સ્પર્શક હોય છે?",
+      "solution": "A circle can have infinitely many tangents. Since a circle is made up of infinitely many points on its circumference, a tangent can be drawn at each of these points.",
+      "solution_hi": "एक वृत्त की अनंत (infinitely many) स्पर्श रेखाएँ हो सकती हैं। चूँकि एक वृत्त अपनी परिधि पर अनंत बिंदुओं से बना होता है, इसलिए इनमें से प्रत्येक बिंदु पर एक स्पर्श रेखा खींची जा सकती है।",
+      "solution_gu": "વર્તુળને અસંખ્ય (અનંત) સ્પર્શકો હોઈ શકે છે. કારણ કે વર્તુળ તેના પરિઘ પર અસંખ્ય બિંદુઓનું બનેલું છે, આ દરેક બિંદુએ એક સ્પર્શક દોરી શકાય છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_3",
-      "type": "quiz",
-      "question": "A tangent PQ at a point P of a circle of radius 5 cm meets a line through the centre O at a point Q so that OQ = 12 cm. Length PQ is:",
-      "question_hi": "5 सेमी त्रिज्या वाले एक वृत्त के बिंदु P पर स्पर्श रेखा PQ केंद्र O से जाने वाली एक रेखा से बिंदु Q पर इस प्रकार मिलती है कि OQ = 12 सेमी है। PQ की लंबाई है:",
+      "id": "C10_MATH_CH10_PRACTICE_2",
+      "type": "practice_question",
+      "question": "Fill in the blanks: (i) A tangent to a circle intersects it in _______ point(s). (ii) A line intersecting a circle in two points is called a _______.",
+      "question_hi": "रिक्त स्थानों की पूर्ति कीजिए: (i) किसी वृत्त की स्पर्श रेखा उसे _______ बिंदु(ओं) पर प्रतिच्छेद करती है। (ii) वृत्त को दो बिंदुओं पर प्रतिच्छेद करने वाली रेखा को _______ कहते हैं।",
+      "question_gu": "ખાલી જગ્યા પૂરો: (i) વર્તુળનો સ્પર્શક વર્તુળને _______ બિંદુ(ઓ)માં છેદે છે. (ii) વર્તુળને બે બિંદુઓમાં છેદતી રેખાને _______ કહે છે.",
+      "solution": "(i) exactly one. (A tangent only touches the circle at one specific point).\n(ii) secant. (A secant cuts through the circle at two points).",
+      "solution_hi": "(i) केवल एक (exactly one)। (स्पर्श रेखा वृत्त को केवल एक विशिष्ट बिंदु पर छूती है)।\n(ii) छेदक रेखा (secant)। (छेदक रेखा वृत्त को दो बिंदुओं पर काटती है)।",
+      "solution_gu": "(i) ફક્ત એક જ. (સ્પર્શક વર્તુળને માત્ર એક જ ચોક્કસ બિંદુએ સ્પર્શે છે).\n(ii) છેદિકા (secant). (છેદિકા વર્તુળને બે બિંદુઓમાં કાપે છે)."
+    },
+    {
+      "id": "C10_MATH_CH10_PRACTICE_3",
+      "type": "practice_question",
+      "question": "Fill in the blanks: (iii) A circle can have _______ parallel tangents at the most. (iv) The common point of a tangent to a circle and the circle is called _______.",
+      "question_hi": "रिक्त स्थानों की पूर्ति कीजिए: (iii) एक वृत्त की अधिकतम _______ समांतर स्पर्श रेखाएँ हो सकती हैं। (iv) वृत्त तथा उसकी स्पर्श रेखा के उभयनिष्ठ बिंदु को _______ कहते हैं।",
+      "question_gu": "ખાલી જગ્યા પૂરો: (iii) વર્તુળને વધુમાં વધુ _______ સમાંતર સ્પર્શક હોઈ શકે. (iv) વર્તુળ અને તેના સ્પર્શકના સામાન્ય બિંદુને _______ કહે છે.",
+      "solution": "(iii) two. (If you draw a diameter, you can draw exactly one tangent at each of its two ends. Any other tangent will not be parallel to these two).\n(iv) point of contact. (This is where the line 'kisses' the circle).",
+      "solution_hi": "(iii) दो (two)। (यदि आप एक व्यास खींचते हैं, तो आप इसके दो सिरों में से प्रत्येक पर ठीक एक स्पर्श रेखा खींच सकते हैं। कोई अन्य स्पर्श रेखा इन दोनों के समांतर नहीं होगी)।\n(iv) स्पर्श बिंदु (point of contact)। (यह वह स्थान है जहाँ रेखा वृत्त को 'चूमती' है)।",
+      "solution_gu": "(iii) બે. (જો તમે એક વ્યાસ દોરો છો, તો તમે તેના બંને છેડાઓમાંથી દરેકે બરાબર એક સ્પર્શક દોરી શકો છો. બીજો કોઈપણ સ્પર્શક આ બંનેને સમાંતર નહીં હોય).\n(iv) સ્પર્શ બિંદુ (point of contact). (આ તે જગ્યા છે જ્યાં રેખા વર્તુળને સ્પર્શે છે)."
+    },
+    {
+      "id": "C10_MATH_CH10_PRACTICE_4",
+      "type": "practice_question",
+      "question": "A tangent PQ at a point P of a circle of radius 5 cm meets a line through the centre O at a point Q so that OQ = 12 cm. Find Length PQ.",
       "options": [
         "12 cm",
         "13 cm",
         "8.5 cm",
         "√119 cm"
       ],
+      "question_hi": "5 सेमी त्रिज्या वाले एक वृत्त के बिंदु P पर स्पर्श रेखा PQ केंद्र O से जाने वाली एक रेखा से बिंदु Q पर इस प्रकार मिलती है कि OQ = 12 सेमी। PQ की लंबाई ज्ञात कीजिए।",
       "options_hi": [
-        "12 सेमी",
-        "13 सेमी",
-        "8.5 सेमी",
-        "√119 सेमी"
-      ],
-      "correct_index": 3,
-      "explanation": "Since tangent is perpendicular to radius, ΔOPQ is right-angled at P. By Pythagoras Theorem: OQ² = OP² + PQ². 12² = 5² + PQ² ⇒ 144 = 25 + PQ² ⇒ PQ² = 119 ⇒ PQ = √119 cm.",
-      "explanation_hi": "चूँकि स्पर्श रेखा त्रिज्या पर लंब होती है, ΔOPQ, P पर समकोण है। पाइथागोरस प्रमेय द्वारा: OQ² = OP² + PQ²। 12² = 5² + PQ² ⇒ 144 = 25 + PQ² ⇒ PQ² = 119 ⇒ PQ = √119 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_4",
-      "type": "quiz",
-      "question": "If tangents PA and PB from a point P to a circle with centre O are inclined to each other at angle of 80°, then ∠POA is equal to:",
-      "question_hi": "यदि एक बिंदु P से केंद्र O वाले किसी वृत्त पर PA और PB स्पर्श रेखाएँ परस्पर 80° के कोण पर झुकी हों, तो ∠POA बराबर है:",
-      "options": [
-        "50°",
-        "60°",
-        "70°",
-        "80°"
-      ],
-      "options_hi": [
-        "50°",
-        "60°",
-        "70°",
-        "80°"
-      ],
-      "correct_index": 0,
-      "explanation": "In quadrilateral OAPB, ∠A = ∠B = 90°. ∠APB = 80°. So ∠AOB = 360 - (90 + 90 + 80) = 100°. In ΔPOA and ΔPOB, they are congruent. So ∠POA = ∠AOB / 2 = 100 / 2 = 50°.",
-      "explanation_hi": "चतुर्भुज OAPB में, ∠A = ∠B = 90°। ∠APB = 80°। अतः ∠AOB = 360 - (90 + 90 + 80) = 100°। ΔPOA और ΔPOB में, वे सर्वांगसम हैं। इसलिए ∠POA = ∠AOB / 2 = 100 / 2 = 50°।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_5",
-      "type": "quiz",
-      "question": "The lengths of tangents drawn from an external point to a circle are:",
-      "question_hi": "वृत्त के बाहर स्थित किसी बिंदु से वृत्त पर खींची गई स्पर्श रेखाओं की लंबाइयाँ होती हैं:",
-      "options": [
-        "Unequal",
-        "Equal",
-        "Parallel",
-        "Perpendicular"
-      ],
-      "options_hi": [
-        "असमान",
-        "समान (बराबर)",
-        "समांतर",
-        "लंबवत"
-      ],
-      "correct_index": 1,
-      "explanation": "According to Theorem 10.2, the lengths of tangents drawn from an external point to a circle are equal.",
-      "explanation_hi": "प्रमेय 10.2 के अनुसार, वृत्त के बाहर स्थित किसी बिंदु से वृत्त पर खींची गई स्पर्श रेखाओं की लंबाइयाँ समान (बराबर) होती हैं।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_6",
-      "type": "quiz",
-      "question": "If TP and TQ are two tangents to a circle with centre O so that ∠POQ = 110°, then ∠PTQ is equal to:",
-      "question_hi": "यदि केंद्र O वाले किसी वृत्त पर TP और TQ दो स्पर्श रेखाएँ इस प्रकार हैं कि ∠POQ = 110° है, तो ∠PTQ बराबर है:",
-      "options": [
-        "60°",
-        "70°",
-        "80°",
-        "90°"
-      ],
-      "options_hi": [
-        "60°",
-        "70°",
-        "80°",
-        "90°"
-      ],
-      "correct_index": 1,
-      "explanation": "In quadrilateral OPTQ, ∠OPT = ∠OQT = 90° (Radius ⊥ Tangent). Sum of angles = 360°. So, ∠PTQ = 360° - (90° + 90° + 110°) = 70°.",
-      "explanation_hi": "चतुर्भुज OPTQ में, ∠OPT = ∠OQT = 90° (त्रिज्या ⊥ स्पर्श रेखा)। कोणों का योग = 360°। अतः, ∠PTQ = 360° - (90° + 90° + 110°) = 70°।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_7",
-      "type": "quiz",
-      "question": "A circle can be inscribed in a quadrilateral ABCD. Which of the following is true?",
-      "question_hi": "एक वृत्त को एक चतुर्भुज ABCD के अंदर खींचा (inscribed) जा सकता है। निम्नलिखित में से कौन सा सत्य है?",
-      "options": [
-        "AB + BC = CD + AD",
-        "AB + CD = AD + BC",
-        "AC = BD",
-        "AB = CD"
-      ],
-      "options_hi": [
-        "AB + BC = CD + AD",
-        "AB + CD = AD + BC",
-        "AC = BD",
-        "AB = CD"
-      ],
-      "correct_index": 1,
-      "explanation": "When a quadrilateral circumscribes a circle, the sum of its opposite sides are equal. Hence, AB + CD = AD + BC.",
-      "explanation_hi": "जब एक चतुर्भुज एक वृत्त के परिगत (बाहर से छूता हुआ) होता है, तो उसकी सम्मुख भुजाओं का योग बराबर होता है। अतः, AB + CD = AD + BC।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_8",
-      "type": "quiz",
-      "question": "The angle between the tangent at any point of a circle and the radius through the point of contact is:",
-      "question_hi": "वृत्त के किसी बिंदु पर स्पर्श रेखा और स्पर्श बिंदु से होकर जाने वाली त्रिज्या के बीच का कोण होता है:",
-      "options": [
-        "30°",
-        "45°",
-        "60°",
-        "90°"
-      ],
-      "options_hi": [
-        "30°",
-        "45°",
-        "60°",
-        "90°"
-      ],
-      "correct_index": 3,
-      "explanation": "Theorem 10.1 states that the tangent at any point of a circle is perpendicular (90°) to the radius through the point of contact.",
-      "explanation_hi": "प्रमेय 10.1 के अनुसार, वृत्त के किसी बिंदु पर स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब (90°) होती है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_9",
-      "type": "quiz",
-      "question": "From a point Q, the length of the tangent to a circle is 24 cm and the distance of Q from the centre is 25 cm. The radius of the circle is:",
-      "question_hi": "एक बिंदु Q से एक वृत्त पर स्पर्श रेखा की लंबाई 24 सेमी है तथा Q की केंद्र से दूरी 25 सेमी है। वृत्त की त्रिज्या है:",
-      "options": [
-        "7 cm",
         "12 cm",
-        "15 cm",
-        "24.5 cm"
+        "13 cm",
+        "8.5 cm",
+        "√119 cm"
       ],
-      "options_hi": [
-        "7 सेमी",
-        "12 सेमी",
-        "15 सेमी",
-        "24.5 सेमी"
-      ],
-      "correct_index": 0,
-      "explanation": "Let O be the center. OQ = 25, PQ = 24. ΔOPQ is right-angled at P. OP² = OQ² - PQ² = 25² - 24² = 625 - 576 = 49. OP = √49 = 7 cm.",
-      "explanation_hi": "माना कि O केंद्र है। OQ = 25, PQ = 24। ΔOPQ, P पर समकोण है। OP² = OQ² - PQ² = 25² - 24² = 625 - 576 = 49। OP = √49 = 7 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_10",
-      "type": "quiz",
-      "question": "Two concentric circles are of radii 5 cm and 3 cm. The length of the chord of the larger circle which touches the smaller circle is:",
-      "question_hi": "दो संकेंद्री वृत्तों की त्रिज्याएँ 5 सेमी तथा 3 सेमी हैं। बड़े वृत्त की उस जीवा की लंबाई ज्ञात कीजिए जो छोटे वृत्त को स्पर्श करती हो:",
-      "options": [
-        "4 cm",
-        "8 cm",
-        "10 cm",
-        "6 cm"
-      ],
-      "options_hi": [
-        "4 सेमी",
-        "8 सेमी",
-        "10 सेमी",
-        "6 सेमी"
-      ],
-      "correct_index": 1,
-      "explanation": "Let chord be AB, touching inner circle at P. OP ⊥ AB. OP=3, OA=5. In ΔOPA, AP² = 5² - 3² = 16 ⇒ AP=4 cm. Since perpendicular from center bisects chord, AB = 2 × AP = 8 cm.",
-      "explanation_hi": "माना कि जीवा AB है, जो छोटे वृत्त को P पर छूती है। OP ⊥ AB। OP=3, OA=5। ΔOPA में, AP² = 5² - 3² = 16 ⇒ AP=4 सेमी। चूँकि केंद्र से लंब जीवा को समद्विभाजित करता है, AB = 2 × AP = 8 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_11",
-      "type": "quiz",
-      "question": "A tangent intersecting a circle at exactly one point is also known as:",
-      "question_hi": "एक वृत्त को ठीक एक बिंदु पर प्रतिच्छेद करने वाली स्पर्श रेखा को इस रूप में भी जाना जाता है:",
-      "options": [
-        "Secant",
-        "Radius",
-        "Chord",
-        "None of these"
-      ],
-      "options_hi": [
-        "छेदक रेखा",
-        "त्रिज्या",
-        "जीवा",
-        "इनमें से कोई नहीं"
+      "question_gu": "5 સેમી ત્રિજ્યાવાળા વર્તુળના કોઈ બિંદુ P આગળ દોરેલ સ્પર્શક PQ, કેન્દ્ર O માંથી પસાર થતી રેખાને Q બિંદુએ એવી રીતે છેદે છે કે જેથી OQ = 12 સેમી થાય. તો PQ ની લંબાઈ શોધો.",
+      "options_gu": [
+        "12 cm",
+        "13 cm",
+        "8.5 cm",
+        "√119 cm"
       ],
       "correct_index": 3,
-      "explanation": "A tangent is specifically a line that touches the circle at exactly one point. A secant intersects at two points, and a chord is a segment. Thus, none of the other terms mean tangent.",
-      "explanation_hi": "स्पर्श रेखा विशेष रूप से एक ऐसी रेखा है जो वृत्त को ठीक एक बिंदु पर छूती है। छेदक रेखा दो बिंदुओं पर काटती है, और जीवा एक रेखाखंड है। इसलिए, अन्य विकल्पों में से कोई भी सही नहीं है।"
+      "solution": "Radius OP = 5 cm. OQ = 12 cm.\nWe know the tangent at any point is perpendicular to the radius. So, angle OPQ = 90°.\nTriangle OPQ is a right-angled triangle. Hypotenuse is OQ.\nBy Pythagoras theorem: OP² + PQ² = OQ²\n5² + PQ² = 12²\n25 + PQ² = 144\nPQ² = 144 - 25 = 119\nPQ = √119 cm.",
+      "solution_hi": "त्रिज्या OP = 5 सेमी। OQ = 12 सेमी।\nहम जानते हैं कि किसी बिंदु पर स्पर्श रेखा त्रिज्या पर लंब होती है। अतः, कोण OPQ = 90°.\nत्रिभुज OPQ एक समकोण त्रिभुज है। कर्ण OQ है।\nपाइथागोरस प्रमेय द्वारा: OP² + PQ² = OQ²\n5² + PQ² = 12²\n25 + PQ² = 144\nPQ² = 144 - 25 = 119\nPQ = √119 सेमी।",
+      "solution_gu": "ત્રિજ્યા OP = 5 સેમી. OQ = 12 સેમી.\nઆપણે જાણીએ છીએ કે કોઈપણ બિંદુએ સ્પર્શક ત્રિજ્યાને લંબ હોય છે. તેથી, ખૂણો OPQ = 90°.\nત્રિકોણ OPQ કાટકોણ ત્રિકોણ છે. કર્ણ OQ છે.\nપાયથાગોરસ પ્રમેય મુજબ: OP² + PQ² = OQ²\n5² + PQ² = 12²\n25 + PQ² = 144\nPQ² = 144 - 25 = 119\nPQ = √119 સેમી."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_12",
-      "type": "quiz",
-      "question": "In a right triangle ABC, right-angled at B, BC = 12 cm and AB = 5 cm. The radius of the circle inscribed in the triangle is:",
-      "question_hi": "एक समकोण त्रिभुज ABC में, जिसका कोण B समकोण है, BC = 12 सेमी और AB = 5 सेमी है। त्रिभुज के अंदर बने वृत्त की त्रिज्या है:",
+      "id": "C10_MATH_CH10_PRACTICE_5",
+      "type": "practice_question",
+      "question": "If tangents PA and PB from a point P to a circle with centre O are inclined to each other at angle of 80°, then find angle POA.",
       "options": [
-        "1 cm",
-        "2 cm",
-        "3 cm",
-        "4 cm"
+        "50°",
+        "60°",
+        "70°",
+        "80°"
       ],
+      "question_hi": "यदि एक बिंदु P से O केंद्र वाले किसी वृत्त पर PA, PB स्पर्श रेखाएँ परस्पर 80° के कोण पर झुकी हों, तो कोण POA ज्ञात कीजिए।",
       "options_hi": [
-        "1 सेमी",
-        "2 सेमी",
-        "3 सेमी",
-        "4 सेमी"
+        "50°",
+        "60°",
+        "70°",
+        "80°"
       ],
-      "correct_index": 1,
-      "explanation": "Hypotenuse AC = √(12² + 5²) = 13 cm. For an inscribed circle in a right triangle, radius r = (AB + BC - AC) / 2 = (5 + 12 - 13) / 2 = 4 / 2 = 2 cm.",
-      "explanation_hi": "कर्ण AC = √(12² + 5²) = 13 सेमी। एक समकोण त्रिभुज में अंतःवृत्त की त्रिज्या r = (AB + BC - AC) / 2 = (5 + 12 - 13) / 2 = 4 / 2 = 2 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch10_13",
-      "type": "quiz",
-      "question": "If a hexagon ABCDEF circumscribes a circle, then which of the following relations is correct?",
-      "question_hi": "यदि एक षट्भुज ABCDEF एक वृत्त के परिगत है, तो निम्नलिखित में से कौन सा संबंध सही है?",
-      "options": [
-        "AB + CD + EF = BC + DE + FA",
-        "AB = CD = EF",
-        "AB + BC + CD = DE + EF + FA",
-        "None of the above"
-      ],
-      "options_hi": [
-        "AB + CD + EF = BC + DE + FA",
-        "AB = CD = EF",
-        "AB + BC + CD = DE + EF + FA",
-        "उपरोक्त में से कोई नहीं"
+      "question_gu": "જો કેન્દ્ર O વાળા વર્તુળ પર બિંદુ P માંથી દોરેલા સ્પર્શકો PA અને PB વચ્ચેનો ખૂણો 80° હોય, તો ખૂણો POA શોધો.",
+      "options_gu": [
+        "50°",
+        "60°",
+        "70°",
+        "80°"
       ],
       "correct_index": 0,
-      "explanation": "For any polygon with an even number of sides circumscribing a circle, the sum of alternate sides is equal. Therefore, AB + CD + EF = BC + DE + FA.",
-      "explanation_hi": "किसी भी सम-भुजाओं वाले बहुभुज के लिए जो एक वृत्त के परिगत होता है, एकांतर (alternate) भुजाओं का योग बराबर होता है। इसलिए, AB + CD + EF = BC + DE + FA।"
+      "solution": "Angle APB = 80°.\nOA and OB are radii. PA and PB are tangents.\nAngle OAP = 90° and Angle OBP = 90° (Radius is perpendicular to tangent).\nIn quadrilateral OAPB, sum of angles is 360°.\nAngle AOB + Angle OAP + Angle OBP + Angle APB = 360°\nAngle AOB + 90° + 90° + 80° = 360°\nAngle AOB + 260° = 360° => Angle AOB = 100°.\nIn triangles OAP and OBP, they are congruent (RHS). So OP bisects Angle AOB.\nAngle POA = 1/2 × Angle AOB = 1/2 × 100° = 50°.",
+      "solution_hi": "कोण APB = 80°.\nOA और OB त्रिज्याएँ हैं। PA और PB स्पर्श रेखाएँ हैं।\nकोण OAP = 90° और कोण OBP = 90° (त्रिज्या स्पर्श रेखा पर लंब होती है)।\nचतुर्भुज OAPB में, कोणों का योग 360° होता है।\nकोण AOB + कोण OAP + कोण OBP + कोण APB = 360°\nकोण AOB + 90° + 90° + 80° = 360°\nकोण AOB + 260° = 360° => कोण AOB = 100°.\nत्रिभुज OAP और OBP में, वे सर्वांगसम (RHS) हैं। इसलिए OP कोण AOB को समद्विभाजित करता है।\nकोण POA = 1/2 × कोण AOB = 1/2 × 100° = 50°.",
+      "solution_gu": "ખૂણો APB = 80°.\nOA અને OB ત્રિજ્યાઓ છે. PA અને PB સ્પર્શકો છે.\nખૂણો OAP = 90° અને ખૂણો OBP = 90° (ત્રિજ્યા સ્પર્શકને લંબ હોય છે).\nચતુષ્કોણ OAPB માં, ખૂણાઓનો સરવાળો 360° થાય છે.\nખૂણો AOB + ખૂણો OAP + ખૂણો OBP + ખૂણો APB = 360°\nખૂણો AOB + 90° + 90° + 80° = 360°\nખૂણો AOB + 260° = 360° => ખૂણો AOB = 100°.\nત્રિકોણ OAP અને OBP એકરૂપ છે (કાકબા). તેથી OP એ ખૂણા AOB નો દ્વિભાજક છે.\nખૂણો POA = 1/2 × ખૂણો AOB = 1/2 × 100° = 50°."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_14",
-      "type": "quiz",
-      "question": "A quadrilateral ABCD is drawn to circumscribe a circle. If AB = 4 cm, CD = 7 cm, and AD = 6 cm, what is the length of BC?",
-      "question_hi": "एक चतुर्भुज ABCD एक वृत्त के परिगत खींचा गया है। यदि AB = 4 सेमी, CD = 7 सेमी और AD = 6 सेमी है, तो BC की लंबाई क्या है?",
-      "options": [
-        "3 cm",
-        "4 cm",
-        "5 cm",
-        "6 cm"
-      ],
-      "options_hi": [
-        "3 सेमी",
-        "4 सेमी",
-        "5 सेमी",
-        "6 सेमी"
-      ],
-      "correct_index": 2,
-      "explanation": "We know AB + CD = AD + BC. Substituting the values: 4 + 7 = 6 + BC ⇒ 11 = 6 + BC ⇒ BC = 5 cm.",
-      "explanation_hi": "हम जानते हैं कि AB + CD = AD + BC. मान रखने पर: 4 + 7 = 6 + BC ⇒ 11 = 6 + BC ⇒ BC = 5 सेमी।"
+      "id": "C10_MATH_CH10_PRACTICE_6",
+      "type": "practice_question",
+      "question": "Prove that the tangents drawn at the ends of a diameter of a circle are parallel.",
+      "question_hi": "सिद्ध कीजिए कि किसी वृत्त के किसी व्यास के सिरों पर खींची गई स्पर्श रेखाएँ समांतर होती हैं।",
+      "question_gu": "સાબિત કરો કે વર્તુળના વ્યાસના અંત્યબિંદુઓએ દોરેલા સ્પર્શકો પરસ્પર સમાંતર હોય છે.",
+      "solution": "Let AB be a diameter of a circle with center O.\nLet PQ and RS be tangents drawn at ends A and B respectively.\nSince OA is a radius and PQ is a tangent, OA ⟂ PQ. So, angle OAP = 90° and angle OAQ = 90°.\nSince OB is a radius and RS is a tangent, OB ⟂ RS. So, angle OBR = 90° and angle OBS = 90°.\nSince AB is a straight line, angle OAP and angle OBS are alternate interior angles.\nSince Angle OAP = Angle OBS = 90°, the alternate interior angles are equal.\nTherefore, the lines PQ and RS are parallel.",
+      "solution_hi": "माना O केंद्र वाले वृत्त का व्यास AB है।\nमाना PQ और RS क्रमशः सिरों A और B पर खींची गई स्पर्श रेखाएँ हैं।\nचूँकि OA एक त्रिज्या है और PQ एक स्पर्श रेखा है, OA ⟂ PQ. अतः, कोण OAP = 90° और कोण OAQ = 90°.\nचूँकि OB एक त्रिज्या है और RS एक स्पर्श रेखा है, OB ⟂ RS. अतः, कोण OBR = 90° और कोण OBS = 90°.\nचूँकि AB एक सीधी रेखा है, कोण OAP और कोण OBS एकांतर अंतःकोण हैं।\nचूँकि कोण OAP = कोण OBS = 90°, एकांतर अंतःकोण बराबर हैं।\nइसलिए, रेखाएँ PQ और RS समांतर हैं।",
+      "solution_gu": "ધારો કે O કેન્દ્રવાળા વર્તુળનો વ્યાસ AB છે.\nધારો કે PQ અને RS અનુક્રમે છેડા A અને B પર દોરેલા સ્પર્શકો છે.\nકારણ કે OA ત્રિજ્યા છે અને PQ સ્પર્શક છે, OA ⟂ PQ. તેથી, ખૂણો OAP = 90° અને ખૂણો OAQ = 90°.\nકારણ કે OB ત્રિજ્યા છે અને RS સ્પર્શક છે, OB ⟂ RS. તેથી, ખૂણો OBR = 90° અને ખૂણો OBS = 90°.\nકારણ કે AB એક સીધી રેખા છે, ખૂણો OAP અને ખૂણો OBS યુગ્મકોણો છે.\nકારણ કે ખૂણો OAP = ખૂણો OBS = 90°, યુગ્મકોણો સમાન છે.\nતેથી, રેખાઓ PQ અને RS સમાંતર છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch10_15",
-      "type": "quiz",
-      "question": "If tangents PA and PB from a point P to a circle with centre O are drawn, and ∠APB = 60°, then ΔPAB is:",
-      "question_hi": "यदि एक बिंदु P से केंद्र O वाले वृत्त पर स्पर्श रेखाएँ PA और PB खींची जाती हैं, और ∠APB = 60° है, तो ΔPAB है:",
-      "options": [
-        "Right-angled",
-        "Isosceles but not equilateral",
-        "Equilateral",
-        "Scalene"
-      ],
-      "options_hi": [
-        "समकोण",
-        "समद्विबाहु लेकिन समबाहु नहीं",
-        "समबाहु",
-        "विषमबाहु"
-      ],
-      "correct_index": 2,
-      "explanation": "We know PA = PB (tangents from an external point). So ΔPAB is isosceles. This means ∠PAB = ∠PBA. Since ∠APB = 60°, the other two angles must sum to 120°, meaning each is 60°. A triangle with all angles 60° is equilateral.",
-      "explanation_hi": "हम जानते हैं कि PA = PB (बाह्य बिंदु से स्पर्श रेखाएँ)। अतः ΔPAB समद्विबाहु है। इसका अर्थ है ∠PAB = ∠PBA। चूँकि ∠APB = 60° है, अन्य दो कोणों का योग 120° होना चाहिए, अर्थात प्रत्येक 60° है। एक त्रिभुज जिसके सभी कोण 60° हों, समबाहु (Equilateral) होता है।"
+      "id": "C10_MATH_CH10_PRACTICE_7",
+      "type": "practice_question",
+      "question": "Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+      "question_hi": "दो संकेंद्री (concentric) वृत्तों की त्रिज्याएँ 5 सेमी तथा 3 सेमी हैं। बड़े वृत्त की उस जीवा की लंबाई ज्ञात कीजिए जो छोटे वृत्त को स्पर्श करती हो।",
+      "question_gu": "બે સમકેન્દ્રી વર્તુળોની ત્રિજ્યાઓ 5 સેમી અને 3 સેમી છે. મોટા વર્તુળની જીવા જે નાના વર્તુળને સ્પર્શે છે તેની લંબાઈ શોધો.",
+      "solution": "Let O be the center. The larger circle has radius 5 cm, smaller has 3 cm.\nLet AB be the chord of the larger circle that touches the smaller circle at point P.\nSo, AB is a tangent to the smaller circle at P.\nOP is the radius of the smaller circle, so OP = 3 cm. Since AB is a tangent, OP ⟂ AB.\nOA is the radius of the larger circle, so OA = 5 cm.\nIn right triangle OPA: OA² = OP² + AP²\n5² = 3² + AP²\n25 = 9 + AP² => AP² = 16 => AP = 4 cm.\nThe perpendicular from the center to a chord bisects the chord. So, AB = 2 × AP = 2 × 4 = 8 cm.\nThe length of the chord is 8 cm.",
+      "solution_hi": "माना केंद्र O है। बड़े वृत्त की त्रिज्या 5 सेमी, छोटे की 3 सेमी है।\nमाना बड़े वृत्त की जीवा AB है जो छोटे वृत्त को बिंदु P पर स्पर्श करती है।\nअतः, AB छोटे वृत्त के बिंदु P पर एक स्पर्श रेखा है।\nOP छोटे वृत्त की त्रिज्या है, इसलिए OP = 3 सेमी। चूँकि AB एक स्पर्श रेखा है, OP ⟂ AB.\nOA बड़े वृत्त की त्रिज्या है, इसलिए OA = 5 सेमी।\nसमकोण त्रिभुज OPA में: OA² = OP² + AP²\n5² = 3² + AP²\n25 = 9 + AP² => AP² = 16 => AP = 4 सेमी।\nकेंद्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है। अतः, AB = 2 × AP = 2 × 4 = 8 सेमी।\nजीवा की लंबाई 8 सेमी है।",
+      "solution_gu": "ધારો કે O કેન્દ્ર છે. મોટા વર્તુળની ત્રિજ્યા 5 સેમી, નાનાની 3 સેમી છે.\nધારો કે મોટા વર્તુળની જીવા AB છે જે નાના વર્તુળને P બિંદુએ સ્પર્શે છે.\nતેથી, AB એ નાના વર્તુળ માટે P આગળ સ્પર્શક છે.\nOP નાના વર્તુળની ત્રિજ્યા છે, તેથી OP = 3 સેમી. કારણ કે AB સ્પર્શક છે, OP ⟂ AB.\nOA મોટા વર્તુળની ત્રિજ્યા છે, તેથી OA = 5 સેમી.\nકાટકોણ ત્રિકોણ OPA માં: OA² = OP² + AP²\n5² = 3² + AP²\n25 = 9 + AP² => AP² = 16 => AP = 4 સેમી.\nકેન્દ્રમાંથી જીવા પર દોરેલો લંબ જીવાને દુભાગે છે. તેથી, AB = 2 × AP = 2 × 4 = 8 સેમી.\nજીવાની લંબાઈ 8 સેમી છે."
+    },
+    {
+      "id": "C10_MATH_CH10_PRACTICE_8",
+      "type": "practice_question",
+      "question": "A quadrilateral ABCD is drawn to circumscribe a circle. Prove that AB + CD = AD + BC.",
+      "question_hi": "एक वृत्त के परिगत एक चतुर्भुज ABCD खींचा गया है। सिद्ध कीजिए कि AB + CD = AD + BC.",
+      "question_gu": "એક વર્તુળની પરિગત ચતુષ્કોણ ABCD દોરેલો છે. સાબિત કરો કે AB + CD = AD + BC.",
+      "solution": "Let the circle touch the sides AB, BC, CD, and DA at points P, Q, R, and S respectively.\nBy the theorem that tangents from an external point are equal:\nAP = AS (Tangents from A)\nBP = BQ (Tangents from B)\nCR = CQ (Tangents from C)\nDR = DS (Tangents from D)\nAdding all these equations:\nAP + BP + CR + DR = AS + BQ + CQ + DS\n(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)\nSince AP + BP = AB, CR + DR = CD, AS + DS = AD, and BQ + CQ = BC:\nAB + CD = AD + BC. Proved.",
+      "solution_hi": "माना वृत्त भुजाओं AB, BC, CD, और DA को क्रमशः P, Q, R, और S बिंदुओं पर स्पर्श करता है।\nइस प्रमेय द्वारा कि बाह्य बिंदु से स्पर्श रेखाएँ समान होती हैं:\nAP = AS (A से स्पर्श रेखाएँ)\nBP = BQ (B से स्पर्श रेखाएँ)\nCR = CQ (C से स्पर्श रेखाएँ)\nDR = DS (D से स्पर्श रेखाएँ)\nइन सभी समीकरणों को जोड़ने पर:\nAP + BP + CR + DR = AS + BQ + CQ + DS\n(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)\nचूँकि AP + BP = AB, CR + DR = CD, AS + DS = AD, और BQ + CQ = BC:\nAB + CD = AD + BC. सिद्ध हुआ।",
+      "solution_gu": "ધારો કે વર્તુળ બાજુઓ AB, BC, CD, અને DA ને અનુક્રમે P, Q, R, અને S બિંદુઓએ સ્પર્શે છે.\nબહારના બિંદુમાંથી દોરેલા સ્પર્શકો સમાન હોય છે તે પ્રમેય મુજબ:\nAP = AS (A માંથી સ્પર્શકો)\nBP = BQ (B માંથી સ્પર્શકો)\nCR = CQ (C માંથી સ્પર્શકો)\nDR = DS (D માંથી સ્પર્શકો)\nઆ બધા સમીકરણોનો સરવાળો કરતા:\nAP + BP + CR + DR = AS + BQ + CQ + DS\n(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)\nકારણ કે AP + BP = AB, CR + DR = CD, AS + DS = AD, અને BQ + CQ = BC:\nAB + CD = AD + BC. સાબિત થયું."
     }
   ]
 }

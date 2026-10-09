@@ -17,7 +17,13 @@ class TeacherTipWidget extends StatefulWidget {
 class _TeacherTipWidgetState extends State<TeacherTipWidget> {
   bool _isPlaying = false;
 
-  String get _body => (widget.block['body'] ?? widget.block['content'] ?? widget.block['tip'] ?? '').toString();
+  String get _body {
+    String text = TrilingualService.instance.getLocalizedText(widget.block, 'body');
+    if (text.isEmpty) text = TrilingualService.instance.getLocalizedText(widget.block, 'content');
+    if (text.isEmpty) text = TrilingualService.instance.getLocalizedText(widget.block, 'tip');
+    if (text.isEmpty) text = (widget.block['body'] ?? widget.block['content'] ?? widget.block['tip'] ?? '').toString();
+    return text;
+  }
 
   Future<void> _playAudio() async {
     if (_body.isEmpty) return;
@@ -56,7 +62,9 @@ class _TeacherTipWidgetState extends State<TeacherTipWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  widget.block['title'] ?? "Teacher's Tip",
+                  TrilingualService.instance.getLocalizedText(widget.block, 'title').isNotEmpty 
+                      ? TrilingualService.instance.getLocalizedText(widget.block, 'title') 
+                      : TrilingualService.instance.getUIText("Teacher's Tip"),
                   style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.amber.shade900),
                 ),
                 const SizedBox(height: 8),

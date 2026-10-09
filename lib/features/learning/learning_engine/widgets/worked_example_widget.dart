@@ -11,8 +11,12 @@ class WorkedExampleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final payload = data['data'] ?? data;
-    final title = payload['title'] ?? 'Worked Example';
-    final problem = payload['problem'] ?? '';
+    final title = TrilingualService.instance.getLocalizedText(payload, 'title').isNotEmpty
+        ? TrilingualService.instance.getLocalizedText(payload, 'title')
+        : (payload['title'] ?? 'Worked Example');
+    final problem = (payload['problem'] != null && payload['problem'].toString().isNotEmpty)
+        ? payload['problem'].toString()
+        : TrilingualService.instance.getLocalizedText(payload, 'body');
     final given = payload['given'];
     final formula = payload['formula'];
     final steps = payload['steps'] as List<dynamic>? ?? [];

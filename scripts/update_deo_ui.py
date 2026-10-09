@@ -5,17 +5,17 @@ curriculum_dir = '/home/ubuntu/Shine_Academy_Naroda/app_core/curriculum'
 
 deo_bank_subject = {
     "id_suffix": "_deo_bank_2026",
-    "name": "DEO Question Bank 2026",
+    "name": "question Question Bank 2026",
     "color_hex": "0xFFFFD700", # Premium Gold
     "icon": "diamond",
     "chapters": [
-        "Science DEO Bank 2026 (Part 1 - MCQs)",
-        "Science DEO Bank 2026 (Part 2 - Subjective)",
-        "Maths (Basic) DEO Bank 2026",
-        "Maths (Standard) DEO Bank 2026",
-        "Social Science DEO Bank 2026",
-        "English (FL) DEO Bank 2026",
-        "Gujarati (SL) DEO Bank 2026"
+        "Science question Bank 2026 (Part 1 - MCQs)",
+        "Science question Bank 2026 (Part 2 - Subjective)",
+        "Maths (Basic) question Bank 2026",
+        "Maths (Standard) question Bank 2026",
+        "Social Science question Bank 2026",
+        "English (FL) question Bank 2026",
+        "Gujarati (SL) question Bank 2026"
     ]
 }
 
@@ -68,4 +68,4 @@ for filename in files_to_update:
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
         
-    print(f"Updated {filename}: Removed old papers and added DEO Bank.")
+    print(f"Updated {filename}: Removed old papers and added question Bank.")

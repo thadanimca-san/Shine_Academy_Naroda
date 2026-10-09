@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/services/trilingual_service.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class AppShell extends StatelessWidget {
   final Widget child;

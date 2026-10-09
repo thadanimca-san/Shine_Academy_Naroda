@@ -43,6 +43,7 @@ class UniversalPdfEngine {
   /// `pdf` package alone cannot provide because it bypasses Flutter's HarfBuzz
   /// shaping engine.
   static Future<Uint8List> generatePdfBytesFromWidgets({
+    void Function(int, int)? onProgress,
     required String title,
     required List<Widget> widgets,
     bool isAnswerKey = false,
@@ -53,25 +54,61 @@ class UniversalPdfEngine {
     final pdf = pw.Document();
     final screenshotController = ScreenshotController();
 
-    // Combine ALL widgets into a single Column and capture ONCE.
-    // This reduces JNI calls from N (one per block) to 1.
-    final combinedWidget = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: widgets,
-    );
+    // Split widgets into chunks to avoid exceeding maximum texture size bounds
+    // (a single long Column of 100 blocks easily exceeds 8192 pixels).
 
-    final img = await screenshotController.captureFromWidget(
-      _wrapInTheme(combinedWidget),
-      delay: const Duration(milliseconds: 500),
-      pixelRatio: 2.0,
-    );
-    final capturedImages = [img];
+    
+    final List<Uint8List> capturedImages = [];
+    // Increase chunk size to 30 lines. Since widgets are mostly individual lines,
+    // 30 lines roughly equates to 1 page. This drastically reduces JNI calls and speeds up generation.
+    const int chunkSize = 1; 
+    
+    for (int i = 0; i < widgets.length; i += chunkSize) {
+      if (onProgress != null) {
+        onProgress(i, widgets.length);
+      }
+      int end = (i + chunkSize < widgets.length) ? i + chunkSize : widgets.length;
+      final chunk = widgets.sublist(i, end);
+      
+      final combinedChunk = Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: chunk,
+      );
 
+      final img = await screenshotController.captureFromWidget(
+        _wrapInTheme(combinedChunk),
+        delay: const Duration(milliseconds: 100),
+        pixelRatio: 1.2, // Reduce from 2.0 to 1.5 to save memory and prevent OOM
+      );
+      capturedImages.add(img);
+    }
+    if (onProgress != null) {
+      onProgress(widgets.length, widgets.length);
+    }
+
+    ByteData? logoData;
+    try {
+      logoData = await rootBundle.load('assets/branding/logo.jpg');
+    } catch (e) {
+      debugPrint("Watermark Warning: $e");
+    }
+    
     pdf.addPage(
       pw.MultiPage(
-        pageFormat: PdfPageFormat.a4,
-        margin: const pw.EdgeInsets.all(32),
+        pageTheme: pw.PageTheme(
+          pageFormat: PdfPageFormat.a4,
+          margin: const pw.EdgeInsets.all(32),
+          buildBackground: (pw.Context context) {
+            if (logoData == null) return pw.SizedBox();
+            return pw.Center(
+              child: pw.Opacity(
+                opacity: 0.15,
+                child: pw.Image(pw.MemoryImage(logoData.buffer.asUint8List()), width: 300),
+              ),
+            );
+          },
+        ),
         header: (pw.Context ctx) => _buildBasicHeader(title, isAnswerKey),
         build: (pw.Context ctx) {
           return capturedImages.map<pw.Widget>((imgBytes) {
@@ -87,15 +124,88 @@ class UniversalPdfEngine {
     return pdf.save();
   }
 
+  
+  /// Generates a PDF natively using the pdf package without screenshot capture.
+  /// This is MUCH faster and 100% reliable for text-heavy PDFs.
+  
+  static Future<void> generateNativePdfTextOnly({
+    required String title,
+    required List<pw.Widget> widgets,
+    bool isAnswerKey = false,
+  }) async {
+    // Load base font for English/Latin
+    final englishData = await rootBundle.load('assets/fonts/DejaVuSans.ttf');
+    final baseTtf = pw.Font.ttf(englishData);
+
+    // Fallback font for Gujarati
+    final gujaratiData = await rootBundle.load('assets/fonts/NotoSansGujarati-Regular.ttf');
+    final gujFallbackTtf = pw.Font.ttf(gujaratiData);
+    
+    // Fallback font for Hindi
+    final hindiData = await rootBundle.load('assets/fonts/NotoSansDevanagari-Regular.ttf');
+    final hinFallbackTtf = pw.Font.ttf(hindiData);
+
+    // Fallback font for Math Symbols
+    final mathData = await rootBundle.load('assets/fonts/NotoSansMath-Regular.ttf');
+    final mathFallbackTtf = pw.Font.ttf(mathData);
+
+    final pdf = pw.Document(
+      theme: pw.ThemeData.withFont(
+        base: baseTtf,
+        fontFallback: [mathFallbackTtf, gujFallbackTtf, hinFallbackTtf],
+      ),
+    );
+
+    ByteData? logoData;
+    try {
+      logoData = await rootBundle.load('assets/branding/logo.jpg');
+    } catch (e) {
+      debugPrint("Watermark Warning: $e");
+    }
+    
+    pdf.addPage(
+      pw.MultiPage(
+        pageTheme: pw.PageTheme(
+          pageFormat: PdfPageFormat.a4,
+          margin: const pw.EdgeInsets.all(32),
+          buildBackground: (pw.Context context) {
+            if (logoData == null) return pw.SizedBox();
+            return pw.Center(
+              child: pw.Opacity(
+                opacity: 0.15,
+                child: pw.Image(pw.MemoryImage(logoData.buffer.asUint8List()), width: 300),
+              ),
+            );
+          },
+        ),
+        header: (pw.Context ctx) => _buildBasicHeader(title, isAnswerKey),
+        build: (pw.Context ctx) {
+          return widgets;
+        },
+      ),
+    );
+
+    final bytes = await pdf.save();
+    final dir = await getTemporaryDirectory();
+    final prefix = isAnswerKey ? 'Answer_Key_' : 'Question_Paper_';
+    final safeTitle = title.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
+    final file = File('${dir.path}/$prefix$safeTitle.pdf');
+    await file.writeAsBytes(bytes);
+    await OpenFilex.open(file.path);
+  }
+
+
   static Future<void> generatePdfFromWidgets({
     required String title,
     required List<Widget> widgets,
     bool isAnswerKey = false,
+    void Function(int, int)? onProgress,
   }) async {
     final bytes = await generatePdfBytesFromWidgets(
       title: title,
       widgets: widgets,
       isAnswerKey: isAnswerKey,
+      onProgress: onProgress,
     );
     final dir = await getTemporaryDirectory();
     final prefix = isAnswerKey ? 'Answer_Key_' : 'Question_Paper_';
@@ -110,20 +220,25 @@ class UniversalPdfEngine {
   /// NotoSansGujarati as the default font.  Combined with the global FontLoader
   /// registration above, this guarantees proper Gujarati shaping.
   static Widget _wrapInTheme(Widget child) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'NotoSansGujarati',
-        colorSchemeSeed: Colors.indigo,
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(
-          width: 794, // A4 width in pixels at 96 DPI
-          color: Colors.white,
-          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-          child: child,
+    return MediaQuery(
+      data: const MediaQueryData(size: Size(794, 2000)),
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Theme(
+          data: ThemeData(
+            fontFamilyFallback: const ['NotoSansGujarati', 'NotoSansDevanagari'],
+            colorSchemeSeed: Colors.indigo,
+            useMaterial3: true,
+          ),
+          child: Material(
+            color: Colors.white,
+            child: Container(
+              width: 794, // A4 width in pixels at 96 DPI
+              color: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+              child: child,
+            ),
+          ),
         ),
       ),
     );

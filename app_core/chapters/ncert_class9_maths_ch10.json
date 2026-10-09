@@ -1,0 +1,98 @@
+{
+  "chapter_id": "ncert_class9_maths_ch10",
+  "title": "Chapter 10: Heron's Formula",
+  "title_hi": "अध्याय 10: हीरोन का सूत्र",
+  "title_gu": "પ્રકરણ 10: હેરોનનું સૂત્ર",
+  "blocks": [
+    {
+      "id": "CBSE_9_MATH_CH10_HOOK_1",
+      "type": "theory",
+      "title": "Step 1: Hook - The Farmer's Problem",
+      "title_hi": "कदम 1: हुक - किसान की समस्या",
+      "title_gu": "પગલું 1: હૂક - ખેડૂતની સમસ્યા",
+      "body": "Imagine a farmer who owns a large triangular field. He needs to buy seeds to plant wheat, but to know how many seeds to buy, he must calculate the exact area of the field. The traditional formula for the area of a triangle is (1/2) × Base × Height. The farmer can easily measure the sides of the field by walking along the fences. But how on earth can he measure the exact vertical 'Height' in the middle of a muddy field? He can't! This was a massive problem until an ancient mathematician named Heron of Alexandria invented a magical formula that calculates the area using ONLY the lengths of the three sides, without ever needing the height!",
+      "body_hi": "कल्पना कीजिए कि एक किसान के पास एक बड़ा त्रिभुजाकार खेत है। उसे गेहूं बोने के लिए बीज खरीदने की आवश्यकता है, लेकिन यह जानने के लिए कि कितने बीज खरीदने हैं, उसे खेत के सटीक क्षेत्रफल की गणना करनी होगी। त्रिभुज के क्षेत्रफल का पारंपरिक सूत्र (1/2) × आधार × ऊंचाई है। किसान आसानी से बाड़ (fences) के साथ चलकर खेत के किनारों को माप सकता है। लेकिन वह एक कीचड़ भरे खेत के बीच में सटीक लंबवत 'ऊंचाई' को कैसे माप सकता है? वह नहीं कर सकता! यह एक बहुत बड़ी समस्या थी जब तक कि अलेक्जेंड्रिया के हीरोन (Heron) नामक एक प्राचीन गणितज्ञ ने एक जादुई सूत्र का आविष्कार नहीं किया जो ऊंचाई की आवश्यकता के बिना केवल तीन भुजाओं की लंबाई का उपयोग करके क्षेत्रफल की गणना करता है!",
+      "body_gu": "કલ્પના કરો કે એક ખેડૂત પાસે વિશાળ ત્રિકોણાકાર ખેતર છે. તેને ઘઉં વાવવા માટે બીજ ખરીદવાની જરૂર છે, પરંતુ કેટલા બીજ ખરીદવા તે જાણવા માટે, તેણે ખેતરના ચોક્કસ ક્ષેત્રફળની ગણતરી કરવી જ જોઇએ. ત્રિકોણના ક્ષેત્રફળ માટેનું પરંપરાગત સૂત્ર (1/2) × પાયો × વેધ (ઊંચાઈ) છે. ખેડૂત વાડ સાથે ચાલીને સરળતાથી ખેતરની બાજુઓ માપી શકે છે. પરંતુ કાદવવાળા ખેતરની મધ્યમાં તે ચોક્કસ ઊભી 'ઊંચાઈ' કેવી રીતે માપી શકે? તે ન કરી શકે! જ્યાં સુધી એલેક્ઝાન્ડ્રિયાના હેરોન નામના પ્રાચીન ગણિતશાસ્ત્રીએ જાદુઈ સૂત્રની શોધ ન કરી કે જે ક્યારેય ઊંચાઈની જરૂરિયાત વિના માત્ર ત્રણ બાજુઓની લંબાઈનો ઉપયોગ કરીને ક્ષેત્રફળની ગણતરી કરે છે ત્યાં સુધી આ એક મોટી સમસ્યા હતી!"
+    },
+    {
+      "id": "CBSE_9_MATH_CH10_SOCRATIC_1",
+      "type": "theory",
+      "title": "Step 2: Socratic Thinking",
+      "title_hi": "कदम 2: सुकराती सोच",
+      "title_gu": "પગલું 2: સોક્રેટિક વિચાર",
+      "body": "If you know the three sides of a triangle are 3m, 4m, and 5m, you have locked its shape perfectly (remember the SSS congruence rule?). Since the shape is perfectly locked, its area must also be a fixed number. So there MUST be a mathematical connection directly between the three sides and the total area. What could that connection be?",
+      "body_hi": "यदि आप जानते हैं कि एक त्रिभुज की तीन भुजाएँ 3 मी, 4 मी और 5 मी हैं, तो आपने इसके आकार को पूरी तरह से लॉक कर दिया है (SSS सर्वांगसमता नियम याद है?)। चूँकि आकार पूरी तरह से लॉक है, इसलिए इसका क्षेत्रफल भी एक निश्चित संख्या होना चाहिए। इसलिए तीनों भुजाओं और कुल क्षेत्रफल के बीच सीधा गणितीय संबंध (mathematical connection) होना ही चाहिए। वह संबंध क्या हो सकता है?",
+      "body_gu": "જો તમે જાણતા હોવ કે ત્રિકોણની ત્રણ બાજુઓ 3m, 4m અને 5m છે, તો તમે તેના આકારને સંપૂર્ણ રીતે લોક કરી દીધો છે (SSS એકરૂપતા નિયમ યાદ છે?). આકાર સંપૂર્ણપણે લૉક હોવાથી, તેનું ક્ષેત્રફળ પણ નિશ્ચિત સંખ્યા હોવી જોઈએ. તેથી ત્રણ બાજુઓ અને કુલ ક્ષેત્રફળ વચ્ચે સીધો ગાણિતિક સંબંધ હોવો જોઈએ. તે જોડાણ શું હોઈ શકે?"
+    },
+    {
+      "id": "CBSE_9_MATH_CH10_DISCOVERY_1",
+      "type": "theory",
+      "title": "Step 3: Discovery - The Semi-Perimeter",
+      "title_hi": "कदम 3: खोज - अर्ध-परिमाप",
+      "title_gu": "પગલું 3: શોધ - અર્ધ-પરિમિતિ",
+      "body": "To build Heron's Formula, we first need to find a special number called the 'Semi-perimeter' (denoted by 's'). \nThe perimeter of a triangle is the total distance around the edge, which is the sum of the three sides (a + b + c). \nThe Semi-perimeter is simply exactly half of the perimeter! \nSo, s = (a + b + c) / 2. \nThis 's' is the secret ingredient that makes Heron's formula work. Think of 's' as the average pulling force of the entire boundary of the triangle.",
+      "body_hi": "हीरोन का सूत्र बनाने के लिए, हमें पहले 'अर्ध-परिमाप' (Semi-perimeter - जिसे 's' द्वारा दर्शाया जाता है) नामक एक विशेष संख्या खोजने की आवश्यकता है।\nएक त्रिभुज का परिमाप किनारे के चारों ओर की कुल दूरी है, जो तीनों भुजाओं (a + b + c) का योग है।\nअर्ध-परिमाप (Semi-perimeter) परिमाप का ठीक आधा होता है!\nइसलिए, s = (a + b + c) / 2।\nयह 's' वह गुप्त घटक है जो हीरोन के सूत्र को काम कराता है। 's' को त्रिभुज की संपूर्ण सीमा के औसत खिंचाव बल के रूप में सोचें।",
+      "body_gu": "હેરોનનું સૂત્ર બનાવવા માટે, આપણે પહેલા 'અર્ધ-પરિમિતિ' (Semi-perimeter - 's' દ્વારા દર્શાવેલ) નામનો વિશિષ્ટ નંબર શોધવાની જરૂર છે.\nત્રિકોણની પરિમિતિ એ કિનારીની આસપાસનું કુલ અંતર છે, જે ત્રણેય બાજુઓનો સરવાળો (a + b + c) છે.\nઅર્ધ-પરિમિતિ એ ફક્ત પરિમિતિનો બરાબર અડધો ભાગ છે!\nતેથી, s = (a + b + c) / 2.\nઆ 's' ગુપ્ત ઘટક છે જે હેરોનનું સૂત્ર કામ કરે છે. 's' ને ત્રિકોણની સમગ્ર સીમાના સરેરાશ ખેંચાણ બળ તરીકે વિચારો."
+    },
+    {
+      "id": "CBSE_9_MATH_CH10_REVEAL_1",
+      "type": "theory",
+      "title": "Step 4: Reveal - Heron's Formula",
+      "title_hi": "कदम 4: प्रकट - हीरोन का सूत्र",
+      "title_gu": "પગલું 4: પ્રગટ - હેરોનનું સૂત્ર",
+      "body": "Here is the masterpiece invented by Heron over 2000 years ago:\nArea of a Triangle = √(s(s - a)(s - b)(s - c))\n\nLet's break it down:\n1. First, find s (the semi-perimeter).\n2. Then subtract each side (a, b, and c) individually from s to get three new numbers: (s-a), (s-b), and (s-c).\n3. Multiply these three numbers together with 's'.\n4. Finally, take the square root of that massive number.\nThe result is the exact area! No height needed!",
+      "body_hi": "यहाँ 2000 वर्ष से भी पहले हीरोन द्वारा आविष्कार की गई उत्कृष्ट कृति (masterpiece) है:\nत्रिभुज का क्षेत्रफल = √(s(s - a)(s - b)(s - c))\n\nआइए इसे तोड़ें:\n1. पहले, s (अर्ध-परिमाप) ज्ञात करें।\n2. फिर तीन नई संख्याएँ प्राप्त करने के लिए s में से प्रत्येक भुजा (a, b, और c) को अलग-अलग घटाएं: (s-a), (s-b), और (s-c)।\n3. इन तीन संख्याओं को 's' के साथ गुणा करें।\n4. अंत में, उस विशाल संख्या का वर्गमूल (square root) लें।\nपरिणाम सटीक क्षेत्रफल है! किसी ऊंचाई की आवश्यकता नहीं!",
+      "body_gu": "અહીં હેરોન દ્વારા 2000 થી વધુ વર્ષો પહેલા શોધાયેલ માસ્ટરપીસ છે:\nત્રિકોણનું ક્ષેત્રફળ = √(s(s - a)(s - b)(s - c))\n\nચાલો તેને તોડીએ:\n1. પ્રથમ, s (અર્ધ-પરિમિતિ) શોધો.\n2. પછી ત્રણ નવા નંબરો મેળવવા માટે s માંથી દરેક બાજુ (a, b અને c) ને વ્યક્તિગત રીતે બાદ કરો: (s-a), (s-b), અને (s-c).\n3. આ ત્રણ નંબરોને 's' સાથે ગુણાકાર કરો.\n4. છેલ્લે, તે વિશાળ સંખ્યાનું વર્ગમૂળ (square root) લો.\nપરિણામ ચોક્કસ ક્ષેત્રફળ છે! કોઈ ઊંચાઈની જરૂર નથી!"
+    },
+    {
+      "id": "CBSE_9_MATH_CH10_KNOWLEDGE_1",
+      "type": "mcq",
+      "title": "Step 5: Knowledge Check",
+      "title_hi": "कदम 5: ज्ञान जांच",
+      "title_gu": "પગલું 5: જ્ઞાન તપાસ",
+      "question": "What is the semi-perimeter (s) of a triangle with sides measuring 6 cm, 8 cm, and 10 cm?",
+      "question_hi": "6 सेमी, 8 सेमी और 10 सेमी भुजाओं वाले त्रिभुज का अर्ध-परिमाप (s) क्या है?",
+      "question_gu": "6 cm, 8 cm અને 10 cm બાજુઓવાળા ત્રિકોણની અર્ધ-પરિમિતિ (s) કેટલી છે?",
+      "options": [
+        "12 cm",
+        "24 cm",
+        "48 cm",
+        "6 cm"
+      ],
+      "options_hi": [
+        "12 सेमी",
+        "24 सेमी",
+        "48 सेमी",
+        "6 सेमी"
+      ],
+      "options_gu": [
+        "12 cm",
+        "24 cm",
+        "48 cm",
+        "6 cm"
+      ],
+      "correct_index": 0,
+      "explanation": "The perimeter is the sum of all sides: 6 + 8 + 10 = 24 cm. The semi-perimeter (s) is exactly half of the perimeter: 24 / 2 = 12 cm.",
+      "explanation_hi": "परिमाप सभी भुजाओं का योग है: 6 + 8 + 10 = 24 सेमी। अर्ध-परिमाप (s) परिमाप का ठीक आधा होता है: 24 / 2 = 12 सेमी।",
+      "explanation_gu": "પરિમિતિ એ બધી બાજુઓનો સરવાળો છે: 6 + 8 + 10 = 24 cm. અર્ધ-પરિમિતિ (s) એ પરિમિતિની બરાબર અડધી છે: 24 / 2 = 12 cm."
+    },
+    {
+      "id": "CBSE_9_MATH_CH10_REFLECTION_1",
+      "type": "theory",
+      "title": "Step 6: Reflection",
+      "title_hi": "कदम 6: प्रतिबिंब",
+      "title_gu": "પગલું 6: પ્રતિબિંબ",
+      "body": "Look closely at the expression inside the square root: s(s-a)(s-b)(s-c). Notice how symmetric and fair it is! It treats all three sides (a, b, and c) equally. No side is more important than the other. This kind of symmetry is a hallmark of great mathematical equations. Mathematics is not just about getting the right answer; it is about discovering beautiful, balanced patterns that describe reality.",
+      "body_hi": "वर्गमूल के अंदर के व्यंजक (expression) को ध्यान से देखें: s(s-a)(s-b)(s-c)। ध्यान दें कि यह कितना सममित (symmetric) और निष्पक्ष है! यह तीनों भुजाओं (a, b और c) के साथ समान व्यवहार करता है। कोई भी भुजा दूसरे से ज्यादा महत्वपूर्ण नहीं है। इस तरह की समरूपता (symmetry) महान गणितीय समीकरणों की पहचान है। गणित केवल सही उत्तर प्राप्त करने के बारे में नहीं है; यह सुंदर, संतुलित पैटर्न की खोज के बारे में है जो वास्तविकता का वर्णन करते हैं।",
+      "body_gu": "વર્ગમૂળની અંદરના સમીકરણને ધ્યાનથી જુઓ: s(s-a)(s-b)(s-c). નોંધ લો કે તે કેટલું સપ્રમાણ અને ન્યાયી છે! તે ત્રણેય બાજુઓ (a, b, અને c) સાથે સમાન વર્તન કરે છે. કોઈ પણ બાજુ બીજી કરતા વધુ મહત્વની નથી. આ પ્રકારની સમપ્રમાણતા (symmetry) એ મહાન ગાણિતિક સમીકરણોની ઓળખ છે. ગણિત માત્ર સાચો જવાબ મેળવવા વિશે નથી; તે સુંદર, સંતુલિત પેટર્ન શોધવા વિશે છે જે વાસ્તવિકતાનું વર્ણન કરે છે."
+    }
+  ],
+  "metadata": {
+    "module_id": "ncert_class9_maths_ch10",
+    "title": "Chapter 10: Heron's Formula",
+    "title_hi": "अध्याय 10: हीरोन का सूत्र",
+    "title_gu": "પ્રકરણ 10: હેરોનનું સૂત્ર",
+    "board": "NCERT/GSEB",
+    "language": "trilingual"
+  }
+}

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../core/services/universal_dictionary_service.dart';
 import '../../core/services/trilingual_service.dart';
 import '../../features/dictionary/dictionary_popup.dart';
@@ -141,7 +140,7 @@ class _GlobalDictionaryWrapperState extends State<GlobalDictionaryWrapper> {
                               const SizedBox(width: 8),
                               Flexible(
                                 child: Text(TrilingualService.instance.getUIText('Dictionary'),
-                                  style: GoogleFonts.inter(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14,
@@ -182,7 +181,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
       ),
       inputDecorationTheme: InputDecorationTheme(
         border: InputBorder.none,
-        hintStyle: GoogleFonts.inter(color: Colors.grey.shade400),
+        hintStyle: TextStyle(color: Colors.grey.shade400),
       ),
     );
   }
@@ -229,7 +228,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
             Icon(Icons.menu_book, size: 64, color: Colors.grey.shade300),
             const SizedBox(height: 16),
             Text(TrilingualService.instance.getUIText('Search any word globally'),
-              style: GoogleFonts.inter(color: Colors.grey.shade600, fontSize: 16),
+              style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
             ),
           ],
         ),
@@ -251,7 +250,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
           return Center(
             child: Text(
               'No words found for "$query".',
-              style: GoogleFonts.inter(color: Colors.grey),
+              style: TextStyle(color: Colors.grey),
             ),
           );
         }
@@ -271,7 +270,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
               leading: Icon(Icons.search, color: Colors.grey),
               title: Text(
                 en,
-                style: GoogleFonts.poppins(
+                style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: AppColors.textPrimary,
                 ),
@@ -282,7 +281,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
                   if (hi.isNotEmpty || gu.isNotEmpty)
                     Text(
                       '$hi ${hi.isNotEmpty && gu.isNotEmpty ? '|' : ''} $gu',
-                      style: GoogleFonts.notoSans(
+                      style: TextStyle(
                         color: AppColors.textSecondary,
                         fontSize: 13,
                       ),
@@ -292,7 +291,7 @@ class GlobalDictionarySearchDelegate extends SearchDelegate<String?> {
                       simpleEn,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.inter(color: Colors.grey.shade600, fontSize: 13),
+                      style: TextStyle(color: Colors.grey.shade600, fontSize: 13),
                     ),
                 ],
               ),

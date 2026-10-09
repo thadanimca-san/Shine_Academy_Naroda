@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:translator/translator.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import 'package:shine_academy_naroda/core/services/presentation_service.dart';
 
 class TrilingualService extends ChangeNotifier {
@@ -130,6 +128,18 @@ class TrilingualService extends ChangeNotifier {
       return content['${baseKey}_en'].toString();
     }
 
+    // Fallback: If 'body' requested but block uses 'content' (or vice versa)
+    final altKey = baseKey == 'body' ? 'content' : (baseKey == 'content' ? 'body' : null);
+    if (altKey != null) {
+      final altLocalizedKey = '${altKey}_$lang';
+      if (lang != 'en' && content.containsKey(altLocalizedKey) && content[altLocalizedKey] != null && content[altLocalizedKey].toString().isNotEmpty) {
+        return content[altLocalizedKey].toString();
+      }
+      if (content.containsKey(altKey) && content[altKey] != null && content[altKey] is String && content[altKey].toString().isNotEmpty) {
+        return content[altKey].toString();
+      }
+    }
+
     return ''; // Return empty instead of null for safer UI rendering
   }
 
@@ -154,6 +164,51 @@ class TrilingualService extends ChangeNotifier {
       'en': 'Community',
       'hi': 'समुदाय',
       'gu': 'સમુદાય',
+    },
+    'SECTION A (Objective Type)': {
+      'en': 'SECTION A (Objective Type)',
+      'hi': 'खंड अ (वस्तुनिष्ठ प्रकार)',
+      'gu': 'વિભાગ A (હેતુલક્ષી પ્રકાર)',
+    },
+    'SECTION B (Descriptive Type)': {
+      'en': 'SECTION B (Descriptive Type)',
+      'hi': 'खंड ब (वर्णनात्मक प्रकार)',
+      'gu': 'વિભાગ B (વર્ણનાત્મક પ્રકાર)',
+    },
+    'General Instructions:': {
+      'en': 'General Instructions:',
+      'hi': 'सामान्य निर्देश:',
+      'gu': 'સામાન્ય સૂચનાઓ:',
+    },
+    '1. All questions are compulsory. There are no internal choices.': {
+      'en': '1. All questions are compulsory. There are no internal choices.',
+      'hi': '1. सभी प्रश्न अनिवार्य हैं। कोई आंतरिक विकल्प नहीं है।',
+      'gu': '1. બધા પ્રશ્નો ફરજિયાત છે. કોઈ આંતરિક વિકલ્પો નથી.',
+    },
+    '2. The paper is divided into Section A (Objective) and Section B (Subjective).': {
+      'en': '2. The paper is divided into Section A (Objective) and Section B (Subjective).',
+      'hi': '2. प्रश्न पत्र खंड अ (वस्तुनिष्ठ) और खंड ब (विषयनिष्ठ) में विभाजित है।',
+      'gu': '2. પ્રશ્નપત્ર વિભાગ A (હેતુલક્ષી) અને વિભાગ B (વર્ણનાત્મક) માં વહેંચાયેલું છે.',
+    },
+    '3. Figures to the right indicate marks allocated to the question.': {
+      'en': '3. Figures to the right indicate marks allocated to the question.',
+      'hi': '3. दाईं ओर दिए गए अंक प्रश्न के लिए निर्धारित अंक दर्शाते हैं।',
+      'gu': '3. જમણી બાજુના આંકડા પ્રશ્ન માટે ફાળવેલા ગુણ દર્શાવે છે.',
+    },
+    '4. Write your answers neatly in the provided answer supplement.': {
+      'en': '4. Write your answers neatly in the provided answer supplement.',
+      'hi': '4. प्रदान की गई उत्तर पुस्तिका में अपने उत्तर स्पष्ट रूप से लिखें।',
+      'gu': '4. આપેલી ઉત્તરવહીમાં તમારા જવાબો સ્પષ્ટ રીતે લખો.',
+    },
+    '(True / False)': {
+      'en': '(True / False)',
+      'hi': '(सही / गलत)',
+      'gu': '(સાચું / ખોટું)',
+    },
+    'Core Concepts': {
+      'en': 'Core Concepts',
+      'hi': 'मूल अवधारणाएं (Core Concepts)',
+      'gu': 'મૂળભૂત સંકલ્પનાઓ (Core Concepts)',
     },
     'TAKE CHAPTER QUIZ': {
       'en': 'TAKE CHAPTER QUIZ',

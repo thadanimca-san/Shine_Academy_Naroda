@@ -1,255 +1,157 @@
 {
   "metadata": {
-    "id": "ncert_class10_maths_ch6",
-    "title": "Chapter 6: Triangles",
-    "subtitle": "The Ultimate Board Exam Mastery Guide",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "NCERT/CBSE",
-    "curriculum": [
-      "Universal"
-    ],
-    "language": "English/Hindi/Gujarati (Bilingual)",
-    "difficulty": "Advanced",
-    "estimated_minutes": 180,
-    "version": "3.0.0-SUPREME-MATHS",
-    "author": "Antigravity Supreme Intelligence",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "triangles",
-      "thales_theorem",
-      "pythagoras_theorem",
-      "similarity",
-      "board_special"
-    ],
-    "learning_outcomes": [
-      "Master the concept of Similarity of Triangles.",
-      "Understand and prove Thales Theorem (Basic Proportionality Theorem).",
-      "Understand and apply Pythagoras Theorem in complex problems.",
-      "Solve CBSE/State Board HOTS questions related to Triangles."
-    ],
-    "ai_context": {
-      "learning_goal": "Make geometry visual and intuitive. Use the 'Socratic Discovery Arc' to build intuition before formal proofs.",
-      "common_misconceptions": [
-        "Students confuse congruence with similarity.",
-        "Students struggle to identify corresponding sides in similar triangles."
-      ]
-    }
+    "module_id": "ncert_class10_maths_ch6",
+    "title": "Ncert Class10 Maths Ch6",
+    "title_hi": "Ncert Class10 Maths Ch6",
+    "title_gu": "Ncert Class10 Maths Ch6",
+    "board": "NCERT/GSEB",
+    "subject": "",
+    "chapter_number": "",
+    "language": "trilingual"
   },
   "blocks": [
     {
+      "id": "C10_MATH_CH6_HOOK_1",
       "type": "hook",
-      "content": "Have you ever wondered how we can measure the height of a mountain without actually climbing it with a tape measure? The secret lies in shadows and the magical property of **Similar Triangles (समरूप त्रिभुज / સમરૂપ ત્રિકોણ)**!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "title": "Measuring the Unreachable",
+      "title_hi": "पहुंच से बाहर को मापना",
+      "title_gu": "પહોંચની બહારનું માપન",
+      "body": "How did ancient mathematicians measure the height of the Great Pyramid of Giza without ever climbing to the top? Or the width of a raging river without crossing it? The answer lies in the magic of shadows and **Similar Triangles**! If two shapes are similar, they are exactly the same shape but different sizes, like a real car and its toy model. In this chapter, we will learn the rules that connect these shapes and discover how a tiny shadow on the ground can reveal the height of the tallest mountain.",
+      "body_hi": "प्राचीन गणितज्ञों ने गीज़ा के महान पिरामिड के शीर्ष पर चढ़े बिना उसकी ऊंचाई कैसे मापी? या किसी उफनती नदी को पार किए बिना उसकी चौड़ाई कैसे मापी? इसका उत्तर परछाइयों और **समरूप त्रिभुजों (Similar Triangles)** के जादू में छिपा है! यदि दो आकृतियाँ समरूप हैं, तो उनका आकार बिल्कुल एक जैसा होता है लेकिन परिमाण (size) अलग होता है, जैसे एक असली कार और उसका खिलौना मॉडल। इस अध्याय में, हम उन नियमों को सीखेंगे जो इन आकृतियों को जोड़ते हैं और पता लगाएंगे कि जमीन पर एक छोटी सी परछाई कैसे सबसे ऊंचे पहाड़ की ऊंचाई बता सकती है।",
+      "body_gu": "પ્રાચીન ગણિતશાસ્ત્રીઓએ ગીઝાના મહાન પિરામિડની ટોચ પર ચઢ્યા વિના તેની ઊંચાઈ કેવી રીતે માપી? અથવા કોઈ ધસમસતી નદીને પાર કર્યા વિના તેની પહોળાઈ કેવી રીતે માપી? તેનો જવાબ પડછાયાઓ અને **સમરૂપ ત્રિકોણો (Similar Triangles)** ના જાદુમાં છુપાયેલો છે! જો બે આકારો સમરૂપ હોય, તો તેઓ આકારમાં બરાબર સમાન હોય છે પરંતુ કદમાં જુદા હોય છે, જેમ કે અસલી કાર અને તેનું રમકડાનું મોડેલ. આ પ્રકરણમાં, આપણે એવા નિયમો વિશે શીખીશું જે આ આકારોને જોડે છે અને જાણીશું કે કેવી રીતે જમીન પરનો એક નાનો પડછાયો સૌથી ઊંચા પર્વતની ઊંચાઈ જણાવી શકે છે."
     },
     {
-      "type": "diagram",
-      "content": "Congruent vs Similar: Congruent means exact same shape and size (like identical twins). Similar means same shape but different size (like a real car and its toy model).",
-      "image_url": "assets/images/maths_ch6_similarity.jpg",
-      "alt_text": "A large and a small triangle showing similarity vs congruence."
-    },
-    {
-      "type": "theory",
-      "content": "**Basic Proportionality Theorem (Thales Theorem):**\nIf a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio. This is a powerful tool in geometry!",
+      "id": "C10_MATH_CH6_SOCRATIC_1",
+      "type": "socratic_question",
+      "question": "If you take a photo of a square building on your phone, the photo is much smaller than the real building. Are they still 'similar'? What about a photo of a rectangular building printed on a square piece of paper—will the building look stretched?",
+      "question_hi": "यदि आप अपने फोन पर एक चौकोर (वर्गाकार) इमारत की तस्वीर लेते हैं, तो तस्वीर असली इमारत से बहुत छोटी होती है। क्या वे अभी भी 'समरूप' हैं? यदि एक आयताकार इमारत की तस्वीर एक वर्गाकार कागज पर छापी जाए तो क्या होगा—क्या इमारत खींची हुई (stretched) दिखेगी?",
+      "question_gu": "જો તમે તમારા ફોન પર ચોરસ ઈમારતનો ફોટો લો છો, તો ફોટો અસલી ઈમારત કરતા ઘણો નાનો હોય છે. શું તેઓ હજુ પણ 'સમરૂપ' છે? જો કોઈ લંબચોરસ ઈમારતનો ફોટો ચોરસ કાગળ પર છાપવામાં આવે તો શું થશે—શું ઈમારત ખેંચાયેલી (stretched) દેખાશે?",
+      "hint": "Think about proportions. If you shrink the length by half, you must also shrink the width by half to keep it looking exactly the same.",
+      "hint_hi": "अनुपात के बारे में सोचें। यदि आप लंबाई को आधा करते हैं, तो आपको इसे बिल्कुल वैसा ही दिखाने के लिए चौड़ाई को भी आधा करना होगा।",
+      "hint_gu": "પ્રમાણ વિશે વિચારો. જો તમે લંબાઈને અડધી કરો છો, તો તેને બરાબર સમાન દેખાવા માટે તમારે પહોળાઈને પણ અડધી કરવી પડશે.",
+      "bloom": "Analyze",
       "difficulty": "Intermediate",
-      "bloom": "Remember"
+      "estimated_minutes": 2
     },
     {
-      "type": "teacher_tip",
-      "content": "💡 **Teacher's Secret:** When writing the proof for Thales Theorem, always start by constructing perpendiculars. The trick is to compare the areas of the triangles formed to get the required ratios!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
-    },
-    {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** Thales Theorem HOTS\n\n*Question:* In a trapezium ABCD with AB || DC, the diagonals intersect at O. Prove that AO/BO = CO/DO.\n*Trick:* Draw a line through O parallel to AB and use Thales Theorem in two different triangles to equate the ratios!",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
-    },
-    {
-      "type": "diagram",
-      "content": "The famous Pythagoras Theorem isn't just an equation; it's the relationship between the areas of squares drawn on the sides of a right-angled triangle.",
-      "image_url": "assets/images/maths_ch6_pythagoras.jpg",
-      "alt_text": "A right angled triangle with squares on all three sides showing area relation."
-    },
-    {
+      "id": "C10_MATH_CH6_THEO_1",
       "type": "theory",
-      "content": "**Pythagoras Theorem (पाइथागोरस प्रमेय):**\nIn a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. Formula: **Hypotenuse² = Base² + Perpendicular²**.",
-      "difficulty": "Advanced",
-      "bloom": "Evaluate"
+      "title": "Similar Figures vs Congruent Figures",
+      "title_hi": "समरूप आकृतियाँ बनाम सर्वांगसम आकृतियाँ",
+      "title_gu": "સમરૂપ આકૃતિઓ વિરુદ્ધ એકરૂપ આકૃતિઓ",
+      "body": "**Congruent Figures**: Two figures are congruent if they have the exactly same shape and same size. (They are perfect duplicates).\n**Similar Figures**: Two figures are similar if they have the **same shape**, but not necessarily the same size. (Like zooming in or out on a screen).\nAll congruent figures are similar, but similar figures need not be congruent.\n**Rule for Polygons**: Two polygons with the same number of sides are similar if:\n1. Their corresponding angles are equal.\n2. The ratio of their corresponding sides is the same (proportional).",
+      "body_hi": "**सर्वांगसम आकृतियाँ (Congruent Figures)**: दो आकृतियाँ सर्वांगसम होती हैं यदि उनका आकार और परिमाण (size) बिल्कुल समान हो। (वे एकदम हूबहू होते हैं)।\n**समरूप आकृतियाँ (Similar Figures)**: दो आकृतियाँ समरूप होती हैं यदि उनका **आकार समान** हो, लेकिन उनका परिमाण समान होना आवश्यक नहीं है। (जैसे स्क्रीन पर ज़ूम इन या ज़ूम आउट करना)।\nसभी सर्वांगसम आकृतियाँ समरूप होती हैं, लेकिन समरूप आकृतियों का सर्वांगसम होना आवश्यक नहीं है।\n**बहुभुजों के लिए नियम**: समान भुजाओं वाले दो बहुभुज (polygons) समरूप होते हैं यदि:\n1. उनके संगत कोण (corresponding angles) बराबर हों।\n2. उनकी संगत भुजाओं का अनुपात समान हो (समानुपाती हों)।",
+      "body_gu": "**એકરૂપ આકૃતિઓ (Congruent Figures)**: બે આકૃતિઓ એકરૂપ કહેવાય જો તેમનો આકાર અને કદ બરાબર સમાન હોય. (તેઓ બિલકુલ આબેહૂબ નકલ છે).\n**સમરૂપ આકૃતિઓ (Similar Figures)**: બે આકૃતિઓ સમરૂપ કહેવાય જો તેમનો **આકાર સમાન** હોય, પરંતુ તેમનું કદ સમાન હોવું જરૂરી નથી. (જેમ કે સ્ક્રીન પર ઝૂમ ઇન અથવા ઝૂમ આઉટ કરવું).\nબધી એકરૂપ આકૃતિઓ સમરૂપ હોય છે, પરંતુ સમરૂપ આકૃતિઓ એકરૂપ હોય તે જરૂરી નથી.\n**બહુકોણ માટેનો નિયમ**: સમાન બાજુઓવાળા બે બહુકોણ સમરૂપ છે જો:\n1. તેમના અનુરૂપ ખૂણાઓ સમાન હોય.\n2. તેમની અનુરૂપ બાજુઓનો ગુણોત્તર સમાન હોય (સમપ્રમાણમાં હોય)."
     },
     {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** Pythagoras Theorem HOTS\n\n*Question:* A ladder rests against a wall at a height of 8m. If the ladder is 10m long, find the distance of the foot of the ladder from the wall.\n*Trick:* This forms a right-angled triangle. Hypotenuse is the ladder (10m), perpendicular is the wall (8m). Apply Pythagoras Theorem: 10² = Base² + 8². Base² = 100 - 64 = 36. So, Base = 6m!",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "id": "C10_MATH_CH6_THEO_2",
+      "type": "theory",
+      "title": "Basic Proportionality Theorem (Thales Theorem)",
+      "title_hi": "आधारभूत समानुपातिकता प्रमेय (थेल्स प्रमेय)",
+      "title_gu": "સમપ્રમાણતાનું મૂળભૂત પ્રમેય (થેલ્સ પ્રમેય)",
+      "body": "The famous Greek mathematician Thales gave an important truth about triangles, known as the **Basic Proportionality Theorem (BPT)**:\n*If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.*\n\nFor example, in a triangle ABC, if a line DE is drawn parallel to BC such that it intersects AB at D and AC at E, then:\n**AD / DB = AE / EC**\n\nThe converse of this theorem is also true: If a line divides any two sides of a triangle in the same ratio, then the line is parallel to the third side.",
+      "body_hi": "प्रसिद्ध यूनानी गणितज्ञ थेल्स ने त्रिभुजों के बारे में एक महत्वपूर्ण सत्य दिया, जिसे **आधारभूत समानुपातिकता प्रमेय (BPT)** के रूप में जाना जाता है:\n*यदि किसी त्रिभुज की एक भुजा के समांतर अन्य दो भुजाओं को भिन्न-भिन्न बिंदुओं पर प्रतिच्छेद करने के लिए एक रेखा खींची जाए, तो ये अन्य दो भुजाएँ एक ही अनुपात में विभाजित हो जाती हैं।*\n\nउदाहरण के लिए, त्रिभुज ABC में, यदि एक रेखा DE, BC के समांतर खींची जाती है जो AB को D पर और AC को E पर प्रतिच्छेद करती है, तो:\n**AD / DB = AE / EC**\n\nइस प्रमेय का विलोम भी सत्य है: यदि कोई रेखा किसी त्रिभुज की किन्हीं दो भुजाओं को एक ही अनुपात में विभाजित करती है, तो वह रेखा तीसरी भुजा के समांतर होती है।",
+      "body_gu": "પ્રખ્યાત ગ્રીક ગણિતશાસ્ત્રી થેલ્સે ત્રિકોણો વિશે એક મહત્વપૂર્ણ સત્ય આપ્યું, જેને **સમપ્રમાણતાનું મૂળભૂત પ્રમેય (BPT)** તરીકે ઓળખવામાં આવે છે:\n*જો ત્રિકોણની કોઈ એક બાજુને સમાંતર દોરેલી રેખા બાકીની બે બાજુઓને ભિન્ન બિંદુઓમાં છેદે, તો તે બે બાજુઓનું સમાન ગુણોત્તરમાં વિભાજન થાય છે.*\n\nઉદાહરણ તરીકે, ત્રિકોણ ABC માં, જો રેખા DE, BC ને સમાંતર દોરવામાં આવે જે AB ને D માં અને AC ને E માં છેદે છે, તો:\n**AD / DB = AE / EC**\n\nઆ પ્રમેયનું પ્રતિપ્રમેય પણ સાચું છે: જો કોઈ રેખા ત્રિકોણની કોઈપણ બે બાજુઓનું સમાન ગુણોત્તરમાં વિભાજન કરે છે, તો તે રેખા ત્રીજી બાજુને સમાંતર છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_1",
-      "type": "quiz",
-      "question": "In ∆ABC, D and E are points on sides AB and AC respectively such that DE || BC. If AD = x, DB = x-2, AE = x+2 and EC = x-1, what is the value of x?",
-      "question_hi": "∆ABC में, D और E क्रमशः भुजाओं AB और AC पर इस प्रकार स्थित हैं कि DE || BC है। यदि AD = x, DB = x-2, AE = x+2 और EC = x-1 है, तो x का मान क्या है?",
-      "options": ["3", "4", "5", "2"],
-      "options_hi": ["3", "4", "5", "2"],
-      "correct_index": 1,
-      "explanation": "By Thales Theorem (BPT), AD/DB = AE/EC. So, x/(x-2) = (x+2)/(x-1). Cross-multiplying: x² - x = x² - 4, which gives x = 4.",
-      "explanation_hi": "थेल्स प्रमेय (BPT) के अनुसार, AD/DB = AE/EC. इसलिए, x/(x-2) = (x+2)/(x-1). तिरछा गुणा करने पर: x² - x = x² - 4, जिससे x = 4 प्राप्त होता है।"
+      "id": "C10_MATH_CH6_THEO_3",
+      "type": "theory",
+      "title": "Criteria for Similarity of Triangles",
+      "title_hi": "त्रिभुजों की समरूपता के लिए कसौटियाँ",
+      "title_gu": "ત્રિકોણોની સમરૂપતા માટેની શરતો",
+      "body": "To prove that two triangles are similar, you don't need to check all angles and all sides. You can use these three main criteria:\n1. **AAA (Angle-Angle-Angle)**: If corresponding angles are equal, the triangles are similar. (Even **AA** is enough, because if 2 angles are equal, the 3rd must be equal).\n2. **SSS (Side-Side-Side)**: If the corresponding sides of two triangles are proportional (in the same ratio), they are similar.\n3. **SAS (Side-Angle-Side)**: If one angle of a triangle is equal to one angle of the other triangle and the sides including these angles are proportional, then the two triangles are similar.",
+      "body_hi": "यह साबित करने के लिए कि दो त्रिभुज समरूप हैं, आपको सभी कोणों और सभी भुजाओं की जाँच करने की आवश्यकता नहीं है। आप इन तीन मुख्य कसौटियों का उपयोग कर सकते हैं:\n1. **AAA (कोण-कोण-कोण)**: यदि संगत कोण बराबर हैं, तो त्रिभुज समरूप होते हैं। (यहां तक कि **AA** भी पर्याप्त है, क्योंकि यदि 2 कोण बराबर हैं, तो तीसरा भी बराबर होना चाहिए)।\n2. **SSS (भुजा-भुजा-भुजा)**: यदि दो त्रिभुजों की संगत भुजाएँ समानुपाती (समान अनुपात में) हैं, तो वे समरूप होते हैं।\n3. **SAS (भुजा-कोण-भुजा)**: यदि एक त्रिभुज का एक कोण दूसरे त्रिभुज के एक कोण के बराबर हो तथा इन कोणों को अंतर्गत करने वाली भुजाएँ समानुपाती हों, तो दोनों त्रिभुज समरूप होते हैं।",
+      "body_gu": "બે ત્રિકોણો સમરૂપ છે તે સાબિત કરવા માટે, તમારે બધા ખૂણાઓ અને બધી બાજુઓ ચકાસવાની જરૂર નથી. તમે આ ત્રણ મુખ્ય શરતોનો ઉપયોગ કરી શકો છો:\n1. **AAA (ખૂણો-ખૂણો-ખૂણો)**: જો અનુરૂપ ખૂણાઓ સમાન હોય, તો ત્રિકોણ સમરૂપ છે. (માત્ર **AA** પણ પૂરતું છે, કારણ કે જો 2 ખૂણા સમાન હોય, તો ત્રીજો પણ સમાન હોવો જ જોઈએ).\n2. **SSS (બાજુ-બાજુ-બાજુ)**: જો બે ત્રિકોણની અનુરૂપ બાજુઓ સમપ્રમાણમાં (સમાન ગુણોત્તરમાં) હોય, તો તેઓ સમરૂપ છે.\n3. **SAS (બાજુ-ખૂણો-બાજુ)**: જો એક ત્રિકોણનો એક ખૂણો બીજા ત્રિકોણના એક ખૂણાને સમાન હોય અને આ ખૂણાઓને સમાવતી બાજુઓ સમપ્રમાણમાં હોય, તો તે બે ત્રિકોણો સમરૂપ છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_2",
-      "type": "quiz",
-      "question": "A ladder 10m long reaches a window 8m above the ground. Find the distance of the foot of the ladder from the base of the wall.",
-      "question_hi": "10 मीटर लंबी एक सीढ़ी जमीन से 8 मीटर ऊपर एक खिड़की तक पहुंचती है। दीवार के आधार से सीढ़ी के निचले सिरे की दूरी ज्ञात कीजिए।",
-      "options": ["6m", "8m", "10m", "12m"],
-      "options_hi": ["6m", "8m", "10m", "12m"],
-      "correct_index": 0,
-      "explanation": "By Pythagoras theorem, Base² + Height² = Hypotenuse². So Base² = 10² - 8² = 100 - 64 = 36. Hence Base = 6m.",
-      "explanation_hi": "पाइथागोरस प्रमेय द्वारा, आधार² + ऊँचाई² = कर्ण²। इसलिए आधार² = 10² - 8² = 100 - 64 = 36। इसलिए आधार = 6 मीटर।"
+      "id": "C10_MATH_CH6_PRACTICE_1",
+      "type": "practice_question",
+      "question": "Fill in the blank: All circles are ________. (congruent, similar)",
+      "question_hi": "रिक्त स्थान की पूर्ति कीजिए: सभी वृत्त ________ होते हैं। (सर्वांगसम, समरूप)",
+      "question_gu": "ખાલી જગ્યા પૂરો: બધા વર્તુળો ________ હોય છે. (એકરૂપ, સમરૂપ)",
+      "solution": "similar.\nAll circles have the same shape, but their radii (sizes) can be different. Therefore, they are similar.",
+      "solution_hi": "समरूप (similar)।\nसभी वृत्तों का आकार समान होता है, लेकिन उनकी त्रिज्याएँ (size) भिन्न हो सकती हैं। इसलिए, वे समरूप होते हैं।",
+      "solution_gu": "સમરૂપ.\nબધા વર્તુળોનો આકાર સમાન હોય છે, પરંતુ તેમની ત્રિજ્યા (કદ) અલગ હોઈ શકે છે. તેથી, તેઓ સમરૂપ છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_3",
-      "type": "quiz",
-      "question": "Two poles of height 6m and 11m stand vertically on a plane ground. If the distance between their feet is 12m, what is the distance between their tops?",
-      "question_hi": "6 मीटर और 11 मीटर ऊंचाई के दो खंभे एक समतल मैदान पर लंबवत खड़े हैं। यदि उनके पैरों के बीच की दूरी 12 मीटर है, तो उनके शीर्षों के बीच की दूरी क्या है?",
-      "options": ["13m", "14m", "15m", "12m"],
-      "options_hi": ["13m", "14m", "15m", "12m"],
-      "correct_index": 0,
-      "explanation": "Draw a parallel line from the top of the smaller pole to the larger pole. It forms a right triangle with base 12m and height (11-6) = 5m. Distance = √(12² + 5²) = √169 = 13m.",
-      "explanation_hi": "छोटे खंभे के शीर्ष से बड़े खंभे तक एक समानांतर रेखा खींचें। यह 12 मीटर आधार और (11-6) = 5 मीटर ऊंचाई वाला एक समकोण त्रिभुज बनाता है। दूरी = √(12² + 5²) = √169 = 13 मीटर।"
+      "id": "C10_MATH_CH6_PRACTICE_2",
+      "type": "practice_question",
+      "question": "Fill in the blank: All squares are ________. (similar, congruent)",
+      "question_hi": "रिक्त स्थान की पूर्ति कीजिए: सभी वर्ग ________ होते हैं। (समरूप, सर्वांगसम)",
+      "question_gu": "ખાલી જગ્યા પૂરો: બધા ચોરસ ________ હોય છે. (સમરૂપ, એકરૂપ)",
+      "solution": "similar.\nAll squares have angles of 90 degrees and all four sides equal in a given square. So the ratio of sides of any two squares will always be the same. Thus, they have the same shape but different sizes, making them similar.",
+      "solution_hi": "समरूप (similar)।\nसभी वर्गों में 90 डिग्री के कोण होते हैं और किसी दिए गए वर्ग में सभी चार भुजाएँ बराबर होती हैं। इसलिए किन्हीं दो वर्गों की भुजाओं का अनुपात हमेशा समान होगा। इस प्रकार, उनका आकार समान होता है लेकिन परिमाण अलग होते हैं, जिससे वे समरूप बन जाते हैं।",
+      "solution_gu": "સમરૂપ.\nબધા ચોરસમાં 90 અંશના ખૂણા હોય છે અને આપેલ ચોરસમાં બધી ચાર બાજુઓ સમાન હોય છે. તેથી કોઈપણ બે ચોરસની બાજુઓનો ગુણોત્તર હંમેશા સમાન રહેશે. આમ, તેમનો આકાર સમાન હોય છે પરંતુ કદ અલગ હોય છે, જે તેમને સમરૂપ બનાવે છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_4",
-      "type": "quiz",
-      "question": "The ratio of the areas of two similar triangles is equal to the:",
-      "question_hi": "दो समरूप त्रिभुजों के क्षेत्रफलों का अनुपात किसके बराबर होता है?",
-      "options": ["Ratio of their corresponding sides", "Ratio of the squares of their corresponding sides", "Ratio of their corresponding altitudes", "Ratio of the squares of their perimeters"],
-      "options_hi": ["उनकी संगत भुजाओं के अनुपात के", "उनकी संगत भुजाओं के वर्गों के अनुपात के", "उनकी संगत ऊंचाइयों के अनुपात के", "उनके परिमापों के वर्गों के अनुपात के"],
-      "correct_index": 1,
-      "explanation": "According to the theorem of areas of similar triangles, the ratio of areas is equal to the square of the ratio of their corresponding sides.",
-      "explanation_hi": "समरूप त्रिभुजों के क्षेत्रफलों के प्रमेय के अनुसार, क्षेत्रफलों का अनुपात उनकी संगत भुजाओं के अनुपात के वर्ग के बराबर होता है।"
+      "id": "C10_MATH_CH6_PRACTICE_3",
+      "type": "practice_question",
+      "question": "Fill in the blank: All ________ triangles are similar. (isosceles, equilateral)",
+      "question_hi": "रिक्त स्थान की पूर्ति कीजिए: सभी ________ त्रिभुज समरूप होते हैं। (समद्विबाहु, समबाहु)",
+      "question_gu": "ખાલી જગ્યા પૂરો: બધા ________ ત્રિકોણો સમરૂપ હોય છે. (સમદ્વિબાજુ, સમબાજુ)",
+      "solution": "equilateral.\nAll equilateral triangles have exactly 60 degrees for all three angles. Since their corresponding angles are always equal, by the AAA criterion, they are always similar.",
+      "solution_hi": "समबाहु (equilateral)।\nसभी समबाहु त्रिभुजों के तीनों कोण ठीक 60 डिग्री के होते हैं। चूँकि उनके संगत कोण हमेशा बराबर होते हैं, इसलिए AAA कसौटी के अनुसार, वे हमेशा समरूप होते हैं।",
+      "solution_gu": "સમબાજુ.\nબધા સમબાજુ ત્રિકોણોમાં ત્રણેય ખૂણા બરાબર 60 અંશના હોય છે. કારણ કે તેમના અનુરૂપ ખૂણાઓ હંમેશા સમાન હોય છે, AAA શરત મુજબ, તેઓ હંમેશા સમરૂપ હોય છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_5",
-      "type": "quiz",
-      "question": "Which of the following is NOT a valid criterion for similarity of two triangles?",
-      "question_hi": "निम्नलिखित में से कौन सा दो त्रिभुजों की समरूपता के लिए एक मान्य कसौटी नहीं है?",
-      "options": ["AAA", "SAS", "SSS", "SSA"],
-      "options_hi": ["AAA", "SAS", "SSS", "SSA"],
-      "correct_index": 3,
-      "explanation": "SSA (Side-Side-Angle) is not a criterion for similarity. AAA, SAS, and SSS are valid criteria for similarity.",
-      "explanation_hi": "SSA (भुजा-भुजा-कोण) समरूपता के लिए कोई कसौटी नहीं है। AAA, SAS और SSS समरूपता के लिए मान्य कसौटियाँ हैं।"
+      "id": "C10_MATH_CH6_PRACTICE_4",
+      "type": "practice_question",
+      "question": "In a triangle ABC, points D and E lie on sides AB and AC respectively such that DE is parallel to BC. If AD = 1.5 cm, DB = 3 cm, and AE = 1 cm, find EC.",
+      "question_hi": "त्रिभुज ABC में, बिंदु D और E क्रमशः भुजाओं AB और AC पर इस प्रकार स्थित हैं कि DE समांतर है BC के। यदि AD = 1.5 सेमी, DB = 3 सेमी, और AE = 1 सेमी है, तो EC ज्ञात कीजिए।",
+      "question_gu": "ત્રિકોણ ABC માં, બિંદુઓ D અને E અનુક્રમે બાજુઓ AB અને AC પર એવી રીતે આવેલા છે કે DE એ BC ને સમાંતર છે. જો AD = 1.5 સેમી, DB = 3 સેમી, અને AE = 1 સેમી હોય, તો EC શોધો.",
+      "solution": "Since DE || BC, we can use the Basic Proportionality Theorem (Thales Theorem).\nAD / DB = AE / EC\n1.5 / 3 = 1 / EC\n1/2 = 1 / EC\nTherefore, EC = 2 cm.",
+      "solution_hi": "चूँकि DE || BC है, हम आधारभूत समानुपातिकता प्रमेय (थेल्स प्रमेय) का उपयोग कर सकते हैं।\nAD / DB = AE / EC\n1.5 / 3 = 1 / EC\n1/2 = 1 / EC\nइसलिए, EC = 2 सेमी।",
+      "solution_gu": "કારણ કે DE || BC, આપણે સમપ્રમાણતાના મૂળભૂત પ્રમેય (થેલ્સ પ્રમેય) નો ઉપયોગ કરી શકીએ છીએ.\nAD / DB = AE / EC\n1.5 / 3 = 1 / EC\n1/2 = 1 / EC\nતેથી, EC = 2 સેમી."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_6",
-      "type": "quiz",
-      "question": "If ∆ABC ~ ∆DEF, AB = 1.2 cm, and DE = 1.4 cm, find the ratio of the areas of ∆ABC and ∆DEF.",
-      "question_hi": "यदि ∆ABC ~ ∆DEF, AB = 1.2 सेमी, और DE = 1.4 सेमी है, तो ∆ABC और ∆DEF के क्षेत्रफलों का अनुपात ज्ञात कीजिए।",
-      "options": ["14:12", "12:14", "36:49", "49:36"],
-      "options_hi": ["14:12", "12:14", "36:49", "49:36"],
-      "correct_index": 2,
-      "explanation": "Ratio of areas = (AB/DE)² = (1.2/1.4)² = (6/7)² = 36/49.",
-      "explanation_hi": "क्षेत्रफलों का अनुपात = (AB/DE)² = (1.2/1.4)² = (6/7)² = 36/49."
+      "id": "C10_MATH_CH6_PRACTICE_5",
+      "type": "practice_question",
+      "question": "In a triangle ABC, DE is parallel to BC. If AD = x, DB = x - 2, AE = x + 2, and EC = x - 1, find the value of x.",
+      "question_hi": "त्रिभुज ABC में, DE, BC के समांतर है। यदि AD = x, DB = x - 2, AE = x + 2, और EC = x - 1 है, तो x का मान ज्ञात कीजिए।",
+      "question_gu": "ત્રિકોણ ABC માં, DE એ BC ને સમાંતર છે. જો AD = x, DB = x - 2, AE = x + 2, અને EC = x - 1 હોય, તો x ની કિંમત શોધો.",
+      "solution": "By Basic Proportionality Theorem, AD / DB = AE / EC\nx / (x - 2) = (x + 2) / (x - 1)\nCross-multiplying:\nx(x - 1) = (x + 2)(x - 2)\nx² - x = x² - 2²\nx² - x = x² - 4\n-x = -4\nx = 4.",
+      "solution_hi": "आधारभूत समानुपातिकता प्रमेय द्वारा, AD / DB = AE / EC\nx / (x - 2) = (x + 2) / (x - 1)\nवज्र-गुणा (Cross-multiplying) करने पर:\nx(x - 1) = (x + 2)(x - 2)\nx² - x = x² - 2²\nx² - x = x² - 4\n-x = -4\nx = 4.",
+      "solution_gu": "સમપ્રમાણતાના મૂળભૂત પ્રમેય મુજબ, AD / DB = AE / EC\nx / (x - 2) = (x + 2) / (x - 1)\nચોકડી ગુણાકાર કરતા:\nx(x - 1) = (x + 2)(x - 2)\nx² - x = x² - 2²\nx² - x = x² - 4\n-x = -4\nx = 4."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_7",
-      "type": "quiz",
-      "question": "The diagonals of a rhombus are 16 cm and 12 cm in length. The length of its side is:",
-      "question_hi": "एक समचतुर्भुज के विकर्णों की लंबाई 16 सेमी और 12 सेमी है। इसकी भुजा की लंबाई है:",
-      "options": ["20 cm", "10 cm", "14 cm", "8 cm"],
-      "options_hi": ["20 सेमी", "10 सेमी", "14 सेमी", "8 सेमी"],
-      "correct_index": 1,
-      "explanation": "Diagonals of a rhombus bisect each other at right angles. So, we get right triangles with legs 8 cm and 6 cm. Side = √(8² + 6²) = √(64 + 36) = √100 = 10 cm.",
-      "explanation_hi": "समचतुर्भुज के विकर्ण एक दूसरे को समकोण पर समद्विभाजित करते हैं। इसलिए, हमें 8 सेमी और 6 सेमी आधार वाले समकोण त्रिभुज मिलते हैं। भुजा = √(8² + 6²) = √(64 + 36) = √100 = 10 सेमी।"
+      "id": "C10_MATH_CH6_PRACTICE_6",
+      "type": "practice_question",
+      "question": "A girl of height 90 cm is walking away from the base of a lamp-post at a speed of 1.2 m/s. If the lamp is 3.6 m above the ground, find the length of her shadow after 4 seconds.",
+      "question_hi": "90 सेमी लंबी एक लड़की 1.2 मी/सेकंड की चाल से एक लैंप-पोस्ट के आधार से दूर जा रही है। यदि लैंप जमीन से 3.6 मी ऊपर है, तो 4 सेकंड बाद उसकी परछाई की लंबाई ज्ञात कीजिए।",
+      "question_gu": "90 સેમી ઊંચાઈવાળી એક છોકરી 1.2 મી/સેકન્ડની ઝડપે લેમ્પ-પોસ્ટના પાયાથી દૂર જઈ રહી છે. જો લેમ્પ જમીનથી 3.6 મીટર ઉપર હોય, તો 4 સેકન્ડ પછી તેના પડછાયાની લંબાઈ શોધો.",
+      "solution": "Let AB be the lamp-post and CD be the girl. Her shadow is DE. Let DE = x meters.\nLamp height AB = 3.6 m. Girl height CD = 90 cm = 0.9 m.\nDistance walked in 4 sec = BD = speed × time = 1.2 m/s × 4 s = 4.8 m.\nIn triangle ABE and triangle CDE:\nAngle E is common.\nAngle B = Angle D = 90°.\nSo, Triangle ABE is similar to Triangle CDE (by AA similarity).\nAB / CD = BE / DE\n3.6 / 0.9 = (4.8 + x) / x\n4 = (4.8 + x) / x\n4x = 4.8 + x\n3x = 4.8\nx = 1.6 m.\nThe length of her shadow is 1.6 m.",
+      "solution_hi": "माना AB लैंप-पोस्ट है और CD लड़की है। उसकी परछाई DE है। माना DE = x मीटर।\nलैंप की ऊंचाई AB = 3.6 मीटर। लड़की की ऊंचाई CD = 90 सेमी = 0.9 मीटर।\n4 सेकंड में तय की गई दूरी = BD = चाल × समय = 1.2 मी/से × 4 से = 4.8 मीटर।\nत्रिभुज ABE और त्रिभुज CDE में:\nकोण E उभयनिष्ठ (common) है।\nकोण B = कोण D = 90°.\nअतः, त्रिभुज ABE और त्रिभुज CDE समरूप हैं (AA समरूपता द्वारा)।\nAB / CD = BE / DE\n3.6 / 0.9 = (4.8 + x) / x\n4 = (4.8 + x) / x\n4x = 4.8 + x\n3x = 4.8\nx = 1.6 मीटर।\nउसकी परछाई की लंबाई 1.6 मीटर है।",
+      "solution_gu": "ધારો કે AB લેમ્પ-પોસ્ટ છે અને CD છોકરી છે. તેનો પડછાયો DE છે. ધારો કે DE = x મીટર.\nલેમ્પની ઊંચાઈ AB = 3.6 મીટર. છોકરીની ઊંચાઈ CD = 90 સેમી = 0.9 મીટર.\n4 સેકન્ડમાં કાપેલું અંતર = BD = ઝડપ × સમય = 1.2 મી/સે × 4 સે = 4.8 મીટર.\nત્રિકોણ ABE અને ત્રિકોણ CDE માં:\nખૂણો E સામાન્ય છે.\nખૂણો B = ખૂણો D = 90°.\nતેથી, ત્રિકોણ ABE અને ત્રિકોણ CDE સમરૂપ છે (AA સમરૂપતા દ્વારા).\nAB / CD = BE / DE\n3.6 / 0.9 = (4.8 + x) / x\n4 = (4.8 + x) / x\n4x = 4.8 + x\n3x = 4.8\nx = 1.6 મીટર.\nતેના પડછાયાની લંબાઈ 1.6 મીટર છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_8",
-      "type": "quiz",
-      "question": "The length of the altitude of an equilateral triangle of side 'a' is:",
-      "question_hi": "'a' भुजा वाले एक समबाहु त्रिभुज के शीर्षलंब (ऊंचाई) की लंबाई क्या है?",
-      "options": ["(√3/2)a", "(√3/4)a²", "(3/2)a", "a"],
-      "options_hi": ["(√3/2)a", "(√3/4)a²", "(3/2)a", "a"],
-      "correct_index": 0,
-      "explanation": "In an equilateral triangle, the altitude bisects the base. Using Pythagoras theorem, Altitude² = a² - (a/2)² = a² - a²/4 = 3a²/4. So, Altitude = (√3/2)a.",
-      "explanation_hi": "समबाहु त्रिभुज में, शीर्षलंब आधार को समद्विभाजित करता है। पाइथागोरस प्रमेय का उपयोग करते हुए, शीर्षलंब² = a² - (a/2)² = a² - a²/4 = 3a²/4। इसलिए, शीर्षलंब = (√3/2)a।"
+      "id": "C10_MATH_CH6_PRACTICE_7",
+      "type": "practice_question",
+      "question": "State true or false: If the ratio of corresponding sides of two triangles is 2:3, then the ratio of their corresponding altitudes is also 2:3.",
+      "question_hi": "सत्य या असत्य बताइए: यदि दो त्रिभुजों की संगत भुजाओं का अनुपात 2:3 है, तो उनके संगत शीर्षलंबों (altitudes) का अनुपात भी 2:3 होता है।",
+      "question_gu": "સાચું કે ખોટું જણાવો: જો બે ત્રિકોણોની અનુરૂપ બાજુઓનો ગુણોત્તર 2:3 હોય, તો તેમના અનુરૂપ વેધનો ગુણોત્તર પણ 2:3 હોય છે.",
+      "solution": "True. If two triangles are similar, the ratio of their corresponding sides is equal to the ratio of their corresponding altitudes, medians, and angle bisectors. Since the ratio of sides is 2:3, the ratio of altitudes is also 2:3.",
+      "solution_hi": "सत्य। यदि दो त्रिभुज समरूप हैं, तो उनकी संगत भुजाओं का अनुपात उनके संगत शीर्षलंबों, माध्यिकाओं और कोण समद्विभाजकों के अनुपात के बराबर होता है। चूँकि भुजाओं का अनुपात 2:3 है, अतः शीर्षलंबों का अनुपात भी 2:3 होगा।",
+      "solution_gu": "સાચું. જો બે ત્રિકોણો સમરૂપ હોય, તો તેમની અનુરૂપ બાજુઓનો ગુણોત્તર તેમના અનુરૂપ વેધ, મધ્યગા અને કોણ દ્વિભાજકોના ગુણોત્તર જેટલો જ હોય છે. કારણ કે બાજુઓનો ગુણોત્તર 2:3 છે, તેથી વેધનો ગુણોત્તર પણ 2:3 થશે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_9",
-      "type": "quiz",
-      "question": "Which of the following sets of side lengths forms a right-angled triangle?",
-      "question_hi": "भुजाओं की लंबाई के निम्नलिखित सेटों में से कौन सा एक समकोण त्रिभुज बनाता है?",
-      "options": ["7 cm, 24 cm, 25 cm", "3 cm, 8 cm, 6 cm", "5 cm, 8 cm, 11 cm", "13 cm, 12 cm, 15 cm"],
-      "options_hi": ["7 सेमी, 24 सेमी, 25 सेमी", "3 सेमी, 8 सेमी, 6 सेमी", "5 सेमी, 8 सेमी, 11 सेमी", "13 सेमी, 12 सेमी, 15 सेमी"],
-      "correct_index": 0,
-      "explanation": "A triangle is right-angled if the square of the largest side equals the sum of squares of the other two. For 7, 24, 25: 7² + 24² = 49 + 576 = 625 = 25².",
-      "explanation_hi": "एक त्रिभुज समकोण होता है यदि सबसे बड़ी भुजा का वर्ग अन्य दो भुजाओं के वर्गों के योग के बराबर हो। 7, 24, 25 के लिए: 7² + 24² = 49 + 576 = 625 = 25²।"
+      "id": "C10_MATH_CH6_PRACTICE_8",
+      "type": "practice_question",
+      "question": "In a trapezium ABCD, AB is parallel to DC. Diagonals AC and BD intersect each other at O. Using similarity criterion for two triangles, show that OA/OC = OB/OD.",
+      "question_hi": "एक समलंब (trapezium) ABCD में, AB, DC के समांतर है। विकर्ण AC और BD परस्पर O पर प्रतिच्छेद करते हैं। दो त्रिभुजों की समरूपता कसौटी का उपयोग करते हुए, दर्शाइए कि OA/OC = OB/OD है।",
+      "question_gu": "સમલંબ ચતુષ્કોણ ABCD માં, AB એ DC ને સમાંતર છે. વિકર્ણો AC અને BD એકબીજાને O બિંદુએ છેદે છે. બે ત્રિકોણો માટે સમરૂપતાની શરતનો ઉપયોગ કરીને, દર્શાવો કે OA/OC = OB/OD છે.",
+      "solution": "In triangles OAB and OCD:\nAngle OAB = Angle OCD (Alternate interior angles, since AB || DC and AC is transversal)\nAngle OBA = Angle ODC (Alternate interior angles, since AB || DC and BD is transversal)\nAngle AOB = Angle COD (Vertically opposite angles)\nTherefore, Triangle OAB is similar to Triangle OCD (by AAA similarity criterion).\nWhen triangles are similar, their corresponding sides are proportional:\nOA / OC = OB / OD = AB / CD\nThus, OA/OC = OB/OD is proved.",
+      "solution_hi": "त्रिभुज OAB और OCD में:\nकोण OAB = कोण OCD (एकांतर अंतःकोण, चूँकि AB || DC और AC तिर्यक रेखा है)\nकोण OBA = कोण ODC (एकांतर अंतःकोण, चूँकि AB || DC और BD तिर्यक रेखा है)\nकोण AOB = कोण COD (शीर्षाभिमुख कोण)\nइसलिए, त्रिभुज OAB और त्रिभुज OCD समरूप हैं (AAA समरूपता कसौटी द्वारा)।\nजब त्रिभुज समरूप होते हैं, तो उनकी संगत भुजाएँ समानुपाती होती हैं:\nOA / OC = OB / OD = AB / CD\nइस प्रकार, OA/OC = OB/OD सिद्ध होता है।",
+      "solution_gu": "ત્રિકોણ OAB અને OCD માં:\nખૂણો OAB = ખૂણો OCD (યુગ્મકોણ, કારણ કે AB || DC અને AC છેદિકા છે)\nખૂણો OBA = ખૂણો ODC (યુગ્મકોણ, કારણ કે AB || DC અને BD છેદિકા છે)\nખૂણો AOB = ખૂણો COD (અભિકોણો)\nતેથી, ત્રિકોણ OAB અને ત્રિકોણ OCD સમરૂપ છે (AAA સમરૂપતાની શરત મુજબ).\nજ્યારે ત્રિકોણો સમરૂપ હોય, ત્યારે તેમની અનુરૂપ બાજુઓ સમપ્રમાણમાં હોય છે:\nOA / OC = OB / OD = AB / CD\nઆમ, OA/OC = OB/OD સાબિત થાય છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch6_10",
-      "type": "quiz",
-      "question": "All circles are _________.",
-      "question_hi": "सभी वृत्त _________ होते हैं।",
-      "options": ["Congruent", "Similar", "Equal", "None of these"],
-      "options_hi": ["सर्वांगसम", "समरूप", "समान", "इनमें से कोई नहीं"],
-      "correct_index": 1,
-      "explanation": "All circles have the same shape but may have different sizes (radii). Hence, they are always similar but not necessarily congruent.",
-      "explanation_hi": "सभी वृत्तों का आकार समान होता है लेकिन उनके माप (त्रिज्या) भिन्न हो सकते हैं। इसलिए, वे हमेशा समरूप होते हैं लेकिन जरूरी नहीं कि सर्वांगसम हों।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch6_11",
-      "type": "quiz",
-      "question": "In an isosceles triangle ABC, if AC = BC and AB² = 2AC², then what is the measure of ∠C?",
-      "question_hi": "एक समद्विबाहु त्रिभुज ABC में, यदि AC = BC और AB² = 2AC² है, तो ∠C का माप क्या है?",
-      "options": ["30°", "45°", "90°", "60°"],
-      "options_hi": ["30°", "45°", "90°", "60°"],
-      "correct_index": 2,
-      "explanation": "Since AB² = 2AC², we can write it as AB² = AC² + AC². Since AC = BC, we can substitute to get AB² = AC² + BC². This is Pythagoras theorem, making ∠C = 90°.",
-      "explanation_hi": "चूंकि AB² = 2AC², हम इसे AB² = AC² + AC² लिख सकते हैं। चूंकि AC = BC है, हम प्रतिस्थापित करके AB² = AC² + BC² प्राप्त कर सकते हैं। यह पाइथागोरस प्रमेय है, जिससे ∠C = 90° हो जाता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch6_12",
-      "type": "quiz",
-      "question": "D and E are the midpoints of sides AB and AC of ∆ABC. If BC = 6 cm, then the length of DE is:",
-      "question_hi": "D और E, ∆ABC की भुजाओं AB और AC के मध्य बिंदु हैं। यदि BC = 6 सेमी है, तो DE की लंबाई क्या है?",
-      "options": ["2 cm", "3 cm", "4 cm", "6 cm"],
-      "options_hi": ["2 सेमी", "3 सेमी", "4 सेमी", "6 सेमी"],
-      "correct_index": 1,
-      "explanation": "By Midpoint Theorem, the line connecting midpoints of two sides of a triangle is parallel to the third side and half of its length. So, DE = 1/2 BC = 3 cm.",
-      "explanation_hi": "मध्य-बिंदु प्रमेय के अनुसार, किसी त्रिभुज की दो भुजाओं के मध्य बिंदुओं को मिलाने वाली रेखा तीसरी भुजा के समानांतर और उसकी लंबाई की आधी होती है। इसलिए, DE = 1/2 BC = 3 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch6_13",
-      "type": "quiz",
-      "question": "A vertical stick 20m long casts a shadow 10m long on the ground. At the same time, a tower casts a shadow 50m long. The height of the tower is:",
-      "question_hi": "20 मीटर लंबी एक ऊर्ध्वाधर छड़ी जमीन पर 10 मीटर लंबी परछाई डालती है। उसी समय, एक टॉवर 50 मीटर लंबी परछाई डालता है। टॉवर की ऊंचाई है:",
-      "options": ["100m", "120m", "25m", "200m"],
-      "options_hi": ["100 मीटर", "120 मीटर", "25 मीटर", "200 मीटर"],
-      "correct_index": 0,
-      "explanation": "At the same time, the triangles formed by the objects and their shadows are similar. Let tower height be h. Then h/50 = 20/10. So h = (20/10) × 50 = 100m.",
-      "explanation_hi": "एक ही समय में, वस्तुओं और उनकी परछाइयों द्वारा बने त्रिभुज समरूप होते हैं। मान लें कि टॉवर की ऊंचाई h है। तब h/50 = 20/10। इसलिए h = (20/10) × 50 = 100 मीटर।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch6_14",
-      "type": "quiz",
-      "question": "In ∆ABC and ∆DEF, if AB/DE = BC/FD, then they will be similar if:",
-      "question_hi": "∆ABC और ∆DEF में, यदि AB/DE = BC/FD है, तो वे समरूप होंगे यदि:",
-      "options": ["∠B = ∠E", "∠A = ∠D", "∠B = ∠D", "∠A = ∠F"],
-      "options_hi": ["∠B = ∠E", "∠A = ∠D", "∠B = ∠D", "∠A = ∠F"],
-      "correct_index": 2,
-      "explanation": "For SAS similarity, the included angles must be equal. The included angle for sides AB and BC is ∠B. For sides DE and FD, it is ∠D. Thus, ∠B = ∠D.",
-      "explanation_hi": "SAS समरूपता के लिए, शामिल कोण समान होने चाहिए। भुजाओं AB और BC के लिए शामिल कोण ∠B है। भुजाओं DE और FD के लिए, यह ∠D है। इस प्रकार, ∠B = ∠D।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch6_15",
-      "type": "quiz",
-      "question": "If in two triangles ABC and PQR, (AB/QR) = (BC/PR) = (CA/PQ), then:",
-      "question_hi": "यदि दो त्रिभुजों ABC और PQR में, (AB/QR) = (BC/PR) = (CA/PQ) है, तो:",
-      "options": ["∆PQR ~ ∆CAB", "∆PQR ~ ∆ABC", "∆CBA ~ ∆PRQ", "∆BCA ~ ∆PQR"],
-      "options_hi": ["∆PQR ~ ∆CAB", "∆PQR ~ ∆ABC", "∆CBA ~ ∆PRQ", "∆BCA ~ ∆PQR"],
-      "correct_index": 0,
-      "explanation": "Corresponding vertices are: A matches with Q, B matches with R, and C matches with P. Therefore, ∆CAB is similar to ∆PQR, which means ∆PQR ~ ∆CAB.",
-      "explanation_hi": "संगत शीर्ष हैं: A, Q से मेल खाता है, B, R से मेल खाता है, और C, P से मेल खाता है। इसलिए, ∆CAB, ∆PQR के समरूप है, जिसका अर्थ है ∆PQR ~ ∆CAB।"
+      "id": "C10_MATH_CH6_PRACTICE_9",
+      "type": "practice_question",
+      "question": "Are two triangles similar if their corresponding sides are 2 cm, 3 cm, 4 cm and 4 cm, 6 cm, 8 cm?",
+      "question_hi": "क्या दो त्रिभुज समरूप हैं यदि उनकी संगत भुजाएँ 2 सेमी, 3 सेमी, 4 सेमी और 4 सेमी, 6 सेमी, 8 सेमी हैं?",
+      "question_gu": "શું બે ત્રિકોણ સમરૂપ છે જો તેમની અનુરૂપ બાજુઓ 2 સેમી, 3 સેમી, 4 સેમી અને 4 સેમી, 6 સેમી, 8 સેમી હોય?",
+      "solution": "Let's check the ratio of the corresponding sides:\n2 / 4 = 1/2\n3 / 6 = 1/2\n4 / 8 = 1/2\nSince the ratio of all three corresponding sides is equal (1/2), by SSS similarity criterion, the two triangles are similar.",
+      "solution_hi": "आइए संगत भुजाओं के अनुपात की जाँच करें:\n2 / 4 = 1/2\n3 / 6 = 1/2\n4 / 8 = 1/2\nचूँकि सभी तीन संगत भुजाओं का अनुपात समान (1/2) है, इसलिए SSS समरूपता कसौटी द्वारा, दोनों त्रिभुज समरूप हैं।",
+      "solution_gu": "ચાલો અનુરૂપ બાજુઓનો ગુણોત્તર ચકાસીએ:\n2 / 4 = 1/2\n3 / 6 = 1/2\n4 / 8 = 1/2\nકારણ કે ત્રણેય અનુરૂપ બાજુઓનો ગુણોત્તર સમાન (1/2) છે, તેથી SSS સમરૂપતાની શરત મુજબ, બે ત્રિકોણો સમરૂપ છે."
     }
   ]
 }

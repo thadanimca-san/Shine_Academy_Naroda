@@ -8,12 +8,14 @@ class QuestionSelectionScreen extends StatefulWidget {
   final List<AssessmentQuestion> allQuestionsPool;
   final List<AssessmentQuestion> initialSelectedQuestions;
   final String title;
+  final bool isManualMode;
 
   const QuestionSelectionScreen({
     super.key,
     required this.allQuestionsPool,
     required this.initialSelectedQuestions,
     required this.title,
+    this.isManualMode = false,
   });
 
   @override
@@ -29,9 +31,12 @@ class _QuestionSelectionScreenState extends State<QuestionSelectionScreen> {
   void initState() {
     super.initState();
     _currentQuestions = List.from(widget.initialSelectedQuestions);
-    // Select all by default
-    for (int i = 0; i < _currentQuestions.length; i++) {
-      _selectedIndices.add(i);
+    
+    if (!widget.isManualMode) {
+      // Select all by default in preset mode
+      for (int i = 0; i < _currentQuestions.length; i++) {
+        _selectedIndices.add(i);
+      }
     }
   }
 
@@ -155,7 +160,9 @@ class _QuestionSelectionScreenState extends State<QuestionSelectionScreen> {
                 Expanded(
                   child: Text(
                     TrilingualService.instance.getUIText(
-                      'Teacher Mode: Swap unsuitable questions or uncheck them before generating the final paper.',
+                      widget.isManualMode
+                          ? 'Teacher Mode: Manually select the questions you want to include in your paper.'
+                          : 'Teacher Mode: Swap unsuitable questions or uncheck them before generating the final paper.',
                     ),
                     style: GoogleFonts.inter(color: Colors.blue[900]),
                   ),
@@ -214,31 +221,32 @@ class _QuestionSelectionScreenState extends State<QuestionSelectionScreen> {
                           'Type: ${q.type}',
                           style: TextStyle(color: Colors.grey),
                         ),
-                  secondary: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue[50],
-                        foregroundColor: Colors.blue[900],
-                        radius: 16,
-                        child: Text(
-                          '${q.marks}M',
-                          style: const TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
+                    secondary: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.blue[50],
+                          foregroundColor: Colors.blue[900],
+                          radius: 16,
+                          child: Text(
+                            '${q.marks}M',
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.autorenew),
-                        color: Colors.blue[700],
-                        tooltip: TrilingualService.instance.getUIText(
-                          'Swap Question',
-                        ),
-                        onPressed: () => _swapQuestion(index),
-                      ),
-                    ],
-                  ),
+                        if (!widget.isManualMode)
+                          IconButton(
+                            icon: const Icon(Icons.autorenew),
+                            color: Colors.blue[700],
+                            tooltip: TrilingualService.instance.getUIText(
+                              'Swap Question',
+                            ),
+                            onPressed: () => _swapQuestion(index),
+                          ),
+                      ],
+                    ),
                 );
               },
             ),

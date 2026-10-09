@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_info_plus/device_info_plus.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class ActivationService {
   static const String _keyActivated = 'is_activated';
@@ -50,8 +51,17 @@ class ActivationService {
       hardwareId = _generateRandomDeviceCode();
     }
 
-    // Hash the hardware ID and return an 8-character device code
-    final bytes = utf8.encode(hardwareId + "ShineHardwareSalt");
+    String packageName = 'com.shineacademynaroda';
+    try {
+      final packageInfo = await PackageInfo.fromPlatform();
+      packageName = packageInfo.packageName;
+    } catch (e) {
+      // fallback
+    }
+
+    // Hash the hardware ID and packageName to return an 8-character device code
+    // This ensures different flavors (junior, highschool, etc.) generate unique codes
+    final bytes = utf8.encode(hardwareId + "ShineHardwareSalt" + packageName);
     final digest = sha256.convert(bytes);
     return digest.toString().substring(0, 8).toUpperCase();
   }

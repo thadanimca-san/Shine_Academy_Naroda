@@ -48,7 +48,7 @@ class TTSService {
   final Map<TTSSpeed, double> _speedMap = {
     TTSSpeed.verySlow: 0.18,
     TTSSpeed.slow: 0.30,
-    TTSSpeed.medium: 0.50,
+    TTSSpeed.medium: 0.42,
   };
 
   String _resolvedLanguage = 'en-IN';
@@ -213,14 +213,14 @@ class TTSService {
             return !name.contains('network') && !name.contains('online');
           }).toList();
 
-          // Prefer female voices for a sweeter sound
-          final femaleVoices = offlineIndianVoices.where((v) {
+          // Google TTS uses 'end' and 'ene' for male en-IN voices
+          final maleVoices = offlineIndianVoices.where((v) {
             final name = (v['name']?.toString() ?? '').toLowerCase();
-            return name.contains('female');
+            return name.contains('male') || name.contains('end-local') || name.contains('ene-local') || name.contains('end-network') || name.contains('ene-network');
           }).toList();
 
-          final selectedVoice = femaleVoices.isNotEmpty 
-            ? femaleVoices.first 
+          final selectedVoice = maleVoices.isNotEmpty 
+            ? maleVoices.first 
             : (offlineIndianVoices.isNotEmpty ? offlineIndianVoices.first : indianVoices.first);
           
           final voiceMap = {
@@ -276,8 +276,8 @@ Future<void> _applyDefaultSettings() async {
       _log('setVolume error: $e');
     }
     try {
-      await _flutterTts!.setPitch(1.0);
-      _log('Pitch: 1.0');
+      await _flutterTts!.setPitch(0.85);
+      _log('Pitch: 0.85');
     } catch (e) {
       _log('setPitch error: $e');
     }
@@ -343,10 +343,10 @@ Future<void> _applyDefaultSettings() async {
       }
 
       // Softer pitch for Hindi — warmer, less harsh than default 1.0
-      await _flutterTts!.setPitch(0.9);
+      await _flutterTts!.setPitch(0.85);
       await _flutterTts!.speak(text);
       // Restore pitch and language after playback completes
-      await _flutterTts!.setPitch(1.0);
+      await _flutterTts!.setPitch(0.85);
       await _flutterTts!.setLanguage(_resolvedLanguage);
     } catch (e) {
       _log('speakHindi() error: $e');
@@ -378,19 +378,19 @@ Future<void> _applyDefaultSettings() async {
       
       if (targetLangCode == 'hi' || targetLangCode == 'hi-IN') {
         await _flutterTts!.setLanguage('hi-IN');
-        // 🎶 Softer pitch for Hindi — warmer, sweeter sound
-        await _flutterTts!.setPitch(0.9);
-        _log('Switching TTS language to hi-IN (pitch: 0.9) for Hindi');
+        // Natural male pitch for Hindi
+        await _flutterTts!.setPitch(0.85);
+        _log('Switching TTS language to hi-IN (pitch: 0.85) for Hindi');
       } else if (targetLangCode == 'gu' || targetLangCode == 'gu-IN') {
         await _flutterTts!.setLanguage('gu-IN');
-        // Slightly softer pitch for Gujarati
-        await _flutterTts!.setPitch(0.95);
-        _log('Switching TTS language to gu-IN (pitch: 0.95) for Gujarati');
+        // Natural male pitch for Gujarati
+        await _flutterTts!.setPitch(0.85);
+        _log('Switching TTS language to gu-IN (pitch: 0.85) for Gujarati');
       } else {
         await _flutterTts!.setLanguage(_resolvedLanguage); // Fallback to detected English
-        // Slightly higher pitch for English for a sweeter, friendly sound
-        await _flutterTts!.setPitch(1.1);
-        _log('Switching TTS language to $_resolvedLanguage (pitch: 1.1) for English');
+        // Natural male pitch for English
+        await _flutterTts!.setPitch(0.85);
+        _log('Switching TTS language to $_resolvedLanguage (pitch: 0.85) for English');
       }
     } catch (e) {
       _log('stop/setLanguage before speak threw: $e');

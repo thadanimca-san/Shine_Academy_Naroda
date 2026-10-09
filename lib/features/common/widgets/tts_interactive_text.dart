@@ -14,6 +14,7 @@ class TtsInteractiveText extends StatefulWidget {
   final Color highlightColor;
   final TextAlign textAlign;
   final void Function(String word, String meaning)? onInlineGlossTap;
+  final bool isPdfMode;
 
   const TtsInteractiveText({
     super.key,
@@ -23,6 +24,7 @@ class TtsInteractiveText extends StatefulWidget {
     this.highlightColor = Colors.yellow,
     this.textAlign = TextAlign.start,
     this.onInlineGlossTap,
+    this.isPdfMode = false,
   });
 
   @override
@@ -135,6 +137,18 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
            mathContent = mathContent.replaceAll(r'\not\implies', r'\not\Rightarrow');
            mathContent = mathContent.replaceAll(r'\not \implies', r'\not \Rightarrow');
            
+           if (widget.isPdfMode) {
+              _cleanText += ' ';
+              // In PDF mode, MarkdownBody with flutter_math_fork hangs the offstage renderer
+              // because KaTeX fonts aren't globally pre-loaded. We fallback to plain text.
+              _spans.add(TextSpan(
+                 text: ' ' + mathContent + ' ', 
+                 style: widget.style?.copyWith(fontWeight: FontWeight.bold) ?? const TextStyle(fontWeight: FontWeight.bold),
+              ));
+              i = j - 1;
+              continue;
+           }
+
            String fullMathString = isBlock ? '\$\$$mathContent\$\$' : '\$$mathContent\$';
            
            _cleanText += ' '; // Add space for TTS to skip it smoothly
@@ -203,6 +217,27 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.isPdfMode) {
+      List<InlineSpan> builtSpans = [];
+      for (var span in _spans) {
+        if (span is TextSpan) {
+          builtSpans.add(TextSpan(
+            text: span.text,
+            style: span.style,
+          ));
+        } else {
+          builtSpans.add(span);
+        }
+      }
+      return RichText(
+        textAlign: widget.textAlign,
+        text: TextSpan(
+          style: DefaultTextStyle.of(context).style.merge(widget.style),
+          children: builtSpans,
+        ),
+      );
+    }
+
     return ValueListenableBuilder<TtsProgress>(
       valueListenable: TTSService.instance.progress,
       builder: (context, progress, child) {

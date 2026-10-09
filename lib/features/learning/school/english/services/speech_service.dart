@@ -252,6 +252,39 @@ class SpeechService {
       await _tts!.setLanguage(chosen);
       _resolvedLanguage = chosen;
       _log('Language set successfully: "$_resolvedLanguage"');
+
+      // Attempt to force a male voice for this language
+      try {
+        final voices = await _tts!.getVoices;
+        if (voices != null) {
+          final List<Map<Object?, Object?>> voiceList = List<Map<Object?, Object?>>.from(voices);
+          
+          final localVoices = voiceList.where((v) {
+            final locale = (v['locale']?.toString() ?? '').toLowerCase();
+            return locale == chosen?.toLowerCase() || locale.replaceAll('_', '-') == chosen?.toLowerCase();
+          }).toList();
+
+          if (localVoices.isNotEmpty) {
+          // Google TTS uses 'end' and 'ene' for male en-IN voices
+          final maleVoices = localVoices.where((v) {
+            final name = (v['name']?.toString() ?? '').toLowerCase();
+            return name.contains('male') || name.contains('end-local') || name.contains('ene-local') || name.contains('end-network') || name.contains('ene-network');
+          }).toList();
+
+            final selectedVoice = maleVoices.isNotEmpty ? maleVoices.first : localVoices.first;
+            
+            final voiceMap = {
+              "name": selectedVoice['name']?.toString() ?? '',
+              "locale": selectedVoice['locale']?.toString() ?? ''
+            };
+            
+            await _tts!.setVoice(voiceMap);
+            _log('Forced male voice: ${voiceMap['name']}');
+          }
+        }
+      } catch (e) {
+        _log('Failed to force male voice: $e');
+      }
     } catch (e) {
       _log('Language detection failed: $e. Attempting blind en-US...');
       try {
@@ -276,13 +309,13 @@ class SpeechService {
       _log('setVolume error: $e');
     }
     try {
-      await _tts!.setSpeechRate(0.45);
+      await _tts!.setSpeechRate(0.42);
       _log('SpeechRate set to 0.45');
     } catch (e) {
       _log('setSpeechRate error: $e');
     }
     try {
-      await _tts!.setPitch(1.0);
+      await _tts!.setPitch(0.85);
       _log('Pitch set to 1.0');
     } catch (e) {
       _log('setPitch error: $e');
@@ -375,7 +408,7 @@ class SpeechService {
     // ALWAYS reset speech rate to default (0.45) before standard speak
     // to prevent bleed-over from speakWithSettings
     try {
-      await _tts!.setSpeechRate(0.45);
+      await _tts!.setSpeechRate(0.42);
     } catch (e) {
       _log('setSpeechRate before speak failed: $e');
     }

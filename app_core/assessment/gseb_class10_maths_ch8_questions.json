@@ -1,224 +1,982 @@
-{
-  "metadata": {
-    "id": "gseb_class10_maths_ch8_questions",
-    "title": "Chapter 8: Practice Test",
-    "title_hi": "अध्याय 8: अभ्यास टेस्ट",
-    "title_gu": "પ્રકરણ 8: પ્રેક્ટિસ ટેસ્ટ",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "GSEB/NCERT/CBSE",
-    "version": "5.0.0-COMPLETE",
-    "estimated_minutes": 100,
-    "tags": ["maths", "trigonometry", "practice", "identities"]
+[
+  {
+    "id": "C10M_CH8_EG1",
+    "question": "NCERT Example 1: Given tan A = 4/3, find the other trigonometric ratios of the angle A.",
+    "question_hi": "NCERT उदाहरण 1: यदि tan A = 4/3, तो कोण A के अन्य त्रिकोणमितीय अनुपात ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 1: જો tan A = 4/3 હોય, તો ખૂણા A ના અન્ય ત્રિકોણમિતીય ગુણોત્તરો શોધો.",
+    "options": [
+      "sin A = 4/5, cos A = 3/5, cosec A = 5/4, sec A = 5/3, cot A = 3/4",
+      "sin A = 3/5, cos A = 4/5, cosec A = 5/3, sec A = 5/4, cot A = 3/4",
+      "sin A = 4/5, cos A = 3/4, cosec A = 5/4, sec A = 4/3, cot A = 4/3",
+      "sin A = 3/4, cos A = 4/5, cosec A = 4/3, sec A = 5/4, cot A = 1"
+    ],
+    "options_hi": [
+      "sin A = 4/5, cos A = 3/5, cosec A = 5/4, sec A = 5/3, cot A = 3/4",
+      "sin A = 3/5, cos A = 4/5, cosec A = 5/3, sec A = 5/4, cot A = 3/4",
+      "sin A = 4/5, cos A = 3/4, cosec A = 5/4, sec A = 4/3, cot A = 4/3",
+      "sin A = 3/4, cos A = 4/5, cosec A = 4/3, sec A = 5/4, cot A = 1"
+    ],
+    "options_gu": [
+      "sin A = 4/5, cos A = 3/5, cosec A = 5/4, sec A = 5/3, cot A = 3/4",
+      "sin A = 3/5, cos A = 4/5, cosec A = 5/3, sec A = 5/4, cot A = 3/4",
+      "sin A = 4/5, cos A = 3/4, cosec A = 5/4, sec A = 4/3, cot A = 4/3",
+      "sin A = 3/4, cos A = 4/5, cosec A = 4/3, sec A = 5/4, cot A = 1"
+    ],
+    "correct_index": 0,
+    "explanation": "Let BC = 4k and AB = 3k. By Pythagoras theorem:\nAC = √(AB² + BC²) = √((3k)² + (4k)²) = √(9k² + 16k²) = √25k² = 5k.\nNow:\nsin A = BC/AC = 4k/5k = 4/5\ncos A = AB/AC = 3k/5k = 3/5\ncot A = 1/tan A = 3/4\ncosec A = 1/sin A = 5/4\nsec A = 1/cos A = 5/3.",
+    "explanation_hi": "माना BC = 4k और AB = 3k। पाइथागोरस प्रमेय से:\nAC = √(AB² + BC²) = √(9k² + 16k²) = √25k² = 5k।\nअतः:\nsin A = BC/AC = 4/5\ncos A = AB/AC = 3/5\ncot A = 1/tan A = 3/4\ncosec A = 1/sin A = 5/4\nsec A = 1/cos A = 5/3।",
+    "explanation_gu": "ધારો કે BC = 4k અને AB = 3k. પાયથાગોરસ પ્રમેય મુજબ:\nAC = √(AB² + BC²) = √(9k² + 16k²) = √25k² = 5k.\nઆથી:\nsin A = BC/AC = 4/5\ncos A = AB/AC = 3/5\ncot A = 1/tan A = 3/4\ncosec A = 1/sin A = 5/4\nsec A = 1/cos A = 5/3."
   },
-  "blocks": [
-    {
-      "type": "quiz",
-      "id": "CH8_EX2_Q2B",
-      "difficulty": "Intermediate",
-      "bloom": "Apply",
-      "question": "Ex 8.2 Q2(ii): Evaluate (1 - tan² 45°) / (1 + tan² 45°)",
-      "question_hi": "अभ्यास 8.2 प्र2(ii): (1 - tan² 45°) / (1 + tan² 45°) का मान ज्ञात करें।",
-      "question_gu": "ક. 8.2 Q2(ii): (1 - tan² 45°) / (1 + tan² 45°) ની કિંમત શોધો.",
-      "options": ["tan 90°", "1", "sin 45°", "0"],
-      "options_hi": ["tan 90°", "1", "sin 45°", "0"],
-      "options_gu": ["tan 90°", "1", "sin 45°", "0"],
-      "correct_index": 3,
-      "explanation": "tan 45° = 1. So, (1 - 1²) / (1 + 1²) = (1 - 1) / (1 + 1) = 0 / 2 = 0.",
-      "explanation_hi": "(1-1)/(1+1) = 0/2 = 0।",
-      "explanation_gu": "(1-1)/(1+1) = 0/2 = 0."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX2_Q2C",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.2 Q2(iii): sin 2A = 2 sin A is true when A = ?",
-      "question_hi": "अभ्यास 8.2 प्र2(iii): sin 2A = 2 sin A सत्य है जब A = ?",
-      "question_gu": "ક. 8.2 Q2(iii): sin 2A = 2 sin A સાચું છે જ્યારે A = ?",
-      "options": ["0°", "30°", "45°", "60°"],
-      "options_hi": ["0°", "30°", "45°", "60°"],
-      "options_gu": ["0°", "30°", "45°", "60°"],
-      "correct_index": 0,
-      "explanation": "If A = 0°, sin 2(0°) = sin 0° = 0. And 2 sin 0° = 2(0) = 0. They are equal. If A=30°, sin 60° (√3/2) ≠ 2 sin 30° (2×1/2=1).",
-      "explanation_hi": "A=0° पर दोनों 0 होते हैं।",
-      "explanation_gu": "A=0° પર બંને 0 થાય છે."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX2_Q2D",
-      "difficulty": "Intermediate",
-      "bloom": "Apply",
-      "question": "Ex 8.2 Q2(iv): 2 tan 30° / (1 - tan² 30°) is equal to:",
-      "question_hi": "अभ्यास 8.2 प्र2(iv): 2 tan 30° / (1 - tan² 30°) किसके बराबर है?",
-      "question_gu": "ક. 8.2 Q2(iv): 2 tan 30° / (1 - tan² 30°) કોના બરાબર છે?",
-      "options": ["cos 60°", "sin 60°", "tan 60°", "sin 30°"],
-      "options_hi": ["cos 60°", "sin 60°", "tan 60°", "sin 30°"],
-      "options_gu": ["cos 60°", "sin 60°", "tan 60°", "sin 30°"],
-      "correct_index": 2,
-      "explanation": "= [2(1/√3)] / [1 - (1/3)] = (2/√3) / (2/3) = (2/√3) × (3/2) = √3. And tan 60° = √3.",
-      "explanation_hi": "मान √3 आता है, जो tan 60° है।",
-      "explanation_gu": "કિંમત √3 મળે છે, જે tan 60° છે."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX2_Q4A",
-      "difficulty": "Advanced",
-      "bloom": "Remember",
-      "question": "Ex 8.2 Q4(i): True or False: sin (A + B) = sin A + sin B",
-      "question_hi": "अभ्यास 8.2 प्र4(i): सत्य या असत्य: sin (A + B) = sin A + sin B",
-      "question_gu": "ક. 8.2 Q4(i): સાચું કે ખોટું: sin (A + B) = sin A + sin B",
-      "options": ["False", "True"],
-      "options_hi": ["असत्य", "सत्य"],
-      "options_gu": ["ખોટું", "સાચું"],
-      "correct_index": 0,
-      "explanation": "False. For example, if A=30° and B=60°, sin (30+60) = sin 90° = 1. But sin 30° + sin 60° = 1/2 + √3/2 ≠ 1.",
-      "explanation_hi": "असत्य। sin(30+60) = 1, जबकि sin 30 + sin 60 = 1/2 + √3/2 ≠ 1।",
-      "explanation_gu": "ખોટું. sin(30+60) = 1, પણ sin 30 + sin 60 = 1/2 + √3/2 ≠ 1."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX2_Q4B",
-      "difficulty": "Intermediate",
-      "bloom": "Understand",
-      "question": "Ex 8.2 Q4(ii): True or False: The value of sin θ increases as θ increases (from 0° to 90°).",
-      "question_hi": "अभ्यास 8.2 प्र4(ii): सत्य या असत्य: θ के बढ़ने पर sin θ का मान बढ़ता है।",
-      "question_gu": "ક. 8.2 Q4(ii): સાચું કે ખોટું: θ વધવા સાથે sin θ નું મૂલ્ય વધે છે.",
-      "options": ["True", "False"],
-      "options_hi": ["सत्य", "असत्य"],
-      "options_gu": ["સાચું", "ખોટું"],
-      "correct_index": 0,
-      "explanation": "True. sin 0° = 0, sin 30° = 0.5, sin 90° = 1. The value increases from 0 to 1.",
-      "explanation_hi": "सत्य। मान 0 से 1 तक बढ़ता है।",
-      "explanation_gu": "સાચું. 0 થી 1 સુધી વધે છે."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q3A",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q3(i): Evaluate 9 sec² A - 9 tan² A",
-      "question_hi": "अभ्यास 8.3 प्र3(i): मान ज्ञात करें: 9 sec² A - 9 tan² A",
-      "question_gu": "ક. 8.3 Q3(i): કિંમત શોધો: 9 sec² A - 9 tan² A",
-      "options": ["1", "9", "8", "0"],
-      "options_hi": ["1", "9", "8", "0"],
-      "options_gu": ["1", "9", "8", "0"],
-      "correct_index": 1,
-      "explanation": "= 9 (sec² A - tan² A). Using the identity sec² A - tan² A = 1, the value is 9(1) = 9.",
-      "explanation_hi": "= 9(sec² A - tan² A) = 9(1) = 9।",
-      "explanation_gu": "= 9(sec² A - tan² A) = 9(1) = 9."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q3B",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q3(ii): Evaluate (1 + tan θ + sec θ) (1 + cot θ - cosec θ)",
-      "question_hi": "अभ्यास 8.3 प्र3(ii): मान ज्ञात करें: (1 + tan θ + sec θ) (1 + cot θ - cosec θ)",
-      "question_gu": "ક. 8.3 Q3(ii): કિંમત શોધો: (1 + tan θ + sec θ) (1 + cot θ - cosec θ)",
-      "options": ["0", "1", "2", "-1"],
-      "options_hi": ["0", "1", "2", "-1"],
-      "options_gu": ["0", "1", "2", "-1"],
-      "correct_index": 2,
-      "explanation": "Convert all to sin and cos. LHS = (1 + sin/cos + 1/cos) (1 + cos/sin - 1/sin) = [(cos+sin+1)/cos] [(sin+cos-1)/sin] = [(sin+cos)² - 1²] / (sin cos) = (sin² + cos² + 2sincos - 1) / (sincos) = (1 + 2sincos - 1) / sincos = 2.",
-      "explanation_hi": "sin और cos में बदलकर हल करने पर उत्तर 2 आता है।",
-      "explanation_gu": "sin અને cos માં ફેરવીને સાદું રૂપ આપતાં 2 મળે છે."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q3C",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q3(iii): Evaluate (sec A + tan A) (1 - sin A)",
-      "question_hi": "अभ्यास 8.3 प्र3(iii): मान ज्ञात करें: (sec A + tan A) (1 - sin A)",
-      "question_gu": "ક. 8.3 Q3(iii): કિંમત શોધો: (sec A + tan A) (1 - sin A)",
-      "options": ["sec A", "sin A", "cosec A", "cos A"],
-      "options_hi": ["sec A", "sin A", "cosec A", "cos A"],
-      "options_gu": ["sec A", "sin A", "cosec A", "cos A"],
-      "correct_index": 3,
-      "explanation": "=(1/cos A + sin A/cos A) (1 - sin A) = [(1 + sin A)/cos A] (1 - sin A) = (1 - sin² A) / cos A = (cos² A) / cos A = cos A.",
-      "explanation_hi": "(1 - sin² A) / cos A = cos² A / cos A = cos A।",
-      "explanation_gu": "(1 - sin² A) / cos A = cos² A / cos A = cos A."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q3D",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q3(iv): Evaluate (1 + tan² A) / (1 + cot² A)",
-      "question_hi": "अभ्यास 8.3 प्र3(iv): मान ज्ञात करें: (1 + tan² A) / (1 + cot² A)",
-      "question_gu": "ક. 8.3 Q3(iv): કિંમત શોધો: (1 + tan² A) / (1 + cot² A)",
-      "options": ["sec² A", "-1", "cot² A", "tan² A"],
-      "options_hi": ["sec² A", "-1", "cot² A", "tan² A"],
-      "options_gu": ["sec² A", "-1", "cot² A", "tan² A"],
-      "correct_index": 3,
-      "explanation": "1 + tan² A = sec² A. 1 + cot² A = cosec² A. So sec² A / cosec² A = (1/cos² A) / (1/sin² A) = sin² A / cos² A = tan² A.",
-      "explanation_hi": "sec² A / cosec² A = sin² A / cos² A = tan² A।",
-      "explanation_gu": "sec² A / cosec² A = sin² A / cos² A = tan² A."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q4_A",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q4(i): Prove identity: (cosec θ - cot θ)² is equal to which of the following?",
-      "question_hi": "अभ्यास 8.3 प्र4(i): सिद्ध करें: (cosec θ - cot θ)² किसके बराबर है?",
-      "question_gu": "ક. 8.3 Q4(i): સાબિત કરો: (cosec θ - cot θ)² કોના બરાબર છે?",
-      "options": ["(1 - cos θ) / (1 + cos θ)", "(1 + cos θ) / (1 - cos θ)", "sin² θ / (1 + cos θ)", "1 / (1 + cos θ)"],
-      "options_hi": ["(1 - cos θ) / (1 + cos θ)", "(1 + cos θ) / (1 - cos θ)", "sin² θ / (1 + cos θ)", "1 / (1 + cos θ)"],
-      "options_gu": ["(1 - cos θ) / (1 + cos θ)", "(1 + cos θ) / (1 - cos θ)", "sin² θ / (1 + cos θ)", "1 / (1 + cos θ)"],
-      "correct_index": 0,
-      "explanation": "(1/sin θ - cos θ/sin θ)² = ((1 - cos θ)/sin θ)² = (1 - cos θ)² / sin² θ = (1 - cos θ)² / (1 - cos² θ) = (1 - cos θ)² / [(1 - cos θ)(1 + cos θ)] = (1 - cos θ) / (1 + cos θ).",
-      "explanation_hi": "(1 - cos θ)² / (1 - cos² θ) = (1 - cos θ)/(1 + cos θ)।",
-      "explanation_gu": "(1 - cos θ)² / (1 - cos² θ) = (1 - cos θ)/(1 + cos θ)."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q4_B",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q4(ii): Simplify [cos A / (1 + sin A)] + [(1 + sin A) / cos A]",
-      "question_hi": "अभ्यास 8.3 प्र4(ii): सरल करें: [cos A / (1 + sin A)] + [(1 + sin A) / cos A]",
-      "question_gu": "ક. 8.3 Q4(ii): સાદું રૂપ આપો: [cos A / (1 + sin A)] + [(1 + sin A) / cos A]",
-      "options": ["2 sec A", "2 cos A", "2 cosec A", "sec A + tan A"],
-      "options_hi": ["2 sec A", "2 cos A", "2 cosec A", "sec A + tan A"],
-      "options_gu": ["2 sec A", "2 cos A", "2 cosec A", "sec A + tan A"],
-      "correct_index": 0,
-      "explanation": "LCM = cos A (1 + sin A). Numerator = cos² A + (1 + sin A)² = cos² A + 1 + sin² A + 2 sin A = 1 + 1 + 2 sin A = 2 + 2 sin A = 2(1 + sin A). Fraction = 2(1 + sin A) / [cos A(1 + sin A)] = 2/cos A = 2 sec A.",
-      "explanation_hi": "अंश = 2(1+sin A)। परिणाम = 2/cos A = 2 sec A।",
-      "explanation_gu": "અંશ = 2(1+sin A). પરિણામ = 2/cos A = 2 sec A."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q4_C",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q4(vi): Simplify √[ (1 + sin A) / (1 - sin A) ]",
-      "question_hi": "अभ्यास 8.3 प्र4(vi): सरल करें: √[ (1 + sin A) / (1 - sin A) ]",
-      "question_gu": "ક. 8.3 Q4(vi): સાદું રૂપ આપો: √[ (1 + sin A) / (1 - sin A) ]",
-      "options": ["sec A + tan A", "sec A - tan A", "cosec A + cot A", "cos A + sin A"],
-      "options_hi": ["sec A + tan A", "sec A - tan A", "cosec A + cot A", "cos A + sin A"],
-      "options_gu": ["sec A + tan A", "sec A - tan A", "cosec A + cot A", "cos A + sin A"],
-      "correct_index": 0,
-      "explanation": "Multiply numerator and denominator inside root by (1+sin A). Root of [(1+sin A)² / (1-sin² A)] = (1+sin A) / √cos² A = (1+sin A) / cos A = 1/cos A + sin A/cos A = sec A + tan A.",
-      "explanation_hi": "रूट के अंदर (1+sin A) से गुणा करें। (1+sin A)/cos A = sec A + tan A।",
-      "explanation_gu": "વર્ગમૂળમાં (1+sin A) વડે ગુણો. (1+sin A)/cos A = sec A + tan A."
-    },
-    {
-      "type": "quiz",
-      "id": "CH8_EX3_Q4_D",
-      "difficulty": "Advanced",
-      "bloom": "Apply",
-      "question": "Ex 8.3 Q4(viii): Simplify (sin A + cosec A)² + (cos A + sec A)²",
-      "question_hi": "अभ्यास 8.3 प्र4(viii): सरल करें: (sin A + cosec A)² + (cos A + sec A)²",
-      "question_gu": "ક. 8.3 Q4(viii): સાદું રૂપ આપો: (sin A + cosec A)² + (cos A + sec A)²",
-      "options": ["7 + tan² A + cot² A", "5 + tan² A + cot² A", "7 + sec² A + cosec² A", "9"],
-      "options_hi": ["7 + tan² A + cot² A", "5 + tan² A + cot² A", "7 + sec² A + cosec² A", "9"],
-      "options_gu": ["7 + tan² A + cot² A", "5 + tan² A + cot² A", "7 + sec² A + cosec² A", "9"],
-      "correct_index": 0,
-      "explanation": "Expand: (sin² A + cosec² A + 2) + (cos² A + sec² A + 2) = (sin² A + cos² A) + 4 + cosec² A + sec² A = 1 + 4 + (1 + cot² A) + (1 + tan² A) = 7 + tan² A + cot² A.",
-      "explanation_hi": "1 + 4 + (1+cot² A) + (1+tan² A) = 7 + tan² A + cot² A।",
-      "explanation_gu": "1 + 4 + (1+cot² A) + (1+tan² A) = 7 + tan² A + cot² A."
-    }
-  ]
-}
+  {
+    "id": "C10M_CH8_EG3",
+    "question": "NCERT Example 3: Consider △ACB, right-angled at C, in which AB = 29 units, BC = 21 units and ∠ABC = θ. Determine the value of (i) cos²θ + sin²θ and (ii) cos²θ - sin²θ.",
+    "question_hi": "NCERT उदाहरण 3: △ACB लीजिए जिसका कोण C समकोण है, जिसमें AB = 29 इकाई, BC = 21 इकाई और ∠ABC = θ है। (i) cos²θ + sin²θ और (ii) cos²θ - sin²θ का मान ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 3: △ACB ધ્યાનમાં લો, જ્યાં ખૂણો C કાટખૂણો છે, જેમાં AB = 29 એકમ, BC = 21 એકમ અને ∠ABC = θ છે. (i) cos²θ + sin²θ અને (ii) cos²θ - sin²θ નું મૂલ્ય શોધો.",
+    "options": [
+      "(i) 1, (ii) 41/841",
+      "(i) 1, (ii) 21/29",
+      "(i) 2, (ii) 40/841",
+      "(i) 1, (ii) 400/841"
+    ],
+    "options_hi": [
+      "(i) 1, (ii) 41/841",
+      "(i) 1, (ii) 21/29",
+      "(i) 2, (ii) 40/841",
+      "(i) 1, (ii) 400/841"
+    ],
+    "options_gu": [
+      "(i) 1, (ii) 41/841",
+      "(i) 1, (ii) 21/29",
+      "(i) 2, (ii) 40/841",
+      "(i) 1, (ii) 400/841"
+    ],
+    "correct_index": 0,
+    "explanation": "In right △ACB, AC = √(AB² - BC²) = √(29² - 21²) = √(841 - 441) = √400 = 20 units.\nTherefore, sin θ = AC/AB = 20/29 and cos θ = BC/AB = 21/29.\n(i) cos²θ + sin²θ = (21/29)² + (20/29)² = (441 + 400)/841 = 841/841 = 1.\n(ii) cos²θ - sin²θ = (21/29)² - (20/29)² = (441 - 400)/841 = 41/841.",
+    "explanation_hi": "समकोण △ACB में, AC = √(AB² - BC²) = √(841 - 441) = √400 = 20 इकाई।\nअतः sin θ = 20/29 और cos θ = 21/29।\n(i) cos²θ + sin²θ = (21/29)² + (20/29)² = (441 + 400)/841 = 841/841 = 1।\n(ii) cos²θ - sin²θ = 441/841 - 400/841 = 41/841।",
+    "explanation_gu": "કાટકોણ △ACB માં, AC = √(AB² - BC²) = √(841 - 441) = √400 = 20 એકમ.\nતેથી sin θ = 20/29 અને cos θ = 21/29.\n(i) cos²θ + sin²θ = (21/29)² + (20/29)² = 841/841 = 1.\n(ii) cos²θ - sin²θ = (441 - 400)/841 = 41/841."
+  },
+  {
+    "id": "C10M_CH8_EG4",
+    "question": "NCERT Example 4: In a right triangle ABC, right-angled at B, if tan A = 1, verify that 2 sin A cos A = 1.",
+    "question_hi": "NCERT उदाहरण 4: एक समकोण त्रिभुज ABC में जिसका कोण B समकोण है, यदि tan A = 1, तो सत्यापित कीजिए कि 2 sin A cos A = 1।",
+    "question_gu": "NCERT ઉદાહરણ 4: કાટકોણ ત્રિકોણ ABC માં, જ્યાં ખૂણો B કાટખૂણો છે, જો tan A = 1 હોય, તો ચકાસો કે 2 sin A cos A = 1.",
+    "options": [
+      "Verified: sin A = 1/√2, cos A = 1/√2, so 2(1/√2)(1/√2) = 1",
+      "False: 2 sin A cos A = 2",
+      "False: 2 sin A cos A = 1/2",
+      "Cannot be verified without side lengths"
+    ],
+    "options_hi": [
+      "सत्यापित: sin A = 1/√2, cos A = 1/√2, अतः 2(1/√2)(1/√2) = 1",
+      "असत्य: 2 sin A cos A = 2",
+      "असत्य: 2 sin A cos A = 1/2",
+      "भुजाओं की लंबाई के बिना सत्यापित नहीं किया जा सकता"
+    ],
+    "options_gu": [
+      "ચકાસાયેલ: sin A = 1/√2, cos A = 1/√2, તેથી 2(1/√2)(1/√2) = 1",
+      "ખોટું: 2 sin A cos A = 2",
+      "ખોટું: 2 sin A cos A = 1/2",
+      "બાજુઓની લંબાઈ વગર ચકાસી શકાતું નથી"
+    ],
+    "correct_index": 0,
+    "explanation": "tan A = BC/AB = 1 ⇒ BC = AB = k.\nBy Pythagoras theorem, AC = √(AB² + BC²) = √(k² + k²) = k√2.\nSo sin A = BC/AC = k/(k√2) = 1/√2 and cos A = AB/AC = 1/√2.\nTherefore, 2 sin A cos A = 2 × (1/√2) × (1/√2) = 2 × (1/2) = 1. Verified!",
+    "explanation_hi": "tan A = BC/AB = 1 ⇒ BC = AB = k।\nपाइथागोरस प्रमेय से, AC = √(k² + k²) = k√2।\nअतः sin A = 1/√2 तथा cos A = 1/√2।\nइसलिए 2 sin A cos A = 2 × (1/√2) × (1/√2) = 1। सत्यापित!",
+    "explanation_gu": "tan A = BC/AB = 1 ⇒ BC = AB = k.\nપાયથાગોરસ પ્રમેય મુજબ, AC = √(k² + k²) = k√2.\nતેથી sin A = 1/√2 અને cos A = 1/√2.\nઆથી 2 sin A cos A = 2 × (1/√2) × (1/√2) = 1. ચકાસાયેલ!"
+  },
+  {
+    "id": "C10M_CH8_EG5",
+    "question": "NCERT Example 5: In △OPQ, right-angled at P, OP = 7 cm and OQ - PQ = 1 cm. Determine the values of sin Q and cos Q.",
+    "question_hi": "NCERT उदाहरण 5: △OPQ में जिसका कोण P समकोण है, OP = 7 सेमी और OQ - PQ = 1 सेमी। sin Q और cos Q का मान ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 5: △OPQ માં, જ્યાં ખૂણો P કાટખૂણો છે, OP = 7 સેમી અને OQ - PQ = 1 સેમી છે. sin Q અને cos Q નું મૂલ્ય શોધો.",
+    "options": [
+      "sin Q = 7/25, cos Q = 24/25",
+      "sin Q = 24/25, cos Q = 7/25",
+      "sin Q = 7/24, cos Q = 24/7",
+      "sin Q = 1/25, cos Q = 7/25"
+    ],
+    "options_hi": [
+      "sin Q = 7/25, cos Q = 24/25",
+      "sin Q = 24/25, cos Q = 7/25",
+      "sin Q = 7/24, cos Q = 24/7",
+      "sin Q = 1/25, cos Q = 7/25"
+    ],
+    "options_gu": [
+      "sin Q = 7/25, cos Q = 24/25",
+      "sin Q = 24/25, cos Q = 7/25",
+      "sin Q = 7/24, cos Q = 24/7",
+      "sin Q = 1/25, cos Q = 7/25"
+    ],
+    "correct_index": 0,
+    "explanation": "In right △OPQ, OQ² = OP² + PQ².\nSince OQ = 1 + PQ, we have:\n(1 + PQ)² = OP² + PQ²\n1 + 2PQ + PQ² = 7² + PQ²\n1 + 2PQ = 49 ⇒ 2PQ = 48 ⇒ PQ = 24 cm.\nOQ = 1 + 24 = 25 cm.\nFor angle Q: opposite side = OP = 7 cm, adjacent = PQ = 24 cm, hypotenuse = OQ = 25 cm.\nThus, sin Q = OP/OQ = 7/25, cos Q = PQ/OQ = 24/25.",
+    "explanation_hi": "समकोण △OPQ में, OQ² = OP² + PQ²।\nचूँकि OQ = 1 + PQ:\n(1 + PQ)² = 7² + PQ²\n1 + 2PQ + PQ² = 49 + PQ²\n2PQ = 48 ⇒ PQ = 24 सेमी।\nOQ = 1 + 24 = 25 सेमी।\nअतः sin Q = OP/OQ = 7/25 और cos Q = PQ/OQ = 24/25।",
+    "explanation_gu": "કાટકોણ △OPQ માં, OQ² = OP² + PQ².\nOQ = 1 + PQ હોવાથી:\n(1 + PQ)² = 7² + PQ²\n1 + 2PQ + PQ² = 49 + PQ²\n2PQ = 48 ⇒ PQ = 24 સેમી.\nOQ = 1 + 24 = 25 સેમી.\nઆથી sin Q = OP/OQ = 7/25 અને cos Q = PQ/OQ = 24/25."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q1",
+    "question": "Exercise 8.1 Q1: In △ABC, right-angled at B, AB = 24 cm, BC = 7 cm. Determine: (i) sin A, cos A, (ii) sin C, cos C.",
+    "question_hi": "प्रश्नावली 8.1 Q1: △ABC में जिसका कोण B समकोण है, AB = 24 सेमी और BC = 7 सेमी है। निम्नलिखित का मान ज्ञात कीजिए: (i) sin A, cos A, (ii) sin C, cos C।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q1: △ABC માં, ખૂણો B કાટખૂણો છે, AB = 24 સેમી, BC = 7 સેમી છે. નીચેનાના મૂલ્યો શોધો: (i) sin A, cos A, (ii) sin C, cos C.",
+    "options": [
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 24/25, cos C = 7/25",
+      "(i) sin A = 24/25, cos A = 7/25; (ii) sin C = 7/25, cos C = 24/25",
+      "(i) sin A = 7/24, cos A = 24/7; (ii) sin C = 24/7, cos C = 7/24",
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 7/25, cos C = 24/25"
+    ],
+    "options_hi": [
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 24/25, cos C = 7/25",
+      "(i) sin A = 24/25, cos A = 7/25; (ii) sin C = 7/25, cos C = 24/25",
+      "(i) sin A = 7/24, cos A = 24/7; (ii) sin C = 24/7, cos C = 7/24",
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 7/25, cos C = 24/25"
+    ],
+    "options_gu": [
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 24/25, cos C = 7/25",
+      "(i) sin A = 24/25, cos A = 7/25; (ii) sin C = 7/25, cos C = 24/25",
+      "(i) sin A = 7/24, cos A = 24/7; (ii) sin C = 24/7, cos C = 7/24",
+      "(i) sin A = 7/25, cos A = 24/25; (ii) sin C = 7/25, cos C = 24/25"
+    ],
+    "correct_index": 0,
+    "explanation": "By Pythagoras theorem, AC = √(AB² + BC²) = √(24² + 7²) = √(576 + 49) = √625 = 25 cm.\n(i) For angle A: Opposite side = BC = 7 cm, Adjacent side = AB = 24 cm, Hypotenuse = AC = 25 cm.\nsin A = BC/AC = 7/25, cos A = AB/AC = 24/25.\n(ii) For angle C: Opposite side = AB = 24 cm, Adjacent side = BC = 7 cm, Hypotenuse = AC = 25 cm.\nsin C = AB/AC = 24/25, cos C = BC/AC = 7/25.",
+    "explanation_hi": "पाइथागोरस प्रमेय से, AC = √(24² + 7²) = √625 = 25 सेमी।\n(i) कोण A के लिए: सम्मुख भुजा = BC = 7, संलग्न भुजा = AB = 24, कर्ण = 25।\nsin A = 7/25, cos A = 24/25।\n(ii) कोण C के लिए: सम्मुख भुजा = AB = 24, संलग्न भुजा = BC = 7, कर्ण = 25।\nsin C = 24/25, cos C = 7/25।",
+    "explanation_gu": "પાયથાગોરસ પ્રમેય મુજબ, AC = √(24² + 7²) = √625 = 25 સેમી.\n(i) ખૂણા A માટે: સામેની બાજુ = BC = 7, પાસેની બાજુ = AB = 24, કર્ણ = 25.\nsin A = 7/25, cos A = 24/25.\n(ii) ખૂણા C માટે: સામેની બાજુ = AB = 24, પાસેની બાજુ = BC = 7, કર્ણ = 25.\nsin C = 24/25, cos C = 7/25."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q2",
+    "question": "Exercise 8.1 Q2: In right triangle PQR right-angled at Q, PQ = 12 cm and PR = 13 cm. Find tan P - cot R.",
+    "question_hi": "प्रश्नावली 8.1 Q2: समकोण त्रिभुज PQR में जिसका कोण Q समकोण है, PQ = 12 सेमी और PR = 13 सेमी है। tan P - cot R का मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q2: કાટકોણ ત્રિકોણ PQR માં ખૂણો Q કાટખૂણો છે, PQ = 12 સેમી અને PR = 13 સેમી છે. tan P - cot R નું મૂલ્ય શોધો.",
+    "options": [
+      "0",
+      "1",
+      "5/12",
+      "-5/12"
+    ],
+    "options_hi": [
+      "0",
+      "1",
+      "5/12",
+      "-5/12"
+    ],
+    "options_gu": [
+      "0",
+      "1",
+      "5/12",
+      "-5/12"
+    ],
+    "correct_index": 0,
+    "explanation": "By Pythagoras theorem in right △PQR:\nQR = √(PR² - PQ²) = √(13² - 12²) = √(169 - 144) = √25 = 5 cm.\nFor angle P: tan P = Opposite/Adjacent = QR/PQ = 5/12.\nFor angle R: cot R = Adjacent/Opposite = QR/PQ = 5/12.\nTherefore, tan P - cot R = 5/12 - 5/12 = 0.",
+    "explanation_hi": "पाइथागोरस प्रमेय से, QR = √(13² - 12²) = √25 = 5 सेमी।\nकोण P के लिए: tan P = QR/PQ = 5/12।\nकोण R के लिए: cot R = QR/PQ = 5/12।\nअतः tan P - cot R = 5/12 - 5/12 = 0।",
+    "explanation_gu": "પાયથાગોરસ પ્રમેય મુજબ, QR = √(13² - 12²) = √25 = 5 સેમી.\nખૂણા P માટે: tan P = QR/PQ = 5/12.\nખૂણા R માટે: cot R = QR/PQ = 5/12.\nતેથી, tan P - cot R = 5/12 - 5/12 = 0."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q3",
+    "question": "Exercise 8.1 Q3: If sin A = 3/4, calculate cos A and tan A.",
+    "question_hi": "प्रश्नावली 8.1 Q3: यदि sin A = 3/4, तो cos A और tan A का मान परिकलित कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q3: જો sin A = 3/4 હોય, તો cos A અને tan A ની ગણતરી કરો.",
+    "options": [
+      "cos A = √7/4, tan A = 3/√7",
+      "cos A = 4/√7, tan A = √7/3",
+      "cos A = 3/5, tan A = 4/5",
+      "cos A = √7/3, tan A = 3/4"
+    ],
+    "options_hi": [
+      "cos A = √7/4, tan A = 3/√7",
+      "cos A = 4/√7, tan A = √7/3",
+      "cos A = 3/5, tan A = 4/5",
+      "cos A = √7/3, tan A = 3/4"
+    ],
+    "options_gu": [
+      "cos A = √7/4, tan A = 3/√7",
+      "cos A = 4/√7, tan A = √7/3",
+      "cos A = 3/5, tan A = 4/5",
+      "cos A = √7/3, tan A = 3/4"
+    ],
+    "correct_index": 0,
+    "explanation": "sin A = Opposite/Hypotenuse = 3/4. Let opposite = 3k, hypotenuse = 4k.\nBy Pythagoras theorem, Adjacent = √((4k)² - (3k)²) = √(16k² - 9k²) = k√7.\ncos A = Adjacent/Hypotenuse = k√7 / 4k = √7/4.\ntan A = Opposite/Adjacent = 3k / k√7 = 3/√7.",
+    "explanation_hi": "sin A = लंब/कर्ण = 3/4। माना लंब = 3k, कर्ण = 4k।\nपाइथागोरस प्रमेय से, आधार = √(16k² - 9k²) = k√7।\ncos A = आधार/कर्ण = √7/4।\ntan A = लंब/आधार = 3/√7।",
+    "explanation_gu": "sin A = સામેની બાજુ/કર્ણ = 3/4. ધારો કે સામેની બાજુ = 3k, કર્ણ = 4k.\nપાયથાગોરસ પ્રમેય મુજબ, પાસેની બાજુ = √(16k² - 9k²) = k√7.\ncos A = પાસેની બાજુ/કર્ણ = √7/4.\ntan A = સામેની બાજુ/પાસેની બાજુ = 3/√7."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q4",
+    "question": "Exercise 8.1 Q4: Given 15 cot A = 8, find sin A and sec A.",
+    "question_hi": "प्रश्नावली 8.1 Q4: यदि 15 cot A = 8 हो, तो sin A और sec A का मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q4: આપેલ છે કે 15 cot A = 8, તો sin A અને sec A શોધો.",
+    "options": [
+      "sin A = 15/17, sec A = 17/8",
+      "sin A = 8/17, sec A = 15/8",
+      "sin A = 15/8, sec A = 17/15",
+      "sin A = 17/15, sec A = 8/17"
+    ],
+    "options_hi": [
+      "sin A = 15/17, sec A = 17/8",
+      "sin A = 8/17, sec A = 15/8",
+      "sin A = 15/8, sec A = 17/15",
+      "sin A = 17/15, sec A = 8/17"
+    ],
+    "options_gu": [
+      "sin A = 15/17, sec A = 17/8",
+      "sin A = 8/17, sec A = 15/8",
+      "sin A = 15/8, sec A = 17/15",
+      "sin A = 17/15, sec A = 8/17"
+    ],
+    "correct_index": 0,
+    "explanation": "15 cot A = 8 ⇒ cot A = 8/15.\ncot A = Adjacent/Opposite ⇒ Adjacent = 8k, Opposite = 15k.\nHypotenuse = √((8k)² + (15k)²) = √(64k² + 225k²) = √289k² = 17k.\nsin A = Opposite/Hypotenuse = 15k/17k = 15/17.\nsec A = Hypotenuse/Adjacent = 17k/8k = 17/8.",
+    "explanation_hi": "15 cot A = 8 ⇒ cot A = 8/15 = आधार/लंब।\nकर्ण = √(8² + 15²) = √(64 + 225) = √289 = 17k।\nsin A = लंब/कर्ण = 15/17।\nsec A = कर्ण/आधार = 17/8।",
+    "explanation_gu": "15 cot A = 8 ⇒ cot A = 8/15 = પાસેની બાજુ/સામેની બાજુ.\nકર્ણ = √(8² + 15²) = √289 = 17k.\nsin A = સામેની બાજુ/કર્ણ = 15/17.\nsec A = કર્ણ/પાસેની બાજુ = 17/8."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q5",
+    "question": "Exercise 8.1 Q5: Given sec θ = 13/12, calculate all other trigonometric ratios.",
+    "question_hi": "प्रश्नावली 8.1 Q5: यदि sec θ = 13/12 हो, तो अन्य सभी त्रिकोणमितीय अनुपात परिकलित कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q5: આપેલ છે કે sec θ = 13/12, તો અન્ય તમામ ત્રિકોણમિતીય ગુણોત્તરો શોધો.",
+    "options": [
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, cosec θ = 13/5, cot θ = 12/5",
+      "sin θ = 12/13, cos θ = 5/13, tan θ = 12/5, cosec θ = 13/12, cot θ = 5/12",
+      "sin θ = 5/12, cos θ = 13/12, tan θ = 5/13, cosec θ = 12/5, cot θ = 13/5",
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 12/5, cosec θ = 5/13, cot θ = 5/12"
+    ],
+    "options_hi": [
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, cosec θ = 13/5, cot θ = 12/5",
+      "sin θ = 12/13, cos θ = 5/13, tan θ = 12/5, cosec θ = 13/12, cot θ = 5/12",
+      "sin θ = 5/12, cos θ = 13/12, tan θ = 5/13, cosec θ = 12/5, cot θ = 13/5",
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 12/5, cosec θ = 5/13, cot θ = 5/12"
+    ],
+    "options_gu": [
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, cosec θ = 13/5, cot θ = 12/5",
+      "sin θ = 12/13, cos θ = 5/13, tan θ = 12/5, cosec θ = 13/12, cot θ = 5/12",
+      "sin θ = 5/12, cos θ = 13/12, tan θ = 5/13, cosec θ = 12/5, cot θ = 13/5",
+      "sin θ = 5/13, cos θ = 12/13, tan θ = 12/5, cosec θ = 5/13, cot θ = 5/12"
+    ],
+    "correct_index": 0,
+    "explanation": "sec θ = Hypotenuse/Adjacent = 13/12. Let Hypotenuse = 13k, Adjacent = 12k.\nOpposite = √((13k)² - (12k)²) = √(169k² - 144k²) = √25k² = 5k.\nTherefore:\nsin θ = 5/13, cos θ = 1/sec θ = 12/13, tan θ = 5/12,\ncosec θ = 1/sin θ = 13/5, cot θ = 1/tan θ = 12/5.",
+    "explanation_hi": "sec θ = कर्ण/आधार = 13/12। लंब = √(13² - 12²) = √25 = 5k।\nअतः sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, cosec θ = 13/5, cot θ = 12/5।",
+    "explanation_gu": "sec θ = કર્ણ/પાસેની બાજુ = 13/12. સામેની બાજુ = √(13² - 12²) = √25 = 5k.\nતેથી sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, cosec θ = 13/5, cot θ = 12/5."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q7",
+    "question": "Exercise 8.1 Q7: If cot θ = 7/8, evaluate: (i) (1 + sin θ)(1 - sin θ) / [(1 + cos θ)(1 - cos θ)], (ii) cot²θ.",
+    "question_hi": "प्रश्नावली 8.1 Q7: यदि cot θ = 7/8, तो मान निकालिए: (i) (1 + sin θ)(1 - sin θ) / [(1 + cos θ)(1 - cos θ)], (ii) cot²θ।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q7: જો cot θ = 7/8 હોય, તો મૂલ્ય શોધો: (i) (1 + sin θ)(1 - sin θ) / [(1 + cos θ)(1 - cos θ)], (ii) cot²θ.",
+    "options": [
+      "(i) 49/64, (ii) 49/64",
+      "(i) 64/49, (ii) 64/49",
+      "(i) 7/8, (ii) 49/64",
+      "(i) 1, (ii) 49/64"
+    ],
+    "options_hi": [
+      "(i) 49/64, (ii) 49/64",
+      "(i) 64/49, (ii) 64/49",
+      "(i) 7/8, (ii) 49/64",
+      "(i) 1, (ii) 49/64"
+    ],
+    "options_gu": [
+      "(i) 49/64, (ii) 49/64",
+      "(i) 64/49, (ii) 64/49",
+      "(i) 7/8, (ii) 49/64",
+      "(i) 1, (ii) 49/64"
+    ],
+    "correct_index": 0,
+    "explanation": "Using algebraic identity (a + b)(a - b) = a² - b²:\n(1 + sin θ)(1 - sin θ) / [(1 + cos θ)(1 - cos θ)] = (1 - sin²θ) / (1 - cos²θ).\nSince 1 - sin²θ = cos²θ and 1 - cos²θ = sin²θ:\ncos²θ / sin²θ = (cos θ / sin θ)² = cot²θ = (7/8)² = 49/64.\n(ii) cot²θ = (7/8)² = 49/64. Both answers are 49/64!",
+    "explanation_hi": "बीजगणितीय सर्वसमिका (a + b)(a - b) = a² - b² का उपयोग करने पर:\n(1 - sin²θ)/(1 - cos²θ) = cos²θ/sin²θ = cot²θ = (7/8)² = 49/64।\n(ii) cot²θ = (7/8)² = 49/64। दोनों भागों का मान 49/64 है!",
+    "explanation_gu": "બીજગણિતીય નિત્યસમ (a + b)(a - b) = a² - b² નો ઉપયોગ કરતાં:\n(1 - sin²θ)/(1 - cos²θ) = cos²θ/sin²θ = cot²θ = (7/8)² = 49/64.\n(ii) cot²θ = (7/8)² = 49/64. બંને જવાબો 49/64 આવે છે!"
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q8",
+    "question": "Exercise 8.1 Q8: If 3 cot A = 4, check whether (1 - tan²A)/(1 + tan²A) = cos²A - sin²A or not.",
+    "question_hi": "प्रश्नावली 8.1 Q8: यदि 3 cot A = 4, तो जाँच कीजिए कि (1 - tan²A)/(1 + tan²A) = cos²A - sin²A है या नहीं।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q8: જો 3 cot A = 4 હોય, તો ચકાસો કે (1 - tan²A)/(1 + tan²A) = cos²A - sin²A છે કે નહીં.",
+    "options": [
+      "Yes, both sides equal 7/25",
+      "No, LHS = 7/25 and RHS = 1",
+      "No, LHS = 16/25 and RHS = 7/25",
+      "Yes, both sides equal 25/7"
+    ],
+    "options_hi": [
+      "हाँ, दोनों पक्ष 7/25 के बराबर हैं",
+      "नहीं, LHS = 7/25 और RHS = 1",
+      "नहीं, LHS = 16/25 और RHS = 7/25",
+      "हाँ, दोनों पक्ष 25/7 के बराबर हैं"
+    ],
+    "options_gu": [
+      "હા, બંને બાજુ 7/25 બરાબર છે",
+      "ના, ડા.બા. = 7/25 અને જ.બા. = 1",
+      "ના, ડા.બા. = 16/25 અને જ.બા. = 7/25",
+      "હા, બંને બાજુ 25/7 બરાબર છે"
+    ],
+    "correct_index": 0,
+    "explanation": "3 cot A = 4 ⇒ cot A = 4/3 ⇒ tan A = 3/4.\nIn right triangle, Adjacent = 4, Opposite = 3, Hypotenuse = √(4² + 3²) = 5.\ncos A = 4/5, sin A = 3/5.\nLHS = [1 - (3/4)²] / [1 + (3/4)²] = [1 - 9/16] / [1 + 9/16] = (7/16) / (25/16) = 7/25.\nRHS = cos²A - sin²A = (4/5)² - (3/5)² = 16/25 - 9/25 = 7/25.\nSince LHS = RHS = 7/25, they are equal!",
+    "explanation_hi": "3 cot A = 4 ⇒ cot A = 4/3 ⇒ tan A = 3/4।\nआधार = 4, लंब = 3, कर्ण = 5।\ncos A = 4/5, sin A = 3/5।\nLHS = (1 - 9/16)/(1 + 9/16) = (7/16)/(25/16) = 7/25।\nRHS = cos²A - sin²A = 16/25 - 9/25 = 7/25।\nचूँकि LHS = RHS = 7/25, अतः दोनों पक्ष बराबर हैं!",
+    "explanation_gu": "3 cot A = 4 ⇒ cot A = 4/3 ⇒ tan A = 3/4.\nપાસેની બાજુ = 4, સામેની બાજુ = 3, કર્ણ = 5.\ncos A = 4/5, sin A = 3/5.\nડા.બા. = (1 - 9/16)/(1 + 9/16) = 7/25.\nજ.બા. = 16/25 - 9/25 = 7/25.\nડા.બા. = જ.બા. = 7/25 હોવાથી બંને સમાન છે!"
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q9",
+    "question": "Exercise 8.1 Q9: In △ABC, right-angled at B, if tan A = 1/√3, find the values of: (i) sin A cos C + cos A sin C, (ii) cos A cos C - sin A sin C.",
+    "question_hi": "प्रश्नावली 8.1 Q9: △ABC में जिसका कोण B समकोण है, यदि tan A = 1/√3, तो मान ज्ञात कीजिए: (i) sin A cos C + cos A sin C, (ii) cos A cos C - sin A sin C।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q9: △ABC માં ખૂણો B કાટખૂણો છે, જો tan A = 1/√3 હોય, તો મૂલ્ય શોધો: (i) sin A cos C + cos A sin C, (ii) cos A cos C - sin A sin C.",
+    "options": [
+      "(i) 1, (ii) 0",
+      "(i) 0, (ii) 1",
+      "(i) 1/2, (ii) √3/2",
+      "(i) 1, (ii) -1"
+    ],
+    "options_hi": [
+      "(i) 1, (ii) 0",
+      "(i) 0, (ii) 1",
+      "(i) 1/2, (ii) √3/2",
+      "(i) 1, (ii) -1"
+    ],
+    "options_gu": [
+      "(i) 1, (ii) 0",
+      "(i) 0, (ii) 1",
+      "(i) 1/2, (ii) √3/2",
+      "(i) 1, (ii) -1"
+    ],
+    "correct_index": 0,
+    "explanation": "tan A = BC/AB = 1/√3. Let BC = 1k, AB = √3k.\nAC = √(BC² + AB²) = √(1k² + 3k²) = √4k² = 2k.\nFor angle A: sin A = 1/2, cos A = √3/2.\nFor angle C: sin C = AB/AC = √3/2, cos C = BC/AC = 1/2.\n(i) sin A cos C + cos A sin C = (1/2)(1/2) + (√3/2)(√3/2) = 1/4 + 3/4 = 4/4 = 1.\n(ii) cos A cos C - sin A sin C = (√3/2)(1/2) - (1/2)(√3/2) = √3/4 - √3/4 = 0.",
+    "explanation_hi": "tan A = 1/√3 ⇒ BC = 1k, AB = √3k, AC = 2k।\nsin A = 1/2, cos A = √3/2।\nsin C = √3/2, cos C = 1/2।\n(i) (1/2)(1/2) + (√3/2)(√3/2) = 1/4 + 3/4 = 1।\n(ii) (√3/2)(1/2) - (1/2)(√3/2) = √3/4 - √3/4 = 0।",
+    "explanation_gu": "tan A = 1/√3 ⇒ BC = 1k, AB = √3k, AC = 2k.\nsin A = 1/2, cos A = √3/2.\nsin C = √3/2, cos C = 1/2.\n(i) (1/2)(1/2) + (√3/2)(√3/2) = 1/4 + 3/4 = 1.\n(ii) (√3/2)(1/2) - (1/2)(√3/2) = √3/4 - √3/4 = 0."
+  },
+  {
+    "id": "C10M_CH8_EX8.1_Q10",
+    "question": "Exercise 8.1 Q10: In △PQR, right-angled at Q, PR + QR = 25 cm and PQ = 5 cm. Determine the values of sin P, cos P and tan P.",
+    "question_hi": "प्रश्नावली 8.1 Q10: △PQR में जिसका कोण Q समकोण है, PR + QR = 25 सेमी और PQ = 5 सेमी है। sin P, cos P और tan P के मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.1 Q10: △PQR માં ખૂણો Q કાટખૂણો છે, PR + QR = 25 સેમી અને PQ = 5 સેમી છે. sin P, cos P અને tan P ના મૂલ્યો શોધો.",
+    "options": [
+      "sin P = 12/13, cos P = 5/13, tan P = 12/5",
+      "sin P = 5/13, cos P = 12/13, tan P = 5/12",
+      "sin P = 12/25, cos P = 5/25, tan P = 12/5",
+      "sin P = 7/25, cos P = 24/25, tan P = 7/24"
+    ],
+    "options_hi": [
+      "sin P = 12/13, cos P = 5/13, tan P = 12/5",
+      "sin P = 5/13, cos P = 12/13, tan P = 5/12",
+      "sin P = 12/25, cos P = 5/25, tan P = 12/5",
+      "sin P = 7/25, cos P = 24/25, tan P = 7/24"
+    ],
+    "options_gu": [
+      "sin P = 12/13, cos P = 5/13, tan P = 12/5",
+      "sin P = 5/13, cos P = 12/13, tan P = 5/12",
+      "sin P = 12/25, cos P = 5/25, tan P = 12/5",
+      "sin P = 7/25, cos P = 24/25, tan P = 7/24"
+    ],
+    "correct_index": 0,
+    "explanation": "Let QR = x cm, then PR = (25 - x) cm.\nBy Pythagoras theorem:\nPR² = PQ² + QR²\n(25 - x)² = 5² + x²\n625 - 50x + x² = 25 + x²\n50x = 600 ⇒ x = 12 cm (QR = 12 cm).\nPR = 25 - 12 = 13 cm.\nFor angle P: Opposite = QR = 12, Adjacent = PQ = 5, Hypotenuse = PR = 13.\nTherefore, sin P = 12/13, cos P = 5/13, tan P = 12/5.",
+    "explanation_hi": "माना QR = x सेमी, तो PR = (25 - x) सेमी।\nपाइथागोरस प्रमेय से: (25 - x)² = 5² + x²\n625 - 50x + x² = 25 + x²\n50x = 600 ⇒ x = 12 सेमी (QR = 12)।\nPR = 25 - 12 = 13 सेमी।\nअतः sin P = 12/13, cos P = 5/13, tan P = 12/5।",
+    "explanation_gu": "ધારો કે QR = x સેમી, તો PR = (25 - x) સેમી.\nપાયથાગોરસ પ્રમેય મુજબ: (25 - x)² = 5² + x²\n625 - 50x + x² = 25 + x²\n50x = 600 ⇒ x = 12 સેમી (QR = 12).\nPR = 25 - 12 = 13 સેમી.\nતેથી sin P = 12/13, cos P = 5/13, tan P = 12/5."
+  },
+  {
+    "id": "C10M_CH8_EG6",
+    "question": "NCERT Example 6: In △ABC, right-angled at B, AB = 5 cm and ∠ACB = 30°. Determine the lengths of the sides BC and AC.",
+    "question_hi": "NCERT उदाहरण 6: △ABC में जिसका कोण B समकोण है, AB = 5 सेमी और ∠ACB = 30° है। भुजाओं BC और AC की लंबाइयाँ ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 6: △ABC માં ખૂણો B કાટખૂણો છે, AB = 5 સેમી અને ∠ACB = 30° છે. બાજુઓ BC અને AC ની લંબાઈ શોધો.",
+    "options": [
+      "BC = 5√3 cm, AC = 10 cm",
+      "BC = 10 cm, AC = 5√3 cm",
+      "BC = 5 cm, AC = 10√3 cm",
+      "BC = 5/√3 cm, AC = 10 cm"
+    ],
+    "options_hi": [
+      "BC = 5√3 cm, AC = 10 cm",
+      "BC = 10 cm, AC = 5√3 cm",
+      "BC = 5 cm, AC = 10√3 cm",
+      "BC = 5/√3 cm, AC = 10 cm"
+    ],
+    "options_gu": [
+      "BC = 5√3 cm, AC = 10 cm",
+      "BC = 10 cm, AC = 5√3 cm",
+      "BC = 5 cm, AC = 10√3 cm",
+      "BC = 5/√3 cm, AC = 10 cm"
+    ],
+    "correct_index": 0,
+    "explanation": "For angle C = 30°:\ntan 30° = AB/BC ⇒ 1/√3 = 5/BC ⇒ BC = 5√3 cm.\nsin 30° = AB/AC ⇒ 1/2 = 5/AC ⇒ AC = 10 cm.\nAlternatively, by Pythagoras: AC = √(AB² + BC²) = √(25 + 75) = √100 = 10 cm.",
+    "explanation_hi": "कोण C = 30° के लिए:\ntan 30° = AB/BC ⇒ 1/√3 = 5/BC ⇒ BC = 5√3 सेमी।\nsin 30° = AB/AC ⇒ 1/2 = 5/AC ⇒ AC = 10 सेमी।",
+    "explanation_gu": "ખૂણા C = 30° માટે:\ntan 30° = AB/BC ⇒ 1/√3 = 5/BC ⇒ BC = 5√3 સેમી.\nsin 30° = AB/AC ⇒ 1/2 = 5/AC ⇒ AC = 10 સેમી."
+  },
+  {
+    "id": "C10M_CH8_EG7",
+    "question": "NCERT Example 7: In △PQR, right-angled at Q, PQ = 3 cm and PR = 6 cm. Determine ∠QPR and ∠PRQ.",
+    "question_hi": "NCERT उदाहरण 7: △PQR में जिसका कोण Q समकोण है, PQ = 3 सेमी और PR = 6 सेमी है। ∠QPR और ∠PRQ का मान ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 7: △PQR માં ખૂણો Q કાટખૂણો છે, PQ = 3 સેમી અને PR = 6 સેમી છે. ∠QPR અને ∠PRQ ના મૂલ્યો નક્કી કરો.",
+    "options": [
+      "∠PRQ = 30°, ∠QPR = 60°",
+      "∠PRQ = 60°, ∠QPR = 30°",
+      "∠PRQ = 45°, ∠QPR = 45°",
+      "∠PRQ = 30°, ∠QPR = 30°"
+    ],
+    "options_hi": [
+      "∠PRQ = 30°, ∠QPR = 60°",
+      "∠PRQ = 60°, ∠QPR = 30°",
+      "∠PRQ = 45°, ∠QPR = 45°",
+      "∠PRQ = 30°, ∠QPR = 30°"
+    ],
+    "options_gu": [
+      "∠PRQ = 30°, ∠QPR = 60°",
+      "∠PRQ = 60°, ∠QPR = 30°",
+      "∠PRQ = 45°, ∠QPR = 45°",
+      "∠PRQ = 30°, ∠QPR = 30°"
+    ],
+    "correct_index": 0,
+    "explanation": "sin R = PQ/PR = 3/6 = 1/2.\nSince sin 30° = 1/2, we have ∠PRQ = 30°.\nSince the sum of angles in a triangle is 180°:\n∠QPR = 180° - (90° + 30°) = 60°.",
+    "explanation_hi": "sin R = PQ/PR = 3/6 = 1/2।\nचूँकि sin 30° = 1/2, अतः ∠PRQ = 30°।\nत्रिभुज के कोणों का योग: ∠QPR = 180° - 120° = 60°।",
+    "explanation_gu": "sin R = PQ/PR = 3/6 = 1/2.\nsin 30° = 1/2 હોવાથી ∠PRQ = 30°.\nત્રિકોણના ત્રણેય ખૂણાનો સરવાળો 180°: ∠QPR = 180° - 120° = 60°."
+  },
+  {
+    "id": "C10M_CH8_EG8",
+    "question": "NCERT Example 8: If sin(A - B) = 1/2, cos(A + B) = 1/2, where 0° < A + B ≤ 90° and A > B, find A and B.",
+    "question_hi": "NCERT उदाहरण 8: यदि sin(A - B) = 1/2, cos(A + B) = 1/2, जहाँ 0° < A + B ≤ 90° तथा A > B, तो A और B ज्ञात कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 8: જો sin(A - B) = 1/2, cos(A + B) = 1/2, જ્યાં 0° < A + B ≤ 90° અને A > B, તો A અને B શોધો.",
+    "options": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 20°",
+      "A = 45°, B = 45°"
+    ],
+    "options_hi": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 20°",
+      "A = 45°, B = 45°"
+    ],
+    "options_gu": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 20°",
+      "A = 45°, B = 45°"
+    ],
+    "correct_index": 0,
+    "explanation": "sin(A - B) = 1/2 ⇒ A - B = 30°  ... (1)\ncos(A + B) = 1/2 ⇒ A + B = 60°  ... (2)\nAdding equations (1) and (2):\n2A = 90° ⇒ A = 45°.\nSubstituting A = 45° into (2):\n45° + B = 60° ⇒ B = 15°.",
+    "explanation_hi": "sin(A - B) = 1/2 ⇒ A - B = 30° ... (1)\ncos(A + B) = 1/2 ⇒ A + B = 60° ... (2)\nसमीकरण (1) और (2) को जोड़ने पर:\n2A = 90° ⇒ A = 45°।\nB = 60° - 45° = 15°।",
+    "explanation_gu": "sin(A - B) = 1/2 ⇒ A - B = 30° ... (1)\ncos(A + B) = 1/2 ⇒ A + B = 60° ... (2)\nબંને સમીકરણોનો સરવાળો કરતાં:\n2A = 90° ⇒ A = 45°.\nB = 60° - 45° = 15°."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q1_1",
+    "question": "Exercise 8.2 Q1(i): Evaluate: sin 60° cos 30° + sin 30° cos 60°.",
+    "question_hi": "प्रश्नावली 8.2 Q1(i): मान निकालिए: sin 60° cos 30° + sin 30° cos 60°।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q1(i): મૂલ્ય શોધો: sin 60° cos 30° + sin 30° cos 60°.",
+    "options": [
+      "1",
+      "0",
+      "1/2",
+      "√3/2"
+    ],
+    "options_hi": [
+      "1",
+      "0",
+      "1/2",
+      "√3/2"
+    ],
+    "options_gu": [
+      "1",
+      "0",
+      "1/2",
+      "√3/2"
+    ],
+    "correct_index": 0,
+    "explanation": "sin 60° = √3/2, cos 30° = √3/2, sin 30° = 1/2, cos 60° = 1/2.\nExpression = (√3/2)(√3/2) + (1/2)(1/2) = 3/4 + 1/4 = 4/4 = 1.",
+    "explanation_hi": "मान रखने पर: (√3/2)(√3/2) + (1/2)(1/2) = 3/4 + 1/4 = 1।",
+    "explanation_gu": "કિંમતો મૂકતાં: (√3/2)(√3/2) + (1/2)(1/2) = 3/4 + 1/4 = 1."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q1_2",
+    "question": "Exercise 8.2 Q1(ii): Evaluate: 2 tan²45° + cos²30° - sin²60°.",
+    "question_hi": "प्रश्नावली 8.2 Q1(ii): मान निकालिए: 2 tan²45° + cos²30° - sin²60°।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q1(ii): મૂલ્ય શોધો: 2 tan²45° + cos²30° - sin²60°.",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "√3"
+    ],
+    "options_hi": [
+      "2",
+      "1",
+      "0",
+      "√3"
+    ],
+    "options_gu": [
+      "2",
+      "1",
+      "0",
+      "√3"
+    ],
+    "correct_index": 0,
+    "explanation": "tan 45° = 1, cos 30° = √3/2, sin 60° = √3/2.\nExpression = 2(1)² + (√3/2)² - (√3/2)² = 2 + 3/4 - 3/4 = 2.",
+    "explanation_hi": "मान रखने पर: 2(1)² + (√3/2)² - (√3/2)² = 2 + 3/4 - 3/4 = 2।",
+    "explanation_gu": "કિંમતો મૂકતાં: 2(1)² + (√3/2)² - (√3/2)² = 2 + 3/4 - 3/4 = 2."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q1_3",
+    "question": "Exercise 8.2 Q1(iii): Evaluate: cos 45° / (sec 30° + cosec 30°).",
+    "question_hi": "प्रश्नावली 8.2 Q1(iii): मान निकालिए: cos 45° / (sec 30° + cosec 30°)।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q1(iii): મૂલ્ય શોધો: cos 45° / (sec 30° + cosec 30°).",
+    "options": [
+      "(3√2 - √6) / 8",
+      "(√6 - √2) / 4",
+      "(3√2 + √6) / 8",
+      "√3 / (2√2 + 2)"
+    ],
+    "options_hi": [
+      "(3√2 - √6) / 8",
+      "(√6 - √2) / 4",
+      "(3√2 + √6) / 8",
+      "√3 / (2√2 + 2)"
+    ],
+    "options_gu": [
+      "(3√2 - √6) / 8",
+      "(√6 - √2) / 4",
+      "(3√2 + √6) / 8",
+      "√3 / (2√2 + 2)"
+    ],
+    "correct_index": 0,
+    "explanation": "cos 45° = 1/√2, sec 30° = 2/√3, cosec 30° = 2.\nDenominator = 2/√3 + 2 = (2 + 2√3)/√3 = 2(√3 + 1)/√3.\nExpression = (1/√2) / [2(√3 + 1)/√3] = √3 / [2√2(√3 + 1)] = √3 / [2(√6 + √2)].\nRationalize denominator by multiplying numerator and denominator by (√6 - √2):\n√3(√6 - √2) / [2(6 - 2)] = (√18 - √6) / (2 × 4) = (3√2 - √6) / 8.",
+    "explanation_hi": "मान रखने पर: (1/√2) / (2/√3 + 2) = √3 / [2(√6 + √2)]।\n(√6 - √2) से अंश व हर में गुणा करके परिमेयकरण करने पर:\n(√18 - √6) / [2(6 - 2)] = (3√2 - √6) / 8।",
+    "explanation_gu": "કિંમતો મૂકતાં: (1/√2) / (2/√3 + 2) = √3 / [2(√6 + √2)].\n(√6 - √2) વડે અંશ અને છેદને ગુણી સંમેયીકરણ કરતાં:\n(3√2 - √6) / 8."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q1_4",
+    "question": "Exercise 8.2 Q1(iv): Evaluate: (sin 30° + tan 45° - cosec 60°) / (sec 30° + cos 60° + cot 45°).",
+    "question_hi": "प्रश्नावली 8.2 Q1(iv): मान निकालिए: (sin 30° + tan 45° - cosec 60°) / (sec 30° + cos 60° + cot 45°)।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q1(iv): મૂલ્ય શોધો: (sin 30° + tan 45° - cosec 60°) / (sec 30° + cos 60° + cot 45°).",
+    "options": [
+      "(43 - 24√3) / 11",
+      "(43 + 24√3) / 11",
+      "(24√3 - 43) / 11",
+      "1"
+    ],
+    "options_hi": [
+      "(43 - 24√3) / 11",
+      "(43 + 24√3) / 11",
+      "(24√3 - 43) / 11",
+      "1"
+    ],
+    "options_gu": [
+      "(43 - 24√3) / 11",
+      "(43 + 24√3) / 11",
+      "(24√3 - 43) / 11",
+      "1"
+    ],
+    "correct_index": 0,
+    "explanation": "Numerator = 1/2 + 1 - 2/√3 = 3/2 - 2/√3 = (3√3 - 4) / 2√3.\nDenominator = 2/√3 + 1/2 + 1 = 2/√3 + 3/2 = (4 + 3√3) / 2√3 = (3√3 + 4) / 2√3.\nFraction = (3√3 - 4) / (3√3 + 4).\nRationalize by multiplying by (3√3 - 4):\n(3√3 - 4)² / [(3√3)² - 4²] = (27 - 24√3 + 16) / (27 - 16) = (43 - 24√3) / 11.",
+    "explanation_hi": "अंश = (3√3 - 4) / 2√3, हर = (3√3 + 4) / 2√3।\nभिन्न = (3√3 - 4) / (3√3 + 4)।\nपरिमेयकरण करने पर:\n(3√3 - 4)² / (27 - 16) = (27 + 16 - 24√3) / 11 = (43 - 24√3) / 11।",
+    "explanation_gu": "અંશ = (3√3 - 4) / 2√3, છેદ = (3√3 + 4) / 2√3.\nભાગાકાર = (3√3 - 4) / (3√3 + 4).\nસંમેયીકરણ કરતાં:\n(3√3 - 4)² / 11 = (43 - 24√3) / 11."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q1_5",
+    "question": "Exercise 8.2 Q1(v): Evaluate: (5 cos²60° + 4 sec²30° - tan²45°) / (sin²30° + cos²30°).",
+    "question_hi": "प्रश्नावली 8.2 Q1(v): मान निकालिए: (5 cos²60° + 4 sec²30° - tan²45°) / (sin²30° + cos²30°)।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q1(v): મૂલ્ય શોધો: (5 cos²60° + 4 sec²30° - tan²45°) / (sin²30° + cos²30°).",
+    "options": [
+      "67/12",
+      "55/12",
+      "67/16",
+      "1"
+    ],
+    "options_hi": [
+      "67/12",
+      "55/12",
+      "67/16",
+      "1"
+    ],
+    "options_gu": [
+      "67/12",
+      "55/12",
+      "67/16",
+      "1"
+    ],
+    "correct_index": 0,
+    "explanation": "cos 60° = 1/2, sec 30° = 2/√3, tan 45° = 1, sin 30° = 1/2, cos 30° = √3/2.\nDenominator = sin²30° + cos²30° = (1/2)² + (√3/2)² = 1/4 + 3/4 = 1.\nNumerator = 5(1/2)² + 4(2/√3)² - 1² = 5(1/4) + 4(4/3) - 1 = 5/4 + 16/3 - 1.\nTaking LCM = 12: (15 + 64 - 12) / 12 = 67/12.\nResult = (67/12) / 1 = 67/12.",
+    "explanation_hi": "हर = sin²30° + cos²30° = 1/4 + 3/4 = 1।\nअंश = 5(1/4) + 4(4/3) - 1 = 5/4 + 16/3 - 1 = (15 + 64 - 12)/12 = 67/12।\nअतः मान = 67/12।",
+    "explanation_gu": "છેદ = sin²30° + cos²30° = 1/4 + 3/4 = 1.\nઅંશ = 5(1/4) + 4(4/3) - 1 = 5/4 + 16/3 - 1 = (15 + 64 - 12)/12 = 67/12.\nઆમ પરિણામ = 67/12."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q2_1",
+    "question": "Exercise 8.2 Q2(i): 2 tan 30° / (1 + tan²30°) is equal to:",
+    "question_hi": "प्रश्नावली 8.2 Q2(i): 2 tan 30° / (1 + tan²30°) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.2 Q2(i): 2 tan 30° / (1 + tan²30°) બરાબર છે:",
+    "options": [
+      "sin 60°",
+      "cos 60°",
+      "tan 60°",
+      "sin 30°"
+    ],
+    "options_hi": [
+      "sin 60°",
+      "cos 60°",
+      "tan 60°",
+      "sin 30°"
+    ],
+    "options_gu": [
+      "sin 60°",
+      "cos 60°",
+      "tan 60°",
+      "sin 30°"
+    ],
+    "correct_index": 0,
+    "explanation": "tan 30° = 1/√3.\n2 tan 30° / (1 + tan²30°) = [2(1/√3)] / [1 + (1/√3)²] = (2/√3) / (1 + 1/3) = (2/√3) / (4/3) = (2/√3) × (3/4) = 3/(2√3) = √3/2.\nSince sin 60° = √3/2, the correct option is sin 60°.",
+    "explanation_hi": "मान रखने पर: [2(1/√3)] / [1 + 1/3] = (2/√3) / (4/3) = √3/2 = sin 60°।",
+    "explanation_gu": "કિંમતો મૂકતાં: (2/√3) / (4/3) = √3/2 = sin 60°."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q2_2",
+    "question": "Exercise 8.2 Q2(ii): (1 - tan²45°) / (1 + tan²45°) is equal to:",
+    "question_hi": "प्रश्नावली 8.2 Q2(ii): (1 - tan²45°) / (1 + tan²45°) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.2 Q2(ii): (1 - tan²45°) / (1 + tan²45°) બરાબર છે:",
+    "options": [
+      "0",
+      "tan 90°",
+      "1",
+      "sin 45°"
+    ],
+    "options_hi": [
+      "0",
+      "tan 90°",
+      "1",
+      "sin 45°"
+    ],
+    "options_gu": [
+      "0",
+      "tan 90°",
+      "1",
+      "sin 45°"
+    ],
+    "correct_index": 0,
+    "explanation": "tan 45° = 1.\n(1 - tan²45°) / (1 + tan²45°) = (1 - 1²) / (1 + 1²) = (1 - 1) / (1 + 1) = 0/2 = 0.",
+    "explanation_hi": "tan 45° = 1 रखने पर: (1 - 1)/(1 + 1) = 0/2 = 0।",
+    "explanation_gu": "tan 45° = 1 મૂકતાં: (1 - 1)/(1 + 1) = 0/2 = 0."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q2_3",
+    "question": "Exercise 8.2 Q2(iii): sin 2A = 2 sin A is true when A equals:",
+    "question_hi": "प्रश्नावली 8.2 Q2(iii): sin 2A = 2 sin A तब सत्य होता है, जबकि A बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.2 Q2(iii): sin 2A = 2 sin A ત્યારે જ સાચું થાય જ્યારે A બરાબર હોય:",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "options_hi": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "options_gu": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correct_index": 0,
+    "explanation": "Substitute A = 0°:\nLHS = sin(2 × 0°) = sin 0° = 0.\nRHS = 2 sin 0° = 2 × 0 = 0.\nLHS = RHS. For A = 30°, LHS = sin 60° = √3/2, RHS = 2 sin 30° = 1 (not equal). Thus A = 0°.",
+    "explanation_hi": "A = 0° रखने पर: LHS = sin(0°) = 0, RHS = 2 sin 0° = 0। अतः A = 0° पर ही यह सत्य है।",
+    "explanation_gu": "A = 0° મૂકતાં: ડા.બા. = sin 0° = 0, જ.બા. = 2(0) = 0. આમ A = 0° સાચો જવાબ છે."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q2_4",
+    "question": "Exercise 8.2 Q2(iv): 2 tan 30° / (1 - tan²30°) is equal to:",
+    "question_hi": "प्रश्नावली 8.2 Q2(iv): 2 tan 30° / (1 - tan²30°) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.2 Q2(iv): 2 tan 30° / (1 - tan²30°) બરાબર છે:",
+    "options": [
+      "tan 60°",
+      "cos 60°",
+      "sin 60°",
+      "sin 30°"
+    ],
+    "options_hi": [
+      "tan 60°",
+      "cos 60°",
+      "sin 60°",
+      "sin 30°"
+    ],
+    "options_gu": [
+      "tan 60°",
+      "cos 60°",
+      "sin 60°",
+      "sin 30°"
+    ],
+    "correct_index": 0,
+    "explanation": "tan 30° = 1/√3.\n2 tan 30° / (1 - tan²30°) = [2(1/√3)] / [1 - (1/√3)²] = (2/√3) / (1 - 1/3) = (2/√3) / (2/3) = (2/√3) × (3/2) = 3/√3 = √3.\nSince tan 60° = √3, the answer is tan 60°.",
+    "explanation_hi": "मान रखने पर: (2/√3) / (2/3) = √3 = tan 60°।",
+    "explanation_gu": "કિંમતો મૂકતાં: (2/√3) / (2/3) = √3 = tan 60°."
+  },
+  {
+    "id": "C10M_CH8_EX8.2_Q3",
+    "question": "Exercise 8.2 Q3: If tan(A + B) = √3 and tan(A - B) = 1/√3, where 0° < A + B ≤ 90° and A > B, find A and B.",
+    "question_hi": "प्रश्नावली 8.2 Q3: यदि tan(A + B) = √3 और tan(A - B) = 1/√3, जहाँ 0° < A + B ≤ 90° और A > B, तो A और B का मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 8.2 Q3: જો tan(A + B) = √3 અને tan(A - B) = 1/√3, જ્યાં 0° < A + B ≤ 90° અને A > B હોય, તો A અને B ના મૂલ્યો શોધો.",
+    "options": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 10°",
+      "A = 40°, B = 20°"
+    ],
+    "options_hi": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 10°",
+      "A = 40°, B = 20°"
+    ],
+    "options_gu": [
+      "A = 45°, B = 15°",
+      "A = 60°, B = 30°",
+      "A = 50°, B = 10°",
+      "A = 40°, B = 20°"
+    ],
+    "correct_index": 0,
+    "explanation": "tan(A + B) = √3 ⇒ A + B = 60°  ... (1)\ntan(A - B) = 1/√3 ⇒ A - B = 30°  ... (2)\nAdding (1) and (2): 2A = 90° ⇒ A = 45°.\nFrom (1): B = 60° - 45° = 15°.",
+    "explanation_hi": "tan(A + B) = √3 ⇒ A + B = 60° ... (1)\ntan(A - B) = 1/√3 ⇒ A - B = 30° ... (2)\nजोड़ने पर: 2A = 90° ⇒ A = 45° और B = 15°।",
+    "explanation_gu": "tan(A + B) = √3 ⇒ A + B = 60° ... (1)\ntan(A - B) = 1/√3 ⇒ A - B = 30° ... (2)\nસરવાળો કરતાં: 2A = 90° ⇒ A = 45° અને B = 15°."
+  },
+  {
+    "id": "C10M_CH8_EG9",
+    "question": "NCERT Example 9: Express the ratios cos A, tan A and sec A in terms of sin A.",
+    "question_hi": "NCERT उदाहरण 9: अनुपातों cos A, tan A और sec A को sin A के पदों में व्यक्त कीजिए।",
+    "question_gu": "NCERT ઉદાહરણ 9: cos A, tan A અને sec A ને sin A ના સ્વરૂપમાં દર્શાવો.",
+    "options": [
+      "cos A = √(1 - sin²A), tan A = sin A / √(1 - sin²A), sec A = 1 / √(1 - sin²A)",
+      "cos A = 1 - sin A, tan A = sin A / (1 - sin A), sec A = 1 / (1 - sin A)",
+      "cos A = √(1 + sin²A), tan A = √(1 - sin²A) / sin A, sec A = √(1 - sin²A)",
+      "cos A = 1 / sin A, tan A = sin²A, sec A = 1 - sin²A"
+    ],
+    "options_hi": [
+      "cos A = √(1 - sin²A), tan A = sin A / √(1 - sin²A), sec A = 1 / √(1 - sin²A)",
+      "cos A = 1 - sin A, tan A = sin A / (1 - sin A), sec A = 1 / (1 - sin A)",
+      "cos A = 1 - sin A, tan A = sin A / (1 - sin A), sec A = 1 / (1 - sin A)",
+      "cos A = 1 / sin A, tan A = sin²A, sec A = 1 - sin²A"
+    ],
+    "options_gu": [
+      "cos A = √(1 - sin²A), tan A = sin A / √(1 - sin²A), sec A = 1 / √(1 - sin²A)",
+      "cos A = 1 - sin A, tan A = sin A / (1 - sin A), sec A = 1 / (1 - sin A)",
+      "cos A = 1 - sin A, tan A = sin A / (1 - sin A), sec A = 1 / (1 - sin A)",
+      "cos A = 1 / sin A, tan A = sin²A, sec A = 1 - sin²A"
+    ],
+    "correct_index": 0,
+    "explanation": "Since sin²A + cos²A = 1, cos²A = 1 - sin²A ⇒ cos A = √(1 - sin²A).\ntan A = sin A / cos A = sin A / √(1 - sin²A).\nsec A = 1 / cos A = 1 / √(1 - sin²A).",
+    "explanation_hi": "sin²A + cos²A = 1 ⇒ cos A = √(1 - sin²A)।\ntan A = sin A / cos A = sin A / √(1 - sin²A)।\nsec A = 1 / cos A = 1 / √(1 - sin²A)।",
+    "explanation_gu": "sin²A + cos²A = 1 ⇒ cos A = √(1 - sin²A).\ntan A = sin A / cos A = sin A / √(1 - sin²A).\nsec A = 1 / cos A = 1 / √(1 - sin²A)."
+  },
+  {
+    "id": "C10M_CH8_EG10",
+    "question": "NCERT Example 10: Prove that sec A(1 - sin A)(sec A + tan A) equals:",
+    "question_hi": "NCERT उदाहरण 10: सिद्ध कीजिए कि sec A(1 - sin A)(sec A + tan A) का मान बराबर है:",
+    "question_gu": "NCERT ઉદાહરણ 10: સાબિત કરો કે sec A(1 - sin A)(sec A + tan A) ની કિંમત બરાબર છે:",
+    "options": [
+      "1",
+      "0",
+      "sec²A",
+      "2"
+    ],
+    "options_hi": [
+      "1",
+      "0",
+      "sec²A",
+      "2"
+    ],
+    "options_gu": [
+      "1",
+      "0",
+      "sec²A",
+      "2"
+    ],
+    "correct_index": 0,
+    "explanation": "LHS = sec A(1 - sin A)(sec A + tan A)\n= (1/cos A)(1 - sin A)(1/cos A + sin A/cos A)\n= [(1 - sin A)/cos A] × [(1 + sin A)/cos A]\n= (1 - sin²A) / cos²A\n= cos²A / cos²A = 1 = RHS. Proved!",
+    "explanation_hi": "LHS = (1/cos A)(1 - sin A)[(1 + sin A)/cos A]\n= (1 - sin²A)/cos²A = cos²A/cos²A = 1 = RHS।",
+    "explanation_gu": "ડા.બા. = (1/cos A)(1 - sin A)[(1 + sin A)/cos A]\n= (1 - sin²A)/cos²A = cos²A/cos²A = 1 = જ.બા."
+  },
+  {
+    "id": "C10M_CH8_EX8.3_Q3_1",
+    "question": "Exercise 8.3 Q3(i): 9 sec²A - 9 tan²A equals:",
+    "question_hi": "प्रश्नावली 8.3 Q3(i): 9 sec²A - 9 tan²A बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.3 Q3(i): 9 sec²A - 9 tan²A બરાબર છે:",
+    "options": [
+      "9",
+      "1",
+      "8",
+      "0"
+    ],
+    "options_hi": [
+      "9",
+      "1",
+      "8",
+      "0"
+    ],
+    "options_gu": [
+      "9",
+      "1",
+      "8",
+      "0"
+    ],
+    "correct_index": 0,
+    "explanation": "9 sec²A - 9 tan²A = 9(sec²A - tan²A).\nSince sec²A - tan²A = 1, we have 9 × 1 = 9.",
+    "explanation_hi": "9(sec²A - tan²A) = 9(1) = 9।",
+    "explanation_gu": "9(sec²A - tan²A) = 9(1) = 9."
+  },
+  {
+    "id": "C10M_CH8_EX8.3_Q3_2",
+    "question": "Exercise 8.3 Q3(ii): (1 + tan θ + sec θ)(1 + cot θ - cosec θ) equals:",
+    "question_hi": "प्रश्नावली 8.3 Q3(ii): (1 + tan θ + sec θ)(1 + cot θ - cosec θ) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.3 Q3(ii): (1 + tan θ + sec θ)(1 + cot θ - cosec θ) બરાબર છે:",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "options_hi": [
+      "2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "options_gu": [
+      "2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "correct_index": 0,
+    "explanation": "Convert to sin θ and cos θ:\n(1 + sin θ/cos θ + 1/cos θ)(1 + cos θ/sin θ - 1/sin θ)\n= [(cos θ + sin θ + 1)/cos θ] × [(sin θ + cos θ - 1)/sin θ]\n= [(cos θ + sin θ)² - 1²] / (sin θ cos θ)\n= (cos²θ + sin²θ + 2 sin θ cos θ - 1) / (sin θ cos θ)\n= (1 + 2 sin θ cos θ - 1) / (sin θ cos θ) = 2 sin θ cos θ / (sin θ cos θ) = 2.",
+    "explanation_hi": "sin और cos में बदलने पर: [(sin θ + cos θ + 1)/cos θ][(sin θ + cos θ - 1)/sin θ]\n= [(sin θ + cos θ)² - 1] / (sin θ cos θ) = (1 + 2 sin θ cos θ - 1) / (sin θ cos θ) = 2।",
+    "explanation_gu": "sin અને cos માં ફેરવતાં: [(sin θ + cos θ)² - 1] / (sin θ cos θ) = 2 sin θ cos θ / (sin θ cos θ) = 2."
+  },
+  {
+    "id": "C10M_CH8_EX8.3_Q3_3",
+    "question": "Exercise 8.3 Q3(iii): (sec A + tan A)(1 - sin A) equals:",
+    "question_hi": "प्रश्नावली 8.3 Q3(iii): (sec A + tan A)(1 - sin A) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.3 Q3(iii): (sec A + tan A)(1 - sin A) બરાબર છે:",
+    "options": [
+      "cos A",
+      "sec A",
+      "sin A",
+      "cosec A"
+    ],
+    "options_hi": [
+      "cos A",
+      "sec A",
+      "sin A",
+      "cosec A"
+    ],
+    "options_gu": [
+      "cos A",
+      "sec A",
+      "sin A",
+      "cosec A"
+    ],
+    "correct_index": 0,
+    "explanation": "(sec A + tan A)(1 - sin A) = (1/cos A + sin A/cos A)(1 - sin A)\n= [(1 + sin A)/cos A](1 - sin A) = (1 - sin²A)/cos A = cos²A/cos A = cos A.",
+    "explanation_hi": "(1/cos A + sin A/cos A)(1 - sin A) = (1 - sin²A)/cos A = cos²A/cos A = cos A।",
+    "explanation_gu": "(1/cos A + sin A/cos A)(1 - sin A) = (1 - sin²A)/cos A = cos²A/cos A = cos A."
+  },
+  {
+    "id": "C10M_CH8_EX8.3_Q3_4",
+    "question": "Exercise 8.3 Q3(iv): (1 + tan²A) / (1 + cot²A) equals:",
+    "question_hi": "प्रश्नावली 8.3 Q3(iv): (1 + tan²A) / (1 + cot²A) बराबर है:",
+    "question_gu": "સ્વાધ્યાય 8.3 Q3(iv): (1 + tan²A) / (1 + cot²A) બરાબર છે:",
+    "options": [
+      "tan²A",
+      "sec²A",
+      "-1",
+      "cot²A"
+    ],
+    "options_hi": [
+      "tan²A",
+      "sec²A",
+      "-1",
+      "cot²A"
+    ],
+    "options_gu": [
+      "tan²A",
+      "sec²A",
+      "-1",
+      "cot²A"
+    ],
+    "correct_index": 0,
+    "explanation": "1 + tan²A = sec²A and 1 + cot²A = cosec²A.\nsec²A / cosec²A = (1/cos²A) / (1/sin²A) = sin²A / cos²A = tan²A.",
+    "explanation_hi": "sec²A / cosec²A = (1/cos²A)/(1/sin²A) = sin²A/cos²A = tan²A।",
+    "explanation_gu": "sec²A / cosec²A = (1/cos²A)/(1/sin²A) = sin²A/cos²A = tan²A."
+  },
+  {
+    "id": "C10M_CH8_HOTS_Q1",
+    "question": "Board HOTS: If sec θ + tan θ = p, what is the value of sin θ?",
+    "question_hi": "बोर्ड परीक्षा HOTS: यदि sec θ + tan θ = p, तो sin θ का मान क्या होगा?",
+    "question_gu": "બોર્ડ HOTS પ્રશ્ન: જો sec θ + tan θ = p હોય, તો sin θ નું મૂલ્ય શું થાય?",
+    "options": [
+      "(p² - 1) / (p² + 1)",
+      "(p² + 1) / (p² - 1)",
+      "(p² - 1) / 2p",
+      "2p / (p² + 1)"
+    ],
+    "options_hi": [
+      "(p² - 1) / (p² + 1)",
+      "(p² + 1) / (p² - 1)",
+      "(p² - 1) / 2p",
+      "2p / (p² + 1)"
+    ],
+    "options_gu": [
+      "(p² - 1) / (p² + 1)",
+      "(p² + 1) / (p² - 1)",
+      "(p² - 1) / 2p",
+      "2p / (p² + 1)"
+    ],
+    "correct_index": 0,
+    "explanation": "We know sec²θ - tan²θ = 1 ⇒ (sec θ - tan θ)(sec θ + tan θ) = 1.\nGiven sec θ + tan θ = p ⇒ sec θ - tan θ = 1/p.\nAdding the two equations: 2 sec θ = p + 1/p = (p² + 1)/p ⇒ sec θ = (p² + 1)/2p.\nSubtracting the two equations: 2 tan θ = p - 1/p = (p² - 1)/p ⇒ tan θ = (p² - 1)/2p.\nTherefore, sin θ = tan θ / sec θ = [(p² - 1)/2p] / [(p² + 1)/2p] = (p² - 1) / (p² + 1).",
+    "explanation_hi": "sec θ + tan θ = p तथा sec θ - tan θ = 1/p।\nजोड़ने पर: sec θ = (p² + 1)/2p।\nघटाने पर: tan θ = (p² - 1)/2p।\nsin θ = tan θ / sec θ = (p² - 1) / (p² + 1)।",
+    "explanation_gu": "sec θ + tan θ = p અને sec θ - tan θ = 1/p.\nસરવાળો કરતાં: sec θ = (p² + 1)/2p.\nબાદબાકી કરતાં: tan θ = (p² - 1)/2p.\nsin θ = tan θ / sec θ = (p² - 1) / (p² + 1)."
+  },
+  {
+    "id": "C10M_CH8_HOTS_Q2",
+    "question": "Board HOTS: If x = a sin θ + b cos θ and y = a cos θ - b sin θ, find the value of x² + y².",
+    "question_hi": "बोर्ड परीक्षा HOTS: यदि x = a sin θ + b cos θ और y = a cos θ - b sin θ, तो x² + y² का मान ज्ञात कीजिए।",
+    "question_gu": "બોર્ડ HOTS પ્રશ્ન: જો x = a sin θ + b cos θ અને y = a cos θ - b sin θ હોય, તો x² + y² નું મૂલ્ય શોધો.",
+    "options": [
+      "a² + b²",
+      "a² - b²",
+      "1",
+      "2ab"
+    ],
+    "options_hi": [
+      "a² + b²",
+      "a² - b²",
+      "1",
+      "2ab"
+    ],
+    "options_gu": [
+      "a² + b²",
+      "a² - b²",
+      "1",
+      "2ab"
+    ],
+    "correct_index": 0,
+    "explanation": "x² = (a sin θ + b cos θ)² = a² sin²θ + b² cos²θ + 2ab sin θ cos θ.\ny² = (a cos θ - b sin θ)² = a² cos²θ + b² sin²θ - 2ab sin θ cos θ.\nAdding x² and y²:\nx² + y² = a²(sin²θ + cos²θ) + b²(cos²θ + sin²θ) + (2ab sin θ cos θ - 2ab sin θ cos θ)\n= a²(1) + b²(1) + 0 = a² + b².",
+    "explanation_hi": "x² और y² का विस्तार करके जोड़ने पर:\nx² + y² = a²(sin²θ + cos²θ) + b²(cos²θ + sin²θ) = a² + b²।",
+    "explanation_gu": "x² અને y² નો સરવાળો કરતાં:\nx² + y² = a²(sin²θ + cos²θ) + b²(cos²θ + sin²θ) = a² + b²."
+  },
+  {
+    "id": "C10M_CH8_HOTS_Q3",
+    "question": "Board HOTS: If sin θ + sin²θ = 1, find the value of the expression (cos²θ + cos⁴θ).",
+    "question_hi": "बोर्ड परीक्षा HOTS: यदि sin θ + sin²θ = 1, तो व्यंजक (cos²θ + cos⁴θ) का मान ज्ञात कीजिए।",
+    "question_gu": "બોર્ડ HOTS પ્રશ્ન: જો sin θ + sin²θ = 1 હોય, તો (cos²θ + cos⁴θ) નું મૂલ્ય શોધો.",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "-1"
+    ],
+    "options_hi": [
+      "1",
+      "0",
+      "2",
+      "-1"
+    ],
+    "options_gu": [
+      "1",
+      "0",
+      "2",
+      "-1"
+    ],
+    "correct_index": 0,
+    "explanation": "Given: sin θ + sin²θ = 1 ⇒ sin θ = 1 - sin²θ.\nSince 1 - sin²θ = cos²θ, we have:\nsin θ = cos²θ.\nSquaring both sides:\nsin²θ = (cos²θ)² = cos⁴θ.\nNow substitute into the required expression:\ncos²θ + cos⁴θ = sin θ + sin²θ.\nSince sin θ + sin²θ is given as 1, the value is exactly 1!",
+    "explanation_hi": "दिया है: sin θ = 1 - sin²θ = cos²θ।\nदोनों पक्षों का वर्ग करने पर: sin²θ = cos⁴θ।\nअतः cos²θ + cos⁴θ = sin θ + sin²θ = 1।",
+    "explanation_gu": "આપેલ છે: sin θ = 1 - sin²θ = cos²θ.\nબંને બાજુ વર્ગ કરતાં: sin²θ = cos⁴θ.\nતેથી cos²θ + cos⁴θ = sin θ + sin²θ = 1."
+  }
+]

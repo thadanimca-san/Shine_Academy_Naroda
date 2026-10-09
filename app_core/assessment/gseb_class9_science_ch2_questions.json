@@ -1,215 +1,282 @@
-{
-  "metadata": {
-    "module_id": "gseb_class9_science_ch2",
-    "version": "1.0",
-    "difficulty_level": "intermediate",
-    "last_updated": "2026-08-15"
+[
+  {
+    "id": "KOBJ_C9S2_MOD1_CHECK",
+    "question": "Which of the following is a pure substance?",
+    "question_hi": "निम्नलिखित में से कौन-सा एक शुद्ध पदार्थ है?",
+    "question_gu": "નીચેનામાંથી કયો એક શુદ્ધ પદાર્થ છે?",
+    "options": [
+      "Distilled Water (H₂O)",
+      "Milk",
+      "Air",
+      "Soil"
+    ],
+    "options_hi": [
+      "आसुत जल (H₂O)",
+      "दूध",
+      "वायु",
+      "मिट्टी"
+    ],
+    "options_gu": [
+      "નિષ્યંદિત પાણી (H₂O)",
+      "દૂધ",
+      "હવા",
+      "માટી"
+    ],
+    "correct_index": 0,
+    "explanation": "Distilled water consists only of H₂O molecules with fixed chemical composition. Milk, air, and soil are mixtures.",
+    "explanation_hi": "आसुत जल केवल H₂O अणुओं से बना होता है जिसका रासायनिक संगठन निश्चित है। दूध, हवा और मिट्टी मिश्रण हैं।",
+    "explanation_gu": "નિષ્યંદિત પાણી ફક્ત H₂O અણુઓનું બનેલું છે. દૂધ, હવા અને માટી મિશ્રણો છે."
   },
-  "questions": [
-    {
-      "id": "q1",
-      "type": "mcq",
-      "bloom_taxonomy": "understanding",
-      "question_text": {
-        "english": "Which of the following statements is true for a pure substance?",
-        "hindi": "एक शुद्ध पदार्थ (pure substance) के लिए निम्नलिखित में से कौन सा कथन सत्य है?"
-      },
-      "options": [
-        {
-          "id": "o1",
-          "english": "It consists of only one type of particles.",
-          "hindi": "यह केवल एक ही प्रकार के कणों से बना होता है।"
-        },
-        {
-          "id": "o2",
-          "english": "It can be separated into different kinds of matter by physical processes.",
-          "hindi": "इसे भौतिक प्रक्रियाओं द्वारा विभिन्न प्रकार के पदार्थों में अलग किया जा सकता है।"
-        },
-        {
-          "id": "o3",
-          "english": "Milk is an example of a pure substance.",
-          "hindi": "दूध एक शुद्ध पदार्थ का उदाहरण है।"
-        },
-        {
-          "id": "o4",
-          "english": "It always has a variable composition.",
-          "hindi": "इसकी संरचना हमेशा परिवर्तनशील होती है।"
-        }
-      ],
-      "answer": "o1",
-      "explanation": {
-        "english": "A pure substance consists of a single type of particles and has a fixed composition.",
-        "hindi": "एक शुद्ध पदार्थ में एक ही प्रकार के कण होते हैं और इसकी संरचना निश्चित होती है।"
-      },
-      "distractor_rationale": {
-        "english": "Mixtures can be separated by physical processes (not pure substances). Milk is a mixture of water, fat, and proteins.",
-        "hindi": "मिश्रण (Mixtures) को भौतिक प्रक्रियाओं द्वारा अलग किया जा सकता है (शुद्ध पदार्थों को नहीं)। दूध पानी, वसा और प्रोटीन का मिश्रण है।"
-      },
-      "ai_context": {
-        "hint": "Think about what the word 'pure' means in Science compared to everyday life."
-      }
-    },
-    {
-      "id": "q2",
-      "type": "mcq",
-      "bloom_taxonomy": "applying",
-      "question_text": {
-        "english": "A student mixed some salt in water and stirred it well. The resulting mixture is a:",
-        "hindi": "एक छात्र ने पानी में थोडा नमक मिलाया और उसे अच्छी तरह हिलाया। बनने वाला मिश्रण क्या है?"
-      },
-      "options": [
-        {
-          "id": "o1",
-          "english": "Heterogeneous mixture (Suspension)",
-          "hindi": "विषमांगी मिश्रण (निलंबन)"
-        },
-        {
-          "id": "o2",
-          "english": "Homogeneous mixture (Solution)",
-          "hindi": "समांगी मिश्रण (विलयन)"
-        },
-        {
-          "id": "o3",
-          "english": "Colloid",
-          "hindi": "कोलॉइड"
-        },
-        {
-          "id": "o4",
-          "english": "Pure Compound",
-          "hindi": "शुद्ध यौगिक"
-        }
-      ],
-      "answer": "o2",
-      "explanation": {
-        "english": "Salt completely dissolves in water, creating a uniform composition throughout. This is a true solution.",
-        "hindi": "नमक पानी में पूरी तरह घुल जाता है, जिससे हर जगह एक समान संरचना बन जाती है। इसे एक सच्चा विलयन कहते हैं।"
-      },
-      "distractor_rationale": {
-        "english": "If it was heterogeneous, you would still see the salt particles. It is not a compound because no chemical reaction took place.",
-        "hindi": "अगर यह विषमांगी होता, तो आपको नमक के कण अभी भी दिखाई देते। यह कोई यौगिक नहीं है क्योंकि कोई रासायनिक प्रतिक्रिया नहीं हुई है।"
-      },
-      "ai_context": {
-        "hint": "Can you see the salt particles separately after mixing? If not, the composition is uniform."
-      }
-    },
-    {
-      "id": "q3",
-      "type": "mcq",
-      "bloom_taxonomy": "remembering",
-      "question_text": {
-        "english": "Which of the following will show the Tyndall effect?",
-        "hindi": "निम्नलिखित में से कौन टिंडल प्रभाव (Tyndall effect) दिखाएगा?"
-      },
-      "options": [
-        {
-          "id": "o1",
-          "english": "Salt solution",
-          "hindi": "नमक का विलयन"
-        },
-        {
-          "id": "o2",
-          "english": "Milk",
-          "hindi": "दूध"
-        },
-        {
-          "id": "o3",
-          "english": "Copper sulphate solution",
-          "hindi": "कॉपर सल्फेट का विलयन"
-        },
-        {
-          "id": "o4",
-          "english": "Sugar solution",
-          "hindi": "चीनी का विलयन"
-        }
-      ],
-      "answer": "o2",
-      "explanation": {
-        "english": "Milk is a colloid. The particles of a colloid are large enough to scatter a beam of light passing through it.",
-        "hindi": "दूध एक कोलॉइड है। कोलॉइड के कण इतने बड़े होते हैं कि वे अपने से गुजरने वाले प्रकाश की किरण को बिखेर सकते हैं।"
-      },
-      "distractor_rationale": {
-        "english": "Salt, sugar, and copper sulphate form true solutions where particles are too small to scatter light.",
-        "hindi": "नमक, चीनी और कॉपर सल्फेट सच्चे विलयन बनाते हैं जिनके कण इतने छोटे होते हैं कि वे प्रकाश को बिखेर नहीं सकते।"
-      },
-      "ai_context": {
-        "hint": "Tyndall effect requires particles that are intermediate in size - not too small (solutions) and not too big (suspensions)."
-      }
-    },
-    {
-      "id": "q4",
-      "type": "mcq",
-      "bloom_taxonomy": "analyzing",
-      "question_text": {
-        "english": "Brass is considered a mixture and not a compound because:",
-        "hindi": "पीतल (Brass) को एक मिश्रण माना जाता है न कि यौगिक क्योंकि:"
-      },
-      "options": [
-        {
-          "id": "o1",
-          "english": "It shows the properties of its constituents (Copper and Zinc).",
-          "hindi": "यह अपने घटकों (तांबा और जस्ता) के गुण दिखाता है।"
-        },
-        {
-          "id": "o2",
-          "english": "It can be separated into its constituents by physical methods.",
-          "hindi": "इसे भौतिक विधियों द्वारा इसके घटकों में अलग किया जा सकता है।"
-        },
-        {
-          "id": "o3",
-          "english": "It is formed by a chemical reaction.",
-          "hindi": "यह एक रासायनिक प्रतिक्रिया द्वारा बनता है।"
-        },
-        {
-          "id": "o4",
-          "english": "It only contains one type of atom.",
-          "hindi": "इसमें केवल एक प्रकार का परमाणु होता है।"
-        }
-      ],
-      "answer": "o1",
-      "explanation": {
-        "english": "Alloys like brass are considered mixtures because they show the properties of their constituent metals and can have variable composition.",
-        "hindi": "पीतल जैसी मिश्र धातुओं को मिश्रण माना जाता है क्योंकि वे अपनी मूल धातुओं के गुण दिखाती हैं और उनकी संरचना परिवर्तनशील हो सकती है।"
-      },
-      "distractor_rationale": {
-        "english": "Alloys CANNOT be separated by simple physical methods, but they are still mixtures because no new chemical compound is formed.",
-        "hindi": "मिश्र धातुओं को सरल भौतिक विधियों द्वारा अलग नहीं किया जा सकता, लेकिन वे फिर भी मिश्रण हैं क्योंकि कोई नया रासायनिक यौगिक नहीं बनता है।"
-      },
-      "ai_context": {
-        "hint": "Does Brass stop acting like metal after it's mixed? Think about the definition of a mixture vs compound."
-      }
-    },
-    {
-      "id": "q5",
-      "type": "true_false",
-      "bloom_taxonomy": "understanding",
-      "question_text": {
-        "english": "Elements can be broken down into simpler substances by chemical reactions.",
-        "hindi": "तत्वों (Elements) को रासायनिक प्रतिक्रियाओं द्वारा सरल पदार्थों में तोड़ा जा सकता है।"
-      },
-      "options": [
-        {
-          "id": "true",
-          "english": "True",
-          "hindi": "सच"
-        },
-        {
-          "id": "false",
-          "english": "False",
-          "hindi": "झूठ"
-        }
-      ],
-      "answer": "false",
-      "explanation": {
-        "english": "An element is a basic form of matter that CANNOT be broken down into simpler substances by chemical reactions.",
-        "hindi": "तत्व पदार्थ का एक मूल रूप है जिसे रासायनिक प्रतिक्रियाओं द्वारा सरल पदार्थों में नहीं तोड़ा जा सकता है।"
-      },
-      "distractor_rationale": {
-        "english": "You are confusing elements with compounds. Compounds can be broken down into elements.",
-        "hindi": "आप तत्वों (Elements) को यौगिकों (Compounds) के साथ भ्रमित कर रहे हैं। यौगिकों को तत्वों में तोड़ा जा सकता है।"
-      },
-      "ai_context": {
-        "hint": "An element is like a single letter of the alphabet. Can you break a letter down into smaller letters?"
-      }
-    }
-  ]
-}
+  {
+    "id": "KOBJ_C9S2_MOD2_CHECK",
+    "question": "If 36 g of sodium chloride (NaCl) is dissolved in 100 g of water to prepare a saturated solution, what is its mass percentage concentration?",
+    "question_hi": "यदि 36 ग्राम सोडियम क्लोराइड (NaCl) को 100 ग्राम जल में घोलकर संतृप्त विलयन बनाया जाता है, तो द्रव्यमान प्रतिशत सांद्रता क्या होगी?",
+    "question_gu": "જો 36 ગ્રામ સોડિયમ ક્લોરાઇડ (NaCl) ને 100 ગ્રામ પાણીમાં ઓગાળીને સંતૃપ્ત દ્રાવણ બનાવવામાં આવે, તો તેની દળ ટકાવારી સાંદ્રતા કેટલી થશે?",
+    "options": [
+      "26.47%",
+      "36.00%",
+      "30.00%",
+      "100.00%"
+    ],
+    "options_hi": [
+      "26.47%",
+      "36.00%",
+      "30.00%",
+      "100.00%"
+    ],
+    "options_gu": [
+      "26.47%",
+      "36.00%",
+      "30.00%",
+      "100.00%"
+    ],
+    "correct_index": 0,
+    "explanation": "Mass of Solute = 36 g. Mass of Solution = 36 + 100 = 136 g. Mass % = (36 / 136) × 100 = 26.47%.",
+    "explanation_hi": "विलेय का द्रव्यमान = 36 ग्राम। विलयन का द्रव्यमान = 36 + 100 = 136 ग्राम। द्रव्यमान % = (36 / 136) × 100 = 26.47%।",
+    "explanation_gu": "દ્રાવ્યનું દળ = 36 ગ્રામ. દ્રાવણનું દળ = 36 + 100 = 136 ગ્રામ. દળ % = (36 / 136) × 100 = 26.47%."
+  },
+  {
+    "id": "KOBJ_C9S2_MOD3_CHECK",
+    "question": "Which of the following mixtures will show the Tyndall Effect?",
+    "question_hi": "निम्नलिखित में से कौन-सा मिश्रण टिंडल प्रभाव (Tyndall Effect) दिखाएगा?",
+    "question_gu": "નીચેનામાંથી કયું મિશ્રણ ટીન્ડલ અસર (Tyndall Effect) દર્શાવશે?",
+    "options": [
+      "Milk and Starch Solution",
+      "Salt Solution",
+      "Copper Sulphate Solution",
+      "Sugar Solution"
+    ],
+    "options_hi": [
+      "दूध और स्टार्च का घोल",
+      "नमक का घोल",
+      "कॉपर सल्फेट का घोल",
+      "चीनी का घोल"
+    ],
+    "options_gu": [
+      "દૂધ અને સ્ટાર્ચનું દ્રાવણ",
+      "મીઠાનું દ્રાવણ",
+      "કોપર સલ્ફેટનું દ્રાવણ",
+      "ખાંડનું દ્રાવણ"
+    ],
+    "correct_index": 0,
+    "explanation": "Milk and starch solutions are colloids whose particles scatter light beam (Tyndall effect). True solutions like salt, sugar, and copper sulphate do not scatter light.",
+    "explanation_hi": "दूध और स्टार्च का घोल कोलाइड हैं जिनके कण प्रकाश की किरण को फैलाते हैं। नमक, चीनी और कॉपर सल्फेट के वास्तविक विलयन प्रकाश का प्रकीर्णन नहीं करते।",
+    "explanation_gu": "દૂધ અને સ્ટાર્ચનું દ્રાવણ કલીલ હોવાથી પ્રકાશના કિરણનું પ્રકીર્ણન કરે છે. સાચા દ્રાવણો પ્રકીર્ણન કરતા નથી."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q01",
+    "question": "What is meant by a substance?",
+    "question_hi": "पदार्थ (Substance) से आप क्या समझते हैं?",
+    "question_gu": "પદાર્થ (Substance) એટલે શું?",
+    "options": [
+      "A matter made of a single type of particles with definite chemical properties",
+      "A mixture of different liquids",
+      "Any material visible to human eye",
+      "A gaseous form of water"
+    ],
+    "options_hi": [
+      "एक ही प्रकार के कणों से बना पदार्थ जिसके रासायनिक गुण निश्चित होते हैं",
+      "विभिन्न द्रवों का मिश्रण",
+      "मानव आंख को दिखाई देने वाली कोई भी सामग्री",
+      "जल का गैसीय रूप"
+    ],
+    "options_gu": [
+      "એક જ પ્રકારના કણોનો બનેલો પદાર્થ જેના રાસાયણિક ગુણધર્મો ચોક્કસ હોય છે",
+      "વિવિધ પ્રવાહીઓનું મિશ્રણ",
+      "માનવ આંખને દેખાતી કોઈપણ સામગ્રી",
+      "પાણીનું વાયુ સ્વરૂપ"
+    ],
+    "correct_index": 0,
+    "explanation": "A pure substance consists of a single type of particles and cannot be separated into other kinds of matter by any physical process.",
+    "explanation_hi": "एक शुद्ध पदार्थ केवल एक ही प्रकार के कणों से मिलकर बनता है और इसे किसी भौतिक प्रक्रिया द्वारा अन्य प्रकार के पदार्थों में विभाजित नहीं किया जा सकता।",
+    "explanation_gu": "શુદ્ધ પદાર્થ માત્ર એક જ પ્રકારના કણોનો બનેલો હોય છે અને તેને કોઈપણ ભૌતિક પ્રક્રિયા દ્વારા અન્ય પદાર્થોમાં અલગ કરી શકાતો નથી."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q02",
+    "question": "List the main differences between homogeneous and heterogeneous mixtures.",
+    "question_hi": "समांगी और विषमांगी मिश्रणों में मुख्य अंतर बताइए।",
+    "question_gu": "સમાંગ અને વિષમાંગ મિશ્રણો વચ્ચેના મુખ્ય તફાવતો જણાવો.",
+    "options": [
+      "Homogeneous has uniform composition throughout; Heterogeneous has non-uniform composition",
+      "Homogeneous is always solid; Heterogeneous is always gas",
+      "Homogeneous mixtures cannot be formed",
+      "Heterogeneous mixtures have no particles"
+    ],
+    "options_hi": [
+      "समांगी में संरचना समान होती है; विषमांगी में संरचना असमान होती है",
+      "समांगी हमेशा ठोस होता है; विषमांगी हमेशा गैस होता है",
+      "समांगी मिश्रण नहीं बन सकते",
+      "विषमांगी मिश्रण में कोई कण नहीं होते"
+    ],
+    "options_gu": [
+      "સમાંગ મિશ્રણમાં રચના એકસમાન હોય છે; વિષમાંગ મિશ્રણમાં રચના અસમાન હોય છે",
+      "સમાંગ હંમેશા ઘન હોય છે; વિષમાંગ હંમેશા વાયુ હોય છે",
+      "સમાંગ મિશ્રણ બનાવી શકાતા નથી",
+      "વિષમાંગ મિશ્રણમાં કણો હોતા નથી"
+    ],
+    "correct_index": 0,
+    "explanation": "Homogeneous mixtures (e.g., Sugar in water) have uniform composition and no visible boundaries. Heterogeneous mixtures (e.g., Oil and water, Sand in water) have non-uniform composition and visible boundaries.",
+    "explanation_hi": "समांगी मिश्रण (जैसे पानी में चीनी) में समान संरचना होती है। विषमांगी मिश्रण (जैसे पानी में तेल) में भौतिक रूप से भिन्न भाग दिखाई देते हैं।",
+    "explanation_gu": "સમાંગ મિશ્રણ (જેમ કે પાણીમાં ખાંડ) એકસમાન સંરચના ધરાવે છે. વિષમાંગ મિશ્રણ (જેમ કે પાણીમાં તેલ) ભૌતિક રીતે અલગ સીમાઓ ધરાવે છે."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q05",
+    "question": "How will you separate a mixture containing kerosene and petrol (difference in boiling points is more than 25°C), which are miscible with each other?",
+    "question_hi": "एक-दूसरे में घुलनशील मिट्टी के तेल और पेट्रोल (कथनांकों का अंतर 25°C से अधिक है) के मिश्रण को आप कैसे पृथक करेंगे?",
+    "question_gu": "એકબીજામાં મિશ્ર થઈ શકે તેવા કેરોસીન અને પેટ્રોલ (ઉત્કલનબિંદુનો તફાવત 25°C થી વધુ છે) ના મિશ્રણને તમે કેવી રીતે અલગ કરશો?",
+    "options": [
+      "Simple Distillation",
+      "Fractional Distillation",
+      "Separating Funnel",
+      "Filtration"
+    ],
+    "options_hi": [
+      "साधारण आसवन (Simple Distillation)",
+      "प्रभाजी आसवन (Fractional Distillation)",
+      "पृथक्कारी कीप (Separating Funnel)",
+      "निस्पंदन (Filtration)"
+    ],
+    "options_gu": [
+      "સાદું નિશ્યંદન (Simple Distillation)",
+      "વિભાગીય નિશ્યંદન (Fractional Distillation)",
+      "અલગકારી ગળણી (Separating Funnel)",
+      "ગાળણ (Filtration)"
+    ],
+    "correct_index": 0,
+    "explanation": "Since boiling point difference is MORE than 25°C (25 K), Simple Distillation is used. If difference were less than 25 K, Fractional Distillation would be used.",
+    "explanation_hi": "चूँकि कथनांक का अंतर 25°C से अधिक है, इसलिए साधारण आसवन (Simple Distillation) का उपयोग किया जाता है।",
+    "explanation_gu": "ઉત્કલનબિંદુનો તફાવત 25°C થી વધુ હોવાથી સાદું નિશ્યંદન (Simple Distillation) વપરાય છે."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q07",
+    "question": "Name the techniques used to separate: (i) Butter from curd, (ii) Salt from sea water, (iii) Camphor from salt.",
+    "question_hi": "पृथक करने की तकनीकों के नाम बताएं: (i) दही से मक्खन, (ii) समुद्री जल से नमक, (iii) नमक से कपूर।",
+    "question_gu": "અલગીકરણની પદ્ધતિઓના નામ આપો: (i) દહીંમાંથી માખણ, (ii) દરિયાના પાણીમાંથી મીઠું, (iii) મીઠામાંથી કપૂર.",
+    "options": [
+      "(i) Centrifugation, (ii) Evaporation, (iii) Sublimation",
+      "(i) Filtration, (ii) Decantation, (iii) Distillation",
+      "(i) Chromatography, (ii) Centrifugation, (iii) Evaporation",
+      "(i) Sublimation, (ii) Evaporation, (iii) Centrifugation"
+    ],
+    "options_hi": [
+      "(i) अपकेंद्रीकरण (Centrifugation), (ii) वाष्पीकरण (Evaporation), (iii) ऊर्ध्वपातन (Sublimation)",
+      "(i) निस्पंदन, (ii) निस्तारण, (iii) आसवन",
+      "(i) क्रोमैटोग्राफी, (ii) अपकेंद्रीकरण, (iii) वाष्पीकरण",
+      "(i) ऊर्ध्वपातन, (ii) वाष्पीकरण, (iii) अपकेंद्रीकरण"
+    ],
+    "options_gu": [
+      "(i) સેન્ટ્રિફ્યુગેશન (Centrifugation), (ii) બાષ્પીભવન (Evaporation), (iii) ઉર્ધ્વપાતન (Sublimation)",
+      "(i) ગાળણ, (ii) નિતારણ, (iii) નિશ્યંદન",
+      "(i) ક્રોમેટોગ્રાફી, (ii) સેન્ટ્રિફ્યુગેશન, (iii) બાષ્પીભવન",
+      "(i) ઉર્ધ્વપાતન, (ii) બાષ્પીભવન, (iii) સેન્ટ્રિફ્યુગેશન"
+    ],
+    "correct_index": 0,
+    "explanation": "Butter from curd = Centrifugation; Salt from sea water = Evaporation/Crystallization; Camphor from salt = Sublimation.",
+    "explanation_hi": "दही से मक्खन = अपकेंद्रीकरण; समुद्री जल से नमक = वाष्पीकरण; नमक से कपूर = ऊर्ध्वपातन।",
+    "explanation_gu": "દહીંમાંથી માખણ = સેન્ટ્રિફ્યુગેશન; દરિયામાંથી મીઠું = બાષ્પીભવન; મીઠામાંથી કપૂર = ઉર્ધ્વપાતન."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q09",
+    "question": "Which of the following are CHEMICAL CHANGES?\n(i) Cutting of trees, (ii) Rusting of almirah, (iii) Pass of electric current through water to give H₂ & O₂, (iv) Dissolving salt in water, (v) Burning of paper and wood",
+    "question_hi": "निम्नलिखित में से कौन-से रासायनिक परिवर्तन हैं?\n(i) पेड़ों का काटना, (ii) अलमारी पर जंग लगना, (iii) पानी में विद्युत धारा प्रवाहित करके H₂ और O₂ बनाना, (iv) पानी में नमक घोलना, (v) कागज और लकड़ी का जलना",
+    "question_gu": "નીચેનામાંથી કયા રાસાયણિક ફેરફારો છે?\n(i) વૃક્ષોનું કાપવું, (ii) તિજોરીને કાટ લાગવો, (iii) પાણીમાંથી વિદ્યુતપ્રવાહ પસાર કરી H₂ અને O₂ મેળવવો, (iv) પાણીમાં મીઠું ઓગાળવું, (v) કાગળ અને લાકડાનું સળગવું",
+    "options": [
+      "(ii), (iii), and (v) only",
+      "(i), (iv), and (v) only",
+      "(i) and (iv) only",
+      "All are chemical changes"
+    ],
+    "options_hi": [
+      "केवल (ii), (iii), और (v)",
+      "केवल (i), (iv), और (v)",
+      "केवल (i) और (iv)",
+      "सभी रासायनिक परिवर्तन हैं"
+    ],
+    "options_gu": [
+      "ફક્ત (ii), (iii), અને (v)",
+      "ફક્ત (i), (iv), અને (v)",
+      "ફક્ત (i) અને (iv)",
+      "તમામ રાસાયણિક ફેરફારો છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Rusting of iron, electrolysis of water into H₂ & O₂, and burning of paper/wood produce new chemical substances, making them Chemical Changes.",
+    "explanation_hi": "अलमारी पर जंग लगना, जल का विद्युत अपघटन (H₂ & O₂), और कागज/लकड़ी का जलना नए रासायनिक पदार्थ बनाते हैं, अतः ये रासायनिक परिवर्तन हैं।",
+    "explanation_gu": "તિજોરીને કાટ લાગવો, પાણીનું વિદ્યુતવિભાજન, અને કાગળ/લાકડું સળગવું એ નવા રાસાયણિક પદાર્થો બનાવતા હોવાથી રાસાયણિક ફેરફારો છે."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q16",
+    "question": "How would you confirm that a colorless liquid given to you is pure water?",
+    "question_hi": "आप यह कैसे पुष्टि करेंगे कि दिया गया रंगहीन द्रव शुद्ध जल है?",
+    "question_gu": "તમને આપવામાં આવેલું રંગહીન પ્રવાહી શુદ્ધ પાણી છે તે તમે કેવી રીતે ચકાસશો?",
+    "options": [
+      "By checking its boiling point: pure water boils at exactly 100°C (373 K) at 1 atm pressure",
+      "By smelling it",
+      "By freezing it to 10°C",
+      "By filtering it through paper"
+    ],
+    "options_hi": [
+      "इसके कथनांक की जाँच करके: शुद्ध जल 1 वायुमंडलीय दाब पर ठीक 100°C (373 K) पर उबलता है",
+      "इसे सूँघकर",
+      "इसे 10°C पर जमाकर",
+      "इसे फिल्टर पेपर से छानकर"
+    ],
+    "options_gu": [
+      "તેનું ઉત્કલનબિંદુ ચકાસીને: શુદ્ધ પાણી 1 વાતાવરણ દબાણે બરાબર 100°C (373 K) તાપમાને ઉકળે છે",
+      "તેને સુંઘીને",
+      "તેને 10°C પર ઠંડુ કરીને",
+      "તેને ગાળણપત્ર વડે ગાળીને"
+    ],
+    "correct_index": 0,
+    "explanation": "Every pure liquid has a fixed sharp boiling point. Pure water boils at exactly 100°C (373 K). Impurities alter the boiling point.",
+    "explanation_hi": "प्रत्येक शुद्ध द्रव का एक निश्चित कथनांक होता है। शुद्ध जल ठीक 100°C पर उबलता है। अशुद्धियों से कथनांक बदल जाता है।",
+    "explanation_gu": "દરેક શુદ્ધ પ્રવાહીનું ઉત્કલનબિંદુ ચોક્કસ હોય છે. શુદ્ધ પાણી બરાબર 100°C પર ઉકળે છે. અશુદ્ધિઓ ઉત્કલનબિંદુ બદલે છે."
+  },
+  {
+    "id": "KOBJ_C9S2_EX_Q20",
+    "question": "Classify Sodium, Soil, Sugar Solution, Silver, Calcium Carbonate, and Carbon Dioxide into elements, compounds, and mixtures.",
+    "question_hi": "सोडियम, मिट्टी, चीनी का घोल, चाँदी, कैल्शियम कार्बोनेट और कार्बन डाइऑक्साइड को तत्व, यौगिक और मिश्रण में वर्गीकृत करें।",
+    "question_gu": "સોડિયમ, માટી, ખાંડનું દ્રાવણ, ચાંદી, કેલ્શિયમ કાર્બોનેટ અને કાર્બન ડાયોક્સાઇડને તત્વો, સંયોજનો અને મિશ્રણોમાં વર્ગીકૃત કરો.",
+    "options": [
+      "Elements: Sodium, Silver | Compounds: Calcium Carbonate, Carbon Dioxide | Mixtures: Soil, Sugar Solution",
+      "Elements: Soil, Water | Compounds: Sodium, Silver | Mixtures: Carbon Dioxide",
+      "Elements: Sugar Solution | Compounds: Soil | Mixtures: Silver, Sodium",
+      "All are compounds"
+    ],
+    "options_hi": [
+      "तत्व: सोडियम, चाँदी | यौगिक: कैल्शियम कार्बोनेट, कार्बन डाइऑक्साइड | मिश्रण: मिट्टी, चीनी का घोल",
+      "तत्व: मिट्टी, जल | यौगिक: सोडियम, चाँदी | मिश्रण: कार्बन डाइऑक्साइड",
+      "तत्व: चीनी का घोल | यौगिक: मिट्टी | मिश्रण: चाँदी, सोडियम",
+      "सभी यौगिक हैं"
+    ],
+    "options_gu": [
+      "તત્વો: સોડિયમ, ચાંદી | સંયોજનો: કેલ્શિયમ કાર્બોનેટ, કાર્બન ડાયોક્સાઇડ | મિશ્રણો: માટી, ખાંડનું દ્રાવણ",
+      "તત્વો: માટી, પાણી | સંયોજનો: સોડિયમ, ચાંદી | મિશ્રણો: કાર્બન ડાયોક્સાઇડ",
+      "તત્વો: ખાંડનું દ્રાવણ | સંયોજનો: માટી | મિશ્રણો: ચાંદી, સોડિયમ",
+      "તમામ સંયોજનો છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Sodium (Na) & Silver (Ag) are Elements. Calcium Carbonate (CaCO₃) & Carbon Dioxide (CO₂) are Compounds. Soil & Sugar solution are Mixtures.",
+    "explanation_hi": "सोडियम (Na) और चाँदी (Ag) तत्व हैं। कैल्शियम कार्बोनेट (CaCO₃) और कार्बन डाइऑक्साइड (CO₂) यौगिक हैं। मिट्टी और चीनी का घोल मिश्रण हैं।",
+    "explanation_gu": "સોડિયમ (Na) અને ચાંદી (Ag) તત્વો છે. કેલ્શિયમ કાર્બોનેટ (CaCO₃) અને કાર્બન ડાયોક્સાઇડ (CO₂) સંયોજનો છે. માટી અને ખાંડનું દ્રાવણ મિશ્રણો છે."
+  }
+]

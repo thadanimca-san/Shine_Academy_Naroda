@@ -190,6 +190,7 @@ NEVER put multiple theory blocks in a row.
 - Use paid APIs (Phase 1 = Rs.0 cost)
 - Introduce new dependencies without checking existing ones
 - Say "done" without validation
+- Render Devanagari/Gujarati PDFs without embedding `Noto Sans Devanagari` and `Noto Sans Gujarati` (required for left matra shaping like `ચ` + `િ` = `ચિ`)
 
 ---
 

@@ -16,6 +16,14 @@ MUST BE INCLUDED. NO SHORTCUTS. NO LAZY SUMMARIES. NO "DONE" WITHOUT PROOF.**
 - The student's time and the user's money are both valuable. Do not waste either.
 
 =========================================================
+PERMANENT DIRECTIVE: DUAL TEXTBOOK EDITIONS & BOLD BOOK NAMES
+=========================================================
+**CRITICAL DIRECTIVE FOR ALL AGENTS (NOTED BY USER ON 2026-10-03):**
+1. **GIVE EVERYTHING TO STUDENTS**: Provide 100% of all learning materials for both Old/Classic textbook editions and New/Latest rationalized editions (e.g. **Ganita Prakash** for Maths, **Poorvi** for English, **Curiosity** for Science, **Beehive**, **Moments**). Never delete or omit any edition.
+2. **EXPLICIT BOLD BOOK NAMES & EDITIONS**: Every chapter, curriculum file, module title, and UI list MUST explicitly display the **exact Book Name and Edition in BOLD** (e.g., **Ganita Prakash (New 2024 Edition)** vs **NCERT Mathematics Classic (Old Edition)**).
+3. **TRILINGUAL BADGES**: All book names and edition labels must appear in English, Hindi, and Gujarati.
+
+=========================================================
 
 =========================================================
 TOP PRIORITY: HINDI TRANSLATION IS MANDATORY EVERYWHERE
@@ -405,3 +413,28 @@ DATA LOCALITY & SCATTERING PREVENTION RULE
 **CRITICAL DIRECTIVE FOR ALL AGENTS:**
 All educational content (JSON data, parsed chapters) MUST be stored in a unified, predictable directory structure (e.g., `lib/content_database/` or a strictly defined standard location).
 Do not scatter content across different feature modules or raw data folders. When creating or modifying content (like Class 10 Maths), ensure it is placed in the designated centralized content repository.
+
+=========================================================
+QUOTA SAVING RULE
+=========================================================
+**CRITICAL DIRECTIVE FOR ALL AGENTS:**
+The user is paying for API quota. You MUST be as concise as possible. 
+- Do NOT provide long explanations unless explicitly asked.
+- Provide just the code or the direct answer.
+- Say less, do more.
+
+=========================================================
+INDIC / GUJARATI PDF RENDERING RULE (NOTO FONTS EMBEDDING)
+=========================================================
+**CRITICAL DIRECTIVE FOR ALL AGENTS (NOTED BY USER ON 2026-10-06):**
+When rendering Hindi (Devanagari) and Gujarati text into PDF via HTML-to-PDF generators (such as Puppeteer, PDFKit, DOMPDF, or Flutter web/print templates):
+1. **LEFT MATRA SHAPING**: Gujarati short 'ee' matra (`િ` - Chhoti 'ee' matra) attaches to the left of the consonant glyph (e.g. `ચ` + `િ` = `ચિ`).
+2. **GOOGLE NOTO FONTS MANDATORY**: You MUST explicitly embed Google Noto Fonts (`Noto Sans Devanagari` and `Noto Sans Gujarati`) in the PDF HTML/CSS template (`@font-face` or font-family declarations) to ensure complex text shaping and proper glyph/matra rendering without broken symbols or incorrect layout.
+=========================================================
+TRUE PROGRAMMER RULE (TRY-CATCH & ERROR HANDLING)
+=========================================================
+**CRITICAL DIRECTIVE FOR ALL AGENTS (NOTED BY USER ON 2026-10-08):**
+A true programmer NEVER lets code fail silently. 
+1. **Always use try-catch blocks** for any asynchronous, complex, or error-prone operations (like file saving, network requests, database operations, or PDF generation).
+2. **Never fail silently.** If an exception occurs, catch it and explicitly log it to the console/debugPrint AND show a user-friendly error message in the UI (e.g., via SnackBar or Dialog). 
+3. **Remember this rule permanently.** Do not waste hours of the user's debugging time by writing code that silently crashes. 

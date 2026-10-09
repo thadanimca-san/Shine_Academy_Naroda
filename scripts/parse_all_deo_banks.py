@@ -128,11 +128,11 @@ def parse_deo_file(txt_file, subject_prefix, subject_title, start_ch_id):
         ch_json_1 = {
             "metadata": {
                 "title": f"{subject_title} (Part 1 - MCQs)",
-                "subject": "DEO Question Bank 2026",
+                "subject": "question Question Bank 2026",
                 "grade": "10",
                 "curriculum": ["GSEB", "NCERT", "CBSE"],
                 "difficulty": "Advanced",
-                "version": "4.0.0-DEO-BANK"
+                "version": "4.0.0-question-BANK"
             },
             "blocks": blocks_1
         }
@@ -143,17 +143,17 @@ def parse_deo_file(txt_file, subject_prefix, subject_title, start_ch_id):
 
     # Save Part 2 (Subjective)
     if len(subj_blocks) > 0:
-        blocks_2 = [{"type": "hook", "content": f"Welcome to Part 2 of the {subject_title} DEO Bank! This section covers True/False, Fill in the blanks, and Subjective questions."}]
+        blocks_2 = [{"type": "hook", "content": f"Welcome to Part 2 of the {subject_title} question Bank! This section covers True/False, Fill in the blanks, and Subjective questions."}]
         blocks_2.extend(subj_blocks[:150])
         
         ch_json_2 = {
             "metadata": {
                 "title": f"{subject_title} (Part 2 - Subjective)",
-                "subject": "DEO Question Bank 2026",
+                "subject": "question Question Bank 2026",
                 "grade": "10",
                 "curriculum": ["GSEB", "NCERT", "CBSE"],
                 "difficulty": "Advanced",
-                "version": "4.0.0-DEO-BANK"
+                "version": "4.0.0-question-BANK"
             },
             "blocks": blocks_2
         }
@@ -164,8 +164,8 @@ def parse_deo_file(txt_file, subject_prefix, subject_title, start_ch_id):
 
 
 if __name__ == "__main__":
-    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/basic_maths/BASIC_MATHS.txt', 'maths_basic', 'Maths (Basic) DEO Bank 2026', 3)
-    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/standard_maths/STANDARD_MATHEMATICS.txt', 'maths_standard', 'Maths (Standard) DEO Bank 2026', 5)
-    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/social_science/SOCIAL_SCIENCE.txt', 'social_science', 'Social Science DEO Bank 2026', 7)
-    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/english_fl/ENGLISH_FL.txt', 'english', 'English (FL) DEO Bank 2026', 9)
-    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/gujarati_sl/GUJARATI_SL.txt', 'gujarati', 'Gujarati (SL) DEO Bank 2026', 11)
+    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/basic_maths/BASIC_MATHS.txt', 'maths_basic', 'Maths (Basic) question Bank 2026', 3)
+    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/standard_maths/STANDARD_MATHEMATICS.txt', 'maths_standard', 'Maths (Standard) question Bank 2026', 5)
+    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/social_science/SOCIAL_SCIENCE.txt', 'social_science', 'Social Science question Bank 2026', 7)
+    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/english_fl/ENGLISH_FL.txt', 'english', 'English (FL) question Bank 2026', 9)
+    parse_deo_file('/home/ubuntu/Shine_Academy_Naroda/raw_data/class10/gujarati_sl/GUJARATI_SL.txt', 'gujarati', 'Gujarati (SL) question Bank 2026', 11)

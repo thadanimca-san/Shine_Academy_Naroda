@@ -25,7 +25,7 @@ def generate_board_curriculum(curriculum_filepath, board_name):
     for subject in curriculum.get("subjects", []):
         subject_name = subject.get("name", "Unknown Subject")
         
-        # Skip DEO Bank since it has its own dedicated script
+        # Skip question Bank since it has its own dedicated script
         if "deo_bank" in subject.get("id", ""):
             continue
             

@@ -5,22 +5,22 @@ curriculum_dir = '/home/ubuntu/Shine_Academy_Naroda/app_core/curriculum'
 
 deo_bank_subject = {
     "id_suffix": "_deo_bank_2026",
-    "name": "DEO Question Bank 2026",
+    "name": "question Question Bank 2026",
     "color_hex": "0xFFFFD700", # Premium Gold
     "icon": "diamond",
     "chapters": [
-        "Science DEO Bank (Part 1 - MCQs)",
-        "Science DEO Bank (Part 2 - Subject)",
-        "Maths Basic DEO Bank (Part 1 - MCQs)",
-        "Maths Basic DEO Bank (Part 2 - Subject)",
-        "Maths Standard DEO Bank (Part 1 - MCQs)",
-        "Maths Standard DEO Bank (Part 2 - Subject)",
-        "Social Science DEO Bank (Part 1 - MCQs)",
-        "Social Science DEO Bank (Part 2 - Subject)",
-        "English (FL) DEO Bank (Part 1 - MCQs)",
-        "English (FL) DEO Bank (Part 2 - Subject)",
-        "Gujarati (SL) DEO Bank (Part 1 - MCQs)",
-        "Gujarati (SL) DEO Bank (Part 2 - Subject)"
+        "Science question Bank (Part 1 - MCQs)",
+        "Science question Bank (Part 2 - Subject)",
+        "Maths Basic question Bank (Part 1 - MCQs)",
+        "Maths Basic question Bank (Part 2 - Subject)",
+        "Maths Standard question Bank (Part 1 - MCQs)",
+        "Maths Standard question Bank (Part 2 - Subject)",
+        "Social Science question Bank (Part 1 - MCQs)",
+        "Social Science question Bank (Part 2 - Subject)",
+        "English (FL) question Bank (Part 1 - MCQs)",
+        "English (FL) question Bank (Part 2 - Subject)",
+        "Gujarati (SL) question Bank (Part 1 - MCQs)",
+        "Gujarati (SL) question Bank (Part 2 - Subject)"
     ]
 }
 

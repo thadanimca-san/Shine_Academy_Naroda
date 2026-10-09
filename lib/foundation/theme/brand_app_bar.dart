@@ -15,7 +15,6 @@ class BrandAppBar extends StatelessWidget implements PreferredSizeWidget {
       // Using a Row in title allows us to keep it beautifully aligned.
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
             'assets/shineacademynarodalogo.jpg',
@@ -23,7 +22,7 @@ class BrandAppBar extends StatelessWidget implements PreferredSizeWidget {
             fit: BoxFit.contain,
           ),
           const SizedBox(width: 8),
-          Flexible(
+          Expanded(
             child: Text(
               title,
               overflow: TextOverflow.ellipsis,

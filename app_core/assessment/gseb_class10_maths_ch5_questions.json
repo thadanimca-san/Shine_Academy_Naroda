@@ -1,149 +1,2746 @@
-{
-  "metadata": {
-    "id": "NCERT_MATH_10_CH5_PRACTICE",
-    "title": "Chapter 5: Arithmetic Progressions (Mock Test)",
-    "subtitle": "Test Your Understanding",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "GSEB/CBSE",
-    "curriculum": [
-      "Universal"
+[
+  {
+    "id": "C10M_CH5_EX5.1_Q1_p1",
+    "question": "Exercise 5.1 (Q1.i): In which of the following situations does the list of numbers involved make an arithmetic progression, and why?\n'The taxi fare after each km when the fare is ₹15 for the first km and ₹8 for each additional km.'",
+    "question_hi": "प्रश्नावली 5.1 (Q1.i): निम्नलिखित स्थितियों में से किन स्थितियों में संबद्ध संख्याओं की सूची AP है और क्यों?\n'प्रत्येक किलोमीटर के बाद का टैक्सी का किराया, जबकि प्रथम किलोमीटर के लिए किराया ₹15 है और प्रत्येक अतिरिक्त किलोमीटर के लिए किराया ₹8 है।'",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q1.i): નીચે આપેલી સ્થિતિમાંથી કઈ સ્થિતિમાં સંબંધિત સંખ્યાઓની યાદી સમાંતર શ્રેણી બને છે અને કેમ?\n'ટેક્ષીનું ભાડું, પ્રથમ કિમી માટે ₹15 અને પછીના દરેક કિમી માટે ₹8 છે.'",
+    "options": [
+      "Yes, it forms an AP because the difference between successive fares is constantly ₹8",
+      "No, it does not form an AP because the first km costs more",
+      "No, it is a geometric progression",
+      "Yes, it forms an AP with common difference ₹15"
     ],
-    "language": "English/Hindi/Gujarati (Trilingual)",
-    "difficulty": "Intermediate",
-    "estimated_minutes": 60,
-    "version": "1.0.0",
-    "author": "Antigravity",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "arithmetic_progressions",
-      "mock test",
-      "practice",
-      "trilingual"
+    "options_hi": [
+      "हाँ, यह एक AP बनाती है क्योंकि क्रमिक किरायों के बीच का अंतर स्थिर रूप से ₹8 है",
+      "नहीं, यह AP नहीं बनाती क्योंकि पहले किलोमीटर का किराया अधिक है",
+      "नहीं, यह एक गुणोत्तर श्रेढ़ी है",
+      "हाँ, यह सार्व अंतर ₹15 वाली एक AP बनाती है"
     ],
-    "learning_outcomes": [
-      "Calculate the nth term of an AP.",
-      "Calculate the sum of the first n terms of an AP.",
-      "Apply the formulas to find missing parameters."
+    "options_gu": [
+      "હા, તે AP બનાવે છે કારણ કે ક્રમિક ભાડા વચ્ચેનો તફાવત સતત ₹8 છે",
+      "ના, તે AP બનાવતી નથી કારણ કે પ્રથમ કિમીનું ભાડું વધારે છે",
+      "ના, તે સમગુણોત્તર શ્રેણી છે",
+      "હા, તે સામાન્ય તફાવત ₹15 વાળી AP બનાવે છે"
     ],
-    "ai_context": {
-      "learning_goal": "Assess the student's mastery of Chapter 5 through questions derived from the exercises.",
-      "common_misconceptions": []
-    }
+    "correct_index": 0,
+    "explanation": "Fare for 1st km = 15. For 2 km = 15 + 8 = 23. For 3 km = 23 + 8 = 31. The terms are 15, 23, 31, 39... Since (a_{k+1} - a_k) = 8 (constant), it forms an AP with a = 15 and d = 8.",
+    "explanation_hi": "पहले किमी का किराया = 15। 2 किमी का = 15 + 8 = 23। 3 किमी का = 23 + 8 = 31। पद हैं: 15, 23, 31, 39... चूँकि सार्व अंतर d = 8 स्थिर है, यह a = 15 और d = 8 वाली AP है।",
+    "explanation_gu": "પ્રથમ કિમીનું ભાડું = 15. 2 કિમી માટે = 15 + 8 = 23. 3 કિમી માટે = 23 + 8 = 31. પદો: 15, 23, 31, 39... સામાન્ય તફાવત d = 8 અચળ હોવાથી, તે a = 15 અને d = 8 વાળી AP બનાવે છે."
   },
-  "blocks": [
-    {
-      "id": "CH5_PRACTICE_Q1",
-      "type": "quiz",
-      "question": "The 30th term of the AP: 10, 7, 4, ... is:",
-      "question_hi": "AP: 10, 7, 4, ... का 30वाँ पद है:",
-      "question_gu": "AP: 10, 7, 4, ... નું 30મું પદ છે:",
-      "options": ["97", "77", "-77", "-87"],
-      "options_hi": ["97", "77", "-77", "-87"],
-      "options_gu": ["97", "77", "-77", "-87"],
-      "correct_index": 2,
-      "explanation": "a = 10, d = 7 - 10 = -3. \na_30 = a + (30 - 1)d = 10 + 29(-3) = 10 - 87 = -77.",
-      "explanation_hi": "a = 10, d = 7 - 10 = -3. \na_30 = a + (30 - 1)d = 10 + 29(-3) = 10 - 87 = -77.",
-      "explanation_gu": "a = 10, d = 7 - 10 = -3. \na_30 = a + (30 - 1)d = 10 + 29(-3) = 10 - 87 = -77."
-    },
-    {
-      "id": "CH5_PRACTICE_Q2",
-      "type": "quiz",
-      "question": "Which term of the AP: 3, 8, 13, 18, ... is 78?",
-      "question_hi": "AP: 3, 8, 13, 18, ... का कौन सा पद 78 है?",
-      "question_gu": "AP: 3, 8, 13, 18, ... નું કયું પદ 78 છે?",
-      "options": ["12th", "14th", "16th", "18th"],
-      "options_hi": ["12वाँ", "14वाँ", "16वाँ", "18वाँ"],
-      "options_gu": ["12મું", "14મું", "16મું", "18મું"],
-      "correct_index": 2,
-      "explanation": "a = 3, d = 5. Let a_n = 78.\na_n = a + (n - 1)d\n78 = 3 + (n - 1)5\n75 = (n - 1)5\n15 = n - 1\nn = 16. So, the 16th term is 78.",
-      "explanation_hi": "a = 3, d = 5. मान लें a_n = 78.\na_n = a + (n - 1)d\n78 = 3 + (n - 1)5\n75 = (n - 1)5\n15 = n - 1\nn = 16. इसलिए, 16वाँ पद 78 है।",
-      "explanation_gu": "a = 3, d = 5. ધારો કે a_n = 78.\na_n = a + (n - 1)d\n78 = 3 + (n - 1)5\n75 = (n - 1)5\n15 = n - 1\nn = 16. તેથી, 16મું પદ 78 છે."
-    },
-    {
-      "id": "CH5_PRACTICE_Q3",
-      "type": "quiz",
-      "question": "Find the number of terms in the AP: 7, 13, 19, ... , 205",
-      "question_hi": "AP: 7, 13, 19, ... , 205 में पदों की संख्या ज्ञात कीजिए।",
-      "question_gu": "AP: 7, 13, 19, ... , 205 માં પદોની સંખ્યા શોધો.",
-      "options": ["34", "35", "36", "37"],
-      "options_hi": ["34", "35", "36", "37"],
-      "options_gu": ["34", "35", "36", "37"],
-      "correct_index": 0,
-      "explanation": "a = 7, d = 6, a_n = 205.\n205 = 7 + (n - 1)6\n198 = 6(n - 1)\n33 = n - 1\nn = 34.",
-      "explanation_hi": "a = 7, d = 6, a_n = 205.\n205 = 7 + (n - 1)6\n198 = 6(n - 1)\n33 = n - 1\nn = 34.",
-      "explanation_gu": "a = 7, d = 6, a_n = 205.\n205 = 7 + (n - 1)6\n198 = 6(n - 1)\n33 = n - 1\nn = 34."
-    },
-    {
-      "id": "CH5_PRACTICE_Q4",
-      "type": "quiz",
-      "question": "Find the 31st term of an AP whose 11th term is 38 and the 16th term is 73.",
-      "question_hi": "उस AP का 31वाँ पद ज्ञात कीजिए जिसका 11वाँ पद 38 और 16वाँ पद 73 है।",
-      "question_gu": "તે AP નું 31મું પદ શોધો જેનું 11મું પદ 38 અને 16મું પદ 73 છે.",
-      "options": ["178", "188", "198", "208"],
-      "options_hi": ["178", "188", "198", "208"],
-      "options_gu": ["178", "188", "198", "208"],
-      "correct_index": 0,
-      "explanation": "a + 10d = 38, a + 15d = 73. Subtracting the two gives 5d = 35 => d = 7.\na + 10(7) = 38 => a = 38 - 70 = -32.\na_31 = a + 30d = -32 + 30(7) = -32 + 210 = 178.",
-      "explanation_hi": "a + 10d = 38, a + 15d = 73. दोनों को घटाने पर 5d = 35 => d = 7 प्राप्त होता है।\na + 10(7) = 38 => a = 38 - 70 = -32.\na_31 = a + 30d = -32 + 30(7) = -32 + 210 = 178.",
-      "explanation_gu": "a + 10d = 38, a + 15d = 73. બંનેની બાદબાકી કરતા 5d = 35 => d = 7 મળે છે.\na + 10(7) = 38 => a = 38 - 70 = -32.\na_31 = a + 30d = -32 + 30(7) = -32 + 210 = 178."
-    },
-    {
-      "id": "CH5_PRACTICE_Q5",
-      "type": "quiz",
-      "question": "How many three-digit numbers are divisible by 7?",
-      "question_hi": "तीन अंकों की कितनी संख्याएँ 7 से विभाज्य हैं?",
-      "question_gu": "ત્રણ અંકોની કેટલી સંખ્યાઓ 7 વડે વિભાજ્ય છે?",
-      "options": ["126", "128", "130", "132"],
-      "options_hi": ["126", "128", "130", "132"],
-      "options_gu": ["126", "128", "130", "132"],
-      "correct_index": 1,
-      "explanation": "First 3-digit number divisible by 7 is 105. The last is 994. \nHere a = 105, d = 7, a_n = 994.\n994 = 105 + (n - 1)7\n889 = (n - 1)7\n127 = n - 1\nn = 128.",
-      "explanation_hi": "7 से विभाज्य पहली 3-अंकीय संख्या 105 है। अंतिम 994 है।\nयहाँ a = 105, d = 7, a_n = 994.\n994 = 105 + (n - 1)7\n889 = (n - 1)7\n127 = n - 1\nn = 128.",
-      "explanation_gu": "7 વડે વિભાજ્ય પ્રથમ 3-અંકની સંખ્યા 105 છે. છેલ્લી 994 છે.\nઅહીં a = 105, d = 7, a_n = 994.\n994 = 105 + (n - 1)7\n889 = (n - 1)7\n127 = n - 1\nn = 128."
-    },
-    {
-      "id": "CH5_PRACTICE_Q6",
-      "type": "quiz",
-      "question": "How many multiples of 4 lie between 10 and 250?",
-      "question_hi": "10 और 250 के बीच 4 के कितने गुणज हैं?",
-      "question_gu": "10 અને 250 ની વચ્ચે 4 ના કેટલા ગુણજ છે?",
-      "options": ["58", "59", "60", "61"],
-      "options_hi": ["58", "59", "60", "61"],
-      "options_gu": ["58", "59", "60", "61"],
-      "correct_index": 2,
-      "explanation": "The first multiple is 12, and the last is 248.\na = 12, d = 4, a_n = 248.\n248 = 12 + (n - 1)4\n236 = (n - 1)4\n59 = n - 1\nn = 60.",
-      "explanation_hi": "पहला गुणज 12 है, और अंतिम 248 है।\na = 12, d = 4, a_n = 248.\n248 = 12 + (n - 1)4\n236 = (n - 1)4\n59 = n - 1\nn = 60.",
-      "explanation_gu": "પ્રથમ ગુણજ 12 છે, અને છેલ્લો 248 છે.\na = 12, d = 4, a_n = 248.\n248 = 12 + (n - 1)4\n236 = (n - 1)4\n59 = n - 1\nn = 60."
-    },
-    {
-      "id": "CH5_PRACTICE_Q7",
-      "type": "quiz",
-      "question": "Find the sum of the first 15 multiples of 8.",
-      "question_hi": "8 के प्रथम 15 गुणजों का योग ज्ञात कीजिए।",
-      "question_gu": "8 ના પ્રથમ 15 ગુણજોનો સરવાળો શોધો.",
-      "options": ["960", "940", "920", "900"],
-      "options_hi": ["960", "940", "920", "900"],
-      "options_gu": ["960", "940", "920", "900"],
-      "correct_index": 0,
-      "explanation": "The multiples form an AP: 8, 16, 24...\na = 8, d = 8, n = 15.\nS_15 = 15/2 [2(8) + 14(8)] = 15/2 [16 + 112] = 15/2 [128] = 15 * 64 = 960.",
-      "explanation_hi": "गुणज एक AP बनाते हैं: 8, 16, 24...\na = 8, d = 8, n = 15.\nS_15 = 15/2 [2(8) + 14(8)] = 15/2 [16 + 112] = 15/2 [128] = 15 * 64 = 960.",
-      "explanation_gu": "ગુણજો એક AP બનાવે છે: 8, 16, 24...\na = 8, d = 8, n = 15.\nS_15 = 15/2 [2(8) + 14(8)] = 15/2 [16 + 112] = 15/2 [128] = 15 * 64 = 960."
-    },
-    {
-      "id": "CH5_PRACTICE_Q8",
-      "type": "quiz",
-      "question": "The 11th term of the AP: -3, -1/2, 2, ... is:",
-      "question_hi": "AP: -3, -1/2, 2, ... का 11वाँ पद है:",
-      "question_gu": "AP: -3, -1/2, 2, ... નું 11મું પદ છે:",
-      "options": ["28", "22", "-38", "-48"],
-      "options_hi": ["28", "22", "-38", "-48"],
-      "options_gu": ["28", "22", "-38", "-48"],
-      "correct_index": 1,
-      "explanation": "a = -3, d = (-1/2) - (-3) = 5/2.\na_11 = a + 10d = -3 + 10(5/2) = -3 + 25 = 22.",
-      "explanation_hi": "a = -3, d = (-1/2) - (-3) = 5/2.\na_11 = a + 10d = -3 + 10(5/2) = -3 + 25 = 22.",
-      "explanation_gu": "a = -3, d = (-1/2) - (-3) = 5/2.\na_11 = a + 10d = -3 + 10(5/2) = -3 + 25 = 22."
-    }
-  ]
-}
+  {
+    "id": "C10M_CH5_EX5.1_Q1_p2",
+    "question": "Exercise 5.1 (Q1.ii): Does the situation form an AP?\n'The amount of air present in a cylinder when a vacuum pump removes 1/4 of the air remaining in the cylinder at a time.'",
+    "question_hi": "प्रश्नावली 5.1 (Q1.ii): क्या यह स्थिति AP बनाती है?\n'किसी बेलन (सिलेंडर) में उपस्थित हवा की मात्रा, जबकि वायु निकालने वाला पम्प प्रत्येक बार बेलन की शेष हवा का 1/4 भाग बाहर निकाल देता है।'",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q1.ii): શું આ સ્થિતિ AP બનાવે છે?\n'નળાકારમાં રહેલ હવાનું પ્રમાણ, જ્યારે વેક્યુમ પંપ દરેક વખતે નળાકારમાં બાકી રહેલ હવાનો 1/4 ભાગ બહાર કાઢે છે.'",
+    "options": [
+      "No, it does not form an AP because the difference between successive volumes is not constant",
+      "Yes, it forms an AP with common difference -1/4",
+      "Yes, it forms an AP with common difference 3/4",
+      "No, because the volume increases"
+    ],
+    "options_hi": [
+      "नहीं, यह AP नहीं बनाती क्योंकि क्रमिक आयતनों के बीच का अंतर स्थिर नहीं है",
+      "हाँ, यह सार्व अंतर -1/4 वाली एक AP बनाती है",
+      "हाँ, यह सार्व अंतर 3/4 वाली एक AP बनाती है",
+      "नहीं, क्योंकि आयतन बढ़ता है"
+    ],
+    "options_gu": [
+      "ના, તે AP બનાવતી નથી કારણ કે ક્રમિક કદ વચ્ચેનો તફાવત અચળ નથી",
+      "હા, તે સામાન્ય તફાવત -1/4 વાળી AP બનાવે છે",
+      "હા, તે સામાન્ય તફાવત 3/4 વાળી AP બનાવે છે",
+      "ના, કારણ કે કદ વધે છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Let initial volume be V. After 1st removal: V - V/4 = (3/4)V. After 2nd removal: (3/4)V - (1/4)(3/4)V = (9/16)V. The differences are -V/4 and -3V/16. Since differences are unequal, it is NOT an AP.",
+    "explanation_hi": "माना प्रारंभिक आयतन V है। पहली बार निकालने पर: (3/4)V। दूसरी बार निकालने पर: (9/16)V। अंतर -V/4 और -3V/16 हैं, जो समान नहीं हैं। अतः यह AP नहीं है।",
+    "explanation_gu": "ધારો કે પ્રારંભિક કદ V છે. પ્રથમ વખત પછી: (3/4)V. બીજી વખત પછી: (9/16)V. તફાવત -V/4 અને -3V/16 છે જે સમાન નથી. તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q1_p3",
+    "question": "Exercise 5.1 (Q1.iii): Does the situation form an AP?\n'The cost of digging a well after every metre of digging, when it costs ₹150 for the first metre and rises by ₹50 for each subsequent metre.'",
+    "question_hi": "प्रश्नावली 5.1 (Q1.iii): क्या यह स्थिति AP बनाती है?\n'प्रत्येक मीटर की खुदाई के बाद, एक कुआँ खोदने की लागत, जबकि प्रथम मीटर खुदाई की लागत ₹150 है और बाद में प्रत्येक मीटर खुदाई की लागत ₹50 बढ़ती जाती है।'",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q1.iii): શું આ સ્થિતિ AP બનાવે છે?\n'પ્રત્યેક મીટરના ખોદકામ બાદ એક કૂવો ખોદવાનો ખર્ચ, પ્રથમ મીટર માટે ₹150 અને પછીના પ્રત્યેક મીટર દીઠ ₹50 વધતો જાય છે.'",
+    "options": [
+      "Yes, it forms an AP with a = 150 and d = 50",
+      "No, it does not form an AP",
+      "Yes, it forms an AP with a = 50 and d = 150",
+      "No, because the cost must be constant"
+    ],
+    "options_hi": [
+      "हाँ, यह a = 150 और d = 50 वाली एक AP बनाती है",
+      "नहीं, यह AP नहीं बनाती है",
+      "हाँ, यह a = 50 और d = 150 वाली एक AP बनाती है",
+      "नहीं, क्योंकि लागत स्थिर होनी चाहिए"
+    ],
+    "options_gu": [
+      "હા, તે a = 150 અને d = 50 વાળી AP બનાવે છે",
+      "ના, તે AP બનાવતી નથી",
+      "હા, તે a = 50 અને d = 150 વાળી AP બનાવે છે",
+      "ના, કારણ કે ખર્ચ અચળ હોવો જોઈએ"
+    ],
+    "correct_index": 0,
+    "explanation": "Costs for successive metres are: 150, 200, 250, 300... The common difference is d = 200 - 150 = 50 (constant). Therefore, it is an AP.",
+    "explanation_hi": "क्रमिक मीटरों की लागत है: 150, 200, 250, 300... सार्व अंतर d = 200 - 150 = 50 (स्थिर) है। अतः यह एक AP है।",
+    "explanation_gu": "ક્રમિક મીટર માટે ખર્ચ: 150, 200, 250, 300... સામાન્ય તફાવત d = 200 - 150 = 50 (અચળ) છે. તેથી તે AP છે."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q1_p4",
+    "question": "Exercise 5.1 (Q1.iv): Does the situation form an AP?\n'The amount of money in the account every year, when ₹10,000 is deposited at compound interest at 8% per annum.'",
+    "question_hi": "प्रश्नावली 5.1 (Q1.iv): क्या यह स्थिति AP बनाती है?\n'खाते में प्रत्येक वर्ष का मिश्रधन, जबकि ₹10,000 की राशि 8% वार्षिक की दर से चक्रवृद्धि ब्याज पर जमा की जाती है।'",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q1.iv): શું આ સ્થિતિ AP બનાવે છે?\n'ખાતામાં જમા થયેલ વાર્ષિક રકમ, જ્યારે ₹10,000 ની રકમ 8% ના વાર્ષિક ચક્રવૃદ્ધિ વ્યાજના દરે મુકવામાં આવે છે.'",
+    "options": [
+      "No, it does not form an AP because compound interest increases the principal multiplicatively",
+      "Yes, it forms an AP with common difference ₹800",
+      "Yes, it forms an AP with common difference ₹10,800",
+      "No, because the interest is 0"
+    ],
+    "options_hi": [
+      "नहीं, यह AP नहीं बनाती क्योंकि चक्रवृद्धि ब्याज मूलधन को गुणात्मक रूप से बढ़ाता है",
+      "हाँ, यह सार्व अंतर ₹800 वाली एक AP बनाती है",
+      "हाँ, यह सार्व अंतर ₹10,800 वाली एक AP बनाती है",
+      "नहीं, क्योंकि ब्याज 0 है"
+    ],
+    "options_gu": [
+      "ના, તે AP બનાવતી નથી કારણ કે ચક્રવૃદ્ધિ વ્યાજ રકમને ગુણાત્મક રીતે વધારે છે",
+      "હા, તે સામાન્ય તફાવત ₹800 વાળી AP બનાવે છે",
+      "હા, તે સામાન્ય તફાવત ₹10,800 વાળી AP બનાવે છે",
+      "ના, કારણ કે વ્યાજ 0 છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Amount after n years is 10000(1 + 8/100)^n. Year 1: 10800, Year 2: 11664, Year 3: 12597.12. The differences are 800, 864, 933.12... which are not equal. Hence it is NOT an AP.",
+    "explanation_hi": "n वर्षों के बाद की राशि 10000(1 + 8/100)^n होती है। वर्ष 1: 10800, वर्ष 2: 11664... अंतर 800, 864... समान नहीं हैं। अतः यह AP नहीं है।",
+    "explanation_gu": "n વર્ષ પછીની રકમ 10000(1 + 8/100)^n છે. વર્ષ 1: 10800, વર્ષ 2: 11664... તફાવત 800, 864... સમાન નથી. તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q2_p1",
+    "question": "Exercise 5.1 (Q2.1): Write the first four terms of the AP, when the first term 'a' and the common difference 'd' are given as follows: a = 10, d = 10",
+    "question_hi": "प्रश्नावली 5.1 (Q2.1): दी हुई AP के प्रथम चार पद लिखिए, जबकि प्रथम पद 'a' और सार्व अंतर 'd' निम्नलिखित हैं: a = 10, d = 10",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q2.1): જ્યારે પ્રથમ પદ 'a' અને સામાન્ય તફાવત 'd' ના મૂલ્યો નીચે પ્રમાણે હોય ત્યારે AP ના પ્રથમ ચાર પદો લખો: a = 10, d = 10",
+    "options": [
+      "10, 20, 30, 40",
+      "10, 100, 1000, 10000",
+      "0, 10, 20, 30",
+      "10, 20, 40, 80"
+    ],
+    "options_hi": [
+      "10, 20, 30, 40",
+      "10, 100, 1000, 10000",
+      "0, 10, 20, 30",
+      "10, 20, 40, 80"
+    ],
+    "options_gu": [
+      "10, 20, 30, 40",
+      "10, 100, 1000, 10000",
+      "0, 10, 20, 30",
+      "10, 20, 40, 80"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁ = 10, a₂ = 10+10 = 20, a₃ = 20+10 = 30, a₄ = 30+10 = 40.",
+    "explanation_hi": "a₁ = 10, a₂ = 10+10 = 20, a₃ = 20+10 = 30, a₄ = 30+10 = 40।",
+    "explanation_gu": "a₁ = 10, a₂ = 10+10 = 20, a₃ = 20+10 = 30, a₄ = 30+10 = 40."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q2_p2",
+    "question": "Exercise 5.1 (Q2.2): Write the first four terms of the AP, when the first term 'a' and the common difference 'd' are given as follows: a = -2, d = 0",
+    "question_hi": "प्रश्नावली 5.1 (Q2.2): दी हुई AP के प्रथम चार पद लिखिए, जबकि प्रथम पद 'a' और सार्व अंतर 'd' निम्नलिखित हैं: a = -2, d = 0",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q2.2): જ્યારે પ્રથમ પદ 'a' અને સામાન્ય તફાવત 'd' ના મૂલ્યો નીચે પ્રમાણે હોય ત્યારે AP ના પ્રથમ ચાર પદો લખો: a = -2, d = 0",
+    "options": [
+      "-2, -2, -2, -2",
+      "-2, 0, 2, 4",
+      "-2, -4, -6, -8",
+      "0, 0, 0, 0"
+    ],
+    "options_hi": [
+      "-2, -2, -2, -2",
+      "-2, 0, 2, 4",
+      "-2, -4, -6, -8",
+      "0, 0, 0, 0"
+    ],
+    "options_gu": [
+      "-2, -2, -2, -2",
+      "-2, 0, 2, 4",
+      "-2, -4, -6, -8",
+      "0, 0, 0, 0"
+    ],
+    "correct_index": 0,
+    "explanation": "Since d = 0, every term is identical: -2, -2, -2, -2.",
+    "explanation_hi": "चूँकि d = 0 है, प्रत्येक पद समान होगा: -2, -2, -2, -2।",
+    "explanation_gu": "કારણ કે d = 0 છે, દરેક પદ સમાન રહે છે: -2, -2, -2, -2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q2_p3",
+    "question": "Exercise 5.1 (Q2.3): Write the first four terms of the AP, when the first term 'a' and the common difference 'd' are given as follows: a = 4, d = -3",
+    "question_hi": "प्रश्नावली 5.1 (Q2.3): दी हुई AP के प्रथम चार पद लिखिए, जबकि प्रथम पद 'a' और सार्व अंतर 'd' निम्नलिखित हैं: a = 4, d = -3",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q2.3): જ્યારે પ્રથમ પદ 'a' અને સામાન્ય તફાવત 'd' ના મૂલ્યો નીચે પ્રમાણે હોય ત્યારે AP ના પ્રથમ ચાર પદો લખો: a = 4, d = -3",
+    "options": [
+      "4, 1, -2, -5",
+      "4, 7, 10, 13",
+      "4, -12, 36, -108",
+      "4, 1, 0, -3"
+    ],
+    "options_hi": [
+      "4, 1, -2, -5",
+      "4, 7, 10, 13",
+      "4, -12, 36, -108",
+      "4, 1, 0, -3"
+    ],
+    "options_gu": [
+      "4, 1, -2, -5",
+      "4, 7, 10, 13",
+      "4, -12, 36, -108",
+      "4, 1, 0, -3"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁ = 4, a₂ = 4 + (-3) = 1, a₃ = 1 + (-3) = -2, a₄ = -2 + (-3) = -5.",
+    "explanation_hi": "a₁ = 4, a₂ = 4 + (-3) = 1, a₃ = 1 + (-3) = -2, a₄ = -2 + (-3) = -5।",
+    "explanation_gu": "a₁ = 4, a₂ = 4 + (-3) = 1, a₃ = 1 + (-3) = -2, a₄ = -2 + (-3) = -5."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q2_p4",
+    "question": "Exercise 5.1 (Q2.4): Write the first four terms of the AP, when the first term 'a' and the common difference 'd' are given as follows: a = -1, d = 1/2",
+    "question_hi": "प्रश्नावली 5.1 (Q2.4): दी हुई AP के प्रथम चार पद लिखिए, जबकि प्रथम पद 'a' और सार्व अंतर 'd' निम्नलिखित हैं: a = -1, d = 1/2",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q2.4): જ્યારે પ્રથમ પદ 'a' અને સામાન્ય તફાવત 'd' ના મૂલ્યો નીચે પ્રમાણે હોય ત્યારે AP ના પ્રથમ ચાર પદો લખો: a = -1, d = 1/2",
+    "options": [
+      "-1, -1/2, 0, 1/2",
+      "-1, -3/2, -2, -5/2",
+      "-1, 0, 1, 2",
+      "-1, -1/2, -1/4, -1/8"
+    ],
+    "options_hi": [
+      "-1, -1/2, 0, 1/2",
+      "-1, -3/2, -2, -5/2",
+      "-1, 0, 1, 2",
+      "-1, -1/2, -1/4, -1/8"
+    ],
+    "options_gu": [
+      "-1, -1/2, 0, 1/2",
+      "-1, -3/2, -2, -5/2",
+      "-1, 0, 1, 2",
+      "-1, -1/2, -1/4, -1/8"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁ = -1, a₂ = -1 + 1/2 = -1/2, a₃ = -1/2 + 1/2 = 0, a₄ = 0 + 1/2 = 1/2.",
+    "explanation_hi": "a₁ = -1, a₂ = -1 + 1/2 = -1/2, a₃ = -1/2 + 1/2 = 0, a₄ = 0 + 1/2 = 1/2।",
+    "explanation_gu": "a₁ = -1, a₂ = -1 + 1/2 = -1/2, a₃ = -1/2 + 1/2 = 0, a₄ = 0 + 1/2 = 1/2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q2_p5",
+    "question": "Exercise 5.1 (Q2.5): Write the first four terms of the AP, when the first term 'a' and the common difference 'd' are given as follows: a = -1.25, d = -0.25",
+    "question_hi": "प्रश्नावली 5.1 (Q2.5): दी हुई AP के प्रथम चार पद लिखिए, जबकि प्रथम पद 'a' और सार्व अंतर 'd' निम्नलिखित हैं: a = -1.25, d = -0.25",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q2.5): જ્યારે પ્રથમ પદ 'a' અને સામાન્ય તફાવત 'd' ના મૂલ્યો નીચે પ્રમાણે હોય ત્યારે AP ના પ્રથમ ચાર પદો લખો: a = -1.25, d = -0.25",
+    "options": [
+      "-1.25, -1.50, -1.75, -2.00",
+      "-1.25, -1.00, -0.75, -0.50",
+      "-1.25, -1.50, -2.00, -2.50",
+      "-1.25, 0.25, 1.75, 3.25"
+    ],
+    "options_hi": [
+      "-1.25, -1.50, -1.75, -2.00",
+      "-1.25, -1.00, -0.75, -0.50",
+      "-1.25, -1.50, -2.00, -2.50",
+      "-1.25, 0.25, 1.75, 3.25"
+    ],
+    "options_gu": [
+      "-1.25, -1.50, -1.75, -2.00",
+      "-1.25, -1.00, -0.75, -0.50",
+      "-1.25, -1.50, -2.00, -2.50",
+      "-1.25, 0.25, 1.75, 3.25"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁ = -1.25, a₂ = -1.25 + (-0.25) = -1.50, a₃ = -1.75, a₄ = -2.00.",
+    "explanation_hi": "a₁ = -1.25, a₂ = -1.25 + (-0.25) = -1.50, a₃ = -1.75, a₄ = -2.00।",
+    "explanation_gu": "a₁ = -1.25, a₂ = -1.25 + (-0.25) = -1.50, a₃ = -1.75, a₄ = -2.00."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q3_p1",
+    "question": "Exercise 5.1 (Q3.1): For the following AP, write the first term 'a' and the common difference 'd': 3, 1, -1, -3, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q3.1): निम्नलिखित में से प्रत्येक AP के लिए प्रथम पद तथा सार्व अंतर लिखिए: 3, 1, -1, -3, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q3.1): નીચે આપેલ સમાંતર શ્રેણી માટે પ્રથમ પદ અને સામાન્ય તફાવત શોધો: 3, 1, -1, -3, ...",
+    "options": [
+      "a = 3, d = -2",
+      "a = 3, d = 2",
+      "a = -3, d = -2",
+      "a = 1, d = -2"
+    ],
+    "options_hi": [
+      "a = 3, d = -2",
+      "a = 3, d = 2",
+      "a = -3, d = -2",
+      "a = 1, d = -2"
+    ],
+    "options_gu": [
+      "a = 3, d = -2",
+      "a = 3, d = 2",
+      "a = -3, d = -2",
+      "a = 1, d = -2"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 3, d = 1 - 3 = -2.",
+    "explanation_hi": "a = 3, d = 1 - 3 = -2।",
+    "explanation_gu": "a = 3, d = 1 - 3 = -2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q3_p2",
+    "question": "Exercise 5.1 (Q3.2): For the following AP, write the first term 'a' and the common difference 'd': -5, -1, 3, 7, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q3.2): निम्नलिखित में से प्रत्येक AP के लिए प्रथम पद तथा सार्व अंतर लिखिए: -5, -1, 3, 7, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q3.2): નીચે આપેલ સમાંતર શ્રેણી માટે પ્રથમ પદ અને સામાન્ય તફાવત શોધો: -5, -1, 3, 7, ...",
+    "options": [
+      "a = -5, d = 4",
+      "a = -5, d = -4",
+      "a = -1, d = 4",
+      "a = 7, d = 4"
+    ],
+    "options_hi": [
+      "a = -5, d = 4",
+      "a = -5, d = -4",
+      "a = -1, d = 4",
+      "a = 7, d = 4"
+    ],
+    "options_gu": [
+      "a = -5, d = 4",
+      "a = -5, d = -4",
+      "a = -1, d = 4",
+      "a = 7, d = 4"
+    ],
+    "correct_index": 0,
+    "explanation": "a = -5, d = -1 - (-5) = -1 + 5 = 4.",
+    "explanation_hi": "a = -5, d = -1 - (-5) = -1 + 5 = 4।",
+    "explanation_gu": "a = -5, d = -1 - (-5) = -1 + 5 = 4."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q3_p3",
+    "question": "Exercise 5.1 (Q3.3): For the following AP, write the first term 'a' and the common difference 'd': 1/3, 5/3, 9/3, 13/3, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q3.3): निम्नलिखित में से प्रत्येक AP के लिए प्रथम पद तथा सार्व अंतर लिखिए: 1/3, 5/3, 9/3, 13/3, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q3.3): નીચે આપેલ સમાંતર શ્રેણી માટે પ્રથમ પદ અને સામાન્ય તફાવત શોધો: 1/3, 5/3, 9/3, 13/3, ...",
+    "options": [
+      "a = 1/3, d = 4/3",
+      "a = 1/3, d = 5/3",
+      "a = 5/3, d = 4/3",
+      "a = 1/3, d = -4/3"
+    ],
+    "options_hi": [
+      "a = 1/3, d = 4/3",
+      "a = 1/3, d = 5/3",
+      "a = 5/3, d = 4/3",
+      "a = 1/3, d = -4/3"
+    ],
+    "options_gu": [
+      "a = 1/3, d = 4/3",
+      "a = 1/3, d = 5/3",
+      "a = 5/3, d = 4/3",
+      "a = 1/3, d = -4/3"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 1/3, d = 5/3 - 1/3 = 4/3.",
+    "explanation_hi": "a = 1/3, d = 5/3 - 1/3 = 4/3।",
+    "explanation_gu": "a = 1/3, d = 5/3 - 1/3 = 4/3."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q3_p4",
+    "question": "Exercise 5.1 (Q3.4): For the following AP, write the first term 'a' and the common difference 'd': 0.6, 1.7, 2.8, 3.9, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q3.4): निम्नलिखित में से प्रत्येक AP के लिए प्रथम पद तथा सार्व अंतर लिखिए: 0.6, 1.7, 2.8, 3.9, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q3.4): નીચે આપેલ સમાંતર શ્રેણી માટે પ્રથમ પદ અને સામાન્ય તફાવત શોધો: 0.6, 1.7, 2.8, 3.9, ...",
+    "options": [
+      "a = 0.6, d = 1.1",
+      "a = 0.6, d = 0.9",
+      "a = 1.7, d = 1.1",
+      "a = 0.6, d = -1.1"
+    ],
+    "options_hi": [
+      "a = 0.6, d = 1.1",
+      "a = 0.6, d = 0.9",
+      "a = 1.7, d = 1.1",
+      "a = 0.6, d = -1.1"
+    ],
+    "options_gu": [
+      "a = 0.6, d = 1.1",
+      "a = 0.6, d = 0.9",
+      "a = 1.7, d = 1.1",
+      "a = 0.6, d = -1.1"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 0.6, d = 1.7 - 0.6 = 1.1.",
+    "explanation_hi": "a = 0.6, d = 1.7 - 0.6 = 1.1।",
+    "explanation_gu": "a = 0.6, d = 1.7 - 0.6 = 1.1."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p1",
+    "question": "Exercise 5.1 (Q4.1): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 2, 4, 8, 16, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.1): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 2, 4, 8, 16, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.1): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 2, 4, 8, 16, ...",
+    "options": [
+      "Not an AP (differences 2, 4, 8 are not equal)",
+      "AP with d = 2; next terms: 18, 20, 22",
+      "AP with d = 4; next terms: 20, 24, 28",
+      "AP with d = 8; next terms: 24, 32, 40"
+    ],
+    "options_hi": [
+      "AP नहीं है (अंतर 2, 4, 8 समान नहीं हैं)",
+      "AP है जहाँ d = 2; अगले पद: 18, 20, 22",
+      "AP है जहाँ d = 4; अगले पद: 20, 24, 28",
+      "AP है जहाँ d = 8; अगले पद: 24, 32, 40"
+    ],
+    "options_gu": [
+      "AP નથી (તફાવત 2, 4, 8 સમાન નથી)",
+      "AP છે જ્યાં d = 2; આગળના પદો: 18, 20, 22",
+      "AP છે જ્યાં d = 4; આગળના પદો: 20, 24, 28",
+      "AP છે જ્યાં d = 8; આગળના પદો: 24, 32, 40"
+    ],
+    "correct_index": 0,
+    "explanation": "4 - 2 = 2, 8 - 4 = 4. Differences are not equal, so it is NOT an AP.",
+    "explanation_hi": "4 - 2 = 2, 8 - 4 = 4। अंतर समान नहीं हैं, इसलिए यह AP नहीं है।",
+    "explanation_gu": "4 - 2 = 2, 8 - 4 = 4. તફાવત સમાન નથી, તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p2",
+    "question": "Exercise 5.1 (Q4.2): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 2, 5/2, 3, 7/2, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.2): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 2, 5/2, 3, 7/2, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.2): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 2, 5/2, 3, 7/2, ...",
+    "options": [
+      "AP with d = 1/2; next three terms: 4, 9/2, 5",
+      "Not an AP",
+      "AP with d = 1; next three terms: 4, 5, 6",
+      "AP with d = 1/2; next three terms: 4, 5, 6"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = 1/2; अगले तीन पद: 4, 9/2, 5",
+      "AP नहीं है",
+      "AP है जहाँ d = 1; अगले तीन पद: 4, 5, 6",
+      "AP है जहाँ d = 1/2; अगले तीन पद: 4, 5, 6"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = 1/2; આગળના ત્રણ પદો: 4, 9/2, 5",
+      "AP નથી",
+      "AP છે જ્યાં d = 1; આગળના ત્રણ પદો: 4, 5, 6",
+      "AP છે જ્યાં d = 1/2; આગળના ત્રણ પદો: 4, 5, 6"
+    ],
+    "correct_index": 0,
+    "explanation": "5/2 - 2 = 1/2, 3 - 5/2 = 1/2, 7/2 - 3 = 1/2. Constant d = 1/2. Next terms: 7/2 + 1/2 = 4, 4 + 1/2 = 9/2, 9/2 + 1/2 = 5.",
+    "explanation_hi": "5/2 - 2 = 1/2, 3 - 5/2 = 1/2. अंतर स्थिर d = 1/2 है। अगले पद: 4, 9/2, 5।",
+    "explanation_gu": "5/2 - 2 = 1/2, 3 - 5/2 = 1/2. સામાન્ય તફાવત d = 1/2 છે. આગળના પદો: 4, 9/2, 5."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p3",
+    "question": "Exercise 5.1 (Q4.3): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: -1.2, -3.2, -5.2, -7.2, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.3): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: -1.2, -3.2, -5.2, -7.2, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.3): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: -1.2, -3.2, -5.2, -7.2, ...",
+    "options": [
+      "AP with d = -2; next three terms: -9.2, -11.2, -13.2",
+      "AP with d = 2; next three terms: -5.2, -3.2, -1.2",
+      "Not an AP",
+      "AP with d = -2; next three terms: -8.2, -9.2, -10.2"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = -2; अगले तीन पद: -9.2, -11.2, -13.2",
+      "AP है जहाँ d = 2; अगले तीन पद: -5.2, -3.2, -1.2",
+      "AP नहीं है",
+      "AP है जहाँ d = -2; अगले तीन पद: -8.2, -9.2, -10.2"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = -2; આગળના ત્રણ પદો: -9.2, -11.2, -13.2",
+      "AP છે જ્યાં d = 2; આગળના ત્રણ પદો: -5.2, -3.2, -1.2",
+      "AP નથી",
+      "AP છે જ્યાં d = -2; આગળના ત્રણ પદો: -8.2, -9.2, -10.2"
+    ],
+    "correct_index": 0,
+    "explanation": "-3.2 - (-1.2) = -2, -5.2 - (-3.2) = -2. So d = -2. Next terms: -7.2 + (-2) = -9.2, -11.2, -13.2.",
+    "explanation_hi": "-3.2 - (-1.2) = -2। d = -2 स्थिर है। अगले पद: -9.2, -11.2, -13.2।",
+    "explanation_gu": "-3.2 - (-1.2) = -2. d = -2 અચળ છે. આગળના પદો: -9.2, -11.2, -13.2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p4",
+    "question": "Exercise 5.1 (Q4.4): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: -10, -6, -2, 2, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.4): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: -10, -6, -2, 2, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.4): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: -10, -6, -2, 2, ...",
+    "options": [
+      "AP with d = 4; next three terms: 6, 10, 14",
+      "AP with d = -4; next three terms: -2, -6, -10",
+      "Not an AP",
+      "AP with d = 4; next three terms: 4, 8, 12"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = 4; अगले तीन पद: 6, 10, 14",
+      "AP है जहाँ d = -4; अगले तीन पद: -2, -6, -10",
+      "AP नहीं है",
+      "AP है जहाँ d = 4; अगले तीन पद: 4, 8, 12"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = 4; આગળના ત્રણ પદો: 6, 10, 14",
+      "AP છે જ્યાં d = -4; આગળના ત્રણ પદો: -2, -6, -10",
+      "AP નથી",
+      "AP છે જ્યાં d = 4; આગળના ત્રણ પદો: 4, 8, 12"
+    ],
+    "correct_index": 0,
+    "explanation": "-6 - (-10) = 4, -2 - (-6) = 4, 2 - (-2) = 4. d = 4. Next terms: 2+4=6, 6+4=10, 10+4=14.",
+    "explanation_hi": "-6 - (-10) = 4, -2 - (-6) = 4। d = 4 स्थिर है। अगले पद: 6, 10, 14।",
+    "explanation_gu": "-6 - (-10) = 4, -2 - (-6) = 4. d = 4 અચળ છે. આગળના પદો: 6, 10, 14."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p5",
+    "question": "Exercise 5.1 (Q4.5): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 3, 3+√2, 3+2√2, 3+3√2, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.5): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 3, 3+√2, 3+2√2, 3+3√2, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.5): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 3, 3+√2, 3+2√2, 3+3√2, ...",
+    "options": [
+      "AP with d = √2; next three terms: 3+4√2, 3+5√2, 3+6√2",
+      "Not an AP",
+      "AP with d = 2; next three terms: 3+4√2, 3+5√2, 3+6√2",
+      "AP with d = √2; next three terms: 3+5√2, 3+7√2, 3+9√2"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = √2; अगले तीन पद: 3+4√2, 3+5√2, 3+6√2",
+      "AP नहीं है",
+      "AP है जहाँ d = 2; अगले तीन पद: 3+4√2, 3+5√2, 3+6√2",
+      "AP है जहाँ d = √2; अगले तीन पद: 3+5√2, 3+7√2, 3+9√2"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = √2; આગળના ત્રણ પદો: 3+4√2, 3+5√2, 3+6√2",
+      "AP નથી",
+      "AP છે જ્યાં d = 2; આગળના ત્રણ પદો: 3+4√2, 3+5√2, 3+6√2",
+      "AP છે જ્યાં d = √2; આગળના ત્રણ પદો: 3+5√2, 3+7√2, 3+9√2"
+    ],
+    "correct_index": 0,
+    "explanation": "(3+√2) - 3 = √2, (3+2√2) - (3+√2) = √2. Constant d = √2. Next terms: 3+4√2, 3+5√2, 3+6√2.",
+    "explanation_hi": "(3+√2) - 3 = √2। अंतर d = √2 स्थिर है। अगले पद: 3+4√2, 3+5√2, 3+6√2।",
+    "explanation_gu": "(3+√2) - 3 = √2. તફાવત d = √2 અચળ છે. આગળના પદો: 3+4√2, 3+5√2, 3+6√2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p6",
+    "question": "Exercise 5.1 (Q4.6): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 0.2, 0.22, 0.222, 0.2222, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.6): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 0.2, 0.22, 0.222, 0.2222, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.6): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 0.2, 0.22, 0.222, 0.2222, ...",
+    "options": [
+      "Not an AP (differences 0.02, 0.002, 0.0002 are not equal)",
+      "AP with d = 0.02",
+      "AP with d = 0.2",
+      "AP with d = 0.002"
+    ],
+    "options_hi": [
+      "AP नहीं है (अंतर 0.02, 0.002, 0.0002 समान नहीं हैं)",
+      "AP है जहाँ d = 0.02",
+      "AP है जहाँ d = 0.2",
+      "AP है जहाँ d = 0.002"
+    ],
+    "options_gu": [
+      "AP નથી (તફાવત 0.02, 0.002, 0.0002 સમાન નથી)",
+      "AP છે જ્યાં d = 0.02",
+      "AP છે જ્યાં d = 0.2",
+      "AP છે જ્યાં d = 0.002"
+    ],
+    "correct_index": 0,
+    "explanation": "0.22 - 0.2 = 0.02, while 0.222 - 0.22 = 0.002. Since 0.02 ≠ 0.002, it is NOT an AP.",
+    "explanation_hi": "0.22 - 0.2 = 0.02, जबकि 0.222 - 0.22 = 0.002। अंतर समान नहीं हैं, अतः यह AP नहीं है।",
+    "explanation_gu": "0.22 - 0.2 = 0.02, જ્યારે 0.222 - 0.22 = 0.002. તફાવત સમાન નથી, તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p7",
+    "question": "Exercise 5.1 (Q4.7): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 0, -4, -8, -12, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.7): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 0, -4, -8, -12, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.7): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 0, -4, -8, -12, ...",
+    "options": [
+      "AP with d = -4; next three terms: -16, -20, -24",
+      "AP with d = 4; next three terms: -8, -4, 0",
+      "Not an AP",
+      "AP with d = -4; next three terms: -14, -18, -22"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = -4; अगले तीन पद: -16, -20, -24",
+      "AP है जहाँ d = 4; अगले तीन पद: -8, -4, 0",
+      "AP नहीं है",
+      "AP है जहाँ d = -4; अगले तीन पद: -14, -18, -22"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = -4; આગળના ત્રણ પદો: -16, -20, -24",
+      "AP છે જ્યાં d = 4; આગળના ત્રણ પદો: -8, -4, 0",
+      "AP નથી",
+      "AP છે જ્યાં d = -4; આગળના ત્રણ પદો: -14, -18, -22"
+    ],
+    "correct_index": 0,
+    "explanation": "-4 - 0 = -4, -8 - (-4) = -4. d = -4. Next terms: -12 + (-4) = -16, -20, -24.",
+    "explanation_hi": "-4 - 0 = -4, -8 - (-4) = -4। d = -4 स्थिर है। अगले पद: -16, -20, -24।",
+    "explanation_gu": "-4 - 0 = -4, -8 - (-4) = -4. d = -4 અચળ છે. આગળના પદો: -16, -20, -24."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p8",
+    "question": "Exercise 5.1 (Q4.8): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: -1/2, -1/2, -1/2, -1/2, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.8): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: -1/2, -1/2, -1/2, -1/2, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.8): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: -1/2, -1/2, -1/2, -1/2, ...",
+    "options": [
+      "AP with d = 0; next three terms: -1/2, -1/2, -1/2",
+      "Not an AP",
+      "AP with d = 1/2; next three terms: 0, 1/2, 1",
+      "AP with d = -1/2; next three terms: -1, -3/2, -2"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = 0; अगले तीन पद: -1/2, -1/2, -1/2",
+      "AP नहीं है",
+      "AP है जहाँ d = 1/2; अगले तीन पद: 0, 1/2, 1",
+      "AP है जहाँ d = -1/2; अगले तीन पद: -1, -3/2, -2"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = 0; આગળના ત્રણ પદો: -1/2, -1/2, -1/2",
+      "AP નથી",
+      "AP છે જ્યાં d = 1/2; આગળના ત્રણ પદો: 0, 1/2, 1",
+      "AP છે જ્યાં d = -1/2; આગળના ત્રણ પદો: -1, -3/2, -2"
+    ],
+    "correct_index": 0,
+    "explanation": "-1/2 - (-1/2) = 0. Common difference is 0. Next terms: -1/2, -1/2, -1/2.",
+    "explanation_hi": "-1/2 - (-1/2) = 0। सार्व अंतर 0 स्थिर है। अगले पद: -1/2, -1/2, -1/2।",
+    "explanation_gu": "-1/2 - (-1/2) = 0. સામાન્ય તફાવત 0 અચળ છે. આગળના પદો: -1/2, -1/2, -1/2."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p9",
+    "question": "Exercise 5.1 (Q4.9): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 1, 3, 9, 27, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.9): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 1, 3, 9, 27, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.9): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 1, 3, 9, 27, ...",
+    "options": [
+      "Not an AP (differences 2, 6, 18 are not equal)",
+      "AP with d = 3",
+      "AP with d = 2",
+      "AP with d = 6"
+    ],
+    "options_hi": [
+      "AP नहीं है (अंतर 2, 6, 18 समान नहीं हैं)",
+      "AP है जहाँ d = 3",
+      "AP है जहाँ d = 2",
+      "AP है जहाँ d = 6"
+    ],
+    "options_gu": [
+      "AP નથી (તફાવત 2, 6, 18 સમાન નથી)",
+      "AP છે જ્યાં d = 3",
+      "AP છે જ્યાં d = 2",
+      "AP છે જ્યાં d = 6"
+    ],
+    "correct_index": 0,
+    "explanation": "3 - 1 = 2, while 9 - 3 = 6. Differences are not equal, so it is NOT an AP.",
+    "explanation_hi": "3 - 1 = 2, जबकि 9 - 3 = 6। अंतर समान नहीं हैं, अतः यह AP नहीं है।",
+    "explanation_gu": "3 - 1 = 2, જ્યારે 9 - 3 = 6. તફાવત સમાન નથી, તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p10",
+    "question": "Exercise 5.1 (Q4.10): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: a, 2a, 3a, 4a, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.10): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: a, 2a, 3a, 4a, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.10): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: a, 2a, 3a, 4a, ...",
+    "options": [
+      "AP with d = a; next three terms: 5a, 6a, 7a",
+      "Not an AP",
+      "AP with d = 2a; next three terms: 6a, 8a, 10a",
+      "AP with d = a²; next three terms: 5a, 6a, 7a"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = a; अगले तीन पद: 5a, 6a, 7a",
+      "AP नहीं है",
+      "AP है जहाँ d = 2a; अगले तीन पद: 6a, 8a, 10a",
+      "AP है जहाँ d = a²; अगले तीन पद: 5a, 6a, 7a"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = a; આગળના ત્રણ પદો: 5a, 6a, 7a",
+      "AP નથી",
+      "AP છે જ્યાં d = 2a; આગળના ત્રણ પદો: 6a, 8a, 10a",
+      "AP છે જ્યાં d = a²; આગળના ત્રણ પદો: 5a, 6a, 7a"
+    ],
+    "correct_index": 0,
+    "explanation": "2a - a = a, 3a - 2a = a. Constant difference d = a. Next terms: 5a, 6a, 7a.",
+    "explanation_hi": "2a - a = a, 3a - 2a = a। सार्व अंतर d = a स्थिर है। अगले पद: 5a, 6a, 7a।",
+    "explanation_gu": "2a - a = a, 3a - 2a = a. સામાન્ય તફાવત d = a અચળ છે. આગળના પદો: 5a, 6a, 7a."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p11",
+    "question": "Exercise 5.1 (Q4.11): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: a, a², a³, a⁴, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.11): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: a, a², a³, a⁴, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.11): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: a, a², a³, a⁴, ...",
+    "options": [
+      "Not an AP (differences a² - a ≠ a³ - a²)",
+      "AP with d = a",
+      "AP with d = a²",
+      "AP with d = 2a"
+    ],
+    "options_hi": [
+      "AP नहीं है (अंतर a² - a ≠ a³ - a²)",
+      "AP है जहाँ d = a",
+      "AP है जहाँ d = a²",
+      "AP है जहाँ d = 2a"
+    ],
+    "options_gu": [
+      "AP નથી (તફાવત a² - a ≠ a³ - a²)",
+      "AP છે જ્યાં d = a",
+      "AP છે જ્યાં d = a²",
+      "AP છે જ્યાં d = 2a"
+    ],
+    "correct_index": 0,
+    "explanation": "a² - a = a(a - 1) while a³ - a² = a²(a - 1). Unless a = 0 or 1, these are unequal. Thus it is NOT an AP.",
+    "explanation_hi": "a² - a ≠ a³ - a²। अंतर समान नहीं हैं, अतः यह AP नहीं है।",
+    "explanation_gu": "a² - a ≠ a³ - a². તફાવત સમાન નથી, તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p12",
+    "question": "Exercise 5.1 (Q4.12): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: √2, √8, √18, √32, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.12): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: √2, √8, √18, √32, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.12): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: √2, √8, √18, √32, ...",
+    "options": [
+      "AP with d = √2; next three terms: √50, √72, √98",
+      "Not an AP",
+      "AP with d = √6; next three terms: √40, √48, √56",
+      "AP with d = 2; next three terms: √50, √72, √98"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = √2; अगले तीन पद: √50, √72, √98",
+      "AP नहीं है",
+      "AP है जहाँ d = √6; अगले तीन पद: √40, √48, √56",
+      "AP है जहाँ d = 2; अगले तीन पद: √50, √72, √98"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = √2; આગળના ત્રણ પદો: √50, √72, √98",
+      "AP નથી",
+      "AP છે જ્યાં d = √6; આગળના ત્રણ પદો: √40, √48, √56",
+      "AP છે જ્યાં d = 2; આગળના ત્રણ પદો: √50, √72, √98"
+    ],
+    "correct_index": 0,
+    "explanation": "Simplify terms: √2, 2√2, 3√2, 4√2... d = 2√2 - √2 = √2. Next terms: 5√2 = √50, 6√2 = √72, 7√2 = √98.",
+    "explanation_hi": "पदों को सरल करें: √2, 2√2, 3√2, 4√2... d = √2 स्थिर है। अगले पद: 5√2 = √50, 6√2 = √72, 7√2 = √98।",
+    "explanation_gu": "પદોનું સાદુરૂપ આપો: √2, 2√2, 3√2, 4√2... d = √2 અચળ છે. આગળના પદો: 5√2 = √50, 6√2 = √72, 7√2 = √98."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p13",
+    "question": "Exercise 5.1 (Q4.13): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: √3, √6, √9, √12, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.13): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: √3, √6, √9, √12, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.13): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: √3, √6, √9, √12, ...",
+    "options": [
+      "Not an AP (differences √6 - √3 ≠ √9 - √6)",
+      "AP with d = √3",
+      "AP with d = 3",
+      "AP with d = √6"
+    ],
+    "options_hi": [
+      "AP नहीं है (अंतर √6 - √3 ≠ √9 - √6)",
+      "AP है जहाँ d = √3",
+      "AP है जहाँ d = 3",
+      "AP है जहाँ d = √6"
+    ],
+    "options_gu": [
+      "AP નથી (તફાવત √6 - √3 ≠ √9 - √6)",
+      "AP છે જ્યાં d = √3",
+      "AP છે જ્યાં d = 3",
+      "AP છે જ્યાં d = √6"
+    ],
+    "correct_index": 0,
+    "explanation": "√6 - √3 ≠ √9 - √6 (which is 3 - √6). The differences are unequal, so it is NOT an AP.",
+    "explanation_hi": "√6 - √3 ≠ 3 - √6। अंतर समान नहीं हैं, अतः यह AP नहीं है।",
+    "explanation_gu": "√6 - √3 ≠ 3 - √6. તફાવત સમાન નથી, તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p14",
+    "question": "Exercise 5.1 (Q4.14): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 1², 3², 5², 7², ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.14): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 1², 3², 5², 7², ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.14): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 1², 3², 5², 7², ...",
+    "options": [
+      "Not an AP (1, 9, 25, 49 have differences 8, 16, 24)",
+      "AP with d = 8",
+      "AP with d = 2",
+      "AP with d = 16"
+    ],
+    "options_hi": [
+      "AP नहीं है (1, 9, 25, 49 के अंतर 8, 16, 24 समान नहीं हैं)",
+      "AP है जहाँ d = 8",
+      "AP है जहाँ d = 2",
+      "AP है जहाँ d = 16"
+    ],
+    "options_gu": [
+      "AP નથી (1, 9, 25, 49 ના તફાવત 8, 16, 24 સમાન નથી)",
+      "AP છે જ્યાં d = 8",
+      "AP છે જ્યાં d = 2",
+      "AP છે જ્યાં d = 16"
+    ],
+    "correct_index": 0,
+    "explanation": "1² = 1, 3² = 9, 5² = 25, 7² = 49. Differences: 9-1=8, 25-9=16. Since 8 ≠ 16, it is NOT an AP.",
+    "explanation_hi": "1, 9, 25, 49... अंतर 8, 16 समान नहीं हैं। अतः यह AP नहीं है।",
+    "explanation_gu": "1, 9, 25, 49... તફાવત 8, 16 સમાન નથી. તેથી તે AP નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.1_Q4_p15",
+    "question": "Exercise 5.1 (Q4.15): Which of the following are APs? If they form an AP, find the common difference 'd' and write three more terms: 1², 5², 7², 73, ...",
+    "question_hi": "प्रश्नावली 5.1 (Q4.15): निम्नलिखित में से कौन-कौन AP हैं? यदि कोई AP है, तो इसका सार्व अंतर 'd' ज्ञात कीजिए और इनके तीन और पद लिखिए: 1², 5², 7², 73, ...",
+    "question_gu": "સ્વાધ્યાય 5.1 (Q4.15): નીચેનામાંથી કઈ શ્રેણી સમાંતર શ્રેણી છે? જો તે સમાંતર શ્રેણી બનાવે, તો સામાન્ય તફાવત 'd' શોધો અને પછીના ત્રણ પદો લખો: 1², 5², 7², 73, ...",
+    "options": [
+      "AP with d = 24; next three terms: 97, 121, 145",
+      "Not an AP",
+      "AP with d = 24; next three terms: 97, 119, 143",
+      "AP with d = 12; next three terms: 85, 97, 109"
+    ],
+    "options_hi": [
+      "AP है जहाँ d = 24; अगले तीन पद: 97, 121, 145",
+      "AP नहीं है",
+      "AP है जहाँ d = 24; अगले तीन पद: 97, 119, 143",
+      "AP है जहाँ d = 12; अगले तीन पद: 85, 97, 109"
+    ],
+    "options_gu": [
+      "AP છે જ્યાં d = 24; આગળના ત્રણ પદો: 97, 121, 145",
+      "AP નથી",
+      "AP છે જ્યાં d = 24; આગળના ત્રણ પદો: 97, 119, 143",
+      "AP છે જ્યાં d = 12; આગળના ત્રણ પદો: 85, 97, 109"
+    ],
+    "correct_index": 0,
+    "explanation": "1² = 1, 5² = 25, 7² = 49, 73... Differences: 25-1=24, 49-25=24, 73-49=24. Constant d = 24! Next terms: 73+24=97, 97+24=121, 121+24=145.",
+    "explanation_hi": "1, 25, 49, 73... अंतर 25-1=24, 49-25=24, 73-49=24 स्थिर है (d = 24)। अगले पद: 97, 121, 145।",
+    "explanation_gu": "1, 25, 49, 73... તફાવત 25-1=24, 49-25=24, 73-49=24 અચળ છે (d = 24). આગળના પદો: 97, 121, 145."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q1_p1",
+    "question": "Exercise 5.2 (Q1.1): Fill in the blank in the table, given that 'a' is the first term, 'd' the common difference and a_n the nth term of the AP: a = 7, d = 3, n = 8, find a_n",
+    "question_hi": "प्रश्नावली 5.2 (Q1.1): निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ AP का प्रथम पद 'a', सार्व अंतर 'd' और nवाँ पद a_n है: a = 7, d = 3, n = 8, find a_n",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q1.1): નીચેના કોષ્ટકમાં ખાલી જગ્યા પૂરો, જ્યાં AP નું પ્રથમ પદ 'a', સામાન્ય તફાવત 'd' અને nમું પદ a_n છે: a = 7, d = 3, n = 8, find a_n",
+    "options": [
+      "a_n = 28",
+      "a_n = 31",
+      "a_n = 24",
+      "a_n = 21"
+    ],
+    "options_hi": [
+      "a_n = 28",
+      "a_n = 31",
+      "a_n = 24",
+      "a_n = 21"
+    ],
+    "options_gu": [
+      "a_n = 28",
+      "a_n = 31",
+      "a_n = 24",
+      "a_n = 21"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = a + (n - 1)d = 7 + (8 - 1) × 3 = 7 + 21 = 28.",
+    "explanation_hi": "a_n = a + (n - 1)d = 7 + (8 - 1) × 3 = 7 + 21 = 28।",
+    "explanation_gu": "a_n = a + (n - 1)d = 7 + (8 - 1) × 3 = 7 + 21 = 28."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q1_p2",
+    "question": "Exercise 5.2 (Q1.2): Fill in the blank in the table, given that 'a' is the first term, 'd' the common difference and a_n the nth term of the AP: a = -18, n = 10, a_n = 0, find d",
+    "question_hi": "प्रश्नावली 5.2 (Q1.2): निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ AP का प्रथम पद 'a', सार्व अंतर 'd' और nवाँ पद a_n है: a = -18, n = 10, a_n = 0, find d",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q1.2): નીચેના કોષ્ટકમાં ખાલી જગ્યા પૂરો, જ્યાં AP નું પ્રથમ પદ 'a', સામાન્ય તફાવત 'd' અને nમું પદ a_n છે: a = -18, n = 10, a_n = 0, find d",
+    "options": [
+      "d = 2",
+      "d = -2",
+      "d = 1.8",
+      "d = 9"
+    ],
+    "options_hi": [
+      "d = 2",
+      "d = -2",
+      "d = 1.8",
+      "d = 9"
+    ],
+    "options_gu": [
+      "d = 2",
+      "d = -2",
+      "d = 1.8",
+      "d = 9"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = a + (n - 1)d => 0 = -18 + (10 - 1)d => 9d = 18 => d = 2.",
+    "explanation_hi": "0 = -18 + 9d => 9d = 18 => d = 2।",
+    "explanation_gu": "0 = -18 + 9d => 9d = 18 => d = 2."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q1_p3",
+    "question": "Exercise 5.2 (Q1.3): Fill in the blank in the table, given that 'a' is the first term, 'd' the common difference and a_n the nth term of the AP: d = -3, n = 18, a_n = -5, find a",
+    "question_hi": "प्रश्नावली 5.2 (Q1.3): निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ AP का प्रथम पद 'a', सार्व अंतर 'd' और nवाँ पद a_n है: d = -3, n = 18, a_n = -5, find a",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q1.3): નીચેના કોષ્ટકમાં ખાલી જગ્યા પૂરો, જ્યાં AP નું પ્રથમ પદ 'a', સામાન્ય તફાવત 'd' અને nમું પદ a_n છે: d = -3, n = 18, a_n = -5, find a",
+    "options": [
+      "a = 46",
+      "a = -46",
+      "a = 56",
+      "a = 49"
+    ],
+    "options_hi": [
+      "a = 46",
+      "a = -46",
+      "a = 56",
+      "a = 49"
+    ],
+    "options_gu": [
+      "a = 46",
+      "a = -46",
+      "a = 56",
+      "a = 49"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = a + (n - 1)d => -5 = a + (18 - 1)(-3) => -5 = a - 51 => a = 46.",
+    "explanation_hi": "-5 = a + 17(-3) => -5 = a - 51 => a = 46।",
+    "explanation_gu": "-5 = a + 17(-3) => -5 = a - 51 => a = 46."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q1_p4",
+    "question": "Exercise 5.2 (Q1.4): Fill in the blank in the table, given that 'a' is the first term, 'd' the common difference and a_n the nth term of the AP: a = -18.9, d = 2.5, a_n = 3.6, find n",
+    "question_hi": "प्रश्नावली 5.2 (Q1.4): निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ AP का प्रथम पद 'a', सार्व अंतर 'd' और nवाँ पद a_n है: a = -18.9, d = 2.5, a_n = 3.6, find n",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q1.4): નીચેના કોષ્ટકમાં ખાલી જગ્યા પૂરો, જ્યાં AP નું પ્રથમ પદ 'a', સામાન્ય તફાવત 'd' અને nમું પદ a_n છે: a = -18.9, d = 2.5, a_n = 3.6, find n",
+    "options": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 8"
+    ],
+    "options_hi": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 8"
+    ],
+    "options_gu": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 8"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = a + (n - 1)d => 3.6 = -18.9 + (n - 1)(2.5) => (n - 1)(2.5) = 22.5 => n - 1 = 9 => n = 10.",
+    "explanation_hi": "3.6 = -18.9 + (n - 1)(2.5) => 22.5 = (n - 1)(2.5) => n - 1 = 9 => n = 10।",
+    "explanation_gu": "3.6 = -18.9 + (n - 1)(2.5) => 22.5 = (n - 1)(2.5) => n - 1 = 9 => n = 10."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q1_p5",
+    "question": "Exercise 5.2 (Q1.5): Fill in the blank in the table, given that 'a' is the first term, 'd' the common difference and a_n the nth term of the AP: a = 3.5, d = 0, n = 105, find a_n",
+    "question_hi": "प्रश्नावली 5.2 (Q1.5): निम्नलिखित सारणी में, रिक्त स्थानों को भरिए, जहाँ AP का प्रथम पद 'a', सार्व अंतर 'd' और nवाँ पद a_n है: a = 3.5, d = 0, n = 105, find a_n",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q1.5): નીચેના કોષ્ટકમાં ખાલી જગ્યા પૂરો, જ્યાં AP નું પ્રથમ પદ 'a', સામાન્ય તફાવત 'd' અને nમું પદ a_n છે: a = 3.5, d = 0, n = 105, find a_n",
+    "options": [
+      "a_n = 3.5",
+      "a_n = 0",
+      "a_n = 105",
+      "a_n = 367.5"
+    ],
+    "options_hi": [
+      "a_n = 3.5",
+      "a_n = 0",
+      "a_n = 105",
+      "a_n = 367.5"
+    ],
+    "options_gu": [
+      "a_n = 3.5",
+      "a_n = 0",
+      "a_n = 105",
+      "a_n = 367.5"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = a + (n - 1)d = 3.5 + (105 - 1) × 0 = 3.5.",
+    "explanation_hi": "a_n = 3.5 + 104 × 0 = 3.5।",
+    "explanation_gu": "a_n = 3.5 + 104 × 0 = 3.5."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q2_p1",
+    "question": "Exercise 5.2 (Q2.i): Choose the correct choice: 30th term of the AP: 10, 7, 4, ... is:",
+    "question_hi": "प्रश्नावली 5.2 (Q2.i): सही उत्तर चुनिए: AP: 10, 7, 4, ... का 30वाँ पद है:",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q2.i): સાચો વિકલ્પ પસંદ કરો: સમાંતર શ્રેણી 10, 7, 4, ... નું 30મું પદ છે:",
+    "options": [
+      "-77",
+      "97",
+      "77",
+      "-87"
+    ],
+    "options_hi": [
+      "-77",
+      "97",
+      "77",
+      "-87"
+    ],
+    "options_gu": [
+      "-77",
+      "97",
+      "77",
+      "-87"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 10, d = 7 - 10 = -3, n = 30. a₃₀ = a + (30 - 1)d = 10 + 29(-3) = 10 - 87 = -77.",
+    "explanation_hi": "यहाँ a = 10, d = 7 - 10 = -3, n = 30। a₃₀ = 10 + 29(-3) = 10 - 87 = -77।",
+    "explanation_gu": "અહીં a = 10, d = 7 - 10 = -3, n = 30. a₃₀ = 10 + 29(-3) = 10 - 87 = -77."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q2_p2",
+    "question": "Exercise 5.2 (Q2.ii): Choose the correct choice: 11th term of the AP: -3, -1/2, 2, ... is:",
+    "question_hi": "प्रश्नावली 5.2 (Q2.ii): सही उत्तर चुनिए: AP: -3, -1/2, 2, ... का 11वाँ पद है:",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q2.ii): સાચો વિકલ્પ પસંદ કરો: સમાંતર શ્રેણી -3, -1/2, 2, ... નું 11મું પદ છે:",
+    "options": [
+      "22",
+      "28",
+      "-38",
+      "-46 1/2"
+    ],
+    "options_hi": [
+      "22",
+      "28",
+      "-38",
+      "-46 1/2"
+    ],
+    "options_gu": [
+      "22",
+      "28",
+      "-38",
+      "-46 1/2"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = -3, d = -1/2 - (-3) = 5/2, n = 11. a₁₁ = -3 + (11 - 1)(5/2) = -3 + 10(5/2) = -3 + 25 = 22.",
+    "explanation_hi": "यहाँ a = -3, d = -1/2 - (-3) = 5/2, n = 11। a₁₁ = -3 + 10(5/2) = -3 + 25 = 22।",
+    "explanation_gu": "અહીં a = -3, d = -1/2 - (-3) = 5/2, n = 11. a₁₁ = -3 + 10(5/2) = -3 + 25 = 22."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q3_p1",
+    "question": "Exercise 5.2 (Q3.1): In the following AP, find the missing terms in the boxes: 2, [ ? ], 26",
+    "question_hi": "प्रश्नावली 5.2 (Q3.1): निम्नलिखित समांतर श्रेढ़ी में, रिक्त खानों के पदों को ज्ञात कीजिए: 2, [ ? ], 26",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q3.1): નીચેની સમાંતર શ્રેણીમાં ખાલી ખાનાના પદો શોધો: 2, [ ? ], 26",
+    "options": [
+      "14",
+      "12",
+      "16",
+      "18"
+    ],
+    "options_hi": [
+      "14",
+      "12",
+      "16",
+      "18"
+    ],
+    "options_gu": [
+      "14",
+      "12",
+      "16",
+      "18"
+    ],
+    "correct_index": 0,
+    "explanation": "In an AP, middle term is the arithmetic mean: (2 + 26) / 2 = 14. (Or 2 + 2d = 26 => 2d = 24 => d = 12 => 2 + 12 = 14).",
+    "explanation_hi": "AP में मध्य पद समांतर माध्य होता है: (2 + 26) / 2 = 14।",
+    "explanation_gu": "AP માં મધ્યમ પદ સમાંતર મધ્યક છે: (2 + 26) / 2 = 14."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q3_p2",
+    "question": "Exercise 5.2 (Q3.2): In the following AP, find the missing terms in the boxes: [ ? ], 13, [ ? ], 3",
+    "question_hi": "प्रश्नावली 5.2 (Q3.2): निम्नलिखित समांतर श्रेढ़ी में, रिक्त खानों के पदों को ज्ञात कीजिए: [ ? ], 13, [ ? ], 3",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q3.2): નીચેની સમાંતર શ્રેણીમાં ખાલી ખાનાના પદો શોધો: [ ? ], 13, [ ? ], 3",
+    "options": [
+      "18 and 8",
+      "15 and 9",
+      "16 and 10",
+      "20 and 6"
+    ],
+    "options_hi": [
+      "18 and 8",
+      "15 and 9",
+      "16 and 10",
+      "20 and 6"
+    ],
+    "options_gu": [
+      "18 and 8",
+      "15 and 9",
+      "16 and 10",
+      "20 and 6"
+    ],
+    "correct_index": 0,
+    "explanation": "a + d = 13 and a + 3d = 3. Subtracting: 2d = -10 => d = -5. Then a = 13 - (-5) = 18. Third term = 13 + (-5) = 8.",
+    "explanation_hi": "a + d = 13 और a + 3d = 3। घटाने पर: 2d = -10 => d = -5। a = 18। तीसरा पद = 18 + 2(-5) = 8।",
+    "explanation_gu": "a + d = 13 અને a + 3d = 3. બાદબાકી કરતા: 2d = -10 => d = -5. a = 18. ત્રીજું પદ = 8."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q3_p3",
+    "question": "Exercise 5.2 (Q3.3): In the following AP, find the missing terms in the boxes: 5, [ ? ], [ ? ], 9 1/2",
+    "question_hi": "प्रश्नावली 5.2 (Q3.3): निम्नलिखित समांतर श्रेढ़ी में, रिक्त खानों के पदों को ज्ञात कीजिए: 5, [ ? ], [ ? ], 9 1/2",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q3.3): નીચેની સમાંતર શ્રેણીમાં ખાલી ખાનાના પદો શોધો: 5, [ ? ], [ ? ], 9 1/2",
+    "options": [
+      "6 1/2 and 8",
+      "6 and 7 1/2",
+      "7 and 8 1/2",
+      "6 1/2 and 7 1/2"
+    ],
+    "options_hi": [
+      "6 1/2 and 8",
+      "6 and 7 1/2",
+      "7 and 8 1/2",
+      "6 1/2 and 7 1/2"
+    ],
+    "options_gu": [
+      "6 1/2 and 8",
+      "6 and 7 1/2",
+      "7 and 8 1/2",
+      "6 1/2 and 7 1/2"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 5, a₄ = 19/2 => a + 3d = 19/2 => 3d = 19/2 - 5 = 9/2 => d = 3/2. Second term = 5 + 3/2 = 6 1/2. Third term = 6 1/2 + 3/2 = 8.",
+    "explanation_hi": "a = 5, a + 3d = 19/2 => 3d = 9/2 => d = 3/2। पद: 5 + 3/2 = 6 1/2 और 8।",
+    "explanation_gu": "a = 5, a + 3d = 19/2 => 3d = 9/2 => d = 3/2. પદો: 6 1/2 અને 8."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q3_p4",
+    "question": "Exercise 5.2 (Q3.4): In the following AP, find the missing terms in the boxes: -4, [ ? ], [ ? ], [ ? ], [ ? ], 6",
+    "question_hi": "प्रश्नावली 5.2 (Q3.4): निम्नलिखित समांतर श्रेढ़ी में, रिक्त खानों के पदों को ज्ञात कीजिए: -4, [ ? ], [ ? ], [ ? ], [ ? ], 6",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q3.4): નીચેની સમાંતર શ્રેણીમાં ખાલી ખાનાના પદો શોધો: -4, [ ? ], [ ? ], [ ? ], [ ? ], 6",
+    "options": [
+      "-2, 0, 2, 4",
+      "-2, -1, 0, 1",
+      "-1, 1, 3, 5",
+      "-3, -2, -1, 0"
+    ],
+    "options_hi": [
+      "-2, 0, 2, 4",
+      "-2, -1, 0, 1",
+      "-1, 1, 3, 5",
+      "-3, -2, -1, 0"
+    ],
+    "options_gu": [
+      "-2, 0, 2, 4",
+      "-2, -1, 0, 1",
+      "-1, 1, 3, 5",
+      "-3, -2, -1, 0"
+    ],
+    "correct_index": 0,
+    "explanation": "a = -4, a₆ = 6 => a + 5d = 6 => -4 + 5d = 6 => 5d = 10 => d = 2. Missing terms: -4+2 = -2, 0, 2, 4.",
+    "explanation_hi": "a = -4, a + 5d = 6 => 5d = 10 => d = 2। लुप्त पद: -2, 0, 2, 4।",
+    "explanation_gu": "a = -4, a + 5d = 6 => 5d = 10 => d = 2. ખૂટતા પદો: -2, 0, 2, 4."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q3_p5",
+    "question": "Exercise 5.2 (Q3.5): In the following AP, find the missing terms in the boxes: [ ? ], 38, [ ? ], [ ? ], [ ? ], -22",
+    "question_hi": "प्रश्नावली 5.2 (Q3.5): निम्नलिखित समांतर श्रेढ़ी में, रिक्त खानों के पदों को ज्ञात कीजिए: [ ? ], 38, [ ? ], [ ? ], [ ? ], -22",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q3.5): નીચેની સમાંતર શ્રેણીમાં ખાલી ખાનાના પદો શોધો: [ ? ], 38, [ ? ], [ ? ], [ ? ], -22",
+    "options": [
+      "53, 23, 8, -7",
+      "50, 26, 14, 2",
+      "53, 20, 7, -6",
+      "48, 28, 18, 8"
+    ],
+    "options_hi": [
+      "53, 23, 8, -7",
+      "50, 26, 14, 2",
+      "53, 20, 7, -6",
+      "48, 28, 18, 8"
+    ],
+    "options_gu": [
+      "53, 23, 8, -7",
+      "50, 26, 14, 2",
+      "53, 20, 7, -6",
+      "48, 28, 18, 8"
+    ],
+    "correct_index": 0,
+    "explanation": "a + d = 38, a + 5d = -22. Subtracting: 4d = -60 => d = -15. a = 38 - (-15) = 53. Terms: 53, 23, 8, -7.",
+    "explanation_hi": "a + d = 38 और a + 5d = -22। घटाने पर: 4d = -60 => d = -15, a = 53। पद: 53, 23, 8, -7।",
+    "explanation_gu": "a + d = 38 અને a + 5d = -22. બાદબાકી કરતા: 4d = -60 => d = -15, a = 53. પદો: 53, 23, 8, -7."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q4",
+    "question": "Exercise 5.2 (Q4): Which term of the AP: 3, 8, 13, 18, ... is 78?",
+    "question_hi": "प्रश्नावली 5.2 (Q4): AP: 3, 8, 13, 18, ... का कौन सा पद 78 है?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q4): સમાંતર શ્રેણી 3, 8, 13, 18, ... નું કેટલામું પદ 78 થાય?",
+    "options": [
+      "16th term",
+      "15th term",
+      "17th term",
+      "14th term"
+    ],
+    "options_hi": [
+      "16वाँ पद",
+      "15वाँ पद",
+      "17वाँ पद",
+      "14वाँ पद"
+    ],
+    "options_gu": [
+      "16મું પદ",
+      "15મું પદ",
+      "17મું પદ",
+      "14મું પદ"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 3, d = 8 - 3 = 5, a_n = 78. Formula: a_n = a + (n - 1)d => 78 = 3 + (n - 1)5 => 75 = 5(n - 1) => n - 1 = 15 => n = 16.",
+    "explanation_hi": "यहाँ a = 3, d = 5, a_n = 78। सूत्र: a + (n - 1)d = 78 => 3 + 5(n - 1) = 78 => 5(n - 1) = 75 => n - 1 = 15 => n = 16।",
+    "explanation_gu": "અહીં a = 3, d = 5, a_n = 78. સૂત્ર: 3 + (n - 1)5 = 78 => 5(n - 1) = 75 => n - 1 = 15 => n = 16."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q5_p1",
+    "question": "Exercise 5.2 (Q5.i): Find the number of terms in the AP: 7, 13, 19, ..., 205",
+    "question_hi": "प्रश्नावली 5.2 (Q5.i): निम्नलिखित समांतर श्रेढ़ी में पदों की संख्या ज्ञात कीजिए: 7, 13, 19, ..., 205",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q5.i): સમાંતર શ્રેણી 7, 13, 19, ..., 205 માં પદોની સંખ્યા શોધો:",
+    "options": [
+      "34 terms",
+      "33 terms",
+      "35 terms",
+      "36 terms"
+    ],
+    "options_hi": [
+      "34 पद",
+      "33 पद",
+      "35 पद",
+      "36 पद"
+    ],
+    "options_gu": [
+      "34 પદો",
+      "33 પદો",
+      "35 પદો",
+      "36 પદો"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 7, d = 13 - 7 = 6, a_n = 205. 205 = 7 + (n - 1)6 => 6(n - 1) = 198 => n - 1 = 33 => n = 34.",
+    "explanation_hi": "a = 7, d = 6, a_n = 205। 205 = 7 + 6(n - 1) => 6(n - 1) = 198 => n - 1 = 33 => n = 34 पद।",
+    "explanation_gu": "a = 7, d = 6, a_n = 205. 205 = 7 + 6(n - 1) => 6(n - 1) = 198 => n - 1 = 33 => n = 34 પદો."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q5_p2",
+    "question": "Exercise 5.2 (Q5.ii): Find the number of terms in the AP: 18, 15 1/2, 13, ..., -47",
+    "question_hi": "प्रश्नावली 5.2 (Q5.ii): निम्नलिखित समांतर श्रेढ़ी में पदों की संख्या ज्ञात कीजिए: 18, 15 1/2, 13, ..., -47",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q5.ii): સમાંતર શ્રેણી 18, 15 1/2, 13, ..., -47 માં પદોની સંખ્યા શોધો:",
+    "options": [
+      "27 terms",
+      "26 terms",
+      "28 terms",
+      "25 terms"
+    ],
+    "options_hi": [
+      "27 पद",
+      "26 पद",
+      "28 पद",
+      "25 पद"
+    ],
+    "options_gu": [
+      "27 પદો",
+      "26 પદો",
+      "28 પદો",
+      "25 પદો"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 18, d = 31/2 - 18 = -5/2, a_n = -47. -47 = 18 + (n - 1)(-5/2) => -65 = -(5/2)(n - 1) => n - 1 = 26 => n = 27.",
+    "explanation_hi": "a = 18, d = -5/2, a_n = -47। -47 = 18 - 5/2(n - 1) => 65 = 5/2(n - 1) => n - 1 = 26 => n = 27।",
+    "explanation_gu": "a = 18, d = -5/2, a_n = -47. -47 = 18 - 5/2(n - 1) => 65 = 5/2(n - 1) => n - 1 = 26 => n = 27."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q6",
+    "question": "Exercise 5.2 (Q6): Check whether -150 is a term of the AP: 11, 8, 5, 2, ...",
+    "question_hi": "प्रश्नावली 5.2 (Q6): क्या AP: 11, 8, 5, 2, ... का एक पद -150 है? क्यों?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q6): ચકાસો કે શું -150 એ સમાંતર શ્રેણી 11, 8, 5, 2, ... નું કોઈ પદ છે?",
+    "options": [
+      "No, because n = 54 2/3 is not a natural number",
+      "Yes, it is the 55th term",
+      "Yes, it is the 54th term",
+      "No, because -150 is negative"
+    ],
+    "options_hi": [
+      "नहीं, क्योंकि n = 54 2/3 एक प्राकृत संख्या नहीं है",
+      "हाँ, यह 55वाँ पद है",
+      "हाँ, यह 54वाँ पद है",
+      "नहीं, क्योंकि -150 ऋणात्मक है"
+    ],
+    "options_gu": [
+      "ના, કારણ કે n = 54 2/3 એ પ્રાકૃતિક સંખ્યા નથી",
+      "હા, તે 55મું પદ છે",
+      "હા, તે 54મું પદ છે",
+      "ના, કારણ કે -150 ઋણ છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 11, d = 8 - 11 = -3. Let a_n = -150 => 11 + (n - 1)(-3) = -150 => -3(n - 1) = -161 => n - 1 = 161/3 => n = 164/3 = 54 2/3. Since n must be a positive integer, -150 is NOT a term.",
+    "explanation_hi": "a = 11, d = -3। -150 = 11 + (n - 1)(-3) => -3(n - 1) = -161 => n = 164/3 = 54 2/3। चूँकि n एक धनात्मक पूर्णांक होना चाहिए, इसलिए -150 पद नहीं है।",
+    "explanation_gu": "a = 11, d = -3. -150 = 11 + (n - 1)(-3) => n = 164/3. n ધન પૂર્ણાંક હોવો જરૂરી હોવાથી, -150 શ્રેણીનું પદ નથી."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q7",
+    "question": "Exercise 5.2 (Q7): Find the 31st term of an AP whose 11th term is 38 and the 16th term is 73.",
+    "question_hi": "प्रश्नावली 5.2 (Q7): उस AP का 31वाँ पद ज्ञात कीजिए, जिसका 11वाँ पद 38 है और 16वाँ पद 73 है।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q7): જે સમાંતર શ્રેણીનું 11મું પદ 38 અને 16મું પદ 73 હોય તેનું 31મું પદ શોધો.",
+    "options": [
+      "178",
+      "168",
+      "188",
+      "172"
+    ],
+    "options_hi": [
+      "178",
+      "168",
+      "188",
+      "172"
+    ],
+    "options_gu": [
+      "178",
+      "168",
+      "188",
+      "172"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁₁ = a + 10d = 38, and a₁₆ = a + 15d = 73. Subtracting: 5d = 35 => d = 7. Then a + 10(7) = 38 => a = -32. Thus a₃₁ = a + 30d = -32 + 30(7) = -32 + 210 = 178.",
+    "explanation_hi": "a + 10d = 38 और a + 15d = 73। घटाने पर: 5d = 35 => d = 7। a = 38 - 70 = -32। a₃₁ = -32 + 30(7) = 178।",
+    "explanation_gu": "a + 10d = 38 અને a + 15d = 73. બાદબાકી કરતા: 5d = 35 => d = 7. a = -32. a₃₁ = -32 + 30(7) = 178."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q8",
+    "question": "Exercise 5.2 (Q8): An AP consists of 50 terms of which 3rd term is 12 and the last term is 106. Find the 29th term.",
+    "question_hi": "प्रश्नावली 5.2 (Q8): एक AP में 50 पद हैं, जिसका तीसरा पद 12 है और अंतिम पद 106 है। इसका 29वाँ पद ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q8): એક સમાંતર શ્રેણીમાં 50 પદ છે. જો ત્રીજું પદ 12 અને છેલ્લું પદ 106 હોય, તો તેનું 29મું પદ શોધો.",
+    "options": [
+      "64",
+      "62",
+      "66",
+      "68"
+    ],
+    "options_hi": [
+      "64",
+      "62",
+      "66",
+      "68"
+    ],
+    "options_gu": [
+      "64",
+      "62",
+      "66",
+      "68"
+    ],
+    "correct_index": 0,
+    "explanation": "Total terms n = 50. a₃ = a + 2d = 12, a₅₀ = a + 49d = 106. Subtracting: 47d = 94 => d = 2. a = 12 - 2(2) = 8. a₂₉ = a + 28d = 8 + 28(2) = 64.",
+    "explanation_hi": "a + 2d = 12 और a + 49d = 106। 47d = 94 => d = 2। a = 12 - 4 = 8। a₂₉ = 8 + 28(2) = 64।",
+    "explanation_gu": "a + 2d = 12 અને a + 49d = 106. 47d = 94 => d = 2. a = 8. a₂₉ = 8 + 28(2) = 64."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q9",
+    "question": "Exercise 5.2 (Q9): If the 3rd and the 9th terms of an AP are 4 and -8 respectively, which term of this AP is zero?",
+    "question_hi": "प्रश्नावली 5.2 (Q9): यदि किसी AP के तीसरे और नौवें पद क्रमशः 4 और -8 हैं, तो इसका कौन सा पद शून्य होगा?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q9): જો સમાંતર શ્રેણીનું ત્રીજું અને નવમું પદ અનુક્રમે 4 અને -8 હોય, તો તે શ્રેણીનું કયું પદ શૂન્ય થાય?",
+    "options": [
+      "5th term",
+      "6th term",
+      "4th term",
+      "7th term"
+    ],
+    "options_hi": [
+      "5वाँ पद",
+      "6वाँ पद",
+      "4वाँ पद",
+      "7वाँ पद"
+    ],
+    "options_gu": [
+      "5મું પદ",
+      "6મું પદ",
+      "4મું પદ",
+      "7મું પદ"
+    ],
+    "correct_index": 0,
+    "explanation": "a₃ = a + 2d = 4, a₉ = a + 8d = -8. Subtracting: 6d = -12 => d = -2. a = 4 - 2(-2) = 8. Set a_n = 0: 8 + (n - 1)(-2) = 0 => 2(n - 1) = 8 => n - 1 = 4 => n = 5.",
+    "explanation_hi": "a + 2d = 4 और a + 8d = -8। 6d = -12 => d = -2, a = 8। a_n = 0 => 8 + (n - 1)(-2) = 0 => n = 5वाँ पद।",
+    "explanation_gu": "a + 2d = 4 અને a + 8d = -8. 6d = -12 => d = -2, a = 8. a_n = 0 => 8 + (n - 1)(-2) = 0 => n = 5મું પદ."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q10",
+    "question": "Exercise 5.2 (Q10): The 17th term of an AP exceeds its 10th term by 7. Find the common difference.",
+    "question_hi": "प्रश्नावली 5.2 (Q10): किसी AP का 17वाँ पद उसके 10वें पद से 7 अधिक है। इसका सार्व अंतर ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q10): કોઈ સમાંતર શ્રેણીનું 17મું પદ તેના 10મા પદ કરતાં 7 વધુ છે, તો તેનો સામાન્ય તફાવત શોધો.",
+    "options": [
+      "d = 1",
+      "d = 7",
+      "d = 2",
+      "d = -1"
+    ],
+    "options_hi": [
+      "d = 1",
+      "d = 7",
+      "d = 2",
+      "d = -1"
+    ],
+    "options_gu": [
+      "d = 1",
+      "d = 7",
+      "d = 2",
+      "d = -1"
+    ],
+    "correct_index": 0,
+    "explanation": "a₁₇ - a₁₀ = 7 => (a + 16d) - (a + 9d) = 7 => 7d = 7 => d = 1.",
+    "explanation_hi": "a₁₇ - a₁₀ = 7 => (a + 16d) - (a + 9d) = 7 => 7d = 7 => d = 1।",
+    "explanation_gu": "a₁₇ - a₁₀ = 7 => (a + 16d) - (a + 9d) = 7 => 7d = 7 => d = 1."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q11",
+    "question": "Exercise 5.2 (Q11): Which term of the AP: 3, 15, 27, 39, ... will be 132 more than its 54th term?",
+    "question_hi": "प्रश्नावली 5.2 (Q11): AP: 3, 15, 27, 39, ... का कौन सा पद उसके 54वें पद से 132 अधिक होगा?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q11): સમાંતર શ્રેણી 3, 15, 27, 39, ... નું કયું પદ તેના 54મા પદ કરતાં 132 વધુ હશે?",
+    "options": [
+      "65th term",
+      "64th term",
+      "66th term",
+      "63rd term"
+    ],
+    "options_hi": [
+      "65वाँ पद",
+      "64वाँ पद",
+      "66वाँ पद",
+      "63वाँ पद"
+    ],
+    "options_gu": [
+      "65મું પદ",
+      "64મું પદ",
+      "66મું પદ",
+      "63મું પદ"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 3, d = 12. Let the required term be a_n. a_n - a₅₄ = 132 => (n - 54)d = 132 => (n - 54)(12) = 132 => n - 54 = 11 => n = 65.",
+    "explanation_hi": "a = 3, d = 12। a_n = a₅₄ + 132 => (n - 54)d = 132 => (n - 54)(12) = 132 => n - 54 = 11 => n = 65वाँ पद।",
+    "explanation_gu": "a = 3, d = 12. a_n = a₅₄ + 132 => (n - 54)12 = 132 => n - 54 = 11 => n = 65મું પદ."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q12",
+    "question": "Exercise 5.2 (Q12): Two APs have the same common difference. The difference between their 100th terms is 100, what is the difference between their 1000th terms?",
+    "question_hi": "प्रश्नावली 5.2 (Q12): दो समांतर श्रेढ़ियों का सार्व अंतर समान है। यदि इनके 100वें पदों का अंतर 100 है, तो इनके 1000वें पदों का अंतर क्या होगा?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q12): બે સમાંતર શ્રેણીના સામાન્ય તફાવત સમાન છે. તેમના 100મા પદોનો તફાવત 100 હોય, તો તેમના 1000મા પદોનો તફાવત કેટલો હશે?",
+    "options": [
+      "100",
+      "1000",
+      "0",
+      "10000"
+    ],
+    "options_hi": [
+      "100",
+      "1000",
+      "0",
+      "10000"
+    ],
+    "options_gu": [
+      "100",
+      "1000",
+      "0",
+      "10000"
+    ],
+    "correct_index": 0,
+    "explanation": "Let first terms be a and b with same d. Difference of nth terms: (a + (n-1)d) - (b + (n-1)d) = a - b. The difference is ALWAYS constant (a - b) for ANY term! Since difference between 100th terms is 100, a - b = 100. Thus difference between 1000th terms is also 100.",
+    "explanation_hi": "nवें पदों का अंतर = (a + (n-1)d) - (b + (n-1)d) = a - b (स्थिर)। अतः 1000वें पदों का अंतर भी a - b = 100 ही होगा।",
+    "explanation_gu": "nમા પદોનો તફાવત = a - b (અચળ રહે છે). તેથી 1000મા પદોનો તફાવત પણ 100 જ થશે."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q13",
+    "question": "Exercise 5.2 (Q13): How many three-digit numbers are divisible by 7?",
+    "question_hi": "प्रश्नावली 5.2 (Q13): तीन अंकों वाली कितनी संख्याएँ 7 से विभाज्य हैं?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q13): ત્રણ અંકની કેટલી સંખ્યાઓ 7 વડે વિભાજ્ય હશે?",
+    "options": [
+      "128 numbers",
+      "127 numbers",
+      "129 numbers",
+      "130 numbers"
+    ],
+    "options_hi": [
+      "128 संख्याएँ",
+      "127 संख्याएँ",
+      "129 संख्याएँ",
+      "130 संख्याएँ"
+    ],
+    "options_gu": [
+      "128 સંખ્યાઓ",
+      "127 સંખ્યાઓ",
+      "129 સંખ્યાઓ",
+      "130 સંખ્યાઓ"
+    ],
+    "correct_index": 0,
+    "explanation": "Smallest 3-digit number divisible by 7 is 105. Largest is 994. The AP is 105, 112, ..., 994 with a = 105, d = 7. 994 = 105 + (n - 1)7 => 7(n - 1) = 889 => n - 1 = 127 => n = 128.",
+    "explanation_hi": "पहली 3-अंकीय संख्या 105 है और अंतिम 994 है। 994 = 105 + 7(n - 1) => 7(n - 1) = 889 => n = 128 संख्याएँ।",
+    "explanation_gu": "પ્રથમ 3-અંકની સંખ્યા 105 અને છેલ્લી 994 છે. 994 = 105 + 7(n - 1) => n = 128 સંખ્યાઓ."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q14",
+    "question": "Exercise 5.2 (Q14): How many multiples of 4 lie between 10 and 250?",
+    "question_hi": "प्रश्नावली 5.2 (Q14): 10 और 250 के बीच में 4 के कितने गुणज हैं?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q14): 10 અને 250 વચ્ચે 4 ના કેટલા ગુણિત હશે?",
+    "options": [
+      "60 multiples",
+      "59 multiples",
+      "61 multiples",
+      "62 multiples"
+    ],
+    "options_hi": [
+      "60 गुणज",
+      "59 गुणज",
+      "61 गुणज",
+      "62 गुणज"
+    ],
+    "options_gu": [
+      "60 ગુણિત",
+      "59 ગુણિત",
+      "61 ગુણિત",
+      "62 ગુણિત"
+    ],
+    "correct_index": 0,
+    "explanation": "First multiple after 10 is 12. Last multiple before 250 is 248. AP: 12, 16, ..., 248. a = 12, d = 4. 248 = 12 + (n - 1)4 => 4(n - 1) = 236 => n - 1 = 59 => n = 60.",
+    "explanation_hi": "10 के बाद पहला गुणज 12 है और 250 से पहले 248 है। 248 = 12 + 4(n - 1) => 4(n - 1) = 236 => n = 60 गुणज।",
+    "explanation_gu": "10 પછી પ્રથમ ગુણિત 12 અને 250 પહેલાં 248 છે. 248 = 12 + 4(n - 1) => n = 60 ગુણિત."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q15",
+    "question": "Exercise 5.2 (Q15): For what value of n, are the nth terms of two APs: 63, 65, 67, ... and 3, 10, 17, ... equal?",
+    "question_hi": "प्रश्नावली 5.2 (Q15): n के किस मान के लिए, दोनों समांतर श्रेढ़ियों 63, 65, 67, ... और 3, 10, 17, ... के nवें पद बराबर होंगे?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q15): n ના કયા મૂલ્ય માટે બે સમાંતર શ્રેણીઓ 63, 65, 67, ... અને 3, 10, 17, ... ના nમા પદ સમાન થાય?",
+    "options": [
+      "n = 13",
+      "n = 12",
+      "n = 14",
+      "n = 15"
+    ],
+    "options_hi": [
+      "n = 13",
+      "n = 12",
+      "n = 14",
+      "n = 15"
+    ],
+    "options_gu": [
+      "n = 13",
+      "n = 12",
+      "n = 14",
+      "n = 15"
+    ],
+    "correct_index": 0,
+    "explanation": "For 1st AP: a_n = 63 + (n - 1)2 = 61 + 2n. For 2nd AP: a_n = 3 + (n - 1)7 = 7n - 4. Setting equal: 61 + 2n = 7n - 4 => 5n = 65 => n = 13.",
+    "explanation_hi": "पहली AP: 63 + (n - 1)2 = 61 + 2n। दूसरी AP: 3 + (n - 1)7 = 7n - 4। बराबर रखने पर: 61 + 2n = 7n - 4 => 5n = 65 => n = 13।",
+    "explanation_gu": "પ્રથમ AP: 61 + 2n. બીજી AP: 7n - 4. સરખાવતા: 61 + 2n = 7n - 4 => 5n = 65 => n = 13."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q16",
+    "question": "Exercise 5.2 (Q16): Determine the AP whose 3rd term is 16 and the 7th term exceeds the 5th term by 12.",
+    "question_hi": "प्रश्नावली 5.2 (Q16): वह AP निर्धारित कीजिए जिसका तीसरा पद 16 है और 7वाँ पद 5वें पद से 12 अधिक है।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q16): એવી સમાંતર શ્રેણી શોધો કે જેનું ત્રીજું પદ 16 અને 7મું પદ 5મા પદથી 12 વધુ હોય.",
+    "options": [
+      "4, 10, 16, 22, ...",
+      "2, 8, 14, 20, ...",
+      "4, 8, 12, 16, ...",
+      "6, 12, 18, 24, ..."
+    ],
+    "options_hi": [
+      "4, 10, 16, 22, ...",
+      "2, 8, 14, 20, ...",
+      "4, 8, 12, 16, ...",
+      "6, 12, 18, 24, ..."
+    ],
+    "options_gu": [
+      "4, 10, 16, 22, ...",
+      "2, 8, 14, 20, ...",
+      "4, 8, 12, 16, ...",
+      "6, 12, 18, 24, ..."
+    ],
+    "correct_index": 0,
+    "explanation": "a₇ - a₅ = 12 => (a + 6d) - (a + 4d) = 12 => 2d = 12 => d = 6. Given a₃ = 16 => a + 2(6) = 16 => a = 4. The AP is 4, 10, 16, 22, ...",
+    "explanation_hi": "a₇ - a₅ = 12 => 2d = 12 => d = 6। a + 2(6) = 16 => a = 4। AP है: 4, 10, 16, 22, ...।",
+    "explanation_gu": "a₇ - a₅ = 12 => 2d = 12 => d = 6. a + 2(6) = 16 => a = 4. AP: 4, 10, 16, 22, ..."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q17",
+    "question": "Exercise 5.2 (Q17): Find the 20th term from the last term of the AP: 3, 8, 13, ..., 253.",
+    "question_hi": "प्रश्नावली 5.2 (Q17): AP: 3, 8, 13, ..., 253 में अंतिम पद से 20वाँ पद ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q17): સમાંતર શ્રેણી 3, 8, 13, ..., 253 નું છેલ્લેથી 20મું પદ શોધો.",
+    "options": [
+      "158",
+      "148",
+      "168",
+      "153"
+    ],
+    "options_hi": [
+      "158",
+      "148",
+      "168",
+      "153"
+    ],
+    "options_gu": [
+      "158",
+      "148",
+      "168",
+      "153"
+    ],
+    "correct_index": 0,
+    "explanation": "Here l = 253, d = 8 - 3 = 5. Formula for nth term from end: l - (n - 1)d = 253 - (20 - 1)5 = 253 - 19(5) = 253 - 95 = 158.",
+    "explanation_hi": "अंतिम पद से nवाँ पद = l - (n - 1)d = 253 - (20 - 1)5 = 253 - 95 = 158।",
+    "explanation_gu": "છેલ્લેથી nમું પદ = l - (n - 1)d = 253 - 19(5) = 253 - 95 = 158."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q18",
+    "question": "Exercise 5.2 (Q18): The sum of the 4th and 8th terms of an AP is 24 and the sum of the 6th and 10th terms is 44. Find the first three terms of the AP.",
+    "question_hi": "प्रश्नावली 5.2 (Q18): किसी AP के चौथे और 8वें पदों का योग 24 है तथा छठे और 10वें पदों का योग 44 है। इस AP के प्रथम तीन पद ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q18): એક સમાંતર શ્રેણીના ચોથા અને આઠમા પદોનો સરવાળો 24 છે અને છઠ્ઠા અને દસમા પદોનો સરવાળો 44 છે, તો આ સમાંતર શ્રેણીના પ્રથમ ત્રણ પદ શોધો.",
+    "options": [
+      "-13, -8, -3",
+      "-10, -5, 0",
+      "-15, -10, -5",
+      "-12, -7, -2"
+    ],
+    "options_hi": [
+      "-13, -8, -3",
+      "-10, -5, 0",
+      "-15, -10, -5",
+      "-12, -7, -2"
+    ],
+    "options_gu": [
+      "-13, -8, -3",
+      "-10, -5, 0",
+      "-15, -10, -5",
+      "-12, -7, -2"
+    ],
+    "correct_index": 0,
+    "explanation": "a₄ + a₈ = (a + 3d) + (a + 7d) = 2a + 10d = 24 => a + 5d = 12. a₆ + a₁₀ = (a + 5d) + (a + 9d) = 2a + 14d = 44 => a + 7d = 22. Subtracting: 2d = 10 => d = 5. Then a = 12 - 5(5) = -13. First 3 terms: -13, -8, -3.",
+    "explanation_hi": "2a + 10d = 24 => a + 5d = 12। 2a + 14d = 44 => a + 7d = 22। घटाने पर: 2d = 10 => d = 5, a = -13। प्रथम तीन पद: -13, -8, -3।",
+    "explanation_gu": "a + 5d = 12 અને a + 7d = 22. બાદબાકી કરતા: 2d = 10 => d = 5, a = -13. પ્રથમ ત્રણ પદો: -13, -8, -3."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q19",
+    "question": "Exercise 5.2 (Q19): Subba Rao started work in 1995 at an annual salary of ₹5000 and received an increment of ₹200 each year. In which year did his income reach ₹7000?",
+    "question_hi": "प्रश्नावली 5.2 (Q19): सुब्बा राव ने 1995 में ₹5000 के मासिक वेतन पर कार्य आरंभ किया और प्रत्येक वर्ष ₹200 की वेतन वृद्धि प्राप्त की। किस वर्ष में उनका वेतन ₹7000 हो गया?",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q19): સુબ્બારામે 1995 માં ₹5000 ના વાર્ષિક વેતનથી કામ શરૂ કર્યું અને તેમને દર વર્ષે ₹200 ની વેતનવૃદ્ધિ મળે છે. કયા વર્ષમાં તેમનું વેતન ₹7000 થશે?",
+    "options": [
+      "In the year 2005 (11th year)",
+      "In the year 2004 (10th year)",
+      "In the year 2006 (12th year)",
+      "In the year 2007 (13th year)"
+    ],
+    "options_hi": [
+      "वर्ष 2005 में (11वाँ वर्ष)",
+      "वर्ष 2004 में (10वाँ वर्ष)",
+      "वर्ष 2006 में (12वाँ वर्ष)",
+      "वर्ष 2007 में (13वाँ वर्ष)"
+    ],
+    "options_gu": [
+      "વર્ષ 2005 માં (11મું વર્ષ)",
+      "વર્ષ 2004 માં (10મું વર્ષ)",
+      "વર્ષ 2006 માં (12મું વર્ષ)",
+      "વર્ષ 2007 માં (13મું વર્ષ)"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 5000, d = 200, a_n = 7000. 7000 = 5000 + (n - 1)200 => 200(n - 1) = 2000 => n - 1 = 10 => n = 11. Year = 1995 + (11 - 1) = 2005.",
+    "explanation_hi": "a = 5000, d = 200, a_n = 7000। 7000 = 5000 + 200(n - 1) => n - 1 = 10 => n = 11वाँ वर्ष। वर्ष = 1995 + 10 = 2005।",
+    "explanation_gu": "a = 5000, d = 200, a_n = 7000. 7000 = 5000 + 200(n - 1) => n = 11મું વર્ષ. વર્ષ = 1995 + 10 = 2005."
+  },
+  {
+    "id": "C10M_CH5_EX5.2_Q20",
+    "question": "Exercise 5.2 (Q20): Ramkali saved ₹5 in the first week of a year and then increased her weekly savings by ₹1.75. If in the nth week, her weekly savings become ₹20.75, find n.",
+    "question_hi": "प्रश्नावली 5.2 (Q20): रामकली ने किसी वर्ष के प्रथम सप्ताह में ₹5 की बचत की और फिर अपनी साप्ताहिक बचत ₹1.75 बढ़ाती गई। यदि nवें सप्ताह में उसकी साप्ताहिक बचत ₹20.75 हो जाती है, तो n ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.2 (Q20): રામકલીએ વર્ષના પ્રથમ અઠવાડિયે ₹5 ની બચત કરી અને પછી તેની સાપ્તાહિક બચતમાં ₹1.75 નો વધારો કર્યો. જો nમા અઠવાડિયે તેની બચત ₹20.75 થાય, તો n નું મૂલ્ય શોધો.",
+    "options": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 12"
+    ],
+    "options_hi": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 12"
+    ],
+    "options_gu": [
+      "n = 10",
+      "n = 9",
+      "n = 11",
+      "n = 12"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 5, d = 1.75, a_n = 20.75. 20.75 = 5 + (n - 1)(1.75) => (n - 1)(1.75) = 15.75 => n - 1 = 15.75 / 1.75 = 9 => n = 10.",
+    "explanation_hi": "a = 5, d = 1.75, a_n = 20.75। 20.75 = 5 + 1.75(n - 1) => 1.75(n - 1) = 15.75 => n - 1 = 9 => n = 10।",
+    "explanation_gu": "a = 5, d = 1.75, a_n = 20.75. 20.75 = 5 + 1.75(n - 1) => 1.75(n - 1) = 15.75 => n - 1 = 9 => n = 10."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q1_p1",
+    "question": "Exercise 5.3 (Q1.1): Find the sum of the following AP: 2, 7, 12, ... to 10 terms",
+    "question_hi": "प्रश्नावली 5.3 (Q1.1): निम्नलिखित समांतर श्रेढ़ियों का योग ज्ञात कीजिए: 2, 7, 12, ... to 10 terms",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q1.1): નીચે આપેલ સમાંતર શ્રેણીઓનો સરવાળો શોધો: 2, 7, 12, ... to 10 terms",
+    "options": [
+      "245",
+      "250",
+      "240",
+      "235"
+    ],
+    "options_hi": [
+      "245",
+      "250",
+      "240",
+      "235"
+    ],
+    "options_gu": [
+      "245",
+      "250",
+      "240",
+      "235"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 2, d = 5, n = 10. S₁₀ = (10/2)[2(2) + (10 - 1)5] = 5[4 + 45] = 5(49) = 245.",
+    "explanation_hi": "a = 2, d = 5, n = 10। S₁₀ = 5[4 + 45] = 5(49) = 245।",
+    "explanation_gu": "a = 2, d = 5, n = 10. S₁₀ = 5[4 + 45] = 5(49) = 245."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q1_p2",
+    "question": "Exercise 5.3 (Q1.2): Find the sum of the following AP: -37, -33, -29, ... to 12 terms",
+    "question_hi": "प्रश्नावली 5.3 (Q1.2): निम्नलिखित समांतर श्रेढ़ियों का योग ज्ञात कीजिए: -37, -33, -29, ... to 12 terms",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q1.2): નીચે આપેલ સમાંતર શ્રેણીઓનો સરવાળો શોધો: -37, -33, -29, ... to 12 terms",
+    "options": [
+      "-180",
+      "-190",
+      "-170",
+      "-160"
+    ],
+    "options_hi": [
+      "-180",
+      "-190",
+      "-170",
+      "-160"
+    ],
+    "options_gu": [
+      "-180",
+      "-190",
+      "-170",
+      "-160"
+    ],
+    "correct_index": 0,
+    "explanation": "a = -37, d = -33 - (-37) = 4, n = 12. S₁₂ = (12/2)[2(-37) + (12 - 1)4] = 6[-74 + 44] = 6(-30) = -180.",
+    "explanation_hi": "a = -37, d = 4, n = 12। S₁₂ = 6[-74 + 44] = 6(-30) = -180।",
+    "explanation_gu": "a = -37, d = 4, n = 12. S₁₂ = 6[-74 + 44] = 6(-30) = -180."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q1_p3",
+    "question": "Exercise 5.3 (Q1.3): Find the sum of the following AP: 0.6, 1.7, 2.8, ... to 100 terms",
+    "question_hi": "प्रश्नावली 5.3 (Q1.3): निम्नलिखित समांतर श्रेढ़ियों का योग ज्ञात कीजिए: 0.6, 1.7, 2.8, ... to 100 terms",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q1.3): નીચે આપેલ સમાંતર શ્રેણીઓનો સરવાળો શોધો: 0.6, 1.7, 2.8, ... to 100 terms",
+    "options": [
+      "5505",
+      "5455",
+      "5550",
+      "5510"
+    ],
+    "options_hi": [
+      "5505",
+      "5455",
+      "5550",
+      "5510"
+    ],
+    "options_gu": [
+      "5505",
+      "5455",
+      "5550",
+      "5510"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 0.6, d = 1.1, n = 100. S₁₀₀ = (100/2)[2(0.6) + (99)(1.1)] = 50[1.2 + 108.9] = 50(110.1) = 5505.",
+    "explanation_hi": "a = 0.6, d = 1.1, n = 100। S₁₀₀ = 50[1.2 + 108.9] = 50(110.1) = 5505।",
+    "explanation_gu": "a = 0.6, d = 1.1, n = 100. S₁₀₀ = 50[1.2 + 108.9] = 50(110.1) = 5505."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q1_p4",
+    "question": "Exercise 5.3 (Q1.4): Find the sum of the following AP: 1/15, 1/12, 1/10, ... to 11 terms",
+    "question_hi": "प्रश्नावली 5.3 (Q1.4): निम्नलिखित समांतर श्रेढ़ियों का योग ज्ञात कीजिए: 1/15, 1/12, 1/10, ... to 11 terms",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q1.4): નીચે આપેલ સમાંતર શ્રેણીઓનો સરવાળો શોધો: 1/15, 1/12, 1/10, ... to 11 terms",
+    "options": [
+      "33/20",
+      "31/20",
+      "3/2",
+      "37/20"
+    ],
+    "options_hi": [
+      "33/20",
+      "31/20",
+      "3/2",
+      "37/20"
+    ],
+    "options_gu": [
+      "33/20",
+      "31/20",
+      "3/2",
+      "37/20"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 1/15, d = 1/12 - 1/15 = 1/60, n = 11. S₁₁ = (11/2)[2/15 + 10(1/60)] = (11/2)[2/15 + 1/6] = (11/2)(9/30) = 33/20.",
+    "explanation_hi": "a = 1/15, d = 1/60, n = 11। S₁₁ = (11/2)[2/15 + 1/6] = (11/2)(9/30) = 33/20।",
+    "explanation_gu": "a = 1/15, d = 1/60, n = 11. S₁₁ = (11/2)[2/15 + 1/6] = (11/2)(9/30) = 33/20."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q2_p1",
+    "question": "Exercise 5.3 (Q2.1): Find the sum given below: 7 + 10 1/2 + 14 + ... + 84",
+    "question_hi": "प्रश्नावली 5.3 (Q2.1): नीचे दिए हुए योगफलों को ज्ञात कीजिए: 7 + 10 1/2 + 14 + ... + 84",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q2.1): નીચે આપેલા સરવાળા શોધો: 7 + 10 1/2 + 14 + ... + 84",
+    "options": [
+      "1046 1/2 (or 2093/2)",
+      "1040",
+      "1050 1/2",
+      "1045"
+    ],
+    "options_hi": [
+      "1046 1/2 (or 2093/2)",
+      "1040",
+      "1050 1/2",
+      "1045"
+    ],
+    "options_gu": [
+      "1046 1/2 (or 2093/2)",
+      "1040",
+      "1050 1/2",
+      "1045"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 7, d = 7/2, l = 84. 84 = 7 + (n - 1)(7/2) => n - 1 = 22 => n = 23. S₂₃ = (23/2)(7 + 84) = (23/2)(91) = 2093/2 = 1046 1/2.",
+    "explanation_hi": "a = 7, d = 7/2, l = 84 => n = 23। S₂₃ = (23/2)(7 + 84) = 2093/2 = 1046 1/2।",
+    "explanation_gu": "a = 7, d = 7/2, l = 84 => n = 23. S₂₃ = (23/2)(7 + 84) = 2093/2 = 1046 1/2."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q2_p2",
+    "question": "Exercise 5.3 (Q2.2): Find the sum given below: 34 + 32 + 30 + ... + 10",
+    "question_hi": "प्रश्नावली 5.3 (Q2.2): नीचे दिए हुए योगफलों को ज्ञात कीजिए: 34 + 32 + 30 + ... + 10",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q2.2): નીચે આપેલા સરવાળા શોધો: 34 + 32 + 30 + ... + 10",
+    "options": [
+      "286",
+      "296",
+      "276",
+      "280"
+    ],
+    "options_hi": [
+      "286",
+      "296",
+      "276",
+      "280"
+    ],
+    "options_gu": [
+      "286",
+      "296",
+      "276",
+      "280"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 34, d = -2, l = 10. 10 = 34 + (n - 1)(-2) => 2(n - 1) = 24 => n = 13. S₁₃ = (13/2)(34 + 10) = (13/2)(44) = 13 × 22 = 286.",
+    "explanation_hi": "a = 34, d = -2, l = 10 => n = 13। S₁₃ = (13/2)(34 + 10) = 286।",
+    "explanation_gu": "a = 34, d = -2, l = 10 => n = 13. S₁₃ = (13/2)(34 + 10) = 286."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q2_p3",
+    "question": "Exercise 5.3 (Q2.3): Find the sum given below: (-5) + (-8) + (-11) + ... + (-230)",
+    "question_hi": "प्रश्नावली 5.3 (Q2.3): नीचे दिए हुए योगफलों को ज्ञात कीजिए: (-5) + (-8) + (-11) + ... + (-230)",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q2.3): નીચે આપેલા સરવાળા શોધો: (-5) + (-8) + (-11) + ... + (-230)",
+    "options": [
+      "-8930",
+      "-8900",
+      "-8950",
+      "-8830"
+    ],
+    "options_hi": [
+      "-8930",
+      "-8900",
+      "-8950",
+      "-8830"
+    ],
+    "options_gu": [
+      "-8930",
+      "-8900",
+      "-8950",
+      "-8830"
+    ],
+    "correct_index": 0,
+    "explanation": "a = -5, d = -3, l = -230. -230 = -5 + (n - 1)(-3) => -3(n - 1) = -225 => n = 76. S₇₆ = (76/2)[-5 + (-230)] = 38(-235) = -8930.",
+    "explanation_hi": "a = -5, d = -3, l = -230 => n = 76। S₇₆ = 38(-235) = -8930।",
+    "explanation_gu": "a = -5, d = -3, l = -230 => n = 76. S₇₆ = 38(-235) = -8930."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p1",
+    "question": "Exercise 5.3 (Q3.1): In an AP: given a = 5, d = 3, a_n = 50, find n and S_n",
+    "question_hi": "प्रश्नावली 5.3 (Q3.1): एक AP में: given a = 5, d = 3, a_n = 50, find n and S_n",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.1): સમાંતર શ્રેણીમાં: given a = 5, d = 3, a_n = 50, find n and S_n",
+    "options": [
+      "n = 16, S_n = 440",
+      "n = 15, S_n = 420",
+      "n = 16, S_n = 450",
+      "n = 17, S_n = 440"
+    ],
+    "options_hi": [
+      "n = 16, S_n = 440",
+      "n = 15, S_n = 420",
+      "n = 16, S_n = 450",
+      "n = 17, S_n = 440"
+    ],
+    "options_gu": [
+      "n = 16, S_n = 440",
+      "n = 15, S_n = 420",
+      "n = 16, S_n = 450",
+      "n = 17, S_n = 440"
+    ],
+    "correct_index": 0,
+    "explanation": "50 = 5 + (n - 1)3 => 3(n - 1) = 45 => n = 16. S₁₆ = (16/2)(5 + 50) = 8(55) = 440.",
+    "explanation_hi": "50 = 5 + 3(n - 1) => n = 16। S₁₆ = 8(5 + 50) = 440।",
+    "explanation_gu": "50 = 5 + 3(n - 1) => n = 16. S₁₆ = 8(5 + 50) = 440."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p2",
+    "question": "Exercise 5.3 (Q3.2): In an AP: given a = 7, a_13 = 35, find d and S_13",
+    "question_hi": "प्रश्नावली 5.3 (Q3.2): एक AP में: given a = 7, a_13 = 35, find d and S_13",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.2): સમાંતર શ્રેણીમાં: given a = 7, a_13 = 35, find d and S_13",
+    "options": [
+      "d = 7/3, S_13 = 273",
+      "d = 2, S_13 = 260",
+      "d = 7/3, S_13 = 280",
+      "d = 3, S_13 = 273"
+    ],
+    "options_hi": [
+      "d = 7/3, S_13 = 273",
+      "d = 2, S_13 = 260",
+      "d = 7/3, S_13 = 280",
+      "d = 3, S_13 = 273"
+    ],
+    "options_gu": [
+      "d = 7/3, S_13 = 273",
+      "d = 2, S_13 = 260",
+      "d = 7/3, S_13 = 280",
+      "d = 3, S_13 = 273"
+    ],
+    "correct_index": 0,
+    "explanation": "a + 12d = 35 => 7 + 12d = 35 => 12d = 28 => d = 7/3. S₁₃ = (13/2)(7 + 35) = (13/2)(42) = 273.",
+    "explanation_hi": "7 + 12d = 35 => d = 7/3। S₁₃ = (13/2)(42) = 273।",
+    "explanation_gu": "7 + 12d = 35 => d = 7/3. S₁₃ = (13/2)(42) = 273."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p3",
+    "question": "Exercise 5.3 (Q3.3): In an AP: given a_12 = 37, d = 3, find a and S_12",
+    "question_hi": "प्रश्नावली 5.3 (Q3.3): एक AP में: given a_12 = 37, d = 3, find a and S_12",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.3): સમાંતર શ્રેણીમાં: given a_12 = 37, d = 3, find a and S_12",
+    "options": [
+      "a = 4, S_12 = 246",
+      "a = 3, S_12 = 240",
+      "a = 4, S_12 = 250",
+      "a = 5, S_12 = 246"
+    ],
+    "options_hi": [
+      "a = 4, S_12 = 246",
+      "a = 3, S_12 = 240",
+      "a = 4, S_12 = 250",
+      "a = 5, S_12 = 246"
+    ],
+    "options_gu": [
+      "a = 4, S_12 = 246",
+      "a = 3, S_12 = 240",
+      "a = 4, S_12 = 250",
+      "a = 5, S_12 = 246"
+    ],
+    "correct_index": 0,
+    "explanation": "a + 11(3) = 37 => a + 33 = 37 => a = 4. S₁₂ = (12/2)(4 + 37) = 6(41) = 246.",
+    "explanation_hi": "a + 33 = 37 => a = 4। S₁₂ = 6(4 + 37) = 246।",
+    "explanation_gu": "a + 33 = 37 => a = 4. S₁₂ = 6(4 + 37) = 246."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p4",
+    "question": "Exercise 5.3 (Q3.4): In an AP: given a_3 = 15, S_10 = 125, find d and a_10",
+    "question_hi": "प्रश्नावली 5.3 (Q3.4): एक AP में: given a_3 = 15, S_10 = 125, find d and a_10",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.4): સમાંતર શ્રેણીમાં: given a_3 = 15, S_10 = 125, find d and a_10",
+    "options": [
+      "d = -1, a_10 = 8",
+      "d = 1, a_10 = 22",
+      "d = -1, a_10 = 10",
+      "d = -2, a_10 = 8"
+    ],
+    "options_hi": [
+      "d = -1, a_10 = 8",
+      "d = 1, a_10 = 22",
+      "d = -1, a_10 = 10",
+      "d = -2, a_10 = 8"
+    ],
+    "options_gu": [
+      "d = -1, a_10 = 8",
+      "d = 1, a_10 = 22",
+      "d = -1, a_10 = 10",
+      "d = -2, a_10 = 8"
+    ],
+    "correct_index": 0,
+    "explanation": "a + 2d = 15, and 5(2a + 9d) = 125 => 2a + 9d = 25. 2(a + 2d) = 2a + 4d = 30. Subtracting: 5d = -5 => d = -1, a = 17. a₁₀ = 17 + 9(-1) = 8.",
+    "explanation_hi": "a + 2d = 15 और 2a + 9d = 25 => d = -1, a = 17, a₁₀ = 8।",
+    "explanation_gu": "a + 2d = 15 અને 2a + 9d = 25 => d = -1, a = 17, a₁₀ = 8."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p5",
+    "question": "Exercise 5.3 (Q3.5): In an AP: given d = 5, S_9 = 75, find a and a_9",
+    "question_hi": "प्रश्नावली 5.3 (Q3.5): एक AP में: given d = 5, S_9 = 75, find a and a_9",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.5): સમાંતર શ્રેણીમાં: given d = 5, S_9 = 75, find a and a_9",
+    "options": [
+      "a = -35/3, a_9 = 85/3",
+      "a = -10, a_9 = 30",
+      "a = -35/3, a_9 = 25",
+      "a = -11, a_9 = 29"
+    ],
+    "options_hi": [
+      "a = -35/3, a_9 = 85/3",
+      "a = -10, a_9 = 30",
+      "a = -35/3, a_9 = 25",
+      "a = -11, a_9 = 29"
+    ],
+    "options_gu": [
+      "a = -35/3, a_9 = 85/3",
+      "a = -10, a_9 = 30",
+      "a = -35/3, a_9 = 25",
+      "a = -11, a_9 = 29"
+    ],
+    "correct_index": 0,
+    "explanation": "(9/2)[2a + 8(5)] = 75 => 9(2a + 40) = 150 => 2a + 40 = 50/3 => 2a = -70/3 => a = -35/3. a₉ = -35/3 + 40 = 85/3.",
+    "explanation_hi": "(9/2)[2a + 40] = 75 => a = -35/3, a₉ = 85/3।",
+    "explanation_gu": "(9/2)[2a + 40] = 75 => a = -35/3, a₉ = 85/3."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p6",
+    "question": "Exercise 5.3 (Q3.6): In an AP: given a = 2, d = 8, S_n = 90, find n and a_n",
+    "question_hi": "प्रश्नावली 5.3 (Q3.6): एक AP में: given a = 2, d = 8, S_n = 90, find n and a_n",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.6): સમાંતર શ્રેણીમાં: given a = 2, d = 8, S_n = 90, find n and a_n",
+    "options": [
+      "n = 5, a_n = 34",
+      "n = 6, a_n = 42",
+      "n = 5, a_n = 32",
+      "n = 4, a_n = 26"
+    ],
+    "options_hi": [
+      "n = 5, a_n = 34",
+      "n = 6, a_n = 42",
+      "n = 5, a_n = 32",
+      "n = 4, a_n = 26"
+    ],
+    "options_gu": [
+      "n = 5, a_n = 34",
+      "n = 6, a_n = 42",
+      "n = 5, a_n = 32",
+      "n = 4, a_n = 26"
+    ],
+    "correct_index": 0,
+    "explanation": "(n/2)[4 + (n - 1)8] = 90 => n(4n - 2) = 90 => 2n² - n - 45 = 0 => (2n + 9)(n - 5) = 0 => n = 5. a₅ = 2 + 4(8) = 34.",
+    "explanation_hi": "2n² - n - 45 = 0 => n = 5, a₅ = 2 + 32 = 34।",
+    "explanation_gu": "2n² - n - 45 = 0 => n = 5, a₅ = 34."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p7",
+    "question": "Exercise 5.3 (Q3.7): In an AP: given a = 8, a_n = 62, S_n = 210, find n and d",
+    "question_hi": "प्रश्नावली 5.3 (Q3.7): एक AP में: given a = 8, a_n = 62, S_n = 210, find n and d",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.7): સમાંતર શ્રેણીમાં: given a = 8, a_n = 62, S_n = 210, find n and d",
+    "options": [
+      "n = 6, d = 54/5",
+      "n = 5, d = 10",
+      "n = 6, d = 11",
+      "n = 7, d = 54/5"
+    ],
+    "options_hi": [
+      "n = 6, d = 54/5",
+      "n = 5, d = 10",
+      "n = 6, d = 11",
+      "n = 7, d = 54/5"
+    ],
+    "options_gu": [
+      "n = 6, d = 54/5",
+      "n = 5, d = 10",
+      "n = 6, d = 11",
+      "n = 7, d = 54/5"
+    ],
+    "correct_index": 0,
+    "explanation": "(n/2)(8 + 62) = 210 => 35n = 210 => n = 6. a₆ = 8 + 5d = 62 => 5d = 54 => d = 54/5.",
+    "explanation_hi": "35n = 210 => n = 6, 5d = 54 => d = 54/5।",
+    "explanation_gu": "35n = 210 => n = 6, d = 54/5."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p8",
+    "question": "Exercise 5.3 (Q3.8): In an AP: given a_n = 4, d = 2, S_n = -14, find n and a",
+    "question_hi": "प्रश्नावली 5.3 (Q3.8): एक AP में: given a_n = 4, d = 2, S_n = -14, find n and a",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.8): સમાંતર શ્રેણીમાં: given a_n = 4, d = 2, S_n = -14, find n and a",
+    "options": [
+      "n = 7, a = -8",
+      "n = 6, a = -6",
+      "n = 7, a = -6",
+      "n = 8, a = -8"
+    ],
+    "options_hi": [
+      "n = 7, a = -8",
+      "n = 6, a = -6",
+      "n = 7, a = -6",
+      "n = 8, a = -8"
+    ],
+    "options_gu": [
+      "n = 7, a = -8",
+      "n = 6, a = -6",
+      "n = 7, a = -6",
+      "n = 8, a = -8"
+    ],
+    "correct_index": 0,
+    "explanation": "a + (n - 1)2 = 4 => a = 6 - 2n. S_n = (n/2)(a + 4) = -14 => n(10 - 2n) = -28 => n² - 5n - 14 = 0 => (n - 7)(n + 2) = 0 => n = 7, a = 6 - 14 = -8.",
+    "explanation_hi": "n² - 5n - 14 = 0 => n = 7, a = -8।",
+    "explanation_gu": "n² - 5n - 14 = 0 => n = 7, a = -8."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p9",
+    "question": "Exercise 5.3 (Q3.9): In an AP: given a = 3, n = 8, S = 192, find d",
+    "question_hi": "प्रश्नावली 5.3 (Q3.9): एक AP में: given a = 3, n = 8, S = 192, find d",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.9): સમાંતર શ્રેણીમાં: given a = 3, n = 8, S = 192, find d",
+    "options": [
+      "d = 6",
+      "d = 5",
+      "d = 7",
+      "d = 4"
+    ],
+    "options_hi": [
+      "d = 6",
+      "d = 5",
+      "d = 7",
+      "d = 4"
+    ],
+    "options_gu": [
+      "d = 6",
+      "d = 5",
+      "d = 7",
+      "d = 4"
+    ],
+    "correct_index": 0,
+    "explanation": "(8/2)[2(3) + 7d] = 192 => 4(6 + 7d) = 192 => 6 + 7d = 48 => 7d = 42 => d = 6.",
+    "explanation_hi": "4(6 + 7d) = 192 => 7d = 42 => d = 6।",
+    "explanation_gu": "4(6 + 7d) = 192 => d = 6."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q3_p10",
+    "question": "Exercise 5.3 (Q3.10): In an AP: given l = 28, S = 144, and there are total 9 terms, find a",
+    "question_hi": "प्रश्नावली 5.3 (Q3.10): एक AP में: given l = 28, S = 144, and there are total 9 terms, find a",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q3.10): સમાંતર શ્રેણીમાં: given l = 28, S = 144, and there are total 9 terms, find a",
+    "options": [
+      "a = 4",
+      "a = 3",
+      "a = 5",
+      "a = 6"
+    ],
+    "options_hi": [
+      "a = 4",
+      "a = 3",
+      "a = 5",
+      "a = 6"
+    ],
+    "options_gu": [
+      "a = 4",
+      "a = 3",
+      "a = 5",
+      "a = 6"
+    ],
+    "correct_index": 0,
+    "explanation": "S = (n/2)(a + l) => 144 = (9/2)(a + 28) => 16 × 2 = a + 28 => a + 28 = 32 => a = 4.",
+    "explanation_hi": "(9/2)(a + 28) = 144 => a + 28 = 32 => a = 4।",
+    "explanation_gu": "(9/2)(a + 28) = 144 => a = 4."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q4",
+    "question": "Exercise 5.3 (Q4): How many terms of the AP: 9, 17, 25, ... must be taken to give a sum of 636?",
+    "question_hi": "प्रश्नावली 5.3 (Q4): 636 योग प्राप्त करने के लिए, AP: 9, 17, 25, ... के कितने पद लेने चाहिए?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q4): સમાંતર શ્રેણી 9, 17, 25, ... ના કેટલા પદોનો સરવાળો 636 થાય?",
+    "options": [
+      "12 terms",
+      "13 terms",
+      "11 terms",
+      "14 terms"
+    ],
+    "options_hi": [
+      "12 पद",
+      "13 पद",
+      "11 पद",
+      "14 पद"
+    ],
+    "options_gu": [
+      "12 પદો",
+      "13 પદો",
+      "11 પદો",
+      "14 પદો"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 9, d = 8, S_n = 636. S_n = (n/2)[2(9) + (n - 1)8] = 636 => n(9 + 4n - 4) = 636 => 4n² + 5n - 636 = 0. Factoring: (4n + 53)(n - 12) = 0 => n = 12 (since n > 0).",
+    "explanation_hi": "a = 9, d = 8, S_n = 636। 4n² + 5n - 636 = 0 => (4n + 53)(n - 12) = 0 => n = 12 पद।",
+    "explanation_gu": "a = 9, d = 8, S_n = 636. 4n² + 5n - 636 = 0 => (4n + 53)(n - 12) = 0 => n = 12 પદો."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q5",
+    "question": "Exercise 5.3 (Q5): The first term of an AP is 5, the last term is 45 and the sum is 400. Find the number of terms and the common difference.",
+    "question_hi": "प्रश्नावली 5.3 (Q5): किसी AP का प्रथम पद 5, अंतिम पद 45 और योग 400 है। पदों की संख्या और सार्व अंतर ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q5): સમાંતર શ્રેણીનું પ્રથમ પદ 5, અંતિમ પદ 45 અને સરવાળો 400 છે. શ્રેણીના પદોની સંખ્યા અને સામાન્ય તફાવત શોધો.",
+    "options": [
+      "n = 16, d = 8/3",
+      "n = 15, d = 3",
+      "n = 16, d = 3",
+      "n = 17, d = 8/3"
+    ],
+    "options_hi": [
+      "n = 16, d = 8/3",
+      "n = 15, d = 3",
+      "n = 16, d = 3",
+      "n = 17, d = 8/3"
+    ],
+    "options_gu": [
+      "n = 16, d = 8/3",
+      "n = 15, d = 3",
+      "n = 16, d = 3",
+      "n = 17, d = 8/3"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 5, l = 45, S_n = 400. S_n = (n/2)(a + l) => 400 = (n/2)(50) => 25n = 400 => n = 16. Then 45 = 5 + 15d => 15d = 40 => d = 8/3.",
+    "explanation_hi": "S_n = (n/2)(5 + 45) = 400 => 25n = 400 => n = 16। 45 = 5 + 15d => d = 40/15 = 8/3।",
+    "explanation_gu": "S_n = (n/2)(5 + 45) = 400 => 25n = 400 => n = 16. 45 = 5 + 15d => d = 8/3."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q6",
+    "question": "Exercise 5.3 (Q6): The first and the last terms of an AP are 17 and 350 respectively. If the common difference is 9, how many terms are there and what is their sum?",
+    "question_hi": "प्रश्नावली 5.3 (Q6): किसी AP के प्रथम और अंतिम पद क्रमशः 17 और 350 हैं। यदि सार्व अंतर 9 है, तो इसमें कितने पद हैं और इनका योग क्या है?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q6): સમાંતર શ્રેણીના પ્રથમ અને અંતિમ પદ અનુક્રમે 17 અને 350 છે. જો સામાન્ય તફાવત 9 હોય, તો તેમાં કેટલા પદ છે અને તેમનો સરવાળો કેટલો થાય?",
+    "options": [
+      "n = 38, S_n = 6973",
+      "n = 37, S_n = 6973",
+      "n = 38, S_n = 6873",
+      "n = 39, S_n = 7020"
+    ],
+    "options_hi": [
+      "n = 38, S_n = 6973",
+      "n = 37, S_n = 6973",
+      "n = 38, S_n = 6873",
+      "n = 39, S_n = 7020"
+    ],
+    "options_gu": [
+      "n = 38, S_n = 6973",
+      "n = 37, S_n = 6973",
+      "n = 38, S_n = 6873",
+      "n = 39, S_n = 7020"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 17, l = 350, d = 9. 350 = 17 + (n - 1)9 => 9(n - 1) = 333 => n - 1 = 37 => n = 38. S₃₈ = (38/2)(17 + 350) = 19 × 367 = 6973.",
+    "explanation_hi": "350 = 17 + 9(n - 1) => n = 38। S₃₈ = 19(17 + 350) = 19 × 367 = 6973।",
+    "explanation_gu": "350 = 17 + 9(n - 1) => n = 38. S₃₈ = 19 × 367 = 6973."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q7",
+    "question": "Exercise 5.3 (Q7): Find the sum of first 22 terms of an AP in which d = 7 and 22nd term is 149.",
+    "question_hi": "प्रश्नावली 5.3 (Q7): उस AP के प्रथम 22 पदों का योग ज्ञात कीजिए, जिसमें d = 7 है और 22वाँ पद 149 है।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q7): જે સમાંતર શ્રેણીમાં d = 7 અને 22મું પદ 149 હોય, તેના પ્રથમ 22 પદોનો સરવાળો શોધો.",
+    "options": [
+      "1661",
+      "1650",
+      "1672",
+      "1640"
+    ],
+    "options_hi": [
+      "1661",
+      "1650",
+      "1672",
+      "1640"
+    ],
+    "options_gu": [
+      "1661",
+      "1650",
+      "1672",
+      "1640"
+    ],
+    "correct_index": 0,
+    "explanation": "n = 22, d = 7, a₂₂ = 149. a + 21(7) = 149 => a + 147 = 149 => a = 2. S₂₂ = (22/2)(a + a₂₂) = 11(2 + 149) = 11(151) = 1661.",
+    "explanation_hi": "a + 21(7) = 149 => a = 2। S₂₂ = 11(2 + 149) = 11 × 151 = 1661।",
+    "explanation_gu": "a + 21(7) = 149 => a = 2. S₂₂ = 11(2 + 149) = 1661."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q8",
+    "question": "Exercise 5.3 (Q8): Find the sum of first 51 terms of an AP whose second and third terms are 14 and 18 respectively.",
+    "question_hi": "प्रश्नावली 5.3 (Q8): उस AP के प्रथम 51 पदों का योग ज्ञात कीजिए, जिसके दूसरे और तीसरे पद क्रमशः 14 और 18 हैं।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q8): એક સમાંતર શ્રેણીનું બીજું અને ત્રીજું પદ અનુક્રમે 14 અને 18 હોય, તો તેના પ્રથમ 51 પદોનો સરવાળો શોધો.",
+    "options": [
+      "5610",
+      "5510",
+      "5620",
+      "5710"
+    ],
+    "options_hi": [
+      "5610",
+      "5510",
+      "5620",
+      "5710"
+    ],
+    "options_gu": [
+      "5610",
+      "5510",
+      "5620",
+      "5710"
+    ],
+    "correct_index": 0,
+    "explanation": "a₂ = 14, a₃ = 18 => d = 18 - 14 = 4. First term a = 14 - 4 = 10. S₅₁ = (51/2)[2(10) + (51 - 1)4] = (51/2)[20 + 200] = (51/2)(220) = 51 × 110 = 5610.",
+    "explanation_hi": "d = 18 - 14 = 4, a = 10। S₅₁ = (51/2)[20 + 200] = 51 × 110 = 5610।",
+    "explanation_gu": "d = 18 - 14 = 4, a = 10. S₅₁ = (51/2)[20 + 200] = 51 × 110 = 5610."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q9",
+    "question": "Exercise 5.3 (Q9): If the sum of first 7 terms of an AP is 49 and that of 17 terms is 289, find the sum of first n terms.",
+    "question_hi": "प्रश्नावली 5.3 (Q9): यदि किसी AP के प्रथम 7 पदों का योग 49 है और प्रथम 17 पदों का योग 289 है, तो इसके प्रथम n पदों का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q9): જો સમાંતર શ્રેણીના પ્રથમ 7 પદોનો સરવાળો 49 અને 17 પદોનો સરવાળો 289 હોય, તો તેના પ્રથમ n પદોનો સરવાળો શોધો.",
+    "options": [
+      "S_n = n²",
+      "S_n = 2n²",
+      "S_n = n(n + 1)",
+      "S_n = n² + n"
+    ],
+    "options_hi": [
+      "S_n = n²",
+      "S_n = 2n²",
+      "S_n = n(n + 1)",
+      "S_n = n² + n"
+    ],
+    "options_gu": [
+      "S_n = n²",
+      "S_n = 2n²",
+      "S_n = n(n + 1)",
+      "S_n = n² + n"
+    ],
+    "correct_index": 0,
+    "explanation": "S₇ = (7/2)(2a + 6d) = 49 => a + 3d = 7. S₁₇ = (17/2)(2a + 16d) = 289 => a + 8d = 17. Subtracting: 5d = 10 => d = 2, a = 1. S_n = (n/2)[2(1) + (n - 1)2] = (n/2)(2n) = n².",
+    "explanation_hi": "a + 3d = 7 और a + 8d = 17 => d = 2, a = 1। S_n = (n/2)[2 + 2n - 2] = n²।",
+    "explanation_gu": "a + 3d = 7 અને a + 8d = 17 => d = 2, a = 1. S_n = (n/2)[2 + 2n - 2] = n²."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q10_p1",
+    "question": "Exercise 5.3 (Q10.i): Show that a₁, a₂, ..., a_n, ... form an AP where a_n = 3 + 4n. Also find the sum of the first 15 terms.",
+    "question_hi": "प्रश्नावली 5.3 (Q10.i): दर्शाइए कि a₁, a₂, ..., a_n, ... से एक AP बनती है, जहाँ a_n = 3 + 4n है। साथ ही प्रथम 15 पदों का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q10.i): સાબિત કરો કે a₁, a₂, ..., a_n, ... સમાંતર શ્રેણી બનાવે છે, જ્યાં a_n = 3 + 4n. તેના પ્રથમ 15 પદોનો સરવાળો પણ શોધો.",
+    "options": [
+      "Forms an AP (d = 4); S_15 = 525",
+      "Forms an AP (d = 3); S_15 = 520",
+      "Not an AP",
+      "Forms an AP (d = 4); S_15 = 535"
+    ],
+    "options_hi": [
+      "AP बनती है (d = 4); S_15 = 525",
+      "AP बनती है (d = 3); S_15 = 520",
+      "AP नहीं बनती",
+      "AP बनती है (d = 4); S_15 = 535"
+    ],
+    "options_gu": [
+      "AP બને છે (d = 4); S_15 = 525",
+      "AP બને છે (d = 3); S_15 = 520",
+      "AP બનતી નથી",
+      "AP બને છે (d = 4); S_15 = 535"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = 3 + 4n. Terms: a₁ = 7, a₂ = 11, a₃ = 15. Common difference d = 11 - 7 = 4 (constant). S₁₅ = (15/2)[2(7) + 14(4)] = (15/2)[14 + 56] = (15/2)(70) = 525.",
+    "explanation_hi": "a₁ = 7, a₂ = 11, a₃ = 15 => d = 4 (स्थिर)। S₁₅ = (15/2)[14 + 56] = 15 × 35 = 525।",
+    "explanation_gu": "a₁ = 7, a₂ = 11 => d = 4. S₁₅ = (15/2)(70) = 525."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q10_p2",
+    "question": "Exercise 5.3 (Q10.ii): Show that a₁, a₂, ..., a_n, ... form an AP where a_n = 9 - 5n. Also find the sum of the first 15 terms.",
+    "question_hi": "प्रश्नावली 5.3 (Q10.ii): दर्शाइए कि a₁, a₂, ..., a_n, ... से एक AP बनती है, जहाँ a_n = 9 - 5n है। साथ ही प्रथम 15 पदों का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q10.ii): સાબિત કરો કે a₁, a₂, ..., a_n, ... સમાંતર શ્રેણી બનાવે છે, જ્યાં a_n = 9 - 5n. તેના પ્રથમ 15 પદોનો સરવાળો પણ શોધો.",
+    "options": [
+      "Forms an AP (d = -5); S_15 = -465",
+      "Forms an AP (d = 5); S_15 = 465",
+      "Not an AP",
+      "Forms an AP (d = -5); S_15 = -450"
+    ],
+    "options_hi": [
+      "AP बनती है (d = -5); S_15 = -465",
+      "AP बनती है (d = 5); S_15 = 465",
+      "AP नहीं बनती",
+      "AP बनती है (d = -5); S_15 = -450"
+    ],
+    "options_gu": [
+      "AP બને છે (d = -5); S_15 = -465",
+      "AP બને છે (d = 5); S_15 = 465",
+      "AP બનતી નથી",
+      "AP બને છે (d = -5); S_15 = -450"
+    ],
+    "correct_index": 0,
+    "explanation": "a_n = 9 - 5n. Terms: a₁ = 4, a₂ = -1, a₃ = -6. d = -1 - 4 = -5 (constant). S₁₅ = (15/2)[2(4) + 14(-5)] = (15/2)[8 - 70] = (15/2)(-62) = -465.",
+    "explanation_hi": "a₁ = 4, a₂ = -1 => d = -5। S₁₅ = (15/2)[8 - 70] = 15 × (-31) = -465।",
+    "explanation_gu": "a₁ = 4, a₂ = -1 => d = -5. S₁₅ = (15/2)(-62) = -465."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q11",
+    "question": "Exercise 5.3 (Q11): If the sum of the first n terms of an AP is 4n - n², what is the first term (S₁)? What is the sum of first two terms? What is the second term? Similarly, find the 3rd, the 10th and the nth terms.",
+    "question_hi": "प्रश्नावली 5.3 (Q11): यदि किसी AP के प्रथम n पदों का योग 4n - n² है, तो इसका प्रथम पद क्या है? प्रथम दो पदों का योग क्या है? दूसरा पद क्या है? इसी प्रकार, तीसरे, 10वें और nवें पद ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q11): જો કોઈ સમાંતર શ્રેણીના પ્રથમ n પદોનો સરવાળો 4n - n² હોય, તો તેનું પ્રથમ પદ કયું હશે? પ્રથમ બે પદોનો સરવાળો કેટલો હશે? બીજું પદ કયું હશે? આ જ રીતે ત્રીજું, 10મું અને nમું પદ શોધો.",
+    "options": [
+      "S₁ = 3, S₂ = 4, a₂ = 1, a₃ = -1, a₁₀ = -15, a_n = 5 - 2n",
+      "S₁ = 3, S₂ = 4, a₂ = 2, a₃ = 0, a₁₀ = -14, a_n = 5 - n",
+      "S₁ = 4, S₂ = 6, a₂ = 2, a₃ = -1, a₁₀ = -15, a_n = 4 - 2n",
+      "S₁ = 3, S₂ = 5, a₂ = 2, a₃ = 1, a₁₀ = -13, a_n = 5 - 2n"
+    ],
+    "options_hi": [
+      "S₁ = 3, S₂ = 4, a₂ = 1, a₃ = -1, a₁₀ = -15, a_n = 5 - 2n",
+      "S₁ = 3, S₂ = 4, a₂ = 2, a₃ = 0, a₁₀ = -14, a_n = 5 - n",
+      "S₁ = 4, S₂ = 6, a₂ = 2, a₃ = -1, a₁₀ = -15, a_n = 4 - 2n",
+      "S₁ = 3, S₂ = 5, a₂ = 2, a₃ = 1, a₁₀ = -13, a_n = 5 - 2n"
+    ],
+    "options_gu": [
+      "S₁ = 3, S₂ = 4, a₂ = 1, a₃ = -1, a₁₀ = -15, a_n = 5 - 2n",
+      "S₁ = 3, S₂ = 4, a₂ = 2, a₃ = 0, a₁₀ = -14, a_n = 5 - n",
+      "S₁ = 4, S₂ = 6, a₂ = 2, a₃ = -1, a₁₀ = -15, a_n = 4 - 2n",
+      "S₁ = 3, S₂ = 5, a₂ = 2, a₃ = 1, a₁₀ = -13, a_n = 5 - 2n"
+    ],
+    "correct_index": 0,
+    "explanation": "S_n = 4n - n². S₁ = 4(1) - 1² = 3 (First term a = 3). S₂ = 4(2) - 2² = 4. a₂ = S₂ - S₁ = 4 - 3 = 1. d = a₂ - a₁ = 1 - 3 = -2. a₃ = a + 2d = 3 + 2(-2) = -1. a₁₀ = 3 + 9(-2) = -15. a_n = S_n - S_{n-1} = 5 - 2n.",
+    "explanation_hi": "S₁ = 3 (प्रथम पद)। S₂ = 4। a₂ = 4 - 3 = 1। d = -2। a₃ = -1, a₁₀ = -15, a_n = 5 - 2n।",
+    "explanation_gu": "S₁ = 3 (પ્રથમ પદ). S₂ = 4. a₂ = 1. d = -2. a₃ = -1, a₁₀ = -15, a_n = 5 - 2n."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q12",
+    "question": "Exercise 5.3 (Q12): Find the sum of the first 40 positive integers divisible by 6.",
+    "question_hi": "प्रश्नावली 5.3 (Q12): ऐसे प्रथम 40 धन पूर्णांकों का योग ज्ञात कीजिए जो 6 से विभाज्य हैं।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q12): 6 વડે વિભાજ્ય હોય તેવા પ્રથમ 40 ધન પૂર્ણાંકોનો સરવાળો શોધો.",
+    "options": [
+      "4920",
+      "4820",
+      "5020",
+      "4960"
+    ],
+    "options_hi": [
+      "4920",
+      "4820",
+      "5020",
+      "4960"
+    ],
+    "options_gu": [
+      "4920",
+      "4820",
+      "5020",
+      "4960"
+    ],
+    "correct_index": 0,
+    "explanation": "Integers are: 6, 12, 18, ..., to 40 terms. a = 6, d = 6, n = 40. S₄₀ = (40/2)[2(6) + (39)(6)] = 20[12 + 234] = 20(246) = 4920.",
+    "explanation_hi": "AP: 6, 12, 18... a = 6, d = 6, n = 40। S₄₀ = 20(12 + 234) = 20 × 246 = 4920।",
+    "explanation_gu": "AP: 6, 12, 18... a = 6, d = 6, n = 40. S₄₀ = 20 × 246 = 4920."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q13",
+    "question": "Exercise 5.3 (Q13): Find the sum of the first 15 multiples of 8.",
+    "question_hi": "प्रश्नावली 5.3 (Q13): 8 के प्रथम 15 गुणजों का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q13): 8 ના પ્રથમ 15 ગુણિતોનો સરવાળો શોધો.",
+    "options": [
+      "960",
+      "940",
+      "980",
+      "1000"
+    ],
+    "options_hi": [
+      "960",
+      "940",
+      "980",
+      "1000"
+    ],
+    "options_gu": [
+      "960",
+      "940",
+      "980",
+      "1000"
+    ],
+    "correct_index": 0,
+    "explanation": "Multiples of 8: 8, 16, 24, ... to 15 terms. a = 8, d = 8, n = 15. S₁₅ = (15/2)[2(8) + (14)(8)] = (15/2)[16 + 112] = (15/2)(128) = 15 × 64 = 960.",
+    "explanation_hi": "AP: 8, 16, 24... a = 8, d = 8, n = 15। S₁₅ = (15/2)(128) = 15 × 64 = 960।",
+    "explanation_gu": "AP: 8, 16, 24... a = 8, d = 8, n = 15. S₁₅ = 15 × 64 = 960."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q14",
+    "question": "Exercise 5.3 (Q14): Find the sum of the odd numbers between 0 and 50.",
+    "question_hi": "प्रश्नावली 5.3 (Q14): 0 और 50 के बीच की विषम संख्याओं का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q14): 0 અને 50 વચ્ચેના અયુગ્મ પૂર્ણાંકોનો સરવાળો શોધો.",
+    "options": [
+      "625",
+      "650",
+      "600",
+      "576"
+    ],
+    "options_hi": [
+      "625",
+      "650",
+      "600",
+      "576"
+    ],
+    "options_gu": [
+      "625",
+      "650",
+      "600",
+      "576"
+    ],
+    "correct_index": 0,
+    "explanation": "Odd numbers: 1, 3, 5, ..., 49. a = 1, d = 2, l = 49. 49 = 1 + (n - 1)2 => 2(n - 1) = 48 => n = 25. S₂₅ = (25/2)(1 + 49) = (25/2)(50) = 25 × 25 = 625.",
+    "explanation_hi": "विषम संख्याएँ: 1, 3, 5, ..., 49। n = 25। S₂₅ = (25/2)(1 + 49) = 25 × 25 = 625।",
+    "explanation_gu": "અયુગ્મ સંખ્યાઓ: 1, 3, ..., 49. n = 25. S₂₅ = 25 × 25 = 625."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q15",
+    "question": "Exercise 5.3 (Q15): A contract on construction job specifies a penalty for delay of completion beyond a certain date as follows: ₹200 for the first day, ₹250 for the second day, ₹300 for the third day, etc., the penalty for each succeeding day being ₹50 more than for the preceding day. How much money the contractor has to pay as penalty, if he has delayed the work by 30 days?",
+    "question_hi": "प्रश्नावली 5.3 (Q15): निर्माण कार्य से संबंधित किसी ठेके में, एक निश्चित तिथि के बाद कार्य को विलंब से पूरा करने के लिए जुर्माना लगाने का प्रावधान इस प्रकार है: पहले दिन के लिए ₹200, दूसरे दिन के लिए ₹250, तीसरे दिन के लिए ₹300 इत्यादि, अर्थात् प्रत्येक उत्तरोत्तर दिन का जुर्माना अपने से ठीक पहले दिन के जुर्माने से ₹50 अधिक है। एक ठेकेदार को जुर्माने के रूप में कितनी राशि अदा करनी पड़ेगी, यदि वह इस कार्य में 30 दिन का विलंब कर देता है?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q15): નિર્માણ કામના કરારમાં નિશ્ચિત તારીખ કરતાં વિલંબ થાય તો દંડની જોગવાઈ નીચે મુજબ છે: પ્રથમ દિવસ માટે ₹200, બીજા દિવસ માટે ₹250, ત્રીજા દિવસ માટે ₹300 વગેરે. પ્રત્યેક દિવસનો દંડ તેના આગળના દિવસ કરતાં ₹50 વધુ છે. જો કોન્ટ્રાક્ટર 30 દિવસનો વિલંબ કરે તો તેને કેટલો દંડ ભરવો પડશે?",
+    "options": [
+      "₹27,750",
+      "₹27,500",
+      "₹28,000",
+      "₹26,750"
+    ],
+    "options_hi": [
+      "₹27,750",
+      "₹27,500",
+      "₹28,000",
+      "₹26,750"
+    ],
+    "options_gu": [
+      "₹27,750",
+      "₹27,500",
+      "₹28,000",
+      "₹26,750"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 200, d = 50, n = 30. S₃₀ = (30/2)[2(200) + (30 - 1)(50)] = 15[400 + 1450] = 15(1850) = ₹27,750.",
+    "explanation_hi": "a = 200, d = 50, n = 30। S₃₀ = 15[400 + 1450] = 15 × 1850 = ₹27,750।",
+    "explanation_gu": "a = 200, d = 50, n = 30. S₃₀ = 15[400 + 1450] = 15 × 1850 = ₹27,750."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q16",
+    "question": "Exercise 5.3 (Q16): A sum of ₹700 is to be used to give seven cash prizes to students of a school for their overall academic performance. If each prize is ₹20 less than its preceding prize, find the value of each of the prizes.",
+    "question_hi": "प्रश्नावली 5.3 (Q16): किसी स्कूल के विद्यार्थियों को उनके समग्र शैक्षिक प्रदर्शन के लिए 7 नकद पुरस्कार देने के लिए ₹700 की राशि रखी गई है। यदि प्रत्येक पुरस्कार अपने से ठीक पहले पुरस्कार से ₹20 कम है, तो प्रत्येक पुरस्कार का मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q16): કોઈ શાળામાં વિદ્યાર્થીઓને સમગ્ર શૈક્ષણિક પ્રદર્શન માટે 7 રોકડ પુરસ્કારો આપવા માટે કુલ ₹700 ની જોગવાઈ છે. જો પ્રત્યેક પુરસ્કાર તેના આગળના પુરસ્કાર કરતાં ₹20 ઓછો હોય, તો પ્રત્યેક પુરસ્કારનું મૂલ્ય શોધો.",
+    "options": [
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40",
+      "₹150, ₹130, ₹110, ₹90, ₹70, ₹50, ₹30",
+      "₹170, ₹150, ₹130, ₹110, ₹90, ₹70, ₹50",
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹50, ₹30"
+    ],
+    "options_hi": [
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40",
+      "₹150, ₹130, ₹110, ₹90, ₹70, ₹50, ₹30",
+      "₹170, ₹150, ₹130, ₹110, ₹90, ₹70, ₹50",
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹50, ₹30"
+    ],
+    "options_gu": [
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40",
+      "₹150, ₹130, ₹110, ₹90, ₹70, ₹50, ₹30",
+      "₹170, ₹150, ₹130, ₹110, ₹90, ₹70, ₹50",
+      "₹160, ₹140, ₹120, ₹100, ₹80, ₹50, ₹30"
+    ],
+    "correct_index": 0,
+    "explanation": "n = 7, S₇ = 700, d = -20. S₇ = (7/2)[2a + 6(-20)] = 700 => (7/2)(2a - 120) = 700 => 2a - 120 = 200 => 2a = 320 => a = 160. The 7 prizes are: ₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40.",
+    "explanation_hi": "(7/2)[2a - 120] = 700 => 2a - 120 = 200 => a = 160। पुरस्कार हैं: ₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40।",
+    "explanation_gu": "(7/2)[2a - 120] = 700 => a = 160. પુરસ્કારો: ₹160, ₹140, ₹120, ₹100, ₹80, ₹60, ₹40."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q17",
+    "question": "Exercise 5.3 (Q17): In a school, students thought of planting trees in and around the school to reduce air pollution. It was decided that the number of trees, that each section of each class will plant, will be the same as the class, in which they are studying (e.g. section of Class I will plant 1 tree, Class II will plant 2 trees and so on till Class XII). There are three sections of each class. How many trees will be planted by the students?",
+    "question_hi": "प्रश्नावली 5.3 (Q17): एक स्कूल के विद्यार्थियों ने वायु प्रदूषण कम करने के लिए स्कूल के अंदर और बाहर पेड़ लगाने के बारे में सोचा। यह निर्णय लिया गया कि प्रत्येक कक्षा का प्रत्येक अनुभाग अपनी कक्षा की संख्या के बराबर पेड़ लगाएगा (कक्षा I का एक अनुभाग 1 पेड़, कक्षा II का 2 पेड़... कक्षा XII का 12 पेड़ लगाएगा)। प्रत्येक कक्षा के तीन अनुभाग हैं। विद्यार्थियों द्वारा लगाए गए कुल पेड़ों की संख्या कितनी होगी?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q17): એક શાળાના વિદ્યાર્થીઓએ વાયુ પ્રદૂષણ ઘટાડવા માટે શાળાની અંદર અને બહાર વૃક્ષો વાવવાનું નક્કી કર્યું. એવું નક્કી કરાયું કે દરેક ધોરણનો દરેક વર્ગ તે જે ધોરણમાં ભણતો હોય તેટલા વૃક્ષ વાવશે (દા.ત. ધોરણ I નો એક વર્ગ 1 વૃક્ષ, ધોરણ II નો 2 વૃક્ષ... ધોરણ XII નો 12 વૃક્ષ). દરેક ધોરણના ત્રણ વર્ગ (sections) છે. વિદ્યાર્થીઓ દ્વારા કુલ કેટલા વૃક્ષો વવાશે?",
+    "options": [
+      "234 trees",
+      "224 trees",
+      "244 trees",
+      "216 trees"
+    ],
+    "options_hi": [
+      "234 पेड़",
+      "224 पेड़",
+      "244 पेड़",
+      "216 पेड़"
+    ],
+    "options_gu": [
+      "234 વૃક્ષો",
+      "224 વૃક્ષો",
+      "244 વૃક્ષો",
+      "216 વૃક્ષો"
+    ],
+    "correct_index": 0,
+    "explanation": "Trees planted by each class (with 3 sections): Class 1 = 3(1) = 3, Class 2 = 3(2) = 6, ..., Class 12 = 3(12) = 36. AP: 3, 6, 9, ..., 36. a = 3, d = 3, n = 12. S₁₂ = (12/2)(3 + 36) = 6(39) = 234 trees.",
+    "explanation_hi": "प्रत्येक कक्षा द्वारा: 3, 6, 9, ..., 36। n = 12। S₁₂ = 6(3 + 36) = 6 × 39 = 234 पेड़।",
+    "explanation_gu": "દરેક ધોરણ દ્વારા: 3, 6, 9, ..., 36. n = 12. S₁₂ = 6(3 + 36) = 6 × 39 = 234 વૃક્ષો."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q18",
+    "question": "Exercise 5.3 (Q18): A spiral is made up of successive semicircles, with centres alternately at A and B, starting with centre at A, of radii 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, ... What is the total length of such a spiral made up of thirteen consecutive semicircles? (Take π = 22/7)",
+    "question_hi": "प्रश्नावली 5.3 (Q18): केंद्र A से प्रारंभ करते हुए, बारी-बारी से केंद्रों A और B को लेते हुए, त्रिज्याओं 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, ... वाले उत्तरोत्तर अर्धवृत्तों को खींचकर एक सर्पिल (spiral) बनाया गया है। तेरह क्रमागत अर्धवृत्तों से बने इस सर्पिल की कुल लंबाई क्या है? (π = 22/7 लीजिए)",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q18): વારાફરતી A અને B ને કેન્દ્ર લઈ ક્રમિક અર્ધવર્તુળોની મદદથી એક કુંતલ (spiral) બનાવેલ છે. તેની શરૂઆત A થી થાય છે. ત્રિજ્યાઓ 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, ... છે. આવા 13 ક્રમિક અર્ધવર્તુળોથી બનતા કુંતલની કુલ લંબાઈ કેટલી થશે? (π = 22/7 લો)",
+    "options": [
+      "143 cm",
+      "132 cm",
+      "154 cm",
+      "144 cm"
+    ],
+    "options_hi": [
+      "143 cm",
+      "132 cm",
+      "154 cm",
+      "144 cm"
+    ],
+    "options_gu": [
+      "143 cm",
+      "132 cm",
+      "154 cm",
+      "144 cm"
+    ],
+    "correct_index": 0,
+    "explanation": "Length of semicircle of radius r is πr. The lengths are: π(0.5), π(1.0), π(1.5), ..., π(6.5). Total length = π[0.5 + 1.0 + 1.5 + ... to 13 terms]. Sum = (13/2)(0.5 + 6.5) = (13/2)(7) = 91/2. Total length = (22/7) × (91/2) = 11 × 13 = 143 cm.",
+    "explanation_hi": "अर्धवृत्त की लंबाई = πr। कुल लंबाई = π[0.5 + 1.0 + ... 13 पदों तक] = (22/7) × (13/2)(7) = 11 × 13 = 143 cm।",
+    "explanation_gu": "અર્ધવર્તુળની લંબાઈ = πr. કુલ લંબાઈ = (22/7) × (13/2)(7) = 11 × 13 = 143 cm."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q19",
+    "question": "Exercise 5.3 (Q19): 200 logs are stacked in the following manner: 20 logs in the bottom row, 19 in the next row, 18 in the row next to it and so on. In how many rows are the 200 logs placed and how many logs are in the top row?",
+    "question_hi": "प्रश्नावली 5.3 (Q19): 200 लट्ठों (logs) को ढेरी के रूप में इस प्रकार रखा जाता है: सबसे नीचे वाली पंक्ति में 20 लट्ठे, उससे अगली पंक्ति में 19 लट्ठे, उससे अगली पंक्ति में 18 लट्ठे, इत्यादि। ये 200 लट्ठे कितनी पंक्तियों में रखे गए हैं तथा सबसे ऊपरी पंक्ति में कितने लट्ठे हैं?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q19): 200 લાકડાના ભારીયાઓ (logs) નીચે પ્રમાણે ગોઠવવામાં આવ્યા છે: તળિયેની હારમાં 20, તેની ઉપરની હારમાં 19, તેની ઉપર 18 વગેરે. આ 200 ભારીયાઓ કેટલી હારમાં મુકાયા હશે અને સૌથી ઉપરની હારમાં કેટલા ભારીયા હશે?",
+    "options": [
+      "16 rows; 5 logs in top row",
+      "25 rows; -4 logs in top row",
+      "15 rows; 6 logs in top row",
+      "16 rows; 4 logs in top row"
+    ],
+    "options_hi": [
+      "16 पंक्तियाँ; सबसे ऊपरी पंक्ति में 5 लट्ठे",
+      "25 पंक्तियाँ; सबसे ऊपरी पंक्ति में -4 लट्ठे",
+      "15 पंक्तियाँ; सबसे ऊपरी पंक्ति में 6 लट्ठे",
+      "16 पंक्तियाँ; सबसे ऊपरी पंक्ति में 4 लट्ठे"
+    ],
+    "options_gu": [
+      "16 હાર; સૌથી ઉપરની હારમાં 5 ભારીયા",
+      "25 હાર; સૌથી ઉપરની હારમાં -4 ભારીયા",
+      "15 હાર; સૌથી ઉપરની હારમાં 6 ભારીયા",
+      "16 હાર; સૌથી ઉપરની હારમાં 4 ભારીયા"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 20, d = -1, S_n = 200. (n/2)[2(20) + (n - 1)(-1)] = 200 => n(41 - n) = 400 => n² - 41n + 400 = 0 => (n - 16)(n - 25) = 0. If n = 25, a₂₅ = 20 + 24(-1) = -4 (impossible). Thus n = 16 rows. Logs in top row = a₁₆ = 20 + 15(-1) = 5 logs.",
+    "explanation_hi": "n² - 41n + 400 = 0 => (n - 16)(n - 25) = 0। यदि n = 25, तो a₂₅ = -4 (असंभव)। अतः n = 16 पंक्तियाँ। सबसे ऊपरी पंक्ति में a₁₆ = 20 - 15 = 5 लट्ठे।",
+    "explanation_gu": "n² - 41n + 400 = 0 => n = 16 (કારણ કે n = 25 માટે પદો ઋણ બને જે અશક્ય છે). ટોચની હારમાં પદ a₁₆ = 20 - 15 = 5 ભારીયા."
+  },
+  {
+    "id": "C10M_CH5_EX5.3_Q20",
+    "question": "Exercise 5.3 (Q20): In a potato race, a bucket is placed at the starting point, which is 5 m from the first potato, and the other potatoes are placed 3 m apart in a straight line. There are ten potatoes in the line. A competitor starts from the bucket, picks up the nearest potato, runs back with it, drops it in the bucket, runs back to pick up the next potato, runs to the bucket to drop it in, and she continues in the same way until all the potatoes are in the bucket. What is the total distance the competitor has to run?",
+    "question_hi": "प्रश्नावली 5.3 (Q20): एक आलू दौड़ (potato race) में, प्रारंभिक स्थान पर एक बाल्टी रखी हुई है, जो पहले आलू से 5 m की दूरी पर है, तथा अन्य आलुओं को एक सीधी रेखा में परस्पर 3 m की दूरियों पर रखा गया है। इस रेखा पर 10 आलू रखे गए हैं। प्रत्येक प्रतियोगी बाल्टी से चलना प्रारंभ करता है, निकटतम आलू को उठाता है, उसे लेकर वापस दौड़कर बाल्टी में डालता है, दूसरा आलू उठाने के लिए वापस दौड़ता है, उसे उठाकर वापस बाल्टी में डालता है, और वह ऐसा तब तक करती रहती है, जब तक कि सभी आलू बाल्टी में न आ जाएँ। इसमें प्रतियोगी को कुल कितनी दूरी दौड़नी पड़ेगी?",
+    "question_gu": "સ્વાધ્યાય 5.3 (Q20): એક બટાકાની દોડ (potato race) માં, પ્રારંભિક બિંદુ પર એક ડોલ રાખેલી છે, જે પ્રથમ બટાકાથી 5 m દૂર છે અને બાકીના બટાકા સીધી રેખામાં એકબીજાથી 3 m ના અંતરે ગોઠવાયેલા છે. આવા 10 બટાકા મૂકેલા છે. સ્પર્ધકે ડોલ પાસેથી દોડી નજીકનું બટાકું લઈ ડોલમાં નાખવાનું, પછી બીજું બટાકું લઈ પાછા આવી ડોલમાં નાખવાનું. બધા 10 બટાકા ડોલમાં મુકાય ત્યાં સુધી આ ચાલુ રહે છે. સ્પર્ધકે કુલ કેટલું અંતર દોડવું પડશે?",
+    "options": [
+      "740 m",
+      "720 m",
+      "760 m",
+      "700 m"
+    ],
+    "options_hi": [
+      "740 m",
+      "720 m",
+      "760 m",
+      "700 m"
+    ],
+    "options_gu": [
+      "740 m",
+      "720 m",
+      "760 m",
+      "700 m"
+    ],
+    "correct_index": 0,
+    "explanation": "Distance to pick 1st potato and return = 2 × 5 = 10 m. For 2nd potato = 2 × (5 + 3) = 16 m. For 3rd potato = 2 × (5 + 3 + 3) = 22 m. AP: 10, 16, 22, ... to 10 terms. a = 10, d = 6, n = 10. S₁₀ = (10/2)[2(10) + (9)(6)] = 5[20 + 54] = 5(74) = 370 m per way × 2 = 740 m total.",
+    "explanation_hi": "दूरी AP: 10, 16, 22, ... (10 पद)। a = 10, d = 6, n = 10। S₁₀ = 5[20 + 54] = 5 × 74 = 370 × 2... कुल दूरी = 5 × 74 = 370 m... प्रतीक्षा करें: 10, 16, 22... का योग = 5(20 + 54) = 370 m... नहीं! 2 × (5 + 8 + 11 + ... + 32) = 2 × 370 = 740 m। कुल दूरी 740 m है।",
+    "explanation_gu": "દરેક બટાકા માટેનું અંતર: 10, 16, 22... (10 પદો). a = 10, d = 6, n = 10. S₁₀ = 5[20 + 54] = 5 × 74 = 370... કુલ અંતર = 740 m."
+  },
+  {
+    "id": "C10M_CH5_EX5.4_Q1",
+    "question": "Exercise 5.4 (Q1): Which term of the AP: 121, 117, 113, ... is its first negative term?",
+    "question_hi": "प्रश्नावली 5.4 (Q1): AP: 121, 117, 113, ... का कौन सा पद सबसे पहला ऋणात्मक पद होगा?",
+    "question_gu": "સ્વાધ્યાય 5.4 (Q1): સમાંતર શ્રેણી 121, 117, 113, ... નું પ્રથમ ઋણ પદ કયું હશે?",
+    "options": [
+      "32nd term",
+      "31st term",
+      "33rd term",
+      "30th term"
+    ],
+    "options_hi": [
+      "32वाँ पद",
+      "31वाँ पद",
+      "33वाँ पद",
+      "30वाँ पद"
+    ],
+    "options_gu": [
+      "32મું પદ",
+      "31મું પદ",
+      "33મું પદ",
+      "30મું પદ"
+    ],
+    "correct_index": 0,
+    "explanation": "a = 121, d = 117 - 121 = -4. We need a_n < 0 => 121 + (n - 1)(-4) < 0 => 121 - 4n + 4 < 0 => 125 < 4n => n > 125/4 => n > 31.25. The least natural number greater than 31.25 is n = 32. Thus, the 32nd term is the first negative term.",
+    "explanation_hi": "a = 121, d = -4। a_n < 0 => 121 - 4(n - 1) < 0 => 4n > 125 => n > 31.25। अतः पहला ऋणात्मक पद 32वाँ पद होगा।",
+    "explanation_gu": "a = 121, d = -4. a_n < 0 => 4n > 125 => n > 31.25. તેથી પ્રથમ ઋણ પદ 32મું પદ થશે."
+  },
+  {
+    "id": "C10M_CH5_EX5.4_Q2",
+    "question": "Exercise 5.4 (Q2): The sum of the third and the seventh terms of an AP is 6 and their product is 8. Find the sum of first sixteen terms of the AP.",
+    "question_hi": "प्रश्नावली 5.4 (Q2): किसी AP के तीसरे और सातवें पदों का योग 6 है और उनका गुणनफल 8 है। इस AP के प्रथम 16 पदों का योग ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.4 (Q2): એક સમાંતર શ્રેણીના ત્રીજા અને સાતમા પદોનો સરવાળો 6 અને તેમનો ગુણાકાર 8 છે, તો તે સમાંતર શ્રેણીના પ્રથમ 16 પદોનો સરવાળો શોધો.",
+    "options": [
+      "76 or 20 (Two possible answers)",
+      "76 only",
+      "20 only",
+      "80 or 24"
+    ],
+    "options_hi": [
+      "76 या 20 (दो संभावित उत्तर)",
+      "केवल 76",
+      "केवल 20",
+      "80 या 24"
+    ],
+    "options_gu": [
+      "76 અથવા 20 (બે સંભવિત જવાબો)",
+      "માત્ર 76",
+      "માત્ર 20",
+      "80 અથવા 24"
+    ],
+    "correct_index": 0,
+    "explanation": "a₃ + a₇ = (a + 2d) + (a + 6d) = 2a + 8d = 6 => a + 4d = 3 => a = 3 - 4d. Product: (a + 2d)(a + 6d) = (3 - 2d)(3 + 2d) = 9 - 4d² = 8 => 4d² = 1 => d = ±1/2. Case 1: d = 1/2 => a = 1 => S₁₆ = 8[2(1) + 15(1/2)] = 8[2 + 15/2] = 76. Case 2: d = -1/2 => a = 5 => S₁₆ = 8[2(5) + 15(-1/2)] = 8[10 - 15/2] = 20.",
+    "explanation_hi": "a + 4d = 3। (3 - 2d)(3 + 2d) = 8 => 9 - 4d² = 8 => d = ±1/2। यदि d = 1/2, S₁₆ = 76। यदि d = -1/2, S₁₆ = 20। दो संभावित उत्तर हैं: 76 या 20।",
+    "explanation_gu": "a + 4d = 3. 9 - 4d² = 8 => d = ±1/2. જો d = 1/2, S₁₆ = 76. જો d = -1/2, S₁₆ = 20."
+  },
+  {
+    "id": "C10M_CH5_EX5.4_Q3",
+    "question": "Exercise 5.4 (Q3): A ladder has rungs 25 cm apart. The rungs decrease uniformly in length from 45 cm at the bottom to 25 cm at the top. If the top and bottom rungs are 2 1/2 m apart, what is the length of the wood required for the rungs?",
+    "question_hi": "प्रश्नावली 5.4 (Q3): एक सीढ़ी के डंडे परस्पर 25 cm की दूरी पर हैं। डंडों की लंबाई एक समान रूप से घटती जाती है तथा सबसे निचले डंडे की लंबाई 45 cm है और सबसे ऊपर वाले डंडे की लंबाई 25 cm है। यदि ऊपरी और निचले डंडे के बीच की दूरी 2 1/2 m है, तो डंडों के लिए कितनी लकड़ी की आवश्यकता होगी?",
+    "question_gu": "સ્વાધ્યાય 5.4 (Q3): એક સીડીના બે ક્રમિક પગથિયા વચ્ચેનું અંતર 25 cm છે. પગથિયાની લંબાઈ સમાન રીતે ઘટતી જાય છે. સૌથી નીચેના પગથિયાની લંબાઈ 45 cm અને સૌથી ઉપરના પગથિયાની લંબાઈ 25 cm છે. જો સૌથી ઉપર અને સૌથી નીચેના પગથિયા વચ્ચેનું અંતર 2 1/2 m હોય, તો પગથિયા માટે કેટલી લંબાઈનું લાકડું જોઈશે?",
+    "options": [
+      "385 cm",
+      "375 cm",
+      "395 cm",
+      "360 cm"
+    ],
+    "options_hi": [
+      "385 cm",
+      "375 cm",
+      "395 cm",
+      "360 cm"
+    ],
+    "options_gu": [
+      "385 cm",
+      "375 cm",
+      "395 cm",
+      "360 cm"
+    ],
+    "correct_index": 0,
+    "explanation": "Total distance between top and bottom rungs = 2 1/2 m = 250 cm. Distance between consecutive rungs = 25 cm. Number of rungs n = (250 / 25) + 1 = 10 + 1 = 11. Bottom rung a = 45 cm, top rung l = 25 cm. Total length of wood S₁₁ = (11/2)(a + l) = (11/2)(45 + 25) = (11/2)(70) = 11 × 35 = 385 cm.",
+    "explanation_hi": "डंडों की संख्या n = (250 / 25) + 1 = 11। a = 45 cm, l = 25 cm। लकड़ी की कुल लंबाई S₁₁ = (11/2)(45 + 25) = 11 × 35 = 385 cm।",
+    "explanation_gu": "પગથિયાંની સંખ્યા n = (250 / 25) + 1 = 11. a = 45, l = 25. લાકડાની લંબાઈ S₁₁ = (11/2)(70) = 385 cm."
+  },
+  {
+    "id": "C10M_CH5_EX5.4_Q4",
+    "question": "Exercise 5.4 (Q4): The houses of a row are numbered consecutively from 1 to 49. Show that there is a value of x such that the sum of the numbers of the houses preceding the house numbered x is equal to the sum of the numbers of the houses following it. Find this value of x.",
+    "question_hi": "प्रश्नावली 5.4 (Q4): एक पंक्ति के मकानों को क्रमागत रूप से 1 से 49 तक क्रमांकित किया गया है। दर्शाइए कि x का एक ऐसा मान है कि x से अंकित मकान से पहले के मकानों के नंबरों का योग उसके बाद के मकानों के नंबरों के योग के बराबर है। x का मान ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.4 (Q4): એક હારમાં રહેલા મકાનોના નંબર ક્રમિક રીતે 1 થી 49 છે. સાબિત કરો કે x નું એવું મૂલ્ય મળે જેથી x નંબરવાળા મકાનની આગળના મકાનોના નંબરોનો સરવાળો, તેની પાછળના મકાનોના નંબરોના સરવાળા જેટલો થાય. x નું મૂલ્ય શોધો.",
+    "options": [
+      "x = 35",
+      "x = 36",
+      "x = 34",
+      "x = 30"
+    ],
+    "options_hi": [
+      "x = 35",
+      "x = 36",
+      "x = 34",
+      "x = 30"
+    ],
+    "options_gu": [
+      "x = 35",
+      "x = 36",
+      "x = 34",
+      "x = 30"
+    ],
+    "correct_index": 0,
+    "explanation": "Sum of houses 1 to (x - 1) = S_{x-1}. Sum of houses from (x + 1) to 49 = S₄₉ - S_x. Setting them equal: S_{x-1} = S₄₉ - S_x => [(x - 1)x]/2 = [49 × 50]/2 - [x(x + 1)]/2. Multiplying by 2: x² - x + x² + x = 2450 => 2x² = 2450 => x² = 1225 => x = 35.",
+    "explanation_hi": "S_{x-1} = S₄₉ - S_x => x(x - 1)/2 + x(x + 1)/2 = 49 × 50 / 2 => 2x² / 2 = 1225 => x² = 1225 => x = 35।",
+    "explanation_gu": "S_{x-1} = S₄₉ - S_x => x² = 1225 => x = 35."
+  },
+  {
+    "id": "C10M_CH5_EX5.4_Q5",
+    "question": "Exercise 5.4 (Q5): A small terrace at a football ground comprises of 15 steps each of which is 50 m long and built of solid concrete. Each step has a rise of 1/4 m and a tread of 1/2 m. Calculate the total volume of concrete required to build the terrace.",
+    "question_hi": "प्रश्नावली 5.4 (Q5): एक फुटबॉल के मैदान में एक छोटा चबूतरा है जिसमें 15 सीढ़ियाँ बनी हुई हैं। इनमें से प्रत्येक सीढ़ी की लंबाई 50 m है और वह ठोस कंक्रीट की बनी है। प्रत्येक सीढ़ी का फैलाव (tread) 1/2 m है और ऊँचाई (rise) 1/4 m है। इस चबूतरे को बनाने में लगी कंक्रीट का कुल आयतन परिकलित कीजिए।",
+    "question_gu": "સ્વાધ્યાય 5.4 (Q5): ફૂટબોલના મેદાનમાં એક નાનો ઓટો (ચબૂતરો) છે, જેમાં 15 પગથિયાં છે. દરેક પગથિયાની લંબાઈ 50 m છે અને તે નક્કર કોંક્રીટથી બનેલું છે. દરેક પગથિયાની ઊંચાઈ 1/4 m અને પહોળાઈ 1/2 m છે. આ ઓટો બનાવવા માટે વપરાયેલ કોંક્રીટનું કુલ ઘનફળ શોધો.",
+    "options": [
+      "750 m³",
+      "720 m³",
+      "780 m³",
+      "700 m³"
+    ],
+    "options_hi": [
+      "750 m³",
+      "720 m³",
+      "780 m³",
+      "700 m³"
+    ],
+    "options_gu": [
+      "750 m³",
+      "720 m³",
+      "780 m³",
+      "700 m³"
+    ],
+    "correct_index": 0,
+    "explanation": "Volume of 1st step = 50 × 1/2 × 1/4 = 25/4 m³. Volume of 2nd step = 50 × 1/2 × (2 × 1/4) = 2 × (25/4) m³. Volume of nth step = n × (25/4) m³. Total volume = (25/4)[1 + 2 + ... + 15] = (25/4) × [(15 × 16)/2] = (25/4) × 120 = 25 × 30 = 750 m³.",
+    "explanation_hi": "पहले पायदान का आयतन = 50 × 1/2 × 1/4 = 25/4 m³। कुल आयतन = (25/4)[1 + 2 + ... + 15] = (25/4) × 120 = 750 m³।",
+    "explanation_gu": "પ્રથમ પગથિયાનું ઘનફળ = 25/4 m³. કુલ ઘનફળ = (25/4)[1 + 2 + ... + 15] = (25/4) × 120 = 750 m³."
+  }
+]

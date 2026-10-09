@@ -1,399 +1,156 @@
 {
   "metadata": {
-    "id": "ncert_class10_maths_ch14",
-    "title": "Chapter 14: Statistics",
-    "subtitle": "Master Data Analysis and Central Tendency",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "NCERT/CBSE",
-    "curriculum": [
-      "Universal"
-    ],
-    "language": "English/Hindi/Gujarati (Bilingual)",
-    "difficulty": "Advanced",
-    "estimated_minutes": 180,
-    "version": "3.0.0-SUPREME-MATHS",
-    "author": "Antigravity Supreme Intelligence",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "statistics",
-      "mean",
-      "median",
-      "mode",
-      "bilingual"
-    ],
-    "learning_outcomes": [
-      "Calculate Mean of grouped data using various methods.",
-      "Find the Mode of grouped data.",
-      "Determine the Median of grouped data.",
-      "Understand the empirical relationship between mean, median, and mode."
-    ],
-    "ai_context": {
-      "learning_goal": "Help students visualize data and understand the real-world applications of central tendency. Use the 'Socratic Discovery Arc'.",
-      "common_misconceptions": [
-        "Students confuse the formulas for Mean, Median, and Mode.",
-        "Difficulty in finding cumulative frequencies."
-      ]
-    }
+    "module_id": "ncert_class10_maths_ch14",
+    "title": "Ncert Class10 Maths Ch14",
+    "title_hi": "Ncert Class10 Maths Ch14",
+    "title_gu": "Ncert Class10 Maths Ch14",
+    "board": "NCERT/GSEB",
+    "subject": "",
+    "chapter_number": "",
+    "language": "trilingual"
   },
   "blocks": [
     {
+      "id": "C10_MATH_CH14_HOOK_1",
       "type": "hook",
-      "content": "Imagine you are the manager of a cricket team. You need to pick the best batsman based on their past 10 matches. Should you look at their average score? Or the score they hit most frequently? Or the middle value of their scores? Welcome to the fascinating world of **Statistics (सांख्यिकी / આંકડાશાસ્ત્ર)**!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "title": "Predicting the Future",
+      "title_hi": "भविष्य की भविष्यवाणी करना",
+      "title_gu": "ભવિષ્યની આગાહી કરવી",
+      "body": "Will it rain today? Will you win the lottery? Who will win the cricket match? We use the word 'probably' all the time when we are unsure about the future. But what if you could put an exact mathematical number on that uncertainty? That is exactly what the science of **Probability** does! It is the math of chance. From casinos calculating their odds, to insurance companies setting your premiums, to scientists predicting weather patterns, probability allows us to make smart decisions even when we don't know exactly what will happen.",
+      "body_hi": "क्या आज बारिश होगी? क्या आप लॉटरी जीतेंगे? क्रिकेट मैच कौन जीतेगा? जब हम भविष्य के बारे में अनिश्चित होते हैं तो हम हर समय 'शायद (probably)' शब्द का उपयोग करते हैं। लेकिन क्या हो अगर आप उस अनिश्चितता पर एक सटीक गणितीय संख्या डाल सकें? **प्रायिकता (Probability)** का विज्ञान ठीक यही करता है! यह संयोग (chance) का गणित है। कैसीनो द्वारा अपने जीतने के अवसरों (odds) की गणना करने से लेकर, बीमा कंपनियों द्वारा आपके प्रीमियम तय करने तक, और वैज्ञानिकों द्वारा मौसम के मिजाज की भविष्यवाणी करने तक, प्रायिकता हमें स्मार्ट निर्णय लेने की अनुमति देती है, भले ही हम यह नहीं जानते हों कि वास्तव में क्या होने वाला है।",
+      "body_gu": "શું આજે વરસાદ પડશે? શું તમે લોટરી જીતશો? ક્રિકેટ મેચ કોણ જીતશે? જ્યારે આપણે ભવિષ્ય વિશે અચોક્કસ હોઈએ છીએ ત્યારે આપણે હંમેશા 'કદાચ (probably)' શબ્દનો ઉપયોગ કરીએ છીએ. પરંતુ જો તમે તે અચોક્કસતા પર ચોક્કસ ગાણિતિક સંખ્યા મૂકી શકો તો શું? **સંભાવના (Probability)** નું વિજ્ઞાન બરાબર આ જ કરે છે! તે તક (chance) નું ગણિત છે. કસિનો દ્વારા તેમના જીતવાના અવસરો (odds) ની ગણતરી કરવાથી માંડીને, વીમા કંપનીઓ દ્વારા તમારા પ્રીમિયમ નક્કી કરવા સુધી, અને વૈજ્ઞાનિકો દ્વારા હવામાનની પેટર્નની આગાહી કરવા સુધી, સંભાવના આપણને સ્માર્ટ નિર્ણયો લેવાની મંજૂરી આપે છે, ભલે આપણે જાણતા ન હોઈએ કે ખરેખર શું થવાનું છે."
     },
     {
-      "type": "diagram",
-      "content": "The Three Pillars of Central Tendency: Mean, Median, and Mode. They help us find the 'center' of the data in different ways.",
-      "image_url": "assets/images/maths_ch14_central_tendency.jpg",
-      "alt_text": "Illustration showing Mean, Median, and Mode."
-    },
-    {
-      "type": "theory",
-      "content": "**Mean (माध्य / મધ્યક):**\nThe average of the data.\nFor grouped data (Direct Method):\nx̄ = Σ(fᵢxᵢ) / Σfᵢ\n\nWhere 'x̄' is the mean, 'fᵢ' is the frequency, and 'xᵢ' is the class mark.",
+      "id": "C10_MATH_CH14_SOCRATIC_1",
+      "type": "socratic_question",
+      "question": "If you toss a perfectly fair coin, you know there is a 50% chance of getting a Head. Does this mean if you toss it 10 times, you will definitely get exactly 5 Heads and 5 Tails?",
+      "question_hi": "यदि आप एक पूरी तरह से निष्पक्ष (fair) सिक्के को उछालते हैं, तो आप जानते हैं कि चित (Head) आने की 50% संभावना है। क्या इसका मतलब यह है कि यदि आप इसे 10 बार उछालते हैं, तो आपको निश्चित रूप से ठीक 5 चित और 5 पट (Tails) मिलेंगे?",
+      "question_gu": "જો તમે એકદમ નિષ્પક્ષ (fair) સિક્કો ઉછાળો છો, તો તમે જાણો છો કે છાપ (Head) આવવાની 50% સંભાવના છે. શું આનો અર્થ એ છે કે જો તમે તેને 10 વખત ઉછાળો, તો તમને ચોક્કસપણે બરાબર 5 છાપ અને 5 કાંટા (Tails) મળશે?",
+      "hint": "Think about the difference between what is mathematically expected to happen over a million tosses versus what can happen in just a few tosses.",
+      "hint_hi": "एक लाख उछाल में गणितीय रूप से क्या होने की उम्मीद है बनाम केवल कुछ उछाल में क्या हो सकता है, इसके बीच के अंतर के बारे में सोचें।",
+      "hint_gu": "દસ લાખ ઉછાળમાં ગાણિતિક રીતે શું થવાની અપેક્ષા છે વિરુદ્ધ માત્ર થોડા ઉછાળમાં શું થઈ શકે છે, તે બંને વચ્ચેના તફાવત વિશે વિચારો.",
+      "bloom": "Analyze",
       "difficulty": "Intermediate",
-      "bloom": "Remember"
+      "estimated_minutes": 2
     },
     {
-      "type": "diagram",
-      "content": "Finding the Mode means finding the peak of the data, the most frequent observation.",
-      "image_url": "assets/images/maths_ch14_mode_peak.jpg",
-      "alt_text": "Graph showing the peak frequency representing the mode."
-    },
-    {
+      "id": "C10_MATH_CH14_THEO_1",
       "type": "theory",
-      "content": "**Mode (बहुलक / બહુલક):**\nThe value that occurs most frequently.\nFormula for grouped data:\nMode = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h\n\nWhere 'l' is the lower limit of the modal class, 'h' is the class size, 'f₁' is the frequency of the modal class, 'f₀' is the frequency of the preceding class, and 'f₂' is the frequency of the succeeding class.",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "title": "Theoretical Probability",
+      "title_hi": "सैद्धांतिक प्रायिकता",
+      "title_gu": "સૈદ્ધાંતિક સંભાવના",
+      "body": "In class 9, we learned about experimental probability (based on actual experiments). In class 10, we study **Theoretical Probability** (predicting the outcome before doing the experiment by assuming all outcomes are equally likely).\nThe theoretical probability of an event E, written as P(E), is defined as:\n**P(E) = (Number of outcomes favourable to E) / (Number of all possible outcomes of the experiment)**\nFor example, when rolling a standard die, the possible outcomes are {1, 2, 3, 4, 5, 6}. So, the total number of outcomes is 6.\nThe probability of getting a '4' is 1/6, because there is only one '4' on the die.",
+      "body_hi": "कक्षा 9 में, हमने प्रायोगिक प्रायिकता (वास्तविक प्रयोगों पर आधारित) के बारे में सीखा। कक्षा 10 में, हम **सैद्धांतिक प्रायिकता (Theoretical Probability)** (यह मानकर कि सभी परिणाम समप्रायिक यानी equally likely हैं, प्रयोग करने से पहले परिणाम की भविष्यवाणी करना) का अध्ययन करते हैं।\nकिसी घटना E की सैद्धांतिक प्रायिकता, जिसे P(E) के रूप में लिखा जाता है, को इस प्रकार परिभाषित किया गया है:\n**P(E) = (E के अनुकूल परिणामों की संख्या) / (प्रयोग के सभी संभव परिणामों की संख्या)**\nउदाहरण के लिए, एक मानक पासे (die) को फेंकने पर, संभव परिणाम {1, 2, 3, 4, 5, 6} होते हैं। अतः, परिणामों की कुल संख्या 6 है।\n'4' प्राप्त करने की प्रायिकता 1/6 है, क्योंकि पासे पर केवल एक '4' होता है।",
+      "body_gu": "ધોરણ 9 માં, આપણે પ્રાયોગિક સંભાવના (વાસ્તવિક પ્રયોગો પર આધારિત) વિશે શીખ્યા. ધોરણ 10 માં, આપણે **સૈદ્ધાંતિક સંભાવના (Theoretical Probability)** (તમામ પરિણામો સમસંભાવી એટલે કે equally likely છે તેમ માનીને પ્રયોગ કરતા પહેલા પરિણામની આગાહી કરવી) નો અભ્યાસ કરીએ છીએ.\nઘટના E ની સૈદ્ધાંતિક સંભાવના, જેને P(E) તરીકે લખવામાં આવે છે, તેને નીચે મુજબ વ્યાખ્યાયિત કરવામાં આવે છે:\n**P(E) = (ઘટના E ને સાનુકૂળ પરિણામોની સંખ્યા) / (પ્રયોગના તમામ શક્ય પરિણામોની સંખ્યા)**\nઉદાહરણ તરીકે, પ્રમાણભૂત પાસા (die) ને ફેંકતી વખતે, શક્ય પરિણામો {1, 2, 3, 4, 5, 6} છે. તેથી, પરિણામોની કુલ સંખ્યા 6 છે.\n'4' મેળવવાની સંભાવના 1/6 છે, કારણ કે પાસા પર માત્ર એક જ '4' હોય છે."
     },
     {
+      "id": "C10_MATH_CH14_THEO_2",
       "type": "theory",
-      "content": "**Median (माध्यक / મધ્યસ્થ):**\nThe middle value of the sorted data.\nFormula for grouped data:\nMedian = l + [ (n/2 - cf) / f ] × h\n\nWhere 'l' is the lower limit of median class, 'n' is number of observations, 'cf' is cumulative frequency of class preceding the median class, 'f' is frequency of median class, and 'h' is class size.",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "title": "Sure, Impossible, and Complementary Events",
+      "title_hi": "निश्चित, असंभव और पूरक घटनाएँ",
+      "title_gu": "ચોક્કસ, અશક્ય અને પૂરક ઘટનાઓ",
+      "body": "*   **Impossible Event:** An event that can never happen. Its probability is **0**. (e.g., rolling a 7 on a standard 6-sided die).\n*   **Sure Event:** An event that is certain to happen. Its probability is **1**. (e.g., rolling a number less than 10 on a standard die).\n*   **Probability Range:** Because of this, the probability of any event E always lies between 0 and 1: **0 ≤ P(E) ≤ 1**.\n*   **Complementary Events:** The event 'not E' (denoted by Ē or E') is the complement of event E. The sum of the probability of an event happening and not happening is always 1.\n**P(E) + P(not E) = 1**",
+      "body_hi": "*   **असंभव घटना (Impossible Event):** एक ऐसी घटना जो कभी नहीं हो सकती। इसकी प्रायिकता **0** होती है। (उदा., एक मानक 6-पहल वाले पासे पर 7 आना)।\n*   **निश्चित घटना (Sure Event):** एक ऐसी घटना जिसका होना निश्चित है। इसकी प्रायिकता **1** होती है। (उदा., एक मानक पासे पर 10 से छोटी संख्या आना)।\n*   **प्रायिकता की सीमा:** इसके कारण, किसी भी घटना E की प्रायिकता हमेशा 0 और 1 के बीच होती है: **0 ≤ P(E) ≤ 1**.\n*   **पूरक घटनाएँ (Complementary Events):** घटना 'E नहीं' (जिससे Ē या E' द्वारा दर्शाया जाता है) घटना E की पूरक है। किसी घटना के होने और न होने की प्रायिकता का योग हमेशा 1 होता है।\n**P(E) + P(E नहीं) = 1**",
+      "body_gu": "*   **અશક્ય ઘટના (Impossible Event):** એક એવી ઘટના જે ક્યારેય બની શકતી નથી. તેની સંભાવના **0** હોય છે. (દા.ત., પ્રમાણભૂત 6-બાજુવાળા પાસા પર 7 આવવા).\n*   **ચોક્કસ ઘટના (Sure Event):** એક એવી ઘટના જે બનવાની જ છે. તેની સંભાવના **1** હોય છે. (દા.ત., પ્રમાણભૂત પાસા પર 10 થી નાની સંખ્યા આવવી).\n*   **સંભાવનાનો વિસ્તાર:** આના કારણે, કોઈપણ ઘટના E ની સંભાવના હંમેશા 0 અને 1 ની વચ્ચે હોય છે: **0 ≤ P(E) ≤ 1**.\n*   **પૂરક ઘટનાઓ (Complementary Events):** ઘટના 'E નહિ' (જેને Ē અથવા E' દ્વારા દર્શાવાય છે) એ ઘટના E ની પૂરક છે. કોઈપણ ઘટના બનવાની અને ન બનવાની સંભાવનાનો સરવાળો હંમેશા 1 હોય છે.\n**P(E) + P(E નહિ) = 1**"
     },
     {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** Empirical Relationship\n\n**3 Median = Mode + 2 Mean**\n\n*Board Trick:* You might be given any two values and asked to find the third. Memorize this relation!",
-      "difficulty": "Intermediate",
-      "bloom": "Apply"
+      "id": "C10_MATH_CH14_THEO_3",
+      "type": "theory",
+      "title": "Deck of Playing Cards",
+      "title_hi": "ताश के पत्तों की गड्डी",
+      "title_gu": "પત્તાની થોકડી",
+      "body": "Many probability questions involve a standard deck of 52 playing cards. You must memorize its structure:\n*   **Total Cards = 52**\n*   **Two Colors:** 26 Red cards and 26 Black cards.\n*   **Four Suits (13 cards each):**\n    *   Hearts (♥) - Red\n    *   Diamonds (♦) - Red\n    *   Spades (♠) - Black\n    *   Clubs (♣) - Black\n*   **Face Cards:** Kings, Queens, and Jacks are called face cards. There are 3 in each suit, so 3 × 4 = **12 Face Cards** in total. (Aces are NOT face cards).",
+      "body_hi": "कई प्रायिकता प्रश्नों में 52 ताश के पत्तों (playing cards) की एक मानक गड्डी शामिल होती है। आपको इसकी संरचना याद रखनी चाहिए:\n*   **कुल पत्ते = 52**\n*   **दो रंग:** 26 लाल पत्ते और 26 काले पत्ते।\n*   **चार सूट (प्रत्येक में 13 पत्ते):**\n    *   पान (Hearts ♥) - लाल\n    *   ईंट (Diamonds ♦) - लाल\n    *   हुकुम (Spades ♠) - काला\n    *   चिड़ी (Clubs ♣) - काला\n*   **फेस कार्ड (Face Cards):** बादशाह (King), बेगम (Queen) और गुलाम (Jack) को फेस कार्ड (चित्र वाले पत्ते) कहा जाता है। प्रत्येक सूट में 3 होते हैं, अतः कुल मिलाकर 3 × 4 = **12 फेस कार्ड** होते हैं। (इक्के यानी Aces फेस कार्ड नहीं होते हैं)।",
+      "body_gu": "સંભાવનાના ઘણા પ્રશ્નોમાં 52 પત્તાની પ્રમાણભૂત થોકડી (deck) નો સમાવેશ થાય છે. તમારે તેનું માળખું યાદ રાખવું જ જોઈએ:\n*   **કુલ પત્તા = 52**\n*   **બે રંગ:** 26 લાલ પત્તા અને 26 કાળા પત્તા.\n*   **ચાર પ્રકાર (દરેકમાં 13 પત્તા):**\n    *   લાલ (Hearts ♥) - લાલ\n    *   ચરકટ (Diamonds ♦) - લાલ\n    *   કાળી (Spades ♠) - કાળો\n    *   ફુલ્લી (Clubs ♣) - કાળો\n*   **ચિત્રવાળા પત્તા (Face Cards):** રાજા (King), રાણી (Queen), અને ગુલામ (Jack) ને ચિત્રવાળા પત્તા (face cards) કહેવાય છે. દરેક પ્રકારમાં 3 હોય છે, તેથી કુલ મળીને 3 × 4 = **12 ચિત્રવાળા પત્તા** હોય છે. (એક્કા એટલે કે Aces ચિત્રવાળા પત્તા નથી)."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_1",
-      "type": "quiz",
-      "question": "What is the empirical relationship between the three measures of central tendency?",
-      "question_hi": "केंद्रीय प्रवृत्ति के तीन मापों के बीच अनुभवजन्य संबंध क्या है?",
+      "id": "C10_MATH_CH14_PRACTICE_1",
+      "type": "practice_question",
+      "question": "Which of the following cannot be the probability of an event?",
       "options": [
-        "3 Median = Mode + 2 Mean",
-        "3 Mean = Mode + 2 Median",
-        "Mode = 3 Mean - 2 Median",
-        "Median = 3 Mode - 2 Mean"
+        "2/3",
+        "-1.5",
+        "15%",
+        "0.7"
       ],
+      "question_hi": "निम्नलिखित में से कौन सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?",
       "options_hi": [
-        "3 माध्यक = बहुलक + 2 माध्य",
-        "3 माध्य = बहुलक + 2 माध्यक",
-        "बहुलक = 3 माध्य - 2 माध्यक",
-        "माध्यक = 3 बहुलक - 2 माध्य"
+        "2/3",
+        "-1.5",
+        "15%",
+        "0.7"
       ],
-      "correct_index": 0,
-      "explanation": "The correct empirical formula that relates mean, median, and mode is 3 Median = Mode + 2 Mean.",
-      "explanation_hi": "सही अनुभवजन्य सूत्र जो माध्य, माध्यक और बहुलक को जोड़ता है वह 3 माध्यक = बहुलक + 2 माध्य है।"
+      "question_gu": "નીચેનામાંથી કયો વિકલ્પ ઘટનાની સંભાવના ન હોઈ શકે?",
+      "options_gu": [
+        "2/3",
+        "-1.5",
+        "15%",
+        "0.7"
+      ],
+      "correct_index": 1,
+      "solution": "The probability of an event must always lie between 0 and 1 (inclusive). i.e., 0 ≤ P(E) ≤ 1.\n-1.5 is a negative number, which is less than 0. Therefore, it cannot be a probability.\nNote: 2/3 = 0.66... (valid), 15% = 0.15 (valid), 0.7 (valid).",
+      "solution_hi": "किसी घटना की प्रायिकता हमेशा 0 और 1 (सहित) के बीच होनी चाहिए। अर्थात् 0 ≤ P(E) ≤ 1.\n-1.5 एक ऋणात्मक संख्या है, जो 0 से कम है। इसलिए, यह प्रायिकता नहीं हो सकती।\nनोट: 2/3 = 0.66... (मान्य), 15% = 0.15 (मान्य), 0.7 (मान्य)।",
+      "solution_gu": "ઘટનાની સંભાવના હંમેશા 0 અને 1 (સહિત) ની વચ્ચે હોવી જોઈએ. એટલે કે, 0 ≤ P(E) ≤ 1.\n-1.5 એ ઋણ સંખ્યા છે, જે 0 કરતાં ઓછી છે. તેથી, તે સંભાવના ન હોઈ શકે.\nનોંધ: 2/3 = 0.66... (માન્ય), 15% = 0.15 (માન્ય), 0.7 (માન્ય)."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_2",
-      "type": "quiz",
-      "question": "Which measure of central tendency takes into account all the data items?",
-      "question_hi": "केंद्रीय प्रवृत्ति का कौन सा माप सभी डेटा आइटमों को ध्यान में रखता है?",
-      "options": [
-        "Mean",
-        "Median",
-        "Mode",
-        "Both Mean and Median"
-      ],
-      "options_hi": [
-        "माध्य",
-        "माध्यक",
-        "बहुलक",
-        "माध्य और माध्यक दोनों"
-      ],
-      "correct_index": 0,
-      "explanation": "The mean is calculated by adding all observations and dividing by the total number of observations, so it uses every data point.",
-      "explanation_hi": "माध्य की गणना सभी अवलोकनों को जोड़कर और अवलोकनों की कुल संख्या से विभाजित करके की जाती है, इसलिए यह प्रत्येक डेटा बिंदु का उपयोग करता है।"
+      "id": "C10_MATH_CH14_PRACTICE_2",
+      "type": "practice_question",
+      "question": "If P(E) = 0.05, what is the probability of 'not E'?",
+      "question_hi": "यदि P(E) = 0.05 है, तो 'E नहीं' की प्रायिकता क्या है?",
+      "question_gu": "જો P(E) = 0.05 હોય, તો 'E નહિ' ની સંભાવના શું છે?",
+      "solution": "We know that P(E) + P(not E) = 1\nTherefore, P(not E) = 1 - P(E)\n= 1 - 0.05\n= 0.95",
+      "solution_hi": "हम जानते हैं कि P(E) + P(E नहीं) = 1\nइसलिए, P(E नहीं) = 1 - P(E)\n= 1 - 0.05\n= 0.95",
+      "solution_gu": "આપણે જાણીએ છીએ કે P(E) + P(E નહિ) = 1\nતેથી, P(E નહિ) = 1 - P(E)\n= 1 - 0.05\n= 0.95"
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_3",
-      "type": "quiz",
-      "question": "In the formula for calculating mode of grouped data, what does 'f₁' represent?",
-      "question_hi": "वर्गीकृत डेटा के बहुलक की गणना के सूत्र में, 'f₁' क्या दर्शाता है?",
-      "options": [
-        "Frequency of the modal class",
-        "Frequency of the class preceding the modal class",
-        "Frequency of the class succeeding the modal class",
-        "Lower limit of the modal class"
-      ],
-      "options_hi": [
-        "बहुलक वर्ग की बारंबारता",
-        "बहुलक वर्ग से ठीक पहले वाले वर्ग की बारंबारता",
-        "बहुलक वर्ग के ठीक बाद वाले वर्ग की बारंबारता",
-        "बहुलक वर्ग की निचली सीमा"
-      ],
-      "correct_index": 0,
-      "explanation": "In the mode formula, f₁ is the frequency of the modal class (the class with the highest frequency).",
-      "explanation_hi": "बहुलक सूत्र में, f₁ बहुलक वर्ग (सबसे अधिक बारंबारता वाला वर्ग) की बारंबारता है।"
+      "id": "C10_MATH_CH14_PRACTICE_3",
+      "type": "practice_question",
+      "question": "A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag. What is the probability that the ball drawn is (i) red ? (ii) not red?",
+      "question_hi": "एक थैले में 3 लाल और 5 काली गेंदें हैं। इस थैले में से एक गेंद यादृच्छया (at random) निकाली जाती है। इसकी प्रायिकता क्या है कि गेंद (i) लाल हो? (ii) लाल नहीं हो?",
+      "question_gu": "એક થેલામાં 3 લાલ અને 5 કાળા દડા છે. થેલામાંથી એક દડો યાદચ્છિક રીતે કાઢવામાં આવે છે. બહાર કાઢેલ દડો (i) લાલ હોય? (ii) લાલ ન હોય તેની સંભાવના કેટલી?",
+      "solution": "Total number of balls = 3 (red) + 5 (black) = 8.\n(i) Number of red balls (favourable outcomes) = 3.\nP(Red) = 3 / 8.\n(ii) P(Not Red) = 1 - P(Red) = 1 - 3/8 = (8-3)/8 = 5/8.\n(Alternatively, Not Red means Black, and there are 5 black balls. So, 5/8).",
+      "solution_hi": "गेंदों की कुल संख्या = 3 (लाल) + 5 (काली) = 8.\n(i) लाल गेंदों की संख्या (अनुकूल परिणाम) = 3.\nP(लाल) = 3 / 8.\n(ii) P(लाल नहीं) = 1 - P(लाल) = 1 - 3/8 = (8-3)/8 = 5/8.\n(वैकल्पिक रूप से, 'लाल नहीं' का अर्थ है 'काली', और 5 काली गेंदें हैं। अतः, 5/8)।",
+      "solution_gu": "દડાની કુલ સંખ્યા = 3 (લાલ) + 5 (કાળા) = 8.\n(i) લાલ દડાની સંખ્યા (સાનુકૂળ પરિણામો) = 3.\nP(લાલ) = 3 / 8.\n(ii) P(લાલ નહિ) = 1 - P(લાલ) = 1 - 3/8 = (8-3)/8 = 5/8.\n(વૈકલ્પિક રીતે, 'લાલ નહિ' નો અર્થ 'કાળો' થાય છે, અને 5 કાળા દડા છે. તેથી, 5/8)."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_4",
-      "type": "quiz",
-      "question": "What is the class mark of the class interval 10-25?",
-      "question_hi": "वर्ग अंतराल 10-25 का वर्ग चिह्न क्या है?",
-      "options": [
-        "17.5",
-        "15",
-        "12.5",
-        "20"
-      ],
-      "options_hi": [
-        "17.5",
-        "15",
-        "12.5",
-        "20"
-      ],
-      "correct_index": 0,
-      "explanation": "Class mark is the midpoint of the class. (Lower Limit + Upper Limit) / 2 = (10 + 25) / 2 = 17.5.",
-      "explanation_hi": "वर्ग चिह्न वर्ग का मध्य बिंदु होता है। (निचली सीमा + ऊपरी सीमा) / 2 = (10 + 25) / 2 = 17.5।"
+      "id": "C10_MATH_CH14_PRACTICE_4",
+      "type": "practice_question",
+      "question": "A box contains 5 red marbles, 8 white marbles and 4 green marbles. One marble is taken out of the box at random. What is the probability that the marble taken out will be (i) red ? (ii) white ? (iii) not green?",
+      "question_hi": "एक डिब्बे में 5 लाल कंचे, 8 सफेद कंचे और 4 हरे कंचे हैं। इस डिब्बे में से एक कंचा यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि निकाला गया कंचा (i) लाल है? (ii) सफेद है? (iii) हरा नहीं है?",
+      "question_gu": "એક પેટીમાં 5 લાલ લખોટીઓ, 8 સફેદ લખોટીઓ અને 4 લીલી લખોટીઓ છે. પેટીમાંથી એક લખોટી યાદચ્છિક રીતે બહાર કાઢવામાં આવે છે. બહાર કાઢેલ લખોટી (i) લાલ હોય? (ii) સફેદ હોય? (iii) લીલી ન હોય તેની સંભાવના કેટલી?",
+      "solution": "Total marbles = 5 + 8 + 4 = 17.\n(i) Number of red marbles = 5. P(Red) = 5/17.\n(ii) Number of white marbles = 8. P(White) = 8/17.\n(iii) Number of green marbles = 4. P(Green) = 4/17.\nP(Not Green) = 1 - P(Green) = 1 - 4/17 = 13/17.\n(Alternatively, not green means it's either red or white. 5 + 8 = 13. So, 13/17).",
+      "solution_hi": "कुल कंचे = 5 + 8 + 4 = 17.\n(i) लाल कंचों की संख्या = 5. P(लाल) = 5/17.\n(ii) सफेद कंचों की संख्या = 8. P(सफेद) = 8/17.\n(iii) हरे कंचों की संख्या = 4. P(हरा) = 4/17.\nP(हरा नहीं) = 1 - P(हरा) = 1 - 4/17 = 13/17.\n(वैकल्पिक रूप से, 'हरा नहीं' का अर्थ है कि यह लाल या सफेद है। 5 + 8 = 13. अतः, 13/17)।",
+      "solution_gu": "કુલ લખોટીઓ = 5 + 8 + 4 = 17.\n(i) લાલ લખોટીઓની સંખ્યા = 5. P(લાલ) = 5/17.\n(ii) સફેદ લખોટીઓની સંખ્યા = 8. P(સફેદ) = 8/17.\n(iii) લીલી લખોટીઓની સંખ્યા = 4. P(લીલી) = 4/17.\nP(લીલી નહિ) = 1 - P(લીલી) = 1 - 4/17 = 13/17.\n(વૈકલ્પિક રીતે, 'લીલી નહિ' એટલે કે તે લાલ અથવા સફેદ છે. 5 + 8 = 13. તેથી, 13/17)."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_5",
-      "type": "quiz",
-      "question": "If the mode of a data is 18 and the mean is 24, what is the median?",
-      "question_hi": "यदि किसी डेटा का बहुलक 18 है और माध्य 24 है, तो माध्यक क्या है?",
-      "options": [
-        "22",
-        "21",
-        "20",
-        "24"
-      ],
-      "options_hi": [
-        "22",
-        "21",
-        "20",
-        "24"
-      ],
-      "correct_index": 0,
-      "explanation": "Using 3 Median = Mode + 2 Mean. 3 Median = 18 + 2(24) = 18 + 48 = 66. So, Median = 66 / 3 = 22.",
-      "explanation_hi": "3 माध्यक = बहुलक + 2 माध्य का उपयोग करते हुए। 3 माध्यक = 18 + 2(24) = 18 + 48 = 66। अतः, माध्यक = 66 / 3 = 22।"
+      "id": "C10_MATH_CH14_PRACTICE_5",
+      "type": "practice_question",
+      "question": "One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting (i) a king of red colour (ii) a face card (iii) a red face card (iv) the jack of hearts (v) a spade (vi) the queen of diamonds.",
+      "question_hi": "52 पत्तों की अच्छी प्रकार से फेंटी गई एक गड्डी में से एक पत्ता निकाला जाता है। निम्नलिखित को प्राप्त करने की प्रायिकता ज्ञात कीजिए: (i) लाल रंग का बादशाह (ii) एक फेस कार्ड (iii) लाल रंग का तस्वीर वाला पत्ता (iv) पान का गुलाम (v) हुकुम का पत्ता (vi) ईंट की बेगम।",
+      "question_gu": "સરખી રીતે ચીપેલા 52 પત્તાની થોકડીમાંથી એક પત્તું કાઢવામાં આવે છે. તો (i) લાલ રંગનો રાજા (ii) મુખમુદ્રાવાળું પત્તું (iii) લાલ રંગનું મુખમુદ્રાવાળું પત્તું (iv) લાલ (Hearts) નો ગુલામ (v) કાળીનું પત્તું (vi) ચરકટની રાણી મળવાની સંભાવના શોધો.",
+      "solution": "Total possible outcomes = 52.\n(i) A king of red colour: There are 2 red kings (Hearts and Diamonds). P = 2/52 = 1/26.\n(ii) A face card: There are 12 face cards. P = 12/52 = 3/13.\n(iii) A red face card: 6 red face cards (3 Hearts, 3 Diamonds). P = 6/52 = 3/26.\n(iv) The jack of hearts: There is exactly 1 jack of hearts. P = 1/52.\n(v) A spade: There are 13 spades. P = 13/52 = 1/4.\n(vi) The queen of diamonds: There is exactly 1 queen of diamonds. P = 1/52.",
+      "solution_hi": "कुल संभव परिणाम = 52.\n(i) लाल रंग का बादशाह: 2 लाल बादशाह होते हैं (पान और ईंट)। P = 2/52 = 1/26.\n(ii) एक फेस कार्ड (तस्वीर वाला पत्ता): 12 फेस कार्ड होते हैं। P = 12/52 = 3/13.\n(iii) लाल रंग का तस्वीर वाला पत्ता: 6 लाल फेस कार्ड (3 पान, 3 ईंट)। P = 6/52 = 3/26.\n(iv) पान का गुलाम: पान का ठीक 1 गुलाम होता है। P = 1/52.\n(v) हुकुम का पत्ता: हुकुम के 13 पत्ते होते हैं। P = 13/52 = 1/4.\n(vi) ईंट की बेगम: ईंट की ठीक 1 बेगम होती है। P = 1/52.",
+      "solution_gu": "કુલ શક્ય પરિણામો = 52.\n(i) લાલ રંગનો રાજા: 2 લાલ રાજા હોય છે (લાલ અને ચરકટ). P = 2/52 = 1/26.\n(ii) મુખમુદ્રાવાળું પત્તું (face card): 12 મુખમુદ્રાવાળા પત્તા હોય છે. P = 12/52 = 3/13.\n(iii) લાલ રંગનું મુખમુદ્રાવાળું પત્તું: 6 લાલ મુખમુદ્રાવાળા પત્તા (3 લાલના, 3 ચરકટના). P = 6/52 = 3/26.\n(iv) લાલ (Hearts) નો ગુલામ: લાલનો બરાબર 1 ગુલામ હોય છે. P = 1/52.\n(v) કાળીનું પત્તું: કાળીના 13 પત્તા હોય છે. P = 13/52 = 1/4.\n(vi) ચરકટની રાણી: ચરકટની બરાબર 1 રાણી હોય છે. P = 1/52."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_6",
-      "type": "quiz",
-      "question": "Which of the following measures of central tendency cannot be determined graphically?",
-      "question_hi": "केंद्रीय प्रवृत्ति के निम्नलिखित मापों में से किसे ग्राफ़ की मदद से निर्धारित नहीं किया जा सकता है?",
-      "options": [
-        "Mean",
-        "Median",
-        "Mode",
-        "Both Median and Mode"
-      ],
-      "options_hi": [
-        "माध्य",
-        "माध्यक",
-        "बहुलक",
-        "माध्यक और बहुलक दोनों"
-      ],
-      "correct_index": 0,
-      "explanation": "Median can be found using ogives, and Mode can be found using a histogram. However, Mean cannot be determined graphically.",
-      "explanation_hi": "माध्यक को त्वरण (ogives) का उपयोग करके पाया जा सकता है, और बहुलक को हिस्टोग्राम का उपयोग करके पाया जा सकता है। हालाँकि, माध्य ग्राफ़िकल रूप से निर्धारित नहीं किया जा सकता है।"
+      "id": "C10_MATH_CH14_PRACTICE_6",
+      "type": "practice_question",
+      "question": "Two dice, one blue and one grey, are thrown at the same time. Write down all the possible outcomes. What is the probability that the sum of the two numbers appearing on the top of the dice is (i) 8 ? (ii) 13 ? (iii) less than or equal to 12 ?",
+      "question_hi": "एक स्लेटी (grey) पासे और एक नीले पासे को एक साथ फेंका जाता है। सभी संभावित परिणामों को लिखिए। इसकी क्या प्रायिकता है कि दोनों पासों की संख्याओं का योग (i) 8 है? (ii) 13 है? (iii) 12 से छोटा या उसके बराबर है?",
+      "question_gu": "બે પાસા, એક ભૂરો અને એક રાખોડી, એક જ સમયે ફેંકવામાં આવે છે. તમામ શક્ય પરિણામો લખો. પાસાની ઉપરની સપાટી પર દેખાતી બે સંખ્યાઓનો સરવાળો (i) 8 હોય? (ii) 13 હોય? (iii) 12 કે તેથી ઓછો હોય તેની સંભાવના શું છે?",
+      "solution": "Possible outcomes when 2 dice are thrown are 36 (6x6):\n(1,1), (1,2)... (1,6)\n(2,1)... (2,6)\n...\n(6,1)... (6,6).\nTotal outcomes = 36.\n(i) Sum is 8: Favourable outcomes are (2,6), (3,5), (4,4), (5,3), (6,2). Total 5. P(Sum 8) = 5/36.\n(ii) Sum is 13: The maximum sum is 6+6=12. Sum 13 is an impossible event. P(Sum 13) = 0.\n(iii) Sum ≤ 12: Every possible outcome has a sum less than or equal to 12. This is a sure event. P(Sum ≤ 12) = 36/36 = 1.",
+      "solution_hi": "2 पासे फेंकने पर संभावित परिणाम 36 (6x6) होते हैं:\n(1,1), (1,2)... (1,6)\n(2,1)... (2,6)\n...\n(6,1)... (6,6).\nकुल परिणाम = 36.\n(i) योग 8 है: अनुकूल परिणाम (2,6), (3,5), (4,4), (5,3), (6,2) हैं। कुल 5. P(योग 8) = 5/36.\n(ii) योग 13 है: अधिकतम योग 6+6=12 है। योग 13 एक असंभव घटना है। P(योग 13) = 0.\n(iii) योग ≤ 12: प्रत्येक संभावित परिणाम का योग 12 से कम या उसके बराबर होता है। यह एक निश्चित घटना है। P(योग ≤ 12) = 36/36 = 1.",
+      "solution_gu": "2 પાસા ફેંકવામાં આવે ત્યારે શક્ય પરિણામો 36 (6x6) હોય છે:\n(1,1), (1,2)... (1,6)\n(2,1)... (2,6)\n...\n(6,1)... (6,6).\nકુલ પરિણામો = 36.\n(i) સરવાળો 8 હોય: સાનુકૂળ પરિણામો (2,6), (3,5), (4,4), (5,3), (6,2) છે. કુલ 5. P(સરવાળો 8) = 5/36.\n(ii) સરવાળો 13 હોય: મહત્તમ સરવાળો 6+6=12 છે. સરવાળો 13 એ અશક્ય ઘટના છે. P(સરવાળો 13) = 0.\n(iii) સરવાળો ≤ 12: દરેક શક્ય પરિણામનો સરવાળો 12 કે તેથી ઓછો હોય છે. આ એક ચોક્કસ ઘટના છે. P(સરવાળો ≤ 12) = 36/36 = 1."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch14_7",
-      "type": "quiz",
-      "question": "The cumulative frequency curve is also known as:",
-      "question_hi": "संचयी बारंबारता वक्र को किस अन्य नाम से भी जाना जाता है?",
-      "options": [
-        "Ogive",
-        "Histogram",
-        "Frequency polygon",
-        "Bar graph"
-      ],
-      "options_hi": [
-        "ओजाइव (त्वरण)",
-        "आयतचित्र (हिस्टोग्राम)",
-        "बारंबारता बहुभुज",
-        "दंड आलेख (बार ग्राफ़)"
-      ],
-      "correct_index": 0,
-      "explanation": "A cumulative frequency curve is mathematically referred to as an ogive (pronounced o-jive).",
-      "explanation_hi": "एक संचयी बारंबारता वक्र को गणितीय रूप से ओजाइव (ogive) कहा जाता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_8",
-      "type": "quiz",
-      "question": "While calculating the mean of grouped data, we assume that the frequencies are:",
-      "question_hi": "वर्गीकृत डेटा के माध्य की गणना करते समय, हम यह मान लेते हैं कि बारंबारताएँ कहाँ केंद्रित हैं?",
-      "options": [
-        "Centred at the class marks of the classes",
-        "Evenly distributed over the classes",
-        "Centred at the lower limits of the classes",
-        "Centred at the upper limits of the classes"
-      ],
-      "options_hi": [
-        "वर्गों के वर्ग चिह्नों पर केंद्रित",
-        "वर्गों में समान रूप से वितरित",
-        "वर्गों की निचली सीमाओं पर केंद्रित",
-        "वर्गों की ऊपरी सीमाओं पर केंद्रित"
-      ],
-      "correct_index": 0,
-      "explanation": "In grouped data, we assume that all observations in a class interval are concentrated at the class mark (midpoint) of that interval.",
-      "explanation_hi": "वर्गीकृत डेटा में, हम मानते हैं कि एक वर्ग अंतराल के सभी अवलोकन उस अंतराल के वर्ग चिह्न (मध्य बिंदु) पर केंद्रित हैं।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_9",
-      "type": "quiz",
-      "question": "What is the median of the first 10 prime numbers?",
-      "question_hi": "प्रथम 10 अभाज्य संख्याओं का माध्यक क्या है?",
-      "options": [
-        "12",
-        "11",
-        "13",
-        "14"
-      ],
-      "options_hi": [
-        "12",
-        "11",
-        "13",
-        "14"
-      ],
-      "correct_index": 0,
-      "explanation": "The first 10 primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. The median is the average of the 5th and 6th terms: (11+13)/2 = 12.",
-      "explanation_hi": "प्रथम 10 अभाज्य संख्याएँ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 हैं। माध्यक 5वें और 6वें पद का औसत है: (11+13)/2 = 12।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_10",
-      "type": "quiz",
-      "question": "Which measure of central tendency is given by the x-coordinate of the point of intersection of the 'more than' ogive and 'less than' ogive?",
-      "question_hi": "'से अधिक' प्रकार के ओजाइव और 'से कम' प्रकार के ओजाइव के प्रतिच्छेदन बिंदु के x-निर्देशांक द्वारा केंद्रीय प्रवृत्ति का कौन सा माप दिया जाता है?",
-      "options": [
-        "Median",
-        "Mean",
-        "Mode",
-        "None of these"
-      ],
-      "options_hi": [
-        "माध्यक",
-        "माध्य",
-        "बहुलक",
-        "इनमें से कोई नहीं"
-      ],
-      "correct_index": 0,
-      "explanation": "The x-coordinate of the intersection of 'less than' and 'more than' ogives always gives the median of the data.",
-      "explanation_hi": "'से कम' और 'से अधिक' प्रकार के ओजाइव के प्रतिच्छेदन का x-निर्देशांक हमेशा डेटा का माध्यक देता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_11",
-      "type": "quiz",
-      "question": "If the mean of first n natural numbers is 15, what is the value of n?",
-      "question_hi": "यदि प्रथम n प्राकृत संख्याओं का माध्य 15 है, तो n का मान क्या है?",
-      "options": [
-        "29",
-        "30",
-        "28",
-        "31"
-      ],
-      "options_hi": [
-        "29",
-        "30",
-        "28",
-        "31"
-      ],
-      "correct_index": 0,
-      "explanation": "Sum of first n natural numbers is n(n+1)/2. Mean = (n+1)/2. Setting (n+1)/2 = 15 gives n+1 = 30, so n = 29.",
-      "explanation_hi": "प्रथम n प्राकृत संख्याओं का योग n(n+1)/2 है। माध्य = (n+1)/2। (n+1)/2 = 15 रखने पर n+1 = 30 प्राप्त होता है, इसलिए n = 29।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_12",
-      "type": "quiz",
-      "question": "For a symmetrical frequency distribution, which of the following is correct?",
-      "question_hi": "एक सममित बारंबारता बंटन के लिए, निम्नलिखित में से कौन सा सही है?",
-      "options": [
-        "Mean = Median = Mode",
-        "Mean > Median > Mode",
-        "Mean < Median < Mode",
-        "Mode = Median + Mean"
-      ],
-      "options_hi": [
-        "माध्य = माध्यक = बहुलक",
-        "माध्य > माध्यक > बहुलक",
-        "माध्य < माध्यक < बहुलक",
-        "बहुलक = माध्यक + माध्य"
-      ],
-      "correct_index": 0,
-      "explanation": "In a perfectly symmetrical distribution (like a normal bell curve), the mean, median, and mode are all equal and located at the center.",
-      "explanation_hi": "पूरी तरह से सममित बंटन (जैसे सामान्य बेल वक्र) में, माध्य, माध्यक और बहुलक सभी समान होते हैं और केंद्र में स्थित होते हैं।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_13",
-      "type": "quiz",
-      "question": "If the mean of a frequency distribution is 8.1, the sum of frequencies is 20, and the sum of products of frequencies and class marks is 132 + 5k, what is the value of k?",
-      "question_hi": "यदि एक बारंबारता बंटन का माध्य 8.1 है, बारंबारता का योग 20 है, और बारंबारता और वर्ग चिह्नों के गुणनफल का योग 132 + 5k है, तो k का मान क्या है?",
-      "options": [
-        "6",
-        "5",
-        "4",
-        "3"
-      ],
-      "options_hi": [
-        "6",
-        "5",
-        "4",
-        "3"
-      ],
-      "correct_index": 0,
-      "explanation": "Mean = Sum(fx) / Sum(f). So 8.1 = (132 + 5k) / 20. Solving gives 162 = 132 + 5k, then 5k = 30, so k = 6.",
-      "explanation_hi": "माध्य = Sum(fx) / Sum(f)। इसलिए 8.1 = (132 + 5k) / 20। हल करने पर 162 = 132 + 5k प्राप्त होता है, फिर 5k = 30, इसलिए k = 6।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_14",
-      "type": "quiz",
-      "question": "In the formula for finding the median of grouped data, what does 'cf' stand for?",
-      "question_hi": "वर्गीकृत डेटा के माध्यक को ज्ञात करने के सूत्र में, 'cf' का क्या अर्थ है?",
-      "options": [
-        "Cumulative frequency of the class preceding the median class",
-        "Cumulative frequency of the median class",
-        "Frequency of the median class",
-        "Total frequency"
-      ],
-      "options_hi": [
-        "माध्यक वर्ग से ठीक पहले वाले वर्ग की संचयी बारंबारता",
-        "माध्यक वर्ग की संचयी बारंबारता",
-        "माध्यक वर्ग की बारंबारता",
-        "कुल बारंबारता"
-      ],
-      "correct_index": 0,
-      "explanation": "In the median formula, 'cf' represents the cumulative frequency of the class just preceding the median class.",
-      "explanation_hi": "माध्यक सूत्र में, 'cf' माध्यक वर्ग से ठीक पहले वाले वर्ग की संचयी बारंबारता को दर्शाता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch14_15",
-      "type": "quiz",
-      "question": "If xᵢ are the midpoints of class intervals, fᵢ are frequencies, and x̄ is the mean, then what is the value of Σ fᵢ(xᵢ - x̄)?",
-      "question_hi": "यदि xᵢ वर्ग अंतरालों के मध्य बिंदु हैं, fᵢ बारंबारताएँ हैं, और x̄ माध्य है, तो Σ fᵢ(xᵢ - x̄) का मान क्या है?",
-      "options": [
-        "0",
-        "1",
-        "-1",
-        "2"
-      ],
-      "options_hi": [
-        "0",
-        "1",
-        "-1",
-        "2"
-      ],
-      "correct_index": 0,
-      "explanation": "The algebraic sum of deviations of a set of observations from their mean is always 0. Σ fᵢxᵢ - x̄Σ fᵢ = n x̄ - n x̄ = 0.",
-      "explanation_hi": "अवलोकनों के एक समूह के उनके माध्य से विचलनों का बीजगणितीय योग हमेशा 0 होता है। Σ fᵢxᵢ - x̄Σ fᵢ = n x̄ - n x̄ = 0।"
+      "id": "C10_MATH_CH14_PRACTICE_7",
+      "type": "practice_question",
+      "question": "A lot consists of 144 ball pens of which 20 are defective and the others are good. Nuri will buy a pen if it is good, but will not buy if it is defective. The shopkeeper draws one pen at random and gives it to her. What is the probability that (i) She will buy it ? (ii) She will not buy it ?",
+      "question_hi": "144 बॉल पेनों के एक समूह में 20 बॉल पेन खराब हैं और शेष अच्छे हैं। नूरी वही पेन खरीदना चाहेगी जो अच्छा हो, परंतु खराब पेन वह नहीं खरीदना चाहेगी। दुकानदार इन पेनों में से यादृच्छया एक पेन निकालकर उसे देता है। इसकी क्या प्रायिकता है कि (i) वह पेन खरीदेगी? (ii) वह पेन नहीं खरीदेगी?",
+      "question_gu": "144 બોલપેનના એક જથ્થામાં 20 બોલપેન ખામીયુક્ત છે અને બાકીની સારી છે. નૂરી સારી પેન હશે તો જ ખરીદશે, પરંતુ ખામીયુક્ત હશે તો નહીં ખરીદે. દુકાનદાર યાદચ્છિક રીતે એક પેન કાઢીને તેને આપે છે. (i) તે પેન ખરીદશે તેની સંભાવના કેટલી? (ii) તે પેન નહીં ખરીદે તેની સંભાવના કેટલી?",
+      "solution": "Total number of pens = 144.\nNumber of defective pens = 20.\nNumber of good pens = 144 - 20 = 124.\n(i) She will buy it if it is good. P(Good pen) = 124 / 144 = 31 / 36.\n(ii) She will not buy it if it is defective. P(Defective pen) = 20 / 144 = 5 / 36.",
+      "solution_hi": "पेनों की कुल संख्या = 144.\nखराब पेनों की संख्या = 20.\nअच्छे पेनों की संख्या = 144 - 20 = 124.\n(i) वह इसे खरीदेगी यदि यह अच्छा है। P(अच्छा पेन) = 124 / 144 = 31 / 36.\n(ii) वह इसे नहीं खरीदेगी यदि यह खराब है। P(खराब पेन) = 20 / 144 = 5 / 36.",
+      "solution_gu": "પેનની કુલ સંખ્યા = 144.\nખામીયુક્ત પેનની સંખ્યા = 20.\nસારી પેનની સંખ્યા = 144 - 20 = 124.\n(i) જો તે સારી હશે તો તે ખરીદશે. P(સારી પેન) = 124 / 144 = 31 / 36.\n(ii) જો તે ખામીયુક્ત હશે તો તે નહીં ખરીદે. P(ખામીયુક્ત પેન) = 20 / 144 = 5 / 36."
     }
   ]
 }

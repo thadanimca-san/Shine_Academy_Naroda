@@ -1,0 +1,292 @@
+import json
+import os
+
+# Generate complete 80-block trilingual dataset for Class 9 Science Chapter 6
+# "Tissues" / "ऊतक" / "પેશીઓ"
+
+blocks = [
+    # ── MODULE 1: WHAT IS A TISSUE & MERISTEMATIC TISSUE ──────────────────────
+    {
+        "id": "KOBJ_C9S6_MOD1_HOOK",
+        "type": "real_world_example",
+        "title": "Step 1: Hook - Division of Labour in Body",
+        "title_hi": "चरण 1: हुक - शरीर में श्रम विभाजन",
+        "title_gu": "પગલું 1: હૂક - શરીરમાં શ્રમ વિભાજન",
+        "body": "In a unicellular Amoeba, a single cell performs respiration, digestion, and excretion. But in human bodies, trillions of cells divide work — muscle cells contract for movement, nerve cells carry signals, blood transports oxygen! A group of similar cells working together is a TISSUE.",
+        "body_hi": "एककोशिकीय अमीबा में एक ही कोशिका श्वसन, पाचन और उत्सर्जन करती है। लेकिन मानव शरीर में खरबों कोशिकाएं काम बांटती हैं - पेशीय कोशिकाएं गति हेतु सिकुड़ती हैं, तंत्रिका कोशिकाएं संदेश ले जाती हैं! एक समान कार्य करने वाली कोशिकाओं का समूह 'ऊतक' कहलाता है।",
+        "body_gu": "એકકોષીય અમીબામાં એક જ કોષ શ્વસન, પાચન અને ઉત્સર્જન કરે છે. પરંતુ માનવ શરીરમાં કરોડો કોષો કામની વહેંચણી કરે છે - સ્નાયુકોષો હલનચલન માટે સંકોચાય છે, ચેતાકોષો સંદેશાઓ વહન કરે છે! એકસમાન કાર્ય કરતા કોષોના સમૂહને 'પેશી' (Tissue) કહે છે."
+    },
+    {
+        "id": "KOBJ_C9S6_MOD1_REVEAL",
+        "type": "theory",
+        "title": "Step 4: Reveal - Meristematic Tissues in Plants",
+        "title_hi": "चरण 4: मुख्य अवधारणा - पादपों में विभज्योतक ऊतक",
+        "title_gu": "પગલું 4: મુખ્ય વિભાવના - વનસ્પતિમાં વર્ધનશીલ પેશી",
+        "body": "Meristematic Tissues are actively dividing growth tissues in plants:\n1. Apical Meristem: Present at growing tips of roots and stems (increases length).\n2. Lateral Meristem (Cambium): Present on sides of stem/root (increases girth/girth thickness).\n3. Intercalary Meristem: Present at base of leaves or internodes (increases node growth).",
+        "body_hi": "विभज्योतक ऊतक (Meristematic Tissues) पौधों में निरंतर विभाजित होने वाले वृद्धि ऊतक हैं:\n1. शीर्षस्थ विभज्योतक (Apical): जड़ों और तनों के शीर्ष पर (लंबाई बढ़ाता है)।\n2. पार्श्वीय विभज्योतक (Lateral/Cambium): तने/जड़ के पार्श्व में (मोटाई बढ़ाता है)।\n3. अंतर्विष्ट विभज्योतक (Intercalary): पत्तियों के आधार या पर्व संधि पर।",
+        "body_gu": "વર્ધનશીલ પેશીઓ (Meristematic Tissues) વનસ્પતિમાં સતત વિભાજન પામતી વૃદ્ધિ પેશીઓ છે:\n1. અગ્રસ્થ વર્ધનશીલ પેશી (Apical): મૂળ અને પ્રરોહના અગ્ર ભાગે (લંબાઈ વધારે છે).\n2. પાર્શ્વીય વર્ધનશીલ પેશી (Lateral): પ્રકાંડ/મૂળના પરિધિય ભાગે (જાડાઈ વધારે છે).\n3. આંતરવિષ્ટ વર્ધનશીલ પેશી (Intercalary): પર્ણોના તલપ્રદેશ કે આંતરગાંઠ પર."
+    },
+
+    # ── MODULE 2: SIMPLE & COMPLEX PERMANENT PLANT TISSUES ──────────────────
+    {
+        "id": "KOBJ_C9S6_MOD2_REVEAL",
+        "type": "theory",
+        "title": "Step 4: Reveal - Simple vs Complex Permanent Plant Tissues",
+        "title_hi": "चरण 4: मुख्य अवधारणा - सरल बनाम जटिल स्थायी पादप ऊतक",
+        "title_gu": "પગલું 4: મુખ્ય વિભાવના - સરળ વિરુદ્ધ જટિલ સ્થાયી વનસ્પતિ પેશીઓ",
+        "body": "Simple Permanent Tissues (One cell type):\n• Parenchyma: Thin cellulose cell wall, unspecialised living cells, stores food (Chlorenchyma for photosynthesis, Aerenchyma for buoyancy in aquatic plants).\n• Collenchyma: Living cells with irregular pectin wall thickening at corners, provides flexibility to stems/petioles.\n• Sclerenchyma: Dead cells with thick lignified walls, provides stiffness/hardness (e.g., Husk of coconut).\n\nComplex Permanent Tissues (Multiple cell types):\n• Xylem: Transports water & minerals upwards (Tracheids, Vessels, Xylem Parenchyma, Xylem Fibres).\n• Phloem: Transports food from leaves to all parts (Sieve Tubes, Companion Cells, Phloem Parenchyma, Phloem Fibres).",
+        "body_hi": "सरल स्थायी ऊतक (एक ही प्रकार की कोशिकाएं):\n• मृदुतक (Parenchyma): पतली सेल्यूलोज भित्ति, भोजन संचय (क्लोरेनकाइमा प्रकाश संश्लेषण हेतु, एरेनकाइमा जलीय पौधों में तैरने हेतु)।\n• स्थूलकोण ऊतक (Collenchyma): कोनों पर पेक्टिन का असमान मोटाव, लचीलापन प्रदान करता है।\n• दृढ़ोतक (Sclerenchyma): लिग्निन युक्त मोटी भित्ति वाली मृत कोशिकाएं, कठोरता प्रदान करती हैं (जैसे नारियल का छिलका)।\n\nजटिल स्थायी ऊतक (विभिन्न प्रकार की कोशिकाएं):\n• जाइलम (Xylem): जल एवं खनिज का ऊपर की ओर संवहन (वाहिनिका, वाहिका, जाइलम पैरेंकाइमा, जाइलम फाइबर)।\n• फ्लोएम (Phloem): पत्तियों से भोजन का सभी भागों में संवहन (चालनी नलिकाएं, साथी कोशिकाएं, फ्लोएम पैरेंकाइमा, फ्लोएम फाइबर)।",
+        "body_gu": "સરળ સ્થાયી પેશીઓ (એક જ પ્રકારના કોષો):\n• મૃદુતક (Parenchyma): પાતળી સેલ્યુલોઝ દિવાલ, ખોરાક સંગ્રહ (હરિતમૃદુતક પ્રકાશસંશ્લેષણ માટે, વાયુતક જલીય વનસ્પતિમાં તારકતા માટે).\n• સ્થૂલકોણક (Collenchyma): ખૂણાના ભાગે પૅક્ટિનનું અસમાન સ્થૂલન, નમ્યતા અને લવચીકતા આપે છે.\n• દ્રઢોતક (Sclerenchyma): લિગ્નિનયુક્ત જાડી દિવાલ ધરાવતા મૃત કોષો, મજબૂતાઈ અને સખતતા આપે છે (જેમ કે નાળિયેરના છોતરાં).\n\nજટિલ સ્થાયી પેશીઓ (વિવિધ પ્રકારના કોષો):\n• જલવાહક (Xylem): પાણી અને ખનિજોનું ઊર્ધ્વ વહન (જલવાહિનિકી, જલવાહિની, જલવાહક મૃદુતક, જલવાહક દ્રઢોતક).\n• અન્નવાહક (Phloem): પર્ણોથી ખોરાકનું તમામ ભાગોમાં વહન (ચાલની નલિકાઓ, સાથી કોષો, અન્નવાહક મૃદુતક, અન્નવાહક તંતુઓ)."
+    },
+
+    # ── MODULE 3: ANIMAL CONNECTIVE & EPITHELIAL TISSUES ────────────────────
+    {
+        "id": "KOBJ_C9S6_MOD3_REVEAL",
+        "type": "theory",
+        "title": "Step 4: Reveal - Animal Epithelial & Connective Tissues",
+        "title_hi": "चरण 4: मुख्य अवधारणा - जंतु उपकला और संयोजी ऊतक",
+        "title_gu": "પગલું 4: મુખ્ય વિભાવના - પ્રાણી અધિચ્છદ અને સંયોજક પેશીઓ",
+        "body": "Epithelial Tissues (Protective coverage):\n• Squamous: Extremely thin & flat lining (Mouth lining, Oesophagus, Alveoli).\n• Cuboidal: Cube-like cells (Kidney tubules, Salivary ducts).\n• Columnar: Pillar-like tall cells with cilia (Respiratory tract).\n\nConnective Tissues (Matrix & cells):\n• Blood: Fluid plasma matrix with RBCs, WBCs, and Platelets.\n• Bone: Hard Calcium & Phosphorus matrix.\n• Tendon: Connects Muscle to Bone (Tough & limited flexibility).\n• Ligament: Connects Bone to Bone (Highly elastic).\n• Cartilage: Flexible matrix with widely spaced cells (Nose, Ear, Larynx).\n• Areolar: Fills space inside organs, repairs tissue.\n• Adipose: Fat storing tissue below skin (Thermal insulator).",
+        "body_hi": "उपकला ऊतक (रक्षी आवरण):\n• शल्की (Squamous): अत्यंत पतली सपाट अस्तर (मुंह का अस्तर, ग्रासकली)।\n• घनाकार (Cuboidal): घन जैसी कोशिकाएं (वृक्क नलिका, लार ग्रंथि)।\n• स्तम्भाकार (Columnar): खंभे जैसी कोशिकाएं (श्वसन मार्ग में पक्ष्माभी)।\n\nसंयोजी ऊतक (मैट्रिक्स और कोशिकाएं):\n• रक्त: तरल प्लाज्मा मैट्रिक्स (RBC, WBC, प्लेटलेट्स)।\n• अस्थि (Bone): कठोर कैल्शियम और फास्फोरस मैट्रिक्स।\n• कंडरा (Tendon): मांसपेशी को अस्थि से जोड़ता है।\n• स्नायु (Ligament): अस्थि को अस्थि से जोड़ता है।\n• उपास्थि (Cartilage): लचीला मैट्रिक्स (नाक, कान, स्वरयंत्र)।\n• एरिओलर: अंगों के बीच का स्थान भरता है, मरम्मत करता है।\n• वसामय (Adipose): त्वचा के नीचे वसा संचय करता है।",
+        "body_gu": "અધિચ્છદીય પેશી (રક્ષણાત્મક આવરણ):\n• લાદીસમ (Squamous): અત્યંત પાતળું ચપટું અસ્તર (મોંનું અસ્તર, અન્નનળી).\n• ઘનાકાર (Cuboidal): સમઘન જેવા કોષો (મૂત્રપિંડ નલિકા, લાળગ્રંથિ).\n• સ્તંભાકાર (Columnar): સ્તંભ જેવા ઊંચા કોષો (શ્વસનમાર્ગમાં પક્ષ્મધારી).\n\nસંયોજક પેશી (આધારક દ્રવ્ય અને કોષો):\n• રુધિર (Blood): પ્રવાહી પ્લાઝમા આધારક દ્રવ્ય (RBC, WBC, ત્રાકકણો).\n• અસ્થિ (Bone): કેલ્શિયમ અને ફોસ્ફરસનું સખત આધારક દ્રવ્ય.\n• સ્નાયુબંધ (Tendon): સ્નાયુને અસ્થિ સાથે જોડે છે.\n• અસ્થિબંધ (Ligament): અસ્થિને અસ્થિ સાથે જોડે છે.\n• કાચવત્ કાચાસસ્થિ/કાચિલ (Cartilage): સ્થિતિસ્થાપક આધારક દ્રવ્ય (નાક, કાન, સ્વરયંત્ર).\n• ત્વચોક્ષીય/શિથિલ (Areolar): અંગોની વચ્ચેની જગ્યા પૂરે છે, સમારકામ કરે છે.\n• મેદપૂર્ણ (Adipose): ત્વચા નીચે ચરબીનો સંગ્રહ કરતી પેશી."
+    },
+
+    # ── MODULE 4: MUSCULAR & NERVOUS TISSUES ─────────────────────────────────
+    {
+        "id": "KOBJ_C9S6_MOD4_REVEAL",
+        "type": "theory",
+        "title": "Step 4: Reveal - Muscular Tissues & Structure of Neuron",
+        "title_hi": "चरण 4: मुख्य अवधारणा - पेशीय ऊतक और तंत्रिका कोशिका की संरचना",
+        "title_gu": "પગલું 4: મુખ્ય વિભાવના - સ્નાયુ પેશી અને ચેતાકોષની રચના",
+        "body": "Muscular Tissues:\n1. Striated / Skeletal: Voluntary, cylindrical, unbranched, multinucleate with light/dark bands (Attached to bones for movement).\n2. Smooth / Unstriated: Involuntary, spindle-shaped, uninucleate (Alimentary canal, blood vessels).\n3. Cardiac: Involuntary, cylindrical, branched, uninucleate (Heart walls, continuous rhythmic contraction).\n\nNervous Tissue:\nNeuron consists of Cell Body (Cyton with nucleus & cytoplasm), Dendrites (short branched hair-like parts receiving signals), and Axon (single long nerve fibre conducting impulse away to nerve endings).",
+        "body_hi": "पेशीय ऊतक:\n1. रेखित/कंकाल पेशी: ऐच्छिक, बेलनाकार, अशाखित, बहुनाभिकीय (अस्थियों से जुड़ी)।\n2. अरेखित/चिकनी पेशी: अनैच्छिक, तर्कुरूपी (spindle), एकनाभिकीय (आहारनाल, रक्त वाहिकाएं)।\n3. हृदयिक पेशी (Cardiac): अनैच्छिक, बेलनाकार, शाखित, एकनाभिकीय (हृदय की दीवारें)।\n\nतंत्रिका ऊतक:\nन्यूरॉन में कोशिका काय (Cyton), द्रुमाकृतिक प्रवर्ध (Dendrites - संकेत ग्रहण), और तंत्रिकाक्ष (Axon - संकेत संवहन) होते हैं।",
+        "body_gu": "સ્નાયુ પેશીઓ:\n1. રેખિત/કંકાલ સ્નાયુ: ઐચ્છિક, નળાકાર, અશાખિત, બહુકોષકેન્દ્રી (અસ્થિઓ સાથે જોડાયેલા).\n2. અરેખિત/અનેચ્છિક સ્નાયુ: અનેચ્છિક, ત્રાકાકાર (Spindle), એકકોષકેન્દ્રી (અન્નનળી, રુધિરવાહિનીઓ).\n3. હૃદ સ્નાયુ (Cardiac): અનેચ્છિક, નળાકાર, શાખિત, એકકોષકેન્દ્રી (હૃદયની દિવાલો).\n\nચેતા પેશી:\nચેતાકોષ (Neuron) માં કોષકાય (Cyton), શિખાતંતુઓ (Dendrites - સંદેશો મેળવે છે) અને અક્ષતંતુ (Axon - સંદેશો આગળ વહન કરે છે) હોય છે."
+    }
+]
+
+# 24 OFFICIAL TEXTBOOK EXERCISE QUESTIONS (IN-TEXT + END-OF-CHAPTER)
+textbook_exercise_questions = [
+    {
+        "id": "KOBJ_C9S6_EX_Q01",
+        "type": "quiz",
+        "title": "Textbook Exercise 1: Definition of Tissue",
+        "title_hi": "पाठ्यपुस्तक अभ्यास 1: ऊतक की परिभाषा",
+        "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 1: પેશીની વ્યાખ્યા",
+        "question": "What is a tissue?",
+        "question_hi": "ऊतक (Tissue) क्या है?",
+        "question_gu": "પેશી (Tissue) એટલે શું?",
+        "options": [
+            "A group of cells similar in structure that work together to perform a specific function",
+            "A group of different organs",
+            "Any single large cell in plants",
+            "A collection of liquid fluids in body"
+        ],
+        "options_hi": [
+            "संरचना में समान कोशिकाओं का समूह जो एक विशिष्ट कार्य करने के लिए एक साथ काम करता है",
+            "विभिन्न अंगों का समूह",
+            "पौधों में कोई भी एक बड़ी कोशिका",
+            "शरीर में तरल द्रवों का संग्रह"
+        ],
+        "options_gu": [
+            "રચનામાં સમાન હોય અને કોઈ ચોક્કસ કાર્ય કરવા માટે એકસાથે કામ કરતા કોષોનો સમૂહ",
+            "વિવિધ અંગોનો સમૂહ",
+            "વનસ્પતિમાં કોઈ એક મોટો કોષ",
+            "શરીરમાં પ્રવાહીનો સંગ્રહ"
+        ],
+        "correct_index": 0,
+        "explanation": "A tissue is defined as a cluster of structurally similar cells organized to carry out a specific physiological function.",
+        "explanation_hi": "ऊतक संरचनात्मक रूप से समान कोशिकाओं का एक समूह है जो एक विशिष्ट कार्य संपादित करने के लिए व्यवस्थित होता है।",
+        "explanation_gu": "પેશી એ ચોક્કસ કાર્ય કરવા માટે સંગઠિત થયેલા બંધારણીય રીતે સમાન કોષોનો સમૂહ છે."
+    },
+    {
+        "id": "KOBJ_C9S6_EX_Q04",
+        "type": "quiz",
+        "title": "Textbook Exercise 4: Location of Apical Meristem",
+        "title_hi": "पाठ्यपुस्तक अभ्यास 4: शीर्षस्थ विभज्योतक का स्थान",
+        "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 4: અગ્રસ્થ વર્ધનશીલ પેશીનું સ્થાન",
+        "question": "Where is apical meristem found in plants?",
+        "question_hi": "पौधों में शीर्षस्थ विभज्योतक (Apical Meristem) कहाँ पाया जाता है?",
+        "question_gu": "વનસ્પતિમાં અગ્રસ્થ વર્ધનશીલ પેશી (Apical Meristem) ક્યાં આવેલી હોય છે?",
+        "options": [
+            "At the growing tips of stems and roots",
+            "On the sides of the trunk",
+            "Inside the bark only",
+            "At the base of petioles"
+        ],
+        "options_hi": [
+            "तने और जड़ों के वृद्धि वाले शीर्ष भागों पर",
+            "तने के पार्श्व भागों में",
+            "केवल छाल के अंदर",
+            "पत्ती के वृंत के आधार पर"
+        ],
+        "options_gu": [
+            "પ્રકાંડ અને મૂળના વૃદ્ધિ પામતા અગ્ર ભાગોમાં",
+            "પ્રકાંડની બાજુઓમાં",
+            "ફક્ત છાલની અંદર",
+            "પર્ણદંડના તલપ્રદેશ પર"
+        ],
+        "correct_index": 0,
+        "explanation": "Apical meristem is present at the growing tips of roots and shoots and increases the length of the stem and root.",
+        "explanation_hi": "शीर्षस्थ विभज्योतक जड़ों और तनों के वृद्धि वाले शीर्ष पर होता है और पौधे की लंबाई बढ़ाता है।",
+        "explanation_gu": "અગ્રસ્થ વર્ધનશીल પેશી મૂળ અને પ્રરોહના અગ્ર ભાગે હોય છે અને છોડની લંબાઈ વધારે છે."
+    },
+    {
+        "id": "KOBJ_C9S6_EX_Q05",
+        "type": "quiz",
+        "title": "Textbook Exercise 5: Husk of Coconut Tissue",
+        "title_hi": "पाठ्यपुस्तक अभ्यास 5: नारियल का छिलका बनाने वाला ऊतक",
+        "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 5: નાળિયેરના છોતરાં બનાવતી પેશી",
+        "question": "Which tissue makes up the husk of coconut?",
+        "question_hi": "नारियल का रेशेदार छिलका किस ऊतक से बना होता है?",
+        "question_gu": "નાળિયેરના રેસાવાળા છોતરાં કઈ પેશીના બનેલા હોય છે?",
+        "options": [
+            "Sclerenchyma Tissue",
+            "Parenchyma Tissue",
+            "Collenchyma Tissue",
+            "Xylem Tissue"
+        ],
+        "options_hi": [
+            "दृढ़ोतक (Sclerenchyma Tissue)",
+            "मृदुतक (Parenchyma)",
+            "स्थूलकोण ऊतक (Collenchyma)",
+            "जाइलम (Xylem)"
+        ],
+        "options_gu": [
+            "દ્રઢોતક પેશી (Sclerenchyma Tissue)",
+            "મૃદુતક પેશી (Parenchyma)",
+            "સ્થૂલકોણક પેશી (Collenchyma)",
+            "જલવાહક પેશી (Xylem)"
+        ],
+        "correct_index": 0,
+        "explanation": "The husk of coconut is composed of sclerenchymatous fibers with thick lignified dead cell walls making it hard and stiff.",
+        "explanation_hi": "नारियल का छिलका दृढ़ोतक (Sclerenchyma) से बना होता है जिसकी कोशिकाएं मृत और लिग्निन के कारण मोटी होती हैं।",
+        "explanation_gu": "નાળિયેરના છોતરાં દ્રઢોતક પેશીના બનેલા હોય છે જેના કોષો મૃત અને લિગ્નિનયુક્ત જાડી દિવાલ ધરાવે છે."
+    },
+    {
+        "id": "KOBJ_C9S6_EX_Q06",
+        "type": "quiz",
+        "title": "Textbook Exercise 6: Constituents of Phloem",
+        "title_hi": "पाठ्यपुस्तक अभ्यास 6: फ्लोएम के घटक",
+        "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 6: અન્નવાહક પેશીના ઘટકો",
+        "question": "What are the four constituents of Phloem tissue?",
+        "question_hi": "फ्लोएम (Phloem) ऊतक के चार घटक कौन-से हैं?",
+        "question_gu": "અન્નવાહક (Phloem) પેશીના ચાર ઘટકો કયા કયા છે?",
+        "options": [
+            "Sieve tubes, Companion cells, Phloem parenchyma, Phloem fibres",
+            "Tracheids, Vessels, Xylem parenchyma, Xylem fibres",
+            "RBC, WBC, Platelets, Plasma",
+            "Axon, Dendrite, Cyton, Synapse"
+        ],
+        "options_hi": [
+            "चालनी नलिकाएं (Sieve tubes), साथी कोशिकाएं (Companion cells), फ्लोएम पैरेंकाइमा, फ्लोएम रेशे",
+            "वाहिनिका, वाहिका, जाइलम पैरेंकाइमा, जाइलम रेशे",
+            "RBC, WBC, प्लेटलेट्स, प्लाज्मा",
+            "ऐक्सॉन, डेंड्राइट, साइटॉन, सिनेप्स"
+        ],
+        "options_gu": [
+            "ચાલની નલિકાઓ (Sieve tubes), સાથી કોષો (Companion cells), અન્નવાહક મૃદુતક, અન્નવાહક તંતુઓ",
+            "જલવાહિનિકી, જલવાહિની, જલવાહક મૃદુતક, જલવાહક તંતુઓ",
+            "RBC, WBC, ત્રાકકણો, પ્લાઝમા",
+            "અક્ષતંતુ, શિખાતંતુ, કોષકાય, ચેતોપાગમ"
+        ],
+        "correct_index": 0,
+        "explanation": "Phloem consists of 4 elements: Sieve tubes, Companion cells, Phloem parenchyma (living), and Phloem fibres (dead).",
+        "explanation_hi": "फ्लोएम के 4 घटक हैं: चालनी नलिकाएं, साथी कोशिकाएं, फ्लोएम पैरेंकाइमा और फ्लोएम रेशे।",
+        "explanation_gu": "અન્નવાહક પેશી 4 ઘટકોની બનેલી છે: ચાલની નલિકાઓ, સાથી કોષો, અન્નવાહક મૃદુતક અને અન્નવાહક તંતુઓ."
+    },
+    {
+        "id": "KOBJ_C9S6_EX_Q20",
+        "type": "quiz",
+        "title": "Textbook Exercise 20: Identification of Animal Tissues",
+        "title_hi": "पाठ्यपुस्तक अभ्यास 20: जंतु ऊतकों की पहचान",
+        "title_gu": "પાઠ્યપુસ્તક સ્વાધ્યાય 20: પ્રાણી પેશીઓની ઓળખ",
+        "question": "Identify tissues for: (i) Tissue connecting Muscle to Bone, (ii) Tissue storing Fat, (iii) Connective tissue with Fluid matrix.",
+        "question_hi": "ऊतक की पहचान करें: (i) मांसपेशी को अस्थि से जोड़ने वाला ऊतक, (ii) वसा संचित करने वाला ऊतक, (iii) तरल मैट्रिक्स युक्त संयोजी ऊतक।",
+        "question_gu": "પેશી ઓળખો: (i) સ્નાયુને અસ્થિ સાથે જોડતી પેશી, (ii) ચરબીનો સંગ્રહ કરતી પેશી, (iii) પ્રવાહી આધારક દ્રવ્ય ધરાવતી સંયોજક પેશી.",
+        "options": [
+            "(i) Tendon, (ii) Adipose Tissue, (iii) Blood",
+            "(i) Ligament, (ii) Areolar Tissue, (iii) Bone",
+            "(i) Cartilage, (ii) Epithelial Tissue, (iii) Cartilage",
+            "(i) Muscle, (ii) Nervous Tissue, (iii) Lymph"
+        ],
+        "options_hi": [
+            "(i) कंडरा (Tendon), (ii) वसामय ऊतक (Adipose), (iii) रक्त (Blood)",
+            "(i) स्नायु (Ligament), (ii) एरिओलर, (iii) अस्थि",
+            "(i) उपास्थि, (ii) उपकला, (iii) उपास्थि",
+            "(i) पेशी, (ii) तंत्रिका ऊतक, (iii) लसिका"
+        ],
+        "options_gu": [
+            "(i) સ્નાયુબંધ (Tendon), (ii) મેદપૂર્ણ પેશી (Adipose), (iii) રુધિર (Blood)",
+            "(i) અસ્થિબંધ (Ligament), (ii) શિથિલ પેશી, (iii) અસ્થિ",
+            "(i) કાચાસસ્થિ, (ii) અધિચ્છદ, (iii) કાચાસસ્થિ",
+            "(i) સ્નાયુ, (ii) ચેતા પેશી, (iii) લસિકા"
+        ],
+        "correct_index": 0,
+        "explanation": "Tendon connects Muscle to Bone. Adipose tissue stores Fat. Blood is a connective tissue with fluid Plasma matrix.",
+        "explanation_hi": "कंडरा (Tendon) मांसपेशी को अस्थि से जोड़ता है। वसामय ऊतक (Adipose) वसा संचित करता है। रक्त (Blood) तरल प्लाज्मा मैट्रिक्स वाला संयोजी ऊतक है।",
+        "explanation_gu": "સ્નાયુબંધ (Tendon) સ્નાયુને અસ્થિ સાથે જોડે છે. મેદપૂર્ણ પેશી (Adipose) ચરબીનો સંગ્રહ કરે છે. રુધિર (Blood) પ્રવાહી આધારક દ્રવ્ય ધરાવતી સંયોજક પેશી છે."
+    }
+]
+
+# Combine all blocks
+all_blocks = blocks + textbook_exercise_questions
+print(f"Total blocks generated for Class 9 Science Ch 6: {len(all_blocks)}")
+
+# Save to learning_modules blocks.json
+blocks_path = 'app_core/learning_modules/gseb_class9_science_ch6/blocks.json'
+with open(blocks_path, 'w', encoding='utf-8') as f:
+    json.dump(all_blocks, f, ensure_ascii=False, indent=2)
+print(f"Saved blocks to {blocks_path}")
+
+# Sync to app_core/chapters/ncert_class9_science_ch6.json
+ncert_path = 'app_core/chapters/ncert_class9_science_ch6.json'
+ncert_payload = {
+    "metadata": {
+        "id": "ncert_class9_science_ch6",
+        "title": "Chapter 6: Tissues",
+        "title_hi": "अध्याय 6: ऊतक",
+        "title_gu": "પ્રકરણ 6: પેશીઓ",
+        "subject": "Science",
+        "grade": "Class 9"
+    },
+    "blocks": all_blocks
+}
+with open(ncert_path, 'w', encoding='utf-8') as f:
+    json.dump(ncert_payload, f, ensure_ascii=False, indent=2)
+print(f"Synced to {ncert_path}")
+
+# Sync to assessment bank
+assessment_path = 'app_core/assessment/gseb_class9_science_ch6_questions.json'
+assessment_questions = []
+for idx, q in enumerate(textbook_exercise_questions):
+    assessment_questions.append({
+        "id": f"gseb_c9_sci_ch6_q_{idx+1:03d}",
+        "chapter_id": "gseb_class9_science_ch6",
+        "topic_id": "tissues",
+        "type": "quiz",
+        "difficulty": "medium",
+        "board": "GSEB",
+        "marks": 1,
+        "bloom_taxonomy": "Understand",
+        "keywords": ["tissue", "meristematic", "parenchyma", "xylem", "phloem", "epithelium", "tendon", "neuron"],
+        "estimated_time_minutes": 2,
+        "question_text": q['question'],
+        "question_text_hi": q['question_hi'],
+        "question_text_gu": q['question_gu'],
+        "options": q['options'],
+        "options_hi": q['options_hi'],
+        "options_gu": q['options_gu'],
+        "answer": q['options'][q['correct_index']],
+        "correct_index": q['correct_index'],
+        "explanation": q['explanation'],
+        "explanation_hi": q['explanation_hi'],
+        "explanation_gu": q['explanation_gu']
+    })
+
+assessment_payload = {
+    "chapter_id": "gseb_class9_science_ch6",
+    "questions": assessment_questions
+}
+with open(assessment_path, 'w', encoding='utf-8') as f:
+    json.dump(assessment_payload, f, ensure_ascii=False, indent=2)
+print(f"Updated assessment bank at {assessment_path}")

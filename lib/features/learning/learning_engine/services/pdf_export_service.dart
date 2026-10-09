@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -8,14 +9,28 @@ import 'package:printing/printing.dart';
 import 'package:shine_academy_naroda/core/utils/pdf_branding_util.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
+import 'package:shine_academy_naroda/core/engine/universal_pdf_engine.dart';
+import 'package:shine_academy_naroda/features/common/widgets/tts_interactive_text.dart';
 
 class PdfExportService {
   static Future<void> generateAndPrintSubject(Map<String, dynamic> subjectData) async {
     final pdf = pw.Document();
 
-    final fontBase = await PdfGoogleFonts.notoSansRegular();
-    final fontBold = await PdfGoogleFonts.notoSansBold();
-    final fontTheme = pw.ThemeData.withFont(base: fontBase, bold: fontBold);
+final baseData = await rootBundle.load('assets/fonts/DejaVuSans.ttf');
+    final fontBase = pw.Font.ttf(baseData);
+    final boldData = await rootBundle.load('assets/fonts/DejaVuSans-Bold.ttf');
+    final fontBold = pw.Font.ttf(boldData);
+    
+    final gujData = await rootBundle.load('assets/fonts/NotoSansGujarati-Regular.ttf');
+    final gujFont = pw.Font.ttf(gujData);
+    final hinData = await rootBundle.load('assets/fonts/NotoSansDevanagari-Regular.ttf');
+    final hinFont = pw.Font.ttf(hinData);
+
+    final fontTheme = pw.ThemeData.withFont(
+      base: fontBase, 
+      bold: fontBold,
+      fontFallback: [gujFont, hinFont]
+    );
 
     final pageTheme = await PdfBrandingUtil.getPageTheme(
       pageFormat: PdfPageFormat.a4,
@@ -93,7 +108,7 @@ class PdfExportService {
                     ],
                   ),
                 ),
-                ...blocks.map((block) => _buildPdfBlock(block)).toList(),
+                ...blocks.map((block) => _buildPdfBlock(block)),
                 pw.SizedBox(height: 40),
                 pw.Divider(color: PdfColors.grey300),
                 pw.SizedBox(height: 8),
@@ -134,6 +149,7 @@ class PdfExportService {
     );
   }
 
+
   static Future<void> generateAndPrintChapter(
       BuildContext context,
       Map<String, dynamic> metadata,
@@ -144,18 +160,6 @@ class PdfExportService {
 
     try {
       final title = metadata['title'] ?? 'Chapter Study Material';
-      final pdf = pw.Document();
-
-      final fontBase = await PdfGoogleFonts.notoSansRegular();
-      final fontBold = await PdfGoogleFonts.notoSansBold();
-      final fontTheme = pw.ThemeData.withFont(base: fontBase, bold: fontBold);
-
-      final pageTheme = await PdfBrandingUtil.getPageTheme(
-        pageFormat: PdfPageFormat.a4, 
-        studentName: studentName,
-        theme: fontTheme,
-      );
-
       final validBlocks = blocks.whereType<Map>().toList();
       
       if (context.mounted) {
@@ -174,9 +178,9 @@ class PdfExportService {
                     children: [
                       const CircularProgressIndicator(),
                       const SizedBox(height: 16),
-                      Text('${TrilingualService.instance.getUIText('Processing block')} $currentBlock / ${validBlocks.length}'),
+                      Text('${TrilingualService.instance.getUIText('Processing component')} $currentBlock'),
                       const SizedBox(height: 8),
-                      Text(TrilingualService.instance.getUIText('Please wait. Formatting document...'),
+                      Text(TrilingualService.instance.getUIText('Please wait. High quality rendering takes time...'),
                         style: const TextStyle(fontSize: 12, color: Colors.grey),
                         textAlign: TextAlign.center,
                       ),
@@ -189,50 +193,29 @@ class PdfExportService {
         );
       }
 
-      List<pw.Widget> pdfBlocks = [];
+      List<Widget> flutterWidgets = [];
       for (int i = 0; i < validBlocks.length; i++) {
         final block = validBlocks[i];
         progressNotifier.value = i + 1;
         
-        // Add a small delay to allow UI to update
         await Future.delayed(const Duration(milliseconds: 2));
-        
-        pdfBlocks.addAll(_buildNativePdfWidgets(block));
+        flutterWidgets.addAll(await _buildFlutterWidgets(block));
       }
+
+      final bytes = await UniversalPdfEngine.generatePdfBytesFromWidgets(
+        title: title,
+        widgets: flutterWidgets,
+        isAnswerKey: false,
+        onProgress: (current, total) {
+           progressNotifier.value = (validBlocks.length) + current;
+        }
+      );
 
       if (dialogCtx != null && dialogCtx!.mounted) {
         Navigator.of(dialogCtx!).pop();
         dialogCtx = null;
       }
-      
-      pdf.addPage(
-        pw.MultiPage(
-          pageTheme: pageTheme,
-          header: (pw.Context context) => pw.Column(
-            children: [
-              pw.Header(
-                level: 0,
-                child: pw.Center(
-                  child: pw.Text(
-                    title,
-                    style: pw.TextStyle(
-                      fontSize: 24,
-                      fontWeight: pw.FontWeight.bold,
-                      color: PdfColor.fromHex('#1565C0'),
-                    ),
-                  ),
-                ),
-              ),
-              pw.SizedBox(height: 20),
-            ],
-          ),
-          build: (pw.Context context) {
-            return pdfBlocks;
-          },
-        ),
-      );
 
-      final bytes = await pdf.save();
       await PdfViewerUtil.openPdfBytes(bytes, '${metadata['id'] ?? 'chapter'}_study_material.pdf');
     } catch (e, stack) {
       if (dialogCtx != null && dialogCtx!.mounted) {
@@ -244,16 +227,14 @@ class PdfExportService {
     }
   }
 
-  // Uses purely native pw.Widgets to ensure it works on all Android devices
-  // Returns a List<pw.Widget> to allow MultiPage to break massive texts across pages.
-  static List<pw.Widget> _buildNativePdfWidgets(Map block) {
+  static Future<List<Widget>> _buildFlutterWidgets(Map block) async {
     final type = block['type']?.toString() ?? 'unknown';
     final payload = block.containsKey('content') && block['content'] is Map 
         ? block['content'] as Map 
         : block;
 
     final title = _getTitle(payload);
-    List<pw.Widget> widgets = [];
+    List<Widget> widgets = [];
 
     switch (type) {
       case 'theory':
@@ -263,18 +244,25 @@ class PdfExportService {
       case 'text':
         if (title != null) {
           widgets.add(
-            pw.Padding(
-              padding: const pw.EdgeInsets.only(bottom: 8, top: 12),
-              child: pw.Text(
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8, top: 12),
+              child: Text(
                 title,
-                style: pw.TextStyle(fontSize: 18, fontWeight: pw.FontWeight.bold, color: PdfColor.fromHex('#0D47A1')),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF0D47A1)),
               ),
             )
           );
         }
         final body = _getLoc(payload, ['body', 'content', 'text']);
         widgets.addAll(_buildParagraphs(body));
-        widgets.add(pw.SizedBox(height: 16));
+        
+        final imageWidget = await _buildFlutterImage(payload);
+        if (imageWidget != null) {
+          widgets.add(const SizedBox(height: 8));
+          widgets.add(imageWidget);
+        }
+        
+        widgets.add(const SizedBox(height: 16));
         return widgets;
 
       case 'socratic':
@@ -284,27 +272,27 @@ class PdfExportService {
       case 'practice_question':
       case 'board_questions':
       case 'knowledge_check':
-        widgets.add(pw.SizedBox(height: 12));
+        widgets.add(const SizedBox(height: 12));
         widgets.add(
-          pw.Text('QUESTION', style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: PdfColors.grey600))
+          const Text('QUESTION', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey))
         );
-        widgets.add(pw.SizedBox(height: 4));
+        widgets.add(const SizedBox(height: 4));
         widgets.add(
-          _buildRichText(_getLoc(payload, ['question']), isBold: true)
+          TtsInteractiveText(text: _getLoc(payload, ['question']), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14))
         );
-        widgets.add(pw.SizedBox(height: 8));
+        widgets.add(const SizedBox(height: 8));
 
         final options = _getLocList(payload, ['options']);
         if (options.isNotEmpty) {
           for (var opt in options) {
             widgets.add(
-              pw.Padding(
-                padding: const pw.EdgeInsets.only(left: 16, bottom: 4),
-                child: pw.Row(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+              Padding(
+                padding: const EdgeInsets.only(left: 16, bottom: 4),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    pw.Text('• ', style: const pw.TextStyle(fontSize: 12)),
-                    pw.Expanded(child: _buildRichText(opt.toString())),
+                    const Text('• ', style: TextStyle(fontSize: 12)),
+                    Expanded(child: TtsInteractiveText(text: opt.toString(), style: const TextStyle(fontSize: 14))),
                   ],
                 ),
               )
@@ -314,14 +302,14 @@ class PdfExportService {
 
         final solution = _getLoc(payload, ['solution', 'answer', 'explanation']);
         if (solution.isNotEmpty) {
-          widgets.add(pw.SizedBox(height: 12));
+          widgets.add(const SizedBox(height: 12));
           widgets.add(
-            pw.Text('SOLUTION / ANSWER', style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: PdfColors.green700))
+            const Text('SOLUTION / ANSWER', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.green))
           );
-          widgets.add(pw.SizedBox(height: 4));
+          widgets.add(const SizedBox(height: 4));
           widgets.addAll(_buildParagraphs(solution));
         }
-        widgets.add(pw.SizedBox(height: 24));
+        widgets.add(const SizedBox(height: 24));
         return widgets;
 
       case 'common_mistakes':
@@ -329,15 +317,15 @@ class PdfExportService {
       case 'insight':
       case 'memory_trick':
         final label = type == 'common_mistakes' ? 'COMMON MISTAKE' : (type == 'memory_trick' ? 'MEMORY TRICK' : 'TEACHER TIP');
-        final color = type == 'memory_trick' ? PdfColors.purple900 : PdfColors.amber900;
+        final color = type == 'memory_trick' ? Colors.purple[900]! : Colors.amber[900]!;
         
-        widgets.add(pw.SizedBox(height: 12));
+        widgets.add(const SizedBox(height: 12));
         widgets.add(
-          pw.Text(label, style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold, color: color))
+          Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: color))
         );
-        widgets.add(pw.SizedBox(height: 4));
+        widgets.add(const SizedBox(height: 4));
         widgets.addAll(_buildParagraphs(_getLoc(payload, ['content', 'text']), textColor: color));
-        widgets.add(pw.SizedBox(height: 24));
+        widgets.add(const SizedBox(height: 24));
         return widgets;
 
       default:
@@ -345,69 +333,85 @@ class PdfExportService {
         if (fallbackContent.isNotEmpty) {
           if (title != null) {
             widgets.add(
-              pw.Padding(
-                padding: const pw.EdgeInsets.only(bottom: 8, top: 12),
-                child: pw.Text(
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8, top: 12),
+                child: Text(
                   title,
-                  style: pw.TextStyle(fontSize: 16, fontWeight: pw.FontWeight.bold, color: PdfColors.grey900),
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87),
                 ),
               )
             );
           }
           widgets.addAll(_buildParagraphs(fallbackContent));
-          widgets.add(pw.SizedBox(height: 16));
+        }
+        
+        final defImageWidget = await _buildFlutterImage(payload);
+        if (defImageWidget != null) {
+          widgets.add(const SizedBox(height: 8));
+          widgets.add(defImageWidget);
+        }
+        
+        if (fallbackContent.isNotEmpty || defImageWidget != null) {
+          widgets.add(const SizedBox(height: 16));
         }
         return widgets;
     }
   }
 
-  // Splits long text blocks by double-newlines to allow MultiPage to break between paragraphs safely.
-  static List<pw.Widget> _buildParagraphs(String text, {PdfColor? textColor}) {
+  static List<Widget> _buildParagraphs(String text, {Color? textColor}) {
     final paragraphs = text.split('\n\n');
-    List<pw.Widget> widgets = [];
+    List<Widget> widgets = [];
     for (var p in paragraphs) {
       if (p.trim().isEmpty) continue;
-      // Also split by single newline to respect formatting
       final lines = p.split('\n');
       for (var line in lines) {
          if(line.trim().isEmpty) continue;
          widgets.add(
-           pw.Padding(
-             padding: const pw.EdgeInsets.only(bottom: 4),
-             child: _buildRichText(line, color: textColor ?? PdfColors.grey900),
+           Padding(
+             padding: const EdgeInsets.only(bottom: 4),
+             child: TtsInteractiveText(text: line, style: TextStyle(fontSize: 14, color: textColor ?? Colors.black87)),
            )
          );
       }
-      widgets.add(pw.SizedBox(height: 8));
+      widgets.add(const SizedBox(height: 8));
     }
     return widgets;
   }
 
-  static pw.RichText _buildRichText(String text, {bool isBold = false, PdfColor color = PdfColors.grey900}) {
-    final RegExp boldRegex = RegExp(r'\*\*(.*?)\*\*');
-    final List<pw.InlineSpan> spans = [];
-    int lastMatchEnd = 0;
-
-    for (final match in boldRegex.allMatches(text)) {
-      if (match.start > lastMatchEnd) {
-        spans.add(pw.TextSpan(text: text.substring(lastMatchEnd, match.start)));
+  static Future<Widget?> _buildFlutterImage(Map payload) async {
+    final imageUrl = payload['image_url'] ?? (payload['visuals'] != null ? payload['visuals']['image_url'] : null) ?? payload['path'];
+    if (imageUrl != null && imageUrl.toString().isNotEmpty) {
+      try {
+        Uint8List imageBytes;
+        if (imageUrl.toString().startsWith('/')) {
+           imageBytes = File(imageUrl.toString()).readAsBytesSync();
+        } else {
+           final ByteData data = await rootBundle.load(imageUrl.toString());
+           imageBytes = data.buffer.asUint8List();
+        }
+        final imageWidget = Center(child: Image.memory(imageBytes, height: 200, fit: BoxFit.contain));
+        
+        final caption = _getLoc(payload, ['caption']);
+        if (caption.isNotEmpty) {
+          return Column(
+            children: [
+              imageWidget,
+              const SizedBox(height: 4),
+              Center(
+                child: Text(caption, style: const TextStyle(fontSize: 10, color: Colors.grey, fontStyle: FontStyle.italic))
+              ),
+            ]
+          );
+        }
+        return imageWidget;
+      } catch (e) {
+        debugPrint('Error loading image $imageUrl for PDF: $e');
       }
-      spans.add(pw.TextSpan(text: match.group(1), style: pw.TextStyle(fontWeight: pw.FontWeight.bold)));
-      lastMatchEnd = match.end;
     }
-
-    if (lastMatchEnd < text.length) {
-      spans.add(pw.TextSpan(text: text.substring(lastMatchEnd)));
-    }
-
-    return pw.RichText(
-      text: pw.TextSpan(
-        style: pw.TextStyle(fontSize: 12, color: color, fontWeight: isBold ? pw.FontWeight.bold : pw.FontWeight.normal),
-        children: spans,
-      ),
-    );
+    return null;
   }
 
+  
   static String _getLoc(Map payload, List<String> baseKeys) {
     final lang = TrilingualService.instance.activeViewLanguage;
     for (final key in baseKeys) {
@@ -568,7 +572,7 @@ class PdfExportService {
               ...options.map((opt) => pw.Padding(
                 padding: const pw.EdgeInsets.only(bottom: 4, left: 16),
                 child: pw.Text('• $opt', style: const pw.TextStyle(fontSize: 12)),
-              )).toList(),
+              )),
             ],
           ),
         );

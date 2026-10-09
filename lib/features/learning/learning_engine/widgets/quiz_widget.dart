@@ -4,6 +4,8 @@ import '../../../../core/services/streak_manager_service.dart';
 import '../../../../core/widgets/presentation_builder.dart';
 import '../../../dictionary/dictionary_popup.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
+import 'package:markdown/markdown.dart' as md;
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_typography.dart';
 
@@ -136,15 +138,28 @@ class _QuizWidgetState extends State<QuizWidget> {
                     buttonItems: buttonItems,
                   );
                 },
-                child: Text(
-                  questionText,
-                  style: GoogleFonts.inter(
-                    fontSize: 18 * scale,
-                    fontWeight: FontWeight.w600,
-                    color: Theme.of(context).colorScheme.onSurface,
-                    height: 1.5,
-                  ).adaptToLanguage(),
+                child: MediaQuery(
+                  data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+                  child: MarkdownBody(
+                    data: questionText.replaceAll(r'\not\implies', r'\not\Rightarrow').replaceAll(r'\not \implies', r'\not \Rightarrow'),
+                  selectable: false,
+                  builders: {
+                    'latex': LatexElementBuilder(),
+                  },
+                  extensionSet: md.ExtensionSet(
+                    <md.BlockSyntax>[...md.ExtensionSet.gitHubFlavored.blockSyntaxes, LatexBlockSyntax()],
+                    <md.InlineSyntax>[...md.ExtensionSet.gitHubFlavored.inlineSyntaxes, LatexInlineSyntax()],
+                  ),
+                  styleSheet: MarkdownStyleSheet(
+                    p: GoogleFonts.inter(
+                      fontSize: 18 * scale,
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).colorScheme.onSurface,
+                      height: 1.5,
+                    ).adaptToLanguage(),
+                  ),
                 ),
+              ),
               ),
               const SizedBox(height: 16),
               ...List.generate(options.length, (index) {
@@ -201,10 +216,23 @@ class _QuizWidgetState extends State<QuizWidget> {
                         ),
                         const SizedBox(width: 16),
                         Expanded(
-                          child: Text(
-                            options[index].toString(),
-                            style: GoogleFonts.inter(fontSize: 15 * scale, color: Theme.of(context).colorScheme.onSurface).adaptToLanguage(),
+                          child: MediaQuery(
+                            data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+                            child: MarkdownBody(
+                              data: options[index].toString().replaceAll(r'\not\implies', r'\not\Rightarrow').replaceAll(r'\not \implies', r'\not \Rightarrow'),
+                            selectable: false,
+                            builders: {
+                              'latex': LatexElementBuilder(),
+                            },
+                            extensionSet: md.ExtensionSet(
+                              <md.BlockSyntax>[...md.ExtensionSet.gitHubFlavored.blockSyntaxes, LatexBlockSyntax()],
+                              <md.InlineSyntax>[...md.ExtensionSet.gitHubFlavored.inlineSyntaxes, LatexInlineSyntax()],
+                            ),
+                            styleSheet: MarkdownStyleSheet(
+                              p: GoogleFonts.inter(fontSize: 15 * scale, color: Theme.of(context).colorScheme.onSurface).adaptToLanguage(),
+                            ),
                           ),
+                        ),
                         ),
                         if (_hasSubmitted && isCorrect)
                           Icon(Icons.check_circle, color: Colors.green),
@@ -281,6 +309,13 @@ class _QuizWidgetState extends State<QuizWidget> {
                 MarkdownBody(
                   data: explanation,
                   selectable: true,
+                  builders: {
+                    'latex': LatexElementBuilder(),
+                  },
+                  extensionSet: md.ExtensionSet(
+                    <md.BlockSyntax>[...md.ExtensionSet.gitHubFlavored.blockSyntaxes, LatexBlockSyntax()],
+                    <md.InlineSyntax>[...md.ExtensionSet.gitHubFlavored.inlineSyntaxes, LatexInlineSyntax()],
+                  ),
                   styleSheet: MarkdownStyleSheet(
                     p: AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface).copyWith(height: 1.6),
                     tableBody: AppTypography.bodySmall(context, color: Theme.of(context).colorScheme.onSurface),

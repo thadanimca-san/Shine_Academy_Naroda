@@ -1,0 +1,1017 @@
+import os
+import json
+
+def make_quiz(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Apply", diff="Intermediate", mins=2):
+    return {
+        "id": id_str,
+        "type": "quiz",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_socratic(id_str, q_en, q_hi, q_gu, opts_en, opts_hi, opts_gu, correct_idx, expl_en, expl_hi, expl_gu, bloom="Analyze", diff="Beginner", mins=2):
+    return {
+        "id": id_str,
+        "type": "socratic_question",
+        "question": q_en,
+        "options": opts_en,
+        "correct_index": correct_idx,
+        "explanation": expl_en,
+        "question_hi": q_hi,
+        "options_hi": opts_hi,
+        "explanation_hi": expl_hi,
+        "question_gu": q_gu,
+        "options_gu": opts_gu,
+        "explanation_gu": expl_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def make_theory(id_str, title_en, title_hi, title_gu, body_en, body_hi, body_gu, btype="theory", bloom="Understand", diff="Beginner", mins=3):
+    return {
+        "id": id_str,
+        "type": btype,
+        "title": title_en,
+        "body": body_en,
+        "title_hi": title_hi,
+        "body_hi": body_hi,
+        "title_gu": title_gu,
+        "body_gu": body_gu,
+        "bloom": bloom,
+        "difficulty": diff,
+        "estimated_minutes": mins
+    }
+
+def get_metadata():
+    return {
+        "id": "ncert_class10_maths_ch10",
+        "title": "Chapter 10: Circles",
+        "title_hi": "अध्याय 10: वृत्त",
+        "title_gu": "પ્રકરણ 10: વર્તુળ",
+        "subject": "Mathematics",
+        "grade": "10",
+        "board": "CBSE/GSEB",
+        "curriculum": ["CBSE", "NCERT", "GSEB"],
+        "language": "English, Hindi, Gujarati",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 200,
+        "version": "2.0.0",
+        "author": "Shine Academy EduOS",
+        "last_updated": "2026-10-01",
+        "tags": [
+            "circles",
+            "tangent_to_circle",
+            "secant",
+            "point_of_contact",
+            "theorem_10_1",
+            "theorem_10_2",
+            "lengths_of_tangents",
+            "exercise_10_1",
+            "exercise_10_2",
+            "board_exam"
+        ]
+    }
+
+# =========================================================================
+# PART 1: 8-STEP PEDAGOGY - TANGENTS, SECANTS & THEOREM 10.1
+# =========================================================================
+def get_part1_blocks():
+    blocks = []
+
+    # 1. Step 1: Hook
+    blocks.append(make_theory(
+        "C10M_CH10_001",
+        "The Turning Wheel: How a Round Curve Meets a Flat World",
+        "घूमता हुआ पहिया: कैसे एक गोल वक्र समतल दुनिया से मिलता है",
+        "ફરતું પૈડું: એક ગોળ વળાંક કેવી રીતે સપાટ દુનિયાને સ્પર્શે છે",
+        "Look closely at the wheel of a bicycle rolling forward on a smooth concrete road. Even though the rim is completely curved and round, at any frozen instant in time, how many points of that wheel actually touch the flat ground?\n\nJust **ONE single point**!\n\nIf a stone gets stuck in the tread and suddenly flies loose as you speed up, what direction does it take? Does it curve through the air, or does it shoot out in a straight line tangent to the spinning tire? In physics, centrifugal motion flings sparks off a spinning grinding wheel along razor-sharp tangent lines!\n\nIn this chapter, we explore one of the most elegant geometric interactions in nature: what happens when an infinite straight line meets a perfect circle.",
+        "सपाट कंक्रीट की सड़क पर आगे बढ़ते साइकिल के पहिये को ध्यान से देखें। यद्यपि पहिया पूरी तरह से वक्राकार और गोल है, फिर भी समय के किसी एक स्थिर क्षण में, उस पहिये का कितना भाग वास्तव में समतल जमीन को छूता है?\n\nकेवल **एक अकेला बिंदु**!\n\nयदि पहिये के खांचे में फंसा कोई कंकड़ आपके तेज चलते समय अचानक बाहर निकल जाता है, तो वह किस दिशा में जाता है? क्या वह हवा में मुड़ता है, या घूमते पहिये की स्पर्शरेखा (tangent) में एक सीधी रेखा में गोली की तरह निकलता है? भौतिकी में, ग्राइंडर के पहिये से निकलने वाली चिंगारियां बिल्कुल सीधी स्पर्शरेखाओं के साथ निकलती हैं!\n\nइस अध्याय में, हम प्रकृति के सबसे सुंदर ज्यामितीय संपर्कों में से एक का अन्वेषण करेंगे: जब एक अनंत सीधी रेखा एक पूर्ण वृत्त से मिलती है तो क्या होता है।",
+        "સપાટ રસ્તા પર આગળ વધતા સાયકલના પૈડાને ધ્યાનથી જુઓ. પૈડાની કિનારી સંપૂર્ણપણે ગોળાકાર અને વક્ર હોવા છતાં, ચોક્કસ ક્ષણે તે સપાટ જમીનને કેટલા બિંદુઓમાં સ્પર્શે છે?\n\nમાત્ર **એક જ બિંદુ** પર!\n\nજો ટાયરમાં ફસાયેલો કાંકરીનો ટુકડો અચાનક ઊડે, તો તે કઈ દિશામાં જશે? તે વળાંક લેશે કે ફરતા પૈડાને સ્પર્શતી સીધી રેખામાં ફેંકાશે? ભૌતિકવિજ્ઞાનમાં, ફરતા ગ્રાઇન્ડર વ્હીલમાંથી ઊડતા તણખા એકદમ સીધી સ્પર્શક રેખામાં ગતિ કરે છે!\n\nઆ પ્રકરણમાં, આપણે કુદરતના સૌથી અદ્ભુત ભૌમિતિક સંબંધનો અભ્યાસ કરીશું: જ્યારે એક સીધી રેખા પૂર્ણ વર્તુળને મળે ત્યારે શું થાય છે.",
+        btype="hook",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 2. Step 2: Socratic Question
+    blocks.append(make_socratic(
+        "C10M_CH10_002",
+        "Consider a circle and a straight line drawn on the same flat piece of paper. What is the maximum number of points at which the line can intersect the circle?",
+        "एक ही समतल कागज पर खींचे गए एक वृत्त और एक सीधी रेखा पर विचार कीजिए। वह अधिकतम कितने बिंदुओं पर वृत्त को प्रतिच्छेद कर सकती है?",
+        "એક જ કાગળ પર દોરેલા વર્તુળ અને સીધી રેખાનો વિચાર કરો. આ રેખા વર્તુળને વધુમાં વધુ કેટલા બિંદુઓમાં છેદી શકે છે?",
+        [
+            "Exactly 1 point",
+            "At most 2 points",
+            "Infinitely many points",
+            "At most 3 points"
+        ],
+        [
+            "ठीक 1 बिंदु पर",
+            "अधिकतम 2 बिंदुओं पर",
+            "अनंत बिंदुओं पर",
+            "अधिकतम 3 बिंदुओं पर"
+        ],
+        [
+            "બરાબર 1 બિંદુ પર",
+            "વધુમાં વધુ 2 બિંદુઓ પર",
+            "અનંત બિંદુઓ પર",
+            "વધુમાં વધુ 3 બિંદુઓ પર"
+        ],
+        1,
+        "A straight line can either: (1) not intersect the circle at all (0 common points), (2) touch the circle at exactly 1 point (tangent), or (3) cut right through the circle at exactly 2 points (secant). Because a circle is convex and quadratic in nature (x² + y² = r²), a linear line can never intersect it at 3 or more points!",
+        "एक सीधी रेखा या तो: (1) वृत्त को बिल्कुल नहीं काटती (0 उभयनिष्ठ बिंदु), (2) वृत्त को ठीक 1 बिंदु पर छूती है (स्पर्शरेखा), या (3) वृत्त को काटकर ठीक 2 बिंदुओं पर पार करती है (छेदक रेखा)। चूँकि वृत्त द्विघाती (x² + y² = r²) होता है, एक रैखिक रेखा इसे कभी भी 3 या अधिक बिंदुओं पर नहीं काट सकती!",
+        "સીધી રેખા: (1) વર્તુળને જરાય ન છેદે (0 સામાન્ય બિંદુ), (2) વર્તુળને બરાબર 1 બિંદુએ સ્પર્શે (સ્પર્શક), અથવા (3) વર્તુળમાંથી આરપાર પસાર થઈ 2 બિંદુઓમાં છેદે (છેદિકા). વર્તુળ દ્વિઘાત સમીકરણ (x² + y² = r²) ધરાવતું હોવાથી, સીધી રેખા તેને ક્યારેય 3 કે તેથી વધુ બિંદુઓમાં છેદી શકે નહીં!",
+        bloom="Analyze",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 3. Step 3: Discovery
+    blocks.append(make_theory(
+        "C10M_CH10_003",
+        "Discovery: The Three Geometrical Relationships",
+        "खोज: तीन ज्यामितीय स्थितियाँ",
+        "શોધ: ત્રણ ભૌમિતિક પરિસ્થિતિઓ",
+        "When a circle and a line $PQ$ lie in the same plane, exactly three distinct situations arise:\n\n1. **Non-intersecting Line (अप्रतिच्छेदी रेखा / અછેદક રેખા):**\n   - The line $PQ$ and the circle have **no common point**.\n   - The perpendicular distance from the centre $O$ to the line is strictly greater than the radius ($d > r$).\n\n2. **Secant (छेदक रेखा / છેદિકા):**\n   - The line $PQ$ cuts the circle at **two distinct points** $A$ and $B$.\n   - The word *secant* comes from the Latin *secare* meaning 'to cut'.\n   - The segment $AB$ between the intersection points is called a **chord** of the circle. Here, distance from centre $d < r$.\n\n3. **Tangent (स्पर्शरेखा / સ્પર્શક):**\n   - The line touches the circle at **only one single point** $P$.\n   - The word *tangent* comes from the Latin word *tangere* meaning 'to touch' (introduced by Danish mathematician Thomas Fincke in 1583).\n   - The single common point $P$ is formally named the **Point of Contact** (स्पर्श बिंदु / સ્પર્શ બિંદુ). Here, distance from centre $d = r$.\n\n*Key Intuition:* A tangent is simply a limiting case of a secant when the two endpoints of its corresponding chord coincide!",
+        "जब एक वृत्त और एक रेखा $PQ$ एक ही तल में स्थित होते हैं, तो ठीक तीन अलग-अलग स्थितियाँ उत्पन्न होती हैं:\n\n1. **अप्रतिच्छेदी रेखा (Non-intersecting Line):**\n   - रेखा $PQ$ और वृत्त में **कोई उभयनिष्ठ बिंदु नहीं** होता है।\n   - वृत्त के केंद्र $O$ से रेखा की लंबवत दूरी त्रिज्या से अधिक होती है ($d > r$)।\n\n2. **छेदक रेखा (Secant):**\n   - रेखा $PQ$ वृत्त को **दो अलग-अलग बिंदुओं** $A$ और $B$ पर काटती है।\n   - शब्द *secant* लैटिन शब्द *secare* से आया है जिसका अर्थ है 'काटना'।\n   - दोनों बिंदुओं के बीच का रेखाखंड $AB$ वृत्त की **जीवा (chord)** कहलाता है। यहाँ केंद्र से दूरी $d < r$ होती है।\n\n3. **स्पर्शरेखा (Tangent):**\n   - रेखा वृत्त को **केवल एक ही बिंदु** $P$ पर छूती है।\n   - शब्द *tangent* लैटिन शब्द *tangere* से आया है जिसका अर्थ है 'छूना' (डेनिश गणितज्ञ थॉमस फिनके द्वारा 1583 में प्रस्तुत किया गया)।\n   - यह एकल उभयनिष्ठ बिंदु $P$ **स्पर्श बिंदु (Point of Contact)** कहलाता है। यहाँ केंद्र से दूरी $d = r$ होती है।\n\n*मुख्य अंतर्दृष्टि:* स्पर्शरेखा वास्तव में छेदक रेखा की एक सीमांत स्थिति (limiting position) है जब जीवा के दोनों सिरे संपाती (coincident) हो जाते हैं!",
+        "જ્યારે વર્તુળ અને રેખા $PQ$ એક જ સમતલમાં હોય, ત્યારે બરાબર ત્રણ પરિસ્થિતિઓ બને છે:\n\n1. **અછેદક રેખા (Non-intersecting Line):**\n   - રેખા $PQ$ અને વર્તુળ વચ્ચે **કોઈ સામાન્ય બિંદુ નથી**.\n   - કેન્દ્ર $O$ થી રેખાનું લંબઅંતર ત્રિજ્યા કરતાં વધુ હોય છે ($d > r$).\n\n2. **છેદિકા (Secant):**\n   - રેખા $PQ$ વર્તુળને **બે ભિન્ન બિંદુઓ** $A$ અને $B$ માં છેદે છે.\n   - *Secant* શબ્દ લેટિન શબ્દ *secare* પરથી આવ્યો છે જેનો અર્થ 'કાપવું' થાય છે.\n   - આ બે બિંદુઓ વચ્ચેનો રેખાખંડ $AB$ વર્તુળની **જીવા (chord)** બને છે. અહીં કેન્દ્રથી અંતર $d < r$ હોય છે.\n\n3. **સ્પર્શક (Tangent):**\n   - રેખા વર્તુળને **માત્ર એક જ બિંદુ** $P$ આગળ સ્પર્શે છે.\n   - *Tangent* શબ્દ લેટિન શબ્દ *tangere* પરથી આવ્યો છે જેનો અર્થ 'સ્પર્શ કરવો' થાય છે (1583 માં ડેનિશ ગણિતશાસ્ત્રી થોમસ ફિન્કે દ્વારા પ્રચલિત કરાયો).\n   - આ સામાન્ય બિંદુ $P$ ને **સ્પર્શ બિંદુ (Point of Contact)** કહેવામાં આવે છે. અહીં કેન્દ્રથી લંબઅંતર $d = r$ હોય છે.\n\n*મુખ્ય સમજ:* સ્પર્શક એ છેદિકાની એવી વિશિષ્ટ સ્થિતિ છે જ્યારે જીવાના બંને અંત્યબિંદુઓ એકબીજા પર સંપાતી થઈ જાય છે!",
+        btype="discovery",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 4. Step 4: Reveal - Theorem 10.1
+    blocks.append(make_theory(
+        "C10M_CH10_004",
+        "Theorem 10.1: The Tangent-Radius Perpendicularity Theorem",
+        "प्रमेय 10.1: स्पर्शरेखा और त्रिज्या की लंबवतता का प्रमेय",
+        "પ્રમેય 10.1: સ્પર્શક અને ત્રિજ્યાના પરસ્પર લંબ હોવાનો પ્રમેય",
+        "### Statement:\n**The tangent at any point of a circle is perpendicular to the radius through the point of contact.**\n\n### Proof & Reasoning:\n- Let $XY$ be a tangent to a circle with centre $O$ touching at point of contact $P$.\n- Take any other point $Q$ on the line $XY$ (other than $P$) and join $OQ$.\n- Notice that $Q$ must lie **outside the circle**. (If $Q$ lay inside or on the circle, the line $XY$ would intersect the circle in two points and become a secant, not a tangent!).\n- Therefore, the length of $OQ$ is greater than the radius $OP$:\n  $$OQ > OP$$\n- Since this holds true for **every** point on the line $XY$ except point $P$, $OP$ is the **shortest distance** from the centre $O$ to the line $XY$.\n- By fundamental geometry, the shortest distance from a point to a given line is always the **perpendicular distance**.\n\n$$\\therefore OP \\perp XY$$\n\n### Important Corollaries:\n1. At any single point on a circle, there can be **one and only one tangent**.\n2. The line containing the radius through the point of contact is also called the **Normal** to the circle at that point.",
+        "### कथन:\n**वृत्त के किसी बिंदु पर स्पर्शरेखा, स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है।**\n\n### उपपत्ति एवं तर्क:\n- मान लीजिए $XY$ केंद्र $O$ वाले वृत्त की स्पर्शरेखा है जो स्पर्श बिंदु $P$ पर स्पर्श करती है।\n- रेखा $XY$ पर $P$ के अतिरिक्त कोई अन्य बिंदु $Q$ लीजिए और $OQ$ को मिलाइए।\n- ध्यान दीजिए कि बिंदु $Q$ को **वृत्त के बाहर** ही स्थित होना चाहिए। (यदि $Q$ वृत्त के अंदर या परिधि पर होगा, तो रेखा $XY$ वृत्त को दो बिंदुओं पर काटेगी और छेदक रेखा बन जाएगी, स्पर्शरेखा नहीं!)।\n- अतः $OQ$ की लंबाई वृत्त की त्रिज्या $OP$ से बड़ी होगी:\n  $$OQ > OP$$\n- चूँकि यह स्थिति बिंदु $P$ के अलावा रेखा $XY$ के **प्रत्येक** बिंदु के लिए सत्य है, इसलिए $OP$ केंद्र $O$ से रेखा $XY$ के बिंदुओं की **न्यूनतम दूरी** है।\n- ज्यामिति के मूलभूत नियम से, किसी बिंदु से रेखा तक की सबसे छोटी दूरी सदैव **लंबवत दूरी** होती है।\n\n$$\\therefore OP \\perp XY$$\n\n### महत्वपूर्ण निष्कर्ष:\n1. वृत्त के किसी एक बिंदु पर **केवल और केवल एक ही स्पर्शरेखा** हो सकती है।\n2. स्पर्श बिंदु से होकर जाने वाली त्रिज्या वाली रेखा को उस बिंदु पर वृत्त का **अभिलंब (Normal)** भी कहा जाता है।",
+        "### વિધાન:\n**વર્તુળના કોઈ બિંદુએ દોરેલો સ્પર્શક, સ્પર્શ બિંદુમાંથી પસાર થતી ત્રિજ્યાને લંબ હોય છે.**\n\n### સાબિતી અને તર્ક:\n- ધારો કે કેન્દ્ર $O$ વાળા વર્તુળના સ્પર્શ બિંદુ $P$ આગળ $XY$ સ્પર્શક છે.\n- રેખા $XY$ પર $P$ સિવાયનું કોઈપણ બિંદુ $Q$ લો અને $OQ$ જોડો.\n- સ્પષ્ટ છે કે બિંદુ $Q$ વર્તુળની **બહાર જ હોવું જોઈએ**. (જો $Q$ વર્તુળની અંદર કે પરિઘ પર હોય, તો રેખા $XY$ વર્તુળને બે બિંદુઓમાં છેદી છેદિકા બની જાય, સ્પર્શક ન રહે!).\n- આથી, અંતર $OQ$ એ ત્રિજ્યા $OP$ કરતાં મોટું જ હોય:\n  $$OQ > OP$$\n- બિંદુ $P$ સિવાય રેખા $XY$ પરના **દરેક** બિંદુ માટે આ સાચું હોવાથી, કેન્દ્ર $O$ થી રેખા $XY$ નું **સૌથી ટૂંકું અંતર** $OP$ છે.\n- ભૂમિતિના નિયમ મુજબ, કોઈ બિંદુથી રેખા સુધીનું લઘુત્તમ અંતર હંમેશા **લંબ અંતર** જ હોય છે.\n\n$$\\therefore OP \\perp XY$$\n\n### મહત્વના તારણો:\n1. વર્તુળના કોઈ એક બિંદુ આગળ **એક અને માત્ર એક જ સ્પર્શક** દોરી શકાય.\n2. સ્પર્શ બિંદુમાંથી પસાર થતી ત્રિજ્યાવાળી રેખાને તે બિંદુ આગળ વર્તુળનો **અભિલંબ (Normal)** કહે છે.",
+        btype="theory",
+        bloom="Understand",
+        diff="Intermediate",
+        mins=4
+    ))
+
+    # 5. Step 5: Teacher Tip
+    blocks.append(make_theory(
+        "C10M_CH10_005",
+        "Teacher Tip: The Right-Angled Triangle Secret of Theorem 10.1",
+        "शिक्षक युक्ति: प्रमेय 10.1 का समकोण त्रिभुज रहस्य",
+        "શિક્ષકની સલાહ: પ્રમેય 10.1 નું કાટકોણ ત્રિકોણ રહસ્ય",
+        "The moment you see the words *'tangent to a circle'*, instantly train your brain to identify a **Right-Angled Triangle** ($\Delta OPT$):\n\n$$\\angle OPT = 90^\\circ$$\n\nIn this right triangle:\n- **$OP = r$** is the Radius (Perpendicular/Leg).\n- **$PT = L$** is the Tangent length (Base/Leg).\n- **$OT = d$** is the Hypotenuse (Distance from centre to external point).\n\nBy Pythagoras Theorem:\n$$d^2 = r^2 + L^2 \\implies L = \\sqrt{d^2 - r^2}, \\quad r = \\sqrt{d^2 - L^2}, \\quad d = \\sqrt{r^2 + L^2}$$\n\n*Exam Warning:* Always verify that the hypotenuse is the line segment connecting the external point to the **centre** ($OT$), NEVER the tangent length ($PT$)!",
+        "जैसे ही आप प्रश्न में *'वृत्त की स्पर्शरेखा'* शब्द देखें, तुरंत अपने मस्तिष्क को एक **समकोण त्रिभुज** ($\Delta OPT$) की पहचान करने के लिए तैयार करें:\n\n$$\\angle OPT = 90^\\circ$$\n\nइस समकोण त्रिभुज में:\n- **$OP = r$** त्रिज्या है (लंब भुजा)।\n- **$PT = L$** स्पर्शरेखा की लंबाई है (आधार भुजा)।\n- **$OT = d$** कर्ण है (केंद्र से बाहरी बिंदु की दूरी)।\n\nपाइथागोरस प्रमेय द्वारा:\n$$d^2 = r^2 + L^2 \\implies L = \\sqrt{d^2 - r^2}, \\quad r = \\sqrt{d^2 - L^2}, \\quad d = \\sqrt{r^2 + L^2}$$\n\n*परीक्षा चेतावनी:* हमेशा सुनिश्चित करें कि कर्ण केंद्र से बाहरी बिंदु को मिलाने वाला रेखाखंड ($OT$) है, स्पर्शरेखा की लंबाई ($PT$) कभी भी कर्ण नहीं हो सकती!",
+        "પ્રશ્નમાં *'વર્તુળનો સ્પર્શક'* શબ્દ જોતાં જ તમારા મગજમાં **કાટકોણ ત્રિકોણ** ($\Delta OPT$) ની કલ્પના સ્પષ્ટ થવી જોઈએ:\n\n$$\\angle OPT = 90^\\circ$$\n\nઆ કાટકોણ ત્રિકોણમાં:\n- **$OP = r$** ત્રિજ્યા છે (એક બાજુ).\n- **$PT = L$** સ્પર્શકની લંબાઈ છે (બીજી બાજુ).\n- **$OT = d$** કર્ણ છે (કેન્દ્રથી બહારના બિંદુનું અંતર).\n\nપાયથાગોરસ પ્રમેય મુજબ:\n$$d^2 = r^2 + L^2 \\implies L = \\sqrt{d^2 - r^2}, \\quad r = \\sqrt{d^2 - L^2}, \\quad d = \\sqrt{r^2 + L^2}$$\n\n*પરીક્ષા ચેતવણી:* હંમેશા ચકાસો કે કર્ણ એ કેન્દ્રથી બહારના બિંદુને જોડતો રેખાખંડ ($OT$) જ બને છે, સ્પર્શકની લંબાઈ ($PT$) ક્યારેય કર્ણ ન હોઈ શકે!",
+        btype="teacher_tip",
+        bloom="Remember",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 6. Step 6: Knowledge Check - Exercise 10.1 Full Questions
+    # Q1 of Ex 10.1
+    blocks.append(make_quiz(
+        "C10M_CH10_006",
+        "How many tangents can a circle have in total?",
+        "एक वृत्त की कुल कितनी स्पर्शरेखाएँ हो सकती हैं?",
+        "એક વર્તુળને કુલ કેટલા સ્પર્શકો હોઈ શકે?",
+        [
+            "Only 1",
+            "Exactly 2",
+            "Exactly 4",
+            "Infinitely many"
+        ],
+        [
+            "केवल 1",
+            "ठीक 2",
+            "ठीक 4",
+            "अपरिमित रूप से अनेक (अनंत)"
+        ],
+        [
+            "માત્ર 1",
+            "બરાબર 2",
+            "બરાબર 4",
+            "અસંખ્ય (અનંત)"
+        ],
+        3,
+        "A circle consists of infinitely many points on its circumference. At each and every single point, exactly one unique tangent can be drawn. Therefore, a circle has infinitely many tangents in total.",
+        "वृत्त की परिधि पर अपरिमित रूप से अनेक (अनंत) बिंदु होते हैं। प्रत्येक बिंदु पर ठीक एक अद्वितीय स्पर्शरेखा खींची जा सकती है। इसलिए, एक वृत्त की अनंत स्पर्शरेखाएँ हो सकती हैं।",
+        "વર્તુળના પરિઘ પર અનંત બિંદુઓ આવેલા હોય છે. દરેક બિંદુ આગળ બરાબર એક અનન્ય સ્પર્શક દોરી શકાય છે. તેથી, વર્તુળને કુલ અસંખ્ય (અનંત) સ્પર્શકો હોઈ શકે છે.",
+        bloom="Understand",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # Q2(i) of Ex 10.1
+    blocks.append(make_quiz(
+        "C10M_CH10_007",
+        "A tangent to a circle intersects it in _____ point(s).",
+        "किसी वृत्त की स्पर्शरेखा उसे _____ बिंदु(ओं) पर प्रतिच्छेद करती है।",
+        "વર્તુળનો સ્પર્શક વર્તુળને _____ બિંદુ(ઓ)માં છેદે છે.",
+        [
+            "Zero",
+            "One",
+            "Two",
+            "Infinitely many"
+        ],
+        [
+            "शून्य",
+            "एक",
+            "दो",
+            "अनंत"
+        ],
+        [
+            "શૂન્ય",
+            "એક",
+            "બે",
+            "અનંત"
+        ],
+        1,
+        "By definition, a tangent touches and intersects a circle at exactly one single point, known as the point of contact.",
+        "परिभाषा के अनुसार, स्पर्शरेखा वृत्त को ठीक एक बिंदु पर छूती और प्रतिच्छेद करती है, जिसे स्पर्श बिंदु कहते हैं।",
+        "વ્યાખ્યા અનુસાર, સ્પર્શક વર્તુળને માત્ર અને માત્ર એક જ બિંદુમાં સ્પર્શે છે, જેને સ્પર્શ બિંદુ કહે છે.",
+        bloom="Remember",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # Q2(ii) of Ex 10.1
+    blocks.append(make_quiz(
+        "C10M_CH10_008",
+        "A line intersecting a circle in two distinct points is called a:",
+        "वृत्त को दो अलग-अलग बिंदुओं पर प्रतिच्छेद करने वाली रेखा को कहते हैं:",
+        "વર્તુળને બે ભિન્ન બિંદુઓમાં છેદતી રેખાને _____ કહે છે:",
+        [
+            "Tangent",
+            "Secant",
+            "Radius",
+            "Segment"
+        ],
+        [
+            "स्पर्शरेखा (Tangent)",
+            "छेदक रेखा (Secant)",
+            "त्रिज्या (Radius)",
+            "वृत्तखंड (Segment)"
+        ],
+        [
+            "સ્પર્શક (Tangent)",
+            "છેદિકા (Secant)",
+            "ત્રિજ્યા (Radius)",
+            "વૃત્તખંડ (Segment)"
+        ],
+        1,
+        "A straight line cutting through a circle at two distinct points is called a secant line.",
+        "वृत्त को दो अलग बिंदुओं पर काटकर निकलने वाली सीधी रेखा को छेदक रेखा (secant) कहा जाता है।",
+        "વર્તુળને બે ભિન્ન બિંદુઓમાં છેદીને પસાર થતી રેખાને છેદિકા (secant) કહે છે.",
+        bloom="Remember",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # Q2(iii) of Ex 10.1
+    blocks.append(make_quiz(
+        "C10M_CH10_009",
+        "A circle can have at most _____ parallel tangents for any given direction or diameter.",
+        "किसी दिए गए व्यास या दिशा के लिए एक वृत्त की अधिकतम _____ समांतर स्पर्शरेखाएँ हो सकती हैं।",
+        "કોઈ આપેલ દિશા અથવા વ્યાસ માટે વર્તુળને વધુમાં વધુ _____ સમાંતર સ્પર્શકો હોઈ શકે.",
+        [
+            "One",
+            "Two",
+            "Four",
+            "Infinitely many"
+        ],
+        [
+            "एक",
+            "दो",
+            "चार",
+            "अनंत"
+        ],
+        [
+            "એક",
+            "બે",
+            "ચાર",
+            "અનંત"
+        ],
+        1,
+        "For any chosen diameter or secant, tangents drawn at the two opposite endpoints of the diameter are perpendicular to the same line, making them parallel. Hence, at most 2 parallel tangents can exist for any given orientation.",
+        "किसी व्यास के दोनों विपरीत छोरों पर खींची गई स्पर्शरेखाएँ उसी एक व्यास पर लंब होती हैं, जिससे वे परस्पर समांतर हो जाती हैं। अतः किसी दिशा के लिए अधिकतम 2 समांतर स्पर्शरेखाएँ हो सकती हैं।",
+        "કોઈપણ વ્યાસના બંને સામસામેના અંત્યબિંદુઓ આગળ દોરેલા સ્પર્શકો તે જ વ્યાસને લંબ હોવાથી પરસ્પર સમાંતર બને છે. આથી, આપેલ દિશા માટે વધુમાં વધુ 2 સમાંતર સ્પર્શકો હોઈ શકે.",
+        bloom="Understand",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # Q2(iv) of Ex 10.1
+    blocks.append(make_quiz(
+        "C10M_CH10_010",
+        "The common point of a tangent to a circle and the circle is called the:",
+        "वृत्त तथा उसकी स्पर्शरेखा के उभयनिष्ठ बिंदु को कहते हैं:",
+        "વર્તુળ અને સ્પર્શકના સામાન્ય બિંદુને _____ કહે છે:",
+        [
+            "Centre",
+            "Point of Contact",
+            "Chord",
+            "Vertex"
+        ],
+        [
+            "केंद्र",
+            "स्पर्श बिंदु (Point of Contact)",
+            "जीवा",
+            "शीर्ष"
+        ],
+        [
+            "કેન્દ્ર",
+            "સ્પર્શ બિંદુ (Point of Contact)",
+            "જીવા",
+            "શિરોબિંદુ"
+        ],
+        1,
+        "The single point where the tangent touches the circle is formally defined as the Point of Contact.",
+        "वह एकल बिंदु जहाँ स्पर्शरेखा वृत्त को छूती है, स्पर्श बिंदु (Point of Contact) कहलाता है।",
+        "જે એકમાત્ર બિંદુ આગળ સ્પર્શક વર્તુળને અડકે છે તેને સ્પર્શ બિંદુ કહેવામાં આવે છે.",
+        bloom="Remember",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # Q3 of Ex 10.1 (Calculation)
+    blocks.append(make_quiz(
+        "C10M_CH10_011",
+        "A tangent PQ at a point P of a circle of radius 5 cm meets a line through the centre O at a point Q so that OQ = 12 cm. Length PQ is:",
+        "5 सेमी त्रिज्या वाले एक वृत्त के बिंदु P पर स्पर्शरेखा PQ केंद्र O से जाने वाली एक रेखा से बिंदु Q पर इस प्रकार मिलती है कि OQ = 12 सेमी है। PQ की लंबाई है:",
+        "5 સેમી ત્રિજ્યાવાળા વર્તુળના બિંદુ P આગળ દોરેલો સ્પર્શક PQ કેન્દ્ર O માંથી પસાર થતી રેખાને બિંદુ Q માં એવી રીતે મળે છે કે જેથી OQ = 12 સેમી થાય. PQ ની લંબાઈ કેટલી થાય?",
+        [
+            "12 cm",
+            "13 cm",
+            "8.5 cm",
+            "√119 cm"
+        ],
+        [
+            "12 सेमी",
+            "13 सेमी",
+            "8.5 सेमी",
+            "√119 सेमी"
+        ],
+        [
+            "12 સેમી",
+            "13 સેમી",
+            "8.5 સેમી",
+            "√119 સેમી"
+        ],
+        3,
+        "By Theorem 10.1, the radius OP is perpendicular to the tangent PQ at P (∠OPQ = 90°).\nIn right-angled triangle OPQ:\nOQ² = OP² + PQ²\n12² = 5² + PQ²\n144 = 25 + PQ²\nPQ² = 144 - 25 = 119\nPQ = √119 cm.",
+        "प्रमेय 10.1 के अनुसार, बिंदु P पर त्रिज्या OP स्पर्शरेखा PQ पर लंब है (∠OPQ = 90°)।\nसमकोण त्रिभुज OPQ में:\nOQ² = OP² + PQ²\n12² = 5² + PQ²\n144 = 25 + PQ²\nPQ² = 144 - 25 = 119\nPQ = √119 सेमी।",
+        "પ્રમેય 10.1 મુજબ, ત્રિજ્યા OP સ્પર્શક PQ ને P આગળ લંબ છે (∠OPQ = 90°).\nકાટકોણ ત્રિકોણ OPQ માં:\nOQ² = OP² + PQ²\n12² = 5² + PQ²\n144 = 25 + PQ²\nPQ² = 144 - 25 = 119\nPQ = √119 સેમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # Q4 of Ex 10.1 (Geometric Construction Concept)
+    blocks.append(make_theory(
+        "C10M_CH10_012",
+        "Exercise 10.1 Question 4: Parallel Tangent and Secant Construction",
+        "प्रश्नावली 10.1 प्रश्न 4: समांतर स्पर्शरेखा और छेदक रेखा की रचना",
+        "સ્વાધ્યાય 10.1 પ્રશ્ન 4: સમાંતર સ્પર્શક અને છેદિકાની રચના",
+        "### Problem Statement:\nDraw a circle and two lines parallel to a given line such that one is a tangent and the other, a secant to the circle.\n\n### Geometric Construction & Analysis:\n1. **Given:** A circle with centre $O$ and a given line $l$.\n2. **To Draw:** A line $m$ parallel to $l$ touching the circle (tangent), and a line $n$ parallel to $l$ intersecting the circle at two points (secant).\n3. **Step 1:** Draw a perpendicular from the centre $O$ to the given line $l$, intersecting the line $l$ at $M$.\n4. **Step 2:** Let this perpendicular ray intersect the circumference of the circle at points $P$ and $Q$ ($PQ$ is a diameter perpendicular to $l$).\n5. **Step 3:** Draw a straight line $m$ perpendicular to diameter $PQ$ passing through point $P$. Since both line $l$ and line $m$ are perpendicular to the same transversal $OM$, line $m \\parallel l$. Line $m$ touches the circle at only point $P$, so it is the required **tangent**.\n6. **Step 4:** Choose any interior point $R$ on radius $OP$ and draw a line $n$ perpendicular to $OM$ through $R$. Line $n \\parallel l$ and cuts the circle at two distinct points $A$ and $B$, making it the required **secant**.",
+        "### प्रश्न:\nएक वृत्त खींचिए और एक दी गई रेखा के समांतर दो ऐसी रेखाएँ खींचिए कि उनमें से एक स्पर्शरेखा हो तथा दूसरी छेदक रेखा हो।\n\n### ज्यामितीय रचना एवं विश्लेषण:\n1. **दिया है:** केंद्र $O$ वाला एक वृत्त और एक दी गई रेखा $l$।\n2. **रचना करनी है:** रेखा $l$ के समांतर एक रेखा $m$ जो वृत्त की स्पर्शरेखा हो, और एक रेखा $n$ जो वृत्त की छेदक रेखा हो।\n3. **चरण 1:** केंद्र $O$ से दी गई रेखा $l$ पर एक लंब खींचिए जो रेखा $l$ को $M$ पर मिले।\n4. **चरण 2:** मान लीजिए यह लंबवत किरण वृत्त की परिधि को $P$ और $Q$ पर काटती है ($PQ$ एक व्यास है जो $l$ पर लंब है)।\n5. **चरण 3:** बिंदु $P$ से होकर जाने वाली और व्यास $PQ$ पर लंबवत एक सीधी रेखा $m$ खींचिए। चूँकि रेखा $l$ और रेखा $m$ दोनों एक ही तिर्यक रेखा पर लंब हैं, अतः रेखा $m \\parallel l$ होगी। यह वृत्त को केवल $P$ पर छूती है, अतः यह अभीष्ट **स्पर्शरेखा** है।\n6. **चरण 4:** त्रिज्या $OP$ पर कोई आंतरिक बिंदु $R$ लीजिए और $R$ से होकर जाने वाली रेखा $n$ खींचिए जो $OM$ पर लंब हो। रेखा $n \\parallel l$ होगी और वृत्त को दो बिंदुओं $A$ और $B$ पर काटेगी, अतः यह अभीष्ट **छेदक रेखा** है।",
+        "### પ્રશ્ન:\nએક વર્તુળ દોરો અને આપેલ રેખાને સમાંતર હોય તેવી બે રેખાઓ દોરો જે પૈકી એક વર્તુળનો સ્પર્શક હોય અને બીજી વર્તુળની છેદિકા હોય.\n\n### ભૌમિતિક રચના અને પૃથક્કરણ:\n1. **પક્ષ:** કેન્દ્ર $O$ વાળું વર્તુળ અને એક આપેલ રેખા $l$.\n2. **કૃત્ય:** રેખા $l$ ને સમાંતર એવી રેખા $m$ (સ્પર્શક) અને રેખા $n$ (છેદિકા) દોરવી.\n3. **પગલું 1:** કેન્દ્ર $O$ માંથી આપેલ રેખા $l$ પર લંબ દોરો જે રેખા $l$ ને $M$ આગળ છેદે.\n4. **પગલું 2:** ધારો કે આ લંબ રેખા વર્તુળના પરિઘને $P$ અને $Q$ માં છેદે છે ($PQ$ એ $l$ ને લંબ વ્યાસ બને છે).\n5. **પગલું 3:** વ્યાસ $PQ$ ને બિંદુ $P$ આગળ લંબ હોય તેવી રેખા $m$ દોરો. રેખા $l$ અને રેખા $m$ બંને એક જ છેદિકાને લંબ હોવાથી $m \\parallel l$ થાય. રેખા $m$ વર્તુળને માત્ર બિંદુ $P$ આગળ સ્પર્શતી હોવાથી તે માંગેલ **સ્પર્શક** છે.\n6. **પગલું 4:** ત્રિજ્યા $OP$ પર કોઈ અંદરનું બિંદુ $R$ લો અને તેમાંથી પસાર થતી $OM$ ને લંબ રેખા $n$ દોરો. રેખા $n \\parallel l$ થશે અને વર્તુળને બે ભિન્ન બિંદુઓ $A$ અને $B$ માં છેદશે, જેથી તે માંગેલ **છેદિકા** બનશે.",
+        btype="theory",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 2: NUMBER OF TANGENTS & THEOREM 10.2 (SOLVED EXAMPLES 1, 2, 3)
+# =========================================================================
+def get_part2_blocks():
+    blocks = []
+
+    # 7. Step 1: The Three Cases of Tangents from a Point
+    blocks.append(make_theory(
+        "C10M_CH10_013",
+        "Tangents from a Point: The Three Fundamental Cases",
+        "किसी बिंदु से स्पर्शरेखाएँ: तीन मूलभूत स्थितियाँ",
+        "બિંદુમાંથી સ્પર્શકો: ત્રણ પાયાની પરિસ્થિતિઓ",
+        "How many tangents can be drawn to a circle from a given point $P$ in space? The answer depends entirely on the location of $P$ relative to the circle:\n\n1. **Case 1: Point $P$ lies INSIDE the circle:**\n   - Any line drawn through $P$ must enter and exit the circle, cutting it at two distinct points.\n   - **Number of tangents = 0** (No tangent can be drawn from an interior point).\n\n2. **Case 2: Point $P$ lies ON the circle:**\n   - The point $P$ is on the circumference itself.\n   - By Theorem 10.1, the unique line perpendicular to the radius at $P$ touches the circle.\n   - **Number of tangents = Exactly 1**.\n\n3. **Case 3: Point $P$ lies OUTSIDE the circle:**\n   - From an external point, two distinct lines of sight can gaze at the circular rim.\n   - **Number of tangents = Exactly 2**.\n\n*Definition:* The length of the segment of the tangent from the external point $P$ to the point of contact with the circle is called the **Length of the Tangent**.",
+        "किसी तल में स्थित एक बिंदु $P$ से वृत्त पर कितनी स्पर्शरेखाएँ खींची जा सकती हैं? इसका उत्तर पूरी तरह से वृत्त के सापेक्ष बिंदु $P$ की स्थिति पर निर्भर करता है:\n\n1. **स्थिति 1: बिंदु $P$ वृत्त के अंदर (अभ्यंतर में) स्थित है:**\n   - $P$ से होकर जाने वाली कोई भी रेखा वृत्त के आर-पार जाएगी और उसे दो बिंदुओं पर काटेगी।\n   - **स्पर्शरेखाओं की संख्या = 0** (वृत्त के अंदर स्थित किसी बिंदु से कोई स्पर्शरेखा नहीं खींची जा सकती)।\n\n2. **स्थिति 2: बिंदु $P$ वृत्त पर (परिधि पर) स्थित है:**\n   - बिंदु $P$ स्वयं वृत्त की परिधि पर है।\n   - प्रमेय 10.1 के अनुसार, $P$ पर त्रिज्या पर लंबवत रेखा ही स्पर्शरेखा होती है।\n   - **स्पर्शरेखाओं की संख्या = ठीक 1**।\n\n3. **स्थिति 3: बिंदु $P$ वृत्त के बाहर स्थित है:**\n   - बाहरी बिंदु से वृत्त की दोनों ओर दो स्पर्शरेखाएँ खींची जा सकती हैं।\n   - **स्पर्शरेखाओं की संख्या = ठीक 2**।\n\n*परिभाषा:* बाहरी बिंदु $P$ से वृत्त के स्पर्श बिंदु तक के स्पर्शरेखा के रेखाखंड की लंबाई को **स्पर्शरेखा की लंबाई (Length of Tangent)** कहा जाता है।",
+        "સમતલના કોઈ બિંદુ $P$ માંથી વર્તુળ પર કેટલા સ્પર્શકો દોરી શકાય? આનો આધાર બિંદુ $P$ ના સ્થાન પર રહેલો છે:\n\n1. **સ્થિતિ 1: બિંદુ $P$ વર્તુળની અંદરના ભાગમાં હોય:**\n   - $P$ માંથી પસાર થતી કોઈપણ રેખા વર્તુળમાંથી આરપાર નીકળી તેને બે બિંદુઓમાં છેદશે.\n   - **સ્પર્શકોની સંખ્યા = 0** (અંદરના બિંદુમાંથી વર્તુળ પર કોઈ સ્પર્શક દોરી શકાતો નથી).\n\n2. **સ્થિતિ 2: બિંદુ $P$ વર્તુળ પર આવેલું હોય:**\n   - બિંદુ $P$ પરિઘ પર જ આવેલું છે.\n   - પ્રમેય 10.1 મુજબ, તે બિંદુએ ત્રિજ્યાને લંબ એક જ રેખા મળે.\n   - **સ્પર્શકોની સંખ્યા = બરાબર 1**.\n\n3. **સ્થિતિ 3: બિંદુ $P$ વર્તુળની બહારના ભાગમાં હોય:**\n   - બહારના બિંદુમાંથી વર્તુળની બંને તરફ બરાબર બે સ્પર્શકો દોરી શકાય છે.\n   - **સ્પર્શકોની સંખ્યા = બરાબર 2**.\n\n*વ્યાખ્યા:* બહારના બિંદુ $P$ થી વર્તુળ સાથેના સ્પર્શ બિંદુ સુધીના રેખાખંડની લંબાઈને **સ્પર્શકની લંબાઈ (Length of Tangent)** કહે છે.",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=3
+    ))
+
+    # 8. Step 2: Theorem 10.2
+    blocks.append(make_theory(
+        "C10M_CH10_014",
+        "Theorem 10.2: Equal Lengths of Tangents from an External Point",
+        "प्रमेय 10.2: बाह्य बिंदु से खींची गई स्पर्शरेखाओं की लंबाइयों की समानता",
+        "પ્રમેય 10.2: બહારના બિંદુમાંથી દોરેલા સ્પર્શકોની લંબાઈ સમાન હોવાનો પ્રમેય",
+        "### Statement:\n**The lengths of tangents drawn from an external point to a circle are equal.**\n\n### Proof:\n- **Given:** A circle with centre $O$, an external point $P$, and two tangents $PQ$ and $PR$ touching the circle at $Q$ and $R$ respectively.\n- **To Prove:** $PQ = PR$.\n- **Construction:** Join $OP$, $OQ$, and $OR$.\n\nIn $\\Delta OQP$ and $\\Delta ORP$:\n1. $\\angle OQP = \\angle ORP = 90^\\circ$ (Theorem 10.1: radius perpendicular to tangent at point of contact).\n2. $OP = OP$ (Common hypotenuse).\n3. $OQ = OR$ (Radii of the same circle).\n\nTherefore, by **RHS Congruence Criterion**:\n$$\\Delta OQP \\cong \\Delta ORP$$\n\nBy CPCT (Corresponding Parts of Congruent Triangles):\n$$PQ = PR$$\n\n### Two Vital Extra Corollaries (Proved in Exam!):\n1. **Center Angle Bisected:** $\\angle OPQ = \\angle OPR$. The line joining the external point to the centre **bisects the angle between the two tangents**.\n2. **Subtended Angle Bisected:** $\\angle POQ = \\angle POR$. $OP$ bisects the angle subtended by the points of contact at the centre.\n3. **Supplementary Angles:** In quadrilateral $OQPR$, $\\angle Q + \\angle R = 90^\\circ + 90^\\circ = 180^\\circ$. Therefore, the remaining two angles are supplementary:\n$$\\angle QPR + \\angle QOR = 180^\\circ$$",
+        "### कथन:\n**बाह्य बिंदु से वृत्त पर खींची गई स्पर्शरेखाओं की लंबाइयाँ बराबर होती हैं।**\n\n### उपपत्ति:\n- **दिया है:** केंद्र $O$ वाला एक वृत्त, एक बाह्य बिंदु $P$, और दो स्पर्शरेखाएँ $PQ$ तथा $PR$ जो वृत्त को क्रमशः $Q$ और $R$ पर स्पर्श करती हैं।\n- **सिद्ध करना है:** $PQ = PR$।\n- **रचना:** $OP$, $OQ$ और $OR$ को मिलाइए।\n\n$\\Delta OQP$ और $\\Delta ORP$ में:\n1. $\\angle OQP = \\angle ORP = 90^\\circ$ (प्रमेय 10.1: स्पर्श बिंदु पर त्रिज्या स्पर्शरेखा पर लंब होती है)।\n2. $OP = OP$ (उभयनिष्ठ कर्ण)।\n3. $OQ = OR$ (एक ही वृत्त की त्रिज्याएँ)।\n\nअतः **RHS सर्वांगसमता नियम (समकोण-कर्ण-भुजा)** द्वारा:\n$$\\Delta OQP \\cong \\Delta ORP$$\n\nCPCT द्वारा (सर्वांगसम त्रिभुजों के संगत भाग बराबर होते हैं):\n$$PQ = PR$$\n\n### दो अत्यंत महत्वपूर्ण उप-प्रमेय (बोर्ड परीक्षा में बार-बार पूछे जाते हैं):\n1. **स्पर्शरेखाओं के बीच के कोण का समद्वિभाजन:** $\\angle OPQ = \\angle OPR$। केंद्र को बाह्य बिंदु से मिलाने वाली रेखा **दोनों स्पर्शरेखाओं के बीच के कोण को समद्विभाजित** करती है।\n2. **केंद्र पर अंतरित कोण का समद्विभाजन:** $\\angle POQ = \\angle POR$। रेखा $OP$ केंद्र पर अंतरित कोण को भी समद्विभाजित करती है।\n3. **संपूरक कोण नियम:** चतुर्भुज $OQPR$ में, $\\angle Q + \\angle R = 90^\\circ + 90^\\circ = 180^\\circ$। अतः शेष दोनों कोण संपूरक होते हैं:\n$$\\angle QPR + \\angle QOR = 180^\\circ$$",
+        "### વિધાન:\n**વર્તુળની બહારના બિંદુમાંથી વર્તુળ પર દોરેલા સ્પર્શકોની લંબાઈ સમાન હોય છે.**\n\n### સાબિતી:\n- **પક્ષ:** કેન્દ્ર $O$ વાળું વર્તુળ, બહારનું બિંદુ $P$, અને $P$ માંથી દોરેલા બે સ્પર્શકો $PQ$ અને $PR$ જે વર્તુળને અનુક્રમે $Q$ અને $R$ માં સ્પર્શે છે.\n- **સાધ્ય:** $PQ = PR$.\n- **રચના:** $OP$, $OQ$ અને $OR$ જોડો.\n\n$\\Delta OQP$ અને $\\Delta ORP$ માં:\n1. $\\angle OQP = \\angle ORP = 90^\\circ$ (પ્રમેય 10.1: સ્પર્શ બિંદુએ ત્રિજ્યા સ્પર્શકને લંબ હોય છે).\n2. $OP = OP$ (સામાન્ય કર્ણ).\n3. $OQ = OR$ (એક જ વર્તુળની ત્રિજ્યાઓ).\n\nઆથી, **કાકબા (RHS) શરત** મુજબ:\n$$\\Delta OQP \\cong \\Delta ORP$$\n\nએકરૂપ ત્રિકોણના અનુરૂપ અંગો (CPCT) સમાન હોવાથી:\n$$PQ = PR$$\n\n### બે અતિ મહત્વના ઉપપ્રમેયો:\n1. **સ્પર્શકો વચ્ચેના ખૂણાનું દ્વિભાજન:** $\\angle OPQ = \\angle OPR$. બહારના બિંદુને કેન્દ્ર સાથે જોડતો રેખાખંડ **સ્પર્શકો વચ્ચેના ખૂણાને દુભાગે છે**.\n2. **કેન્દ્ર આગળ બનતા ખૂણાનું દ્વિભાજન:** $\\angle POQ = \\angle POR$. રેખાખંડ $OP$ કેન્દ્ર આગળ બનતા ખૂણાને પણ દુભાગે છે.\n3. **પૂરકકોણનો નિયમ:** ચતુષ્કોણ $OQPR$ માં, $\\angle Q + \\angle R = 90^\\circ + 90^\\circ = 180^\\circ$ હોવાથી સામસામેના ખૂણા પૂરકકોણ બને છે:\n$$\\angle QPR + \\angle QOR = 180^\\circ$$",
+        btype="theory",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=4
+    ))
+
+    # 9. Solved Example 1 (Concentric Circles Chord Bisected)
+    blocks.append(make_theory(
+        "C10M_CH10_015",
+        "Example 1: Chord of Larger Concentric Circle Touching Smaller Circle",
+        "उदाहरण 1: छोटे वृत्त को स्पर्श करने वाली बड़े संकेंद्रीय वृत्त की जीवा",
+        "ઉદાહરણ 1: નાના વર્તુળને સ્પર્શતી મોટા સમકેન્દ્રી વર્તુળની જીવા",
+        "### Problem Statement:\nProve that in two concentric circles, the chord of the larger circle, which touches the smaller circle, is bisected at the point of contact.\n\n### Proof & Explanation:\n- Let $C_1$ and $C_2$ be two concentric circles with common centre $O$.\n- Let $AB$ be a chord of the larger circle $C_1$ which touches the smaller circle $C_2$ at point $P$.\n- Join $OP$.\n- Since $AB$ is a tangent to the smaller circle $C_2$ at $P$ and $OP$ is the radius of $C_2$, by **Theorem 10.1**:\n  $$OP \\perp AB$$\n- Now consider $AB$ as a chord of the larger circle $C_1$. We know from Class 9 geometry that **the perpendicular drawn from the centre of a circle to a chord bisects the chord**.\n- Since $OP \\perp AB$ and $O$ is the centre of $C_1$:\n  $$AP = PB$$\n\nHence, the chord $AB$ is bisected at the point of contact $P$! *(Proved)*",
+        "### प्रश्न:\nसिद्ध कीजिए कि दो संकेंद्रीय वृत्तों में, बड़े वृत्त की जीवा, जो छोटे वृत्त को स्पर्श करती है, स्पर्श बिंदु पर समद्विभाजित होती है।\n\n### उपपत्ति एवं स्पष्टीकरण:\n- मान लीजिए $C_1$ और $C_2$ दो संकेंद्रीय वृत्त हैं जिनका उभयनिष्ठ केंद्र $O$ है।\n- मान लीजिए $AB$ बड़े वृत्त $C_1$ की एक जीवा है जो छोटे वृत्त $C_2$ को बिंदु $P$ पर स्पर्श करती है।\n- $OP$ को मिलाइए।\n- चूँकि $AB$ छोटे वृत्त $C_2$ के बिंदु $P$ पर स्पर्शरेखा है और $OP$ वृत्त $C_2$ की त्रिज्या है, अतः **प्रमेय 10.1** के अनुसार:\n  $$OP \\perp AB$$\n- अब $AB$ को बड़े वृत्त $C_1$ की जीवा के रूप में देखिए। कक्षा 9 की ज्यामिति से हम जानते हैं कि **वृत्त के केंद्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है**।\n- चूँकि $OP \\perp AB$ है और $O$ वृत्त $C_1$ का केंद्र है:\n  $$AP = PB$$\n\nअतः बड़े वृत्त की जीवा $AB$ स्पर्श बिंदु $P$ पर समद्विभाजित होती है! *(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nસાબિત કરો કે બે સમકેન્દ્રી વર્તુળોમાં, મોટા વર્તુળની જીવા જે નાના વર્તુળને સ્પર્શતી હોય, તે સ્પર્શ બિંદુ આગળ દુભાગાય છે.\n\n### સાબિતી અને સમજૂતી:\n- ધારો કે $C_1$ અને $C_2$ સમાન કેન્દ્ર $O$ ધરાવતા બે સમકેન્દ્રી વર્તુળો છે.\n- ધારો કે મોટા વર્તુળ $C_1$ ની જીવા $AB$ નાના વર્તુળ $C_2$ ને બિંદુ $P$ આગળ સ્પર્શે છે.\n- $OP$ જોડો.\n- $AB$ એ નાના વર્તુળ $C_2$ નો બિંદુ $P$ આગળનો સ્પર્શક હોવાથી અને $OP$ તેની ત્રિજ્યા હોવાથી, **પ્રમેય 10.1** મુજબ:\n  $$OP \\perp AB$$\n- હવે મોટા વર્તુળ $C_1$ માટે $AB$ જીવા છે. ધોરણ 9 ની ભૂમિતિ મુજબ **વર્તુળના કેન્દ્રમાંથી જીવા પર દોરેલો લંબ જીવાને દુભાગે છે**.\n- અહીં $OP \\perp AB$ હોવાથી અને $O$ વર્તુળ $C_1$ નું કેન્દ્ર હોવાથી:\n  $$AP = PB$$\n\nઆમ, જીવા $AB$ સ્પર્શ બિંદુ $P$ આગળ દુભાગાય છે! *(સાબિત થાય છે)*",
+        btype="example",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # 10. Solved Example 2 (Angle PTQ = 2 Angle OPQ)
+    blocks.append(make_theory(
+        "C10M_CH10_016",
+        "Example 2: Prove that ∠PTQ = 2∠OPQ",
+        "उदाहरण 2: सिद्ध कीजिए कि ∠PTQ = 2∠OPQ",
+        "ઉદાહરણ 2: સાબિત કરો કે ∠PTQ = 2∠OPQ",
+        "### Problem Statement:\nTwo tangents $TP$ and $TQ$ are drawn to a circle with centre $O$ from an external point $T$. Prove that $\\angle PTQ = 2\\angle OPQ$.\n\n### Proof:\n- Let $\\angle PTQ = \\theta$.\n- By Theorem 10.2, the lengths of tangents from an external point are equal, so $TP = TQ$.\n- Therefore, $\\Delta TPQ$ is an **isosceles triangle** with $TP = TQ$.\n- In an isosceles triangle, angles opposite to equal sides are equal:\n  $$\\angle TPQ = \\angle TQP$$\n- Since the sum of angles in $\\Delta TPQ$ is $180^\\circ$:\n  $$\\angle TPQ + \\angle TQP + \\angle PTQ = 180^\\circ$$\n  $$2\\angle TPQ + \\theta = 180^\\circ \\implies \\angle TPQ = \\frac{1}{2}(180^\\circ - \\theta) = 90^\\circ - \\frac{1}{2}\\theta$$\n- By Theorem 10.1, radius $OP$ is perpendicular to tangent $TP$, so $\\angle OPT = 90^\\circ$.\n- Looking at the diagram:\n  $$\\angle OPQ = \\angle OPT - \\angle TPQ = 90^\\circ - \\left(90^\\circ - \\frac{1}{2}\\theta\\right) = \\frac{1}{2}\\theta = \\frac{1}{2}\\angle PTQ$$\n- Multiplying both sides by 2:\n  $$\\angle PTQ = 2\\angle OPQ$$\n*(Hence Proved! This is a classic 3-mark CBSE/GSEB Board Question)*",
+        "### प्रश्न:\nकेंद्र $O$ वाले वृत्त पर बाह्य बिंदु $T$ से दो स्पर्शरेखाएँ $TP$ और $TQ$ खींची गई हैं। सिद्ध कीजिए कि $\\angle PTQ = 2\\angle OPQ$।\n\n### उपपत्ति:\n- मान लीजिए $\\angle PTQ = \\theta$ है।\n- प्रमेय 10.2 के अनुसार, बाह्य बिंदु से खींची गई स्पर्शरेखाएँ बराबर होती हैं, अतः $TP = TQ$।\n- इसलिए, $\\Delta TPQ$ एक **समद्विबाहु त्रिभुज** है जिसमें $TP = TQ$।\n- समद्विबाहु त्रिभुज में समान भुजाओं के सम्मुख कोण बराबर होते हैं:\n  $$\\angle TPQ = \\angle TQP$$\n- त्रिभुज $\\Delta TPQ$ के तीनों कोणों का योग $180^\\circ$ होता है:\n  $$\\angle TPQ + \\angle TQP + \\angle PTQ = 180^\\circ$$\n  $$2\\angle TPQ + \\theta = 180^\\circ \\implies \\angle TPQ = \\frac{1}{2}(180^\\circ - \\theta) = 90^\\circ - \\frac{1}{2}\\theta$$\n- प्रमेय 10.1 के अनुसार, त्रिज्या $OP$ स्पर्शरेखा $TP$ पर लंब है, अतः $\\angle OPT = 90^\\circ$।\n- चित्र से:\n  $$\\angle OPQ = \\angle OPT - \\angle TPQ = 90^\\circ - \\left(90^\\circ - \\frac{1}{2}\\theta\\right) = \\frac{1}{2}\\theta = \\frac{1}{2}\\angle PTQ$$\n- दोनों पक्षों को 2 से गुणा करने पर:\n  $$\\angle PTQ = 2\\angle OPQ$$\n*(इति सिद्धम्! यह बोर्ड परीक्षा का एक अत्यंत महत्वपूर्ण 3 अंक का प्रश्न है)*",
+        "### પ્રશ્ન:\nકેન્દ્ર $O$ વાળા વર્તુળ પર બહારના બિંદુ $T$ માંથી બે સ્પર્શકો $TP$ અને $TQ$ દોરેલા છે. સાબિત કરો કે $\\angle PTQ = 2\\angle OPQ$.\n\n### સાબિતી:\n- ધારો કે $\\angle PTQ = \\theta$.\n- પ્રમેય 10.2 મુજબ બહારના બિંદુમાંથી દોરેલા સ્પર્શકો સમાન હોવાથી, $TP = TQ$.\n- આથી, $\\Delta TPQ$ એ **સમદ્વિબાજુ ત્રિકોણ** છે જેમાં $TP = TQ$.\n- સમાન બાજુઓની સામેના ખૂણા સમાન થાય:\n  $$\\angle TPQ = \\angle TQP$$\n- ત્રિકોણ $\\Delta TPQ$ ના ત્રણેય ખૂણાઓનો સરવાળો $180^\\circ$ થાય:\n  $$\\angle TPQ + \\angle TQP + \\angle PTQ = 180^\\circ$$\n  $$2\\angle TPQ + \\theta = 180^\\circ \\implies \\angle TPQ = \\frac{1}{2}(180^\\circ - \\theta) = 90^\\circ - \\frac{1}{2}\\theta$$\n- પ્રમેય 10.1 મુજબ ત્રિજ્યા $OP$ સ્પર્શક $TP$ ને લંબ હોવાથી, $\\angle OPT = 90^\\circ$.\n- આકૃતિ પરથી:\n  $$\\angle OPQ = \\angle OPT - \\angle TPQ = 90^\\circ - \\left(90^\\circ - \\frac{1}{2}\\theta\\right) = \\frac{1}{2}\\theta = \\frac{1}{2}\\angle PTQ$$\n- બંને બાજુ 2 વડે ગુણતાં:\n  $$\\angle PTQ = 2\\angle OPQ$$\n*(સાબિત થાય છે! આ બોર્ડ પરીક્ષાનો અતિ મહત્વનો 3 ગુણનો પ્રશ્ન છે)*",
+        btype="example",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=4
+    ))
+
+    # 11. Solved Example 3 (Chord 8 cm, Radius 5 cm, Find Tangent TP)
+    blocks.append(make_theory(
+        "C10M_CH10_017",
+        "Example 3: Calculating Tangent Length from Chord & Radius",
+        "उदाहरण 3: जीवा और त्रिज्या से स्पर्शरेखा की लंबाई ज्ञात करना",
+        "ઉદાહરણ 3: જીવા અને ત્રિજ્યા પરથી સ્પર્શકની લંબાઈ શોધવી",
+        "### Problem Statement:\n$PQ$ is a chord of length $8\\text{ cm}$ of a circle of radius $5\\text{ cm}$. The tangents at $P$ and $Q$ intersect at a point $T$. Find the length of $TP$.\n\n### Step-by-Step Solution:\n1. **Join $OT$** intersecting chord $PQ$ at point $R$.\n2. Since $\\Delta TPQ$ is isosceles ($TP = TQ$) and $OT$ is the angle bisector of $\\angle PTQ$, $OT$ is the **perpendicular bisector** of chord $PQ$!\n   $$PR = RQ = \\frac{8}{2} = 4\\text{ cm}, \\quad \\angle PRO = 90^\\circ$$\n3. **In right triangle $\\Delta PRO$:**\n   $$OR = \\sqrt{OP^2 - PR^2} = \\sqrt{5^2 - 4^2} = \\sqrt{25 - 16} = \\sqrt{9} = 3\\text{ cm}$$\n4. **Method of Similar Triangles:**\n   In right $\\Delta OPT$ (right-angled at $P$, since $OP \\perp TP$) and right $\\Delta ORP$ (right-angled at $R$):\n   - $\\angle POT = \\angle ROP$ (Common angle)\n   - $\\angle OPT = \\angle ORP = 90^\\circ$\n   - Therefore, by **AA Similarity Criterion**: $\\Delta TP O \\sim \\Delta PRO$\n5. **Taking ratios of corresponding sides:**\n   $$\\frac{TP}{PR} = \\frac{OP}{OR} \\implies \\frac{TP}{4} = \\frac{5}{3}$$\n   $$TP = \\frac{5 \\times 4}{3} = \\frac{20}{3}\\text{ cm} \\approx 6.67\\text{ cm}$$\n\n*Alternative (Pythagoras):* In $\\Delta PRT$, $TP^2 = TR^2 + 4^2 = y^2 + 16$. In $\\Delta OPT$, $TP^2 + 5^2 = (y + 3)^2$. Solving gives $y = \\frac{16}{3}$, hence $TP = \\frac{20}{3}\\text{ cm}$.",
+        "### प्रश्न:\n5 सेमी त्रिज्या के एक वृत्त की 8 सेमी लंबी एक जीवा $PQ$ है। $P$ और $Q$ पर स्पर्शरेखाएँ परस्पर एक बिंदु $T$ पर प्रतिच्छेद करती हैं। $TP$ की लंबाई ज्ञात कीजिए।\n\n### चरणबद्ध हल:\n1. **$OT$ को मिलाइए** जो जीवा $PQ$ को बिंदु $R$ पर काटता है।\n2. चूँकि $\\Delta TPQ$ समद्विबाहु त्रिभुज है ($TP = TQ$) और $OT$, $\\angle PTQ$ का समद्विभाजक है, अतः $OT$ जीवा $PQ$ का **लंब समद्विभाजक** होगा!\n   $$PR = RQ = \\frac{8}{2} = 4\\text{ सेमी}, \\quad \\angle PRO = 90^\\circ$$\n3. **समकोण त्रिभुज $\\Delta PRO$ में:**\n   $$OR = \\sqrt{OP^2 - PR^2} = \\sqrt{5^2 - 4^2} = \\sqrt{25 - 16} = \\sqrt{9} = 3\\text{ सेमी}$$\n4. **समरूप त्रिभुजों की विधि:**\n   समकोण $\\Delta OPT$ ($\angle OPT = 90^\\circ$) और समकोण $\\Delta PRO$ ($\angle PRO = 90^\\circ$) में:\n   - $\\angle POT = \\angle ROP$ (उभयनिष्ठ कोण)\n   - $\\angle OPT = \\angle ORP = 90^\\circ$\n   - अतः **AA समरूपता कसौटी** से: $\\Delta TP O \\sim \\Delta PRO$\n5. **संगत भुजाओं का अनुपात लेने पर:**\n   $$\\frac{TP}{PR} = \\frac{OP}{OR} \\implies \\frac{TP}{4} = \\frac{5}{3}$$\n   $$TP = \\frac{20}{3}\\text{ सेमी} \\approx 6.67\\text{ सेमी}$$\n\n*उत्तर:* $TP = \\frac{20}{3}$ सेमी।",
+        "### પ્રશ્ન:\n5 સેમી ત્રિજ્યાવાળા વર્તુળની 8 સેમી લંબાઈની જીવા $PQ$ છે. $P$ અને $Q$ આગળના સ્પર્શકો બિંદુ $T$ આગળ છેદે છે. $TP$ ની લંબાઈ શોધો.\n\n### સ્ટેપ-બાય-સ્ટેપ ઉકેલ:\n1. **$OT$ જોડો** જે જીવા $PQ$ ને બિંદુ $R$ આગળ છેદે છે.\n2. $\\Delta TPQ$ સમદ્વિબાજુ ત્રિકોણ હોવાથી ($TP = TQ$) અને $OT$ એ $\\angle PTQ$ નો દ્વિભાજક હોવાથી, $OT$ જીવા $PQ$ નો **લંબદ્વિભાજક** બને!\n   $$PR = RQ = \\frac{8}{2} = 4\\text{ સેમી}, \\quad \\angle PRO = 90^\\circ$$\n3. **કાટકોણ ત્રિકોણ $\\Delta PRO$ માં:**\n   $$OR = \\sqrt{OP^2 - PR^2} = \\sqrt{5^2 - 4^2} = \\sqrt{25 - 16} = \\sqrt{9} = 3\\text{ સેમી}$$\n4. **સમરૂપ ત્રિકોણની રીત:**\n   કાટકોણ $\\Delta OPT$ અને કાટકોણ $\\Delta PRO$ માં:\n   - $\\angle POT = \\angle ROP$ (સામાન્ય ખૂણો)\n   - $\\angle OPT = \\angle ORP = 90^\\circ$\n   - આથી, **ખૂખૂ સમરૂપતા** મુજબ: $\\Delta TP O \\sim \\Delta PRO$\n5. **અનુરૂપ બાજુઓનો ગુણોત્તર લેતાં:**\n   $$\\frac{TP}{PR} = \\frac{OP}{OR} \\implies \\frac{TP}{4} = \\frac{5}{3}$$\n   $$TP = \\frac{20}{3}\\text{ સેમી} \\approx 6.67\\text{ સેમી}$$\n\n*જવાબ:* $TP = \\frac{20}{3}$ સેમી.",
+        btype="example",
+        bloom="Apply",
+        diff="Advanced",
+        mins=4
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 3: EXERCISE 10.2 COMPLETE QUESTIONS (Q1 TO Q13)
+# =========================================================================
+def get_part3_blocks():
+    blocks = []
+
+    # Ex 10.2 Q1
+    blocks.append(make_quiz(
+        "C10M_CH10_018",
+        "From a point Q, the length of the tangent to a circle is 24 cm and the distance of Q from the centre is 25 cm. The radius of the circle is:",
+        "एक बिंदु Q से एक वृत्त पर स्पर्शरेखा की लंबाई 24 सेमी तथा Q की केंद्र से दूरी 25 सेमी है। वृत्त की त्रिज्या है:",
+        "બિંદુ Q માંથી દોરેલા વર્તુળના સ્પર્શકની લંબાઈ 24 સેમી અને વર્તુળના કેન્દ્રથી Q નું અંતર 25 સેમી છે. વર્તુળની ત્રિજ્યા કેટલી થાય?",
+        [
+            "7 cm",
+            "12 cm",
+            "15 cm",
+            "24.5 cm"
+        ],
+        [
+            "7 सेमी",
+            "12 सेमी",
+            "15 सेमी",
+            "24.5 सेमी"
+        ],
+        [
+            "7 સેમી",
+            "12 સેમી",
+            "15 સેમી",
+            "24.5 સેમી"
+        ],
+        0,
+        "Let O be the centre and P be the point of contact. By Theorem 10.1, ∠OPQ = 90°.\nBy Pythagoras theorem in right triangle OPQ:\nOQ² = OP² + PQ²\n25² = OP² + 24²\n625 = OP² + 576\nOP² = 625 - 576 = 49\nOP = √49 = 7 cm.",
+        "माना केंद्र O है और स्पर्श बिंदु P है। प्रमेय 10.1 के अनुसार, ∠OPQ = 90°।\nसमकोण त्रिभुज OPQ में पाइथागोरस प्रमेय से:\nOQ² = OP² + PQ²\n25² = OP² + 24²\n625 = OP² + 576\nOP² = 625 - 576 = 49\nOP = √49 = 7 सेमी।",
+        "ધારો કે કેન્દ્ર O અને સ્પર્શ બિંદુ P છે. પ્રમેય 10.1 મુજબ, ∠OPQ = 90°.\nકાટકોણ ત્રિકોણ OPQ માં પાયથાગોરસ પ્રમેય મુજબ:\nOQ² = OP² + PQ²\n25² = OP² + 24²\n625 = OP² + 576\nOP² = 625 - 576 = 49\nOP = √49 = 7 સેમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # Ex 10.2 Q2
+    blocks.append(make_quiz(
+        "C10M_CH10_019",
+        "If TP and TQ are the two tangents to a circle with centre O so that ∠POQ = 110°, then ∠PTQ is equal to:",
+        "यदि TP और TQ केंद्र O वाले किसी वृत्त पर दो स्पर्शरेखाएँ इस प्रकार हैं कि ∠POQ = 110°, तो ∠PTQ बराबर है:",
+        "જો TP અને TQ એ કેન્દ્ર O વાળા વર્તુળના એવા બે સ્પર્શકો હોય કે જેથી ∠POQ = 110° બને, તો ∠PTQ નું મૂલ્ય કેટલું થાય?",
+        [
+            "60°",
+            "70°",
+            "80°",
+            "90°"
+        ],
+        [
+            "60°",
+            "70°",
+            "80°",
+            "90°"
+        ],
+        [
+            "60°",
+            "70°",
+            "80°",
+            "90°"
+        ],
+        1,
+        "In quadrilateral OPTQ:\nOP ⊥ TP and OQ ⊥ TQ (Theorem 10.1), so ∠OPT = 90° and ∠OQT = 90°.\nThe sum of all four interior angles in quadrilateral OPTQ is 360°:\n∠PTQ + ∠POQ + ∠OPT + ∠OQT = 360°\n∠PTQ + 110° + 90° + 90° = 360°\n∠PTQ + 290° = 360°\n∠PTQ = 360° - 290° = 70°.",
+        "चतुर्भुज OPTQ में:\nOP ⊥ TP और OQ ⊥ TQ (प्रमेय 10.1), अतः ∠OPT = 90° और ∠OQT = 90°।\nचतुर्भुज OPTQ के चारों अंतःकोणों का योग 360° होता है:\n∠PTQ + ∠POQ + ∠OPT + ∠OQT = 360°\n∠PTQ + 110° + 90° + 90° = 360°\n∠PTQ + 290° = 360°\n∠PTQ = 360° - 290° = 70°।",
+        "ચતુષ્કોણ OPTQ માં:\nOP ⊥ TP અને OQ ⊥ TQ (પ્રમેય 10.1), જેથી ∠OPT = 90° અને ∠OQT = 90°.\nચતુષ્કોણ OPTQ ના ચારેય ખૂણાઓનો સરવાળો 360° થાય:\n∠PTQ + ∠POQ + ∠OPT + ∠OQT = 360°\n∠PTQ + 110° + 90° + 90° = 360°\n∠PTQ + 290° = 360°\n∠PTQ = 360° - 290° = 70°.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # Ex 10.2 Q3
+    blocks.append(make_quiz(
+        "C10M_CH10_020",
+        "If tangents PA and PB from a point P to a circle with centre O are inclined to each other at angle of 80°, then ∠POA is equal to:",
+        "यदि एक बिंदु P से केंद्र O वाले किसी वृत्त पर PA, PB स्पर्शरेखाएँ परस्पर 80° के कोण पर झुकी हों, तो ∠POA बराबर है:",
+        "જો બિંદુ P માંથી કેન્દ્ર O વાળા વર્તુળ પર દોરેલા સ્પર્શકો PA અને PB વચ્ચેનો ખૂણો 80° હોય, તો ∠POA બરાબર _____ થાય:",
+        [
+            "50°",
+            "60°",
+            "70°",
+            "80°"
+        ],
+        [
+            "50°",
+            "60°",
+            "70°",
+            "80°"
+        ],
+        [
+            "50°",
+            "60°",
+            "70°",
+            "80°"
+        ],
+        0,
+        "In quadrilateral OAPB:\n∠AOB + ∠APB = 180° (supplementary opposite angles).\n∠AOB + 80° = 180° => ∠AOB = 100°.\nSince OP bisects ∠AOB (by symmetry / congruent triangles ΔOPA ≅ ΔOPB):\n∠POA = ∠AOB / 2 = 100° / 2 = 50°.",
+        "चतुर्भुज OAPB में:\n∠AOB + ∠APB = 180° (सम्मुख कोण संपूरक होते हैं)।\n∠AOB + 80° = 180° => ∠AOB = 100°।\nचूँकि रेखा OP कोण ∠AOB को समद्विभाजित करती है (सर्वाંગસમ त्रिभुज ΔOPA ≅ ΔOPB द्वारा):\n∠POA = ∠AOB / 2 = 100° / 2 = 50°।",
+        "ચતુષ્કોણ OAPB માં:\n∠AOB + ∠APB = 180° (સામસામેના ખૂણા પૂરકકોણ છે).\n∠AOB + 80° = 180° => ∠AOB = 100°.\nOP એ ∠AOB નો દ્વિભાજક હોવાથી (એકરૂપ ત્રિકોણ ΔOPA ≅ ΔOPB દ્વારા):\n∠POA = ∠AOB / 2 = 100° / 2 = 50°.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # Ex 10.2 Q4 (Tangents at ends of diameter are parallel)
+    blocks.append(make_theory(
+        "C10M_CH10_021",
+        "Exercise 10.2 Question 4: Tangents at Diameter Ends are Parallel",
+        "प्रश्नावली 10.2 प्रश्न 4: व्यास के सिरों पर खींची गई स्पर्शरेखाएँ समांतर होती हैं",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 4: વ્યાસના છેડે દોરેલા સ્પર્શકો પરસ્પર સમાંતર હોય છે",
+        "### Problem Statement:\nProve that the tangents drawn at the ends of a diameter of a circle are parallel.\n\n### Formal Proof:\n1. **Given:** Let $AB$ be a diameter of a circle with centre $O$. Let lines $PQ$ and $RS$ be the tangents drawn at the endpoints $A$ and $B$ respectively.\n2. **To Prove:** Line $PQ \\parallel$ Line $RS$.\n3. **Proof:**\n   - By Theorem 10.1, the radius through the point of contact is perpendicular to the tangent.\n   - At point $A$: $OA \\perp PQ \\implies \\angle OAP = 90^\\circ$ (or $\\angle BAP = 90^\\circ$).\n   - At point $B$: $OB \\perp RS \\implies \\angle OBS = 90^\\circ$ (or $\\angle ABS = 90^\\circ$).\n   - Consider diameter $AB$ as a **transversal line** intersecting line $PQ$ and line $RS$:\n     $$\\angle BAP = 90^\\circ \\quad \\text{and} \\quad \\angle ABS = 90^\\circ$$\n     $$\\therefore \\angle BAP = \\angle ABS = 90^\\circ$$\n   - These two angles form a pair of **alternate interior angles**!\n   - Since the alternate interior angles are equal, the two lines must be parallel:\n     $$PQ \\parallel RS$$\n*(Hence Proved)*",
+        "### प्रश्न:\nसिद्ध कीजिए कि किसी वृत्त के किसी व्यास के सिरों पर खींची गई स्पर्शरेखाएँ समांतर होती हैं।\n\n### उपपत्ति:\n1. **दिया है:** केंद्र $O$ वाले वृत्त का एक व्यास $AB$ है। व्यास के सिरों $A$ और $B$ पर क्रमशः रेखाएँ $PQ$ और $RS$ स्पर्शरेखाएँ हैं।\n2. **सिद्ध करना है:** रेखा $PQ \\parallel$ रेखा $RS$।\n3. **उपपत्ति:**\n   - प्रमेय 10.1 के अनुसार, स्पर्श बिंदु से जाने वाली त्रिज्या स्पर्शरेखा पर लंब होती है।\n   - बिंदु $A$ पर: $OA \\perp PQ \\implies \\angle BAP = 90^\\circ$।\n   - बिंदु $B$ पर: $OB \\perp RS \\implies \\angle ABS = 90^\\circ$।\n   - व्यास $AB$ को रेखा $PQ$ और रेखा $RS$ को काटने वाली **तिर्यक रेखा** मानिए:\n     $$\\angle BAP = \\angle ABS = 90^\\circ$$\n   - ये दोनों कोण **एकांतर अंतःकोण (alternate interior angles)** का एक युग्म बनाते हैं!\n   - चूँकि एकांतर अंतःकोण बराबर हैं, इसलिए दोनों रेखाएँ परस्पर समांतर होंगी:\n     $$PQ \\parallel RS$$\n*(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nસાબિત કરો કે વર્તુળના વ્યાસના અંત્યબિંદુઓએ દોરેલા સ્પર્શકો પરસ્પર સમાંતર હોય છે.\n\n### સાબિતી:\n1. **પક્ષ:** કેન્દ્ર $O$ વાળા વર્તુળનો વ્યાસ $AB$ છે. વ્યાસના અંત્યબિંદુઓ $A$ અને $B$ આગળ દોરેલા સ્પર્શકો અનુક્રમે $PQ$ અને $RS$ છે.\n2. **સાધ્ય:** રેખા $PQ \\parallel$ રેખા $RS$.\n3. **સાબિતી:**\n   - પ્રમેય 10.1 મુજબ, સ્પર્શ બિંદુમાંથી પસાર થતી ત્રિજ્યા સ્પર્શકને લંબ હોય છે.\n   - બિંદુ $A$ આગળ: $OA \\perp PQ \\implies \\angle BAP = 90^\\circ$.\n   - બિંદુ $B$ આગળ: $OB \\perp RS \\implies \\angle ABS = 90^\\circ$.\n   - વ્યાસ $AB$ ને રેખા $PQ$ અને $RS$ ની **છેદિકા** ગણતાં:\n     $$\\angle BAP = \\angle ABS = 90^\\circ$$\n   - આ બંને ખૂણાઓ સમાન માપના **યુગ્મકોણ (alternate interior angles)** ની જોડ બનાવે છે!\n   - યુગ્મકોણો સમાન હોવાથી બંને રેખાઓ પરસ્પર સમાંતર થાય:\n     $$PQ \\parallel RS$$\n*(સાબિત થાય છે)*",
+        btype="theory",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # Ex 10.2 Q5 (Perpendicular at point of contact passes through centre)
+    blocks.append(make_theory(
+        "C10M_CH10_022",
+        "Exercise 10.2 Question 5: Normal to Tangent Passes Through Centre",
+        "प्रश्नावली 10.2 प्रश्न 5: स्पर्श बिंदु पर लंब केंद्र से होकर जाता है",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 5: સ્પર્શ બિંદુએ દોરેલો લંબ કેન્દ્રમાંથી પસાર થાય છે",
+        "### Problem Statement:\nProve that the perpendicular at the point of contact to the tangent to a circle passes through the centre.\n\n### Proof by Contradiction:\n1. **Given:** A circle with centre $O$ and a tangent $AB$ touching the circle at point $P$.\n2. **To Prove:** The perpendicular to $AB$ at $P$ passes through the centre $O$.\n3. **Proof by Contradiction:**\n   - Suppose the perpendicular to $AB$ at $P$ does **not** pass through centre $O$. Let it pass through some other point $O'$.\n   - Join $O'P$. Since $O'P \\perp AB$, we have:\n     $$\\angle O'PB = 90^\\circ \\quad \\text{--- (Equation 1)}$$\n   - But by **Theorem 10.1**, the radius through the point of contact $OP$ is perpendicular to tangent $AB$:\n     $$\\angle OPB = 90^\\circ \\quad \\text{--- (Equation 2)}$$\n   - Comparing (1) and (2):\n     $$\\angle O'PB = \\angle OPB$$\n   - Looking at the figure, this is only possible if ray $O'P$ and ray $OP$ **coincide** with each other!\n   - Therefore, point $O'$ must coincide with point $O$.\n\nHence, the perpendicular at the point of contact to the tangent **must pass through the centre** of the circle. *(Proved)*",
+        "### प्रश्न:\nसिद्ध कीजिए कि स्पर्श बिंदु से स्पर्शरेखा पर खींचा गया लंब वृत्त के केंद्र से होकर जाता है।\n\n### विरोधाभास द्वारा उपपत्ति (Proof by Contradiction):\n1. **दिया है:** केंद्र $O$ वाला एक वृत्त और स्पर्शरेखा $AB$ जो वृत्त को बिंदु $P$ पर स्पर्श करती है।\n2. **सिद्ध करना है:** $AB$ पर बिंदु $P$ पर खींचा गया लंब केंद्र $O$ से होकर जाता है।\n3. **विरोधाभास द्वारा उपपत्ति:**\n   - मान लीजिए कि बिंदु $P$ पर $AB$ पर लंब केंद्र $O$ से होकर **नहीं** जाता है, बल्कि किसी अन्य बिंदु $O'$ से होकर जाता है।\n   - $O'P$ को मिलाइए। चूँकि $O'P \\perp AB$ है, अतः:\n     $$\\angle O'PB = 90^\\circ \\quad \\text{--- (समीकरण 1)}$$\n   - परंतु **प्रमेय 10.1** के अनुसार, स्पर्श बिंदु $P$ से जाने वाली त्रिज्या $OP$ स्पर्शरेखा $AB$ पर लंब होती है:\n     $$\\angle OPB = 90^\\circ \\quad \\text{--- (समीकरण 2)}$$\n   - समीकरण (1) और (2) की तुलना करने पर:\n     $$\\angle O'PB = \\angle OPB$$\n   - चित्र से स्पष्ट है कि यह केवल तभी संभव है जब किरण $O'P$ और किरण $OP$ परस्पर **संपाती (coincide)** हों!\n   - अतः बिंदु $O'$ और बिंदु $O$ एक ही बिंदु हैं।\n\nअतः स्पर्श बिंदु पर स्पर्शरेखा पर खींचा गया लंब अनिवार्य रूप से केंद्र से होकर जाता है। *(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nસાબિત કરો કે વર્તુળના સ્પર્શકના સ્પર્શ બિંદુએ દોરેલો લંબ વર્તુળના કેન્દ્રમાંથી પસાર થાય છે.\n\n### અનિષ્ટાપત્તિની રીત (Proof by Contradiction):\n1. **પક્ષ:** કેન્દ્ર $O$ વાળું વર્તુળ અને બિંદુ $P$ આગળ સ્પર્શક $AB$.\n2. **સાધ્ય:** સ્પર્શ બિંદુ $P$ આગળ દોરેલો લંબ કેન્દ્ર $O$ માંથી પસાર થાય છે.\n3. **સાબિતી:**\n   - ધારો કે $P$ આગળ દોરેલો લંબ કેન્દ્ર $O$ માંથી પસાર **ન થતાં** અન્ય કોઈ બિંદુ $O'$ માંથી પસાર થાય છે.\n   - $O'P$ જોડો. $O'P \\perp AB$ હોવાથી:\n     $$\\angle O'PB = 90^\\circ \\quad \\text{--- (સમીકરણ 1)}$$\n   - પરંતુ **પ્રમેય 10.1** મુજબ ત્રિજ્યા $OP$ સ્પર્શક $AB$ ને લંબ હોય છે:\n     $$\\angle OPB = 90^\\circ \\quad \\text{--- (સમીકરણ 2)}$$\n   - પરિણામ (1) અને (2) પરથી:\n     $$\\angle O'PB = \\angle OPB$$\n   - આકૃતિ પરથી આ ત્યારે જ શક્ય બને જ્યારે કિરણ $O'P$ અને કિરણ $OP$ પરસ્પર **સંપાતી** હોય!\n   - આથી બિંદુ $O'$ એ કેન્દ્ર $O$ જ છે.\n\nઆમ, સ્પર્શ બિંદુએ દોરેલો લંબ હંમેશા કેન્દ્રમાંથી જ પસાર થાય છે. *(સાબિત થાય છે)*",
+        btype="theory",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # Ex 10.2 Q6
+    blocks.append(make_quiz(
+        "C10M_CH10_023",
+        "The length of a tangent from a point A at distance 5 cm from the centre of the circle is 4 cm. Find the radius of the circle.",
+        "एक बिंदु A से, जो एक वृत्त के केंद्र से 5 सेमी दूरी पर है, वृत्त पर स्पर्शरेखा की लंबाई 4 सेमी है। वृत्त की त्रिज्या ज्ञात कीजिए।",
+        "વર્તુળના કેન્દ્રથી 5 સેમી અંતરે આવેલા બિંદુ A માંથી દોરેલા સ્પર્શકની લંબાઈ 4 સેમી છે. વર્તુળની ત્રિજ્યા શોધો.",
+        [
+            "2 cm",
+            "3 cm",
+            "√41 cm",
+            "4.5 cm"
+        ],
+        [
+            "2 सेमी",
+            "3 सेमी",
+            "√41 सेमी",
+            "4.5 सेमी"
+        ],
+        [
+            "2 સેમી",
+            "3 સેમી",
+            "√41 સેમી",
+            "4.5 સેમી"
+        ],
+        1,
+        "Let O be the centre and P be the point of contact. OA = 5 cm (hypotenuse) and AP = 4 cm (tangent).\nBy Pythagoras theorem in right ΔOPA (∠OPA = 90°):\nOA² = OP² + AP²\n5² = OP² + 4²\n25 = OP² + 16\nOP² = 25 - 16 = 9\nOP = √9 = 3 cm.",
+        "माना वृत्त का केंद्र O है और स्पर्श बिंदु P है। OA = 5 सेमी (कर्ण) और AP = 4 सेमी (स्पर्शरेखा)।\nसमकोण ΔOPA में पाइथागोरस प्रमेय से:\nOA² = OP² + AP²\n5² = OP² + 4²\n25 = OP² + 16\nOP² = 9 => OP = 3 सेमी।",
+        "ધારો કે કેન્દ્ર O અને સ્પર્શ બિંદુ P છે. OA = 5 સેમી (કર્ણ) અને AP = 4 સેમી (સ્પર્શક).\nકાટકોણ ΔOPA માં પાયથાગોરસ પ્રમેય મુજબ:\nOA² = OP² + AP²\n5² = OP² + 4²\n25 = OP² + 16\nOP² = 9 => OP = 3 સેમી.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # Ex 10.2 Q7
+    blocks.append(make_quiz(
+        "C10M_CH10_024",
+        "Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+        "दो संकेंद्रीय वृत्तों की त्रिज्याएँ 5 सेमी तथा 3 सेमी हैं। बड़े वृत्त की उस जीवा की लंबाई ज्ञात कीजिए जो छोटे वृत्त को स्पर्श करती है।",
+        "બે સમકેન્દ્રી વર્તુળોની ત્રિજ્યા 5 સેમી અને 3 સેમી છે. મોટા વર્તુળની નાના વર્તુળને સ્પર્શતી જીવાની લંબાઈ શોધો.",
+        [
+            "4 cm",
+            "6 cm",
+            "8 cm",
+            "10 cm"
+        ],
+        [
+            "4 सेमी",
+            "6 सेमी",
+            "8 सेमी",
+            "10 सेमी"
+        ],
+        [
+            "4 સેમી",
+            "6 સેમી",
+            "8 સેમી",
+            "10 સેમી"
+        ],
+        2,
+        "Let O be the common centre and AB be the chord of larger circle touching smaller circle at P.\nJoin OP and OA. OP = 3 cm (smaller radius), OA = 5 cm (larger radius).\nBy Theorem 10.1, OP ⊥ AB, and perpendicular from centre bisects chord AB (AP = PB).\nIn right triangle OPA:\nOA² = OP² + AP²\n5² = 3² + AP²\n25 = 9 + AP² => AP² = 16 => AP = 4 cm.\nFull chord length AB = 2 × AP = 2 × 4 = 8 cm.",
+        "माना उभयनिष्ठ केंद्र O है और बड़े वृत्त की जीवा AB छोटे वृत्त को P पर स्पर्श करती है।\nOP और OA को मिलाइए। OP = 3 सेमी (छोटी त्रिज्या), OA = 5 सेमी (बड़ी त्रिज्या)।\nप्रमेय 10.1 से OP ⊥ AB, और केंद्र से लंब जीवा को समद्विभाजित करता है (AP = PB)।\nसमकोण ΔOPA में:\n5² = 3² + AP² => AP² = 16 => AP = 4 सेमी।\nपूरी जीवा AB = 2 × AP = 2 × 4 = 8 सेमी।",
+        "ધારો કે સામાન્ય કેન્દ્ર O અને મોટા વર્તુળની જીવા AB નાના વર્તુળને P આગળ સ્પર્શે છે.\nOP અને OA જોડો. OP = 3 સેમી, OA = 5 સેમી.\nપ્રમેય 10.1 મુજબ OP ⊥ AB, અને કેન્દ્રમાંથી લંબ જીવાને દુભાગે છે (AP = PB).\nકાટકોણ ત્રિકોણ OPA માં:\n5² = 3² + AP² => AP² = 16 => AP = 4 સેમી.\nસંપૂર્ણ જીવા AB = 2 × AP = 2 × 4 = 8 સેમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # Ex 10.2 Q8 (AB + CD = AD + BC)
+    blocks.append(make_theory(
+        "C10M_CH10_025",
+        "Exercise 10.2 Question 8: Circumscribing Quadrilateral Property",
+        "प्रश्नावली 10.2 प्रश्न 8: परिगत चतुर्भुज का मूलभूत गुणधर्म",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 8: પરિગત ચતુષ્કોણનો મૂળભૂત ગુણધર્મ",
+        "### Problem Statement:\nA quadrilateral $ABCD$ is drawn to circumscribe a circle. Prove that:\n$$AB + CD = AD + BC$$\n\n### Proof:\n- Let the circle touch sides $AB, BC, CD,$ and $DA$ at points $P, Q, R,$ and $S$ respectively.\n- By **Theorem 10.2**, the lengths of tangents drawn from an external point to a circle are equal:\n  1. From vertex $A$: $AP = AS$  --- (1)\n  2. From vertex $B$: $BP = BQ$  --- (2)\n  3. From vertex $C$: $CR = CQ$  --- (3)\n  4. From vertex $D$: $DR = DS$  --- (4)\n\nAdding equations (1), (2), (3), and (4) together:\n$$(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)$$\n\nNotice that:\n- $AP + BP = AB$\n- $CR + DR = CD$\n- $AS + DS = AD$\n- $BQ + CQ = BC$\n\nSubstituting these line segments:\n$$AB + CD = AD + BC$$\n\n*(Hence Proved! In any quadrilateral circumscribing a circle, the sum of opposite sides is always equal.)*",
+        "### प्रश्न:\nएक वृत्त के परिगत एक चतुर्भुज $ABCD$ खींचा गया है। सिद्ध कीजिए कि:\n$$AB + CD = AD + BC$$\n\n### उपपत्ति:\n- मान लीजिए वृत्त भुजाओं $AB, BC, CD$ और $DA$ को क्रमशः $P, Q, R$ और $S$ पर स्पर्श करता है।\n- **प्रमेय 10.2** के अनुसार, किसी बाह्य बिंदु से वृत्त पर खींची गई स्पर्शरेखाओं की लंबाइयाँ बराबर होती हैं:\n  1. शीर्ष $A$ से: $AP = AS$  --- (समीकरण 1)\n  2. शीर्ष $B$ से: $BP = BQ$  --- (समीकरण 2)\n  3. शीर्ष $C$ से: $CR = CQ$  --- (समीकरण 3)\n  4. शीर्ष $D$ से: $DR = DS$  --- (समीकरण 4)\n\nसमीकरण (1), (2), (3) और (4) को जोड़ने पर:\n$$(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)$$\n\nचित्र से हम जानते हैं कि:\n- $AP + BP = AB$\n- $CR + DR = CD$\n- $AS + DS = AD$\n- $BQ + CQ = BC$\n\nमान रखने पर:\n$$AB + CD = AD + BC$$\n\n*(इति सिद्धम्! किसी वृत्त के परिगत बने चतुर्भुज की सम्मुख भुजाओं का योग सदैव बराबर होता है।)*",
+        "### પ્રશ્ન:\nએક વર્તુળને પરિગત ચતુષ્કોણ $ABCD$ દોરેલો છે. સાબિત કરો કે:\n$$AB + CD = AD + BC$$\n\n### સાબિતી:\n- ધારો કે વર્તુળ બાજુઓ $AB, BC, CD$ અને $DA$ ને અનુક્રમે $P, Q, R$ અને $S$ આગળ સ્પર્શે છે.\n- **પ્રમેય 10.2** મુજબ, બહારના બિંદુમાંથી દોરેલા સ્પર્શકોની લંબાઈ સમાન હોય છે:\n  1. શિરોબિંદુ $A$ માંથી: $AP = AS$  --- (1)\n  2. શિરોબિંદુ $B$ માંથી: $BP = BQ$  --- (2)\n  3. શિરોબિંદુ $C$ માંથી: $CR = CQ$  --- (3)\n  4. શિરોબિંદુ $D$ માંથી: $DR = DS$  --- (4)\n\nસમીકરણ (1), (2), (3) અને (4) નો સરવાળો કરતાં:\n$$(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)$$\n\nઆકૃતિ પરથી:\n- $AP + BP = AB$\n- $CR + DR = CD$\n- $AS + DS = AD$\n- $BQ + CQ = BC$\n\nકિંમતો મૂકતાં:\n$$AB + CD = AD + BC$$\n\n*(સાબિત થાય છે! વર્તુળને પરિગત ચતુષ્કોણમાં સામસામેની બાજુઓનો સરવાળો સમાન હોય છે.)*",
+        btype="theory",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # Ex 10.2 Q9 (Angle AOB = 90 degrees)
+    blocks.append(make_theory(
+        "C10M_CH10_026",
+        "Exercise 10.2 Question 9: Prove that ∠AOB = 90°",
+        "प्रश्नावली 10.2 प्रश्न 9: सिद्ध कीजिए कि ∠AOB = 90°",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 9: સાબિત કરો કે ∠AOB = 90°",
+        "### Problem Statement:\nIn Fig. 10.13, $XY$ and $X'Y'$ are two parallel tangents to a circle with centre $O$ and another tangent $AB$ with point of contact $C$ intersecting $XY$ at $A$ and $X'Y'$ at $B$. Prove that $\\angle AOB = 90^\\circ$.\n\n### Proof:\n- Let $P$ and $Q$ be the points of contact of parallel tangents $XY$ and $X'Y'$. Join $OC$.\n- In $\\Delta OPA$ and $\\Delta OCA$:\n  1. $AP = AC$ (Tangents from external point $A$)\n  2. $OP = OC$ (Radii of same circle)\n  3. $OA = OA$ (Common side)\n  $$\\therefore \\Delta OPA \\cong \\Delta OCA \\quad (\\text{SSS Congruence})$$\n  $$\\implies \\angle POA = \\angle COA \\implies \\angle POC = 2\\angle COA \\quad \\text{--- (1)}$$\n\n- Similarly, in $\\Delta OQB$ and $\\Delta OCB$:\n  $$\\Delta OQB \\cong \\Delta OCB \\implies \\angle QOB = \\angle COB \\implies \\angle QOC = 2\\angle COB \\quad \\text{--- (2)}$$\n\n- Since $PQ$ is a diameter (segment connecting points of contact of two parallel tangents), $POQ$ is a straight line ($180^\\circ$):\n  $$\\angle POC + \\angle QOC = 180^\\circ$$\n  $$2\\angle COA + 2\\angle COB = 180^\\circ$$\n  $$2(\\angle COA + \\angle COB) = 180^\\circ$$\n  $$\\angle COA + \\angle COB = 90^\\circ$$\n  $$\\therefore \\angle AOB = 90^\\circ$$\n*(Hence Proved! A classic board exam theorem.)*",
+        "### प्रश्न:\nआकृति में, $XY$ तथा $X'Y'$ केंद्र $O$ वाले किसी वृत्त पर दो समांतर स्पर्शरेखाएँ हैं और स्पर्श बिंदु $C$ पर स्पर्शरेखा $AB$, $XY$ को $A$ तथा $X'Y'$ को $B$ पर प्रतिच्छेद करती है। सिद्ध कीजिए कि $\\angle AOB = 90^\\circ$।\n\n### उपपत्ति:\n- मान लीजिए $P$ और $Q$ समांतर स्पर्शरेखाओं $XY$ और $X'Y'$ के स्पर्श बिंदु हैं। $OC$ को मिलाइए।\n- $\\Delta OPA$ और $\\Delta OCA$ में:\n  1. $AP = AC$ (बाह्य बिंदु $A$ से स्पर्शरेखाएँ)\n  2. $OP = OC$ (एक ही वृत्त की त्रिज्याएँ)\n  3. $OA = OA$ (उभयनिष्ठ भुजा)\n  $$\\therefore \\Delta OPA \\cong \\Delta OCA \\quad (\\text{SSS सर्वाંગસમતા})$$\n  $$\\implies \\angle POA = \\angle COA \\implies \\angle POC = 2\\angle COA \\quad \\text{--- (1)}$$\n\n- इसी प्रकार, $\\Delta OQB$ और $\\Delta OCB$ में:\n  $$\\Delta OQB \\cong \\Delta OCB \\implies \\angle QOC = 2\\angle COB \\quad \\text{--- (2)}$$\n\n- चूँकि $PQ$ एक व्यास है, अतः $POQ$ एक सरल रेखा है ($180^\\circ$):\n  $$\\angle POC + \\angle QOC = 180^\\circ$$\n  $$2\\angle COA + 2\\angle COB = 180^\\circ$$\n  $$2(\\angle COA + \\angle COB) = 180^\\circ$$\n  $$\\angle COA + \\angle COB = 90^\\circ$$\n  $$\\therefore \\angle AOB = 90^\\circ$$\n*(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nઆકૃતિમાં, કેન્દ્ર $O$ વાળા વર્તુળના બે સમાંતર સ્પર્શકો $XY$ અને $X'Y'$ છે અને સ્પર્શ બિંદુ $C$ આગળ દોરેલો સ્પર્શક $AB$, $XY$ ને $A$ અને $X'Y'$ ને $B$ માં છેદે છે. સાબિત કરો કે $\\angle AOB = 90^\\circ$.\n\n### સાબિતી:\n- ધારો કે $P$ અને $Q$ સમાંતર સ્પર્શકોના સ્પર્શ બિંદુઓ છે. $OC$ જોડો.\n- $\\Delta OPA$ અને $\\Delta OCA$ માં:\n  1. $AP = AC$ (બહારના બિંદુ $A$ માંથી સ્પર્શકો)\n  2. $OP = OC$ (વર્તુળની ત્રિજ્યાઓ)\n  3. $OA = OA$ (સામાન્ય બાજુ)\n  $$\\therefore \\Delta OPA \\cong \\Delta OCA \\quad (\\text{બાબાબા શરત})$$\n  $$\\implies \\angle POA = \\angle COA \\implies \\angle POC = 2\\angle COA \\quad \\text{--- (1)}$$\n\n- તે જ રીતે $\\Delta OQB$ અને $\\Delta OCB$ માં:\n  $$\\Delta OQB \\cong \\Delta OCB \\implies \\angle QOC = 2\\angle COB \\quad \\text{--- (2)}$$\n\n- $PQ$ વ્યાસ હોવાથી $POQ$ સીધી રેખા બને છે ($180^\\circ$):\n  $$\\angle POC + \\angle QOC = 180^\\circ$$\n  $$2\\angle COA + 2\\angle COB = 180^\\circ$$\n  $$2(\\angle COA + \\angle COB) = 180^\\circ$$\n  $$\\angle COA + \\angle COB = 90^\\circ$$\n  $$\\therefore \\angle AOB = 90^\\circ$$\n*(સાબિત થાય છે)*",
+        btype="theory",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    # Ex 10.2 Q10 (Angle between tangents supplementary to central angle)
+    blocks.append(make_theory(
+        "C10M_CH10_027",
+        "Exercise 10.2 Question 10: Tangent Angle Supplementary to Central Angle",
+        "प्रश्नावली 10.2 प्रश्न 10: स्पर्शरेखा कोण और केंद्र पर अंतरित कोण संपूरक होते हैं",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 10: સ્પર્શકો વચ્ચેનો ખૂણો અને કેન્દ્ર આગળનો ખૂણો પૂરક હોય છે",
+        "### Problem Statement:\nProve that the angle between the two tangents drawn from an external point to a circle is supplementary to the angle subtended by the line-segment joining the points of contact at the centre.\n\n### Proof:\n- Let $PA$ and $PB$ be two tangents from external point $P$ to a circle with centre $O$ touching at $A$ and $B$.\n- Join $OA$ and $OB$.\n- By Theorem 10.1, the radius through the point of contact is perpendicular to the tangent:\n  $$OA \\perp PA \\implies \\angle OAP = 90^\\circ$$\n  $$OB \\perp PB \\implies \\angle OBP = 90^\\circ$$\n- In quadrilateral $OAPB$, the sum of all four interior angles is $360^\\circ$:\n  $$\\angle APB + \\angle AOB + \\angle OAP + \\angle OBP = 360^\\circ$$\n  $$\\angle APB + \\angle AOB + 90^\\circ + 90^\\circ = 360^\\circ$$\n  $$\\angle APB + \\angle AOB + 180^\\circ = 360^\\circ$$\n  $$\\angle APB + \\angle AOB = 360^\\circ - 180^\\circ = 180^\\circ$$\n\nSince their sum is $180^\\circ$, the angle between the two tangents ($\angle APB$) and the central angle ($\angle AOB$) are **supplementary**! *(Proved)*",
+        "### प्रश्न:\nसिद्ध कीजिए कि किसी बाह्य बिंदु से किसी वृत्त पर खींची गई दो स्पर्शरेखाओं के बीच का कोण स्पर्श बिंदुओं को मिलाने वाले रेखाखंड द्वारा केंद्र पर अंतरित कोण का संपूरक होता है।\n\n### उपपत्ति:\n- मान लीजिए बाह्य बिंदु $P$ से केंद्र $O$ वाले वृत्त पर दो स्पर्शरेखाएँ $PA$ और $PB$ हैं जो $A$ और $B$ पर स्पर्श करती हैं।\n- $OA$ और $OB$ को मिलाइए।\n- प्रमेय 10.1 के अनुसार, स्पर्श बिंदु पर त्रिज्या स्पर्शरेखा पर लंब होती है:\n  $$OA \\perp PA \\implies \\angle OAP = 90^\\circ$$\n  $$OB \\perp PB \\implies \\angle OBP = 90^\\circ$$\n- चतुर्भुज $OAPB$ के चारों अंतःकोणों का योग $360^\\circ$ होता है:\n  $$\\angle APB + \\angle AOB + \\angle OAP + \\angle OBP = 360^\\circ$$\n  $$\\angle APB + \\angle AOB + 90^\\circ + 90^\\circ = 360^\\circ$$\n  $$\\angle APB + \\angle AOB = 180^\\circ$$\n\nचूँकि दोनों कोणों का योग $180^\\circ$ है, अतः स्पर्शरेखाओं के बीच का कोण ($\angle APB$) तथा केंद्र पर अंतरित कोण ($\angle AOB$) परस्पर **संपूरक** हैं! *(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nસાબિત કરો કે વર્તુળના બહારના બિંદુમાંથી દોરેલા બે સ્પર્શકો વચ્ચેનો ખૂણો અને સ્પર્શ બિંદુઓને જોડતા રેખાખંડે કેન્દ્ર આગળ આંતરેલો ખૂણો એકબીજાના પૂરકકોણ હોય છે.\n\n### સાબિતી:\n- ધારો કે બહારના બિંદુ $P$ માંથી કેન્દ્ર $O$ વાળા વર્તુળ પર દોરેલા સ્પર્શકો $PA$ અને $PB$ છે.\n- $OA$ અને $OB$ જોડો.\n- પ્રમેય 10.1 મુજબ:\n  $$OA \\perp PA \\implies \\angle OAP = 90^\\circ$$\n  $$OB \\perp PB \\implies \\angle OBP = 90^\\circ$$\n- ચતુષ્કોણ $OAPB$ ના ચારેય ખૂણાઓનો સરવાળો $360^\\circ$ થાય:\n  $$\\angle APB + \\angle AOB + \\angle OAP + \\angle OBP = 360^\\circ$$\n  $$\\angle APB + \\angle AOB + 90^\\circ + 90^\\circ = 360^\\circ$$\n  $$\\angle APB + \\angle AOB = 180^\\circ$$\n\nબંને ખૂણાઓનો સરવાળો $180^\\circ$ હોવાથી, તેઓ પરસ્પર **પૂરકકોણ** છે! *(સાબિત થાય છે)*",
+        btype="theory",
+        bloom="Understand",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # Ex 10.2 Q11 (Parallelogram circumscribing circle is rhombus)
+    blocks.append(make_theory(
+        "C10M_CH10_028",
+        "Exercise 10.2 Question 11: Circumscribing Parallelogram is a Rhombus",
+        "प्रश्नावली 10.2 प्रश्न 11: वृत्त के परिगत समांतर चतुर्भुज समचतुर्भुज होता है",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 11: વર્તુળને પરિગત સમાંતરબાજુ ચતુષ્કોણ એ સમબાજુ ચતુષ્કોણ છે",
+        "### Problem Statement:\nProve that the parallelogram circumscribing a circle is a rhombus.\n\n### Proof:\n1. **Given:** Let $ABCD$ be a parallelogram circumscribing a circle.\n   - Since $ABCD$ is a parallelogram, its opposite sides are equal:\n     $$AB = CD \\quad \\text{and} \\quad AD = BC \\quad \\text{--- (1)}$$\n2. **From Question 8 / Property of Circumscribing Quadrilateral:**\n   $$AB + CD = AD + BC \\quad \\text{--- (2)}$$\n3. **Substitute (1) into (2):**\n   $$AB + AB = AD + AD$$\n   $$2AB = 2AD$$\n   $$AB = AD$$\n4. Since adjacent sides are equal ($AB = AD$) and opposite sides are equal ($AB = CD, AD = BC$):\n   $$AB = BC = CD = DA$$\n\nA parallelogram having all four sides equal is, by definition, a **Rhombus**!\n$$\\therefore ABCD \\text{ is a rhombus.} \\quad (\\text{Hence Proved})$$",
+        "### प्रश्न:\nसिद्ध कीजिए कि किसी वृत्त के परिगत समांतर चतुर्भुज समचतुर्भुज होता है।\n\n### उपपत्ति:\n1. **दिया है:** मान लीजिए $ABCD$ एक वृत्त के परिगत बना एक समांतर चतुर्भुज है।\n   - समांतर चतुर्भुज की सम्मुख भुजाएँ बराबर होती हैं:\n     $$AB = CD \\quad \\text{तथा} \\quad AD = BC \\quad \\text{--- (1)}$$\n2. **प्रश्न 8 से (परिगत चतुर्भुज का प्रमेय):**\n   $$AB + CD = AD + BC \\quad \\text{--- (2)}$$\n3. **समीकरण (1) का मान (2) में रखने पर:**\n   $$AB + AB = AD + AD$$\n   $$2AB = 2AD$$\n   $$AB = AD$$\n4. चूँकि संलग्न भुजाएँ बराबर हैं ($AB = AD$) और सम्मुख भुजाएँ बराबर हैं:\n   $$AB = BC = CD = DA$$\n\nजिस समांतर चतुर्भुज की चारों भुजाएँ बराबर हों, वह **समचतुर्भुज (Rhombus)** कहलाता है!\n$$\\therefore ABCD \\text{ एक समचतुर्भुज है।} \\quad (\\text{इति सिद्धम्})$$",
+        "### પ્રશ્ન:\nસાબિત કરો કે વર્તુળને પરિગત સમાંતરબાજુ ચતુષ્કોણ સમબાજુ ચતુષ્કોણ છે.\n\n### સાબિતી:\n1. **પક્ષ:** વર્તુળને પરિગત સમાંતરબાજુ ચતુષ્કોણ $ABCD$ છે.\n   - સમાંતરબાજુ ચતુષ્કોણની સામસામેની બાજુઓ સમાન હોય:\n     $$AB = CD \\quad \\text{અને} \\quad AD = BC \\quad \\text{--- (1)}$$\n2. **પ્રશ્ન 8 ના ગુણધર્મ મુજબ:**\n   $$AB + CD = AD + BC \\quad \\text{--- (2)}$$\n3. **પરિણામ (1) ની કિંમત (2) માં મૂકતાં:**\n   $$AB + AB = AD + AD$$\n   $$2AB = 2AD$$\n   $$AB = AD$$\n4. પાસપાસેની બાજુઓ સમાન થવાથી અને સામસામેની બાજુઓ સમાન હોવાથી:\n   $$AB = BC = CD = DA$$\n\nજે સમાંતરબાજુ ચતુષ્કોણની ચારેય બાજુઓ સમાન હોય તેને **સમબાજુ ચતુષ્કોણ (Rhombus)** કહે છે!\n$$\\therefore ABCD \\text{ સમબાજુ ચતુષ્કોણ છે.} \\quad (\\text{સાબિત થાય છે})$$",
+        btype="theory",
+        bloom="Analyze",
+        diff="Intermediate",
+        mins=3
+    ))
+
+    # Ex 10.2 Q12 (Triangle circumscribing circle radius 4, segments 8 and 6, find AB and AC)
+    blocks.append(make_theory(
+        "C10M_CH10_029",
+        "Exercise 10.2 Question 12: Finding Sides AB and AC of Circumscribed Triangle",
+        "प्रश्नावली 10.2 प्रश्न 12: परिगत त्रिभुज की भुजाएँ AB और AC ज्ञात करना",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 12: પરિગત ત્રિકોણની બાજુઓ AB અને AC ના માપ શોધવા",
+        "### Problem Statement:\nA triangle $ABC$ is drawn to circumscribe a circle of radius $4\\text{ cm}$ such that the segments $BD$ and $DC$ into which $BC$ is divided by the point of contact $D$ are of lengths $8\\text{ cm}$ and $6\\text{ cm}$ respectively. Find the sides $AB$ and $AC$.\n\n### Complete Step-by-Step Solution:\n1. **Tangents from External Points:**\n   - Let the incircle touch $BC$ at $D$, $AC$ at $E$, and $AB$ at $F$.\n   - From $C$: $CF = CD = 6\\text{ cm}$.\n   - From $B$: $BE = BD = 8\\text{ cm}$.\n   - From $A$: Let $AF = AE = x\\text{ cm}$.\n\n2. **Sides of $\\Delta ABC$:**\n   - $a = BC = 6 + 8 = 14\\text{ cm}$\n   - $b = AC = x + 6\\text{ cm}$\n   - $c = AB = x + 8\\text{ cm}$\n\n3. **Semi-perimeter ($s$):**\n   $$s = \\frac{a + b + c}{2} = \\frac{14 + (x + 6) + (x + 8)}{2} = \\frac{2x + 28}{2} = x + 14\\text{ cm}$$\n\n4. **Area by Heron's Formula:**\n   - $s - a = (x + 14) - 14 = x$\n   - $s - b = (x + 14) - (x + 6) = 8$\n   - $s - c = (x + 14) - (x + 8) = 6$\n   $$\\text{Area}(\\Delta ABC) = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{(x + 14)(x)(8)(6)} = \\sqrt{48x(x + 14)}$$\n\n5. **Area by Inradius Decomposition:**\n   Join centre $O$ to vertices $A, B, C$. The total area is the sum of three triangles with height $r = 4\\text{ cm}$:\n   $$\\text{Area}(\\Delta ABC) = \\text{Area}(\\Delta OBC) + \\text{Area}(\\Delta OCA) + \\text{Area}(\\Delta OAB)$$\n   $$= \\frac{1}{2}(BC)(r) + \\frac{1}{2}(AC)(r) + \\frac{1}{2}(AB)(r) = r \\cdot \\frac{a + b + c}{2} = r \\cdot s = 4(x + 14)$$\n\n6. **Equating both Area formulas:**\n   $$\\sqrt{48x(x + 14)} = 4(x + 14)$$\n   Squaring both sides:\n   $$48x(x + 14) = 16(x + 14)^2$$\n   Dividing both sides by $16(x + 14)$ (since $x + 14 \\neq 0$):\n   $$3x = x + 14 \\implies 2x = 14 \\implies x = 7\\text{ cm}$$\n\n7. **Final Dimensions:**\n   - Side $AB = x + 8 = 7 + 8 = 15\\text{ cm}$\n   - Side $AC = x + 6 = 7 + 6 = 13\\text{ cm}$",
+        "### प्रश्न:\n4 सेमी त्रिज्या वाले एक वृत्त के परिगत एक त्रिभुज $ABC$ इस प्रकार खींचा गया है कि स्पर्श बिंदु $D$ द्वारा $BC$ को विभाजित करने वाले रेखाखंड $BD$ और $DC$ की लंबाइयाँ क्रमशः 8 सेमी और 6 सेमी हैं। भुजाएँ $AB$ और $AC$ ज्ञात कीजिए।\n\n### चरणबद्ध संपूर्ण हल:\n1. **बाह्य बिंदुओं से स्पर्शरेखाएँ:**\n   - मान लीजिए वृत्त $BC$ को $D$ पर, $AC$ को $E$ पर और $AB$ को $F$ पर स्पर्श करता है।\n   - $C$ से: $CE = CD = 6$ सेमी।\n   - $B$ से: $BF = BD = 8$ सेमी।\n   - $A$ से: माना $AF = AE = x$ सेमी।\n\n2. **त्रिभुज $ABC$ की भुजाएँ:**\n   - $a = BC = 6 + 8 = 14$ सेमी\n   - $b = AC = x + 6$ सेमी\n   - $c = AB = x + 8$ सेमी\n\n3. **अर्ध-परिमाप ($s$):**\n   $$s = \\frac{14 + (x + 6) + (x + 8)}{2} = x + 14\\text{ सेमी}$$\n\n4. **हीरोन के सूत्र द्वारा क्षेत्रफल:**\n   $$\\Delta = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{(x+14)(x)(8)(6)} = \\sqrt{48x(x + 14)}$$\n\n5. **अंतःत्रिज्या विधि द्वारा क्षेत्रफल:**\n   $$\\text{क्षेत्रफल} = r \\times s = 4(x + 14)$$\n\n6. **दोनों क्षेत्रफलों की तुलना करने पर:**\n   $$\\sqrt{48x(x + 14)} = 4(x + 14)$$\n   दोनों ओर वर्ग करने पर:\n   $$48x(x + 14) = 16(x + 14)^2$$\n   $$3x = x + 14 \\implies 2x = 14 \\implies x = 7\\text{ सेमी}$$\n\n7. **अंतिम भुजाएँ:**\n   - भुजा $AB = x + 8 = 7 + 8 = 15$ सेमी\n   - भुजा $AC = x + 6 = 7 + 6 = 13$ सेमी",
+        "### પ્રશ્ન:\n4 સેમી ત્રિજ્યાવાળા વર્તુળને પરિગત ત્રિકોણ $ABC$ એવો દોરેલો છે કે જેથી સ્પર્શ બિંદુ $D$ દ્વારા વિભાજિત રેખાખંડ $BD$ અને $DC$ ની લંબાઈ અનુક્રમે 8 સેમી અને 6 સેમી હોય. બાજુઓ $AB$ અને $AC$ શોધો.\n\n### સ્ટેપ-બાય-સ્ટેપ ગણતરી:\n1. **બહારના બિંદુમાંથી સ્પર્શકો:**\n   - સ્પર્શ બિંદુઓ $D, E, F$ છે.\n   - $CD = CE = 6$ સેમી, $BD = BF = 8$ સેમી, અને ધારો કે $AF = AE = x$ સેમી.\n\n2. **ત્રિકોણ $ABC$ ની બાજુઓ:**\n   - $a = BC = 14$ સેમી, $b = AC = x + 6$ સેમી, $c = AB = x + 8$ સેમી.\n\n3. **અર્ધપરિમિતિ ($s$):**\n   $$s = \\frac{14 + (x + 6) + (x + 8)}{2} = x + 14\\text{ સેમી}$$\n\n4. **હેરોનના સૂત્રથી ક્ષેત્રફળ:**\n   $$\\text{ક્ષેત્રફળ} = \\sqrt{(x + 14)(x)(8)(6)} = \\sqrt{48x(x + 14)}$$\n\n5. **અંતઃત્રિજ્યાની રીતે ક્ષેત્રફળ:**\n   $$\\text{ક્ષેત્રફળ} = r \\times s = 4(x + 14)$$\n\n6. **સરખામણી કરતાં:**\n   $$\\sqrt{48x(x + 14)} = 4(x + 14)$$\n   બંને બાજુ વર્ગ કરતાં: $48x(x + 14) = 16(x + 14)^2$\n   $$3x = x + 14 \\implies 2x = 14 \\implies x = 7\\text{ સેમી}$$\n\n7. **અંતિમ માપ:**\n   - $AB = 7 + 8 = 15$ સેમી\n   - $AC = 7 + 6 = 13$ સેમી",
+        btype="example",
+        bloom="Apply",
+        diff="Advanced",
+        mins=5
+    ))
+
+    # Ex 10.2 Q13 (Opposite sides subtend supplementary angles at centre)
+    blocks.append(make_theory(
+        "C10M_CH10_030",
+        "Exercise 10.2 Question 13: Opposite Sides Subtend Supplementary Angles at Centre",
+        "प्रश्नावली 10.2 प्रश्न 13: परिगत चतुर्भुज की सम्मुख भुजाएँ केंद्र पर संपूरक कोण अंतरित करती हैं",
+        "સ્વાધ્યાય 10.2 પ્રશ્ન 13: પરિગત ચતુષ્કોણની સામસામેની બાજુઓ કેન્દ્ર આગળ પૂરકકોણ બનાવે છે",
+        "### Problem Statement:\nProve that opposite sides of a quadrilateral circumscribing a circle subtend supplementary angles at the centre of the circle.\n\n### Proof:\n1. **Given:** Let quadrilateral $ABCD$ circumscribe a circle with centre $O$, touching at points $P, Q, R, S$ on sides $AB, BC, CD, DA$.\n2. **To Prove:**\n   - $\\angle AOB + \\angle COD = 180^\\circ$\n   - $\\angle BOC + \\angle AOD = 180^\\circ$\n3. **Construction:** Join the centre $O$ to all four vertices ($OA, OB, OC, OD$) and to all four points of contact ($OP, OQ, OR, OS$).\n4. This divides the complete central angle of $360^\\circ$ into 8 small angles around $O$, labeled $\\angle 1, \\angle 2, \\angle 3, \\angle 4, \\angle 5, \\angle 6, \\angle 7, \\angle 8$.\n5. In $\\Delta OAP$ and $\\Delta OAS$:\n   - $AP = AS$ (Theorem 10.2)\n   - $OP = OS$ (Radii)\n   - $OA = OA$ (Common)\n   $$\\Delta OAP \\cong \\Delta OAS \\implies \\angle 1 = \\angle 8$$\n6. Similarly:\n   $$\\angle 2 = \\angle 3, \\quad \\angle 4 = \\angle 5, \\quad \\angle 6 = \\angle 7$$\n7. Sum of all angles around point $O$ is $360^\\circ$:\n   $$(\\angle 1 + \\angle 8) + (\\angle 2 + \\angle 3) + (\\angle 4 + \\angle 5) + (\\angle 6 + \\angle 7) = 360^\\circ$$\n   $$2\\angle 1 + 2\\angle 2 + 2\\angle 5 + 2\\angle 6 = 360^\\circ$$\n   $$2[(\\angle 1 + \\angle 2) + (\\angle 5 + \\angle 6)] = 360^\\circ$$\n   $$\\angle AOB + \\angle COD = 180^\\circ$$\n\nSimilarly, $\\angle BOC + \\angle AOD = 180^\\circ$. *(Hence Proved)*",
+        "### प्रश्न:\nसिद्ध कीजिए कि वृत्त के परिगत बनी चतुर्भुज की सम्मुख भुजाएँ केंद्र पर संपूरक कोण अंतरित करती हैं।\n\n### उपपत्ति:\n1. **दिया है:** केंद्र $O$ वाले वृत्त के परिगत एक चतुर्भुज $ABCD$ है जो भुजाओं $AB, BC, CD, DA$ को क्रमशः $P, Q, R, S$ पर स्पर्श करता है।\n2. **सिद्ध करना है:** $\\angle AOB + \\angle COD = 180^\\circ$ तथा $\\angle BOC + \\angle AOD = 180^\\circ$।\n3. **रचना:** केंद्र $O$ को शीर्षों $A, B, C, D$ तथा स्पर्श बिंदुओं $P, Q, R, S$ से मिलाइए।\n4. इससे केंद्र $O$ के चारों ओर 8 कोण $\\angle 1, \\angle 2, \\dots, \\angle 8$ बनते हैं।\n5. $\\Delta OAP \\cong \\Delta OAS$ से: $\\angle 1 = \\angle 8$।\n6. इसी प्रकार: $\\angle 2 = \\angle 3, \\quad \\angle 4 = \\angle 5, \\quad \\angle 6 = \\angle 7$।\n7. केंद्र पर बने सभी कोणों का योग $360^\\circ$ होता है:\n   $$2(\\angle 1 + \\angle 2 + \\angle 5 + \\angle 6) = 360^\\circ$$\n   $$(\\angle 1 + \\angle 2) + (\\angle 5 + \\angle 6) = 180^\\circ$$\n   $$\\angle AOB + \\angle COD = 180^\\circ$$\n\nइसी प्रकार $\\angle BOC + \\angle AOD = 180^\\circ$ भी सिद्ध होता है। *(इति सिद्धम्)*",
+        "### પ્રશ્ન:\nસાબિત કરો કે વર્તુળને પરિગત ચતુષ્કોણની સામસામેની બાજુઓ વર્તુળના કેન્દ્ર આગળ પૂરકકોણ બનાવે છે.\n\n### સાબિતી:\n1. **પક્ષ:** કેન્દ્ર $O$ વાળા વર્તુળને પરિગત ચતુષ્કોણ $ABCD$ છે, જે બાજુઓ પર $P, Q, R, S$ આગળ સ્પર્શે છે.\n2. **સાધ્ય:** $\\angle AOB + \\angle COD = 180^\\circ$ અને $\\angle BOC + \\angle AOD = 180^\\circ$.\n3. **રચના:** કેન્દ્ર $O$ ને શિરોબિંદુઓ $A, B, C, D$ તથા સ્પર્શ બિંદુઓ $P, Q, R, S$ સાથે જોડો.\n4. આથી કેન્દ્ર આગળ 8 ખૂણાઓ $\\angle 1, \\angle 2, \\dots, \\angle 8$ બને છે.\n5. એકરૂપ ત્રિકોણો પરથી: $\\angle 1 = \\angle 8, \\angle 2 = \\angle 3, \\angle 4 = \\angle 5, \\angle 6 = \\angle 7$.\n6. કેન્દ્ર આગળના તમામ ખૂણાઓનો સરવાળો $360^\\circ$ થાય:\n   $$2(\\angle 1 + \\angle 2 + \\angle 5 + \\angle 6) = 360^\\circ$$\n   $$(\\angle 1 + \\angle 2) + (\\angle 5 + \\angle 6) = 180^\\circ$$\n   $$\\angle AOB + \\angle COD = 180^\\circ$$\n\nતે જ રીતે $\\angle BOC + \\angle AOD = 180^\\circ$ સાબિત થાય છે. *(સાબિત થાય છે)*",
+        btype="theory",
+        bloom="Analyze",
+        diff="Advanced",
+        mins=4
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 4: HIGH-YIELD BOARD EXAM QUESTIONS & PYTHAGOREAN CHALLENGES
+# =========================================================================
+def get_part4_blocks():
+    blocks = []
+
+    # High yield MCQ 1: Angle between tangents 60 degrees, find length of tangent in terms of radius
+    blocks.append(make_quiz(
+        "C10M_CH10_031",
+        "If two tangents inclined at an angle of 60° are drawn to a circle of radius 3 cm, then the length of each tangent is equal to:",
+        "यदि 3 सेमी त्रिज्या वाले एक वृत्त पर 60° के कोण पर झुकी दो स्पर्शरेखाएँ खींची जाती हैं, तो प्रत्येक स्पर्शरेखा की लंबाई किसके बराबर होगी?",
+        "જો 3 સેમી ત્રિજ્યાવાળા વર્તુળ પર પરસ્પર 60° ના ખૂણે ઝૂકેલા બે સ્પર્શકો દોરવામાં આવે, તો દરેક સ્પર્શકની લંબાઈ કેટલી થશે?",
+        [
+            "3 cm",
+            "6 cm",
+            "3√3 cm",
+            "3/√3 cm"
+        ],
+        [
+            "3 सेमी",
+            "6 सेमी",
+            "3√3 सेमी",
+            "3/√3 सेमी"
+        ],
+        [
+            "3 સેમી",
+            "6 સેમી",
+            "3√3 સેમી",
+            "3/√3 સેમી"
+        ],
+        2,
+        "Let P be external point and PA, PB be tangents with ∠APB = 60°.\nOP bisects ∠APB, so ∠OPA = 30°.\nIn right triangle OPA (∠OAP = 90°):\ntan(∠OPA) = OA / AP\ntan(30°) = 3 / AP\n1/√3 = 3 / AP\nAP = 3√3 cm.",
+        "माना बाह्य बिंदु P है और PA, PB स्पर्शरेखाएँ हैं जहाँ ∠APB = 60° है।\nOP कोण ∠APB को समद्विभाजित करता है, अतः ∠OPA = 30°।\nसमकोण त्रिभुज OPA (∠OAP = 90°) में:\ntan(∠OPA) = OA / AP\ntan(30°) = 3 / AP\n1/√3 = 3 / AP\nAP = 3√3 सेमी।",
+        "ધારો કે બહારનું બિંદુ P અને સ્પર્શકો PA, PB વચ્ચેનો ખૂણો ∠APB = 60° છે.\nOP એ ∠APB નો દ્વિભાજક હોવાથી ∠OPA = 30°.\nકાટકોણ ત્રિકોણ OPA (∠OAP = 90°) માં:\ntan(∠OPA) = OA / AP\ntan(30°) = 3 / AP\n1/√3 = 3 / AP\nAP = 3√3 સેમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    # High yield MCQ 2: Distance between two parallel tangents
+    blocks.append(make_quiz(
+        "C10M_CH10_032",
+        "The distance between two parallel tangents of a circle of radius 4.5 cm is:",
+        "4.5 सेमी त्रिज्या वाले वृत्त की दो समांतर स्पर्शरेखाओं के बीच की दूरी है:",
+        "4.5 સેમી ત્રિજ્યાવાળા વર્તુળના બે સમાંતર સ્પર્શકો વચ્ચેનું અંતર કેટલું થાય?",
+        [
+            "4.5 cm",
+            "9 cm",
+            "13.5 cm",
+            "18 cm"
+        ],
+        [
+            "4.5 सेमी",
+            "9 सेमी",
+            "13.5 सेमी",
+            "18 सेमी"
+        ],
+        [
+            "4.5 સેમી",
+            "9 સેમી",
+            "13.5 સેમી",
+            "18 સેમી"
+        ],
+        1,
+        "Two parallel tangents can only be drawn at the opposite endpoints of a diameter of the circle. Therefore, the distance between them is the length of the diameter = 2 × radius = 2 × 4.5 = 9 cm.",
+        "दो समांतर स्पर्शरेखाएँ केवल वृत्त के किसी व्यास के दोनों विपरीत सिरों पर ही खींची जा सकती हैं। अतः उनके बीच की दूरी व्यास की लंबाई के बराबर होती है = 2 × त्रिज्या = 2 × 4.5 = 9 सेमी।",
+        "બે સમાંતર સ્પર્શકો માત્ર વર્તુળના વ્યાસના સામસામેના છેડે જ દોરી શકાય છે. તેથી, તેમની વચ્ચેનું અંતર વ્યાસની લંબાઈ બરાબર થાય = 2 × ત્રિજ્યા = 2 × 4.5 = 9 સેમી.",
+        bloom="Understand",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # High yield MCQ 3: Chord subtending 90 degrees at center
+    blocks.append(make_quiz(
+        "C10M_CH10_033",
+        "If a chord AB subtends an angle of 60° at the centre of a circle, then the angle between the tangents at A and B is:",
+        "यदि एक जीवा AB वृत्त के केंद्र पर 60° का कोण अंतरित करती है, तो A और B पर स्पर्शरेखाओं के बीच का कोण है:",
+        "જો જીવા AB વર્તુળના કેન્દ્ર આગળ 60° નો ખૂણો આંતરે, તો A અને B આગળના સ્પર્શકો વચ્ચેનો ખૂણો કેટલો થાય?",
+        [
+            "60°",
+            "90°",
+            "120°",
+            "150°"
+        ],
+        [
+            "60°",
+            "90°",
+            "120°",
+            "150°"
+        ],
+        [
+            "60°",
+            "90°",
+            "120°",
+            "150°"
+        ],
+        2,
+        "By Theorem 10.2 corollary, the angle between two tangents (∠APB) and the angle subtended by the chord at the centre (∠AOB) are supplementary (their sum is 180°).\n∠APB = 180° - ∠AOB = 180° - 60° = 120°.",
+        "प्रमेय 10.2 के नियम के अनुसार, दोनों स्पर्शरेखाओं के बीच का कोण (∠APB) तथा जीवा द्वारा केंद्र पर अंतरित कोण (∠AOB) संपूरक होते हैं (दोनों का योग 180° होता है)।\n∠APB = 180° - ∠AOB = 180° - 60° = 120°।",
+        "પ્રમેય 10.2 ના ઉપપ્રમેય મુજબ, બે સ્પર્શકો વચ્ચેનો ખૂણો (∠APB) અને જીવા દ્વારા કેન્દ્ર આગળ આંતરેલો ખૂણો (∠AOB) પૂરકકોણ હોય છે (સરવાળો 180°).\n∠APB = 180° - ∠AOB = 180° - 60° = 120°.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # High yield MCQ 4: Circumscribed Quadrilateral perimeter
+    blocks.append(make_quiz(
+        "C10M_CH10_034",
+        "In a quadrilateral ABCD circumscribing a circle, AB = 6 cm, BC = 7 cm, and CD = 4 cm. The length of side AD is:",
+        "एक वृत्त के परिगत एक चतुर्भुज ABCD में, AB = 6 सेमी, BC = 7 सेमी, और CD = 4 सेमी है। भुजा AD की लंबाई है:",
+        "વર્તુળને પરિગત ચતુષ્કોણ ABCD માં AB = 6 સેમી, BC = 7 સેમી અને CD = 4 સેમી હોય, તો બાજુ AD ની લંબાઈ કેટલી થાય?",
+        [
+            "3 cm",
+            "5 cm",
+            "6 cm",
+            "8 cm"
+        ],
+        [
+            "3 सेमी",
+            "5 सेमी",
+            "6 सेमी",
+            "8 सेमी"
+        ],
+        [
+            "3 સેમી",
+            "5 સેમી",
+            "6 સેમી",
+            "8 સેમી"
+        ],
+        0,
+        "For any quadrilateral circumscribing a circle, AB + CD = AD + BC.\n6 + 4 = AD + 7\n10 = AD + 7\nAD = 10 - 7 = 3 cm.",
+        "किसी वृत्त के परिगत चतुर्भुज के लिए, AB + CD = AD + BC होता है।\n6 + 4 = AD + 7\n10 = AD + 7\nAD = 10 - 7 = 3 सेमी।",
+        "વર્તુળને પરિગત કોઈપણ ચતુષ્કોણ માટે, AB + CD = AD + BC થાય.\n6 + 4 = AD + 7\n10 = AD + 7\nAD = 10 - 7 = 3 સેમી.",
+        bloom="Apply",
+        diff="Beginner",
+        mins=1
+    ))
+
+    # High yield MCQ 5: Incircle of right triangle (r = (a + b - c) / 2)
+    blocks.append(make_quiz(
+        "C10M_CH10_035",
+        "A right-angled triangle ABC with right angle at B has sides AB = 6 cm and BC = 8 cm. The radius of its incircle is:",
+        "एक समकोण त्रिभुज ABC में जिसका कोण B समकोण है, भुजाएँ AB = 6 सेमी तथा BC = 8 सेमी हैं। इसके अंतःवृत्त की त्रिज्या है:",
+        "કાટકોણ ત્રિકોણ ABC માં ખૂણો B કાટખૂણો છે અને બાજુઓ AB = 6 સેમી તથા BC = 8 સેમી છે. તેના અંતઃવૃત્તની ત્રિજ્યા કેટલી થાય?",
+        [
+            "1 cm",
+            "2 cm",
+            "3 cm",
+            "4 cm"
+        ],
+        [
+            "1 सेमी",
+            "2 सेमी",
+            "3 सेमी",
+            "4 सेमी"
+        ],
+        [
+            "1 સેમી",
+            "2 સેમી",
+            "3 સેમી",
+            "4 સેમી"
+        ],
+        1,
+        "In right triangle ABC, hypotenuse AC = √(6² + 8²) = √(36 + 64) = √100 = 10 cm.\nFor any right-angled triangle with legs a, b and hypotenuse c, the inradius formula is:\nr = (a + b - c) / 2 = (6 + 8 - 10) / 2 = 4 / 2 = 2 cm.",
+        "समकोण त्रिभुज ABC में, कर्ण AC = √(6² + 8²) = √100 = 10 सेमी।\nसमकोण त्रिभुज के अंतःवृत्त की त्रिज्या का सूत्र है:\nr = (लंब + आधार - कर्ण) / 2 = (6 + 8 - 10) / 2 = 4 / 2 = 2 सेमी।",
+        "કાટકોણ ત્રિકોણ ABC માં, કર્ણ AC = √(6² + 8²) = √100 = 10 સેમી.\nકાટકોણ ત્રિકોણના અંતઃવૃત્તની ત્રિજ્યાનું સૂત્ર:\nr = (કાટખૂણો બનાવતી બાજુઓનો સરવાળો - કર્ણ) / 2 = (6 + 8 - 10) / 2 = 4 / 2 = 2 સેમી.",
+        bloom="Apply",
+        diff="Intermediate",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# PART 5: SUMMARY MATRIX & BOARD EXAM BLUEPRINT
+# =========================================================================
+def get_part5_blocks():
+    blocks = []
+
+    # 36. Summary Matrix
+    blocks.append(make_theory(
+        "C10M_CH10_036",
+        "Circles Master Summary: The Two Pillars of Chapter 10",
+        "वृत्त मास्टर सारांश: अध्याय 10 के दो मुख्य स्तंभ",
+        "વર્તુળ માસ્ટર સારાંશ: પ્રકરણ 10 ના બે મુખ્ય આધારસ્તંભ",
+        "### 1. The Two Golden Theorems of Circles\n| Theorem | Statement | Mathematical Formula |\n|---|---|---|\n| **Theorem 10.1** | The tangent at any point is perpendicular to the radius through the point of contact. | $OP \\perp PT \\implies \\angle OPT = 90^\\circ$ |\n| **Theorem 10.2** | The lengths of tangents drawn from an external point to a circle are equal. | $PQ = PR$ |\n\n### 2. Tangent Count Decision Table\n| Location of Point $P$ | Number of Tangents |\n|---|---|\n| **Inside the circle** ($d < r$) | **0** tangents |\n| **On the circle** ($d = r$) | **1** tangent |\n| **Outside the circle** ($d > r$) | **2** tangents of equal length |\n\n### 3. Golden Properties to Never Forget\n- **Pythagoras in Circles:** In right $\\Delta OPT$, $OT^2 = OP^2 + PT^2$ where $OT$ is the distance to the centre.\n- **Supplementary Angles:** Angle between two tangents + Angle subtended at centre $= 180^\\circ$.\n- **Circumscribing Quadrilateral:** Sum of opposite sides is equal: $AB + CD = AD + BC$.\n- **Circumscribing Parallelogram:** Any parallelogram circumscribing a circle is always a **Rhombus**.",
+        "### 1. वृत्त के दो स्वर्णिम प्रमेय\n| प्रमेय | कथन | गणितीय सूत्र |\n|---|---|---|\n| **प्रमेय 10.1** | स्पर्श बिंदु पर स्पर्शरेखा, स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है। | $OP \\perp PT \\implies \\angle OPT = 90^\\circ$ |\n| **प्रमेय 10.2** | बाह्य बिंदु से वृत्त पर खींची गई स्पर्शरेखाओं की लंबाइयाँ बराबर होती हैं। | $PQ = PR$ |\n\n### 2. स्पर्शरेखा संख्या सारणी\n| बिंदु $P$ की स्थिति | स्पर्शरेखाओं की संख्या |\n|---|---|\n| **वृत्त के अंदर** ($d < r$) | **0** स्पर्शरेखा |\n| **वृत्त पर** ($d = r$) | **1** स्पर्शरेखा |\n| **वृत्त के बाहर** ($d > r$) | **2** समान लंबाई की स्पर्शरेखाएँ |\n\n### 3. प्रमुख महत्वपूर्ण नियम\n- **पाइथागोरस संबंध:** समकोण $\\Delta OPT$ में, $OT^2 = OP^2 + PT^2$ जहाँ $OT$ केंद्र से दूरी है।\n- **संपूरक कोण नियम:** दोनों स्पर्शरेखाओं के बीच का कोण + केंद्र पर अंतरित कोण $= 180^\\circ$।\n- **परिगत चतुर्भुज:** सम्मुख भुजाओं का योग समान होता है: $AB + CD = AD + BC$।\n- **परिगत समांतर चतुर्भुज:** वृत्त के परिगत कोई भी समांतर चतुर्भुज सदैव **समचतुर्भुज (Rhombus)** होता है।",
+        "### 1. વર્તુળના બે સુવર્ણ પ્રમેયો\n| પ્રમેય | વિધાન | ગાણિતિક સૂત્ર |\n|---|---|---|\n| **પ્રમેય 10.1** | વર્તુળના કોઈ બિંદુએ દોરેલો સ્પર્શક, સ્પર્શ બિંદુમાંથી પસાર થતી ત્રિજ્યાને લંબ હોય છે. | $OP \\perp PT \\implies \\angle OPT = 90^\\circ$ |\n| **પ્રમેય 10.2** | વર્તુળની બહારના બિંદુમાંથી વર્તુળ પર દોરેલા સ્પર્શકોની લંબાઈ સમાન હોય છે. | $PQ = PR$ |\n\n### 2. સ્પર્શકોની સંખ્યાનું કોષ્ટક\n| બિંદુ $P$ નું સ્થાન | સ્પર્શકોની સંખ્યા |\n|---|---|\n| **વર્તુળની અંદર** ($d < r$) | **0** સ્પર્શક |\n| **વર્તુળ પર** ($d = r$) | **1** સ્પર્શક |\n| **વર્તુળની બહાર** ($d > r$) | **2** સમાન લંબાઈના સ્પર્શકો |\n\n### 3. યાદ રાખવાના સુવર્ણ નિયમો\n- **પાયથાગોરસ સંબંધ:** કાટકોણ $\\Delta OPT$ માં, $OT^2 = OP^2 + PT^2$ જ્યાં $OT$ કેન્દ્રથી અંતર છે.\n- **પૂરકકોણ નિયમ:** સ્પર્શકો વચ્ચેનો ખૂણો + કેન્દ્ર આગળ બનતો ખૂણો $= 180^\\circ$.\n- **પરિગત ચતુષ્કોણ:** સામસામેની બાજુઓનો સરવાળો સમાન: $AB + CD = AD + BC$.\n- **પરિગત સમાંતરબાજુ ચતુષ્કોણ:** વર્તુળને પરિગત કોઈપણ સમાંતરબાજુ ચતુષ્કોણ હંમેશા **સમબાજુ ચતુષ્કોણ** બને છે.",
+        btype="theory",
+        bloom="Remember",
+        diff="Beginner",
+        mins=2
+    ))
+
+    # 37. Mastery Blueprint
+    blocks.append(make_theory(
+        "C10M_CH10_037",
+        "Mastery Blueprint: How to Score 100% in Circles in Class 10 Board Exam",
+        "मास्टरी ब्लूप्रिंट: कक्षा 10 बोर्ड परीक्षा में वृत्त में शत-प्रतिशत अंक प्राप्त करने की रणनीति",
+        "માસ્ટરી બ્લુપ્રિન્ટ: ધોરણ 10 બોર્ડ પરીક્ષામાં વર્તુળ પ્રકરણમાં સંપૂર્ણ ગુણ મેળવવાની રણનીતિ",
+        "To guarantee full marks in Chapter 10 in your Board Exam (CBSE/GSEB):\n\n1. **Draw a Clean Labeled Diagram for Every Proof:** An unillustrated proof loses 1 to 1.5 marks immediately. Always mark the right angle ($\llcorner$) at the point of contact!\n2. **Always State the Theorem by Name or Full Statement:** When writing $OP \\perp XY$, always append *(Theorem 10.1: Tangent is perpendicular to radius at point of contact)* in brackets. Board evaluators look for this exact justification.\n3. **Use RHS Congruence for Theorem 10.2:** In $\\Delta OQP$ and $\\Delta ORP$, explicitly list: (i) Right angles ($90^\\circ$), (ii) Hypotenuse ($OP = OP$), (iii) Radii ($OQ = OR$), and state **RHS criterion** before writing CPCT.\n4. **Never Confuse Hypotenuse with Tangent:** In calculation questions, the hypotenuse is ALWAYS the distance from the centre to the external point ($OT$), NOT the tangent length ($PT$).\n5. **Quadrilateral Circumscribing a Circle:** Remember the exact 4 tangent equations ($AP = AS, BP = BQ, CR = CQ, DR = DS$) and add them systematically. This question appears almost every alternate year in board exams!",
+        "कक्षा 10 की बोर्ड परीक्षा (CBSE/GSEB) में अध्याय 10 में पूरे अंक प्राप्त करने की अचूक रणनीतियाँ:\n\n1. **प्रत्येक उपपत्ति के लिए स्वच्छ नामांकित चित्र बनाएँ:** बिना चित्र की उपपत्ति पर 1 से 1.5 अंक कट जाते हैं। स्पर्श बिंदु पर समकोण ($\llcorner$) का चिह्न अवश्य लगाएँ!\n2. **प्रमेय का पूरा कथन या संदर्भ लिखें:** जब भी $OP \\perp XY$ लिखें, कोष्ठक में कारण अवश्य लिखें: *(प्रमेय 10.1: स्पर्श बिंदु से जाने वाली त्रिज्या स्पर्शरेखा पर लंब होती है)*। बोर्ड परीक्षक इस औचित्य की जाँच करते हैं।\n3. **प्रमेय 10.2 के लिए RHS सर्वांगसमता का उपयोग करें:** $\\Delta OQP$ और $\\Delta ORP$ में स्पष्ट रूप से लिखें: (i) समकोण ($90^\\circ$), (ii) उभयनिष्ठ कर्ण ($OP = OP$), (iii) त्रिज्याएँ ($OQ = OR$), और CPCT लिखने से पहले **RHS कसौटी** का उल्लेख करें।\n4. **कर्ण और स्पर्शरेखा में कभी भ्रमित न हों:** गणना वाले प्रश्नों में, कर्ण सदैव केंद्र से बाह्य बिंदु की दूरी ($OT$) होती है, स्पर्शरेखा की लंबाई ($PT$) कभी नहीं।\n5. **परिगत चतुर्भुज वाला प्रश्न:** चारों स्पर्शरेखा समीकरणों ($AP = AS, BP = BQ, CR = CQ, DR = DS$) को लिखकर जोड़ना याद रखें। यह प्रश्न बोर्ड परीक्षा में बार-बार पूछा जाता है!",
+        "ધોરણ 10 બોર્ડ પરીક્ષા (CBSE/GSEB) માં પ્રકરણ 10 માં પૂરેપૂરા ગુણ મેળવવાની શ્રેષ્ઠ રણનીતિ:\n\n1. **દરેક સાબિતી માટે સ્વચ્છ આકૃતિ દોરો:** આકૃતિ વગરની સાબિતીમાં સીધા 1 થી 1.5 ગુણ કપાઈ જાય છે. સ્પર્શ બિંદુ આગળ કાટખૂણાનું નિશાન દર્શાવો!\n2. **પ્રમેયનું કારણ કૌંસમાં અવશ્ય લખો:** $OP \\perp XY$ લખ્યા પછી કૌંસમાં લખો: *(પ્રમેય 10.1: સ્પર્શ બિંદુએ ત્રિજ્યા સ્પર્શકને લંબ હોય છે)*. મૂલ્યાંકનકાર આ કારણ ખાસ તપાસે છે.\n3. **પ્રમેય 10.2 માટે કાકબા (RHS) શરત દર્શાવો:** $\\Delta OQP$ અને $\\Delta ORP$ માં: (i) કાટખૂણો ($90^\\circ$), (ii) સામાન્ય કર્ણ ($OP = OP$), (iii) ત્રિજ્યાઓ ($OQ = OR$), અને CPCT લખતા પહેલાં **કાકબા શરત** નો સ્પષ્ટ ઉલ્લેખ કરો.\n4. **કર્ણ અને સ્પર્શકની લંબાઈમાં ભૂલ ન કરો:** દાખલા ગણતી વખતે કર્ણ હંમેશા કેન્દ્રથી બહારના બિંદુનું અંતર ($OT$) જ હોય છે, સ્પર્શકની લંબાઈ ($PT$) નહીં.\n5. **પરિગત ચતુષ્કોણનો પ્રશ્ન:** ચારેય સ્પર્શક સમીકરણો ($AP = AS, BP = BQ, CR = CQ, DR = DS$) લખી તેનો સરવાળો કરવાની પદ્ધતિ યાદ રાખો. આ પ્રશ્ન બોર્ડમાં વારંવાર પૂછાય છે!",
+        btype="mastery",
+        bloom="Apply",
+        diff="Beginner",
+        mins=2
+    ))
+
+    return blocks
+
+# =========================================================================
+# GENERATE ALL BLOCKS & WRITE TO JSON
+# =========================================================================
+def generate_blocks():
+    return (
+        get_part1_blocks() +
+        get_part2_blocks() +
+        get_part3_blocks() +
+        get_part4_blocks() +
+        get_part5_blocks()
+    )
+
+def generate_chapter():
+    chapter_data = {
+        "metadata": get_metadata(),
+        "blocks": generate_blocks()
+    }
+    
+    output_dir = 'app_core/chapters'
+    os.makedirs(output_dir, exist_ok=True)
+    target_path = os.path.join(output_dir, 'ncert_class10_maths_ch10.json')
+    
+    with open(target_path, 'w', encoding='utf-8') as f:
+        json.dump(chapter_data, f, indent=2, ensure_ascii=False)
+        
+    print(f"Generated {target_path} successfully with {len(chapter_data['blocks'])} blocks!")
+
+if __name__ == "__main__":
+    generate_chapter()

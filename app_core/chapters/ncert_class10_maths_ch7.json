@@ -1,249 +1,177 @@
 {
   "metadata": {
-    "id": "ncert_class10_maths_ch7",
-    "title": "Chapter 7: Coordinate Geometry",
-    "subtitle": "The Ultimate Board Exam Mastery Guide",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "NCERT/CBSE",
-    "curriculum": [
-      "Universal"
-    ],
-    "language": "English/Hindi/Gujarati (Bilingual)",
-    "difficulty": "Advanced",
-    "estimated_minutes": 180,
-    "version": "3.0.0-SUPREME-MATHS",
-    "author": "Antigravity Supreme Intelligence",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "coordinate_geometry",
-      "distance_formula",
-      "section_formula",
-      "board_special",
-      "bilingual"
-    ],
-    "learning_outcomes": [
-      "Master the Distance Formula to find the length between two points.",
-      "Understand the Section Formula to find coordinates of a point dividing a line segment.",
-      "Solve CBSE/State Board HOTS questions related to coordinate geometry.",
-      "Apply logic to real-world geometric scenarios."
-    ],
-    "ai_context": {
-      "learning_goal": "Make abstract coordinates feel real. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
-      "common_misconceptions": [
-        "Students get confused with negative signs in the formulas.",
-        "Students struggle with the ratio in the section formula."
-      ]
-    }
+    "module_id": "ncert_class10_maths_ch7",
+    "title": "Ncert Class10 Maths Ch7",
+    "title_hi": "Ncert Class10 Maths Ch7",
+    "title_gu": "Ncert Class10 Maths Ch7",
+    "board": "NCERT/GSEB",
+    "subject": "",
+    "chapter_number": "",
+    "language": "trilingual"
   },
   "blocks": [
     {
+      "id": "C10_MATH_CH7_HOOK_1",
       "type": "hook",
-      "content": "Imagine you are standing at point A and your friend is at point B on a giant grid. How do you find the exact distance between you two? Or what if you want to meet exactly halfway? This is the power of **Coordinate Geometry (निर्देशांक ज्यामिति / યામ ભૂમિતિ)**!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "title": "Finding Treasure on a Map",
+      "title_hi": "नक्शे पर खजाना ढूँढना",
+      "title_gu": "નકશા પર ખજાનો શોધવો",
+      "body": "Imagine you have a pirate's treasure map spread out on an invisible grid. The treasure is hidden at point 'A', and your pirate ship is at point 'B'. How do you calculate the exact shortest distance your ship must travel to reach the gold? You can't just use a measuring tape! This is where **Coordinate Geometry** comes to the rescue. By using the 'x' and 'y' addresses of any two points on a graph, mathematics gives us a magical formula to calculate the exact distance between them. Let's learn the secrets of the grid!",
+      "body_hi": "कल्पना कीजिए कि आपके पास एक अदृश्य ग्रिड (grid) पर फैला हुआ समुद्री डाकुओं के खजाने का नक्शा है। खजाना बिंदु 'A' पर छिपा है, और आपका समुद्री डाकू जहाज बिंदु 'B' पर है। आप उस सटीक सबसे छोटी दूरी की गणना कैसे करेंगे जो आपके जहाज को सोने तक पहुँचने के लिए तय करनी होगी? आप केवल मापने वाले टेप (measuring tape) का उपयोग नहीं कर सकते! यहीं पर **निर्देशांक ज्यामिति (Coordinate Geometry)** बचाव के लिए आती है। ग्राफ़ पर किन्हीं दो बिंदुओं के 'x' और 'y' पतों (addresses) का उपयोग करके, गणित हमें उनके बीच की सटीक दूरी की गणना करने के लिए एक जादुई सूत्र देता है। आइए ग्रिड के रहस्य सीखें!",
+      "body_gu": "કલ્પના કરો કે તમારી પાસે એક અદ્રશ્ય ગ્રીડ (grid) પર ફેલાયેલો ચાંચિયાઓના ખજાનાનો નકશો છે. ખજાનો બિંદુ 'A' પર છુપાયેલો છે, અને તમારું ચાંચિયાઓનું જહાજ બિંદુ 'B' પર છે. સોના સુધી પહોંચવા માટે તમારા જહાજે કાપવા પડતા ચોક્કસ ટૂંકા અંતરની ગણતરી તમે કેવી રીતે કરશો? તમે માત્ર માપપટ્ટીનો (measuring tape) ઉપયોગ કરી શકતા નથી! અહીં જ **યામ ભૂમિતિ (Coordinate Geometry)** મદદે આવે છે. આલેખ પરના કોઈપણ બે બિંદુઓના 'x' અને 'y' સરનામાનો ઉપયોગ કરીને, ગણિત આપણને તેમની વચ્ચેના ચોક્કસ અંતરની ગણતરી કરવા માટે એક જાદુઈ સૂત્ર આપે છે. ચાલો ગ્રીડના રહસ્યો શીખીએ!"
     },
     {
-      "type": "diagram",
-      "content": "The Cartesian Plane: The map of mathematical reality where every point has an address (x, y).",
-      "image_url": "assets/images/maths_ch7_cartesian_plane.jpg",
-      "alt_text": "A glowing Cartesian plane showing the X and Y axes with a point."
+      "id": "C10_MATH_CH7_SOCRATIC_1",
+      "type": "socratic_question",
+      "question": "If you are standing at the origin (0,0) on a giant piece of graph paper, and your friend is standing at (3,4), which means 3 steps right and 4 steps forward. Can you think of a famous theorem about right-angled triangles that could help you find the direct distance to your friend?",
+      "question_hi": "यदि आप एक विशाल ग्राफ़ पेपर पर मूल बिंदु (0,0) पर खड़े हैं, और आपका मित्र (3,4) पर खड़ा है, जिसका अर्थ है 3 कदम दाएँ और 4 कदम आगे। क्या आप समकोण त्रिभुजों के बारे में किसी प्रसिद्ध प्रमेय के बारे में सोच सकते हैं जो आपके मित्र तक सीधी दूरी ज्ञात करने में आपकी मदद कर सकता है?",
+      "question_gu": "જો તમે એક વિશાળ આલેખપત્ર પર ઉગમબિંદુ (0,0) પર ઉભા છો, અને તમારો મિત્ર (3,4) પર ઉભો છે, જેનો અર્થ છે 3 ડગલાં જમણી બાજુ અને 4 ડગલાં આગળ. શું તમે કાટકોણ ત્રિકોણ વિશેના કોઈ પ્રખ્યાત પ્રમેય વિશે વિચારી શકો છો જે તમારા મિત્ર સુધીનું સીધું અંતર શોધવામાં તમારી મદદ કરી શકે?",
+      "hint": "You made a right-angled triangle where the base is 3 and the perpendicular height is 4. You need to find the hypotenuse.",
+      "hint_hi": "आपने एक समकोण त्रिभुज बनाया जहाँ आधार 3 है और लंबवत ऊँचाई 4 है। आपको कर्ण (hypotenuse) ज्ञात करना है।",
+      "hint_gu": "તમે એક કાટકોણ ત્રિકોણ બનાવ્યો છે જ્યાં પાયો 3 છે અને વેધની ઊંચાઈ 4 છે. તમારે કર્ણ (hypotenuse) શોધવાનો છે.",
+      "bloom": "Analyze",
+      "difficulty": "Easy",
+      "estimated_minutes": 2
     },
     {
+      "id": "C10_MATH_CH7_THEO_1",
       "type": "theory",
-      "content": "**Distance Formula (दूरी सूत्र):**\nThe distance between two points P(x₁, y₁) and Q(x₂, y₂) is given by:\n**PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]**\n\n*Example:* Distance between (0,0) and (3,4) is √[(3-0)² + (4-0)²] = √(9+16) = √25 = 5 units.",
-      "difficulty": "Intermediate",
-      "bloom": "Remember"
+      "title": "The Distance Formula",
+      "title_hi": "दूरी सूत्र",
+      "title_gu": "અંતર સૂત્ર",
+      "body": "The **Distance Formula** is used to find the distance between any two points on a Cartesian plane.\nIf we have two points, P(x₁, y₁) and Q(x₂, y₂), the distance 'PQ' between them is given by:\n\n**PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]**\n\nThis formula is actually just the Pythagorean theorem applied to the coordinate plane. The difference in the x-coordinates is the base of a right triangle, and the difference in the y-coordinates is the height. The distance is the hypotenuse!\n*Special Case*: The distance of a point P(x, y) from the origin O(0, 0) is **√(x² + y²)**.",
+      "body_hi": "**दूरी सूत्र (Distance Formula)** का उपयोग कार्तीय तल (Cartesian plane) पर किन्हीं दो बिंदुओं के बीच की दूरी ज्ञात करने के लिए किया जाता है।\nयदि हमारे पास दो बिंदु P(x₁, y₁) और Q(x₂, y₂) हैं, तो उनके बीच की दूरी 'PQ' निम्न द्वारा दी जाती है:\n\n**PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]**\n\nयह सूत्र वास्तव में निर्देशांक तल पर लागू किया गया पाइथागोरस प्रमेय (Pythagorean theorem) ही है। x-निर्देशांकों में अंतर समकोण त्रिभुज का आधार है, और y-निर्देशांकों में अंतर ऊंचाई है। दूरी कर्ण (hypotenuse) है!\n*विशेष स्थिति*: मूल बिंदु O(0, 0) से किसी बिंदु P(x, y) की दूरी **√(x² + y²)** होती है।",
+      "body_gu": "**અંતર સૂત્ર (Distance Formula)** નો ઉપયોગ કાર્તેઝિયન સમતલ પર કોઈપણ બે બિંદુઓ વચ્ચેનું અંતર શોધવા માટે થાય છે.\nજો આપણી પાસે બે બિંદુઓ P(x₁, y₁) અને Q(x₂, y₂) હોય, તો તેમની વચ્ચેનું અંતર 'PQ' નીચે મુજબ અપાય છે:\n\n**PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]**\n\nઆ સૂત્ર ખરેખર યામ સમતલ પર લાગુ કરવામાં આવેલ પાયથાગોરસનું પ્રમેય જ છે. x-યામો વચ્ચેનો તફાવત કાટકોણ ત્રિકોણનો પાયો છે, અને y-યામો વચ્ચેનો તફાવત વેધ (ઊંચાઈ) છે. અંતર એ કર્ણ (hypotenuse) છે!\n*ખાસ કિસ્સો*: ઉગમબિંદુ O(0, 0) થી બિંદુ P(x, y) નું અંતર **√(x² + y²)** છે."
     },
     {
-      "type": "teacher_tip",
-      "content": "💡 **Teacher's Secret:** The Distance Formula is just the Pythagorean Theorem in disguise! Draw a right triangle between the two points, and the distance is simply the hypotenuse.",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
-    },
-    {
-      "type": "diagram",
-      "content": "The Section Formula: Finding the exact coordinate that divides a journey into specific ratios.",
-      "image_url": "assets/images/maths_ch7_section_formula.jpg",
-      "alt_text": "A line segment divided into a ratio m1:m2 with coordinates shown."
-    },
-    {
+      "id": "C10_MATH_CH7_THEO_2",
       "type": "theory",
-      "content": "**Section Formula (विभाजन सूत्र):**\nThe coordinates of the point P(x, y) which divides the line segment joining the points A(x₁, y₁) and B(x₂, y₂) internally in the ratio m₁ : m₂ are:\n**x = (m₁x₂ + m₂x₁) / (m₁ + m₂)**\n**y = (m₁y₂ + m₂y₁) / (m₁ + m₂)**",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "title": "Collinear Points",
+      "title_hi": "संरेख बिंदु",
+      "title_gu": "સમરેખ બિંદુઓ",
+      "body": "Three points A, B, and C are said to be **collinear** if they all lie on the exact same straight line.\nHow do we prove this using the distance formula?\nIf we find the distances AB, BC, and AC, the points will be collinear if the sum of any two distances is equal to the third distance.\nFor example, if A, B, and C are in that order on a line, then:\n**AB + BC = AC**\nIf the sum of the two smaller distances is greater than the largest distance, the points form a triangle and are not collinear.",
+      "body_hi": "तीन बिंदुओं A, B, और C को **संरेख (collinear)** कहा जाता है यदि वे सभी बिल्कुल एक ही सीधी रेखा पर स्थित हों।\nदूरी सूत्र का उपयोग करके हम इसे कैसे सिद्ध कर सकते हैं?\nयदि हम दूरी AB, BC, और AC ज्ञात करते हैं, तो बिंदु संरेख होंगे यदि किन्हीं दो दूरियों का योग तीसरी दूरी के बराबर हो।\nउदाहरण के लिए, यदि A, B, और C एक रेखा पर उसी क्रम में हैं, तो:\n**AB + BC = AC**\nयदि दो छोटी दूरियों का योग सबसे बड़ी दूरी से अधिक है, तो बिंदु एक त्रिभुज बनाते हैं और संरेख नहीं होते हैं।",
+      "body_gu": "ત્રણ બિંદુઓ A, B અને C ને **સમરેખ (collinear)** કહેવાય છે જો તેઓ બધા બરાબર એક જ સીધી રેખા પર આવેલા હોય.\nઅંતર સૂત્રનો ઉપયોગ કરીને આપણે આ કેવી રીતે સાબિત કરી શકીએ?\nજો આપણે AB, BC અને AC અંતર શોધીએ, તો બિંદુઓ સમરેખ કહેવાશે જો કોઈપણ બે અંતરનો સરવાળો ત્રીજા અંતર જેટલો હોય.\nઉદાહરણ તરીકે, જો A, B અને C રેખા પર તે જ ક્રમમાં હોય, તો:\n**AB + BC = AC**\nજો બે નાના અંતરનો સરવાળો સૌથી મોટા અંતર કરતા વધારે હોય, તો બિંદુઓ ત્રિકોણ બનાવે છે અને સમરેખ નથી હોતા."
     },
     {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** The Midpoint Formula\n\nIf the ratio is 1:1, P is the midpoint! The formula simplifies to:\n**( (x₁+x₂)/2 , (y₁+y₂)/2 )**\n\n*Board Trick:* Use k:1 ratio when you need to find the ratio itself! It makes calculations much easier.",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "id": "C10_MATH_CH7_THEO_3",
+      "type": "theory",
+      "title": "The Section Formula",
+      "title_hi": "विभाजन सूत्र",
+      "title_gu": "વિભાજન સૂત્ર",
+      "body": "Suppose two friends live at points A(x₁, y₁) and B(x₂, y₂). They want to meet at a point P(x, y) on the line segment joining their houses, such that the ratio of the distance AP to PB is m₁ : m₂. How do we find the coordinates of P?\nWe use the **Section Formula**:\n\nThe coordinates of point P(x, y) that internally divides the line segment joining A(x₁, y₁) and B(x₂, y₂) in the ratio m₁ : m₂ are:\n\n**x = (m₁x₂ + m₂x₁) / (m₁ + m₂)**\n**y = (m₁y₂ + m₂y₁) / (m₁ + m₂)**",
+      "body_hi": "मान लीजिए कि दो दोस्त बिंदु A(x₁, y₁) और B(x₂, y₂) पर रहते हैं। वे अपने घरों को जोड़ने वाले रेखाखंड पर एक बिंदु P(x, y) पर मिलना चाहते हैं, ताकि दूरी AP और PB का अनुपात m₁ : m₂ हो। हम P के निर्देशांक (coordinates) कैसे ज्ञात करते हैं?\nहम **विभाजन सूत्र (Section Formula)** का उपयोग करते हैं:\n\nबिंदु P(x, y) के निर्देशांक जो A(x₁, y₁) और B(x₂, y₂) को जोड़ने वाले रेखाखंड को m₁ : m₂ के अनुपात में आंतरिक रूप से विभाजित करता है, वे हैं:\n\n**x = (m₁x₂ + m₂x₁) / (m₁ + m₂)**\n**y = (m₁y₂ + m₂y₁) / (m₁ + m₂)**",
+      "body_gu": "ધારો કે બે મિત્રો બિંદુ A(x₁, y₁) અને B(x₂, y₂) પર રહે છે. તેઓ તેમના ઘરોને જોડતા રેખાખંડ પર એવા બિંદુ P(x, y) પર મળવા માંગે છે, જેથી અંતર AP અને PB નો ગુણોત્તર m₁ : m₂ થાય. આપણે P ના યામ કેવી રીતે શોધી શકીએ?\nઆપણે **વિભાજન સૂત્ર (Section Formula)** નો ઉપયોગ કરીએ છીએ:\n\nA(x₁, y₁) અને B(x₂, y₂) ને જોડતા રેખાખંડનું અંતઃવિભાજન m₁ : m₂ ગુણોત્તરમાં કરતા બિંદુ P(x, y) ના યામ નીચે મુજબ છે:\n\n**x = (m₁x₂ + m₂x₁) / (m₁ + m₂)**\n**y = (m₁y₂ + m₂y₁) / (m₁ + m₂)**"
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_1",
-      "type": "quiz",
-      "question": "The distance of the point P(2, 3) from the x-axis is",
-      "question_hi": "बिंदु P(2, 3) की x-अक्ष से दूरी है",
-      "options": ["2", "3", "1", "5"],
-      "options_hi": ["2", "3", "1", "5"],
-      "correct_index": 1,
-      "explanation": "The distance of a point from the x-axis is its y-coordinate. Hence, the distance is 3 units.",
-      "explanation_hi": "x-अक्ष से किसी बिंदु की दूरी उसका y-निर्देशांक होती है। इसलिए, दूरी 3 इकाई है।"
+      "id": "C10_MATH_CH7_THEO_4",
+      "type": "theory",
+      "title": "Mid-point Formula",
+      "title_hi": "मध्य-बिंदु सूत्र",
+      "title_gu": "મધ્યબિંદુ સૂત્ર",
+      "body": "What if the point P lies exactly in the middle of A and B? \nThis means the ratio m₁ : m₂ is exactly 1 : 1.\nBy putting m₁ = 1 and m₂ = 1 in the Section Formula, we get the simpler **Mid-point Formula**.\nThe coordinates of the mid-point of the line segment joining A(x₁, y₁) and B(x₂, y₂) are:\n\n**( (x₁ + x₂) / 2 , (y₁ + y₂) / 2 )**\n\nIt is just the average of the x-coordinates and the average of the y-coordinates!",
+      "body_hi": "क्या होगा यदि बिंदु P, A और B के बिल्कुल बीच में स्थित हो?\nइसका अर्थ है कि अनुपात m₁ : m₂ ठीक 1 : 1 है।\nविभाजन सूत्र में m₁ = 1 और m₂ = 1 रखने पर, हमें एक सरल **मध्य-बिंदु सूत्र (Mid-point Formula)** मिलता है।\nA(x₁, y₁) और B(x₂, y₂) को जोड़ने वाले रेखाखंड के मध्य-बिंदु के निर्देशांक हैं:\n\n**( (x₁ + x₂) / 2 , (y₁ + y₂) / 2 )**\n\nयह केवल x-निर्देशांकों का औसत और y-निर्देशांकों का औसत है!",
+      "body_gu": "જો બિંદુ P, A અને B ની બરાબર મધ્યમાં આવેલું હોય તો શું?\nઆનો અર્થ એ છે કે ગુણોત્તર m₁ : m₂ બરાબર 1 : 1 છે.\nવિભાજન સૂત્રમાં m₁ = 1 અને m₂ = 1 મૂકવાથી, આપણને સરળ **મધ્યબિંદુ સૂત્ર (Mid-point Formula)** મળે છે.\nA(x₁, y₁) અને B(x₂, y₂) ને જોડતા રેખાખંડના મધ્યબિંદુના યામ આ મુજબ છે:\n\n**( (x₁ + x₂) / 2 , (y₁ + y₂) / 2 )**\n\nતે માત્ર x-યામોની સરેરાશ અને y-યામોની સરેરાશ છે!"
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_2",
-      "type": "quiz",
-      "question": "The distance between the points A(0,6) and B(0,-2) is",
-      "question_hi": "बिंदुओं A(0,6) और B(0,-2) के बीच की दूरी है",
-      "options": ["4", "8", "6", "2"],
-      "options_hi": ["4", "8", "6", "2"],
-      "correct_index": 1,
-      "explanation": "Distance = √[(0-0)² + (-2-6)²] = √(-8)² = 8 units.",
-      "explanation_hi": "दूरी = √[(0-0)² + (-2-6)²] = √(-8)² = 8 इकाई।"
+      "id": "C10_MATH_CH7_PRACTICE_1",
+      "type": "practice_question",
+      "question": "Find the distance between the following pairs of points: (2, 3), (4, 1)",
+      "question_hi": "बिंदुओं के निम्नलिखित युग्मों के बीच की दूरी ज्ञात कीजिए: (2, 3), (4, 1)",
+      "question_gu": "બિંદુઓની નીચેની જોડ વચ્ચેનું અંતર શોધો: (2, 3), (4, 1)",
+      "solution": "Let P(x₁, y₁) = (2, 3) and Q(x₂, y₂) = (4, 1).\nUsing the distance formula: PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]\nPQ = √[(4 - 2)² + (1 - 3)²]\nPQ = √[(2)² + (-2)²]\nPQ = √[4 + 4] = √8\n√8 can be written as 2√2.\nThe distance is 2√2 units.",
+      "solution_hi": "माना P(x₁, y₁) = (2, 3) और Q(x₂, y₂) = (4, 1).\nदूरी सूत्र का उपयोग करने पर: PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]\nPQ = √[(4 - 2)² + (1 - 3)²]\nPQ = √[(2)² + (-2)²]\nPQ = √[4 + 4] = √8\n√8 को 2√2 लिखा जा सकता है।\nदूरी 2√2 मात्रक (units) है।",
+      "solution_gu": "ધારો કે P(x₁, y₁) = (2, 3) અને Q(x₂, y₂) = (4, 1).\nઅંતર સૂત્રનો ઉપયોગ કરતા: PQ = √[(x₂ - x₁)² + (y₂ - y₁)²]\nPQ = √[(4 - 2)² + (1 - 3)²]\nPQ = √[(2)² + (-2)²]\nPQ = √[4 + 4] = √8\n√8 ને 2√2 તરીકે લખી શકાય છે.\nઅંતર 2√2 એકમ છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_3",
-      "type": "quiz",
-      "question": "The distance of the point P(-6, 8) from the origin is",
-      "question_hi": "बिंदु P(-6, 8) की मूल बिंदु से दूरी है",
-      "options": ["8", "2", "10", "6"],
-      "options_hi": ["8", "2", "10", "6"],
-      "correct_index": 2,
-      "explanation": "Distance from origin = √(x² + y²) = √((-6)² + 8²) = √(36 + 64) = √100 = 10 units.",
-      "explanation_hi": "मूल बिंदु से दूरी = √(x² + y²) = √((-6)² + 8²) = √(36 + 64) = √100 = 10 इकाई।"
+      "id": "C10_MATH_CH7_PRACTICE_2",
+      "type": "practice_question",
+      "question": "Find the distance between the following pairs of points: (-5, 7), (-1, 3)",
+      "question_hi": "बिंदुओं के निम्नलिखित युग्मों के बीच की दूरी ज्ञात कीजिए: (-5, 7), (-1, 3)",
+      "question_gu": "બિંદુઓની નીચેની જોડ વચ્ચેનું અંતર શોધો: (-5, 7), (-1, 3)",
+      "solution": "Let A(-5, 7) and B(-1, 3).\nAB = √[(-1 - (-5))² + (3 - 7)²]\nAB = √[(-1 + 5)² + (-4)²]\nAB = √[(4)² + (-4)²]\nAB = √[16 + 16] = √32\n√32 = 4√2 units.",
+      "solution_hi": "माना A(-5, 7) और B(-1, 3).\nAB = √[(-1 - (-5))² + (3 - 7)²]\nAB = √[(-1 + 5)² + (-4)²]\nAB = √[(4)² + (-4)²]\nAB = √[16 + 16] = √32\n√32 = 4√2 मात्रक।",
+      "solution_gu": "ધારો કે A(-5, 7) અને B(-1, 3).\nAB = √[(-1 - (-5))² + (3 - 7)²]\nAB = √[(-1 + 5)² + (-4)²]\nAB = √[(4)² + (-4)²]\nAB = √[16 + 16] = √32\n√32 = 4√2 એકમ."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_4",
-      "type": "quiz",
-      "question": "The coordinates of the point which lies on the y-axis at a distance of 5 units in the negative direction of y-axis are",
-      "question_hi": "y-अक्ष पर y-अक्ष की ऋणात्मक दिशा में 5 इकाई की दूरी पर स्थित बिंदु के निर्देशांक हैं",
-      "options": ["(5,0)", "(0,5)", "(-5,0)", "(0,-5)"],
-      "options_hi": ["(5,0)", "(0,5)", "(-5,0)", "(0,-5)"],
-      "correct_index": 3,
-      "explanation": "Since the point lies on the y-axis, its x-coordinate is 0. Distance is 5 in negative direction, so y = -5. Point is (0, -5).",
-      "explanation_hi": "चूँकि बिंदु y-अक्ष पर स्थित है, इसका x-निर्देशांक 0 है। ऋणात्मक दिशा में दूरी 5 है, इसलिए y = -5। बिंदु (0, -5) है।"
+      "id": "C10_MATH_CH7_PRACTICE_3",
+      "type": "practice_question",
+      "question": "Determine if the points (1, 5), (2, 3) and (-2, -11) are collinear.",
+      "question_hi": "निर्धारित कीजिए कि क्या बिंदु (1, 5), (2, 3) और (-2, -11) संरेख हैं।",
+      "question_gu": "ચકાસો કે બિંદુઓ (1, 5), (2, 3) અને (-2, -11) સમરેખ છે કે નહીં.",
+      "solution": "Let A=(1, 5), B=(2, 3), C=(-2, -11).\nAB = √[(2 - 1)² + (3 - 5)²] = √[1² + (-2)²] = √[1 + 4] = √5 ≈ 2.23\nBC = √[(-2 - 2)² + (-11 - 3)²] = √[(-4)² + (-14)²] = √[16 + 196] = √212 ≈ 14.56\nAC = √[(-2 - 1)² + (-11 - 5)²] = √[(-3)² + (-16)²] = √[9 + 256] = √265 ≈ 16.27\nSince AB + BC (approx 16.79) is NOT equal to AC (approx 16.27), √5 + √212 ≠ √265.\nThe points are NOT collinear.",
+      "solution_hi": "माना A=(1, 5), B=(2, 3), C=(-2, -11).\nAB = √[(2 - 1)² + (3 - 5)²] = √[1² + (-2)²] = √[1 + 4] = √5 ≈ 2.23\nBC = √[(-2 - 2)² + (-11 - 3)²] = √[(-4)² + (-14)²] = √[16 + 196] = √212 ≈ 14.56\nAC = √[(-2 - 1)² + (-11 - 5)²] = √[(-3)² + (-16)²] = √[9 + 256] = √265 ≈ 16.27\nचूँकि AB + BC (लगभग 16.79) AC (लगभग 16.27) के बराबर नहीं है, √5 + √212 ≠ √265.\nअतः बिंदु संरेख नहीं हैं।",
+      "solution_gu": "ધારો કે A=(1, 5), B=(2, 3), C=(-2, -11).\nAB = √[(2 - 1)² + (3 - 5)²] = √[1² + (-2)²] = √[1 + 4] = √5 ≈ 2.23\nBC = √[(-2 - 2)² + (-11 - 3)²] = √[(-4)² + (-14)²] = √[16 + 196] = √212 ≈ 14.56\nAC = √[(-2 - 1)² + (-11 - 5)²] = √[(-3)² + (-16)²] = √[9 + 256] = √265 ≈ 16.27\nકારણ કે AB + BC (આશરે 16.79) એ AC (આશરે 16.27) બરાબર નથી, √5 + √212 ≠ √265.\nતેથી બિંદુઓ સમરેખ નથી."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_5",
-      "type": "quiz",
-      "question": "The midpoint of the line segment joining the points A(-2, 8) and B(-6, -4) is",
-      "question_hi": "बिंदुओं A(-2, 8) और B(-6, -4) को मिलाने वाले रेखाखंड का मध्य बिंदु है",
-      "options": ["(-4, -6)", "(2, 6)", "(-4, 2)", "(4, 2)"],
-      "options_hi": ["(-4, -6)", "(2, 6)", "(-4, 2)", "(4, 2)"],
-      "correct_index": 2,
-      "explanation": "Midpoint = ((-2-6)/2 , (8-4)/2) = (-8/2, 4/2) = (-4, 2).",
-      "explanation_hi": "मध्य बिंदु = ((-2-6)/2 , (8-4)/2) = (-8/2, 4/2) = (-4, 2)।"
+      "id": "C10_MATH_CH7_PRACTICE_4",
+      "type": "practice_question",
+      "question": "Check whether (5, -2), (6, 4) and (7, -2) are the vertices of an isosceles triangle.",
+      "question_hi": "जाँच कीजिए कि क्या बिंदु (5, -2), (6, 4) और (7, -2) एक समद्विबाहु त्रिभुज के शीर्ष हैं।",
+      "question_gu": "ચકાસો કે (5, -2), (6, 4) અને (7, -2) એ સમદ્વિબાજુ ત્રિકોણના શિરોબિંદુઓ છે કે નહીં.",
+      "solution": "Let A(5, -2), B(6, 4), and C(7, -2).\nAn isosceles triangle has at least two equal sides.\nAB = √[(6 - 5)² + (4 - (-2))²] = √[1² + 6²] = √[1 + 36] = √37\nBC = √[(7 - 6)² + (-2 - 4)²] = √[1² + (-6)²] = √[1 + 36] = √37\nAC = √[(7 - 5)² + (-2 - (-2))²] = √[2² + 0²] = √4 = 2\nSince AB = BC = √37, two sides are equal.\nYes, the points form an isosceles triangle.",
+      "solution_hi": "माना A(5, -2), B(6, 4), और C(7, -2).\nएक समद्विबाहु त्रिभुज में कम से कम दो बराबर भुजाएँ होती हैं।\nAB = √[(6 - 5)² + (4 - (-2))²] = √[1² + 6²] = √[1 + 36] = √37\nBC = √[(7 - 6)² + (-2 - 4)²] = √[1² + (-6)²] = √[1 + 36] = √37\nAC = √[(7 - 5)² + (-2 - (-2))²] = √[2² + 0²] = √4 = 2\nचूँकि AB = BC = √37, दो भुजाएँ बराबर हैं।\nहाँ, बिंदु एक समद्विबाहु त्रिभुज बनाते हैं।",
+      "solution_gu": "ધારો કે A(5, -2), B(6, 4), અને C(7, -2).\nસમદ્વિબાજુ ત્રિકોણમાં ઓછામાં ઓછી બે બાજુઓ સમાન હોય છે.\nAB = √[(6 - 5)² + (4 - (-2))²] = √[1² + 6²] = √[1 + 36] = √37\nBC = √[(7 - 6)² + (-2 - 4)²] = √[1² + (-6)²] = √[1 + 36] = √37\nAC = √[(7 - 5)² + (-2 - (-2))²] = √[2² + 0²] = √4 = 2\nકારણ કે AB = BC = √37, બે બાજુઓ સમાન છે.\nહા, આ બિંદુઓ સમદ્વિબાજુ ત્રિકોણ બનાવે છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_6",
-      "type": "quiz",
-      "question": "The ratio in which x-axis divides the line segment joining the points (5, 4) and (2, -3) is",
-      "question_hi": "वह अनुपात जिसमें x-अक्ष बिंदुओं (5, 4) और (2, -3) को मिलाने वाले रेखाखंड को विभाजित करता है",
-      "options": ["5:2", "3:4", "2:5", "4:3"],
-      "options_hi": ["5:2", "3:4", "2:5", "4:3"],
-      "correct_index": 3,
-      "explanation": "Let ratio be k:1. Any point on x-axis has y-coordinate 0. So, (k(-3) + 1(4))/(k+1) = 0 => -3k + 4 = 0 => k = 4/3.",
-      "explanation_hi": "माना अनुपात k:1 है। x-अक्ष पर किसी भी बिंदु का y-निर्देशांक 0 होता है। इसलिए, (k(-3) + 1(4))/(k+1) = 0 => -3k + 4 = 0 => k = 4/3।"
+      "id": "C10_MATH_CH7_PRACTICE_5",
+      "type": "practice_question",
+      "question": "Find the point on the x-axis which is equidistant from (2, -5) and (-2, 9).",
+      "question_hi": "x-अक्ष पर वह बिंदु ज्ञात कीजिए जो (2, -5) और (-2, 9) से समदूरस्थ (equidistant) है।",
+      "question_gu": "x-અક્ષ પરનું એવું બિંદુ શોધો જે (2, -5) અને (-2, 9) થી સમાન અંતરે આવેલું હોય.",
+      "solution": "Let the required point on the x-axis be P(x, 0).\nLet A(2, -5) and B(-2, 9).\nGiven PA = PB, so PA² = PB²\n(x - 2)² + (0 - (-5))² = (x - (-2))² + (0 - 9)²\n(x - 2)² + 25 = (x + 2)² + 81\n(x² - 4x + 4) + 25 = (x² + 4x + 4) + 81\nx² - 4x + 29 = x² + 4x + 85\n-4x - 4x = 85 - 29\n-8x = 56\nx = -7.\nSo, the point is (-7, 0).",
+      "solution_hi": "माना x-अक्ष पर अभीष्ट बिंदु P(x, 0) है।\nमाना A(2, -5) और B(-2, 9).\nदिया है PA = PB, इसलिए PA² = PB²\n(x - 2)² + (0 - (-5))² = (x - (-2))² + (0 - 9)²\n(x - 2)² + 25 = (x + 2)² + 81\n(x² - 4x + 4) + 25 = (x² + 4x + 4) + 81\nx² - 4x + 29 = x² + 4x + 85\n-4x - 4x = 85 - 29\n-8x = 56\nx = -7.\nअतः, वह बिंदु (-7, 0) है।",
+      "solution_gu": "ધારો કે x-અક્ષ પર માંગેલ બિંદુ P(x, 0) છે.\nધારો કે A(2, -5) અને B(-2, 9).\nઆપેલ છે કે PA = PB, તેથી PA² = PB²\n(x - 2)² + (0 - (-5))² = (x - (-2))² + (0 - 9)²\n(x - 2)² + 25 = (x + 2)² + 81\n(x² - 4x + 4) + 25 = (x² + 4x + 4) + 81\nx² - 4x + 29 = x² + 4x + 85\n-4x - 4x = 85 - 29\n-8x = 56\nx = -7.\nતેથી, તે બિંદુ (-7, 0) છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_7",
-      "type": "quiz",
-      "question": "If the points A(1, 2), B(0, 0) and C(a, b) are collinear, then",
-      "question_hi": "यदि बिंदु A(1, 2), B(0, 0) और C(a, b) संरेख हैं, तो",
-      "options": ["a = b", "a = 2b", "2a = b", "a = -b"],
-      "options_hi": ["a = b", "a = 2b", "2a = b", "a = -b"],
-      "correct_index": 2,
-      "explanation": "Area of triangle is 0. 1(0 - b) + 0(b - 2) + a(2 - 0) = 0 => -b + 2a = 0 => 2a = b.",
-      "explanation_hi": "त्रिभुज का क्षेत्रफल 0 है। 1(0 - b) + 0(b - 2) + a(2 - 0) = 0 => -b + 2a = 0 => 2a = b।"
+      "id": "C10_MATH_CH7_PRACTICE_6",
+      "type": "practice_question",
+      "question": "Find the values of y for which the distance between the points P(2, -3) and Q(10, y) is 10 units.",
+      "question_hi": "y का वह मान ज्ञात कीजिए, जिसके लिए बिंदु P(2, -3) और Q(10, y) के बीच की दूरी 10 मात्रक है।",
+      "question_gu": "જો બિંદુઓ P(2, -3) અને Q(10, y) વચ્ચેનું અંતર 10 એકમ હોય, તો y ની કિંમતો શોધો.",
+      "solution": "Distance PQ = 10.\nUsing distance formula:\n√[(10 - 2)² + (y - (-3))²] = 10\nSquaring both sides:\n(8)² + (y + 3)² = 100\n64 + y² + 6y + 9 = 100\ny² + 6y + 73 = 100\ny² + 6y - 27 = 0\nFactorising (Sum=6, Prod=-27 -> 9, -3):\n(y + 9)(y - 3) = 0\ny = -9 or y = 3.",
+      "solution_hi": "दूरी PQ = 10.\nदूरी सूत्र का उपयोग करने पर:\n√[(10 - 2)² + (y - (-3))²] = 10\nदोनों पक्षों का वर्ग करने पर:\n(8)² + (y + 3)² = 100\n64 + y² + 6y + 9 = 100\ny² + 6y + 73 = 100\ny² + 6y - 27 = 0\nगुणनखंड करने पर (योग=6, गुणनफल=-27 -> 9, -3):\n(y + 9)(y - 3) = 0\ny = -9 या y = 3.",
+      "solution_gu": "અંતર PQ = 10.\nઅંતર સૂત્રનો ઉપયોગ કરતા:\n√[(10 - 2)² + (y - (-3))²] = 10\nબંને બાજુ વર્ગ કરતા:\n(8)² + (y + 3)² = 100\n64 + y² + 6y + 9 = 100\ny² + 6y + 73 = 100\ny² + 6y - 27 = 0\nઅવયવ પાડતા (સરવાળો=6, ગુણાકાર=-27 -> 9, -3):\n(y + 9)(y - 3) = 0\ny = -9 અથવા y = 3."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_8",
-      "type": "quiz",
-      "question": "A point on x-axis which is equidistant from points A(2, -5) and B(-2, 9) is",
-      "question_hi": "x-अक्ष पर एक बिंदु जो बिंदुओं A(2, -5) और B(-2, 9) से समदूरस्थ है",
-      "options": ["(7, 0)", "(-7, 0)", "(0, 7)", "(0, -7)"],
-      "options_hi": ["(7, 0)", "(-7, 0)", "(0, 7)", "(0, -7)"],
-      "correct_index": 1,
-      "explanation": "Let point be (x,0). (x-2)² + (0+5)² = (x+2)² + (0-9)². x² - 4x + 4 + 25 = x² + 4x + 4 + 81. -8x = 56 => x = -7. Point is (-7, 0).",
-      "explanation_hi": "माना बिंदु (x,0) है। (x-2)² + (0+5)² = (x+2)² + (0-9)²। x² - 4x + 4 + 25 = x² + 4x + 4 + 81। -8x = 56 => x = -7। बिंदु (-7, 0) है।"
+      "id": "C10_MATH_CH7_PRACTICE_7",
+      "type": "practice_question",
+      "question": "Find the coordinates of the point which divides the join of (-1, 7) and (4, -3) in the ratio 2:3.",
+      "question_hi": "उस बिंदु के निर्देशांक ज्ञात कीजिए, जो बिंदुओं (-1, 7) और (4, -3) को मिलाने वाले रेखाखंड को 2:3 के अनुपात में विभाजित करता है।",
+      "question_gu": "બિંદુઓ (-1, 7) અને (4, -3) ને જોડતા રેખાખંડનું 2:3 ના ગુણોત્તરમાં વિભાજન કરતા બિંદુના યામ શોધો.",
+      "solution": "Let P(x, y) be the required point.\nHere, x₁ = -1, y₁ = 7, x₂ = 4, y₂ = -3, m₁ = 2, m₂ = 3.\nUsing Section Formula:\nx = (m₁x₂ + m₂x₁) / (m₁ + m₂)\nx = (2(4) + 3(-1)) / (2 + 3) = (8 - 3) / 5 = 5 / 5 = 1\n\ny = (m₁y₂ + m₂y₁) / (m₁ + m₂)\ny = (2(-3) + 3(7)) / (2 + 3) = (-6 + 21) / 5 = 15 / 5 = 3\n\nThe coordinates of the point are (1, 3).",
+      "solution_hi": "माना P(x, y) अभीष्ट बिंदु है।\nयहाँ, x₁ = -1, y₁ = 7, x₂ = 4, y₂ = -3, m₁ = 2, m₂ = 3.\nविभाजन सूत्र का उपयोग करने पर:\nx = (m₁x₂ + m₂x₁) / (m₁ + m₂)\nx = (2(4) + 3(-1)) / (2 + 3) = (8 - 3) / 5 = 5 / 5 = 1\n\ny = (m₁y₂ + m₂y₁) / (m₁ + m₂)\ny = (2(-3) + 3(7)) / (2 + 3) = (-6 + 21) / 5 = 15 / 5 = 3\n\nबिंदु के निर्देशांक (1, 3) हैं।",
+      "solution_gu": "ધારો કે માંગેલ બિંદુ P(x, y) છે.\nઅહીં, x₁ = -1, y₁ = 7, x₂ = 4, y₂ = -3, m₁ = 2, m₂ = 3.\nવિભાજન સૂત્રનો ઉપયોગ કરતા:\nx = (m₁x₂ + m₂x₁) / (m₁ + m₂)\nx = (2(4) + 3(-1)) / (2 + 3) = (8 - 3) / 5 = 5 / 5 = 1\n\ny = (m₁y₂ + m₂y₁) / (m₁ + m₂)\ny = (2(-3) + 3(7)) / (2 + 3) = (-6 + 21) / 5 = 15 / 5 = 3\n\nબિંદુના યામ (1, 3) છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_9",
-      "type": "quiz",
-      "question": "If A(-6, 7) and B(-1, -5) are two given points then the distance 2AB is",
-      "question_hi": "यदि A(-6, 7) और B(-1, -5) दो दिए गए बिंदु हैं तो दूरी 2AB है",
-      "options": ["13", "26", "169", "238"],
-      "options_hi": ["13", "26", "169", "238"],
-      "correct_index": 1,
-      "explanation": "AB = √[(-1 - (-6))² + (-5 - 7)²] = √[5² + (-12)²] = √[25 + 144] = √169 = 13. So, 2AB = 2 × 13 = 26.",
-      "explanation_hi": "AB = √[(-1 - (-6))² + (-5 - 7)²] = √[5² + (-12)²] = √[25 + 144] = √169 = 13. इसलिए, 2AB = 2 × 13 = 26."
+      "id": "C10_MATH_CH7_PRACTICE_8",
+      "type": "practice_question",
+      "question": "Find the ratio in which the line segment joining the points (-3, 10) and (6, -8) is divided by (-1, 6).",
+      "question_hi": "वह अनुपात ज्ञात कीजिए जिसमें बिंदुओं (-3, 10) और (6, -8) को मिलाने वाले रेखाखंड को बिंदु (-1, 6) विभाजित करता है।",
+      "question_gu": "બિંદુઓ (-3, 10) અને (6, -8) ને જોડતા રેખાખંડનું બિંદુ (-1, 6) કયા ગુણોત્તરમાં વિભાજન કરે છે તે શોધો.",
+      "solution": "Let the ratio be k : 1.\nUsing section formula for the x-coordinate:\nx = (k(x₂) + 1(x₁)) / (k + 1)\n-1 = (k(6) + 1(-3)) / (k + 1)\n-1(k + 1) = 6k - 3\n-k - 1 = 6k - 3\n-1 + 3 = 6k + k\n2 = 7k\nk = 2/7\nSo the ratio is k : 1 = 2/7 : 1 = 2 : 7.",
+      "solution_hi": "माना अनुपात k : 1 है।\nx-निर्देशांक के लिए विभाजन सूत्र का उपयोग करने पर:\nx = (k(x₂) + 1(x₁)) / (k + 1)\n-1 = (k(6) + 1(-3)) / (k + 1)\n-1(k + 1) = 6k - 3\n-k - 1 = 6k - 3\n-1 + 3 = 6k + k\n2 = 7k\nk = 2/7\nअतः अनुपात k : 1 = 2/7 : 1 = 2 : 7 है।",
+      "solution_gu": "ધારો કે ગુણોત્તર k : 1 છે.\nx-યામ માટે વિભાજન સૂત્રનો ઉપયોગ કરતા:\nx = (k(x₂) + 1(x₁)) / (k + 1)\n-1 = (k(6) + 1(-3)) / (k + 1)\n-1(k + 1) = 6k - 3\n-k - 1 = 6k - 3\n-1 + 3 = 6k + k\n2 = 7k\nk = 2/7\nતેથી ગુણોત્તર k : 1 = 2/7 : 1 = 2 : 7 છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_10",
-      "type": "quiz",
-      "question": "The coordinates of the centroid of a triangle whose vertices are (0, 6), (8, 12) and (8, 0) is",
-      "question_hi": "एक त्रिभुज जिसके शीर्ष (0, 6), (8, 12) और (8, 0) हैं, के केंद्रक के निर्देशांक हैं",
-      "options": ["(4, 6)", "(16, 6)", "(8, 6)", "(16/3, 6)"],
-      "options_hi": ["(4, 6)", "(16, 6)", "(8, 6)", "(16/3, 6)"],
-      "correct_index": 3,
-      "explanation": "Centroid = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3) = ((0+8+8)/3, (6+12+0)/3) = (16/3, 18/3) = (16/3, 6).",
-      "explanation_hi": "केंद्रक = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3) = ((0+8+8)/3, (6+12+0)/3) = (16/3, 18/3) = (16/3, 6)।"
+      "id": "C10_MATH_CH7_PRACTICE_9",
+      "type": "practice_question",
+      "question": "If (1, 2), (4, y), (x, 6) and (3, 5) are the vertices of a parallelogram taken in order, find x and y.",
+      "question_hi": "यदि बिंदु (1, 2), (4, y), (x, 6) और (3, 5) इसी क्रम में लेने पर एक समांतर चतुर्भुज के शीर्ष हों, तो x और y ज्ञात कीजिए।",
+      "question_gu": "જો (1, 2), (4, y), (x, 6) અને (3, 5) એ એક સમાંતરબાજુ ચતુષ્કોણના ક્રમિક શિરોબિંદુઓ હોય, તો x અને y શોધો.",
+      "solution": "Let A(1, 2), B(4, y), C(x, 6) and D(3, 5) be the vertices of a parallelogram.\nThe diagonals of a parallelogram bisect each other. So, the mid-point of AC = the mid-point of BD.\nMid-point of AC = ((1 + x)/2 , (2 + 6)/2) = ((x + 1)/2 , 4)\nMid-point of BD = ((4 + 3)/2 , (y + 5)/2) = (7/2 , (y + 5)/2)\nComparing x-coordinates:\n(x + 1)/2 = 7/2 => x + 1 = 7 => x = 6.\nComparing y-coordinates:\n4 = (y + 5)/2 => 8 = y + 5 => y = 3.\nThus, x = 6 and y = 3.",
+      "solution_hi": "माना A(1, 2), B(4, y), C(x, 6) और D(3, 5) समांतर चतुर्भुज के शीर्ष हैं।\nसमांतर चतुर्भुज के विकर्ण एक-दूसरे को समद्विभाजित (bisect) करते हैं। इसलिए, AC का मध्य-बिंदु = BD का मध्य-बिंदु।\nAC का मध्य-बिंदु = ((1 + x)/2 , (2 + 6)/2) = ((x + 1)/2 , 4)\nBD का मध्य-बिंदु = ((4 + 3)/2 , (y + 5)/2) = (7/2 , (y + 5)/2)\nx-निर्देशांकों की तुलना करने पर:\n(x + 1)/2 = 7/2 => x + 1 = 7 => x = 6.\ny-निर्देशांकों की तुलना करने पर:\n4 = (y + 5)/2 => 8 = y + 5 => y = 3.\nइस प्रकार, x = 6 और y = 3.",
+      "solution_gu": "ધારો કે A(1, 2), B(4, y), C(x, 6) અને D(3, 5) સમાંતરબાજુ ચતુષ્કોણના શિરોબિંદુઓ છે.\nસમાંતરબાજુ ચતુષ્કોણના વિકર્ણો એકબીજાને દુભાગે (bisect) છે. તેથી, AC નું મધ્યબિંદુ = BD નું મધ્યબિંદુ.\nAC નું મધ્યબિંદુ = ((1 + x)/2 , (2 + 6)/2) = ((x + 1)/2 , 4)\nBD નું મધ્યબિંદુ = ((4 + 3)/2 , (y + 5)/2) = (7/2 , (y + 5)/2)\nx-યામ સરખાવતા:\n(x + 1)/2 = 7/2 => x + 1 = 7 => x = 6.\ny-યામ સરખાવતા:\n4 = (y + 5)/2 => 8 = y + 5 => y = 3.\nઆમ, x = 6 અને y = 3."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch7_11",
-      "type": "quiz",
-      "question": "The distance between the points (a cosθ + b sinθ, 0) and (0, a sinθ - b cosθ) is",
-      "question_hi": "बिंदुओं (a cosθ + b sinθ, 0) और (0, a sinθ - b cosθ) के बीच की दूरी है",
-      "options": ["a² + b²", "√(a² + b²)", "a + b", "a - b"],
-      "options_hi": ["a² + b²", "√(a² + b²)", "a + b", "a - b"],
-      "correct_index": 1,
-      "explanation": "d² = (0 - (a cosθ + b sinθ))² + (a sinθ - b cosθ - 0)² = a²cos²θ + b²sin²θ + 2ab sinθ cosθ + a²sin²θ + b²cos²θ - 2ab sinθ cosθ = a²(cos²θ + sin²θ) + b²(sin²θ + cos²θ) = a² + b². So d = √(a² + b²).",
-      "explanation_hi": "d² = (0 - (a cosθ + b sinθ))² + (a sinθ - b cosθ - 0)² = a²cos²θ + b²sin²θ + 2ab sinθ cosθ + a²sin²θ + b²cos²θ - 2ab sinθ cosθ = a²(cos²θ + sin²θ) + b²(sin²θ + cos²θ) = a² + b²। इसलिए d = √(a² + b²)।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch7_12",
-      "type": "quiz",
-      "question": "If the distance between the points (4, p) and (1, 0) is 5, then the value of p is",
-      "question_hi": "यदि बिंदुओं (4, p) और (1, 0) के बीच की दूरी 5 है, तो p का मान है",
-      "options": ["4 only", "±4", "-4 only", "0"],
-      "options_hi": ["केवल 4", "±4", "केवल -4", "0"],
-      "correct_index": 1,
-      "explanation": "d² = (4 - 1)² + (p - 0)² = 25 => 3² + p² = 25 => 9 + p² = 25 => p² = 16 => p = ±4.",
-      "explanation_hi": "d² = (4 - 1)² + (p - 0)² = 25 => 3² + p² = 25 => 9 + p² = 25 => p² = 16 => p = ±4।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch7_13",
-      "type": "quiz",
-      "question": "A line segment is of length 10 units. If the coordinates of its one end are (2, -3) and the abscissa of the other end is 10, then its ordinate is",
-      "question_hi": "एक रेखाखंड की लंबाई 10 इकाई है। यदि इसके एक सिरे के निर्देशांक (2, -3) हैं और दूसरे सिरे का भुज 10 है, तो इसकी कोटि है",
-      "options": ["9", "-6", "3 or -9", "-3 or 9"],
-      "options_hi": ["9", "-6", "3 या -9", "-3 या 9"],
-      "correct_index": 2,
-      "explanation": "Let the other end be (10, y). Distance = √[(10 - 2)² + (y - (-3))²] = 10. => 8² + (y + 3)² = 100 => 64 + (y + 3)² = 100 => (y + 3)² = 36 => y + 3 = ±6. So y = 3 or y = -9.",
-      "explanation_hi": "माना दूसरा सिरा (10, y) है। दूरी = √[(10 - 2)² + (y - (-3))²] = 10। => 8² + (y + 3)² = 100 => 64 + (y + 3)² = 100 => (y + 3)² = 36 => y + 3 = ±6। इसलिए y = 3 या y = -9।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch7_14",
-      "type": "quiz",
-      "question": "In what ratio does the y-axis divide the line segment joining the points P(-4, 2) and Q(8, 3)?",
-      "question_hi": "y-अक्ष बिंदुओं P(-4, 2) और Q(8, 3) को मिलाने वाले रेखाखंड को किस अनुपात में विभाजित करता है?",
-      "options": ["1:2", "2:1", "3:1", "1:3"],
-      "options_hi": ["1:2", "2:1", "3:1", "1:3"],
-      "correct_index": 0,
-      "explanation": "Let ratio be k:1. At y-axis, x = 0. So, (k(8) + 1(-4))/(k+1) = 0 => 8k - 4 = 0 => k = 4/8 = 1/2. Ratio is 1:2.",
-      "explanation_hi": "माना अनुपात k:1 है। y-अक्ष पर, x = 0। इसलिए, (k(8) + 1(-4))/(k+1) = 0 => 8k - 4 = 0 => k = 4/8 = 1/2। अनुपात 1:2 है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch7_15",
-      "type": "quiz",
-      "question": "The fourth vertex D of a parallelogram ABCD whose three vertices are A(-2, 3), B(6, 7) and C(8, 3) is",
-      "question_hi": "एक समांतर चतुर्भुज ABCD का चौथा शीर्ष D जिसके तीन शीर्ष A(-2, 3), B(6, 7) और C(8, 3) हैं, है",
-      "options": ["(0, 1)", "(0, -1)", "(-1, 0)", "(1, 0)"],
-      "options_hi": ["(0, 1)", "(0, -1)", "(-1, 0)", "(1, 0)"],
-      "correct_index": 1,
-      "explanation": "Diagonals bisect each other. Midpoint of AC = Midpoint of BD. ( (-2+8)/2, (3+3)/2 ) = ( (6+x)/2, (7+y)/2 ). (3, 3) = ((6+x)/2, (7+y)/2). 6+x=6 => x=0; 7+y=6 => y=-1. So D is (0, -1).",
-      "explanation_hi": "विकर्ण एक दूसरे को समद्विभाजित करते हैं। AC का मध्य बिंदु = BD का मध्य बिंदु। ( (-2+8)/2, (3+3)/2 ) = ( (6+x)/2, (7+y)/2 )। (3, 3) = ((6+x)/2, (7+y)/2)। 6+x=6 => x=0; 7+y=6 => y=-1। इसलिए D (0, -1) है।"
+      "id": "C10_MATH_CH7_PRACTICE_10",
+      "type": "practice_question",
+      "question": "Find the coordinates of a point A, where AB is the diameter of a circle whose centre is (2, -3) and B is (1, 4).",
+      "question_hi": "एक बिंदु A के निर्देशांक ज्ञात कीजिए, जहाँ AB एक वृत्त का व्यास है जिसका केंद्र (2, -3) है तथा B के निर्देशांक (1, 4) हैं।",
+      "question_gu": "વર્તુળનો વ્યાસ AB છે. જો વર્તુળનું કેન્દ્ર (2, -3) અને B (1, 4) હોય, તો બિંદુ A ના યામ શોધો.",
+      "solution": "Let the coordinates of A be (x, y).\nCentre C(2, -3) is the mid-point of the diameter AB with B(1, 4).\nUsing Mid-point Formula:\nx-coordinate: (x + 1) / 2 = 2 => x + 1 = 4 => x = 3.\ny-coordinate: (y + 4) / 2 = -3 => y + 4 = -6 => y = -10.\nTherefore, the coordinates of A are (3, -10).",
+      "solution_hi": "माना A के निर्देशांक (x, y) हैं।\nकेंद्र C(2, -3) व्यास AB का मध्य-बिंदु है, जहाँ B(1, 4) है।\nमध्य-बिंदु सूत्र का उपयोग करने पर:\nx-निर्देशांक: (x + 1) / 2 = 2 => x + 1 = 4 => x = 3.\ny-निर्देशांक: (y + 4) / 2 = -3 => y + 4 = -6 => y = -10.\nइसलिए, A के निर्देशांक (3, -10) हैं।",
+      "solution_gu": "ધારો કે A ના યામ (x, y) છે.\nકેન્દ્ર C(2, -3) એ વ્યાસ AB નું મધ્યબિંદુ છે, જ્યાં B(1, 4) છે.\nમધ્યબિંદુ સૂત્રનો ઉપયોગ કરતા:\nx-યામ: (x + 1) / 2 = 2 => x + 1 = 4 => x = 3.\ny-યામ: (y + 4) / 2 = -3 => y + 4 = -6 => y = -10.\nતેથી, A ના યામ (3, -10) છે."
     }
   ]
 }

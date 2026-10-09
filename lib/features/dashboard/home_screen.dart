@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import '../../foundation/theme/app_colors.dart';
@@ -69,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final flavor = appFlavor ?? 'default';
     if (isLoading) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
@@ -242,19 +244,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   // ── SPECIAL SKILLS SECTION ──────────────────────────────
                   // Visible to ALL students regardless of class/stage
                   Text(
-                    TrilingualService.instance.getUIText("Special Skills"),
+                    TrilingualService.instance.getUIText("Special Skill - Fast Multiplication"),
                     style: GoogleFonts.poppins(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                       color: AppColors.textPrimary,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    TrilingualService.instance.getUIText("Calculate 10× faster with ancient wisdom!"),
-                    style: GoogleFonts.inter(
-                      fontSize: 13,
-                      color: AppColors.textSecondary,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -262,28 +256,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                      // Abacus Card
-                      Expanded(
-                        child: _SpecialSkillCard(
-                          title: TrilingualService.instance.getUIText("Abacus"),
-                          subtitle: TrilingualService.instance.getUIText("Mental Maths\nLevel 1"),
-                          icon: Icons.grid_on,
-                          gradientColors: const [Color(0xFF6C3483), Color(0xFF9B59B6)],
-                          onTap: () => context.push('/curriculum/abacus_level1'),
+                      if (flavor == 'skillup') ...[
+                        // Abacus Card
+                        Expanded(
+                          child: _SpecialSkillCard(
+                            title: TrilingualService.instance.getUIText("Abacus"),
+                            subtitle: TrilingualService.instance.getUIText("Mental Maths\nLevel 1"),
+                            icon: Icons.grid_on,
+                            gradientColors: const [Color(0xFF6C3483), Color(0xFF9B59B6)],
+                            onTap: () => context.push('/curriculum/abacus_level1'),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                      // Vedic Maths Card
-                      Expanded(
-                        child: _SpecialSkillCard(
-                          title: TrilingualService.instance.getUIText("Vedic Maths"),
-                          subtitle: TrilingualService.instance.getUIText("Ancient\nSutras"),
-                          icon: Icons.psychology,
-                          gradientColors: const [Color(0xFFE67E22), Color(0xFFF39C12)],
-                          onTap: () => context.push('/curriculum/vedic_maths_level1'),
+                        const SizedBox(width: 12),
+                        // Vedic Maths Card
+                        Expanded(
+                          child: _SpecialSkillCard(
+                            title: TrilingualService.instance.getUIText("Vedic Maths"),
+                            subtitle: TrilingualService.instance.getUIText("Ancient\nSutras"),
+                            icon: Icons.psychology,
+                            gradientColors: const [Color(0xFFE67E22), Color(0xFFF39C12)],
+                            onTap: () => context.push('/curriculum/vedic_maths_level1'),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
+                        const SizedBox(width: 12),
+                      ],
                       // Tables Practice Card
                       Expanded(
                         child: _SpecialSkillCard(
@@ -402,6 +398,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildDynamicQuickAccess() {
+    final flavor = appFlavor ?? 'default';
     List<Widget> cards = [];
 
     Widget buildCard(String title, IconData icon, Color color, String route) {
@@ -544,19 +541,16 @@ class _HomeScreenState extends State<HomeScreen> {
         );
         
         hsCards = [
-          SizedBox(
-            width: 130,
-            child: buildCard("Physics\nSandbox", Icons.science, AppColors.physicsColor, '/learning/physics'),
-          ),
-          const SizedBox(width: 16),
+          if (flavor == 'achievers') ...[
+            SizedBox(
+              width: 130,
+              child: buildCard("Physics\nSandbox", Icons.science, AppColors.physicsColor, '/learning/physics'),
+            ),
+            const SizedBox(width: 16),
+          ],
           SizedBox(
             width: 130,
             child: buildCard("English\nSimulations", Icons.language, Colors.deepPurple, '/english_simulation'),
-          ),
-          const SizedBox(width: 16),
-          SizedBox(
-            width: 130,
-            child: buildCard("Question\nPapers", Icons.auto_stories, Colors.blue, '/assessment'),
           ),
         ];
       }
@@ -605,13 +599,11 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     } else {
       // Default / Secondary (Class 9-10)
-      cards.add(buildCard("Question\nPapers", Icons.auto_stories, Colors.blue, '/assessment'));
-      cards.add(const SizedBox(width: 16));
       cards.add(buildCard("Science\nSimulations", Icons.science, AppColors.scienceColor, '/learning/sci_sim'));
-      cards.add(const SizedBox(width: 16));
-      cards.add(buildCard("NCERT Sci\n(Full Demo)", Icons.auto_stories, AppColors.englishColor, '/chapter-demo'));
-      cards.add(const SizedBox(width: 16));
-      cards.add(buildCard("Physics\nSandbox", Icons.science, AppColors.physicsColor, '/learning/physics'));
+      if (flavor == 'achievers') {
+        cards.add(const SizedBox(width: 16));
+        cards.add(buildCard("Physics\nSandbox", Icons.science, AppColors.physicsColor, '/learning/physics'));
+      }
       roleSpecificWidgets = SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: IntrinsicHeight(
@@ -625,7 +617,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Column(
       children: [
-        // UNIVERSAL PREMIUM SPOKEN ENGLISH BANNER
+        if (flavor == 'skillup') ...[
+          // UNIVERSAL PREMIUM SPOKEN ENGLISH BANNER
         Card(
           elevation: 6,
           shadowColor: Colors.pink.withValues(alpha: 0.3),
@@ -667,7 +660,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        const SizedBox(height: 16),
+        ],
+        if (flavor == 'skillup') const SizedBox(height: 16),
         roleSpecificWidgets,
       ],
     );

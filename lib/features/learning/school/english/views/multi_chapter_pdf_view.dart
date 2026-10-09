@@ -119,9 +119,7 @@ class _MultiChapterPdfViewState extends State<MultiChapterPdfView> {
                     onPressed: selectedChapters.isEmpty
                         ? null
                         : () async {
-                            await PdfGeneratorService.generateAndOpenQuestionPaper(
-                              selectedChapters,
-                            );
+                            await PdfGeneratorService.generateAndOpenQuestionPaper(context, selectedChapters);
                           },
                     icon: Icon(Icons.picture_as_pdf),
                     label: Text('Generate QP ($totalQuestions Qs)'),
@@ -137,9 +135,7 @@ class _MultiChapterPdfViewState extends State<MultiChapterPdfView> {
                     onPressed: selectedChapters.isEmpty
                         ? null
                         : () async {
-                            await PdfGeneratorService.generateAndOpenAnswerKey(
-                              selectedChapters,
-                            );
+                            await PdfGeneratorService.generateAndOpenAnswerKey(context, selectedChapters);
                           },
                     icon: Icon(Icons.task_alt),
                     label: Text(TrilingualService.instance.getUIText('Generate Answer Key')),

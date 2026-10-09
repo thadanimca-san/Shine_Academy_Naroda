@@ -66,9 +66,9 @@ class _QuestionPaperScreenState extends State<QuestionPaperScreen> with SingleTi
 
     try {
       if (_tabController.index == 0) {
-        await _pdfService.generateQuestionPaperPDF(title, questions);
+        await _pdfService.generateQuestionPaperPDF(context, title, questions);
       } else {
-        await _pdfService.generateSolutionsPDF(title, questions);
+        await _pdfService.generateSolutionsPDF(context, title, questions);
       }
     } catch (e) {
       if (mounted) {

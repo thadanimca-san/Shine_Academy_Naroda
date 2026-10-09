@@ -218,22 +218,34 @@ class _QuestionPaperViewScreenState extends State<QuestionPaperViewScreen> with 
               onPressed: () async {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Generating PDF...'))));
-                if (isAnswerKey) {
-                  await PdfExportService.generateAndPreviewAnswerKey(
-                    widget.title, 
-                    widget.questions, 
-                    schoolName: schoolNameCtrl.text,
-                    examTitle: examTitleCtrl.text,
-                    timeAllowed: timeAllowedCtrl.text,
-                  );
-                } else {
-                  await PdfExportService.generateAndPreviewQuestionPaper(
-                    widget.title, 
-                    widget.questions, 
-                    schoolName: schoolNameCtrl.text,
-                    examTitle: examTitleCtrl.text,
-                    timeAllowed: timeAllowedCtrl.text,
-                  );
+                try {
+                  if (isAnswerKey) {
+                    await PdfExportService.generateAndPreviewAnswerKey(
+                      context,
+                      widget.title, 
+                      widget.questions, 
+                      schoolName: schoolNameCtrl.text,
+                      examTitle: examTitleCtrl.text,
+                      timeAllowed: timeAllowedCtrl.text,
+                    );
+                  } else {
+                    await PdfExportService.generateAndPreviewQuestionPaper(
+                      context,
+                      widget.title, 
+                      widget.questions, 
+                      schoolName: schoolNameCtrl.text,
+                      examTitle: examTitleCtrl.text,
+                      timeAllowed: timeAllowedCtrl.text,
+                    );
+                  }
+                } catch (e, st) {
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('Error generating PDF: $e'),
+                      duration: const Duration(seconds: 10),
+                    ));
+                    debugPrint('PDF Error: $e\n$st');
+                  }
                 }
               },
               child: Text(TrilingualService.instance.getUIText('Generate')),

@@ -1,0 +1,245 @@
+[
+  {
+    "id": "C10_MATH_CH3_HOOK_1",
+    "type": "hook",
+    "title": "The Detective's Mathematical Toolkit",
+    "title_hi": "जासूस का गणितीय टूलकिट",
+    "title_gu": "ડિટેક્ટીવની ગાણિતિક ટૂલકિટ",
+    "body": "Imagine you are a detective trying to crack a code. You have two clues: \"The sum of two numbers is 10\" and \"The first number is 2 more than the second\". How do you find the exact numbers? By using a pair of linear equations! In real life, whenever we have two unknown quantities (like the cost of an apple and a banana) and two different conditions, we use pairs of linear equations in two variables. Let's learn how to solve these puzzles algebraically and graphically!",
+    "body_hi": "कल्पना कीजिए कि आप एक जासूस हैं जो एक कोड क्रैक करने की कोशिश कर रहे हैं। आपके पास दो सुराग हैं: \"दो संख्याओं का योग 10 है\" और \"पहली संख्या दूसरी से 2 अधिक है\"। आप सटीक संख्याएँ कैसे ज्ञात करेंगे? दो चरों वाले रैखिक समीकरणों के युग्म का उपयोग करके! वास्तविक जीवन में, जब भी हमारे पास दो अज्ञात राशियाँ (जैसे सेब और केले की कीमत) और दो अलग-अलग शर्तें होती हैं, तो हम दो चरों वाले रैखिक समीकरण युग्म का उपयोग करते हैं। आइए सीखें कि इन पहेलियों को बीजगणितीय और ग्राफीय रूप से कैसे हल किया जाए!",
+    "body_gu": "કલ્પના કરો કે તમે એક ડિટેક્ટીવ છો જે કોડ ક્રેક કરવાનો પ્રયાસ કરી રહ્યો છે. તમારી પાસે બે સંકેતો છે: \"બે સંખ્યાઓનો સરવાળો 10 છે\" અને \"પ્રથમ સંખ્યા બીજી કરતા 2 વધુ છે\". તમે ચોક્કસ સંખ્યાઓ કેવી રીતે શોધશો? દ્વિચલ સુરેખ સમીકરણ યુગ્મનો ઉપયોગ કરીને! વાસ્તવિક જીવનમાં, જ્યારે પણ આપણી પાસે બે અજ્ઞાત રાશિઓ (જેમ કે સફરજન અને કેળાની કિંમત) અને બે અલગ-અલગ શરતો હોય, ત્યારે આપણે દ્વિચલ સુરેખ સમીકરણ યુગ્મનો ઉપયોગ કરીએ છીએ. ચાલો જાણીએ કે આ કોયડાઓને બીજગણિતીય અને ભૌમિતિક રીતે કેવી રીતે ઉકેલવા!"
+  },
+  {
+    "id": "C10_MATH_CH3_SOCRATIC_1",
+    "type": "socratic_question",
+    "question": "If you buy 2 pencils and 3 erasers for ₹9, and your friend buys 4 pencils and 6 erasers for ₹18 from the same shop. Can you find the exact price of one pencil? Why or why not?",
+    "question_hi": "यदि आप 9 रुपये में 2 पेंसिल और 3 रबर खरीदते हैं, और आपका दोस्त उसी दुकान से 18 रुपये में 4 पेंसिल और 6 रबर खरीदता है। क्या आप एक पेंसिल की सटीक कीमत ज्ञात कर सकते हैं? क्यों या क्यों नहीं?",
+    "question_gu": "જો તમે 9 રૂપિયામાં 2 પેન્સિલ અને 3 રબર ખરીદો છો, અને તમારો મિત્ર એ જ દુકાનમાંથી 18 રૂપિયામાં 4 પેન્સિલ અને 6 રબર ખરીદે છે. શું તમે એક પેન્સિલની ચોક્કસ કિંમત શોધી શકો છો? શા માટે અથવા શા માટે નહીં?",
+    "hint": "Look closely at the numbers. Your friend bought exactly double of what you bought, and paid exactly double the price. Did you really get a \"new\" piece of information?",
+    "hint_hi": "संख्याओं को ध्यान से देखें। आपके दोस्त ने आपके द्वारा खरीदी गई मात्रा से ठीक दोगुना खरीदा, और ठीक दोगुनी कीमत चुकाई। क्या आपको वास्तव में कोई \"नई\" जानकारी मिली?",
+    "hint_gu": "સંખ્યાઓને ધ્યાનથી જુઓ. તમારા મિત્રએ તમે ખરીદેલી વસ્તુઓ કરતા બરાબર બમણી વસ્તુઓ ખરીદી, અને બરાબર બમણી કિંમત ચૂકવી. શું તમને ખરેખર કોઈ \"નવી\" માહિતી મળી?",
+    "bloom": "Analyze",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10_MATH_CH3_THEO_1",
+    "type": "theory",
+    "title": "Pair of Linear Equations in Two Variables",
+    "title_hi": "दो चरों वाले रैखिक समीकरण युग्म",
+    "title_gu": "દ્વિચલ સુરેખ સમીકરણ યુગ્મ",
+    "body": "An equation of the form **ax + by + c = 0**, where a, b, and c are real numbers, and a and b are not both zero, is called a linear equation in two variables x and y.\nTwo linear equations in the same two variables x and y constitute a **pair of linear equations in two variables**.\nThe general form is:\n**a₁x + b₁y + c₁ = 0**\n**a₂x + b₂y + c₂ = 0**\nGeometrically, a linear equation in two variables represents a straight line. So, a pair of linear equations represents two lines in a plane.",
+    "body_hi": "**ax + by + c = 0** के रूप का एक समीकरण, जहाँ a, b और c वास्तविक संख्याएँ हैं, और a और b दोनों शून्य नहीं हैं, दो चरों x और y में एक रैखिक समीकरण कहलाता है।\nसमान दो चरों x और y में दो रैखिक समीकरण मिलकर **दो चरों वाले रैखिक समीकरण युग्म (pair of linear equations in two variables)** बनाते हैं।\nइसका सामान्य रूप है:\n**a₁x + b₁y + c₁ = 0**\n**a₂x + b₂y + c₂ = 0**\nज्यामितीय रूप से, दो चरों वाला एक रैखिक समीकरण एक सीधी रेखा को निरूपित करता है। इसलिए, रैखिक समीकरणों का एक युग्म एक तल में दो रेखाओं को निरूपित करता है।",
+    "body_gu": "**ax + by + c = 0** સ્વરૂપના સમીકરણને, જ્યાં a, b અને c વાસ્તવિક સંખ્યાઓ છે, અને a અને b બંને શૂન્ય નથી, તેને બે ચલ x અને y માં સુરેખ સમીકરણ કહેવાય છે.\nએક જ બે ચલ x અને y માં બે સુરેખ સમીકરણો મળીને **દ્વિચલ સુરેખ સમીકરણ યુગ્મ** બનાવે છે.\nતેનું સામાન્ય સ્વરૂપ આ મુજબ છે:\n**a₁x + b₁y + c₁ = 0**\n**a₂x + b₂y + c₂ = 0**\nભૌમિતિક રીતે, દ્વિચલ સુરેખ સમીકરણ એક સીધી રેખા દર્શાવે છે. તેથી, સુરેખ સમીકરણોની જોડી સમતલમાં બે રેખાઓ દર્શાવે છે."
+  },
+  {
+    "id": "C10_MATH_CH3_THEO_2",
+    "type": "theory",
+    "title": "Graphical Method of Solution",
+    "title_hi": "ग्राफीय विधि से हल",
+    "title_gu": "ભૌમિતિક રીત (આલેખની રીત) થી ઉકેલ",
+    "body": "When we draw two lines on a graph, exactly one of three possibilities can happen:\n1. **Intersecting Lines**: The two lines intersect at exactly one point. This point gives the unique solution. The equations are **consistent**.\n2. **Parallel Lines**: The two lines are parallel and never intersect. The equations have **no solution**. They are **inconsistent**.\n3. **Coincident Lines**: The two lines overlap completely. Every point on the line is a solution, so there are **infinitely many solutions**. The equations are dependent and **consistent**.",
+    "body_hi": "जब हम एक ग्राफ पर दो रेखाएँ खींचते हैं, तो ठीक तीन में से एक संभावना हो सकती है:\n1. **प्रतिच्छेदी रेखाएँ (Intersecting Lines)**: दोनों रेखाएँ ठीक एक बिंदु पर प्रतिच्छेद करती हैं। यह बिंदु एक अद्वितीय (unique) हल देता है। समीकरण **संगत (consistent)** हैं।\n2. **समांतर रेखाएँ (Parallel Lines)**: दोनों रेखाएँ समांतर होती हैं और कभी प्रतिच्छेद नहीं करती हैं। समीकरणों का **कोई हल नहीं** होता है। वे **असंगत (inconsistent)** हैं।\n3. **संपाती रेखाएँ (Coincident Lines)**: दोनों रेखाएँ पूरी तरह से एक-दूसरे के ऊपर आच्छादित (overlap) होती हैं। रेखा पर स्थित प्रत्येक बिंदु एक हल होता है, इसलिए **अपरिमित रूप से अनेक हल** होते हैं। समीकरण आश्रित और **संगत (consistent)** हैं।",
+    "body_gu": "જ્યારે આપણે આલેખ પર બે રેખાઓ દોરીએ છીએ, ત્યારે બરાબર ત્રણમાંથી એક શક્યતા બની શકે છે:\n1. **છેદતી રેખાઓ (Intersecting Lines)**: બંને રેખાઓ બરાબર એક જ બિંદુએ છેદે છે. આ બિંદુ અનન્ય (unique) ઉકેલ આપે છે. સમીકરણો **સુસંગત (consistent)** છે.\n2. **સમાંતર રેખાઓ (Parallel Lines)**: બંને રેખાઓ સમાંતર હોય છે અને ક્યારેય છેદતી નથી. સમીકરણોનો **કોઈ ઉકેલ નથી**. તેઓ **અસંગત (inconsistent)** છે.\n3. **સંપાતી રેખાઓ (Coincident Lines)**: બંને રેખાઓ સંપૂર્ણપણે એકબીજા પર સંપાત (overlap) થાય છે. રેખા પરનું દરેક બિંદુ એક ઉકેલ છે, તેથી **અનંત ઉકેલો** છે. સમીકરણો અવલંબી અને **સુસંગત (consistent)** છે."
+  },
+  {
+    "id": "C10_MATH_CH3_THEO_3",
+    "type": "theory",
+    "title": "Comparing the Ratios (a₁/a₂, b₁/b₂, c₁/c₂)",
+    "title_hi": "अनुपातों की तुलना (a₁/a₂, b₁/b₂, c₁/c₂)",
+    "title_gu": "ગુણોત્તરોની સરખામણી (a₁/a₂, b₁/b₂, c₁/c₂)",
+    "body": "We can find the nature of the lines without actually drawing them, just by comparing the ratios of their coefficients:\nFor equations a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0:\n1. If **a₁/a₂ ≠ b₁/b₂**, the lines intersect exactly at one point (unique solution).\n2. If **a₁/a₂ = b₁/b₂ ≠ c₁/c₂**, the lines are parallel (no solution).\n3. If **a₁/a₂ = b₁/b₂ = c₁/c₂**, the lines are coincident (infinitely many solutions).",
+    "body_hi": "हम केवल गुणांकों के अनुपातों की तुलना करके, वास्तव में ग्राफ बनाए बिना रेखाओं की प्रकृति ज्ञात कर सकते हैं:\nसमीकरणों a₁x + b₁y + c₁ = 0 और a₂x + b₂y + c₂ = 0 के लिए:\n1. यदि **a₁/a₂ ≠ b₁/b₂**, तो रेखाएँ ठीक एक बिंदु पर प्रतिच्छेद करती हैं (अद्वितीय हल)।\n2. यदि **a₁/a₂ = b₁/b₂ ≠ c₁/c₂**, तो रेखाएँ समांतर होती हैं (कोई हल नहीं)।\n3. यदि **a₁/a₂ = b₁/b₂ = c₁/c₂**, तो रेखाएँ संपाती होती हैं (अपरिमित रूप से अनेक हल)।",
+    "body_gu": "આપણે ફક્ત સહગુણકોના ગુણોત્તરોની સરખામણી કરીને, વાસ્તવમાં આલેખ દોર્યા વિના રેખાઓનો સ્વભાવ શોધી શકીએ છીએ:\nસમીકરણો a₁x + b₁y + c₁ = 0 અને a₂x + b₂y + c₂ = 0 માટે:\n1. જો **a₁/a₂ ≠ b₁/b₂**, તો રેખાઓ બરાબર એક જ બિંદુએ છેદે છે (અનન્ય ઉકેલ).\n2. જો **a₁/a₂ = b₁/b₂ ≠ c₁/c₂**, તો રેખાઓ સમાંતર છે (કોઈ ઉકેલ નથી).\n3. જો **a₁/a₂ = b₁/b₂ = c₁/c₂**, તો રેખાઓ સંપાતી છે (અનંત ઉકેલો)."
+  },
+  {
+    "id": "C10_MATH_CH3_THEO_4",
+    "type": "theory",
+    "title": "Algebraic Methods: Substitution Method",
+    "title_hi": "बीजगणितीय विधियाँ: प्रतिस्थापन विधि",
+    "title_gu": "બૈજિક રીતો: આદેશની રીત",
+    "body": "When graphical methods are not convenient (especially for non-integers), we use algebraic methods. The **Substitution Method** involves:\nStep 1: Find the value of one variable (say y) in terms of the other variable (x) from either of the two equations.\nStep 2: Substitute this value of y in the *other* equation. This reduces it to an equation in one variable (x), which can be easily solved.\nStep 3: Substitute the value of x obtained into the Step 1 equation to find the exact value of y.",
+    "body_hi": "जब ग्राफीय विधियाँ सुविधाजनक नहीं होती हैं (विशेषकर गैर-पूर्णांकों के लिए), हम बीजगणितीय विधियों का उपयोग करते हैं। **प्रतिस्थापन विधि (Substitution Method)** में शामिल है:\nचरण 1: दोनों में से किसी एक समीकरण से एक चर (मान लीजिए y) का मान दूसरे चर (x) के पदों में ज्ञात कीजिए।\nचरण 2: y के इस मान को *दूसरे* समीकरण में प्रतिस्थापित (substitute) करें। यह इसे एक चर (x) वाले समीकरण में बदल देता है, जिसे आसानी से हल किया जा सकता है।\nचरण 3: प्राप्त x के मान को चरण 1 के समीकरण में प्रतिस्थापित करके y का सटीक मान ज्ञात करें।",
+    "body_gu": "જ્યારે ભૌમિતિક રીતો અનુકૂળ ન હોય (ખાસ કરીને અપૂર્ણાંકો માટે), ત્યારે આપણે બૈજિક રીતોનો ઉપયોગ કરીએ છીએ. **આદેશની રીત (Substitution Method)** માં નીચે મુજબનો સમાવેશ થાય છે:\nપગલું 1: બે સમીકરણોમાંથી કોઈપણ એકમાંથી એક ચલ (ધારો કે y) ની કિંમત બીજા ચલ (x) ના સ્વરૂપમાં શોધો.\nપગલું 2: y ની આ કિંમતને *બીજા* સમીકરણમાં મૂકો (આદેશ આપો). આ તેને એક ચલ (x) વાળા સમીકરણમાં ફેરવે છે, જેને સરળતાથી ઉકેલી શકાય છે.\nપગલું 3: મેળવેલી x ની કિંમતને પગલા 1 ના સમીકરણમાં મૂકીને y ની ચોક્કસ કિંમત શોધો."
+  },
+  {
+    "id": "C10_MATH_CH3_THEO_5",
+    "type": "theory",
+    "title": "Algebraic Methods: Elimination Method",
+    "title_hi": "बीजगणितीय विधियाँ: विलोपन विधि",
+    "title_gu": "બૈજિક રીતો: લોપની રીત",
+    "body": "The **Elimination Method** is often faster. \nStep 1: Multiply both equations by suitable non-zero constants to make the coefficients of one variable (either x or y) numerically equal in both equations.\nStep 2: Add or subtract one equation from the other so that the variable with equal coefficients gets eliminated.\nStep 3: Solve the resulting equation in one variable.\nStep 4: Substitute this value in either of the original equations to find the value of the other variable.",
+    "body_hi": "**विलोपन विधि (Elimination Method)** अक्सर तेज़ होती है।\nचरण 1: दोनों समीकरणों को उपयुक्त शून्येतर (non-zero) अचरों (constants) से गुणा करें ताकि दोनों समीकरणों में एक चर (या तो x या y) के गुणांक संख्यात्मक रूप से समान हो जाएं।\nचरण 2: एक समीकरण को दूसरे में से जोड़ें या घटाएं ताकि समान गुणांक वाला चर विलुप्त (eliminate) हो जाए।\nचरण 3: एक चर वाले परिणामी समीकरण को हल करें।\nचरण 4: दूसरे चर का मान ज्ञात करने के लिए इस मान को किसी भी मूल समीकरण में प्रतिस्थापित करें।",
+    "body_gu": "**લોપની રીત (Elimination Method)** ઘણીવાર ઝડપી હોય છે.\nપગલું 1: બંને સમીકરણોને યોગ્ય શૂન્યેતર (non-zero) અચળાંકો વડે ગુણો જેથી બંને સમીકરણોમાં એક ચલ (x અથવા y) ના સહગુણકો સંખ્યાત્મક રીતે સમાન બને.\nપગલું 2: એક સમીકરણને બીજામાં ઉમેરો અથવા તેમાંથી બાદ કરો જેથી સમાન સહગુણકવાળા ચલનો લોપ થાય (દૂર થાય).\nપગલું 3: પરિણામી એક ચલવાળા સમીકરણને ઉકેલો.\nપગલું 4: બીજા ચલની કિંમત શોધવા માટે આ કિંમતને કોઈપણ મૂળ સમીકરણમાં મૂકો."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_1",
+    "type": "practice_question",
+    "question": "On comparing the ratios a₁/a₂, b₁/b₂ and c₁/c₂, find out whether the lines representing the following pair of linear equations intersect at a point, are parallel or coincident: \n5x - 4y + 8 = 0 \n7x + 6y - 9 = 0",
+    "question_hi": "अनुपातों a₁/a₂, b₁/b₂ और c₁/c₂ की तुलना कर ज्ञात कीजिए कि निम्न रैखिक समीकरणों के युग्म द्वारा निरूपित रेखाएँ एक बिंदु पर प्रतिच्छेद करती हैं, समांतर हैं अथवा संपाती हैं:\n5x - 4y + 8 = 0 \n7x + 6y - 9 = 0",
+    "question_gu": "ગુણોત્તરો a₁/a₂, b₁/b₂ અને c₁/c₂ ની સરખામણી કરીને નીચેના સુરેખ સમીકરણ યુગ્મ દ્વારા દર્શાવાતી રેખાઓ એક બિંદુએ છેદે છે, સમાંતર છે કે સંપાતી છે તે નક્કી કરો:\n5x - 4y + 8 = 0 \n7x + 6y - 9 = 0",
+    "solution": "Here, a₁=5, b₁=-4, c₁=8 and a₂=7, b₂=6, c₂=-9.\na₁/a₂ = 5/7\nb₁/b₂ = -4/6 = -2/3\nSince a₁/a₂ ≠ b₁/b₂ (5/7 ≠ -2/3), the lines intersect exactly at one point.",
+    "solution_hi": "यहाँ, a₁=5, b₁=-4, c₁=8 तथा a₂=7, b₂=6, c₂=-9.\na₁/a₂ = 5/7\nb₁/b₂ = -4/6 = -2/3\nचूँकि a₁/a₂ ≠ b₁/b₂ (5/7 ≠ -2/3), इसलिए रेखाएँ एक बिंदु पर प्रतिच्छेद करती हैं।",
+    "solution_gu": "અહીં, a₁=5, b₁=-4, c₁=8 અને a₂=7, b₂=6, c₂=-9.\na₁/a₂ = 5/7\nb₁/b₂ = -4/6 = -2/3\nકારણ કે a₁/a₂ ≠ b₁/b₂ (5/7 ≠ -2/3), તેથી રેખાઓ એક બિંદુએ છેદે છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_2",
+    "type": "practice_question",
+    "question": "On comparing the ratios a₁/a₂, b₁/b₂ and c₁/c₂, find out whether the lines representing the following pair of linear equations intersect at a point, are parallel or coincident: \n9x + 3y + 12 = 0 \n18x + 6y + 24 = 0",
+    "question_hi": "अनुपातों a₁/a₂, b₁/b₂ और c₁/c₂ की तुलना कर ज्ञात कीजिए कि निम्न रैखिक समीकरणों के युग्म द्वारा निरूपित रेखाएँ एक बिंदु पर प्रतिच्छेद करती हैं, समांतर हैं अथवा संपाती हैं:\n9x + 3y + 12 = 0 \n18x + 6y + 24 = 0",
+    "question_gu": "ગુણોત્તરો a₁/a₂, b₁/b₂ અને c₁/c₂ ની સરખામણી કરીને નીચેના સુરેખ સમીકરણ યુગ્મ દ્વારા દર્શાવાતી રેખાઓ એક બિંદુએ છેદે છે, સમાંતર છે કે સંપાતી છે તે નક્કી કરો:\n9x + 3y + 12 = 0 \n18x + 6y + 24 = 0",
+    "solution": "Here, a₁=9, b₁=3, c₁=12 and a₂=18, b₂=6, c₂=24.\na₁/a₂ = 9/18 = 1/2\nb₁/b₂ = 3/6 = 1/2\nc₁/c₂ = 12/24 = 1/2\nSince a₁/a₂ = b₁/b₂ = c₁/c₂ (1/2 = 1/2 = 1/2), the lines are coincident.",
+    "solution_hi": "यहाँ, a₁=9, b₁=3, c₁=12 तथा a₂=18, b₂=6, c₂=24.\na₁/a₂ = 9/18 = 1/2\nb₁/b₂ = 3/6 = 1/2\nc₁/c₂ = 12/24 = 1/2\nचूँकि a₁/a₂ = b₁/b₂ = c₁/c₂ (1/2 = 1/2 = 1/2), इसलिए रेखाएँ संपाती (coincident) हैं।",
+    "solution_gu": "અહીં, a₁=9, b₁=3, c₁=12 અને a₂=18, b₂=6, c₂=24.\na₁/a₂ = 9/18 = 1/2\nb₁/b₂ = 3/6 = 1/2\nc₁/c₂ = 12/24 = 1/2\nકારણ કે a₁/a₂ = b₁/b₂ = c₁/c₂ (1/2 = 1/2 = 1/2), તેથી રેખાઓ સંપાતી છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_3",
+    "type": "practice_question",
+    "question": "On comparing the ratios a₁/a₂, b₁/b₂ and c₁/c₂, find out whether the lines representing the following pair of linear equations intersect at a point, are parallel or coincident: \n6x - 3y + 10 = 0 \n2x - y + 9 = 0",
+    "question_hi": "अनुपातों a₁/a₂, b₁/b₂ और c₁/c₂ की तुलना कर ज्ञात कीजिए कि निम्न रैखिक समीकरणों के युग्म द्वारा निरूपित रेखाएँ एक बिंदु पर प्रतिच्छेद करती हैं, समांतर हैं अथवा संपाती हैं:\n6x - 3y + 10 = 0 \n2x - y + 9 = 0",
+    "question_gu": "ગુણોત્તરો a₁/a₂, b₁/b₂ અને c₁/c₂ ની સરખામણી કરીને નીચેના સુરેખ સમીકરણ યુગ્મ દ્વારા દર્શાવાતી રેખાઓ એક બિંદુએ છેદે છે, સમાંતર છે કે સંપાતી છે તે નક્કી કરો:\n6x - 3y + 10 = 0 \n2x - y + 9 = 0",
+    "solution": "Here, a₁=6, b₁=-3, c₁=10 and a₂=2, b₂=-1, c₂=9.\na₁/a₂ = 6/2 = 3\nb₁/b₂ = -3/-1 = 3\nc₁/c₂ = 10/9\nSince a₁/a₂ = b₁/b₂ ≠ c₁/c₂ (3 = 3 ≠ 10/9), the lines are parallel.",
+    "solution_hi": "यहाँ, a₁=6, b₁=-3, c₁=10 तथा a₂=2, b₂=-1, c₂=9.\na₁/a₂ = 6/2 = 3\nb₁/b₂ = -3/-1 = 3\nc₁/c₂ = 10/9\nचूँकि a₁/a₂ = b₁/b₂ ≠ c₁/c₂ (3 = 3 ≠ 10/9), इसलिए रेखाएँ समांतर हैं।",
+    "solution_gu": "અહીં, a₁=6, b₁=-3, c₁=10 અને a₂=2, b₂=-1, c₂=9.\na₁/a₂ = 6/2 = 3\nb₁/b₂ = -3/-1 = 3\nc₁/c₂ = 10/9\nકારણ કે a₁/a₂ = b₁/b₂ ≠ c₁/c₂ (3 = 3 ≠ 10/9), તેથી રેખાઓ સમાંતર છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_4",
+    "type": "practice_question",
+    "question": "On comparing the ratios, find out whether the following pair of linear equations are consistent, or inconsistent: \n3x + 2y = 5 ; 2x - 3y = 7",
+    "question_hi": "अनुपातों की तुलना कर ज्ञात कीजिए कि निम्न रैखिक समीकरणों के युग्म संगत हैं या असंगत:\n3x + 2y = 5 ; 2x - 3y = 7",
+    "question_gu": "ગુણોત્તરોની સરખામણી કરીને નીચેના સુરેખ સમીકરણ યુગ્મ સુસંગત છે કે અસંગત તે નક્કી કરો:\n3x + 2y = 5 ; 2x - 3y = 7",
+    "solution": "Write equations as: 3x + 2y - 5 = 0 and 2x - 3y - 7 = 0.\na₁/a₂ = 3/2\nb₁/b₂ = 2/-3\nSince a₁/a₂ ≠ b₁/b₂, the equations have a unique solution. Therefore, they are consistent.",
+    "solution_hi": "समीकरणों को इस प्रकार लिखें: 3x + 2y - 5 = 0 और 2x - 3y - 7 = 0.\na₁/a₂ = 3/2\nb₁/b₂ = -2/3 (या 2/-3)\nचूँकि a₁/a₂ ≠ b₁/b₂, समीकरणों का अद्वितीय हल है। इसलिए, वे संगत (consistent) हैं।",
+    "solution_gu": "સમીકરણોને આ રીતે લખો: 3x + 2y - 5 = 0 અને 2x - 3y - 7 = 0.\na₁/a₂ = 3/2\nb₁/b₂ = -2/3\nકારણ કે a₁/a₂ ≠ b₁/b₂, સમીકરણોનો અનન્ય ઉકેલ છે. તેથી, તેઓ સુસંગત છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_5",
+    "type": "practice_question",
+    "question": "On comparing the ratios, find out whether the following pair of linear equations are consistent, or inconsistent: \n2x - 3y = 8 ; 4x - 6y = 9",
+    "question_hi": "अनुपातों की तुलना कर ज्ञात कीजिए कि निम्न रैखिक समीकरणों के युग्म संगत हैं या असंगत:\n2x - 3y = 8 ; 4x - 6y = 9",
+    "question_gu": "ગુણોત્તરોની સરખામણી કરીને નીચેના સુરેખ સમીકરણ યુગ્મ સુસંગત છે કે અસંગત તે નક્કી કરો:\n2x - 3y = 8 ; 4x - 6y = 9",
+    "solution": "Write equations as: 2x - 3y - 8 = 0 and 4x - 6y - 9 = 0.\na₁/a₂ = 2/4 = 1/2\nb₁/b₂ = -3/-6 = 1/2\nc₁/c₂ = -8/-9 = 8/9\nSince a₁/a₂ = b₁/b₂ ≠ c₁/c₂, the lines are parallel. They have no solution. Therefore, they are inconsistent.",
+    "solution_hi": "समीकरणों को इस प्रकार लिखें: 2x - 3y - 8 = 0 और 4x - 6y - 9 = 0.\na₁/a₂ = 2/4 = 1/2\nb₁/b₂ = -3/-6 = 1/2\nc₁/c₂ = -8/-9 = 8/9\nचूँकि a₁/a₂ = b₁/b₂ ≠ c₁/c₂, रेखाएँ समांतर हैं। इनका कोई हल नहीं है। इसलिए, वे असंगत (inconsistent) हैं।",
+    "solution_gu": "સમીકરણોને આ રીતે લખો: 2x - 3y - 8 = 0 અને 4x - 6y - 9 = 0.\na₁/a₂ = 2/4 = 1/2\nb₁/b₂ = -3/-6 = 1/2\nc₁/c₂ = -8/-9 = 8/9\nકારણ કે a₁/a₂ = b₁/b₂ ≠ c₁/c₂, રેખાઓ સમાંતર છે. તેમનો કોઈ ઉકેલ નથી. તેથી, તેઓ અસંગત છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_6",
+    "type": "practice_question",
+    "question": "Half the perimeter of a rectangular garden, whose length is 4 m more than its width, is 36 m. Find the dimensions of the garden.",
+    "question_hi": "एक आयताकार बाग, जिसकी लंबाई, चौड़ाई से 4 मी अधिक है, का अर्धपरिमाप 36 मी है। बाग की विमाएँ (लंबाई और चौड़ाई) ज्ञात कीजिए।",
+    "question_gu": "એક લંબચોરસ બગીચાની અર્ધપરિમિતિ 36 મીટર છે, જેની લંબાઈ તેની પહોળાઈ કરતાં 4 મીટર વધુ છે. બગીચાનાં પરિમાણો (લંબાઈ અને પહોળાઈ) શોધો.",
+    "solution": "Let length be x meters and width be y meters.\nCondition 1: Length is 4m more than width => x = y + 4 => x - y = 4  ---(1)\nCondition 2: Half perimeter is 36. Perimeter = 2(x + y), so Half perimeter = x + y.\nSo, x + y = 36  ---(2)\nAdding eq (1) and (2):\n(x - y) + (x + y) = 4 + 36\n2x = 40 => x = 20.\nSubstitute x in eq (2): 20 + y = 36 => y = 16.\nTherefore, the length is 20 m and the width is 16 m.",
+    "solution_hi": "माना लंबाई x मीटर और चौड़ाई y मीटर है।\nशर्त 1: लंबाई चौड़ाई से 4 मी अधिक है => x = y + 4 => x - y = 4 ---(1)\nशर्त 2: अर्धपरिमाप 36 है। परिमाप = 2(x + y), इसलिए अर्धपरिमाप = x + y.\nअतः, x + y = 36 ---(2)\nसमीकरण (1) और (2) को जोड़ने पर:\n(x - y) + (x + y) = 4 + 36\n2x = 40 => x = 20.\nसमीकरण (2) में x का मान रखने पर: 20 + y = 36 => y = 16.\nइसलिए, लंबाई 20 मीटर है और चौड़ाई 16 मीटर है।",
+    "solution_gu": "ધારો કે લંબાઈ x મીટર અને પહોળાઈ y મીટર છે.\nશરત 1: લંબાઈ પહોળાઈ કરતાં 4 મીટર વધુ છે => x = y + 4 => x - y = 4 ---(1)\nશરત 2: અર્ધપરિમિતિ 36 છે. પરિમિતિ = 2(x + y), તેથી અર્ધપરિમિતિ = x + y.\nતેથી, x + y = 36 ---(2)\nસમીકરણ (1) અને (2) ઉમેરતા:\n(x - y) + (x + y) = 4 + 36\n2x = 40 => x = 20.\nસમીકરણ (2) માં x ની કિંમત મુકતા: 20 + y = 36 => y = 16.\nતેથી, લંબાઈ 20 મીટર છે અને પહોળાઈ 16 મીટર છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_7",
+    "type": "practice_question",
+    "question": "Solve the following pair of linear equations by the substitution method: \nx + y = 14 \nx - y = 4",
+    "question_hi": "निम्नलिखित रैखिक समीकरण युग्म को प्रतिस्थापन विधि से हल कीजिए:\nx + y = 14 \nx - y = 4",
+    "question_gu": "નીચેના સુરેખ સમીકરણ યુગ્મને આદેશની રીતથી ઉકેલો:\nx + y = 14 \nx - y = 4",
+    "solution": "x + y = 14 ---(1)\nx - y = 4  ---(2)\nFrom eq (2), x = 4 + y.\nSubstitute this value of x in eq (1):\n(4 + y) + y = 14\n4 + 2y = 14\n2y = 10 => y = 5.\nSubstitute y = 5 in x = 4 + y:\nx = 4 + 5 = 9.\nThe solution is x = 9, y = 5.",
+    "solution_hi": "x + y = 14 ---(1)\nx - y = 4 ---(2)\nसमीकरण (2) से, x = 4 + y.\nसमीकरण (1) में x का यह मान प्रतिस्थापित करने पर:\n(4 + y) + y = 14\n4 + 2y = 14\n2y = 10 => y = 5.\ny = 5 को x = 4 + y में रखने पर:\nx = 4 + 5 = 9.\nहल x = 9, y = 5 है।",
+    "solution_gu": "x + y = 14 ---(1)\nx - y = 4 ---(2)\nસમીકરણ (2) પરથી, x = 4 + y.\nસમીકરણ (1) માં x ની આ કિંમત મુકતા:\n(4 + y) + y = 14\n4 + 2y = 14\n2y = 10 => y = 5.\nx = 4 + y માં y = 5 મુકતા:\nx = 4 + 5 = 9.\nઉકેલ x = 9, y = 5 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_8",
+    "type": "practice_question",
+    "question": "Solve the following pair of linear equations by the substitution method: \ns - t = 3 \ns/3 + t/2 = 6",
+    "question_hi": "निम्नलिखित रैखिक समीकरण युग्म को प्रतिस्थापन विधि से हल कीजिए:\ns - t = 3 \ns/3 + t/2 = 6",
+    "question_gu": "નીચેના સુરેખ સમીકરણ યુગ્મને આદેશની રીતથી ઉકેલો:\ns - t = 3 \ns/3 + t/2 = 6",
+    "solution": "s - t = 3  ---(1)\ns/3 + t/2 = 6. Multiply by LCM 6 to remove fractions: 2s + 3t = 36 ---(2)\nFrom (1), s = 3 + t.\nSubstitute s in (2):\n2(3 + t) + 3t = 36\n6 + 2t + 3t = 36\n5t = 30 => t = 6.\nSubstitute t = 6 in s = 3 + t:\ns = 3 + 6 = 9.\nThe solution is s = 9, t = 6.",
+    "solution_hi": "s - t = 3 ---(1)\ns/3 + t/2 = 6. भिन्नों को हटाने के लिए LCM 6 से गुणा करें: 2s + 3t = 36 ---(2)\n(1) से, s = 3 + t.\ns का मान (2) में रखने पर:\n2(3 + t) + 3t = 36\n6 + 2t + 3t = 36\n5t = 30 => t = 6.\ns = 3 + t में t = 6 रखने पर:\ns = 3 + 6 = 9.\nहल s = 9, t = 6 है।",
+    "solution_gu": "s - t = 3 ---(1)\ns/3 + t/2 = 6. અપૂર્ણાંકો દૂર કરવા માટે લ.સા.અ. 6 વડે ગુણો: 2s + 3t = 36 ---(2)\n(1) પરથી, s = 3 + t.\n(2) માં s ની કિંમત મુકતા:\n2(3 + t) + 3t = 36\n6 + 2t + 3t = 36\n5t = 30 => t = 6.\ns = 3 + t માં t = 6 મુકતા:\ns = 3 + 6 = 9.\nઉકેલ s = 9, t = 6 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_9",
+    "type": "practice_question",
+    "question": "Solve 2x + 3y = 11 and 2x - 4y = -24 and hence find the value of 'm' for which y = mx + 3.",
+    "question_hi": "2x + 3y = 11 और 2x - 4y = -24 को हल कीजिए और इससे 'm' का वह मान ज्ञात कीजिए जिसके लिए y = mx + 3 हो।",
+    "question_gu": "2x + 3y = 11 અને 2x - 4y = -24 ને ઉકેલો અને તે પરથી 'm' ની એવી કિંમત શોધો જેના માટે y = mx + 3 થાય.",
+    "solution": "2x + 3y = 11 ---(1)\n2x - 4y = -24 => x - 2y = -12 => x = 2y - 12 ---(2)\nSubstitute (2) in (1):\n2(2y - 12) + 3y = 11\n4y - 24 + 3y = 11\n7y = 35 => y = 5.\nSubstitute y in (2): x = 2(5) - 12 = 10 - 12 = -2.\nSo, x = -2, y = 5.\nNow, y = mx + 3.\n5 = m(-2) + 3\n5 - 3 = -2m => 2 = -2m => m = -1.",
+    "solution_hi": "2x + 3y = 11 ---(1)\n2x - 4y = -24 => x - 2y = -12 => x = 2y - 12 ---(2)\n(2) को (1) में प्रतिस्थापित करने पर:\n2(2y - 12) + 3y = 11\n4y - 24 + 3y = 11\n7y = 35 => y = 5.\n(2) में y रखने पर: x = 2(5) - 12 = 10 - 12 = -2.\nअतः, x = -2, y = 5.\nअब, y = mx + 3.\n5 = m(-2) + 3\n5 - 3 = -2m => 2 = -2m => m = -1.",
+    "solution_gu": "2x + 3y = 11 ---(1)\n2x - 4y = -24 => x - 2y = -12 => x = 2y - 12 ---(2)\n(2) ને (1) માં મુકતા:\n2(2y - 12) + 3y = 11\n4y - 24 + 3y = 11\n7y = 35 => y = 5.\n(2) માં y મુકતા: x = 2(5) - 12 = 10 - 12 = -2.\nતેથી, x = -2, y = 5.\nહવે, y = mx + 3.\n5 = m(-2) + 3\n5 - 3 = -2m => 2 = -2m => m = -1."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_10",
+    "type": "practice_question",
+    "question": "The difference between two numbers is 26 and one number is three times the other. Find them.",
+    "question_hi": "दो संख्याओं का अंतर 26 है और एक संख्या दूसरी संख्या की तीन गुनी है। उन्हें ज्ञात कीजिए।",
+    "question_gu": "બે સંખ્યાઓનો તફાવત 26 છે અને એક સંખ્યા બીજી સંખ્યા કરતાં ત્રણ ગણી છે. તે સંખ્યાઓ શોધો.",
+    "solution": "Let the larger number be x and smaller be y.\nDifference is 26: x - y = 26 ---(1)\nOne is 3 times the other: x = 3y ---(2)\nSubstitute (2) in (1):\n3y - y = 26\n2y = 26 => y = 13.\nSubstitute y in (2):\nx = 3(13) = 39.\nThe numbers are 39 and 13.",
+    "solution_hi": "माना बड़ी संख्या x और छोटी संख्या y है।\nअंतर 26 है: x - y = 26 ---(1)\nएक दूसरे की 3 गुनी है: x = 3y ---(2)\n(2) को (1) में प्रतिस्थापित करने पर:\n3y - y = 26\n2y = 26 => y = 13.\ny को (2) में रखने पर:\nx = 3(13) = 39.\nसंख्याएँ 39 और 13 हैं।",
+    "solution_gu": "ધારો કે મોટી સંખ્યા x અને નાની સંખ્યા y છે.\nતફાવત 26 છે: x - y = 26 ---(1)\nએક સંખ્યા બીજી કરતા 3 ગણી છે: x = 3y ---(2)\n(2) ને (1) માં મુકતા:\n3y - y = 26\n2y = 26 => y = 13.\ny ને (2) માં મુકતા:\nx = 3(13) = 39.\nતે સંખ્યાઓ 39 અને 13 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_11",
+    "type": "practice_question",
+    "question": "The larger of two supplementary angles exceeds the smaller by 18 degrees. Find them.",
+    "question_hi": "दो संपूरक कोणों में बड़ा कोण छोटे कोण से 18 डिग्री अधिक है। उन्हें ज्ञात कीजिए।",
+    "question_gu": "બે પૂરકકોણો પૈકી મોટો ખૂણો નાના ખૂણા કરતાં 18 અંશ મોટો છે. તે ખૂણાઓ શોધો.",
+    "solution": "Let the larger angle be x and smaller be y.\nSince they are supplementary, x + y = 180° ---(1)\nThe larger exceeds smaller by 18: x = y + 18 ---(2)\nSubstitute (2) in (1):\n(y + 18) + y = 180\n2y = 180 - 18\n2y = 162 => y = 81°.\nSubstitute y in (2): x = 81 + 18 = 99°.\nThe angles are 99° and 81°.",
+    "solution_hi": "माना बड़ा कोण x और छोटा कोण y है।\nचूँकि वे संपूरक (supplementary) हैं, x + y = 180° ---(1)\nबड़ा कोण छोटे से 18 अधिक है: x = y + 18 ---(2)\n(2) को (1) में प्रतिस्थापित करने पर:\n(y + 18) + y = 180\n2y = 180 - 18\n2y = 162 => y = 81°.\ny को (2) में रखने पर: x = 81 + 18 = 99°.\nकोण 99° और 81° हैं।",
+    "solution_gu": "ધારો કે મોટો ખૂણો x અને નાનો ખૂણો y છે.\nકારણ કે તેઓ પૂરકકોણ છે, x + y = 180° ---(1)\nમોટો ખૂણો નાના કરતા 18 વધુ છે: x = y + 18 ---(2)\n(2) ને (1) માં મુકતા:\n(y + 18) + y = 180\n2y = 180 - 18\n2y = 162 => y = 81°.\ny ને (2) માં મુકતા: x = 81 + 18 = 99°.\nખૂણાઓ 99° અને 81° છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_12",
+    "type": "practice_question",
+    "question": "Solve the following pair of linear equations by the elimination method: \n3x + 4y = 10 \n2x - 2y = 2",
+    "question_hi": "निम्नलिखित रैखिक समीकरण युग्म को विलोपन विधि से हल कीजिए:\n3x + 4y = 10 \n2x - 2y = 2",
+    "question_gu": "નીચેના સુરેખ સમીકરણ યુગ્મને લોપની રીતથી ઉકેલો:\n3x + 4y = 10 \n2x - 2y = 2",
+    "solution": "3x + 4y = 10 ---(1)\n2x - 2y = 2  ---(2)\nMultiply eq (2) by 2 to make the y coefficients equal in magnitude:\n4x - 4y = 4 ---(3)\nAdd eq (1) and (3):\n(3x + 4y) + (4x - 4y) = 10 + 4\n7x = 14 => x = 2.\nSubstitute x = 2 in eq (2):\n2(2) - 2y = 2\n4 - 2y = 2 => 2y = 2 => y = 1.\nThe solution is x = 2, y = 1.",
+    "solution_hi": "3x + 4y = 10 ---(1)\n2x - 2y = 2 ---(2)\ny के गुणांकों के परिमाण को समान करने के लिए समीकरण (2) को 2 से गुणा करें:\n4x - 4y = 4 ---(3)\nसमीकरण (1) और (3) को जोड़ने पर:\n(3x + 4y) + (4x - 4y) = 10 + 4\n7x = 14 => x = 2.\nx = 2 को समीकरण (2) में रखने पर:\n2(2) - 2y = 2\n4 - 2y = 2 => 2y = 2 => y = 1.\nहल x = 2, y = 1 है।",
+    "solution_gu": "3x + 4y = 10 ---(1)\n2x - 2y = 2 ---(2)\ny ના સહગુણકોનું મૂલ્ય સમાન કરવા સમીકરણ (2) ને 2 વડે ગુણો:\n4x - 4y = 4 ---(3)\nસમીકરણ (1) અને (3) ઉમેરતા:\n(3x + 4y) + (4x - 4y) = 10 + 4\n7x = 14 => x = 2.\nસમીકરણ (2) માં x = 2 મુકતા:\n2(2) - 2y = 2\n4 - 2y = 2 => 2y = 2 => y = 1.\nઉકેલ x = 2, y = 1 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_13",
+    "type": "practice_question",
+    "question": "Solve the following pair of linear equations by the elimination method: \nx/2 + 2y/3 = -1 \nx - y/3 = 3",
+    "question_hi": "निम्नलिखित रैखिक समीकरण युग्म को विलोपन विधि से हल कीजिए:\nx/2 + 2y/3 = -1 \nx - y/3 = 3",
+    "question_gu": "નીચેના સુરેખ સમીકરણ યુગ્મને લોપની રીતથી ઉકેલો:\nx/2 + 2y/3 = -1 \nx - y/3 = 3",
+    "solution": "Clear fractions:\nEq 1 (multiply by 6): 3x + 4y = -6 ---(1)\nEq 2 (multiply by 3): 3x - y = 9  ---(2)\nSubtract (2) from (1):\n(3x + 4y) - (3x - y) = -6 - 9\n5y = -15 => y = -3.\nSubstitute y = -3 in (2):\n3x - (-3) = 9\n3x + 3 = 9 => 3x = 6 => x = 2.\nThe solution is x = 2, y = -3.",
+    "solution_hi": "भिन्नों को सरल करने पर:\nसमीकरण 1 (6 से गुणा करने पर): 3x + 4y = -6 ---(1)\nसमीकरण 2 (3 से गुणा करने पर): 3x - y = 9 ---(2)\n(1) में से (2) घटाने पर:\n(3x + 4y) - (3x - y) = -6 - 9\n5y = -15 => y = -3.\ny = -3 को (2) में रखने पर:\n3x - (-3) = 9\n3x + 3 = 9 => 3x = 6 => x = 2.\nहल x = 2, y = -3 है।",
+    "solution_gu": "અપૂર્ણાંકો દૂર કરતા:\nસમીકરણ 1 (6 વડે ગુણતા): 3x + 4y = -6 ---(1)\nસમીકરણ 2 (3 વડે ગુણતા): 3x - y = 9 ---(2)\n(1) માંથી (2) બાદ કરતા:\n(3x + 4y) - (3x - y) = -6 - 9\n5y = -15 => y = -3.\ny = -3 ને (2) માં મુકતા:\n3x - (-3) = 9\n3x + 3 = 9 => 3x = 6 => x = 2.\nઉકેલ x = 2, y = -3 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_14",
+    "type": "practice_question",
+    "question": "A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. Find the fraction.",
+    "question_hi": "एक भिन्न 1/3 हो जाती है, जब उसके अंश से 1 घटाया जाता है और वह 1/4 हो जाती है, जब हर में 8 जोड़ दिया जाता है। वह भिन्न ज्ञात कीजिए।",
+    "question_gu": "એક અપૂર્ણાંકના અંશમાંથી 1 બાદ કરતા નવા અપૂર્ણાંકનું અતિસંક્ષિપ્ત રૂપ 1/3 મળે છે અને તે જ અપૂર્ણાંકના છેદમાં 8 ઉમેરતા મળતા અપૂર્ણાંકનું અતિસંક્ષિપ્ત રૂપ 1/4 થાય છે. તે અપૂર્ણાંક શોધો.",
+    "solution": "Let the fraction be x/y.\nCondition 1: (x - 1) / y = 1/3 => 3x - 3 = y => 3x - y = 3 ---(1)\nCondition 2: x / (y + 8) = 1/4 => 4x = y + 8 => 4x - y = 8 ---(2)\nSubtract (1) from (2):\n(4x - y) - (3x - y) = 8 - 3\nx = 5.\nSubstitute x = 5 in (1):\n3(5) - y = 3 => 15 - y = 3 => y = 12.\nThe fraction is 5/12.",
+    "solution_hi": "माना भिन्न x/y है।\nशर्त 1: (x - 1) / y = 1/3 => 3x - 3 = y => 3x - y = 3 ---(1)\nशर्त 2: x / (y + 8) = 1/4 => 4x = y + 8 => 4x - y = 8 ---(2)\n(2) में से (1) घटाने पर:\n(4x - y) - (3x - y) = 8 - 3\nx = 5.\nx = 5 को (1) में रखने पर:\n3(5) - y = 3 => 15 - y = 3 => y = 12.\nवह भिन्न 5/12 है।",
+    "solution_gu": "ધારો કે અપૂર્ણાંક x/y છે.\nશરત 1: (x - 1) / y = 1/3 => 3x - 3 = y => 3x - y = 3 ---(1)\nશરત 2: x / (y + 8) = 1/4 => 4x = y + 8 => 4x - y = 8 ---(2)\n(2) માંથી (1) બાદ કરતા:\n(4x - y) - (3x - y) = 8 - 3\nx = 5.\nx = 5 ને (1) માં મુકતા:\n3(5) - y = 3 => 15 - y = 3 => y = 12.\nઅપૂર્ણાંક 5/12 છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_15",
+    "type": "practice_question",
+    "question": "Yash scored 40 marks in a test, getting 3 marks for each right answer and losing 1 mark for each wrong answer. Had 4 marks been awarded for each correct answer and 2 marks been deducted for each incorrect answer, then Yash would have scored 50 marks. How many questions were there in the test?",
+    "question_hi": "यश ने एक टेस्ट में 40 अंक अर्जित किए, जब उसे प्रत्येक सही उत्तर पर 3 अंक मिले तथा अशुद्ध उत्तर पर 1 अंक की कटौती की गई। यदि उसे सही उत्तर पर 4 अंक मिलते तथा अशुद्ध उत्तर पर 2 अंक कटते, तो यश 50 अंक अर्जित करता। टेस्ट में कुल कितने प्रश्न थे?",
+    "question_gu": "યશને એક કસોટીમાં 40 ગુણ મળ્યા હતા, તેને પ્રત્યેક સાચા જવાબ માટે 3 ગુણ મળ્યા હતા અને પ્રત્યેક ખોટા જવાબ માટે 1 ગુણ કપાયો હતો. જો તેને દરેક સાચા જવાબ માટે 4 ગુણ અપાયા હોત અને દરેક ખોટા જવાબ માટે 2 ગુણ કપાયા હોત, તો યશે 50 ગુણ મેળવ્યા હોત. આ કસોટીમાં કુલ કેટલા પ્રશ્નો હતા?",
+    "solution": "Let number of right answers be x and wrong answers be y. Total questions = x + y.\nCase 1: 3x - 1y = 40  ---(1)\nCase 2: 4x - 2y = 50 => 2x - y = 25  ---(2)\nSubtract (2) from (1):\n(3x - y) - (2x - y) = 40 - 25\nx = 15.\nSubstitute x = 15 in (1):\n3(15) - y = 40 => 45 - y = 40 => y = 5.\nTotal questions = 15 + 5 = 20.",
+    "solution_hi": "माना सही उत्तरों की संख्या x और गलत उत्तरों की संख्या y है। कुल प्रश्न = x + y.\nस्थिति 1: 3x - 1y = 40 ---(1)\nस्थिति 2: 4x - 2y = 50 => 2x - y = 25 ---(2)\n(1) में से (2) घटाने पर:\n(3x - y) - (2x - y) = 40 - 25\nx = 15.\nx = 15 को (1) में रखने पर:\n3(15) - y = 40 => 45 - y = 40 => y = 5.\nकुल प्रश्न = 15 + 5 = 20.",
+    "solution_gu": "ધારો કે સાચા જવાબોની સંખ્યા x અને ખોટા જવાબોની સંખ્યા y છે. કુલ પ્રશ્નો = x + y.\nકિસ્સો 1: 3x - 1y = 40 ---(1)\nકિસ્સો 2: 4x - 2y = 50 => 2x - y = 25 ---(2)\n(1) માંથી (2) બાદ કરતા:\n(3x - y) - (2x - y) = 40 - 25\nx = 15.\nx = 15 ને (1) માં મુકતા:\n3(15) - y = 40 => 45 - y = 40 => y = 5.\nકુલ પ્રશ્નો = 15 + 5 = 20."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_16",
+    "type": "practice_question",
+    "question": "Places A and B are 100 km apart on a highway. One car starts from A and another from B at the same time. If the cars travel in the same direction at different speeds, they meet in 5 hours. If they travel towards each other, they meet in 1 hour. What are the speeds of the two cars?",
+    "question_hi": "एक राजमार्ग पर दो स्थान A और B, 100 किमी की दूरी पर हैं। एक कार A से तथा दूसरी कार B से एक ही समय चलना प्रारंभ करती है। यदि ये कारें भिन्न-भिन्न चालों से एक ही दिशा में चलती हैं, तो वे 5 घंटे पश्चात् मिलती हैं। यदि वे विपरीत दिशा (एक-दूसरे की ओर) में चलती हैं, तो वे 1 घंटे पश्चात् मिलती हैं। दोनों कारों की चाल ज्ञात कीजिए।",
+    "question_gu": "ધોરીમાર્ગ પર સ્થાન A અને B એકબીજાથી 100 કિમી દૂર છે. એક ગાડી A થી ઉપડે છે અને બીજી ગાડી B થી તે જ સમયે ઉપડે છે. જો ગાડીઓ એક જ દિશામાં ભિન્ન ઝડપે દોડે, તો તેઓ 5 કલાકમાં એકબીજાને મળે છે. જો તેઓ એકબીજા તરફ દોડે, તો તેઓ 1 કલાકમાં મળે છે. બે ગાડીઓની ઝડપ કેટલી હશે?",
+    "solution": "Let speed of car from A be x km/h and from B be y km/h (x > y).\nSame direction: relative speed is (x - y). Time = Distance/Speed => 5 = 100/(x-y) => x - y = 20 ---(1)\nOpposite direction: relative speed is (x + y). Time = Distance/Speed => 1 = 100/(x+y) => x + y = 100 ---(2)\nAdd (1) and (2): 2x = 120 => x = 60 km/h.\nSubstitute x in (2): 60 + y = 100 => y = 40 km/h.\nThe speeds are 60 km/h and 40 km/h.",
+    "solution_hi": "माना A से चलने वाली कार की चाल x किमी/घंटा और B से चलने वाली कार की चाल y किमी/घंटा है (x > y)।\nएक ही दिशा में: सापेक्ष चाल (x - y) है। समय = दूरी/चाल => 5 = 100/(x-y) => x - y = 20 ---(1)\nविपरीत दिशा में: सापेक्ष चाल (x + y) है। समय = दूरी/चाल => 1 = 100/(x+y) => x + y = 100 ---(2)\n(1) और (2) को जोड़ने पर: 2x = 120 => x = 60 किमी/घंटा।\nx को (2) में रखने पर: 60 + y = 100 => y = 40 किमी/घंटा।\nकारों की चाल 60 किमी/घंटा और 40 किमी/घंटा है।",
+    "solution_gu": "ધારો કે A થી શરૂ થતી ગાડીની ઝડપ x કિમી/કલાક અને B થી શરૂ થતી ગાડીની ઝડપ y કિમી/કલાક છે (x > y).\nએક જ દિશામાં: સાપેક્ષ ઝડપ (x - y) છે. સમય = અંતર/ઝડપ => 5 = 100/(x-y) => x - y = 20 ---(1)\nવિરુદ્ધ દિશામાં: સાપેક્ષ ઝડપ (x + y) છે. સમય = અંતર/ઝડપ => 1 = 100/(x+y) => x + y = 100 ---(2)\n(1) અને (2) ઉમેરતા: 2x = 120 => x = 60 કિમી/કલાક.\nx ને (2) માં મુકતા: 60 + y = 100 => y = 40 કિમી/કલાક.\nગાડીઓની ઝડપ 60 કિમી/કલાક અને 40 કિમી/કલાક છે."
+  },
+  {
+    "id": "C10_MATH_CH3_PRACTICE_17",
+    "type": "practice_question",
+    "question": "The area of a rectangle gets reduced by 9 square units, if its length is reduced by 5 units and breadth is increased by 3 units. If we increase the length by 3 units and the breadth by 2 units, the area increases by 67 square units. Find the dimensions of the rectangle.",
+    "question_hi": "एक आयत का क्षेत्रफल 9 वर्ग इकाई कम हो जाता है, यदि उसकी लंबाई 5 इकाई कम कर दी जाती है और चौड़ाई 3 इकाई बढ़ा दी जाती है। यदि हम लंबाई को 3 इकाई और चौड़ाई को 2 इकाई बढ़ा दें, तो क्षेत्रफल 67 वर्ग इकाई बढ़ जाता है। आयत की विमाएँ ज्ञात कीजिए।",
+    "question_gu": "જો લંબચોરસની લંબાઈમાં 5 એકમનો ઘટાડો થાય અને પહોળાઈમાં 3 એકમનો વધારો થાય, તો લંબચોરસનું ક્ષેત્રફળ 9 ચોરસ એકમ જેટલું ઘટે છે. જો આપણે લંબાઈમાં 3 એકમ અને પહોળાઈમાં 2 એકમ વધારીએ, તો ક્ષેત્રફળ 67 ચોરસ એકમ વધે છે. લંબચોરસનાં પરિમાણો શોધો.",
+    "solution": "Let length be x and breadth be y. Original Area = xy.\nCase 1: (x - 5)(y + 3) = xy - 9\nxy + 3x - 5y - 15 = xy - 9\n3x - 5y = 6  ---(1)\nCase 2: (x + 3)(y + 2) = xy + 67\nxy + 2x + 3y + 6 = xy + 67\n2x + 3y = 61 ---(2)\nMultiply (1) by 3 and (2) by 5:\n9x - 15y = 18\n10x + 15y = 305\nAdd them: 19x = 323 => x = 17.\nSubstitute x in (1): 3(17) - 5y = 6 => 51 - 6 = 5y => 45 = 5y => y = 9.\nThe length is 17 units and breadth is 9 units.",
+    "solution_hi": "माना लंबाई x और चौड़ाई y है। मूल क्षेत्रफल = xy.\nस्थिति 1: (x - 5)(y + 3) = xy - 9\nxy + 3x - 5y - 15 = xy - 9\n3x - 5y = 6 ---(1)\nस्थिति 2: (x + 3)(y + 2) = xy + 67\nxy + 2x + 3y + 6 = xy + 67\n2x + 3y = 61 ---(2)\n(1) को 3 से और (2) को 5 से गुणा करें:\n9x - 15y = 18\n10x + 15y = 305\nइन्हें जोड़ने पर: 19x = 323 => x = 17.\nx को (1) में रखने पर: 3(17) - 5y = 6 => 51 - 6 = 5y => 45 = 5y => y = 9.\nलंबाई 17 इकाई और चौड़ाई 9 इकाई है।",
+    "solution_gu": "ધારો કે લંબાઈ x અને પહોળાઈ y છે. મૂળ ક્ષેત્રફળ = xy.\nકિસ્સો 1: (x - 5)(y + 3) = xy - 9\nxy + 3x - 5y - 15 = xy - 9\n3x - 5y = 6 ---(1)\nકિસ્સો 2: (x + 3)(y + 2) = xy + 67\nxy + 2x + 3y + 6 = xy + 67\n2x + 3y = 61 ---(2)\n(1) ને 3 વડે અને (2) ને 5 વડે ગુણો:\n9x - 15y = 18\n10x + 15y = 305\nતેમને ઉમેરતા: 19x = 323 => x = 17.\nx ને (1) માં મુકતા: 3(17) - 5y = 6 => 51 - 6 = 5y => 45 = 5y => y = 9.\nલંબાઈ 17 એકમ અને પહોળાઈ 9 એકમ છે."
+  }
+]

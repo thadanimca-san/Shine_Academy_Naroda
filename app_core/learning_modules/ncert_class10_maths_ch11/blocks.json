@@ -1,0 +1,812 @@
+[
+  {
+    "id": "C10M_CH11_001",
+    "type": "hook",
+    "title": "The Pizza Slices, Bicycle Wheels, and Lighthouse Beams: Unlocking Circular Geometry",
+    "body": "Have you ever wondered how an Italian chef slices a circular pizza into equal wedges? Or how far a car travels every time its wheels turn once? How does a lighthouse at the edge of a rocky coastline warn ships about dangerous coral reefs hidden underwater by sweeping a beam of light across a specific angular spread?\n\nAll these everyday phenomena are governed by the elegant principles of **Areas Related to Circles**.\n\nWhile a straight-line polygon (like a rectangle or triangle) has rigid flat edges, a circle is infinitely smooth. When you cut a circular region with lines from its centre or a straight chord, you create two distinct fundamental shapes: **Sectors** (त्रिज्यखंड / વૃત્તાંશ) and **Segments** (वृत्तखंड / વૃત્તખંડ).\n\nIn this chapter, we will master the formulas, geometric intuitions, and real-world mathematics that will help you ace every single question in your Class 10 Board Exams!",
+    "title_hi": "पिज्जा के टुकड़े, साइकिल के पहिये और लाइटहाउस की किरणें: वृत्तीय ज्यामिति का रहस्य",
+    "body_hi": "क्या आपने कभी सोचा है कि एक पिज्जा शेफ गोल पिज्जा को बराबर टुकड़ों में कैसे काटता है? या जब कार का पहिया एक चक्कर पूरा करता है तो कार वास्तव में कितनी दूरी तय करती है? समुद्र के पथरीले तट पर स्थित एक लाइटहाउस पानी के नीचे छिपी खतरनाक चट्टानों से जहाजों को आगाह करने के लिए एक निश्चित कोणीय फैलाव में प्रकाश की किरण कैसे फैलाता है?\n\nये सभी दैनिक जीवन की घटनाएँ **वृत्तों से संबंधित क्षेत्रफल (Areas Related to Circles)** के अद्भुत सिद्धांतों पर आधारित हैं।\n\nजबकि सीधी रेखाओं वाले बहुभुज (जैसे आयत या त्रिभुज) में सीधी भुजाएँ होती हैं, वृत्त पूरी तरह से चिकना और वक्राकार होता है। जब आप वृत्त के केंद्र से जाने वाली त्रिज्याओं या किसी सीधी जीवा द्वारा वृत्तीय क्षेत्र को काटते हैं, तो दो विशिष्ट मूलभूत आकृतियाँ बनती हैं: **त्रिज्यखंड (Sector)** और **वृत्तखंड (Segment)**।\n\nइस अध्याय में, हम उन सूत्रों, ज्यामितीय अंतर्दृष्टियों और व्यावहारिक गणित में महारत हासिल करेंगे जो आपको कक्षा 10 की बोर्ड परीक्षा के प्रत्येक प्रश्न को शत-प्रतिशत सटीकता से हल करने में सक्षम बनाएंगे!",
+    "title_gu": "પિઝાના ટુકડા, સાયકલના પૈડા અને લાઇટહાઉસના કિરણો: વર્તુળાકાર ભૂમિતિનું રહસ્ય",
+    "body_gu": "શું તમે ક્યારેય વિચાર્યું છે કે પિઝા શેફ ગોળાકાર પિઝાને સરખા ભાગોમાં કેવી રીતે કાપે છે? અથવા કારનું પૈડું એક પરિભ્રમણ પૂર્ણ કરે ત્યારે કાર ખરેખર કેટલું અંતર કાપે છે? સમુદ્ર કિનારે આવેલું લાઇટહાઉસ પાણીની અંદર છુપાયેલા ખતરનાક ખડકોથી વહાણોને સાવચેત કરવા માટે ચોક્કસ ખૂણામાં પ્રકાશનો પટ્ટો કેવી રીતે પાથરે છે?\n\nઆ બધી રોજિંદા જીવનની પરિસ્થિતિઓ **વર્તુળ સંબંધિત ક્ષેત્રફળ (Areas Related to Circles)** ના સુંદર ગણિત પર આધારિત છે.\n\nજ્યારે સીધી રેખાઓ વાળા બહુકોણ (જેવા કે લંબચોરસ કે ત્રિકોણ) સીધી બાજુઓ ધરાવે છે, વર્તુળ સંપૂર્ણ વક્ર અને લીસું હોય છે. જ્યારે તમે વર્તુળના કેન્દ્રમાંથી ત્રિજ્યાઓ દોરીને કે જીવા વડે તેના ભાગ કરો છો, ત્યારે બે પાયાના આકારો બને છે: **વૃત્તાંશ (Sector)** અને **વૃત્તખંડ (Segment)**.\n\nઆ પ્રકરણમાં, આપણે તે તમામ સૂત્રો, ભૌમિતિક સમજ અને વ્યવહારુ દાખલાઓ શીખીશું જે ધોરણ 10 ની બોર્ડ પરીક્ષામાં પૂરેપૂરા ગુણ મેળવવામાં તમને સક્ષમ બનાવશે!",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_002",
+    "type": "socratic_question",
+    "question": "If the radius of a circular pizza is doubled (for example, increased from 10 cm to 20 cm), by what factor does the total eating area of the pizza increase?",
+    "options": [
+      "It doubles (2 times)",
+      "It triples (3 times)",
+      "It quadruples (4 times)",
+      "It increases by 8 times"
+    ],
+    "correct_index": 2,
+    "explanation": "The area of a circle is given by $A = \\pi r^2$. Because area depends quadratically on the radius, doubling the radius ($r \\to 2r$) scales the area by $2^2 = 4$ times! Mathematically: $\\pi (2r)^2 = 4\\pi r^2$. Therefore, a 20 cm pizza provides four times as much food as a 10 cm pizza!",
+    "question_hi": "यदि किसी गोल पिज्जा की त्रिज्या को दोगुना कर दिया जाए (उदाहरण के लिए 10 सेमी से बढ़ाकर 20 सेमी), तो पिज्जा का कुल खाने योग्य क्षेत्रफल कितने गुना बढ़ जाएगा?",
+    "options_hi": [
+      "यह दोगुना (2 गुना) हो जाता है",
+      "यह तीन गुना (3 गुना) हो जाता है",
+      "यह चार गुना (4 गुना) हो जाता है",
+      "यह आठ गुना (8 गुना) हो जाता है"
+    ],
+    "explanation_hi": "वृत्त का क्षेत्रफल सूत्र $A = \\pi r^2$ द्वारा दिया जाता है। चूँकि क्षेत्रफल त्रिज्या के वर्ग पर निर्भर करता है, इसलिए त्रिज्या को दोगुना करने पर ($r \\to 2r$) क्षेत्रफल $2^2 = 4$ गुना बढ़ जाता है! गणितीय रूप से: $\\pi (2r)^2 = 4\\pi r^2$। अतः 20 सेमी का एक पिज्जा 10 सेमी वाले पिज्जा से चार गुना अधिक भोजन देता है!",
+    "question_gu": "જો ગોળાકાર પિઝાની ત્રિજ્યા બમણી કરવામાં આવે (દાખલા તરીકે 10 સેમી થી વધારીને 20 સેમી), તો પિઝાનું કુલ ખાવાલાયક ક્ષેત્રફળ કેટલા ગણું થઈ જશે?",
+    "options_gu": [
+      "તે બમણું (2 ગણું) થાય છે",
+      "તે ત્રણ ગણું (3 ગણું) થાય છે",
+      "તે ચાર ગણું (4 ગણું) થાય છે",
+      "તે આઠ ગણું (8 ગણું) થાય છે"
+    ],
+    "explanation_gu": "વર્તુળનું ક્ષેત્રફળ સૂત્ર $A = \\pi r^2$ દ્વારા મળે છે. ક્ષેત્રફળ ત્રિજ્યાના વર્ગના સમપ્રમાણમાં હોવાથી, ત્રિજ્યા બમણી કરતાં ($r \\to 2r$) ક્ષેત્રફળ $2^2 = 4$ ગણું થઈ જાય છે! ગાણિતિક રીતે: $\\pi (2r)^2 = 4\\pi r^2$. આથી, 20 સેમીનો એક પિઝા 10 સેમીના પિઝા કરતાં ચાર ગણું વધુ ભોજન આપે છે!",
+    "bloom": "Analyze",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_003",
+    "type": "discovery",
+    "title": "Discovery: The Constant π, Circumference and Area of a Circle",
+    "body": "### 1. The Mysterious Constant $\\pi$ (Pi)\nAcross thousands of years, civilizations noticed that for **any** circle—from a tiny coin to the wheel of a chariot—the ratio of its circumference to its diameter is always constant:\n\n$$\\frac{\\text{Circumference}}{\\text{Diameter}} = \\frac{C}{d} = \\pi$$\n\n- The great Indian mathematician **Aryabhata** (476–550 CE) gave the value of $\\pi$ as $\\frac{62832}{20000} = 3.1416$, correct to four decimal places!\n- $\\pi$ is an **irrational number**. For calculations, we use the rational approximation $\\pi \\approx \\frac{22}{7}$ or $\\pi \\approx 3.14$.\n\n### 2. Fundamental Review Formulas\n1. **Circumference of Circle:**\n   $$C = 2\\pi r = \\pi d$$\n2. **Area of Circle:**\n   $$A = \\pi r^2 = \\frac{\\pi d^2}{4}$$\n3. **Semicircle:**\n   - $\\text{Perimeter} = \\pi r + 2r = r(\\pi + 2)$\n   - $\\text{Area} = \\frac{1}{2}\\pi r^2$\n4. **Quadrant (One-fourth of Circle):**\n   - $\\text{Perimeter} = \\frac{\\pi r}{2} + 2r$\n   - $\\text{Area} = \\frac{1}{4}\\pi r^2$\n5. **Circular Ring (Concentric Region between radii $R$ and $r$, where $R > r$):**\n   - $\\text{Area} = \\pi R^2 - \\pi r^2 = \\pi(R^2 - r^2) = \\pi(R + r)(R - r)$",
+    "title_hi": "खोज: अचर π, वृत्त की परिधि और क्षेत्रफल का रहस्य",
+    "body_hi": "### 1. रहस्यमयी अचर $\\pi$ (पाई)\nहजारों वर्षों से विभिन्न सभ्यताओं ने देखा कि **किसी भी** वृत्त के लिए—चाहे वह छोटा सिक्का हो या रथ का बड़ा पहिया—उसकी परिधि और व्यास का अनुपात सदैव एक निश्चित अचर होता है:\n\n$$\\frac{\\text{परिधि}}{\\text{व्यास}} = \\frac{C}{d} = \\pi$$\n\n- महान भारतीय गणितज्ञ **आर्यभट्ट** (476–550 ईस्वी) ने $\\pi$ का मान $\\frac{62832}{20000} = 3.1416$ दिया था, जो दशमलव के चार स्थानों तक बिल्कुल सही था!\n- $\\pi$ एक **अपरिमेय संख्या (irrational number)** है। गणना के लिए हम इसके परिमेय सन्निकटन $\\pi \\approx \\frac{22}{7}$ या $\\pi \\approx 3.14$ का उपयोग करते हैं।\n\n### 2. मूलभूत पुनरावलोकन सूत्र\n1. **वृत्त की परिधि:**\n   $$C = 2\\pi r = \\pi d$$\n2. **वृत्त का क्षेत्रफल:**\n   $$A = \\pi r^2 = \\frac{\\pi d^2}{4}$$\n3. **अर्धवृत्त (Semicircle):**\n   - $\\text{परिमाप} = \\pi r + 2r = r(\\pi + 2)$\n   - $\\text{क्षेत्रफल} = \\frac{1}{2}\\pi r^2$\n4. **चतुर्थांश (Quadrant):**\n   - $\\text{परिमाप} = \\frac{\\pi r}{2} + 2r$\n   - $\\text{क्षेत्रफल} = \\frac{1}{4}\\pi r^2$\n5. **वृत्ताकार वलय (Circular Ring - दो संकेंद्रीय वृत्तों के बीच का भाग जहाँ $R > r$):**\n   - $\\text{क्षेत्रफल} = \\pi R^2 - \\pi r^2 = \\pi(R^2 - r^2) = \\pi(R + r)(R - r)$",
+    "title_gu": "શોધ: અચળાંક π, વર્તુળનો પરિઘ અને ક્ષેત્રફળનું રહસ્ય",
+    "body_gu": "### 1. રહસ્યમય અચળાંક $\\pi$ (પાઇ)\nહજારો વર્ષોથી પ્રાચીન ગણિતશાસ્ત્રીઓએ જોયું કે **કોઈપણ** વર્તુળ માટે—પછી ભલે તે નાનો સિક્કો હોય કે રથનું મોટું પૈડું—તેના પરિઘ અને વ્યાસનો ગુણોત્તર હંમેશા એક અચળ કિંમત આપે છે:\n\n$$\\frac{\\text{પરિઘ}}{\\text{વ્યાસ}} = \\frac{C}{d} = \\pi$$\n\n- મહાન ભારતીય ગણિતશાસ્ત્રી **આર્યભટ્ટ** (476–550 ઈસવી) એ $\\pi$ ની કિંમત $\\frac{62832}{20000} = 3.1416$ આપી હતી, જે દશાંશના ચાર સ્થળ સુધી એકદમ ચોક્કસ હતી!\n- $\\pi$ એક **અસંમેય સંખ્યા (irrational number)** છે. દાખલા ગણવા માટે આપણે સંમેય આસન્ન મૂલ્ય $\\pi \\approx \\frac{22}{7}$ અથવા $\\pi \\approx 3.14$ નો ઉપયોગ કરીએ છીએ.\n\n### 2. પાયાના સૂત્રો\n1. **વર્તુળનો પરિઘ:**\n   $$C = 2\\pi r = \\pi d$$\n2. **વર્તુળનું ક્ષેત્રફળ:**\n   $$A = \\pi r^2 = \\frac{\\pi d^2}{4}$$\n3. **અર્ધવર્તુળ (Semicircle):**\n   - $\\text{પરિમિતિ} = \\pi r + 2r = r(\\pi + 2)$\n   - $\\text{ક્ષેત્રફળ} = \\frac{1}{2}\\pi r^2$\n4. **ચતુર્થાંશ (Quadrant):**\n   - $\\text{પરિમિતિ} = \\frac{\\pi r}{2} + 2r$\n   - $\\text{ક્ષેત્રફળ} = \\frac{1}{4}\\pi r^2$\n5. **વર્તુળાકાર કંકણાકાર માર્ગ (Circular Ring - બે સમકેન્દ્રી વર્તુળો વચ્ચેનો ભાગ જ્યાં $R > r$):**\n   - $\\text{ક્ષેત્રફળ} = \\pi R^2 - \\pi r^2 = \\pi(R^2 - r^2) = \\pi(R + r)(R - r)$",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_004",
+    "type": "teacher_tip",
+    "title": "Teacher Tip: Revolutions of a Wheel, Distance and Speed",
+    "body": "Rotating wheel problems appear frequently in Board Exams and competitive tests. Always apply this fundamental relationship:\n\n### 1. Distance in One Revolution\nIn one complete turn ($360^\\circ$), a wheel travels a linear distance equal to its **circumference**:\n$$\\text{Distance in 1 revolution} = 2\\pi r = \\pi d$$\n\n### 2. Number of Revolutions Formula\n$$\\text{Number of Revolutions } (N) = \\frac{\\text{Total Distance Covered}}{\\text{Circumference of Wheel}} = \\frac{s}{2\\pi r}$$\n\n### 3. Crucial Unit Conversion Traps\n- Often distance is given in **kilometers (km)** or **meters (m)**, while wheel radius is in **centimeters (cm)** or **millimeters (mm)**.\n- Always convert everything to the **same unit** before dividing:\n  $$1\\text{ km} = 1000\\text{ m} = 100,000\\text{ cm}$$\n  $$1\\text{ m} = 100\\text{ cm} = 1000\\text{ mm}$$\n- If time and speed are given: $\\text{Distance} = \\text{Speed} \\times \\text{Time}$. Convert speed from $\\text{km/h}$ to $\\text{cm/min}$ if needed:\n  $$1\\text{ km/h} = \\frac{100,000\\text{ cm}}{60\\text{ min}} = \\frac{5000}{3}\\text{ cm/min}$$",
+    "title_hi": "शिक्षक युक्ति: पहिये के घूर्णन (चक्कर), दूरी और चाल का नियम",
+    "body_hi": "पहिये के चक्कर और गति वाले प्रश्न बोर्ड परीक्षाओं में अक्सर पूछे जाते हैं। हमेशा इस मूलभूत संबंध को याद रखें:\n\n### 1. एक चक्कर में तय की गई दूरी\nएक पूरे चक्कर ($360^\\circ$) में पहिया अपनी **परिधि** के बराबर सीधी दूरी तय करता है:\n$$\\text{1 चक्कर में दूरी} = 2\\pi r = \\pi d$$\n\n### 2. कुल चक्करों की संख्या का सूत्र\n$$\\text{चक्करों की संख्या } (N) = \\frac{\\text{तय की गई कुल दूरी}}{\\text{पहिये की परिधि}} = \\frac{s}{2\\pi r}$$\n\n### 3. मात्रक परिवर्तन (Unit Conversion) की सावधानी\n- अक्सर दूरी **किलोमीटर (km)** या **मीटर (m)** में दी जाती है, जबकि पहिये की त्रिज्या **सेमी (cm)** में होती है।\n- भाग देने से पहले हमेशा सभी राशियों को **एक ही मात्रक** में बदलें:\n  $$1\\text{ km} = 1000\\text{ m} = 100,000\\text{ cm}$$\n  $$1\\text{ m} = 100\\text{ cm} = 1000\\text{ mm}$$\n- यदि चाल और समय दिया हो: $\\text{दूरी} = \\text{चाल} \\times \\text{समय}$। यदि आवश्यक हो तो चाल को $\\text{km/h}$ से $\\text{cm/min}$ में बदलें:\n  $$1\\text{ km/h} = \\frac{100,000\\text{ cm}}{60\\text{ min}} = \\frac{5000}{3}\\text{ cm/min}$$",
+    "title_gu": "શિક્ષકની સલાહ: પૈડાના પરિભ્રમણ (ચક્કર), અંતર અને ઝડપનો નિયમ",
+    "body_gu": "પૈડાના પરિભ્રમણ અને ઝડપવાળા દાખલાઓ બોર્ડ પરીક્ષામાં વારંવાર પૂછાય છે. આ પાયાના સંબંધો હંમેશા યાદ રાખો:\n\n### 1. એક પરિભ્રમણમાં કપાતું અંતર\nએક પૂર્ણ ચક્કરમાં ($360^\\circ$) પૈડું તેના **પરિઘ** જેટલું રેખીય અંતર કાપે છે:\n$$\\text{1 પરિભ્રમણમાં કપાતું અંતર} = 2\\pi r = \\pi d$$\n\n### 2. પરિભ્રમણની સંખ્યાનું સૂત્ર\n$$\\text{ચક્કરની સંખ્યા } (N) = \\frac{\\text{કુલ કપાેલું અંતર}}{\\text{પૈડાનો પરિઘ}} = \\frac{s}{2\\pi r}$$\n\n### 3. એકમ રૂપાંતરણની સાવચેતી\n- ઘણીવાર અંતર **કિલોમીટર (km)** કે **મીટર (m)** માં આપેલું હોય છે, જ્યારે પૈડાની ત્રિજ્યા **સેમી (cm)** માં હોય છે.\n- ગણતરી કરતાં પહેલાં હંમેશા બધા માપને **એક જ એકમ** માં ફેરવો:\n  $$1\\text{ km} = 1000\\text{ m} = 100,000\\text{ cm}$$\n  $$1\\text{ m} = 100\\text{ cm} = 1000\\text{ mm}$$\n- જો ઝડપ અને સમય આપેલ હોય: $\\text{અંતર} = \\text{ઝડપ} \\times \\text{સમય}$. જરૂર જણાય તો ઝડપને $\\text{km/h}$ માંથી $\\text{cm/min}$ માં ફેરવો:\n  $$1\\text{ km/h} = \\frac{100,000\\text{ cm}}{60\\text{ min}} = \\frac{5000}{3}\\text{ cm/min}$$",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_005",
+    "type": "quiz",
+    "question": "A bicycle wheel has a diameter of 70 cm. How many complete revolutions will it make to travel a distance of 110 meters? (Use π = 22/7)",
+    "options": [
+      "25 revolutions",
+      "50 revolutions",
+      "100 revolutions",
+      "150 revolutions"
+    ],
+    "correct_index": 1,
+    "explanation": "Diameter d = 70 cm => Radius r = 35 cm.\nCircumference C = 2πr = 2 × (22/7) × 35 = 220 cm = 2.2 m.\nTotal distance = 110 m.\nNumber of revolutions N = Total Distance / Circumference = 110 / 2.2 = 50 revolutions.",
+    "question_hi": "एक साइकिल के पहिये का व्यास 70 सेमी है। 110 मीटर की दूरी तय करने में यह पहिया कुल कितने चक्कर लगाएगा? (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "25 चक्कर",
+      "50 चक्कर",
+      "100 चक्कर",
+      "150 चक्कर"
+    ],
+    "explanation_hi": "व्यास d = 70 सेमी => त्रिज्या r = 35 सेमी।\nपहिये की परिधि C = 2πr = 2 × (22/7) × 35 = 220 सेमी = 2.2 मीटर।\nकुल दूरी = 110 मीटर।\nचक्करों की संख्या N = कुल दूरी / परिधि = 110 / 2.2 = 50 चक्कर।",
+    "question_gu": "એક સાયકલના પૈડાનો વ્યાસ 70 સેમી છે. 110 મીટરનું અંતર કાપવા માટે તે કેટલા પૂર્ણ પરિભ્રમણ (ચક્કર) લગાવશે? (π = 22/7 લો)",
+    "options_gu": [
+      "25 ચક્કર",
+      "50 ચક્કર",
+      "100 ચક્કર",
+      "150 ચક્કર"
+    ],
+    "explanation_gu": "વ્યાસ d = 70 સેમી => ત્રિજ્યા r = 35 સેમી.\nપૈડાનો પરિઘ C = 2πr = 2 × (22/7) × 35 = 220 સેમી = 2.2 મીટર.\nકુલ અંતર = 110 મીટર.\nચક્કરની સંખ્યા N = કુલ અંતર / પરિઘ = 110 / 2.2 = 50 પરિભ્રમણ.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_006",
+    "type": "quiz",
+    "question": "If the perimeter and the area of a circle are numerically equal, then what is the radius of the circle?",
+    "options": [
+      "2 units",
+      "π units",
+      "4 units",
+      "7 units"
+    ],
+    "correct_index": 0,
+    "explanation": "Given that perimeter = area numerically:\n2πr = πr²\nDividing both sides by πr (since r ≠ 0):\n2 = r => r = 2 units.\nHence, the radius of the circle is 2 units.",
+    "question_hi": "यदि एक वृत्त का परिमाप (परिधि) और क्षेत्रफल संख्यात्मक रूप से बराबर हैं, तो उस वृत्त की त्रिज्या क्या होगी?",
+    "options_hi": [
+      "2 मात्रक (units)",
+      "π मात्रक (units)",
+      "4 मात्रक (units)",
+      "7 मात्रक (units)"
+    ],
+    "explanation_hi": "दिया गया है कि संख्यात्मक रूप से परिमाप = क्षेत्रफल:\n2πr = πr²\nदोनों पक्षों को πr से भाग देने पर (चूँकि r ≠ 0):\n2 = r => r = 2 मात्रक (units)।\nअतः वृत्त की त्रिज्या 2 मात्रक होगी।",
+    "question_gu": "જો વર્તુળની પરિમિતિ (પરિઘ) અને ક્ષેત્રફળ સંખ્યાત્મક રીતે સમાન હોય, તો તે વર્તુળની ત્રિજ્યા કેટલી હશે?",
+    "options_gu": [
+      "2 એકમ (units)",
+      "π એકમ (units)",
+      "4 એકમ (units)",
+      "7 એકમ (units)"
+    ],
+    "explanation_gu": "આપેલ છે કે પરિમિતિ અને ક્ષેત્રફળ સંખ્યાત્મક રીતે સમાન છે:\n2πr = πr²\nબંને બાજુ πr વડે ભાગતાં (કારણ કે r ≠ 0):\n2 = r => r = 2 એકમ.\nઆથી, વર્તુળની ત્રિજ્યા 2 એકમ થાય.",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH11_007",
+    "type": "socratic_question",
+    "question": "A complete rotation around the centre of a circle equals 360°. What exact fraction of the total area of the circle is enclosed by a sector whose central angle is 60°?",
+    "options": [
+      "1/6 of the circle",
+      "1/4 of the circle",
+      "1/8 of the circle",
+      "1/12 of the circle"
+    ],
+    "correct_index": 0,
+    "explanation": "Since the complete circle subtends 360° at the centre, a sector with angle θ takes up a fraction equal to θ/360°. For θ = 60°: Fraction = 60°/360° = 1/6. Therefore, the area of this sector is exactly 1/6 of the entire circle's area (πr²/6)!",
+    "question_hi": "वृत्त के केंद्र के चारों ओर एक पूर्ण घूर्णन 360° के बराबर होता है। 60° केंद्रीय कोण वाले एक त्रिज्यखंड द्वारा वृत्त के कुल क्षेत्रफल का कितना भाग घेरा जाता है?",
+    "options_hi": [
+      "वृत्त का 1/6 भाग",
+      "वृत्त का 1/4 भाग",
+      "वृत्त का 1/8 भाग",
+      "वृत्त का 1/12 भाग"
+    ],
+    "explanation_hi": "चूँकि संपूर्ण वृत्त केंद्र पर 360° का कोण अंतरित करता है, इसलिए θ कोण वाला त्रिज्यखंड कुल वृत्त का θ/360° भाग लेता है। θ = 60° के लिए: भाग = 60°/360° = 1/6। अतः इस त्रिज्यखंड का क्षेत्रफल पूरे वृत्त के क्षेत्रफल का ठीक 1/6 भाग (πr²/6) होता है!",
+    "question_gu": "વર્તુળના કેન્દ્ર આગળ બનતો પૂર્ણ ખૂણો 360° હોય છે. 60° નો કેન્દ્ર આગળનો ખૂણો ધરાવતા વૃત્તાંશ દ્વારા વર્તુળના કુલ ક્ષેત્રફળનો કેટલામો ભાગ ઘેરાય છે?",
+    "options_gu": [
+      "વર્તુળનો 1/6 ભાગ",
+      "વર્તુળનો 1/4 ભાગ",
+      "વર્તુળનો 1/8 ભાગ",
+      "વર્તુળનો 1/12 ભાગ"
+    ],
+    "explanation_gu": "સંપૂર્ણ વર્તુળ કેન્દ્ર આગળ 360° નો ખૂણો બનાવે છે, તેથી θ ખૂણો ધરાવતો વૃત્તાંશ કુલ વર્તુળનો θ/360° જેટલો ભાગ રોકે છે. θ = 60° માટે: ભાગ = 60°/360° = 1/6. આથી, આ વૃત્તાંશનું ક્ષેત્રફળ સમગ્ર વર્તુળના ક્ષેત્રફળના 1/6 ભાગ (πr²/6) જેટલું થાય!",
+    "bloom": "Analyze",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_008",
+    "type": "theory",
+    "title": "Sector of a Circle: Definitions, Arc Length and Area Formulas",
+    "body": "### 1. Definition of Sector\nThe portion (or part) of the circular region enclosed by **two radii** and the **corresponding arc** is called a **Sector of the circle**.\n\n- **Minor Sector (लघु त्रिज्यखंड / લઘુવૃત્તાંશ):** The sector corresponding to the minor arc, where central angle $\\theta < 180^\\circ$. When we say 'sector' without qualification, it always refers to the minor sector.\n- **Major Sector (दीर्घ त्रिज्यखंड / ગુરુવૃત્તાંશ):** The remaining portion of the circular region corresponding to the major arc, where central angle is $360^\\circ - \\theta$.\n\n### 2. Length of an Arc of a Sector\nThe curved boundary of a sector of angle $\\theta$ is an arc of the circle. Its length $l$ is:\n\n$$l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r = \\frac{\\theta}{180^\\circ} \\times \\pi r$$\n\n### 3. Area of a Sector of Angle $\\theta$\n$$\\text{Area of Sector } OAPB = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n\n### 4. Alternative Formula Connecting Area and Arc Length\nNotice the beautiful algebraic connection between Area and Arc Length:\n$$\\text{Area} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} \\left(\\frac{\\theta}{360^\\circ} \\times 2\\pi r\\right) r = \\frac{1}{2} l r$$\n\n*Pro Tip:* If arc length $l$ and radius $r$ are known, you can directly find the area using $\\text{Area} = \\frac{1}{2}lr$ without calculating $\\theta$!\n\n### 5. Area of Major Sector\n$$\\text{Area of Major Sector} = \\pi r^2 - \\text{Area of Minor Sector} = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2$$",
+    "title_hi": "वृत्त का त्रिज्यखंड: परिभाषाएँ, चाप की लंबाई और क्षेत्रफल के सूत्र",
+    "body_hi": "### 1. त्रिज्यखंड की परिभाषा\n**दो त्रिज्याओं** और उनके **संगत चाप** से घिरे वृत्तीय क्षेत्र के भाग को **वृत्त का त्रिज्यखंड (Sector)** कहते हैं।\n\n- **लघु त्रिज्यखंड (Minor Sector):** लघु चाप से संबंधित त्रिज्यखंड, जिसका केंद्रीय कोण $\\theta < 180^\\circ$ होता है। सामान्यतः 'त्रिज्यखंड' शब्द का अर्थ लघु त्रिज्यखंड ही होता है।\n- **दीर्घ त्रिज्यखंड (Major Sector):** वृत्त का शेष बड़ा भाग जो दीर्घ चाप से संबंधित होता है, जिसका केंद्रीय कोण $360^\\circ - \\theta$ होता है।\n\n### 2. त्रिज्यखंड के संगत चाप की लंबाई\n$\\theta$ कोण वाले त्रिज्यखंड की वक्राकार सीमा वृत्त का एक चाप होती है। इसकी लंबाई $l$ निम्न सूत्र द्वारा दी जाती है:\n\n$$l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r = \\frac{\\theta}{180^\\circ} \\times \\pi r$$\n\n### 3. $\\theta$ कोण वाले त्रिज्यखंड का क्षेत्रफल\n$$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n\n### 4. क्षेत्रफल और चाप की लंबाई का सीधा संबंध\nक्षेत्रफल और चाप की लंबाई के बीच का सुंदर गणितीय संबंध देखिए:\n$$\\text{क्षेत्रफल} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} \\left(\\frac{\\theta}{360^\\circ} \\times 2\\pi r\\right) r = \\frac{1}{2} l r$$\n\n*महत्वपूर्ण युक्ति:* यदि चाप की लंबाई $l$ और त्रिज्या $r$ ज्ञात हों, तो बिना कोण $\\theta$ निकाले सीधे $\\text{क्षेत्रफल} = \\frac{1}{2}lr$ से उत्तर प्राप्त कर सकते हैं!\n\n### 5. दीर्घ त्रिज्यखंड का क्षेत्रफल\n$$\\text{दीर्घ त्रिज्यखंड का क्षेत्रफल} = \\pi r^2 - \\text{लघु त्रिज्यखंड का क्षेत्रफल} = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2$$",
+    "title_gu": "વર્તુળનો વૃત્તાંશ: વ્યાખ્યાઓ, ચાપની લંબાઈ અને ક્ષેત્રફળના સૂત્રો",
+    "body_gu": "### 1. વૃત્તાંશની વ્યાખ્યા\n**બે ત્રિજ્યાઓ** અને તેના **સંગત ચાપ** વડે ઘેરાયેલા વર્તુળાકાર પ્રદેશના ભાગને **વર્તુળનો વૃત્તાંશ (Sector)** કહે છે.\n\n- **લઘુવૃત્તાંશ (Minor Sector):** લઘુચાપને સંગત વૃત્તાંશ, જેનો કેન્દ્ર આગળનો ખૂણો $\\theta < 180^\\circ$ હોય. સામાન્ય રીતે 'વૃત્તાંશ' કહેતાં લઘુવૃત્તાંશ જ સમજવો.\n- **ગુરુવૃત્તાંશ (Major Sector):** ગુરુચાપને સંગત બાકીનો મોટો વર્તુળાકાર ભાગ, જેનો કેન્દ્ર આગળનો ખૂણો $360^\\circ - \\theta$ હોય.\n\n### 2. વૃત્તાંશના ચાપની લંબાઈ\n$\\theta$ ખૂણાવાળા વૃત્તાંશની વક્ર ધાર વર્તુળનો ચાપ બનાવે છે. તેની લંબાઈ $l$ નું સૂત્ર:\n\n$$l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r = \\frac{\\theta}{180^\\circ} \\times \\pi r$$\n\n### 3. $\\theta$ ખૂણાવાળા વૃત્તાંશનું ક્ષેત્રફળ\n$$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n\n### 4. ક્ષેત્રફળ અને ચાપની લંબાઈ વચ્ચેનો સંબંધ\nક્ષેત્રફળ અને ચાપની લંબાઈ વચ્ચેનો વિશિષ્ટ સંબંધ:\n$$\\text{ક્ષેત્રફળ} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} \\left(\\frac{\\theta}{360^\\circ} \\times 2\\pi r\\right) r = \\frac{1}{2} l r$$\n\n*ખાસ સલાહ:* જો ચાપની લંબાઈ $l$ અને ત્રિજ્યા $r$ આપેલી હોય, તો ખૂણો $\\theta$ શોધ્યા વગર સીધું $\\text{ક્ષેત્રફળ} = \\frac{1}{2}lr$ વાપરી શકાય!\n\n### 5. ગુરુવૃત્તાંશનું ક્ષેત્રફળ\n$$\\text{ગુરુવૃત્તાંશનું ક્ષેત્રફળ} = \\pi r^2 - \\text{લઘુવૃત્તાંશનું ક્ષેત્રફળ} = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2$$",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH11_009",
+    "type": "teacher_tip",
+    "title": "Teacher Tip: The Clock Speed Rule (Minute Hand vs Hour Hand Angles)",
+    "body": "Clock questions are a favourite of CBSE and State Board examiners. Memorize these angular rates forever:\n\n### 1. Minute Hand of a Clock\n- The minute hand completes a full circle ($360^\\circ$) in **60 minutes** (1 hour).\n- In 1 minute, the minute hand turns through:\n  $$\\text{Angle in 1 minute} = \\frac{360^\\circ}{60} = 6^\\circ$$\n- In $t$ minutes, the angle swept is:\n  $$\\theta = t \\times 6^\\circ$$\n  - In 5 minutes: $\\theta = 5 \\times 6^\\circ = 30^\\circ$\n  - In 15 minutes: $\\theta = 15 \\times 6^\\circ = 90^\\circ$\n  - In 20 minutes: $\\theta = 20 \\times 6^\\circ = 120^\\circ$\n\n### 2. Hour Hand of a Clock\n- The hour hand completes a full circle ($360^\\circ$) in **12 hours** ($12 \\times 60 = 720$ minutes).\n- In 1 hour, the hour hand turns through:\n  $$\\text{Angle in 1 hour} = \\frac{360^\\circ}{12} = 30^\\circ$$\n- In 1 minute, the hour hand turns through:\n  $$\\text{Angle in 1 minute} = \\frac{360^\\circ}{720} = 0.5^\\circ = \\left(\\frac{1}{2}\\right)^\\circ$$",
+    "title_hi": "शिक्षक युक्ति: घड़ी की सुइयों का कोणीय नियम (मिनट की सुई बनाम घंटे की सुई)",
+    "body_hi": "घड़ी से संबंधित प्रश्न बोर्ड परीक्षकों के अत्यंत प्रिय होते हैं। इन कोणीय दरों को हमेशा याद रखें:\n\n### 1. घड़ी की मिनट वाली सुई\n- मिनट की सुई **60 मिनट** (1 घंटे) में एक पूरा चक्कर ($360^\\circ$) लगाती है।\n- 1 मिनट में मिनट की सुई द्वारा घूमा गया कोण:\n  $$\\text{1 मिनट में कोण} = \\frac{360^\\circ}{60} = 6^\\circ$$\n- $t$ मिनट में अंतरित कोण:\n  $$\\theta = t \\times 6^\\circ$$\n  - 5 मिनट में: $\\theta = 5 \\times 6^\\circ = 30^\\circ$\n  - 15 मिनट में: $\\theta = 15 \\times 6^\\circ = 90^\\circ$\n  - 20 मिनट में: $\\theta = 20 \\times 6^\\circ = 120^\\circ$\n\n### 2. घड़ी की घंटे वाली सुई\n- घंटे की सुई **12 घंटे** ($12 \\times 60 = 720$ मिनट) में एक पूरा चक्कर ($360^\\circ$) लगाती है।\n- 1 घंटे में घंटे की सुई द्वारा घूमा गया कोण:\n  $$\\text{1 घंटे में कोण} = \\frac{360^\\circ}{12} = 30^\\circ$$\n- 1 मिनट में घंटे की सुई द्वारा घूमा गया कोण:\n  $$\\text{1 मिनट में कोण} = \\frac{360^\\circ}{720} = 0.5^\\circ = \\left(\\frac{1}{2}\\right)^\\circ$$",
+    "title_gu": "શિક્ષકની સલાહ: ઘડિયાળના કાંટાનો ખૂણાનો નિયમ (મિનિટ કાંટો વિરુદ્ધ કલાક કાંટો)",
+    "body_gu": "ઘડિયાળ આધારિત પ્રશ્નો બોર્ડ પરીક્ષામાં વારંવાર પૂછાય છે. આ ખૂણાના નિયમો હંમેશા યાદ રાખો:\n\n### 1. ઘડિયાળનો મિનિટ કાંટો\n- મિનિટ કાંટો **60 મિનિટ** (1 કલાક) માં એક પૂર્ણ ચક્ર ($360^\\circ$) પૂર્ણ કરે છે.\n- 1 મિનિટમાં મિનિટ કાંટા દ્વારા રચાતો ખૂણો:\n  $$\\text{1 મિનિટમાં ખૂણો} = \\frac{360^\\circ}{60} = 6^\\circ$$\n- $t$ મિનિટમાં બનતો ખૂણો:\n  $$\\theta = t \\times 6^\\circ$$\n  - 5 મિનિટમાં: $\\theta = 5 \\times 6^\\circ = 30^\\circ$\n  - 15 મિનિટમાં: $\\theta = 15 \\times 6^\\circ = 90^\\circ$\n  - 20 મિનિટમાં: $\\theta = 20 \\times 6^\\circ = 120^\\circ$\n\n### 2. ઘડિયાળનો કલાક કાંટો\n- કલાક કાંટો **12 કલાક** ($12 \\times 60 = 720$ મિનિટ) માં એક પૂર્ણ ચક્ર ($360^\\circ$) પૂરું કરે છે.\n- 1 કલાકમાં કલાક કાંટા દ્વારા રચાતો ખૂણો:\n  $$\\text{1 કલાકમાં ખૂણો} = \\frac{360^\\circ}{12} = 30^\\circ$$\n- 1 મિનિટમાં કલાક કાંટા દ્વારા રચાતો ખૂણો:\n  $$\\text{1 મિનિટમાં ખૂણો} = \\frac{360^\\circ}{720} = 0.5^\\circ = \\left(\\frac{1}{2}\\right)^\\circ$$",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_010",
+    "type": "example",
+    "title": "Example 1: Area of Minor Sector and Corresponding Major Sector",
+    "body": "### Problem Statement:\nFind the area of the sector of a circle with radius 4 cm and of angle 30°. Also, find the area of the corresponding major sector. (Use $\\pi = 3.14$)\n\n### Step-by-Step Solution:\n1. **Given Data:**\n   - Radius $r = 4\\text{ cm}$\n   - Central angle $\\theta = 30^\\circ$\n   - $\\pi = 3.14$\n\n2. **Area of Minor Sector:**\n   $$\\text{Area of sector} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n   $$\\text{Area} = \\frac{30^\\circ}{360^\\circ} \\times 3.14 \\times 4^2 = \\frac{1}{12} \\times 3.14 \\times 16$$\n   $$\\text{Area} = \\frac{4}{3} \\times 3.14 = \\frac{12.56}{3} \\approx 4.19\\text{ cm}^2$$\n\n3. **Area of Corresponding Major Sector:**\n   $$\\text{Area of major sector} = \\pi r^2 - \\text{Area of minor sector}$$\n   $$\\text{Total Area} = 3.14 \\times 4^2 = 3.14 \\times 16 = 50.24\\text{ cm}^2$$\n   $$\\text{Area of major sector} = 50.24 - 4.19 = 46.05\\text{ cm}^2$$\n\n   *Alternative Method using $(360^\\circ - \\theta) = 330^\\circ$:*\n   $$\\text{Area} = \\frac{330^\\circ}{360^\\circ} \\times 3.14 \\times 16 = \\frac{11}{12} \\times 50.24 = 46.05\\text{ cm}^2$$",
+    "title_hi": "उदाहरण 1: लघु त्रिज्यखंड और संगत दीर्घ त्रिज्यखंड का क्षेत्रफल",
+    "body_hi": "### प्रश्न:\nत्रिज्या 4 सेमी वाले एक वृत्त के त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए, जिसका कोण 30° है। साथ ही, संगत दीर्घ त्रिज्यखंड का क्षेत्रफल भी ज्ञात कीजिए। ($\\pi = 3.14$ का प्रयोग कीजिए)\n\n### चरणबद्ध हल:\n1. **दिया गया डेटा:**\n   - त्रिज्या $r = 4\\text{ सेमी}$\n   - केंद्रीय कोण $\\theta = 30^\\circ$\n   - $\\pi = 3.14$\n\n2. **लघु त्रिज्यखंड का क्षेत्रफल:**\n   $$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n   $$\\text{क्षेत्रफल} = \\frac{30^\\circ}{360^\\circ} \\times 3.14 \\times 4^2 = \\frac{1}{12} \\times 3.14 \\times 16$$\n   $$\\text{क्षेत्रफल} = \\frac{4}{3} \\times 3.14 = \\frac{12.56}{3} \\approx 4.19\\text{ सेमी}^2$$\n\n3. **संगत दीर्घ त्रिज्यखंड का क्षेत्रफल:**\n   $$\\text{दीर्घ त्रिज्यखंड का क्षेत्रफल} = \\pi r^2 - \\text{लघु त्रिज्यखंड का क्षेत्रफल}$$\n   $$\\text{वृत्त का कुल क्षेत्रफल} = 3.14 \\times 4^2 = 3.14 \\times 16 = 50.24\\text{ सेमी}^2$$\n   $$\\text{दीर्घ त्रिज्यखंड का क्षेत्रफल} = 50.24 - 4.19 = 46.05\\text{ सेमी}^2$$\n\n   *वैकल्पिक विधि $((360^\\circ - 30^\\circ) = 330^\\circ$ द्वारा):*\n   $$\\text{क्षेत्रफल} = \\frac{330^\\circ}{360^\\circ} \\times 3.14 \\times 16 = \\frac{11}{12} \\times 50.24 = 46.05\\text{ सेमी}^2$$",
+    "title_gu": "ઉદાહરણ 1: લઘુવૃત્તાંશ અને સંગત ગુરુવૃત્તાંશનું ક્ષેત્રફળ",
+    "body_gu": "### પ્રશ્ન:\n4 સેમી ત્રિજ્યાવાળા વર્તુળના 30° ખૂણો ધરાવતા વૃત્તાંશનું ક્ષેત્રફળ શોધો. તેમજ તેને સંગત ગુરુવૃત્તાંશનું ક્ષેત્રફળ પણ શોધો. ($\\pi = 3.14$ લો)\n\n### પગલાંવાર ઉકેલ:\n1. **આપેલી વિગતો:**\n   - ત્રિજ્યા $r = 4\\text{ સેમી}$\n   - કેન્દ્ર આગળનો ખૂણો $\\theta = 30^\\circ$\n   - $\\pi = 3.14$\n\n2. **લઘુવૃત્તાંશનું ક્ષેત્રફળ:**\n   $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$$\n   $$\\text{ક્ષેત્રફળ} = \\frac{30^\\circ}{360^\\circ} \\times 3.14 \\times 4^2 = \\frac{1}{12} \\times 3.14 \\times 16$$\n   $$\\text{ક્ષેત્રફળ} = \\frac{4}{3} \\times 3.14 = \\frac{12.56}{3} \\approx 4.19\\text{ સેમી}^2$$\n\n3. **સંગત ગુરુવૃત્તાંશનું ક્ષેત્રફળ:**\n   $$\\text{ગુરુવૃત્તાંશનું ક્ષેત્રફળ} = \\pi r^2 - \\text{લઘુવૃત્તાંશનું ક્ષેત્રફળ}$$\n   $$\\text{વર્તુળનું કુલ ક્ષેત્રફળ} = 3.14 \\times 4^2 = 3.14 \\times 16 = 50.24\\text{ સેમી}^2$$\n   $$\\text{ગુરુવૃત્તાંશનું ક્ષેત્રફળ} = 50.24 - 4.19 = 46.05\\text{ સેમી}^2$$\n\n   *વૈકલ્પિક રીત $((360^\\circ - 30^\\circ) = 330^\\circ$ નો ઉપયોગ કરીને):*\n   $$\\text{ક્ષેત્રફળ} = \\frac{330^\\circ}{360^\\circ} \\times 3.14 \\times 16 = \\frac{11}{12} \\times 50.24 = 46.05\\text{ સેમી}^2$$",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_011",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q1: Find the area of a sector of a circle with radius 6 cm if angle of the sector is 60°. (Use π = 22/7)",
+    "options": [
+      "132/7 cm²",
+      "144/7 cm²",
+      "120/7 cm²",
+      "154/7 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Given radius r = 6 cm and angle θ = 60°.\nArea of sector = (θ/360°) × πr²\n= (60/360) × (22/7) × 6²\n= (1/6) × (22/7) × 36\n= (22 × 6) / 7 = 132/7 cm² (≈ 18.86 cm²).",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 1: 6 सेमी त्रिज्या वाले एक वृत्त के एक त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए, जिसका कोण 60° है। (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "132/7 सेमी²",
+      "144/7 सेमी²",
+      "120/7 सेमी²",
+      "154/7 सेमी²"
+    ],
+    "explanation_hi": "दिया है: त्रिज्या r = 6 सेमी और कोण θ = 60°।\nत्रिज्यखंड का क्षेत्रफल = (θ/360°) × πr²\n= (60/360) × (22/7) × 6²\n= (1/6) × (22/7) × 36\n= (22 × 6) / 7 = 132/7 सेमी² (≈ 18.86 सेमी²)।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 1: 6 સેમી ત્રિજ્યાવાળા વર્તુળના વૃત્તાંશનું ક્ષેત્રફળ શોધો જેનો ખૂણો 60° છે. (π = 22/7 લો)",
+    "options_gu": [
+      "132/7 સેમી²",
+      "144/7 સેમી²",
+      "120/7 સેમી²",
+      "154/7 સેમી²"
+    ],
+    "explanation_gu": "આપેલ છે: ત્રિજ્યા r = 6 સેમી અને ખૂણો θ = 60°.\nવૃત્તાંશનું ક્ષેત્રફળ = (θ/360°) × πr²\n= (60/360) × (22/7) × 6²\n= (1/6) × (22/7) × 36\n= (22 × 6) / 7 = 132/7 સેમી² (≈ 18.86 સેમી²).",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_012",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q2: Find the area of a quadrant of a circle whose circumference is 22 cm. (Use π = 22/7)",
+    "options": [
+      "77/8 cm²",
+      "77/4 cm²",
+      "35/8 cm²",
+      "44/7 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Given circumference 2πr = 22 cm => 2 × (22/7) × r = 22 => r = 7/2 cm = 3.5 cm.\nA quadrant is a sector with angle θ = 90° (one-fourth of the circle):\nArea of quadrant = (1/4)πr² = (1/4) × (22/7) × (7/2) × (7/2) = (11 × 7) / (4 × 2) = 77/8 cm² (≈ 9.625 cm²).",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 2: एक वृत्त के चतुर्थांश (quadrant) का क्षेत्रफल ज्ञात कीजिए, जिसकी परिधि 22 सेमी है। (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "77/8 सेमी²",
+      "77/4 सेमी²",
+      "35/8 सेमी²",
+      "44/7 सेमी²"
+    ],
+    "explanation_hi": "दिया है परिधि 2πr = 22 सेमी => 2 × (22/7) × r = 22 => r = 7/2 सेमी।\nचतुर्थांश 90° का त्रिज्यखंड होता है (वृत्त का एक-चौथाई भाग):\nचतुर्थांश का क्षेत्रफल = (1/4)πr² = (1/4) × (22/7) × (7/2) × (7/2) = 77/8 सेमी² (≈ 9.625 सेमी²)।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 2: એક વર્તુળના ચતુર્થાંશનું ક્ષેત્રફળ શોધો જેનો પરિઘ 22 સેમી છે. (π = 22/7 લો)",
+    "options_gu": [
+      "77/8 સેમી²",
+      "77/4 સેમી²",
+      "35/8 સેમી²",
+      "44/7 સેમી²"
+    ],
+    "explanation_gu": "પરિઘ 2πr = 22 સેમી આપેલ છે => 2 × (22/7) × r = 22 => r = 7/2 સેમી.\nચતુર્થાંશ એટલે 90° નો વૃત્તાંશ (વર્તુળનો ચોથો ભાગ):\nચતુર્થાંશનું ક્ષેત્રફળ = (1/4)πr² = (1/4) × (22/7) × (7/2) × (7/2) = 77/8 સેમી² (≈ 9.625 સેમી²).",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_013",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q3: The length of the minute hand of a clock is 14 cm. Find the area swept by the minute hand in 5 minutes. (Use π = 22/7)",
+    "options": [
+      "154/3 cm²",
+      "154/6 cm²",
+      "77/3 cm²",
+      "308/3 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Length of minute hand acts as radius: r = 14 cm.\nIn 60 minutes, the minute hand sweeps 360°.\nIn 5 minutes, angle swept θ = (360° / 60) × 5 = 30°.\nArea swept = (θ/360°) × πr²\n= (30/360) × (22/7) × 14 × 14\n= (1/12) × 22 × 2 × 14\n= (1/12) × 616 = 154/3 cm² (≈ 51.33 cm²).",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 3: एक घड़ी की मिनट की सुई जिसकी लंबाई 14 सेमी है। इस सुई द्वारा 5 मिनट में रचित क्षेत्रफल ज्ञात कीजिए। (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "154/3 सेमी²",
+      "154/6 सेमी²",
+      "77/3 सेमी²",
+      "308/3 सेमी²"
+    ],
+    "explanation_hi": "मिनट की सुई की लंबाई त्रिज्या का कार्य करती है: r = 14 सेमी।\n60 मिनट में मिनट की सुई 360° घूमती है।\n5 मिनट में घूमा गया कोण θ = (360° / 60) × 5 = 30°।\nसुई द्वारा रचित क्षेत्रफल = (θ/360°) × πr²\n= (30/360) × (22/7) × 14 × 14\n= (1/12) × 44 × 14 = 616 / 12 = 154/3 सेमी² (≈ 51.33 सेमी²)।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 3: એક ઘડિયાળના મિનિટ કાંટાની લંબાઈ 14 સેમી છે. મિનિટ કાંટા દ્વારા 5 મિનિટમાં રચાતા ક્ષેત્રનું ક્ષેત્રફળ શોધો. (π = 22/7 લો)",
+    "options_gu": [
+      "154/3 સેમી²",
+      "154/6 સેમી²",
+      "77/3 સેમી²",
+      "308/3 સેમી²"
+    ],
+    "explanation_gu": "મિનિટ કાંટાની લંબાઈ ત્રિજ્યા બને છે: r = 14 સેમી.\n60 મિનિટમાં મિનિટ કાંટો 360° નું પરિભ્રમણ કરે છે.\n5 મિનિટમાં રચાતો ખૂણો θ = (360° / 60) × 5 = 30°.\nરચાતા ક્ષેત્રનું ક્ષેત્રફળ = (θ/360°) × πr²\n= (30/360) × (22/7) × 14 × 14\n= (1/12) × 22 × 2 × 14 = 616 / 12 = 154/3 સેમી² (≈ 51.33 સેમી²).",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_014",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q14: Area of a sector of angle p (in degrees) of a circle with radius R is:",
+    "options": [
+      "(p / 180) × 2πR",
+      "(p / 180) × πR²",
+      "(p / 360) × 2πR",
+      "(p / 720) × 2πR²"
+    ],
+    "correct_index": 3,
+    "explanation": "The standard formula for area of a sector with angle p and radius R is (p/360) × πR².\nNotice option (D): (p/720) × 2πR² = (p/360) × πR², which matches the correct formula exactly! Options (A) and (C) calculate arc length, while option (B) has 180 in the denominator instead of 360.",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 14: त्रिज्या R वाले वृत्त के उस त्रिज्यखंड का क्षेत्रफल जिसका कोण p° है, निम्नलिखित है:",
+    "options_hi": [
+      "(p / 180) × 2πR",
+      "(p / 180) × πR²",
+      "(p / 360) × 2πR",
+      "(p / 720) × 2πR²"
+    ],
+    "explanation_hi": "त्रिज्या R और कोण p वाले त्रिज्यखंड के क्षेत्रफल का मानक सूत्र (p/360) × πR² होता है।\nविकल्प (D) को ध्यान से देखें: (p/720) × 2πR² = (p/360) × πR², जो मानक सूत्र के बिल्कुल समान है! विकल्प (A) और (C) चाप की लंबाई से संबंधित हैं, जबकि विकल्प (B) में हर में 360 के स्थान पर 180 है।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 14: R ત્રિજ્યાવાળા વર્તુળના p° ખૂણો ધરાવતા વૃત્તાંશનું ક્ષેત્રફળ નીચે મુજબ છે:",
+    "options_gu": [
+      "(p / 180) × 2πR",
+      "(p / 180) × πR²",
+      "(p / 360) × 2πR",
+      "(p / 720) × 2πR²"
+    ],
+    "explanation_gu": "ત્રિજ્યા R અને ખૂણા p વાળા વૃત્તાંશના ક્ષેત્રફળનું પ્રમાણિત સૂત્ર (p/360) × πR² છે.\nવિકલ્પ (D) જુઓ: (p/720) × 2πR² = (p/360) × πR², જે સાચા સૂત્ર સાથે બરાબર મેળ ખાય છે! વિકલ્પ (A) અને (C) ચાપની લંબાઈ દર્શાવે છે, જ્યારે વિકલ્પ (B) માં છેદમાં 360 ના બદલે 180 છે.",
+    "bloom": "Analyze",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH11_015",
+    "type": "discovery",
+    "title": "Discovery: Segment of a Circle (Slicing with a Chord)",
+    "body": "### 1. Definition of Segment\nThe portion (or part) of the circular region enclosed between a **chord** and the **corresponding arc** is called a **Segment of the circle**.\n\n- **Minor Segment (लघु वृत्तखंड / લઘુવૃત્તખંડ):** The smaller region enclosed by the chord and the minor arc.\n- **Major Segment (दीर्घ वृत्तखंड / ગુરુવૃત્તખંડ):** The larger region enclosed by the chord and the major arc.\n\n### 2. The Golden Subtraction Formula for Minor Segment\nTo find the area of the minor segment $APB$ formed by chord $AB$:\n1. Draw radii $OA$ and $OB$ to form the sector $OAPB$.\n2. Subtract the area of $\\Delta OAB$ from the area of sector $OAPB$:\n\n$$\\mathbf{\\text{Area of Minor Segment } APB = \\text{Area of Sector } OAPB - \\text{Area of } \\Delta OAB}$$\n\n$$\\text{Area of Minor Segment} = \\left(\\frac{\\theta}{360^\\circ} \\times \\pi r^2\\right) - \\text{Area of } \\Delta OAB$$\n\n### 3. Formula for Major Segment\n$$\\mathbf{\\text{Area of Major Segment} = \\text{Area of Circle} - \\text{Area of Minor Segment}}$$\n$$\\text{Area of Major Segment} = \\pi r^2 - \\text{Area of Minor Segment}$$",
+    "title_hi": "खोज: वृत्त का वृत्तखंड (जीवा द्वारा काटा गया भाग)",
+    "body_hi": "### 1. वृत्तखंड की परिभाषा\nएक **जीवा (chord)** और उसके **संगत चाप (arc)** के बीच घिरे वृत्तीय क्षेत्र के भाग को **वृत्त का वृत्तखंड (Segment)** कहते हैं।\n\n- **लघु वृत्तखंड (Minor Segment):** जीवा और लघु चाप के बीच घिरा छोटा क्षेत्र।\n- **दीर्घ वृत्तखंड (Major Segment):** जीवा और दीर्घ चाप के बीच घिरा बड़ा क्षेत्र।\n\n### 2. लघु वृत्तखंड का स्वर्णिम घटाव सूत्र\nजीवा $AB$ द्वारा बने लघु वृत्तखंड $APB$ का क्षेत्रफल ज्ञात करने के लिए:\n1. केंद्र $O$ से त्रिज्याएँ $OA$ और $OB$ खींचकर त्रिज्यखंड $OAPB$ बनाएँ।\n2. त्रिज्यखंड $OAPB$ के क्षेत्रफल में से त्रिभुज $\\Delta OAB$ का क्षेत्रफल घटा दें:\n\n$$\\mathbf{\\text{लघु वृत्तखंड } APB \\text{ का क्षेत्रफल} = \\text{त्रिज्यखंड } OAPB \\text{ का क्षेत्रफल} - \\Delta OAB \\text{ का क्षेत्रफल}}$$\n\n$$\\text{लघु वृत्तखंड का क्षेत्रफल} = \\left(\\frac{\\theta}{360^\\circ} \\times \\pi r^2\\right) - \\Delta OAB \\text{ का क्षेत्रफल}$$\n\n### 3. दीर्घ वृत्तखंड का क्षेत्रफल\n$$\\mathbf{\\text{दीर्घ वृत्तखंड का क्षेत्रफल} = \\text{वृत्त का कुल क्षेत्रफल} - \\text{लघु वृत्तखंड का क्षेत्रफल}}$$\n$$\\text{दीर्घ वृत्तखंड का क्षेत्रफल} = \\pi r^2 - \\text{लघु वृत्तखंड का क्षेत्रफल}$$",
+    "title_gu": "શોધ: વર્તુળનો વૃત્તખંડ (જીવા વડે થતો છેદ)",
+    "body_gu": "### 1. વૃત્તખંડની વ્યાખ્યા\nવર્તુળની **જીવા (chord)** અને તેના **સંગત ચાપ (arc)** વચ્ચે ઘેરાયેલા વર્તુળાકાર પ્રદેશના ભાગને **વર્તુળનો વૃત્તખંડ (Segment)** કહે છે.\n\n- **લઘુવૃત્તખંડ (Minor Segment):** જીવા અને લઘુચાપ વચ્ચેનો નાનો પ્રદેશ.\n- **ગુરુવૃત્તખંડ (Major Segment):** જીવા અને ગુરુચાપ વચ્ચેનો મોટો પ્રદેશ.\n\n### 2. લઘુવૃત્તખંડનું સુવર્ણ બાદબાકી સૂત્ર\nજીવા $AB$ દ્વારા રચાતા લઘુવૃત્તખંડ $APB$ નું ક્ષેત્રફળ શોધવા માટે:\n1. ત્રિજ્યાઓ $OA$ અને $OB$ જોડી વૃત્તાંશ $OAPB$ બનાવો.\n2. વૃત્તાંશ $OAPB$ ના ક્ષેત્રફળમાંથી ત્રિકોણ $\\Delta OAB$ નું ક્ષેત્રફળ બાદ કરો:\n\n$$\\mathbf{\\text{લઘુવૃત્તખંડ } APB \\text{ નું ક્ષેત્રફળ} = \\text{વૃત્તાંશ } OAPB \\text{ નું ક્ષેત્રફળ} - \\Delta OAB \\text{ નું ક્ષેત્રફળ}}$$\n\n$$\\text{લઘુવૃત્તખંડનું ક્ષેત્રફળ} = \\left(\\frac{\\theta}{360^\\circ} \\times \\pi r^2\\right) - \\Delta OAB \\text{ નું ક્ષેત્રફળ}$$\n\n### 3. ગુરુવૃત્તખંડનું ક્ષેત્રફળ\n$$\\mathbf{\\text{ગુરુવૃત્તખંડનું ક્ષેત્રફળ} = \\text{વર્તુળનું કુલ ક્ષેત્રફળ} - \\text{લઘુવૃત્તખંડનું ક્ષેત્રફળ}}$$\n$$\\text{ગુરુવૃત્તખંડનું ક્ષેત્રફળ} = \\pi r^2 - \\text{લઘુવૃત્તખંડનું ક્ષેત્રફળ}$$",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_016",
+    "type": "teacher_tip",
+    "title": "Teacher Tip: Master Formulas for Area of Triangle OAB (θ = 60°, 90°, 120°)",
+    "body": "In segment problems, finding the **Area of Triangle $\\Delta OAB$** is where 90% of students make mistakes. Master these three exact cases:\n\n### Case 1: When Central Angle $\\theta = 90^\\circ$ (Right-angled Triangle)\nHere $OA \\perp OB$, so the two radii form the perpendicular base and height:\n$$\\text{Area of } \\Delta OAB = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times r \\times r = \\frac{1}{2}r^2$$\n\n### Case 2: When Central Angle $\\theta = 60^\\circ$ (Equilateral Triangle)\nSince $OA = OB = r$, $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 60^\\circ}{2} = 60^\\circ$. All three angles are $60^\\circ$, making $\\Delta OAB$ an **equilateral triangle** of side $r$:\n$$\\text{Area of } \\Delta OAB = \\frac{\\sqrt{3}}{4} r^2$$\n*(Use $\\sqrt{3} \\approx 1.73$ when requested)*\n\n### Case 3: When Central Angle $\\theta = 120^\\circ$ (Obtuse Isosceles Triangle)\nDraw a perpendicular $OM \\perp AB$. Then $OM$ bisects $\\angle AOB$ into two $60^\\circ$ angles and bisects chord $AB$:\n- In right $\\Delta OMA$: $AM = r \\sin 60^\\circ = r \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = r\\sqrt{3}$\n- Altitude $OM = r \\cos 60^\\circ = \\frac{r}{2}$\n- $\\text{Area of } \\Delta OAB = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times r\\sqrt{3} \\times \\frac{r}{2} = \\frac{\\sqrt{3}}{4} r^2$\n\n### The Universal Trigonometric Secret:\nFor ANY angle $\\theta$ between two sides of length $r$, the area is always:\n$$\\mathbf{\\text{Area of } \\Delta OAB = \\frac{1}{2} r^2 \\sin \\theta}$$\n- For $\\theta = 90^\\circ$: $\\frac{1}{2} r^2 \\sin 90^\\circ = \\frac{1}{2} r^2 (1) = \\frac{1}{2} r^2$\n- For $\\theta = 60^\\circ$: $\\frac{1}{2} r^2 \\sin 60^\\circ = \\frac{1}{2} r^2 \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{\\sqrt{3}}{4} r^2$\n- For $\\theta = 120^\\circ$: $\\frac{1}{2} r^2 \\sin 120^\\circ = \\frac{1}{2} r^2 \\sin(180^\\circ - 60^\\circ) = \\frac{1}{2} r^2 \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{\\sqrt{3}}{4} r^2$",
+    "title_hi": "शिक्षक युक्ति: त्रिभुज OAB के क्षेत्रफल के अचूक सूत्र (θ = 60°, 90°, 120°)",
+    "body_hi": "वृत्तखंड के प्रश्नों में **त्रिभुज $\\Delta OAB$ का क्षेत्रफल** निकालते समय 90% विद्यार्थी गलती करते हैं। इन तीन स्थितियों को पूरी तरह कंठस्थ कर लें:\n\n### स्थिति 1: जब केंद्रीय कोण $\\theta = 90^\\circ$ हो (समकोण त्रिभुज)\nयहाँ $OA \\perp OB$ है, अतः दोनों त्रिज्याएँ ही आधार और लंब बन जाती हैं:\n$$\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{1}{2} \\times \\text{आधार} \\times \\text{ऊंचाई} = \\frac{1}{2} \\times r \\times r = \\frac{1}{2}r^2$$\n\n### स्थिति 2: जब केंद्रीय कोण $\\theta = 60^\\circ$ हो (समबाहु त्रिभुज)\nचूँकि $OA = OB = r$ है, अतः $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 60^\\circ}{2} = 60^\\circ$। तीनों कोण $60^\\circ$ होने के कारण $\\Delta OAB$ एक **समबाहु त्रिभुज (equilateral triangle)** बन जाता है:\n$$\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{\\sqrt{3}}{4} r^2$$\n*(जब प्रश्न में कहा जाए तो $\\sqrt{3} \\approx 1.73$ का प्रयोग करें)*\n\n### स्थिति 3: जब केंद्रीय कोण $\\theta = 120^\\circ$ हो (अधिककोण समद्विबाहु त्रिभुज)\nकेंद्र $O$ से जीवा $AB$ पर लंब $OM \\perp AB$ खींचिए। यह लंब कोण को दो $60^\\circ$ कोणों में और जीवा को दो बराबर भागों में बाँटता है:\n- समकोण $\\Delta OMA$ में: $AM = r \\sin 60^\\circ = r \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = r\\sqrt{3}$\n- ऊंचाई $OM = r \\cos 60^\\circ = \\frac{r}{2}$\n- $\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times r\\sqrt{3} \\times \\frac{r}{2} = \\frac{\\sqrt{3}}{4} r^2$\n\n### सार्वभौमिक त्रिकोणमितीय नियम:\nत्रिज्या $r$ वाली दो भुजाओं के बीच किसी भी कोण $\\theta$ के लिए:\n$$\\mathbf{\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{1}{2} r^2 \\sin \\theta}$$\n- $\\theta = 90^\\circ$ के लिए: $\\frac{1}{2} r^2 \\sin 90^\\circ = \\frac{1}{2} r^2 (1) = \\frac{1}{2} r^2$\n- $\\theta = 60^\\circ$ के लिए: $\\frac{1}{2} r^2 \\sin 60^\\circ = \\frac{1}{2} r^2 \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{\\sqrt{3}}{4} r^2$\n- $\\theta = 120^\\circ$ के लिए: $\\frac{1}{2} r^2 \\sin 120^\\circ = \\frac{1}{2} r^2 \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{\\sqrt{3}}{4} r^2$",
+    "title_gu": "શિક્ષકની સલાહ: ત્રિકોણ OAB ના ક્ષેત્રફળ માટેના અચૂક સૂત્રો (θ = 60°, 90°, 120°)",
+    "body_gu": "વૃત્તખંડના દાખલાઓમાં **ત્રિકોણ $\\Delta OAB$ નું ક્ષેત્રફળ** ગણતી વખતે મોટાભાગના વિદ્યાર્થીઓ ભૂલ કરે છે. આ ત્રણ પરિસ્થિતિઓ બરાબર સમજી લો:\n\n### સ્થિતિ 1: જ્યારે કેન્દ્ર આગળનો ખૂણો $\\theta = 90^\\circ$ હોય (કાટકોણ ત્રિકોણ)\nઅહીં $OA \\perp OB$ હોવાથી બંને ત્રિજ્યાઓ પાયો અને વેધ બને છે:\n$$\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{1}{2} \\times \\text{પાયો} \\times \\text{વેધ} = \\frac{1}{2} \\times r \\times r = \\frac{1}{2}r^2$$\n\n### સ્થિતિ 2: જ્યારે કેન્દ્ર આગળનો ખૂણો $\\theta = 60^\\circ$ હોય (સમબાજુ ત્રિકોણ)\n$OA = OB = r$ હોવાથી સામેના ખૂણા સમાન થાય: $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 60^\\circ}{2} = 60^\\circ$. ત્રણેય ખૂણા $60^\\circ$ હોવાથી $\\Delta OAB$ **સમબાજુ ત્રિકોણ** બને છે:\n$$\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{\\sqrt{3}}{4} r^2$$\n*(પ્રશ્નમાં માંગ્યા મુજબ $\\sqrt{3} \\approx 1.73$ લો)*\n\n### સ્થિતિ 3: જ્યારે કેન્દ્ર આગળનો ખૂણો $\\theta = 120^\\circ$ હોય (ગુરુકોણ સમદ્વિબાજુ ત્રિકોણ)\nકેન્દ્ર $O$ માંથી જીવા $AB$ પર લંબ $OM \\perp AB$ દોરો. આ લંબ ખૂણાનું $60^\\circ$ ના બે ભાગમાં અને જીવાનું બે સરખા ભાગમાં વિભાજન કરે છે:\n- કાટકોણ $\\Delta OMA$ માં: $AM = r \\sin 60^\\circ = r \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = r\\sqrt{3}$\n- વેધ $OM = r \\cos 60^\\circ = \\frac{r}{2}$\n- $\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times r\\sqrt{3} \\times \\frac{r}{2} = \\frac{\\sqrt{3}}{4} r^2$\n\n### સાર્વત્રિક ત્રિકોણમિતીય નિયમ:\nબે ત્રિજ્યાઓ વચ્ચેના કોઈપણ ખૂણા $\\theta$ માટે ત્રિકોણનું ક્ષેત્રફળ:\n$$\\mathbf{\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{1}{2} r^2 \\sin \\theta}$$\n- $\\theta = 90^\\circ$ માટે: $\\frac{1}{2} r^2 \\sin 90^\\circ = \\frac{1}{2} r^2$\n- $\\theta = 60^\\circ$ માટે: $\\frac{1}{2} r^2 \\sin 60^\\circ = \\frac{\\sqrt{3}}{4} r^2$\n- $\\theta = 120^\\circ$ માટે: $\\frac{1}{2} r^2 \\sin 120^\\circ = \\frac{\\sqrt{3}}{4} r^2$",
+    "bloom": "Remember",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_017",
+    "type": "example",
+    "title": "Example 2: Area of Segment AYB with Central Angle 120°",
+    "body": "### Problem Statement:\nFind the area of the segment $AYB$ shown in a circle of radius 21 cm, if $\\angle AOB = 120^\\circ$. (Use $\\pi = 22/7$)\n\n### Step-by-Step Solution:\n1. **Given Data:**\n   - Radius $r = 21\\text{ cm}$\n   - Central angle $\\theta = 120^\\circ$\n   - $\\pi = 22/7$\n\n2. **Area of Sector $OAYB$:**\n   $$\\text{Area of sector} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{120^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21$$\n   $$\\text{Area of sector} = \\frac{1}{3} \\times 22 \\times 3 \\times 21 = 22 \\times 21 = 462\\text{ cm}^2$$\n\n3. **Area of $\\Delta OAB$:**\n   - Draw $OM \\perp AB$. In right $\\Delta OMA$, $\\angle AOM = 60^\\circ$.\n   - $OM = OA \\cos 60^\\circ = 21 \\times \\frac{1}{2} = \\frac{21}{2}\\text{ cm}$\n   - $AM = OA \\sin 60^\\circ = 21 \\times \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = 21\\sqrt{3}\\text{ cm}$\n   - $\\text{Area of } \\Delta OAB = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times 21\\sqrt{3} \\times \\frac{21}{2} = \\frac{441\\sqrt{3}}{4}\\text{ cm}^2$\n\n4. **Area of Segment $AYB$:**\n   $$\\text{Area of segment} = \\text{Area of sector } OAYB - \\text{Area of } \\Delta OAB$$\n   $$\\text{Area of segment} = \\left(462 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ cm}^2 = \\frac{21}{4}(88 - 21\\sqrt{3})\\text{ cm}^2$$\n\n   *(If $\\sqrt{3} = 1.732$: $\\text{Area} = 462 - 190.95 = 271.05\\text{ cm}^2$)*",
+    "title_hi": "उदाहरण 2: 120° केंद्रीय कोण वाले वृत्तखंड AYB का क्षेत्रफल",
+    "body_hi": "### प्रश्न:\n21 सेमी त्रिज्या वाले एक वृत्त में वृत्तखंड $AYB$ का क्षेत्रफल ज्ञात कीजिए, यदि $\\angle AOB = 120^\\circ$ है। ($\\pi = 22/7$ का प्रयोग कीजिए)\n\n### चरणबद्ध हल:\n1. **दिया गया डेटा:**\n   - त्रिज्या $r = 21\\text{ सेमी}$\n   - केंद्रीय कोण $\\theta = 120^\\circ$\n   - $\\pi = 22/7$\n\n2. **त्रिज्यखंड $OAYB$ का क्षेत्रफल:**\n   $$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{120^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21$$\n   $$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{1}{3} \\times 22 \\times 3 \\times 21 = 22 \\times 21 = 462\\text{ सेमी}^2$$\n\n3. **त्रिभुज $\\Delta OAB$ का क्षेत्रफल:**\n   - $OM \\perp AB$ खींचिए। समकोण त्रिभुज $\\Delta OMA$ में $\\angle AOM = 60^\\circ$ है।\n   - $OM = OA \\cos 60^\\circ = 21 \\times \\frac{1}{2} = \\frac{21}{2}\\text{ सेमी}$\n   - $AM = OA \\sin 60^\\circ = 21 \\times \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = 21\\sqrt{3}\\text{ सेमी}$\n   - $\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times 21\\sqrt{3} \\times \\frac{21}{2} = \\frac{441\\sqrt{3}}{4}\\text{ सेमी}^2$\n\n4. **वृत्तखंड $AYB$ का क्षेत्रफल:**\n   $$\\text{वृत्तखंड का क्षेत्रफल} = \\text{त्रिज्यखंड का क्षेत्रफल} - \\Delta OAB \\text{ का क्षेत्रफल}$$\n   $$\\text{वृत्तखंड का क्षेत्रफल} = \\left(462 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ सेमी}^2 = \\frac{21}{4}(88 - 21\\sqrt{3})\\text{ सेमी}^2$$",
+    "title_gu": "ઉદાહરણ 2: 120° કેન્દ્ર આગળનો ખૂણો ધરાવતા વૃત્તખંડ AYB નું ક્ષેત્રફળ",
+    "body_gu": "### પ્રશ્ન:\n21 સેમી ત્રિજ્યાવાળા વર્તુળમાં વૃત્તખંડ $AYB$ નું ક્ષેત્રફળ શોધો, જો $\\angle AOB = 120^\\circ$ હોય. ($\\pi = 22/7$ લો)\n\n### પગલાંવાર ઉકેલ:\n1. **આપેલી વિગતો:**\n   - ત્રિજ્યા $r = 21\\text{ સેમી}$\n   - કેન્દ્ર આગળનો ખૂણો $\\theta = 120^\\circ$\n   - $\\pi = 22/7$\n\n2. **વૃત્તાંશ $OAYB$ નું ક્ષેત્રફળ:**\n   $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{120^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21$$\n   $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{1}{3} \\times 22 \\times 3 \\times 21 = 22 \\times 21 = 462\\text{ સેમી}^2$$\n\n3. **ત્રિકોણ $\\Delta OAB$ નું ક્ષેત્રફળ:**\n   - $OM \\perp AB$ દોરો. કાટકોણ $\\Delta OMA$ માં $\\angle AOM = 60^\\circ$ થાય.\n   - $OM = OA \\cos 60^\\circ = 21 \\times \\frac{1}{2} = \\frac{21}{2}\\text{ સેમી}$\n   - $AM = OA \\sin 60^\\circ = 21 \\times \\frac{\\sqrt{3}}{2} \\implies AB = 2 \\times AM = 21\\sqrt{3}\\text{ સેમી}$\n   - $\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{1}{2} \\times AB \\times OM = \\frac{1}{2} \\times 21\\sqrt{3} \\times \\frac{21}{2} = \\frac{441\\sqrt{3}}{4}\\text{ સેમી}^2$\n\n4. **વૃત્તખંડ $AYB$ નું ક્ષેત્રફળ:**\n   $$\\text{વૃત્તખંડનું ક્ષેત્રફળ} = \\text{વૃત્તાંશનું ક્ષેત્રફળ} - \\Delta OAB \\text{ નું ક્ષેત્રફળ}$$\n   $$\\text{વૃત્તખંડનું ક્ષેત્રફળ} = \\left(462 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ સેમી}^2 = \\frac{21}{4}(88 - 21\\sqrt{3})\\text{ સેમી}^2$$",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH11_018",
+    "type": "theory",
+    "title": "Exercise 11.1 Q4: Right-Angled Central Chord: Minor Segment and Major Sector Analysis",
+    "body": "### Problem Statement:\nA chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the corresponding:\n(i) minor segment\n(ii) major sector (Use $\\pi = 3.14$)\n\n### Step-by-Step Complete Solution:\n1. **Given:** Radius $r = 10\\text{ cm}$, Central Angle $\\theta = 90^\\circ$, $\\pi = 3.14$.\n\n2. **(i) Area of Minor Segment:**\n   - Area of minor sector $OAPB$:\n     $$\\text{Area of sector} = \\frac{90^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{1}{4} \\times 3.14 \\times 10^2 = \\frac{314}{4} = 78.5\\text{ cm}^2$$\n   - Area of right $\\Delta OAB$ with $\\angle AOB = 90^\\circ$:\n     $$\\text{Area of } \\Delta OAB = \\frac{1}{2} \\times OA \\times OB = \\frac{1}{2} \\times 10 \\times 10 = 50\\text{ cm}^2$$\n   - Area of minor segment:\n     $$\\text{Area of minor segment} = \\text{Area of sector} - \\text{Area of } \\Delta OAB = 78.5 - 50 = 28.5\\text{ cm}^2$$\n\n3. **(ii) Area of Major Sector:**\n   - Central angle of major sector $= 360^\\circ - 90^\\circ = 270^\\circ$.\n   $$\\text{Area of major sector} = \\frac{270^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{3}{4} \\times 3.14 \\times 100 = 3 \\times 78.5 = 235.5\\text{ cm}^2$$\n   - *(Alternative check: Total area $- 78.5 = 314 - 78.5 = 235.5\\text{ cm}^2$)*",
+    "title_hi": "प्रश्नावली 11.1 प्रश्न 4: समकोण अंतरित करने वाली जीवा: लघु वृत्तखंड और दीर्घ त्रिज्यखंड का विश्लेषण",
+    "body_hi": "### प्रश्न:\n10 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर एक समकोण अंतरित करती है। निम्नलिखित के क्षेत्रफल ज्ञात कीजिए:\n(i) संगत लघु वृत्तखंड\n(ii) संगत दीर्घ त्रिज्यखंड ($\\pi = 3.14$ का प्रयोग कीजिए)\n\n### चरणबद्ध पूर्ण हल:\n1. **दिया है:** त्रिज्या $r = 10\\text{ सेमी}$, केंद्रीय कोण $\\theta = 90^\\circ$, $\\pi = 3.14$।\n\n2. **(i) संगत लघु वृत्तखंड का क्षेत्रफल:**\n   - लघु त्रिज्यखंड $OAPB$ का क्षेत्रफल:\n     $$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{90^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{1}{4} \\times 3.14 \\times 100 = 78.5\\text{ सेमी}^2$$\n   - समकोण त्रिभुज $\\Delta OAB$ का क्षेत्रफल:\n     $$\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{1}{2} \\times 10 \\times 10 = 50\\text{ सेमी}^2$$\n   - लघु वृत्तखंड का क्षेत्रफल:\n     $$\\text{लघु वृत्तखंड का क्षेत्रफल} = 78.5 - 50 = 28.5\\text{ सेमी}^2$$\n\n3. **(ii) संगत दीर्घ त्रिज्यखंड का क्षेत्रफल:**\n   - दीर्घ त्रिज्यखंड का केंद्रीय कोण $= 360^\\circ - 90^\\circ = 270^\\circ$।\n   $$\\text{दीर्घ त्रिज्यखंड का क्षेत्रफल} = \\frac{270^\\circ}{360^\\circ} \\times 3.14 \\times 100 = \\frac{3}{4} \\times 314 = 235.5\\text{ सेमी}^2$$",
+    "title_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 4: કાટખૂણો આંતરતી જીવા: લઘુવૃત્તખંડ અને ગુરુવૃત્તાંશનું વિશ્લેષણ",
+    "body_gu": "### પ્રશ્ન:\n10 સેમી ત્રિજ્યાવાળા વર્તુળની જીવા કેન્દ્ર આગળ કાટખૂણો આંતરે છે. નીચેના ક્ષેત્રફળ શોધો:\n(i) સંગત લઘુવૃત્તખંડ\n(ii) સંગત ગુરુવૃત્તાંશ ($\\pi = 3.14$ લો)\n\n### પગલાંવાર પૂર્ણ ઉકેલ:\n1. **આપેલ વિગત:** ત્રિજ્યા $r = 10\\text{ સેમી}$, કેન્દ્ર આગળનો ખૂણો $\\theta = 90^\\circ$, $\\pi = 3.14$.\n\n2. **(i) સંગત લઘુવૃત્તખંડનું ક્ષેત્રફળ:**\n   - લઘુવૃત્તાંશનું ક્ષેત્રફળ:\n     $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{90^\\circ}{360^\\circ} \\times 3.14 \\times 10^2 = \\frac{1}{4} \\times 314 = 78.5\\text{ સેમી}^2$$\n   - કાટકોણ $\\Delta OAB$ નું ક્ષેત્રફળ:\n     $$\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{1}{2} \\times 10 \\times 10 = 50\\text{ સેમી}^2$$\n   - લઘુવૃત્તખંડનું ક્ષેત્રફળ:\n     $$\\text{લઘુવૃત્તખંડનું ક્ષેત્રફળ} = 78.5 - 50 = 28.5\\text{ સેમી}^2$$\n\n3. **(ii) સંગત ગુરુવૃત્તાંશનું ક્ષેત્રફળ:**\n   - ગુરુવૃત્તાંશનો ખૂણો $= 360^\\circ - 90^\\circ = 270^\\circ$.\n   $$\\text{ગુરુવૃત્તાંશનું ક્ષેત્રફળ} = \\frac{270^\\circ}{360^\\circ} \\times 3.14 \\times 100 = \\frac{3}{4} \\times 314 = 235.5\\text{ સેમી}^2$$",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_019",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q4 Quiz: What are the areas of the minor segment and major sector respectively for a circle of radius 10 cm with central angle 90°? (Use π = 3.14)",
+    "options": [
+      "Minor segment = 28.5 cm², Major sector = 235.5 cm²",
+      "Minor segment = 25.0 cm², Major sector = 250.0 cm²",
+      "Minor segment = 31.4 cm², Major sector = 210.5 cm²",
+      "Minor segment = 28.5 cm², Major sector = 285.5 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Minor sector area = (90/360) × 3.14 × 100 = 78.5 cm².\nArea of triangle = (1/2) × 10 × 10 = 50 cm².\nMinor segment = 78.5 - 50 = 28.5 cm².\nMajor sector = (270/360) × 3.14 × 100 = 235.5 cm².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 4 प्रश्नोत्तरी: 10 सेमी त्रिज्या और 90° केंद्रीय कोण वाले वृत्त के लिए क्रमशः लघु वृत्तखंड और दीर्घ त्रिज्यखंड का क्षेत्रफल क्या होगा? (π = 3.14 का प्रयोग कीजिए)",
+    "options_hi": [
+      "लघु वृत्तखंड = 28.5 सेमी², दीर्घ त्रिज्यखंड = 235.5 सेमी²",
+      "लघु वृत्तखंड = 25.0 सेमी², दीर्घ त्रिज्यखंड = 250.0 सेमी²",
+      "लघु वृत्तखंड = 31.4 सेमी², दीर्घ त्रिज्यखंड = 210.5 सेमी²",
+      "लघु वृत्तखंड = 28.5 सेमी², दीर्घ त्रिज्यखंड = 285.5 सेमी²"
+    ],
+    "explanation_hi": "लघु त्रिज्यखंड का क्षेत्रफल = (90/360) × 3.14 × 100 = 78.5 सेमी²।\nत्रिभुज का क्षेत्रफल = (1/2) × 10 × 10 = 50 सेमी²।\nलघु वृत्तखंड = 78.5 - 50 = 28.5 सेमी²।\nदीर्घ त्रिज्यखंड = (270/360) × 3.14 × 100 = 235.5 सेमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 4 ક્વિઝ: 10 સેમી ત્રિજ્યા અને 90° કેન્દ્ર આગળનો ખૂણો ધરાવતા વર્તુળ માટે અનુક્રમે લઘુવૃત્તખંડ અને ગુરુવૃત્તાંશનું ક્ષેત્રફળ કેટલું થાય? (π = 3.14 લો)",
+    "options_gu": [
+      "લઘુવૃત્તખંડ = 28.5 સેમી², ગુરુવૃત્તાંશ = 235.5 સેમી²",
+      "લઘુવૃત્તખંડ = 25.0 સેમી², ગુરુવૃત્તાંશ = 250.0 સેમી²",
+      "લઘુવૃત્તખંડ = 31.4 સેમી², ગુરુવૃત્તાંશ = 210.5 સેમી²",
+      "લઘુવૃત્તખંડ = 28.5 સેમી², ગુરુવૃત્તાંશ = 285.5 સેમી²"
+    ],
+    "explanation_gu": "લઘુવૃત્તાંશનું ક્ષેત્રફળ = (90/360) × 3.14 × 100 = 78.5 સેમી².\nત્રિકોણનું ક્ષેત્રફળ = (1/2) × 10 × 10 = 50 સેમી².\nલઘુવૃત્તખંડ = 78.5 - 50 = 28.5 સેમી².\nગુરુવૃત્તાંશ = (270/360) × 3.14 × 100 = 235.5 સેમી².",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_020",
+    "type": "theory",
+    "title": "Exercise 11.1 Q5: Arc, Sector, and Equilateral Segment Analysis (Radius 21 cm, θ = 60°)",
+    "body": "### Problem Statement:\nIn a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. Find:\n(i) the length of the arc\n(ii) area of the sector formed by the arc\n(iii) area of the segment formed by the corresponding chord (Use $\\pi = 22/7$)\n\n### Step-by-Step Solution:\n1. **Given:** Radius $r = 21\\text{ cm}$, Central Angle $\\theta = 60^\\circ$.\n\n2. **(i) Length of the Arc ($l$):**\n   $$l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r = \\frac{60^\\circ}{360^\\circ} \\times 2 \\times \\frac{22}{7} \\times 21$$\n   $$l = \\frac{1}{6} \\times 2 \\times 22 \\times 3 = \\frac{132}{6} = 22\\text{ cm}$$\n\n3. **(ii) Area of the Sector:**\n   $$\\text{Area of sector} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21$$\n   $$\\text{Area of sector} = \\frac{1}{6} \\times 22 \\times 3 \\times 21 = 11 \\times 21 = 231\\text{ cm}^2$$\n\n4. **(iii) Area of the Segment Formed by Corresponding Chord:**\n   - Since $OA = OB = 21\\text{ cm}$ and $\\angle AOB = 60^\\circ$, $\\Delta OAB$ is equilateral with side $a = 21\\text{ cm}$.\n   $$\\text{Area of } \\Delta OAB = \\frac{\\sqrt{3}}{4} a^2 = \\frac{\\sqrt{3}}{4} \\times 21^2 = \\frac{441\\sqrt{3}}{4}\\text{ cm}^2$$\n   $$\\text{Area of segment} = \\text{Area of sector} - \\text{Area of } \\Delta OAB = \\left(231 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ cm}^2$$\n   *(Using $\\sqrt{3} \\approx 1.732$: $\\text{Area} \\approx 231 - 190.95 = 40.05\\text{ cm}^2$)*",
+    "title_hi": "प्रश्नावली 11.1 प्रश्न 5: चाप, त्रिज्यखंड और समबाहु वृत्तखंड का संपूर्ण विश्लेषण (त्रिज्या 21 सेमी, θ = 60°)",
+    "body_hi": "### प्रश्न:\nत्रिज्या 21 सेमी वाले वृत्त का एक चाप केंद्र पर 60° का कोण अंतरित करता है। ज्ञात कीजिए:\n(i) चाप की लंबाई\n(ii) चाप द्वारा बनाए गए त्रिज्यखंड का क्षेत्रफल\n(iii) संगत जीवा द्वारा बनाए गए वृत्तखंड का क्षेत्रफल ($\\pi = 22/7$ का प्रयोग कीजिए)\n\n### चरणबद्ध हल:\n1. **दिया है:** त्रिज्या $r = 21\\text{ सेमी}$, केंद्रीय कोण $\\theta = 60^\\circ$।\n\n2. **(i) चाप की लंबाई ($l$):**\n   $$l = \\frac{60^\\circ}{360^\\circ} \\times 2 \\times \\frac{22}{7} \\times 21 = \\frac{1}{6} \\times 44 \\times 3 = 22\\text{ सेमी}$$\n\n3. **(ii) त्रिज्यखंड का क्षेत्रफल:**\n   $$\\text{क्षेत्रफल} = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21 = \\frac{1}{6} \\times 22 \\times 63 = 231\\text{ सेमी}^2$$\n\n4. **(iii) संगत जीवा द्वारा बनाए गए वृत्तखंड का क्षेत्रफल:**\n   - $\\Delta OAB$ में $OA = OB = 21\\text{ सेमी}$ और $\\angle AOB = 60^\\circ$ होने के कारण यह एक समबाहु त्रिभुज है।\n   $$\\Delta OAB \\text{ का क्षेत्रफल} = \\frac{\\sqrt{3}}{4} \\times 21^2 = \\frac{441\\sqrt{3}}{4}\\text{ सेमी}^2$$\n   $$\\text{वृत्तखंड का क्षेत्रफल} = \\left(231 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ सेमी}^2$$",
+    "title_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 5: ચાપ, વૃત્તાંશ અને સમબાજુ વૃત્તખંડનું વિશ્લેષણ (ત્રિજ્યા 21 સેમી, θ = 60°)",
+    "body_gu": "### પ્રશ્ન:\n21 સેમી ત્રિજ્યાવાળા વર્તુળનું એક ચાપ કેન્દ્ર આગળ 60° નો ખૂણો આંતરે છે. શોધો:\n(i) ચાપની લંબાઈ\n(ii) ચાપ વડે બનતા વૃત્તાંશનું ક્ષેત્રફળ\n(iii) સંગત જીવા વડે બનતા વૃત્તખંડનું ક્ષેત્રફળ ($\\pi = 22/7$ લો)\n\n### પગલાંવાર ઉકેલ:\n1. **આપેલ વિગત:** ત્રિજ્યા $r = 21\\text{ સેમી}$, કેન્દ્ર આગળનો ખૂણો $\\theta = 60^\\circ$.\n\n2. **(i) ચાપની લંબાઈ ($l$):**\n   $$l = \\frac{60^\\circ}{360^\\circ} \\times 2 \\times \\frac{22}{7} \\times 21 = \\frac{1}{6} \\times 44 \\times 3 = 22\\text{ સેમી}$$\n\n3. **(ii) વૃત્તાંશનું ક્ષેત્રફળ:**\n   $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 21 \\times 21 = \\frac{1}{6} \\times 22 \\times 63 = 231\\text{ સેમી}^2$$\n\n4. **(iii) સંગત જીવા વડે બનતા વૃત્તખંડનું ક્ષેત્રફળ:**\n   - $\\Delta OAB$ માં $OA = OB = 21\\text{ સેમી}$ અને ખૂણો $60^\\circ$ હોવાથી તે સમબાજુ ત્રિકોણ છે.\n   $$\\Delta OAB \\text{ નું ક્ષેત્રફળ} = \\frac{\\sqrt{3}}{4} \\times 21^2 = \\frac{441\\sqrt{3}}{4}\\text{ સેમી}^2$$\n   $$\\text{વૃત્તખંડનું ક્ષેત્રફળ} = \\left(231 - \\frac{441\\sqrt{3}}{4}\\right)\\text{ સેમી}^2$$",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_021",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q5 Quiz: For a circle of radius 21 cm with arc subtending 60° at the centre, what are the arc length and sector area?",
+    "options": [
+      "Length of arc = 22 cm, Area of sector = 231 cm²",
+      "Length of arc = 44 cm, Area of sector = 462 cm²",
+      "Length of arc = 21 cm, Area of sector = 220 cm²",
+      "Length of arc = 11 cm, Area of sector = 115.5 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Length of arc = (60/360) × 2 × (22/7) × 21 = (1/6) × 132 = 22 cm.\nArea of sector = (60/360) × (22/7) × 21 × 21 = (1/6) × 22 × 63 = 231 cm².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 5 प्रश्नोत्तरी: 21 सेमी त्रिज्या और 60° केंद्रीय कोण वाले वृत्त के लिए चाप की लंबाई और त्रिज्यखंड का क्षेत्रफल क्या होगा?",
+    "options_hi": [
+      "चाप की लंबाई = 22 सेमी, त्रिज्यखंड का क्षेत्रफल = 231 सेमी²",
+      "चाप की लंबाई = 44 सेमी, त्रिज्यखंड का क्षेत्रफल = 462 सेमी²",
+      "चाप की लंबाई = 21 सेमी, त्रिज्यखंड का क्षेत्रफल = 220 सेमी²",
+      "चाप की लंबाई = 11 सेमी, त्रिज्यखंड का क्षेत्रफल = 115.5 सेमी²"
+    ],
+    "explanation_hi": "चाप की लंबाई = (60/360) × 2 × (22/7) × 21 = 22 सेमी।\nत्रिज्यखंड का क्षेत्रफल = (60/360) × (22/7) × 21 × 21 = 231 सेमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 5 ક્વિઝ: 21 સેમી ત્રિજ્યા અને 60° કેન્દ્ર આગળનો ખૂણો ધરાવતા વર્તુળ માટે ચાપની લંબાઈ અને વૃત્તાંશનું ક્ષેત્રફળ કેટલું થાય?",
+    "options_gu": [
+      "ચાપની લંબાઈ = 22 સેમી, વૃત્તાંશનું ક્ષેત્રફળ = 231 સેમી²",
+      "ચાપની લંબાઈ = 44 સેમી, વૃત્તાંશનું ક્ષેત્રફળ = 462 સેમી²",
+      "ચાપની લંબાઈ = 21 સેમી, વૃત્તાંશનું ક્ષેત્રફળ = 220 સેમી²",
+      "ચાપની લંબાઈ = 11 સેમી, વૃત્તાંશનું ક્ષેત્રફળ = 115.5 સેમી²"
+    ],
+    "explanation_gu": "ચાપની લંબાઈ = (60/360) × 2 × (22/7) × 21 = 22 સેમી.\nવૃત્તાંશનું ક્ષેત્રફળ = (60/360) × (22/7) × 21 × 21 = 231 સેમી².",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_022",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q6: A chord of a circle of radius 15 cm subtends an angle of 60° at the centre. Find the areas of the corresponding minor and major segments. (Use π = 3.14 and √3 = 1.73)",
+    "options": [
+      "Minor = 20.4375 cm², Major = 686.0625 cm²",
+      "Minor = 22.5000 cm², Major = 684.0000 cm²",
+      "Minor = 18.2500 cm², Major = 688.2500 cm²",
+      "Minor = 25.4375 cm², Major = 681.0625 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Radius r = 15 cm, θ = 60°.\nArea of sector = (60/360) × 3.14 × 15² = (1/6) × 3.14 × 225 = 117.75 cm².\nArea of equilateral triangle = (√3/4) × 15² = (1.73 × 225) / 4 = 389.25 / 4 = 97.3125 cm².\nArea of minor segment = 117.75 - 97.3125 = 20.4375 cm².\nTotal circle area = πr² = 3.14 × 225 = 706.5 cm².\nArea of major segment = 706.5 - 20.4375 = 686.0625 cm².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 6: 15 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर 60° का कोण अंतरित करती है। संगत लघु और दीर्घ वृत्तखंडों के क्षेत्रफल ज्ञात कीजिए। (π = 3.14 और √3 = 1.73 का प्रयोग कीजिए)",
+    "options_hi": [
+      "लघु = 20.4375 सेमी², दीर्घ = 686.0625 सेमी²",
+      "लघु = 22.5000 सेमी², दीर्घ = 684.0000 सेमी²",
+      "लघु = 18.2500 सेमी², दीर्घ = 688.2500 सेमी²",
+      "लघु = 25.4375 सेमी², दीर्घ = 681.0625 सेमी²"
+    ],
+    "explanation_hi": "त्रिज्या r = 15 सेमी, θ = 60°।\nत्रिज्यखंड का क्षेत्रफल = (60/360) × 3.14 × 225 = 117.75 सेमी²।\nसमबाहु त्रिभुज का क्षेत्रफल = (√3/4) × 225 = (1.73 × 225) / 4 = 97.3125 सेमी²।\nलघु वृत्तखंड का क्षेत्रफल = 117.75 - 97.3125 = 20.4375 सेमी²।\nवृत्त का कुल क्षेत्रफल = 3.14 × 225 = 706.5 सेमी²।\nदीर्घ वृत्तखंड का क्षेत्रफल = 706.5 - 20.4375 = 686.0625 सेमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 6: 15 સેમી ત્રિજ્યાવાળા વર્તુળની જીવા કેન્દ્ર આગળ 60° નો ખૂણો આંતરે છે. સંગત લઘુ અને ગુરુ વૃત્તખંડના ક્ષેત્રફળ શોધો. (π = 3.14 અને √3 = 1.73 લો)",
+    "options_gu": [
+      "લઘુ = 20.4375 સેમી², ગુરુ = 686.0625 સેમી²",
+      "લઘુ = 22.5000 સેમી², ગુરુ = 684.0000 સેમી²",
+      "લઘુ = 18.2500 સેમી², ગુરુ = 688.2500 સેમી²",
+      "લઘુ = 25.4375 સેમી², ગુરુ = 681.0625 સેમી²"
+    ],
+    "explanation_gu": "ત્રિજ્યા r = 15 સેમી, θ = 60°.\nવૃત્તાંશનું ક્ષેત્રફળ = (60/360) × 3.14 × 225 = 117.75 સેમી².\nસમબાજુ ત્રિકોણનું ક્ષેત્રફળ = (√3/4) × 225 = (1.73 × 225) / 4 = 97.3125 સેમી².\nલઘુવૃત્તખંડનું ક્ષેત્રફળ = 117.75 - 97.3125 = 20.4375 સેમી².\nવર્તુળનું કુલ ક્ષેત્રફળ = 3.14 × 225 = 706.5 સેમી².\nગુરુવૃત્તખંડનું ક્ષેત્રફળ = 706.5 - 20.4375 = 686.0625 સેમી².",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_023",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q7: A chord of a circle of radius 12 cm subtends an angle of 120° at the centre. Find the area of the corresponding segment of the circle. (Use π = 3.14 and √3 = 1.73)",
+    "options": [
+      "88.44 cm²",
+      "78.44 cm²",
+      "92.16 cm²",
+      "104.28 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Radius r = 12 cm, θ = 120°.\nArea of sector = (120/360) × 3.14 × 12² = (1/3) × 3.14 × 144 = 48 × 3.14 = 150.72 cm².\nArea of triangle = (1/2)r² sin(120°) = (1/2) × 144 × (√3/2) = 36√3 = 36 × 1.73 = 62.28 cm².\nArea of segment = Area of sector - Area of triangle = 150.72 - 62.28 = 88.44 cm².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 7: 12 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर 120° का कोण अंतरित करती है। संगत वृत्तखंड का क्षेत्रफल ज्ञात कीजिए। (π = 3.14 और √3 = 1.73 का प्रयोग कीजिए)",
+    "options_hi": [
+      "88.44 सेमी²",
+      "78.44 सेमी²",
+      "92.16 सेमी²",
+      "104.28 सेमी²"
+    ],
+    "explanation_hi": "त्रिज्या r = 12 सेमी, θ = 120°।\nत्रिज्यखंड का क्षेत्रफल = (120/360) × 3.14 × 144 = 48 × 3.14 = 150.72 सेमी²।\nत्रिभुज का क्षेत्रफल = (1/2)r² sin(120°) = 36√3 = 36 × 1.73 = 62.28 सेमी²।\nवृत्तखंड का क्षेत्रफल = 150.72 - 62.28 = 88.44 सेमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 7: 12 સેમી ત્રિજ્યાવાળા વર્તુળની જીવા કેન્દ્ર આગળ 120° નો ખૂણો આંતરે છે. સંગત વૃત્તખંડનું ક્ષેત્રફળ શોધો. (π = 3.14 અને √3 = 1.73 લો)",
+    "options_gu": [
+      "88.44 સેમી²",
+      "78.44 સેમી²",
+      "92.16 સેમી²",
+      "104.28 સેમી²"
+    ],
+    "explanation_gu": "ત્રિજ્યા r = 12 સેમી, θ = 120°.\nવૃત્તાંશનું ક્ષેત્રફળ = (120/360) × 3.14 × 144 = 48 × 3.14 = 150.72 સેમી².\nત્રિકોણનું ક્ષેત્રફળ = (1/2)r² sin(120°) = 36√3 = 36 × 1.73 = 62.28 સેમી².\nવૃત્તખંડનું ક્ષેત્રફળ = 150.72 - 62.28 = 88.44 સેમી².",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_024",
+    "type": "theory",
+    "title": "Exercise 11.1 Q8: Horse Grazing in a Square Grass Field Analysis",
+    "body": "### Problem Statement:\nA horse is tied to a peg at one corner of a square shaped grass field of side 15 m by means of a 5 m long rope. Find:\n(i) the area of that part of the field in which the horse can graze.\n(ii) the increase in the grazing area if the rope were 10 m long instead of 5 m. (Use $\\pi = 3.14$)\n\n### Step-by-Step Mathematical Analysis:\n1. **Corner of a Square Field:**\n   - Each internal angle of a square is $90^\\circ$.\n   - Because the horse is anchored at a corner, it can only sweep out a **quadrant of a circle** (central angle $\\theta = 90^\\circ$).\n\n2. **(i) Grazing Area with 5 m Rope ($r = 5\\text{ m}$):**\n   $$\\text{Area} = \\frac{90^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{1}{4} \\times 3.14 \\times 5^2 = \\frac{1}{4} \\times 3.14 \\times 25$$\n   $$\\text{Area} = \\frac{78.5}{4} = 19.625\\text{ m}^2$$\n\n3. **(ii) Grazing Area with 10 m Rope ($R = 10\\text{ m}$):**\n   $$\\text{New Area} = \\frac{1}{4} \\times 3.14 \\times 10^2 = \\frac{1}{4} \\times 314 = 78.5\\text{ m}^2$$\n\n4. **Increase in Grazing Area:**\n   $$\\text{Increase} = \\text{New Area} - \\text{Old Area} = 78.5 - 19.625 = 58.875\\text{ m}^2$$",
+    "title_hi": "प्रश्नावली 11.1 प्रश्न 8: वर्गाकार घास के मैदान में घोड़े के चरने का विस्तृत विश्लेषण",
+    "body_hi": "### प्रश्न:\n15 मीटर भुजा वाले एक वर्गाकार घास के मैदान के एक कोने पर लगे खूँटे से एक घोड़े को 5 मीटर लंबी रस्सी से बाँध दिया गया है। ज्ञात कीजिए:\n(i) मैदान के उस भाग का क्षेत्रफल जहाँ घोड़ा घास चर सकता है।\n(ii) चरे जा सकने वाले क्षेत्रफल में वृद्धि, यदि रस्सी 5 मीटर के स्थान पर 10 मीटर लंबी हो। ($\\pi = 3.14$ का प्रयोग कीजिए)\n\n### चरणबद्ध गणितीय विश्लेषण:\n1. **वर्गाकार मैदान का कोना:**\n   - वर्ग का प्रत्येक आंतरिक कोण $90^\\circ$ होता है।\n   - खूँटे से बँधा होने के कारण घोड़ा केवल $90^\\circ$ का एक **चतुर्थांश** ही चर सकता है।\n\n2. **(i) 5 मीटर लंबी रस्सी से चरा गया क्षेत्रफल ($r = 5\\text{ मी}$):**\n   $$\\text{क्षेत्रफल} = \\frac{90^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{1}{4} \\times 3.14 \\times 25 = 19.625\\text{ मी}^2$$\n\n3. **(ii) 10 मीटर लंबी रस्सी से चरा गया नया क्षेत्रफल ($R = 10\\text{ मी}$):**\n   $$\\text{नया क्षेत्रफल} = \\frac{1}{4} \\times 3.14 \\times 100 = 78.5\\text{ मी}^2$$\n\n4. **चरे जा सकने वाले क्षेत्रफल में वृद्धि:**\n   $$\\text{वृद्धि} = 78.5 - 19.625 = 58.875\\text{ मी}^2$$",
+    "title_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 8: ચોરસ ઘાસના મેદાનમાં ઘોડાના ચરવાના ક્ષેત્રફળનું વિશ્લેષણ",
+    "body_gu": "### પ્રશ્ન:\n15 મીટર બાજુવાળા ચોરસ ઘાસના મેદાનના એક ખૂણે બાંધેલા ખીલા સાથે ઘોડાને 5 મીટર લાંબા દોરડાથી બાંધેલ છે. શોધો:\n(i) મેદાનના જે ભાગમાં ઘોડો ઘાસ ચરી શકે તેનું ક્ષેત્રફળ.\n(ii) જો દોરડું 5 મીટરને બદલે 10 મીટર લાંબું હોત, તો ચરવાના ક્ષેત્રફળમાં થતો વધારો. ($\\pi = 3.14$ લો)\n\n### પગલાંવાર ગાણિતિક પૃથક્કરણ:\n1. **ચોરસ મેદાનનો ખૂણો:**\n   - ચોરસનો દરેક ખૂણો $90^\\circ$ હોય છે.\n   - ખૂણે ખીલો હોવાથી ઘોડો માત્ર $90^\\circ$ ખૂણાવાળા **ચતુર્થાંશ** ભાગમાં જ ચરી શકે છે.\n\n2. **(i) 5 મીટર લાંબા દોરડા માટે ચરાતું ક્ષેત્રફળ ($r = 5\\text{ મી}$):**\n   $$\\text{ક્ષેત્રફળ} = \\frac{90^\\circ}{360^\\circ} \\times \\pi r^2 = \\frac{1}{4} \\times 3.14 \\times 25 = 19.625\\text{ મી}^2$$\n\n3. **(ii) 10 મીટર લાંબા દોરડા માટે ચરાતું ક્ષેત્રફળ ($R = 10\\text{ મી}$):**\n   $$\\text{નવું ક્ષેત્રફળ} = \\frac{1}{4} \\times 3.14 \\times 100 = 78.5\\text{ મી}^2$$\n\n4. **ચરવાના ક્ષેત્રફળમાં થતો વધારો:**\n   $$\\text{વધારો} = 78.5 - 19.625 = 58.875\\text{ મી}^2$$",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_025",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q8 Quiz: What is the increase in the grazing area when the horse's rope is lengthened from 5 m to 10 m in a square field? (Use π = 3.14)",
+    "options": [
+      "58.875 m²",
+      "19.625 m²",
+      "78.500 m²",
+      "39.250 m²"
+    ],
+    "correct_index": 0,
+    "explanation": "Old Area = (1/4) × 3.14 × 25 = 19.625 m².\nNew Area = (1/4) × 3.14 × 100 = 78.5 m².\nIncrease in Area = 78.5 - 19.625 = 58.875 m².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 8 प्रश्नोत्तरी: जब वर्गाकार मैदान में घोड़े की रस्सी को 5 मीटर से बढ़ाकर 10 मीटर कर दिया जाता है, तो चरने वाले क्षेत्रफल में कितनी वृद्धि होगी? (π = 3.14 का प्रयोग कीजिए)",
+    "options_hi": [
+      "58.875 मीटर²",
+      "19.625 मीटर²",
+      "78.500 मीटर²",
+      "39.250 मीटर²"
+    ],
+    "explanation_hi": "पुराना क्षेत्रफल = (1/4) × 3.14 × 25 = 19.625 मी²।\nनया क्षेत्रफल = (1/4) × 3.14 × 100 = 78.5 मी²।\nक्षेत्रफल में वृद्धि = 78.5 - 19.625 = 58.875 मी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 8 ક્વિઝ: જ્યારે ચોરસ મેદાનમાં ઘોડાના દોરડાને 5 મીટરથી વધારીને 10 મીટર કરવામાં આવે, ત્યારે ચરવાના ક્ષેત્રફળમાં કેટલો વધારો થાય? (π = 3.14 લો)",
+    "options_gu": [
+      "58.875 મીટર²",
+      "19.625 મીટર²",
+      "78.500 મીટર²",
+      "39.250 મીટર²"
+    ],
+    "explanation_gu": "જૂનું ક્ષેત્રફળ = (1/4) × 3.14 × 25 = 19.625 મી².\nનવું ક્ષેત્રફળ = (1/4) × 3.14 × 100 = 78.5 મી².\nક્ષેત્રફળમાં વધારો = 78.5 - 19.625 = 58.875 મી².",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_026",
+    "type": "theory",
+    "title": "Exercise 11.1 Q9: Silver Wire Brooch: Circumference, Diameters, and Sectors",
+    "body": "### Problem Statement:\nA brooch is made with silver wire in the form of a circle with diameter 35 mm. The wire is also used in making 5 diameters which divide the circle into 10 equal sectors. Find:\n(i) the total length of the silver wire required.\n(ii) the area of each sector of the brooch. (Use $\\pi = 22/7$)\n\n### Step-by-Step Solution:\n1. **Given Data:**\n   - Diameter $d = 35\\text{ mm} \\implies \\text{Radius } r = \\frac{35}{2}\\text{ mm}$\n   - Number of diameters $= 5$\n   - Number of equal sectors $= 10$\n\n2. **(i) Total Length of Silver Wire Required:**\n   - Wire is used for the outer circular rim (Circumference) AND for the 5 straight diameters.\n   $$\\text{Circumference } C = \\pi d = \\frac{22}{7} \\times 35 = 22 \\times 5 = 110\\text{ mm}$$\n   $$\\text{Length of 5 diameters} = 5 \\times d = 5 \\times 35 = 175\\text{ mm}$$\n   $$\\text{Total wire length} = 110 + 175 = 285\\text{ mm}$$\n\n3. **(ii) Area of Each Sector of the Brooch:**\n   - Since the circle is divided into 10 equal sectors, each sector has central angle:\n     $$\\theta = \\frac{360^\\circ}{10} = 36^\\circ$$\n   $$\\text{Area of each sector} = \\frac{1}{10} \\times \\pi r^2 = \\frac{1}{10} \\times \\frac{22}{7} \\times \\left(\\frac{35}{2}\\right) \\times \\left(\\frac{35}{2}\\right)$$\n   $$\\text{Area} = \\frac{1}{10} \\times 22 \\times 5 \\times \\frac{35}{4} = \\frac{1}{10} \\times 110 \\times \\frac{35}{4} = 11 \\times \\frac{35}{4} = \\frac{385}{4} = 96.25\\text{ mm}^2$$",
+    "title_hi": "प्रश्नावली 11.1 प्रश्न 9: चाँदी के तार का ब्रૂच: परिधि, व्यास और त्रिज्यखंडों का विश्लेषण",
+    "body_hi": "### प्रश्न:\nएक वृत्ताकार ब्रूच को चाँदी के तार से बनाया जाना है जिसका व्यास 35 मिमी है। तार को वृत्त के 5 व्यासों को बनाने में भी प्रयुक्त किया गया है जो उसे 10 बराबर त्रिज्यखंडों में विभाजित करते हैं। ज्ञात कीजिए:\n(i) कुल वांछित चाँदी के तार की लंबाई\n(ii) ब्रूच के प्रत्येक त्रिज्यखंड का क्षेत्रफल ($\\pi = 22/7$ का प्रयोग कीजिए)\n\n### चरणबद्ध हल:\n1. **दिया गया डेटा:**\n   - व्यास $d = 35\\text{ मिमी} \\implies \\text{त्रिज्या } r = \\frac{35}{2}\\text{ मिमी}$\n   - व्यासों की संख्या $= 5$\n   - बराबर त्रिज्यखंडों की संख्या $= 10$\n\n2. **(i) कुल तार की लंबाई:**\n   - तार परिधि पर और 5 व्यासों में प्रयुक्त हुआ है।\n   $$\\text{परिधि } C = \\pi d = \\frac{22}{7} \\times 35 = 110\\text{ मिमी}$$\n   $$\\text{5 व्यासों की लंबाई} = 5 \\times 35 = 175\\text{ मिमी}$$\n   $$\\text{कुल तार की लंबाई} = 110 + 175 = 285\\text{ मिमी}$$\n\n3. **(ii) प्रत्येक त्रिज्यखंड का क्षेत्रफल:**\n   - 10 बराबर त्रिज्यखंडों के लिए केंद्रीय कोण $\\theta = \\frac{360^\\circ}{10} = 36^\\circ$।\n   $$\\text{प्रत्येक त्रिज्यखंड का क्षेत्रफल} = \\frac{1}{10} \\times \\frac{22}{7} \\times \\frac{35}{2} \\times \\frac{35}{2} = \\frac{385}{4} = 96.25\\text{ मिमी}^2$$",
+    "title_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 9: ચાંદીના તારનું બ્રૂચ: પરિઘ, વ્યાસ અને વૃત્તાંશનું વિશ્લેષણ",
+    "body_gu": "### પ્રશ્ન:\nચાંદીના તારમાંથી 35 મીમી વ્યાસવાળું વર્તુળાકાર બ્રૂચ બનાવવામાં આવે છે. વર્તુળને 10 સમાન વૃત્તાંશમાં વહેંચતા 5 વ્યાસ બનાવવામાં પણ તારનો ઉપયોગ થાય છે. શોધો:\n(i) જરૂરી ચાંદીના તારની કુલ લંબાઈ.\n(ii) બ્રૂચના દરેક વૃત્તાંશનું ક્ષેત્રફળ. ($\\pi = 22/7$ લો)\n\n### પગલાંવાર ઉકેલ:\n1. **આપેલી વિગતો:**\n   - વ્યાસ $d = 35\\text{ મીમી} \\implies \\text{ત્રિજ્યા } r = \\frac{35}{2}\\text{ મીમી}$\n   - વ્યાસની સંખ્યા $= 5$\n   - સમાન વૃત્તાંશની સંખ્યા $= 10$\n\n2. **(i) જરૂરી તારની કુલ લંબાઈ:**\n   - તાર વર્તુળના પરિઘ પર અને 5 વ્યાસમાં વપરાય છે.\n   $$\\text{પરિઘ } C = \\pi d = \\frac{22}{7} \\times 35 = 110\\text{ મીમી}$$\n   $$\\text{5 વ્યાસની લંબાઈ} = 5 \\times 35 = 175\\text{ મીમી}$$\n   $$\\text{તારની કુલ લંબાઈ} = 110 + 175 = 285\\text{ મીમી}$$\n\n3. **(ii) દરેક વૃત્તાંશનું ક્ષેત્રફળ:**\n   - દરેક વૃત્તાંશનો ખૂણો $\\theta = \\frac{360^\\circ}{10} = 36^\\circ$.\n   $$\\text{દરેક વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{1}{10} \\times \\frac{22}{7} \\times \\frac{35}{2} \\times \\frac{35}{2} = \\frac{385}{4} = 96.25\\text{ મીમી}^2$$",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_027",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q9 Quiz: For the silver wire brooch (diameter 35 mm, 5 diameters, 10 equal sectors), what are the total wire length and the area of each sector?",
+    "options": [
+      "Total wire = 285 mm, Area of each sector = 96.25 mm²",
+      "Total wire = 250 mm, Area of each sector = 85.50 mm²",
+      "Total wire = 320 mm, Area of each sector = 110.25 mm²",
+      "Total wire = 285 mm, Area of each sector = 192.50 mm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Total wire length = Circumference + 5 × diameter = (22/7) × 35 + 5 × 35 = 110 + 175 = 285 mm.\nArea of each sector = (1/10) × πr² = (1/10) × (22/7) × (35/2) × (35/2) = 385/4 = 96.25 mm².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 9 प्रश्नोत्तरी: चाँदी के तार के ब्रूच (व्यास 35 मिमी, 5 व्यास, 10 बराबर त्रिज्यखंड) के लिए तार की कुल लंबाई और प्रत्येक त्रिज्यखंड का क्षेत्रफल क्या होगा?",
+    "options_hi": [
+      "तार की कुल लंबाई = 285 मिमी, प्रत्येक त्रिज्यखंड का क्षेत्रफल = 96.25 मिमी²",
+      "तार की कुल लंबाई = 250 मिमी, प्रत्येक त्रिज्यखंड का क्षेत्रफल = 85.50 मिमी²",
+      "तार की कुल लंबाई = 320 मिमी, प्रत्येक त्रिज्यखंड का क्षेत्रफल = 110.25 मिमी²",
+      "तार की कुल लंबाई = 285 मिमी, प्रत्येक त्रिज्यखंड का क्षेत्रफल = 192.50 मिमी²"
+    ],
+    "explanation_hi": "तार की कुल लंबाई = परिधि + 5 × व्यास = (22/7) × 35 + 5 × 35 = 110 + 175 = 285 मिमी।\nप्रत्येक त्रिज्यखंड का क्षेत्रफल = (1/10) × πr² = 385/4 = 96.25 मिमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 9 ક્વિઝ: ચાંદીના તારના બ્રૂચ (વ્યાસ 35 મીમી, 5 વ્યાસ, 10 સમાન વૃત્તાંશ) માટે તારની કુલ લંબાઈ અને દરેક વૃત્તાંશનું ક્ષેત્રફળ કેટલું થાય?",
+    "options_gu": [
+      "વાયરની કુલ લંબાઈ = 285 મીમી, દરેક વૃત્તાંશનું ક્ષેત્રફળ = 96.25 મીમી²",
+      "વાયરની કુલ લંબાઈ = 250 મીમી, દરેક વૃત્તાંશનું ક્ષેત્રફળ = 85.50 મીમી²",
+      "વાયરની કુલ લંબાઈ = 320 મીમી, દરેક વૃત્તાંશનું ક્ષેત્રફળ = 110.25 મીમી²",
+      "વાયરની કુલ લંબાઈ = 285 મીમી, દરેક વૃત્તાંશનું ક્ષેત્રફળ = 192.50 મીમી²"
+    ],
+    "explanation_gu": "તારની કુલ લંબાઈ = પરિઘ + 5 × વ્યાસ = (22/7) × 35 + 5 × 35 = 110 + 175 = 285 મીમી.\nદરેક વૃત્તાંશનું ક્ષેત્રફળ = (1/10) × πr² = 385/4 = 96.25 મીમી².",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_028",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q10: An umbrella has 8 ribs which are equally spaced. Assuming the umbrella to be a flat circle of radius 45 cm, find the area between two consecutive ribs. (Use π = 22/7)",
+    "options": [
+      "22275/28 cm²",
+      "21150/28 cm²",
+      "22275/14 cm²",
+      "19800/28 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "The umbrella has 8 equal sectors: Central angle θ = 360° / 8 = 45°.\nRadius r = 45 cm.\nArea between two consecutive ribs = (1/8) × πr²\n= (1/8) × (22/7) × 45²\n= (11 × 2025) / (4 × 7) = 22275 / 28 cm² (≈ 795.54 cm²).",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 10: एक छतरी में 8 ताने हैं, जो समान दूरी पर लगे हुए हैं। छतरी को 45 सेमी त्रिज्या वाला एक सपाट वृत्त मानते हुए, इसकी दो क्रमागत तानों के बीच का क्षेत्रफल ज्ञात कीजिए। (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "22275/28 सेमी²",
+      "21150/28 सेमी²",
+      "22275/14 सेमी²",
+      "19800/28 सेमी²"
+    ],
+    "explanation_hi": "छतरी में 8 बराबर त्रिज्यखंड हैं: केंद्रीय कोण θ = 360° / 8 = 45°।\nत्रिज्या r = 45 सेमी।\nदो क्रमागत तानों के बीच का क्षेत्रफल = (1/8) × πr²\n= (1/8) × (22/7) × 45² = 22275/28 सेमी² (≈ 795.54 सेमी²)।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 10: એક છત્રીમાં સમાન અંતરે 8 સળિયા આવેલા છે. છત્રીને 45 સેમી ત્રિજ્યાવાળું સપાટ વર્તુળ ધારીને, બે ક્રમિક સળિયા વચ્ચેનું ક્ષેત્રફળ શોધો. (π = 22/7 લો)",
+    "options_gu": [
+      "22275/28 સેમી²",
+      "21150/28 સેમી²",
+      "22275/14 સેમી²",
+      "19800/28 સેમી²"
+    ],
+    "explanation_gu": "છત્રીમાં 8 સમાન વૃત્તાંશ બને છે: કેન્દ્ર આગળનો ખૂણો θ = 360° / 8 = 45°.\nત્રિજ્યા r = 45 સેમી.\nબે ક્રમિક સળિયા વચ્ચેનું ક્ષેત્રફળ = (1/8) × πr²\n= (1/8) × (22/7) × 45² = 22275/28 સેમી² (≈ 795.54 સેમી²).",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_029",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q11: A car has two wipers which do not overlap. Each wiper has a blade of length 25 cm sweeping through an angle of 115°. Find the total area cleaned at each sweep of the blades. (Use π = 22/7)",
+    "options": [
+      "158125/126 cm²",
+      "158125/252 cm²",
+      "145000/126 cm²",
+      "162000/126 cm²"
+    ],
+    "correct_index": 0,
+    "explanation": "Blade length r = 25 cm, θ = 115°.\nArea cleaned by 1 wiper = (θ/360°) × πr² = (115/360) × (22/7) × 25².\nSince there are TWO identical non-overlapping wipers, multiply by 2:\nTotal Area = 2 × (115/360) × (22/7) × 625\n= (115/180) × (22/7) × 625 = (23/36) × (22/7) × 625 = (23 × 11 × 625) / (18 × 7)\n= 158125 / 126 cm² (≈ 1254.96 cm²).",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 11: किसी कार के दो वाइपर हैं, जो एक दूसरे को कभी आच्छादित नहीं करते हैं। प्रत्येक वाइपर की पत्ती की लंबाई 25 सेमी है और वह 115° के कोण तक घूमकर सफाई कर सकता है। पत्तियों की प्रत्येक बुहार के साथ साफ होने वाला कुल क्षेत्रफल ज्ञात कीजिए। (π = 22/7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "158125/126 सेमी²",
+      "158125/252 सेमी²",
+      "145000/126 सेमी²",
+      "162000/126 सेमी²"
+    ],
+    "explanation_hi": "पत्ती की लंबाई r = 25 सेमी, कोण θ = 115°।\n1 वाइपर द्वारा साफ क्षेत्रफल = (115/360) × (22/7) × 25²।\nचूँकि कार में 2 वाइपर हैं, इसलिए 2 से गुणा करेंगे:\nकुल क्षेत्रफल = 2 × (115/360) × (22/7) × 625 = 158125/126 सेमी² (≈ 1254.96 सेमी²)।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 11: એક કારને બે વાઇપર છે, જે ક્યારેય એકબીજા પર આચ્છાદિત થતાં નથી. દરેક વાઇપરના પાંખિયાની લંબાઈ 25 સેમી છે અને તે 115° ના ખૂણે સફાઈ કરે છે. દરેક ફેરા વખતે સાફ થતા વિસ્તારનું કુલ ક્ષેત્રફળ શોધો. (π = 22/7 લો)",
+    "options_gu": [
+      "158125/126 સેમી²",
+      "158125/252 સેમી²",
+      "145000/126 સેમી²",
+      "162000/126 સેમી²"
+    ],
+    "explanation_gu": "પાંખિયાની લંબાઈ r = 25 સેમી, ખૂણો θ = 115°.\n1 વાઇપર દ્વારા સાફ થતું ક્ષેત્રફળ = (115/360) × (22/7) × 25².\nબે વાઇપર હોવાથી 2 વડે ગુણતાં:\nકુલ ક્ષેત્રફળ = 2 × (115/360) × (22/7) × 625 = 158125/126 સેમી² (≈ 1254.96 સેમી²).",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_030",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q12: To warn ships for underwater rocks, a lighthouse spreads a red coloured light over a sector of angle 80° to a distance of 16.5 km. Find the area of the sea over which the ships are warned. (Use π = 3.14)",
+    "options": [
+      "189.97 km²",
+      "175.45 km²",
+      "198.24 km²",
+      "205.80 km²"
+    ],
+    "correct_index": 0,
+    "explanation": "Radius r = 16.5 km, Central angle θ = 80°.\nArea of sea warned = (θ/360°) × πr²\n= (80/360) × 3.14 × (16.5)²\n= (2/9) × 3.14 × 272.25\n= (2/9) × 854.865 = 1709.73 / 9 = 189.97 km².",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 12: जहाजों को समुद्र में जलमग्न चट्टानों की चेतावनी देने के लिए, एक लाइट हाउस 80° कोण वाले एक त्रिज्यखंड में 16.5 किमी की दूरी तक लाल रंग का प्रकाश फैलाता है। समुद्र के उस भाग का क्षेत्रफल ज्ञात कीजिए जिसमें जहाजों को चेतावनी दी जा सके। (π = 3.14 का प्रयोग कीजिए)",
+    "options_hi": [
+      "189.97 किमी²",
+      "175.45 किमी²",
+      "198.24 किमी²",
+      "205.80 किमी²"
+    ],
+    "explanation_hi": "त्रिज्या r = 16.5 किमी, कोण θ = 80°।\nचेतावनी प्राप्त समुद्र का क्षेत्रफल = (80/360) × 3.14 × (16.5)²\n= (2/9) × 3.14 × 272.25 = 1709.73 / 9 = 189.97 किमी²।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 12: સમુદ્રમાં છુપાયેલા ખડકો અંગે વહાણોને ચેતવણી આપવા માટે, એક દીવાદાંડી 80° ના ખૂણાવાળા વૃત્તાંશમાં 16.5 કિમીના અંતર સુધી લાલ રંગનો પ્રકાશ પાથરે છે. સમુદ્રના જેટલા વિસ્તારમાં વહાણોને ચેતવણી અપાતી હોય તેનું ક્ષેત્રફળ શોધો. (π = 3.14 લો)",
+    "options_gu": [
+      "189.97 કિમી²",
+      "175.45 કિમી²",
+      "198.24 કિમી²",
+      "205.80 કિમી²"
+    ],
+    "explanation_gu": "ત્રિજ્યા r = 16.5 કિમી, ખૂણો θ = 80°.\nચેતવણી અપાતો દરિયાઈ વિસ્તાર = (80/360) × 3.14 × (16.5)²\n= (2/9) × 3.14 × 272.25 = 1709.73 / 9 = 189.97 કિમી².",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_031",
+    "type": "theory",
+    "title": "Exercise 11.1 Q13: Round Table Cover with Six Equal Segment Designs (HOTS Analysis)",
+    "body": "### Problem Statement:\nA round table cover has six equal designs as shown. If the radius of the cover is 28 cm, find the cost of making the designs at the rate of ₹ 0.35 per $\\text{cm}^2$. (Use $\\sqrt{3} = 1.7$ and $\\pi = 22/7$)\n\n### Geometric Decomposition:\n1. The 6 equal designs lie along the outer circumference between the chords of a regular hexagon inscribed in the circle.\n2. Each individual design is a **Minor Segment** corresponding to an angle of:\n   $$\\theta = \\frac{360^\\circ}{6} = 60^\\circ$$\n3. **Area of 1 Sector (radius $r = 28\\text{ cm}$, $\\theta = 60^\\circ$):**\n   $$\\text{Area of sector} = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 28 \\times 28 = \\frac{1}{6} \\times 22 \\times 4 \\times 28 = \\frac{1}{6} \\times 2464 = \\frac{1232}{3}\\text{ cm}^2$$\n\n4. **Area of 1 Equilateral Triangle ($\\Delta OAB$ with side $a = 28\\text{ cm}$):**\n   $$\\text{Area of } \\Delta OAB = \\frac{\\sqrt{3}}{4} a^2 = \\frac{1.7}{4} \\times 28 \\times 28 = 1.7 \\times 7 \\times 28 = 1.7 \\times 196 = 333.2\\text{ cm}^2$$\n\n5. **Area of 1 Design (Minor Segment):**\n   $$\\text{Area of 1 design} = \\frac{1232}{3} - 333.2 = \\frac{1232 - 999.6}{3} = \\frac{232.4}{3}\\text{ cm}^2$$\n\n6. **Total Area of All 6 Designs:**\n   $$\\text{Total Area} = 6 \\times \\left(\\frac{232.4}{3}\\right) = 2 \\times 232.4 = 464.8\\text{ cm}^2$$\n\n7. **Total Cost of Making Designs:**\n   $$\\text{Total Cost} = 464.8 \\times ₹ 0.35 = ₹ 162.68$$\n\n*(Exam Tip: Notice how multiplying by 6 immediately cancels the denominator 3, preventing messy repeating decimal fractions!)*",
+    "title_hi": "प्रश्नावली 11.1 प्रश्न 13: छह समान डिजाइनों वाले गोल मेजपोश का विस्तृत विश्लेषण (उच्च स्तरीय प्रश्न)",
+    "body_hi": "### प्रश्न:\nएक गोल मेजपोश पर छह समान डिजाइन बने हुए हैं। यदि मेजपोश की त्रिज्या 28 सेमी है, तो ₹ 0.35 प्रति सेमी² की दर से इन डिजाइनों को बनाने की लागत ज्ञात कीजिए। ($\\sqrt{3} = 1.7$ और $\\pi = 22/7$ का प्रयोग कीजिए)\n\n### ज्यामितीय विश्लेषण:\n1. 6 समान डिजाइन वृत्त के अंदर बने समषट्भुज की भुजाओं पर स्थित **लघु वृत्तखंड** हैं।\n2. प्रत्येक डिजाइन का केंद्रीय कोण:\n   $$\\theta = \\frac{360^\\circ}{6} = 60^\\circ$$\n3. **1 त्रिज्यखंड का क्षेत्रफल ($r = 28\\text{ सेमी}$, $\\theta = 60^\\circ$):**\n   $$\\text{त्रिज्यखंड का क्षेत्रफल} = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 28 \\times 28 = \\frac{1232}{3}\\text{ सेमी}^2$$\n\n4. **1 समबाहु त्रिभुज का क्षेत्रफल ($a = 28\\text{ सेमी}$):**\n   $$\\text{त्रिभुज का क्षेत्रफल} = \\frac{\\sqrt{3}}{4} \\times 28^2 = \\frac{1.7}{4} \\times 784 = 1.7 \\times 196 = 333.2\\text{ सेमी}^2$$\n\n5. **1 डिजाइन (लघु वृत्तखंड) का क्षेत्रफल:**\n   $$\\text{1 डिजाइन का क्षेत्रफल} = \\frac{1232}{3} - 333.2 = \\frac{232.4}{3}\\text{ सेमी}^2$$\n\n6. **सभी 6 डिजाइनों का कुल क्षेत्रफल:**\n   $$\\text{कुल क्षेत्रफल} = 6 \\times \\frac{232.4}{3} = 2 \\times 232.4 = 464.8\\text{ सेमी}^2$$\n\n7. **डिजाइन बनाने की कुल लागत:**\n   $$\\text{कुल लागत} = 464.8 \\times ₹ 0.35 = ₹ 162.68$$",
+    "title_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 13: છ સમાન ભાત ધરાવતા ગોળ મેજપોશનું વિશ્લેષણ (ઉચ્ચ વિચારશૈલી દાખલો)",
+    "body_gu": "### પ્રશ્ન:\nએક ગોળ મેજપોશ પર છ સમાન ભાત (ડિઝાઇન) બનાવેલી છે. જો મેજપોશની ત્રિજ્યા 28 સેમી હોય, તો ₹ 0.35 પ્રતિ સેમી² ના દરે ડિઝાઇન બનાવવાનો ખર્ચ શોધો. ($\\sqrt{3} = 1.7$ અને $\\pi = 22/7$ લો)\n\n### ભૌમિતિક પૃથક્કરણ:\n1. આ 6 સમાન ડિઝાઇન નિયમિત ષટ્કોણની બાજુઓ પર રચાતા 6 **લઘુવૃત્તખંડ** છે.\n2. દરેક ડિઝાઇન માટે કેન્દ્ર આગળનો ખૂણો:\n   $$\\theta = \\frac{360^\\circ}{6} = 60^\\circ$$\n3. **1 વૃત્તાંશનું ક્ષેત્રફળ ($r = 28\\text{ સેમી}$, $\\theta = 60^\\circ$):**\n   $$\\text{વૃત્તાંશનું ક્ષેત્રફળ} = \\frac{60^\\circ}{360^\\circ} \\times \\frac{22}{7} \\times 28 \\times 28 = \\frac{1232}{3}\\text{ સેમી}^2$$\n\n4. **1 સમબાજુ ત્રિકોણનું ક્ષેત્રફળ ($a = 28\\text{ સેમી}$):**\n   $$\\text{ત્રિકોણનું ક્ષેત્રફળ} = \\frac{\\sqrt{3}}{4} \\times 28^2 = \\frac{1.7}{4} \\times 784 = 333.2\\text{ સેમી}^2$$\n\n5. **1 ડિઝાઇન (લઘુવૃત્તખંડ) નું ક્ષેત્રફળ:**\n   $$\\text{1 ડિઝાઇનનું ક્ષેત્રફળ} = \\frac{1232}{3} - 333.2 = \\frac{232.4}{3}\\text{ સેમી}^2$$\n\n6. **બધી 6 ડિઝાઇનોનું કુલ ક્ષેત્રફળ:**\n   $$\\text{કુલ ક્ષેત્રફળ} = 6 \\times \\frac{232.4}{3} = 2 \\times 232.4 = 464.8\\text{ સેમી}^2$$\n\n7. **ડિઝાઇન બનાવવાનો કુલ ખર્ચ:**\n   $$\\text{કુલ ખર્ચ} = 464.8 \\times ₹ 0.35 = ₹ 162.68$$",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH11_032",
+    "type": "quiz",
+    "question": "Exercise 11.1 Q13 Quiz: For a round table cover of radius 28 cm with 6 equal designs, what is the total area of the 6 designs and the cost at ₹ 0.35 per cm²? (Use √3 = 1.7)",
+    "options": [
+      "Total Area = 464.8 cm², Cost = ₹ 162.68",
+      "Total Area = 512.4 cm², Cost = ₹ 179.34",
+      "Total Area = 420.0 cm², Cost = ₹ 147.00",
+      "Total Area = 464.8 cm², Cost = ₹ 185.92"
+    ],
+    "correct_index": 0,
+    "explanation": "Area of 1 sector = (60/360) × (22/7) × 28² = 1232/3 cm².\nArea of 1 triangle = (√3/4) × 28² = (1.7/4) × 784 = 333.2 cm².\nArea of 1 design = 1232/3 - 333.2 = 232.4/3 cm².\nTotal area of 6 designs = 6 × (232.4/3) = 464.8 cm².\nTotal Cost = 464.8 × ₹ 0.35 = ₹ 162.68.",
+    "question_hi": "प्रश्नावली 11.1 प्रश्न 13 प्रश्नोत्तरी: 28 सेमी त्रिज्या और 6 समान डिजाइनों वाले एक गोल मेजपोश के लिए सभी 6 डिजाइनों का कुल क्षेत्रफल और ₹ 0.35 प्रति सेमी² की दर से कुल लागत क्या होगी? (√3 = 1.7 का प्रयोग कीजिए)",
+    "options_hi": [
+      "कुल क्षेत्रफल = 464.8 सेमी², कुल लागत = ₹ 162.68",
+      "कुल क्षेत्रफल = 512.4 सेमी², कुल लागत = ₹ 179.34",
+      "कुल क्षेत्रफल = 420.0 सेमी², कुल लागत = ₹ 147.00",
+      "कुल क्षेत्रफल = 464.8 सेमी², कुल लागत = ₹ 185.92"
+    ],
+    "explanation_hi": "1 त्रिज्यखंड का क्षेत्रफल = 1232/3 सेमी²।\n1 त्रिभुज का क्षेत्रफल = 333.2 सेमी²।\n1 डिजाइन का क्षेत्रफल = 232.4/3 सेमी²।\n6 डिजाइनों का क्षेत्रफल = 6 × (232.4/3) = 464.8 सेमी²।\nकुल लागत = 464.8 × ₹ 0.35 = ₹ 162.68।",
+    "question_gu": "સ્વાધ્યાય 11.1 પ્રશ્ન 13 ક્વિઝ: 28 સેમી ત્રિજ્યા અને 6 સમાન ડિઝાઇનવાળા ગોળ મેજપોશ માટે બધી 6 ડિઝાઇનનું કુલ ક્ષેત્રફળ અને ₹ 0.35 પ્રતિ સેમી² ના દરે કુલ ખર્ચ કેટલો થાય? (√3 = 1.7 લો)",
+    "options_gu": [
+      "કુલ ક્ષેત્રફળ = 464.8 સેમી², કુલ ખર્ચ = ₹ 162.68",
+      "કુલ ક્ષેત્રફળ = 512.4 સેમી², કુલ ખર્ચ = ₹ 179.34",
+      "કુલ ક્ષેત્રફળ = 420.0 સેમી², કુલ ખર્ચ = ₹ 147.00",
+      "કુલ ક્ષેત્રફળ = 464.8 સેમી², કુલ ખર્ચ = ₹ 185.92"
+    ],
+    "explanation_gu": "1 વૃત્તાંશનું ક્ષેત્રફળ = 1232/3 સેમી².\n1 ત્રિકોણનું ક્ષેત્રફળ = 333.2 સેમી².\n1 ડિઝાઇનનું ક્ષેત્રફળ = 232.4/3 સેમી².\n6 ડિઝાઇનનું ક્ષેત્રફળ = 6 × (232.4/3) = 464.8 સેમી².\nકુલ ખર્ચ = 464.8 × ₹ 0.35 = ₹ 162.68.",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH11_033",
+    "type": "reflection",
+    "title": "Reflection: Sector vs Segment and Dimensional Thinking",
+    "body": "Take a moment to pause and reflect on the beautiful mathematical harmony of circular areas:\n\n1. **Linear vs Quadratic Scaling:**\n   - The circumference $C = 2\\pi r$ and arc length $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ are **1-dimensional (linear)** measurements. If radius doubles, arc length simply doubles.\n   - The area $A = \\pi r^2$ and sector area $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$ are **2-dimensional (quadratic)** measurements. If radius doubles, area multiplies by $2^2 = 4$!\n\n2. **The Triangle Analogy for Sector Area:**\n   - Imagine peeling the sector into hundreds of microscopically thin concentric threads and unrolling them straight.\n   - The curved boundary forms a base of length $l$ (arc length), while the radius acts as altitude $r$.\n   - The area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} l r$.\n   - That is why $\\text{Area of Sector} = \\frac{1}{2} l r$! Mathematics is never arbitrary; every formula has an intuitive visual soul.\n\n3. **Sector vs Segment Distinction in Your Mind:**\n   - Sector = Pizza Slice (bounded by two radii and an arc).\n   - Segment = Crust Cut (bounded by a straight chord and an arc). Always subtract the inner triangle to isolate the segment!",
+    "title_hi": "चिंतन: त्रिज्यखंड बनाम वृत्तखंड एवं विमीय सोच",
+    "body_hi": "एक क्षण रुककर वृत्तीय क्षेत्रफलों के सुंदर गणितीय सामंजस्य पर चिंतन कीजिए:\n\n1. **रैखिक बनाम द्विघाती पैमाना:**\n   - परिधि $C = 2\\pi r$ और चाप की लंबाई $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ **एक-विमीय (1-D)** माप हैं। यदि त्रिज्या दोगुनी होती है, तो चाप की लंबाई भी दोगुनी हो जाती है।\n   - क्षेत्रफल $A = \\pi r^2$ और त्रिज्यखंड का क्षेत्रफल $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$ **द्वि-विमीय (2-D)** माप हैं। त्रिज्या दोगुनी होने पर क्षेत्रफल $2^2 = 4$ गुना हो जाता है!\n\n2. **त्रिज्यखंड का त्रिभुज सादृश्य:**\n   - कल्पना कीजिए कि त्रिज्यखंड को पतले-पतले धागों में खोलकर सीधा बिछाया जाए।\n   - चाप की लंबाई $l$ आधार बन जाती है और त्रिज्या $r$ ऊंचाई बन जाती है।\n   - त्रिभुज का क्षेत्रफल $\\frac{1}{2} \\times \\text{आधार} \\times \\text{ऊंचाई} = \\frac{1}{2} l r$ होता है।\n   - यही कारण है कि त्रिज्यखंड का क्षेत्रफल $\\frac{1}{2} l r$ के बराबर भी होता है!\n\n3. **त्रिज्यखंड और वृत्तखंड का अंतर:**\n   - त्रिज्यखंड = पिज्जा का टुकड़ा (दो त्रिज्याओं और चाप से घिरा)।\n   - वृत्तखंड = सीधी जीवा और चाप से घिरा भाग। वृत्तखंड निकालने के लिए हमेशा त्रिज्यखंड में से त्रिभुज को घटाएँ!",
+    "title_gu": "ચિંતન: વૃત્તાંશ વિરુદ્ધ વૃત્તખંડ અને પરિમાણીય વિચારસરણી",
+    "body_gu": "એક ક્ષણ રોકાઈને વર્તુળાકાર ક્ષેત્રફળોની ગાણિતિક સુંદરતા પર વિચાર કરો:\n\n1. **રેખીય વિરુદ્ધ દ્વિઘાતી માપન:**\n   - પરિઘ $C = 2\\pi r$ અને ચાપની લંબાઈ $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ **1-પરિમાણીય** માપ છે. ત્રિજ્યા બમણી થાય તો ચાપની લંબાઈ પણ બમણી થાય.\n   - ક્ષેત્રફળ $A = \\pi r^2$ અને વૃત્તાંશનું ક્ષેત્રફળ $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$ **2-પરિમાણીય** માપ છે. ત્રિજ્યા બમણી થાય તો ક્ષેત્રફળ $2^2 = 4$ ગણું થાય!\n\n2. **વૃત્તાંશ અને ત્રિકોણની સામ્યતા:**\n   - જો વૃત્તાંશની વક્ર ધારને સીધી કરી દેવામાં આવે તો તે લંબાઈ $l$ નો પાયો બને અને ત્રિજ્યા $r$ તેની ઊંચાઈ બને.\n   - ત્રિકોણનું ક્ષેત્રફળ $\\frac{1}{2} \\times \\text{પાયો} \\times \\text{વેધ} = \\frac{1}{2} l r$ થાય.\n   - તેથી જ વૃત્તાંશનું ક્ષેત્રફળ $\\frac{1}{2} l r$ પણ થાય છે!\n\n3. **વૃત્તાંશ અને વૃત્તખંડનો ભેદ:**\n   - વૃત્તાંશ = પિઝાનો ટુકડો (બે ત્રિજ્યા અને ચાપ વચ્ચેનો પ્રદેશ).\n   - વૃત્તખંડ = જીવા અને ચાપ વચ્ચેનો પ્રદેશ. વૃત્તખંડ શોધવા વૃત્તાંશમાંથી ત્રિકોણ હંમેશા બાદ કરવો!",
+    "bloom": "Evaluate",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_034",
+    "type": "teacher_tip",
+    "title": "Teacher Tip: The 5 Fatal Pitfalls in Board Exams (Avoid These!)",
+    "body": "Every year thousands of students lose 2 to 5 marks needlessly in Chapter 11. Protect your marks by checking these 5 points:\n\n1. **Confusing Sector with Segment:**\n   - *Mistake:* Writing $\\frac{\\theta}{360^\\circ} \\times \\pi r^2$ for area of segment!\n   - *Fix:* Segment ALWAYS requires subtracting the area of triangle: $\\text{Area of Sector} - \\text{Area of Triangle}$.\n\n2. **Ignoring the Specified Value of $\\pi$:**\n   - If the question explicitly states **Use $\\pi = 3.14$**, you MUST use 3.14. Using $22/7$ will yield decimal deviations and board evaluators will deduct marks!\n   - If nothing is stated, default to $\\pi = \\frac{22}{7}$.\n\n3. **Forgetting Multipliers in Practical Problems:**\n   - A car has **two** wipers ($2 \\times$).\n   - A round table cover has **six** designs ($6 \\times$).\n   - Brooch has **5 diameters** added to the circumference.\n\n4. **The $120^\\circ$ Triangle Calculation:**\n   - Do not try to guess the altitude! Use $\\text{Area} = \\frac{\\sqrt{3}}{4} r^2$ or derive $AM = r\\frac{\\sqrt{3}}{2}$ and $OM = \\frac{r}{2}$.\n\n5. **Unit Mismatch in Costs and Rates:**\n   - Ensure the calculated area unit matches the rate unit. If area is in $\\text{cm}^2$ and rate is ₹ per $\\text{m}^2$, convert carefully ($1\\text{ m}^2 = 10,000\\text{ cm}^2$)!",
+    "title_hi": "शिक्षक युक्ति: बोर्ड परीक्षा की 5 सबसे बड़ी गलतियाँ (इनसे बचें!)",
+    "body_hi": "हर साल हज़ारों विद्यार्थी अध्याय 11 में 2 से 5 अंक अनावश्यक रूप से गँवा देते हैं। इन 5 बातों की जाँच करके अपने अंक सुरक्षित करें:\n\n1. **त्रिज्यखंड और वृत्तखंड में भ्रम:**\n   - *गलती:* वृत्तखंड के क्षेत्रफल के लिए केवल त्रिज्यखंड का सूत्र लिख देना!\n   - *सुधार:* वृत्तखंड के लिए त्रिज्यखंड में से त्रिभुज का क्षेत्रफल अवश्य घटाएँ: $\\text{त्रिज्यखंड का क्षेत्रफल} - \\text{त्रिभुज का क्षेत्रफल}$।\n\n2. **$\\pi$ के दिए गए मान की अनदेखी:**\n   - यदि प्रश्न में स्पष्ट लिखा है **$\\pi = 3.14$ का प्रयोग कीजिए**, तो 3.14 ही प्रयोग करें। $22/7$ का प्रयोग करने से दशमलव में अंतर आएगा और अंक कटेंगे!\n   - यदि कोई निर्देश न हो, तभी $\\pi = \\frac{22}{7}$ का उपयोग करें।\n\n3. **व्यावहारिक प्रश्नों में गुणक भूल जाना:**\n   - कार के **दो** वाइपर होते हैं ($2 \\times$ करना न भूलें)।\n   - मेजपोश में **छह** डिजाइन हैं ($6 \\times$ करना न भूलें)।\n   - ब्रूच में परिधि के साथ **5 व्यास** भी जोड़ने हैं।\n\n4. **120° वाले त्रिभुज की गणना:**\n   - ऊंचाई का अनुमान न लगाएँ! $\\text{क्षेत्रफल} = \\frac{\\sqrt{3}}{4} r^2$ का प्रयोग करें।\n\n5. **लागत और मात्रक की संगति:**\n   - सुनिश्चित करें कि क्षेत्रफल की इकाई और दर की इकाई समान हों ($1\\text{ मी}^2 = 10,000\\text{ सेमी}^2$)।",
+    "title_gu": "શિક્ષકની સલાહ: બોર્ડ પરીક્ષામાં થતી 5 મોટી ભૂલો (આનાથી બચો!)",
+    "body_gu": "દર વર્ષે હજારો વિદ્યાર્થીઓ પ્રકરણ 11 માં 2 થી 5 ગુણ ગુમાવે છે. આ 5 બાબતો ચકાસીને તમારા ગુણ સુરક્ષિત કરો:\n\n1. **વૃત્તાંશ અને વૃત્તખંડ વચ્ચે ગૂંચવણ:**\n   - *ભૂલ:* વૃત્તખંડના ક્ષેત્રફળ માટે માત્ર વૃત્તાંશનું સૂત્ર લખવું!\n   - *સુધારો:* વૃત્તખંડ માટે વૃત્તાંશમાંથી ત્રિકોણનું ક્ષેત્રફળ બાદ કરવું ફરજિયાત છે: $\\text{વૃત્તાંશનું ક્ષેત્રફળ} - \\text{ત્રિકોણનું ક્ષેત્રફળ}$.\n\n2. **$\\pi$ ની આપેલ કિંમત ધ્યાને ન લેવી:**\n   - જો પ્રશ્નમાં **$\\pi = 3.14$** લખેલું હોય, તો 3.14 જ વાપરો. $22/7$ વાપરશો તો દશાંશમાં ફેર પડશે અને ગુણ કપાશે!\n   - જો કોઈ સૂચના ન હોય, તો જ $\\pi = \\frac{22}{7}$ લો.\n\n3. **વ્યવહારુ દાખલાઓમાં ગુણાકાર ભૂલી જવો:**\n   - કારમાં **બે** વાઇપર હોય છે ($2 \\times$ કરવું).\n   - મેજપોશમાં **છ** ડિઝાઇન હોય છે ($6 \\times$ કરવું).\n   - બ્રૂચમાં પરિઘ સાથે **5 વ્યાસ** ઉમેરવાના હોય છે.\n\n4. **120° ખૂણાવાળા ત્રિકોણની ગણતરી:**\n   - ત્રિકોણના ક્ષેત્રફળ માટે $\\frac{\\sqrt{3}}{4} r^2$ નો ઉપયોગ કરવો.\n\n5. **ખર્ચ અને એકમની સુસંગતતા:**\n   - ક્ષેત્રફળનો એકમ અને ખર્ચનો દર એક જ માપમાં હોવા જોઈએ ($1\\text{ મી}^2 = 10,000\\text{ સેમી}^2$).",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_035",
+    "type": "theory",
+    "title": "Master Formula Matrix: Areas Related to Circles",
+    "body": "### Complete Formula Reference Guide for Chapter 11\n\n| Geometric Shape | Arc Length / Perimeter | Area Formula |\n|---|---|---|\n| **Full Circle** | $C = 2\\pi r = \\pi d$ | $A = \\pi r^2$ |\n| **Semicircle** | $P = \\pi r + 2r$ | $A = \\frac{1}{2}\\pi r^2$ |\n| **Quadrant** | $P = \\frac{\\pi r}{2} + 2r$ | $A = \\frac{1}{4}\\pi r^2$ |\n| **Circular Ring** | Outer: $2\\pi R$, Inner: $2\\pi r$ | $A = \\pi(R^2 - r^2)$ |\n| **Minor Sector** (angle $\\theta$) | $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} l r$ |\n| **Major Sector** | $2\\pi r - l = \\frac{360^\\circ - \\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2 = \\pi r^2 - \\text{Sector}_{\\text{min}}$ |\n| **Minor Segment** | Chord length $AB + \\text{arc } l$ | $A = \\text{Area of Sector} - \\text{Area of } \\Delta OAB$ |\n| **Major Segment** | Chord length $AB + \\text{major arc}$ | $A = \\pi r^2 - \\text{Area of Minor Segment}$ |\n\n### Area of Triangle $\\Delta OAB$ Quick Lookup\n| Central Angle $\\theta$ | Formula for Area of $\\Delta OAB$ |\n|---|---|\n| **$\\theta = 90^\\circ$** | $\\frac{1}{2} r^2$ |\n| **$\\theta = 60^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **$\\theta = 120^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **Any angle $\\theta$** | $\\frac{1}{2} r^2 \\sin \\theta$ |",
+    "title_hi": "मास्टर सूत्र तालिका: वृत्तों से संबंधित क्षेत्रफल",
+    "body_hi": "### अध्याय 11 की संपूर्ण सूत्र मार्गदर्शिका तालिका\n\n| ज्यामितीय आकृति | परिमाप / चाप की लंबाई | क्षेत्रफल का सूत्र |\n|---|---|---|\n| **पूर्ण वृत्त** | $C = 2\\pi r = \\pi d$ | $A = \\pi r^2$ |\n| **अर्धवृत्त** | $P = \\pi r + 2r$ | $A = \\frac{1}{2}\\pi r^2$ |\n| **चतुर्थांश** | $P = \\frac{\\pi r}{2} + 2r$ | $A = \\frac{1}{4}\\pi r^2$ |\n| **वृत्ताकार वलय (Ring)** | बाहरी: $2\\pi R$, भीतरी: $2\\pi r$ | $A = \\pi(R^2 - r^2)$ |\n| **लघु त्रिज्यखंड** (कोण $\\theta$) | $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} l r$ |\n| **दीर्घ त्रिज्यखंड** | $\\frac{360^\\circ - \\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2$ |\n| **लघु वृत्तखंड** | जीवा $AB + \\text{लघु चाप } l$ | $A = \\text{त्रिज्यखंड का क्षेत्रफल} - \\Delta OAB \\text{ का क्षेत्रफल}$ |\n| **दीर्घ वृत्तखंड** | जीवा $AB + \\text{दीर्घ चाप}$ | $A = \\pi r^2 - \\text{लघु वृत्तखंड का क्षेत्रफल}$ |\n\n### त्रिभुज $\\Delta OAB$ के क्षेत्रफल की त्वरित तालिका\n| केंद्रीय कोण $\\theta$ | $\\Delta OAB$ के क्षेत्रफल का सूत्र |\n|---|---|\n| **$\\theta = 90^\\circ$** | $\\frac{1}{2} r^2$ |\n| **$\\theta = 60^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **$\\theta = 120^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **कोई भी कोण $\\theta$** | $\\frac{1}{2} r^2 \\sin \\theta$ |",
+    "title_gu": "માસ્ટર સૂત્ર કોષ્ટક: વર્તુળ સંબંધિત ક્ષેત્રફળ",
+    "body_gu": "### પ્રકરણ 11 ના તમામ સૂત્રોનું માસ્ટર કોષ્ટક\n\n| ભૌમિતિક આકાર | પરિમિતિ / ચાપની લંબાઈ | ક્ષેત્રફળનું સૂત્ર |\n|---|---|---|\n| **પૂર્ણ વર્તુળ** | $C = 2\\pi r = \\pi d$ | $A = \\pi r^2$ |\n| **અર્ધવર્તુળ** | $P = \\pi r + 2r$ | $A = \\frac{1}{2}\\pi r^2$ |\n| **ચતુર્થાંશ** | $P = \\frac{\\pi r}{2} + 2r$ | $A = \\frac{1}{4}\\pi r^2$ |\n| **કંકણાકાર માર્ગ (Ring)** | બહારનો: $2\\pi R$, અંદરનો: $2\\pi r$ | $A = \\pi(R^2 - r^2)$ |\n| **લઘુવૃત્તાંશ** (ખૂણો $\\theta$) | $l = \\frac{\\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{\\theta}{360^\\circ} \\times \\pi r^2 = \\frac{1}{2} l r$ |\n| **ગુરુવૃત્તાંશ** | $\\frac{360^\\circ - \\theta}{360^\\circ} \\times 2\\pi r$ | $A = \\frac{360^\\circ - \\theta}{360^\\circ} \\times \\pi r^2$ |\n| **લઘુવૃત્તખંડ** | જીવા $AB + \\text{ચાપ } l$ | $A = \\text{વૃત્તાંશનું ક્ષેત્રફળ} - \\Delta OAB \\text{ નું ક્ષેત્રફળ}$ |\n| **ગુરુવૃત્તખંડ** | જીવા $AB + \\text{ગુરુચાપ}$ | $A = \\pi r^2 - \\text{લઘુવૃત્તખંડનું ક્ષેત્રફળ}$ |\n\n### ત્રિકોણ $\\Delta OAB$ ના ક્ષેત્રફળની ઝડપી સંદર્ભ સારણી\n| કેન્દ્ર આગળનો ખૂણો $\\theta$ | $\\Delta OAB$ ના ક્ષેત્રફળનું સૂત્ર |\n|---|---|\n| **$\\theta = 90^\\circ$** | $\\frac{1}{2} r^2$ |\n| **$\\theta = 60^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **$\\theta = 120^\\circ$** | $\\frac{\\sqrt{3}}{4} r^2$ |\n| **કોઈપણ ખૂણો $\\theta$** | $\\frac{1}{2} r^2 \\sin \\theta$ |",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH11_036",
+    "type": "mastery",
+    "title": "Mastery Blueprint: How to Score 100% in Areas Related to Circles in Class 10 Board Exam",
+    "body": "Follow these proven examiner-recommended strategies to score full marks in Chapter 11:\n\n1. **Step-by-Step Writing Format:**\n   - **Step 1:** Write down **Given:** radius $r = \\dots$, angle $\\theta = \\dots$, value of $\\pi$.\n   - **Step 2:** State the formula clearly before plugging in numbers: $\\text{Area} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$.\n   - **Step 3:** Perform simplification systematically. Keep terms as proper fractions until the final step to avoid compounding decimal rounding errors.\n   - **Step 4:** Always write the correct unit ($\text{cm}^2$, $\text{m}^2$, $\text{mm}^2$, $\text{km}^2$). Missing units cost half a mark!\n\n2. **Double-Check Clock Calculations:**\n   - Remember: In 1 minute, the minute hand covers $6^\\circ$. Multiply the given minutes by 6 to get $\\theta$.\n\n3. **Segment Questions Checklist:**\n   - Did you calculate the sector area?\n   - Did you calculate the triangle area using the correct formula for $60^\\circ, 90^\\circ,$ or $120^\\circ$?\n   - Did you subtract triangle area from sector area?\n   - If major segment was asked, did you subtract minor segment from the total circle area ($\\pi r^2$)?\n\n4. **Word Problems (Wipers, Horse, Table Cover, Brooch):**\n   - Read carefully if there are multiple identical components (2 wipers $\\implies$ multiply by 2; 6 designs $\\implies$ multiply by 6).\n   - Calculate the rate and total cost as the very last step.",
+    "title_hi": "मास्टरी ब्लूप्रिंट: कक्षा 10 बोर्ड परीक्षा में वृत्तों से संबंधित क्षेत्रफल में शत-प्रतिशत अंक प्राप्त करने की रणनीति",
+    "body_hi": "कक्षा 10 बोर्ड परीक्षा में अध्याय 11 में पूरे अंक प्राप्त करने के लिए परीक्षकों द्वारा अनुशंसित रणनीतियाँ:\n\n1. **चरणबद्ध उत्तर लेखन प्रारूप:**\n   - **चरण 1:** सबसे पहले **दिया है** लिखें: त्रिज्या $r = \\dots$, कोण $\\theta = \\dots$, $\\pi$ का मान।\n   - **चरण 2:** संख्याओं को रखने से पहले सूत्र स्पष्ट रूप से लिखें: $\\text{क्षेत्रफल} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$।\n   - **चरण 3:** गणना व्यवस्थित रूप से करें। जब तक आवश्यक न हो, अंतिम चरण तक भिन्नों को न काटें ताकि दशमलव की त्रुटियों से बचा जा सके।\n   - **चरण 4:** उत्तर के साथ सही मात्रक ($\text{सेमी}^2$, $\text{मीटर}^2$) अवश्य लिखें। मात्रक न लिखने पर आधा अंक कट जाता है!\n\n2. **घड़ी वाले प्रश्नों की पुनः जाँच:**\n   - याद रखें: 1 मिनट में मिनट की सुई $6^\\circ$ घूमती है। दिए गए मिनटों को 6 से गुणा करके $\\theta$ ज्ञात करें।\n\n3. **वृत्तखंड प्रश्नों की जाँच सूची:**\n   - क्या आपने त्रिज्यखंड का क्षेत्रफल निकाला?\n   - क्या आपने $60^\\circ, 90^\\circ,$ या $120^\\circ$ के अनुसार सही त्रिभुज का क्षेत्रफल निकाला?\n   - क्या आपने त्रिज्यखंड में से त्रिभुज को घटाया?\n   - यदि दीर्घ वृत्तखंड पूछा गया था, तो क्या आपने कुल क्षेत्रफल में से लघु वृत्तखंड को घटाया?\n\n4. **व्यावहारिक प्रश्न (वाइपर, घोड़ा, मेजपोश, ब्रूच):**\n   - ध्यान से पढ़ें कि क्या एक से अधिक घटक हैं (2 वाइपर $\\implies 2$ से गुणा; 6 डिजाइन $\\implies 6$ से गुणा)।\n   - लागत की गणना हमेशा सबसे अंतिम चरण में करें।",
+    "title_gu": "માસ્ટરી બ્લુપ્રિન્ટ: ધોરણ 10 બોર્ડ પરીક્ષામાં વર્તુળ સંબંધિત ક્ષેત્રફળમાં સંપૂર્ણ ગુણ મેળવવાની શ્રેષ્ઠ રણનીતિ",
+    "body_gu": "ધોરણ 10 બોર્ડ પરીક્ષામાં પ્રકરણ 11 માં પૂરેપૂરા ગુણ મેળવવાની પરીક્ષક દ્વારા પ્રમાણિત શ્રેષ્ઠ રણનીતિ:\n\n1. **પગલાંવાર ઉત્તર લેખન પદ્ધતિ:**\n   - **પગલું 1:** સૌથી પહેલાં **પક્ષ/આપેલ વિગત** લખો: ત્રિજ્યા $r = \\dots$, ખૂણો $\\theta = \\dots$, $\\pi$ ની કિંમત.\n   - **પગલું 2:** કિંમતો મૂકતા પહેલાં સૂત્ર સ્પષ્ટ લખો: $\\text{ક્ષેત્રફળ} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$.\n   - **પગલું 3:** સાદુરૂપ વ્યવસ્થિત આપો. દશાંશની ભૂલોથી બચવા છેલ્લે સુધી અપૂર્ણાંક સ્વરૂપ જાળવી રાખો.\n   - **પગલું 4:** જવાબની પાછળ યોગ્ય એકમ ($\text{સેમી}^2$, $\text{મીટર}^2$) અવશ્ય લખો. એકમ ન લખવાથી અડધો ગુણ કપાઈ જાય છે!\n\n2. **ઘડિયાળના દાખલાઓની ચકાસણી:**\n   - યાદ રાખો: 1 મિનિટમાં મિનિટ કાંટો $6^\\circ$ ઘૂમે છે. આપેલી મિનિટોને 6 વડે ગુણીને $\\theta$ શોધો.\n\n3. **વૃત્તખંડના દાખલાઓ માટે ચેકલિસ્ટ:**\n   - શું તમે વૃત્તાંશનું ક્ષેત્રફળ શોધ્યું?\n   - શું તમે $60^\\circ, 90^\\circ,$ કે $120^\\circ$ મુજબ ત્રિકોણનું સાચું ક્ષેત્રફળ શોધ્યું?\n   - શું તમે વૃત્તાંશમાંથી ત્રિકોણનું ક્ષેત્રફળ બાદ કર્યું?\n   - જો ગુરુવૃત્તખંડ પૂછ્યો હોય, તો શું વર્તુળના કુલ ક્ષેત્રફળમાંથી લઘુવૃત્તખંડ બાદ કર્યો?\n\n4. **વ્યવહારુ દાખલાઓ (વાઇપર, ઘોડો, મેજપોશ, બ્રૂચ):**\n   - ઘટકોની સંખ્યા બરાબર જુઓ (2 વાઇપર $\\implies 2$ વડે ગુણવું; 6 ડિઝાઇન $\\implies 6$ વડે ગુણવું).\n   - ખર્ચની ગણતરી સૌથી છેલ્લા પગલામાં જ કરો.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  }
+]

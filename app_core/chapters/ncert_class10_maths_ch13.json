@@ -1,245 +1,166 @@
 {
   "metadata": {
-    "id": "ncert_class10_maths_ch13",
-    "title": "Chapter 13: Surface Areas and Volumes",
-    "subtitle": "The Ultimate Board Exam Mastery Guide",
-    "subject": "Maths",
-    "grade": "10",
-    "board": "NCERT/CBSE",
-    "curriculum": [
-      "Universal"
-    ],
-    "language": "English/Hindi/Gujarati (Bilingual)",
-    "difficulty": "Advanced",
-    "estimated_minutes": 180,
-    "version": "3.0.0-SUPREME-MATHS",
-    "author": "Antigravity Supreme Intelligence",
-    "reviewed_by": "Chief Academic Architect",
-    "tags": [
-      "maths",
-      "surface_areas",
-      "volumes",
-      "cylinder",
-      "cone",
-      "sphere",
-      "board_special",
-      "bilingual"
-    ],
-    "learning_outcomes": [
-      "Master the formulas for Surface Areas and Volumes of combinations of solids.",
-      "Understand the concepts of Cylinder, Cone, and Sphere.",
-      "Solve CBSE/State Board HOTS questions related to converting one solid into another.",
-      "Apply logic to real-world scenarios."
-    ],
-    "ai_context": {
-      "learning_goal": "Help students visualize 3D shapes. Use the 'Socratic Discovery Arc' to build intuition before giving formulas.",
-      "common_misconceptions": [
-        "Students get confused between Total Surface Area (TSA) and Curved Surface Area (CSA).",
-        "Students make calculation errors when dealing with Pi (π) and radius."
-      ]
-    }
+    "module_id": "ncert_class10_maths_ch13",
+    "title": "Ncert Class10 Maths Ch13",
+    "title_hi": "Ncert Class10 Maths Ch13",
+    "title_gu": "Ncert Class10 Maths Ch13",
+    "board": "NCERT/GSEB",
+    "subject": "",
+    "chapter_number": "",
+    "language": "trilingual"
   },
   "blocks": [
     {
+      "id": "C10_MATH_CH13_HOOK_1",
       "type": "hook",
-      "content": "Imagine you have an ice cream cone with a scoop of ice cream on top! What if you want to know how much ice cream is there, or how much wafer is used to make the cone? This is where the magic of **Surface Areas and Volumes (पृष्ठीय क्षेत्रफल और आयतन / પૃષ્ઠફળ અને ઘનફળ)** comes in!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "title": "Finding the 'Normal' in the Chaos",
+      "title_hi": "अराजकता में 'सामान्य' खोजना",
+      "title_gu": "અવ્યવસ્થામાં 'સામાન્ય' શોધવું",
+      "body": "Imagine you have the test scores of 5,000 students. Just looking at a massive list of numbers tells you nothing. How do you find out how the \"average\" student performed? How do you know what the most common score was? Or what score splits the students exactly in half? To make sense of massive amounts of information in the real world—from census data to predicting the weather—we need a way to summarize chaos into a single, meaningful number. Welcome to the world of **Statistics**, where we find the hidden stories inside raw data!",
+      "body_hi": "कल्पना कीजिए कि आपके पास 5,000 छात्रों के परीक्षा के अंक (scores) हैं। संख्याओं की एक विशाल सूची को देखने मात्र से आपको कुछ पता नहीं चलता है। आप यह कैसे पता लगाएंगे कि \"औसत (average)\" छात्र ने कैसा प्रदर्शन किया? आपको कैसे पता चलेगा कि सबसे आम स्कोर क्या था? या कौन सा स्कोर छात्रों को ठीक आधे में विभाजित करता है? वास्तविक दुनिया में भारी मात्रा में जानकारी को समझने के लिए—जनगणना डेटा से लेकर मौसम की भविष्यवाणी करने तक—हमें अराजकता (chaos) को एक एकल, अर्थपूर्ण संख्या में सारांशित करने के तरीके की आवश्यकता है। **सांख्यिकी (Statistics)** की दुनिया में आपका स्वागत है, जहाँ हम कच्चे डेटा (raw data) के अंदर छिपी कहानियों को खोजते हैं!",
+      "body_gu": "કલ્પના કરો કે તમારી પાસે 5,000 વિદ્યાર્થીઓના પરીક્ષાના ગુણ (scores) છે. સંખ્યાઓની વિશાળ યાદીને માત્ર જોવાથી તમને કંઈ ખબર પડતી નથી. તમે કેવી રીતે શોધી શકશો કે \"સરેરાશ (average)\" વિદ્યાર્થીએ કેવું પ્રદર્શન કર્યું? તમને કેવી રીતે ખબર પડશે કે સૌથી સામાન્ય સ્કોર કયો હતો? અથવા કયો સ્કોર વિદ્યાર્થીઓને બરાબર અડધા ભાગમાં વહેંચે છે? વાસ્તવિક દુનિયામાં મોટા પ્રમાણની માહિતીને સમજવા માટે—વસ્તી ગણતરીના ડેટાથી લઈને હવામાનની આગાહી કરવા સુધી—આપણે અવ્યવસ્થા (chaos) ને એકલ, અર્થપૂર્ણ સંખ્યામાં સારાંશિત કરવાની રીતની જરૂર છે. **આંકડાશાસ્ત્ર (Statistics)** ની દુનિયામાં તમારું સ્વાગત છે, જ્યાં આપણે કાચા ડેટા (raw data) ની અંદર છુપાયેલી વાર્તાઓ શોધીએ છીએ!"
     },
     {
-      "type": "diagram",
-      "content": "Visualize combinations of solids: A tent (cone on a cylinder), an ice cream cone (hemisphere on a cone).",
-      "image_url": "assets/images/maths_ch13_solid_combos.jpg",
-      "alt_text": "3D diagram showing combinations of various shapes like cylinders, cones, and hemispheres."
-    },
-    {
-      "type": "theory",
-      "content": "**Cylinder (बेलन / નળાકાર):**\n• Curved Surface Area (CSA) = 2πrh\n• Total Surface Area (TSA) = 2πr(r + h)\n• Volume = πr²h\n\n**Cone (शंकु / શંકુ):**\n• Slant Height (l) = √(r² + h²)\n• Curved Surface Area (CSA) = πrl\n• Total Surface Area (TSA) = πr(l + r)\n• Volume = (1/3)πr²h\n\n**Sphere (गोला / ગોલક):**\n• Surface Area = 4πr²\n• Volume = (4/3)πr³\n\n**Hemisphere (अर्धगोला / અર્ધગોલક):**\n• Curved Surface Area (CSA) = 2πr²\n• Total Surface Area (TSA) = 3πr²\n• Volume = (2/3)πr³",
+      "id": "C10_MATH_CH13_SOCRATIC_1",
+      "type": "socratic_question",
+      "question": "If three people in a room earn ₹10,000 a month, and a billionaire walks into the room earning ₹10,00,00,000 a month, the \"average\" (mean) salary in the room suddenly becomes over ₹2.5 Crores! Does this average correctly represent what a \"typical\" person in that room earns?",
+      "question_hi": "यदि एक कमरे में तीन लोग महीने में ₹10,000 कमाते हैं, और एक अरबपति उस कमरे में आता है जो महीने में ₹10,00,00,000 कमाता है, तो कमरे में \"औसत\" (माध्य/mean) वेतन अचानक ₹2.5 करोड़ से अधिक हो जाता है! क्या यह औसत सही ढंग से दर्शाता है कि उस कमरे में एक \"विशिष्ट (typical)\" व्यक्ति क्या कमाता है?",
+      "question_gu": "જો એક રૂમમાં ત્રણ લોકો મહિનામાં ₹10,000 કમાતા હોય, અને એક અબજોપતિ તે રૂમમાં આવે જે મહિનામાં ₹10,00,00,000 કમાતો હોય, તો રૂમમાં \"સરેરાશ\" (મધ્યક/mean) પગાર અચાનક ₹2.5 કરોડથી વધુ થઈ જાય છે! શું આ સરેરાશ યોગ્ય રીતે દર્શાવે છે કે તે રૂમમાં એક \"સામાન્ય (typical)\" વ્યક્તિ શું કમાય છે?",
+      "hint": "Think about whether a single extreme value (the billionaire) should change the representation of the majority.",
+      "hint_hi": "सोचें कि क्या एक एकल चरम मूल्य (अरबपति) को बहुमत के प्रतिनिधित्व को बदलना चाहिए।",
+      "hint_gu": "વિચારો કે શું એક જ અત્યંત મોટું મૂલ્ય (અબજોપતિ) બહુમતીની રજૂઆતને બદલી શકે છે.",
+      "bloom": "Analyze",
       "difficulty": "Intermediate",
-      "bloom": "Remember"
+      "estimated_minutes": 2
     },
     {
-      "type": "teacher_tip",
-      "content": "💡 **Teacher's Secret:** When dealing with combinations of solids, remember that the Total Surface Area of the new solid is NOT the sum of the TSAs of the individual solids. You only add the visible areas (usually the CSAs)!",
-      "difficulty": "Beginner",
-      "bloom": "Understand"
+      "id": "C10_MATH_CH13_THEO_1",
+      "type": "theory",
+      "title": "Mean of Grouped Data",
+      "title_hi": "वर्गीकृत आँकड़ों का माध्य",
+      "title_gu": "વર્ગીકૃત માહિતીનો મધ્યક",
+      "body": "The **Mean (Average)** is found by adding all observations and dividing by the total number of observations. But when data is grouped into classes (like 10-20, 20-30), we don't know the exact individual values. So, we find the **class mark** (mid-point of each class).\nClass Mark (xᵢ) = (Upper class limit + Lower class limit) / 2.\nThere are three methods to find the mean of grouped data:\n1. **Direct Method:** Mean = Σ(fᵢxᵢ) / Σfᵢ\n2. **Assumed Mean Method:** We guess a mean 'a' from the middle of the xᵢ values, find the deviation dᵢ = xᵢ - a. Mean = a + [Σ(fᵢdᵢ) / Σfᵢ].\n3. **Step-Deviation Method:** We further simplify by dividing dᵢ by the class size 'h' to get uᵢ = dᵢ / h. Mean = a + h × [Σ(fᵢuᵢ) / Σfᵢ].",
+      "body_hi": "**माध्य (Mean या Average)** सभी प्रेक्षणों को जोड़कर और प्रेक्षणों की कुल संख्या से भाग देकर ज्ञात किया जाता है। लेकिन जब डेटा वर्गों में वर्गीकृत होता है (जैसे 10-20, 20-30), तो हम सटीक व्यक्तिगत मान नहीं जानते हैं। इसलिए, हम **वर्ग चिह्न (class mark)** (प्रत्येक वर्ग का मध्य-बिंदु) ज्ञात करते हैं।\nवर्ग चिह्न (xᵢ) = (ऊपरी वर्ग सीमा + निचली वर्ग सीमा) / 2.\nवर्गीकृत आँकड़ों का माध्य ज्ञात करने की तीन विधियाँ हैं:\n1. **प्रत्यक्ष विधि (Direct Method):** माध्य = Σ(fᵢxᵢ) / Σfᵢ\n2. **कल्पित माध्य विधि (Assumed Mean Method):** हम xᵢ मानों के मध्य से एक माध्य 'a' मानते हैं, और विचलन dᵢ = xᵢ - a ज्ञात करते हैं। माध्य = a + [Σ(fᵢdᵢ) / Σfᵢ].\n3. **पग-विचलन विधि (Step-Deviation Method):** हम dᵢ को वर्ग माप 'h' से भाग देकर और सरल करते हैं जिससे uᵢ = dᵢ / h प्राप्त होता है। माध्य = a + h × [Σ(fᵢuᵢ) / Σfᵢ].",
+      "body_gu": "**મધ્યક (Mean કે સરેરાશ)** બધા અવલોકનોનો સરવાળો કરી અને તેને અવલોકનોની કુલ સંખ્યા વડે ભાગીને શોધવામાં આવે છે. પરંતુ જ્યારે ડેટા વર્ગોમાં વર્ગીકૃત થયેલ હોય (જેમ કે 10-20, 20-30), ત્યારે આપણે ચોક્કસ વ્યક્તિગત મૂલ્યો જાણતા નથી. તેથી, આપણે **વર્ગ-ચિહ્ન (class mark/મધ્યકિંમત)** (દરેક વર્ગનું મધ્ય-બિંદુ) શોધીએ છીએ.\nવર્ગ-ચિહ્ન (xᵢ) = (ઉર્ધ્વસીમા + અધઃસીમા) / 2.\nવર્ગીકૃત માહિતીનો મધ્યક શોધવા માટે ત્રણ રીતો છે:\n1. **સીધી રીત (Direct Method):** મધ્યક = Σ(fᵢxᵢ) / Σfᵢ\n2. **ધારેલા મધ્યકની રીત (Assumed Mean Method):** આપણે xᵢ મૂલ્યોની વચ્ચેથી એક મધ્યક 'a' ધારીએ છીએ, અને વિચલન dᵢ = xᵢ - a શોધીએ છીએ. મધ્યક = a + [Σ(fᵢdᵢ) / Σfᵢ].\n3. **પદ-વિચલનની રીત (Step-Deviation Method):** આપણે dᵢ ને વર્ગલંબાઈ 'h' વડે ભાગીને વધુ સરળ બનાવીએ છીએ જેથી uᵢ = dᵢ / h મળે છે. મધ્યક = a + h × [Σ(fᵢuᵢ) / Σfᵢ]."
     },
     {
-      "type": "diagram",
-      "content": "Conversion of Solids: Melting a big sphere to make smaller cones. The VOLUME remains the same!",
-      "image_url": "assets/images/maths_ch13_melting.jpg",
-      "alt_text": "Illustration showing a large melting sphere being poured into smaller cone moulds."
+      "id": "C10_MATH_CH13_THEO_2",
+      "type": "theory",
+      "title": "Mode of Grouped Data",
+      "title_hi": "वर्गीकृत आँकड़ों का बहुलक",
+      "title_gu": "વર્ગીકૃત માહિતીનો બહુલક",
+      "body": "The **Mode** is the value that occurs most frequently. In grouped data, we look for the **modal class** (the class with the highest frequency).\nTo find the exact mode within that class, we use the formula:\n**Mode = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h**\nWhere:\nl = lower limit of the modal class\nh = size of the class interval (assuming all class sizes are equal)\nf₁ = frequency of the modal class\nf₀ = frequency of the class *preceding* (before) the modal class\nf₂ = frequency of the class *succeeding* (after) the modal class.",
+      "body_hi": "**बहुलक (Mode)** वह मान है जो सबसे अधिक बार आता है। वर्गीकृत आँकड़ों में, हम **बहुलक वर्ग (modal class)** (सबसे अधिक बारंबारता वाला वर्ग) की तलाश करते हैं।\nउस वर्ग के भीतर सटीक बहुलक खोजने के लिए, हम सूत्र का उपयोग करते हैं:\n**बहुलक = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h**\nजहाँ:\nl = बहुलक वर्ग की निचली सीमा\nh = वर्ग अंतराल की माप (यह मानते हुए कि सभी वर्ग माप बराबर हैं)\nf₁ = बहुलक वर्ग की बारंबारता\nf₀ = बहुलक वर्ग से *ठीक पहले (preceding)* वाले वर्ग की बारंबारता\nf₂ = बहुलक वर्ग के *ठीक बाद (succeeding)* आने वाले वर्ग की बारंबारता।",
+      "body_gu": "**બહુલક (Mode)** એ એવું મૂલ્ય છે જે સૌથી વધુ વખત આવે છે. વર્ગીકૃત માહિતીમાં, આપણે **બહુલક વર્ગ (modal class)** (સૌથી વધુ આવૃત્તિ વાળો વર્ગ) શોધીએ છીએ.\nતે વર્ગની અંદર ચોક્કસ બહુલક શોધવા માટે, આપણે આ સૂત્રનો ઉપયોગ કરીએ છીએ:\n**બહુલક = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h**\nજ્યાં:\nl = બહુલક વર્ગની અધઃસીમા\nh = વર્ગલંબાઈ (એમ માનીને કે તમામ વર્ગલંબાઈ સમાન છે)\nf₁ = બહુલક વર્ગની આવૃત્તિ\nf₀ = બહુલક વર્ગની *તરત આગળના (preceding)* વર્ગની આવૃત્તિ\nf₂ = બહુલક વર્ગની *તરત પાછળના (succeeding)* વર્ગની આવૃત્તિ."
     },
     {
-      "type": "exam_tips",
-      "content": "🔥 **BOARD EXAM HOT TOPIC:** Conversion of solid from one shape to another.\n\n*Board Trick:* The fundamental rule is: **Volume of old solid = Volume of new solid**. Equate their formulas and solve for the unknown dimension (radius, height, or number of items).",
-      "difficulty": "Advanced",
-      "bloom": "Apply"
+      "id": "C10_MATH_CH13_THEO_3",
+      "type": "theory",
+      "title": "Median of Grouped Data",
+      "title_hi": "वर्गीकृत आँकड़ों का माध्यक",
+      "title_gu": "વર્ગીકૃત માહિતીનો મધ્યસ્થ",
+      "body": "The **Median** is the middle value that divides the data exactly in half. For grouped data, we first need to find the **cumulative frequency (cf)** (running total of frequencies).\nThen, find N/2 (where N is the total frequency). The **median class** is the class whose cumulative frequency is greater than and nearest to N/2.\nThe formula to find the exact median is:\n**Median = l + [ (N/2 - cf) / f ] × h**\nWhere:\nl = lower limit of median class\nN = number of observations\ncf = cumulative frequency of class *preceding* the median class\nf = frequency of median class\nh = class size.",
+      "body_hi": "**माध्यक (Median)** वह मध्य मान है जो डेटा को ठीक आधे में विभाजित करता है। वर्गीकृत आँकड़ों के लिए, हमें पहले **संचयी बारंबारता (cumulative frequency, cf)** (बारंबारताओं का चल योग) ज्ञात करने की आवश्यकता है।\nफिर, N/2 ज्ञात करें (जहाँ N कुल बारंबारता है)। **माध्यक वर्ग (median class)** वह वर्ग है जिसकी संचयी बारंबारता N/2 से अधिक और निकटतम है।\nसटीक माध्यक ज्ञात करने का सूत्र है:\n**माध्यक = l + [ (N/2 - cf) / f ] × h**\nजहाँ:\nl = माध्यक वर्ग की निचली सीमा\nN = प्रेक्षणों की संख्या\ncf = माध्यक वर्ग से *ठीक पहले* वाले वर्ग की संचयी बारंबारता\nf = माध्यक वर्ग की बारंबारता\nh = वर्ग माप।",
+      "body_gu": "**મધ્યસ્થ (Median)** એ મધ્ય મૂલ્ય છે જે માહિતીને બરાબર અડધા ભાગમાં વહેંચે છે. વર્ગીકૃત માહિતી માટે, આપણે પહેલા **સંચયી આવૃત્તિ (cumulative frequency, cf)** (આવૃત્તિઓનો કુલ સરવાળો) શોધવાની જરૂર છે.\nપછી, N/2 શોધો (જ્યાં N કુલ આવૃત્તિ છે). **મધ્યસ્થ વર્ગ (median class)** એ વર્ગ છે જેની સંચયી આવૃત્તિ N/2 કરતાં મોટી અને સૌથી નજીક હોય.\nચોક્કસ મધ્યસ્થ શોધવા માટેનું સૂત્ર છે:\n**મધ્યસ્થ = l + [ (N/2 - cf) / f ] × h**\nજ્યાં:\nl = મધ્યસ્થ વર્ગની અધઃસીમા\nN = અવલોકનોની કુલ સંખ્યા\ncf = મધ્યસ્થ વર્ગની *તરત આગળના* વર્ગની સંચયી આવૃત્તિ\nf = મધ્યસ્થ વર્ગની આવૃત્તિ\nh = વર્ગલંબાઈ."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch13_1",
-      "type": "quiz",
-      "question": "A solid piece of iron in the form of a cuboid of dimensions 49cm × 33cm × 24cm, is moulded to form a solid sphere. What is the radius of the sphere?",
-      "question_hi": "49 सेमी × 33 सेमी × 24 सेमी आयामों वाले एक ठोस लोहे के घनाभ को पिघलाकर एक ठोस गोला बनाया जाता है। गोले की त्रिज्या क्या है?",
-      "options": ["21 cm", "23 cm", "25 cm", "19 cm"],
-      "options_hi": ["21 सेमी", "23 सेमी", "25 सेमी", "19 सेमी"],
-      "correct_index": 0,
-      "explanation": "Volume of cuboid = 49 × 33 × 24. Volume of sphere = (4/3)πr³. Equating them: (4/3) × (22/7) × r³ = 38808. Solving gives r³ = 9261, so r = 21 cm.",
-      "explanation_hi": "घनाभ का आयतन = 49 × 33 × 24। गोले का आयतन = (4/3)πr³। दोनों को बराबर करने पर: (4/3) × (22/7) × r³ = 38808. हल करने पर r³ = 9261 मिलता है, इसलिए r = 21 सेमी।"
+      "id": "C10_MATH_CH13_THEO_4",
+      "type": "theory",
+      "title": "Empirical Relationship",
+      "title_hi": "आनुभविक संबंध",
+      "title_gu": "આનુભવિક સંબંધ",
+      "body": "There is a beautiful, empirical (based on observation) relationship between the three measures of central tendency (Mean, Median, and Mode). If a distribution is moderately skewed (not perfectly symmetrical), they are connected by this formula:\n**3 Median = Mode + 2 Mean**\nThis is incredibly useful: if you know any two of these values, you can quickly find the third without doing long calculations!",
+      "body_hi": "केंद्रीय प्रवृत्ति के तीन मापों (माध्य, माध्यक और बहुलक) के बीच एक सुंदर, आनुभविक (अवलोकन पर आधारित/empirical) संबंध है। यदि कोई बंटन मध्यम रूप से विषम (moderately skewed, पूरी तरह से सममित नहीं) है, तो वे इस सूत्र द्वारा जुड़े होते हैं:\n**3 माध्यक = बहुलक + 2 माध्य**\nयह अविश्वसनीय रूप से उपयोगी है: यदि आप इनमें से किन्हीं दो मानों को जानते हैं, तो आप लंबी गणना किए बिना तीसरे को जल्दी से पा सकते हैं!",
+      "body_gu": "મધ્યવર્તી સ્થિતિમાનના ત્રણ માપો (મધ્યક, મધ્યસ્થ અને બહુલક) વચ્ચે એક સુંદર, આનુભવિક (અવલોકન આધારિત/empirical) સંબંધ છે. જો વિતરણ સાધારણ અસમમિત (સંપૂર્ણપણે સંમિત ન હોય) હોય, તો તેઓ આ સૂત્ર દ્વારા જોડાયેલા છે:\n**3 મધ્યસ્થ = બહુલક + 2 મધ્યક**\nઆ અવિશ્વસનીય રીતે ઉપયોગી છે: જો તમે આમાંથી કોઈપણ બે મૂલ્યો જાણતા હોવ, તો તમે લાંબી ગણતરીઓ કર્યા વિના ઝડપથી ત્રીજું મૂલ્ય શોધી શકો છો!"
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch13_2",
-      "type": "quiz",
-      "question": "If two solid hemispheres of the same base radius 'r' are joined together along their bases, then the curved surface area of this new solid is:",
-      "question_hi": "यदि समान आधार त्रिज्या 'r' वाले दो ठोस अर्धगोलों को उनके आधारों के साथ जोड़ दिया जाए, तो इस नए ठोस का वक्र पृष्ठीय क्षेत्रफल क्या होगा?",
-      "options": ["3πr²", "4πr²", "6πr²", "8πr²"],
-      "options_hi": ["3πr²", "4πr²", "6πr²", "8πr²"],
-      "correct_index": 1,
-      "explanation": "Joining two hemispheres along their bases forms a complete sphere. The curved surface area of a sphere is 4πr².",
-      "explanation_hi": "दो अर्धगोलों को उनके आधार पर जोड़ने से एक पूर्ण गोला बनता है। गोले का वक्र पृष्ठीय क्षेत्रफल 4πr² होता है।"
+      "id": "C10_MATH_CH13_PRACTICE_1",
+      "type": "practice_question",
+      "question": "A survey was conducted by a group of students as a part of their environment awareness programme, in which they collected the following data regarding the number of plants in 20 houses in a locality. Find the mean number of plants per house.\nNumber of plants: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nNumber of houses: 1, 2, 1, 5, 6, 2, 3",
+      "question_hi": "विद्यार्थियों के एक समूह द्वारा अपने पर्यावरण चेतना अभियान के अंतर्गत एक सर्वेक्षण किया गया, जिसमें उन्होंने एक मोहल्ले के 20 घरों में लगे हुए पौधों से संबंधित निम्नलिखित आँकड़े एकत्रित किए। प्रति घर माध्य पौधों की संख्या ज्ञात कीजिए।\nपौधों की संख्या: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nघरों की संख्या: 1, 2, 1, 5, 6, 2, 3",
+      "question_gu": "વિદ્યાર્થીઓના એક સમૂહ દ્વારા તેમના પર્યાવરણ જાગૃતિ કાર્યક્રમના ભાગરૂપે એક સર્વેક્ષણ હાથ ધરવામાં આવ્યું હતું, જેમાં તેઓએ એક વિસ્તારના 20 ઘરોમાં છોડની સંખ્યા અંગે નીચેનો ડેટા એકત્રિત કર્યો હતો. ઘર દીઠ છોડની મધ્યક સંખ્યા શોધો.\nછોડની સંખ્યા: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nઘરોની સંખ્યા: 1, 2, 1, 5, 6, 2, 3",
+      "solution": "Let's use Direct Method. Class marks (xᵢ) are midpoints of intervals.\nClasses: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nxᵢ: 1, 3, 5, 7, 9, 11, 13\nfᵢ: 1, 2, 1, 5, 6, 2, 3 (Total Σfᵢ = 20)\nfᵢxᵢ: 1×1=1, 2×3=6, 1×5=5, 5×7=35, 6×9=54, 2×11=22, 3×13=39\nΣ(fᵢxᵢ) = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162.\nMean = Σ(fᵢxᵢ) / Σfᵢ = 162 / 20 = 8.1.\nThe mean number of plants per house is 8.1.",
+      "solution_hi": "आइए प्रत्यक्ष विधि का उपयोग करें। वर्ग चिह्न (xᵢ) अंतरालों के मध्य बिंदु हैं।\nवर्ग: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nxᵢ: 1, 3, 5, 7, 9, 11, 13\nfᵢ: 1, 2, 1, 5, 6, 2, 3 (कुल Σfᵢ = 20)\nfᵢxᵢ: 1×1=1, 2×3=6, 1×5=5, 5×7=35, 6×9=54, 2×11=22, 3×13=39\nΣ(fᵢxᵢ) = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162.\nमाध्य = Σ(fᵢxᵢ) / Σfᵢ = 162 / 20 = 8.1.\nप्रति घर माध्य पौधों की संख्या 8.1 है।",
+      "solution_gu": "ચાલો સીધી રીતનો ઉપયોગ કરીએ. વર્ગ-ચિહ્ન (xᵢ) એ અંતરાલોના મધ્યબિંદુઓ છે.\nવર્ગો: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nxᵢ: 1, 3, 5, 7, 9, 11, 13\nfᵢ: 1, 2, 1, 5, 6, 2, 3 (કુલ Σfᵢ = 20)\nfᵢxᵢ: 1×1=1, 2×3=6, 1×5=5, 5×7=35, 6×9=54, 2×11=22, 3×13=39\nΣ(fᵢxᵢ) = 1 + 6 + 5 + 35 + 54 + 22 + 39 = 162.\nમધ્યક = Σ(fᵢxᵢ) / Σfᵢ = 162 / 20 = 8.1.\nઘર દીઠ છોડની મધ્યક સંખ્યા 8.1 છે."
     },
     {
-      "id": "QUIZ_ncert_class10_maths_ch13_3",
-      "type": "quiz",
-      "question": "During the conversion of a solid from one shape to another, the volume of the new shape will:",
-      "question_hi": "एक ठोस को एक आकार से दूसरे आकार में बदलने के दौरान, नए आकार का आयतन:",
-      "options": ["Increase", "Decrease", "Remain unaltered", "Be doubled"],
-      "options_hi": ["बढ़ेगा", "घटेगा", "अपरिवर्तित रहेगा", "दोगुना हो जाएगा"],
+      "id": "C10_MATH_CH13_PRACTICE_2",
+      "type": "practice_question",
+      "question": "The following data gives the information on the observed lifetimes (in hours) of 225 electrical components:\nLifetimes (in hours): 0-20, 20-40, 40-60, 60-80, 80-100, 100-120\nFrequency: 10, 35, 52, 61, 38, 29\nDetermine the modal lifetimes of the components.",
+      "question_hi": "निम्नलिखित आँकड़े 225 बिजली उपकरणों के प्रेक्षित जीवनकाल (घंटों में) की सूचना देते हैं:\nजीवनकाल (घंटों में): 0-20, 20-40, 40-60, 60-80, 80-100, 100-120\nबारंबारता: 10, 35, 52, 61, 38, 29\nउपकरणों का बहुलक जीवनकाल ज्ञात कीजिए।",
+      "question_gu": "નીચેની માહિતી 225 વીજળીનાં ઉપકરણોના આયુષ્ય (કલાકોમાં) ની માહિતી આપે છે:\nઆયુષ્ય (કલાકોમાં): 0-20, 20-40, 40-60, 60-80, 80-100, 100-120\nઆવૃત્તિ: 10, 35, 52, 61, 38, 29\nઉપકરણોનું બહુલક આયુષ્ય શોધો.",
+      "solution": "Highest frequency is 61, so modal class is 60-80.\nLower limit (l) = 60.\nClass size (h) = 20.\nFrequency of modal class (f₁) = 61.\nFrequency of preceding class (f₀) = 52.\nFrequency of succeeding class (f₂) = 38.\nMode = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h\n= 60 + [ (61 - 52) / (2×61 - 52 - 38) ] × 20\n= 60 + [ 9 / (122 - 90) ] × 20\n= 60 + [ 9 / 32 ] × 20\n= 60 + (180 / 32)\n= 60 + 5.625 = 65.625 hours.",
+      "solution_hi": "सर्वाधिक बारंबारता 61 है, अतः बहुलक वर्ग 60-80 है।\nनिचली सीमा (l) = 60.\nवर्ग माप (h) = 20.\nबहुलक वर्ग की बारंबारता (f₁) = 61.\nठीक पहले वाले वर्ग की बारंबारता (f₀) = 52.\nठीक बाद वाले वर्ग की बारंबारता (f₂) = 38.\nबहुलक = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h\n= 60 + [ (61 - 52) / (2×61 - 52 - 38) ] × 20\n= 60 + [ 9 / (122 - 90) ] × 20\n= 60 + [ 9 / 32 ] × 20\n= 60 + (180 / 32)\n= 60 + 5.625 = 65.625 घंटे।",
+      "solution_gu": "સૌથી વધુ આવૃત્તિ 61 છે, તેથી બહુલક વર્ગ 60-80 છે.\nઅધઃસીમા (l) = 60.\nવર્ગલંબાઈ (h) = 20.\nબહુલક વર્ગની આવૃત્તિ (f₁) = 61.\nતરત આગળના વર્ગની આવૃત્તિ (f₀) = 52.\nતરત પાછળના વર્ગની આવૃત્તિ (f₂) = 38.\nબહુલક = l + [ (f₁ - f₀) / (2f₁ - f₀ - f₂) ] × h\n= 60 + [ (61 - 52) / (2×61 - 52 - 38) ] × 20\n= 60 + [ 9 / (122 - 90) ] × 20\n= 60 + [ 9 / 32 ] × 20\n= 60 + (180 / 32)\n= 60 + 5.625 = 65.625 કલાક."
+    },
+    {
+      "id": "C10_MATH_CH13_PRACTICE_3",
+      "type": "practice_question",
+      "question": "The following distribution gives the daily income of 50 workers of a factory.\nDaily income (in ₹): 100-120, 120-140, 140-160, 160-180, 180-200\nNumber of workers: 12, 14, 8, 6, 10\nFind the mean daily income of the workers of the factory by using an appropriate method.",
+      "question_hi": "किसी कारखाने के 50 श्रमिकों की दैनिक मजदूरी के निम्नलिखित बंटन पर विचार कीजिए:\nदैनिक मजदूरी (₹ में): 100-120, 120-140, 140-160, 160-180, 180-200\nश्रमिकों की संख्या: 12, 14, 8, 6, 10\nएक उपयुक्त विधि का प्रयोग करते हुए, इस कारखाने के श्रमिकों की माध्य दैनिक मजदूरी ज्ञात कीजिए।",
+      "question_gu": "નીચેનું વિતરણ કારખાનાના 50 કામદારોની દૈનિક આવક આપે છે.\nદૈનિક આવક (₹ માં): 100-120, 120-140, 140-160, 160-180, 180-200\nકામદારોની સંખ્યા: 12, 14, 8, 6, 10\nયોગ્ય રીતનો ઉપયોગ કરીને કારખાનાના કામદારોની મધ્યક દૈનિક આવક શોધો.",
+      "solution": "Let's use the Assumed Mean Method.\nxᵢ (class marks): 110, 130, 150, 170, 190. \nLet Assumed mean (a) = 150.\ndᵢ = xᵢ - 150. So dᵢ: -40, -20, 0, 20, 40.\nfᵢ: 12, 14, 8, 6, 10 (Total N = 50)\nfᵢdᵢ: 12(-40) = -480, 14(-20) = -280, 8(0) = 0, 6(20) = 120, 10(40) = 400.\nΣ(fᵢdᵢ) = -480 - 280 + 0 + 120 + 400 = -760 + 520 = -240.\nMean = a + [Σ(fᵢdᵢ) / Σfᵢ]\n= 150 + (-240 / 50)\n= 150 - 4.8\n= 145.2.\nThe mean daily income is ₹ 145.20.",
+      "solution_hi": "आइए कल्पित माध्य विधि का उपयोग करें।\nxᵢ (वर्ग चिह्न): 110, 130, 150, 170, 190.\nमाना कल्पित माध्य (a) = 150.\ndᵢ = xᵢ - 150. अतः dᵢ: -40, -20, 0, 20, 40.\nfᵢ: 12, 14, 8, 6, 10 (कुल N = 50)\nfᵢdᵢ: 12(-40) = -480, 14(-20) = -280, 8(0) = 0, 6(20) = 120, 10(40) = 400.\nΣ(fᵢdᵢ) = -480 - 280 + 0 + 120 + 400 = -760 + 520 = -240.\nमाध्य = a + [Σ(fᵢdᵢ) / Σfᵢ]\n= 150 + (-240 / 50)\n= 150 - 4.8\n= 145.2.\nमाध्य दैनिक मजदूरी ₹ 145.20 है।",
+      "solution_gu": "ચાલો ધારેલા મધ્યકની રીતનો ઉપયોગ કરીએ.\nxᵢ (વર્ગ-ચિહ્ન): 110, 130, 150, 170, 190.\nધારો કે ધારેલો મધ્યક (a) = 150.\ndᵢ = xᵢ - 150. તેથી dᵢ: -40, -20, 0, 20, 40.\nfᵢ: 12, 14, 8, 6, 10 (કુલ N = 50)\nfᵢdᵢ: 12(-40) = -480, 14(-20) = -280, 8(0) = 0, 6(20) = 120, 10(40) = 400.\nΣ(fᵢdᵢ) = -480 - 280 + 0 + 120 + 400 = -760 + 520 = -240.\nમધ્યક = a + [Σ(fᵢdᵢ) / Σfᵢ]\n= 150 + (-240 / 50)\n= 150 - 4.8\n= 145.2.\nમધ્યક દૈનિક આવક ₹ 145.20 છે."
+    },
+    {
+      "id": "C10_MATH_CH13_PRACTICE_4",
+      "type": "practice_question",
+      "question": "The following frequency distribution gives the monthly consumption of electricity of 68 consumers of a locality. Find the median of the data.\nMonthly consumption (in units): 65-85, 85-105, 105-125, 125-145, 145-165, 165-185, 185-205\nNo. of consumers: 4, 5, 13, 20, 14, 8, 4",
+      "question_hi": "निम्नलिखित बारंबारता बंटन किसी मोहल्ले के 68 उपभोक्ताओं की बिजली की मासिक खपत दर्शाता है। इन आँकड़ों का माध्यक ज्ञात कीजिए।\nमासिक खपत (इकाइयों में): 65-85, 85-105, 105-125, 125-145, 145-165, 165-185, 185-205\nउपभोक्ताओं की संख्या: 4, 5, 13, 20, 14, 8, 4",
+      "question_gu": "નીચેનું આવૃત્તિ વિતરણ એક વિસ્તારના 68 ગ્રાહકોનો માસિક વીજળીનો વપરાશ આપે છે. માહિતીનો મધ્યસ્થ શોધો.\nમાસિક વપરાશ (એકમોમાં): 65-85, 85-105, 105-125, 125-145, 145-165, 165-185, 185-205\nગ્રાહકોની સંખ્યા: 4, 5, 13, 20, 14, 8, 4",
+      "solution": "First, create Cumulative Frequency (cf) table:\n65-85: f=4, cf=4\n85-105: f=5, cf=4+5=9\n105-125: f=13, cf=9+13=22\n125-145: f=20, cf=22+20=42\n145-165: f=14, cf=42+14=56\n165-185: f=8, cf=56+8=64\n185-205: f=4, cf=64+4=68.\nN = 68, so N/2 = 34.\nThe cumulative frequency just greater than 34 is 42, which belongs to class 125-145. So, median class is 125-145.\nl = 125, cf = 22 (preceding class), f = 20, h = 20.\nMedian = l + [ (N/2 - cf) / f ] × h\n= 125 + [ (34 - 22) / 20 ] × 20\n= 125 + [ 12 / 20 ] × 20\n= 125 + 12 = 137 units.",
+      "solution_hi": "सबसे पहले, संचयी बारंबारता (cf) तालिका बनाएँ:\n65-85: f=4, cf=4\n85-105: f=5, cf=4+5=9\n105-125: f=13, cf=9+13=22\n125-145: f=20, cf=22+20=42\n145-165: f=14, cf=42+14=56\n165-185: f=8, cf=56+8=64\n185-205: f=4, cf=64+4=68.\nN = 68, अतः N/2 = 34.\n34 से ठीक बड़ी संचयी बारंबारता 42 है, जो वर्ग 125-145 की है। अतः, माध्यक वर्ग 125-145 है।\nl = 125, cf = 22 (ठीक पहले वाले वर्ग की), f = 20, h = 20.\nमाध्यक = l + [ (N/2 - cf) / f ] × h\n= 125 + [ (34 - 22) / 20 ] × 20\n= 125 + [ 12 / 20 ] × 20\n= 125 + 12 = 137 इकाइयाँ।",
+      "solution_gu": "સૌપ્રથમ, સંચયી આવૃત્તિ (cf) કોષ્ટક બનાવો:\n65-85: f=4, cf=4\n85-105: f=5, cf=4+5=9\n105-125: f=13, cf=9+13=22\n125-145: f=20, cf=22+20=42\n145-165: f=14, cf=42+14=56\n165-185: f=8, cf=56+8=64\n185-205: f=4, cf=64+4=68.\nN = 68, તેથી N/2 = 34.\n34 થી તરત મોટી સંચયી આવૃત્તિ 42 છે, જે વર્ગ 125-145 ની છે. તેથી, મધ્યસ્થ વર્ગ 125-145 છે.\nl = 125, cf = 22 (તરત આગળના વર્ગની), f = 20, h = 20.\nમધ્યસ્થ = l + [ (N/2 - cf) / f ] × h\n= 125 + [ (34 - 22) / 20 ] × 20\n= 125 + [ 12 / 20 ] × 20\n= 125 + 12 = 137 એકમો."
+    },
+    {
+      "id": "C10_MATH_CH13_PRACTICE_5",
+      "type": "practice_question",
+      "question": "If the median of a distribution is 28.5, find the values of x and y.\nClass interval: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nFrequency: 5, x, 20, 15, y, 5\nTotal frequency is 60.",
+      "question_hi": "यदि नीचे दिए हुए बंटन का माध्यक 28.5 हो, तो x और y के मान ज्ञात कीजिए।\nवर्ग अंतराल: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nबारंबारता: 5, x, 20, 15, y, 5\nकुल बारंबारता 60 है।",
+      "question_gu": "જો નીચે આપેલા વિતરણનો મધ્યસ્થ 28.5 હોય, તો x અને y ના મૂલ્યો શોધો.\nવર્ગ અંતરાલ: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nઆવૃત્તિ: 5, x, 20, 15, y, 5\nકુલ આવૃત્તિ 60 છે.",
+      "solution": "N = 60 => N/2 = 30.\nTotal frequency = 5 + x + 20 + 15 + y + 5 = 45 + x + y = 60 => x + y = 15  --- (Eq 1)\nMedian is 28.5, which lies in the class 20-30. So, median class is 20-30.\nl = 20, f = 20, h = 10.\ncf of preceding class (10-20) = 5 + x.\nMedian = l + [ (N/2 - cf) / f ] × h\n28.5 = 20 + [ (30 - (5 + x)) / 20 ] × 10\n8.5 = [ (25 - x) / 20 ] × 10\n8.5 = (25 - x) / 2\n17 = 25 - x\nx = 25 - 17 = 8.\nSubstitute x in Eq 1:\n8 + y = 15 => y = 7.\nThe values are x = 8 and y = 7.",
+      "solution_hi": "N = 60 => N/2 = 30.\nकुल बारंबारता = 5 + x + 20 + 15 + y + 5 = 45 + x + y = 60 => x + y = 15 --- (समीकरण 1)\nमाध्यक 28.5 है, जो वर्ग 20-30 में स्थित है। अतः, माध्यक वर्ग 20-30 है।\nl = 20, f = 20, h = 10.\nठीक पहले वाले वर्ग (10-20) की संचयी बारंबारता (cf) = 5 + x.\nमाध्यक = l + [ (N/2 - cf) / f ] × h\n28.5 = 20 + [ (30 - (5 + x)) / 20 ] × 10\n8.5 = [ (25 - x) / 20 ] × 10\n8.5 = (25 - x) / 2\n17 = 25 - x\nx = 25 - 17 = 8.\nx का मान समीकरण 1 में रखने पर:\n8 + y = 15 => y = 7.\nमान x = 8 और y = 7 हैं।",
+      "solution_gu": "N = 60 => N/2 = 30.\nકુલ આવૃત્તિ = 5 + x + 20 + 15 + y + 5 = 45 + x + y = 60 => x + y = 15 --- (સમીકરણ 1)\nમધ્યસ્થ 28.5 છે, જે વર્ગ 20-30 ની વચ્ચે આવે છે. તેથી, મધ્યસ્થ વર્ગ 20-30 છે.\nl = 20, f = 20, h = 10.\nતરત આગળના વર્ગ (10-20) ની સંચયી આવૃત્તિ (cf) = 5 + x.\nમધ્યસ્થ = l + [ (N/2 - cf) / f ] × h\n28.5 = 20 + [ (30 - (5 + x)) / 20 ] × 10\n8.5 = [ (25 - x) / 20 ] × 10\n8.5 = (25 - x) / 2\n17 = 25 - x\nx = 25 - 17 = 8.\nx ની કિંમત સમીકરણ 1 માં મૂકતા:\n8 + y = 15 => y = 7.\nમૂલ્યો x = 8 અને y = 7 છે."
+    },
+    {
+      "id": "C10_MATH_CH13_PRACTICE_6",
+      "type": "practice_question",
+      "question": "A life insurance agent found the following data for distribution of ages of 100 policy holders. Calculate the median age, if policies are given only to persons having age 18 years onwards but less than 60 year.\nAge (in years) : Below 20, Below 25, Below 30, Below 35, Below 40, Below 45, Below 50, Below 55, Below 60\nNumber of policy holders: 2, 6, 24, 45, 78, 89, 92, 98, 100",
+      "question_hi": "एक जीवन बीमा एजेंट 100 पॉलिसी धारकों की आयु के बंटन के निम्नलिखित आँकड़े ज्ञात करता है। माध्यक आयु परिकलित कीजिए, यदि पॉलिसी केवल उन्हीं व्यक्तियों को दी जाती है जिनकी आयु 18 वर्ष या उससे अधिक हो, परंतु 60 वर्ष से कम हो।\nआयु (वर्षों में): 20 से कम, 25 से कम, 30 से कम, 35 से कम, 40 से कम, 45 से कम, 50 से कम, 55 से कम, 60 से कम\nपॉलिसी धारकों की संख्या: 2, 6, 24, 45, 78, 89, 92, 98, 100",
+      "question_gu": "એક જીવન વીમા એજન્ટને 100 પોલિસી ધારકોની ઉંમરના વિતરણ માટે નીચેની માહિતી મળી. જો પોલિસી ફક્ત 18 વર્ષ કે તેથી વધુ પરંતુ 60 વર્ષથી ઓછી ઉંમરના લોકોને જ આપવામાં આવતી હોય, તો મધ્યસ્થ ઉંમરની ગણતરી કરો.\nઉંમર (વર્ષમાં): 20 થી ઓછી, 25 થી ઓછી, 30 થી ઓછી, 35 થી ઓછી, 40 થી ઓછી, 45 થી ઓછી, 50 થી ઓછી, 55 થી ઓછી, 60 થી ઓછી\nપોલિસી ધારકોની સંખ્યા: 2, 6, 24, 45, 78, 89, 92, 98, 100",
+      "solution": "The given data is of 'less than' type, so the frequencies are actually cumulative frequencies (cf).\nWe create class intervals: 15-20, 20-25, 25-30... etc.\nfrequencies (f) = cf(current) - cf(previous):\n15-20: cf=2, f=2\n20-25: cf=6, f=6-2=4\n25-30: cf=24, f=24-6=18\n30-35: cf=45, f=45-24=21\n35-40: cf=78, f=78-45=33\n...\nTotal N = 100. N/2 = 50.\nThe cf just greater than 50 is 78, corresponding to class 35-40.\nMedian class = 35-40.\nl = 35, cf = 45, f = 33, h = 5.\nMedian = l + [ (N/2 - cf) / f ] × h\n= 35 + [ (50 - 45) / 33 ] × 5\n= 35 + [ 5 / 33 ] × 5\n= 35 + 25/33 = 35 + 0.76 = 35.76 years.",
+      "solution_hi": "दिए गए आँकड़े 'से कम (less than)' प्रकार के हैं, इसलिए बारंबारताएं वास्तव में संचयी बारंबारताएं (cf) हैं।\nहम वर्ग अंतराल बनाते हैं: 15-20, 20-25, 25-30... आदि।\nबारंबारता (f) = cf(वर्तमान) - cf(पिछला):\n15-20: cf=2, f=2\n20-25: cf=6, f=6-2=4\n25-30: cf=24, f=24-6=18\n30-35: cf=45, f=45-24=21\n35-40: cf=78, f=78-45=33\n...\nकुल N = 100. N/2 = 50.\n50 से ठीक बड़ी cf 78 है, जो वर्ग 35-40 के संगत है।\nमाध्यक वर्ग = 35-40.\nl = 35, cf = 45, f = 33, h = 5.\nमाध्यक = l + [ (N/2 - cf) / f ] × h\n= 35 + [ (50 - 45) / 33 ] × 5\n= 35 + [ 5 / 33 ] × 5\n= 35 + 25/33 = 35 + 0.76 = 35.76 वर्ष।",
+      "solution_gu": "આપેલી માહિતી 'થી ઓછા (less than)' પ્રકારની છે, તેથી આવૃત્તિઓ વાસ્તવમાં સંચયી આવૃત્તિઓ (cf) છે.\nઆપણે વર્ગ અંતરાલો બનાવીએ છીએ: 15-20, 20-25, 25-30... વગેરે.\nઆવૃત્તિ (f) = cf(વર્તમાન) - cf(અગાઉનું):\n15-20: cf=2, f=2\n20-25: cf=6, f=6-2=4\n25-30: cf=24, f=24-6=18\n30-35: cf=45, f=45-24=21\n35-40: cf=78, f=78-45=33\n...\nકુલ N = 100. N/2 = 50.\n50 થી તરત મોટી cf 78 છે, જે વર્ગ 35-40 ને અનુરૂપ છે.\nમધ્યસ્થ વર્ગ = 35-40.\nl = 35, cf = 45, f = 33, h = 5.\nમધ્યસ્થ = l + [ (N/2 - cf) / f ] × h\n= 35 + [ (50 - 45) / 33 ] × 5\n= 35 + [ 5 / 33 ] × 5\n= 35 + 25/33 = 35 + 0.76 = 35.76 વર્ષ."
+    },
+    {
+      "id": "C10_MATH_CH13_PRACTICE_7",
+      "type": "practice_question",
+      "question": "If the mean of a moderately asymmetrical distribution is 24 and the median is 26, find the mode using empirical formula.",
+      "options": [
+        "22",
+        "28",
+        "30",
+        "32"
+      ],
+      "question_hi": "यदि एक साधारणतः असममित (moderately asymmetrical) बंटन का माध्य 24 और माध्यक 26 है, तो आनुभविक सूत्र (empirical formula) का उपयोग करके बहुलक ज्ञात कीजिए।",
+      "options_hi": [
+        "22",
+        "28",
+        "30",
+        "32"
+      ],
+      "question_gu": "જો સાધારણ અસમમિત વિતરણનો મધ્યક 24 અને મધ્યસ્થ 26 હોય, તો આનુભવિક સૂત્ર (empirical formula) નો ઉપયોગ કરીને બહુલક શોધો.",
+      "options_gu": [
+        "22",
+        "28",
+        "30",
+        "32"
+      ],
       "correct_index": 2,
-      "explanation": "When a solid is melted and recast into another shape, the amount of material remains the same. Hence, the volume remains unaltered.",
-      "explanation_hi": "जब किसी ठोस को पिघलाकर दूसरे आकार में ढाला जाता है, तो सामग्री की मात्रा समान रहती है। इसलिए, आयतन अपरिवर्तित रहता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_4",
-      "type": "quiz",
-      "question": "The total surface area of a solid hemisphere of radius 'r' is:",
-      "question_hi": "त्रिज्या 'r' वाले एक ठोस अर्धगोले का कुल पृष्ठीय क्षेत्रफल है:",
-      "options": ["2πr²", "3πr²", "4πr²", "πr²"],
-      "options_hi": ["2πr²", "3πr²", "4πr²", "πr²"],
-      "correct_index": 1,
-      "explanation": "The total surface area of a solid hemisphere includes its curved surface area (2πr²) and the flat circular base area (πr²). Total = 3πr².",
-      "explanation_hi": "एक ठोस अर्धगोले के कुल पृष्ठीय क्षेत्रफल में इसका वक्र पृष्ठीय क्षेत्रफल (2πr²) और समतल वृत्ताकार आधार का क्षेत्रफल (πr²) शामिल होता है। कुल = 3πr²।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_5",
-      "type": "quiz",
-      "question": "A cone, a hemisphere, and a cylinder stand on equal bases and have the same height. What is the ratio of their volumes?",
-      "question_hi": "एक शंकु, एक अर्धगोला और एक बेलन समान आधार पर खड़े हैं और उनकी ऊंचाई समान है। उनके आयतनों का अनुपात क्या है?",
-      "options": ["1:2:3", "2:1:3", "3:2:1", "1:3:2"],
-      "options_hi": ["1:2:3", "2:1:3", "3:2:1", "1:3:2"],
-      "correct_index": 0,
-      "explanation": "Since they have the same base and height, h = r. Volume of cone = (1/3)πr³, Hemisphere = (2/3)πr³, Cylinder = πr³. Ratio is (1/3):(2/3):1 = 1:2:3.",
-      "explanation_hi": "चूंकि उनका आधार और ऊंचाई समान है, h = r। शंकु का आयतन = (1/3)πr³, अर्धगोला = (2/3)πr³, बेलन = πr³। अनुपात (1/3):(2/3):1 = 1:2:3 है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_6",
-      "type": "quiz",
-      "question": "If the radius of the base of a right circular cylinder is halved, keeping the height same, what is the ratio of the volume of the reduced cylinder to that of the original?",
-      "question_hi": "यदि एक लंब वृत्तीय बेलन के आधार की त्रिज्या को आधा कर दिया जाए, जबकि ऊंचाई समान रहे, तो घटे हुए बेलन के आयतन का मूल बेलन के आयतन से अनुपात क्या होगा?",
-      "options": ["1:2", "1:4", "1:8", "4:1"],
-      "options_hi": ["1:2", "1:4", "1:8", "4:1"],
-      "correct_index": 1,
-      "explanation": "Original volume = πr²h. New volume = π(r/2)²h = (1/4)πr²h. Ratio = (1/4) : 1 = 1:4.",
-      "explanation_hi": "मूल आयतन = πr²h। नया आयतन = π(r/2)²h = (1/4)πr²h। अनुपात = (1/4) : 1 = 1:4।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_7",
-      "type": "quiz",
-      "question": "A cylinder and a cone have the same base radius and the same height. The ratio of the volume of the cylinder to that of the cone is:",
-      "question_hi": "एक बेलन और एक शंकु के आधार की त्रिज्या समान है और ऊंचाई समान है। बेलन के आयतन का शंकु के आयतन से अनुपात है:",
-      "options": ["1:3", "3:1", "1:2", "2:1"],
-      "options_hi": ["1:3", "3:1", "1:2", "2:1"],
-      "correct_index": 1,
-      "explanation": "Volume of cylinder = πr²h. Volume of cone = (1/3)πr²h. Ratio = πr²h : (1/3)πr²h = 3:1.",
-      "explanation_hi": "बेलन का आयतन = πr²h। शंकु का आयतन = (1/3)πr²h। अनुपात = πr²h : (1/3)πr²h = 3:1।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_8",
-      "type": "quiz",
-      "question": "A metallic sphere of radius 4.2 cm is melted and recast into the shape of a cylinder of radius 6 cm. The height of the cylinder is:",
-      "question_hi": "4.2 सेमी त्रिज्या वाले धातु के एक गोले को पिघलाकर 6 सेमी त्रिज्या वाले एक बेलन के आकार में ढाला जाता है। बेलन की ऊंचाई है:",
-      "options": ["2.74 cm", "2.744 cm", "1.4 cm", "3.2 cm"],
-      "options_hi": ["2.74 सेमी", "2.744 सेमी", "1.4 सेमी", "3.2 सेमी"],
-      "correct_index": 1,
-      "explanation": "Volume of sphere = Volume of cylinder. (4/3)π(4.2)³ = π(6)²h. Solving for h gives h = (4 × 4.2 × 4.2 × 4.2) / (3 × 36) = 2.744 cm.",
-      "explanation_hi": "गोले का आयतन = बेलन का आयतन। (4/3)π(4.2)³ = π(6)²h। h के लिए हल करने पर h = (4 × 4.2 × 4.2 × 4.2) / (3 × 36) = 2.744 सेमी मिलता है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_9",
-      "type": "quiz",
-      "question": "If the surface area of a sphere is 616 cm², what is its radius? (Take π = 22/7)",
-      "question_hi": "यदि एक गोले का पृष्ठीय क्षेत्रफल 616 सेमी² है, तो इसकी त्रिज्या क्या है? (π = 22/7 लें)",
-      "options": ["7 cm", "14 cm", "21 cm", "3.5 cm"],
-      "options_hi": ["7 सेमी", "14 सेमी", "21 सेमी", "3.5 सेमी"],
-      "correct_index": 0,
-      "explanation": "Surface area = 4πr² = 616. Therefore, 4 × (22/7) × r² = 616. r² = (616 × 7) / 88 = 49. So, r = 7 cm.",
-      "explanation_hi": "पृष्ठीय क्षेत्रफल = 4πr² = 616. इसलिए, 4 × (22/7) × r² = 616. r² = (616 × 7) / 88 = 49. अतः, r = 7 सेमी।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_10",
-      "type": "quiz",
-      "question": "A solid metallic cylinder of base radius 3 cm and height 5 cm is melted to form cones, each of height 1 cm and base radius 1 mm. The number of cones formed is:",
-      "question_hi": "आधार त्रिज्या 3 सेमी और ऊंचाई 5 सेमी वाले एक ठोस धातु के बेलन को पिघलाकर 1 सेमी ऊंचाई और 1 मिमी आधार त्रिज्या वाले शंकु बनाए जाते हैं। बने शंकुओं की संख्या है:",
-      "options": ["450", "1350", "4500", "13500"],
-      "options_hi": ["450", "1350", "4500", "13500"],
-      "correct_index": 3,
-      "explanation": "Radius of cone = 1 mm = 0.1 cm. Number of cones = Volume of cylinder / Volume of one cone = [π(3)²(5)] / [(1/3)π(0.1)²(1)] = 45 / 0.00333... = 13500.",
-      "explanation_hi": "शंकु की त्रिज्या = 1 मिमी = 0.1 सेमी। शंकुओं की संख्या = बेलन का आयतन / एक शंकु का आयतन = [π(3)²(5)] / [(1/3)π(0.1)²(1)] = 13500।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_11",
-      "type": "quiz",
-      "question": "If the ratio of the volumes of two spheres is 1:8, then the ratio of their surface areas is:",
-      "question_hi": "यदि दो गोलों के आयतनों का अनुपात 1:8 है, तो उनके पृष्ठीय क्षेत्रफलों का अनुपात है:",
-      "options": ["1:2", "1:4", "1:8", "1:16"],
-      "options_hi": ["1:2", "1:4", "1:8", "1:16"],
-      "correct_index": 1,
-      "explanation": "V1/V2 = (r1/r2)³ = 1/8, so r1/r2 = 1/2. Ratio of surface areas = (r1/r2)² = (1/2)² = 1:4.",
-      "explanation_hi": "V1/V2 = (r1/r2)³ = 1/8, इसलिए r1/r2 = 1/2। पृष्ठीय क्षेत्रफलों का अनुपात = (r1/r2)² = (1/2)² = 1:4।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_12",
-      "type": "quiz",
-      "question": "The shape of a 'gilli', in the traditional game of gilli-danda, is a combination of:",
-      "question_hi": "गिल्ली-डंडा के पारंपरिक खेल में एक 'गिल्ली' का आकार किसका संयोजन होता है?",
-      "options": ["Two cylinders", "A cone and a cylinder", "Two cones and a cylinder", "Two cylinders and a cone"],
-      "options_hi": ["दो बेलन", "एक शंकु और एक बेलन", "दो शंकु और एक बेलन", "दो बेलन और एक शंकु"],
-      "correct_index": 2,
-      "explanation": "A gilli is pointed at both ends and cylindrical in the middle. Hence, it is a combination of a cylinder and two cones at the ends.",
-      "explanation_hi": "एक गिल्ली दोनों सिरों पर नुकीली और बीच में बेलनाकार होती है। इसलिए, यह एक बेलन और सिरों पर दो शंकुओं का संयोजन है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_13",
-      "type": "quiz",
-      "question": "A right circular cylinder of radius 'r' cm and height 'h' cm (h > 2r) just encloses a sphere. What is the radius of the sphere?",
-      "question_hi": "त्रिज्या 'r' सेमी और ऊंचाई 'h' सेमी (h > 2r) वाला एक लंब वृत्तीय बेलन एक गोले को पूरी तरह से घेर लेता है। गोले की त्रिज्या क्या है?",
-      "options": ["r", "h", "h/2", "2r"],
-      "options_hi": ["r", "h", "h/2", "2r"],
-      "correct_index": 0,
-      "explanation": "If a cylinder just encloses a sphere, the sphere touches the sides of the cylinder. Therefore, the radius of the sphere equals the radius of the cylinder, 'r'.",
-      "explanation_hi": "यदि कोई बेलन किसी गोले को पूरी तरह से घेर लेता है, तो गोला बेलन के किनारों को छूता है। इसलिए, गोले की त्रिज्या बेलन की त्रिज्या 'r' के बराबर होती है।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_14",
-      "type": "quiz",
-      "question": "A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5 mm. What is its surface area?",
-      "question_hi": "एक दवा का कैप्सूल एक बेलन के आकार का है जिसके दोनों सिरों पर दो अर्धगोले लगे हुए हैं। पूरे कैप्सूल की लंबाई 14 मिमी है और कैप्सूल का व्यास 5 मिमी है। इसका पृष्ठीय क्षेत्रफल क्या है?",
-      "options": ["220 mm²", "180 mm²", "200 mm²", "240 mm²"],
-      "options_hi": ["220 मिमी²", "180 मिमी²", "200 मिमी²", "240 मिमी²"],
-      "correct_index": 0,
-      "explanation": "Radius = 2.5 mm. Cylinder length = 14 - (2.5 + 2.5) = 9 mm. Surface Area = CSA of cylinder + 2 × CSA of hemisphere = 2πrh + 2(2πr²) = 2πr(h + 2r) = 2 × 22/7 × 2.5 × (9 + 5) = 220 mm².",
-      "explanation_hi": "त्रिज्या = 2.5 मिमी। बेलन की लंबाई = 14 - (2.5 + 2.5) = 9 मिमी। पृष्ठीय क्षेत्रफल = बेलन का वक्र पृष्ठ + 2 × अर्धगोले का वक्र पृष्ठ = 2πrh + 2(2πr²) = 2πr(h + 2r) = 2 × 22/7 × 2.5 × (9 + 5) = 220 मिमी²।"
-    },
-    {
-      "id": "QUIZ_ncert_class10_maths_ch13_15",
-      "type": "quiz",
-      "question": "If a solid cylinder of radius 'r' and height 'h' is placed over another cylinder of the same radius and height, the total surface area of the new shape formed is:",
-      "question_hi": "यदि त्रिज्या 'r' और ऊंचाई 'h' वाले एक ठोस बेलन को समान त्रिज्या और ऊंचाई वाले दूसरे बेलन के ऊपर रखा जाता है, तो बनने वाले नए आकार का कुल पृष्ठीय क्षेत्रफल क्या है?",
-      "options": ["4πrh + 4πr²", "4πrh + 2πr²", "2πrh + 2πr²", "4πrh + 3πr²"],
-      "options_hi": ["4πrh + 4πr²", "4πrh + 2πr²", "2πrh + 2πr²", "4πrh + 3πr²"],
-      "correct_index": 1,
-      "explanation": "The new shape is a cylinder with radius 'r' and height '2h'. Its total surface area is 2πr(2h) + 2πr² = 4πrh + 2πr².",
-      "explanation_hi": "नया आकार त्रिज्या 'r' और ऊंचाई '2h' वाला एक बेलन है। इसका कुल पृष्ठीय क्षेत्रफल 2πr(2h) + 2πr² = 4πrh + 2πr² है।"
+      "solution": "Given: Mean = 24, Median = 26.\nEmpirical formula: 3 Median = Mode + 2 Mean\n3(26) = Mode + 2(24)\n78 = Mode + 48\nMode = 78 - 48 = 30.",
+      "solution_hi": "दिया है: माध्य = 24, माध्यक = 26.\nआनुभविक सूत्र: 3 माध्यक = बहुलक + 2 माध्य\n3(26) = बहुलक + 2(24)\n78 = बहुलक + 48\nबहुलक = 78 - 48 = 30.",
+      "solution_gu": "આપેલ છે: મધ્યક = 24, મધ્યસ્થ = 26.\nઆનુભવિક સૂત્ર: 3 મધ્યસ્થ = બહુલક + 2 મધ્યક\n3(26) = બહુલક + 2(24)\n78 = બહુલક + 48\nબહુલક = 78 - 48 = 30."
     }
   ]
 }

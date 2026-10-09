@@ -55,7 +55,7 @@ def parse_english_mcq_chapter(txt_file, ch_id, ch_title, output_dir):
                     "question": f"Q{q_num}: {q_text}",
                     "options": parsed_options,
                     "correct_answer": correct_answer,
-                    "explanation": "Correct answer as per the DEO question bank."
+                    "explanation": "Correct answer as per the question question bank."
                 }
             })
             mcq_count += 1

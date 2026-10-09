@@ -90,18 +90,18 @@ def generate_subjective_paper(subject, chapter_id, title):
 
 def generate_deo_bank():
     papers = [
-        {"id": "gseb_class10_deo_bank_2026_ch1", "subj": "Science", "title": "Science DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch2", "subj": "Science", "title": "Science DEO Bank (Part 2 - Subject)", "type": "subjective"},
-        {"id": "gseb_class10_deo_bank_2026_ch3", "subj": "Maths Basic", "title": "Maths Basic DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch4", "subj": "Maths Basic", "title": "Maths Basic DEO Bank (Part 2 - Subject)", "type": "subjective"},
-        {"id": "gseb_class10_deo_bank_2026_ch5", "subj": "Maths Standard", "title": "Maths Standard DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch6", "subj": "Maths Standard", "title": "Maths Standard DEO Bank (Part 2 - Subject)", "type": "subjective"},
-        {"id": "gseb_class10_deo_bank_2026_ch7", "subj": "Social Science", "title": "Social Science DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch8", "subj": "Social Science", "title": "Social Science DEO Bank (Part 2 - Subject)", "type": "subjective"},
-        {"id": "gseb_class10_deo_bank_2026_ch9", "subj": "English (FL)", "title": "English (FL) DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch10", "subj": "English (FL)", "title": "English (FL) DEO Bank (Part 2 - Subject)", "type": "subjective"},
-        {"id": "gseb_class10_deo_bank_2026_ch11", "subj": "Gujarati (SL)", "title": "Gujarati (SL) DEO Bank (Part 1 - MCQs)", "type": "mcq"},
-        {"id": "gseb_class10_deo_bank_2026_ch12", "subj": "Gujarati (SL)", "title": "Gujarati (SL) DEO Bank (Part 2 - Subject)", "type": "subjective"}
+        {"id": "gseb_class10_question_bank_2026_ch1", "subj": "Science", "title": "Science question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch2", "subj": "Science", "title": "Science question Bank (Part 2 - Subject)", "type": "subjective"},
+        {"id": "gseb_class10_question_bank_2026_ch3", "subj": "Maths Basic", "title": "Maths Basic question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch4", "subj": "Maths Basic", "title": "Maths Basic question Bank (Part 2 - Subject)", "type": "subjective"},
+        {"id": "gseb_class10_question_bank_2026_ch5", "subj": "Maths Standard", "title": "Maths Standard question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch6", "subj": "Maths Standard", "title": "Maths Standard question Bank (Part 2 - Subject)", "type": "subjective"},
+        {"id": "gseb_class10_question_bank_2026_ch7", "subj": "Social Science", "title": "Social Science question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch8", "subj": "Social Science", "title": "Social Science question Bank (Part 2 - Subject)", "type": "subjective"},
+        {"id": "gseb_class10_question_bank_2026_ch9", "subj": "English (FL)", "title": "English (FL) question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch10", "subj": "English (FL)", "title": "English (FL) question Bank (Part 2 - Subject)", "type": "subjective"},
+        {"id": "gseb_class10_question_bank_2026_ch11", "subj": "Gujarati (SL)", "title": "Gujarati (SL) question Bank (Part 1 - MCQs)", "type": "mcq"},
+        {"id": "gseb_class10_question_bank_2026_ch12", "subj": "Gujarati (SL)", "title": "Gujarati (SL) question Bank (Part 2 - Subject)", "type": "subjective"}
     ]
     
     os.makedirs("app_core/chapters", exist_ok=True)
@@ -114,4 +114,4 @@ def generate_deo_bank():
 
 if __name__ == "__main__":
     generate_deo_bank()
-    print("DEO Bank papers generated successfully.")
+    print("question Bank papers generated successfully.")

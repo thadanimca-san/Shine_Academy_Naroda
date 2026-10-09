@@ -1,0 +1,154 @@
+[
+  {
+    "id": "BLK_CH10_01",
+    "type": "real_world_example",
+    "content": "Imagine you inherited an irregularly shaped triangular plot of land. To sell it, you need to know its exact area. You can easily measure its three boundaries (sides) by walking around it, but measuring the perpendicular 'height' across a bumpy field is almost impossible. How do you find the area using just the three side lengths? Enter Heron's Formula!",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2,
+    "bloom": "Understand"
+  },
+  {
+    "id": "BLK_CH10_02",
+    "type": "theory",
+    "content": "In this chapter, we will learn how to calculate the area of any triangle when only the lengths of its three sides are known. This method, discovered by the ancient Greek mathematician Heron of Alexandria, eliminates the need to know the triangle's height.",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1,
+    "bloom": "Remember"
+  },
+  {
+    "id": "BLK_CH10_03",
+    "type": "theory",
+    "content": "Normally, the area of a triangle is calculated using the formula: Area = (1/2) * base * height. But when the height is unknown, we use a new metric based solely on the sides. First, we need a concept called the 'semi-perimeter'.",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2,
+    "bloom": "Understand"
+  },
+  {
+    "id": "BLK_CH10_04",
+    "type": "dictionary_link",
+    "content": "Before proceeding, make sure you understand the concept of [Semi-Perimeter](#TERM_SEMI_PERIMETER).",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1,
+    "bloom": "Remember"
+  },
+  {
+    "id": "BLK_CH10_05",
+    "type": "formula",
+    "content": "If a triangle has side lengths a, b, and c, its semi-perimeter (s) is given by:\n\ns = (a + b + c) / 2",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_06",
+    "type": "memory_trick",
+    "content": "Think of the prefix 'semi-' like a semi-circle (half a circle) or the semi-finals (halfway to the finals). So, semi-perimeter simply means 'half of the perimeter'. Find the total boundary, then cut it in half!",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1,
+    "bloom": "Remember"
+  },
+  {
+    "id": "BLK_CH10_07",
+    "type": "flashcard",
+    "content": "Question: What is the semi-perimeter of a triangle with sides 6, 8, and 10?\nAnswer: 12. (Because 6+8+10 = 24, and 24 / 2 = 12)",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_08",
+    "type": "common_mistakes",
+    "content": "A very frequent mistake is calculating (a + b + c) and stopping there! Remember, that is the PERIMETER. Heron's formula specifically uses the SEMI-perimeter 's'. Always remember to divide the sum by 2.",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2,
+    "bloom": "Analyze"
+  },
+  {
+    "id": "BLK_CH10_09",
+    "type": "theory",
+    "content": "Once we have the semi-perimeter (s), we can plug it into Heron's Formula. This formula beautifully relates the area of the triangle to the differences between the semi-perimeter and each of its sides.",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2,
+    "bloom": "Understand"
+  },
+  {
+    "id": "BLK_CH10_10",
+    "type": "formula",
+    "content": "Heron's Formula for the area of a triangle:\n\nArea = √[s * (s - a) * (s - b) * (s - c)]\n\nWhere 's' is the semi-perimeter, and 'a', 'b', 'c' are the lengths of the sides.",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_11",
+    "type": "teacher_tip",
+    "content": "When evaluating √[s * (s - a) * (s - b) * (s - c)], DO NOT multiply all four numbers into one massive number! Instead, break each number down into its prime factors. This makes finding pairs of numbers for the square root incredibly easy.",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3,
+    "bloom": "Analyze"
+  },
+  {
+    "id": "BLK_CH10_12",
+    "type": "worked_example",
+    "content": "Find the area of a triangle with sides 13 cm, 14 cm, and 15 cm.\n\nStep 1: Calculate semi-perimeter (s)\ns = (13 + 14 + 15) / 2 = 42 / 2 = 21 cm.\n\nStep 2: Calculate differences\n(s - a) = 21 - 13 = 8\n(s - b) = 21 - 14 = 7\n(s - c) = 21 - 15 = 6\n\nStep 3: Apply Heron's Formula\nArea = √[21 * 8 * 7 * 6]\n\nStep 4: Prime factorize instead of multiplying\n= √[(3 * 7) * (2 * 2 * 2) * (7) * (2 * 3)]\nGroup the pairs:\n= √[(2*2) * (2*2) * (3*3) * (7*7)]\n= 2 * 2 * 3 * 7\n= 84 cm².",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_13",
+    "type": "common_mistakes",
+    "content": "When calculating the differences (s-a), (s-b), and (s-c), make sure to subtract the SIDE from the SEMI-PERIMETER. A common error is doing (a-s), resulting in a negative number, which makes the square root impossible (imaginary number). Also, note that 's' must always be strictly greater than any individual side of a valid triangle.",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2,
+    "bloom": "Analyze"
+  },
+  {
+    "id": "BLK_CH10_14",
+    "type": "worked_example",
+    "content": "An isosceles triangle has a perimeter of 30 cm and each of the equal sides is 12 cm. Find the area of the triangle.\n\nStep 1: Find the third side\nPerimeter = 30 = 12 + 12 + c\n24 + c = 30  =>  c = 6 cm.\n\nStep 2: Semi-perimeter\ns = 30 / 2 = 15 cm.\n\nStep 3: Apply Heron's Formula\nArea = √[15 * (15 - 12) * (15 - 12) * (15 - 6)]\n= √[15 * 3 * 3 * 9]\n= √[(3 * 5) * 3 * 3 * (3 * 3)]\n= 9√15 cm².",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_15",
+    "type": "theory",
+    "content": "Heron's formula isn't just for triangles! We can use it to find the area of complex quadrilaterals. By drawing a diagonal across the quadrilateral, we split it into two distinct triangles. We can then apply Heron's formula to both triangles and sum their areas.",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3,
+    "bloom": "Understand"
+  },
+  {
+    "id": "BLK_CH10_16",
+    "type": "worked_example",
+    "content": "Find the area of a quadrilateral ABCD where AB = 3m, BC = 4m, CD = 4m, DA = 5m, and AC = 5m.\n\nStep 1: Triangle ABC (sides 3, 4, 5)\nSince 3² + 4² = 5², it's a right-angled triangle.\nArea(ABC) = (1/2) * base * height = (1/2) * 3 * 4 = 6 m².\n(Alternatively, using Heron's: s=(3+4+5)/2=6; √[6*3*2*1] = 6 m²)\n\nStep 2: Triangle ACD (sides 5, 4, 5)\ns = (5+4+5)/2 = 14/2 = 7.\nArea(ACD) = √[7 * (7-5) * (7-4) * (7-5)]\n= √[7 * 2 * 3 * 2] = 2√21 m².\n\nStep 3: Total Area\nArea(ABCD) = 6 + 2√21 m².",
+    "difficulty": "Advanced",
+    "estimated_minutes": 7,
+    "bloom": "Apply"
+  },
+  {
+    "id": "BLK_CH10_17",
+    "type": "summary",
+    "content": "Chapter Summary:\n1. The semi-perimeter 's' of a triangle with sides a,b,c is s = (a+b+c)/2.\n2. Heron's Formula for the area is √[s(s-a)(s-b)(s-c)].\n3. This formula is highly useful when heights are unknown and for finding areas of quadrilaterals by splitting them into triangles.",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3,
+    "bloom": "Remember"
+  },
+  {
+    "id": "BLK_CH10_18",
+    "type": "challenge_question",
+    "content": "A floral design on a floor is made up of 16 triangular tiles. The sides of each triangle are 9 cm, 28 cm, and 35 cm. If the cost of polishing the tiles is 50 paise per cm², what is the total cost of polishing the design?",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8,
+    "bloom": "Create"
+  },
+  {
+    "id": "BLK_CH10_19",
+    "type": "board_questions",
+    "content": "Are you ready to test yourself? Head over to the Question Bank and try out real exam questions from past board papers to test your mastery of Heron's Formula!",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 1,
+    "bloom": "Evaluate"
+  }
+]

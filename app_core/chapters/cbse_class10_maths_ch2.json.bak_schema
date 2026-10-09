@@ -1,0 +1,583 @@
+[
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_01",
+    "type": "hook",
+    "title": "The Rollercoaster of Math!",
+    "title_hi": "गणित का रोलरकोस्टर!",
+    "body": "Have you ever looked at a rollercoaster and wondered how engineers design its exact shape? The loops, the ups, and the downs aren't random. They are designed using mathematical curves called Polynomials! Let's find out how.",
+    "body_hi": "क्या आपने कभी रोलरकोस्टर को देखकर सोचा है कि इंजीनियर इसके सटीक आकार को कैसे डिज़ाइन करते हैं? लूप, उतार और चढ़ाव यादृच्छिक नहीं होते हैं। वे बहुपद (Polynomials) नामक गणितीय वक्रों का उपयोग करके डिज़ाइन किए गए हैं! आइए जानते हैं कैसे।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_02",
+    "type": "socratic_thinking",
+    "question": "If you throw a ball in the air, it goes up and then comes down in a curved path. What do you think defines this path?",
+    "question_hi": "यदि आप एक गेंद को हवा में फेंकते हैं, तो वह ऊपर जाती है और फिर एक घुमावदार रास्ते में नीचे आती है। आपको क्या लगता है कि इस रास्ते को कौन परिभाषित करता है?",
+    "options": [
+      "A straight line equation",
+      "A magical force",
+      "A quadratic polynomial",
+      "A circle's equation"
+    ],
+    "options_hi": [
+      "एक सीधी रेखा का समीकरण",
+      "एक जादुई शक्ति",
+      "एक द्विघात बहुपद",
+      "एक वृत्त का समीकरण"
+    ],
+    "correct_index": 2,
+    "explanation": "The path is a parabola, which is perfectly described by a quadratic polynomial!",
+    "explanation_hi": "यह रास्ता एक परवलय (parabola) है, जिसे एक द्विघात बहुपद द्वारा पूरी तरह से वर्णित किया जाता है!"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_03",
+    "type": "discovery",
+    "title": "Understanding the Curves",
+    "title_hi": "वक्रों को समझना",
+    "body": "Imagine drawing a simple straight line on a graph. Now imagine bending that line into a U-shape. As we add more 'powers' (exponents) to our variables, the graph gets more bends and curves. These shapes are the visual representation of polynomials.",
+    "body_hi": "एक ग्राफ पर एक साधारण सीधी रेखा खींचने की कल्पना करें। अब उस रेखा को U-आकार में मोड़ने की कल्पना करें। जैसे-जैसे हम अपने चर में अधिक 'घात' (exponents) जोड़ते हैं, ग्राफ में अधिक मोड़ और वक्र आते हैं। ये आकृतियाँ बहुपदों का दृश्य प्रतिनिधित्व हैं।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_04",
+    "type": "reveal",
+    "title": "What is a Polynomial?",
+    "title_hi": "बहुपद क्या है?",
+    "body": "A polynomial is an algebraic expression consisting of variables and coefficients, involving only the operations of addition, subtraction, multiplication, and non-negative integer exponents of variables. For example, p(x) = 2x^2 - 3x + 4. The highest power of x is called the 'degree' of the polynomial.",
+    "body_hi": "बहुपद एक बीजीय व्यंजक है जिसमें चर और गुणांक होते हैं, जिनमें केवल जोड़, घटाव, गुणा और चरों के गैर-नकारात्मक पूर्णांक घातांक के संचालन शामिल होते हैं। उदाहरण के लिए, p(x) = 2x^2 - 3x + 4। x की उच्चतम घात को बहुपद की 'घात' (degree) कहा जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_05",
+    "type": "theory",
+    "title": "Types of Polynomials by Degree",
+    "title_hi": "घात के आधार पर बहुपदों के प्रकार",
+    "body": "1. Linear Polynomial: Degree 1 (e.g., 2x + 3)\n2. Quadratic Polynomial: Degree 2 (e.g., x^2 + 5x + 6)\n3. Cubic Polynomial: Degree 3 (e.g., x^3 - 4x^2 + x - 1)",
+    "body_hi": "1. रैखिक बहुपद: घात 1 (उदा., 2x + 3)\n2. द्विघात बहुपद: घात 2 (उदा., x^2 + 5x + 6)\n3. त्रिघात बहुपद: घात 3 (उदा., x^3 - 4x^2 + x - 1)"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_06",
+    "type": "knowledge_check",
+    "question": "What is the degree of the polynomial p(x) = 4x^3 - 2x^5 + x - 7?",
+    "question_hi": "बहुपद p(x) = 4x^3 - 2x^5 + x - 7 की घात क्या है?",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "7"
+    ],
+    "options_hi": [
+      "3",
+      "5",
+      "4",
+      "7"
+    ],
+    "correct_index": 1,
+    "explanation": "The degree is the highest power of the variable x, which is 5 here.",
+    "explanation_hi": "घात चर x की उच्चतम शक्ति है, जो यहाँ 5 है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_07",
+    "type": "theory",
+    "title": "Zeroes of a Polynomial",
+    "title_hi": "बहुपद के शून्यक",
+    "body": "A real number 'k' is a zero of a polynomial p(x), if p(k) = 0. Geometrically, the zeroes of a polynomial are the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.",
+    "body_hi": "एक वास्तविक संख्या 'k' बहुपद p(x) का शून्यक है, यदि p(k) = 0। ज्यामितीय रूप से, एक बहुपद के शून्यक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ y = p(x) का ग्राफ x-अक्ष को काटता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_08",
+    "type": "knowledge_check",
+    "question": "If the graph of a polynomial intersects the x-axis at 3 distinct points, how many real zeroes does it have?",
+    "question_hi": "यदि किसी बहुपद का ग्राफ x-अक्ष को 3 अलग-अलग बिंदुओं पर काटता है, तो उसके कितने वास्तविक शून्यक होंगे?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "options_hi": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct_index": 2,
+    "explanation": "The number of real zeroes equals the number of times the graph intersects the x-axis.",
+    "explanation_hi": "वास्तविक शून्यकों की संख्या ग्राफ द्वारा x-अक्ष को काटने की संख्या के बराबर होती है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_09",
+    "type": "theory",
+    "title": "Relationship between Zeroes and Coefficients",
+    "title_hi": "शून्यकों और गुणांकों के बीच संबंध",
+    "body": "For a quadratic polynomial ax^2 + bx + c, let the zeroes be α and β.\nSum of zeroes (α + β) = -b/a\nProduct of zeroes (α * β) = c/a",
+    "body_hi": "एक द्विघात बहुपद ax^2 + bx + c के लिए, मान लें कि शून्यक α और β हैं।\nशून्यकों का योग (α + β) = -b/a\nशून्यकों का गुणनफल (α * β) = c/a"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_10",
+    "type": "knowledge_check",
+    "question": "For the polynomial x^2 - 5x + 6, what is the sum of its zeroes?",
+    "question_hi": "बहुपद x^2 - 5x + 6 के लिए, इसके शून्यकों का योग क्या है?",
+    "options": [
+      "5",
+      "-5",
+      "6",
+      "-6"
+    ],
+    "options_hi": [
+      "5",
+      "-5",
+      "6",
+      "-6"
+    ],
+    "correct_index": 0,
+    "explanation": "Sum of zeroes = -b/a = -(-5)/1 = 5.",
+    "explanation_hi": "शून्यकों का योग = -b/a = -(-5)/1 = 5।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_11",
+    "type": "reflection",
+    "title": "Time to Reflect",
+    "title_hi": "विचार करने का समय",
+    "body": "Think about why a quadratic polynomial can have at most 2 zeroes, a cubic at most 3, and so on. Can you explain this to a friend using the idea of how a graph bends?",
+    "body_hi": "सोचिए कि एक द्विघात बहुपद में अधिकतम 2 शून्यक, एक त्रिघात में अधिकतम 3, इत्यादि क्यों हो सकते हैं। क्या आप अपने दोस्त को यह ग्राफ के मुड़ने के विचार का उपयोग करके समझा सकते हैं?"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_12",
+    "type": "connection",
+    "title": "Connecting to the Real World",
+    "title_hi": "वास्तविक दुनिया से जुड़ना",
+    "body": "Polynomials aren't just graph curves! They are used to model population growth, predict stock market trends, and even in computer graphics to render smooth 3D objects in your favorite video games.",
+    "body_hi": "बहुपद केवल ग्राफ वक्र नहीं हैं! इनका उपयोग जनसंख्या वृद्धि को मॉडल करने, शेयर बाजार के रुझानों की भविष्यवाणी करने, और यहां तक कि आपके पसंदीदा वीडियो गेम में चिकनी 3D वस्तुओं को प्रस्तुत करने के लिए कंप्यूटर ग्राफिक्स में किया जाता है।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_13",
+    "type": "mastery",
+    "title": "Mastery Challenge",
+    "title_hi": "महारत की चुनौती",
+    "body": "Find the quadratic polynomial whose zeroes are 2 and -3. Verify the relationship between the coefficients and the zeroes.",
+    "body_hi": "वह द्विघात बहुपद ज्ञात कीजिए जिसके शून्यक 2 और -3 हैं। गुणांकों और शून्यकों के बीच संबंध को सत्यापित करें।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_DEO_01",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If α and β are the zeroes of the quadratic polynomial f(x) = x² - p(x + 1) - c, then (α + 1)(β + 1) is equal to:",
+    "question_hi": "यदि α और β द्विघात बहुपद f(x) = x² - p(x + 1) - c के शून्यक हैं, तो (α + 1)(β + 1) किसके बराबर है?",
+    "options": [
+      "c - 1",
+      "1 - c",
+      "c",
+      "1 + c"
+    ],
+    "options_hi": [
+      "c - 1",
+      "1 - c",
+      "c",
+      "1 + c"
+    ],
+    "correct_index": 1,
+    "explanation": "f(x) = x² - px - p - c. Sum of zeroes = α + β = p. Product of zeroes = αβ = -(p + c). Therefore, (α + 1)(β + 1) = αβ + α + β + 1 = -(p + c) + p + 1 = 1 - c.",
+    "explanation_hi": "f(x) = x² - px - p - c। शून्यकों का योग = α + β = p। शून्यकों का गुणनफल = αβ = -(p + c)। इसलिए, (α + 1)(β + 1) = αβ + α + β + 1 = -(p + c) + p + 1 = 1 - c।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_DEO_02",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If α and β are the zeroes of the polynomial x² + 6x + 2, then the value of (1/α + 1/β) is:",
+    "question_hi": "यदि α और β बहुपद x² + 6x + 2 के शून्यक हैं, तो (1/α + 1/β) का मान है:",
+    "options": [
+      "3",
+      "-3",
+      "12",
+      "-12"
+    ],
+    "options_hi": [
+      "3",
+      "-3",
+      "12",
+      "-12"
+    ],
+    "correct_index": 1,
+    "explanation": "Sum of zeroes (α + β) = -6. Product of zeroes (αβ) = 2. Now, 1/α + 1/β = (α + β) / αβ = -6 / 2 = -3.",
+    "explanation_hi": "शून्यकों का योग (α + β) = -6। शून्यकों का गुणनफल (αβ) = 2। अब, 1/α + 1/β = (α + β) / αβ = -6 / 2 = -3।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_DEO_03",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "The quadratic polynomial whose zeroes are 5 + √2 and 5 - √2 is:",
+    "question_hi": "वह द्विघात बहुपद क्या होगा जिसके शून्यक 5 + √2 और 5 - √2 हैं?",
+    "options": [
+      "x² - 10x + 21",
+      "x² + 10x + 23",
+      "x² - 10x + 23",
+      "x² + 10x - 21"
+    ],
+    "options_hi": [
+      "x² - 10x + 21",
+      "x² + 10x + 23",
+      "x² - 10x + 23",
+      "x² + 10x - 21"
+    ],
+    "correct_index": 2,
+    "explanation": "Sum of zeroes = (5 + √2) + (5 - √2) = 10. Product of zeroes = (5 + √2)(5 - √2) = 25 - 2 = 23. A quadratic polynomial is given by x² - (Sum)x + Product = x² - 10x + 23.",
+    "explanation_hi": "शून्यकों का योग = (5 + √2) + (5 - √2) = 10। शून्यकों का गुणनफल = (5 + √2)(5 - √2) = 25 - 2 = 23। एक द्विघात बहुपद x² - (योग)x + गुणनफल द्वारा दिया जाता है = x² - 10x + 23।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_DEO_04",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If one zero of the polynomial (a² + 9)x² + 13x + 6a is the reciprocal of the other, then the value of 'a' is:",
+    "question_hi": "यदि बहुपद (a² + 9)x² + 13x + 6a का एक शून्यक दूसरे का व्युत्क्रम है, तो 'a' का मान है:",
+    "options": [
+      "2",
+      "3",
+      "-2",
+      "-3"
+    ],
+    "options_hi": [
+      "2",
+      "3",
+      "-2",
+      "-3"
+    ],
+    "correct_index": 1,
+    "explanation": "Let the zeroes be α and 1/α. Product of zeroes = α * (1/α) = 1. Therefore, 6a / (a² + 9) = 1. This gives a² - 6a + 9 = 0, which means (a - 3)² = 0. Hence, a = 3.",
+    "explanation_hi": "मान लें कि शून्यक α और 1/α हैं। शून्यकों का गुणनफल = α * (1/α) = 1। इसलिए, 6a / (a² + 9) = 1। इससे a² - 6a + 9 = 0 प्राप्त होता है, जिसका अर्थ है (a - 3)² = 0। अतः, a = 3।"
+  },
+  {
+    "id": "KOBJ_CLASS10_MATH_CH2_DEO_05",
+    "type": "mcq",
+    "is_deo_challenge": true,
+    "question": "If α and β are zeroes of the polynomial 2y² + 7y + 5, find the value of α + β + αβ.",
+    "question_hi": "यदि α और β बहुपद 2y² + 7y + 5 के शून्यक हैं, तो α + β + αβ का मान ज्ञात कीजिए।",
+    "options": [
+      "-1",
+      "1",
+      "0",
+      "-2"
+    ],
+    "options_hi": [
+      "-1",
+      "1",
+      "0",
+      "-2"
+    ],
+    "correct_index": 0,
+    "explanation": "Sum of zeroes (α + β) = -7/2. Product of zeroes (αβ) = 5/2. Then, α + β + αβ = -7/2 + 5/2 = -2/2 = -1.",
+    "explanation_hi": "शून्यकों का योग (α + β) = -7/2। शून्यकों का गुणनफल (αβ) = 5/2। तब, α + β + αβ = -7/2 + 5/2 = -2/2 = -1।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_1",
+    "type": "quiz",
+    "question": "Sample mock test question 1 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 1 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 1. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 1 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_2",
+    "type": "quiz",
+    "question": "Sample mock test question 2 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 2 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 2. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 2 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_3",
+    "type": "quiz",
+    "question": "Sample mock test question 3 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 3 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 3. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 3 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_4",
+    "type": "quiz",
+    "question": "Sample mock test question 4 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 4 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 4. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 4 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_5",
+    "type": "quiz",
+    "question": "Sample mock test question 5 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 5 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 5. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 5 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_6",
+    "type": "quiz",
+    "question": "Sample mock test question 6 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 6 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 6. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 6 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_7",
+    "type": "quiz",
+    "question": "Sample mock test question 7 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 7 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 7. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 7 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_8",
+    "type": "quiz",
+    "question": "Sample mock test question 8 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 8 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 8. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 8 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_9",
+    "type": "quiz",
+    "question": "Sample mock test question 9 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 9 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 9. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 9 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_10",
+    "type": "quiz",
+    "question": "Sample mock test question 10 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 10 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 10. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 10 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_11",
+    "type": "quiz",
+    "question": "Sample mock test question 11 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 11 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 11. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 11 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_12",
+    "type": "quiz",
+    "question": "Sample mock test question 12 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 12 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 12. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 12 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_13",
+    "type": "quiz",
+    "question": "Sample mock test question 13 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 13 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 13. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 13 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_14",
+    "type": "quiz",
+    "question": "Sample mock test question 14 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 14 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 14. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 14 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  },
+  {
+    "id": "QUIZ_cbse_class10_maths_ch2_15",
+    "type": "quiz",
+    "question": "Sample mock test question 15 for Maths Chapter?",
+    "question_hi": "क्या यह Maths Chapter के लिए नमूना मॉक टेस्ट प्रश्न 15 है?",
+    "options": [
+      "Correct Answer",
+      "Incorrect Option 1",
+      "Incorrect Option 2",
+      "Incorrect Option 3"
+    ],
+    "options_hi": [
+      "सही उत्तर",
+      "गलत विकल्प 1",
+      "गलत विकल्प 2",
+      "गलत विकल्प 3"
+    ],
+    "correct_index": 0,
+    "explanation": "Explanation for question 15. This tests your understanding of Maths Chapter.",
+    "explanation_hi": "प्रश्न 15 के लिए स्पष्टीकरण। यह Maths Chapter की आपकी समझ का परीक्षण करता है।"
+  }
+]

@@ -9,12 +9,14 @@
         {
           "chapter_id": "gseb_class9_science_ch1",
           "title": "Chapter 1: Matter in Our Surroundings",
-          "module_id": "gseb_class9_science_ch1"
+          "module_id": "gseb_class9_science_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_science_ch2",
           "title": "Chapter 2: Is Matter Around Us Pure",
-          "module_id": "gseb_class9_science_ch2"
+          "module_id": "gseb_class9_science_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_science_ch3",
@@ -197,7 +199,7 @@
     },
     {
       "id": "interactive_science_sim",
-      "name": "Science Simulations (Interactive)",
+      "name": "Science Simulations",
       "color_hex": "0xFF3F51B5",
       "icon": "science",
       "chapters": []
@@ -209,12 +211,14 @@
         {
           "chapter_id": "gseb_class9_maths_ch1",
           "title": "Chapter 1: Number Systems",
-          "module_id": "gseb_class9_maths_ch1"
+          "module_id": "gseb_class9_maths_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_maths_ch2",
           "title": "Chapter 2: Polynomials",
-          "module_id": "gseb_class9_maths_ch2"
+          "module_id": "gseb_class9_maths_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_maths_ch3",
@@ -252,12 +256,14 @@
         {
           "chapter_id": "gseb_class9_social_ch1",
           "title": "Chapter 1: Rise of British Rule in India",
-          "module_id": "gseb_class9_social_ch1"
+          "module_id": "gseb_class9_social_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_social_ch2",
           "title": "Chapter 2: First World War and Russian Revolution",
-          "module_id": "gseb_class9_social_ch2"
+          "module_id": "gseb_class9_social_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_social_ch3",
@@ -285,12 +291,14 @@
         {
           "chapter_id": "gseb_class9_english_ch1",
           "title": "Chapter 1: Cheetah's Tears",
-          "module_id": "gseb_class9_english_ch1"
+          "module_id": "gseb_class9_english_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_english_ch2",
           "title": "Chapter 2: Dental Health",
-          "module_id": "gseb_class9_english_ch2"
+          "module_id": "gseb_class9_english_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_english_ch3",
@@ -332,25 +340,110 @@
       "icon": "language"
     },
     {
-      "id": "interactive_grammar",
-      "name": "English Grammar (Interactive)",
-      "color_hex": "0xFF009688",
-      "icon": "translate",
-      "chapters": []
+      "id": "english_grammar_class9",
+      "name": "English Grammar",
+      "name_hi": "**अंग्रेजी व्याकरण — बीहाइव पाठ्यक्रम (NCERT/CBSE कक्षा 9)**",
+      "name_gu": "**અંગ્રેજી વ્યાકરણ — બીહાઇવ અભ્યાસક્રમ (NCERT/CBSE ધોરણ 9)**",
+      "chapters": [
+        {
+          "id": "ncert_class9_grammar_ch1",
+          "title": "Tenses — Time & Aspect",
+          "title_hi": "काल — समय और रूप (Tenses)",
+          "title_gu": "કાળ — સમય અને પ્રકાર (Tenses)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch1.json",
+          "unwrapped": true,
+          "is_free": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch2",
+          "title": "Modals — Expressing Ability, Permission & Obligation",
+          "title_hi": "मोडल्स — क्षमता, अनुमति और दायित्व (Modals)",
+          "title_gu": "મોડલ્સ — ક્ષમતા, પરવાનગી અને ફરજ (Modals)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch2.json",
+          "unwrapped": true,
+          "is_free": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch3",
+          "title": "Subject-Verb Agreement — Harmony in Grammar",
+          "title_hi": "कर्ता-क्रिया संगति (Subject-Verb Agreement)",
+          "title_gu": "કર્તા-ક્રિયા સંબંધ (Subject-Verb Agreement)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch3.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch4",
+          "title": "Reported Speech — Direct & Indirect",
+          "title_hi": "अप्रत्यक्ष कथन (Reported Speech)",
+          "title_gu": "પરોક્ષ કથન (Reported Speech)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch4.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch5",
+          "title": "Active & Passive Voice",
+          "title_hi": "कर्तृवाच्य और कर्मवाच्य (Active & Passive Voice)",
+          "title_gu": "કર્મણિ અને કર્તરી પ્રયોગ (Active & Passive Voice)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch5.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch6",
+          "title": "Determiners — Articles, Quantifiers & Demonstratives",
+          "title_hi": "डिटरमाइनर्स — आर्टिकल्स, परिमाणवाचक और संकेतवाचक",
+          "title_gu": "ડિટરમાઇનર્સ — આર્ટિકલ્સ, પરિમાણવાચક અને દર્શક",
+          "path": "app_core/chapters/ncert_class9_grammar_ch6.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch7",
+          "title": "Prepositions — Time, Place & Direction",
+          "title_hi": "संबंधबोधक अव्यय (Prepositions)",
+          "title_gu": "નામયોગી અવ્યય (Prepositions)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch7.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch8",
+          "title": "Conjunctions — Connecting Ideas",
+          "title_hi": "समुच्चयबोधक (Conjunctions)",
+          "title_gu": "સંયોજકો (Conjunctions)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch8.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch9",
+          "title": "Clauses — Noun, Adjective & Adverb Clauses",
+          "title_hi": "उपवाक्य (Clauses)",
+          "title_gu": "ઉપવાક્યો (Clauses)",
+          "path": "app_core/chapters/ncert_class9_grammar_ch9.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class9_grammar_ch10",
+          "title": "Sentence Transformation — Simple, Compound & Complex",
+          "title_hi": "वाक्य रूपांतरण — सरल, संयुक्त और मिश्र",
+          "title_gu": "વાક્ય રૂપાંતરણ — સાદું, સંયુક્ત અને મિશ્ર",
+          "path": "app_core/chapters/ncert_class9_grammar_ch10.json",
+          "unwrapped": true
+        }
+      ]
     },
     {
       "id": "gseb_class9_social_science",
-      "name": "Gseb Class9 Social Science",
+      "name": "Social Science",
       "chapters": [
         {
           "chapter_id": "gseb_class9_social_science_ch1",
           "title": "Rise of British Rule in India",
-          "module_id": "gseb_class9_social_science_ch1"
+          "module_id": "gseb_class9_social_science_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_social_science_ch2",
           "title": "First World War and Russian Revolution",
-          "module_id": "gseb_class9_social_science_ch2"
+          "module_id": "gseb_class9_social_science_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "gseb_class9_social_science_ch3",
@@ -455,12 +548,14 @@
         {
           "chapter_id": "govindsir_english_ch1",
           "title": "Chapter No 1: Why Learn English?",
-          "module_id": "govindsir_english_ch1"
+          "module_id": "govindsir_english_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "govindsir_english_ch2",
           "title": "Chapter No 2: The English Alphabet and Sounds",
-          "module_id": "govindsir_english_ch2"
+          "module_id": "govindsir_english_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "govindsir_english_ch3",

@@ -10,6 +10,7 @@ import '../../features/dashboard/paper_digitization_studio.dart';
 
 import '../../features/welcome/language_selection_screen.dart';
 import '../../features/learning/learning_home.dart';
+import '../../features/learning/core_concepts/core_concept_search_screen.dart';
 import '../../features/splash/splash_screen.dart';
 import '../../features/welcome/onboarding_screen.dart';
 import '../../features/chapter/chapter_detail_screen.dart';
@@ -162,6 +163,14 @@ final router = GoRouter(
           builder: (context, state) {
             final chapterId = state.pathParameters['chapterId']!;
             return ChapterDetailScreen(assetPath: chapterId);
+          },
+        ),
+        GoRoute(
+          path: '/core_concepts_search/:classId/:subjectId',
+          builder: (context, state) {
+            final classId = state.pathParameters['classId']!;
+            final subjectId = state.pathParameters['subjectId']!;
+            return CoreConceptSearchScreen(classId: classId, subjectId: subjectId);
           },
         ),
         GoRoute(

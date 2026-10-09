@@ -1,0 +1,155 @@
+[
+  {
+    "id": "C10_MATH_CH11_HOOK_1",
+    "type": "hook",
+    "title": "Slicing the Perfect Pizza",
+    "title_hi": "परफेक्ट पिज़्ज़ा काटना",
+    "title_gu": "પરફેક્ટ પિઝા કાપવા",
+    "body": "Imagine you order a giant, delicious pizza. When you take a slice, you are taking a 'Sector' of that circular pizza. But how do you know exactly how much pizza is in that one slice? Is a slice with a wider angle but smaller radius better than a slice with a smaller angle but larger radius? To find out who gets the most cheese, we need the magic of **Areas Related to Circles**. From designing a car's windshield wiper to cutting a cake, understanding how to calculate the area of pieces of a circle is an essential slice of life!",
+    "body_hi": "कल्पना कीजिए कि आप एक विशाल, स्वादिष्ट पिज़्ज़ा ऑर्डर करते हैं। जब आप एक टुकड़ा (slice) लेते हैं, तो आप उस गोलाकार पिज़्ज़ा का 'त्रिज्यखंड (Sector)' ले रहे होते हैं। लेकिन आपको कैसे पता चलेगा कि उस एक टुकड़े में वास्तव में कितना पिज़्ज़ा है? क्या बड़े कोण लेकिन छोटी त्रिज्या वाला टुकड़ा छोटे कोण लेकिन बड़ी त्रिज्या वाले टुकड़े से बेहतर है? यह पता लगाने के लिए कि किसे सबसे अधिक चीज़ (cheese) मिलता है, हमें **वृत्तों से संबंधित क्षेत्र (Areas Related to Circles)** के जादू की आवश्यकता है। कार के विंडशील्ड वाइपर को डिजाइन करने से लेकर केक काटने तक, वृत्त के टुकड़ों के क्षेत्रफल की गणना करना जीवन का एक अनिवार्य हिस्सा है!",
+    "body_gu": "કલ્પના કરો કે તમે એક વિશાળ, સ્વાદિષ્ટ પિઝા ઓર્ડર કરો છો. જ્યારે તમે એક ટુકડો (slice) લો છો, ત્યારે તમે તે ગોળાકાર પિઝાનો 'વૃત્તાંશ (Sector)' લઈ રહ્યા છો. પરંતુ તમને કેવી રીતે ખબર પડે કે તે એક ટુકડામાં બરાબર કેટલો પિઝા છે? શું મોટા ખૂણા પણ નાની ત્રિજ્યાવાળો ટુકડો નાના ખૂણા પણ મોટી ત્રિજ્યાવાળા ટુકડા કરતા વધુ સારો છે? કોને સૌથી વધુ ચીઝ (cheese) મળે છે તે શોધવા માટે, આપણને **વર્તુળો સંબંધિત ક્ષેત્રફળ (Areas Related to Circles)** ના જાદુની જરૂર છે. કારના વિન્ડશિલ્ડ વાઇપરની ડિઝાઇન કરવાથી લઈને કેક કાપવા સુધી, વર્તુળના ટુકડાઓનું ક્ષેત્રફળ કેવી રીતે ગણવું તે સમજવું એ જીવનનો એક આવશ્યક ભાગ છે!"
+  },
+  {
+    "id": "C10_MATH_CH11_SOCRATIC_1",
+    "type": "socratic_question",
+    "question": "The total angle at the center of a full circle is 360 degrees. If you cut a circle perfectly in half, the angle at the center is 180 degrees. What fraction of the circle's total area is that half?",
+    "question_hi": "एक पूर्ण वृत्त के केंद्र पर कुल कोण 360 डिग्री होता है। यदि आप एक वृत्त को ठीक आधा काटते हैं, तो केंद्र पर कोण 180 डिग्री होता है। वह आधा हिस्सा वृत्त के कुल क्षेत्रफल का कितना अंश (fraction) है?",
+    "question_gu": "સંપૂર્ણ વર્તુળના કેન્દ્ર આગળનો કુલ ખૂણો 360 ડિગ્રી હોય છે. જો તમે વર્તુળને બરાબર અડધું કાપો, તો કેન્દ્ર આગળનો ખૂણો 180 ડિગ્રી થાય. તે અડધો ભાગ વર્તુળના કુલ ક્ષેત્રફળનો કેટલો અંશ (અપૂર્ણાંક) છે?",
+    "hint": "Divide 180 by 360. What simple fraction do you get?",
+    "hint_hi": "180 को 360 से भाग दें। आपको कौन सा सरल भिन्न मिलता है?",
+    "hint_gu": "180 ને 360 વડે ભાગો. તમને કયો સાદો અપૂર્ણાંક મળે છે?",
+    "bloom": "Understand",
+    "difficulty": "Easy",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10_MATH_CH11_THEO_1",
+    "type": "theory",
+    "title": "Sector of a Circle",
+    "title_hi": "वृत्त का त्रिज्यखंड",
+    "title_gu": "વર્તુળનો વૃત્તાંશ",
+    "body": "A **Sector** is the portion of a circular region enclosed by two radii and the corresponding arc. (Think of it as a slice of pizza).\n*   **Major Sector**: The bigger slice of the circle.\n*   **Minor Sector**: The smaller slice of the circle.\nIf we know the radius 'r' and the angle 'θ' (in degrees) that the sector makes at the center of the circle, we can easily find its area.\nThe formula for the **Area of a Sector** of angle θ is:\n**Area = (θ / 360) × πr²**\n(It makes sense: θ/360 is just the fraction of the whole circle you are taking, and πr² is the area of the whole circle!)",
+    "body_hi": "एक **त्रिज्यखंड (Sector)** किसी वृत्तीय क्षेत्र का वह भाग है जो दो त्रिज्याओं और संगत चाप (arc) से घिरा होता है। (इसे पिज़्ज़ा के टुकड़े के रूप में सोचें)।\n*   **दीर्घ त्रिज्यखंड (Major Sector)**: वृत्त का बड़ा टुकड़ा।\n*   **लघु त्रिज्यखंड (Minor Sector)**: वृत्त का छोटा टुकड़ा।\nयदि हम त्रिज्या 'r' और वह कोण 'θ' (डिग्री में) जानते हैं जो त्रिज्यखंड वृत्त के केंद्र पर बनाता है, तो हम आसानी से इसका क्षेत्रफल ज्ञात कर सकते हैं।\nθ कोण वाले **त्रिज्यखंड के क्षेत्रफल** का सूत्र है:\n**क्षेत्रफल = (θ / 360) × πr²**\n(यह तार्किक है: θ/360 केवल पूरे वृत्त का वह अंश है जो आप ले रहे हैं, और πr² पूरे वृत्त का क्षेत्रफल है!)",
+    "body_gu": "**વૃત્તાંશ (Sector)** એ બે ત્રિજ્યાઓ અને અનુરૂપ ચાપ (arc) દ્વારા ઘેરાયેલા વર્તુળાકાર પ્રદેશનો ભાગ છે. (આને પિઝાના ટુકડા તરીકે વિચારો).\n*   **ગુરુવૃત્તાંશ (Major Sector)**: વર્તુળનો મોટો ટુકડો.\n*   **લઘુવૃત્તાંશ (Minor Sector)**: વર્તુળનો નાનો ટુકડો.\nજો આપણે ત્રિજ્યા 'r' અને ખૂણો 'θ' (ડિગ્રીમાં) જાણતા હોઈએ જે વૃત્તાંશ વર્તુળના કેન્દ્ર આગળ બનાવે છે, તો આપણે સરળતાથી તેનું ક્ષેત્રફળ શોધી શકીએ છીએ.\nθ ખૂણાવાળા **વૃત્તાંશના ક્ષેત્રફળ** માટેનું સૂત્ર છે:\n**ક્ષેત્રફળ = (θ / 360) × πr²**\n(તે તાર્કિક છે: θ/360 એ ફક્ત આખા વર્તુળનો તે ભાગ છે જે તમે લઈ રહ્યા છો, અને πr² એ આખા વર્તુળનું ક્ષેત્રફળ છે!)"
+  },
+  {
+    "id": "C10_MATH_CH11_THEO_2",
+    "type": "theory",
+    "title": "Length of an Arc of a Sector",
+    "title_hi": "त्रिज्यखंड के चाप की लंबाई",
+    "title_gu": "વૃત્તાંશની ચાપની લંબાઈ",
+    "body": "Just like the area of a sector is a fraction of the total area, the length of the arc (the curved crust of the pizza slice) is a fraction of the total circumference.\nThe formula for the **Length of an Arc** of a sector of angle θ is:\n**Length = (θ / 360) × 2πr**\nWhere 2πr is the total circumference of the circle.",
+    "body_hi": "जिस प्रकार एक त्रिज्यखंड का क्षेत्रफल कुल क्षेत्रफल का एक अंश होता है, उसी प्रकार चाप की लंबाई (पिज़्ज़ा के टुकड़े का घुमावदार किनारा) कुल परिधि का एक अंश होता है।\nθ कोण वाले त्रिज्यखंड के **चाप की लंबाई** का सूत्र है:\n**लंबाई = (θ / 360) × 2πr**\nजहाँ 2πr वृत्त की कुल परिधि है।",
+    "body_gu": "જેમ વૃત્તાંશનું ક્ષેત્રફળ એ કુલ ક્ષેત્રફળનો એક ભાગ છે, તેવી જ રીતે ચાપની લંબાઈ (પિઝાના ટુકડાની વળાંકવાળી કિનારી) એ કુલ પરિઘનો એક ભાગ છે.\nθ ખૂણાવાળા વૃત્તાંશની **ચાપની લંબાઈ** માટેનું સૂત્ર છે:\n**લંબાઈ = (θ / 360) × 2πr**\nજ્યાં 2πr એ વર્તુળનો કુલ પરિઘ છે."
+  },
+  {
+    "id": "C10_MATH_CH11_THEO_3",
+    "type": "theory",
+    "title": "Segment of a Circle",
+    "title_hi": "वृत्त का वृत्तखंड",
+    "title_gu": "વર્તુળનો વૃત્તખંડ",
+    "body": "A **Segment** is the portion of a circular region enclosed between a chord and the corresponding arc.\n*   **Major Segment**: The larger region made by the chord.\n*   **Minor Segment**: The smaller region made by the chord.\nTo find the area of a segment, you don't have a direct formula. You have to use a clever trick:\n**Area of Segment = Area of the corresponding Sector - Area of the corresponding Triangle** formed by the two radii and the chord.",
+    "body_hi": "एक **वृत्तखंड (Segment)** एक जीवा (chord) और संगत चाप के बीच घिरे वृत्तीय क्षेत्र का भाग है।\n*   **दीर्घ वृत्तखंड (Major Segment)**: जीवा द्वारा बनाया गया बड़ा क्षेत्र।\n*   **लघु वृत्तखंड (Minor Segment)**: जीवा द्वारा बनाया गया छोटा क्षेत्र।\nवृत्तखंड का क्षेत्रफल ज्ञात करने के लिए, आपके पास कोई सीधा सूत्र नहीं है। आपको एक चतुर चाल (trick) का उपयोग करना होगा:\n**वृत्तखंड का क्षेत्रफल = संगत त्रिज्यखंड का क्षेत्रफल - संगत त्रिभुज का क्षेत्रफल** (जो दो त्रिज्याओं और जीवा द्वारा बनता है)।",
+    "body_gu": "**વૃત્તખંડ (Segment)** એ જીવા (chord) અને અનુરૂપ ચાપ વચ્ચે ઘેરાયેલો વર્તુળાકાર પ્રદેશનો ભાગ છે.\n*   **ગુરુવૃત્તખંડ (Major Segment)**: જીવા દ્વારા બનેલો મોટો પ્રદેશ.\n*   **લઘુવૃત્તખંડ (Minor Segment)**: જીવા દ્વારા બનેલો નાનો પ્રદેશ.\nવૃત્તખંડનું ક્ષેત્રફળ શોધવા માટે, તમારી પાસે કોઈ સીધું સૂત્ર નથી. તમારે એક ચતુર યુક્તિનો ઉપયોગ કરવો પડશે:\n**વૃત્તખંડનું ક્ષેત્રફળ = અનુરૂપ વૃત્તાંશનું ક્ષેત્રફળ - અનુરૂપ ત્રિકોણનું ક્ષેત્રફળ** (જે બે ત્રિજ્યાઓ અને જીવા દ્વારા બને છે)."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_1",
+    "type": "practice_question",
+    "question": "Find the area of a sector of a circle with radius 6 cm if angle of the sector is 60°.",
+    "question_hi": "6 सेमी त्रिज्या वाले एक वृत्त के एक त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए, जिसका कोण 60° है।",
+    "question_gu": "જો 6 સેમી ત્રિજ્યાવાળા વર્તુળના વૃત્તાંશનો ખૂણો 60° હોય, તો તે વૃત્તાંશનું ક્ષેત્રફળ શોધો.",
+    "solution": "Here, radius r = 6 cm and angle θ = 60°.\nArea of the sector = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (6)²\n= (1 / 6) × (22 / 7) × 36\n= (22 / 7) × 6\n= 132 / 7 cm².",
+    "solution_hi": "यहाँ, त्रिज्या r = 6 सेमी और कोण θ = 60° है।\nत्रिज्यखंड का क्षेत्रफल = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (6)²\n= (1 / 6) × (22 / 7) × 36\n= (22 / 7) × 6\n= 132 / 7 सेमी²।",
+    "solution_gu": "અહીં, ત્રિજ્યા r = 6 સેમી અને ખૂણો θ = 60° છે.\nવૃત્તાંશનું ક્ષેત્રફળ = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (6)²\n= (1 / 6) × (22 / 7) × 36\n= (22 / 7) × 6\n= 132 / 7 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_2",
+    "type": "practice_question",
+    "question": "Find the area of a quadrant of a circle whose circumference is 22 cm.",
+    "question_hi": "एक वृत्त के चतुर्थांश (quadrant) का क्षेत्रफल ज्ञात कीजिए, जिसकी परिधि 22 सेमी है।",
+    "question_gu": "જેનો પરિઘ 22 સેમી હોય તેવા વર્તુળના ચતુર્થાંશ (quadrant) નું ક્ષેત્રફળ શોધો.",
+    "solution": "Circumference = 2πr = 22 cm\n2 × (22/7) × r = 22\nr = (22 × 7) / (2 × 22) = 7/2 cm.\nA quadrant is a sector with angle θ = 90°.\nArea of quadrant = (1/4) × πr²\n= (1/4) × (22/7) × (7/2) × (7/2)\n= (1/4) × 11 × 7 / 2\n= 77 / 8 cm².",
+    "solution_hi": "परिधि = 2πr = 22 सेमी\n2 × (22/7) × r = 22\nr = (22 × 7) / (2 × 22) = 7/2 सेमी।\nएक चतुर्थांश 90° कोण वाला त्रिज्यखंड होता है।\nचतुर्थांश का क्षेत्रफल = (1/4) × πr²\n= (1/4) × (22/7) × (7/2) × (7/2)\n= (1/4) × 11 × 7 / 2\n= 77 / 8 सेमी²।",
+    "solution_gu": "પરિઘ = 2πr = 22 સેમી\n2 × (22/7) × r = 22\nr = (22 × 7) / (2 × 22) = 7/2 સેમી.\nચતુર્થાંશ એ 90° ના ખૂણાવાળો વૃત્તાંશ છે.\nચતુર્થાંશનું ક્ષેત્રફળ = (1/4) × πr²\n= (1/4) × (22/7) × (7/2) × (7/2)\n= (1/4) × 11 × 7 / 2\n= 77 / 8 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_3",
+    "type": "practice_question",
+    "question": "The length of the minute hand of a clock is 14 cm. Find the area swept by the minute hand in 5 minutes.",
+    "question_hi": "एक घड़ी की मिनट की सुई जिसकी लंबाई 14 सेमी है। इस सुई द्वारा 5 मिनट में रचित क्षेत्रफल ज्ञात कीजिए।",
+    "question_gu": "એક ઘડિયાળના મિનિટ કાંટાની લંબાઈ 14 સેમી છે. મિનિટ કાંટા દ્વારા 5 મિનિટમાં આવરી લેવાયેલું ક્ષેત્રફળ શોધો.",
+    "solution": "In 60 minutes, the minute hand sweeps 360°.\nIn 1 minute, it sweeps 360° / 60 = 6°.\nIn 5 minutes, the angle swept θ = 5 × 6° = 30°.\nRadius r (length of minute hand) = 14 cm.\nArea swept (Area of sector) = (θ / 360) × πr²\n= (30 / 360) × (22 / 7) × (14)²\n= (1 / 12) × (22 / 7) × 196\n= (1 / 12) × 22 × 28\n= 154 / 3 cm².",
+    "solution_hi": "60 मिनट में, मिनट की सुई 360° घूमती है।\n1 मिनट में, यह 360° / 60 = 6° घूमती है।\n5 मिनट में, रचित कोण θ = 5 × 6° = 30°.\nत्रिज्या r (मिनट की सुई की लंबाई) = 14 सेमी।\nरचित क्षेत्रफल (त्रिज्यखंड का क्षेत्रफल) = (θ / 360) × πr²\n= (30 / 360) × (22 / 7) × (14)²\n= (1 / 12) × (22 / 7) × 196\n= (1 / 12) × 22 × 28\n= 154 / 3 सेमी²।",
+    "solution_gu": "60 મિનિટમાં, મિનિટ કાંટો 360° ફરે છે.\n1 મિનિટમાં, તે 360° / 60 = 6° ફરે છે.\n5 મિનિટમાં, આંતરેલો ખૂણો θ = 5 × 6° = 30°.\nત્રિજ્યા r (મિનિટ કાંટાની લંબાઈ) = 14 સેમી.\nઆવરી લેવાયેલું ક્ષેત્રફળ (વૃત્તાંશનું ક્ષેત્રફળ) = (θ / 360) × πr²\n= (30 / 360) × (22 / 7) × (14)²\n= (1 / 12) × (22 / 7) × 196\n= (1 / 12) × 22 × 28\n= 154 / 3 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_4",
+    "type": "practice_question",
+    "question": "A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the corresponding: (i) minor segment (Use π = 3.14)",
+    "question_hi": "10 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर एक समकोण अंतरित करती है। निम्नलिखित के क्षेत्रफल ज्ञात कीजिए: (i) संगत लघु वृत्तखंड (π = 3.14 का प्रयोग कीजिए)",
+    "question_gu": "10 સેમી ત્રિજ્યાવાળા વર્તુળની જીવા કેન્દ્ર આગળ કાટખૂણો આંતરે છે. અનુરૂપ: (i) લઘુવૃત્તખંડ નું ક્ષેત્રફળ શોધો (π = 3.14 નો ઉપયોગ કરો)",
+    "solution": "Radius r = 10 cm, Angle θ = 90°.\nArea of minor sector = (90 / 360) × π × 10² = (1/4) × 3.14 × 100 = 314 / 4 = 78.5 cm².\nArea of right triangle = 1/2 × base × height = 1/2 × 10 × 10 = 50 cm².\nArea of minor segment = Area of sector - Area of triangle\n= 78.5 - 50 = 28.5 cm².",
+    "solution_hi": "त्रिज्या r = 10 सेमी, कोण θ = 90°.\nलघु त्रिज्यखंड का क्षेत्रफल = (90 / 360) × π × 10² = (1/4) × 3.14 × 100 = 314 / 4 = 78.5 सेमी².\nसमकोण त्रिभुज का क्षेत्रफल = 1/2 × आधार × ऊँचाई = 1/2 × 10 × 10 = 50 सेमी².\nलघु वृत्तखंड का क्षेत्रफल = त्रिज्यखंड का क्षेत्रफल - त्रिभुज का क्षेत्रफल\n= 78.5 - 50 = 28.5 सेमी²।",
+    "solution_gu": "ત્રિજ્યા r = 10 સેમી, ખૂણો θ = 90°.\nલઘુવૃત્તાંશનું ક્ષેત્રફળ = (90 / 360) × π × 10² = (1/4) × 3.14 × 100 = 314 / 4 = 78.5 સેમી².\nકાટકોણ ત્રિકોણનું ક્ષેત્રફળ = 1/2 × પાયો × વેધ = 1/2 × 10 × 10 = 50 સેમી².\nલઘુવૃત્તખંડનું ક્ષેત્રફળ = વૃત્તાંશનું ક્ષેત્રફળ - ત્રિકોણનું ક્ષેત્રફળ\n= 78.5 - 50 = 28.5 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_5",
+    "type": "practice_question",
+    "question": "A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the corresponding: (ii) major sector (Use π = 3.14)",
+    "question_hi": "10 सेमी त्रिज्या वाले एक वृत्त की कोई जीवा केंद्र पर एक समकोण अंतरित करती है। निम्नलिखित के क्षेत्रफल ज्ञात कीजिए: (ii) संगत दीर्घ त्रिज्यखंड (π = 3.14 का प्रयोग कीजिए)",
+    "question_gu": "10 સેમી ત્રિજ્યાવાળા વર્તુળની જીવા કેન્દ્ર આગળ કાટખૂણો આંતરે છે. અનુરૂપ: (ii) ગુરુવૃત્તાંશ નું ક્ષેત્રફળ શોધો (π = 3.14 નો ઉપયોગ કરો)",
+    "solution": "Radius r = 10 cm.\nAngle for major sector = 360° - 90° = 270°.\nArea of major sector = (270 / 360) × 3.14 × 10²\n= (3/4) × 314\n= 3 × 78.5\n= 235.5 cm².",
+    "solution_hi": "त्रिज्या r = 10 सेमी.\nदीर्घ त्रिज्यखंड के लिए कोण = 360° - 90° = 270°.\nदीर्घ त्रिज्यखंड का क्षेत्रफल = (270 / 360) × 3.14 × 10²\n= (3/4) × 314\n= 3 × 78.5\n= 235.5 सेमी²।",
+    "solution_gu": "ત્રિજ્યા r = 10 સેમી.\nગુરુવૃત્તાંશ માટેનો ખૂણો = 360° - 90° = 270°.\nગુરુવૃત્તાંશનું ક્ષેત્રફળ = (270 / 360) × 3.14 × 10²\n= (3/4) × 314\n= 3 × 78.5\n= 235.5 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_6",
+    "type": "practice_question",
+    "question": "In a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. Find: (i) the length of the arc",
+    "question_hi": "21 सेमी त्रिज्या वाले एक वृत्त का एक चाप केंद्र पर 60° का कोण अंतरित करता है। ज्ञात कीजिए: (i) चाप की लंबाई",
+    "question_gu": "21 સેમી ત્રિજ્યાવાળા વર્તુળની એક ચાપ કેન્દ્ર આગળ 60° નો ખૂણો આંતરે છે. શોધો: (i) ચાપની લંબાઈ",
+    "solution": "Radius r = 21 cm, angle θ = 60°.\nLength of the arc = (θ / 360) × 2πr\n= (60 / 360) × 2 × (22 / 7) × 21\n= (1 / 6) × 2 × 22 × 3\n= (1 / 6) × 132\n= 22 cm.",
+    "solution_hi": "त्रिज्या r = 21 सेमी, कोण θ = 60°.\nचाप की लंबाई = (θ / 360) × 2πr\n= (60 / 360) × 2 × (22 / 7) × 21\n= (1 / 6) × 2 × 22 × 3\n= (1 / 6) × 132\n= 22 सेमी।",
+    "solution_gu": "ત્રિજ્યા r = 21 સેમી, ખૂણો θ = 60°.\nચાપની લંબાઈ = (θ / 360) × 2πr\n= (60 / 360) × 2 × (22 / 7) × 21\n= (1 / 6) × 2 × 22 × 3\n= (1 / 6) × 132\n= 22 સેમી."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_7",
+    "type": "practice_question",
+    "question": "In a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. Find: (ii) area of the sector formed by the arc",
+    "question_hi": "21 सेमी त्रिज्या वाले एक वृत्त का एक चाप केंद्र पर 60° का कोण अंतरित करता है। ज्ञात कीजिए: (ii) चाप द्वारा बनाए गए त्रिज्यखंड का क्षेत्रफल",
+    "question_gu": "21 સેમી ત્રિજ્યાવાળા વર્તુળની એક ચાપ કેન્દ્ર આગળ 60° નો ખૂણો આંતરે છે. શોધો: (ii) ચાપ દ્વારા બનતા વૃત્તાંશનું ક્ષેત્રફળ",
+    "solution": "Radius r = 21 cm, θ = 60°.\nArea of sector = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (21 × 21)\n= (1 / 6) × 22 × 3 × 21\n= (1 / 6) × 1386\n= 231 cm².",
+    "solution_hi": "त्रिज्या r = 21 सेमी, θ = 60°.\nत्रिज्यखंड का क्षेत्रफल = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (21 × 21)\n= (1 / 6) × 22 × 3 × 21\n= (1 / 6) × 1386\n= 231 सेमी²।",
+    "solution_gu": "ત્રિજ્યા r = 21 સેમી, θ = 60°.\nવૃત્તાંશનું ક્ષેત્રફળ = (θ / 360) × πr²\n= (60 / 360) × (22 / 7) × (21 × 21)\n= (1 / 6) × 22 × 3 × 21\n= (1 / 6) × 1386\n= 231 સેમી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_8",
+    "type": "practice_question",
+    "question": "A horse is tied to a peg at one corner of a square shaped grass field of side 15 m by means of a 5 m long rope. Find the area of that part of the field in which the horse can graze.",
+    "question_hi": "15 सेमी भुजा वाले एक वर्गाकार घास के मैदान के एक कोने पर लगे खूँटे से एक घोड़े को 5 मीटर लंबी रस्सी से बाँध दिया गया है। मैदान के उस भाग का क्षेत्रफल ज्ञात कीजिए जहाँ घोड़ा घास चर सकता है।",
+    "question_gu": "15 મીટર બાજુવાળા એક ચોરસ આકારના ઘાસના મેદાનના એક ખૂણે બાંધેલા ખીલા સાથે એક ઘોડાને 5 મીટર લાંબા દોરડાથી બાંધેલો છે. મેદાનના એ ભાગનું ક્ષેત્રફળ શોધો જેમાં ઘોડો ચરી શકે.",
+    "solution": "The horse can graze in the shape of a sector of a circle with radius r = 5 m.\nThe corner of the square forms a 90° angle, so θ = 90°.\nArea that can be grazed = Area of sector = (θ / 360) × πr²\n= (90 / 360) × 3.14 × (5)²\n= (1 / 4) × 3.14 × 25\n= (1 / 4) × 78.5\n= 19.625 m².",
+    "solution_hi": "घोड़ा 5 मीटर त्रिज्या वाले एक वृत्त के त्रिज्यखंड के आकार में चर सकता है।\nवर्ग का कोना 90° का कोण बनाता है, अतः θ = 90°.\nचरे जा सकने वाले भाग का क्षेत्रफल = त्रिज्यखंड का क्षेत्रफल = (θ / 360) × πr²\n= (90 / 360) × 3.14 × (5)²\n= (1 / 4) × 3.14 × 25\n= (1 / 4) × 78.5\n= 19.625 मी²।",
+    "solution_gu": "ઘોડો r = 5 મીટર ત્રિજ્યાવાળા વર્તુળના વૃત્તાંશના આકારમાં ચરી શકે છે.\nચોરસનો ખૂણો 90° નો ખૂણો બનાવે છે, તેથી θ = 90°.\nચરી શકાતા ભાગનું ક્ષેત્રફળ = વૃત્તાંશનું ક્ષેત્રફળ = (θ / 360) × πr²\n= (90 / 360) × 3.14 × (5)²\n= (1 / 4) × 3.14 × 25\n= (1 / 4) × 78.5\n= 19.625 મી²."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_9",
+    "type": "practice_question",
+    "question": "A brooch is made with silver wire in the form of a circle with diameter 35 mm. The wire is also used in making 5 diameters which divide the circle into 10 equal sectors. Find the total length of the silver wire required.",
+    "question_hi": "एक वृत्ताकार ब्रूच (brooch) को चाँदी के तार से बनाया जाना है जिसका व्यास 35 मिमी है। तार को वृत्त के 5 व्यासों को बनाने में भी प्रयुक्त किया गया है जो उसे 10 बराबर त्रिज्यखंडों में विभाजित करते हैं। ज्ञात कीजिए: आवश्यक चाँदी के तार की कुल लंबाई।",
+    "question_gu": "ચાંદીના તારમાંથી 35 મીમી વ્યાસવાળું એક વર્તુળાકાર બ્રૂચ (brooch) બનાવવામાં આવ્યું છે. આ તારનો ઉપયોગ વર્તુળના 5 વ્યાસ બનાવવા માટે પણ કરવામાં આવ્યો છે જે વર્તુળને 10 સમાન વૃત્તાંશમાં વિભાજિત કરે છે. જરૂરી ચાંદીના તારની કુલ લંબાઈ શોધો.",
+    "solution": "Diameter (d) = 35 mm, so Radius (r) = 35/2 mm.\nThe silver wire is used for the circumference of the circle and for the 5 diameters.\nCircumference = πd = (22 / 7) × 35 = 22 × 5 = 110 mm.\nLength of 5 diameters = 5 × 35 = 175 mm.\nTotal length of wire required = 110 + 175 = 285 mm.",
+    "solution_hi": "व्यास (d) = 35 मिमी, अतः त्रिज्या (r) = 35/2 मिमी।\nचाँदी के तार का उपयोग वृत्त की परिधि और 5 व्यासों के लिए किया जाता है।\nपरिधि = πd = (22 / 7) × 35 = 22 × 5 = 110 मिमी।\n5 व्यासों की लंबाई = 5 × 35 = 175 मिमी।\nआवश्यक तार की कुल लंबाई = 110 + 175 = 285 मिमी।",
+    "solution_gu": "વ્યાસ (d) = 35 મીમી, તેથી ત્રિજ્યા (r) = 35/2 મીમી.\nચાંદીના તારનો ઉપયોગ વર્તુળના પરિઘ અને 5 વ્યાસ માટે થાય છે.\nપરિઘ = πd = (22 / 7) × 35 = 22 × 5 = 110 મીમી.\n5 વ્યાસની લંબાઈ = 5 × 35 = 175 મીમી.\nજરૂરી તારની કુલ લંબાઈ = 110 + 175 = 285 મીમી."
+  },
+  {
+    "id": "C10_MATH_CH11_PRACTICE_10",
+    "type": "practice_question",
+    "question": "An umbrella has 8 ribs which are equally spaced. Assuming umbrella to be a flat circle of radius 45 cm, find the area between the two consecutive ribs of the umbrella.",
+    "question_hi": "एक छतरी में 8 ताने (ribs) हैं, जो बराबर दूरी पर लगे हुए हैं। छतरी को 45 सेमी त्रिज्या वाला एक सपाट वृत्त मानते हुए, इसकी दो क्रमागत तानों के बीच का क्षेत्रफल ज्ञात कीजिए।",
+    "question_gu": "એક છત્રીમાં 8 સળિયા (ribs) છે જે સમાન અંતરે ગોઠવાયેલા છે. છત્રીને 45 સેમી ત્રિજ્યાવાળું સપાટ વર્તુળ ધારીને, છત્રીના બે ક્રમિક સળિયા વચ્ચેનું ક્ષેત્રફળ શોધો.",
+    "solution": "The umbrella has 8 equal ribs, dividing it into 8 equal sectors.\nAngle of each sector (θ) = 360° / 8 = 45°.\nRadius (r) = 45 cm.\nArea between two consecutive ribs (Area of one sector) = (θ / 360) × πr²\n= (45 / 360) × (22 / 7) × 45 × 45\n= (1 / 8) × (22 / 7) × 2025\n= (11 / 4) × (2025 / 7)\n= 22275 / 28 cm².",
+    "solution_hi": "छतरी में 8 बराबर ताने हैं, जो इसे 8 बराबर त्रिज्यखंडों में विभाजित करते हैं।\nप्रत्येक त्रिज्यखंड का कोण (θ) = 360° / 8 = 45°.\nत्रिज्या (r) = 45 सेमी।\nदो क्रमागत तानों के बीच का क्षेत्रफल (एक त्रिज्यखंड का क्षेत्रफल) = (θ / 360) × πr²\n= (45 / 360) × (22 / 7) × 45 × 45\n= (1 / 8) × (22 / 7) × 2025\n= (11 / 4) × (2025 / 7)\n= 22275 / 28 सेमी²।",
+    "solution_gu": "છત્રીમાં 8 સમાન સળિયા છે, જે તેને 8 સમાન વૃત્તાંશમાં વિભાજિત કરે છે.\nદરેક વૃત્તાંશનો ખૂણો (θ) = 360° / 8 = 45°.\nત્રિજ્યા (r) = 45 સેમી.\nબે ક્રમિક સળિયા વચ્ચેનું ક્ષેત્રફળ (એક વૃત્તાંશનું ક્ષેત્રફળ) = (θ / 360) × πr²\n= (45 / 360) × (22 / 7) × 45 × 45\n= (1 / 8) × (22 / 7) × 2025\n= (11 / 4) × (2025 / 7)\n= 22275 / 28 સેમી²."
+  }
+]

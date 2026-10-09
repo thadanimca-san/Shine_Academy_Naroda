@@ -7,28 +7,28 @@ prefixes = ['ncert', 'gseb', 'cbse']
 for prefix in prefixes:
     for i in range(2, 8):
         ch_id = f"{prefix}_class10_deo_bank_2026_ch{i}"
-        title = "DEO Bank 2026"
-        if i == 2: title = "Science DEO Bank 2026 (Part 2 - Subjective)"
-        elif i == 3: title = "Maths (Basic) DEO Bank 2026"
-        elif i == 4: title = "Maths (Standard) DEO Bank 2026"
-        elif i == 5: title = "Social Science DEO Bank 2026"
-        elif i == 6: title = "English (FL) DEO Bank 2026"
-        elif i == 7: title = "Gujarati (SL) DEO Bank 2026"
+        title = "question Bank 2026"
+        if i == 2: title = "Science question Bank 2026 (Part 2 - Subjective)"
+        elif i == 3: title = "Maths (Basic) question Bank 2026"
+        elif i == 4: title = "Maths (Standard) question Bank 2026"
+        elif i == 5: title = "Social Science question Bank 2026"
+        elif i == 6: title = "English (FL) question Bank 2026"
+        elif i == 7: title = "Gujarati (SL) question Bank 2026"
         
         json_data = {
             "metadata": {
                 "id": ch_id,
                 "title": title,
-                "subject": "DEO Question Bank 2026",
+                "subject": "question Question Bank 2026",
                 "grade": "10",
                 "curriculum": ["GSEB", "NCERT", "CBSE"],
                 "difficulty": "Advanced",
-                "version": "4.0.0-DEO-BANK"
+                "version": "4.0.0-question-BANK"
             },
             "blocks": [
                 {
                     "type": "hook",
-                    "content": "Welcome to the DEO Bank! This section is currently being parsed by the AI Swarm from the official PDF. Check back soon for the full interactive content!"
+                    "content": "Welcome to the question Bank! This section is currently being parsed by the AI Swarm from the official PDF. Check back soon for the full interactive content!"
                 }
             ]
         }

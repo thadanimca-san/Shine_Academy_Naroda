@@ -1,0 +1,110 @@
+{
+  "chapter_id": "ncert_class9_maths_ch2",
+  "title": "Chapter 2: Polynomials",
+  "title_hi": "अध्याय 2: बहुपद",
+  "title_gu": "પ્રકરણ 2: બહુપદીઓ",
+  "blocks": [
+    {
+      "id": "CBSE_9_MATH_CH2_HOOK_1",
+      "type": "theory",
+      "title": "Step 1: Hook - The Algebra Machine",
+      "title_hi": "कदम 1: हुक - बीजगणित मशीन",
+      "title_gu": "પગલું 1: હૂક - બીજગણિત મશીન",
+      "body": "Imagine a magic machine where you feed in a number 'x', it multiplies that number by 5, adds 3, squares it, and spits out a new number! This magic machine is called a 'Polynomial'. From designing rollercoasters to predicting the stock market, polynomials are the hidden equations that run the modern world. In this chapter, we will open this machine, understand its parts (variables, coefficients, degrees), and learn how to factorize it to find its secret zeroes!",
+      "body_hi": "एक ऐसी जादुई मशीन की कल्पना करें जहाँ आप एक संख्या 'x' डालते हैं, वह उस संख्या को 5 से गुणा करती है, 3 जोड़ती है, उसका वर्ग (square) करती है, और एक नई संख्या बाहर निकालती है! इस जादुई मशीन को 'बहुपद' (Polynomial) कहा जाता है। रोलरकोस्टर को डिजाइन करने से लेकर शेयर बाजार की भविष्यवाणी करने तक, बहुपद वे छिपे हुए समीकरण हैं जो आधुनिक दुनिया को चलाते हैं। इस अध्याय में, हम इस मशीन को खोलेंगे, इसके हिस्सों (चर, गुणांक, घात) को समझेंगे, और इसके गुप्त शून्यों (zeroes) को खोजने के लिए इसका गुणनखंड करना सीखेंगे!",
+      "body_gu": "એક જાદુઈ મશીનની કલ્પના કરો જ્યાં તમે 'x' નંબર દાખલ કરો છો, તે તે સંખ્યાને 5 વડે ગુણાકાર કરે છે, 3 ઉમેરે છે, તેનો વર્ગ કરે છે અને એક નવો નંબર બહાર કાઢે છે! આ જાદુઈ મશીનને 'બહુપદી' કહેવાય છે. રોલરકોસ્ટર ડિઝાઇન કરવાથી લઈને શેરબજારની આગાહી કરવા સુધી, બહુપદીઓ એ છુપાયેલા સમીકરણો છે જે આધુનિક વિશ્વ ચલાવે છે. આ પ્રકરણમાં, આપણે આ મશીન ખોલીશું, તેના ભાગો (ચલ, સહગુણક, ઘાત) ને સમજીશું અને તેના ગુપ્ત શૂન્યોને શોધવા માટે તેના અવયવ પાડતા શીખીશું!"
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_SOCRATIC_1",
+      "type": "theory",
+      "title": "Step 2: Socratic Thinking",
+      "title_hi": "कदम 2: सुकराती सोच",
+      "title_gu": "પગલું 2: સોક્રેટિક વિચાર",
+      "body": "If I give you the equation P(x) = x² - 4, what happens when you put x = 2? You get 2² - 4 = 0. The output becomes nothing! Why is the number '2' so special for this equation? Is finding these 'zero-making' numbers the ultimate goal of solving algebra?",
+      "body_hi": "यदि मैं आपको समीकरण P(x) = x² - 4 दूँ, तो जब आप x = 2 रखते हैं तो क्या होता है? आपको 2² - 4 = 0 मिलता है। आउटपुट शून्य हो जाता है! इस समीकरण के लिए संख्या '2' इतनी खास क्यों है? क्या इन 'शून्य बनाने वाली' संख्याओं को खोजना बीजगणित को हल करने का अंतिम लक्ष्य है?",
+      "body_gu": "જો હું તમને P(x) = x² - 4 સમીકરણ આપું, તો જ્યારે તમે x = 2 મૂકો ત્યારે શું થશે? તમને 2² - 4 = 0 મળે છે. પરિણામ શૂન્ય થઈ જાય છે! આ સમીકરણ માટે નંબર '2' આટલો ખાસ કેમ છે? શું આ 'શૂન્ય બનાવતી' સંખ્યાઓ શોધવી એ બીજગણિત ઉકેલવાનું અંતિમ લક્ષ્ય છે?"
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_DISCOVERY_1",
+      "type": "theory",
+      "title": "Step 3: Discovery - The Anatomy of a Polynomial",
+      "title_hi": "कदम 3: खोज - बहुपद की शारीरिक रचना",
+      "title_gu": "પગલું 3: શોધ - બહુપદીની રચના",
+      "body": "A polynomial is made of building blocks called 'terms'. Let's look at 5x³ - 2x² + 7. \n1. Variables: The alphabet 'x' is the variable (it can change). \n2. Coefficients: The numbers glued to the variables (5 is the coefficient of x³, and -2 is for x²). \n3. Constant: The lonely number 7 is the constant. \n4. Degree: The highest power of the variable is the 'Boss' or the Degree. Here, the highest power is 3, so the degree of this polynomial is 3. Note: The powers MUST be whole numbers! If a power is a fraction (like x^(1/2) or √x) or negative, it is NOT a polynomial.",
+      "body_hi": "बहुपद 'पदों' (terms) नामक बिल्डिंग ब्लॉक्स से बना होता है। आइए 5x³ - 2x² + 7 को देखें।\n1. चर (Variables): वर्णमाला 'x' चर है (यह बदल सकता है)।\n2. गुणांक (Coefficients): चर से जुड़ी संख्याएँ (x³ का गुणांक 5 है, और x² का -2 है)।\n3. अचर (Constant): अकेली संख्या 7 अचर है।\n4. घात (Degree): चर की उच्चतम घात (highest power) 'बॉस' या घात होती है। यहाँ, उच्चतम घात 3 है, इसलिए इस बहुपद की घात 3 है। ध्यान दें: घात हमेशा पूर्ण संख्या होनी चाहिए! यदि घात भिन्न (जैसे x^(1/2) या √x) या ऋणात्मक है, तो वह बहुपद नहीं है।",
+      "body_gu": "બહુપદી 'પદો' નામના બિલ્ડીંગ બ્લોક્સથી બનેલી છે. ચાલો 5x³ - 2x² + 7 જોઈએ.\n1. ચલ (Variables): મૂળાક્ષર 'x' એ ચલ છે (તે બદલાઈ શકે છે).\n2. સહગુણક (Coefficients): ચલો સાથે જોડાયેલ સંખ્યાઓ (x³ નો સહગુણક 5 છે, અને x² માટે -2 છે).\n3. અચળ (Constant): એકલો નંબર 7 એ અચળ છે.\n4. ઘાત (Degree): ચલની સૌથી વધુ ઘાત એ 'બોસ' અથવા ઘાત છે. અહીં, સૌથી વધુ ઘાત 3 છે, તેથી આ બહુપદીની ઘાત 3 છે. નોંધ: ઘાત સંપૂર્ણ સંખ્યા હોવી જોઈએ! જો ઘાત અપૂર્ણાંક (જેમ કે x^(1/2) અથવા √x) અથવા ઋણ હોય, તો તે બહુપદી નથી."
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_REVEAL_1",
+      "type": "theory",
+      "title": "Step 4: Reveal - The Zeroes of a Polynomial",
+      "title_hi": "कदम 4: प्रकट - बहुपद के शून्यक",
+      "title_gu": "પગલું 4: પ્રગટ - બહુપદીના શૂન્યો",
+      "body": "The Zero of a polynomial is the 'Magic Number' that destroys the polynomial and turns its total value to 0! \nIf P(x) = x - 5, what value of x makes it zero? Obviously, x = 5. So, 5 is the zero of this polynomial. \nWhat if the equation is a quadratic (degree 2) like P(x) = x² - 5x + 6? It has TWO magic numbers! We find them by 'Splitting the Middle Term'. We need two numbers that multiply to 6 and add to -5. Those numbers are -2 and -3. So, (x - 2)(x - 3) = 0, which means the zeroes are x = 2 and x = 3.",
+      "body_hi": "किसी बहुपद का शून्यक (Zero) वह 'जादुई संख्या' है जो बहुपद को नष्ट कर देती है और उसका कुल मान 0 कर देती है!\nयदि P(x) = x - 5 है, तो x का कौन सा मान इसे शून्य बनाता है? ज़ाहिर है, x = 5। इसलिए, 5 इस बहुपद का शून्यक है।\nक्या होगा यदि समीकरण P(x) = x² - 5x + 6 की तरह द्विघात (घात 2) हो? इसके दो जादुई नंबर हैं! हम 'मध्य पद को विभक्त करने' (Splitting the Middle Term) के द्वारा उन्हें खोजते हैं। हमें ऐसी दो संख्याओं की आवश्यकता है जिन्हें गुणा करने पर 6 और जोड़ने पर -5 प्राप्त हो। वे संख्याएँ -2 और -3 हैं। इसलिए, (x - 2)(x - 3) = 0, जिसका अर्थ है शून्यक x = 2 और x = 3 हैं।",
+      "body_gu": "બહુપદીનો શૂન્ય એ 'મેજિક નંબર' છે જે બહુપદીનો નાશ કરે છે અને તેનું કુલ મૂલ્ય 0 કરે છે!\nજો P(x) = x - 5 હોય, તો x નું કયું મૂલ્ય તેને શૂન્ય બનાવે છે? દેખીતી રીતે, x = 5. તેથી, 5 એ આ બહુપદીનું શૂન્ય છે.\nજો સમીકરણ P(x) = x² - 5x + 6 જેવું દ્વિઘાત (ઘાત 2) હોય તો શું? તેમાં બે જાદુઈ નંબરો છે! અમે 'મધ્યમ પદનું વિભાજન' (Splitting the Middle Term) દ્વારા તેમને શોધીએ છીએ. આપણને બે એવી સંખ્યાઓ જોઈએ છે જેનો ગુણાકાર 6 થાય અને સરવાળો -5 થાય. તે સંખ્યાઓ -2 અને -3 છે. તેથી, (x - 2)(x - 3) = 0, જેનો અર્થ થાય છે શૂન્યો x = 2 અને x = 3 છે."
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_KNOWLEDGE_1",
+      "type": "mcq",
+      "title": "Step 5: Knowledge Check",
+      "title_hi": "कदम 5: ज्ञान जांच",
+      "title_gu": "પગલું 5: જ્ઞાન તપાસ",
+      "question": "Which of the following expressions is NOT a polynomial?",
+      "question_hi": "निम्नलिखित में से कौन सा व्यंजक बहुपद नहीं है?",
+      "question_gu": "નીચેનામાંથી કયો વિકલ્પ બહુપદી નથી?",
+      "options": [
+        "x² - 5x + 6",
+        "y³ + 2y - 7",
+        "x + 1/x",
+        "3x"
+      ],
+      "options_hi": [
+        "x² - 5x + 6",
+        "y³ + 2y - 7",
+        "x + 1/x",
+        "3x"
+      ],
+      "options_gu": [
+        "x² - 5x + 6",
+        "y³ + 2y - 7",
+        "x + 1/x",
+        "3x"
+      ],
+      "correct_index": 2,
+      "explanation": "The expression 'x + 1/x' can be written as x + x⁻¹. Since the power of x is -1 (a negative integer), it violates the rule that all powers in a polynomial must be whole numbers.",
+      "explanation_hi": "व्यंजक 'x + 1/x' को x + x⁻¹ के रूप में लिखा जा सकता है। चूँकि x की घात -1 (एक ऋणात्मक पूर्णांक) है, यह इस नियम का उल्लंघन करता है कि बहुपद में सभी घात पूर्ण संख्याएँ होनी चाहिए।",
+      "explanation_gu": "'x + 1/x' સમીકરણ x + x⁻¹ તરીકે લખી શકાય છે. x ની ઘાત -1 (ઋણ પૂર્ણાંક) હોવાથી, તે નિયમનું ઉલ્લંઘન કરે છે કે બહુપદીમાં તમામ ઘાત સંપૂર્ણ સંખ્યા હોવી જોઈએ."
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_REFLECTION_1",
+      "type": "theory",
+      "title": "Step 6: Reflection",
+      "title_hi": "कदम 6: प्रतिबिंब",
+      "title_gu": "પગલું 6: પ્રતિબિંબ",
+      "body": "When you factorize a quadratic polynomial into two parts like (x - 2)(x - 3), you are basically breaking down a complex problem into two simple pieces. If either of the pieces becomes zero, the whole problem becomes zero! Isn't life like that? When faced with a massive, complex challenge, you break it down into smaller factors. Conquer the small factors, and the big problem solves itself!",
+      "body_hi": "जब आप एक द्विघात बहुपद को (x - 2)(x - 3) जैसे दो भागों में गुणित करते हैं, तो आप मूल रूप से एक जटिल समस्या को दो सरल टुकड़ों में तोड़ रहे होते हैं। यदि कोई भी टुकड़ा शून्य हो जाता है, तो पूरी समस्या शून्य हो जाती है! क्या जीवन ऐसा नहीं है? जब एक बड़े पैमाने पर, जटिल चुनौती का सामना करना पड़ता है, तो आप इसे छोटे कारकों में तोड़ देते हैं। छोटे कारकों पर विजय प्राप्त करें, और बड़ी समस्या अपने आप हल हो जाती है!",
+      "body_gu": "જ્યારે તમે દ્વિઘાત બહુપદીના બે ભાગ કરો છો જેમ કે (x - 2)(x - 3), ત્યારે તમે મૂળભૂત રીતે જટિલ સમસ્યાને બે સરળ ટુકડાઓમાં તોડી રહ્યા છો. જો બેમાંથી કોઈપણ ટુકડો શૂન્ય બની જાય, તો આખી સમસ્યા શૂન્ય થઈ જાય છે! શું જીવન આવું નથી? જ્યારે એક વિશાળ, જટિલ પડકારનો સામનો કરવો પડે છે, ત્યારે તમે તેને નાના પરિબળોમાં તોડી નાખો છો. નાના પરિબળો પર વિજય મેળવો, અને મોટી સમસ્યા જાતે જ હલ થઈ જશે!"
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_CONNECTION_1",
+      "type": "theory",
+      "title": "Step 7: Connection",
+      "title_hi": "कदम 7: संबंध",
+      "title_gu": "પગલું 7: સંબંધ",
+      "body": "Polynomials are the foundation of Calculus, which you will study in Class 11 and 12. Also, every polynomial graph makes a beautiful curve. A linear polynomial (degree 1) makes a straight line. A quadratic polynomial (degree 2) makes a U-shape called a 'Parabola'. Every time you throw a basketball into a hoop, the path the ball takes perfectly matches a quadratic polynomial equation!",
+      "body_hi": "बहुपद कैलकुलस (Calculus) की नींव हैं, जिसका अध्ययन आप कक्षा 11 और 12 में करेंगे। साथ ही, हर बहुपद का ग्राफ एक सुंदर वक्र (curve) बनाता है। एक रैखिक बहुपद (घात 1) एक सीधी रेखा बनाता है। एक द्विघात बहुपद (घात 2) एक यू-आकार (U-shape) बनाता है जिसे 'परवलय' (Parabola) कहा जाता है। हर बार जब आप बास्केटबॉल को हूप में फेंकते हैं, तो गेंद जो रास्ता अपनाती है वह पूरी तरह से एक द्विघात बहुपद समीकरण से मेल खाता है!",
+      "body_gu": "બહુપદીઓ કેલ્ક્યુલસનો પાયો છે, જેનો તમે ધોરણ 11 અને 12 માં અભ્યાસ કરશો. ઉપરાંત, દરેક બહુપદીનો આલેખ એક સુંદર વળાંક બનાવે છે. સુરેખ બહુપદી (ઘાત 1) સીધી રેખા બનાવે છે. દ્વિઘાત બહુપદી (ઘાત 2) U-આકાર બનાવે છે જેને 'પરવલય' (Parabola) કહેવાય છે. દર વખતે જ્યારે તમે બાસ્કેટબોલ ફેંકો છો, ત્યારે બોલ જે માર્ગ લે છે તે દ્વિઘાત બહુપદી સમીકરણ સાથે સંપૂર્ણ રીતે મેળ ખાય છે!"
+    },
+    {
+      "id": "CBSE_9_MATH_CH2_MASTERY_1",
+      "type": "theory",
+      "title": "Step 8: Mastery - Algebraic Identities",
+      "title_hi": "कदम 8: महारत - बीजीय सर्वसमिकाएँ",
+      "title_gu": "પગલું 8: નિપુણતા - બૈજિક નિત્યસમ",
+      "body": "To become a polynomial ninja, you must memorize the magical Algebraic Identities. They act like shortcut cheat codes!\n1. (x + y)² = x² + 2xy + y²\n2. (x - y)² = x² - 2xy + y²\n3. x² - y² = (x + y)(x - y)\n4. (x + a)(x + b) = x² + (a+b)x + ab\nExample: What is 102 × 98? Don't multiply directly! Use identity #3. \n102 × 98 = (100 + 2)(100 - 2) = 100² - 2² = 10000 - 4 = 9996! Ninja speed achieved!",
+      "body_hi": "बहुपद निंजा बनने के लिए, आपको जादुई बीजीय सर्वसमिकाओं (Algebraic Identities) को याद रखना चाहिए। वे शॉर्टकट चीट कोड (cheat codes) की तरह काम करते हैं!\n1. (x + y)² = x² + 2xy + y²\n2. (x - y)² = x² - 2xy + y²\n3. x² - y² = (x + y)(x - y)\n4. (x + a)(x + b) = x² + (a+b)x + ab\nउदाहरण: 102 × 98 क्या है? सीधे गुणा मत करो! सर्वसमिका #3 का प्रयोग करो।\n102 × 98 = (100 + 2)(100 - 2) = 100² - 2² = 10000 - 4 = 9996! निंजा स्पीड प्राप्त की!",
+      "body_gu": "બહુપદી નિન્જા બનવા માટે, તમારે જાદુઈ બૈજિક નિત્યસમને યાદ રાખવા જોઈએ. તેઓ શોર્ટકટ ચીટ કોડ જેવા કાર્ય કરે છે!\n1. (x + y)² = x² + 2xy + y²\n2. (x - y)² = x² - 2xy + y²\n3. x² - y² = (x + y)(x - y)\n4. (x + a)(x + b) = x² + (a+b)x + ab\nઉદાહરણ: 102 × 98 શું છે? સીધો ગુણાકાર કરશો નહીં! નિત્યસમ #3 નો ઉપયોગ કરો.\n102 × 98 = (100 + 2)(100 - 2) = 100² - 2² = 10000 - 4 = 9996! નિન્જા ઝડપ પ્રાપ્ત!"
+    }
+  ]
+}

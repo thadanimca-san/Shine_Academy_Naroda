@@ -4,22 +4,19 @@
   "subjects": [
     {
       "id": "cbse_class10_science",
-      "name": "Science",
+      "name": "Science — NCERT Science (New CBSE Rationalized Edition)",
       "chapters": [
-        {
-          "chapter_id": "cbse_class10_science_mock_exam_1",
-          "title": "Board Exam: Full Science Paper 1 (With Solutions)",
-          "module_id": "gseb_class10_science_mock_exam_1"
-        },
         {
           "chapter_id": "cbse_class10_science_ch1",
           "title": "Chapter 1: Chemical Reactions and Equations",
-          "module_id": "ncert_class10_science_ch1"
+          "module_id": "ncert_class10_science_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_science_ch2",
           "title": "Chapter 2: Acids, Bases and Salts",
-          "module_id": "ncert_class10_science_ch2"
+          "module_id": "ncert_class10_science_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_science_ch3",
@@ -78,28 +75,25 @@
         }
       ],
       "color_hex": "0xFF4CAF50",
-      "icon": "science"
-    },
-    {
-      "id": "interactive_science_sim",
-      "name": "Science Simulations (Interactive)",
-      "color_hex": "0xFF3F51B5",
       "icon": "science",
-      "chapters": []
+      "edition": "New Rationalized Edition"
     },
     {
       "id": "cbse_class10_math",
-      "name": "Mathematics",
+      "name": "Mathematics — Ganita Prakash (New 2024 CBSE Edition)",
+      "edition": "Ganita Prakash (New Edition)",
       "chapters": [
         {
           "chapter_id": "cbse_class10_math_ch1",
           "title": "Chapter 1: Real Numbers",
-          "module_id": "ncert_class10_maths_ch1"
+          "module_id": "ncert_class10_maths_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_math_ch2",
           "title": "Chapter 2: Polynomials",
-          "module_id": "ncert_class10_maths_ch2"
+          "module_id": "ncert_class10_maths_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_math_ch3",
@@ -167,19 +161,21 @@
     },
     {
       "id": "cbse_class10_social",
-      "name": "Social Science",
+      "name": "Social Science — History + Civics + Geography + Economics",
       "color_hex": "0xFF9C27B0",
       "icon": "book",
       "chapters": [
         {
           "chapter_id": "cbse_class10_social_science_hist_ch1",
           "title": "History Chapter 1: The Rise of Nationalism in Europe",
-          "module_id": "ncert_class10_history_ch1"
+          "module_id": "ncert_class10_history_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_social_science_hist_ch2",
           "title": "History Chapter 2: Nationalism in India",
-          "module_id": "ncert_class10_history_ch2"
+          "module_id": "ncert_class10_history_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_social_science_hist_ch3",
@@ -281,23 +277,26 @@
           "title": "Economics Chapter 5: Consumer Rights",
           "module_id": "ncert_class10_economics_ch5"
         }
-      ]
+      ],
+      "edition": "NCERT Classic + Rationalized Edition"
     },
     {
       "id": "cbse_class10_english",
-      "name": "English",
+      "name": "English — First Flight (Main Textbook) & Footprints Without Feet (Supplementary)",
       "color_hex": "0xFFFF9800",
       "icon": "language",
       "chapters": [
         {
           "chapter_id": "cbse_class10_english_ch1",
           "title": "Chapter 1: A Letter to God (First Flight)",
-          "module_id": "cbse_class10_english_ch1"
+          "module_id": "cbse_class10_english_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_english_ch2",
           "title": "Chapter 2: Nelson Mandela: Long Walk to Freedom",
-          "module_id": "cbse_class10_english_ch2"
+          "module_id": "cbse_class10_english_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_english_ch3",
@@ -311,38 +310,28 @@
         },
         {
           "chapter_id": "cbse_class10_english_ch5",
-          "title": "Chapter 5: The Hundred Dresses - I",
+          "title": "Chapter 5: Glimpses of India",
           "module_id": "cbse_class10_english_ch5"
         },
         {
           "chapter_id": "cbse_class10_english_ch6",
-          "title": "Chapter 6: The Hundred Dresses - II",
+          "title": "Chapter 6: Mijbil the Otter",
           "module_id": "cbse_class10_english_ch6"
         },
         {
           "chapter_id": "cbse_class10_english_ch7",
-          "title": "Chapter 7: Glimpses of India",
+          "title": "Chapter 7: Madam Rides the Bus",
           "module_id": "cbse_class10_english_ch7"
         },
         {
           "chapter_id": "cbse_class10_english_ch8",
-          "title": "Chapter 8: Mijbil the Otter",
+          "title": "Chapter 8: The Sermon at Benares",
           "module_id": "cbse_class10_english_ch8"
         },
         {
           "chapter_id": "cbse_class10_english_ch9",
-          "title": "Chapter 9: Madam Rides the Bus",
+          "title": "Chapter 9: The Proposal",
           "module_id": "cbse_class10_english_ch9"
-        },
-        {
-          "chapter_id": "cbse_class10_english_ch10",
-          "title": "Chapter 10: The Sermon at Benares",
-          "module_id": "cbse_class10_english_ch10"
-        },
-        {
-          "chapter_id": "cbse_class10_english_ch11",
-          "title": "Chapter 11: The Proposal",
-          "module_id": "cbse_class10_english_ch11"
         },
         {
           "chapter_id": "cbse_class10_english_sup_ch1",
@@ -369,280 +358,752 @@
           "title": "Chapter 16: Footprints without Feet (Supplementary)",
           "module_id": "cbse_class10_english_sup_ch5"
         }
-      ]
+      ],
+      "edition": "First Flight + Footprints Without Feet"
     },
     {
-      "id": "interactive_grammar",
-      "name": "English Grammar (Interactive)",
-      "color_hex": "0xFF009688",
-      "icon": "translate",
+      "id": "cbse_class10_english101",
+      "name": "English Code 101",
+      "color_hex": "0xFFFF9800",
+      "icon": "language",
       "chapters": [
         {
-          "chapter_id": "ncert_class10_grammar_ch1",
-          "title": "Grammar Chapter 1: Tenses",
-          "module_id": "ncert_class10_grammar_ch1"
+          "chapter_id": "cbse_class10_english101_ch1",
+          "title": "Chapter 1: Two Gentlemen of Verona",
+          "module_id": "cbse_class10_english101_ch1",
+          "is_free": true
         },
         {
-          "chapter_id": "ncert_class10_grammar_ch2",
-          "title": "Grammar Chapter 2: Modals",
-          "module_id": "ncert_class10_grammar_ch2"
+          "chapter_id": "cbse_class10_english101_ch2",
+          "title": "Chapter 2: Mrs. Packletide's Tiger",
+          "module_id": "cbse_class10_english101_ch2",
+          "is_free": true
         },
         {
-          "chapter_id": "ncert_class10_grammar_ch3",
-          "title": "Grammar Chapter 3: Subject-Verb Concord",
-          "module_id": "ncert_class10_grammar_ch3"
+          "chapter_id": "cbse_class10_english101_ch3",
+          "title": "Chapter 3: The Letter",
+          "module_id": "cbse_class10_english101_ch3"
         },
         {
-          "chapter_id": "ncert_class10_grammar_ch4",
-          "title": "Grammar Chapter 4: Reported Speech",
-          "module_id": "ncert_class10_grammar_ch4"
+          "chapter_id": "cbse_class10_english101_ch4",
+          "title": "Chapter 4: A Shady Plot",
+          "module_id": "cbse_class10_english101_ch4"
         },
         {
-          "chapter_id": "ncert_class10_grammar_ch5",
-          "title": "Grammar Chapter 5: Determiners",
-          "module_id": "ncert_class10_grammar_ch5"
+          "chapter_id": "cbse_class10_english101_ch5",
+          "title": "Chapter 5: Patol Babu, Film Star",
+          "module_id": "cbse_class10_english101_ch5"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch6",
+          "title": "Chapter 6: Virtually True",
+          "module_id": "cbse_class10_english101_ch6"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch7",
+          "title": "Chapter 7: The Frog and the Nightingale",
+          "module_id": "cbse_class10_english101_ch7"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch8",
+          "title": "Chapter 8: Mirror",
+          "module_id": "cbse_class10_english101_ch8"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch9",
+          "title": "Chapter 9: Not Marble, nor the Gilded Monuments",
+          "module_id": "cbse_class10_english101_ch9"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch10",
+          "title": "Chapter 12: Ozymandias",
+          "module_id": "cbse_class10_english101_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_english101_ch11",
+          "title": "Chapter 12: The Rime of the Ancient Mariner",
+          "module_id": "cbse_class10_english101_ch11"
+        }
+      ],
+      "edition": "First Flight + Footprints Without Feet"
+    },
+    {
+      "id": "english_grammar_class10",
+      "name": "English Grammar",
+      "name_hi": "**अंग्रेजी व्याकरण — फर्स्ट फ्लाइट पाठ्यक्रम (NCERT/CBSE कक्षा 10)**",
+      "name_gu": "**અંગ્રેજી વ્યાકરણ — ફર્સ્ટ ફ્લાઇટ અભ્યાસક્રમ (NCERT/CBSE ધોરણ 10)**",
+      "chapters": [
+        {
+          "id": "ncert_class10_grammar_ch1",
+          "title": "Tenses — Board Pattern Review & Advanced Rules",
+          "title_hi": "काल — बोर्ड पैटर्न समीक्षा और उन्नत नियम",
+          "title_gu": "કાળ — બોર્ડ પેટર્ન સમીક્ષા અને એડવાન્સ નિયમો",
+          "path": "app_core/chapters/ncert_class10_grammar_ch1.json",
+          "unwrapped": true,
+          "is_free": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch2",
+          "title": "Modals — Expressing Nuance, Advice & Probability",
+          "title_hi": "मोडल्स — बारीकियाँ, सलाह और संभावना",
+          "title_gu": "મોડલ્સ — સલાહ, સંભાવના અને સૂક્ષ્મ અર્થ",
+          "path": "app_core/chapters/ncert_class10_grammar_ch2.json",
+          "unwrapped": true,
+          "is_free": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch3",
+          "title": "Subject-Verb Concord — Tricky Exam Patterns",
+          "title_hi": "कर्ता-क्रिया मेल (Subject-Verb Concord)",
+          "title_gu": "કર્તા-ક્રિયા સંવાદિતા (Subject-Verb Concord)",
+          "path": "app_core/chapters/ncert_class10_grammar_ch3.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch4",
+          "title": "Reported Speech — Commands, Requests & Dialogue Completion",
+          "title_hi": "रिपोर्टेड स्पीच — आदेश, अनुरोध और संवाद पूर्ति",
+          "title_gu": "રિપોર્ટેડ સ્પીચ — આજ્ઞા, વિનંતી અને સંવાદ પૂર્ણતા",
+          "path": "app_core/chapters/ncert_class10_grammar_ch4.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch5",
+          "title": "Active & Passive Voice — Advanced Imperatives & Prepositions",
+          "title_hi": "एक्टिव और पैसिव वॉइस — उन्नत संरचनाएं",
+          "title_gu": "એક્ટિવ અને પેસિવ વોઇસ — એડવાન્સ સંરચનાઓ",
+          "path": "app_core/chapters/ncert_class10_grammar_ch5.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch6",
+          "title": "Editing and Omission Exercises (Board Pattern)",
+          "title_hi": "संपादन और लोप अभ्यास (बोर्ड पैटर्न)",
+          "title_gu": "એડિટિંગ અને ઓમિશન સ્વાધ્યાય (બોર્ડ પેટર્ન)",
+          "path": "app_core/chapters/ncert_class10_grammar_ch6.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch7",
+          "title": "Gap Filling Exercises (Board Pattern)",
+          "title_hi": "रिक्त स्थान पूर्ति अभ्यास (बोर्ड पैटर्न)",
+          "title_gu": "ગેપ ફીલિંગ સ્વાધ્યાય (બોર્ડ પેટર્ન)",
+          "path": "app_core/chapters/ncert_class10_grammar_ch7.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch8",
+          "title": "Transformation of Sentences — Advanced Board Structures",
+          "title_hi": "वाक्य रूपांतरण — उन्नत बोर्ड संरचनाएं",
+          "title_gu": "વાક્ય રૂપાંતરણ — એડવાન્સ બોર્ડ રચનાઓ",
+          "path": "app_core/chapters/ncert_class10_grammar_ch8.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch9",
+          "title": "Formal Letter Writing — Structure & Board Format",
+          "title_hi": "औपचारिक पत्र लेखन — संरचना और बोर्ड प्रारूप",
+          "title_gu": "ઔપચારિક પત્ર લેખન — માળખું અને બોર્ડ ફોર્મેટ",
+          "path": "app_core/chapters/ncert_class10_grammar_ch9.json",
+          "unwrapped": true
+        },
+        {
+          "id": "ncert_class10_grammar_ch10",
+          "title": "Analytical Paragraph Writing — Data & Graph Interpretation",
+          "title_hi": "विश्लेषणात्मक पैराग्राफ लेखन — डेटा और ग्राफ व्याख्या",
+          "title_gu": "વિશ્લેષણાત્મક ફકરા લેખન — ડેટા અને આલેખ વિશ્લેષણ",
+          "path": "app_core/chapters/ncert_class10_grammar_ch10.json",
+          "unwrapped": true
         }
       ]
     },
     {
       "id": "cbse_class10_hindi",
-      "name": "हिन्दी (Second Language)",
+      "name": "हिन्दी Course A 002",
       "color_hex": "0xFFE91E63",
       "icon": "translate",
       "chapters": [
         {
           "chapter_id": "cbse_class10_hindi_ch1",
-          "title": "पाठ 1: साखी (कबीर दास)",
-          "module_id": "cbse_class10_hindi_ch1"
+          "title": "पाठ 1: पद — सूरदास",
+          "module_id": "cbse_class10_hindi_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_hindi_ch2",
-          "title": "पाठ 2: मीरा के पद",
-          "module_id": "cbse_class10_hindi_ch2"
+          "title": "पाठ 2: राम-लक्ष्मण-परशुराम संवाद — तुलसीदास",
+          "module_id": "cbse_class10_hindi_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_hindi_ch3",
-          "title": "पाठ 3: तताँरा-वामीरो कथा",
+          "title": "पाठ 3: आत्मकथ्य — जयशंकर प्रसाद",
           "module_id": "cbse_class10_hindi_ch3"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch4",
-          "title": "पाठ 4: मनुष्यता",
+          "title": "पाठ 4: उत्साह / अट नहीं रही है — सूर्यकांत त्रिपाठी 'निराला'",
           "module_id": "cbse_class10_hindi_ch4"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch5",
-          "title": "पाठ 5: पर्वत प्रदेश में पावस",
+          "title": "पाठ 5: यह दंतुरित मुस्कान / फसल — नागार्जुन",
           "module_id": "cbse_class10_hindi_ch5"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch6",
-          "title": "पाठ 6: अब कहाँ दूसरे के दुख से दुखी होने वाले",
+          "title": "पाठ 6: संगतकार — मंगलेश डबराल",
           "module_id": "cbse_class10_hindi_ch6"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch7",
-          "title": "पाठ 7: पतझर में टूटी पत्तियाँ",
+          "title": "पाठ 7: नेताजी का चश्मा — स्वयं प्रकाश",
           "module_id": "cbse_class10_hindi_ch7"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch8",
-          "title": "पाठ 8: कर चले हम फ़िदा",
+          "title": "पाठ 8: बालगोबिन भगत — रामवृक्ष बेनीपुरी",
           "module_id": "cbse_class10_hindi_ch8"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch9",
-          "title": "पाठ 9: आत्मत्राण",
+          "title": "पाठ 9: लखनवी अंदाज़ — यशपाल",
           "module_id": "cbse_class10_hindi_ch9"
         },
         {
           "chapter_id": "cbse_class10_hindi_ch10",
-          "title": "पाठ 10: बड़े भाई साहब",
+          "title": "पाठ 10: एक कहानी यह भी — मन्नू भंडारी",
           "module_id": "cbse_class10_hindi_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_hindi_ch11",
+          "title": "पाठ 11: नौबतखाने में इबादत — यतीन्द्र मिश्र",
+          "module_id": "cbse_class10_hindi_ch11"
+        },
+        {
+          "chapter_id": "cbse_class10_hindi_ch12",
+          "title": "पाठ 12: संस्कृति — भदंत आनंद कौसल्यायन",
+          "module_id": "cbse_class10_hindi_ch12"
+        },
+        {
+          "chapter_id": "cbse_class10_hindi_ch13",
+          "title": "पाठ 13: माता का आँचल — शिवपूजन सहाय",
+          "module_id": "cbse_class10_hindi_ch13"
+        },
+        {
+          "chapter_id": "cbse_class10_hindi_ch14",
+          "title": "पाठ 14: साना-साना हाथ जोड़ि... — मधु कांकरिया",
+          "module_id": "cbse_class10_hindi_ch14"
+        },
+        {
+          "chapter_id": "cbse_class10_hindi_ch15",
+          "title": "पाठ 15: मैं क्यों लिखता हूँ? — अज्ञेय",
+          "module_id": "cbse_class10_hindi_ch15"
+        }
+      ]
+    },
+    {
+      "id": "cbse_class10_hindiB",
+      "name": "हिन्दी Course B 085",
+      "color_hex": "0xFFE91E63",
+      "icon": "translate",
+      "chapters": [
+        {
+          "chapter_id": "cbse_class10_hindiB_ch1",
+          "title": "पाठ 1: साखी — कबीर - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch1",
+          "is_free": true
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch2",
+          "title": "पाठ 2: पद — मीरा - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch2",
+          "is_free": true
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch3",
+          "title": "पाठ 3: मनुष्यता — मैथिलीशरण गुप्त - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch3"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch4",
+          "title": "पाठ 4: पर्वत प्रदेश में पावस — सुमित्रानंदन पंत - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch4"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch5",
+          "title": "पाठ 5: कर चले हम फ़िदा — कैफ़ी आज़मी - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch5"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch6",
+          "title": "पाठ 6: आत्मत्राण — रवींद्रनाथ ठाकुर - पद्य खंड (कविता)",
+          "module_id": "cbse_class10_hindiB_ch6"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch7",
+          "title": "पाठ 7: बड़े भाई साहब — प्रेमचंद",
+          "module_id": "cbse_class10_hindiB_ch7"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch8",
+          "title": "पाठ 8: तताँरा-वामीरो कथा — लीलाधर मंडलोई",
+          "module_id": "cbse_class10_hindiB_ch8"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch9",
+          "title": "पाठ 9: तीसरी कसम के शिल्पकार शैलेंद्र — प्रहलाद अग्रवाल",
+          "module_id": "cbse_class10_hindiB_ch9"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch10",
+          "title": "पाठ 10: अब कहाँ दूसरे के दुख से दुखी होने वाले — निदा फ़ाज़ली",
+          "module_id": "cbse_class10_hindiB_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch11",
+          "title": "पाठ 11: पतझर में टूटी पत्तियाँ (गिन्नी का सोना / ज़ेन की देन) — रवींद्र केलेकर",
+          "module_id": "cbse_class10_hindiB_ch11"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch12",
+          "title": "पाठ 12: कारतूस — हबीब तनवीर",
+          "module_id": "cbse_class10_hindiB_ch12"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch13",
+          "title": "पाठ 13: हरिहर काका — मिथिलेश्वर",
+          "module_id": "cbse_class10_hindiB_ch13"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch14",
+          "title": "पाठ 14: सपनों के-से दिन — गुरुदयाल सिंह",
+          "module_id": "cbse_class10_hindiB_ch14"
+        },
+        {
+          "chapter_id": "cbse_class10_hindiB_ch15",
+          "title": "पाठ 15: टोपी शुक्ला — राही मासूम रज़ा",
+          "module_id": "cbse_class10_hindiB_ch15"
+        }
+      ]
+    },
+    {
+      "id": "cbse_class10_sanskrit_122",
+      "name": "संस्कृत कोड 122",
+      "color_hex": "0xFFE91E63",
+      "icon": "translate",
+      "chapters": [
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch1",
+          "title": "प्रथमः पाठः — शुचिपर्यावरणम्",
+          "module_id": "cbse_class10_sanksrit122_ch1",
+          "is_free": true
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch2",
+          "title": "द्वितीयः पाठः — बुद्धिर्बलवती सदा",
+          "module_id": "cbse_class10_sanksrit122_ch2"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch3",
+          "title": "तृतीयः पाठः — शिशुलालसम्",
+          "module_id": "cbse_class10_sanksrit122_ch3"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch4",
+          "title": "चतुर्थः पाठः — जननी तुल्यवत्सला",
+          "module_id": "cbse_class10_sanksrit122_ch4"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch5",
+          "title": "पंचमः पाठः — सुभाषितानि",
+          "module_id": "cbse_class10_sanksrit122_ch5"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch6",
+          "title": "द्षष्ठः पाठः — सौहार्दं प्रकृतेः शोभा",
+          "module_id": "cbse_class10_sanksrit122_ch6"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch7",
+          "title": "द्सप्तमः पाठः — विचित्रः साक्षी",
+          "module_id": "cbse_class10_sanksrit122_ch7"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch8",
+          "title": "अष्टमः पाठः — सूक्तयः",
+          "module_id": "cbse_class10_sanksrit122_ch8"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch9",
+          "title": "नवमः पाठः — अनूक्तयः",
+          "module_id": "cbse_class10_sanksrit122_ch9"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch10",
+          "title": "10 : सन्धिकार्यम्: स्वर, व्यंजन एवं विसर्ग सन्धि",
+          "module_id": "cbse_class10_sanksrit122_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch11",
+          "title": "11 : समासः: तत्पुरुष, बहुव्रीहि, द्विगु, अव्ययीभाव",
+          "module_id": "cbse_class10_sanksrit122_ch11"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch12",
+          "title": "12 : प्रत्ययाः: तद्धित (मटुप्, ठक्, त्व, तल्) एवं स्त्री-प्रत्यय (टाप्, ङीप्)",
+          "module_id": "cbse_class10_sanksrit122_ch12"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch13",
+          "title": "13 : समयलेखनम्: अंकों के स्थान पर शब्दों में समय लिखना",
+          "module_id": "cbse_class10_sanksrit122_ch13"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch14",
+          "title": "14 : अव्ययपदानि: वाक्य प्रयोग एवं रिक्त स्थान पूर्ति",
+          "module_id": "cbse_class10_sanksrit122_ch14"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch15",
+          "title": "15 : अशुद्धिशोधनम्: वचन, लिङ्ग, पुरुष, लकार एवं विभक्ति आधारित शोधन",
+          "module_id": "cbse_class10_sanksrit122_ch15"
+        },
+        {
+          "chapter_id": "cbse_class10_sanksrit122_ch16",
+          "title": "16 : रचनात्मक कार्यम्: पत्र-लेखनम्, चित्र-वर्णनम् / अनुच्छेद-लेखनम्, और हिन्दी/अंग्रेजी वाक्यों का संस्कृत अनुवाद",
+          "module_id": "cbse_class10_sanksrit122_ch16"
+        }
+      ]
+    },
+    {
+      "id": "cbse_class10_sanskrit_076",
+      "name": "संस्कृत (Communicative) - 076",
+      "color_hex": "0xFFE91E63",
+      "icon": "translate",
+      "book_name": "मणिका भाग २ (Manika Part 2)",
+      "chapters": [
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch1",
+          "title": "प्रथमः पाठः: वाङ्मयं तपः",
+          "title_en": "Chapter 1: Vaangmayam Tapah",
+          "module_id": "cbse_class10_sanskrit076_ch1",
+          "is_free": true
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch2",
+          "title": "द्वितीयः पाठः: नास्ति त्यागसमं सुखम्",
+          "title_en": "Chapter 2: Nasti Tyagasamam Sukham",
+          "module_id": "cbse_class10_sanskrit076_ch2",
+          "is_free": true
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch3",
+          "title": "तृतीयः पाठः: रमणीया हि सृष्टिरेषा",
+          "title_en": "Chapter 3: Ramaniya Hi Srishtiresha",
+          "module_id": "cbse_class10_sanskrit076_ch3"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch4",
+          "title": "चतुर्थः पाठः: आज्ञा गुरूणां ह्यविचारणीया",
+          "title_en": "Chapter 4: Aagya Gurunam Hyavicharaniya",
+          "module_id": "cbse_class10_sanskrit076_ch4"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch5",
+          "title": "पञ्चमः पाठः: अभ्यासवशगं मनः",
+          "title_en": "Chapter 5: Abhyasavashagam Manah",
+          "module_id": "cbse_class10_sanskrit076_ch5"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch6",
+          "title": "षष्ठः पाठः: राष्ट्रं संरक्ष्यमेव हि",
+          "title_en": "Chapter 6: Rashtram Samrakshyameva Hi",
+          "module_id": "cbse_class10_sanskrit076_ch6"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch7",
+          "title": "सप्तमः पाठः: साधुवृत्तिं समाचरेत्",
+          "title_en": "Chapter 7: Sadhuvrittim Samacharet",
+          "module_id": "cbse_class10_sanskrit076_ch7"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch8",
+          "title": "अष्टमः पाठः: तिरुक्कुरल्-सूक्ति-सौरभम्",
+          "title_en": "Chapter 8: Thirukkural-Sukti-Saurabham",
+          "module_id": "cbse_class10_sanskrit076_ch8"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch9",
+          "title": "नवमः पाठः: सुस्वागतं भोः ! अरुणाचलेऽस्मिन्",
+          "title_en": "Chapter 9: Suswagatam Bhoh! Arunachale Asmin",
+          "module_id": "cbse_class10_sanskrit076_ch9"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch10",
+          "title": "दशमः पाठः: कालोऽहम्",
+          "title_en": "Chapter 10: Kaalo Aham",
+          "module_id": "cbse_class10_sanskrit076_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_ch11",
+          "title": "एकादशः पाठः: किं किम् उपादेयम्",
+          "title_en": "Chapter 11: Kim Kim Upadeyam",
+          "module_id": "cbse_class10_sanskrit076_ch11"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_grammar",
+          "title": "संस्कृत व्याकरणम् (Sanskrit Vyakaran)",
+          "title_en": "Sanskrit Grammar (Sandhi, Samas, Dhatu Roop, Karak)",
+          "module_id": "cbse_class10_sanskrit076_vyakaran"
+        },
+        {
+          "chapter_id": "cbse_class10_sanskrit076_composition",
+          "title": "रचनात्मक कार्यम् (Writing & Composition)",
+          "title_en": "Patra Lekhan, Chitra Varnan, Anuvad",
+          "module_id": "cbse_class10_sanskrit076_composition"
         }
       ]
     },
     {
       "id": "cbse_class10_gujarati",
-      "name": "ગુજરાતી (Second Language)",
-      "color_hex": "0xFFFF9800",
-      "icon": "auto_stories",
+      "name": "ગુજરાતી 010",
+      "subject_code": "010",
+      "color_hex": "0xFFE91E63",
+      "icon": "translate",
+      "edition": "Gujarat State Board / CBSE 2025-26 Edition",
       "chapters": [
         {
           "chapter_id": "cbse_class10_gujarati_ch1",
-          "title": "પાઠ ૧: મોરલી",
-          "module_id": "cbse_class10_gujarati_ch1"
+          "title": "પાઠ ૧: વૈષ્ણવજન",
+          "title_gu": "પાઠ ૧: વૈષ્ણવજન",
+          "author": "Narsinh Mehta",
+          "author_gu": "નરસિંહ મહેતા",
+          "type": "Poetry",
+          "module_id": "cbse_class10_gujarati_ch1",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch2",
-          "title": "પાઠ ૨: વૈષ્ણવજન તો તેને કહીએ",
-          "module_id": "cbse_class10_gujarati_ch2"
+          "title": "પાઠ ૨: રેસનો ઘોડો",
+          "title_gu": "પાઠ ૨: રેસનો ઘોડો",
+          "author": "Varsha Adalja",
+          "author_gu": "વર્ષા અડાલજા",
+          "type": "Prose",
+          "module_id": "cbse_class10_gujarati_ch2",
+          "is_free": true
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch3",
           "title": "પાઠ ૩: શીલવંત સાધુને",
+          "title_gu": "પાઠ ૩: શીલવંત સાધુને",
+          "author": "Gangasati",
+          "author_gu": "ગંગાસતી",
+          "type": "Poetry",
           "module_id": "cbse_class10_gujarati_ch3"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch4",
-          "title": "પાઠ ૪: દીકરી",
+          "title": "પાઠ ૪: ભૂલી ગયા પછી",
+          "title_gu": "પાઠ ૪: ભૂલી ગયા પછી",
+          "author": "Raghuveer Chaudhari",
+          "author_gu": "રઘુવીર ચૌધરી",
+          "type": "Prose",
           "module_id": "cbse_class10_gujarati_ch4"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch5",
-          "title": "પાઠ ૫: વતનથી વિદાય થતાં",
+          "title": "પાઠ ૫: દિવે દિવે સંસ્કૃતિ જાગશે",
+          "title_gu": "પાઠ ૫: દિવે દિવે સંસ્કૃતિ જાગશે",
+          "author": "Sundaram",
+          "author_gu": "સુંદરમ્",
+          "type": "Poetry",
           "module_id": "cbse_class10_gujarati_ch5"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch6",
-          "title": "પાઠ ૬: બોલીએ ના કાંઈ",
+          "title": "પાઠ ૬: વાયરલ ઇન્ફેક્શન",
+          "title_gu": "પાઠ ૬: વાયરલ ઇન્ફેક્શન",
+          "author": "Gunvant Shah",
+          "author_gu": "ગુણવંત શાહ",
+          "type": "Prose",
           "module_id": "cbse_class10_gujarati_ch6"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch7",
-          "title": "પાઠ ૭: જીવમાં જીવ આવ્યો",
+          "title": "પાઠ ૭: જ્યાં જ્યાં વસે એક ગુજરાતી",
+          "title_gu": "પાઠ ૭: જ્યાં જ્યાં વસે એક ગુજરાતી",
+          "author": "Khabardar",
+          "author_gu": "ખબરદાર",
+          "type": "Poetry",
           "module_id": "cbse_class10_gujarati_ch7"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch8",
-          "title": "પાઠ ૮: ચોપડાની ઇન્દ્રજાળ",
+          "title": "પાઠ ૮: છત્રી",
+          "title_gu": "પાઠ ૮: છત્રી",
+          "author": "Ratilal Borisagar",
+          "author_gu": "રતિલાલ બોરીસાગર",
+          "type": "Prose",
           "module_id": "cbse_class10_gujarati_ch8"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch9",
-          "title": "પાઠ ૯: ઢીંગલી",
+          "title": "પાઠ ૯: દીકરી",
+          "title_gu": "પાઠ ૯: દીકરી",
+          "author": "Ashok Chavda 'Bedil'",
+          "author_gu": "અશોક ચાવડા 'બેદિલ'",
+          "type": "Poetry",
           "module_id": "cbse_class10_gujarati_ch9"
         },
         {
           "chapter_id": "cbse_class10_gujarati_ch10",
-          "title": "પાઠ ૧૦: ભૂખથી યે ભૂંડી ભીખ",
+          "title": "પાઠ ૧૦: ચોપડાની ઇન્દ્રજાળ",
+          "title_gu": "પાઠ ૧૦: ચોપડાની ઇન્દ્રજાળ",
+          "author": "Chandrakant Pandya",
+          "author_gu": "ચંદ્રકાંત પંડ્યા",
+          "type": "Prose",
           "module_id": "cbse_class10_gujarati_ch10"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch11",
+          "title": "પાઠ ૧૧: હું એવો ગુજરાતી",
+          "title_gu": "પાઠ ૧૧: હું એવો ગુજરાતી",
+          "author": "Vinod Joshi",
+          "author_gu": "વિનોદ જોશી",
+          "type": "Poetry",
+          "module_id": "cbse_class10_gujarati_ch11"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch12",
+          "title": "પાઠ ૧૨: જન્મોત્સવ",
+          "title_gu": "પાઠ ૧૨: જન્મોત્સવ",
+          "author": "Suresh Joshi",
+          "author_gu": "સુરેશ જોશી",
+          "type": "Prose",
+          "module_id": "cbse_class10_gujarati_ch12"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch13",
+          "title": "પાઠ ૧૩: ચાંદલિયો",
+          "title_gu": "પાઠ ૧૩: ચાંદલિયો",
+          "author": "Lokgeet",
+          "author_gu": "લોકગીત",
+          "type": "Poetry",
+          "module_id": "cbse_class10_gujarati_ch13"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch14",
+          "title": "પાઠ ૧૪: ગતિકંપ",
+          "title_gu": "પાઠ ૧૪: ગતિકંપ",
+          "author": "Mohammad Mankad",
+          "author_gu": "મોહમ્મદ માંકડ",
+          "type": "Prose",
+          "module_id": "cbse_class10_gujarati_ch14"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch15",
+          "title": "પાઠ ૧૫: માધવને દીઠો છે ક્યાંય...",
+          "title_gu": "પાઠ ૧૫: માધવને દીઠો છે ક્યાંય...",
+          "author": "Harindra Dave",
+          "author_gu": "હરીન્દ્ર દવે",
+          "type": "Poetry",
+          "module_id": "cbse_class10_gujarati_ch15"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_ch16",
+          "title": "પાઠ ૧૬: વતનથી વિદાય થતાં",
+          "title_gu": "પાઠ ૧૬: વતનથી વિદાય થતાં",
+          "author": "Ushanas",
+          "author_gu": "ઉશનસ્",
+          "type": "Poetry",
+          "module_id": "cbse_class10_gujarati_ch16"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_grammar",
+          "title": "ગુજરાતી વ્યાકરણ (Grammar)",
+          "title_gu": "ગુજરાતી વ્યાકરણ",
+          "author": null,
+          "author_gu": null,
+          "type": "Grammar",
+          "module_id": "cbse_class10_gujarati_vyakaran"
+        },
+        {
+          "chapter_id": "cbse_class10_gujarati_writing",
+          "title": "લેખન વિભાગ (Writing Skills)",
+          "title_gu": "લેખન વિભાગ",
+          "author": null,
+          "author_gu": null,
+          "type": "Writing",
+          "module_id": "cbse_class10_gujarati_lekhan"
         }
       ]
     },
     {
-      "id": "cbse_class10_sanskrit",
-      "name": "Sanskrit",
-      "color_hex": "0xFF8BC34A",
-      "icon": "menu_book",
-      "chapters": [
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch1",
-          "title": "Chapter 1: Samvadadhvam (Let Us Speak Together)",
-          "module_id": "cbse_class10_sanskrit_ch1"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch2",
-          "title": "Chapter 2: Yad Bhavishyo Vinashyati",
-          "module_id": "cbse_class10_sanskrit_ch2"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch3",
-          "title": "Chapter 3: Swasthavrttam Samachara",
-          "module_id": "cbse_class10_sanskrit_ch3"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch4",
-          "title": "Chapter 4: Janardanasya Pashchimah Sandeshah",
-          "module_id": "cbse_class10_sanskrit_ch4"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch5",
-          "title": "Chapter 5: Gunavati Kanya",
-          "module_id": "cbse_class10_sanskrit_ch5"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch6",
-          "title": "Chapter 6: Kashthandah",
-          "module_id": "cbse_class10_sanskrit_ch6"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch7",
-          "title": "Chapter 7: Subhashitakusumani",
-          "module_id": "cbse_class10_sanskrit_ch7"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch8",
-          "title": "Chapter 8: Sakshi Bhutah Manushyah",
-          "module_id": "cbse_class10_sanskrit_ch8"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch9",
-          "title": "Chapter 9: Chakshushman Andha Eva",
-          "module_id": "cbse_class10_sanskrit_ch9"
-        },
-        {
-          "chapter_id": "cbse_class10_sanskrit_ch10",
-          "title": "Chapter 10: Tvameka Bhavani",
-          "module_id": "cbse_class10_sanskrit_ch10"
-        }
-      ]
-    },
-    {
-      "id": "cbse_class10_deo_bank_2026",
-      "name": "DEO Question Bank 2026",
+      "id": "cbse_class10_Question_bank_2026",
+      "name": "Question Bank 2026",
       "color_hex": "0xFFFFD700",
       "icon": "diamond",
       "chapters": [
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch1",
-          "title": "Science DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch1"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch1",
+          "title": "Science Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch1"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch2",
-          "title": "Science DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch2"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch2",
+          "title": "Science Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch2"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch3",
-          "title": "Maths Basic DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch3"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch3",
+          "title": "Maths Basic Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch3"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch4",
-          "title": "Maths Basic DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch4"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch4",
+          "title": "Maths Basic Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch4"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch5",
-          "title": "Maths Standard DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch5"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch5",
+          "title": "Maths Standard Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch5"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch6",
-          "title": "Maths Standard DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch6"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch6",
+          "title": "Maths Standard Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch6"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch7",
-          "title": "Social Science DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch7"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch7",
+          "title": "Social Science Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch7"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch8",
-          "title": "Social Science DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch8"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch8",
+          "title": "Social Science Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch8"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch9",
-          "title": "English (FL) DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch9"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch9",
+          "title": "English (FL) Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch9"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch10",
-          "title": "English (FL) DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch10"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch10",
+          "title": "English (FL) Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch10"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch11",
-          "title": "Gujarati (SL) DEO Bank (Part 1 - MCQs)",
-          "module_id": "cbse_class10_deo_bank_2026_ch11"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch11",
+          "title": "Gujarati (SL) Question Bank (Part 1 - MCQs)",
+          "module_id": "cbse_class10_Question_bank_2026_ch11"
         },
         {
-          "chapter_id": "cbse_class10_deo_bank_2026_ch12",
-          "title": "Gujarati (SL) DEO Bank (Part 2 - Subject)",
-          "module_id": "cbse_class10_deo_bank_2026_ch12"
+          "chapter_id": "cbse_class10_Question_bank_2026_ch12",
+          "title": "Gujarati (SL) Question Bank (Part 2 - Subject)",
+          "module_id": "cbse_class10_Question_bank_2026_ch12"
         }
       ]
     },

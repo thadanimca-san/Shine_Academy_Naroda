@@ -1,0 +1,786 @@
+[
+  {
+    "id": "C10M_CH14_009",
+    "question": "A card is drawn from a well-shuffled pack of 52 cards. What is the probability that the card drawn is neither a king nor a red card?",
+    "question_hi": "अच्छी तरह फेंटी गई 52 पत्तों की ताश की गड्डी में से एक पत्ता निकाला जाता है। इसकी क्या प्रायिकता है कि निकाला गया पत्ता न तो बादशाह हो और न ही लाल पत्ता?",
+    "question_gu": "સરખી રીતે ચીપેલાં 52 પત્તાની કેટમાંથી એક પત્તું ખેંચવામાં આવે છે. ખેંચાયેલું પત્તું ન તો રાજા હોય અને ન તો લાલ રંગનું હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "6/13",
+      "7/13",
+      "1/2",
+      "5/13"
+    ],
+    "options_hi": [
+      "6/13",
+      "7/13",
+      "1/2",
+      "5/13"
+    ],
+    "options_gu": [
+      "6/13",
+      "7/13",
+      "1/2",
+      "5/13"
+    ],
+    "correct_index": 0,
+    "explanation": "Total cards = 52. Red cards = 26 (including 2 red kings). Kings in black suits = 2 (Spade King and Club King). Total excluded cards = 26 + 2 = 28 cards. Favourable cards = 52 - 28 = 24 black non-kings. P(neither king nor red) = 24 / 52 = 6 / 13.",
+    "explanation_hi": "कुल पत्ते = 52। लाल पत्ते = 26 (जिनमें 2 लाल बादशाह शामिल हैं)। काले बादशाह = 2 (हुकुम और चिड़ी)। हटाए जाने वाले कुल पत्ते = 26 + 2 = 28। अनुकूल पत्ते = 52 - 28 = 24। प्रायिकता = 24 / 52 = 6 / 13।",
+    "explanation_gu": "કુલ પત્તા = 52. લાલ રંગના પત્તા = 26 (જેમાં લાલ રંગના 2 રાજા આવી ગયા). કાળા રંગના રાજા = 2 (કાળી અને ફુલ્લી). બાદ કરવાના કુલ પત્તા = 26 + 2 = 28. સાનુકૂળ પત્તા = 52 - 28 = 24. સંભાવના = 24 / 52 = 6 / 13."
+  },
+  {
+    "id": "C10M_CH14_010",
+    "question": "Exercise 14.1 Q1: Complete the statements:\n(i) Probability of an event E + Probability of the event 'not E' = ?\n(ii) Probability of an impossible event is ?\n(iii) Probability of a sure event is ?\n(iv) The probability of an event is greater than or equal to ? and less than or equal to ?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 1: कथनों को पूरा कीजिए:\n(i) घटना E की प्रायिकता + घटना 'E नहीं' की प्रायिकता = ?\n(ii) असंभव घटना की प्रायिकता ? होती है।\n(iii) निश्चित घटना की प्रायिकता ? होती है।\n(iv) किसी घटना की प्रायिकता ? से बड़ी या उसके बराबर तथा ? से छोटी या उसके बराबर होती है।",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 1: વિધાનો પૂર્ણ કરો:\n(i) ઘટના E ની સંભાવના + ઘટના 'E નહીં' ની સંભાવના = ?\n(ii) અશક્ય ઘટનાની સંભાવના ? હોય છે.\n(iii) ચોક્કસ ઘટનાની સંભાવના ? હોય છે.\n(iv) કોઈપણ ઘટનાની સંભાવના ? થી મોટી અથવા તેના જેટલી અને ? થી નાની અથવા તેના જેટલી હોય છે.",
+    "options": [
+      "(i) 1, (ii) 0, (iii) 1, (iv) 0 and 1",
+      "(i) 0, (ii) 1, (iii) 0, (iv) -1 and 1",
+      "(i) 1, (ii) 0.5, (iii) 1, (iv) 0 and 100",
+      "(i) 0.5, (ii) 0, (iii) 1, (iv) 0 and 1"
+    ],
+    "options_hi": [
+      "(i) 1, (ii) 0, (iii) 1, (iv) 0 और 1",
+      "(i) 0, (ii) 1, (iii) 0, (iv) -1 और 1",
+      "(i) 1, (ii) 0.5, (iii) 1, (iv) 0 और 100",
+      "(i) 0.5, (ii) 0, (iii) 1, (iv) 0 और 1"
+    ],
+    "options_gu": [
+      "(i) 1, (ii) 0, (iii) 1, (iv) 0 અને 1",
+      "(i) 0, (ii) 1, (iii) 0, (iv) -1 અને 1",
+      "(i) 1, (ii) 0.5, (iii) 1, (iv) 0 અને 100",
+      "(i) 0.5, (ii) 0, (iii) 1, (iv) 0 અને 1"
+    ],
+    "correct_index": 0,
+    "explanation": "These are fundamental axioms of probability:\n(i) P(E) + P(not E) = 1 (Complementary events).\n(ii) An event that cannot happen has probability 0 (Impossible event).\n(iii) An event that is certain to happen has probability 1 (Sure event).\n(iv) The probability of any event always satisfies 0 <= P(E) <= 1.",
+    "explanation_hi": "ये प्रायिकता के मूलभूत नियम हैं:\n(i) P(E) + P(E नहीं) = 1 (पूरक घटनाएं)।\n(ii) असंभव घटना की प्रायिकता 0 होती है।\n(iii) निश्चित घटना की प्रायिकता 1 होती है।\n(iv) किसी भी घटना के लिए सदैव 0 <= P(E) <= 1 होता है।",
+    "explanation_gu": "આ સંભાવનાના પાયાના ગાણિતિક નિયમો છે:\n(i) P(E) + P(E નહીં) = 1 (પૂરક ઘટનાઓ).\n(ii) અશક્ય ઘટનાની સંભાવના 0 હોય છે.\n(iii) નિશ્ચિત ઘટનાની સંભાવના 1 હોય છે.\n(iv) કોઈપણ ઘટના માટે હંમેશાં 0 <= P(E) <= 1 હોય છે."
+  },
+  {
+    "id": "C10M_CH14_011",
+    "question": "Exercise 14.1 Q2: Which of the following experiments have equally likely outcomes?\n1. A driver attempts to start a car. The car starts or does not start.\n2. A player attempts to shoot a basketball. She/he shoots or misses the shot.\n3. A trial is made to answer a true-false question. The answer is right or wrong.\n4. A baby is born. It is a boy or a girl.",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 2: निम्नलिखित में से किन प्रयोगों के परिणाम समप्रायिक (Equally Likely) हैं?\n1. एक ड्राइवर कार चलाने का प्रयास करता है। कार शुरू होती है या नहीं होती।\n2. एक खिलाड़ी बास्केटबॉल को बास्केट में डालने का प्रयास करता है। वह गेंद डाल पाता है या चूक जाता है।\n3. एक सत्य-असत्य प्रश्न का उत्तर देने का प्रयास किया जाता है। उत्तर सही है या गलत।\n4. एक बच्चे का जन्म होता है। वह एक लड़का है या लड़की।",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 2: નીચેનામાંથી કયા પ્રયોગોના પરિણામો સમસંભાવી (Equally Likely) છે?\n1. ડ્રાઈવર કાર શરૂ કરવાનો પ્રયત્ન કરે છે. કાર શરૂ થાય છે અથવા શરૂ થતી નથી.\n2. ખેલાડી બાસ્કેટબોલને બાસ્કેટમાં નાખવાનો પ્રયત્ન કરે છે. તે બોલને બાસ્કેટમાં નાખે છે અથવા ચૂકી જાય છે.\n3. ખરાં-ખોટાં પ્રશ્નનો જવાબ આપવાની કસોટી છે. જવાબ સત્ય છે કે અસત્ય.\n4. બાળક જન્મ્યું છે. તે બાબો છે કે બેબી.",
+    "options": [
+      "Only Statements 3 and 4 have equally likely outcomes",
+      "All four statements have equally likely outcomes",
+      "Only Statements 1 and 2 have equally likely outcomes",
+      "None of the statements have equally likely outcomes"
+    ],
+    "options_hi": [
+      "केवल कथन 3 और 4 के परिणाम समप्रायिक हैं",
+      "चारों कथनों के परिणाम समप्रायिक हैं",
+      "केवल कथन 1 और 2 के परिणाम समप्रायिक हैं",
+      "किसी भी कथन के परिणाम समप्रायिक नहीं हैं"
+    ],
+    "options_gu": [
+      "માત્ર વિધાનો 3 અને 4 ના પરિણામો સમસંભાવી છે",
+      "ચારેય વિધાનોના પરિણામો સમસંભાવી છે",
+      "માત્ર વિધાનો 1 અને 2 ના પરિણામો સમસંભાવી છે",
+      "એકપણ વિધાનના પરિણામો સમસંભાવી નથી"
+    ],
+    "correct_index": 0,
+    "explanation": "1. Car starting depends on mechanical condition/fuel, so the two outcomes are not equally likely.\n2. Shooting a basketball depends on player skill and defense, not equally likely.\n3. True-False question has only 2 possibilities with equal chance (1/2 each) under random guessing -> Equally likely!\n4. Biological birth has equal chance of boy or girl (1/2 each) -> Equally likely!",
+    "explanation_hi": "1. कार का चालू होना उसकी यांत्रिक स्थिति और ईंधन पर निर्भर करता है, अतः ये समप्रायिक नहीं हैं।\n2. बास्केटबॉल डालना खिलाड़ी की कुशलता पर निर्भर करता है, अतः समप्रायिक नहीं है।\n3. सत्य-असत्य प्रश्न में केवल दो विकल्प होते हैं और दोनों की संभावना 1/2 बराबर होती है -> समप्रायिक है!\n4. जन्म लेने वाला बच्चा लड़का होगा या लड़की, दोनों की संभावना 1/2 बराबर होती है -> समप्रायिक है!",
+    "explanation_gu": "1. કાર શરૂ થવી એ તેની મિકેનિકલ સ્થિતિ અને પેટ્રોલ પર નિર્ભર છે, તેથી પરિણામો સમસંભાવી નથી.\n2. બાસ્કેટબોલ નાખવો એ ખેલાડીની કુશળતા પર આધાર રાખે છે, તેથી સમસંભાવી નથી.\n3. ખરાં-ખોટાંમાં અંદાજ લગાવતાં સાચો કે ખોટો પડવાની શક્યતા સરખી 1/2 રહે છે -> સમસંભાવી છે!\n4. જન્મનાર બાળક દીકરો કે દીકરી હોવાની પ્રાકૃતિક શક્યતા 1/2 સમાન રહે છે -> સમસંભાવી છે!"
+  },
+  {
+    "id": "C10M_CH14_012",
+    "question": "Exercise 14.1 Q3: Why is tossing a coin considered to be a fair way of deciding which team should get the ball at the beginning of a football game?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 3: फुटबॉल खेल के प्रारंभ में यह निर्णय लेने के लिए कि कौन सी टीम पहले गेंद लेगी, सिक्का उछालना एक न्यायसंगत तरीका क्यों माना जाता है?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 3: ફૂટબોલની રમતની શરૂઆતમાં કઈ ટીમને બોલ મળવો જોઈએ તે નક્કી કરવા સિક્કો ઉછાળવો શા માટે નિષ્પક્ષ રીત માનવામાં આવે છે?",
+    "options": [
+      "Because Head and Tail are equally likely outcomes, and the result is completely unpredictable and unbiased",
+      "Because coins are manufactured by the central government under official supervision",
+      "Because the heavier side of a coin always touches the grass first",
+      "Because a coin toss ensures both teams score equal goals in the match"
+    ],
+    "options_hi": [
+      "क्योंकि चित और पट आना समप्रायिक परिणाम हैं, और परिणाम पूरी तरह से निष्पक्ष और अप्रत्याशित होता है",
+      "क्योंकि सिक्के केंद्र सरकार द्वारा आधिकारिक निगरानी में बनाए जाते हैं",
+      "क्योंकि सिक्के का भारी हिस्सा हमेशा पहले जमीन को छूता है",
+      "क्योंकि सिक्का उछालने से मैच में दोनों टीमों के गोल बराबर रहते हैं"
+    ],
+    "options_gu": [
+      "કારણ કે છાપ અને કાંટો આવવાના પરિણામો સમસંભાવી છે અને પરિણામ સંપૂર્ણપણે નિષ્પક્ષ અને અણધાર્યું રહે છે",
+      "કારણ કે સિક્કાઓ સરકારી દેખરેખ હેઠળ બને છે",
+      "કારણ કે સિક્કાનો વજનદાર ભાગ હંમેશાં પહેલાં જમીન પર પડે છે",
+      "કારણ કે સિક્કો ઉછાળવાથી બંને ટીમના ગોલ સરખા રહે છે"
+    ],
+    "correct_index": 0,
+    "explanation": "When an unbiased coin is tossed, there are only two mutually exclusive outcomes: Head and Tail. Each has an exact probability of 1/2, and neither team can predict or manipulate the landing beforehand. Thus, it is completely fair and impartial.",
+    "explanation_hi": "जब एक निष्पक्ष सिक्के को उछाला जाता है, तो केवल दो परिणाम संभव होते हैं: चित या पट। दोनों की प्रायिकता ठीक 1/2 होती है और कोई भी टीम नतीजे को प्रभावित नहीं कर सकती। इसलिए यह पूरी तरह निष्पक्ष तरीका है।",
+    "explanation_gu": "જ્યારે સમતોલ સિક્કો ઉછાળવામાં આવે ત્યારે ફક્ત બે જ પરસ્પર નિવારક પરિણામો શક્ય બને છે: છાપ અથવા કાંટો. બંનેની સંભાવના બરાબર 1/2 હોય છે અને કોઈ પણ પક્ષ તેને પ્રભાવિત કરી શકતો નથી. તેથી તે સંપૂર્ણ નિષ્પક્ષ પદ્ધતિ છે."
+  },
+  {
+    "id": "C10M_CH14_013",
+    "question": "Exercise 14.1 Q4: Which of the following cannot be the probability of an event?\n(A) 2/3   (B) -1.5   (C) 15%   (D) 0.7",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 4: निम्नलिखित में से कौन सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?\n(A) 2/3   (B) -1.5   (C) 15%   (D) 0.7",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 4: નીચેનામાંથી કયો વિકલ્પ કોઈ ઘટનાની સંભાવના ન હોઈ શકે?\n(A) 2/3   (B) -1.5   (C) 15%   (D) 0.7",
+    "options": [
+      "(B) -1.5 (Probability can never be negative)",
+      "(A) 2/3 (Fractions are not allowed in probability)",
+      "(C) 15% (Percentages cannot represent probabilities)",
+      "(D) 0.7 (Decimals are invalid probabilities)"
+    ],
+    "options_hi": [
+      "(B) -1.5 (प्रायिकता कभी भी ऋणात्मक नहीं हो सकती)",
+      "(A) 2/3 (प्रायिकता में भिन्न की अनुमति नहीं है)",
+      "(C) 15% (प्रतिशत प्रायिकता को नहीं दर्शा सकते)",
+      "(D) 0.7 (दशमलव अमान्य प्रायिकता है)"
+    ],
+    "options_gu": [
+      "(B) -1.5 (સંભાવનાનું મૂલ્ય ક્યારેય ઋણ ન હોઈ શકે)",
+      "(A) 2/3 (સંભાવનામાં અપૂર્ણાંક માન્ય નથી)",
+      "(C) 15% (ટકાવારી સંભાવના દર્શાવી શકતી નથી)",
+      "(D) 0.7 (દશાંશ અમાન્ય સંભાવના છે)"
+    ],
+    "correct_index": 0,
+    "explanation": "By definition, the probability of any event E satisfies 0 <= P(E) <= 1. Therefore, P(E) can never be negative, nor can it be greater than 1. Since -1.5 < 0, it cannot be a probability. Note: 2/3 = 0.667, 15% = 0.15, and 0.7 are all valid.",
+    "explanation_hi": "परिभाषा के अनुसार किसी घटना की प्रायिकता 0 <= P(E) <= 1 के बीच ही होती है। प्रायिकता कभी ऋणात्मक नहीं हो सकती और न ही 1 से बड़ी हो सकती है। चूँकि -1.5 < 0 है, यह प्रायिकता नहीं हो सकती। (2/3 = 0.667, 15% = 0.15 और 0.7 सभी मान्य हैं)।",
+    "explanation_gu": "વ્યાખ્યા મુજબ કોઈપણ ઘટનાની સંભાવના 0 <= P(E) <= 1 વચ્ચે જ હોય છે. સંભાવના ક્યારેય ઋણ ન હોઈ શકે કે 1 થી મોટી ન હોઈ શકે. અહીં -1.5 < 0 હોવાથી તે કોઈ ઘટનાની સંભાવના હોઈ શકે નહીં."
+  },
+  {
+    "id": "C10M_CH14_014",
+    "question": "Exercise 14.1 Q5: If P(E) = 0.05, what is the probability of 'not E'?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 5: यदि P(E) = 0.05 है, तो 'E नहीं' की प्रायिकता क्या है?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 5: જો P(E) = 0.05 હોય, તો 'E નહીં' ની સંભાવના શું છે?",
+    "options": [
+      "0.95",
+      "0.05",
+      "0.50",
+      "0.90"
+    ],
+    "options_hi": [
+      "0.95",
+      "0.05",
+      "0.50",
+      "0.90"
+    ],
+    "options_gu": [
+      "0.95",
+      "0.05",
+      "0.50",
+      "0.90"
+    ],
+    "correct_index": 0,
+    "explanation": "We know that for any event E and its complementary event 'not E':\nP(E) + P(not E) = 1\nP(not E) = 1 - P(E) = 1 - 0.05 = 0.95.",
+    "explanation_hi": "हम जानते हैं कि किसी घटना E और उसकी पूरक घटना 'E नहीं' के लिए:\nP(E) + P(E नहीं) = 1\nP(E नहीं) = 1 - P(E) = 1 - 0.05 = 0.95।",
+    "explanation_gu": "કોઈપણ ઘટના E અને તેની પૂરક ઘટના 'E નહીં' માટે:\nP(E) + P(E નહીં) = 1\nP(E નહીં) = 1 - P(E) = 1 - 0.05 = 0.95."
+  },
+  {
+    "id": "C10M_CH14_015",
+    "question": "Exercise 14.1 Q6: A bag contains lemon flavoured candies only. Malini takes out one candy without looking into the bag. What is the probability that she takes out:\n(i) an orange flavoured candy?\n(ii) a lemon flavoured candy?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 6: एक थैले में केवल नींबू की महक वाली गोलियां हैं। मालिनी बिना थैले में झांके एक गोली निकालती है। इसकी क्या प्रायिकता है कि वह निकालती है:\n(i) संतरे की महक वाली गोली?\n(ii) नींबू की महक वाली गोली?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 6: એક થેલામાં લીંબુના સ્વાદવાળી જ મીઠાઈઓ છે. માલિની થેલામાં જોયા વગર એક મીઠાઈ બહાર કાઢે છે. તે:\n(i) નારંગીના સ્વાદવાળી મીઠાઈ બહાર કાઢે તેની સંભાવના કેટલી?\n(ii) લીંબુના સ્વાદવાળી મીઠાઈ બહાર કાઢે તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 0 (Impossible event), (ii) 1 (Sure event)",
+      "(i) 1 (Sure event), (ii) 0 (Impossible event)",
+      "(i) 0.5, (ii) 0.5",
+      "(i) 0, (ii) 0.5"
+    ],
+    "options_hi": [
+      "(i) 0 (असंभव घटना), (ii) 1 (निश्चित घटना)",
+      "(i) 1 (निश्चित घटना), (ii) 0 (असंभव घटना)",
+      "(i) 0.5, (ii) 0.5",
+      "(i) 0, (ii) 0.5"
+    ],
+    "options_gu": [
+      "(i) 0 (અશક્ય ઘટના), (ii) 1 (ચોક્કસ ઘટના)",
+      "(i) 1 (ચોક્કસ ઘટના), (ii) 0 (અશક્ય ઘટના)",
+      "(i) 0.5, (ii) 0.5",
+      "(i) 0, (ii) 0.5"
+    ],
+    "correct_index": 0,
+    "explanation": "(i) Since the bag contains only lemon candies, there are 0 orange candies. Thus, drawing an orange candy is an impossible event: P(orange) = 0.\n(ii) Every candy in the bag is lemon flavoured. Thus, drawing a lemon candy is a sure/certain event: P(lemon) = 1.",
+    "explanation_hi": "(i) चूँकि थैले में केवल नींबू की गोलियां हैं, संतरे की गोलियों की संख्या 0 है। अतः संतरे की गोली निकलना एक असंभव घटना है: P(संतरा) = 0।\n(ii) थैले की हर गोली नींबू की है, अतः नींबू की गोली निकलना एक निश्चित घटना है: P(नींबू) = 1।",
+    "explanation_gu": "(i) થેલામાં ફક્ત લીંબુની જ મીઠાઈઓ છે, નારંગીની મીઠાઈની સંખ્યા 0 છે. તેથી તે અશક્ય ઘટના છે: P(નારંગી) = 0.\n(ii) થેલામાંથી નીકળતી દરેક મીઠાઈ લીંબુની જ હશે, તેથી તે ચોક્કસ ઘટના છે: P(લીંબુ) = 1."
+  },
+  {
+    "id": "C10M_CH14_016",
+    "question": "Exercise 14.1 Q7: It is given that in a group of 3 students, the probability of 2 students not having the same birthday is 0.992. What is the probability that the 2 students have the same birthday?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 7: यह दिया हुआ है कि 3 विद्यार्थियों के एक समूह में से 2 विद्यार्थियों का जन्मदिन एक ही दिन न होने की प्रायिकता 0.992 है। इसकी क्या प्रायिकता है कि इन 2 विद्यार्थियों का जन्मदिन एक ही दिन हो?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 7: આપેલ છે કે 3 વિદ્યાર્થીઓના સમૂહમાં 2 વિદ્યાર્થીઓનો જન્મદિન સમાન ન હોય તેની સંભાવના 0.992 છે. બે વિદ્યાર્થીઓનો જન્મદિન સમાન હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "0.008",
+      "0.092",
+      "0.002",
+      "0.992"
+    ],
+    "options_hi": [
+      "0.008",
+      "0.092",
+      "0.002",
+      "0.992"
+    ],
+    "options_gu": [
+      "0.008",
+      "0.092",
+      "0.002",
+      "0.992"
+    ],
+    "correct_index": 0,
+    "explanation": "Let E be the event that the 2 students have the same birthday. Then 'not E' is the event that they do not have the same birthday.\nP(not E) = 0.992.\nP(E) = 1 - P(not E) = 1 - 0.992 = 0.008.",
+    "explanation_hi": "माना E घटना है कि 2 विद्यार्थियों का जन्मदिन एक ही दिन हो। तब 'E नहीं' घटना है कि जन्मदिन एक ही दिन न हो।\nP(E नहीं) = 0.992।\nP(E) = 1 - P(E नहीं) = 1 - 0.992 = 0.008।",
+    "explanation_gu": "ધારો કે ઘટના E એ બંને વિદ્યાર્થીઓનો જન્મદિન સમાન હોવાની ઘટના છે. તો 'E નહીં' એ જન્મદિન સમાન ન હોવાની ઘટના છે.\nP(E નહીં) = 0.992.\nP(E) = 1 - P(E નહીં) = 1 - 0.992 = 0.008."
+  },
+  {
+    "id": "C10M_CH14_017",
+    "question": "Exercise 14.1 Q8: A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag. What is the probability that the ball drawn is:\n(i) red?\n(ii) not red?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 8: एक थैले में 3 लाल और 5 काली गेंदें हैं। इस थैले में से एक गेंद यादृच्छया निकाली जाती है। इसकी प्रायिकता क्या है कि गेंद:\n(i) लाल हो?\n(ii) लाल नहीं हो?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 8: એક થેલામાં 3 લાલ અને 5 કાળા દડા છે. થેલામાંથી એક દડો યાદચ્છિક રીતે કાઢવામાં આવે છે. બહાર કાઢેલ દડો:\n(i) લાલ હોય,\n(ii) લાલ ન હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 3/8, (ii) 5/8",
+      "(i) 5/8, (ii) 3/8",
+      "(i) 3/5, (ii) 2/5",
+      "(i) 1/8, (ii) 7/8"
+    ],
+    "options_hi": [
+      "(i) 3/8, (ii) 5/8",
+      "(i) 5/8, (ii) 3/8",
+      "(i) 3/5, (ii) 2/5",
+      "(i) 1/8, (ii) 7/8"
+    ],
+    "options_gu": [
+      "(i) 3/8, (ii) 5/8",
+      "(i) 5/8, (ii) 3/8",
+      "(i) 3/5, (ii) 2/5",
+      "(i) 1/8, (ii) 7/8"
+    ],
+    "correct_index": 0,
+    "explanation": "Total number of balls = 3 (red) + 5 (black) = 8 balls.\n(i) P(red) = Number of red balls / Total balls = 3 / 8.\n(ii) P(not red) = 1 - P(red) = 1 - 3/8 = 5 / 8 (or simply Black balls / Total = 5 / 8).",
+    "explanation_hi": "थैले में कुल गेंदें = 3 (लाल) + 5 (काली) = 8।\n(i) P(लाल) = लाल गेंदों की संख्या / कुल गेंदें = 3 / 8।\n(ii) P(लाल नहीं) = 1 - P(लाल) = 1 - 3/8 = 5 / 8 (या काली गेंदों की संख्या / कुल गेंदें = 5 / 8)।",
+    "explanation_gu": "થેલામાં કુલ દડા = 3 (લાલ) + 5 (કાળા) = 8.\n(i) P(લાલ) = લાલ દડાની સંખ્યા / કુલ દડા = 3 / 8.\n(ii) P(લાલ ન હોય) = 1 - P(લાલ) = 1 - 3/8 = 5 / 8."
+  },
+  {
+    "id": "C10M_CH14_018",
+    "question": "Exercise 14.1 Q9: A box contains 5 red marbles, 8 white marbles and 4 green marbles. One marble is taken out of the box at random. What is the probability that the marble taken out will be:\n(i) red?\n(ii) white?\n(iii) not green?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 9: एक डिब्बे में 5 लाल कंचे, 8 सफेद कंचे और 4 हरे कंचे हैं। इस डिब्बे में से एक कंचा यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि निकाला गया कंचा:\n(i) लाल है?\n(ii) सफेद है?\n(iii) हरा नहीं है?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 9: એક પેટીમાં 5 લાલ લખોટીઓ, 8 સફેદ લખોટીઓ અને 4 લીલી લખોટીઓ છે. પેટીમાંથી એક લખોટી યાદચ્છિક રીતે બહાર કાઢવામાં આવે છે. બહાર કાઢેલી લખોટી:\n(i) લાલ હોય,\n(ii) સફેદ હોય,\n(iii) લીલી ન હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 5/17, (ii) 8/17, (iii) 13/17",
+      "(i) 5/17, (ii) 8/17, (iii) 4/17",
+      "(i) 8/17, (ii) 5/17, (iii) 13/17",
+      "(i) 5/12, (ii) 8/12, (iii) 9/12"
+    ],
+    "options_hi": [
+      "(i) 5/17, (ii) 8/17, (iii) 13/17",
+      "(i) 5/17, (ii) 8/17, (iii) 4/17",
+      "(i) 8/17, (ii) 5/17, (iii) 13/17",
+      "(i) 5/12, (ii) 8/12, (iii) 9/12"
+    ],
+    "options_gu": [
+      "(i) 5/17, (ii) 8/17, (iii) 13/17",
+      "(i) 5/17, (ii) 8/17, (iii) 4/17",
+      "(i) 8/17, (ii) 5/17, (iii) 13/17",
+      "(i) 5/12, (ii) 8/12, (iii) 9/12"
+    ],
+    "correct_index": 0,
+    "explanation": "Total number of marbles = 5 (red) + 8 (white) + 4 (green) = 17.\n(i) P(red) = 5 / 17.\n(ii) P(white) = 8 / 17.\n(iii) P(not green) = (Red + White) / Total = (5 + 8) / 17 = 13 / 17 (or 1 - 4/17 = 13/17).",
+    "explanation_hi": "कुल कंचे = 5 (लाल) + 8 (सफेद) + 4 (हरे) = 17।\n(i) P(लाल) = 5 / 17।\n(ii) P(सफेद) = 8 / 17।\n(iii) P(हरा नहीं) = (लाल + सफेद) / कुल = (5 + 8) / 17 = 13 / 17 (या 1 - 4/17 = 13/17)।",
+    "explanation_gu": "કુલ લખોટીઓ = 5 (લાલ) + 8 (સફેદ) + 4 (લીલી) = 17.\n(i) P(લાલ) = 5 / 17.\n(ii) P(સફેદ) = 8 / 17.\n(iii) P(લીલી ન હોય) = (લાલ + સફેદ) / કુલ = (5 + 8) / 17 = 13 / 17."
+  },
+  {
+    "id": "C10M_CH14_019",
+    "question": "Exercise 14.1 Q10: A piggy bank contains hundred 50p coins, fifty ₹1 coins, twenty ₹2 coins and ten ₹5 coins. If it is equally likely that one of the coins will fall out when the bank is turned upside down, what is the probability that the coin:\n(i) will be a 50p coin?\n(ii) will not be a ₹5 coin?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 10: एक पिग्गी बैंक (गुल्लक) में 50 पैसे के 100 सिक्के, ₹1 के 50 सिक्के, ₹2 के 20 सिक्के और ₹5 के 10 सिक्के हैं। यदि गुल्लक को उल्टा करने पर कोई एक सिक्का गिरने के परिणाम समप्रायिक हैं, तो इसकी क्या प्रायिकता है कि वह गिरा हुआ सिक्का:\n(i) 50 पैसे का होगा?\n(ii) ₹5 का नहीं होगा?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 10: એક ગલ્લામાં 50 પૈસાના 100 સિક્કા, ₹1 ના 50 સિક્કા, ₹2 ના 20 સિક્કા અને ₹5 ના 10 સિક્કા છે. જ્યારે ગલ્લો ઊંધો કરવામાં આવે ત્યારે એક સિક્કો બહાર પડે તે સમસંભાવી હોય, તો સિક્કો:\n(i) 50 પૈસાનો હોય,\n(ii) ₹5 નો સિક્કો ન હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 5/9, (ii) 17/18",
+      "(i) 5/9, (ii) 1/18",
+      "(i) 1/2, (ii) 17/18",
+      "(i) 10/18, (ii) 16/18"
+    ],
+    "options_hi": [
+      "(i) 5/9, (ii) 17/18",
+      "(i) 5/9, (ii) 1/18",
+      "(i) 1/2, (ii) 17/18",
+      "(i) 10/18, (ii) 16/18"
+    ],
+    "options_gu": [
+      "(i) 5/9, (ii) 17/18",
+      "(i) 5/9, (ii) 1/18",
+      "(i) 1/2, (ii) 17/18",
+      "(i) 10/18, (ii) 16/18"
+    ],
+    "correct_index": 0,
+    "explanation": "Total number of coins = 100 (50p) + 50 (₹1) + 20 (₹2) + 10 (₹5) = 180 coins.\n(i) Favourable 50p coins = 100.\nP(50p coin) = 100 / 180 = 5 / 9.\n(ii) Number of ₹5 coins = 10. Coins that are NOT ₹5 = 180 - 10 = 170.\nP(not ₹5) = 170 / 180 = 17 / 18.",
+    "explanation_hi": "गुल्लक में कुल सिक्के = 100 (50 पैसे) + 50 (₹1) + 20 (₹2) + 10 (₹5) = 180।\n(i) 50 पैसे के सिक्के = 100।\nP(50 पैसे का सिक्का) = 100 / 180 = 5 / 9।\n(ii) ₹5 के सिक्के = 10। जो सिक्के ₹5 के नहीं हैं = 180 - 10 = 170।\nP(₹5 का नहीं) = 170 / 180 = 17 / 18।",
+    "explanation_gu": "ગલ્લામાં રહેલા કુલ સિક્કા = 100 (50 પૈસા) + 50 (₹1) + 20 (₹2) + 10 (₹5) = 180.\n(i) 50 પૈસાના સિક્કા = 100.\nP(50 પૈસાનો સિક્કો) = 100 / 180 = 5 / 9.\n(ii) ₹5 ના સિક્કા = 10. ₹5 ના ન હોય તેવા સિક્કા = 180 - 10 = 170.\nP(₹5 નો ન હોય) = 170 / 180 = 17 / 18."
+  },
+  {
+    "id": "C10M_CH14_020",
+    "question": "Exercise 14.1 Q11: Gopi buys a fish from a shop for his aquarium. The shopkeeper takes out one fish at random from a tank containing 5 male fish and 8 female fish. What is the probability that the fish taken out is a male fish?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 11: गोपी अपने जल-जीव कुंड (एक्वेरियम) के लिए एक दुकान से मछली खरीदता है। दुकानदार एक टंकी, जिसमें 5 नर मछली और 8 मादा मछली हैं, में से एक मछली यादृच्छया उसे देने के लिए निकालती है। इसकी क्या प्रायिकता है कि निकाली गई मछली नर मछली है?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 11: ગોપી પોતાના માછલીઘર માટે દુકાનમાંથી માછલી ખરીદે છે. દુકાનદાર મોટી ટાંકીમાંથી યાદચ્છિક રીતે એક માછલી બહાર કાઢે છે. આ ટાંકીમાં 5 નર માછલી અને 8 માદા માછલી છે. બહાર કાઢેલ માછલી નર હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "3/13"
+    ],
+    "options_hi": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "3/13"
+    ],
+    "options_gu": [
+      "5/13",
+      "8/13",
+      "5/8",
+      "3/13"
+    ],
+    "correct_index": 0,
+    "explanation": "Total number of fish in the tank = 5 (male) + 8 (female) = 13 fish.\nNumber of male fish = 5.\nP(male fish) = Favourable outcomes / Total outcomes = 5 / 13.",
+    "explanation_hi": "टंकी में कुल मछलियां = 5 (नर) + 8 (मादा) = 13।\nनर मछलियों की संख्या = 5।\nP(नर मछली) = अनुकूल परिणाम / कुल परिणाम = 5 / 13।",
+    "explanation_gu": "ટાંકીમાં રહેલી કુલ માછલીઓ = 5 (નર) + 8 (માદા) = 13.\nનર માછલીની સંખ્યા = 5.\nP(નર માછલી) = 5 / 13."
+  },
+  {
+    "id": "C10M_CH14_021",
+    "question": "Exercise 14.1 Q12: A game of chance consists of spinning an arrow which comes to rest pointing at one of the numbers 1, 2, 3, 4, 5, 6, 7, 8, and these are equally likely outcomes. What is the probability that it will point at:\n(i) 8?\n(ii) an odd number?\n(iii) a number greater than 2?\n(iv) a number less than 9?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 12: संयोग के एक खेल में एक तीर को घुमाया जाता है, जो विश्राम में आने के बाद संख्याओं 1, 2, 3, 4, 5, 6, 7 और 8 में से किसी एक संख्या को इंगित करता है, तथा ये सभी परिणाम समप्रायिक हैं। इसकी क्या प्रायिकता है कि यह तीर इंगित करेगा:\n(i) 8 को?\n(ii) एक विषम संख्या को?\n(iii) 2 से बड़ी संख्या को?\n(iv) 9 से छोटी संख्या को?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 12: તકની એક રમતમાં ગોળ ફરતું એક તીર હોય છે. તે 1, 2, 3, 4, 5, 6, 7, 8 માંથી કોઈ એક સંખ્યા તરફ નિર્દેશ કરતું અટકે છે અને આ સમસંભાવી પરિણામો છે:\n(i) તે 8 તરફ નિર્દેશ કરે તેની સંભાવના કેટલી?\n(ii) અયુગ્મ (એકી) સંખ્યા તરફ નિર્દેશ કરે તેની સંભાવના કેટલી?\n(iii) 2 કરતાં મોટી સંખ્યા તરફ નિર્દેશ કરે તેની સંભાવના કેટલી?\n(iv) 9 કરતાં નાની સંખ્યા તરફ નિર્દેશ કરે તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 1/8, (ii) 1/2, (iii) 3/4, (iv) 1",
+      "(i) 1/8, (ii) 3/8, (iii) 5/8, (iv) 1",
+      "(i) 1/8, (ii) 1/2, (iii) 1/2, (iv) 7/8",
+      "(i) 2/8, (ii) 4/8, (iii) 6/8, (iv) 8/8"
+    ],
+    "options_hi": [
+      "(i) 1/8, (ii) 1/2, (iii) 3/4, (iv) 1",
+      "(i) 1/8, (ii) 3/8, (iii) 5/8, (iv) 1",
+      "(i) 1/8, (ii) 1/2, (iii) 1/2, (iv) 7/8",
+      "(i) 2/8, (ii) 4/8, (iii) 6/8, (iv) 8/8"
+    ],
+    "options_gu": [
+      "(i) 1/8, (ii) 1/2, (iii) 3/4, (iv) 1",
+      "(i) 1/8, (ii) 3/8, (iii) 5/8, (iv) 1",
+      "(i) 1/8, (ii) 1/2, (iii) 1/2, (iv) 7/8",
+      "(i) 2/8, (ii) 4/8, (iii) 6/8, (iv) 8/8"
+    ],
+    "correct_index": 0,
+    "explanation": "Total possible outcomes = 8.\n(i) Number 8 appears once -> P(8) = 1 / 8.\n(ii) Odd numbers: {1, 3, 5, 7} (4 outcomes) -> P(odd) = 4 / 8 = 1 / 2.\n(iii) Numbers greater than 2: {3, 4, 5, 6, 7, 8} (6 outcomes) -> P(> 2) = 6 / 8 = 3 / 4.\n(iv) Numbers less than 9: {1, 2, 3, 4, 5, 6, 7, 8} (all 8 outcomes) -> P(< 9) = 8 / 8 = 1 (Sure event).",
+    "explanation_hi": "कुल संभव परिणाम = 8।\n(i) संख्या 8 केवल एक बार है -> P(8) = 1 / 8।\n(ii) विषम संख्याएं: {1, 3, 5, 7} (4 परिणाम) -> P(विषम) = 4 / 8 = 1 / 2।\n(iii) 2 से बड़ी संख्याएं: {3, 4, 5, 6, 7, 8} (6 परिणाम) -> P(> 2) = 6 / 8 = 3 / 4।\n(iv) 9 से छोटी संख्याएं: सभी 8 संख्याएं -> P(< 9) = 8 / 8 = 1 (निश्चित घटना)।",
+    "explanation_gu": "કુલ શક્ય પરિણામો = 8.\n(i) અંક 8 એક જ વાર આવે છે -> P(8) = 1 / 8.\n(ii) એકી સંખ્યાઓ: {1, 3, 5, 7} (4 પરિણામો) -> P(એકી) = 4 / 8 = 1 / 2.\n(iii) 2 કરતાં મોટી સંખ્યાઓ: {3, 4, 5, 6, 7, 8} (6 પરિણામો) -> P(> 2) = 6 / 8 = 3 / 4.\n(iv) 9 કરતાં નાની સંખ્યાઓ: તમામ 8 સંખ્યાઓ -> P(< 9) = 8 / 8 = 1 (નિશ્ચિત ઘટના)."
+  },
+  {
+    "id": "C10M_CH14_022",
+    "question": "Exercise 14.1 Q13: A die is thrown once. Find the probability of getting:\n(i) a prime number?\n(ii) a number lying between 2 and 6?\n(iii) an odd number?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 13: एक पासे को एक बार फेंका जाता है। निम्नलिखित को प्राप्त करने की प्रायिकता ज्ञात कीजिए:\n(i) एक अभाज्य संख्या?\n(ii) 2 और 6 के बीच स्थित कोई संख्या?\n(iii) एक विषम संख्या?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 13: પાસાને એક વાર ફેંકવામાં આવે છે, તો:\n(i) અવિભાજ્ય સંખ્યા મળવાની,\n(ii) 2 અને 6 વચ્ચેની સંખ્યા મળવાની,\n(iii) અયુગ્મ (એકી) સંખ્યા મળવાની સંભાવના શોધો.",
+    "options": [
+      "(i) 1/2, (ii) 1/2, (iii) 1/2",
+      "(i) 2/3, (ii) 1/2, (iii) 1/3",
+      "(i) 1/3, (ii) 2/3, (iii) 1/2",
+      "(i) 1/2, (ii) 3/6, (iii) 2/6"
+    ],
+    "options_hi": [
+      "(i) 1/2, (ii) 1/2, (iii) 1/2",
+      "(i) 2/3, (ii) 1/2, (iii) 1/3",
+      "(i) 1/3, (ii) 2/3, (iii) 1/2",
+      "(i) 1/2, (ii) 3/6, (iii) 2/6"
+    ],
+    "options_gu": [
+      "(i) 1/2, (ii) 1/2, (iii) 1/2",
+      "(i) 2/3, (ii) 1/2, (iii) 1/3",
+      "(i) 1/3, (ii) 2/3, (iii) 1/2",
+      "(i) 1/2, (ii) 3/6, (iii) 2/6"
+    ],
+    "correct_index": 0,
+    "explanation": "Total outcomes = {1, 2, 3, 4, 5, 6} -> n(S) = 6.\n(i) Prime numbers are {2, 3, 5} (3 numbers; note that 1 is not prime!) -> P(prime) = 3 / 6 = 1 / 2.\n(ii) Numbers lying strictly between 2 and 6 are {3, 4, 5} (3 numbers) -> P = 3 / 6 = 1 / 2.\n(iii) Odd numbers are {1, 3, 5} (3 numbers) -> P(odd) = 3 / 6 = 1 / 2.",
+    "explanation_hi": "कुल परिणाम = {1, 2, 3, 4, 5, 6} -> n(S) = 6।\n(i) अभाज्य संख्याएं: {2, 3, 5} (3 संख्याएं; ध्यान दें 1 अभाज्य नहीं है!) -> P(अभाज्य) = 3 / 6 = 1 / 2।\n(ii) 2 और 6 के बीच की संख्याएं: {3, 4, 5} (3 संख्याएं) -> P = 3 / 6 = 1 / 2।\n(iii) विषम संख्याएं: {1, 3, 5} (3 संख्याएं) -> P(विषम) = 3 / 6 = 1 / 2।",
+    "explanation_gu": "કુલ શક્ય પરિણામો = {1, 2, 3, 4, 5, 6} -> n(S) = 6.\n(i) અવિભાજ્ય સંખ્યાઓ: {2, 3, 5} (3 પરિણામો; 1 અવિભાજ્ય નથી!) -> P(અવિભાજ્ય) = 3 / 6 = 1 / 2.\n(ii) 2 અને 6 વચ્ચેની સંખ્યાઓ: {3, 4, 5} (3 પરિણામો) -> P = 3 / 6 = 1 / 2.\n(iii) એકી સંખ્યાઓ: {1, 3, 5} (3 પરિણામો) -> P(એકી) = 3 / 6 = 1 / 2."
+  },
+  {
+    "id": "C10M_CH14_023",
+    "question": "Exercise 14.1 Q14: One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting:\n(i) a king of red colour?\n(ii) a face card?\n(iii) a red face card?\n(iv) the jack of hearts?\n(v) a spade?\n(vi) the queen of diamonds?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 14: 52 पत्तों की अच्छी तरह फेंटी गई गड्डी में से एक पत्ता निकाला जाता है। निम्नलिखित को प्राप्त करने की प्रायिकता ज्ञात कीजिए:\n(i) लाल रंग का बादशाह?\n(ii) एक तस्वीर वाला पत्ता (फेस कार्ड)?\n(iii) लाल रंग का तस्वीर वाला पत्ता?\n(iv) पान का गुलाम?\n(v) हुकुम का पत्ता?\n(vi) ईंट की बेगम?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 14: સરખી રીતે ચીપેલાં 52 પત્તાની કેટમાંથી એક પત્તું કાઢવામાં આવે છે. નીચે દર્શાવેલ પત્તું મળવાની સંભાવના શોધો:\n(i) લાલ રંગનો રાજા,\n(ii) મુખમુદ્રાવાળું પત્તું,\n(iii) લાલ રંગનું મુખમુદ્રાવાળું પત્તું,\n(iv) લાલનો ગુલામ,\n(v) કાળીનું પત્તું,\n(vi) ચરકટની રાણી.",
+    "options": [
+      "(i) 1/26, (ii) 3/13, (iii) 3/26, (iv) 1/52, (v) 1/4, (vi) 1/52",
+      "(i) 1/13, (ii) 3/13, (iii) 3/13, (iv) 1/52, (v) 1/4, (vi) 1/26",
+      "(i) 2/52, (ii) 12/52, (iii) 6/52, (iv) 4/52, (v) 13/52, (vi) 2/52",
+      "(i) 1/26, (ii) 4/13, (iii) 1/13, (iv) 1/26, (v) 1/4, (vi) 1/52"
+    ],
+    "options_hi": [
+      "(i) 1/26, (ii) 3/13, (iii) 3/26, (iv) 1/52, (v) 1/4, (vi) 1/52",
+      "(i) 1/13, (ii) 3/13, (iii) 3/13, (iv) 1/52, (v) 1/4, (vi) 1/26",
+      "(i) 2/52, (ii) 12/52, (iii) 6/52, (iv) 4/52, (v) 13/52, (vi) 2/52",
+      "(i) 1/26, (ii) 4/13, (iii) 1/13, (iv) 1/26, (v) 1/4, (vi) 1/52"
+    ],
+    "options_gu": [
+      "(i) 1/26, (ii) 3/13, (iii) 3/26, (iv) 1/52, (v) 1/4, (vi) 1/52",
+      "(i) 1/13, (ii) 3/13, (iii) 3/13, (iv) 1/52, (v) 1/4, (vi) 1/26",
+      "(i) 2/52, (ii) 12/52, (iii) 6/52, (iv) 4/52, (v) 13/52, (vi) 2/52",
+      "(i) 1/26, (ii) 4/13, (iii) 1/13, (iv) 1/26, (v) 1/4, (vi) 1/52"
+    ],
+    "correct_index": 0,
+    "explanation": "Total cards = 52.\n(i) Red Kings = 2 (Heart King, Diamond King) -> 2 / 52 = 1 / 26.\n(ii) Face cards = 12 (4 Kings, 4 Queens, 4 Jacks) -> 12 / 52 = 3 / 13.\n(iii) Red face cards = 6 (2 Kings, 2 Queens, 2 Jacks in Hearts & Diamonds) -> 6 / 52 = 3 / 26.\n(iv) Jack of hearts = exactly 1 card -> 1 / 52.\n(v) Spades = 13 cards -> 13 / 52 = 1 / 4.\n(vi) Queen of diamonds = exactly 1 card -> 1 / 52.",
+    "explanation_hi": "कुल पत्ते = 52।\n(i) लाल रंग के बादशाह = 2 (पान और ईंट) -> 2 / 52 = 1 / 26।\n(ii) तस्वीर वाले पत्ते = 12 -> 12 / 52 = 3 / 13।\n(iii) लाल तस्वीर वाले पत्ते = 6 -> 6 / 52 = 3 / 26।\n(iv) पान का गुलाम = केवल 1 पत्ता -> 1 / 52।\n(v) हुकुम के पत्ते = 13 -> 13 / 52 = 1 / 4।\n(vi) ईंट की बेगम = केवल 1 पत्ता -> 1 / 52।",
+    "explanation_gu": "કુલ પત્તા = 52.\n(i) લાલ રંગના રાજા = 2 (લાલ અને ચરકટ) -> 2 / 52 = 1 / 26.\n(ii) મુખમુદ્રાવાળા પત્તા = 12 -> 12 / 52 = 3 / 13.\n(iii) લાલ રંગના મુખમુદ્રાવાળા પત્તા = 6 -> 6 / 52 = 3 / 26.\n(iv) લાલનો ગુલામ = ફક્ત 1 પત્તું -> 1 / 52.\n(v) કાળીના પત્તા = 13 -> 13 / 52 = 1 / 4.\n(vi) ચરકટની રાણી = ફક્ત 1 પત્તું -> 1 / 52."
+  },
+  {
+    "id": "C10M_CH14_024",
+    "question": "Exercise 14.1 Q15: Five cards — the ten, jack, queen, king and ace of diamonds, are well-shuffled with their face downwards. One card is then picked up at random.\n(i) What is the probability that the card is the queen?\n(ii) If the queen is drawn and put aside, what is the probability that the second card picked up is (a) an ace? (b) a queen?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 15: ताश के पाँच पत्तों — ईंट का दहला, गुलाम, बेगम, बादशाह और एक्के को पलट कर अच्छी तरह फेंटा जाता है। फिर इनमें से यादृच्छया एक पत्ता निकाला जाता है:\n(i) इसकी क्या प्रायिकता है कि यह पत्ता एक बेगम है?\n(ii) यदि बेगम निकल आती है, तो उसे अलग रख दिया जाता है और एक अन्य पत्ता निकाला जाता है। इसकी क्या प्रायिकता है कि दूसरा निकाला गया पत्ता (a) एक एक्का है? (b) एक बेगम है?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 15: પાંચ ચોકટ (ચરકટ) ના પત્તા — દસ્સો, ગુલામ, રાણી, રાજા અને એક્કો એ તમામના મુખ નીચે રાખીને સરખી રીતે ચીપેલા છે. પછી એક પત્તું યાદચ્છિક રીતે ખેંચવામાં આવે છે:\n(i) પત્તું રાણીનું હશે તેની સંભાવના શું છે?\n(ii) જો રાણી નીકળી આવે તો તેને બાજુ પર મૂકીને બીજું પત્તું ખેંચવામાં આવે, તો બીજું પત્તું (a) એક્કો હોય? (b) રાણી હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 1/5; (ii)(a) 1/4, (b) 0",
+      "(i) 1/5; (ii)(a) 1/5, (b) 1/5",
+      "(i) 1/4; (ii)(a) 1/4, (b) 1/4",
+      "(i) 1/5; (ii)(a) 1/4, (b) 1"
+    ],
+    "options_hi": [
+      "(i) 1/5; (ii)(a) 1/4, (b) 0",
+      "(i) 1/5; (ii)(a) 1/5, (b) 1/5",
+      "(i) 1/4; (ii)(a) 1/4, (b) 1/4",
+      "(i) 1/5; (ii)(a) 1/4, (b) 1"
+    ],
+    "options_gu": [
+      "(i) 1/5; (ii)(a) 1/4, (b) 0",
+      "(i) 1/5; (ii)(a) 1/5, (b) 1/5",
+      "(i) 1/4; (ii)(a) 1/4, (b) 1/4",
+      "(i) 1/5; (ii)(a) 1/4, (b) 1"
+    ],
+    "correct_index": 0,
+    "explanation": "(i) Total cards = 5 (10, J, Q, K, A). Number of Queens = 1. P(Queen) = 1 / 5.\n(ii) When the Queen is drawn and put aside, only 4 cards remain: {10, J, K, A}.\n(a) P(Ace) = 1 Ace out of 4 remaining cards = 1 / 4.\n(b) P(Queen) = 0 Queens remain out of 4 cards = 0 / 4 = 0 (Impossible event!).",
+    "explanation_hi": "(i) कुल पत्ते = 5 (10, J, Q, K, A)। बेगम की संख्या = 1। P(बेगम) = 1 / 5।\n(ii) जब बेगम को अलग रख दिया जाता है, तो केवल 4 पत्ते बचते हैं: {10, J, K, A}।\n(a) P(एक्का) = 4 में से 1 एक्का = 1 / 4।\n(b) P(बेगम) = शेष 4 पत्तों में कोई बेगम नहीं बची = 0 / 4 = 0 (असंभव घटना!)।",
+    "explanation_gu": "(i) કુલ પત્તા = 5 (દસ્સો, ગુલામ, રાણી, રાજા, એક્કો). રાણી = 1. P(રાણી) = 1 / 5.\n(ii) રાણીને બાજુ પર મૂકતાં હવે માત્ર 4 પત્તા વધે છે: {દસ્સો, ગુલામ, રાજા, એક્કો}.\n(a) P(એક્કો) = 4 માંથી 1 એક્કો = 1 / 4.\n(b) P(રાણી) = વધેલા 4 પત્તામાં રાણી છે જ નહીં = 0 / 4 = 0 (અશક્ય ઘટના!)."
+  },
+  {
+    "id": "C10M_CH14_025",
+    "question": "Exercise 14.1 Q16: 12 defective pens are accidentally mixed with 132 good ones. It is not possible to just look at a pen and tell whether or not it is defective. One pen is taken out at random from this lot. Determine the probability that the pen taken out is a good one.",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 16: 12 खराब पेन 132 अच्छे पेनों में गलती से मिल गए हैं। केवल देखकर यह नहीं बताया जा सकता कि कोई पेन खराब है या अच्छा। इस मिश्रण में से एक पेन यादृच्छया निकाला जाता है। निकाले गए पेन के अच्छा होने की प्रायिकता ज्ञात कीजिए।",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 16: ખામીવાળી 12 પેન આકસ્મિક રીતે 132 સારી પેન સાથે ભળી ગઈ છે. એવું નથી કે માત્ર પેનને જોઈને જ કહી શકાય કે પેન ખામીવાળી છે કે સારી. આ જથ્થામાંથી એક પેન યાદચ્છિક રીતે કાઢવામાં આવે છે. કાઢવામાં આવેલી પેન ખામીરહિત (સારી) છે તેની સંભાવના શોધો.",
+    "options": [
+      "11/12",
+      "1/12",
+      "132/144",
+      "12/132"
+    ],
+    "options_hi": [
+      "11/12",
+      "1/12",
+      "132/144",
+      "12/132"
+    ],
+    "options_gu": [
+      "11/12",
+      "1/12",
+      "132/144",
+      "12/132"
+    ],
+    "correct_index": 0,
+    "explanation": "Number of good pens = 132.\nNumber of defective pens = 12.\nTotal number of pens = 132 + 12 = 144.\nP(good pen) = Number of good pens / Total pens = 132 / 144 = 11 / 12 (dividing numerator and denominator by 12).",
+    "explanation_hi": "अच्छे पेनों की संख्या = 132।\nखराब पेनों की संख्या = 12।\nकुल पेनों की संख्या = 132 + 12 = 144।\nP(अच्छा पेन) = अच्छे पेनों की संख्या / कुल पेन = 132 / 144 = 11 / 12 (अंश और हर को 12 से भाग देने पर)।",
+    "explanation_gu": "સારી પેનની સંખ્યા = 132.\nખામીવાળી પેનની સંખ્યા = 12.\nપેનની કુલ સંખ્યા = 132 + 12 = 144.\nP(સારી પેન) = 132 / 144 = 11 / 12 (અંશ અને છેદને 12 વડે ભાગતાં)."
+  },
+  {
+    "id": "C10M_CH14_026",
+    "question": "Exercise 14.1 Q17:\n(i) A lot of 20 bulbs contain 4 defective ones. One bulb is drawn at random from the lot. What is the probability that this bulb is defective?\n(ii) Suppose the bulb drawn in (i) is not defective and is not replaced. Now one bulb is drawn at random from the rest. What is the probability that this bulb is not defective?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 17:\n(i) 20 बल्बों के एक समूह में 4 बल्ब खराब हैं। इस समूह में से एक बल्ब यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि यह बल्ब खराब होगा?\n(ii) मान लीजिए (i) में निकाला गया बल्ब खराब नहीं है और न ही इसे दोबारा बल्बों के साथ मिलाया जाता है। अब शेष बल्बों में से एक बल्ब यादृच्छया निकाला जाता है। इसकी क्या प्रायिकता है कि यह बल्ब खराब नहीं होगा?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 17:\n(i) 20 વીજળીના ગોળાઓનો જથ્થો 4 ખામીયુક્ત ગોળા ધરાવે છે. આ જથ્થામાંથી એક ગોળો યાદચ્છિક રીતે કાઢવામાં આવે છે. આ ગોળો ખામીયુક્ત હોય તેની સંભાવના કેટલી?\n(ii) ધારો કે (i) માં કાઢવામાં આવેલ ગોળો ખામીયુક્ત નથી અને તેને પાછો મૂકવામાં પણ નથી આવ્યો. હવે બાકીના ગોળામાંથી એક ગોળો યાદચ્છિક રીતે કાઢવામાં આવે છે. આ ગોળો ખામીયુક્ત ન હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 1/5, (ii) 15/19",
+      "(i) 1/5, (ii) 16/19",
+      "(i) 4/20, (ii) 15/20",
+      "(i) 1/4, (ii) 15/19"
+    ],
+    "options_hi": [
+      "(i) 1/5, (ii) 15/19",
+      "(i) 1/5, (ii) 16/19",
+      "(i) 4/20, (ii) 15/20",
+      "(i) 1/4, (ii) 15/19"
+    ],
+    "options_gu": [
+      "(i) 1/5, (ii) 15/19",
+      "(i) 1/5, (ii) 16/19",
+      "(i) 4/20, (ii) 15/20",
+      "(i) 1/4, (ii) 15/19"
+    ],
+    "correct_index": 0,
+    "explanation": "(i) Total bulbs = 20, Defective = 4. P(defective) = 4 / 20 = 1 / 5.\n(ii) One non-defective bulb was removed and NOT replaced:\n- Remaining total bulbs = 20 - 1 = 19.\n- Remaining non-defective bulbs = 16 - 1 = 15.\nP(not defective) = 15 / 19.",
+    "explanation_hi": "(i) कुल बल्ब = 20, खराब बल्ब = 4। P(खराब) = 4 / 20 = 1 / 5।\n(ii) पहला सही बल्ब निकाला गया और वापस नहीं रखा गया:\n- अब शेष कुल बल्ब = 20 - 1 = 19।\n- शेष सही (खराब नहीं) बल्ब = 16 - 1 = 15।\nP(खराब नहीं) = 15 / 19।",
+    "explanation_gu": "(i) કુલ ગોળા = 20, ખામીયુક્ત = 4. P(ખામીયુક્ત) = 4 / 20 = 1 / 5.\n(ii) પહેલો સારો ગોળો બહાર કાઢી પાછો મૂક્યો નથી:\n- હવે બાકી રહેલા કુલ ગોળા = 20 - 1 = 19.\n- બાકી રહેલા સારા ગોળા = 16 - 1 = 15.\nP(ખામીયુક્ત ન હોય) = 15 / 19."
+  },
+  {
+    "id": "C10M_CH14_027",
+    "question": "Exercise 14.1 Q18: A box contains 90 discs which are numbered from 1 to 90. If one disc is drawn at random from the box, find the probability that it bears:\n(i) a two-digit number?\n(ii) a perfect square number?\n(iii) a number divisible by 5?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 18: एक पेटी में 90 डिस्क (discs) हैं, जिन पर 1 से 90 तक संख्याएं अंकित हैं। यदि इस पेटी में से एक डिस्क यादृच्छया निकाली जाती है, तो इसकी प्रायिकता ज्ञात कीजिए कि इस डिस्क पर अंकित होगी:\n(i) दो अंकों की एक संख्या?\n(ii) एक पूर्ण वर्ग संख्या?\n(iii) 5 से विभाज्य एक संख्या?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 18: એક પેટીમાં 1 થી 90 સુધીની સંખ્યાઓ લખેલી 90 ગોળ તકતીઓ છે. જો પેટીમાંથી એક ગોળ તકતી યાદચ્છિક રીતે કાઢવામાં આવે, તો તેના પર:\n(i) બે અંકની સંખ્યા હોય,\n(ii) પૂર્ણવર્ગ સંખ્યા હોય,\n(iii) 5 વડે વિભાજ્ય સંખ્યા હોય તેની સંભાવના શોધો.",
+    "options": [
+      "(i) 9/10, (ii) 1/10, (iii) 1/5",
+      "(i) 81/90, (ii) 9/90, (iii) 18/90",
+      "(i) 8/9, (ii) 1/9, (iii) 1/5",
+      "(i) 9/10, (ii) 1/9, (iii) 1/6"
+    ],
+    "options_hi": [
+      "(i) 9/10, (ii) 1/10, (iii) 1/5",
+      "(i) 81/90, (ii) 9/90, (iii) 18/90",
+      "(i) 8/9, (ii) 1/9, (iii) 1/5",
+      "(i) 9/10, (ii) 1/9, (iii) 1/6"
+    ],
+    "options_gu": [
+      "(i) 9/10, (ii) 1/10, (iii) 1/5",
+      "(i) 81/90, (ii) 9/90, (iii) 18/90",
+      "(i) 8/9, (ii) 1/9, (iii) 1/5",
+      "(i) 9/10, (ii) 1/9, (iii) 1/6"
+    ],
+    "correct_index": 0,
+    "explanation": "Total discs = 90 (numbers 1 to 90).\n(i) Single digit numbers are 1 to 9 (9 numbers). Two-digit numbers = 90 - 9 = 81 numbers (from 10 to 90). P(two-digit) = 81 / 90 = 9 / 10.\n(ii) Perfect square numbers from 1 to 90 are: {1, 4, 9, 16, 25, 36, 49, 64, 81} (9 numbers). P(perfect square) = 9 / 90 = 1 / 10.\n(iii) Numbers divisible by 5 from 1 to 90 are: 5, 10, 15, ..., 90 (total = 90 / 5 = 18 numbers). P(divisible by 5) = 18 / 90 = 1 / 5.",
+    "explanation_hi": "कुल डिस्क = 90 (संख्याएं 1 से 90)।\n(i) एक अंक की संख्याएं 1 से 9 (9 संख्याएं) हैं। दो अंकों की संख्याएं = 90 - 9 = 81 (10 से 90 तक)। P(दो अंकों की) = 81 / 90 = 9 / 10।\n(ii) 1 से 90 के बीच पूर्ण वर्ग संख्याएं: {1, 4, 9, 16, 25, 36, 49, 64, 81} (कुल 9)। P(पूर्ण वर्ग) = 9 / 90 = 1 / 10।\n(iii) 5 से विभाज्य संख्याएं: 5, 10, ..., 90 (कुल 90 / 5 = 18 संख्याएं)। P(5 से विभाज्य) = 18 / 90 = 1 / 5।",
+    "explanation_gu": "કુલ તકતીઓ = 90 (1 થી 90 અંકો).\n(i) એક અંકની સંખ્યાઓ 1 થી 9 (9 સંખ્યાઓ) છે. બે અંકની સંખ્યાઓ = 90 - 9 = 81 (10 થી 90 સુધી). P(બે અંકની) = 81 / 90 = 9 / 10.\n(ii) 1 થી 90 માં પૂર્ણવર્ગ સંખ્યાઓ: {1, 4, 9, 16, 25, 36, 49, 64, 81} (કુલ 9). P(પૂર્ણવર્ગ) = 9 / 90 = 1 / 10.\n(iii) 5 વડે વિભાજ્ય સંખ્યાઓ: 5, 10, ..., 90 (કુલ 90 / 5 = 18 સંખ્યાઓ). P(5 વડે વિભાજ્ય) = 18 / 90 = 1 / 5."
+  },
+  {
+    "id": "C10M_CH14_028",
+    "question": "Exercise 14.1 Q19: A child has a die whose six faces show the letters: [A, B, C, D, E, A]. The die is thrown once. What is the probability of getting:\n(i) A?\n(ii) D?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 19: एक बच्चे के पास ऐसा पासा है जिसके छह फलकों पर निम्नलिखित अक्षर अंकित हैं: [A, B, C, D, E, A]। इस पासे को एक बार फेंका जाता है। इसकी क्या प्रायिकता है कि:\n(i) A प्राप्त हो?\n(ii) D प्राप्त हो?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 19: એક બાળક પાસે એક એવો પાસો છે જેની છ સપાટીઓ નીચે આપેલા અક્ષરો દર્શાવે છે: [A, B, C, D, E, A]. આ પાસાને એક વાર ઉછાળવામાં આવે છે. પાસા પર:\n(i) A મળે,\n(ii) D મળે તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 1/3, (ii) 1/6",
+      "(i) 2/6, (ii) 2/6",
+      "(i) 1/6, (ii) 1/6",
+      "(i) 1/2, (ii) 1/6"
+    ],
+    "options_hi": [
+      "(i) 1/3, (ii) 1/6",
+      "(i) 2/6, (ii) 2/6",
+      "(i) 1/6, (ii) 1/6",
+      "(i) 1/2, (ii) 1/6"
+    ],
+    "options_gu": [
+      "(i) 1/3, (ii) 1/6",
+      "(i) 2/6, (ii) 2/6",
+      "(i) 1/6, (ii) 1/6",
+      "(i) 1/2, (ii) 1/6"
+    ],
+    "correct_index": 0,
+    "explanation": "Total faces on the die = 6: [A, B, C, D, E, A].\n(i) Letter 'A' appears on 2 faces -> P(A) = 2 / 6 = 1 / 3.\n(ii) Letter 'D' appears on 1 face -> P(D) = 1 / 6.",
+    "explanation_hi": "पासे के कुल फलक = 6: [A, B, C, D, E, A]।\n(i) अक्षर 'A' 2 फलकों पर है -> P(A) = 2 / 6 = 1 / 3।\n(ii) अक्षर 'D' केवल 1 फलक पर है -> P(D) = 1 / 6।",
+    "explanation_gu": "પાસાની કુલ સપાટીઓ = 6: [A, B, C, D, E, A].\n(i) અક્ષર 'A' 2 સપાટી પર આવે છે -> P(A) = 2 / 6 = 1 / 3.\n(ii) અક્ષર 'D' 1 સપાટી પર આવે છે -> P(D) = 1 / 6."
+  },
+  {
+    "id": "C10M_CH14_029",
+    "question": "Exercise 14.1 Q20: Suppose you drop a die at random on the rectangular region shown (length = 3 m, breadth = 2 m). What is the probability that it will land inside the circle with diameter 1 m?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 20: मान लीजिए आप एक पासे को एक आयताकार क्षेत्र (लंबाई = 3 मीटर, चौड़ाई = 2 मीटर) में यादृच्छया गिराते हैं। इसकी क्या प्रायिकता है कि वह पासा 1 मीटर व्यास वाले वृत्त के अंदर गिरेगा?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 20: ધારો કે એક પાસાને લંબચોરસ ક્ષેત્ર પર યાદચ્છિક રીતે ફેંકો છો (લંબાઈ = 3 મીટર, પહોળાઈ = 2 મીટર). તે 1 મીટર વ્યાસવાળા વર્તુળની અંદર પડશે તેની સંભાવના કેટલી?",
+    "options": [
+      "π / 24",
+      "π / 12",
+      "π / 6",
+      "1 / 6"
+    ],
+    "options_hi": [
+      "π / 24",
+      "π / 12",
+      "π / 6",
+      "1 / 6"
+    ],
+    "options_gu": [
+      "π / 24",
+      "π / 12",
+      "π / 6",
+      "1 / 6"
+    ],
+    "correct_index": 0,
+    "explanation": "Total area of the rectangular region = Length x Breadth = 3 m x 2 m = 6 m².\nDiameter of the circle = 1 m -> Radius r = 1/2 m = 0.5 m.\nFavourable area (Area of the circle) = π r² = π x (1/2)² = π / 4 m².\nP(die lands inside circle) = Area of circle / Total area of rectangle = (π / 4) / 6 = π / 24.",
+    "explanation_hi": "आयताकार क्षेत्र का कुल क्षेत्रफल = लंबाई x चौड़ाई = 3 x 2 = 6 वर्ग मीटर।\nवृत्त का व्यास = 1 मीटर -> त्रिज्या r = 1/2 मीटर।\nअनुकूल क्षेत्रफल (वृत्त का क्षेत्रफल) = π r² = π x (1/2)² = π / 4 वर्ग मीटर।\nप्रायिकता = वृत्त का क्षेत्रफल / आयत का कुल क्षेत्रफल = (π / 4) / 6 = π / 24।",
+    "explanation_gu": "લંબચોરસનું કુલ ક્ષેત્રફળ = લંબાઈ x પહોળાઈ = 3 x 2 = 6 ચોરસ મીટર.\nવર્તુળનો વ્યાસ = 1 મીટર -> ત્રિજ્યા r = 1/2 મીટર.\nસાનુકૂળ ક્ષેત્રફળ (વર્તુળનું ક્ષેત્રફળ) = π r² = π x (1/2)² = π / 4 ચોરસ મીટર.\nસંભાવના = વર્તુળનું ક્ષેત્રફળ / લંબચોરસનું ક્ષેત્રફળ = (π / 4) / 6 = π / 24."
+  },
+  {
+    "id": "C10M_CH14_030",
+    "question": "Exercise 14.1 Q21: A lot consists of 144 ball pens of which 20 are defective and the others are good. Nuri will buy a pen if it is good, but will not buy if it is defective. The shopkeeper draws one pen at random and gives it to her. What is the probability that:\n(i) She will buy it?\n(ii) She will not buy it?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 21: 144 बॉल पेनों के एक समूह में 20 पेन खराब हैं और शेष अच्छे हैं। नूरी वही पेन खरीदना चाहेगी जो अच्छा हो, परंतु खराब पेन वह नहीं खरीदना चाहेगी। दुकानदार इन पेनों में से यादृच्छया एक पेन निकालकर उसे देता है। इसकी क्या प्रायिकता है कि:\n(i) वह पेन खरीदेगी?\n(ii) वह पेन नहीं खरीदेगी?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 21: એક જથ્થો 144 બોલપેન ધરાવે છે. તેમાંથી 20 ખામીયુક્ત અને બાકીની સારી છે. જો પેન સારી હશે તો નુરી પેન ખરીદશે, પરંતુ જો ખામીયુક્ત હશે તો ખરીદશે નહીં. દુકાનદાર યાદચ્છિક રીતે એક પેન કાઢે છે અને તેને આપે છે:\n(i) તે પેન ખરીદશે તેની સંભાવના કેટલી?\n(ii) તે પેન નહીં ખરીદે તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 31/36, (ii) 5/36",
+      "(i) 5/36, (ii) 31/36",
+      "(i) 124/144, (ii) 20/144",
+      "(i) 30/36, (ii) 6/36"
+    ],
+    "options_hi": [
+      "(i) 31/36, (ii) 5/36",
+      "(i) 5/36, (ii) 31/36",
+      "(i) 124/144, (ii) 20/144",
+      "(i) 30/36, (ii) 6/36"
+    ],
+    "options_gu": [
+      "(i) 31/36, (ii) 5/36",
+      "(i) 5/36, (ii) 31/36",
+      "(i) 124/144, (ii) 20/144",
+      "(i) 30/36, (ii) 6/36"
+    ],
+    "correct_index": 0,
+    "explanation": "Total pens = 144.\nDefective pens = 20.\nGood pens = 144 - 20 = 124 pens.\n(i) Nuri buys if the pen is good:\nP(buys) = 124 / 144 = 31 / 36 (dividing by 4).\n(ii) Nuri will not buy if the pen is defective:\nP(will not buy) = 20 / 144 = 5 / 36 (or 1 - 31/36 = 5/36).",
+    "explanation_hi": "कुल पेन = 144।\nखराब पेन = 20।\nअच्छे पेन = 144 - 20 = 124।\n(i) नूरी तब खरीदेगी जब पेन अच्छा हो:\nP(खरीदेगी) = 124 / 144 = 31 / 36 (4 से भाग देने पर)।\n(ii) नूरी तब नहीं खरीदेगी जब पेन खराब हो:\nP(नहीं खरीदेगी) = 20 / 144 = 5 / 36 (या 1 - 31/36 = 5/36)।",
+    "explanation_gu": "કુલ પેન = 144.\nખામીવાળી પેન = 20.\nસારી પેન = 144 - 20 = 124.\n(i) નુરી પેન ખરીદશે જો પેન સારી હોય:\nP(ખરીદશે) = 124 / 144 = 31 / 36 (4 વડે ભાગતાં).\n(ii) નુરી પેન નહીં ખરીદે જો પેન ખામીવાળી હોય:\nP(નહીં ખરીદે) = 20 / 144 = 5 / 36."
+  },
+  {
+    "id": "C10M_CH14_031",
+    "question": "Exercise 14.1 Q22: Two dice are thrown at the same time.\n(i) What is the probability that the sum on the two dice is 8?\n(ii) A student argues that 'there are 11 possible sums (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12). Therefore, each of them has a probability of 1/11.' Do you agree with this argument?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 22: दो पासे एक साथ फेंके जाते हैं।\n(i) दोनों पासों की संख्याओं का योग 8 होने की प्रायिकता क्या है?\n(ii) एक विद्यार्थी यह तर्क देता है कि 'यहाँ कुल 11 संभव योग (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) हैं। अतः प्रत्येक की प्रायिकता 1/11 है।' क्या आप इस तर्क से सहमत हैं?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 22: બે પાસા એકસાથે ફેંકવામાં આવે છે.\n(i) બંને પાસા પરના અંકોનો સરવાળો 8 થાય તેની સંભાવના કેટલી?\n(ii) એક વિદ્યાર્થી દલીલ કરે છે કે 'અહીં 11 શક્ય સરવાળા (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) છે. તેથી પ્રત્યેકની સંભાવના 1/11 થાય.' શું તમે આ દલીલ સાથે સંમત છો?",
+    "options": [
+      "(i) 5/36; (ii) Disagree! The 11 sums are NOT equally likely outcomes",
+      "(i) 1/11; (ii) Agree! There are 11 sums so each has probability 1/11",
+      "(i) 6/36; (ii) Disagree! Sum 8 has only 4 outcomes",
+      "(i) 5/36; (ii) Agree! Probability is always 1 divided by total cases"
+    ],
+    "options_hi": [
+      "(i) 5/36; (ii) असहमत! ये 11 योग समप्रायिक (Equally Likely) परिणाम नहीं हैं",
+      "(i) 1/11; (ii) सहमत! कुल 11 योग हैं इसलिए प्रत्येक की प्रायिकता 1/11 होगी",
+      "(i) 6/36; (ii) असहमत! योग 8 के केवल 4 परिणाम होते हैं",
+      "(i) 5/36; (ii) सहमत! प्रायिकता हमेशा 1 / कुल स्थितियां होती है"
+    ],
+    "options_gu": [
+      "(i) 5/36; (ii) અસંમત! આ 11 સરવાળા સમસંભાવી (Equally Likely) પરિણામો નથી",
+      "(i) 1/11; (ii) સંમત! 11 સરવાળા હોવાથી પ્રત્યેકની સંભાવના 1/11 થાય",
+      "(i) 6/36; (ii) અસંમત! સરવાળો 8 થવા માટે માત્ર 4 પરિણામો છે",
+      "(i) 5/36; (ii) સંમત! સંભાવના હંમેશાં 1 ભાગ્યા કુલ વિકલ્પો હોય છે"
+    ],
+    "correct_index": 0,
+    "explanation": "Total outcomes when two dice are thrown = 36.\n(i) Pairs giving sum 8: {(2,6), (3,5), (4,4), (5,3), (6,2)} (5 outcomes). Thus P(sum 8) = 5 / 36.\n(ii) We disagree with the student! The 11 sums are NOT equally likely. For instance, sum 2 has only 1 outcome (1,1) giving P = 1/36, whereas sum 7 has 6 outcomes giving P = 6/36 = 1/6. Laplace's formula requires equally likely elementary outcomes!",
+    "explanation_hi": "दो पासे फेंकने पर कुल परिणाम = 36।\n(i) योग 8 देने वाले युग्म: {(2,6), (3,5), (4,4), (5,3), (6,2)} (कुल 5 परिणाम)। अतः P(योग 8) = 5 / 36।\n(ii) हम विद्यार्थी के तर्क से असहमत हैं! ये 11 योग समप्रायिक नहीं हैं। उदाहरण के लिए, योग 2 केवल एक स्थिति (1,1) से आता है (P = 1/36), जबकि योग 7 छह स्थितियों से आता है (P = 6/36 = 1/6)। लाप्लास का नियम केवल समप्रायिक परिणामों पर लागू होता है!",
+    "explanation_gu": "બે પાસા ફેંકતાં કુલ શક્ય પરિણામો = 36.\n(i) સરવાળો 8 થવાની જોડ: {(2,6), (3,5), (4,4), (5,3), (6,2)} (5 પરિણામો). તેથી P(સરવાળો 8) = 5 / 36.\n(ii) આપણે વિદ્યાર્થીની દલીલ સાથે અસંમત છીએ! આ 11 પરિણામો સમસંભાવી નથી. સરવાળો 2 માત્ર એક જ રીતે (1,1) બને છે (P = 1/36), જ્યારે સરવાળો 7 છ રીતે બને છે (P = 6/36 = 1/6)."
+  },
+  {
+    "id": "C10M_CH14_032",
+    "question": "Exercise 14.1 Q23: A game consists of tossing a one rupee coin 3 times and noting its outcome each time. Hanif wins if all the tosses give the same result i.e., three heads or three tails, and loses otherwise. Calculate the probability that Hanif will lose the game.",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 23: एक खेल में एक रुपये के सिक्के को तीन बार उछाला जाता है और प्रत्येक बार का परिणाम लिख लिया जाता है। तीनों परिणाम समान होने पर, अर्थात् तीन चित या तीन पट प्राप्त होने पर, हनीफ खेल में जीत जाएगा, अन्यथा वह हार जाएगा। हनीफ के खेल में हार जाने की प्रायिकता परिकलित कीजिए।",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 23: એક રમતમાં એક રૂપિયાના સિક્કાને 3 વાર ઉછાળવાનો છે અને તેના પરિણામો નોંધવાના છે. જો તમામ ઉછાળમાં સરખું પરિણામ મળે, એટલે કે ત્રણ છાપ અથવા ત્રણ કાંટા હોય, તો હનીફ રમત જીતી જાય છે, અન્યથા હારે છે. હનીફ રમત હારી જશે તેની સંભાવનાની ગણતરી કરો.",
+    "options": [
+      "3/4",
+      "1/4",
+      "1/8",
+      "7/8"
+    ],
+    "options_hi": [
+      "3/4",
+      "1/4",
+      "1/8",
+      "7/8"
+    ],
+    "options_gu": [
+      "3/4",
+      "1/4",
+      "1/8",
+      "7/8"
+    ],
+    "correct_index": 0,
+    "explanation": "When a coin is tossed 3 times, total outcomes = 2^3 = 8:\nS = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}.\nHanif wins only if outcome is HHH or TTT (2 favourable outcomes).\nP(Hanif wins) = 2 / 8 = 1 / 4.\nP(Hanif loses) = 1 - P(Hanif wins) = 1 - 1/4 = 3 / 4 (or 6 losing outcomes / 8 = 3 / 4).",
+    "explanation_hi": "एक सिक्के को 3 बार उछालने पर कुल परिणाम = 2^3 = 8:\nS = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}।\nहनीफ केवल तभी जीतता है जब HHH या TTT आए (2 स्थितियां)।\nP(हनीफ जीतता है) = 2 / 8 = 1 / 4।\nP(हनीफ हार जाता है) = 1 - 1/4 = 3 / 4 (या हारने वाले 6 परिणाम / 8 = 3 / 4)।",
+    "explanation_gu": "એક સિક્કાને 3 વાર ઉછાળતાં કુલ શક્ય પરિણામો = 2^3 = 8:\nS = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}.\nહનીફ માત્ર HHH અથવા TTT આવે તો જ જીતે છે (2 સાનુકૂળ પરિણામો).\nP(હનીફ જીતે) = 2 / 8 = 1 / 4.\nP(હનીફ હારી જાય) = 1 - 1/4 = 3 / 4."
+  },
+  {
+    "id": "C10M_CH14_033",
+    "question": "Exercise 14.1 Q24: A die is thrown twice. What is the probability that:\n(i) 5 will not come up either time?\n(ii) 5 will come up at least once?",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 24: एक पासे को दो बार फेंका जाता है। इसकी क्या प्रायिकता है कि:\n(i) 5 किसी भी बार में नहीं आएगा?\n(ii) 5 कम से कम एक बार आएगा?",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 24: પાસાને બે વખત ઉછાળવામાં આવે છે:\n(i) એકપણ વખત 5 ન મળે,\n(ii) ઓછામાં ઓછી એક વાર 5 મળે તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 25/36, (ii) 11/36",
+      "(i) 11/36, (ii) 25/36",
+      "(i) 30/36, (ii) 6/36",
+      "(i) 20/36, (ii) 16/36"
+    ],
+    "options_hi": [
+      "(i) 25/36, (ii) 11/36",
+      "(i) 11/36, (ii) 25/36",
+      "(i) 30/36, (ii) 6/36",
+      "(i) 20/36, (ii) 16/36"
+    ],
+    "options_gu": [
+      "(i) 25/36, (ii) 11/36",
+      "(i) 11/36, (ii) 25/36",
+      "(i) 30/36, (ii) 6/36",
+      "(i) 20/36, (ii) 16/36"
+    ],
+    "correct_index": 0,
+    "explanation": "Total outcomes when a die is thrown twice = 6 x 6 = 36.\nOutcomes where 5 comes up at least once:\n- First die is 5: (5,1), (5,2), (5,3), (5,4), (5,5), (5,6) (6 outcomes)\n- Second die is 5: (1,5), (2,5), (3,5), (4,5), (6,5) [excluding (5,5) already counted] (5 outcomes)\nTotal outcomes where 5 appears at least once = 6 + 5 = 11 outcomes.\n(i) P(5 will not come up either time) = (36 - 11) / 36 = 25 / 36.\n(ii) P(5 will come up at least once) = 11 / 36.",
+    "explanation_hi": "पासे को दो बार फेंकने पर कुल परिणाम = 6 x 6 = 36।\nवे परिणाम जिनमें कम से कम एक बार 5 आता है:\n- पहले पासे पर 5: (5,1), (5,2), (5,3), (5,4), (5,5), (5,6) (6 परिणाम)\n- दूसरे पासे पर 5: (1,5), (2,5), (3,5), (4,5), (6,5) [चूँकि (5,5) पहले ही गिना जा चुका है] (5 परिणाम)\nकुल परिणाम जिनमें 5 आता है = 6 + 5 = 11।\n(i) P(5 किसी भी बार नहीं आएगा) = (36 - 11) / 36 = 25 / 36।\n(ii) P(5 कम से कम एक बार आएगा) = 11 / 36।",
+    "explanation_gu": "પાસાને બે વખત ફેંકતાં કુલ શક્ય પરિણામો = 6 x 6 = 36.\nઓછામાં ઓછી એક વાર 5 આવવાના પરિણામો:\n- પહેલા પાસા પર 5: (5,1), (5,2), (5,3), (5,4), (5,5), (5,6) (6 પરિણામો)\n- બીજા પાસા પર 5: (1,5), (2,5), (3,5), (4,5), (6,5) (5 પરિણામો)\n5 આવવાના કુલ પરિણામો = 6 + 5 = 11.\n(i) P(એકપણ વાર 5 ન આવે) = (36 - 11) / 36 = 25 / 36.\n(ii) P(ઓછામાં ઓછી એક વાર 5 આવે) = 11 / 36."
+  },
+  {
+    "id": "C10M_CH14_034",
+    "question": "Exercise 14.1 Q25: Which of the following arguments are correct and which are not correct?\n(i) If two coins are tossed simultaneously there are three possible outcomes — two heads, two tails or one of each. Therefore, for each of these outcomes, the probability is 1/3.\n(ii) If a die is thrown, there are two possible outcomes — an odd number or an even number. Therefore, the probability of getting an odd number is 1/2.",
+    "question_hi": "प्रश्नावली 14.1 प्रश्न 25: निम्नलिखित में से कौन से तर्क सही हैं और कौन से सही नहीं हैं?\n(i) यदि दो सिक्कों को एक साथ उछाला जाता है, तो इसके तीन संभव परिणाम — दो चित, दो पट या प्रत्येक एक बार हैं। अतः इनमें से प्रत्येक परिणाम की प्रायिकता 1/3 है।\n(ii) यदि एक पासे को फेंका जाता है, तो इसके दो संभव परिणाम — एक विषम संख्या या एक सम संख्या हैं। अतः एक विषम संख्या ज्ञात करने की प्रायिकता 1/2 है।",
+    "question_gu": "સ્વાધ્યાય 14.1 પ્રશ્ન 25: નીચેનામાંથી કઈ દલીલો સાચી છે અને કઈ સાચી નથી?\n(i) જો બે સિક્કાઓને એકસાથે ઉછાળવામાં આવે તો ત્રણ શક્યતાઓ મળે છે — બે છાપ, બે કાંટા અથવા પ્રત્યેકનો એક. તેથી આ પ્રત્યેક પરિણામની સંભાવના 1/3 છે.\n(ii) જો પાસાને ઉછાળવામાં આવે તો બે જ શક્ય પરિણામો મળે છે — અયુગ્મ (એકી) સંખ્યા અથવા યુગ્મ (બેકી) સંખ્યા. તેથી અયુગ્મ સંખ્યા મળવાની સંભાવના 1/2 છે.",
+    "options": [
+      "(i) Incorrect, (ii) Correct",
+      "(i) Correct, (ii) Correct",
+      "(i) Incorrect, (ii) Incorrect",
+      "(i) Correct, (ii) Incorrect"
+    ],
+    "options_hi": [
+      "(i) गलत है, (ii) सही है",
+      "(i) सही है, (ii) सही है",
+      "(i) गलत है, (ii) गलत है",
+      "(i) सही है, (ii) गलत है"
+    ],
+    "options_gu": [
+      "(i) ખોટી છે, (ii) સાચી છે",
+      "(i) સાચી છે, (ii) સાચી છે",
+      "(i) ખોટી છે, (ii) ખોટી છે",
+      "(i) સાચી છે, (ii) ખોટી છે"
+    ],
+    "correct_index": 0,
+    "explanation": "(i) Incorrect! When two coins are tossed, the sample space is {HH, HT, TH, TT} (4 equally likely outcomes). P(two heads) = 1/4, P(two tails) = 1/4, and P(one of each) = 2/4 = 1/2. They do not have equal probability 1/3.\n(ii) Correct! Out of 6 faces, Odd = {1, 3, 5} (3 outcomes) and Even = {2, 4, 6} (3 outcomes). Since both have 3 equally likely outcomes out of 6, P(odd) = 3/6 = 1/2.",
+    "explanation_hi": "(i) गलत है! दो सिक्के उछालने पर 4 समप्रायिक परिणाम होते हैं: {HH, HT, TH, TT}। P(दो चित) = 1/4, P(दो पट) = 1/4, और P(प्रत्येक एक बार) = 2/4 = 1/2। अतः इनकी प्रायिकता 1/3 नहीं हो सकती।\n(ii) सही है! कुल 6 परिणामों में विषम संख्याएं {1, 3, 5} (3 परिणाम) और सम संख्याएं {2, 4, 6} (3 परिणाम) हैं। दोनों समप्रायिक हैं, अतः P(विषम) = 3/6 = 1/2।",
+    "explanation_gu": "(i) ખોટી દલીલ છે! બે સિક્કા ઉછાળતાં 4 સમસંભાવી પરિણામો મળે છે: {HH, HT, TH, TT}. બે છાપ = 1/4, બે કાંટા = 1/4 અને પ્રત્યેક એક = 2/4 = 1/2. તેથી સંભાવના 1/3 ન હોઈ શકે.\n(ii) સાચી દલીલ છે! પાસા પર એકી સંખ્યાઓ {1, 3, 5} (3 પરિણામો) અને બેકી સંખ્યાઓ {2, 4, 6} (3 પરિણામો) સમસંભાવી છે, તેથી P(એકી) = 3/6 = 1/2."
+  },
+  {
+    "id": "C10M_CH14_035",
+    "question": "Board HOTS Challenge: A box contains 12 balls out of which x are black. If one ball is drawn at random from the box, what is the probability that it will be a black ball? If 6 more black balls are put in the box, the probability of drawing a black ball is now double of what it was before. Find the value of x.",
+    "question_hi": "बोर्ड परीक्षा HOTS चुनौती: एक डिब्बे में 12 गेंदें हैं, जिनमें से x गेंदें काली हैं। यदि डिब्बे में से एक गेंद यादृच्छया निकाली जाए, तो इसके काली होने की प्रायिकता क्या है? यदि डिब्बे में 6 काली गेंदें और डाल दी जाएं, तो काली गेंद निकालने की प्रायिकता पहली प्रायिकता की दोगुनी हो जाती है। x का मान ज्ञात कीजिए।",
+    "question_gu": "બોર્ડ પરીક્ષા HOTS પડકાર: એક પેટીમાં 12 દડા છે, તેમાંથી x દડા કાળા છે. જો પેટીમાંથી એક દડો યાદચ્છિક રીતે કાઢવામાં આવે, તો તે કાળો દડો હોય તેની સંભાવના કેટલી? જો પેટીમાં બીજા 6 કાળા દડા મૂકવામાં આવે, તો કાળો દડો નીકળવાની સંભાવના પહેલાં કરતાં બમણી થાય છે. x ની કિંમત શોધો.",
+    "options": [
+      "x = 3",
+      "x = 4",
+      "x = 2",
+      "x = 6"
+    ],
+    "options_hi": [
+      "x = 3",
+      "x = 4",
+      "x = 2",
+      "x = 6"
+    ],
+    "options_gu": [
+      "x = 3",
+      "x = 4",
+      "x = 2",
+      "x = 6"
+    ],
+    "correct_index": 0,
+    "explanation": "Initially: Total balls = 12, Black balls = x. P₁(black) = x / 12.\nAfter adding 6 black balls: Total balls = 12 + 6 = 18, Black balls = x + 6.\nP₂(black) = (x + 6) / 18.\nGiven condition: P₂ = 2 x P₁\n(x + 6) / 18 = 2 x (x / 12) = x / 6\nCross-multiplying: x + 6 = 18 x (x / 6) = 3x\n3x - x = 6 => 2x = 6 => x = 3.",
+    "explanation_hi": "प्रारंभ में: कुल गेंदें = 12, काली गेंदें = x। P₁ = x / 12।\n6 काली गेंदें और मिलाने पर: कुल गेंदें = 18, काली गेंदें = x + 6।\nP₂ = (x + 6) / 18।\nप्रश्नानुसार: P₂ = 2 x P₁\n(x + 6) / 18 = 2 x (x / 12) = x / 6\nx + 6 = 3x => 2x = 6 => x = 3।",
+    "explanation_gu": "શરૂઆતમાં: કુલ દડા = 12, કાળા દડા = x. P₁ = x / 12.\nબીજા 6 કાળા દડા ઉમેરતાં: કુલ દડા = 18, કાળા દડા = x + 6.\nP₂ = (x + 6) / 18.\nશરત મુજબ: P₂ = 2 x P₁\n(x + 6) / 18 = 2 x (x / 12) = x / 6\nx + 6 = 3x => 2x = 6 => x = 3."
+  },
+  {
+    "id": "C10M_CH14_036",
+    "question": "Board HOTS Challenge: From a full pack of 52 cards, all the kings, queens, and jacks are removed. One card is then drawn at random from the remaining cards. What is the probability that the card drawn is (i) a black face card? (ii) a red card? (iii) an ace?",
+    "question_hi": "बोर्ड परीक्षा HOTS चुनौती: 52 पत्तों की ताश की गड्डी में से सभी बादशाह, बेगम और गुलाम निकाल दिए जाते हैं। शेष पत्तों में से यादृच्छया एक पत्ता निकाला जाता है। इसकी क्या प्रायिकता है कि निकाला गया पत्ता (i) एक काला तस्वीर वाला पत्ता है? (ii) एक लाल पत्ता है? (iii) एक एक्का है?",
+    "question_gu": "બોર્ડ પરીક્ષા HOTS પડકાર: 52 પત્તાની કેટમાંથી તમામ રાજા, રાણી અને ગુલામ કાઢી લેવામાં આવે છે. બાકી રહેલાં પત્તામાંથી યાદચ્છિક રીતે એક પત્તું ખેંચવામાં આવે છે. ખેંચાયેલું પત્તું (i) કાળા રંગનું મુખમુદ્રાવાળું હોય, (ii) લાલ રંગનું પત્તું હોય, (iii) એક્કો હોય તેની સંભાવના કેટલી?",
+    "options": [
+      "(i) 0, (ii) 1/2, (iii) 1/10",
+      "(i) 1/40, (ii) 20/52, (iii) 4/52",
+      "(i) 0, (ii) 26/40, (iii) 1/10",
+      "(i) 2/40, (ii) 1/2, (iii) 4/40"
+    ],
+    "options_hi": [
+      "(i) 0, (ii) 1/2, (iii) 1/10",
+      "(i) 1/40, (ii) 20/52, (iii) 4/52",
+      "(i) 0, (ii) 26/40, (iii) 1/10",
+      "(i) 2/40, (ii) 1/2, (iii) 4/40"
+    ],
+    "options_gu": [
+      "(i) 0, (ii) 1/2, (iii) 1/10",
+      "(i) 1/40, (ii) 20/52, (iii) 4/52",
+      "(i) 0, (ii) 26/40, (iii) 1/10",
+      "(i) 2/40, (ii) 1/2, (iii) 4/40"
+    ],
+    "correct_index": 0,
+    "explanation": "Total removed cards = 4 Kings + 4 Queens + 4 Jacks = 12 face cards.\nRemaining total cards in deck = 52 - 12 = 40 cards.\n(i) Since ALL face cards were removed, 0 black face cards remain. P(black face card) = 0 / 40 = 0 (Impossible event).\n(ii) 6 red face cards were removed from 26 red cards, leaving 26 - 6 = 20 red cards. P(red card) = 20 / 40 = 1 / 2.\n(iii) All 4 Aces are intact in the deck. P(Ace) = 4 / 40 = 1 / 10.",
+    "explanation_hi": "निकाले गए कुल पत्ते = 4 बादशाह + 4 बेगम + 4 गुलाम = 12 पत्ते।\nगड्डी में शेष कुल पत्ते = 52 - 12 = 40।\n(i) चूँकि सभी तस्वीर वाले पत्ते निकाल दिए गए हैं, अतः तस्वीर वाले पत्ते बचे ही नहीं: P = 0 / 40 = 0 (असंभव घटना)।\n(ii) 26 लाल पत्तों में से 6 लाल तस्वीर वाले पत्ते निकाल दिए गए, शेष लाल = 20। P(लाल पत्ता) = 20 / 40 = 1 / 2।\n(iii) चारों एक्के गड्डी में सुरक्षित हैं: P(एक्का) = 4 / 40 = 1 / 10।",
+    "explanation_gu": "દૂર કરેલા કુલ પત્તા = 4 રાજા + 4 રાણી + 4 ગુલામ = 12 પત્તા.\nહવે બાકી રહેલાં કુલ પત્તા = 52 - 12 = 40.\n(i) બધા જ મુખમુદ્રાવાળા પત્તા કાઢી લીધા હોવાથી હવે એકપણ ચિત્રવાળું પત્તું નથી: P = 0 / 40 = 0 (અશક્ય ઘટના).\n(ii) 26 લાલ રંગના પત્તામાંથી 6 ચિત્રવાળા નીકળી ગયા, વધ્યા = 20. P(લાલ પત્તું) = 20 / 40 = 1 / 2.\n(iii) ચારેય એક્કા હજી સુરક્ષિત છે: P(એક્કો) = 4 / 40 = 1 / 10."
+  }
+]

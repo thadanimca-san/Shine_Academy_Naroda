@@ -1,0 +1,322 @@
+import json
+import os
+
+blocks = []
+
+# Title Block
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_TITLE_01",
+    "type": "chapter_title",
+    "title_en": "Carbon and its Compounds (NCERT Science New 2024 Edition)",
+    "title_hi": "कार्बन एवं उसके यौगिक (NCERT Science New 2024 Edition)",
+    "title_gu": "કાર્બન અને તેના સંયોજનો (NCERT Science New 2024 Edition)",
+    "subtitle_en": "Understanding the most versatile element",
+    "subtitle_hi": "सबसे बहुमुखी तत्व को समझना",
+    "subtitle_gu": "સૌથી બહુમુખી તત્વને સમજવું"
+})
+
+# Pedagogy Step 1: Hook
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_HOOK_01",
+    "type": "hook",
+    "title_en": "The Element of Life",
+    "title_hi": "जीवन का तत्व",
+    "title_gu": "જીવનનું તત્વ",
+    "body_en": "Look around you. The food you eat, the clothes you wear, the books you read, and even your own body! What do they all have in common? They are all based on a single, magical element. Can you guess what it is?",
+    "body_hi": "अपने चारों ओर देखिए। जो भोजन आप खाते हैं, जो कपड़े आप पहनते हैं, जो किताबें आप पढ़ते हैं, और यहाँ तक कि आपका अपना शरीर भी! इन सबमें क्या समानता है? ये सभी एक ही जादुई तत्व पर आधारित हैं। क्या आप अनुमान लगा सकते हैं कि यह क्या है?",
+    "body_gu": "તમારી આસપાસ જુઓ. તમે જે ખોરાક ખાઓ છો, તમે જે કપડાં પહેરો છો, તમે જે પુસ્તકો વાંચો છો અને તમારું પોતાનું શરીર પણ! આ બધામાં શું સામાન્ય છે? તેઓ બધા એક જ જાદુઈ તત્વ પર આધારિત છે. શું તમે અનુમાન કરી શકો છો કે તે શું છે?"
+})
+
+# Pedagogy Step 2: Socratic Thinking
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_SOCRATIC_01",
+    "type": "socratic_question",
+    "question_en": "Why do you think carbon can form so many different things, from soft graphite in pencils to hard diamonds?",
+    "question_hi": "आपको क्या लगता है कि कार्बन इतनी सारी अलग-अलग चीजें क्यों बना सकता है, पेंसिल में नरम ग्रेफाइट से लेकर कठोर हीरे तक?",
+    "question_gu": "તમને કેમ લાગે છે કે કાર્બન પેન્સિલમાં નરમ ગ્રેફાઇટથી લઈને સખત હીરા સુધીની ઘણી જુદી જુદી વસ્તુઓ બનાવી શકે છે?",
+    "hint_en": "Think about how it connects with other atoms.",
+    "hint_hi": "सोचें कि यह अन्य परमाणुओं के साथ कैसे जुड़ता है।",
+    "hint_gu": "તે અન્ય અણુઓ સાથે કેવી રીતે જોડાય છે તે વિશે વિચારો."
+})
+
+# Pedagogy Step 3: Discovery
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_DISCOVERY_01",
+    "type": "discovery",
+    "title_en": "The Friendly Atom",
+    "title_hi": "मित्रवत परमाणु",
+    "title_gu": "મૈત્રીપૂર્ણ અણુ",
+    "body_en": "Imagine a person who has four hands and can hold hands with four different people at the same time. This allows them to form huge, endless human chains! Carbon is just like that person.",
+    "body_hi": "एक ऐसे व्यक्ति की कल्पना करें जिसके चार हाथ हैं और वह एक ही समय में चार अलग-अलग लोगों का हाथ पकड़ सकता है। यह उन्हें विशाल, अंतहीन मानव श्रृंखला बनाने की अनुमति देता है! कार्बन बिल्कुल उसी व्यक्ति की तरह है।",
+    "body_gu": "એક એવી વ્યક્તિની કલ્પના કરો કે જેના ચાર હાથ છે અને તે એક જ સમયે ચાર અલગ-અલગ લોકોનો હાથ પકડી શકે છે. આ તેમને વિશાળ, અનંત માનવ સાંકળો બનાવવાની મંજૂરી આપે છે! કાર્બન પણ એવી જ વ્યક્તિ છે."
+})
+
+# Pedagogy Step 4: Reveal
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_REVEAL_01",
+    "type": "theory",
+    "title_en": "Covalent Bonding in Carbon",
+    "title_hi": "कार्बन में सहसंयोजी आबंध",
+    "title_gu": "કાર્બનમાં સહસંયોજક બંધ",
+    "body_en": "Carbon has an atomic number of 6. Its electronic configuration is 2, 4. To attain stability, it needs 4 more electrons. It cannot gain or lose 4 electrons easily, so it shares its 4 valence electrons with other atoms. This sharing of electrons forms a Covalent Bond. This property of having 4 valence electrons is called Tetravalency.",
+    "body_hi": "कार्बन की परमाणु संख्या 6 है। इसका इलेक्ट्रॉनिक विन्यास 2, 4 है। स्थिरता प्राप्त करने के लिए, इसे 4 और इलेक्ट्रॉनों की आवश्यकता होती है। यह आसानी से 4 इलेक्ट्रॉन प्राप्त या खो नहीं सकता है, इसलिए यह अन्य परमाणुओं के साथ अपने 4 संयोजी इलेक्ट्रॉनों को साझा करता है। इलेक्ट्रॉनों का यह साझाकरण एक सहसंयोजी आबंध बनाता है। 4 संयोजी इलेक्ट्रॉन होने के इस गुण को चतुरसंयोजकता (Tetravalency) कहा जाता है।",
+    "body_gu": "કાર્બનનો અણુ ક્રમાંક 6 છે. તેની ઇલેક્ટ્રોનિક રચના 2, 4 છે. સ્થિરતા પ્રાપ્ત કરવા માટે, તેને વધુ 4 ઇલેક્ટ્રોનની જરૂર છે. તે 4 ઇલેક્ટ્રોન સરળતાથી મેળવી કે ગુમાવી શકતું નથી, તેથી તે અન્ય અણુઓ સાથે તેના 4 સંયોજક ઇલેક્ટ્રોન વહેંચે છે. ઇલેક્ટ્રોનની આ વહેંચણી સહસંયોજક બંધ બનાવે છે. 4 સંયોજક ઇલેક્ટ્રોન હોવાના આ ગુણધર્મને ચતુઃસંયોજકતા (Tetravalency) કહેવામાં આવે છે."
+})
+
+# Pedagogy Step 5: Knowledge Check
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_QUIZ_01",
+    "type": "quiz",
+    "question_en": "What type of bond does carbon form to achieve a stable electronic configuration?",
+    "question_hi": "एक स्थिर इलेक्ट्रॉनिक विन्यास प्राप्त करने के लिए कार्बन किस प्रकार का आबंध बनाता है?",
+    "question_gu": "સ્થિર ઇલેક્ટ્રોનિક રચના પ્રાપ્ત કરવા માટે કાર્બન કયા પ્રકારનો બંધ બનાવે છે?",
+    "options_en": ["Ionic Bond", "Covalent Bond", "Metallic Bond", "Hydrogen Bond"],
+    "options_hi": ["आयनिक आबंध", "सहसंयोजी आबंध", "धात्विक आबंध", "हाइड्रोजन आबंध"],
+    "options_gu": ["આયનીય બંધ", "સહસંયોજક બંધ", "ધાત્વિક બંધ", "હાઇડ્રોજન બંધ"],
+    "correct_index": 1,
+    "explanation_en": "Carbon shares its 4 valence electrons with other atoms to achieve stability, forming Covalent Bonds.",
+    "explanation_hi": "कार्बन स्थिरता प्राप्त करने के लिए अन्य परमाणुओं के साथ अपने 4 संयोजी इलेक्ट्रॉनों को साझा करता है, जिससे सहसंयोजी आबंध बनते हैं।",
+    "explanation_gu": "કાર્બન સ્થિરતા પ્રાપ્ત કરવા માટે અન્ય અણુઓ સાથે તેના 4 સંયોજક ઇલેક્ટ્રોન વહેંચે છે, અને સહસંયોજક બંધ બનાવે છે."
+})
+
+# Pedagogy Step 6: Reflection
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_REFLECTION_01",
+    "type": "reflection",
+    "question_en": "Explain in your own words why carbon cannot simply gain 4 electrons to form a C4- anion.",
+    "question_hi": "अपने शब्दों में समझाएं कि कार्बन C4- ऋणायन बनाने के लिए केवल 4 इलेक्ट्रॉन क्यों नहीं प्राप्त कर सकता।",
+    "question_gu": "તમારા પોતાના શબ્દોમાં સમજાવો કે કાર્બન C4- આયન બનાવવા માટે શા માટે 4 ઇલેક્ટ્રોન મેળવી શકતો નથી."
+})
+
+# Pedagogy Step 7: Connection
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_CONNECTION_01",
+    "type": "connection",
+    "title_en": "Links to Other Chapters",
+    "title_hi": "अन्य अध्यायों से लिंक",
+    "title_gu": "અન્ય પ્રકરણો સાથે લિંક્સ",
+    "body_en": "You learned about Ionic Bonds in 'Metals and Non-Metals'. Covalent bonds are different because they involve sharing, not transferring, electrons. This sharing is what makes biological molecules like DNA and proteins possible!",
+    "body_hi": "आपने 'धातु और अधातु' में आयनिक आबंधों के बारे में सीखा। सहसंयोजी आबंध भिन्न होते हैं क्योंकि उनमें इलेक्ट्रॉनों का स्थानांतरण नहीं बल्कि साझाकरण होता है। यही साझाकरण डीएनए और प्रोटीन जैसे जैविक अणुओं को संभव बनाता है!",
+    "body_gu": "તમે 'ધાતુઓ અને અધાતુઓ' માં આયનીય બંધ વિશે શીખ્યા. સહસંયોજક બંધ અલગ છે કારણ કે તેમાં ઇલેક્ટ્રોનનું સ્થાનાંતરણ થતું નથી, પરંતુ વહેંચણી થાય છે. આ વહેંચણી જ ડીએનએ અને પ્રોટીન જેવા જૈવિક અણુઓને શક્ય બનાવે છે!"
+})
+
+# Pedagogy Step 8: Mastery
+blocks.append({
+    "id": "KOBJ_C10_SCI_CH4_MASTERY_01",
+    "type": "mastery",
+    "title_en": "Draw the Structure",
+    "title_hi": "संरचना बनाएं",
+    "title_gu": "માળખું દોરો",
+    "body_en": "Try drawing the electron dot structure for Methane (CH4). Remember, Carbon needs 4 electrons and each Hydrogen needs 1.",
+    "body_hi": "मीथेन (CH4) के लिए इलेक्ट्रॉन बिंदु संरचना खींचने का प्रयास करें। याद रखें, कार्बन को 4 इलेक्ट्रॉनों की आवश्यकता होती है और प्रत्येक हाइड्रोजन को 1 की।",
+    "body_gu": "મિથેન (CH4) માટે ઇલેક્ટ્રોન ડોટ સ્ટ્રક્ચર દોરવાનો પ્રયાસ કરો. યાદ રાખો, કાર્બનને 4 ઇલેક્ટ્રોનની જરૂર છે અને દરેક હાઇડ્રોજનને 1 ની જરૂર છે."
+})
+
+
+# NCERT EXERCISE QUESTIONS
+# 15 textbook questions based on NCERT chapter 4 Science class 10.
+
+questions_data = [
+    {
+        "q_en": "Ethane, with the molecular formula C2H6 has:",
+        "q_hi": "ईथेन, जिसका आणविक सूत्र C2H6 है, में:",
+        "q_gu": "ઇથેન, જેનું પરમાણુ સૂત્ર C2H6 છે, તેમાં:",
+        "opts_en": ["6 covalent bonds", "7 covalent bonds", "8 covalent bonds", "9 covalent bonds"],
+        "opts_hi": ["6 सहसंयोजी आबंध हैं", "7 सहसंयोजी आबंध हैं", "8 सहसंयोजी आबंध हैं", "9 सहसंयोजी आबंध हैं"],
+        "opts_gu": ["6 સહસંયોજક બંધ છે", "7 સહસંયોજક બંધ છે", "8 સહસંયોજક બંધ છે", "9 સહસંયોજક બંધ છે"],
+        "ans_idx": 1,
+        "exp_en": "Ethane (C2H6) has 1 C-C bond and 6 C-H bonds, totalling 7 covalent bonds.",
+        "exp_hi": "ईथेन (C2H6) में 1 C-C आबंध और 6 C-H आबंध होते हैं, कुल 7 सहसंयोजी आबंध होते हैं।",
+        "exp_gu": "ઇથેનમાં (C2H6) 1 C-C બંધ અને 6 C-H બંધ છે, કુલ 7 સહસંયોજક બંધ છે."
+    },
+    {
+        "q_en": "Butanone is a four-carbon compound with the functional group:",
+        "q_hi": "ब्यूटेनोन चतुर-कार्बन यौगिक है जिसका प्रकार्यात्मक समूह (functional group) है:",
+        "q_gu": "બ્યુટેનોન ચાર-કાર્બન સંયોજન છે જેમાં કાર્યાત્મક જૂથ છે:",
+        "opts_en": ["Carboxylic acid", "Aldehyde", "Ketone", "Alcohol"],
+        "opts_hi": ["कार्बोक्जिलिक अम्ल", "एल्डिहाइड", "कीटोन", "एल्कोहॉल"],
+        "opts_gu": ["કાર્બોક્સિલિક એસિડ", "આલ્ડીહાઇડ", "કીટોન", "આલ્કોહોલ"],
+        "ans_idx": 2,
+        "exp_en": "The suffix '-one' indicates the presence of a ketone functional group.",
+        "exp_hi": "अनुलग्न '-ओन' कीटोन प्रकार्यात्मक समूह की उपस्थिति को दर्शाता है।",
+        "exp_gu": "પ્રત્યય '-ઓન' કીટોન કાર્યાત્મક જૂથની હાજરી સૂચવે છે."
+    },
+    {
+        "q_en": "While cooking, if the bottom of the vessel is getting blackened on the outside, it means that:",
+        "q_hi": "खाना बनाते समय यदि बर्तन की तली बाहर से काली हो रही है तो इसका मतलब है कि:",
+        "q_gu": "રસોઈ કરતી વખતે, જો વાસણનું તળિયું બહારથી કાળું થઈ રહ્યું હોય, તો તેનો અર્થ એ છે કે:",
+        "opts_en": ["The food is not cooked completely.", "The fuel is not burning completely.", "The fuel is wet.", "The fuel is burning completely."],
+        "opts_hi": ["भोजन पूरी तरह से नहीं पका है।", "ईंधन पूरी तरह से नहीं जल रहा है।", "ईंधन गीला है।", "ईंधन पूरी तरह से जल रहा है।"],
+        "opts_gu": ["ખોરાક સંપૂર્ણપણે રંધાયો નથી.", "બળતણ સંપૂર્ણપણે સળગતું નથી.", "બળતણ ભીનું છે.", "બળતણ સંપૂર્ણપણે સળગી રહ્યું છે."],
+        "ans_idx": 1,
+        "exp_en": "Incomplete combustion of fuel produces unburnt carbon particles (soot) which blackens the vessel.",
+        "exp_hi": "ईंधन के अपूर्ण दहन से बिना जले कार्बन के कण (कालिख) उत्पन्न होते हैं जो बर्तन को काला कर देते हैं।",
+        "exp_gu": "બળતણના અપૂર્ણ દહનથી વણબળેલા કાર્બન કણો (સૂટ) ઉત્પન્ન થાય છે જે વાસણને કાળું કરે છે."
+    },
+    {
+        "q_en": "Explain the nature of the covalent bond using the bond formation in CH3Cl.",
+        "q_hi": "CH3Cl में आबंध निर्माण का उपयोग करके सहसंयोजी आबंध की प्रकृति की व्याख्या करें।",
+        "q_gu": "CH3Cl માં બંધ રચનાનો ઉપયોગ કરીને સહસંયોજક બંધની પ્રકૃતિ સમજાવો.",
+        "opts_en": ["Sharing 1 electron pair between C and each H, and 1 between C and Cl", "Transfer of electrons from C to Cl", "Ionic bonding between H and Cl", "Hydrogen bonding"],
+        "opts_hi": ["C और प्रत्येक H के बीच 1 इलेक्ट्रॉन जोड़ी का साझाकरण, और C और Cl के बीच 1", "C से Cl में इलेक्ट्रॉनों का स्थानांतरण", "H और Cl के बीच आयनिक बंधन", "हाइड्रोजन बंधन"],
+        "opts_gu": ["C અને દરેક H વચ્ચે 1 ઇલેક્ટ્રોન જોડીની વહેંચણી, અને C અને Cl વચ્ચે 1", "C થી Cl માં ઇલેક્ટ્રોનનું સ્થાનાંતરણ", "H અને Cl વચ્ચે આયનીય બંધન", "હાઇડ્રોજન બંધન"],
+        "ans_idx": 0,
+        "exp_en": "Carbon shares 3 of its valence electrons with 3 hydrogen atoms and 1 with a chlorine atom to complete its octet via covalent bonds.",
+        "exp_hi": "कार्बन सहसंयोजी आबंधों के माध्यम से अपना अष्टक पूरा करने के लिए अपने 3 संयोजी इलेक्ट्रॉनों को 3 हाइड्रोजन परमाणुओं के साथ और 1 क्लोरीन परमाणु के साथ साझा करता है।",
+        "exp_gu": "કાર્બન સહસંયોજક બંધ દ્વારા તેના અષ્ટકને પૂર્ણ કરવા માટે તેના 3 સંયોજક ઇલેક્ટ્રોનને 3 હાઇડ્રોજન અણુઓ અને 1 ક્લોરિન અણુ સાથે વહેંચે છે."
+    },
+    {
+        "q_en": "Draw the electron dot structure for ethanoic acid.",
+        "q_hi": "एथेनोइक अम्ल के लिए इलेक्ट्रॉन बिंदु संरचना बनाएं।",
+        "q_gu": "ઇથેનોઇક એસિડ માટે ઇલેક્ટ્રોન ડોટ સ્ટ્રક્ચર દોરો.",
+        "opts_en": ["Structure with -COOH group", "Structure with -CHO group", "Structure with -OH group", "Structure with -O- group"],
+        "opts_hi": ["-COOH समूह के साथ संरचना", "-CHO समूह के साथ संरचना", "-OH समूह के साथ संरचना", "-O- समूह के साथ संरचना"],
+        "opts_gu": ["-COOH જૂથ સાથે માળખું", "-CHO જૂથ સાથે માળખું", "-OH જૂથ સાથે માળખું", "-O- જૂથ સાથે માળખું"],
+        "ans_idx": 0,
+        "exp_en": "Ethanoic acid (CH3COOH) contains a carboxylic acid functional group (-COOH).",
+        "exp_hi": "एथेनोइक अम्ल (CH3COOH) में एक कार्बोक्जिलिक अम्ल प्रकार्यात्मक समूह (-COOH) होता है।",
+        "exp_gu": "ઇથેનોઇક એસિડ (CH3COOH) માં કાર્બોક્સિલિક એસિડ કાર્યાત્મક જૂથ (-COOH) હોય છે."
+    },
+    {
+        "q_en": "Draw the electron dot structure for H2S.",
+        "q_hi": "H2S के लिए इलेक्ट्रॉन बिंदु संरचना बनाएं।",
+        "q_gu": "H2S માટે ઇલેક્ટ્રોન ડોટ સ્ટ્રક્ચર દોરો.",
+        "opts_en": ["S shares 1 electron with each of 2 H atoms", "S transfers electrons to H", "H transfers electrons to S", "No bonds are formed"],
+        "opts_hi": ["S 2 H परमाणुओं में से प्रत्येक के साथ 1 इलेक्ट्रॉन साझा करता है", "S इलेक्ट्रॉनों को H में स्थानांतरित करता है", "H इलेक्ट्रॉनों को S में स्थानांतरित करता है", "कोई आबंध नहीं बनते हैं"],
+        "opts_gu": ["S 2 H અણુઓમાંથી દરેક સાથે 1 ઇલેક્ટ્રોન વહેંચે છે", "S ઇલેક્ટ્રોનને H માં સ્થાનાંતરિત કરે છે", "H ઇલેક્ટ્રોનને S માં સ્થાનાંતરિત કરે છે", "કોઈ બંધ બનતા નથી"],
+        "ans_idx": 0,
+        "exp_en": "Sulphur has 6 valence electrons and shares 1 with each of two hydrogen atoms to complete its octet.",
+        "exp_hi": "सल्फर में 6 संयोजी इलेक्ट्रॉन होते हैं और अपना अष्टक पूरा करने के लिए दो हाइड्रोजन परमाणुओं में से प्रत्येक के साथ 1 साझा करता है।",
+        "exp_gu": "સલ્ફરમાં 6 સંયોજક ઇલેક્ટ્રોન છે અને તેના અષ્ટકને પૂર્ણ કરવા માટે બે હાઇડ્રોજન અણુઓમાંથી દરેક સાથે 1 વહેંચે છે."
+    },
+    {
+        "q_en": "Draw the electron dot structure for propanone.",
+        "q_hi": "प्रोपेनोन के लिए इलेक्ट्रॉन बिंदु संरचना बनाएं।",
+        "q_gu": "પ્રોપેનોન માટે ઇલેક્ટ્રોન ડોટ સ્ટ્રક્ચર દોરો.",
+        "opts_en": ["Ketone group (C=O) on middle carbon", "Aldehyde group (-CHO)", "Carboxylic group (-COOH)", "Alcohol group (-OH)"],
+        "opts_hi": ["मध्य कार्बन पर कीटोन समूह (C=O)", "एल्डिहाइड समूह (-CHO)", "कार्बोक्जिलिक समूह (-COOH)", "एल्कोहॉल समूह (-OH)"],
+        "opts_gu": ["મધ્ય કાર્બન પર કીટોન જૂથ (C=O)", "આલ્ડીહાઇડ જૂથ (-CHO)", "કાર્બોક્સિલિક જૂથ (-COOH)", "આલ્કોહોલ જૂથ (-OH)"],
+        "ans_idx": 0,
+        "exp_en": "Propanone is a 3-carbon ketone (CH3-CO-CH3).",
+        "exp_hi": "प्रोपेनोन एक 3-कार्बन कीटोन (CH3-CO-CH3) है।",
+        "exp_gu": "પ્રોપેનોન 3-કાર્બન કીટોન (CH3-CO-CH3) છે."
+    },
+    {
+        "q_en": "Draw the electron dot structure for F2.",
+        "q_hi": "F2 के लिए इलेक्ट्रॉन बिंदु संरचना बनाएं।",
+        "q_gu": "F2 માટે ઇલેક્ટ્રોન ડોટ સ્ટ્રક્ચર દોરો.",
+        "opts_en": ["One shared pair of electrons", "Two shared pairs of electrons", "Three shared pairs of electrons", "Ionic bond"],
+        "opts_hi": ["इलेक्ट्रॉनों की एक साझा जोड़ी", "इलेक्ट्रॉनों की दो साझा जोड़ियां", "इलेक्ट्रॉनों की तीन साझा जोड़ियां", "आयनिक आबंध"],
+        "opts_gu": ["ઇલેક્ટ્રોનની એક વહેંચાયેલ જોડી", "ઇલેક્ટ્રોનની બે વહેંચાયેલ જોડીઓ", "ઇલેક્ટ્રોનની ત્રણ વહેંચાયેલ જોડીઓ", "આયનીય બંધ"],
+        "ans_idx": 0,
+        "exp_en": "Each fluorine atom has 7 valence electrons and they share one pair to achieve octet.",
+        "exp_hi": "प्रत्येक फ्लोरीन परमाणु में 7 संयोजी इलेक्ट्रॉन होते हैं और वे अष्टक प्राप्त करने के लिए एक जोड़ी साझा करते हैं।",
+        "exp_gu": "દરેક ફ્લોરિન અણુમાં 7 સંયોજક ઇલેક્ટ્રોન હોય છે અને તેઓ અષ્ટક પ્રાપ્ત કરવા માટે એક જોડી વહેંચે છે."
+    },
+    {
+        "q_en": "What is an homologous series? Explain with an example.",
+        "q_hi": "समजातीय श्रेणी क्या है? उदाहरण के साथ समझाएं।",
+        "q_gu": "સમાનધર્મી શ્રેણી શું છે? ઉદાહરણ સાથે સમજાવો.",
+        "opts_en": ["Series of compounds with same functional group, differ by -CH2-", "Series with different functional groups", "Series differing by -OH group", "Series of inorganic compounds"],
+        "opts_hi": ["समान प्रकार्यात्मक समूह वाले यौगिकों की श्रेणी, -CH2- से भिन्न होती है", "विभिन्न प्रकार्यात्मक समूहों वाली श्रेणी", "-OH समूह द्वारा भिन्न श्रेणी", "अकार्बनिक यौगिकों की श्रेणी"],
+        "opts_gu": ["સમાન કાર્યાત્મક જૂથ સાથે સંયોજનોની શ્રેણી, -CH2- દ્વારા અલગ પડે છે", "વિવિધ કાર્યાત્મક જૂથો સાથેની શ્રેણી", "-OH જૂથ દ્વારા અલગ પડતી શ્રેણી", "અકાર્બનિક સંયોજનોની શ્રેણી"],
+        "ans_idx": 0,
+        "exp_en": "Homologous series is a family of carbon compounds having same functional group & chemical properties, differing by a -CH2- unit (e.g. Alkanes: CH4, C2H6).",
+        "exp_hi": "समजातीय श्रेणी कार्बन यौगिकों का एक परिवार है जिसमें समान प्रकार्यात्मक समूह और रासायनिक गुण होते हैं, जो -CH2- इकाई (जैसे एल्केन: CH4, C2H6) से भिन्न होते हैं।",
+        "exp_gu": "સમાનધર્મી શ્રેણી એ કાર્બન સંયોજનોનો પરિવાર છે જેમાં સમાન કાર્યાત્મક જૂથ અને રાસાયણિક ગુણધર્મો હોય છે, જે -CH2- એકમ (દા.ત. આલ્કેન્સ: CH4, C2H6) દ્વારા અલગ પડે છે."
+    },
+    {
+        "q_en": "How can ethanol and ethanoic acid be differentiated on the basis of their physical and chemical properties?",
+        "q_hi": "भौतिक और रासायनिक गुणों के आधार पर इथेनॉल और एथेनोइक अम्ल में कैसे अंतर किया जा सकता है?",
+        "q_gu": "ભૌતિક અને રાસાયણિક ગુણધર્મોના આધારે ઇથેનોલ અને ઇથેનોઇક એસિડને કેવી રીતે અલગ કરી શકાય છે?",
+        "opts_en": ["Ethanoic acid reacts with carbonates to give CO2, ethanol doesn't", "Ethanol reacts with carbonates, ethanoic acid doesn't", "Both react with carbonates", "Neither reacts with carbonates"],
+        "opts_hi": ["एथेनोइक अम्ल कार्बोनेट के साथ प्रतिक्रिया करके CO2 देता है, इथेनॉल नहीं", "इथेनॉल कार्बोनेट के साथ प्रतिक्रिया करता है, एथेनोइक अम्ल नहीं", "दोनों कार्बोनेट के साथ प्रतिक्रिया करते हैं", "कोई भी कार्बोनेट के साथ प्रतिक्रिया नहीं करता है"],
+        "opts_gu": ["ઇથેનોઇક એસિડ કાર્બોનેટ સાથે પ્રતિક્રિયા કરીને CO2 આપે છે, ઇથેનોલ આપતું નથી", "ઇથેનોલ કાર્બોનેટ સાથે પ્રતિક્રિયા આપે છે, ઇથેનોઇક એસિડ નથી આપતું", "બંને કાર્બોનેટ સાથે પ્રતિક્રિયા આપે છે", "કોઈપણ કાર્બોનેટ સાથે પ્રતિક્રિયા આપતું નથી"],
+        "ans_idx": 0,
+        "exp_en": "Ethanoic acid turns blue litmus red and gives effervescence with NaHCO3. Ethanol is neutral and doesn't react with NaHCO3.",
+        "exp_hi": "एथेनोइक अम्ल नीले लिटमस को लाल कर देता है और NaHCO3 के साथ बुदबुदाहट देता है। इथेनॉल उदासीन है और NaHCO3 के साथ प्रतिक्रिया नहीं करता है।",
+        "exp_gu": "ઇથેનોઇક એસિડ વાદળી લિટમસને લાલ કરે છે અને NaHCO3 સાથે ઉભરો આપે છે. ઇથેનોલ તટસ્થ છે અને NaHCO3 સાથે પ્રતિક્રિયા આપતું નથી."
+    },
+    {
+        "q_en": "Why does micelle formation take place when soap is added to water? Will a micelle be formed in other solvents such as ethanol also?",
+        "q_hi": "जब साबुन को पानी में डाला जाता है तो मिसेल का निर्माण क्यों होता है? क्या इथेनॉल जैसे अन्य विलायकों में भी मिसेल बनेगा?",
+        "q_gu": "જ્યારે પાણીમાં સાબુ ઉમેરવામાં આવે ત્યારે મિસેલની રચના શા માટે થાય છે? શું ઇથેનોલ જેવા અન્ય દ્રાવકોમાં પણ મિસેલ બનશે?",
+        "opts_en": ["Soap has hydrophilic & hydrophobic ends; No micelle in ethanol", "Soap has only hydrophilic ends; Yes micelle in ethanol", "Soap has only hydrophobic ends; No micelle in ethanol", "Micelles form everywhere"],
+        "opts_hi": ["साबुन में हाइड्रोफिलिक और हाइड्रोफोबिक सिरे होते हैं; इथेनॉल में कोई मिसेल नहीं", "साबुन में केवल हाइड्रोफिलिक सिरे होते हैं; हाँ इथेनॉल में मिसेल", "साबुन में केवल हाइड्रोफोबिक सिरे होते हैं; इथेनॉल में कोई मिसेल नहीं", "मिसेल हर जगह बनते हैं"],
+        "opts_gu": ["સાબુમાં હાઇડ્રોફિલિક અને હાઇડ્રોફોબિક છેડા હોય છે; ઇથેનોલમાં કોઈ મિસેલ નહીં", "સાબુમાં માત્ર હાઇડ્રોફિલિક છેડા હોય છે; હા ઇથેનોલમાં મિસેલ", "સાબુમાં માત્ર હાઇડ્રોફોબિક છેડા હોય છે; ઇથેનોલમાં કોઈ મિસેલ નહીં", "મિસેલ દરેક જગ્યાએ બને છે"],
+        "ans_idx": 0,
+        "exp_en": "Soap molecules have a hydrophobic tail and hydrophilic head. In water, tails group together forming micelles. Ethanol is non-polar, so no micelles form.",
+        "exp_hi": "साबुन के अणुओं में एक हाइड्रोफोबिक पूंछ और हाइड्रोफिलिक सिर होता है। पानी में, पूंछ एक साथ समूह बनाकर मिसेल बनाती हैं। इथेनॉल गैर-ध्रुवीय है, इसलिए कोई मिसेल नहीं बनता है।",
+        "exp_gu": "સાબુના અણુઓમાં હાઇડ્રોફોબિક પૂંછડી અને હાઇડ્રોફિલિક માથું હોય છે. પાણીમાં, પૂંછડીઓ એકસાથે જૂથ બનાવીને મિસેલ બનાવે છે. ઇથેનોલ બિન-ધ્રુવીય છે, તેથી કોઈ મિસેલ બનતા નથી."
+    },
+    {
+        "q_en": "Why are carbon and its compounds used as fuels for most applications?",
+        "q_hi": "अधिकतर अनुप्रयोगों के लिए कार्बन और उसके यौगिकों का उपयोग ईंधन के रूप में क्यों किया जाता है?",
+        "q_gu": "મોટાભાગના કાર્યક્રમો માટે કાર્બન અને તેના સંયોજનોનો ઉપયોગ બળતણ તરીકે શા માટે થાય છે?",
+        "opts_en": ["They give out large amount of heat on combustion", "They are cheap", "They do not burn", "They produce only water"],
+        "opts_hi": ["दहन पर वे बड़ी मात्रा में ऊष्मा देते हैं", "वे सस्ते हैं", "वे नहीं जलते हैं", "वे केवल पानी उत्पन्न करते हैं"],
+        "opts_gu": ["તેઓ દહન પર મોટા પ્રમાણમાં ગરમી આપે છે", "તેઓ સસ્તા છે", "તેઓ બળતા નથી", "તેઓ માત્ર પાણી ઉત્પન્ન કરે છે"],
+        "ans_idx": 0,
+        "exp_en": "Carbon compounds undergo highly exothermic combustion reactions, releasing a lot of heat and light energy.",
+        "exp_hi": "कार्बन यौगिक अत्यधिक ऊष्माक्षेपी दहन प्रतिक्रियाओं से गुजरते हैं, जिससे बहुत अधिक ऊष्मा और प्रकाश ऊर्जा निकलती है।",
+        "exp_gu": "કાર્બન સંયોજનો અત્યંત ઉષ્માક્ષેપક દહન પ્રતિક્રિયાઓમાંથી પસાર થાય છે, અને ઘણી બધી ગરમી અને પ્રકાશ ઊર્જા મુક્ત કરે છે."
+    },
+    {
+        "q_en": "Explain the formation of scum when hard water is treated with soap.",
+        "q_hi": "कठोर जल को साबुन से उपचारित करने पर मैल (scum) के निर्माण की व्याख्या करें।",
+        "q_gu": "જ્યારે કઠણ પાણીને સાબુ વડે સાફ કરવામાં આવે ત્યારે ફીણ (scum) ની રચના સમજાવો.",
+        "opts_en": ["Soap reacts with Ca2+ and Mg2+ ions to form insoluble precipitate", "Soap reacts with Na+ ions", "Soap dissolves completely in hard water", "No scum is formed"],
+        "opts_hi": ["साबुन अघुलनशील अवक्षेप बनाने के लिए Ca2+ और Mg2+ आयनों के साथ प्रतिक्रिया करता है", "साबुन Na+ आयनों के साथ प्रतिक्रिया करता है", "साबुन कठोर पानी में पूरी तरह से घुल जाता है", "कोई मैल नहीं बनता है"],
+        "opts_gu": ["સાબુ અદ્રાવ્ય અવક્ષેપ બનાવવા માટે Ca2+ અને Mg2+ આયનો સાથે પ્રતિક્રિયા આપે છે", "સાબુ Na+ આયનો સાથે પ્રતિક્રિયા આપે છે", "સાબુ કઠણ પાણીમાં સંપૂર્ણપણે ઓગળી જાય છે", "કોઈ ફીણ બનતું નથી"],
+        "ans_idx": 0,
+        "exp_en": "Hard water contains Ca2+ and Mg2+ ions. Soap reacts with them to form an insoluble white precipitate called scum.",
+        "exp_hi": "कठोर जल में Ca2+ और Mg2+ आयन होते हैं। साबुन उनके साथ प्रतिक्रिया करके अघुलनशील सफेद अवक्षेप बनाता है जिसे मैल कहा जाता है।",
+        "exp_gu": "કઠણ પાણીમાં Ca2+ અને Mg2+ આયનો હોય છે. સાબુ તેમની સાથે પ્રતિક્રિયા કરીને અદ્રાવ્ય સફેદ અવક્ષેપ બનાવે છે જેને સ્કમ (ફીણ) કહેવાય છે."
+    },
+    {
+        "q_en": "What change will you observe if you test soap with litmus paper (red and blue)?",
+        "q_hi": "यदि आप लिटमस पेपर (लाल और नीले) से साबुन का परीक्षण करते हैं तो आप क्या बदलाव देखेंगे?",
+        "q_gu": "જો તમે લિટમસ પેપર (લાલ અને વાદળી) વડે સાબુનું પરીક્ષણ કરશો તો તમે શું ફેરફાર જોશો?",
+        "opts_en": ["Red turns blue; soap is basic", "Blue turns red; soap is acidic", "No change", "Both turn white"],
+        "opts_hi": ["लाल नीला हो जाता है; साबुन क्षारीय है", "नीला लाल हो जाता है; साबुन अम्लीय है", "कोई परिवर्तन नहीं", "दोनों सफेद हो जाते हैं"],
+        "opts_gu": ["લાલ વાદળી થઈ જાય છે; સાબુ બેઝિક છે", "વાદળી લાલ થઈ જાય છે; સાબુ એસિડિક છે", "કોઈ ફેરફાર નહીં", "બંને સફેદ થઈ જાય છે"],
+        "ans_idx": 0,
+        "exp_en": "Soap is a salt of a weak acid and strong base, making it alkaline (basic). It turns red litmus blue.",
+        "exp_hi": "साबुन एक कमजोर अम्ल और मजबूत क्षार का लवण है, जो इसे क्षारीय (बेसिक) बनाता है। यह लाल लिटमस को नीला कर देता है।",
+        "exp_gu": "સાબુ નબળા એસિડ અને મજબૂત બેઝનો ક્ષાર છે, જે તેને આલ્કલાઇન (બેઝિક) બનાવે છે. તે લાલ લિટમસને વાદળી કરે છે."
+    },
+    {
+        "q_en": "What is hydrogenation? What is its industrial application?",
+        "q_hi": "हाइड्रोजनीकरण क्या है? इसका औद्योगिक अनुप्रयोग क्या है?",
+        "q_gu": "હાઇડ્રોજનેશન શું છે? તેનો ઔદ્યોગિક ઉપયોગ શું છે?",
+        "opts_en": ["Adding H2 to unsaturated fats to make saturated fats (ghee)", "Removing H2 from fats", "Adding water to fats", "Burning fats"],
+        "opts_hi": ["संतृप्त वसा (घी) बनाने के लिए असंतृप्त वसा में H2 जोड़ना", "वसा से H2 हटाना", "वसा में पानी मिलाना", "वसा को जलाना"],
+        "opts_gu": ["સંતૃપ્ત ચરબી (ઘી) બનાવવા માટે અસંતૃપ્ત ચરબીમાં H2 ઉમેરવું", "ચરબીમાંથી H2 દૂર કરવું", "ચરબીમાં પાણી ઉમેરવું", "ચરબી બર્ન કરવી"],
+        "ans_idx": 0,
+        "exp_en": "Hydrogenation is the addition of hydrogen to unsaturated hydrocarbons in presence of Ni/Pd catalyst. Used to convert vegetable oils into vanaspati ghee.",
+        "exp_hi": "हाइड्रोजनीकरण Ni/Pd उत्प्रेरक की उपस्थिति में असंतृप्त हाइड्रोकार्बन में हाइड्रोजन का योग है। इसका उपयोग वनस्पति तेलों को वनस्पति घी में बदलने के लिए किया जाता है।",
+        "exp_gu": "હાઇડ્રોજનેશન એ Ni/Pd ઉદ્દીપકની હાજરીમાં અસંતૃપ્ત હાઇડ્રોકાર્બનમાં હાઇડ્રોજનનો ઉમેરો છે. વનસ્પતિ તેલને વનસ્પતિ ઘીમાં રૂપાંતરિત કરવા માટે વપરાય છે."
+    }
+]
+
+for i, q in enumerate(questions_data, start=1):
+    blocks.append({
+        "id": f"KOBJ_C10_SCI_CH4_PRAC_Q{i:02d}",
+        "type": "practice_question",
+        "question_en": q["q_en"],
+        "question_hi": q["q_hi"],
+        "question_gu": q["q_gu"],
+        "options_en": q["opts_en"],
+        "options_hi": q["opts_hi"],
+        "options_gu": q["opts_gu"],
+        "correct_index": q["ans_idx"],
+        "explanation_en": q["exp_en"],
+        "explanation_hi": q["exp_hi"],
+        "explanation_gu": q["exp_gu"]
+    })
+
+
+json_str = json.dumps(blocks, indent=2, ensure_ascii=False)
+with open("/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_science_ch4.json", "w", encoding="utf-8") as f:
+    f.write(json_str)
+print("JSON written successfully!")

@@ -3,9 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../foundation/theme/app_colors.dart';
 import '../../core/services/trilingual_service.dart';
-import '../../core/services/activation_service.dart';
 import '../../core/services/profile_service.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class LanguageSelectionScreen extends StatelessWidget {
   const LanguageSelectionScreen({super.key});

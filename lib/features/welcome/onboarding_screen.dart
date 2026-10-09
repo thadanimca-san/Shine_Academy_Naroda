@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../foundation/theme/app_colors.dart';
 import '../../core/services/profile_service.dart';
+import 'package:flutter/services.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -21,8 +22,33 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String _selectedBoard = '';
 
   final List<String> _roles = ['Student', 'Teacher', 'Parent'];
-  final List<String> _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-8)', 'Secondary (Class 9-10)', 'Higher Secondary (Class 11-12)', 'Competitive (UPSC/JEE)'];
-  final List<String> _boards = ['NCERT', 'GSEB (Gujarat Board)', 'CBSE'];
+  late List<String> _stages;
+  final List<String> _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeStages();
+  }
+
+  void _initializeStages() {
+    final flavor = appFlavor ?? 'default';
+    if (flavor == 'primary') {
+      _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-4)'];
+    } else if (flavor == 'middle') {
+      _stages = ['Upper Primary (Class 5-8)'];
+    } else if (flavor == 'junior') {
+      _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-8)'];
+    } else if (flavor == 'highschool') {
+      _stages = ['Secondary (Class 9-10)'];
+    } else if (flavor == 'commerce' || flavor == 'achievers') {
+      _stages = ['Higher Secondary (Class 11-12)', 'Competitive (UPSC/JEE)'];
+    } else if (flavor == 'skillup') {
+      _stages = ['Skill Up / Special'];
+    } else {
+      _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-8)', 'Secondary (Class 9-10)', 'Higher Secondary (Class 11-12)', 'Competitive (UPSC/JEE)'];
+    }
+  }
 
   void _nextStep() {
     if (_currentStep == 0 && _selectedRole.isEmpty) return;

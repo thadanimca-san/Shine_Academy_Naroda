@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/engine/assessment_engine.dart';
 import '../../../foundation/theme/brand_app_bar.dart';
 import 'question_selection_screen.dart';
+import 'package:flutter/services.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+
 class AssessmentDashboardScreen extends StatefulWidget {
   const AssessmentDashboardScreen({super.key});
 
@@ -18,15 +20,16 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
   
   bool isGenerating = false;
   bool isLoadingCurriculum = false;
+  
+  String generationMode = 'preset'; // 'preset' or 'manual'
 
-  final List<String> boards = ["GSEB", "CBSE", "NCERT"];
-  final List<String> classes = [
-    "class1", "class2",
-    "class3", "class4", "class5", "class6",
-    "class7", "class8", "class9", "class10",
-    "class11", "class11_commerce", "class11_science", "class11_arts",
-    "class12_commerce", "class12_science", "class12_arts"
-  ];
+  int blueprintSecA = 16;
+  int blueprintSecB = 8;
+  int blueprintSecC = 6;
+  int blueprintSecD = 5;
+
+  final List<String> boards = ["Core Concepts", "GSEB", "CBSE"];
+  late List<String> classes;
 
   String _formatClassName(String rawClass) {
     String formatted = rawClass.replaceAll('class', 'Class ').replaceAll('_', ' ');
@@ -45,7 +48,39 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
   @override
   void initState() {
     super.initState();
+    _initializeClassesByFlavor();
     _loadCurriculum();
+  }
+
+  void _initializeClassesByFlavor() {
+    final flavor = appFlavor ?? 'default';
+
+    if (flavor == 'primary') {
+      classes = ["class1", "class2", "class3", "class4"];
+      if (!classes.contains(selectedClass)) selectedClass = "class4";
+    } else if (flavor == 'middle') {
+      classes = ["class5", "class6", "class7", "class8"];
+      if (!classes.contains(selectedClass)) selectedClass = "class8";
+    } else if (flavor == 'junior') {
+      classes = ["class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8"];
+      if (!classes.contains(selectedClass)) selectedClass = "class8";
+    } else if (flavor == 'highschool') {
+      classes = ["class9", "class10"];
+      if (!classes.contains(selectedClass)) selectedClass = "class10";
+    } else if (flavor == 'commerce') {
+      classes = ["class11_commerce", "class12_commerce"];
+      if (!classes.contains(selectedClass)) selectedClass = "class12_commerce";
+    } else if (flavor == 'achievers') {
+      classes = ["class11_science", "class12_science"];
+      if (!classes.contains(selectedClass)) selectedClass = "class12_science";
+    } else {
+      classes = [
+        "class1", "class2", "class3", "class4", "class5", "class6",
+        "class7", "class8", "class9", "class10",
+        "class11", "class11_commerce", "class11_science", "class11_arts",
+        "class12_commerce", "class12_science", "class12_arts"
+      ];
+    }
   }
 
   Future<void> _loadCurriculum() async {
@@ -56,7 +91,8 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
       selectedModuleIds.clear();
     });
 
-    final curriculumId = "${selectedBoard.toLowerCase()}_$selectedClass";
+    final boardPrefix = (selectedBoard == "Core Concepts" || selectedBoard == "NCERT") ? "ncert" : selectedBoard.toLowerCase();
+    final curriculumId = "${boardPrefix}_$selectedClass";
     final subjects = await AssessmentEngine.instance.fetchCurriculumSubjects(curriculumId);
     
     setState(() {
@@ -97,6 +133,23 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
       return;
     }
 
+    List<AssessmentQuestion> initialQuestions = [];
+    if (generationMode == 'preset') {
+      initialQuestions = await AssessmentEngine.instance.generateBoardPatternPaper(
+        selectedModuleIds.toList(),
+        targetSecA: blueprintSecA,
+        targetSecB: blueprintSecB,
+        targetSecC: blueprintSecC,
+        targetSecD: blueprintSecD,
+      );
+      if (initialQuestions.isEmpty) {
+        // Fallback if board pattern gives nothing (e.g., no suitable types)
+        initialQuestions = List.from(allAvailableQuestions);
+      }
+    } else {
+      initialQuestions = List.from(allAvailableQuestions);
+    }
+
     setState(() => isGenerating = false);
     if (mounted) {
       Navigator.push(
@@ -104,8 +157,9 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
         MaterialPageRoute(
           builder: (context) => QuestionSelectionScreen(
             allQuestionsPool: allAvailableQuestions,
-            initialSelectedQuestions: allAvailableQuestions,
+            initialSelectedQuestions: initialQuestions,
             title: "$selectedBoard ${_formatClassName(selectedClass)} - ${selectedSubject?.title ?? 'Test'}",
+            isManualMode: generationMode == 'manual',
           ),
         ),
       );
@@ -168,6 +222,60 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
             _loadCurriculum();
           },
         ),
+        const SizedBox(height: 16),
+        DropdownButtonFormField<String>(
+          value: generationMode,
+          decoration: InputDecoration(
+            labelText: TrilingualService.instance.getUIText("Generation Mode"),
+            labelStyle: const TextStyle(fontSize: 14),
+            border: const OutlineInputBorder(),
+          ),
+          style: TextStyle(
+            fontSize: 16,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
+          items: [
+            DropdownMenuItem(
+              value: 'preset',
+              child: Text(TrilingualService.instance.getUIText("Preset Blueprint (Board Pattern)")),
+            ),
+            DropdownMenuItem(
+              value: 'manual',
+              child: Text(TrilingualService.instance.getUIText("Manual Selection")),
+            ),
+          ],
+          onChanged: (val) {
+            setState(() => generationMode = val!);
+          },
+        ),
+        if (generationMode == 'preset') ...[
+          const SizedBox(height: 16),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.blue[50],
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.blue[200]!),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  TrilingualService.instance.getUIText("Configure Blueprint"),
+                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.blue[900]),
+                ),
+                const SizedBox(height: 12),
+                _buildBlueprintCounter("Section A (1 Mark)", blueprintSecA, (val) => setState(() => blueprintSecA = val)),
+                const SizedBox(height: 8),
+                _buildBlueprintCounter("Section B (2 Marks)", blueprintSecB, (val) => setState(() => blueprintSecB = val)),
+                const SizedBox(height: 8),
+                _buildBlueprintCounter("Section C (3 Marks)", blueprintSecC, (val) => setState(() => blueprintSecC = val)),
+                const SizedBox(height: 8),
+                _buildBlueprintCounter("Section D (4/5 Marks)", blueprintSecD, (val) => setState(() => blueprintSecD = val)),
+              ],
+            ),
+          ),
+        ],
       ],
     );
 
@@ -349,6 +457,39 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
           }
         },
       ),
+    );
+  }
+
+  Widget _buildBlueprintCounter(String label, int value, Function(int) onChanged) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(TrilingualService.instance.getUIText(label), style: const TextStyle(fontSize: 14)),
+        Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.remove_circle_outline),
+              color: Colors.blue[700],
+              onPressed: value > 0 ? () => onChanged(value - 1) : null,
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(),
+            ),
+            const SizedBox(width: 12),
+            Text(
+              value.toString(),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            const SizedBox(width: 12),
+            IconButton(
+              icon: const Icon(Icons.add_circle_outline),
+              color: Colors.blue[700],
+              onPressed: () => onChanged(value + 1),
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

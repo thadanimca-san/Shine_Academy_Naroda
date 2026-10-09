@@ -1,0 +1,225 @@
+[
+  {
+    "id": "C10_MATH_CH2_HOOK_1",
+    "type": "hook",
+    "title": "The Rollercoaster of Algebra",
+    "title_hi": "बीजगणित का रोलरकोस्टर",
+    "title_gu": "બીજગણિતનું રોલરકોસ્ટર",
+    "body": "Imagine you are designing the track of a rollercoaster. It goes up, turns, swoops down, and touches the ground before shooting up again. How do engineers mathematically design these smooth curves? They use Polynomials! The points where the rollercoaster touches the ground are called the \"zeroes\" of the polynomial. Let's learn how to find these magical \"zeroes\" and explore the relationship between the shape of the curve and its equation.",
+    "body_hi": "कल्पना कीजिए कि आप एक रोलरकोस्टर (rollercoaster) का ट्रैक डिज़ाइन कर रहे हैं। यह ऊपर जाता है, मुड़ता है, नीचे आता है, और फिर से ऊपर उठने से पहले जमीन को छूता है। इंजीनियर इन चिकने वक्रों को गणितीय रूप से कैसे डिज़ाइन करते हैं? वे बहुपदों (Polynomials) का उपयोग करते हैं! वे बिंदु जहाँ रोलरकोस्टर जमीन को छूता है, बहुपद के \"शून्यक (zeroes)\" कहलाते हैं। आइए जानें कि इन जादुई \"शून्यकों\" को कैसे खोजा जाए और वक्र के आकार और उसके समीकरण के बीच के संबंध का पता लगाएं।",
+    "body_gu": "કલ્પના કરો કે તમે રોલરકોસ્ટર (rollercoaster) નો ટ્રેક ડિઝાઇન કરી રહ્યા છો. તે ઉપર જાય છે, વળાંક લે છે, નીચે આવે છે, અને ફરીથી ઉપર જતા પહેલા જમીનને સ્પર્શે છે. એન્જિનિયરો આ લીસા વળાંકોને ગાણિતિક રીતે કેવી રીતે ડિઝાઇન કરે છે? તેઓ બહુપદીઓ (Polynomials) નો ઉપયોગ કરે છે! જે બિંદુઓ પર રોલરકોસ્ટર જમીનને સ્પર્શે છે તેને બહુપદીના \"શૂન્યો (zeroes)\" કહેવાય છે. ચાલો જાણીએ કે આ જાદુઈ \"શૂન્યો\" કેવી રીતે શોધવા અને વળાંકના આકાર તથા તેના સમીકરણ વચ્ચેના સંબંધને સમજીએ."
+  },
+  {
+    "id": "C10_MATH_CH2_SOCRATIC_1",
+    "type": "socratic_question",
+    "question": "If an equation has x² as its highest power (like a parabola curve), what is the maximum number of times it can cross the x-axis? Can it cross the x-axis 3 times?",
+    "question_hi": "यदि किसी समीकरण में x² सबसे बड़ी घात है (जैसे परवलय वक्र), तो यह अधिकतम कितनी बार x-अक्ष को पार कर सकता है? क्या यह x-अक्ष को 3 बार पार कर सकता है?",
+    "question_gu": "જો કોઈ સમીકરણમાં x² સૌથી મોટી ઘાત હોય (જેમ કે પરવલય વળાંક), તો તે મહત્તમ કેટલી વાર x-અક્ષને પાર કરી શકે? શું તે x-અક્ષને 3 વખત પાર કરી શકે?",
+    "hint": "Think about the shape of a \"U\". How many times can a \"U\" shape cut a straight horizontal line?",
+    "hint_hi": "एक \"U\" के आकार के बारे में सोचें। एक \"U\" आकार किसी सीधी क्षैतिज रेखा को कितनी बार काट सकता है?",
+    "hint_gu": "એક \"U\" ના આકાર વિશે વિચારો. એક \"U\" આકાર કોઈ સીધી આડી રેખાને કેટલી વાર કાપી શકે?",
+    "bloom": "Analyze",
+    "difficulty": "Easy",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10_MATH_CH2_THEO_1",
+    "type": "theory",
+    "title": "Geometrical Meaning of the Zeroes of a Polynomial",
+    "title_hi": "बहुपद के शून्यकों का ज्यामितीय अर्थ",
+    "title_gu": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+    "body": "The **zeroes** of a polynomial p(x) are precisely the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.\n- A **linear polynomial** ax + b (where a ≠ 0) has exactly one zero, meaning its straight-line graph intersects the x-axis at exactly one point: (-b/a, 0).\n- A **quadratic polynomial** ax² + bx + c (where a ≠ 0) can have at most two zeroes. Its graph is a U-shaped curve called a **parabola**. It can intersect the x-axis at two points, one point, or no points at all.\n- In general, a polynomial of degree *n* can intersect the x-axis at most *n* times. Therefore, a polynomial of degree *n* has at most *n* zeroes.",
+    "body_hi": "किसी बहुपद p(x) के **शून्यक (zeroes)** उन बिंदुओं के x-निर्देशांक होते हैं जहाँ y = p(x) का ग्राफ x-अक्ष को प्रतिच्छेद करता (काटता) है।\n- एक **रैखिक बहुपद (linear polynomial)** ax + b (जहाँ a ≠ 0) का ठीक एक शून्यक होता है, जिसका अर्थ है कि इसका सीधी रेखा वाला ग्राफ x-अक्ष को ठीक एक बिंदु पर प्रतिच्छेद करता है: (-b/a, 0)।\n- एक **द्विघात बहुपद (quadratic polynomial)** ax² + bx + c (जहाँ a ≠ 0) के अधिकतम दो शून्यक हो सकते हैं। इसका ग्राफ U-आकार का वक्र होता है जिसे **परवलय (parabola)** कहा जाता है। यह x-अक्ष को दो बिंदुओं, एक बिंदु या किसी भी बिंदु पर प्रतिच्छेद नहीं कर सकता है।\n- सामान्यतः, घात *n* का एक बहुपद x-अक्ष को अधिकतम *n* बार प्रतिच्छेद कर सकता है। इसलिए, घात *n* के बहुपद के अधिकतम *n* शून्यक होते हैं।",
+    "body_gu": "કોઈ બહુપદી p(x) ના **શૂન્યો (zeroes)** એ તે બિંદુઓના x-યામ છે જ્યાં y = p(x) નો આલેખ x-અક્ષને છેદે છે.\n- **સુરેખ બહુપદી (linear polynomial)** ax + b (જ્યાં a ≠ 0) ને બરાબર એક શૂન્ય હોય છે, જેનો અર્થ છે કે તેનો સીધી રેખાવાળો આલેખ x-અક્ષને બરાબર એક બિંદુએ છેદે છે: (-b/a, 0).\n- **દ્વિઘાત બહુપદી (quadratic polynomial)** ax² + bx + c (જ્યાં a ≠ 0) ને વધુમાં વધુ બે શૂન્યો હોઈ શકે. તેનો આલેખ U-આકારનો વળાંક હોય છે જેને **પરવલય (parabola)** કહેવાય છે. તે x-અક્ષને બે બિંદુઓ, એક બિંદુ અથવા એકપણ બિંદુ પર ન છેદી શકે છે.\n- સામાન્ય રીતે, *n* ઘાત વાળી બહુપદી x-અક્ષને વધુમાં વધુ *n* વખત છેદી શકે છે. તેથી, *n* ઘાતની બહુપદીને વધુમાં વધુ *n* શૂન્યો હોય છે."
+  },
+  {
+    "id": "C10_MATH_CH2_THEO_2",
+    "type": "theory",
+    "title": "Relationship between Zeroes and Coefficients of a Polynomial",
+    "title_hi": "किसी बहुपद के शून्यकों और गुणांकों में संबंध",
+    "title_gu": "બહુપદીના શૂન્યો અને સહગુણકો વચ્ચેનો સંબંધ",
+    "body": "For a quadratic polynomial **p(x) = ax² + bx + c** (where a ≠ 0), let its two zeroes be α (alpha) and β (beta). There is a direct mathematical relationship between its zeroes and its coefficients (a, b, and c):\n\n1. **Sum of zeroes (α + β)** = - (Coefficient of x) / (Coefficient of x²) = **-b / a**\n2. **Product of zeroes (αβ)** = (Constant term) / (Coefficient of x²) = **c / a**\n\nIf we are given the sum of zeroes (S) and product of zeroes (P), we can easily form the quadratic polynomial as: **k[x² - Sx + P]**, where k is any non-zero real number.",
+    "body_hi": "एक द्विघात बहुपद **p(x) = ax² + bx + c** (जहाँ a ≠ 0) के लिए, मान लीजिए कि इसके दो शून्यक α (अल्फा) और β (बीटा) हैं। इसके शून्यकों और इसके गुणांकों (a, b, और c) के बीच एक सीधा गणितीय संबंध होता है:\n\n1. **शून्यकों का योग (α + β)** = - (x का गुणांक) / (x² का गुणांक) = **-b / a**\n2. **शून्यकों का गुणनफल (αβ)** = (अचर पद) / (x² का गुणांक) = **c / a**\n\nयदि हमें शून्यकों का योग (S) और शून्यकों का गुणनफल (P) दिया गया है, तो हम आसानी से द्विघात बहुपद बना सकते हैं: **k[x² - Sx + P]**, जहाँ k कोई शून्येतर वास्तविक संख्या (non-zero real number) है।",
+    "body_gu": "દ્વિઘાત બહુપદી **p(x) = ax² + bx + c** (જ્યાં a ≠ 0) માટે, ધારો કે તેના બે શૂન્યો α (આલ્ફા) અને β (બીટા) છે. તેના શૂન્યો અને તેના સહગુણકો (a, b અને c) વચ્ચે સીધો ગાણિતિક સંબંધ છે:\n\n1. **શૂન્યોનો સરવાળો (α + β)** = - (x નો સહગુણક) / (x² નો સહગુણક) = **-b / a**\n2. **શૂન્યોનો ગુણાકાર (αβ)** = (અચળ પદ) / (x² નો સહગુણક) = **c / a**\n\nજો આપણને શૂન્યોનો સરવાળો (S) અને શૂન્યોનો ગુણાકાર (P) આપેલ હોય, તો આપણે સરળતાથી દ્વિઘાત બહુપદી બનાવી શકીએ છીએ: **k[x² - Sx + P]**, જ્યાં k એ કોઈ શૂન્યેતર વાસ્તવિક સંખ્યા (non-zero real number) છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_1",
+    "type": "practice_question",
+    "question": "The graph of y = p(x) is given for some polynomial p(x). Find the number of zeroes of p(x), if the graph is a straight horizontal line completely above the x-axis.",
+    "question_hi": "किसी बहुपद p(x) के लिए y = p(x) का ग्राफ दिया गया है। यदि ग्राफ एक सीधी क्षैतिज रेखा है जो पूरी तरह से x-अक्ष के ऊपर है, तो p(x) के शून्यकों की संख्या ज्ञात कीजिए।",
+    "question_gu": "કોઈ બહુપદી p(x) માટે y = p(x) નો આલેખ આપેલ છે. જો આલેખ એ સીધી આડી રેખા હોય જે સંપૂર્ણપણે x-અક્ષની ઉપર હોય, તો p(x) ના શૂન્યોની સંખ્યા શોધો.",
+    "solution": "The number of zeroes of a polynomial is the number of times its graph intersects the x-axis.\nSince the given graph is a horizontal line completely above the x-axis, it never intersects the x-axis.\nTherefore, the number of zeroes is 0.",
+    "solution_hi": "किसी बहुपद के शून्यकों की संख्या वह संख्या है जितनी बार उसका ग्राफ x-अक्ष को प्रतिच्छेद करता है।\nचूँकि दिया गया ग्राफ एक क्षैतिज रेखा है जो पूरी तरह से x-अक्ष के ऊपर है, इसलिए यह कभी भी x-अक्ष को प्रतिच्छेद नहीं करता है।\nअतः शून्यकों की संख्या 0 है।",
+    "solution_gu": "બહુપદીના શૂન્યોની સંખ્યા એ તેનો આલેખ કેટલી વાર x-અક્ષને છેદે છે તેની સંખ્યા છે.\nઆપેલ આલેખ એ સીધી આડી રેખા છે જે સંપૂર્ણપણે x-અક્ષની ઉપર છે, તેથી તે ક્યારેય x-અક્ષને છેદતી નથી.\nતેથી, શૂન્યોની સંખ્યા 0 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_2",
+    "type": "practice_question",
+    "question": "Find the number of zeroes of the polynomial p(x) from its graph, if the graph intersects the x-axis at exactly one point.",
+    "question_hi": "बहुपद p(x) के ग्राफ से उसके शून्यकों की संख्या ज्ञात कीजिए, यदि ग्राफ x-अक्ष को ठीक एक बिंदु पर प्रतिच्छेद करता है।",
+    "question_gu": "બહુપદી p(x) ના આલેખ પરથી તેના શૂન્યોની સંખ્યા શોધો, જો આલેખ x-અક્ષને બરાબર એક બિંદુએ છેદતો હોય.",
+    "solution": "The number of zeroes is equal to the number of points where the graph cuts the x-axis.\nSince the graph intersects the x-axis at exactly 1 point, the number of zeroes is 1.",
+    "solution_hi": "शून्यकों की संख्या उन बिंदुओं की संख्या के बराबर होती है जहाँ ग्राफ x-अक्ष को काटता है।\nचूँकि ग्राफ x-अक्ष को ठीक 1 बिंदु पर प्रतिच्छेद करता है, शून्यकों की संख्या 1 है।",
+    "solution_gu": "શૂન્યોની સંખ્યા એ બિંદુઓની સંખ્યા જેટલી હોય છે જ્યાં આલેખ x-અક્ષને કાપે છે.\nઆલેખ x-અક્ષને બરાબર 1 બિંદુએ છેદે છે, તેથી શૂન્યોની સંખ્યા 1 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_3",
+    "type": "practice_question",
+    "question": "Find the number of zeroes of the polynomial p(x), if its graph intersects the x-axis at three distinct points.",
+    "question_hi": "बहुपद p(x) के शून्यकों की संख्या ज्ञात कीजिए, यदि इसका ग्राफ x-अक्ष को तीन अलग-अलग बिंदुओं पर प्रतिच्छेद करता है।",
+    "question_gu": "બહુપદી p(x) ના શૂન્યોની સંખ્યા શોધો, જો તેનો આલેખ x-અક્ષને ત્રણ અલગ-અલગ બિંદુઓએ છેદતો હોય.",
+    "solution": "The zeroes of p(x) are the x-coordinates of the points where its graph intersects the x-axis.\nSince the graph intersects the x-axis at 3 points, the number of zeroes is 3.",
+    "solution_hi": "p(x) के शून्यक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ इसका ग्राफ x-अक्ष को प्रतिच्छेद करता है।\nचूँकि ग्राफ x-अक्ष को 3 बिंदुओं पर प्रतिच्छेद करता है, शून्यकों की संख्या 3 है।",
+    "solution_gu": "p(x) ના શૂન્યો એ તે બિંદુઓના x-યામ છે જ્યાં તેનો આલેખ x-અક્ષને છેદે છે.\nઆલેખ x-અક્ષને 3 બિંદુઓએ છેદે છે, તેથી શૂન્યોની સંખ્યા 3 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_4",
+    "type": "practice_question",
+    "question": "A polynomial graph y = p(x) intersects the x-axis at two points. How many zeroes does p(x) have?",
+    "question_hi": "एक बहुपद ग्राफ y = p(x) x-अक्ष को दो बिंदुओं पर प्रतिच्छेद करता है। p(x) के कितने शून्यक हैं?",
+    "question_gu": "બહુપદીનો આલેખ y = p(x) x-અક્ષને બે બિંદુઓએ છેદે છે. p(x) ને કેટલા શૂન્યો છે?",
+    "solution": "The number of zeroes is exactly the number of points of intersection with the x-axis.\nSo, the number of zeroes is 2.",
+    "solution_hi": "शून्यकों की संख्या ठीक x-अक्ष के साथ प्रतिच्छेदन बिंदुओं की संख्या है।\nअतः, शून्यकों की संख्या 2 है।",
+    "solution_gu": "શૂન્યોની સંખ્યા એ x-અક્ષ સાથેના છેદન બિંદુઓની બરાબર સંખ્યા છે.\nતેથી, શૂન્યોની સંખ્યા 2 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_5",
+    "type": "practice_question",
+    "question": "The graph of y = p(x) touches the x-axis at one point and intersects it at another point. How many zeroes are there?",
+    "question_hi": "y = p(x) का ग्राफ x-अक्ष को एक बिंदु पर स्पर्श करता है और दूसरे बिंदु पर इसे प्रतिच्छेद करता है। कितने शून्यक हैं?",
+    "question_gu": "y = p(x) નો આલેખ x-અક્ષને એક બિંદુએ સ્પર્શે છે અને બીજા બિંદુએ તેને છેદે છે. કેટલા શૂન્યો છે?",
+    "solution": "The x-axis is touched at one point and intersected at another. In both cases, the y-coordinate is 0.\nTherefore, the graph meets the x-axis at a total of 2 points. The number of zeroes is 2.",
+    "solution_hi": "x-अक्ष को एक बिंदु पर स्पर्श किया जाता है और दूसरे पर प्रतिच्छेद किया जाता है। दोनों ही मामलों में, y-निर्देशांक 0 है।\nइसलिए, ग्राफ x-अक्ष से कुल 2 बिंदुओं पर मिलता है। शून्यकों की संख्या 2 है।",
+    "solution_gu": "x-અક્ષને એક બિંદુએ સ્પર્શવામાં આવે છે અને બીજા બિંદુએ છેદવામાં આવે છે. બંને કિસ્સામાં, y-યામ 0 છે.\nતેથી, આલેખ x-અક્ષને કુલ 2 બિંદુઓ પર મળે છે. શૂન્યોની સંખ્યા 2 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_6",
+    "type": "practice_question",
+    "question": "The graph of y = p(x) intersects the x-axis at 4 different points. Find the number of zeroes of p(x).",
+    "question_hi": "y = p(x) का ग्राफ x-अक्ष को 4 अलग-अलग बिंदुओं पर प्रतिच्छेद करता है। p(x) के शून्यकों की संख्या ज्ञात कीजिए।",
+    "question_gu": "y = p(x) નો આલેખ x-અક્ષને 4 અલગ-અલગ બિંદુઓએ છેદે છે. p(x) ના શૂન્યોની સંખ્યા શોધો.",
+    "solution": "Since the graph cuts the x-axis at 4 distinct points, there are 4 values of x for which p(x) = 0.\nThus, the number of zeroes is 4.",
+    "solution_hi": "चूँकि ग्राफ x-अक्ष को 4 अलग-अलग बिंदुओं पर काटता है, इसलिए x के 4 ऐसे मान हैं जिनके लिए p(x) = 0 है।\nइस प्रकार, शून्यकों की संख्या 4 है।",
+    "solution_gu": "કારણ કે આલેખ x-અક્ષને 4 અલગ-અલગ બિંદુઓએ કાપે છે, તેથી x ની એવી 4 કિંમતો છે જેના માટે p(x) = 0 થાય.\nઆમ, શૂન્યોની સંખ્યા 4 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_7",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial x² - 2x - 8, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद x² - 2x - 8 के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી x² - 2x - 8 ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Let p(x) = x² - 2x - 8.\nBy splitting the middle term: x² - 4x + 2x - 8 = x(x - 4) + 2(x - 4) = (x - 4)(x + 2).\nThe zeroes are x = 4 and x = -2. So, α = 4, β = -2.\nHere, a = 1, b = -2, c = -8.\nSum of zeroes: α + β = 4 + (-2) = 2.\nAlso, -b/a = -(-2)/1 = 2. So, α + β = -b/a.\nProduct of zeroes: αβ = 4 × (-2) = -8.\nAlso, c/a = -8/1 = -8. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "माना p(x) = x² - 2x - 8.\nमध्य पद को विभक्त करने पर: x² - 4x + 2x - 8 = x(x - 4) + 2(x - 4) = (x - 4)(x + 2).\nशून्यक x = 4 और x = -2 हैं। अतः, α = 4, β = -2.\nयहाँ, a = 1, b = -2, c = -8.\nशून्यकों का योग: α + β = 4 + (-2) = 2.\nतथा, -b/a = -(-2)/1 = 2. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = 4 × (-2) = -8.\nतथा, c/a = -8/1 = -8. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "ધારો કે p(x) = x² - 2x - 8.\nમધ્યમ પદનું વિભાજન કરતા: x² - 4x + 2x - 8 = x(x - 4) + 2(x - 4) = (x - 4)(x + 2).\nશૂન્યો x = 4 અને x = -2 છે. તેથી, α = 4, β = -2.\nઅહીં, a = 1, b = -2, c = -8.\nશૂન્યોનો સરવાળો: α + β = 4 + (-2) = 2.\nઅને, -b/a = -(-2)/1 = 2. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = 4 × (-2) = -8.\nઅને, c/a = -8/1 = -8. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_8",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial 4s² - 4s + 1, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद 4s² - 4s + 1 के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી 4s² - 4s + 1 ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Let p(s) = 4s² - 4s + 1.\nBy splitting the middle term: 4s² - 2s - 2s + 1 = 2s(2s - 1) - 1(2s - 1) = (2s - 1)(2s - 1).\nThe zeroes are s = 1/2 and s = 1/2. So, α = 1/2, β = 1/2.\nHere, a = 4, b = -4, c = 1.\nSum of zeroes: α + β = 1/2 + 1/2 = 1.\nAlso, -b/a = -(-4)/4 = 4/4 = 1. So, α + β = -b/a.\nProduct of zeroes: αβ = (1/2) × (1/2) = 1/4.\nAlso, c/a = 1/4. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "माना p(s) = 4s² - 4s + 1.\nमध्य पद को विभक्त करने पर: 4s² - 2s - 2s + 1 = 2s(2s - 1) - 1(2s - 1) = (2s - 1)(2s - 1).\nशून्यक s = 1/2 और s = 1/2 हैं। अतः, α = 1/2, β = 1/2.\nयहाँ, a = 4, b = -4, c = 1.\nशून्यकों का योग: α + β = 1/2 + 1/2 = 1.\nतथा, -b/a = -(-4)/4 = 1. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = (1/2) × (1/2) = 1/4.\nतथा, c/a = 1/4. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "ધારો કે p(s) = 4s² - 4s + 1.\nમધ્યમ પદનું વિભાજન કરતા: 4s² - 2s - 2s + 1 = 2s(2s - 1) - 1(2s - 1) = (2s - 1)(2s - 1).\nશૂન્યો s = 1/2 અને s = 1/2 છે. તેથી, α = 1/2, β = 1/2.\nઅહીં, a = 4, b = -4, c = 1.\nશૂન્યોનો સરવાળો: α + β = 1/2 + 1/2 = 1.\nઅને, -b/a = -(-4)/4 = 1. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = (1/2) × (1/2) = 1/4.\nઅને, c/a = 1/4. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_9",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial 6x² - 3 - 7x, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद 6x² - 3 - 7x के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી 6x² - 3 - 7x ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Rearrange the polynomial: p(x) = 6x² - 7x - 3.\nSplitting the middle term: 6x² - 9x + 2x - 3 = 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1).\nThe zeroes are x = 3/2 and x = -1/3. So, α = 3/2, β = -1/3.\nHere, a = 6, b = -7, c = -3.\nSum of zeroes: α + β = 3/2 + (-1/3) = (9 - 2)/6 = 7/6.\nAlso, -b/a = -(-7)/6 = 7/6. So, α + β = -b/a.\nProduct of zeroes: αβ = (3/2) × (-1/3) = -3/6 = -1/2.\nAlso, c/a = -3/6 = -1/2. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "बहुपद को पुनर्व्यवस्थित करें: p(x) = 6x² - 7x - 3.\nमध्य पद को विभक्त करने पर: 6x² - 9x + 2x - 3 = 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1).\nशून्यक x = 3/2 और x = -1/3 हैं। अतः, α = 3/2, β = -1/3.\nयहाँ, a = 6, b = -7, c = -3.\nशून्यकों का योग: α + β = 3/2 - 1/3 = 7/6.\nतथा, -b/a = -(-7)/6 = 7/6. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = (3/2) × (-1/3) = -1/2.\nतथा, c/a = -3/6 = -1/2. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "બહુપદીની ગોઠવણી કરો: p(x) = 6x² - 7x - 3.\nમધ્યમ પદનું વિભાજન કરતા: 6x² - 9x + 2x - 3 = 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1).\nશૂન્યો x = 3/2 અને x = -1/3 છે. તેથી, α = 3/2, β = -1/3.\nઅહીં, a = 6, b = -7, c = -3.\nશૂન્યોનો સરવાળો: α + β = 3/2 - 1/3 = 7/6.\nઅને, -b/a = -(-7)/6 = 7/6. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = (3/2) × (-1/3) = -1/2.\nઅને, c/a = -3/6 = -1/2. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_10",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial 4u² + 8u, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद 4u² + 8u के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી 4u² + 8u ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Let p(u) = 4u² + 8u.\nTaking 4u common: p(u) = 4u(u + 2).\nThe zeroes are u = 0 and u = -2. So, α = 0, β = -2.\nHere, a = 4, b = 8, c = 0.\nSum of zeroes: α + β = 0 + (-2) = -2.\nAlso, -b/a = -8/4 = -2. So, α + β = -b/a.\nProduct of zeroes: αβ = 0 × (-2) = 0.\nAlso, c/a = 0/4 = 0. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "माना p(u) = 4u² + 8u.\n4u को उभयनिष्ठ लेने पर: p(u) = 4u(u + 2).\nशून्यक u = 0 और u = -2 हैं। अतः, α = 0, β = -2.\nयहाँ, a = 4, b = 8, c = 0.\nशून्यकों का योग: α + β = 0 + (-2) = -2.\nतथा, -b/a = -8/4 = -2. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = 0 × (-2) = 0.\nतथा, c/a = 0/4 = 0. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "ધારો કે p(u) = 4u² + 8u.\n4u સામાન્ય લેતા: p(u) = 4u(u + 2).\nશૂન્યો u = 0 અને u = -2 છે. તેથી, α = 0, β = -2.\nઅહીં, a = 4, b = 8, c = 0.\nશૂન્યોનો સરવાળો: α + β = 0 + (-2) = -2.\nઅને, -b/a = -8/4 = -2. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = 0 × (-2) = 0.\nઅને, c/a = 0/4 = 0. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_11",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial t² - 15, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद t² - 15 के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી t² - 15 ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Let p(t) = t² - 15.\nUsing the identity a² - b² = (a-b)(a+b): p(t) = t² - (√15)² = (t - √15)(t + √15).\nThe zeroes are t = √15 and t = -√15. So, α = √15, β = -√15.\nHere, a = 1, b = 0, c = -15.\nSum of zeroes: α + β = √15 + (-√15) = 0.\nAlso, -b/a = -0/1 = 0. So, α + β = -b/a.\nProduct of zeroes: αβ = (√15) × (-√15) = -15.\nAlso, c/a = -15/1 = -15. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "माना p(t) = t² - 15.\nसर्वसमिका a² - b² = (a-b)(a+b) का उपयोग करने पर: p(t) = (t - √15)(t + √15).\nशून्यक t = √15 और t = -√15 हैं। अतः, α = √15, β = -√15.\nयहाँ, a = 1, b = 0, c = -15.\nशून्यकों का योग: α + β = √15 + (-√15) = 0.\nतथा, -b/a = -0/1 = 0. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = (√15) × (-√15) = -15.\nतथा, c/a = -15/1 = -15. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "ધારો કે p(t) = t² - 15.\nનિત્યસમ a² - b² = (a-b)(a+b) નો ઉપયોગ કરતા: p(t) = (t - √15)(t + √15).\nશૂન્યો t = √15 અને t = -√15 છે. તેથી, α = √15, β = -√15.\nઅહીં, a = 1, b = 0, c = -15.\nશૂન્યોનો સરવાળો: α + β = √15 + (-√15) = 0.\nઅને, -b/a = -0/1 = 0. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = (√15) × (-√15) = -15.\nઅને, c/a = -15/1 = -15. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_12",
+    "type": "practice_question",
+    "question": "Find the zeroes of the quadratic polynomial 3x² - x - 4, and verify the relationship between the zeroes and the coefficients.",
+    "question_hi": "द्विघात बहुपद 3x² - x - 4 के शून्यक ज्ञात कीजिए, और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए।",
+    "question_gu": "દ્વિઘાત બહુપદી 3x² - x - 4 ના શૂન્યો શોધો, અને શૂન્યો તથા સહગુણકો વચ્ચેના સંબંધની ચકાસણી કરો.",
+    "solution": "Let p(x) = 3x² - x - 4.\nSplitting the middle term: 3x² - 4x + 3x - 4 = x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1).\nThe zeroes are x = 4/3 and x = -1. So, α = 4/3, β = -1.\nHere, a = 3, b = -1, c = -4.\nSum of zeroes: α + β = 4/3 + (-1) = (4 - 3)/3 = 1/3.\nAlso, -b/a = -(-1)/3 = 1/3. So, α + β = -b/a.\nProduct of zeroes: αβ = (4/3) × (-1) = -4/3.\nAlso, c/a = -4/3. So, αβ = c/a.\nRelationship is verified.",
+    "solution_hi": "माना p(x) = 3x² - x - 4.\nमध्य पद को विभक्त करने पर: 3x² - 4x + 3x - 4 = x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1).\nशून्यक x = 4/3 और x = -1 हैं। अतः, α = 4/3, β = -1.\nयहाँ, a = 3, b = -1, c = -4.\nशून्यकों का योग: α + β = 4/3 + (-1) = 1/3.\nतथा, -b/a = -(-1)/3 = 1/3. अतः, α + β = -b/a.\nशून्यकों का गुणनफल: αβ = (4/3) × (-1) = -4/3.\nतथा, c/a = -4/3. अतः, αβ = c/a.\nसंबंध सत्यापित हुआ।",
+    "solution_gu": "ધારો કે p(x) = 3x² - x - 4.\nમધ્યમ પદનું વિભાજન કરતા: 3x² - 4x + 3x - 4 = x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1).\nશૂન્યો x = 4/3 અને x = -1 છે. તેથી, α = 4/3, β = -1.\nઅહીં, a = 3, b = -1, c = -4.\nશૂન્યોનો સરવાળો: α + β = 4/3 + (-1) = 1/3.\nઅને, -b/a = -(-1)/3 = 1/3. તેથી, α + β = -b/a.\nશૂન્યોનો ગુણાકાર: αβ = (4/3) × (-1) = -4/3.\nઅને, c/a = -4/3. તેથી, αβ = c/a.\nસંબંધ ચકાસાયેલ છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_13",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: 1/4, -1.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: 1/4, -1।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: 1/4, -1.",
+    "solution": "Given: Sum of zeroes (S) = 1/4, Product of zeroes (P) = -1.\nThe general form of the quadratic polynomial is k[x² - (Sum of zeroes)x + (Product of zeroes)].\np(x) = k[x² - (1/4)x + (-1)] = k[x² - (1/4)x - 1].\nTo remove the fraction, let k = 4.\np(x) = 4[x² - (1/4)x - 1] = 4x² - x - 4.\nSo, one such polynomial is 4x² - x - 4.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = 1/4, शून्यकों का गुणनफल (P) = -1.\nद्विघात बहुपद का सामान्य रूप है k[x² - (शून्यकों का योग)x + (शून्यकों का गुणनफल)]।\np(x) = k[x² - (1/4)x + (-1)] = k[x² - x/4 - 1]।\nभिन्न को हटाने के लिए, मान लीजिए k = 4 है।\np(x) = 4[x² - x/4 - 1] = 4x² - x - 4.\nअतः, एक ऐसा बहुपद 4x² - x - 4 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = 1/4, શૂન્યોનો ગુણાકાર (P) = -1.\nદ્વિઘાત બહુપદીનું સામાન્ય સ્વરૂપ k[x² - (શૂન્યોનો સરવાળો)x + (શૂન્યોનો ગુણાકાર)] છે.\np(x) = k[x² - (1/4)x + (-1)] = k[x² - x/4 - 1].\nઅપૂર્ણાંક દૂર કરવા માટે, ધારો કે k = 4.\np(x) = 4[x² - x/4 - 1] = 4x² - x - 4.\nતેથી, આવી એક બહુપદી 4x² - x - 4 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_14",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: √2, 1/3.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: √2, 1/3।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: √2, 1/3.",
+    "solution": "Given: Sum of zeroes (S) = √2, Product of zeroes (P) = 1/3.\nThe quadratic polynomial is k[x² - Sx + P].\np(x) = k[x² - √2x + 1/3].\nLet k = 3.\np(x) = 3[x² - √2x + 1/3] = 3x² - 3√2x + 1.\nSo, one such polynomial is 3x² - 3√2x + 1.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = √2, शून्यकों का गुणनफल (P) = 1/3.\nद्विघात बहुपद k[x² - Sx + P] है।\np(x) = k[x² - √2x + 1/3]।\nमाना k = 3.\np(x) = 3[x² - √2x + 1/3] = 3x² - 3√2x + 1.\nअतः, एक ऐसा बहुपद 3x² - 3√2x + 1 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = √2, શૂન્યોનો ગુણાકાર (P) = 1/3.\nદ્વિઘાત બહુપદી k[x² - Sx + P] છે.\np(x) = k[x² - √2x + 1/3].\nધારો કે k = 3.\np(x) = 3[x² - √2x + 1/3] = 3x² - 3√2x + 1.\nતેથી, આવી એક બહુપદી 3x² - 3√2x + 1 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_15",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: 0, √5.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: 0, √5।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: 0, √5.",
+    "solution": "Given: Sum of zeroes (S) = 0, Product of zeroes (P) = √5.\nThe quadratic polynomial is k[x² - Sx + P].\np(x) = k[x² - 0x + √5] = k[x² + √5].\nLet k = 1.\np(x) = x² + √5.\nSo, one such polynomial is x² + √5.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = 0, शून्यकों का गुणनफल (P) = √5.\nद्विघात बहुपद k[x² - Sx + P] है।\np(x) = k[x² - 0x + √5] = k[x² + √5]।\nमाना k = 1.\np(x) = x² + √5.\nअतः, एक ऐसा बहुपद x² + √5 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = 0, શૂન્યોનો ગુણાકાર (P) = √5.\nદ્વિઘાત બહુપદી k[x² - Sx + P] છે.\np(x) = k[x² - 0x + √5] = k[x² + √5].\nધારો કે k = 1.\np(x) = x² + √5.\nતેથી, આવી એક બહુપદી x² + √5 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_16",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: 1, 1.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: 1, 1।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: 1, 1.",
+    "solution": "Given: Sum of zeroes (S) = 1, Product of zeroes (P) = 1.\nThe quadratic polynomial is k[x² - Sx + P].\np(x) = k[x² - 1x + 1].\nLet k = 1.\np(x) = x² - x + 1.\nSo, one such polynomial is x² - x + 1.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = 1, शून्यकों का गुणनफल (P) = 1.\nद्विघात बहुपद k[x² - Sx + P] है।\np(x) = k[x² - 1x + 1]।\nमाना k = 1.\np(x) = x² - x + 1.\nअतः, एक ऐसा बहुपद x² - x + 1 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = 1, શૂન્યોનો ગુણાકાર (P) = 1.\nદ્વિઘાત બહુપદી k[x² - Sx + P] છે.\np(x) = k[x² - 1x + 1].\nધારો કે k = 1.\np(x) = x² - x + 1.\nતેથી, આવી એક બહુપદી x² - x + 1 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_17",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: -1/4, 1/4.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: -1/4, 1/4।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: -1/4, 1/4.",
+    "solution": "Given: Sum of zeroes (S) = -1/4, Product of zeroes (P) = 1/4.\nThe quadratic polynomial is k[x² - Sx + P].\np(x) = k[x² - (-1/4)x + 1/4] = k[x² + x/4 + 1/4].\nLet k = 4.\np(x) = 4[x² + x/4 + 1/4] = 4x² + x + 1.\nSo, one such polynomial is 4x² + x + 1.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = -1/4, शून्यकों का गुणनफल (P) = 1/4.\nद्विघात बहुपद k[x² - Sx + P] है।\np(x) = k[x² - (-1/4)x + 1/4] = k[x² + x/4 + 1/4]।\nमाना k = 4.\np(x) = 4[x² + x/4 + 1/4] = 4x² + x + 1.\nअतः, एक ऐसा बहुपद 4x² + x + 1 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = -1/4, શૂન્યોનો ગુણાકાર (P) = 1/4.\nદ્વિઘાત બહુપદી k[x² - Sx + P] છે.\np(x) = k[x² - (-1/4)x + 1/4] = k[x² + x/4 + 1/4].\nધારો કે k = 4.\np(x) = 4[x² + x/4 + 1/4] = 4x² + x + 1.\nતેથી, આવી એક બહુપદી 4x² + x + 1 છે."
+  },
+  {
+    "id": "C10_MATH_CH2_PRACTICE_18",
+    "type": "practice_question",
+    "question": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: 4, 1.",
+    "question_hi": "एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं: 4, 1।",
+    "question_gu": "જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે નીચે આપેલી સંખ્યાઓ હોય તેવી દ્વિઘાત બહુપદી મેળવો: 4, 1.",
+    "solution": "Given: Sum of zeroes (S) = 4, Product of zeroes (P) = 1.\nThe quadratic polynomial is k[x² - Sx + P].\np(x) = k[x² - 4x + 1].\nLet k = 1.\np(x) = x² - 4x + 1.\nSo, one such polynomial is x² - 4x + 1.",
+    "solution_hi": "दिया गया है: शून्यकों का योग (S) = 4, शून्यकों का गुणनफल (P) = 1.\nद्विघात बहुपद k[x² - Sx + P] है।\np(x) = k[x² - 4x + 1]।\nमाना k = 1.\np(x) = x² - 4x + 1.\nअतः, एक ऐसा बहुपद x² - 4x + 1 है।",
+    "solution_gu": "આપેલ છે: શૂન્યોનો સરવાળો (S) = 4, શૂન્યોનો ગુણાકાર (P) = 1.\nદ્વિઘાત બહુપદી k[x² - Sx + P] છે.\np(x) = k[x² - 4x + 1].\nધારો કે k = 1.\np(x) = x² - 4x + 1.\nતેથી, આવી એક બહુપદી x² - 4x + 1 છે."
+  }
+]

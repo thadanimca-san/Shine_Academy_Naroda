@@ -20,63 +20,63 @@ files_to_create = [
     },
     {
         "id": "cbse_class10_deo_bank_2026_ch9",
-        "title": "English (FL) DEO Bank (Part 1 - MCQs)",
+        "title": "English (FL) question Bank (Part 1 - MCQs)",
         "subject": "English",
         "board": "CBSE",
         "type": "deo"
     },
     {
         "id": "cbse_class10_deo_bank_2026_ch10",
-        "title": "English (FL) DEO Bank (Part 2 - Subject)",
+        "title": "English (FL) question Bank (Part 2 - Subject)",
         "subject": "English",
         "board": "CBSE",
         "type": "deo"
     },
     {
         "id": "cbse_class10_deo_bank_2026_ch11",
-        "title": "Gujarati (SL) DEO Bank (Part 1 - MCQs)",
+        "title": "Gujarati (SL) question Bank (Part 1 - MCQs)",
         "subject": "Gujarati",
         "board": "CBSE",
         "type": "deo"
     },
     {
         "id": "cbse_class10_deo_bank_2026_ch12",
-        "title": "Gujarati (SL) DEO Bank (Part 2 - Subject)",
+        "title": "Gujarati (SL) question Bank (Part 2 - Subject)",
         "subject": "Gujarati",
         "board": "CBSE",
         "type": "deo"
     },
     {
         "id": "ncert_class10_deo_bank_2026_ch8",
-        "title": "Social Science DEO Bank (Part 2 - Subject)",
+        "title": "Social Science question Bank (Part 2 - Subject)",
         "subject": "Social Science",
         "board": "NCERT",
         "type": "deo"
     },
     {
         "id": "ncert_class10_deo_bank_2026_ch9",
-        "title": "English (FL) DEO Bank (Part 1 - MCQs)",
+        "title": "English (FL) question Bank (Part 1 - MCQs)",
         "subject": "English",
         "board": "NCERT",
         "type": "deo"
     },
     {
         "id": "ncert_class10_deo_bank_2026_ch10",
-        "title": "English (FL) DEO Bank (Part 2 - Subject)",
+        "title": "English (FL) question Bank (Part 2 - Subject)",
         "subject": "English",
         "board": "NCERT",
         "type": "deo"
     },
     {
         "id": "ncert_class10_deo_bank_2026_ch11",
-        "title": "Gujarati (SL) DEO Bank (Part 1 - MCQs)",
+        "title": "Gujarati (SL) question Bank (Part 1 - MCQs)",
         "subject": "Gujarati",
         "board": "NCERT",
         "type": "deo"
     },
     {
         "id": "ncert_class10_deo_bank_2026_ch12",
-        "title": "Gujarati (SL) DEO Bank (Part 2 - Subject)",
+        "title": "Gujarati (SL) question Bank (Part 2 - Subject)",
         "subject": "Gujarati",
         "board": "NCERT",
         "type": "deo"
@@ -121,8 +121,8 @@ def generate_deo_blocks(ch_id, title):
         {
             "id": f"{ch_id.upper()}_THEORY_001",
             "type": "theory",
-            "title": "DEO Question Bank Overview",
-            "title_hi": "DEO प्रश्न बैंक अवलोकन",
+            "title": "question Question Bank Overview",
+            "title_hi": "question प्रश्न बैंक अवलोकन",
             "body": f"This chapter contains important questions from the {title}.",
             "body_hi": f"इस अध्याय में {title} के महत्वपूर्ण प्रश्न हैं।"
         },

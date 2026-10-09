@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "C10M_CH4_1",
+    "type": "hook",
+    "title": "The Trajectory of Flight",
+    "body": "When a cricketer hits a six, a basketball player takes a free throw, or a rocket launches into the sky, the object does not travel in a jagged zigzag or a flat line. Gravity relentlessly pulls it downward while inertia carries it forward. The result is a magnificent, smooth, symmetric arc known as a **parabola**!\n\nCan mathematics capture the exact curve of this flight? Yes! The mathematical equation that governs this arc is none other than a **Quadratic Equation (द्विघात समीकरण / દ્વિઘાત સમીકરણ)**. In this chapter, we will master how to model real-world curves, areas, and puzzles using equations of degree 2!",
+    "title_hi": "उड़ान का प्रक्षेपवक्र (Trajectory)",
+    "body_hi": "जब कोई क्रिकेटर छक्का लगाता है, कोई बास्केटबॉल खिलाड़ी फ्री थ्रो फेंकता है, या कोई रॉकेट आसमान में लॉन्च होता है, तो वस्तु किसी टेढ़ी-मेढ़ी रेखा या सीधी रेखा में नहीं चलती। गुरुत्वाकर्षण इसे लगातार नीचे खींचता है जबकि जड़त्व इसे आगे बढ़ाता है। इसका परिणाम एक शानदार, चिकना और सममित वक्र होता है जिसे **परवलय (Parabola)** कहा जाता है!\n\nक्या गणित इस उड़ान के सटीक वक्र को माप सकता है? हाँ! इस वक्र को नियंत्रित करने वाला गणितीय समीकरण कोई और नहीं बल्कि **द्विघात समीकरण** है। इस अध्याय में, हम सीखेंगे कि घात 2 के समीकरणों का उपयोग करके वास्तविक दुनिया के वक्रों, क्षेत्रफलों और पहेलियों को कैसे हल किया जाए!",
+    "title_gu": "ઉડાનનો પ્રક્ષેપ માર્ગ (Trajectory)",
+    "body_gu": "જ્યારે કોઈ ક્રિકેટર સિક્સર મારે છે, બાસ્કેટબોલ ખેલાડી ફ્રી થ્રો ફેંકે છે, અથવા રોકેટ આકાશમાં લોન્ચ થાય છે, ત્યારે પદાર્થ વાંકાચૂંકા કે સીધા માર્ગે ગતિ કરતો નથી. ગુરુત્વાકર્ષણ તેને સતત નીચે તરફ ખેંચે છે જ્યારે જડત્વ તેને આગળ ધકેલે છે. પરિણામે એક સુંદર, સરળ અને સમપ્રમાણ વળાંક બને છે જેને **પરવલય (Parabola)** કહેવામાં આવે છે!\n\nશું ગણિત આ ઉડાનના ચોક્કસ વળાંકને દર્શાવી શકે છે? હા! આ વળાંકનું નિયમન કરતું ગાણિતિક સમીકરણ બીજું કોઈ નહીં પણ **દ્વિઘાત સમીકરણ** છે. આ પ્રકરણમાં, આપણે શીખીશું કે 2 ઘાતવાળા સમીકરણોનો ઉપયોગ કરીને વાસ્તવિક દુનિયાના વળાંકો, ક્ષેત્રફળો અને કોયડાઓ કેવી રીતે ઉકેલવા!",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_2",
+    "type": "socratic_question",
+    "question": "If you throw a ball straight up into the air, it reaches a height of 15 meters on its way UP, and it passes that same 15-meter mark again on its way DOWN. Based on this curved path, how many times can a projectile be at a specific height (below its maximum peak)?",
+    "options": [
+      "At most 2 times",
+      "Only 1 time",
+      "Infinitely many times",
+      "Never"
+    ],
+    "correct_index": 0,
+    "explanation": "Because the ball ascends and then descends symmetrically, it crosses any given height below its peak exactly twice. This is why equations describing this motion (quadratic equations) have at most two solutions!",
+    "question_hi": "यदि आप एक गेंद को सीधे हवा में ऊपर फेंकते हैं, तो वह ऊपर जाते समय 15 मीटर की ऊँचाई पर पहुँचती है, और नीचे आते समय फिर से उसी 15 मीटर के निशान को पार करती है। इस वक्राकार पथ के आधार पर, एक प्रक्षेप्य (projectile) अपने अधिकतम शिखर से नीचे किसी विशिष्ट ऊँचाई पर कितनी बार हो सकता है?",
+    "options_hi": [
+      "अधिकतम 2 बार",
+      "केवल 1 बार",
+      "अपरिमित रूप से अनेक बार",
+      "कभी नहीं"
+    ],
+    "explanation_hi": "चूँकि गेंद सममित रूप से ऊपर चढ़ती है और फिर नीचे उतरती है, इसलिए वह अपने शिखर से नीचे किसी भी ऊँचाई को ठीक दो बार पार करती है। यही कारण है कि इस गति का वर्णन करने वाले समीकरणों (द्विघात समीकरणों) के अधिकतम दो हल होते हैं!",
+    "question_gu": "જો તમે દડાને હવામાં સીધો ઉપર ફેંકો છો, તો તે ઉપર જતી વખતે 15 મીટરની ઊંચાઈએ પહોંચે છે, અને નીચે આવતી વખતે ફરીથી તે જ 15 મીટરના સ્તરને પસાર કરે છે. આ વળાંકવાળા માર્ગના આધારે, કોઈ પદાર્થ તેની મહત્તમ ઊંચાઈથી નીચે આપેલ ચોક્કસ ઊંચાઈએ કેટલી વાર હોઈ શકે?",
+    "options_gu": [
+      "વધુમાં વધુ 2 વખત",
+      "માત્ર 1 વખત",
+      "અનંત વખત",
+      "ક્યારેય નહીં"
+    ],
+    "explanation_gu": "કારણ કે દડો સમપ્રમાણ રીતે ઉપર ચઢે છે અને પછી નીચે આવે છે, તેથી તે તેની ટોચથી નીચેની કોઈપણ ઊંચાઈને બરાબર બે વાર પસાર કરે છે. આથી જ આ ગતિ દર્શાવતા સમીકરણો (દ્વિઘાત સમીકરણો) ને વધુમાં વધુ બે ઉકેલો હોય છે!",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_3",
+    "type": "discovery",
+    "title": "Discovery: From Straight Lines to Squared Areas",
+    "body": "In Chapter 3, we studied linear equations like **ax + b = 0** or **ax + by + c = 0**. These equations have degree 1 and graph as straight lines. But the real world is rarely just straight lines!\n\nWhen calculating area (Length × Breadth), or gravitational acceleration (where distance is proportional to time squared: $s = \\frac{1}{2}gt^2$), we multiply a variable by itself. This produces an **x²** term!\n- Degree 1 (Linear): 1 dimension, straight line, at most 1 solution.\n- Degree 2 (Quadratic): 2 dimensions (area), parabolic curve, at most 2 solutions.\n\nThe word 'quadratic' comes from the Latin word *quadratus*, meaning 'square'!",
+    "title_hi": "खोज: सीधी रेखाओं से वर्ग के क्षेत्रफल तक",
+    "body_hi": "अध्याय 3 में, हमने **ax + b = 0** या **ax + by + c = 0** जैसे रैखिक समीकरणों का अध्ययन किया। इन समीकरणों की घात 1 होती है और इनका आलेख सीधी रेखाएँ होता है। लेकिन वास्तविक दुनिया केवल सीधी रेखाओं तक सीमित नहीं है!\n\nजब हम क्षेत्रफल (लंबाई × चौड़ाई) या गुरुत्वाकर्षण त्वरण की गणना करते हैं (जहाँ दूरी समय के वर्ग के समानुपाती होती है: $s = \\frac{1}{2}gt^2$), तो हम एक चर को स्वयं से गुणा करते हैं। इससे एक **x²** पद उत्पन्न होता है!\n- घात 1 (रैखिक): 1 विमा, सीधी रेखा, अधिकतम 1 हल।\n- घात 2 (द्विघात): 2 विमाएँ (क्षेत्रफल), परवलयाकार वक्र, अधिकतम 2 हल।\n\n'द्विघात' (Quadratic) शब्द लैटिन शब्द *quadratus* से आया है, जिसका अर्थ है 'वर्ग' (Square)!",
+    "title_gu": "શોધ: સીધી રેખાઓથી ચોરસના ક્ષેત્રફળ સુધી",
+    "body_gu": "પ્રકરણ 3 માં, આપણે **ax + b = 0** અથવા **ax + by + c = 0** જેવા સુરેખ સમીકરણોનો અભ્યાસ કર્યો. આ સમીકરણોની ઘાત 1 હોય છે અને તેનો આલેખ સીધી રેખા હોય છે. પરંતુ વાસ્તવિક દુનિયા માત્ર સીધી રેખાઓ નથી!\n\nજ્યારે આપણે ક્ષેત્રફળ (લંબાઈ × પહોળાઈ), અથવા ગુરુત્વાકર્ષણ પ્રવેગની ગણતરી કરીએ છીએ (જ્યાં અંતર સમયના વર્ગના સમપ્રમાણમાં હોય છે: $s = \\frac{1}{2}gt^2$), ત્યારે આપણે ચલને પોતાની સાથે ગુણીએ છીએ. આનાથી **x²** પદ બને છે!\n- ઘાત 1 (સુરેખ): 1 પરિમાણ, સીધી રેખા, વધુમાં વધુ 1 ઉકેલ.\n- ઘાત 2 (દ્વિઘાત): 2 પરિમાણ (ક્ષેત્રફળ), પરવલય વળાંક, વધુમાં વધુ 2 ઉકેલ.\n\n'ક્વાડ્રેટિક' (Quadratic) શબ્દ લેટિન શબ્દ *quadratus* પરથી આવ્યો છે, જેનો અર્થ થાય છે 'ચોરસ' (Square)!",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_4",
+    "type": "theory",
+    "title": "Standard Form of a Quadratic Equation",
+    "body": "A quadratic equation in the variable x is an equation of the form:\n\n$$\\mathbf{ax^2 + bx + c = 0}$$\n\nwhere **a, b, c** are real numbers and **a ≠ 0**.\n\n**Crucial Observations:**\n1. **a ≠ 0**: If a = 0, the equation reduces to $bx + c = 0$, which is linear, not quadratic.\n2. **Degree is exactly 2**: The highest power of the variable x must be 2.\n3. **b and c can be zero**: Equations like $3x^2 = 0$ or $2x^2 - 8 = 0$ are still quadratic equations because $a \\neq 0$.\n4. **Standard Form Ordering**: When writing in standard form, terms are arranged in descending order of powers: first $x^2$, then $x$, then the constant term.",
+    "title_hi": "द्विघात समीकरण का मानक रूप (Standard Form)",
+    "body_hi": "चर x में एक द्विघात समीकरण निम्न रूप का एक समीकरण होता है:\n\n$$\\mathbf{ax^2 + bx + c = 0}$$\n\nजहाँ **a, b, c** वास्तविक संख्याएँ हैं और **a ≠ 0** है।\n\n**महत्वपूर्ण बिंदु:**\n1. **a ≠ 0**: यदि a = 0 हो, तो समीकरण $bx + c = 0$ बन जाता है, जो कि रैखिक है, द्विघात नहीं।\n2. **घात ठीक 2 है**: चर x की उच्चतम घात 2 होनी चाहिए।\n3. **b और c शून्य हो सकते हैं**: $3x^2 = 0$ या $2x^2 - 8 = 0$ जैसे समीकरण भी द्विघात समीकरण हैं क्योंकि $a \\neq 0$ है।\n4. **मानक रूप का क्रम**: मानक रूप में लिखते समय, पदों को घातों के अवरोही क्रम में व्यवस्थित किया जाता है: पहले $x^2$, फिर $x$, फिर अचर पद।",
+    "title_gu": "દ્વિઘાત સમીકરણનું પ્રમાણિત સ્વરૂપ (Standard Form)",
+    "body_gu": "ચલ x માં દ્વિઘાત સમીકરણ એ નીચેના સ્વરૂપનું સમીકરણ છે:\n\n$$\\mathbf{ax^2 + bx + c = 0}$$\n\nજ્યાં **a, b, c** વાસ્તવિક સંખ્યાઓ છે અને **a ≠ 0** છે.\n\n**મહત્વપૂર્ણ મુદ્દાઓ:**\n1. **a ≠ 0**: જો a = 0 હોય, તો સમીકરણ $bx + c = 0$ બની જાય છે, જે સુરેખ છે, દ્વિઘાત નથી.\n2. **ઘાત બરાબર 2 છે**: ચલ x ની મહત્તમ ઘાત 2 હોવી જોઈએ.\n3. **b અને c શૂન્ય હોઈ શકે છે**: $3x^2 = 0$ અથવા $2x^2 - 8 = 0$ જેવા સમીકરણો પણ દ્વિઘાત સમીકરણો છે કારણ કે $a \\neq 0$ છે.\n4. **પ્રમાણિત સ્વરૂપનો ક્રમ**: પ્રમાણિત સ્વરૂપમાં લખતી વખતે, પદોને ઘાતના ઉતરતા ક્રમમાં ગોઠવવામાં આવે છે: પહેલા $x^2$, પછી $x$, પછી અચળ પદ.",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_5",
+    "type": "teacher_tip",
+    "title": "Teacher Tip: Simplify Before You Judge!",
+    "body": "Never declare whether an equation is quadratic just by looking at brackets! An equation might look quadratic at first glance (e.g., $(x - 2)(x + 1) = (x - 1)(x + 3)$), but when you expand both sides, the $x^2$ terms cancel out, leaving a linear equation! Conversely, an equation with cubes like $x^3 - 4x^2 - x + 1 = (x - 2)^3$ might simplify into a quadratic equation because the $x^3$ terms cancel!\n\n**Golden Rule:** Always expand all brackets, move all terms to the LHS, collect like terms into $ax^2 + bx + c = 0$, and THEN check the highest power!",
+    "title_hi": "शिक्षक युक्ति: निर्णय लेने से पहले सरल करें!",
+    "body_hi": "कोष्ठक देखकर कभी भी यह तय न करें कि समीकरण द्विघात है या नहीं! एक समीकरण पहली नज़र में द्विघात लग सकता है (उदाहरण के लिए, $(x - 2)(x + 1) = (x - 1)(x + 3)$), लेकिन जब आप दोनों पक्षों का विस्तार करते हैं, तो $x^2$ के पद कट जाते हैं, जिससे केवल एक रैखिक समीकरण बचता है! इसके विपरीत, $x^3 - 4x^2 - x + 1 = (x - 2)^3$ जैसे घन पदों वाला समीकरण सरल होकर द्विघात समीकरण बन सकता है क्योंकि $x^3$ के पद कट जाते हैं!\n\n**स्वर्ण नियम:** हमेशा सभी कोष्ठकों का विस्तार करें, सभी पदों को बाईं ओर लाएँ, समान पदों को जोड़कर $ax^2 + bx + c = 0$ बनाएं, और उसके बाद ही उच्चतम घात की जाँच करें!",
+    "title_gu": "શિક્ષકની સલાહ: નિર્ણય લેતા પહેલા સાદુરૂપ આપો!",
+    "body_gu": "કૌંસ જોઈને ક્યારેય નક્કી ન કરો કે સમીકરણ દ્વિઘાત છે કે નહીં! કોઈ સમીકરણ પ્રથમ નજરે દ્વિઘાત લાગી શકે છે (ઉદાહરણ તરીકે, $(x - 2)(x + 1) = (x - 1)(x + 3)$), પરંતુ જ્યારે તમે બંને બાજુઓનું વિસ્તરણ કરો છો, ત્યારે $x^2$ ના પદો કેન્સલ થઈ જાય છે, અને માત્ર સુરેખ સમીકરણ બચે છે! તેનાથી વિપરીત, ઘન પદોવાળું સમીકરણ જેમ કે $x^3 - 4x^2 - x + 1 = (x - 2)^3$ સાદુરૂપ આપ્યા પછી દ્વિઘાત સમીકરણ બની શકે છે કારણ કે $x^3$ ના પદો કેન્સલ થઈ જાય છે!\n\n**સુવર્ણ નિયમ:** હંમેશા બધા કૌંસ છોડો, બધા પદોને ડાબી બાજુ લાવો, સમાન પદોનું સાદુરૂપ આપીને $ax^2 + bx + c = 0$ બનાવો, અને ત્યાર પછી જ મહત્તમ ઘાત તપાસો!",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part1",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.1): Check whether the following is a quadratic equation: (x + 1)² = 2(x - 3)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding: x² + 2x + 1 = 2x - 6 => x² + 7 = 0. Since the highest power of x is 2, it is a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.1): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: (x + 1)² = 2(x - 3)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: x² + 2x + 1 = 2x - 6 => x² + 7 = 0। चूँकि x की उच्चतम घात 2 है, यह एक द्विघात समीकरण है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.1): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: (x + 1)² = 2(x - 3)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: x² + 2x + 1 = 2x - 6 => x² + 7 = 0. કારણ કે x ની મહત્તમ ઘાત 2 છે, તે દ્વિઘાત સમીકરણ છે.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part2",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.2): Check whether the following is a quadratic equation: x² - 2x = (-2)(3 - x)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding: x² - 2x = -6 + 2x => x² - 4x + 6 = 0. Highest power is 2, so it is a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.2): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: x² - 2x = (-2)(3 - x)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: x² - 2x = -6 + 2x => x² - 4x + 6 = 0। उच्चतम घात 2 है, इसलिए यह एक द्विघात समीकरण है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.2): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: x² - 2x = (-2)(3 - x)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: x² - 2x = -6 + 2x => x² - 4x + 6 = 0. મહત્તમ ઘાત 2 છે, તેથી તે દ્વિઘાત સમીકરણ છે.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part3",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.3): Check whether the following is a quadratic equation: (x - 2)(x + 1) = (x - 1)(x + 3)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 1,
+    "explanation": "Expanding: x² - x - 2 = x² + 2x - 3 => -3x + 1 = 0. The x² term cancels out, so it is a linear equation, not quadratic.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.3): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: (x - 2)(x + 1) = (x - 1)(x + 3)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: x² - x - 2 = x² + 2x - 3 => -3x + 1 = 0। x² पद कट जाता है, इसलिए यह एक रैखिक समीकरण है, द्विघात नहीं।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.3): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: (x - 2)(x + 1) = (x - 1)(x + 3)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: x² - x - 2 = x² + 2x - 3 => -3x + 1 = 0. x² પદ દૂર થઈ જાય છે, તેથી તે સુરેખ સમીકરણ છે, દ્વિઘાત નથી.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part4",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.4): Check whether the following is a quadratic equation: (x - 3)(2x + 1) = x(x + 5)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding: 2x² - 5x - 3 = x² + 5x => x² - 10x - 3 = 0. Highest power is 2, so it is a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.4): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: (x - 3)(2x + 1) = x(x + 5)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: 2x² - 5x - 3 = x² + 5x => x² - 10x - 3 = 0। उच्चतम घात 2 है, इसलिए यह एक द्विघात समीकरण है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.4): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: (x - 3)(2x + 1) = x(x + 5)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: 2x² - 5x - 3 = x² + 5x => x² - 10x - 3 = 0. મહત્તમ ઘાત 2 છે, તેથી તે દ્વિઘાત સમીકરણ છે.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part5",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.5): Check whether the following is a quadratic equation: (2x - 1)(x - 3) = (x + 5)(x - 1)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding: 2x² - 7x + 3 = x² + 4x - 5 => x² - 11x + 8 = 0. Highest power is 2, so it is a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.5): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: (2x - 1)(x - 3) = (x + 5)(x - 1)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: 2x² - 7x + 3 = x² + 4x - 5 => x² - 11x + 8 = 0। उच्चतम घात 2 है, इसलिए यह एक द्विघात समीकरण है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.5): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: (2x - 1)(x - 3) = (x + 5)(x - 1)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: 2x² - 7x + 3 = x² + 4x - 5 => x² - 11x + 8 = 0. મહત્તમ ઘાત 2 છે, તેથી તે દ્વિઘાત સમીકરણ છે.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part6",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.6): Check whether the following is a quadratic equation: x² + 3x + 1 = (x - 2)²",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 1,
+    "explanation": "Expanding: x² + 3x + 1 = x² - 4x + 4 => 7x - 3 = 0. The x² terms cancel out, so it is a linear equation, not quadratic.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.6): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: x² + 3x + 1 = (x - 2)²",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: x² + 3x + 1 = x² - 4x + 4 => 7x - 3 = 0। x² के पद कट जाते हैं, इसलिए यह एक रैखिक समीकरण है, द्विघात नहीं।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.6): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: x² + 3x + 1 = (x - 2)²",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: x² + 3x + 1 = x² - 4x + 4 => 7x - 3 = 0. x² ના પદો દૂર થઈ જાય છે, તેથી તે સુરેખ સમીકરણ છે, દ્વિઘાત નથી.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part7",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.7): Check whether the following is a quadratic equation: (x + 2)³ = 2x(x² - 1)",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 1,
+    "explanation": "Expanding: x³ + 6x² + 12x + 8 = 2x³ - 2x => -x³ + 6x² + 14x + 8 = 0. The degree is 3 (cubic), so it is not a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.7): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: (x + 2)³ = 2x(x² - 1)",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "विस्तार करने पर: x³ + 6x² + 12x + 8 = 2x³ - 2x => -x³ + 6x² + 14x + 8 = 0। घात 3 (त्रिघात) है, इसलिए यह द्विघात समीकरण नहीं है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.7): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: (x + 2)³ = 2x(x² - 1)",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: x³ + 6x² + 12x + 8 = 2x³ - 2x => -x³ + 6x² + 14x + 8 = 0. ઘાત 3 (ત્રિઘાત) છે, તેથી તે દ્વિઘાત સમીકરણ નથી.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q1_part8",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q1.8): Check whether the following is a quadratic equation: x³ - 4x² - x + 1 = (x - 2)³",
+    "options": [
+      "Yes, it is a quadratic equation",
+      "No, it is not a quadratic equation",
+      "It is a cubic equation",
+      "It is an equation in two variables"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding RHS: (x - 2)³ = x³ - 6x² + 12x - 8. Equation becomes: x³ - 4x² - x + 1 = x³ - 6x² + 12x - 8 => 2x² - 13x + 9 = 0. The x³ terms cancel and the highest power is 2, so it is a quadratic equation.",
+    "question_hi": "प्रश्नावली 4.1 (Q1.8): जाँच कीजिए कि क्या निम्न एक द्विघात समीकरण है: x³ - 4x² - x + 1 = (x - 2)³",
+    "options_hi": [
+      "हाँ, यह एक द्विघात समीकरण है",
+      "नहीं, यह एक द्विघात समीकरण नहीं है",
+      "यह एक त्रिघात समीकरण है",
+      "यह दो चरों वाला समीकरण है"
+    ],
+    "explanation_hi": "दाहिने पक्ष का विस्तार: (x - 2)³ = x³ - 6x² + 12x - 8। समीकरण बनता है: x³ - 4x² - x + 1 = x³ - 6x² + 12x - 8 => 2x² - 13x + 9 = 0। x³ के पद कट जाते हैं और उच्चतम घात 2 है, इसलिए यह एक द्विघात समीकरण है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q1.8): તપાસો કે શું નીચે આપેલ સમીકરણ દ્વિઘાત સમીકરણ છે: x³ - 4x² - x + 1 = (x - 2)³",
+    "options_gu": [
+      "હા, તે દ્વિઘાત સમીકરણ છે",
+      "ના, તે દ્વિઘાત સમીકરણ નથી",
+      "તે ત્રિઘાત સમીકરણ છે",
+      "તે બે ચલવાળું સમીકરણ છે"
+    ],
+    "explanation_gu": "જમણી બાજુનું વિસ્તરણ: (x - 2)³ = x³ - 6x² + 12x - 8. સમીકરણ બને છે: x³ - 4x² - x + 1 = x³ - 6x² + 12x - 8 => 2x² - 13x + 9 = 0. x³ ના પદો દૂર થાય છે અને મહત્તમ ઘાત 2 છે, તેથી તે દ્વિઘાત સમીકરણ છે.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q2_part1",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q2.i): Represent the situation in the form of a quadratic equation: 'The area of a rectangular plot is 528 m². The length of the plot (in metres) is one more than twice its breadth. We need to find the length and breadth of the plot.' (Let breadth = x metres)",
+    "options": [
+      "2x² + x - 528 = 0",
+      "2x² - x - 528 = 0",
+      "x² + 2x - 528 = 0",
+      "2x² + x + 528 = 0"
+    ],
+    "correct_index": 0,
+    "explanation": "Let the breadth be x metres. Then Length = (2x + 1) metres. Area = Length × Breadth = x(2x + 1) = 528. This simplifies to 2x² + x - 528 = 0.",
+    "question_hi": "प्रश्नावली 4.1 (Q2.i): स्थिति को द्विघात समीकरण के रूप में निरूपित कीजिए: 'एक आयताकार भूखंड का क्षेत्रफल 528 m² है। भूखंड की लंबाई (मीटर में) उसकी चौड़ाई के दोगुने से एक अधिक है। हमें भूखंड की लंबाई और चौड़ाई ज्ञात करनी है।' (माना चौड़ाई = x मीटर)",
+    "options_hi": [
+      "2x² + x - 528 = 0",
+      "2x² - x - 528 = 0",
+      "x² + 2x - 528 = 0",
+      "2x² + x + 528 = 0"
+    ],
+    "explanation_hi": "माना चौड़ाई x मीटर है। तब लंबाई = (2x + 1) मीटर। क्षेत्रफल = लंबाई × चौड़ाई = x(2x + 1) = 528। यह सरल होकर 2x² + x - 528 = 0 बन जाता है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q2.i): નીચે આપેલ પરિસ્થિતિને દ્વિઘાત સમીકરણ સ્વરૂપે દર્શાવો: 'એક લંબચોરસ પ્લોટનું ક્ષેત્રફળ 528 m² છે. પ્લોટની લંબાઈ (મીટરમાં) તેની પહોળાઈના બમણા કરતાં એક વધારે છે. આપણે પ્લોટની લંબાઈ અને પહોળાઈ શોધવી છે.' (ધારો કે પહોળાઈ = x મીટર)",
+    "options_gu": [
+      "2x² + x - 528 = 0",
+      "2x² - x - 528 = 0",
+      "x² + 2x - 528 = 0",
+      "2x² + x + 528 = 0"
+    ],
+    "explanation_gu": "ધારો કે પહોળાઈ x મીટર છે. ત્યારે લંબાઈ = (2x + 1) મીટર. ક્ષેત્રફળ = લંબાઈ × પહોળાઈ = x(2x + 1) = 528. આનું સાદુરૂપ આપતા 2x² + x - 528 = 0 મળે છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q2_part2",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q2.ii): Represent the situation in the form of a quadratic equation: 'The product of two consecutive positive integers is 306. We need to find the integers.' (Let the smaller integer be x)",
+    "options": [
+      "x² + x - 306 = 0",
+      "x² - x - 306 = 0",
+      "x² + 2x - 306 = 0",
+      "x² + x + 306 = 0"
+    ],
+    "correct_index": 0,
+    "explanation": "Let the consecutive integers be x and x + 1. Their product is x(x + 1) = 306 => x² + x = 306 => x² + x - 306 = 0.",
+    "question_hi": "प्रश्नावली 4.1 (Q2.ii): स्थिति को द्विघात समीकरण के रूप में निरूपित कीजिए: 'दो क्रमागत धनात्मक पूर्णांकों का गुणनफल 306 है। हमें पूर्णांकों को ज्ञात करना है।' (माना छोटा पूर्णांक x है)",
+    "options_hi": [
+      "x² + x - 306 = 0",
+      "x² - x - 306 = 0",
+      "x² + 2x - 306 = 0",
+      "x² + x + 306 = 0"
+    ],
+    "explanation_hi": "माना क्रमागत पूर्णांक x और x + 1 हैं। उनका गुणनफल x(x + 1) = 306 => x² + x = 306 => x² + x - 306 = 0 है।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q2.ii): નીચે આપેલ પરિસ્થિતિને દ્વિઘાત સમીકરણ સ્વરૂપે દર્શાવો: 'બે ક્રમિક ધન પૂર્ણાંકોનો ગુણાકાર 306 છે. આપણે આ પૂર્ણાંકો શોધવા છે.' (ધારો કે નાનો પૂર્ણાંક x છે)",
+    "options_gu": [
+      "x² + x - 306 = 0",
+      "x² - x - 306 = 0",
+      "x² + 2x - 306 = 0",
+      "x² + x + 306 = 0"
+    ],
+    "explanation_gu": "ધારો કે ક્રમિક પૂર્ણાંકો x અને x + 1 છે. તેમનો ગુણાકાર x(x + 1) = 306 => x² + x = 306 => x² + x - 306 = 0 થાય.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q2_part3",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q2.iii): Represent the situation in the form of a quadratic equation: 'Rohan's mother is 26 years older than him. The product of their ages (in years) 3 years from now will be 360. We would like to find Rohan's present age.' (Let Rohan's present age be x years)",
+    "options": [
+      "x² + 32x - 273 = 0",
+      "x² - 32x - 273 = 0",
+      "x² + 26x - 360 = 0",
+      "x² + 29x - 273 = 0"
+    ],
+    "correct_index": 0,
+    "explanation": "Let Rohan's age be x. Mother's age = x + 26. In 3 years: Rohan's age = x + 3, Mother's age = x + 29. Product = (x + 3)(x + 29) = x² + 32x + 87 = 360 => x² + 32x - 273 = 0.",
+    "question_hi": "प्रश्नावली 4.1 (Q2.iii): स्थिति को द्विघात समीकरण के रूप में निरूपित कीजिए: 'रोहन की माँ उससे 26 वर्ष बड़ी हैं। उनकी आयु (वर्षों में) का गुणनफल अब से 3 वर्ष बाद 360 हो जाएगा। हमें रोहन की वर्तमान आयु ज्ञात करनी है।' (माना रोहन की वर्तमान आयु x वर्ष है)",
+    "options_hi": [
+      "x² + 32x - 273 = 0",
+      "x² - 32x - 273 = 0",
+      "x² + 26x - 360 = 0",
+      "x² + 29x - 273 = 0"
+    ],
+    "explanation_hi": "माना रोहन की आयु x है। माँ की आयु = x + 26। 3 वर्ष बाद: रोहन की आयु = x + 3, माँ की आयु = x + 29। गुणनफल = (x + 3)(x + 29) = x² + 32x + 87 = 360 => x² + 32x - 273 = 0।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q2.iii): નીચે આપેલ પરિસ્થિતિને દ્વિઘાત સમીકરણ સ્વરૂપે દર્શાવો: 'રોહનની માતા તેના કરતાં 26 વર્ષ મોટા છે. આજથી 3 વર્ષ પછી તેમની ઉંમર (વર્ષોમાં) નો ગુણાકાર 360 થશે. આપણે રોહનની હાલની ઉંમર શોધવી છે.' (ધારો કે રોહનની હાલની ઉંમર x વર્ષ છે)",
+    "options_gu": [
+      "x² + 32x - 273 = 0",
+      "x² - 32x - 273 = 0",
+      "x² + 26x - 360 = 0",
+      "x² + 29x - 273 = 0"
+    ],
+    "explanation_gu": "ધારો કે રોહનની હાલની ઉંમર x છે. માતાની ઉંમર = x + 26. 3 વર્ષ પછી: રોહનની ઉંમર = x + 3, માતાની ઉંમર = x + 29. ગુણાકાર = (x + 3)(x + 29) = x² + 32x + 87 = 360 => x² + 32x - 273 = 0.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.1_Q2_part4",
+    "type": "quiz",
+    "question": "Exercise 4.1 (Q2.iv): Represent the situation in the form of a quadratic equation: 'A train travels a distance of 480 km at a uniform speed. If the speed had been 8 km/h less, then it would have taken 3 hours more to cover the same distance. We need to find the speed of the train.' (Let speed = x km/h)",
+    "options": [
+      "x² - 8x - 1280 = 0",
+      "x² + 8x - 1280 = 0",
+      "x² - 8x + 1280 = 0",
+      "x² - 3x - 480 = 0"
+    ],
+    "correct_index": 0,
+    "explanation": "Time at original speed x = 480/x. Time at reduced speed (x - 8) = 480/(x - 8). Given: 480/(x - 8) - 480/x = 3 => 480[x - (x - 8)] / [x(x - 8)] = 3 => 480 × 8 = 3(x² - 8x) => 160 × 8 = x² - 8x => x² - 8x - 1280 = 0.",
+    "question_hi": "प्रश्नावली 4.1 (Q2.iv): स्थिति को द्विघात समीकरण के रूप में निरूपित कीजिए: 'एक रेलगाड़ी 480 km की दूरी समान चाल से तय करती है। यदि इसकी चाल 8 km/h कम होती, तो वह उसी दूरी को तय करने में 3 घंटे अधिक लेती। हमें रेलगाड़ी की चाल ज्ञात करनी है।' (माना चाल = x km/h)",
+    "options_hi": [
+      "x² - 8x - 1280 = 0",
+      "x² + 8x - 1280 = 0",
+      "x² - 8x + 1280 = 0",
+      "x² - 3x - 480 = 0"
+    ],
+    "explanation_hi": "मूल चाल x पर समय = 480/x। कम की गई चाल (x - 8) पर समय = 480/(x - 8)। दिया गया है: 480/(x - 8) - 480/x = 3 => 480[x - (x - 8)] / [x(x - 8)] = 3 => 480 × 8 = 3(x² - 8x) => 160 × 8 = x² - 8x => x² - 8x - 1280 = 0।",
+    "question_gu": "સ્વાધ્યાય 4.1 (Q2.iv): નીચે આપેલ પરિસ્થિતિને દ્વિઘાત સમીકરણ સ્વરૂપે દર્શાવો: 'એક ટ્રેન 480 km નું અંતર અચળ ઝડપે કાપે છે. જો ઝડપ 8 km/h ઓછી હોત, તો તેટલું જ અંતર કાપવા તે 3 કલાક વધુ સમય લેતી હોત. આપણે ટ્રેનની ઝડપ શોધવી છે.' (ધારો કે ઝડપ = x km/h)",
+    "options_gu": [
+      "x² - 8x - 1280 = 0",
+      "x² + 8x - 1280 = 0",
+      "x² - 8x + 1280 = 0",
+      "x² - 3x - 480 = 0"
+    ],
+    "explanation_gu": "મૂળ ઝડપ x પર સમય = 480/x. ઘટાડેલી ઝડપ (x - 8) પર સમય = 480/(x - 8). આપેલ છે: 480/(x - 8) - 480/x = 3 => 480[x - (x - 8)] / [x(x - 8)] = 3 => 480 × 8 = 3(x² - 8x) => 160 × 8 = x² - 8x => x² - 8x - 1280 = 0.",
+    "bloom": "Apply",
+    "difficulty": "Hard",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_6",
+    "type": "theory",
+    "title": "Solution of a Quadratic Equation by Factorisation",
+    "body": "A real number $\\alpha$ is called a **root** (or solution) of the quadratic equation $ax^2 + bx + c = 0$ if $a\\alpha^2 + b\\alpha + c = 0$.\n\n**The Zero Product Property:**\nIf the product of two factors is zero, i.e., $A \\times B = 0$, then at least one factor must be zero: **A = 0 or B = 0**.\n\n**Steps for Splitting the Middle Term:**\n1. Write the equation in standard form: $ax^2 + bx + c = 0$.\n2. Find the product of the first and last coefficients: $P = a \\times c$.\n3. Find two numbers $p$ and $q$ such that:\n   - Their sum equals the middle coefficient: $p + q = b$\n   - Their product equals $a \\times c$: $p \\times q = a \\times c$\n4. Split the middle term $bx$ into $px + qx$ and factor by grouping.",
+    "title_hi": "गुणनखंडन द्वारा द्विघात समीकरण का हल",
+    "body_hi": "एक वास्तविक संख्या $\\alpha$ को द्विघात समीकरण $ax^2 + bx + c = 0$ का एक **मूल (Root)** या हल कहा जाता है यदि $a\\alpha^2 + b\\alpha + c = 0$ हो।\n\n**शून्य गुणनफल गुणधर्म (Zero Product Property):**\nयदि दो गुणनखंडों का गुणनफल शून्य है, यानी $A \\times B = 0$, तो कम से कम एक गुणनखंड शून्य होना चाहिए: **A = 0 या B = 0**।\n\n**मध्य पद को विभाजित करने के चरण:**\n1. समीकरण को मानक रूप में लिखें: $ax^2 + bx + c = 0$।\n2. पहले और अंतिम गुणांक का गुणनफल ज्ञात करें: $P = a \\times c$।\n3. ऐसी दो संख्याएँ $p$ और $q$ ज्ञात करें कि:\n   - उनका योग मध्य पद के गुणांक के बराबर हो: $p + q = b$\n   - उनका गुणनफल $a \\times c$ के बराबर हो: $p \\times q = a \\times c$\n4. मध्य पद $bx$ को $px + qx$ में तोड़ें और समूहों में गुणनखंड करें।",
+    "title_gu": "અવયવીકરણની રીત વડે દ્વિઘાત સમીકરણનો ઉકેલ",
+    "body_gu": "જો $a\\alpha^2 + b\\alpha + c = 0$ થાય, તો વાસ્તવિક સંખ્યા $\\alpha$ ને દ્વિઘાત સમીકરણ $ax^2 + bx + c = 0$ નું **બીજ (Root)** અથવા ઉકેલ કહેવામાં આવે છે.\n\n**શૂન્ય ગુણાકાર ગુણધર્મ (Zero Product Property):**\nજો બે અવયવોનો ગુણાકાર શૂન્ય હોય, એટલે કે $A \\times B = 0$, તો ઓછામાં ઓછો એક અવયવ શૂન્ય હોવો જોઈએ: **A = 0 અથવા B = 0**.\n\n**મધ્યમ પદના ભાગ પાડવાના પગલાં:**\n1. સમીકરણને પ્રમાણિત સ્વરૂપમાં લખો: $ax^2 + bx + c = 0$.\n2. પ્રથમ અને છેલ્લા સહગુણકનો ગુણાકાર શોધો: $P = a \\times c$.\n3. એવી બે સંખ્યાઓ $p$ અને $q$ શોધો કે જેથી:\n   - તેમનો સરવાળો મધ્યમ પદના સહગુણક જેટલો થાય: $p + q = b$\n   - તેમનો ગુણાકાર $a \\times c$ જેટલો થાય: $p \\times q = a \\times c$\n4. મધ્યમ પદ $bx$ ને $px + qx$ માં વિભાજીત કરો અને સામાન્ય પદ કાઢી અવયવ પાડો.",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH4_7",
+    "type": "teacher_tip",
+    "title": "Mastering the Signs of p and q",
+    "body": "Struggling to find the right signs when splitting the middle term? Use this foolproof chart:\n1. If **ac > 0** (Product is POSITIVE): Both $p$ and $q$ have the **SAME sign** (the same as the sign of $b$).\n   - Example: $x^2 + 5x + 6 = 0$ -> both +2, +3.\n   - Example: $x^2 - 5x + 6 = 0$ -> both -2, -3.\n2. If **ac < 0** (Product is NEGATIVE): $p$ and $q$ have **OPPOSITE signs**, and the larger number takes the sign of $b$!\n   - Example: $x^2 + x - 6 = 0$ -> +3 and -2.\n   - Example: $x^2 - x - 6 = 0$ -> -3 and +2.",
+    "title_hi": "p और q के चिह्नों में महारत हासिल करें",
+    "body_hi": "मध्य पद को विभाजित करते समय चिह्नों में भ्रमित हो रहे हैं? इस अचूक नियम का पालन करें:\n1. यदि **ac > 0** (गुणनफल धनात्मक है): $p$ और $q$ दोनों के **समान चिह्न** होते हैं (वही चिह्न जो $b$ का है)।\n   - उदाहरण: $x^2 + 5x + 6 = 0$ -> दोनों +2, +3।\n   - उदाहरण: $x^2 - 5x + 6 = 0$ -> दोनों -2, -3।\n2. यदि **ac < 0** (गुणनफल ऋणात्मक है): $p$ और $q$ के **विपरीत चिह्न** होते हैं, और बड़ी संख्या का चिह्न वही होता है जो $b$ का है!\n   - उदाहरण: $x^2 + x - 6 = 0$ -> +3 और -2।\n   - उदाहरण: $x^2 - x - 6 = 0$ -> -3 और +2।",
+    "title_gu": "p અને q ના ચિહ્નો પર નિપુણતા મેળવો",
+    "body_gu": "મધ્યમ પદના ભાગ પાડતી વખતે ચિહ્નોમાં ગૂંચવણ થાય છે? આ નિયમ યાદ રાખો:\n1. જો **ac > 0** (ગુણાકાર ધન હોય): $p$ અને $q$ બંનેના **સમાન ચિહ્નો** હોય છે (જે ચિહ્ન $b$ નું હોય તે જ).\n   - ઉદાહરણ: $x^2 + 5x + 6 = 0$ -> બંને +2, +3.\n   - ઉદાહરણ: $x^2 - 5x + 6 = 0$ -> બંને -2, -3.\n2. જો **ac < 0** (ગુણાકાર ઋણ હોય): $p$ અને $q$ ના **વિરુદ્ધ ચિહ્નો** હોય છે, અને મોટી સંખ્યા આગળ $b$ નું ચિહ્ન આવે છે!\n   - ઉદાહરણ: $x^2 + x - 6 = 0$ -> +3 અને -2.\n   - ઉદાહરણ: $x^2 - x - 6 = 0$ -> -3 અને +2.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q1_part1",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q1.1): Find the roots of the quadratic equation by factorisation: x² - 3x - 10 = 0",
+    "options": [
+      "x = 5, -2",
+      "x = -5, 2",
+      "x = 5, 2",
+      "x = -5, -2"
+    ],
+    "correct_index": 0,
+    "explanation": "x² - 5x + 2x - 10 = 0 => x(x - 5) + 2(x - 5) = 0 => (x - 5)(x + 2) = 0. Roots are x = 5 and x = -2.",
+    "question_hi": "प्रश्नावली 4.2 (Q1.1): गुणनखंडन विधि द्वारा द्विघात समीकरण के मूल ज्ञात कीजिए: x² - 3x - 10 = 0",
+    "options_hi": [
+      "x = 5, -2",
+      "x = -5, 2",
+      "x = 5, 2",
+      "x = -5, -2"
+    ],
+    "explanation_hi": "x² - 5x + 2x - 10 = 0 => x(x - 5) + 2(x - 5) = 0 => (x - 5)(x + 2) = 0। मूल x = 5 और x = -2 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q1.1): અવયવીકરણની રીતથી નીચેના દ્વિઘાત સમીકરણના બીજ શોધો: x² - 3x - 10 = 0",
+    "options_gu": [
+      "x = 5, -2",
+      "x = -5, 2",
+      "x = 5, 2",
+      "x = -5, -2"
+    ],
+    "explanation_gu": "x² - 5x + 2x - 10 = 0 => x(x - 5) + 2(x - 5) = 0 => (x - 5)(x + 2) = 0. બીજ x = 5 અને x = -2 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q1_part2",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q1.2): Find the roots of the quadratic equation by factorisation: 2x² + x - 6 = 0",
+    "options": [
+      "x = -2, 3/2",
+      "x = 2, -3/2",
+      "x = -2, -3/2",
+      "x = 2, 3/2"
+    ],
+    "correct_index": 0,
+    "explanation": "2x² + 4x - 3x - 6 = 0 => 2x(x + 2) - 3(x + 2) = 0 => (2x - 3)(x + 2) = 0. Roots are x = 3/2 and x = -2.",
+    "question_hi": "प्रश्नावली 4.2 (Q1.2): गुणनखंडन विधि द्वारा द्विघात समीकरण के मूल ज्ञात कीजिए: 2x² + x - 6 = 0",
+    "options_hi": [
+      "x = -2, 3/2",
+      "x = 2, -3/2",
+      "x = -2, -3/2",
+      "x = 2, 3/2"
+    ],
+    "explanation_hi": "2x² + 4x - 3x - 6 = 0 => 2x(x + 2) - 3(x + 2) = 0 => (2x - 3)(x + 2) = 0। मूल x = 3/2 और x = -2 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q1.2): અવયવીકરણની રીતથી નીચેના દ્વિઘાત સમીકરણના બીજ શોધો: 2x² + x - 6 = 0",
+    "options_gu": [
+      "x = -2, 3/2",
+      "x = 2, -3/2",
+      "x = -2, -3/2",
+      "x = 2, 3/2"
+    ],
+    "explanation_gu": "2x² + 4x - 3x - 6 = 0 => 2x(x + 2) - 3(x + 2) = 0 => (2x - 3)(x + 2) = 0. બીજ x = 3/2 અને x = -2 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q1_part3",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q1.3): Find the roots of the quadratic equation by factorisation: √2x² + 7x + 5√2 = 0",
+    "options": [
+      "x = -√2, -5/√2",
+      "x = √2, 5/√2",
+      "x = -√2, 5/√2",
+      "x = √2, -5/√2"
+    ],
+    "correct_index": 0,
+    "explanation": "Product = √2 × 5√2 = 10. Split 7 into 5 and 2: √2x² + 2x + 5x + 5√2 = 0 => √2x(x + √2) + 5(x + √2) = 0 => (√2x + 5)(x + √2) = 0. Roots are x = -√2 and x = -5/√2.",
+    "question_hi": "प्रश्नावली 4.2 (Q1.3): गुणनखंडन विधि द्वारा द्विघात समीकरण के मूल ज्ञात कीजिए: √2x² + 7x + 5√2 = 0",
+    "options_hi": [
+      "x = -√2, -5/√2",
+      "x = √2, 5/√2",
+      "x = -√2, 5/√2",
+      "x = √2, -5/√2"
+    ],
+    "explanation_hi": "गुणनफल = √2 × 5√2 = 10। 7 को 5 और 2 में तोड़ें: √2x² + 2x + 5x + 5√2 = 0 => √2x(x + √2) + 5(x + √2) = 0 => (√2x + 5)(x + √2) = 0। मूल x = -√2 और x = -5/√2 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q1.3): અવયવીકરણની રીતથી નીચેના દ્વિઘાત સમીકરણના બીજ શોધો: √2x² + 7x + 5√2 = 0",
+    "options_gu": [
+      "x = -√2, -5/√2",
+      "x = √2, 5/√2",
+      "x = -√2, 5/√2",
+      "x = √2, -5/√2"
+    ],
+    "explanation_gu": "ગુણાકાર = √2 × 5√2 = 10. 7 ને 5 અને 2 માં વિભાજીત કરો: √2x² + 2x + 5x + 5√2 = 0 => √2x(x + √2) + 5(x + √2) = 0 => (√2x + 5)(x + √2) = 0. બીજ x = -√2 અને x = -5/√2 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q1_part4",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q1.4): Find the roots of the quadratic equation by factorisation: 2x² - x + 1/8 = 0",
+    "options": [
+      "x = 1/4, 1/4",
+      "x = -1/4, -1/4",
+      "x = 1/2, 1/2",
+      "x = 1/8, 1/8"
+    ],
+    "correct_index": 0,
+    "explanation": "Multiply by 8 to eliminate fraction: 16x² - 8x + 1 = 0 => (4x - 1)² = 0 => (4x - 1)(4x - 1) = 0. Roots are two equal roots: x = 1/4, 1/4.",
+    "question_hi": "प्रश्नावली 4.2 (Q1.4): गुणनखंडन विधि द्वारा द्विघात समीकरण के मूल ज्ञात कीजिए: 2x² - x + 1/8 = 0",
+    "options_hi": [
+      "x = 1/4, 1/4",
+      "x = -1/4, -1/4",
+      "x = 1/2, 1/2",
+      "x = 1/8, 1/8"
+    ],
+    "explanation_hi": "भिन्न समाप्त करने के लिए 8 से गुणा करें: 16x² - 8x + 1 = 0 => (4x - 1)² = 0 => (4x - 1)(4x - 1) = 0। दो बराबर मूल हैं: x = 1/4, 1/4।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q1.4): અવયવીકરણની રીતથી નીચેના દ્વિઘાત સમીકરણના બીજ શોધો: 2x² - x + 1/8 = 0",
+    "options_gu": [
+      "x = 1/4, 1/4",
+      "x = -1/4, -1/4",
+      "x = 1/2, 1/2",
+      "x = 1/8, 1/8"
+    ],
+    "explanation_gu": "અપૂર્ણાંક દૂર કરવા 8 વડે ગુણો: 16x² - 8x + 1 = 0 => (4x - 1)² = 0 => (4x - 1)(4x - 1) = 0. બે સમાન બીજ મળે છે: x = 1/4, 1/4.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q1_part5",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q1.5): Find the roots of the quadratic equation by factorisation: 100x² - 20x + 1 = 0",
+    "options": [
+      "x = 1/10, 1/10",
+      "x = -1/10, -1/10",
+      "x = 1/20, 1/20",
+      "x = 1/5, 1/5"
+    ],
+    "correct_index": 0,
+    "explanation": "100x² - 10x - 10x + 1 = 0 => 10x(10x - 1) - 1(10x - 1) = 0 => (10x - 1)² = 0. Roots are x = 1/10, 1/10.",
+    "question_hi": "प्रश्नावली 4.2 (Q1.5): गुणनखंडन विधि द्वारा द्विघात समीकरण के मूल ज्ञात कीजिए: 100x² - 20x + 1 = 0",
+    "options_hi": [
+      "x = 1/10, 1/10",
+      "x = -1/10, -1/10",
+      "x = 1/20, 1/20",
+      "x = 1/5, 1/5"
+    ],
+    "explanation_hi": "100x² - 10x - 10x + 1 = 0 => 10x(10x - 1) - 1(10x - 1) = 0 => (10x - 1)² = 0। मूल x = 1/10, 1/10 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q1.5): અવયવીકરણની રીતથી નીચેના દ્વિઘાત સમીકરણના બીજ શોધો: 100x² - 20x + 1 = 0",
+    "options_gu": [
+      "x = 1/10, 1/10",
+      "x = -1/10, -1/10",
+      "x = 1/20, 1/20",
+      "x = 1/5, 1/5"
+    ],
+    "explanation_gu": "100x² - 10x - 10x + 1 = 0 => 10x(10x - 1) - 1(10x - 1) = 0 => (10x - 1)² = 0. બીજ x = 1/10, 1/10 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q2_part1",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q2.i): Solve the problem: 'John and Jivanti together have 45 marbles. Both of them lost 5 marbles each, and the product of the number of marbles they now have is 124. How many marbles did they have originally to start with?'",
+    "options": [
+      "36 and 9",
+      "30 and 15",
+      "25 and 20",
+      "39 and 6"
+    ],
+    "correct_index": 0,
+    "explanation": "Let John have x marbles, then Jivanti has 45 - x marbles. After losing 5 marbles: (x - 5)(40 - x) = 124 => -x² + 45x - 200 = 124 => x² - 45x + 324 = 0. Factorizing: (x - 36)(x - 9) = 0 => x = 36 or x = 9. So they had 36 and 9 marbles.",
+    "question_hi": "प्रश्नावली 4.2 (Q2.i): समस्या हल कीजिए: 'जॉन और जीवंती दोनों के पास कुल मिलाकर 45 कंचे हैं। दोनों 5-5 कंचे खो देते हैं, और अब उनके पास कंचों की संख्या का गुणनफल 124 है। आरंभ में उनके पास कितने-कितने कंचे थे?'",
+    "options_hi": [
+      "36 और 9",
+      "30 और 15",
+      "25 और 20",
+      "39 और 6"
+    ],
+    "explanation_hi": "माना जॉन के पास x कंचे हैं, तो जीवंती के पास 45 - x कंचे हैं। 5-5 कंचे खोने के बाद: (x - 5)(40 - x) = 124 => -x² + 45x - 200 = 124 => x² - 45x + 324 = 0। गुणनखंड करने पर: (x - 36)(x - 9) = 0 => x = 36 या x = 9। अतः उनके पास 36 और 9 कंचे थे।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q2.i): કોયડો ઉકેલો: 'જોન અને જીવંતી પાસે કુલ 45 લખોટીઓ છે. બંને 5-5 લખોટીઓ ખોઈ દે છે, અને હવે તેમની પાસેની લખોટીઓની સંખ્યાનો ગુણાકાર 124 છે. શરૂઆતમાં તેમની પાસે કેટલી લખોટીઓ હતી?'",
+    "options_gu": [
+      "36 અને 9",
+      "30 અને 15",
+      "25 અને 20",
+      "39 અને 6"
+    ],
+    "explanation_gu": "ધારો કે જોન પાસે x લખોટીઓ છે, તો જીવંતી પાસે 45 - x લખોટીઓ છે. 5-5 લખોટીઓ ખોયા પછી: (x - 5)(40 - x) = 124 => -x² + 45x - 200 = 124 => x² - 45x + 324 = 0. અવયવ પાડતા: (x - 36)(x - 9) = 0 => x = 36 અથવા x = 9. આમ તેમની પાસે શરૂઆતમાં 36 અને 9 લખોટીઓ હતી.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q2_part2",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q2.ii): Solve the problem: 'A cottage industry produces a certain number of toys in a day. The cost of production of each toy (in ₹) was found to be 55 minus the number of toys produced in a day. On a particular day, the total cost of production was ₹750. Find the number of toys produced on that day.'",
+    "options": [
+      "25 or 30",
+      "20 or 35",
+      "15 or 40",
+      "10 or 45"
+    ],
+    "correct_index": 0,
+    "explanation": "Let the number of toys be x. Cost per toy = 55 - x. Total cost = x(55 - x) = 750 => 55x - x² = 750 => x² - 55x + 750 = 0. Factorizing: (x - 25)(x - 30) = 0 => x = 25 or 30.",
+    "question_hi": "प्रश्नावली 4.2 (Q2.ii): समस्या हल कीजिए: 'एक कुटीर उद्योग एक दिन में कुछ खिलौने बनाता है। प्रत्येक खिलौने का उत्पादन मूल्य (₹ में) 55 में से एक दिन में बनाए गए खिलौनों की संख्या को घटाने से प्राप्त संख्या के बराबर है। किसी एक दिन, कुल निर्माण लागत ₹750 थी। उस दिन बनाए गए खिलौनों की संख्या ज्ञात कीजिए।'",
+    "options_hi": [
+      "25 या 30",
+      "20 या 35",
+      "15 या 40",
+      "10 या 45"
+    ],
+    "explanation_hi": "माना खिलौनों की संख्या x है। प्रति खिलौना लागत = 55 - x। कुल लागत = x(55 - x) = 750 => 55x - x² = 750 => x² - 55x + 750 = 0। गुणनखंड करने पर: (x - 25)(x - 30) = 0 => x = 25 या 30।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q2.ii): કોયડો ઉકેલો: 'એક કુટીર ઉદ્યોગ એક દિવસમાં કેટલાંક રમકડાં બનાવે છે. પ્રત્યેક રમકડું બનાવવાનો ખર્ચ (₹ માં) 55 માંથી એક દિવસમાં ઉત્પાદિત રમકડાંની સંખ્યા બાદ કરવા જેટલો છે. કોઈ એક ચોક્કસ દિવસે રમકડાં બનાવવાનો કુલ ખર્ચ ₹750 હતો. તે દિવસે ઉત્પાદિત રમકડાંની સંખ્યા શોધો.'",
+    "options_gu": [
+      "25 અથવા 30",
+      "20 અથવા 35",
+      "15 અથવા 40",
+      "10 અથવા 45"
+    ],
+    "explanation_gu": "ધારો કે રમકડાંની સંખ્યા x છે. રમકડાં દીઠ ખર્ચ = 55 - x. કુલ ખર્ચ = x(55 - x) = 750 => 55x - x² = 750 => x² - 55x + 750 = 0. અવયવ પાડતા: (x - 25)(x - 30) = 0 => x = 25 અથવા 30.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q3",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q3): Find two numbers whose sum is 27 and product is 182.",
+    "options": [
+      "13 and 14",
+      "12 and 15",
+      "11 and 16",
+      "10 and 17"
+    ],
+    "correct_index": 0,
+    "explanation": "Let one number be x. The other number is 27 - x. Their product is x(27 - x) = 182 => 27x - x² = 182 => x² - 27x + 182 = 0. Factorizing: (x - 13)(x - 14) = 0 => x = 13 or 14. Hence, the two numbers are 13 and 14.",
+    "question_hi": "प्रश्नावली 4.2 (Q3): ऐसी दो संख्याएँ ज्ञात कीजिए जिनका योग 27 हो और गुणनफल 182 हो।",
+    "options_hi": [
+      "13 और 14",
+      "12 और 15",
+      "11 और 16",
+      "10 और 17"
+    ],
+    "explanation_hi": "माना एक संख्या x है। दूसरी संख्या 27 - x है। उनका गुणनफल x(27 - x) = 182 => 27x - x² = 182 => x² - 27x + 182 = 0। गुणनखंड करने पर: (x - 13)(x - 14) = 0 => x = 13 या 14। अतः दोनों संख्याएँ 13 और 14 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q3): એવી બે સંખ્યાઓ શોધો કે જેનો સરવાળો 27 અને ગુણાકાર 182 હોય.",
+    "options_gu": [
+      "13 અને 14",
+      "12 અને 15",
+      "11 અને 16",
+      "10 અને 17"
+    ],
+    "explanation_gu": "ધારો કે એક સંખ્યા x છે. બીજી સંખ્યા 27 - x છે. તેમનો ગુણાકાર x(27 - x) = 182 => 27x - x² = 182 => x² - 27x + 182 = 0. અવયવ પાડતા: (x - 13)(x - 14) = 0 => x = 13 અથવા 14. આમ, બંને સંખ્યાઓ 13 અને 14 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q4",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q4): Find two consecutive positive integers, sum of whose squares is 365.",
+    "options": [
+      "13 and 14",
+      "11 and 12",
+      "14 and 15",
+      "12 and 13"
+    ],
+    "correct_index": 0,
+    "explanation": "Let the consecutive positive integers be x and x + 1. x² + (x + 1)² = 365 => x² + x² + 2x + 1 = 365 => 2x² + 2x - 364 = 0 => x² + x - 182 = 0. Factorizing: (x + 14)(x - 13) = 0. Since x must be positive, x = 13 and x + 1 = 14. The integers are 13 and 14.",
+    "question_hi": "प्रश्नावली 4.2 (Q4): दो क्रमागत धनात्मक पूर्णांक ज्ञात कीजिए जिनके वर्गों का योग 365 हो।",
+    "options_hi": [
+      "13 और 14",
+      "11 और 12",
+      "14 और 15",
+      "12 और 13"
+    ],
+    "explanation_hi": "माना क्रमागत धनात्मक पूर्णांक x और x + 1 हैं। x² + (x + 1)² = 365 => 2x² + 2x + 1 = 365 => 2x² + 2x - 364 = 0 => x² + x - 182 = 0। गुणनखंड करने पर: (x + 14)(x - 13) = 0। चूँकि x धनात्मक होना चाहिए, x = 13 और x + 1 = 14। पूर्णांक 13 और 14 हैं।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q4): જેના વર્ગોનો સરવાળો 365 થાય તેવા બે ક્રમિક ધન પૂર્ણાંકો શોધો.",
+    "options_gu": [
+      "13 અને 14",
+      "11 અને 12",
+      "14 અને 15",
+      "12 અને 13"
+    ],
+    "explanation_gu": "ધારો કે ક્રમિક ધન પૂર્ણાંકો x અને x + 1 છે. x² + (x + 1)² = 365 => 2x² + 2x + 1 = 365 => 2x² + 2x - 364 = 0 => x² + x - 182 = 0. અવયવ પાડતા: (x + 14)(x - 13) = 0. પૂર્ણાંક ધન હોવાથી x = 13 અને x + 1 = 14. આમ તે પૂર્ણાંકો 13 અને 14 છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q5",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q5): The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, find the other two sides.",
+    "options": [
+      "Base = 12 cm, Altitude = 5 cm",
+      "Base = 15 cm, Altitude = 8 cm",
+      "Base = 10 cm, Altitude = 3 cm",
+      "Base = 14 cm, Altitude = 7 cm"
+    ],
+    "correct_index": 0,
+    "explanation": "Let base = x cm. Then altitude = x - 7 cm. By Pythagoras theorem: x² + (x - 7)² = 13² => x² + x² - 14x + 49 = 169 => 2x² - 14x - 120 = 0 => x² - 7x - 60 = 0. Factorizing: (x - 12)(x + 5) = 0. Since length cannot be negative, base x = 12 cm, altitude = 12 - 7 = 5 cm.",
+    "question_hi": "प्रश्नावली 4.2 (Q5): एक समकोण त्रिभुज की ऊँचाई (शीर्षलंब) इसके आधार से 7 cm कम है। यदि कर्ण 13 cm का हो, तो अन्य दो भुजाएँ ज्ञात कीजिए।",
+    "options_hi": [
+      "आधार = 12 cm, शीर्षलंब = 5 cm",
+      "आधार = 15 cm, शीर्षलंब = 8 cm",
+      "आधार = 10 cm, शीर्षलंब = 3 cm",
+      "आधार = 14 cm, शीर्षलंब = 7 cm"
+    ],
+    "explanation_hi": "माना आधार = x cm। तब शीर्षलंब = x - 7 cm। पाइथागोरस प्रमेय द्वारा: x² + (x - 7)² = 13² => 2x² - 14x + 49 = 169 => 2x² - 14x - 120 = 0 => x² - 7x - 60 = 0। गुणनखंड करने पर: (x - 12)(x + 5) = 0। चूँकि लंबाई ऋणात्मक नहीं हो सकती, आधार x = 12 cm, शीर्षलंब = 12 - 7 = 5 cm।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q5): એક કાટકોણ ત્રિકોણનો વેધ તેના પાયા કરતાં 7 cm નાનો છે. જો કર્ણની લંબાઈ 13 cm હોય, તો બાકીની બે બાજુઓનાં માપ શોધો.",
+    "options_gu": [
+      "પાયો = 12 cm, વેધ = 5 cm",
+      "પાયો = 15 cm, વેધ = 8 cm",
+      "પાયો = 10 cm, વેધ = 3 cm",
+      "પાયો = 14 cm, વેધ = 7 cm"
+    ],
+    "explanation_gu": "ધારો કે પાયો = x cm. ત્યારે વેધ = x - 7 cm. પાયથાગોરસ પ્રમેય મુજબ: x² + (x - 7)² = 13² => 2x² - 14x + 49 = 169 => 2x² - 14x - 120 = 0 => x² - 7x - 60 = 0. અવયવ પાડતા: (x - 12)(x + 5) = 0. લંબાઈ ઋણ ન હોઈ શકે, તેથી પાયો x = 12 cm અને વેધ = 12 - 7 = 5 cm મળે છે.",
+    "bloom": "Apply",
+    "difficulty": "Hard",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH4_EX4.2_Q6",
+    "type": "quiz",
+    "question": "Exercise 4.2 (Q6): A cottage industry produces a certain number of pottery articles in a day. It was observed on a particular day that the cost of production of each article (in ₹) was 3 more than twice the number of articles produced on that day. If the total cost of production on that day was ₹90, find the number of articles produced and the cost of each article.",
+    "options": [
+      "Articles = 6, Cost = ₹15",
+      "Articles = 5, Cost = ₹18",
+      "Articles = 10, Cost = ₹9",
+      "Articles = 8, Cost = ₹19"
+    ],
+    "correct_index": 0,
+    "explanation": "Let number of articles = x. Cost of each article = 2x + 3. Total cost = x(2x + 3) = 90 => 2x² + 3x - 90 = 0. Factorizing: 2x² + 15x - 12x - 90 = 0 => x(2x + 15) - 6(2x + 15) = 0 => (2x + 15)(x - 6) = 0. Since number of articles cannot be negative, x = 6. Cost of each article = 2(6) + 3 = ₹15.",
+    "question_hi": "प्रश्नावली 4.2 (Q6): एक कुटीर उद्योग एक दिन में कुछ बर्तनों का निर्माण करता है। एक विशेष दिन यह देखा गया कि प्रत्येक नग के निर्माण की लागत (₹ में) उस दिन के निर्माण किए बर्तनों की संख्या के दोगुने से 3 अधिक थी। यदि उस दिन की कुल निर्माण लागत ₹90 थी, तो निर्मित बर्तनों की संख्या और प्रत्येक नग की लागत ज्ञात कीजिए।",
+    "options_hi": [
+      "बर्तनों की संख्या = 6, प्रत्येक की लागत = ₹15",
+      "बर्तनों की संख्या = 5, प्रत्येक की लागत = ₹18",
+      "बर्तनों की संख्या = 10, प्रत्येक की लागत = ₹9",
+      "बर्तनों की संख्या = 8, प्रत्येक की लागत = ₹19"
+    ],
+    "explanation_hi": "माना बर्तनों की संख्या = x। प्रत्येक बर्तन की लागत = 2x + 3। कुल लागत = x(2x + 3) = 90 => 2x² + 3x - 90 = 0। गुणनखंड करने पर: (2x + 15)(x - 6) = 0। चूँकि बर्तनों की संख्या ऋणात्मक नहीं हो सकती, x = 6। प्रत्येक बर्तन की लागत = 2(6) + 3 = ₹15।",
+    "question_gu": "સ્વાધ્યાય 4.2 (Q6): એક કુટીર ઉદ્યોગ એક દિવસમાં કેટલીક માટીની વસ્તુઓ બનાવે છે. એક ચોક્કસ દિવસે જણાયું કે પ્રત્યેક વસ્તુની ઉત્પાદન કિંમત (₹ માં) તે દિવસે ઉત્પાદિત વસ્તુઓની સંખ્યાના બમણા કરતાં 3 વધારે હતી. જો તે દિવસે કુલ ઉત્પાદન ખર્ચ ₹90 હોય, તો ઉત્પાદિત વસ્તુઓની સંખ્યા અને પ્રત્યેક વસ્તુની કિંમત શોધો.",
+    "options_gu": [
+      "વસ્તુઓની સંખ્યા = 6, પ્રત્યેકની કિંમત = ₹15",
+      "વસ્તુઓની સંખ્યા = 5, પ્રત્યેકની કિંમત = ₹18",
+      "વસ્તુઓની સંખ્યા = 10, પ્રત્યેકની કિંમત = ₹9",
+      "વસ્તુઓની સંખ્યા = 8, પ્રત્યેકની કિંમત = ₹19"
+    ],
+    "explanation_gu": "ધારો કે ઉત્પાદિત વસ્તુઓની સંખ્યા = x. પ્રત્યેક વસ્તુની કિંમત = 2x + 3. કુલ ખર્ચ = x(2x + 3) = 90 => 2x² + 3x - 90 = 0. અવયવ પાડતા: (2x + 15)(x - 6) = 0. વસ્તુઓની સંખ્યા ઋણ ન હોઈ શકે તેથી x = 6. પ્રત્યેક વસ્તુની કિંમત = 2(6) + 3 = ₹15.",
+    "bloom": "Apply",
+    "difficulty": "Hard",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH4_8",
+    "type": "theory",
+    "title": "Quadratic Formula and Nature of Roots",
+    "body": "What if an equation cannot be easily factored using integers? Ancient Indian mathematician **Sridharacharya** gave an explicit formula known as the **Quadratic Formula**:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nThe term inside the square root, **$D = b^2 - 4ac$**, is called the **Discriminant** (विविक्तकर / વિવેચક) because it discriminates the nature of the roots!\n\n**The Three Cases of the Discriminant:**\n1. If **$b^2 - 4ac > 0$**: Two distinct real roots ($x = \\frac{-b + \\sqrt{D}}{2a}$ and $x = \\frac{-b - \\sqrt{D}}{2a}$).\n2. If **$b^2 - 4ac = 0$**: Two equal (coincident) real roots ($x = -\\frac{b}{2a}, -\\frac{b}{2a}$).\n3. If **$b^2 - 4ac < 0$**: No real roots (since the square root of a negative number is not a real number).",
+    "title_hi": "द्विघाती सूत्र और मूलों की प्रकृति",
+    "body_hi": "यदि किसी समीकरण का पूर्णांकों का उपयोग करके आसानी से गुणनखंड नहीं किया जा सकता है, तो क्या करें? प्राचीन भारतीय गणितज्ञ **श्रीधराचार्य** ने एक स्पष्ट सूत्र दिया जिसे **द्विघाती सूत्र (Quadratic Formula)** कहा जाता है:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nवर्गमूल के अंदर का पद, **$D = b^2 - 4ac$**, **विविक्तकर (Discriminant)** कहलाता है क्योंकि यह मूलों की प्रकृति का निर्धारण (भेद) करता है!\n\n**विविक्तकर की तीन स्थितियाँ:**\n1. यदि **$b^2 - 4ac > 0$**: दो भिन्न वास्तविक मूल ($x = \\frac{-b + \\sqrt{D}}{2a}$ और $x = \\frac{-b - \\sqrt{D}}{2a}$)।\n2. यदि **$b^2 - 4ac = 0$**: दो बराबर (संपाती) वास्तविक मूल ($x = -\\frac{b}{2a}, -\\frac{b}{2a}$)।\n3. यदि **$b^2 - 4ac < 0$**: कोई वास्तविक मूल नहीं (क्योंकि ऋणात्मक संख्या का वर्गमूल वास्तविक संख्या नहीं होता)।",
+    "title_gu": "દ્વિઘાત સૂત્ર અને બીજનું સ્વરૂપ (Nature of Roots)",
+    "body_gu": "જો કોઈ સમીકરણના પૂર્ણાંકો વડે સરળતાથી અવયવ ન પડી શકે તો શું કરવું? પ્રાચીન ભારતીય ગણિતશાસ્ત્રી **શ્રીધરાચાર્ય** એ એક સ્પષ્ટ સૂત્ર આપ્યું જેને **દ્વિઘાત સૂત્ર** કહેવામાં આવે છે:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nવર્ગમૂળની અંદર રહેલું પદ, **$D = b^2 - 4ac$**, **વિવેચક (Discriminant)** કહેવાય છે કારણ કે તે બીજના પ્રકારનું વિવેચન (નક્કી) કરે છે!\n\n**વિવેચકની ત્રણ પરિસ્થિતિઓ:**\n1. જો **$b^2 - 4ac > 0$**: બે ભિન્ન વાસ્તવિક બીજ મળે ($x = \\frac{-b + \\sqrt{D}}{2a}$ અને $x = \\frac{-b - \\sqrt{D}}{2a}$).\n2. જો **$b^2 - 4ac = 0$**: બે સમાન વાસ્તવિક બીજ મળે ($x = -\\frac{b}{2a}, -\\frac{b}{2a}$).\n3. જો **$b^2 - 4ac < 0$**: કોઈ વાસ્તવિક બીજ ન મળે (કારણ કે ઋણ સંખ્યાનું વર્ગમૂળ વાસ્તવિક સંખ્યા નથી).",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH4_9",
+    "type": "teacher_tip",
+    "title": "Calculate D First, Always!",
+    "body": "Before spending 5 minutes trying to solve an equation or checking word problem existence, always compute **D = b² - 4ac** first! If D < 0, you can immediately conclude 'No real roots exist' and save immense exam time!",
+    "title_hi": "हमेशा पहले D की गणना करें!",
+    "body_hi": "समीकरण को हल करने या किसी शाब्दिक समस्या के अस्तित्व की जाँच करने में 5 मिनट खर्च करने से पहले, हमेशा सबसे पहले **D = b² - 4ac** की गणना करें! यदि D < 0 है, तो आप तुरंत निष्कर्ष निकाल सकते हैं कि 'कोई वास्तविक मूल अस्तित्व में नहीं है' और परीक्षा का बहुत सारा समय बचा सकते हैं!",
+    "title_gu": "હંમેશા પહેલા D ની ગણતરી કરો!",
+    "body_gu": "સમીકરણ ઉકેલવામાં કે કૂટપ્રશ્નની શક્યતા ચકાસવામાં સમય બગાડતા પહેલાં, હંમેશા સૌપ્રથમ **D = b² - 4ac** ની ગણતરી કરો! જો D < 0 આવે, તો તમે તરત જ કહી શકો છો કે 'વાસ્તવિક બીજ અસ્તિત્વ ધરાવતા નથી' અને પરીક્ષામાં તમારો કિંમતી સમય બચી જશે!",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q1_part1",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q1.i): Find the nature of roots of the quadratic equation. If real roots exist, find them: 2x² - 3x + 5 = 0",
+    "options": [
+      "No real roots (D < 0)",
+      "Two distinct real roots (D > 0)",
+      "Two equal real roots (D = 0)",
+      "None of these"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 2, b = -3, c = 5. Discriminant D = b² - 4ac = (-3)² - 4(2)(5) = 9 - 40 = -31. Since D < 0, there are no real roots.",
+    "question_hi": "प्रश्नावली 4.3 (Q1.i): निम्न द्विघात समीकरण के मूलों की प्रकृति ज्ञात कीजिए। यदि वास्तविक मूलों का अस्तित्व हो, तो उन्हें ज्ञात कीजिए: 2x² - 3x + 5 = 0",
+    "options_hi": [
+      "कोई वास्तविक मूल नहीं (D < 0)",
+      "दो भिन्न वास्तविक मूल (D > 0)",
+      "दो बराबर वास्तविक मूल (D = 0)",
+      "इनमें से कोई नहीं"
+    ],
+    "explanation_hi": "यहाँ a = 2, b = -3, c = 5। विविक्तकर D = b² - 4ac = (-3)² - 4(2)(5) = 9 - 40 = -31। चूँकि D < 0 है, इसलिए कोई वास्तविक मूल नहीं है।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q1.i): નીચે આપેલ દ્વિઘાત સમીકરણના બીજના પ્રકાર શોધો. જો વાસ્તવિક બીજ હોય તો તે શોધો: 2x² - 3x + 5 = 0",
+    "options_gu": [
+      "કોઈ વાસ્તવિક બીજ નથી (D < 0)",
+      "બે ભિન્ન વાસ્તવિક બીજ (D > 0)",
+      "બે સમાન વાસ્તવિક બીજ (D = 0)",
+      "આમાંથી કોઈ નહિ"
+    ],
+    "explanation_gu": "અહીં a = 2, b = -3, c = 5. વિવેચક D = b² - 4ac = (-3)² - 4(2)(5) = 9 - 40 = -31. D < 0 હોવાથી કોઈ વાસ્તવિક બીજ નથી.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q1_part2",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q1.ii): Find the nature of roots of the quadratic equation. If real roots exist, find them: 3x² - 4√3x + 4 = 0",
+    "options": [
+      "Two equal real roots: 2/√3, 2/√3",
+      "Two distinct real roots: √3, -√3",
+      "No real roots",
+      "Two equal real roots: 4/√3, 4/√3"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 3, b = -4√3, c = 4. D = b² - 4ac = (-4√3)² - 4(3)(4) = 48 - 48 = 0. Since D = 0, there are two equal real roots: x = -b/(2a) = -(-4√3)/(2 × 3) = 4√3 / 6 = 2√3 / 3 = 2/√3.",
+    "question_hi": "प्रश्नावली 4.3 (Q1.ii): निम्न द्विघात समीकरण के मूलों की प्रकृति ज्ञात कीजिए। यदि वास्तविक मूलों का अस्तित्व हो, तो उन्हें ज्ञात कीजिए: 3x² - 4√3x + 4 = 0",
+    "options_hi": [
+      "दो बराबर वास्तविक मूल: 2/√3, 2/√3",
+      "दो भिन्न वास्तविक मूल: √3, -√3",
+      "कोई वास्तविक मूल नहीं",
+      "दो बराबर वास्तविक मूल: 4/√3, 4/√3"
+    ],
+    "explanation_hi": "यहाँ a = 3, b = -4√3, c = 4। D = b² - 4ac = (-4√3)² - 4(3)(4) = 48 - 48 = 0। चूँकि D = 0 है, इसलिए दो बराबर वास्तविक मूल हैं: x = -b/(2a) = 4√3 / 6 = 2/√3।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q1.ii): નીચે આપેલ દ્વિઘાત સમીકરણના બીજના પ્રકાર શોધો. જો વાસ્તવિક બીજ હોય તો તે શોધો: 3x² - 4√3x + 4 = 0",
+    "options_gu": [
+      "બે સમાન વાસ્તવિક બીજ: 2/√3, 2/√3",
+      "બે ભિન્ન વાસ્તવિક બીજ: √3, -√3",
+      "કોઈ વાસ્તવિક બીજ નથી",
+      "બે સમાન વાસ્તવિક બીજ: 4/√3, 4/√3"
+    ],
+    "explanation_gu": "અહીં a = 3, b = -4√3, c = 4. D = b² - 4ac = (-4√3)² - 4(3)(4) = 48 - 48 = 0. D = 0 હોવાથી બે સમાન વાસ્તવિક બીજ મળે: x = -b/(2a) = 4√3 / 6 = 2/√3.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q1_part3",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q1.iii): Find the nature of roots of the quadratic equation. If real roots exist, find them: 2x² - 6x + 3 = 0",
+    "options": [
+      "Two distinct real roots: (3 ± √3)/2",
+      "Two equal real roots: 3/2, 3/2",
+      "No real roots",
+      "Two distinct real roots: (6 ± √3)/2"
+    ],
+    "correct_index": 0,
+    "explanation": "Here a = 2, b = -6, c = 3. D = b² - 4ac = (-6)² - 4(2)(3) = 36 - 24 = 12 > 0. Since D > 0, there are two distinct real roots: x = [-(-6) ± √12] / (2 × 2) = (6 ± 2√3) / 4 = (3 ± √3) / 2.",
+    "question_hi": "प्रश्नावली 4.3 (Q1.iii): निम्न द्विघात समीकरण के मूलों की प्रकृति ज्ञात कीजिए। यदि वास्तविक मूलों का अस्तित्व हो, तो उन्हें ज्ञात कीजिए: 2x² - 6x + 3 = 0",
+    "options_hi": [
+      "दो भिन्न वास्तविक मूल: (3 ± √3)/2",
+      "दो बराबर वास्तविक मूल: 3/2, 3/2",
+      "कोई वास्तविक मूल नहीं",
+      "दो भिन्न वास्तविक मूल: (6 ± √3)/2"
+    ],
+    "explanation_hi": "यहाँ a = 2, b = -6, c = 3। D = b² - 4ac = (-6)² - 4(2)(3) = 36 - 24 = 12 > 0। चूँकि D > 0 है, इसलिए दो भिन्न वास्तविक मूल हैं: x = (6 ± 2√3) / 4 = (3 ± √3) / 2।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q1.iii): નીચે આપેલ દ્વિઘાત સમીકરણના બીજના પ્રકાર શોધો. જો વાસ્તવિક બીજ હોય તો તે શોધો: 2x² - 6x + 3 = 0",
+    "options_gu": [
+      "બે ભિન્ન વાસ્તવિક બીજ: (3 ± √3)/2",
+      "બે સમાન વાસ્તવિક બીજ: 3/2, 3/2",
+      "કોઈ વાસ્તવિક બીજ નથી",
+      "બે ભિન્ન વાસ્તવિક બીજ: (6 ± √3)/2"
+    ],
+    "explanation_gu": "અહીં a = 2, b = -6, c = 3. D = b² - 4ac = (-6)² - 4(2)(3) = 36 - 24 = 12 > 0. D > 0 હોવાથી બે ભિન્ન વાસ્તવિક બીજ મળે: x = (6 ± 2√3) / 4 = (3 ± √3) / 2.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q2_part1",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q2.i): Find the values of k for the quadratic equation so that it has two equal roots: 2x² + kx + 3 = 0",
+    "options": [
+      "k = ±2√6",
+      "k = ±6",
+      "k = ±√6",
+      "k = ±4"
+    ],
+    "correct_index": 0,
+    "explanation": "For two equal roots, D = b² - 4ac = 0. Here a = 2, b = k, c = 3. So, k² - 4(2)(3) = 0 => k² - 24 = 0 => k² = 24 => k = ±√24 = ±2√6.",
+    "question_hi": "प्रश्नावली 4.3 (Q2.i): द्विघात समीकरण में k का ऐसा मान ज्ञात कीजिए कि उसके दो बराबर मूल हों: 2x² + kx + 3 = 0",
+    "options_hi": [
+      "k = ±2√6",
+      "k = ±6",
+      "k = ±√6",
+      "k = ±4"
+    ],
+    "explanation_hi": "दो बराबर मूलों के लिए, D = b² - 4ac = 0। यहाँ a = 2, b = k, c = 3। अतः k² - 4(2)(3) = 0 => k² - 24 = 0 => k² = 24 => k = ±√24 = ±2√6।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q2.i): નીચે આપેલ દ્વિઘાત સમીકરણના બીજ સમાન હોય તો k નું મૂલ્ય શોધો: 2x² + kx + 3 = 0",
+    "options_gu": [
+      "k = ±2√6",
+      "k = ±6",
+      "k = ±√6",
+      "k = ±4"
+    ],
+    "explanation_gu": "બે સમાન બીજ માટે, D = b² - 4ac = 0. અહીં a = 2, b = k, c = 3. તેથી, k² - 4(2)(3) = 0 => k² - 24 = 0 => k² = 24 => k = ±√24 = ±2√6.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q2_part2",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q2.ii): Find the values of k for the quadratic equation so that it has two equal roots: kx(x - 2) + 6 = 0",
+    "options": [
+      "k = 6",
+      "k = 0",
+      "k = 6 or 0",
+      "k = -6"
+    ],
+    "correct_index": 0,
+    "explanation": "Expanding: kx² - 2kx + 6 = 0. Here a = k, b = -2k, c = 6. For equal roots, D = 0 => (-2k)² - 4(k)(6) = 0 => 4k² - 24k = 0 => 4k(k - 6) = 0. Since k cannot be 0 (if k = 0, it wouldn't be a quadratic equation), k = 6.",
+    "question_hi": "प्रश्नावली 4.3 (Q2.ii): द्विघात समीकरण में k का ऐसा मान ज्ञात कीजिए कि उसके दो बराबर मूल हों: kx(x - 2) + 6 = 0",
+    "options_hi": [
+      "k = 6",
+      "k = 0",
+      "k = 6 या 0",
+      "k = -6"
+    ],
+    "explanation_hi": "विस्तार करने पर: kx² - 2kx + 6 = 0। यहाँ a = k, b = -2k, c = 6। बराबर मूलों के लिए, D = 0 => (-2k)² - 4(k)(6) = 0 => 4k² - 24k = 0 => 4k(k - 6) = 0। चूँकि k = 0 नहीं हो सकता (यदि k = 0 तो द्विघात समीकरण नहीं रहेगा), अतः k = 6।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q2.ii): નીચે આપેલ દ્વિઘાત સમીકરણના બીજ સમાન હોય તો k નું મૂલ્ય શોધો: kx(x - 2) + 6 = 0",
+    "options_gu": [
+      "k = 6",
+      "k = 0",
+      "k = 6 અથવા 0",
+      "k = -6"
+    ],
+    "explanation_gu": "વિસ્તરણ કરતા: kx² - 2kx + 6 = 0. અહીં a = k, b = -2k, c = 6. સમાન બીજ માટે, D = 0 => (-2k)² - 4(k)(6) = 0 => 4k² - 24k = 0 => 4k(k - 6) = 0. k શૂન્ય ન હોઈ શકે (જો k = 0 હોય તો દ્વિઘાત સમીકરણ ન રહે), તેથી k = 6.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q3",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q3): Is it possible to design a rectangular mango grove whose length is twice its breadth, and the area is 800 m²? If so, find its length and breadth.",
+    "options": [
+      "Yes, Length = 40 m, Breadth = 20 m",
+      "Yes, Length = 50 m, Breadth = 25 m",
+      "No, it is not possible",
+      "Yes, Length = 30 m, Breadth = 15 m"
+    ],
+    "correct_index": 0,
+    "explanation": "Let breadth = x m. Length = 2x m. Area = x(2x) = 2x² = 800 => x² = 400 => x = ±20. Since breadth must be positive, x = 20 m. Length = 2(20) = 40 m. Discriminant is positive, so it is possible.",
+    "question_hi": "प्रश्नावली 4.3 (Q3): क्या एक ऐसी आम की बगिया बनाना संभव है जिसकी लंबाई, चौड़ाई से दोगुनी हो और उसका क्षेत्रफल 800 m² हो? यदि हाँ, तो उसकी लंबाई और चौड़ाई ज्ञात कीजिए।",
+    "options_hi": [
+      "हाँ, लंबाई = 40 m, चौड़ाई = 20 m",
+      "हाँ, लंबाई = 50 m, चौड़ाई = 25 m",
+      "नहीं, यह संभव नहीं है",
+      "हाँ, लंबाई = 30 m, चौड़ाई = 15 m"
+    ],
+    "explanation_hi": "माना चौड़ाई = x m। लंबाई = 2x m। क्षेत्रफल = x(2x) = 2x² = 800 => x² = 400 => x = 20 m। लंबाई = 2(20) = 40 m। विविक्तकर धनात्मक है, इसलिए यह संभव है।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q3): જેની લંબાઈ તેની પહોળાઈ કરતાં બમણી હોય અને ક્ષેત્રફળ 800 m² હોય એવી લંબચોરસ આંબાવાડી બનાવવી શક્ય છે? જો હા, તો તેની લંબાઈ અને પહોળાઈ શોધો.",
+    "options_gu": [
+      "હા, લંબાઈ = 40 m, પહોળાઈ = 20 m",
+      "હા, લંબાઈ = 50 m, પહોળાઈ = 25 m",
+      "ના, તે શક્ય નથી",
+      "હા, લંબાઈ = 30 m, પહોળાઈ = 15 m"
+    ],
+    "explanation_gu": "ધારો કે પહોળાઈ = x m. લંબાઈ = 2x m. ક્ષેત્રફળ = x(2x) = 2x² = 800 => x² = 400 => x = 20 m. લંબાઈ = 2(20) = 40 m. વિવેચક ધન હોવાથી આ શક્ય છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q4",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q4): Is the following situation possible? If so, determine their present ages: 'The sum of the ages of two friends is 20 years. Four years ago, the product of their ages in years was 48.'",
+    "options": [
+      "No, it is not possible (D < 0)",
+      "Yes, Ages are 12 and 8",
+      "Yes, Ages are 14 and 6",
+      "Yes, Ages are 15 and 5"
+    ],
+    "correct_index": 0,
+    "explanation": "Let age of first friend = x years. Age of second friend = 20 - x years. Four years ago: (x - 4)(20 - x - 4) = 48 => (x - 4)(16 - x) = 48 => 16x - x² - 64 + 4x = 48 => -x² + 20x - 112 = 0 => x² - 20x + 112 = 0. Discriminant D = (-20)² - 4(1)(112) = 400 - 448 = -48 < 0. Since D < 0, no real roots exist. Thus, this situation is NOT possible.",
+    "question_hi": "प्रश्नावली 4.3 (Q4): क्या निम्न स्थिति संभव है? यदि है, तो उनकी वर्तमान आयु ज्ञात कीजिए: 'दो मित्रों की आयु का योग 20 वर्ष है। चार वर्ष पूर्व उनकी आयु (वर्षों में) का गुणनफल 48 था।'",
+    "options_hi": [
+      "नहीं, यह संभव नहीं है (D < 0)",
+      "हाँ, आयु 12 और 8 है",
+      "हाँ, आयु 14 और 6 है",
+      "हाँ, आयु 15 और 5 है"
+    ],
+    "explanation_hi": "माना पहले मित्र की आयु = x वर्ष। दूसरे मित्र की आयु = 20 - x वर्ष। चार वर्ष पूर्व: (x - 4)(16 - x) = 48 => -x² + 20x - 112 = 0 => x² - 20x + 112 = 0। विविक्तकर D = (-20)² - 4(1)(112) = 400 - 448 = -48 < 0। चूँकि D < 0 है, इसलिए कोई वास्तविक मूल नहीं हैं। अतः यह स्थिति संभव नहीं है।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q4): શું નીચે આપેલ પરિસ્થિતિ શક્ય છે? જો હા, તો તેમની હાલની ઉંમર શોધો: 'બે મિત્રોની ઉંમરનો સરવાળો 20 વર્ષ છે. ચાર વર્ષ પહેલાં તેમની ઉંમર (વર્ષોમાં) દર્શાવતી સંખ્યાઓનો ગુણાકાર 48 હતો.'",
+    "options_gu": [
+      "ના, તે શક્ય નથી (D < 0)",
+      "હા, ઉંમર 12 અને 8 છે",
+      "હા, ઉંમર 14 અને 6 છે",
+      "હા, ઉંમર 15 અને 5 છે"
+    ],
+    "explanation_gu": "ધારો કે પ્રથમ મિત્રની ઉંમર = x વર્ષ. બીજા મિત્રની ઉંમર = 20 - x વર્ષ. 4 વર્ષ પહેલાં: (x - 4)(16 - x) = 48 => x² - 20x + 112 = 0. વિવેચક D = (-20)² - 4(1)(112) = 400 - 448 = -48 < 0. D < 0 હોવાથી વાસ્તવિક બીજ શક્ય નથી. તેથી આ પરિસ્થિતિ શક્ય નથી.",
+    "bloom": "Apply",
+    "difficulty": "Hard",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_EX4.3_Q5",
+    "type": "quiz",
+    "question": "Exercise 4.3 (Q5): Is it possible to design a rectangular park of perimeter 80 m and area 400 m²? If so, find its length and breadth.",
+    "options": [
+      "Yes, Length = 20 m, Breadth = 20 m",
+      "Yes, Length = 25 m, Breadth = 15 m",
+      "No, it is not possible",
+      "Yes, Length = 30 m, Breadth = 10 m"
+    ],
+    "correct_index": 0,
+    "explanation": "Perimeter = 2(l + b) = 80 => l + b = 40 => b = 40 - l. Area = l(40 - l) = 400 => 40l - l² = 400 => l² - 40l + 400 = 0. Discriminant D = (-40)² - 4(1)(400) = 1600 - 1600 = 0. Since D = 0, equal real roots exist: (l - 20)² = 0 => l = 20 m. Breadth = 40 - 20 = 20 m. (A square is also a rectangle). Yes, it is possible.",
+    "question_hi": "प्रश्नावली 4.3 (Q5): क्या परिमाप 80 m तथा क्षेत्रफल 400 m² के एक पार्क को बनाना संभव है? यदि है, तो उसकी लंबाई और चौड़ाई ज्ञात कीजिए।",
+    "options_hi": [
+      "हाँ, लंबाई = 20 m, चौड़ाई = 20 m",
+      "हाँ, लंबाई = 25 m, चौड़ाई = 15 m",
+      "नहीं, यह संभव नहीं है",
+      "हाँ, लंबाई = 30 m, चौड़ाई = 10 m"
+    ],
+    "explanation_hi": "परिमाप = 2(l + b) = 80 => l + b = 40 => b = 40 - l। क्षेत्रफल = l(40 - l) = 400 => l² - 40l + 400 = 0। विविक्तकर D = (-40)² - 4(1)(400) = 1600 - 1600 = 0। चूँकि D = 0 है, इसलिए (l - 20)² = 0 => l = 20 m। चौड़ाई = 40 - 20 = 20 m। (एक वर्ग भी आयत होता है)। हाँ, यह संभव है।",
+    "question_gu": "સ્વાધ્યાય 4.3 (Q5): જેની પરિમિતિ 80 m અને ક્ષેત્રફળ 400 m² હોય તેવો લંબચોરસ બગીચો બનાવવો શક્ય છે? જો હા, તો તેની લંબાઈ અને પહોળાઈ શોધો.",
+    "options_gu": [
+      "હા, લંબાઈ = 20 m, પહોળાઈ = 20 m",
+      "હા, લંબાઈ = 25 m, પહોળાઈ = 15 m",
+      "ના, તે શક્ય નથી",
+      "હા, લંબાઈ = 30 m, પહોળાઈ = 10 m"
+    ],
+    "explanation_gu": "પરિમિતિ = 2(l + b) = 80 => l + b = 40 => b = 40 - l. ક્ષેત્રફળ = l(40 - l) = 400 => l² - 40l + 400 = 0. વિવેચક D = (-40)² - 4(1)(400) = 1600 - 1600 = 0. D = 0 હોવાથી વાસ્તવિક બીજ મળે: (l - 20)² = 0 => l = 20 m અને b = 20 m. (ચોરસ પણ લંબચોરસ છે). હા, આ શક્ય છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_10",
+    "type": "reflection",
+    "title": "Mathematical Solutions vs Physical Reality",
+    "body": "When solving quadratic equations, we often get two distinct roots (e.g., $x = 12$ and $x = -5$). Mathematically, BOTH numbers satisfy the equation perfectly! But when x represents the base of a triangle, the speed of a train, or the number of pottery articles, why do we reject the negative root?\n\n**Key Insight:** Mathematics provides all theoretical algebraic solutions. However, physical quantities like length, time, age, and count cannot be negative in classical physics. A good mathematician always checks the algebraic answers against real-world constraints!",
+    "title_hi": "गणितीय हल बनाम भौतिक वास्तविकता",
+    "body_hi": "द्विघात समीकरणों को हल करते समय, हमें अक्सर दो भिन्न मूल प्राप्त होते हैं (जैसे, $x = 12$ और $x = -5$)। गणितीय रूप से, दोनों संख्याएँ समीकरण को पूरी तरह से संतुष्ट करती हैं! लेकिन जब x त्रिभुज के आधार, ट्रेन की गति या बर्तनों की संख्या का प्रतिनिधित्व करता है, तो हम ऋणात्मक मूल को क्यों छोड़ देते हैं?\n\n**महत्वपूर्ण अंतर्दृष्टि:** गणित सभी सैद्धांतिक बीजगणितीय हल प्रदान करता है। हालाँकि, लंबाई, समय, आयु और गिनती जैसी भौतिक राशियाँ शास्त्रीय भौतिकी में ऋणात्मक नहीं हो सकती हैं। एक अच्छा गणितज्ञ हमेशा वास्तविक दुनिया की सीमाओं के अनुसार बीजगणितीय उत्तरों की जाँच करता है!",
+    "title_gu": "ગાણિતિક ઉકેલ વિરુદ્ધ ભૌતિક વાસ્તવિકતા",
+    "body_gu": "દ્વિઘાત સમીકરણો ઉકેલતી વખતે, આપણને ઘણીવાર બે ભિન્ન બીજ મળે છે (દા.ત., $x = 12$ અને $x = -5$). ગાણિતિક રીતે, બંને સંખ્યાઓ સમીકરણનું સંપૂર્ણ સમાધાન કરે છે! પરંતુ જ્યારે x ત્રિકોણના પાયા, ટ્રેનની ઝડપ કે માટીની વસ્તુઓની સંખ્યા દર્શાવે છે, ત્યારે આપણે ઋણ બીજને કેમ અવગણીએ છીએ?\n\n**મુખ્ય વિચાર:** ગણિત તમામ સૈદ્ધાંતિક બીજગણિતીય ઉકેલો પૂરા પાડે છે. જો કે, લંબાઈ, સમય, ઉંમર અને ગણતરી જેવી ભૌતિક રાશિઓ વાસ્તવિક દુનિયામાં ઋણ હોઈ શકતી નથી. એક ઉત્કૃષ્ટ વિદ્યાર્થી હંમેશા વાસ્તવિક પરિસ્થિતિ સાથે ગાણિતિક જવાબોની સુસંગતતા ચકાસે છે!",
+    "bloom": "Analyze",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH4_11",
+    "type": "connection",
+    "title": "Quadratic Equations in Science & Engineering",
+    "body": "Where do Quadratic Equations appear beyond Class 10 Maths exams?\n\n1. **Physics & Space Exploration:** The height of any launched satellite, missile, or cricket ball is given by the kinematic equation $h(t) = ut - \\frac{1}{2}gt^2$. Setting $h(t) = 0$ gives the exact flight duration!\n2. **Architecture & Civil Engineering:** Suspension bridges (like the Golden Gate Bridge) and arch bridges distribute massive loads along parabolic curves, designed strictly using quadratic functions.\n3. **Optics & Telescopes:** Dish antennas, car headlights, and solar cookers have parabolic mirrors. Incoming parallel rays reflect and concentrate exactly at a single focal point!\n4. **Business & Economics:** Revenue curves $R(p) = p \\times (a - bp)$ are quadratic. Businesses use the vertex of the parabola to calculate the exact price that maximizes total profit.",
+    "title_hi": "विज्ञान और इंजीनियरिंग में द्विघात समीकरण",
+    "body_hi": "कक्षा 10 की गणित परीक्षा से परे द्विघात समीकरण कहाँ दिखाई देते हैं?\n\n1. **भौतिकी और अंतरिक्ष अन्वेषण:** किसी भी उपग्रह, मिसाइल या क्रिकेट गेंद की ऊँचाई गतिज समीकरण $h(t) = ut - \\frac{1}{2}gt^2$ द्वारा दी जाती है। $h(t) = 0$ रखने से उड़ान का सटीक समय ज्ञात होता है!\n2. **वास्तुकला और सिविल इंजीनियरिंग:** सस्पेंशन ब्रिज और मेहराबदार पुल भारी भार को परवलयाकार वक्रों के साथ वितरित करते हैं, जिन्हें द्विघात फलनों का उपयोग करके डिजाइन किया जाता है।\n3. **प्रकाशिकी और दूरबीन:** डिश एंटीना, कार की हेडलाइट्स और सोलर कुकर में परवलयाकार दर्पण होते हैं। समानांतर किरणें परावर्तित होकर ठीक एक केंद्र बिंदु पर केंद्रित होती हैं!\n4. **व्यापार और अर्थशास्त्र:** राजस्व वक्र $R(p) = p \\times (a - bp)$ द्विघात होते हैं। कंपनियाँ अधिकतम लाभ प्राप्त करने वाली कीमत तय करने के लिए परवलय के शीर्ष का उपयोग करती हैं।",
+    "title_gu": "વિજ્ઞાન અને એન્જિનિયરિંગમાં દ્વિઘાત સમીકરણો",
+    "body_gu": "ધોરણ 10 ની ગણિતની પરીક્ષા સિવાય દ્વિઘાત સમીકરણો ક્યાં વપરાય છે?\n\n1. **ભૌતિક વિજ્ઞાન અને અવકાશ સંશોધન:** કોઈપણ સેટેલાઇટ, મિસાઇલ કે ક્રિકેટ દડાની ઊંચાઈ $h(t) = ut - \\frac{1}{2}gt^2$ સમીકરણ દ્વારા મળે છે. $h(t) = 0$ મુકવાથી ઉડાનનો ચોક્કસ સમય મળે છે!\n2. **આર્કિટેક્ચર અને સિવિલ એન્જિનિયરિંગ:** સસ્પેન્શન બ્રિજ અને કમાનવાળા પુલ પરવલય આકારમાં વજનનું વિતરણ કરે છે, જે દ્વિઘાત વિધેય દ્વારા ડિઝાઇન કરવામાં આવે છે.\n3. **ઓપ્ટિક્સ અને ટેલિસ્કોપ:** ડીશ એન્ટેના, કારની હેડલાઇટ્સ અને સોલાર કૂકરમાં પરવલયાકાર અરીસા હોય છે, જે સમાંતર કિરણોને એક કેન્દ્રબિંદુ પર કેન્દ્રિત કરે છે!\n4. **અર્થશાસ્ત્ર અને વ્યાપાર:** નફાના સમીકરણો દ્વિઘાત હોય છે. વ્યવસાયો મહત્તમ નફો મેળવવા માટે યોગ્ય કિંમત નક્કી કરવા આ વળાંકનો ઉપયોગ કરે છે.",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH4_12",
+    "type": "mastery",
+    "title": "Mastery Challenge: The Board Exam Classic",
+    "body": "Solve this high-yield Board Exam challenge:\n\n**Solve for x:**\n$$\\frac{1}{x + 4} - \\frac{1}{x - 7} = \\frac{11}{30}, \\quad (x \\neq -4, 7)$$\n\n**Solution Steps:**\n1. Combine fractions on LHS: $\\frac{(x - 7) - (x + 4)}{(x + 4)(x - 7)} = \\frac{11}{30}$\n2. Simplify numerator: $\\frac{-11}{x^2 - 3x - 28} = \\frac{11}{30}$\n3. Divide both sides by 11: $\\frac{-1}{x^2 - 3x - 28} = \\frac{1}{30}$\n4. Cross-multiply: $x^2 - 3x - 28 = -30 \\implies x^2 - 3x + 2 = 0$\n5. Factorize: $(x - 1)(x - 2) = 0 \\implies \\mathbf{x = 1, 2}$!",
+    "title_hi": "महारत चुनौती: बोर्ड परीक्षा का प्रतिष्ठित प्रश्न",
+    "body_hi": "इस महत्वपूर्ण बोर्ड परीक्षा प्रश्न को हल करें:\n\n**x के लिए हल कीजिए:**\n$$\\frac{1}{x + 4} - \\frac{1}{x - 7} = \\frac{11}{30}, \\quad (x \\neq -4, 7)$$\n\n**हल के चरण:**\n1. बाएँ पक्ष के भिन्नों को मिलाएँ: $\\frac{(x - 7) - (x + 4)}{(x + 4)(x - 7)} = \\frac{11}{30}$\n2. अंश को सरल करें: $\\frac{-11}{x^2 - 3x - 28} = \\frac{11}{30}$\n3. दोनों पक्षों को 11 से भाग दें: $\\frac{-1}{x^2 - 3x - 28} = \\frac{1}{30}$\n4. तिर्यक गुणा (Cross-multiply) करें: $x^2 - 3x - 28 = -30 \\implies x^2 - 3x + 2 = 0$\n5. गुणनखंड करें: $(x - 1)(x - 2) = 0 \\implies \\mathbf{x = 1, 2}$!",
+    "title_gu": "માસ્ટરી ચેલેન્જ: બોર્ડ પરીક્ષાનો અતિ મહત્વનો પ્રશ્ન",
+    "body_gu": "આ મહત્વપૂર્ણ બોર્ડ પરીક્ષા પ્રશ્નનો ઉકેલ મેળવો:\n\n**x માટે ઉકેલો:**\n$$\\frac{1}{x + 4} - \\frac{1}{x - 7} = \\frac{11}{30}, \\quad (x \\neq -4, 7)$$\n\n**ઉકેલના પગલાં:**\n1. ડાબી બાજુના અપૂર્ણાંકોનો લસાઅ લો: $\\frac{(x - 7) - (x + 4)}{(x + 4)(x - 7)} = \\frac{11}{30}$\n2. અંશનું સાદુરૂપ આપો: $\\frac{-11}{x^2 - 3x - 28} = \\frac{11}{30}$\n3. બંને બાજુ 11 વડે ભાગો: $\\frac{-1}{x^2 - 3x - 28} = \\frac{1}{30}$\n4. ચોકડી ગુણાકાર કરો: $x^2 - 3x - 28 = -30 \\implies x^2 - 3x + 2 = 0$\n5. અવયવ પાડો: $(x - 1)(x - 2) = 0 \\implies \\mathbf{x = 1, 2}$!",
+    "bloom": "Create",
+    "difficulty": "Hard",
+    "estimated_minutes": 5
+  }
+]

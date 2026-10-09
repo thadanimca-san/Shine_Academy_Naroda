@@ -20,9 +20,24 @@ class PdfGeneratorService {
     final subject = metadata['subject'] ?? 'Subject';
     final totalMarks = metadata['total_marks'] ?? 50;
 
+final baseData = await rootBundle.load('assets/fonts/DejaVuSans.ttf');
+    final fontBase = pw.Font.ttf(baseData);
+    final boldData = await rootBundle.load('assets/fonts/DejaVuSans-Bold.ttf');
+    final fontBold = pw.Font.ttf(boldData);
+    
+    final gujData = await rootBundle.load('assets/fonts/NotoSansGujarati-Regular.ttf');
+    final gujFont = pw.Font.ttf(gujData);
+    final hinData = await rootBundle.load('assets/fonts/NotoSansDevanagari-Regular.ttf');
+    final hinFont = pw.Font.ttf(hinData);
+
     final pdf = pw.Document(
       title: '$title - Shine Academy',
       author: 'Shine Academy Naroda',
+      theme: pw.ThemeData.withFont(
+        base: fontBase, 
+        bold: fontBold,
+        fontFallback: [gujFont, hinFont]
+      ),
     );
 
     // Load watermark image

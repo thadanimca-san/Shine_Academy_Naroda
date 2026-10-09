@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
+import 'package:markdown/markdown.dart' as md;
 import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/widgets/presentation_builder.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
@@ -64,6 +66,13 @@ class MarkdownTableWidget extends StatelessWidget {
                 child: MarkdownBody(
                   data: body,
                   selectable: true,
+                  builders: {
+                    'latex': LatexElementBuilder(),
+                  },
+                  extensionSet: md.ExtensionSet(
+                    <md.BlockSyntax>[...md.ExtensionSet.gitHubFlavored.blockSyntaxes, LatexBlockSyntax()],
+                    <md.InlineSyntax>[...md.ExtensionSet.gitHubFlavored.inlineSyntaxes, LatexInlineSyntax()],
+                  ),
                   styleSheet: MarkdownStyleSheet(
                     p: AppTypography.body(context, color: Theme.of(context).colorScheme.onSurface).copyWith(height: 1.6),
                     tableBody: AppTypography.bodySmall(context, color: Theme.of(context).colorScheme.onSurface),

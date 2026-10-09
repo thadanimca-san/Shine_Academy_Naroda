@@ -82,18 +82,18 @@ def parse_science_mcqs():
     print(f"Parsed {len(mcqs)} MCQs.")
     
     if len(mcqs) > 0:
-        blocks = [{"type": "hook", "content": "Welcome to the official DEO Ahmedabad Question Bank 2026 for Science! Let's conquer the Board Exams by practicing these highly expected MCQs."}]
+        blocks = [{"type": "hook", "content": "Welcome to the official question Ahmedabad Question Bank 2026 for Science! Let's conquer the Board Exams by practicing these highly expected MCQs."}]
         blocks.extend(mcqs[:100]) # Take top 100 for part 1
         
         chapter_json = {
             "metadata": {
                 "id": "ncert_class10_deo_bank_2026_ch1",
-                "title": "Science DEO Bank 2026 (Part 1 - MCQs)",
-                "subject": "DEO Question Bank 2026",
+                "title": "Science question Bank 2026 (Part 1 - MCQs)",
+                "subject": "question Question Bank 2026",
                 "grade": "10",
                 "curriculum": ["GSEB", "NCERT", "CBSE"],
                 "difficulty": "Advanced",
-                "version": "4.0.0-DEO-BANK"
+                "version": "4.0.0-question-BANK"
             },
             "blocks": blocks
         }
@@ -103,9 +103,9 @@ def parse_science_mcqs():
         with open(os.path.join(output_dir, 'ncert_class10_deo_bank_2026_ch1.json'), 'w') as f:
             json.dump(chapter_json, f, indent=2)
             
-        with open(os.path.join(output_dir, 'gseb_class10_deo_bank_2026_ch1.json'), 'w') as f:
+        with open(os.path.join(output_dir, 'gseb_class10_question_bank_2026_ch1.json'), 'w') as f:
             json_data_gseb = dict(chapter_json)
-            json_data_gseb["metadata"]["id"] = "gseb_class10_deo_bank_2026_ch1"
+            json_data_gseb["metadata"]["id"] = "gseb_class10_question_bank_2026_ch1"
             json.dump(json_data_gseb, f, indent=2)
             
         with open(os.path.join(output_dir, 'cbse_class10_deo_bank_2026_ch1.json'), 'w') as f:

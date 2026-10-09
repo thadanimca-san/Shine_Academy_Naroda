@@ -1,0 +1,1411 @@
+import json
+import os
+
+def build_ncert_class10_science_ch1():
+    chapter_id = "ncert_class10_science_ch1"
+    
+    metadata = {
+        "id": chapter_id,
+        "title": "Chapter 1: Chemical Reactions and Equations",
+        "title_hi": "अध्याय 1: रासायनिक अभिक्रियाएं एवं समीकरण",
+        "title_gu": "પ્રકરણ 1: રાસાયણિક પ્રક્રિયાઓ અને સમીકરણો",
+        "subject": "Science",
+        "grade": "10",
+        "board": "NCERT/CBSE/GSEB",
+        "curriculum": ["NCERT", "CBSE", "GSEB"],
+        "language": "Trilingual (English/Hindi/Gujarati)",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 180,
+        "version": "2.0.0-GOLD-STANDARD",
+        "author": "Chief Academic Architect - Antigravity",
+        "reviewed_by": "Gold Pedagogy Standard Review Board",
+        "tags": [
+            "chemical_reactions",
+            "chemical_equations",
+            "balancing_equations",
+            "combination_reaction",
+            "decomposition_reaction",
+            "displacement_reaction",
+            "double_displacement",
+            "oxidation_reduction",
+            "redox",
+            "corrosion",
+            "rancidity"
+        ],
+        "learning_outcomes": [
+            "Identify the indicators of a chemical reaction (change in state, color, temperature, gas evolution).",
+            "Write and balance chemical equations following the Law of Conservation of Mass.",
+            "Classify reactions into Combination, Decomposition, Displacement, Double Displacement, and Redox.",
+            "Differentiate between exothermic and endothermic reactions with real-world examples.",
+            "Explain everyday oxidation processes including corrosion and rancidity along with their prevention methods.",
+            "Solve all NCERT in-text and textbook exercise questions with complete explanations."
+        ],
+        "ai_context": {
+            "learning_goal": "Master NCERT Class 10 Chapter 1 through the 8-Step Gold Pedagogy Arc.",
+            "common_misconceptions": [
+                "Students change subscripts instead of coefficients when balancing equations.",
+                "Students confuse displacement with double displacement reactions.",
+                "Students struggle to identify oxidizing vs reducing agents."
+            ],
+            "tutor_hint": "Always remind students that the substance oxidized is the reducing agent, and the substance reduced is the oxidizing agent."
+        }
+    }
+
+    blocks = []
+    block_counter = 1
+
+    def next_id():
+        nonlocal block_counter
+        bid = f"KOBJ_NCERT_C10_SCI_CH1_{block_counter:03d}"
+        block_counter += 1
+        return bid
+
+    # =========================================================================
+    # MODULE 1: CHEMICAL REACTIONS & EQUATIONS (8-STEP PEDAGOGY)
+    # =========================================================================
+    
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Mystery of the Dazzling White Flame",
+        "title_hi": "चमकीली सफेद ज्वाला का रहस्य",
+        "title_gu": "ઝગમગતી સફેદ જ્યોતનું રહસ્ય",
+        "body": "When you hold a silvery ribbon of magnesium metal with tongs and ignite it over a burner, it does not just melt like wax or burn like paper. It erupts into a dazzling, blinding white flame and turns completely into a mysterious white powder! Where did the silvery metal go, and what created that white powder?",
+        "body_hi": "जब आप चिमटे से मैग्नीशियम धातु के एक चमकदार फीते को पकड़कर बर्नर पर जलाते हैं, तो यह मोम की तरह पिघलता नहीं है और न ही कागज की तरह जलता है। यह एक चकाचौंध करने वाली सफेद ज्वाला के साथ जल उठता है और पूरी तरह से एक रहस्यमयी सफेद पाउडर में बदल जाता है! वह चमकदार धातु कहाँ गायब हो गई, और वह सफेद पाउडर कैसे बना?",
+        "body_gu": "જ્યારે તમે ચીપિયા વડે મેગ્નેશિયમ ધાતુની ચમકતી પટ્ટીને પકડીને બર્નર પર સળગાવો છો, ત્યારે તે મીણની જેમ પીગળતી નથી કે કાગળની જેમ સામાન્ય બળતી નથી. તે આંખો આંજી નાખે તેવી ઝગમગતી સફેદ જ્યોત સાથે સળગી ઊઠે છે અને સંપૂર્ણપણે સફેદ પાવડરમાં ફેરવાઈ જાય છે! તે ચમકતી ધાતુ ક્યાં ગઈ અને તે સફેદ પાવડર શેમાંથી બન્યો?"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "When magnesium burns in air to form a white powder, did the magnesium atoms vanish into thin air, or did they bond with an invisible gas around them?",
+        "question_hi": "जब मैग्नीशियम हवा में जलकर सफेद पाउडर बनाता है, तो क्या मैग्नीशियम के परमाणु हवा में गायब हो गए, या वे अपने आसपास की किसी अदृश्य गैस से जुड़ गए?",
+        "question_gu": "જ્યારે મેગ્નેશિયમ હવામાં સળગીને સફેદ પાવડર બનાવે છે, ત્યારે શું મેગ્નેશિયમના પરમાણુઓ હવામાં અદૃશ્ય થઈ ગયા, કે પછી તેઓ પોતાની આસપાસ રહેલા અદ્રશ્ય વાયુ સાથે જોડાઈ ગયા?",
+        "options": [
+            "They combined chemically with oxygen gas from the air to form magnesium oxide.",
+            "The magnesium atoms disintegrated completely into energy.",
+            "The ribbon simply broke down into tiny dust particles without changing chemically.",
+            "The fire converted metal into air."
+        ],
+        "options_hi": [
+            "वे हवा में मौजूद ऑक्सीजन गैस के साथ रासायनिक रूप से जुड़कर मैग्नीशियम ऑक्साइड बनाते हैं।",
+            "मैग्नीशियम के परमाणु पूरी तरह से ऊर्जा में विघटित हो गए।",
+            "मैग्नीशियम का फीता बिना किसी रासायनिक बदलाव के केवल बारीक धूल के कणों में टूट गया।",
+            "आग ने धातु को हवा में बदल दिया।"
+        ],
+        "options_gu": [
+            "તેઓ હવામાં રહેલા ઓક્સિજન વાયુ સાથે રાસાયણિક રીતે જોડાઈને મેગ્નેશિયમ ઓક્સાઇડ બનાવે છે.",
+            "મેગ્નેશિયમના પરમાણુઓ સંપૂર્ણપણે ઉર્જામાં વિઘટિત થઈ ગયા.",
+            "મેગ્નેશિયમની પટ્ટી કોઈ રાસાયણિક ફેરફાર વગર માત્ર ધૂળના કણોમાં વિભાજીત થઈ ગઈ.",
+            "આગે ધાતુને વાયુમાં ફેરવી દીધી."
+        ],
+        "correct_index": 0,
+        "explanation": "Magnesium atoms react with oxygen molecules present in the air at high temperature to form magnesium oxide (2Mg + O2 -> 2MgO), a brand new chemical compound with completely new properties.",
+        "explanation_hi": "मैग्नीशियम परमाणु उच्च तापमान पर हवा में मौजूद ऑक्सीजन अणुओं के साथ अभिक्रिया करके मैग्नीशियम ऑक्साइड (2Mg + O2 -> 2MgO) बनाते हैं, जो पूरी तरह से नए गुणों वाला एक नया यौगिक है।",
+        "explanation_gu": "મેગ્નેશિયમના પરમાણુઓ ઊંચા તાપમાને હવામાં રહેલા ઓક્સિજન અણુઓ સાથે પ્રક્રિયા કરીને મેગ્નેશિયમ ઓક્સાઇડ (2Mg + O2 -> 2MgO) બનાવે છે, જે સંપૂર્ણપણે નવા ગુણધર્મો ધરાવતું સંયોજન છે."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "Signs that a Chemical Reaction has Occurred",
+        "title_hi": "रासायनिक अभिक्रिया होने के स्पष्ट संकेत",
+        "title_gu": "રાસાયણિક પ્રક્રિયા થયાના સ્પષ્ટ સંકેતો",
+        "body": "How do scientists know a chemical change occurred and not just a physical change? Look for four telltale signs:\n1. Change in state (e.g., solid formation or gas release).\n2. Change in colour (e.g., blue copper sulphate turning light green with iron).\n3. Evolution of a gas (e.g., zinc granules reacting with dilute acid to bubble out hydrogen gas).\n4. Change in temperature (e.g., quicklime reacting with water heats up the beaker dramatically).",
+        "body_hi": "वैज्ञानिकों को कैसे पता चलता है कि केवल भौतिक परिवर्तन नहीं बल्कि रासायनिक परिवर्तन हुआ है? इन चार मुख्य संकेतों को देखें:\n1. अवस्था में परिवर्तन (जैसे, ठोस बनना या गैस निकलना)।\n2. रंग में परिवर्तन (जैसे, लोहे के साथ नीला कॉपर सल्फेट हल्का हरा हो जाना)।\n3. गैस का निकास (जैसे, जिंक के दाने तनु अम्ल से क्रिया कर हाइड्रोजन गैस के बुलबुले छोड़ते हैं)।\n4. तापमान में परिवर्तन (जैसे, कली चूने में पानी मिलाने पर बीकर अत्यधिक गर्म हो जाता है)।",
+        "body_gu": "વૈજ્ઞાનિકોને કેવી રીતે ખબર પડે છે કે માત્ર ભૌતિક ફેરફાર નહીં પણ રાસાયણિક ફેરફાર થયો છે? આ ચાર મુખ્ય સંકેતો તપાસો:\n1. અવસ્થામાં ફેરફાર (દા.ત., ઘન પદાર્થ બનવો કે વાયુ ઉત્પન્ન થવો).\n2. રંગમાં ફેરફાર (દા.ત., લોખંડ સાથે પ્રક્રિયાથી વાદળી કોપર સલ્ફેટ આછો લીલો થવો).\n3. વાયુનો ઉદ્ભવ (દા.ત., ઝીંકના દાણા મંદ એસિડ સાથે પ્રક્રિયા કરી હાઇડ્રોજન વાયુ મુક્ત કરે છે).\n4. તાપમાનમાં ફેરફાર (દા.ત., કળીચૂનામાં પાણી ઉમેરતાં બીકર ગરમ થઈ જાય છે)."
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "Chemical Equations and Informative Symbols",
+        "title_hi": "रासायनिक समीकरण और सूचनात्मक प्रतीक",
+        "title_gu": "રાસાયણિક સમીકરણો અને માહિતીપ્રદ સંકેતો",
+        "body": "A chemical equation represents a chemical reaction using symbols and formulas of substances.\n- Reactants are written on the left-hand side (LHS) with a plus sign (+) between them.\n- Products are written on the right-hand side (RHS) with a plus sign (+) between them.\n- An arrow (->) points from reactants to products showing the direction of reaction.\n\nTo make an equation more informative, physical states are mentioned:\n• (s) = solid\n• (l) = liquid\n• (g) = gas\n• (aq) = aqueous (solution in water)\nReaction conditions like temperature, pressure, or catalyst are written above or below the arrow (e.g., CO(g) + 2H2(g) --340 atm--> CH3OH(l)).",
+        "body_hi": "रासायनिक समीकरण पदार्थों के प्रतीकों और सूत्रों का उपयोग करके किसी रासायनिक अभिक्रिया को निरूपित करता है।\n- अभिकारक बाईं ओर (LHS) उनके बीच धन चिन्ह (+) के साथ लिखे जाते हैं।\n- उत्पाद दाईं ओर (RHS) उनके बीच धन चिन्ह (+) के साथ लिखे जाते हैं।\n- एक तीर (->) अभिकारकों से उत्पादों की ओर अभिक्रिया की दिशा दर्शाता है।\n\nसमीकरण को अधिक सूचनात्मक बनाने के लिए भौतिक अवस्थाएं दर्शाई जाती हैं:\n• (s) = ठोस (solid)\n• (l) = द्रव (liquid)\n• (g) = गैस (gas)\n• (aq) = जलीय घोल (aqueous)\nअभिक्रिया की परिस्थितियाँ जैसे तापमान, दाब या उत्प्रेरक तीर के ऊपर या नीचे लिखे जाते हैं (जैसे, CO(g) + 2H2(g) --340 atm--> CH3OH(l))।",
+        "body_gu": "રાસાયણિક સમીકરણ પદાર્થોના સંકેતો અને સૂત્રોનો ઉપયોગ કરીને રાસાયણિક પ્રક્રિયા દર્શાવે છે.\n- પ્રક્રિયકો ડાબી બાજુ (LHS) વચ્ચે વત્તા (+) ચિહ્ન સાથે લખાય છે.\n- નીપજો જમણી બાજુ (RHS) વચ્ચે વત્તા (+) ચિહ્ન સાથે લખાય છે.\n- તીર (->) પ્રક્રિયકોથી નીપજો તરફ પ્રક્રિયાની દિશા દર્શાવે છે.\n\nસમીકરણને વધુ માહિતીપ્રદ બનાવવા ભૌતિક અવસ્થાઓ દર્શાવાય છે:\n• (s) = ઘન (solid)\n• (l) = પ્રવાહી (liquid)\n• (g) = વાયુ (gas)\n• (aq) = જલીય દ્રાવણ (aqueous)\nપ્રક્રિયા પરિસ્થિતિઓ જેવી કે તાપમાન, દબાણ કે ઉદ્દીપક તીરની ઉપર કે નીચે દર્શાવાય છે (જેમ કે, CO(g) + 2H2(g) --340 atm--> CH3OH(l))."
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": next_id(),
+        "type": "teacher_tip",
+        "title": "Teacher Tip: Why Clean the Magnesium Ribbon?",
+        "title_hi": "शिक्षक टिप: मैग्नीशियम रिबन को पहले क्यों साफ किया जाता है?",
+        "title_gu": "શિક્ષક ટિપ: મેગ્નેશિયમ પટ્ટીને સળગાવતા પહેલાં શા માટે સાફ કરવામાં આવે છે?",
+        "body": "Before burning in air, magnesium ribbon must be rubbed with sandpaper. Magnesium is a reactive metal; when exposed to moist air, it slowly forms a stable, dull protective layer of basic magnesium carbonate (or magnesium oxide) on its surface. Cleaning removes this protective crust so it burns freely.",
+        "body_hi": "हवा में जलाने से पहले मैग्नीशियम रिबन को सैंडपेपर (रेगमाल) से रगड़कर साफ किया जाना चाहिए। मैग्नीशियम एक सक्रिय धातु है; नम हवा में रहने पर इसकी सतह पर बेसिक मैग्नीशियम कार्बोनेट (या मैग्नीशियम ऑक्साइड) की एक सुरक्षात्मक परत बन जाती है। रगड़ने से यह परत हट जाती है और रिबन आसानी से जलता है।",
+        "body_gu": "હવામાં સળગાવતાં પહેલાં મેગ્નેશિયમની પટ્ટીને કાચપેપર વડે ઘસીને સાફ કરવી જોઈએ. મેગ્નેશિયમ સક્રિય ધાતુ છે; ભેજવાળી હવામાં રહેતાં તેની સપાટી પર બેઝિક મેગ્નેશિયમ કાર્બોનેટ (કે મેગ્નેશિયમ ઓક્સાઇડ)નું રક્ષણાત્મક પડ બની જાય છે. કાચપેપરથી ઘસવાથી આ પડ દૂર થાય છે અને તે સરળતાથી સળગી શકે છે."
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "What is the primary reason for cleaning a magnesium ribbon with sandpaper before burning it in air?",
+        "question_hi": "हवा में जलाने से पहले मैग्नीशियम रिबन को सैंडपेपर से साफ करने का मुख्य कारण क्या है?",
+        "question_gu": "હવામાં સળગાવતાં પહેલાં મેગ્નેશિયમની પટ્ટીને કાચપેપર વડે સાફ કરવાનું મુખ્ય કારણ શું છે?",
+        "options": [
+            "To remove the protective layer of basic magnesium oxide/carbonate so it ignites readily.",
+            "To make the ribbon look shiny for the demonstration.",
+            "To decrease the melting point of magnesium metal.",
+            "To remove excess moisture from the metal surface."
+        ],
+        "options_hi": [
+            "बेसिक मैग्नीशियम ऑक्साइड/कार्बोनेट की सुरक्षात्मक परत को हटाना ताकि यह आसानी से जल सके।",
+            "प्रदर्शन के लिए रिबन को चमकदार दिखाना।",
+            "मैग्नीशियम धातु के गलनांक को कम करना।",
+            "धातु की सतह से अतिरिक्त नमी को हटाना।"
+        ],
+        "options_gu": [
+            "બેઝિક મેગ્નેશિયમ ઓક્સાઇડ/કાર્બોનેટનું રક્ષણાત્મક પડ દૂર કરવું જેથી તે સરળતાથી સળગી શકે.",
+            "પ્રયોગ દરમિયાન પટ્ટીને માત્ર ચમકદાર દેખાડવી.",
+            "મેગ્નેશિયમ ધાતુનું ગલનબિંદુ ઘટાડવું.",
+            "ધાતુની સપાટી પરથી વધારાનો ભેજ દૂર કરવો."
+        ],
+        "correct_index": 0,
+        "explanation": "Magnesium reacts slowly with atmospheric oxygen and moisture to form a protective coating. Sandpaper removes this coat, allowing direct contact with oxygen during burning.",
+        "explanation_hi": "मैग्नीशियम वायुमंडलीय ऑक्सीजन और नमी के साथ धीरे-धीरे अभिक्रिया करके सुरक्षात्मक कोटिंग बनाता है। सैंडपेपर इस परत को हटा देता है, जिससे दहन के समय ऑक्सीजन से सीधा संपर्क हो पाता है।",
+        "explanation_gu": "મેગ્નેશિયમ વાતાવરણના ઓક્સિજન અને ભેજ સાથે ધીમી પ્રક્રિયા કરીને રક્ષણાત્મક પડ બનાવે છે. કાચપેપર આ પડ દૂર કરે છે જેથી દહન વખતે ઓક્સિજન સાથે સીધો સંપર્ક થાય છે."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Can't You Un-burn Wood?",
+        "title_hi": "जली हुई लकड़ी को वापस मूल रूप में क्यों नहीं लाया जा सकता?",
+        "title_gu": "બળી ગયેલા લાકડાને મૂળ સ્વરૂપમાં પાછું કેમ લાવી શકાતું નથી?",
+        "body": "In a physical change, like melting ice into water, the molecules remain H2O; you simply cool it down to reverse it. But in a chemical reaction, existing chemical bonds break and new chemical bonds form. The carbon atoms in wood have reacted with oxygen to escape as CO2 gas and ash. The identity of the matter itself has transformed!",
+        "body_hi": "भौतिक परिवर्तन में, जैसे बर्फ का पानी में पिघलना, अणु H2O ही रहते हैं; आप इसे ठंडा करके वापस बर्फ बना सकते हैं। लेकिन एक रासायनिक अभिक्रिया में पुराने रासायनिक बंध टूटते हैं और नए बंध बनते हैं। लकड़ी के कार्बन परमाणु ऑक्सीजन से क्रिया करके CO2 गैस और राख के रूप में बदल चुके हैं। पदार्थ की अपनी मूल पहचान ही बदल चुकी है!",
+        "body_gu": "ભૌતિક ફેરફારમાં, જેમ કે બરફનું પાણીમાં પીગળવું, અણુઓ H2O જ રહે છે; તમે ઠંડુ પાડીને તેને પાછો બરફ બનાવી શકો છો. પરંતુ રાસાયણિક પ્રક્રિયામાં જૂના રાસાયણિક બંધ તૂટે છે અને નવા બંધ બને છે. લાકડાના કાર્બન પરમાણુ ઓક્સિજન સાથે પ્રક્રિયા કરીને CO2 વાયુ અને રાખ બની ચૂક્યા છે. પદાર્થની પોતાની મૂળ ઓળખ જ બદલાઈ ગઈ છે!"
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Real-World Chemistry: Life and Industry",
+        "title_hi": "वास्तविक दुनिया का रसायन विज्ञान: जीवन और उद्योग",
+        "title_gu": "વાસ્તવિક દુનિયાનું રસાયણવિજ્ઞાન: જીવન અને ઉદ્યોગ",
+        "body": "Chemical equations are the universal blueprints for engineers and biologists alike:\n• In human cells: Glucose burns smoothly with oxygen (Respiration: C6H12O6 + 6O2 -> 6CO2 + 6H2O + Energy) to keep you alive.\n• In industry: Carbon monoxide reacts with hydrogen under 340 atmospheres of pressure to manufacture liquid fuel Methanol (CO + 2H2 -> CH3OH).\nWithout balanced understanding of chemical reactions, modern medicine, fuels, and food production would not exist.",
+        "body_hi": "रासायनिक समीकरण इंजीनियरों और जीवविज्ञानियों दोनों के लिए सार्वभौमिक खाका (ब्लूप्रिंट) हैं:\n• मानव कोशिकाओं में: ग्लूकोज ऑक्सीजन के साथ धीमी गति से जलता है (श्वसन: C6H12O6 + 6O2 -> 6CO2 + 6H2O + ऊर्जा) जिससे आप जीवित रहते हैं।\n• उद्योग में: तरल ईंधन मेथनॉल बनाने के लिए कार्बन मोनोऑक्साइड 340 वायुमंडलीय दाब पर हाइड्रोजन से क्रिया करती है (CO + 2H2 -> CH3OH)।\nरासायनिक अभिक्रियाओं की स्पष्ट समझ के बिना आधुनिक दवाएं, ईंधन और खाद्य उत्पादन संभव नहीं होते।",
+        "body_gu": "રાસાયણિક સમીકરણો ઇજનેરો અને જીવવિજ્ઞાનીઓ બંને માટે સાર્વત્રિક બ્લૂપ્રિન્ટ છે:\n• માનવ કોષોમાં: આપણને જીવંત રાખવા ગ્લુકોઝ ઓક્સિજન સાથે ધીમેથી દહન પામે છે (શ્વસન: C6H12O6 + 6O2 -> 6CO2 + 6H2O + ઉર્જા).\n• ઉદ્યોગોમાં: પ્રવાહી બળતણ મિથેનોલ બનાવવા માટે 340 વાતાવરણ દબાણે કાર્બન મોનોક્સાઇડ હાઇડ્રોજન સાથે પ્રક્રિયા કરે છે (CO + 2H2 -> CH3OH).\nરાસાયણિક પ્રક્રિયાઓની સાચી સમજ વિના આધુનિક દવાઓ, બળતણ અને ખાદ્ય ઉત્પાદન અશક્ય હોત."
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "Which of the following correctly describes a 'skeletal' chemical equation?",
+        "question_hi": "निम्नलिखित में से कौन सा विकल्प 'कंकाली' (skeletal) रासायनिक समीकरण का सही वर्णन करता है?",
+        "question_gu": "નીચેનામાંથી કયો વિકલ્પ 'માળખાકીય' (skeletal) રાસાયણિક સમીકરણનું સાચું વર્ણન કરે છે?",
+        "options": [
+            "An unbalanced chemical equation where the total mass is not equal on both sides.",
+            "An equation that only includes physical states of elements.",
+            "An equation that contains no arrow symbol.",
+            "A word equation without any chemical formulas."
+        ],
+        "options_hi": [
+            "एक असंतुलित रासायनिक समीकरण जहाँ दोनों तरफ कुल द्रव्यमान बराबर नहीं होता है।",
+            "एक समीकरण जिसमें केवल तत्वों की भौतिक अवस्थाएं शामिल होती हैं।",
+            "एक ऐसा समीकरण जिसमें कोई तीर का निशान नहीं होता।",
+            "बिना किसी रासायनिक सूत्र का केवल एक शब्द समीकरण।"
+        ],
+        "options_gu": [
+            "એક અસંતુલિત રાસાયણિક સમીકરણ જ્યાં બંને બાજુ કુલ દળ સમાન હોતું નથી.",
+            "એક સમીકરણ જેમાં માત્ર તત્વોની ભૌતિક અવસ્થાઓ દર્શાવેલી હોય.",
+            "એક સમીકરણ જેમાં કોઈ તીરનું ચિહ્ન હોતું નથી.",
+            "કોઈપણ રાસાયણિક સૂત્ર વગરનું માત્ર શાબ્દિક સમીકરણ."
+        ],
+        "correct_index": 0,
+        "explanation": "If the number of atoms of each element is not the same on both LHS and RHS, the equation is unbalanced and called a skeletal equation (e.g., Mg + O2 -> MgO).",
+        "explanation_hi": "यदि LHS और RHS दोनों तरफ प्रत्येक तत्व के परमाणुओं की संख्या समान नहीं है, तो समीकरण असंतुलित होता है और इसे कंकाली समीकरण कहा जाता है (जैसे, Mg + O2 -> MgO)।",
+        "explanation_gu": "જો LHS અને RHS બંને તરફ દરેક તત્વના પરમાણુઓની સંખ્યા સમાન ન હોય, તો તે સમીકરણ અસંતુલિત ગણાય છે અને તેને માળખાકીય સમીકરણ કહેવાય છે (દા.ત., Mg + O2 -> MgO)."
+    })
+
+    # =========================================================================
+    # MODULE 2: BALANCING CHEMICAL EQUATIONS (8-STEP PEDAGOGY)
+    # =========================================================================
+
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Cosmic Balance Scale: Nothing Disappears",
+        "title_hi": "ब्रह्मांडीय तराजू: कुछ भी नष्ट नहीं होता",
+        "title_gu": "બ્રહ્માંડનું ત્રાજવું: કશું જ નષ્ટ થતું નથી",
+        "body": "In 1789, Antoine Lavoisier weighed substances before and after a reaction in sealed glass flasks. No matter how violent the reaction, explosion, or smoke, the total weight NEVER changed by even a fraction of a milligram! Every single atom that enters a reaction MUST leave that reaction. How do we reflect this eternal law on paper?",
+        "body_hi": "1789 में, एंटोनी लावोईसियर ने सीलबंद कांच के फ्लास्क में अभिक्रिया से पहले और बाद में पदार्थों का वजन किया। चाहे अभिक्रिया कितनी भी हिंसक हो, विस्फोट हो या धुआं निकले, कुल वजन एक मिलीग्राम भी नहीं बदला! प्रत्येक परमाणु जो किसी अभिक्रिया में प्रवेश करता है, उसे बाहर भी आना होगा। हम कागज पर इस शाश्वत नियम को कैसे दर्शाते हैं?",
+        "body_gu": "1789 માં, એન્ટોની લેવોઇઝરે સીલબંધ કાચના ફ્લાસ્કમાં પ્રક્રિયા પહેલાં અને પછી પદાર્થોનું વજન કર્યું. પ્રક્રિયા ગમે તેટલી ઉગ્ર હોય, વિસ્ફોટ થાય કે ધુમાડો નીકળે, પણ કુલ વજનમાં એક મિલિગ્રામનો પણ ફેરફાર થયો નહીં! પ્રક્રિયામાં ભાગ લેતો દરેક પરમાણુ નીપજમાં પણ હાજર હોવો જ જોઈએ. આ શાશ્વત નિયમને કાગળ પર કેવી રીતે દર્શાવાય?"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "In the reaction between Iron and Steam: Fe + H2O -> Fe3O4 + H2, why can't we simply change the formula Fe3O4 to FeO or H2O to H2O4 to balance the oxygen atoms?",
+        "question_hi": "लोहे और भाप की अभिक्रिया में: Fe + H2O -> Fe3O4 + H2, ऑक्सीजन परमाणुओं को संतुलित करने के लिए हम Fe3O4 के सूत्र को FeO या H2O को H2O4 में क्यों नहीं बदल सकते?",
+        "question_gu": "લોખંડ અને વરાળ વચ્ચેની પ્રક્રિયામાં: Fe + H2O -> Fe3O4 + H2, ઓક્સિજન પરમાણુઓને સંતુલિત કરવા માટે આપણે Fe3O4 ના સૂત્રને બદલીને FeO કે H2O ને H2O4 કેમ ન કરી શકીએ?",
+        "options": [
+            "Changing subscripts alters the chemical identity of the substance; we can only change coefficients in front.",
+            "Subscripts are forbidden by chemistry teachers for neatness.",
+            "Water molecules expand when heated, making formulas flexible.",
+            "Chemical formulas are chosen at random by the reaction."
+        ],
+        "options_hi": [
+            "पाद-चिह्नों (subscripts) को बदलने से पदार्थ की रासायनिक पहचान बदल जाती है; हम केवल आगे के गुणांक (coefficients) बदल सकते हैं।",
+            "रसायन विज्ञान के शिक्षक सफाई बनाए रखने के लिए पाद-चिह्न बदलने से मना करते हैं।",
+            "गर्म करने पर पानी के अणु फैल जाते हैं, जिससे सूत्र लचीले हो जाते हैं।",
+            "रासायनिक सूत्र अभिक्रिया द्वारा यादृच्छिक रूप से चुने जाते हैं।"
+        ],
+        "options_gu": [
+            "સબસ્ક્રીપ્ટ બદલવાથી પદાર્થનું રાસાયણિક બંધારણ બદલાઈ જાય છે; આપણે માત્ર આગળના ગુણાંક (સહગુણક) જ બદલી શકીએ છીએ.",
+            "સ્વચ્છતા જાળવવા માટે શિક્ષકો સબસ્ક્રીપ્ટ બદલવાની મનાઈ કરે છે.",
+            "ગરમ થતાં પાણીના અણુઓ વિસ્તરે છે, જેથી સૂત્રો બદલી શકાય છે.",
+            "રાસાયણિક સૂત્રો પ્રક્રિયા દ્વારા આપમેળે નક્કી થાય છે."
+        ],
+        "correct_index": 0,
+        "explanation": "H2O is water; H2O4 does not exist. Fe3O4 is magnetic iron oxide; FeO is iron(II) oxide. Changing subscripts invents non-existent or wrong chemicals. Balancing is achieved solely by altering whole-number stoichiometric coefficients placed in front of formulas.",
+        "explanation_hi": "H2O पानी है; H2O4 का कोई अस्तित्व नहीं है। Fe3O4 मैग्नेटिक आयरन ऑक्साइड है जबकि FeO फेरस ऑक्साइड है। पाद-चिह्न बदलने से गलत यौગિક बन जाते हैं। संतुलन केवल सूत्रों के आगे उचित पूर्ण संख्या गुणांक रखकर ही किया जाता है।",
+        "explanation_gu": "H2O એટલે પાણી; H2O4 અસ્તિત્વ ધરાવતું નથી. Fe3O4 એ ચુંબકીય આયર્ન ઓક્સાઇડ છે જ્યારે FeO આયર્ન(II) ઓક્સાઇડ છે. સબસ્ક્રીપ્ટ બદલવાથી ખોટા પદાર્થો બની જાય. સમીકરણ સંતુલન માત્ર સૂત્રો આગળ યોગ્ય પૂર્ણાંક સહગુણક મૂકીને જ કરી શકાય છે."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "The Step-by-Step Balancing Method (Hit and Trial)",
+        "title_hi": "समीकरण संतुलन की चरणबद्ध विधि (हिट एंड ट्रायल)",
+        "title_gu": "સમીકરણ સંતુલિત કરવાની તબક્કાવાર પદ્ધતિ (હિટ એન્ડ ટ્રાયલ)",
+        "body": "Let us balance: Fe + H2O -> Fe3O4 + H2\n\n• Step 1: Draw boxes around each formula. Do not touch anything inside the boxes!\n[Fe] + [H2O] -> [Fe3O4] + [H2]\n\n• Step 2: Count atoms on LHS and RHS:\n  - Fe: LHS = 1, RHS = 3\n  - H:  LHS = 2, RHS = 2\n  - O:  LHS = 1, RHS = 4\n\n• Step 3: Pick the element with the maximum atoms (Oxygen has 4 on RHS). Place 4 in front of H2O:\n  Fe + 4H2O -> Fe3O4 + H2\n\n• Step 4: Now H has 8 on LHS (4 x 2 = 8). Place 4 in front of H2 on RHS:\n  Fe + 4H2O -> Fe3O4 + 4H2\n\n• Step 5: Fe has 3 on RHS. Place 3 in front of Fe on LHS:\n  3Fe + 4H2O -> Fe3O4 + 4H2\n\n• Step 6: Verify: Fe (3=3), H (8=8), O (4=4). Perfectly balanced!",
+        "body_hi": "आइए संतुलित करें: Fe + H2O -> Fe3O4 + H2\n\n• चरण 1: प्रत्येक सूत्र के चारों ओर बॉक्स बनाएं। बॉक्स के अंदर कुछ भी न बदलें!\n[Fe] + [H2O] -> [Fe3O4] + [H2]\n\n• चरण 2: LHS और RHS पर परमाणुओं की गिनती करें:\n  - Fe: LHS = 1, RHS = 3\n  - H:  LHS = 2, RHS = 2\n  - O:  LHS = 1, RHS = 4\n\n• चरण 3: सबसे अधिक परमाणु वाले तत्व से शुरुआत करें (RHS पर ऑक्सीजन के 4 हैं)। H2O के आगे 4 लगाएं:\n  Fe + 4H2O -> Fe3O4 + H2\n\n• चरण 4: अब LHS पर H के 8 परमाणु हैं (4 x 2 = 8)। RHS पर H2 के आगे 4 लगाएं:\n  Fe + 4H2O -> Fe3O4 + 4H2\n\n• चरण 5: RHS पर Fe के 3 परमाणु हैं। LHS पर Fe के आगे 3 लगाएं:\n  3Fe + 4H2O -> Fe3O4 + 4H2\n\n• चरण 6: जांचें: Fe (3=3), H (8=8), O (4=4)। पूर्ण रूप से संतुलित!",
+        "body_gu": "ચાલો સંતુલિત કરીએ: Fe + H2O -> Fe3O4 + H2\n\n• તબક્કો 1: દરેક સૂત્રની ફરતે બોક્સ બનાવો. બોક્સની અંદર કશું જ બદલશો નહીં!\n[Fe] + [H2O] -> [Fe3O4] + [H2]\n\n• તબક્કો 2: LHS અને RHS પર પરમાણુઓની ગણતરી કરો:\n  - Fe: LHS = 1, RHS = 3\n  - H:  LHS = 2, RHS = 2\n  - O:  LHS = 1, RHS = 4\n\n• તબક્કો 3: સૌથી વધુ પરમાણુ ધરાવતા તત્વથી શરૂ કરો (RHS પર ઓક્સિજનના 4 છે). H2O આગળ 4 મૂકો:\n  Fe + 4H2O -> Fe3O4 + H2\n\n• તબક્કો 4: હવે LHS પર H ના 8 પરમાણુ થયા (4 x 2 = 8). RHS પર H2 આગળ 4 મૂકો:\n  Fe + 4H2O -> Fe3O4 + 4H2\n\n• તબક્કો 5: RHS પર Fe ના 3 છે. LHS પર Fe આગળ 3 મૂકો:\n  3Fe + 4H2O -> Fe3O4 + 4H2\n\n• તબક્કો 6: ચકાસો: Fe (3=3), H (8=8), O (4=4). સમીકરણ સંપૂર્ણ સંતુલિત છે!"
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "The Law of Conservation of Mass",
+        "title_hi": "द्रव्यमान संरक्षण का नियम",
+        "title_gu": "દળ સંરક્ષણનો નિયમ",
+        "body": "Law of Conservation of Mass states: Matter can neither be created nor destroyed in a chemical reaction. Therefore:\n• Total mass of elements present in the products MUST equal the total mass of elements present in the reactants.\n• The number of atoms of each element remains identical before and after a chemical reaction.\n\nAdding state symbols makes the equation complete:\n3Fe(s) + 4H2O(g) -> Fe3O4(s) + 4H2(g)\nNote: Here H2O is written as (g) because water is used in the form of steam!",
+        "body_hi": "द्रव्यमान संरक्षण का नियम कहता है: किसी रासायनिक अभिक्रिया में न तो द्रव्यमान का निर्माण हो सकता है और न ही विनाश। अतः:\n• उत्पादों में उपस्थित तत्वों का कुल द्रव्यमान, अभिकारकों में उपस्थित तत्वों के कुल द्रव्यमान के बराबर होना चाहिए।\n• रासायनिक अभिक्रिया के पहले और उसके बाद प्रत्येक तत्व के परमाणुओं की संख्या समान रहती है।\n\nभौतिक अवस्थाओं को जोड़ने पर समीकरण पूर्ण होता है:\n3Fe(s) + 4H2O(g) -> Fe3O4(s) + 4H2(g)\nध्यान दें: यहाँ H2O को (g) लिखा गया है क्योंकि पानी भाप (steam) के रूप में प्रयुक्त हुआ है!",
+        "body_gu": "દળ સંરક્ષણનો નિયમ જણાવે છે: કોઈપણ રાસાયણિક પ્રક્રિયામાં દ્રવ્યનું સર્જન કે વિનાશ થઈ શકતો નથી. આથી:\n• નીપજોમાં હાજર તત્વોનું કુલ દળ = પ્રક્રિયકોમાં હાજર તત્વોનું કુલ દળ હોવું જ જોઈએ.\n• રાસાયણિક પ્રક્રિયા પહેલાં અને પછી દરેક તત્વના પરમાણુઓની સંખ્યા સમાન રહે છે.\n\nભૌતિક અવસ્થા દર્શાવવાથી સમીકરણ પરિપૂર્ણ બને છે:\n3Fe(s) + 4H2O(g) -> Fe3O4(s) + 4H2(g)\nનોંધ: અહીં H2O ની પાછળ (g) લખ્યું છે કારણ કે પાણી વરાળ (steam) સ્વરૂપે વપરાયેલ છે!"
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "In the balanced equation: a HNO3 + b Ca(OH)2 -> c Ca(NO3)2 + d H2O, what are the values of coefficients a, b, c, and d?",
+        "question_hi": "संतुलित समीकरण में: a HNO3 + b Ca(OH)2 -> c Ca(NO3)2 + d H2O, गुणांक a, b, c और d के मान क्या हैं?",
+        "question_gu": "સંતુલિત સમીકરણમાં: a HNO3 + b Ca(OH)2 -> c Ca(NO3)2 + d H2O, સહગુણકો a, b, c અને d ની કિંમતો શું હશે?",
+        "options": [
+            "a = 2, b = 1, c = 1, d = 2",
+            "a = 1, b = 2, c = 1, d = 2",
+            "a = 2, b = 2, c = 1, d = 1",
+            "a = 1, b = 1, c = 1, d = 1"
+        ],
+        "options_hi": [
+            "a = 2, b = 1, c = 1, d = 2",
+            "a = 1, b = 2, c = 1, d = 2",
+            "a = 2, b = 2, c = 1, d = 1",
+            "a = 1, b = 1, c = 1, d = 1"
+        ],
+        "options_gu": [
+            "a = 2, b = 1, c = 1, d = 2",
+            "a = 1, b = 2, c = 1, d = 2",
+            "a = 2, b = 2, c = 1, d = 1",
+            "a = 1, b = 1, c = 1, d = 1"
+        ],
+        "correct_index": 0,
+        "explanation": "Calcium is 1 on both sides. Nitrate (NO3) requires 2 HNO3. This gives 2 H from HNO3 + 2 H from Ca(OH)2 = 4 H atoms, requiring 2 H2O. Thus: 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O.",
+        "explanation_hi": "दोनों ओर कैल्शियम 1 है। नाइट्रेट (NO3) के 2 समूह होने के कारण 2 HNO3 चाहिए। इससे 2 H (HNO3 से) + 2 H (Ca(OH)2 से) = 4 H परमाणु बनते हैं, जिसके लिए 2 H2O आवश्यक हैं। अतः: 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O।",
+        "explanation_gu": "બંને બાજુ કેલ્શિયમ 1 છે. નાઇટ્રેટ (NO3) ના 2 જૂથ હોવાથી 2 HNO3 જોઈએ. આથી 2 H (HNO3 ના) + 2 H (Ca(OH)2 ના) = 4 H પરમાણુ થાય, જે માટે 2 H2O જરૂરી છે. આમ: 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Nature Demands Whole Numbers",
+        "title_hi": "प्रकृति केवल पूर्ण संख्याओं की मांग क्यों करती है?",
+        "title_gu": "કુદરત માત્ર પૂર્ણાંક સંખ્યાઓની જ માંગ શા માટે કરે છે?",
+        "body": "In mathematical equations, you can write fractions like 1/2 x + 3/4 y = 5. But in chemistry, you can NEVER have half an atom or half a molecule! Atoms are fundamental indivisible units during a chemical reaction. That is why stoichiometric coefficients must always be the smallest whole numbers.",
+        "body_hi": "गणितीय समीकरणों में, आप 1/2 x + 3/4 y = 5 जैसे भिन्न लिख सकते हैं। लेकिन रसायन विज्ञान में, आपके पास आधा परमाणु या आधा अणु कभी नहीं हो सकता! रासायनिक अभिक्रिया में परमाणु अविभाज्य मौलिक इकाइयाँ होते हैं। यही कारण है कि स्टॉइकियोमेट्रिक गुणांक हमेशा सबसे छोटे पूर्ण अंक होने चाहिए।",
+        "body_gu": "ગણિતના સમીકરણોમાં તમે 1/2 x + 3/4 y = 5 જેવા અપૂર્ણાંક લખી શકો છો. પરંતુ રસાયણશાસ્ત્રમાં અડધો પરમાણુ કે અડધો અણુ ક્યારેય શક્ય નથી! રાસાયણિક પ્રક્રિયા દરમિયાન પરમાણુઓ અવિભાજ્ય મૂળભૂત એકમો તરીકે વર્તે છે. તેથી જ સમીકરણના સહગુણકો હંમેશા નાનામાં નાના પૂર્ણાંક જ હોવા જોઈએ."
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Rocket Launches and Stoichiometric Fuel Mix",
+        "title_hi": "रॉकेट प्रक्षेपण और सटीक ईंधन संतुलन",
+        "title_gu": "રોકેટ લોન્ચિંગ અને સચોટ બળતણ મિશ્રણ",
+        "body": "When ISRO launches a rocket, engineers calculate the exact ratio of liquid hydrogen (fuel) and liquid oxygen (oxidizer): 2H2 + O2 -> 2H2O. If the balance is even slightly off by 0.1%, thousands of kilograms of unburned gas add useless dead weight, or excess oxygen destroys the engine nozzle. Balancing equations literally powers space travel!",
+        "body_hi": "जब इसरो (ISRO) रॉकेट लॉन्च करता है, तो इंजीनियर तरल हाइड्रोजन (ईंधन) और तरल ऑक्सीजन (ऑक्सीकारक) के सटीक अनुपात की गणना करते हैं: 2H2 + O2 -> 2H2O। यदि संतुलन 0.1% भी गड़बड़ा जाए, तो हजारों किलोग्राम बिना जला ईंधन रॉकेट का वजन बढ़ा देगा, या अतिरिक्त ऑक्सीजन इंजन के नोजल को पिघला देगी। समीकरण संतुलन सचमुच अंतरिक्ष यात्रा को संभव बनाता है!",
+        "body_gu": "જ્યારે ISRO રોકેટ લોન્ચ કરે છે, ત્યારે એન્જિનિયરો પ્રવાહી હાઇડ્રોજન (બળતણ) અને પ્રવાહી ઓક્સિજનના ચોક્કસ ગુણોત્તરની ગણતરી કરે છે: 2H2 + O2 -> 2H2O. જો સંતુલનમાં માત્ર 0.1% નો પણ ફેરફાર થાય, તો હજારો કિલો વણબળેલું બળતણ રોકેટનું વજન વધારી દે અથવા વધારાનો ઓક્સિજન એન્જિનને નુકસાન પહોંચાડે. સમીકરણ સંતુલન અવકાશ વિજ્ઞાનનો પાયો છે!"
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "Which set of coefficients correctly balances: Al2(SO4)3 + BaCl2 -> AlCl3 + BaSO4?",
+        "question_hi": "कौन सा गुणांक समूह Al2(SO4)3 + BaCl2 -> AlCl3 + BaSO4 को सही ढंग से संतुलित करता है?",
+        "question_gu": "સહગુણકોનો કયો સમૂહ Al2(SO4)3 + BaCl2 -> AlCl3 + BaSO4 ને યોગ્ય રીતે સંતુલિત કરે છે?",
+        "options": [
+            "1, 3, 2, 3",
+            "1, 2, 2, 3",
+            "2, 3, 2, 3",
+            "1, 3, 1, 3"
+        ],
+        "options_hi": [
+            "1, 3, 2, 3",
+            "1, 2, 2, 3",
+            "2, 3, 2, 3",
+            "1, 3, 1, 3"
+        ],
+        "options_gu": [
+            "1, 3, 2, 3",
+            "1, 2, 2, 3",
+            "2, 3, 2, 3",
+            "1, 3, 1, 3"
+        ],
+        "correct_index": 0,
+        "explanation": "Al2(SO4)3 has 2 Al atoms (giving 2 AlCl3) and 3 SO4 groups (giving 3 BaSO4). The 3 BaSO4 requires 3 BaCl2, which supplies 6 Cl matching 2 AlCl3 (2 x 3 = 6 Cl). Balanced equation: Al2(SO4)3 + 3BaCl2 -> 2AlCl3 + 3BaSO4.",
+        "explanation_hi": "Al2(SO4)3 में 2 Al परमाणु हैं (जिससे 2 AlCl3 बनते हैं) और 3 SO4 समूह हैं (जिससे 3 BaSO4 बनते हैं)। 3 BaSO4 के लिए 3 BaCl2 चाहिए, जो 6 Cl प्रदान करते हैं और 2 AlCl3 से मेल खाते हैं। संतुलित रूप: Al2(SO4)3 + 3BaCl2 -> 2AlCl3 + 3BaSO4।",
+        "explanation_gu": "Al2(SO4)3 માં 2 Al પરમાણુ છે (જેથી 2 AlCl3 બને) અને 3 SO4 સમૂહ છે (જેથી 3 BaSO4 બને). 3 BaSO4 માટે 3 BaCl2 જોઈએ, જે 6 Cl આપે છે અને 2 AlCl3 સાથે મેળ ખાય છે. સંતુલિત સમીકરણ: Al2(SO4)3 + 3BaCl2 -> 2AlCl3 + 3BaSO4."
+    })
+
+    # =========================================================================
+    # MODULE 3: COMBINATION REACTIONS & EXOTHERMIC REACTIONS
+    # =========================================================================
+
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Hissing Cauldron of White Lime",
+        "title_hi": "सफेद चूने की उबलती कड़ाही",
+        "title_gu": "સફેદ ચૂનાની ઉકળતી કઢાઈ",
+        "body": "Have you ever watched workers prepare whitewash for village walls? They drop white rocks of quicklime into an iron drum filled with cold water. Suddenly, the water begins to boil violently without any fire! It hisses, splutters, releases steam, and becomes scorching hot! How can cold water and dry stones produce boiling heat?",
+        "body_hi": "क्या आपने कभी दीवारों की पुताई के लिए चूना तैयार करते देखा है? जब वे ठंडे पानी से भरे लोहे के ड्रम में कली चूने (quicklime) के सफेद पत्थर डालते हैं, तो बिना किसी आग के पानी अचानक हिंसक रूप से उबलने लगता है! यह फुफकारता है, भाप छोड़ता है और अत्यधिक गर्म हो जाता है! ठंडा पानी और सूखे पत्थर खौलता हुआ तापमान कैसे पैदा कर सकते हैं?",
+        "body_gu": "શું તમે ક્યારેય દિવાલો પર કળીચૂનો કરતાં જોયો છે? જ્યારે ઠંડા પાણી ભરેલા ડ્રમમાં કળીચૂનાના સૂકા ટુકડા નાખવામાં આવે છે, ત્યારે કોઈ પણ આગ વગર પાણી અચાનક ઉકળવા લાગે છે! તેમાંથી અવાજ આવે છે, વરાળ નીકળે છે અને તે અત્યંત ગરમ થઈ જાય છે! ઠંડુ પાણી અને સૂકા પથ્થર આટલી પ્રચંડ ગરમી કેવી રીતે પેદા કરી શકે?"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "When calcium oxide (quicklime) reacts with water to form calcium hydroxide (slaked lime), how many separate chemical products are formed?",
+        "question_hi": "जब कैल्शियम ऑक्साइड (कली चूना) पानी के साथ अभिक्रिया करके कैल्शियम हाइड्रॉक्साइड (बुझा हुआ चूना) बनाता है, तो कितने अलग-अलग रासायनिक उत्पाद बनते हैं?",
+        "question_gu": "જ્યારે કેલ્શિયમ ઓક્સાઇડ (કળીચૂનો) પાણી સાથે પ્રક્રિયા કરીને કેલ્શિયમ હાઇડ્રોક્સાઇડ (ભીંજવેલો ચૂનો) બનાવે છે, ત્યારે કેટલી અલગ રાસાયણિક નીપજો બને છે?",
+        "options": [
+            "Only ONE single product (Calcium Hydroxide) is formed, along with heat.",
+            "Two distinct solid products are formed.",
+            "Three different gases are produced.",
+            "No product is formed; it is just a suspension."
+        ],
+        "options_hi": [
+            "ऊष्मा के साथ केवल एक ही उत्पाद (कैल्शियम हाइड्रॉक्साइड) बनता है।",
+            "दो अलग-अलग ठोस उत्पाद बनते हैं।",
+            "तीन अलग-अलग गैसें उत्पन्न होती हैं।",
+            "कोई उत्पाद नहीं बनता; यह केवल एक निलंबન है।"
+        ],
+        "options_gu": [
+            "ઉષ્માની સાથે માત્ર એક જ નીપજ (કેલ્શિયમ હાઇડ્રોક્સાઇડ) બને છે.",
+            "બે અલગ અલગ ઘન નીપજો બને છે.",
+            "ત્રણ જુદા જુદા વાયુઓ ઉત્પન્ન થાય છે.",
+            "કોઈ નીપજ બનતી નથી; તે માત્ર નિલંબન છે."
+        ],
+        "correct_index": 0,
+        "explanation": "CaO(s) + H2O(l) -> Ca(OH)2(aq) + Heat. Two reactants combine to form a single chemical product. Such a reaction is called a Combination Reaction.",
+        "explanation_hi": "CaO(s) + H2O(l) -> Ca(OH)2(aq) + ऊष्मा। दो अभिकारक मिलकर केवल एक उत्पाद बनाते हैं। ऐसी अभिक्रिया को संयोजन (Combination) अभिक्रिया कहते हैं।",
+        "explanation_gu": "CaO(s) + H2O(l) -> Ca(OH)2(aq) + ઉષ્મા. બે પ્રક્રિયકો જોડાઈને માત્ર એક જ નીપજ બનાવે છે. આવી પ્રક્રિયાને સંયોગીકરણ (Combination) પ્રક્રિયા કહે છે."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "The Story of Whitewashed Walls",
+        "title_hi": "दीवारों की सफेदी की वैज्ञानिक कहानी",
+        "title_gu": "દિવાલોના ધોળકામની વૈજ્ઞાનિક વાર્તા",
+        "body": "Why do freshly whitewashed walls look dull at first, but turn into a brilliant, marble-like shiny finish after 2 to 3 days?\n\n1. Quicklime reacts with water to form Slaked Lime:\n   CaO(s) + H2O(l) -> Ca(OH)2(aq) + Heat\n\n2. Slaked lime solution is applied to the walls.\n\n3. Over the next 2 to 3 days, Ca(OH)2 reacts slowly with Carbon Dioxide (CO2) in the air:\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)\n\n4. A micro-thin layer of Calcium Carbonate (CaCO3) forms on the surface. Marble also has the exact same formula (CaCO3), giving walls that dazzling white sheen!",
+        "body_hi": "ताजा पुती हुई दीवारें पहले सुस्त क्यों दिखती हैं, लेकिन 2 से 3 दिनों के बाद संगमरमर जैसी चमकदार क्यों हो जाती हैं?\n\n1. कली चूना पानी से क्रिया करके बुझा हुआ चूना बनाता है:\n   CaO(s) + H2O(l) -> Ca(OH)2(aq) + ऊष्मा\n\n2. बुझे हुए चूने का घोल दीवारों पर लगाया जाता है।\n\n3. अगले 2 से 3 दिनों में, Ca(OH)2 हवा में मौजूद कार्बन डाइऑक्साइड (CO2) के साथ धीमी अभिक्रिया करता है:\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)\n\n4. सतह पर कैल्शियम कार्बोनेट (CaCO3) की एक पतली परत बन जाती है। संगमरमर का रासायनिक सूत्र भी CaCO3 ही है, जिससे दीवारों में शानदार चमक आ जाती है!",
+        "body_gu": "તાજી ચૂનો કરેલી દિવાલો પહેલાં ઝાંખી દેખાય છે, પરંતુ 2 થી 3 દિવસ પછી આરસપહાણ જેવી ચમકદાર કેમ બની જાય છે?\n\n1. કળીચૂનો પાણી સાથે પ્રક્રિયા કરીને ભીંજવેલો ચૂનો બનાવે છે:\n   CaO(s) + H2O(l) -> Ca(OH)2(aq) + ઉષ્મા\n\n2. ભીંજવેલા ચૂનાનું દ્રાવણ દિવાલો પર લગાડવામાં આવે છે.\n\n3. આગામી 2 થી 3 દિવસમાં Ca(OH)2 હવામાંના કાર્બન ડાયોક્સાઇડ (CO2) સાથે ધીમી પ્રક્રિયા કરે છે:\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)\n\n4. સપાટી પર કેલ્શિયમ કાર્બોનેટ (CaCO3) નું પાતળું સ્તર બને છે. આરસપહાણ (માર્બલ) નું સૂત્ર પણ CaCO3 જ છે, જેથી દિવાલો સુંદર ચમકવા લાગે છે!"
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "Combination & Exothermic Reactions Defined",
+        "title_hi": "संयोजन एवं ऊष्माक्षेपी अभिक्रियाओं की परिभाषा",
+        "title_gu": "સંયોગીકરણ અને ઉષ્માક્ષેપક પ્રક્રિયાઓની વ્યાખ્યા",
+        "body": "• COMBINATION REACTION: A reaction in which two or more reactants combine to form a single product.\n  - Burning of coal: C(s) + O2(g) -> CO2(g)\n  - Formation of water: 2H2(g) + O2(g) -> 2H2O(l)\n  - Slaked lime formation: CaO(s) + H2O(l) -> Ca(OH)2(aq)\n\n• EXOTHERMIC REACTION: Reactions in which heat energy is released along with the formation of products.\n  - Burning of natural gas: CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g) + Heat\n  - Respiration: C6H12O6(aq) + 6O2(aq) -> 6CO2(aq) + 6H2O(l) + Energy\n  - Decomposition of vegetable matter into compost.",
+        "body_hi": "• संयोजन अभिक्रिया: ऐसी अभिक्रिया जिसमें दो या दो से अधिक अभिकारक मिलकर एक एकल उत्पाद का निर्माण करते हैं।\n  - कोयले का दहन: C(s) + O2(g) -> CO2(g)\n  - जल का निर्माण: 2H2(g) + O2(g) -> 2H2O(l)\n  - बुझे चूने का निर्माण: CaO(s) + H2O(l) -> Ca(OH)2(aq)\n\n• ऊष्माक्षेपी (Exothermic) अभिक्रिया: ऐसी अभिक्रियाएं जिनमें उत्पाद के निर्माण के साथ-साथ ऊष्मा ऊर्जा भी मुक्त होती है।\n  - प्राकृतिक गैस का दहन: CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g) + ऊष्मा\n  - श्वसन: C6H12O6(aq) + 6O2(aq) -> 6CO2(aq) + 6H2O(l) + ऊर्जा\n  - शाક-सब्जियों का विघटित होकर कंपोस्ट (खाद) बनना।",
+        "body_gu": "• સંયોગીકરણ પ્રક્રિયા: એવી પ્રક્રિયા જેમાં બે કે તેથી વધુ પ્રક્રિયકો જોડાઈને એક જ નીપજનું નિર્માણ કરે છે.\n  - કોલસાનું દહન: C(s) + O2(g) -> CO2(g)\n  - પાણીનું નિર્માણ: 2H2(g) + O2(g) -> 2H2O(l)\n  - ભીંજવેલા ચૂનાનું નિર્માણ: CaO(s) + H2O(l) -> Ca(OH)2(aq)\n\n• ઉષ્માક્ષેપક (Exothermic) પ્રક્રિયા: એવી પ્રક્રિયાઓ જેમાં નીપજના નિર્માણની સાથે ઉષ્મા મુક્ત થાય છે.\n  - કુદરતી વાયુનું દહન: CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g) + ઉષ્મા\n  - શ્વસન: C6H12O6(aq) + 6O2(aq) -> 6CO2(aq) + 6H2O(l) + ઉર્જા\n  - વનસ્પતિ દ્રવ્યનું વિઘટન થઈ ખાતર બનવું."
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": next_id(),
+        "type": "teacher_tip",
+        "title": "Teacher Tip: Master the Lime Trio Formulas",
+        "title_hi": "शिक्षक टिप: चूने के तीनों रूपों के सूत्रों को याद रखें",
+        "title_gu": "શિક્ષક ટિપ: ચૂનાના ત્રણેય સ્વરૂપોના સૂત્રો પાકા કરો",
+        "body": "Don't confuse these in exams:\n1. Quicklime = Calcium Oxide = CaO\n2. Slaked Lime / Lime Water = Calcium Hydroxide = Ca(OH)2\n3. Limestone / Chalk / Marble = Calcium Carbonate = CaCO3",
+        "body_hi": "परीक्षा में इन तीनों में भ्रमित न हों:\n1. कली चूना (Quicklime) = कैल्शियम ऑक्साइड = CaO\n2. बुझा हुआ चूना / चूने का पानी = कैल्शियम हाइड्रॉक्साइड = Ca(OH)2\n3. चूना पत्थर / चाक / संगमरमर = कैल्शियम कार्बोनेट = CaCO3",
+        "body_gu": "પરીક્ષામાં આ ત્રણેય વચ્ચે ભૂલ ન કરતા:\n1. કળીચૂનો (Quicklime) = કેલ્શિયમ ઓક્સાઇડ = CaO\n2. ભીંજવેલો ચૂનો / ચૂનાનું નીતર્યું પાણી = કેલ્શિયમ હાઇડ્રોક્સાઇડ = Ca(OH)2\n3. ચૂનાનો પથ્થર / ચાક / આરસપહાણ = કેલ્શિયમ કાર્બોનેટ = CaCO3"
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "Which of the following processes is an endothermic process rather than exothermic?",
+        "question_hi": "निम्नलिखित में से कौन सी प्रक्रिया ऊष्माक्षेपी के बजाय ऊष्माशोषी (endothermic) प्रक्रिया है?",
+        "question_gu": "નીચેનામાંથી કઈ પ્રક્રિયા ઉષ્માક્ષેપકને બદલે ઉષ્માશોષક (endothermic) પ્રક્રિયા છે?",
+        "options": [
+            "Evaporation of water",
+            "Respiration in living cells",
+            "Reaction of water with quicklime",
+            "Burning of natural gas"
+        ],
+        "options_hi": [
+            "जल का वाष्पीकरण",
+            "जीवित कोशिकाओं में श्वसन",
+            "कली चूने के साथ पानी की अभिक्रिया",
+            "प्राकृतिक गैस का जलना"
+        ],
+        "options_gu": [
+            "પાણીનું બાષ્પીભવન",
+            "સજીવ કોષોમાં શ્વસન",
+            "કળીચૂના સાથે પાણીની પ્રક્રિયા",
+            "કુદરતી વાયુનું દહન"
+        ],
+        "correct_index": 0,
+        "explanation": "Evaporation requires heat energy from the surroundings to break intermolecular forces (cooling effect), making it endothermic. Respiration, slaking of lime, and combustion all release heat (exothermic).",
+        "explanation_hi": "वाष्पीकरण में अंतराण्विक बलों को तोड़ने के लिए परिवेश से ऊष्मा ऊर्जा की आवश्यकता होती है (ऊष्माशोषी)। जबकि श्वसन, चूने का बुझना और दहन सभी ऊष्मा छोड़ते हैं (ऊष्माक्षेपी)।",
+        "explanation_gu": "બાષ્પીભવનમાં આંતર-આણ્વીય આકર્ષણ તોડવા આસપાસમાંથી ઉષ્મા શોષાય છે (ઉષ્માશોષક). જ્યારે શ્વસન, ચૂનાનું ભીંજવવું અને દહન તમામ ઉષ્મા મુક્ત કરે છે (ઉષ્માક્ષેપક)."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Respiration is an Exothermic Reaction",
+        "title_hi": "श्वसन एक ऊष्माक्षेपी अभिक्रिया क्यों है?",
+        "title_gu": "શ્વસન એ ઉષ્માક્ષેપક પ્રક્રિયા શા માટે છે?",
+        "body": "To stay alive, we need energy. The food we eat—rice, bread, potatoes—contains carbohydrates. During digestion, carbohydrates are broken down into glucose. This glucose combines with oxygen in our cells to yield carbon dioxide, water, and ENERGY (ATP). Because energy is released to power our body, respiration is an exothermic reaction!",
+        "body_hi": "जीवित रहने के लिए हमें ऊर्जा चाहिए। जो भोजन हम खाते हैं—चावल, रोटी, आलू—उनमें कार्बोहाइड्रेट होते हैं। पाचन के दौरान कार्बोहाइड्रेट ग्लूकोज में टूट जाते हैं। यह ग्लूकोज हमारी कोशिकाओं में ऑक्सीजन से मिलकर कार्बन डाइऑक्साइड, पानी और ऊर्जा (ATP) देता है। चूंकि ऊर्जा मुक्त होती है, इसलिए श्वसन एक ऊष्माक्षेपी अभिक्रिया है!",
+        "body_gu": "જીવંત રહેવા માટે આપણને ઊર્જા જોઈએ છે. આપણે જે ખોરાક ખાઈએ છીએ—ભાત, રોટલી, બટાટા—તેમાં કાર્બોહાઇડ્રેટ્સ હોય છે. પાચન દરમિયાન કાર્બોહાઇડ્રેટ્સ ગ્લુકોઝમાં રૂપાંતરિત થાય છે. આ ગ્લુકોઝ આપણા કોષોમાં રહેલા ઓક્સિજન સાથે જોડાઈને કાર્બન ડાયોક્સાઇડ, પાણી અને ઊર્જા (ATP) મુક્ત કરે છે. આથી શ્વસન એ ઉષ્માક્ષેપક પ્રક્રિયા છે!"
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Composting and Biogas Clean Energy",
+        "title_hi": "कंपोस्ट खाद और बायोगैस स्वच्छ ऊर्जा",
+        "title_gu": "કમ્પોસ્ટ ખાતર અને બાયોગેસ સ્વચ્છ ઊર્જા",
+        "body": "When farmers pile rotting vegetable waste and cow dung into compost pits, micro-organisms break down the complex organic matter. If you stick your hand deep into a compost pile, you will feel it is surprisingly warm! This decomposition of organic matter into compost is an exothermic reaction that produces nutrient-rich organic manure and biogas for clean cooking fuel.",
+        "body_hi": "जब किसान सब्जी के छिलकों और गोबर को खाद के गड्ढे में डालते हैं, तो सूक्ष्मजीव जटिल कार्बनिक पदार्थों को तोड़ते हैं। यदि आप खाद के ढेर में हाथ डालेंगे, तो वह आपको आश्चर्यजनक रूप से गर्म महसूस होगा! जैविक कचरे का खाद में बदलना एक ऊष्माक्षेपी अभिक्रिया है जो समृद्ध जैविक खाद और खाना पकाने के लिए स्वच्छ बायोगैस ईंधन प्रदान करती है।",
+        "body_gu": "જ્યારે ખેડૂતો શાકભાજીનો કચરો અને છાણ ખાતરના ખાડામાં નાખે છે, ત્યારે સૂક્ષ્મજીવો જટિલ પદાર્થોનું વિઘટન કરે છે. જો તમે ખાતરના ઢગલામાં હાથ નાખશો તો તે અંદરથી હુંફાળો ગરમ લાગશે! આ વિઘટન એક ઉષ્માક્ષેપક પ્રક્રિયા છે જે પોષક તત્વોથી ભરપૂર ખાતર અને રસોઈ માટે સ્વચ્છ બાયોગેસ આપે છે."
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "A substance 'X' used in whitewashing reacts with water to form 'Y'. When CO2 is passed through 'Y', it turns milky due to formation of 'Z'. What are X, Y, and Z?",
+        "question_hi": "सफेदी करने में प्रयुक्त पदार्थ 'X' पानी से क्रिया करके 'Y' बनाता है। जब 'Y' में CO2 प्रवाहित की जाती है, तो 'Z' बनने के कारण यह दूधिया हो जाता है। X, Y और Z क्या हैं?",
+        "question_gu": "ધોળકામમાં વપરાતો પદાર્થ 'X' પાણી સાથે પ્રક્રિયા કરીને 'Y' બનાવે છે. જ્યારે 'Y' માંથી CO2 પસાર થાય છે ત્યારે 'Z' બનવાના કારણે તે દૂધિયું બને છે. X, Y અને Z કયા પદાર્થો છે?",
+        "options": [
+            "X = CaO, Y = Ca(OH)2, Z = CaCO3",
+            "X = CaCO3, Y = CaO, Z = Ca(OH)2",
+            "X = Ca(OH)2, Y = CaCO3, Z = CaO",
+            "X = CaO, Y = CaCO3, Z = Ca(OH)2"
+        ],
+        "options_hi": [
+            "X = CaO, Y = Ca(OH)2, Z = CaCO3",
+            "X = CaCO3, Y = CaO, Z = Ca(OH)2",
+            "X = Ca(OH)2, Y = CaCO3, Z = CaO",
+            "X = CaO, Y = CaCO3, Z = Ca(OH)2"
+        ],
+        "options_gu": [
+            "X = CaO, Y = Ca(OH)2, Z = CaCO3",
+            "X = CaCO3, Y = CaO, Z = Ca(OH)2",
+            "X = Ca(OH)2, Y = CaCO3, Z = CaO",
+            "X = CaO, Y = CaCO3, Z = Ca(OH)2"
+        ],
+        "correct_index": 0,
+        "explanation": "X is Quicklime (CaO). On reacting with water, it forms slaked lime Y (Ca(OH)2). When CO2 is passed through lime water, insoluble calcium carbonate Z (CaCO3) forms, turning the solution milky.",
+        "explanation_hi": "X कली चूना (CaO) है। पानी से क्रिया करके यह बुझा हुआ चूना Y (Ca(OH)2) बनाता है। जब चूने के पानी में CO2 प्रवाहित की जाती है, तो अघुलनशील कैल्शियम कार्बोनेट Z (CaCO3) बनता है, जिससे घोल दूधिया हो जाता है।",
+        "explanation_gu": "X એ કળીચૂનો (CaO) છે. પાણી સાથે પ્રક્રિયાથી ભીંજવેલો ચૂનો Y (Ca(OH)2) બને છે. જ્યારે ચૂનાના નીતર્યા પાણીમાંથી CO2 પસાર થાય છે ત્યારે અદ્રાવ્ય કેલ્શિયમ કાર્બોનેટ Z (CaCO3) બને છે, જે દ્રાવણને દૂધિયું બનાવે છે."
+    })
+
+    # =========================================================================
+    # MODULE 4: DECOMPOSITION REACTIONS (8-STEP PEDAGOGY)
+    # =========================================================================
+
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Choking Sulphur and the Magic of Sunlight",
+        "title_hi": "दमघोंटू सल्फर और सूर्य के प्रकाश का जादू",
+        "title_gu": "ગૂંગળામણ કરતો સલ્ફર અને સૂર્યપ્રકાશનો જાદુ",
+        "body": "Heat beautiful green crystals of ferrous sulphate in a dry boiling tube. Slowly, the green color fades to dirty brown, and a suffocating, choking smell like burning sulphur attacks your nose! Leave white crystals of silver chloride in sunlight, and they mysteriously turn dark grey on their own! What invisible force breaks these solid compounds apart?",
+        "body_hi": "एक सूखी क्वथन नली में फेरस सल्फेट के सुंदर हरे क्रिस्टल गर्म करें। धीरे-धीरे हरा रंग उड़कर मटमैला भूरा हो जाता है और जलते हुए गंधक जैसी दमघोंटू गंध आपकी नाक में भर जाती है! वहीं धूप में रखे सिल्वर क्लोराइड के सफेद क्रिस्टल अपने आप गहरे भूरे-स्लेटी हो जाते हैं! कौन सी अदृश्य शक्ति इन ठोस यौગિકों को तोड़ती है?",
+        "body_gu": "સૂકી ઉત્કલન નળીમાં ફેરસ સલ્ફેટના સુંદર લીલા સ્ફટિક ગરમ કરો. ધીમે ધીમે લીલો રંગ ઉડીને કથ્થઈ બની જાય છે અને સળગતા ગંધક જેવી ગૂંગળામણ કરતી ગંધ આવે છે! તડકામાં મૂકેલા સિલ્વર ક્લોરાઇડના સફેદ સ્ફટિક આપમેળે રાખોડી બની જાય છે! કઈ અદ્રશ્ય શક્તિ આ ઘન સંયોજનોને તોડી નાખે છે?"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "If combination reactions combine multiple reactants into one single product, what fundamental transformation happens in a decomposition reaction?",
+        "question_hi": "यदि संयोजन अभिक्रियाएं कई अभिकारकों को मिलाकर एक एकल उत्पाद बनाती हैं, तो वियोजन (Decomposition) अभिक्रिया में क्या मौलिक परिवर्तन होता है?",
+        "question_gu": "જો સંયોગીકરણ પ્રક્રિયાઓ ઘણા પ્રક્રિયકોને જોડીને એક જ નીપજ બનાવે, તો વિઘટન (Decomposition) પ્રક્રિયામાં કયો મૂળભૂત ફેરફાર થાય છે?",
+        "options": [
+            "A single reactant breaks down to yield two or more simpler products.",
+            "Two liquids mix to become an element.",
+            "Reactants destroy their own electrons.",
+            "Atoms fuse together to form heavier elements."
+        ],
+        "options_hi": [
+            "एक अकेला अभिकारक टूटकर दो या दो से अधिक सरल उत्पाद देता है।",
+            "दो तरल मिलकर एक तत्व बन जाते हैं।",
+            "अभिकारक अपने ही इलेक्ट्रॉनों को नष्ट कर देते हैं।",
+            "परमाणु आपस में जुड़कर भारी तत्व बनाते हैं।"
+        ],
+        "options_gu": [
+            "એક જ પ્રક્રિયક તૂટીને બે કે તેથી વધુ સરળ નીપજો આપે છે.",
+            "બે પ્રવાહી ભળીને એક તત્વ બને છે.",
+            "પ્રક્રિયકો પોતાના જ ઇલેક્ટ્રોનનો નાશ કરે છે.",
+            "પરમાણુઓ જોડાઈને ભારે તત્વો બનાવે છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Decomposition is the exact opposite of combination. A single complex compound absorbs energy (heat, light, or electricity) to split into two or more simpler elements or compounds.",
+        "explanation_hi": "वियोजन अभिक्रिया संयोजन के ठीक विपरीत है। एक अकेला यौગિક ऊर्जा (ऊष्मा, प्रकाश या विद्युत) को अवशोषित करके दो या दो से अधिक सरल तत्वों या यौगिकों में टूट जाता है।",
+        "explanation_gu": "વિઘટન પ્રક્રિયા એ સંયોગીકરણથી બિલકુલ વિરુદ્ધ છે. એક જ સંયોજન ઊર્જા (ઉષ્મા, પ્રકાશ કે વિદ્યુત) શોષીને બે કે તેથી વધુ સરળ તત્વો અથવા સંયોજનોમાં વિભાજીત થાય છે."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "Three Forms of Energy Power Decomposition",
+        "title_hi": "वियोजन को शक्ति देने वाले ऊर्जा के तीन रूप",
+        "title_gu": "વિઘટનને ઊર્જા આપતા ત્રણ સ્વરૂપો",
+        "body": "Chemical bonds do not break on their own; energy must be supplied. There are three types of decomposition:\n\n1. THERMAL DECOMPOSITION (Powered by Heat):\n• Ferrous sulphate: 2FeSO4(s) --heat--> Fe2O3(s) + SO2(g) + SO3(g)\n• Limestone: CaCO3(s) --heat--> CaO(s) + CO2(g)\n• Lead nitrate: 2Pb(NO3)2(s) --heat--> 2PbO(s) [yellow] + 4NO2(g) [brown fumes] + O2(g)\n\n2. ELECTROLYTIC DECOMPOSITION (Powered by Electricity):\n• Water electrolysis: 2H2O(l) --electricity--> 2H2(g) + O2(g)\n  Hydrogen gas is collected at the cathode and oxygen at the anode. The volume of H2 is TWICE the volume of O2 because water has a 2:1 hydrogen-to-oxygen atomic ratio!\n\n3. PHOTOLYTIC DECOMPOSITION (Powered by Light):\n• Silver chloride: 2AgCl(s) --sunlight--> 2Ag(s) [grey] + Cl2(g)\n• Silver bromide: 2AgBr(s) --sunlight--> 2Ag(s) + Br2(g) (Used in black & white photography).",
+        "body_hi": "रासायनिक बंध अपने आप नहीं टूटते; उन्हें ऊर्जा देनी पड़ती है। वियोजन के तीन मुख्य प्रकार हैं:\n\n1. ऊष्मीय वियोजन (ऊष्मा द्वारा संचालित):\n• फेरस सल्फेट: 2FeSO4(s) --ऊष्मा--> Fe2O3(s) + SO2(g) + SO3(g)\n• चूना पत्थर: CaCO3(s) --ऊष्मा--> CaO(s) + CO2(g)\n• लेड नाइट्रेट: 2Pb(NO3)2(s) --ऊष्मा--> 2PbO(s) [पीला] + 4NO2(g) [भूरा धुआं] + O2(g)\n\n2. वैद्युत अपघटन (विद्युत द्वारा संचालित):\n• जल का विद्युत अपघटन: 2H2O(l) --विद्युत--> 2H2(g) + O2(g)\n  कैथोड पर हाइड्रोजन और एनोड पर ऑक्सीजन एकत्रित होती है। H2 का आयतन O2 से दोगुना होता है क्योंकि जल में हाइड्रोजन और ऑक्सीजन का 2:1 अनुपात होता है!\n\n3. प्रकाशीય अपघटन (सूर्य के प्रकाश द्वारा संचालित):\n• सिल्वर क्लोराइड: 2AgCl(s) --सूर्य का प्रकाश--> 2Ag(s) [भूरा-स्लेटी] + Cl2(g)\n• सिल्वर ब्रोमाइड: 2AgBr(s) --सूर्य का प्रकाश--> 2Ag(s) + Br2(g) (श्वेत-श्याम फोटोग्राफी में प्रयुक्त)।",
+        "body_gu": "રાસાયણિક બંધ આપમેળે તૂટતા નથી; તેને ઊર્જા આપવી પડે છે. વિઘટનના ત્રણ મુખ્ય પ્રકારો છે:\n\n1. ઉષ્મીય વિઘટન (ઉષ્મા દ્વારા):\n• ફેરસ સલ્ફેટ: 2FeSO4(s) --ઉષ્મા--> Fe2O3(s) + SO2(g) + SO3(g)\n• ચૂનાનો પથ્થર: CaCO3(s) --ઉષ્મા--> CaO(s) + CO2(g)\n• લેડ નાઇટ્રેટ: 2Pb(NO3)2(s) --ઉષ્મા--> 2PbO(s) [પીળો] + 4NO2(g) [કથ્થઈ ધુમાડો] + O2(g)\n\n2. વિદ્યુતીય વિઘટન (વિદ્યુત દ્વારા):\n• પાણીનું વિદ્યુત-વિભાજન: 2H2O(l) --વિદ્યુત--> 2H2(g) + O2(g)\n  કેથોડ પર હાઇડ્રોજન અને એનોડ પર ઓક્સિજન એકત્રિત થાય છે. H2 નું કદ O2 કરતાં બમણું હોય છે કારણ કે પાણીમાં હાઇડ્રોજન અને ઓક્સિજનનું પ્રમાણ 2:1 છે!\n\n3. પ્રકાશીય વિઘટન (સૂર્યપ્રકાશ દ્વારા):\n• સિલ્વર ક્લોરાઇડ: 2AgCl(s) --સૂર્યપ્રકાશ--> 2Ag(s) [રાખોડી] + Cl2(g)\n• સિલ્વર બ્રોમાઇડ: 2AgBr(s) --સૂર્યપ્રકાશ--> 2Ag(s) + Br2(g) (બ્લેક એન્ડ વ્હાઇટ ફોટોગ્રાફીમાં વપરાય છે)."
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "Decomposition and Endothermic Reactions",
+        "title_hi": "वियोजन एवं ऊष्माशोषी अभिक्रियाएं",
+        "title_gu": "વિઘટન અને ઉષ્માશોષક પ્રક્રિયાઓ",
+        "body": "• DECOMPOSITION REACTION: A chemical reaction in which a single compound splits into two or more simpler substances.\n  General form: AB -> A + B\n\n• ENDOTHERMIC REACTIONS: Reactions that absorb energy from their surroundings in the form of heat, light, or electricity to proceed.\n  Because all decomposition reactions require energy to cleave chemical bonds, they are classic examples of endothermic reactions.\n\nIndustrial Importance:\nThermal decomposition of limestone (CaCO3 -> CaO + CO2) produces quicklime (CaO), an indispensable raw material for manufacturing cement and glass.",
+        "body_hi": "• वियोजन अभिक्रिया: ऐसी रासायनिक अभिक्रिया जिसमें एक यौगिक टूटकर दो या दो से अधिक सरल पदार्थों में विभाजित हो जाता है।\n  सामान्य रूप: AB -> A + B\n\n• ऊष्माशोषी (Endothermic) अभिक्रिया: ऐसी अभिक्रियाएं जिन्हें आगे बढ़ने के लिए परिवेश से ऊष्मा, प्रकाश या विद्युत के रूप में ऊर्जा अवशोषित करनी पड़ती है।\n  चूँकि सभी वियोजन अभिक्रियाओं में बंध तोड़ने के लिए ऊर्जा की आवश्यकता होती है, इसलिए वे ऊष्माशोषी अभिक्रियाओं के प्रमुख उदाहरण हैं।\n\nऔद्योगिक महत्व:\nचूना पत्थर का ऊष्मीय वियोजन (CaCO3 -> CaO + CO2) कली चूना (CaO) बनाता है, जो सीमेंट और कांच के निर्माण के लिए एक अनिवार्य कच्चा माल है।",
+        "body_gu": "• વિઘટન પ્રક્રિયા: એવી રાસાયણિક પ્રક્રિયા જેમાં એક સંયોજન તૂટીને બે કે તેથી વધુ સરળ પદાર્થોમાં વિભાજીત થાય છે.\n  સામાન્ય સ્વરૂપ: AB -> A + B\n\n• ઉષ્માશોષક (Endothermic) પ્રક્રિયા: એવી પ્રક્રિયાઓ જેને આગળ વધવા માટે આસપાસમાંથી ઉષ્મા, પ્રકાશ કે વિદ્યુતના રૂપમાં ઊર્જાનું શોષણ કરવું પડે છે.\n  તમામ વિઘટન પ્રક્રિયાઓમાં રાસાયણિક બંધ તોડવા ઊર્જા જરૂરી હોવાથી તે ઉષ્માશોષક પ્રક્રિયાઓના શ્રેષ્ઠ ઉદાહરણો છે.\n\nઔદ્યોગિક મહત્વ:\nચૂનાના પથ્થરનું ઉષ્મીય વિઘટન (CaCO3 -> CaO + CO2) કળીચૂનો (CaO) આપે છે, જે સિમેન્ટ અને કાચ ઉદ્યોગ માટે અત્યંત જરૂરી કાચો માલ છે."
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": next_id(),
+        "type": "teacher_tip",
+        "title": "Teacher Tip: Board Exam Clues for Decomposition",
+        "title_hi": "शिक्षक टिप: बोर्ड परीक्षा के लिए वियोजन के गुप्त संकेत",
+        "title_gu": "શિક્ષક ટિપ: બોર્ડ પરીક્ષા માટે વિઘટનના મહત્વના સંકેતો",
+        "body": "Look for these exact phrases in board exam questions:\n1. 'Brown fumes emitted on heating' -> Nitrogen dioxide gas (NO2) from Lead Nitrate.\n2. 'Yellow residue left behind' -> Lead(II) oxide (PbO).\n3. 'Smell of burning sulphur' -> SO2 and SO3 gases from Ferrous Sulphate.\n4. 'Chemical stored in dark amber bottles' -> AgCl or AgBr to protect them from sunlight decomposition!",
+        "body_hi": "बोर्ड परीक्षा के प्रश्नों में इन सटीक वाक्यांशों को पहचानें:\n1. 'गर्म करने पर निकलने वाला भूरा धुआं' -> लेड नाइट्रेट से नाइट्रोजन डाइऑक्साइड (NO2) गैस।\n2. 'पीला अवशेष' -> लेड ऑक्साइड (PbO)।\n3. 'जलते हुए गंधक की गंध' -> फेरस सल्फेट से SO2 और SO3 गैसें।\n4. 'काले/भूरे रंग की बोतलों में रखा रसायन' -> AgCl या AgBr ताकि वे सूर्य के प्रकाश से अपघटित न हों!",
+        "body_gu": "બોર્ડ પરીક્ષાના પ્રશ્નોમાં આ મહત્વના સંકેતો યાદ રાખો:\n1. 'ગરમ કરતાં નીકળતો કથ્થઈ ધુમાડો' -> લેડ નાઇટ્રેટમાંથી નીકળતો નાઇટ્રોજન ડાયોક્સાઇડ (NO2) વાયુ.\n2. 'પાછળ રહેતો પીળો અવશેષ' -> લેડ ઓક્સાઇડ (PbO).\n3. 'સળગતા ગંધક જેવી ગંધ' -> ફેરસ સલ્ફેટમાંથી નીકળતા SO2 અને SO3 વાયુ.\n4. 'ઘેરા રંગની બાટલીમાં સંગ્રહિત રસાયણ' -> AgCl કે AgBr જેથી સૂર્યપ્રકાશથી તેનું વિઘટન અટકે!"
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "During the electrolysis of water, why is the volume of gas collected in the cathode tube double the volume collected in the anode tube?",
+        "question_hi": "जल के वैद्युत अपघटन के दौरान, कैथोड पर एकत्रित गैस का आयतन एनोड पर एकत्रित गैस के आयतन से दोगुना क्यों होता है?",
+        "question_gu": "પાણીના વિદ્યુત-વિભાજન દરમિયાન, કેથોડ પર એકત્રિત થતા વાયુનું કદ એનોડ પર એકત્રિત થતા વાયુ કરતાં બમણું શા માટે હોય છે?",
+        "options": [
+            "Water molecules consist of 2 hydrogen atoms for every 1 oxygen atom (H2O).",
+            "Hydrogen gas is twice as heavy as oxygen gas.",
+            "Oxygen gas dissolves completely in water while hydrogen does not.",
+            "Cathodes conduct electricity twice as fast as anodes."
+        ],
+        "options_hi": [
+            "जल के अणु में प्रत्येक 1 ऑक्सीजन परमाणु के मुकाबले 2 हाइड्रोजन परमाणु होते हैं (H2O)।",
+            "हाइड्रोजन गैस ऑक्सीजन गैस से दोगुनी भारी होती है।",
+            "ऑक्सीजन गैस पानी में पूरी तरह घुल जाती है जबकि हाइड्रोजन नहीं घुलती।",
+            "कैथोड एनोड की तुलना में दोगुनी तेजी से बिजली का संचालन करते हैं।"
+        ],
+        "options_gu": [
+            "પાણીના અણુમાં દરેક 1 ઓક્સિજન પરમાણુ સામે 2 હાઇડ્રોજન પરમાણુ હોય છે (H2O).",
+            "હાઇડ્રોજન વાયુ ઓક્સિજન કરતાં બમણો ભારે હોય છે.",
+            "ઓક્સિજન પાણીમાં સંપૂર્ણ ઓગળી જાય છે જ્યારે હાઇડ્રોજન ઓગળતો નથી.",
+            "કેથોડ એનોડ કરતાં બમણી ઝડપે વીજળીનું વહન કરે છે."
+        ],
+        "correct_index": 0,
+        "explanation": "2H2O(l) -> 2H2(g) + O2(g). The stoichiometric ratio of hydrogen to oxygen is 2:1. By Avogadro's law, equal moles of gases occupy equal volumes, so hydrogen volume is double oxygen volume.",
+        "explanation_hi": "2H2O(l) -> 2H2(g) + O2(g)। हाइड्रोजन और ऑक्सीजन का स्टॉइकियोमेट्रिक अनुपात 2:1 है। आवોગાद्रो के नियम के अनुसार, समान मोल गैसें समान आयतन घेरती हैं, इसलिए हाइड्रोजन का आयतन ऑक्सीजन से दोगुना होता है।",
+        "explanation_gu": "2H2O(l) -> 2H2(g) + O2(g). હાઇડ્રોજન અને ઓક્સિજનનો ગુણોત્તર 2:1 છે. એવોગેડ્રોના નિયમ મુજબ સમાન મોલ સમાન કદ રોકે છે, આથી હાઇડ્રોજનનું કદ ઓક્સિજન કરતાં બમણું હોય છે."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Silver Chloride is Kept in Dark Bottles",
+        "title_hi": "सिल्वर क्लोराइड को गहरे रंग की बोतलों में क्यों रखा जाता है?",
+        "title_gu": "સિલ્વર ક્લોરાઇડને ઘેરા રંગની બોટલોમાં શા માટે રાખવામાં આવે છે?",
+        "body": "Photons of ambient light carry enough energy to split the ionic bond between silver (Ag+) and chloride (Cl-) ions. If kept in transparent glass, daylight would turn the pure white compound into dull grey metallic silver powder within hours: 2AgCl -> 2Ag + Cl2. Dark amber glass absorbs light rays, protecting the chemical from unwanted photolytic decomposition.",
+        "body_hi": "प्रकाश के फोटॉनों में सिल्वर (Ag+) और क्लोराइड (Cl-) आयनों के बीच के बंध को तोड़ने के लिए पर्याप्त ऊर्जा होती है। यदि इसे पारदर्शी कांच में रखा जाए, तो दिन का प्रकाश कुछ ही घंटों में इसे भूरे-स्लेटी चांदी में बदल देगा: 2AgCl -> 2Ag + Cl2। गहरे रंग का कांच प्रकाश को सोख लेता है और अवांछित प्रकाशीय अपघटन से बचाता है।",
+        "body_gu": "સામાન્ય પ્રકાશના ફોટોનમાં સિલ્વર (Ag+) અને ક્લોરાઇડ (Cl-) આયનો વચ્ચેનો બંધ તોડવા જેટલી પૂરતી ઊર્જા હોય છે. જો તેને પારદર્શક કાચમાં રાખવામાં આવે તો થોડા કલાકોમાં જ તે રાખોડી ચાંદીમાં ફેરવાઈ જાય: 2AgCl -> 2Ag + Cl2. ઘેરા રંગનો કાચ પ્રકાશને અંદર પ્રવેશવા દેતો નથી અને પ્રકાશીય વિઘટન અટકાવે છે."
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Green Hydrogen: The Future Fuel of Humanity",
+        "title_hi": "ग्रीन हाइड्रोजन: मानवता का भविष्य का ईंधन",
+        "title_gu": "ગ્રીન હાઇડ્રોજન: માનવજાતનું ભવિષ્યનું બળતણ",
+        "body": "Electrolytic decomposition of water is the cornerstone of the zero-carbon revolution! By powering the electrolysis of water (2H2O -> 2H2 + O2) with solar panels and wind turbines, scientists produce 'Green Hydrogen'. When green hydrogen is later burned in cars or rockets, its only emission is pure water vapor! Decomposition today holds the key to solving global warming.",
+        "body_hi": "जल का वैद्युत अपघटन कार्बन-मुक्त क्रांति की आधारशिला है! सौर पैनलों और पवन चक्कियों से बिजली प्राप्त कर जल का विद्युत अपघटन (2H2O -> 2H2 + O2) करके वैज्ञानिक 'ग्रीन हाइड्रोजन' बनाते हैं। जब इस हाइड्रोजन को कारों या रॉकेटों में जलाया जाता है, तो धुएं के स्थान पर केवल शुद्ध जलवाष्प निकलती है! यह तकनीक ग्लोबल वार्मिंग को रोकने की कुंजी है।",
+        "body_gu": "પાણીનું વિદ્યુત વિઘટન એ શૂન્ય-કાર્બન ક્રાંતિનો પાયો છે! સૌર પેનલ અને પવનચક્કીની વીજળીથી પાણીનું વિભાજન (2H2O -> 2H2 + O2) કરીને વૈજ્ઞાનિકો 'ગ્રીન હાઇડ્રોજન' બનાવે છે. જ્યારે કાર કે રોકેટમાં આ હાઇડ્રોજન બળે છે ત્યારે ધુમાડાને બદલે માત્ર શુદ્ધ પાણીની વરાળ નીકળે છે! ગ્લોબલ વોર્મિંગ અટકાવવા માટે આ વિઘટન ચાવીરૂપ છે."
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "When lead nitrate powder is heated in a dry test tube, which gas is released as pungent brown fumes?",
+        "question_hi": "जब एक सूखी परखनली में लेड नाइट्रेट पाउडर को गर्म किया जाता है, तो कौन सी गैस तीखे भूरे धुएं के रूप में निकलती है?",
+        "question_gu": "જ્યારે સૂકી કસનળીમાં લેડ નાઇટ્રેટ પાઉડરને ગરમ કરવામાં આવે છે, ત્યારે કયો વાયુ કથ્થઈ રંગના તીવ્ર ધુમાડા તરીકે બહાર નીકળે છે?",
+        "options": [
+            "Nitrogen dioxide (NO2)",
+            "Nitrous oxide (N2O)",
+            "Nitrogen pentoxide (N2O5)",
+            "Oxygen gas (O2)"
+        ],
+        "options_hi": [
+            "नाइट्रोजन डाइऑक्साइड (NO2)",
+            "नाइट्रस ऑक्साइड (N2O)",
+            "नाइट्रोजन पेंटोक्साइड (N2O5)",
+            "ऑक्सीजन गैस (O2)"
+        ],
+        "options_gu": [
+            "નાઇટ્રોજન ડાયોક્સાઇડ (NO2)",
+            "નાઇટ્રસ ઓક્સાઇડ (N2O)",
+            "નાઇટ્રોજન પેન્ટોક્સાઇડ (N2O5)",
+            "ઓક્સિજન વાયુ (O2)"
+        ],
+        "correct_index": 0,
+        "explanation": "2Pb(NO3)2(s) --heat--> 2PbO(s) + 4NO2(g) + O2(g). The brown gas is Nitrogen dioxide (NO2). Oxygen released is colourless and odourless.",
+        "explanation_hi": "2Pb(NO3)2(s) --ऊष्मा--> 2PbO(s) + 4NO2(g) + O2(g)। भूरे रंग की गैस नाइट्रोजन डाइऑक्साइड (NO2) है। जबकि ऑक्सीजन रंगहीन और गंधहीन होती है।",
+        "explanation_gu": "2Pb(NO3)2(s) --ઉષ્મા--> 2PbO(s) + 4NO2(g) + O2(g). કથ્થઈ રંગનો વાયુ નાઇટ્રોજન ડાયોક્સાઇડ (NO2) છે. જ્યારે ઓક્સિજન રંગહીન અને ગંધહીન વાયુ છે."
+    })
+
+    # =========================================================================
+    # MODULE 5: DISPLACEMENT & DOUBLE DISPLACEMENT REACTIONS
+    # =========================================================================
+
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Iron Nail that Stole Copper's Coat",
+        "title_hi": "लोहे की कील जिसने तांबे का चोगा चुरा लिया",
+        "title_gu": "લોખંડની ખીલી જેણે તાંબાનું આવરણ છીનવી લીધું",
+        "body": "Clean a grey iron nail and suspend it in a beaker filled with deep sky-blue copper sulphate solution. Leave it untouched for 20 minutes. When you pull the nail out, you will gasp: the nail is coated in a thick, reddish-brown coat of pure copper, and the deep blue solution has mysteriously faded into light green! Did the iron nail perform alchemy?",
+        "body_hi": "एक साफ लोहे की कील को गहरे नीले रंग के कॉपर सल्फेट के घोल में लटकाएं। इसे 20 मिनट के लिए छोड़ दें। जब आप कील को बाहर निकालेंगे, तो आप हैरान रह जाएंगे: कील शुद्ध तांबे की लाल-भूरी परत से ढक चुकी है, और गहरा नीला घोल हल्के हरे रंग में बदल चुका है! क्या लोहे की कील ने कोई जादुई रसायन किया?",
+        "body_gu": "એક સાફ લોખંડની ખીલીને ઘેરા વાદળી રંગના કોપર સલ્ફેટના દ્રાવણમાં ડુબાડો. તેને 20 મિનિટ રહેવા દો. જ્યારે તમે ખીલી બહાર કાઢશો ત્યારે આશ્ચર્ય થશે: ખીલી પર શુદ્ધ તાંબાનું લાલ-કથ્થઈ પડ ચડી ગયું છે અને વાદળી દ્રાવણ આછા લીલા રંગનું થઈ ગયું છે! શું લોખંડે કોઈ જાદુ કર્યો?"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "Why was iron able to kick copper out of copper sulphate solution, but if you put a copper coin in iron sulphate solution, absolutely nothing happens?",
+        "question_hi": "लोहा कॉपर सल्फेट के घोल से तांबे को बाहर निकालने में सक्षम क्यों था, लेकिन यदि आप आयरन सल्फेट के घोल में तांबे का सिक्का डालते हैं, तो कुछ भी नहीं होता?",
+        "question_gu": "શા માટે લોખંડ કોપર સલ્ફેટમાંથી તાંબાને વિસ્થાપિત કરી શક્યું, પરંતુ જો તમે આયર્ન સલ્ફેટના દ્રાવણમાં તાંબાનો સિક્કો મૂકો તો કશી જ પ્રક્રિયા થતી નથી?",
+        "options": [
+            "Iron is more chemically reactive than copper; a more reactive metal can displace a less reactive one, but not vice versa.",
+            "Copper prefers to stay in coin form rather than ionic form.",
+            "Iron sulphate has a stronger odor that repels copper.",
+            "The temperature of copper coins is naturally cooler."
+        ],
+        "options_hi": [
+            "लोहा तांबे की तुलना में अधिक रासायनिक रूप से सक्रिय है; एक अधिक सक्रिय धातु कम सक्रिय धातु को विस्थापित कर सकती है, लेकिन इसका उल्टा संभव नहीं है।",
+            "तांबा आयनिक रूप के बजाय सिक्के के रूप में रहना पसंद करता है।",
+            "आयरन सल्फेट में एक तेज गंध होती है जो तांबे को दूर करती है।",
+            "तांबे के सिक्कों का तापमान स्वाभाविक रूप से ठंडा होता है।"
+        ],
+        "options_gu": [
+            "લોખંડ એ તાંબા કરતાં રાસાયણિક રીતે વધુ સક્રિય છે; વધુ સક્રિય ધાતુ ઓછી સક્રિય ધાતુનું વિસ્થાપન કરી શકે છે, પરંતુ તેનાથી ઊલટું શક્ય નથી.",
+            "તાંબુ આયન બનવા કરતાં સિક્કા સ્વરૂપે રહેવાનું પસંદ કરે છે.",
+            "આયર્ન સલ્ફેટની તીવ્ર ગંધ તાંબાને પ્રક્રિયા કરવા દેતી નથી.",
+            "તાંબાના સિક્કાનું તાપમાન કુદરતી રીતે ઠંડુ હોય છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Chemical reactivity dictates displacement: Fe is higher than Cu in the reactivity series. Fe displaces Cu: Fe + CuSO4 -> FeSO4 (light green) + Cu (reddish brown). Since Cu is less reactive than Fe, Cu cannot displace Fe from FeSO4.",
+        "explanation_hi": "रासायनिक सक्रियता विस्थापन तय करती है: सक्रियता श्रेणी में Fe, Cu से ऊपर है। Fe, Cu को विस्थापित करता है: Fe + CuSO4 -> FeSO4 (हल्का हरा) + Cu (लाल-भूरा)। चूंकि Cu कम सक्रिय है, इसलिए वह Fe को FeSO4 से विस्थापित नहीं कर सकता।",
+        "explanation_gu": "ધાતુઓની સક્રિયતા વિસ્થાપન નક્કી કરે છે: સક્રિયતા શ્રેણીમાં Fe એ Cu કરતાં ઉપર છે. Fe એ Cu નું વિસ્થાપન કરે છે: Fe + CuSO4 -> FeSO4 (આછો લીલો) + Cu (લાલ-કથ્થઈ). Cu ઓછી સક્રિય હોવાથી FeSO4 માંથી Fe ને વિસ્થાપિત કરી શકતી નથી."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "Displacement vs Double Displacement: The Dance of Ions",
+        "title_hi": "विस्थापन बनाम द्विविस्थापन: आयनों का आदान-प्रदान",
+        "title_gu": "વિસ્થાપન વિરુદ્ધ દ્વિવિસ્થાપન: આયનોની આપ-લે",
+        "body": "• DISPLACEMENT REACTION (Single Replacement):\nA solitary element kicks out another element from a compound:\nA + BC -> AC + B\nExamples:\n- Fe(s) + CuSO4(aq) [blue] -> FeSO4(aq) [green] + Cu(s) [brown]\n- Zn(s) + CuSO4(aq) -> ZnSO4(aq) [colourless] + Cu(s)\n- Pb(s) + CuCl2(aq) -> PbCl2(aq) + Cu(s)\n\n• DOUBLE DISPLACEMENT REACTION (Ion Exchange):\nTwo compounds exchange their positive and negative ions to form two new compounds:\nAB + CD -> AD + CB\nWhen colourless sodium sulphate reacts with colourless barium chloride, an instantaneous dense white solid precipitates:\nNa2SO4(aq) + BaCl2(aq) -> BaSO4(s) [white precipitate] + 2NaCl(aq)\nAny reaction that produces an insoluble solid is called a PRECIPITATION REACTION.",
+        "body_hi": "• विस्थापन अभिक्रिया (Displacement):\nएक अकेला अधिक क्रियाशील तत्व किसी यौગिक से कम क्रियाशील तत्व को हटा देता है:\nA + BC -> AC + B\nउदाहरण:\n- Fe(s) + CuSO4(aq) [नीला] -> FeSO4(aq) [हरा] + Cu(s) [भूरा]\n- Zn(s) + CuSO4(aq) -> ZnSO4(aq) [रंगहीन] + Cu(s)\n- Pb(s) + CuCl2(aq) -> PbCl2(aq) + Cu(s)\n\n• द्विविस्थापन अभिक्रिया (Double Displacement):\nदो यौગिक अपने आयनों का परस्पर आदान-प्रदान करके दो नए यौગિક बनाते हैं:\nAB + CD -> AD + CB\nजब रंगहीन सोडियम सल्फेट रंगहीन बेरियम क्लोराइड से मिलता है, तो तुरंत एक सफेद ठोस अवक्षेप बन जाता है:\nNa2SO4(aq) + BaCl2(aq) -> BaSO4(s) [सफेद अवक्षेप] + 2NaCl(aq)\nकोई भी अभिक्रिया जो एक अघुलनशील ठोस उत्पन्न करती है, उसे अवक्षेपण (Precipitation) अभिक्रिया कहते हैं।",
+        "body_gu": "• વિસ્થાપન પ્રક્રિયા (Displacement):\nએક વધુ સક્રિય તત્વ સંયોજનમાંથી ઓછા સક્રિય તત્વને દૂર કરે છે:\nA + BC -> AC + B\nઉદાહરણો:\n- Fe(s) + CuSO4(aq) [વાદળી] -> FeSO4(aq) [લીલો] + Cu(s) [કથ્થઈ]\n- Zn(s) + CuSO4(aq) -> ZnSO4(aq) [રંગહીન] + Cu(s)\n- Pb(s) + CuCl2(aq) -> PbCl2(aq) + Cu(s)\n\n• દ્વિવિસ્થાપન પ્રક્રિયા (Double Displacement):\nબે સંયોજનો પોતાના આયનોની આપ-લે કરીને બે નવા સંયોજનો બનાવે છે:\nAB + CD -> AD + CB\nજ્યારે રંગહીન સોડિયમ સલ્ફેટ અને બેરિયમ ક્લોરાઇડ મળે છે ત્યારે તરત જ સફેદ અદ્રાવ્ય પદાર્થ બને છે:\nNa2SO4(aq) + BaCl2(aq) -> BaSO4(s) [સફેદ અવક્ષેપ] + 2NaCl(aq)\nજે પ્રક્રિયામાં અદ્રાવ્ય ઘન પદાર્થ (અવક્ષેપ) ઉત્પન્ન થાય તેને અવક્ષેપન (Precipitation) પ્રક્રિયા કહેવાય છે."
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "Precipitates and Double Displacement in Action",
+        "title_hi": "अवक्षेप और द्विविस्थापन अभिक्रिया के नियम",
+        "title_gu": "અવક્ષેપ અને દ્વિવિસ્થાપન પ્રક્રિયાના નિયમો",
+        "body": "In a double displacement reaction, the driving force is usually the formation of:\n1. An insoluble precipitate that drops out of solution.\n2. A gas that bubbles out.\n3. A stable, neutral covalent molecule like water (neutralisation: Acid + Base -> Salt + Water).\n\nAnother famous NCERT precipitate:\nLead Nitrate + Potassium Iodide:\nPb(NO3)2(aq) + 2KI(aq) -> PbI2(s) [bright yellow precipitate] + 2KNO3(aq)\nLead iodide (PbI2) forms brilliant golden-yellow flakes, often called the 'golden rain' reaction.",
+        "body_hi": "द्विविस्थापन अभिक्रिया में मुख्य कारण प्रायः निम्नलिखित का बनना होता है:\n1. एक अघुलनशील अवक्षेप जो घोल से नीचे बैठ जाता है।\n2. एक गैस जो बुलबुलों के रूप में निकलती है।\n3. जल जैसा एक स्थिर उदासीन अणु (उदासीनीकरण: अम्ल + क्षार -> लवण + जल)।\n\nएक अन्य प्रसिद्ध NCERT अवक्षेप:\nलेड नाइट्रेट + पोटेशियम आयोडाइड:\nPb(NO3)2(aq) + 2KI(aq) -> PbI2(s) [चमकीला पीला अवक्षेप] + 2KNO3(aq)\nलेड आयोडाइड (PbI2) शानदार सुनहरे-पीले रंग का अवक्षेप बनाता है।",
+        "body_gu": "દ્વિવિસ્થાપન પ્રક્રિયા પાછળનું મુખ્ય પરિબળ નીચેનામાંથી કોઈ એકનું નિર્માણ હોય છે:\n1. અદ્રાવ્ય અવક્ષેપ જે દ્રાવણમાં નીચે બેસી જાય છે.\n2. વાયુ જે પરપોટા સ્વરૂપે બહાર નીકળે છે.\n3. પાણી જેવો તટસ્થ અણુ (તટસ્થીકરણ: એસિડ + બેઇઝ -> ક્ષાર + પાણી).\n\nઅન્ય પ્રખ્યાત NCERT અવક્ષેપ:\nલેડ નાઇટ્રેટ + પોટેશિયમ આયોડાઇડ:\nPb(NO3)2(aq) + 2KI(aq) -> PbI2(s) [તેજસ્વી પીળો અવક્ષેપ] + 2KNO3(aq)\nલેડ આયોડાઇડ (PbI2) સુંદર પીળા રંગના અવક્ષેપ આપે છે."
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": next_id(),
+        "type": "teacher_tip",
+        "title": "Teacher Tip: How to Tell Displacement from Double Displacement",
+        "title_hi": "शिक्षक टिप: विस्थापन और द्विविस्थापन में अंतर कैसे पहचानें",
+        "title_gu": "શિક્ષક ટિપ: વિસ્થાપન અને દ્વિવિસ્થાપન વચ્ચેનો ભેદ કેવી રીતે પારખવો",
+        "body": "Easy 5-second check:\n• In Displacement: One reactant is a pure lone ELEMENT, and the other is a COMPOUND (e.g., Fe + CuSO4). Look for an element standing alone.\n• In Double Displacement: BOTH reactants are COMPOUNDS (usually aqueous salt solutions, e.g., Na2SO4 + BaCl2). Look for two pairs swapping partners!",
+        "body_hi": "सरल 5-सेकंड की जांच:\n• विस्थापन में: एक अभिकारक अकेला शुद्ध तत्व (Element) होता है और दूसरा यौગિક (Compound) होता है (जैसे, Fe + CuSO4)। अकेले तत्व को देखें।\n• द्विविस्थापन में: दोनों अभिकारक यौગિક (Compounds) होते हैं (जैसे, Na2SO4 + BaCl2)। दोनों अपने आयनों की अदલા-બદલી करते हैं!",
+        "body_gu": "સરળ 5-સેકન્ડની રીત:\n• વિસ્થાપનમાં: એક પ્રક્રિયક એકલું શુદ્ધ તત્વ (Element) હોય છે અને બીજો સંયોજન (Compound) હોય છે (જેમ કે, Fe + CuSO4).\n• દ્વિવિસ્થાપનમાં: બંને પ્રક્રિયકો સંયોજનો (Compounds) હોય છે (જેમ કે, Na2SO4 + BaCl2). બંને એકબીજાના આયનોની અદલાબદલી કરે છે!"
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "What happens when solutions of barium chloride and sodium sulphate are mixed together?",
+        "question_hi": "जब बेरियम क्लोराइड और सोडियम सल्फेट के घोल को आपस में मिलाया जाता है तो क्या होता है?",
+        "question_gu": "જ્યારે બેરિયમ ક્લોરાઇડ અને સોડિયમ સલ્ફેટના દ્રાવણોને મિશ્ર કરવામાં આવે છે ત્યારે શું થાય છે?",
+        "options": [
+            "A white precipitate of barium sulphate is formed immediately.",
+            "A yellow precipitate of sodium chloride is formed.",
+            "Pungent chlorine gas bubbles out vigorously.",
+            "The beaker turns freezing cold with no visible solid."
+        ],
+        "options_hi": [
+            "तुरंत बेरियम सल्फेट का एक सफेद अवक्षेप बनता है।",
+            "सोडियम क्लोराइड का एक पीला अवक्षेप बनता है।",
+            "तीखी क्लोरीन गैस तेजी से बुलबुलों के साथ निकलती है।",
+            "बिना किसी ठोस के बीकर अत्यधिक ठंडा हो जाता है।"
+        ],
+        "options_gu": [
+            "તરત જ બેરિયમ સલ્ફેટનો સફેદ અવક્ષેપ બને છે.",
+            "સોડિયમ ક્લોરાઇડનો પીળો અવક્ષેપ બને છે.",
+            "તીવ્ર ક્લોરિન વાયુ પરપોટા સાથે બહાર નીકળે છે.",
+            "કોઈ અવક્ષેપ વગર બીકર એકદમ ઠંડુ થઈ જાય છે."
+        ],
+        "correct_index": 0,
+        "explanation": "BaCl2(aq) + Na2SO4(aq) -> BaSO4(s) + 2NaCl(aq). BaSO4 is insoluble in water, forming an instantaneous white precipitate.",
+        "explanation_hi": "BaCl2(aq) + Na2SO4(aq) -> BaSO4(s) + 2NaCl(aq)। BaSO4 पानी में अघुलनशील है, जो तुरंत सफेद अवक्षेप बनाता है।",
+        "explanation_gu": "BaCl2(aq) + Na2SO4(aq) -> BaSO4(s) + 2NaCl(aq). BaSO4 પાણીમાં અદ્રાવ્ય હોવાથી તરત જ સફેદ અવક્ષેપ આપે છે."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Silver is Recovered Using Scrap Copper",
+        "title_hi": "सिल्वर को निकालने के लिए तांबे की कतरनों का उपयोग क्यों किया जाता है?",
+        "title_gu": "ચાંદીના શુદ્ધિકરણમાં તાંબાના ટુકડાનો ઉપયોગ કેમ થાય છે?",
+        "body": "In jewelry refining, scrap silver is dissolved into nitric acid forming silver nitrate (AgNO3). To recover the precious pure silver, jewelers simply throw copper plates into the liquid: Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s). Because copper is cheaper and more reactive than silver, it effortlessly displaces pure, sparkling silver crystals without needing costly electricity!",
+        "body_hi": "आभूषण शोधन में, चांदी के टुकड़ों को नाइट्रिक एसिड में घोलकर सिल्वर नाइट्रेट (AgNO3) बनाया जाता है। कीमती शुद्ध चांदी वापस पाने के लिए जौहरी घोल में तांबे की प्लेटें डालते हैं: Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s)। चूंकि तांबा चांदी से सस्ता और अधिक सक्रिय है, इसलिए यह बिना बिजली खर्च किए शुद्ध चांदी को अलग कर देता है!",
+        "body_gu": "ઝવેરાતના શુદ્ધિકરણમાં જૂની ચાંદીને નાઇટ્રિક એસિડમાં ઓગાળી સિલ્વર નાઇટ્રેટ (AgNO3) બનાવાય છે. શુદ્ધ ચાંદી પાછી મેળવવા તેમાં તાંબાની પ્લેટો મૂકવામાં આવે છે: Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s). તાંબુ સસ્તું અને ચાંદી કરતાં વધુ સક્રિય હોવાથી વીજળીના ખર્ચ વગર શુદ્ધ ચાંદીના સ્ફટિકો છૂટા પાડે છે!"
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Wastewater Treatment and Kidney Stones",
+        "title_hi": "अपशिष्ट जल उपचार और गुर्दे की पथरी",
+        "title_gu": "સાંડપાણી શુદ્ધિકરણ અને કિડનીની પથરી",
+        "body": "Precipitation reactions keep humans alive in medicine and public health:\n• Municipal Wastewater: Toxic heavy metals like lead and cadmium are removed from city sewage by adding carbonate or hydroxide chemicals that precipitate out insoluble metal sludges.\n• Human Body: Kidney stones are formed when calcium ions in urine precipitate with oxalate ions to form insoluble, sharp calcium oxalate crystals (CaC2O4), an unwanted internal precipitation reaction!",
+        "body_hi": "अवक्षेपण अभिक्रियाएं चिकित्सा और सार्वजनिक स्वास्थ्य में जीवन बचाती हैं:\n• अपशिष्ट जल उपचार: सीवेज से लेड और कैडमियम जैसी जहरीली भारी धातुओं को हटाने के लिए ऐसे रसायन मिलाए जाते हैं जो अघुलनशील अवक्षेप बनाकर उन्हें अलग कर देते हैं।\n• मानव शरीर: गुर्दे की पथरी तब बनती है जब मूत्र में कैल्शियम आयન ऑक्सालेट आयनों के साथ अवक्षेपित होकर अघुलनशील कैल्शियम ऑक्सालेट (CaC2O4) क्रिस्टल बनाते हैं!",
+        "body_gu": "અવક્ષેપન પ્રક્રિયાઓ આરોગ્ય અને પર્યાવરણમાં ખૂબ મહત્વની છે:\n• સાંડપાણી શુદ્ધિકરણ: ગટરના પાણીમાંથી લેડ કે કેડમિયમ જેવી ઝેરી ધાતુઓ દૂર કરવા એવા રસાયણો ઉમેરાય છે જે અદ્રાવ્ય કચરો અવક્ષેપિત કરીને પાણી સાફ કરે છે.\n• માનવ શરીર: પેશાબમાં રહેલા કેલ્શિયમ આયનો ઓક્ઝાલેટ સાથે જોડાઈને કેલ્શિયમ ઓક્ઝાલેટ (CaC2O4) ના અદ્રાવ્ય સ્ફટિક બનાવે છે, જેને આપણે કિડનીની પથરી કહીએ છીએ!"
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "When lead nitrate solution is mixed with potassium iodide solution, what is the color of the precipitate formed and what is its chemical formula?",
+        "question_hi": "जब लेड नाइट्रेट के घोल को पोटेशियम आयोडाइड के घोल में मिलाया जाता है, तो बनने वाले अवक्षेप का रंग क्या होता है और उसका रासायनिक सूत्र क्या है?",
+        "question_gu": "જ્યારે લેડ નાઇટ્રેટના દ્રાવણને પોટેશિયમ આયોડાઇડના દ્રાવણમાં ઉમેરવામાં આવે છે, ત્યારે બનતા અવક્ષેપનો રંગ કેવો હોય છે અને તેનું રાસાયણિક સૂત્ર શું છે?",
+        "options": [
+            "Yellow precipitate of PbI2",
+            "White precipitate of KNO3",
+            "Brown precipitate of PbO",
+            "Black precipitate of Pb(NO3)2"
+        ],
+        "options_hi": [
+            "PbI2 का पीला अवक्षेप",
+            "KNO3 का सफेद अवक्षेप",
+            "PbO का भूरा अवक्षेप",
+            "Pb(NO3)2 का काला अवक्षेप"
+        ],
+        "options_gu": [
+            "PbI2 નો પીળો અવક્ષેપ",
+            "KNO3 નો સફેદ અવક્ષેપ",
+            "PbO નો કથ્થઈ અવક્ષેપ",
+            "Pb(NO3)2 નો કાળો અવક્ષેપ"
+        ],
+        "correct_index": 0,
+        "explanation": "Pb(NO3)2(aq) + 2KI(aq) -> PbI2(s) + 2KNO3(aq). Lead iodide (PbI2) is a bright yellow precipitate.",
+        "explanation_hi": "Pb(NO3)2(aq) + 2KI(aq) -> PbI2(s) + 2KNO3(aq)। लेड आयोडाइड (PbI2) एक चमकदार पीला अवक्षेप है।",
+        "explanation_gu": "Pb(NO3)2(aq) + 2KI(aq) -> PbI2(s) + 2KNO3(aq). લેડ આયોડાઇડ (PbI2) એ તેજસ્વી પીળો અવક્ષેપ છે."
+    })
+
+    # =========================================================================
+    # MODULE 6: OXIDATION, REDUCTION, CORROSION & RANCIDITY
+    # =========================================================================
+
+    # 1. Hook
+    blocks.append({
+        "id": next_id(),
+        "type": "hook",
+        "title": "The Blackening Copper and the Stale Potato Chips",
+        "title_hi": "काली पड़ती तांबे की सतह और बासी चिप्स",
+        "title_gu": "કાળું પડતું તાંબુ અને વાસી બટેટાની વેફર",
+        "body": "Heat reddish-brown copper powder in a china dish over a flame; within minutes, a soot-black coat covers the entire powder! But pass hydrogen gas over this black powder while hot, and like magic, the reddish-brown copper is reborn! Meanwhile, in your kitchen pantry, an open packet of potato chips left for a few days develops a foul, rancid smell and bitter taste. Both phenomena are governed by the same chemical twin: Oxidation and Reduction!",
+        "body_hi": "एक चाइना डिश में लाल-भूरे रंग के तांबे के चूर्ण को बर्नर पर गर्म करें; कुछ ही मिनटों में एक काली परत पूरे पाउडर को ढक लेती है! लेकिन गर्म अवस्था में इस काले पाउडर पर हाइड्रोजन गैस प्रवाहित करें, और जादू की तरह लाल-भूरा तांबा वापस लौट आता है! वहीं किचन में खुला रखा चिप्स का पैकेट कुछ दिनों में दुर्गंधयुक्त और कड़वा हो जाता है। ये दोनों घटनाएं एक ही रासायनिक जोड़ी द्वारा संचालित होती हैं: ऑक्सीकरण और अपचयन!",
+        "body_gu": "ચાઇના ડીશમાં લાલ-કથ્થઈ તાંબાના ભૂકાને ગરમ કરો; થોડીવારમાં જ કાળું પડ સમગ્ર પાવડર પર છવાઈ જાય છે! પરંતુ ગરમ પાવડર પર હાઇડ્રોજન વાયુ પસાર કરતાં ચમત્કારની જેમ લાલ-કથ્થઈ તાંબુ પાછું આવી જાય છે! બીજી તરફ ખુલ્લી રાખેલી વેફર થોડા દિવસોમાં દુર્ગંધ મારવા લાગે છે અને સ્વાદ બગડી જાય છે. આ બંને ઘટનાઓ પાછળ એક જ જોડી છે: ઓક્સિડેશન અને રિડક્શન!"
+    })
+
+    # 2. Socratic Question
+    blocks.append({
+        "id": next_id(),
+        "type": "socratic_question",
+        "question": "In the reaction CuO + H2 --heat--> Cu + H2O, which substance lost oxygen (was reduced) and which substance gained oxygen (was oxidized)?",
+        "question_hi": "अभिक्रिया CuO + H2 --ऊष्मा--> Cu + H2O में, किस पदार्थ ने ऑक्सीजन खोई (अपचयित हुआ) और किस पदार्थ ने ऑक्सीजन प्राप्त की (ऑक्सीकृत हुआ)?",
+        "question_gu": "પ્રક્રિયા CuO + H2 --ઉષ્મા--> Cu + H2O માં, કયા પદાર્થે ઓક્સિજન ગુમાવ્યો (રિડક્શન પામ્યો) અને કયા પદાર્થે ઓક્સિજન મેળવ્યો (ઓક્સિડેશન પામ્યો)?",
+        "options": [
+            "CuO lost oxygen (reduced to Cu); H2 gained oxygen (oxidized to H2O).",
+            "H2 lost oxygen; CuO gained oxygen.",
+            "Both substances lost oxygen to the atmosphere.",
+            "Neither substance changed; it is only a physical mixing."
+        ],
+        "options_hi": [
+            "CuO ने ऑक्सीजन खोई (Cu में अपचयित हुआ); H2 ने ऑक्सीजन प्राप्त की (H2O में ऑक्सीकृत हुआ)।",
+            "H2 ने ऑक्सीजन खोई; CuO ने ऑक्सीजन प्राप्त की।",
+            "दोनों पदार्थों ने वातावरण में ऑक्सीजन खो दी।",
+            "किसी भी पदार्थ में बदलाव नहीं हुआ; यह केवल एक भौतिक मिश्रण है।"
+        ],
+        "options_gu": [
+            "CuO એ ઓક્સિજન ગુમાવ્યો (Cu માં રિડક્શન); H2 એ ઓક્સિજન મેળવ્યો (H2O માં ઓક્સિડેશન).",
+            "H2 એ ઓક્સિજન ગુમાવ્યો; CuO એ ઓક્સિજન મેળવ્યો.",
+            "બંને પદાર્થોએ વાતાવરણમાં ઓક્સિજન ગુમાવ્યો.",
+            "કોઈ પદાર્થમાં ફેરફાર થયો નથી; તે માત્ર ભૌતિક મિશ્રણ છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Copper oxide (CuO) gives up oxygen to become copper (Cu), so CuO is reduced. Hydrogen (H2) gains oxygen to become water (H2O), so H2 is oxidized. Reactions where oxidation and reduction occur simultaneously are called REDOX reactions.",
+        "explanation_hi": "कॉपर ऑक्साइड (CuO) ऑक्सीजन खोकर कॉपर (Cu) बन जाता है, इसलिए CuO अपचयित होता है। हाइड्रोजन (H2) ऑक्सीजन प्राप्त करके जल (H2O) बनाता है, इसलिए H2 ऑक्सीकृत होता है। ऐसी अभिक्रियाएं जहाँ ऑक्सीकरण और अपचयन एक साथ होते हैं, रेडॉक्स (Redox) अभिक्रियाएं कहलाती हैं।",
+        "explanation_gu": "કોપર ઓક્સાઇડ (CuO) ઓક્સિજન ગુમાવીને કોપર (Cu) બને છે, તેથી CuO નું રિડક્શન થાય છે. હાઇડ્રોજન (H2) ઓક્સિજન મેળવીને પાણી (H2O) બનાવે છે, તેથી H2 નું ઓક્સિડેશન થાય છે. આવી એકસાથે થતી પ્રક્રિયાઓને રેડોક્સ (Redox) પ્રક્રિયાઓ કહે છે."
+    })
+
+    # 3. Discovery
+    blocks.append({
+        "id": next_id(),
+        "type": "discovery",
+        "title": "Redox Reactions and Everyday Corrosion & Rancidity",
+        "title_hi": "रेडॉक्स अभिक्रियाएं और दैनिक जीवन में संक्षारण एवं विकृतगंधिता",
+        "title_gu": "રેડોક્સ પ્રક્રિયાઓ અને રોજિંદા જીવનમાં ક્ષારણ તથા ખોરાપણું",
+        "body": "• OXIDATION: Gain of Oxygen OR Loss of Hydrogen.\n• REDUCTION: Loss of Oxygen OR Gain of Hydrogen.\n• REDOX REACTION: Oxidation and reduction occurring simultaneously.\n  Examples:\n  - ZnO + C -> Zn + CO (ZnO is reduced; C is oxidized)\n  - MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2 (MnO2 is reduced; HCl is oxidized to Cl2)\n\n• CORROSION: When metals are slowly eaten away by chemical action of air, moisture, and acids.\n  - Rusting of Iron: 4Fe + 3O2 + 2xH2O -> 2Fe2O3·xH2O (hydrated ferric oxide, reddish-brown flaky crust).\n  - Black coating on Silver due to silver sulphide (Ag2S).\n  - Green coating on Copper due to basic copper carbonate [CuCO3·Cu(OH)2].\n  - Prevention: Painting, oiling, greasing, galvanising (coating with zinc), chrome plating, alloying (e.g. Stainless Steel).\n\n• RANCIDITY: When fats and oils in food are oxidized by atmospheric oxygen, developing unpleasant smell and rancid taste.\n  - Prevention: Adding antioxidants (e.g. BHA, BHT), packing chips with unreactive Nitrogen gas (N2), keeping food in airtight containers, refrigeration.",
+        "body_hi": "• ऑक्सीकरण (उपचयन): ऑक्सीजन का जुड़ना या हाइड्रोजन का निकलना।\n• अपचयन: ऑक्सीजन का निकलना या हाइड्रोजन का जुड़ना।\n• रेडॉक्स अभिक्रिया: जहाँ उपचयन और अपचयन दोनों एक साथ होते हैं।\n  उदाहरण:\n  - ZnO + C -> Zn + CO (ZnO अपचयित हुआ; C उपचयित हुआ)\n  - MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2 (MnO2 अपचयित हुआ; HCl, Cl2 में उपचयित हुआ)\n\n• संक्षारण (Corrosion): जब धातुएं हवा, नमी और अम्लों के प्रभाव से धीरे-धीरे नष्ट होने लगती हैं।\n  - लोहे पर जंग लगना: लाल-भूरे रंग की परत (Fe2O3·xH2O)।\n  - चांदी पर काली परत (Ag2S के कारण)।\n  - तांबे पर हरी परत (बेसिक कॉपर कार्बोनेट के कारण)।\n  - रोकथाम: पेंट करना, तेल/ग्रीस लगाना, यशदलेपन (गैल्वनीकरण - जिंक की परत चढ़ाना), मिश्रधातु बनाना।\n\n• विकृतगंधिता (Rancidity): वसा और तेलयुक्त भोजन हवा की ऑक्सीजन से ऑक्सीकृत होकर दुर्गंध और खराब स्वाद पैदा करते हैं।\n  - रोकथाम: एंटीऑक्सीडेंट मिलाना, चिप्स की थैली में नाइट्रोजन गैस भरना, वायुरोधी बर्तनों में रखना, फ्रिज में रखना।",
+        "body_gu": "• ઓક્સિડેશન: ઓક્સિજન ઉમેરાવો અથવા હાઇડ્રોજન દૂર થવો.\n• રિડક્શન: ઓક્સિજન દૂર થવો અથવા હાઇડ્રોજન ઉમેરાવો.\n• રેડોક્સ પ્રક્રિયા: જેમાં ઓક્સિડેશન અને રિડક્શન બંને સાથે થાય છે.\n  ઉદાહરણો:\n  - ZnO + C -> Zn + CO (ZnO નું રિડક્શન; C નું ઓક્સિડેશન)\n  - MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2 (MnO2 નું રિડક્શન; HCl નું Cl2 માં ઓક્સિડેશન)\n\n• ક્ષારણ (Corrosion): હવા, ભેજ કે એસિડની અસરથી ધાતુઓ ધીમે ધીમે ખવાઈ જવાની પ્રક્રિયા.\n  - લોખંડને કાટ લાગવો: લાલ-કથ્થઈ રંગનો કાટ (Fe2O3·xH2O).\n  - ચાંદી પર કાળું પડ (Ag2S ના કારણે).\n  - તાંબા પર લીલું પડ (બેઝિક કોપર કાર્બોનેટના કારણે).\n  - અટકાવવાના ઉપાયો: રંગ કરવો, તેલ કે ગ્રીસ લગાવવું, ગેલ્વેનાઇઝિંગ (ઝીંકનું પડ ચડાવવું), મિશ્રધાતુ બનાવવી.\n\n• ખોરાપણું (Rancidity): તેલ કે ચરબીયુક્ત ખોરાક હવામાંના ઓક્સિજન સાથે પ્રક્રિયા કરી દુર્ગંધ અને ખરાબ સ્વાદ પેદા કરે છે.\n  - અટકાવવાના ઉપાયો: એન્ટિઓક્સિડન્ટ ઉમેરવા, ચિપ્સના પેકેટમાં નાઇટ્રોજન વાયુ ભરવો, હવાચુસ્ત ડબ્બામાં રાખવું, ફ્રિજમાં રાખવું."
+    })
+
+    # 4. Theory
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "Oxidizing and Reducing Agents Explained",
+        "title_hi": "ऑक्सीकारक और अपचायक की स्पष्ट पहचान",
+        "title_gu": "ઓક્સિડેશનકર્તા અને રિડક્શનકર્તાની સ્પષ્ટ ઓળખ",
+        "body": "A critical board concept that confuses many students:\n• OXIDIZING AGENT: The substance that gives oxygen (or removes hydrogen). It causes oxidation in another substance and GETS REDUCED itself.\n• REDUCING AGENT: The substance that removes oxygen (or provides hydrogen). It causes reduction in another substance and GETS OXIDIZED itself.\n\nIn the reaction: CuO + H2 -> Cu + H2O\n• Substance Oxidized = H2\n• Substance Reduced = CuO\n• Oxidizing Agent = CuO (because it provided the oxygen)\n• Reducing Agent = H2 (because it took the oxygen)",
+        "body_hi": "बोर्ड परीक्षा का अत्यंत महत्वपूर्ण नियम:\n• ऑक्सीकारक (Oxidizing Agent): वह पदार्थ जो ऑक्सीजन देता है (या हाइड्रोजन हटाता है)। यह दूसरे पदार्थ का ऑक्सीकरण करता है और स्वयं अपचयित (Reduced) हो जाता है।\n• अपचायक (Reducing Agent): वह पदार्थ जो ऑक्सीजन हटाता है (या हाइड्रोजन देता है)। यह दूसरे पदार्थ का अपचयन करता है और स्वयं ऑक्सीकृत (Oxidized) हो जाता है।\n\nअभिक्रिया में: CuO + H2 -> Cu + H2O\n• ऑक्सीकृत होने वाला पदार्थ = H2\n• अपचयित होने वाला पदार्थ = CuO\n• ऑक्सीकारक = CuO (क्योंकि इसने ऑक्सीजन प्रदान की)\n• अपचायक = H2 (क्योंकि इसने ऑक्सीजन ग्रहण की)",
+        "body_gu": "બોર્ડ પરીક્ષાનો મહત્વનો સિદ્ધાંત:\n• ઓક્સિડેશનકર્તા (Oxidizing Agent): જે પદાર્થ ઓક્સિજન આપે છે (કે હાઇડ્રોજન દૂર કરે છે). તે બીજાનું ઓક્સિડેશન કરે છે અને પોતે રિડક્શન (Reduced) પામે છે.\n• રિડક્શનકર્તા (Reducing Agent): જે પદાર્થ ઓક્સિજન દૂર કરે છે (કે હાઇડ્રોજન આપે છે). તે બીજાનું રિડક્શન કરે છે અને પોતે ઓક્સિડેશન (Oxidized) પામે છે.\n\nપ્રક્રિયામાં: CuO + H2 -> Cu + H2O\n• ઓક્સિડેશન પામતો પદાર્થ = H2\n• રિડક્શન પામતો પદાર્થ = CuO\n• ઓક્સિડેશનકર્તા = CuO (કારણ કે તેણે ઓક્સિજન આપ્યો)\n• રિડક્શનકર્તા = H2 (કારણ કે તેણે ઓક્સિજન લીધો)"
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": next_id(),
+        "type": "teacher_tip",
+        "title": "Teacher Tip: The Inversion Rule for Agents",
+        "title_hi": "शिक्षक टिप: अभिकर्मकों के लिए व्युत्क्रम नियम",
+        "title_gu": "શિક્ષક ટિપ: કર્તા ઓળખવાનો સરળ વ્યસ્ત નિયમ",
+        "body": "Remember this single formula to never lose marks:\n• Substance Oxidized = Reducing Agent\n• Substance Reduced = Oxidizing Agent\nBoth answers always come from the REACTANTS side (LHS). Products are never oxidizing or reducing agents!",
+        "body_hi": "अंक कटने से बचाने के लिए यह एक सूत्र याद रखें:\n• जो पदार्थ ऑक्सीकृत होता है = वही अपचायक है\n• जो पदार्थ अपचयित होता है = वही ऑक्सीकारक है\nये दोनों उत्तर हमेशा अभिकारकों (LHS) की तरफ से ही आते हैं। उत्पाद कभी भी ऑक्सीकारक या अपचायक नहीं होते!",
+        "body_gu": "ગુણ ન કપાય તે માટે આ સરળ નિયમ યાદ રાખો:\n• જે પદાર્થ ઓક્સિડેશન પામે = તે જ રિડક્શનકર્તા છે\n• જે પદાર્થ રિડક્શન પામે = તે જ ઓક્સિડેશનકર્તા છે\nઆ બંને જવાબો હંમેશા પ્રક્રિયકો (LHS) માંથી જ પસંદ થાય છે. નીપજો ક્યારેય ઓક્સિડેશનકર્તા કે રિડક્શનકર્તા હોતા નથી!"
+    })
+
+    # 5. Knowledge Check
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "In the reaction: MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2, which substance acts as the reducing agent?",
+        "question_hi": "अभिक्रिया MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2 में कौन सा पदार्थ अपचायक (reducing agent) के रूप में कार्य करता है?",
+        "question_gu": "પ્રક્રિયા MnO2 + 4HCl -> MnCl2 + 2H2O + Cl2 માં કયો પદાર્થ રિડક્શનકર્તા (reducing agent) તરીકે વર્તે છે?",
+        "options": [
+            "HCl",
+            "MnO2",
+            "MnCl2",
+            "Cl2"
+        ],
+        "options_hi": [
+            "HCl",
+            "MnO2",
+            "MnCl2",
+            "Cl2"
+        ],
+        "options_gu": [
+            "HCl",
+            "MnO2",
+            "MnCl2",
+            "Cl2"
+        ],
+        "correct_index": 0,
+        "explanation": "HCl loses hydrogen and gets oxidized to Cl2. Since HCl gets oxidized, it acts as the reducing agent. MnO2 loses oxygen (gets reduced) and acts as the oxidizing agent.",
+        "explanation_hi": "HCl हाइड्रोजन खोकर Cl2 में ऑक्सीकृत हो जाता है। चूँकि HCl का ऑक्सीकरण होता है, इसलिए यह अपचायक का कार्य करता है। MnO2 ऑक्सीजन खोकर अपचयित होता है और ऑक्सीकारक का कार्य करता है।",
+        "explanation_gu": "HCl હાઇડ્રોજન ગુમાવીને Cl2 માં ઓક્સિડેશન પામે છે. HCl નું ઓક્સિડેશન થતું હોવાથી તે રિડક્શનકર્તા તરીકે વર્તે છે. MnO2 ઓક્સિજન ગુમાવીને ઓક્સિડેશનકર્તા બને છે."
+    })
+
+    # 6. Reflection
+    blocks.append({
+        "id": next_id(),
+        "type": "reflection",
+        "title": "Why Chips Packets are Mostly Puffed Gas",
+        "title_hi": "चिप्स के पैकेट गैस से फूले हुए क्यों होते हैं?",
+        "title_gu": "વેફરના પેકેટ વાયુથી ફૂલેલા શા માટે હોય છે?",
+        "body": "Customers often complain that snack bags are half-empty air! But that gas is NOT ordinary air; it is unreactive, dry Nitrogen gas (N2). Oxygen in normal air rapidly oxidizes the delicate oils in crispy fried potato chips, producing foul volatile aldehydes and ketones (rancidity) in days. Nitrogen is completely inert and acts as an invisible protective cushion, keeping chips crisp, fresh, and tasty for months.",
+        "body_hi": "ग्राहक अक्सर शिकायत करते हैं कि चिप्स के पैकेट में आधी हवा भरी होती है! लेकिन वह गैस सामान्य हवा नहीं है; वह अक्रिय नाइट्रोजन गैस (N2) है। सामान्य हवा की ऑक्सीजन चिप्स के तेल को बहुत तेजी से ऑक्सीकृत कर देती है, जिससे कुछ ही दिनों में दुर्गंध आने लगती है (विकृतगंधिता)। नाइट्रोजन गैस पूरी तरह से निष्क्रिय रहकर चिप्स को महीनों तक कुरकुरा, ताजा और स्वादिष्ट बनाए रखती है।",
+        "body_gu": "ગ્રાહકો ઘણીવાર ફરિયાદ કરે છે કે વેફરના પેકેટમાં માત્ર હવા ભરેલી હોય છે! પરંતુ તે સામાન્ય હવા નથી; તે નિષ્ક્રિય નાઇટ્રોજન વાયુ (N2) છે. હવામાંનો ઓક્સિજન વેફરના તેલ સાથે પ્રક્રિયા કરીને તેને દિવસોમાં ખોરી કરી નાખે છે. નાઇટ્રોજન સંપૂર્ણ નિષ્ક્રિય વાયુ હોવાથી વેફરને મહિનાઓ સુધી કુરકુરી, તાજી અને સ્વાદિષ્ટ રાખે છે."
+    })
+
+    # 7. Connection
+    blocks.append({
+        "id": next_id(),
+        "type": "connection",
+        "title": "Galvanisation: Sacrificial Zinc Protecting Steel Bridges",
+        "title_hi": "गैल्वनीकरण: स्टील के पुलों की रक्षा करता बलिदानी जिंक",
+        "title_gu": "ગેલ્વેનાઇઝેશન: સ્ટીલના પુલોનું રક્ષણ કરતું બલિદાની ઝીંક",
+        "body": "Rust damages millions of tons of iron infrastructure globally each year. To prevent this, massive steel girders, car chassis, and roofing sheets undergo Galvanisation—immersion in molten zinc (Zn). Zinc is more reactive than iron. Even if the outer coating gets scratched, zinc oxidizes preferentially before iron can react with oxygen and moisture. Zinc literally sacrifices its electrons to save the iron underneath!",
+        "body_hi": "जंग के कारण प्रतिवर्ष वैश्विक स्तर पर लाखों टन लोहे का नुकसान होता है। इसे रोकने के लिए स्टील के बड़े गर्डरों, कार की बॉडी और छत की चादरों का गैल्वनीकरण (यशदलेपन) किया जाता है—उन्हें पिघले हुए जिंक में डुबोया जाता है। जिंक लोहे से अधिक सक्रिय है। खरोंच आने पर भी जिंक लोहे से पहले स्वयं ऑक्सीकृत हो जाता है और लोहे को जंग लगने से बचाता है!",
+        "body_gu": "કાટ લાગવાથી દર વર્ષે લાખો ટન લોખંડ નાશ પામે છે. આ રોકવા સ્ટીલના પુલ, કારના માળખા અને પતરાં પર ગેલ્વેનાઇઝેશન કરવામાં આવે છે—તેને પીગળેલા ઝીંકમાં બોળવામાં આવે છે. ઝીંક લોખંડ કરતાં વધુ સક્રિય છે. સ્ક્રેચ પડે તો પણ ઝીંક પહેલાં પ્રક્રિયા કરીને લોખંડને કાટ લાગતો અટકાવે છે. ઝીંક પોતાના ઇલેક્ટ્રોનનું બલિદાન આપી લોખંડને બચાવે છે!"
+    })
+
+    # 8. Mastery Challenge
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "A shiny brown element 'X' on heating in air becomes coated with a black substance 'Y'. What are 'X' and 'Y'?",
+        "question_hi": "एक चमकदार भूरे रंग का तत्व 'X' हवा में गर्म करने पर काले रंग के पदार्थ 'Y' से ढक जाता है। 'X' और 'Y' क्या हैं?",
+        "question_gu": "ચમકદાર કથ્થઈ રંગનું તત્વ 'X' હવામાં ગરમ કરતાં કાળા રંગના પદાર્થ 'Y' ના પડથી ઢંકાઈ જાય છે. 'X' અને 'Y' કયા પદાર્થો છે?",
+        "options": [
+            "X = Copper (Cu), Y = Copper(II) oxide (CuO)",
+            "X = Iron (Fe), Y = Iron(III) oxide (Fe2O3)",
+            "X = Silver (Ag), Y = Silver sulphide (Ag2S)",
+            "X = Lead (Pb), Y = Lead oxide (PbO)"
+        ],
+        "options_hi": [
+            "X = कॉपर (Cu), Y = कॉपर(II) ऑक्साइड (CuO)",
+            "X = लोहा (Fe), Y = आयरन(III) ऑक्साइड (Fe2O3)",
+            "X = चांदी (Ag), Y = सिल्वर सल्फाइड (Ag2S)",
+            "X = लेड (Pb), Y = लेड ऑक्साइड (PbO)"
+        ],
+        "options_gu": [
+            "X = કોપર (Cu), Y = કોપર(II) ઓક્સાઇડ (CuO)",
+            "X = લોખંડ (Fe), Y = આયર્ન(III) ઓક્સાઇડ (Fe2O3)",
+            "X = ચાંદી (Ag), Y = સિલ્વર સલ્ફાઇડ (Ag2S)",
+            "X = લેડ (Pb), Y = લેડ ઓક્સાઇડ (PbO)"
+        ],
+        "correct_index": 0,
+        "explanation": "Element X is copper metal (Cu), which is shiny reddish-brown. When heated in air, it reacts with oxygen to form black copper(II) oxide (CuO): 2Cu + O2 -> 2CuO.",
+        "explanation_hi": "तत्व X कॉपर (Cu) धातु है, जो चमकदार लाल-भूरे रंग की होती है। हवा में गर्म करने पर यह ऑक्सीजन से अभिक्रिया करके काले रंग का कॉपर ऑक्साइड (CuO) बनाता है: 2Cu + O2 -> 2CuO।",
+        "explanation_gu": "તત્વ X એ તાંબુ (Cu) છે, જે ચમકદાર કથ્થઈ રંગની ધાતુ છે. હવામાં ગરમ કરતાં તે ઓક્સિજન સાથે પ્રક્રિયા કરીને કાળા રંગનો કોપર ઓક્સાઇડ (CuO) બનાવે છે: 2Cu + O2 -> 2CuO."
+    })
+
+    # =========================================================================
+    # MODULE 7: COMPLETE NCERT IN-TEXT & TEXTBOOK EXERCISES
+    # =========================================================================
+
+    # NCERT In-text Questions Set 1
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT In-Text 1.1: Why should a magnesium ribbon be cleaned before burning in air?",
+        "question_hi": "NCERT पाठ्य-निहित 1.1: वायु में जलाने से पहले मैग्नीशियम रिबन को साफ क्यों किया जाता है?",
+        "question_gu": "NCERT પાઠ્ય-નિહિત 1.1: હવામાં સળગાવતાં પહેલાં મેગ્નેશિયમની પટ્ટીને શા માટે સાફ કરવામાં આવે છે?",
+        "options": [
+            "To remove the layer of basic magnesium carbonate/oxide formed due to reaction with moist air.",
+            "To remove moisture so that the metal turns into liquid faster.",
+            "To polish the ribbon and make the demonstration look impressive.",
+            "To reduce the ignition temperature of the metal to zero."
+        ],
+        "options_hi": [
+            "नम हवा के साथ अभिक्रिया के कारण बनी बेसिक मैग्नीशियम कार्बोनेट/ऑक्साइड की सुरक्षात्मक परत को हटाने के लिए।",
+            "नमी को हटाने के लिए ताकि धातु तेजी से तरल में बदल सके।",
+            "रिबन को चमकाने और प्रदर्शन को प्रभावशाली बनाने के लिए।",
+            "धातु के प्रज्वलन तापमान को घटाकर शून्य करने के लिए।"
+        ],
+        "options_gu": [
+            "ભેજવાળી હવા સાથે પ્રક્રિયાથી બનેલા બેઝિક મેગ્નેશિયમ કાર્બોનેટ/ઓક્સાઇડના રક્ષણાત્મક પડને દૂર કરવા.",
+            "ભેજ દૂર કરવા જેથી ધાતુ ઝડપથી પીગળી શકે.",
+            "પટ્ટીને ચમકાવી પ્રયોગને આકર્ષક દેખાડવા.",
+            "ધાતુના જ્વલનબિંદુને ઘટાડી શૂન્ય કરવા."
+        ],
+        "correct_index": 0,
+        "explanation": "Magnesium is reactive and forms a protective oxide/carbonate layer on its surface, which hinders further burning. Sandpaper removes this inert layer.",
+        "explanation_hi": "मैग्नीशियम सक्रिय होने के कारण अपनी सतह पर एक सुरक्षात्मक ऑक्साइड/कार्बोनेट परत बना लेता है, जो दहन में बाधा डालती है। सैंडपेपर इस परत को हटा देता है।",
+        "explanation_gu": "મેગ્નેશિયમ સક્રિય હોવાથી સપાટી પર ઓક્સાઇડ/કાર્બોનેટનું રક્ષણાત્મક પડ બનાવે છે, જે દહનને રોકે છે. કાચપેપર આ પડને દૂર કરે છે."
+    })
+
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT In-Text 1.2: Which balanced equation represents: Hydrogen + Chlorine -> Hydrogen chloride?",
+        "question_hi": "NCERT पाठ्य-निहित 1.2: कौन सा संतुलित समीकरण दर्शाता है: हाइड्रोजन + क्लोरीन -> हाइड्रोजन क्लोराइड?",
+        "question_gu": "NCERT પાઠ્ય-નિહિત 1.2: કયું સંતુલિત સમીકરણ દર્શાવે છે: હાઇડ્રોજન + ક્લોરિન -> હાઇડ્રોજન ક્લોરાઇડ?",
+        "options": [
+            "H2(g) + Cl2(g) -> 2HCl(g)",
+            "H + Cl -> HCl",
+            "2H + 2Cl -> 2HCl",
+            "H2 + Cl2 -> H2Cl2"
+        ],
+        "options_hi": [
+            "H2(g) + Cl2(g) -> 2HCl(g)",
+            "H + Cl -> HCl",
+            "2H + 2Cl -> 2HCl",
+            "H2 + Cl2 -> H2Cl2"
+        ],
+        "options_gu": [
+            "H2(g) + Cl2(g) -> 2HCl(g)",
+            "H + Cl -> HCl",
+            "2H + 2Cl -> 2HCl",
+            "H2 + Cl2 -> H2Cl2"
+        ],
+        "correct_index": 0,
+        "explanation": "Both hydrogen and chlorine exist as diatomic gases (H2 and Cl2). They combine to form 2 molecules of gaseous hydrogen chloride (2HCl).",
+        "explanation_hi": "हाइड्रोजन और क्लोरीन दोनों द्विपरमाणुक गैसों (H2 और Cl2) के रूप में होते हैं। वे मिलकर हाइड्रोजन क्लोराइड गैस के 2 अणु (2HCl) बनाते हैं।",
+        "explanation_gu": "હાઇડ્રોજન અને ક્લોરિન બંને દ્વિ-પરમાણ્વીય વાયુઓ (H2 અને Cl2) છે. તેઓ જોડાઈને હાઇડ્રોજન ક્લોરાઇડ વાયુના 2 અણુ (2HCl) બનાવે છે."
+    })
+
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT In-Text 1.3: Which balanced equation represents the reaction of barium chloride and aluminium sulphate in water to form insoluble barium sulphate and aluminium chloride?",
+        "question_hi": "NCERT पाठ्य-निहित 1.3: बेरियम क्लोराइड और एल्युमिनियम सल्फेट की जल में अभिक्रिया का संतुलित समीकरण कौन सा है?",
+        "question_gu": "NCERT પાઠ્ય-નિહિત 1.3: પાણીમાં બેરિયમ ક્લોરાઇડ અને એલ્યુમિનિયમ સલ્ફેટની પ્રક્રિયાનું સંતુલિત સમીકરણ કયું છે?",
+        "options": [
+            "3BaCl2(aq) + Al2(SO4)3(aq) -> 3BaSO4(s) + 2AlCl3(aq)",
+            "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
+            "BaCl2(aq) + AlSO4(aq) -> BaSO4(s) + AlCl2(aq)",
+            "3BaCl2 + 2Al2(SO4)3 -> 3BaSO4 + 4AlCl3"
+        ],
+        "options_hi": [
+            "3BaCl2(aq) + Al2(SO4)3(aq) -> 3BaSO4(s) + 2AlCl3(aq)",
+            "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
+            "BaCl2(aq) + AlSO4(aq) -> BaSO4(s) + AlCl2(aq)",
+            "3BaCl2 + 2Al2(SO4)3 -> 3BaSO4 + 4AlCl3"
+        ],
+        "options_gu": [
+            "3BaCl2(aq) + Al2(SO4)3(aq) -> 3BaSO4(s) + 2AlCl3(aq)",
+            "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
+            "BaCl2(aq) + AlSO4(aq) -> BaSO4(s) + AlCl2(aq)",
+            "3BaCl2 + 2Al2(SO4)3 -> 3BaSO4 + 4AlCl3"
+        ],
+        "correct_index": 0,
+        "explanation": "3 moles of BaCl2 react with 1 mole of Al2(SO4)3 to yield 3 moles of BaSO4 precipitate and 2 moles of AlCl3.",
+        "explanation_hi": "BaCl2 के 3 मोल Al2(SO4)3 के 1 मोल के साथ क्रिया करके BaSO4 के 3 मोल अवक्षेप और AlCl3 के 2 मोल बनाते हैं।",
+        "explanation_gu": "BaCl2 ના 3 મોલ Al2(SO4)3 ના 1 મોલ સાથે પ્રક્રિયા કરીને BaSO4 ના 3 મોલ અવક્ષેપ અને AlCl3 ના 2 મોલ આપે છે."
+    })
+
+    # NCERT In-text Questions Set 2
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT In-Text 2.1: A solution of substance 'X' is used for white washing. Identify substance 'X' and state its reaction with water.",
+        "question_hi": "NCERT पाठ्य-निहित 2.1: सफेदी करने के लिए पदार्थ 'X' के घोल का उपयोग किया जाता है। पदार्थ 'X' की पहचान करें और जल के साथ इसकी अभिक्रिया लिखें।",
+        "question_gu": "NCERT પાઠ્ય-નિહિત 2.1: ધોળકામ માટે પદાર્થ 'X' ના દ્રાવણનો ઉપયોગ થાય છે. પદાર્થ 'X' ઓળખો અને તેની પાણી સાથેની પ્રક્રિયા જણાવો.",
+        "options": [
+            "X is Calcium Oxide (CaO); CaO(s) + H2O(l) -> Ca(OH)2(aq) + Heat",
+            "X is Calcium Carbonate (CaCO3); CaCO3 + H2O -> No reaction",
+            "X is Calcium Hydroxide (Ca(OH)2); Ca(OH)2 + H2O -> Ca2+ + 2OH-",
+            "X is Sodium Hydroxide (NaOH); NaOH + H2O -> Solution"
+        ],
+        "options_hi": [
+            "X कैल्शियम ऑक्साइड (CaO) है; CaO(s) + H2O(l) -> Ca(OH)2(aq) + ऊष्मा",
+            "X कैल्शियम कार्बोनेट (CaCO3) है; CaCO3 + H2O -> कोई अभिक्रिया नहीं",
+            "X कैल्शियम हाइड्रॉक्साइड (Ca(OH)2) है; Ca(OH)2 + H2O -> Ca2+ + 2OH-",
+            "X सोडियम हाइड्रॉक्साइड (NaOH) है; NaOH + H2O -> घोल"
+        ],
+        "options_gu": [
+            "X કેલ્શિયમ ઓક્સાઇડ (CaO) છે; CaO(s) + H2O(l) -> Ca(OH)2(aq) + ઉષ્મા",
+            "X કેલ્શિયમ કાર્બોનેટ (CaCO3) છે; CaCO3 + H2O -> પ્રક્રિયા થતી નથી",
+            "X કેલ્શિયમ હાઇડ્રોક્સાઇડ (Ca(OH)2) છે; Ca(OH)2 + H2O -> Ca2+ + 2OH-",
+            "X સોડિયમ હાઇડ્રોક્સાઇડ (NaOH) છે; NaOH + H2O -> દ્રાવણ"
+        ],
+        "correct_index": 0,
+        "explanation": "Substance X is Quicklime (Calcium Oxide, CaO). It reacts vigorously with water to produce slaked lime [Ca(OH)2] with huge release of heat.",
+        "explanation_hi": "पदार्थ X कली चूना (कैल्शियम ऑक्साइड, CaO) है। यह पानी के साथ तीव्रता से क्रिया करके बुझा हुआ चूना [Ca(OH)2] बनाता है और अत्यधिक ऊष्मा उत्पन्न करता है।",
+        "explanation_gu": "પદાર્થ X એ કળીચૂનો (કેલ્શિયમ ઓક્સાઇડ, CaO) છે. તે પાણી સાથે પ્રચંડ પ્રક્રિયા કરી પુષ્કળ ઉષ્મા સાથે ભીંજવેલો ચૂનો [Ca(OH)2] બનાવે છે."
+    })
+
+    # NCERT Textbook Exercise Question 1
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT Exercise Q1: Which of the statements about the reaction: 2PbO(s) + C(s) -> 2Pb(s) + CO2(g) are INCORRECT?\n(a) Lead is getting reduced.\n(b) Carbon dioxide is getting oxidised.\n(c) Carbon is getting oxidised.\n(d) Lead oxide is getting reduced.",
+        "question_hi": "NCERT अभ्यास Q1: अभिक्रिया 2PbO(s) + C(s) -> 2Pb(s) + CO2(g) के लिए कौन से कथन असत्य (INCORRECT) हैं?\n(a) सीसा (Lead) अपचयित हो रहा है।\n(b) कार्बन डाइऑक्साइड उपचयित हो रही है।\n(c) कार्बन उपचयित हो रहा है।\n(d) लेड ऑक्साइड अपचयित हो रहा है।",
+        "question_gu": "NCERT સ્વાધ્યાય Q1: પ્રક્રિયા 2PbO(s) + C(s) -> 2Pb(s) + CO2(g) માટે નીચેનામાંથી કયા વિધાનો ખોટા (INCORRECT) છે?\n(a) લેડ રિડક્શન પામે છે.\n(b) કાર્બન ડાયોક્સાઇડ ઓક્સિડેશન પામે છે.\n(c) કાર્બન ઓક્સિડેશન પામે છે.\n(d) લેડ ઓક્સાઇડ રિડક્શન પામે છે.",
+        "options": [
+            "(a) and (b)",
+            "(a) and (c)",
+            "(a), (b) and (c)",
+            "(c) and (d)"
+        ],
+        "options_hi": [
+            "(a) और (b)",
+            "(a) और (c)",
+            "(a), (b) और (c)",
+            "(c) और (d)"
+        ],
+        "options_gu": [
+            "(a) અને (b)",
+            "(a) અને (c)",
+            "(a), (b) અને (c)",
+            "(c) અને (d)"
+        ],
+        "correct_index": 0,
+        "explanation": "Statements (a) and (b) are incorrect. Lead oxide (PbO) is reduced, NOT lead. Carbon (C) is oxidized, NOT carbon dioxide. So incorrect statements are (a) and (b).",
+        "explanation_hi": "कथन (a) और (b) असत्य हैं। लेड ऑक्साइड (PbO) अपचयित हो रहा है, न कि लेड। कार्बन (C) उपचयित हो रहा है, न कि कार्बन डाइऑक्साइड। अतः असत्य कथन (a) और (b) हैं।",
+        "explanation_gu": "વિધાનો (a) અને (b) ખોટા છે. લેડ ઓક્સાઇડ (PbO) રિડક્શન પામે છે, લેડ નહીં. કાર્બન (C) ઓક્સિડેશન પામે છે, કાર્બન ડાયોક્સાઇડ નહીં. આથી ખોટા વિધાનો (a) અને (b) છે."
+    })
+
+    # NCERT Textbook Exercise Question 2
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT Exercise Q2: Fe2O3 + 2Al -> Al2O3 + 2Fe. The above reaction is an example of a:",
+        "question_hi": "NCERT अभ्यास Q2: Fe2O3 + 2Al -> Al2O3 + 2Fe. ऊपर दी गई अभिक्रिया एक उदाहरण है:",
+        "question_gu": "NCERT સ્વાધ્યાય Q2: Fe2O3 + 2Al -> Al2O3 + 2Fe. ઉપર આપેલ પ્રક્રિયા શેનું ઉદાહરણ છે?",
+        "options": [
+            "Displacement reaction",
+            "Combination reaction",
+            "Double displacement reaction",
+            "Decomposition reaction"
+        ],
+        "options_hi": [
+            "विस्थापन अभिक्रिया (Displacement reaction)",
+            "संयोजन अभिक्रिया (Combination reaction)",
+            "द्विविस्थापन अभिक्रिया (Double displacement reaction)",
+            "वियोजन अभिक्रिया (Decomposition reaction)"
+        ],
+        "options_gu": [
+            "વિસ્થાપન પ્રક્રિયા (Displacement reaction)",
+            "સંયોગીકરણ પ્રક્રિયા (Combination reaction)",
+            "દ્વિવિસ્થાપન પ્રક્રિયા (Double displacement reaction)",
+            "વિઘટન પ્રક્રિયા (Decomposition reaction)"
+        ],
+        "correct_index": 0,
+        "explanation": "Aluminium is more reactive than iron, so Aluminium displaces Iron from iron(III) oxide. This is a displacement reaction (specifically the Thermite reaction).",
+        "explanation_hi": "एल्युमिनियम लोहे से अधिक सक्रिय है, इसलिए यह आयरन ऑक्साइड से लोहे को विस्थापित कर देता है। यह एक विस्थापन अभिक्रिया (थर्माઇટ अभिक्रिया) है।",
+        "explanation_gu": "એલ્યુમિનિયમ લોખંડ કરતાં વધુ સક્રિય હોવાથી તે આયર્ન ઓક્સાઇડમાંથી લોખંડને વિસ્થાપિત કરે છે. આ વિસ્થાપન પ્રક્રિયા (થર્માઇટ પ્રક્રિયા) છે."
+    })
+
+    # NCERT Textbook Exercise Question 3
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "NCERT Exercise Q3: What happens when dilute hydrochloric acid is added to iron filings?",
+        "question_hi": "NCERT अभ्यास Q3: लोहे के बुरादे पर तनु हाइड्रोक्लोरिक अम्ल डालने से क्या होता है?",
+        "question_gu": "NCERT સ્વાધ્યાય Q3: લોખંડના ભૂકા પર મંદ હાઇડ્રોક્લોરિક એસિડ ઉમેરતાં શું થાય છે?",
+        "options": [
+            "Hydrogen gas and iron(II) chloride are produced.",
+            "Chlorine gas and iron hydroxide are produced.",
+            "No reaction takes place.",
+            "Iron salt and water are produced."
+        ],
+        "options_hi": [
+            "हाइड्रोजन गैस और आयरन(II) क्लोराइड बनते हैं।",
+            "क्लोरीन गैस और आयरन हाइड्रॉक्साइड बनते हैं।",
+            "कोई अभिक्रिया नहीं होती है।",
+            "आयरन लवण और जल बनते हैं।"
+        ],
+        "options_gu": [
+            "હાઇડ્રોજન વાયુ અને આયર્ન(II) ક્લોરાઇડ બને છે.",
+            "ક્લોરિન વાયુ અને આયર્ન હાઇડ્રોક્સાઇડ બને છે.",
+            "કોઈ પ્રક્રિયા થતી નથી.",
+            "આયર્ન ક્ષાર અને પાણી બને છે."
+        ],
+        "correct_index": 0,
+        "explanation": "Fe(s) + 2HCl(aq) -> FeCl2(aq) + H2(g). Iron displaces hydrogen from dilute acid to produce ferrous chloride and hydrogen gas.",
+        "explanation_hi": "Fe(s) + 2HCl(aq) -> FeCl2(aq) + H2(g)। लोहा तनु अम्ल से हाइड्रोजन को विस्थापित करके फेरस क्लोराइड और हाइड्रोजन गैस बनाता है।",
+        "explanation_gu": "Fe(s) + 2HCl(aq) -> FeCl2(aq) + H2(g). લોખંડ મંદ એસિડમાંથી હાઇડ્રોજનને વિસ્થાપિત કરી ફેરસ ક્લોરાઇડ અને હાઇડ્રોજન વાયુ બનાવે છે."
+    })
+
+    # NCERT Textbook Exercise Question 4
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q4: Why Should Chemical Equations be Balanced?",
+        "title_hi": "NCERT अभ्यास Q4: रासायनिक समीकरण संतुलित क्यों होने चाहिए?",
+        "title_gu": "NCERT સ્વાધ્યાય Q4: રાસાયણિક સમીકરણ શા માટે સંતુલિત હોવું જોઈએ?",
+        "body": "• WHAT IS A BALANCED EQUATION?\nA balanced chemical equation is one in which the total number of atoms of each element is equal on both the reactant side (LHS) and the product side (RHS).\n\n• WHY MUST IT BE BALANCED?\nAccording to the Law of Conservation of Mass (Lavoisier, 1789), matter can neither be created nor destroyed in a chemical reaction. Therefore, the total mass of the products must equal the total mass of the reactants. This is only possible if the number of atoms of each element before and after the reaction remains exactly the same.",
+        "body_hi": "• संतुलित रासायनिक समीकरण क्या है?\nएक संतुलित रासायनिक समीकरण वह होता है जिसमें अभिकारक पक्ष (LHS) और उत्पाद पक्ष (RHS) दोनों पर प्रत्येक तत्व के परमाणुओं की संख्या समान होती है।\n\n• इसे संतुलित करना क्यों आवश्यक है?\nद्रव्यमान संरक्षण के नियम (लावोईसियर, 1789) के अनुसार, किसी रासायनिक अभिक्रिया में द्रव्यमान का न तो निर्माण हो सकता है और न ही विनाश। इसलिए, उत्पादों का कुल द्रव्यमान अभिकारकों के कुल द्रव्यमान के बराबर होना चाहिए। यह तभी संभव है जब अभिक्रिया से पहले और बाद में प्रत्येक तत्व के परमाणुओं की संख्या बिल्कुल समान रहे।",
+        "body_gu": "• સંતુલિત સમીકરણ શું છે?\nસંતુલિત રાસાયણિક સમીકરણ એ છે જેમાં પ્રક્રિયકોની બાજુ (LHS) અને નીપજોની બાજુ (RHS) બંને તરફ દરેક તત્વના પરમાણુઓની કુલ સંખ્યા સમાન હોય.\n\n• તેને સંતુલિત કરવું શા માટે જરૂરી છે?\nદળ સંરક્ષણના નિયમ (લેવોઇઝર, 1789) મુજબ કોઈપણ રાસાયણિક પ્રક્રિયામાં દ્રવ્યનું સર્જન કે વિનાશ શક્ય નથી. તેથી નીપજોનું કુલ દળ હંમેશા પ્રક્રિયકોના કુલ દળ જેટલું જ હોવું જોઈએ. આ ત્યારે જ શક્ય બને જ્યારે પ્રક્રિયા પહેલાં અને પછી દરેક તત્વના પરમાણુઓની સંખ્યા સમાન રહે."
+    })
+
+    # NCERT Textbook Exercise Question 5
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q5: Translating Word Equations & Balancing",
+        "title_hi": "NCERT अभ्यास Q5: शब्द समीकरणों का अनुवाद एवं संतुलन",
+        "title_gu": "NCERT સ્વાધ્યાય Q5: શાબ્દિક સમીકરણોનું રૂપાંતરણ અને સંતુલન",
+        "body": "(a) Hydrogen gas combines with nitrogen to form ammonia:\n    3H2(g) + N2(g) -> 2NH3(g)\n\n(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide:\n    2H2S(g) + 3O2(g) -> 2H2O(l) + 2SO2(g)\n\n(c) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate:\n    3BaCl2(aq) + Al2(SO4)3(aq) -> 2AlCl3(aq) + 3BaSO4(s)\n\n(d) Potassium metal reacts with water to give potassium hydroxide and hydrogen gas:\n    2K(s) + 2H2O(l) -> 2KOH(aq) + H2(g)",
+        "body_hi": "(a) हाइड्रोजन गैस नाइट्रोजन से संयोग करके अमोनिया बनाती है:\n    3H2(g) + N2(g) -> 2NH3(g)\n\n(b) हाइड्रोजन सल्फाइड गैस वायु में जलकर जल और सल्फर डाइऑक्साइड देती है:\n    2H2S(g) + 3O2(g) -> 2H2O(l) + 2SO2(g)\n\n(c) बेरियम क्लोराइड एल्युमिनियम सल्फेट से क्रिया कर एल्युमिनियम क्लोराइड और बेरियम सल्फेट का अवक्षेप बनाता है:\n    3BaCl2(aq) + Al2(SO4)3(aq) -> 2AlCl3(aq) + 3BaSO4(s)\n\n(d) पोटेशियम धातु जल के साथ क्रिया करके पोटेशियम हाइड्रॉक्साइड और हाइड्रोजन गैस देती है:\n    2K(s) + 2H2O(l) -> 2KOH(aq) + H2(g)",
+        "body_gu": "(a) હાઇડ્રોજન વાયુ નાઇટ્રોજન સાથે સંયોજાઈને એમોનિયા બનાવે છે:\n    3H2(g) + N2(g) -> 2NH3(g)\n\n(b) હાઇડ્રોજન સલ્ફાઇડ વાયુ હવામાં બળીને પાણી અને સલ્ફર ડાયોક્સાઇડ આપે છે:\n    2H2S(g) + 3O2(g) -> 2H2O(l) + 2SO2(g)\n\n(c) બેરિયમ ક્લોરાઇડ એલ્યુમિનિયમ સલ્ફેટ સાથે પ્રક્રિયા કરી એલ્યુમિનિયમ ક્લોરાઇડ અને બેરિયમ સલ્ફેટનો અવક્ષેપ આપે છે:\n    3BaCl2(aq) + Al2(SO4)3(aq) -> 2AlCl3(aq) + 3BaSO4(s)\n\n(d) પોટેશિયમ ધાતુ પાણી સાથે પ્રક્રિયા કરીને પોટેશિયમ હાઇડ્રોક્સાઇડ અને હાઇડ્રોજન વાયુ આપે છે:\n    2K(s) + 2H2O(l) -> 2KOH(aq) + H2(g)"
+    })
+
+    # NCERT Textbook Exercise Question 6
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q6: Balancing Key Chemical Equations",
+        "title_hi": "NCERT अभ्यास Q6: मुख्य रासायनिक समीकरणों का संतुलन",
+        "title_gu": "NCERT સ્વાધ્યાય Q6: મુખ્ય રાસાયણિક સમીકરણોનું સંતુલન",
+        "body": "Balanced chemical equations:\n\n(a) 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O\n\n(b) 2NaOH + H2SO4 -> Na2SO4 + 2H2O\n\n(c) NaCl + AgNO3 -> AgCl + NaNO3  (Already balanced: 1:1:1:1)\n\n(d) BaCl2 + H2SO4 -> BaSO4 + 2HCl",
+        "body_hi": "संतुलित रासायनिक समीकरण:\n\n(a) 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O\n\n(b) 2NaOH + H2SO4 -> Na2SO4 + 2H2O\n\n(c) NaCl + AgNO3 -> AgCl + NaNO3  (पहले से संतुलित: 1:1:1:1)\n\n(d) BaCl2 + H2SO4 -> BaSO4 + 2HCl",
+        "body_gu": "સંતુલિત રાસાયણિક સમીકરણો:\n\n(a) 2HNO3 + Ca(OH)2 -> Ca(NO3)2 + 2H2O\n\n(b) 2NaOH + H2SO4 -> Na2SO4 + 2H2O\n\n(c) NaCl + AgNO3 -> AgCl + NaNO3  (પહેલેથી જ સંતુલિત: 1:1:1:1)\n\n(d) BaCl2 + H2SO4 -> BaSO4 + 2HCl"
+    })
+
+    # NCERT Textbook Exercise Question 7 & 8
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q7 & Q8: Equations and Identifying Reaction Types",
+        "title_hi": "NCERT अभ्यास Q7 और Q8: समीकरण और अभिक्रिया प्रकार की पहचान",
+        "title_gu": "NCERT સ્વાધ્યાય Q7 અને Q8: સમીકરણો અને પ્રક્રિયાના પ્રકારો",
+        "body": "Balanced equations with reaction types:\n\n1. Calcium hydroxide + Carbon dioxide -> Calcium carbonate + Water\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)  [Precipitation / Combination]\n\n2. Zinc + Silver nitrate -> Zinc nitrate + Silver\n   Zn(s) + 2AgNO3(aq) -> Zn(NO3)2(aq) + 2Ag(s)  [Displacement Reaction]\n\n3. Aluminium + Copper chloride -> Aluminium chloride + Copper\n   2Al(s) + 3CuCl2(aq) -> 2AlCl3(aq) + 3Cu(s)  [Displacement Reaction]\n\n4. Barium chloride + Potassium sulphate -> Barium sulphate + Potassium chloride\n   BaCl2(aq) + K2SO4(aq) -> BaSO4(s) + 2KCl(aq)  [Double Displacement / Precipitation]\n\n5. Potassium bromide + Barium iodide -> Potassium iodide + Barium bromide\n   2KBr(aq) + BaI2(aq) -> 2KI(aq) + BaBr2(aq)  [Double Displacement Reaction]\n\n6. Zinc carbonate(s) -> Zinc oxide(s) + Carbon dioxide(g)\n   ZnCO3(s) --heat--> ZnO(s) + CO2(g)  [Thermal Decomposition Reaction]\n\n7. Magnesium(s) + Hydrochloric acid(aq) -> Magnesium chloride(aq) + Hydrogen(g)\n   Mg(s) + 2HCl(aq) -> MgCl2(aq) + H2(g)  [Displacement Reaction]",
+        "body_hi": "संतुलित समीकरण और उनके प्रकार:\n\n1. कैल्शियम हाइड्रॉक्साइड + कार्बन डाइऑक्साइड -> कैल्शियम कार्बोनेट + जल\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)  [अवक्षेपण / संयोजन]\n\n2. जिंक + सिल्वर नाइट्रेट -> जिंक नाइट्रेट + सिल्वर\n   Zn(s) + 2AgNO3(aq) -> Zn(NO3)2(aq) + 2Ag(s)  [विस्थापन अभिक्रिया]\n\n3. एल्युमिनियम + कॉपर क्लोराइड -> एल्युमिनियम क्लोराइड + कॉपर\n   2Al(s) + 3CuCl2(aq) -> 2AlCl3(aq) + 3Cu(s)  [विस्थापन अभिक्रिया]\n\n4. बेरियम क्लोराइड + पोटेशियम सल्फेट -> बेरियम सल्फेट + पोटेशियम क्लोराइड\n   BaCl2(aq) + K2SO4(aq) -> BaSO4(s) + 2KCl(aq)  [द्विविस्थापन / अवक्षेपण]\n\n5. पोटेशियम ब्रोमाइड + बेरियम आयोडाइड -> पोटेशियम आयोडाइड + बेरियम ब्रोमाइड\n   2KBr(aq) + BaI2(aq) -> 2KI(aq) + BaBr2(aq)  [द्विविस्थापन अभिक्रिया]\n\n6. जिंक कार्बोनेट(s) -> जिंक ऑक्साइड(s) + कार्बन डाइऑक्साइड(g)\n   ZnCO3(s) --ऊष्मा--> ZnO(s) + CO2(g)  [ऊष्मीय वियोजन अभिक्रिया]\n\n7. मैग्नीशियम(s) + हाइड्रोक्लोरिक अम्ल(aq) -> मैग्नीशियम क्लोराइड(aq) + हाइड्रोजन(g)\n   Mg(s) + 2HCl(aq) -> MgCl2(aq) + H2(g)  [विस्थापन अभिक्रिया]",
+        "body_gu": "સંતુલિત સમીકરણો અને પ્રક્રિયાના પ્રકારો:\n\n1. કેલ્શિયમ હાઇડ્રોક્સાઇડ + કાર્બન ડાયોક્સાઇડ -> કેલ્શિયમ કાર્બોનેટ + પાણી\n   Ca(OH)2(aq) + CO2(g) -> CaCO3(s) + H2O(l)  [અવક્ષેપન / સંયોગીકરણ]\n\n2. ઝીંક + સિલ્વર નાઇટ્રેટ -> ઝીંક નાઇટ્રેટ + સિલ્વર\n   Zn(s) + 2AgNO3(aq) -> Zn(NO3)2(aq) + 2Ag(s)  [વિસ્થાપન પ્રક્રિયા]\n\n3. એલ્યુમિનિયમ + કોપર ક્લોરાઇડ -> એલ્યુમિનિયમ ક્લોરાઇડ + કોપર\n   2Al(s) + 3CuCl2(aq) -> 2AlCl3(aq) + 3Cu(s)  [વિસ્થાપન પ્રક્રિયા]\n\n4. બેરિયમ ક્લોરાઇડ + પોટેશિયમ સલ્ફેટ -> બેરિયમ સલ્ફેટ + પોટેશિયમ ક્લોરાઇડ\n   BaCl2(aq) + K2SO4(aq) -> BaSO4(s) + 2KCl(aq)  [દ્વિવિસ્થાપન / અવક્ષેપન]\n\n5. પોટેશિયમ બ્રોમાઇડ + બેરિયમ આયોડાઇડ -> પોટેશિયમ આયોડાઇડ + બેરિયમ બ્રોમાઇડ\n   2KBr(aq) + BaI2(aq) -> 2KI(aq) + BaBr2(aq)  [દ્વિવિસ્થાપન પ્રક્રિયા]\n\n6. ઝીંક કાર્બોનેટ(s) -> ઝીંક ઓક્સાઇડ(s) + કાર્બન ડાયોક્સાઇડ(g)\n   ZnCO3(s) --ઉષ્મા--> ZnO(s) + CO2(g)  [ઉષ્મીય વિઘટન પ્રક્રિયા]\n\n7. મેગ્નેશિયમ(s) + હાઇડ્રોક્લોરિક એસિડ(aq) -> મેગ્નેશિયમ ક્લોરાઇડ(aq) + હાઇડ્રોજન(g)\n   Mg(s) + 2HCl(aq) -> MgCl2(aq) + H2(g)  [વિસ્થાપન પ્રક્રિયા]"
+    })
+
+    # NCERT Textbook Exercise Question 9 to 13
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q9 - Q13: Core Concepts Summary",
+        "title_hi": "NCERT अभ्यास Q9 - Q13: मुख्य अवधारणाओं का संक्षेप",
+        "title_gu": "NCERT સ્વાધ્યાય Q9 - Q13: મુખ્ય સંકલ્પનાઓનો સારાંશ",
+        "body": "• Q9 (Exothermic vs Endothermic):\n  - Exothermic releases heat: CH4 + 2O2 -> CO2 + 2H2O + Heat\n  - Endothermic absorbs heat: CaCO3 --heat--> CaO + CO2\n\n• Q10 (Why Respiration is Exothermic):\n  Carbohydrates break down to glucose. In cells, glucose oxidizes: C6H12O6 + 6O2 -> 6CO2 + 6H2O + Energy (ATP). Since energy is released, it is exothermic.\n\n• Q11 (Why Decomposition is Opposite of Combination):\n  In combination, 2 or more reactants unite into 1 product (2H2 + O2 -> 2H2O). In decomposition, 1 reactant splits into 2 or more products (2H2O -> 2H2 + O2).\n\n• Q12 (Equations for Heat, Light, and Electricity Decomposition):\n  - Heat (Thermal): CaCO3(s) --heat--> CaO(s) + CO2(g)\n  - Light (Photolytic): 2AgCl(s) --sunlight--> 2Ag(s) + Cl2(g)\n  - Electricity (Electrolytic): 2H2O(l) --electricity--> 2H2(g) + O2(g)\n\n• Q13 (Displacement vs Double Displacement):\n  - Displacement: A more reactive lone element displaces a less reactive element from its salt solution: Fe + CuSO4 -> FeSO4 + Cu\n  - Double Displacement: Two compounds exchange mutual ions to form two new compounds: Na2SO4 + BaCl2 -> BaSO4(s) + 2NaCl",
+        "body_hi": "• Q9 (ऊष्माक्षेपी बनाम ऊष्माशोषी):\n  - ऊष्माक्षेपी में ऊष्मा निकलती है: CH4 + 2O2 -> CO2 + 2H2O + ऊष्मा\n  - ऊष्माशोषी में ऊष्मा अवशोषित होती है: CaCO3 --ऊष्मा--> CaO + CO2\n\n• Q10 (श्वसन ऊष्माक्षेपी क्यों है):\n  कार्बोहाइड्रेट ग्लूकोज में टूटते हैं। कोशिकाओं में ग्लूकोज का दहन होता है: C6H12O6 + 6O2 -> 6CO2 + 6H2O + ऊर्जा (ATP)। ऊर्जा मुक्त होने के कारण यह ऊष्माक्षेपी है।\n\n• Q11 (वियोजन संयोजन के विपरीत क्यों है):\n  संयोजन में 2 या अधिक अभिकारक मिलकर 1 उत्पाद बनाते हैं (2H2 + O2 -> 2H2O)। वियोजन में 1 अभिकारक टूटकर 2 या अधिक उत्पाद देता है (2H2O -> 2H2 + O2)।\n\n• Q12 (ऊष्मा, प्रकाश और विद्युत द्वारा वियोजन के समीकरण):\n  - ऊष्मा: CaCO3(s) --ऊष्मा--> CaO(s) + CO2(g)\n  - प्रकाश: 2AgCl(s) --प्रकाश--> 2Ag(s) + Cl2(g)\n  - विद्युत: 2H2O(l) --विद्युत--> 2H2(g) + O2(g)\n\n• Q13 (विस्थापन बनाम द्विविस्थापन):\n  - विस्थापन: एक अधिक सक्रिय तत्व यौગિક से कम सक्रिय तत्व को हटाता है: Fe + CuSO4 -> FeSO4 + Cu\n  - द्विविस्थापन: दो यौગિક आयनों की परस्पर अदલા-બદલી करते हैं: Na2SO4 + BaCl2 -> BaSO4(s) + 2NaCl",
+        "body_gu": "• Q9 (ઉષ્માક્ષેપક વિરુદ્ધ ઉષ્માશોષક):\n  - ઉષ્માક્ષેપકમાં ઉષ્મા મુક્ત થાય છે: CH4 + 2O2 -> CO2 + 2H2O + ઉષ્મા\n  - ઉષ્માશોષકમાં ઉષ્મા શોષાય છે: CaCO3 --ઉષ્મા--> CaO + CO2\n\n• Q10 (શ્વસન ઉષ્માક્ષેપક શા માટે છે):\n  ખોરાકમાંથી મળતો ગ્લુકોઝ કોષોમાં ઓક્સિજન સાથે પ્રક્રિયા કરી ઉર્જા આપે છે: C6H12O6 + 6O2 -> 6CO2 + 6H2O + ઉર્જા (ATP). ઉર્જા મુક્ત થતી હોવાથી તે ઉષ્માક્ષેપક છે.\n\n• Q11 (વિઘટન સંયોગીકરણથી વિરુદ્ધ શા માટે છે):\n  સંયોગીકરણમાં 2 કે વધુ પ્રક્રિયકો જોડાઈને 1 નીપજ બનાવે છે (2H2 + O2 -> 2H2O). વિઘટનમાં 1 પ્રક્રિયક તૂટીને 2 કે વધુ નીપજો આપે છે (2H2O -> 2H2 + O2).\n\n• Q12 (ઉષ્મા, પ્રકાશ અને વિદ્યુત વિઘટનના સમીકરણો):\n  - ઉષ્મા: CaCO3(s) --ઉષ્મા--> CaO(s) + CO2(g)\n  - પ્રકાશ: 2AgCl(s) --પ્રકાશ--> 2Ag(s) + Cl2(g)\n  - વિદ્યુત: 2H2O(l) --વિદ્યુત--> 2H2(g) + O2(g)\n\n• Q13 (વિસ્થાપન વિરુદ્ધ દ્વિવિસ્થાપન):\n  - વિસ્થાપન: વધુ સક્રિય તત્વ ઓછા સક્રિય તત્વને દૂર કરે છે: Fe + CuSO4 -> FeSO4 + Cu\n  - દ્વિવિસ્થાપન: બે સંયોજનો પોતાના આયનોની આપ-લે કરે છે: Na2SO4 + BaCl2 -> BaSO4(s) + 2NaCl"
+    })
+
+    # NCERT Textbook Exercise Question 14 to 20
+    blocks.append({
+        "id": next_id(),
+        "type": "theory",
+        "title": "NCERT Exercise Q14 - Q20: Applications & Everyday Chemistry",
+        "title_hi": "NCERT अभ्यास Q14 - Q20: अनुप्रयोग और दैनिक रसायन",
+        "title_gu": "NCERT સ્વાધ્યાય Q14 - Q20: ઉપયોગો અને રોજિંદુ રસાયણશાસ્ત્ર",
+        "body": "• Q14 (Recovery of Silver by Copper):\n  Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s)\n  Copper is more reactive than silver, displacing solid silver out of solution.\n\n• Q15 (Precipitation Reaction):\n  Any reaction producing an insoluble solid: Na2SO4 + BaCl2 -> BaSO4(s) [white ppt] + 2NaCl.\n\n• Q16 (Oxidation & Reduction in terms of Oxygen):\n  - Oxidation (Gain of Oxygen): 2Cu + O2 -> 2CuO; C + O2 -> CO2\n  - Reduction (Loss of Oxygen): CuO + H2 -> Cu + H2O; ZnO + C -> Zn + CO\n\n• Q17 (Shiny brown element X turns black Y):\n  X = Copper (Cu); Y = Copper(II) oxide (CuO).\n  2Cu + O2 --heat--> 2CuO\n\n• Q18 (Why do we apply paint on iron articles?):\n  Paint creates an impermeable physical barrier between iron and atmospheric oxygen and moisture, preventing oxidation to hydrated iron oxide (rust).\n\n• Q19 (Why are oil and fat containing food items flushed with nitrogen?):\n  Nitrogen is an unreactive, inert gas that displaces oxygen from food packets, preventing the oxidative breakdown (rancidity) of fats and oils.\n\n• Q20 (Corrosion & Rancidity):\n  - Corrosion: The slow eating away of a metal by reaction with atmospheric moisture and oxygen (e.g. rusting of iron forming Fe2O3·xH2O).\n  - Rancidity: The oxidation of fats and oils in food resulting in bad taste and foul odor (e.g. old cooking oil or stale chips turning sour).",
+        "body_hi": "• Q14 (तांबे द्वारा चांदी की पुनःप्राप्ति):\n  Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s)\n  तांबा चांदी से अधिक सक्रिय है, इसलिए वह चांदी को विस्थापित करता है।\n\n• Q15 (अवक्षेपण अभिक्रिया):\n  वह अभिक्रिया जो अघुलनशील ठोस बनाती है: Na2SO4 + BaCl2 -> BaSO4(s) [सफेद अवक्षेप] + 2NaCl।\n\n• Q16 (ऑक्सीजन के आधार पर उपचयन एवं अपचयन):\n  - उपचयन (ऑक्सीजन का जुड़ना): 2Cu + O2 -> 2CuO; C + O2 -> CO2\n  - अपचयन (ऑक्सीजन का हटना): CuO + H2 -> Cu + H2O; ZnO + C -> Zn + CO\n\n• Q17 (चमकदार भूरा तत्व X काला Y बनता है):\n  X = कॉपर (Cu); Y = कॉपर ऑक्साइड (CuO)।\n  2Cu + O2 --ऊष्मा--> 2CuO\n\n• Q18 (लोहे की वस्तुओं पर पेंट क्यों लगाते हैं?):\n  पेंट लोहे और हवा की ऑक्सीजन तथा नमी के बीच एक सुरक्षात्मक अवरोध बनाता है, जिससे जंग नहीं लगती।\n\n• Q19 (तेल एवं वसायुक्त खाद्य पदार्थों को नाइट्रोजन से प्रभावित क्यों किया जाता है?):\n  नाइट्रोजन एक अक्रिय गैस है जो पैकेट से ऑक्सीजन को हटा देती है, जिससे तेल और वसा का ऑक्सीकरण (विकृतगंधिता) रुक जाता है।\n\n• Q20 (संक्षारण एवं विकृतगंधिता):\n  - संक्षारण: हवा, नमी और रसायनों की क्रिया द्वारा धातु का धीरे-धीरे नष्ट होना (जैसे लोहे पर जंग लगना)।\n  - विकृतगंधिता: खाद्य पदार्थों में वसा और तेल के ऑक्सीकरण से आने वाली दुर्गंध और खराब स्वाद।",
+        "body_gu": "• Q14 (તાંબા દ્વારા ચાંદીની પુનઃપ્રાપ્તિ):\n  Cu(s) + 2AgNO3(aq) -> Cu(NO3)2(aq) + 2Ag(s)\n  તાંબુ ચાંદી કરતાં વધુ સક્રિય હોવાથી ચાંદીનું વિસ્થાપન કરે છે.\n\n• Q15 (અવક્ષેપન પ્રક્રિયા):\n  અદ્રાવ્ય ઘન નીપજ આપતી પ્રક્રિયા: Na2SO4 + BaCl2 -> BaSO4(s) [સફેદ અવક્ષેપ] + 2NaCl.\n\n• Q16 (ઓક્સિજનના સંદર્ભમાં ઓક્સિડેશન અને રિડક્શન):\n  - ઓક્સિડેશન (ઓક્સિજન ઉમેરાવો): 2Cu + O2 -> 2CuO; C + O2 -> CO2\n  - રિડક્શન (ઓક્સિજન દૂર થવો): CuO + H2 -> Cu + H2O; ZnO + C -> Zn + CO\n\n• Q17 (ચમકદાર કથ્થઈ તત્વ X કાળું Y બને છે):\n  X = તાંબુ (Cu); Y = કોપર ઓક્સાઇડ (CuO).\n  2Cu + O2 --ઉષ્મા--> 2CuO\n\n• Q18 (લોખંડની વસ્તુઓ પર રંગ શા માટે લગાડવામાં આવે છે?):\n  રંગ લોખંડ અને વાતાવરણના ઓક્સિજન તથા ભેજ વચ્ચે રક્ષણાત્મક પડ બનાવે છે, જેથી કાટ લાગતો નથી.\n\n• Q19 (તેલ અને ચરબીયુક્ત ખાદ્ય પદાર્થો સાથે નાઇટ્રોજન વાયુ શા માટે ભરવામાં આવે છે?):\n  નાઇટ્રોજન નિષ્ક્રિય વાયુ છે જે પેકેટમાંથી ઓક્સિજન દૂર કરી તેલનું ઓક્સિડેશન (ખોરાપણું) અટકાવે છે.\n\n• Q20 (ક્ષારણ અને ખોરાપણું):\n  - ક્ષારણ: હવા અને ભેજની અસરથી ધાતુઓનું ધીમે ધીમે ખવાઈ જવું (દા.ત. લોખંડને કાટ લાગવો).\n  - ખોરાપણું: તેલ કે ચરબીયુક્ત ખોરાકનું ઓક્સિડેશન થઈ સ્વાદ અને ગંધ બગડી જવી."
+    })
+
+    # Final Board Mastery MCQ
+    blocks.append({
+        "id": next_id(),
+        "type": "mcq",
+        "question": "Which of the following is NOT an example of a chemical change?",
+        "question_hi": "निम्नलिखित में से कौन सा रासायनिक परिवर्तन का उदाहरण नहीं है?",
+        "question_gu": "નીચેનામાંથી કયો રાસાયણિક ફેરફારનું ઉદાહરણ નથી?",
+        "options": [
+            "Melting of wax on gentle heating",
+            "Rusting of iron gate in rainy season",
+            "Digestion of food in human stomach",
+            "Curdling of milk in summer"
+        ],
+        "options_hi": [
+            "धीमी आंच पर मोम का पिघलना",
+            "बरसात के मौसम में लोहे के गेट पर जंग लगना",
+            "मानव पेट में भोजन का पचना",
+            "गर्मियों में दूध का दही बनना"
+        ],
+        "options_gu": [
+            "ધીમી ગરમીએ મીણનું પીગળવું",
+            "ચોમાસામાં લોખંડના દરવાજાને કાટ લાગવો",
+            "માનવ જઠરમાં ખોરાકનું પાચન થવું",
+            "ઉનાળામાં દૂધનું દહીં બનવું"
+        ],
+        "correct_index": 0,
+        "explanation": "Melting of wax is a reversible physical change (solid to liquid). Rusting, digestion, and curdling involve breaking and forming of chemical bonds, creating brand new substances.",
+        "explanation_hi": "मोम का पिघलना एक उत्क्रमणीय भौतिक परिवर्तन है (ठोस से द्रव)। जबकि जंग लगना, पाचन और दूध से दही बनना नए रासायनिक बंध बनाते हैं और रासायनिक परिवर्तन हैं।",
+        "explanation_gu": "મીણનું પીગળવું એ ઉલટાવી શકાય તેવો ભૌતિક ફેરફાર છે (ઘનમાંથી પ્રવાહી). જ્યારે કાટ લાગવો, પાચન અને દૂધનું દહીં બનવું એ નવા રાસાયણિક પદાર્થો બનાવતા રાસાયણિક ફેરફારો છે."
+    })
+
+    final_payload = {
+        "metadata": metadata,
+        "blocks": blocks
+    }
+
+    output_path = "/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/ncert_class10_science_ch1.json"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(final_payload, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Generated {len(blocks)} blocks successfully in {output_path}")
+    
+    # Also generate gseb version for syllabus parity
+    gseb_output_path = "/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/gseb_class10_science_ch1.json"
+    gseb_payload = dict(final_payload)
+    gseb_payload["metadata"] = dict(metadata)
+    gseb_payload["metadata"]["id"] = "gseb_class10_science_ch1"
+    gseb_payload["metadata"]["board"] = "GSEB"
+    with open(gseb_output_path, "w", encoding="utf-8") as f:
+        json.dump(gseb_payload, f, ensure_ascii=False, indent=2)
+    print(f"✅ Generated GSEB copy in {gseb_output_path}")
+
+if __name__ == "__main__":
+    build_ncert_class10_science_ch1()

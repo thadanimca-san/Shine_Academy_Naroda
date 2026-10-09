@@ -1,39 +1,43 @@
-import 'dart:convert';
-import 'dart:io';
-
 void main() {
-  final file = File('/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/cbse_class10_maths_ch1.json');
-  final chapterData = jsonDecode(file.readAsStringSync());
+  String text = "(a) \$\\cong\$";
+  String cleanText = "";
   
-  List<dynamic> allQuestions = [];
-  
-  if (chapterData is List) {
-    // If it's a direct list of blocks
-    for (var block in chapterData) {
-      if (block['type'] == 'quiz' || block['type'] == 'mcq' || block['type'] == 'knowledge_check' || block['type'] == 'socratic' || block['type'] == 'quiz_multiple_choice') {
-        if (block['is_deo_challenge'] == true) {
-          continue;
-        }
-        allQuestions.add(block);
+  bool isBold = false;
+  bool isItalic = false;
+
+  for (int i = 0; i < text.length; i++) {
+    String char = text[i];
+
+    if (char == '\$') {
+      bool isBlock = false;
+      int j = i + 1;
+      if (j < text.length && text[j] == '\$') {
+         isBlock = true;
+         j++;
       }
-    }
-  } else if (chapterData['blocks'] != null) {
-    // If it's wrapped in a map
-    final blocks = chapterData['blocks'] as List;
-    for (var block in blocks) {
-      if (block['type'] == 'quiz' || block['type'] == 'mcq' || block['type'] == 'knowledge_check' || block['type'] == 'socratic' || block['type'] == 'quiz_multiple_choice') {
-        if (block['is_deo_challenge'] == true) {
-          continue;
-        }
-        allQuestions.add(block);
+      int start = j;
+      int end = -1;
+      while (j < text.length) {
+         if (text[j] == '\$') {
+            if (isBlock && j + 1 < text.length && text[j+1] == '\$') {
+                end = j;
+                j += 2;
+                break;
+            } else if (!isBlock) {
+                end = j;
+                j++;
+                break;
+            }
+         }
+         j++;
       }
-    }
-  }
-  
-  print("Found ${allQuestions.length} standard practice questions.");
-  if (allQuestions.length <= 2) {
-    for (var q in allQuestions) {
-      print("Q: ${q['question'] ?? q['question_text']}");
+      
+      if (end != -1) {
+         String mathContent = text.substring(start, end);
+         print("Found math: $mathContent");
+         i = j - 1;
+         continue;
+      }
     }
   }
 }

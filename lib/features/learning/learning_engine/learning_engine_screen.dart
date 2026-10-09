@@ -65,12 +65,11 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   List<dynamic> _boardBlocks = [];
   bool _isLoading = true;
   String _error = '';
-  bool _isComingSoon = false;
   bool _showDictionaryHint = true;
   bool _showBoardQuestions = false;
   bool _isTranslating = false;
   late String _lastLang;
-  
+
   // Phase 6: Smart Panel Remote Control Support
   final ScrollController _scrollController = ScrollController();
   final FocusNode _focusNode = FocusNode();
@@ -95,7 +94,6 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     super.dispose();
   }
 
-
   void _onLanguageChanged() {
     final currentLang = TrilingualService.instance.activeViewLanguage;
     if (_lastLang != currentLang) {
@@ -113,73 +111,88 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     setState(() {
       _isTranslating = true;
     });
-    
-    await TrilingualService.instance.preTranslateBlocks(_blocks, isDictionary: widget.moduleId.contains('DICT'));
-    
+
+    await TrilingualService.instance.preTranslateBlocks(
+      _blocks,
+      isDictionary: widget.moduleId.contains('DICT'),
+    );
+
     if (!mounted) return;
     setState(() {
       _isTranslating = false;
     });
   }
+
   Future<void> _loadModule() async {
     try {
       await LocalContentManager.instance.init();
 
       if (widget.moduleId.contains('DICT')) {
-        final termString = await rootBundle.loadString('app_core/knowledge_graph/dictionary/${widget.moduleId}.json');
+        final termString = await rootBundle.loadString(
+          'app_core/knowledge_graph/dictionary/${widget.moduleId}.json',
+        );
         setState(() {
           _metadata = json.decode(termString);
           _blocks = [];
           _isLoading = false;
         });
       } else {
-  Map<String, dynamic> _normalizeData(dynamic rawData) {
-    if (rawData is List) {
-      return {
-        'metadata': {'title': 'Chapter'},
-        'content': rawData,
-        'blocks': rawData,
-      };
-    } else if (rawData is Map) {
-      return rawData as Map<String, dynamic>;
-    }
-    return {};
-  }
+        Map<String, dynamic> _normalizeData(dynamic rawData) {
+          if (rawData is List) {
+            return {
+              'metadata': {'title': 'Chapter'},
+              'content': rawData,
+              'blocks': rawData,
+            };
+          } else if (rawData is Map) {
+            return rawData as Map<String, dynamic>;
+          }
+          return {};
+        }
 
         // ── Priority 1: Check LocalContentManager (catches editor-saved changes) ──
         final chapterAssetPath = 'app_core/chapters/${widget.moduleId}.json';
-        dynamic rawFileData =
-            await LocalContentManager.instance.readLocalJson(chapterAssetPath);
+        dynamic rawFileData = await LocalContentManager.instance.readLocalJson(
+          chapterAssetPath,
+        );
 
         // ── Priority 2: Fall back to bundled asset ────────────────────────────
         if (rawFileData == null) {
           try {
-            final String fileString =
-                await rootBundle.loadString(chapterAssetPath);
+            final String fileString = await rootBundle.loadString(
+              chapterAssetPath,
+            );
             rawFileData = jsonDecode(fileString);
           } catch (_) {
             // Chapter file doesn't exist at all
           }
         }
-        
-        Map<String, dynamic>? fileData = rawFileData != null ? _normalizeData(rawFileData) : null;
 
+        Map<String, dynamic>? fileData = rawFileData != null
+            ? _normalizeData(rawFileData)
+            : null;
 
         if (fileData != null) {
-          final metaData = (fileData['metadata'] as Map<String, dynamic>?) ?? {};
+          final metaData =
+              (fileData['metadata'] as Map<String, dynamic>?) ?? {};
           final rawBlocks = (fileData['blocks'] as List<dynamic>?) ?? [];
 
           final pedagogyReport = PedagogyEngine.validateChapterFlow(rawBlocks);
           if (!pedagogyReport.isValid) {
             debugPrint(
-                'PEDAGOGY WARNING: Chapter ${widget.moduleId} is missing: '
-                '${pedagogyReport.missingComponents.join(', ')}');
+              'PEDAGOGY WARNING: Chapter ${widget.moduleId} is missing: '
+              '${pedagogyReport.missingComponents.join(', ')}',
+            );
           }
 
           setState(() {
             _metadata = metaData;
-            _standardBlocks = rawBlocks.where((b) => b['is_board_challenge'] != true).toList();
-            _boardBlocks = rawBlocks.where((b) => b['is_board_challenge'] == true).toList();
+            _standardBlocks = rawBlocks
+                .where((b) => b['is_board_challenge'] != true)
+                .toList();
+            _boardBlocks = rawBlocks
+                .where((b) => b['is_board_challenge'] == true)
+                .toList();
             _blocks = _showBoardQuestions ? rawBlocks : _standardBlocks;
             _isLoading = false;
           });
@@ -188,8 +201,12 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
 
         // ── Priority 3: Fall back to in-memory CurriculumDatabase ─────────────
         if (CurriculumDatabase.instance.hasModule(widget.moduleId)) {
-          final metaData = CurriculumDatabase.instance.getModuleMetadata(widget.moduleId);
-          final rawBlocks = CurriculumDatabase.instance.getModuleBlocks(widget.moduleId);
+          final metaData = CurriculumDatabase.instance.getModuleMetadata(
+            widget.moduleId,
+          );
+          final rawBlocks = CurriculumDatabase.instance.getModuleBlocks(
+            widget.moduleId,
+          );
 
           if (rawBlocks == null) {
             throw Exception('Module blocks not found in database.');
@@ -198,23 +215,26 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
           final pedagogyReport = PedagogyEngine.validateChapterFlow(rawBlocks);
           if (!pedagogyReport.isValid) {
             debugPrint(
-                'PEDAGOGY WARNING: Chapter ${widget.moduleId} is missing: '
-                '${pedagogyReport.missingComponents.join(', ')}');
+              'PEDAGOGY WARNING: Chapter ${widget.moduleId} is missing: '
+              '${pedagogyReport.missingComponents.join(', ')}',
+            );
           }
 
           setState(() {
             _metadata = metaData ?? {};
-            _standardBlocks = rawBlocks.where((b) => b['is_board_challenge'] != true).toList();
-            _boardBlocks = rawBlocks.where((b) => b['is_board_challenge'] == true).toList();
+            _standardBlocks = rawBlocks
+                .where((b) => b['is_board_challenge'] != true)
+                .toList();
+            _boardBlocks = rawBlocks
+                .where((b) => b['is_board_challenge'] == true)
+                .toList();
             _blocks = _showBoardQuestions ? rawBlocks : _standardBlocks;
             _isLoading = false;
           });
         } else {
-          // Module not found anywhere — show Coming Soon gracefully
-          setState(() {
-            _isComingSoon = true;
-            _isLoading = false;
-          });
+          throw Exception(
+            'Module ${widget.moduleId} not found in LocalContentManager, assets, or CurriculumDatabase. Please ensure you have restarted the app (stop with q and flutter run) to bundle new JSON files.',
+          );
         }
       }
     } catch (e, stack) {
@@ -234,23 +254,34 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
       if (childWidget != null) {
         return childWidget;
       } else {
-        return _buildDiagnosticError(block, 'Unknown block type: ${block['type']}');
+        return _buildDiagnosticError(
+          block,
+          'Unknown block type: ${block['type']}',
+        );
       }
     } catch (e, stack) {
-      return _buildDiagnosticError(block, e.toString(), stackTrace: stack.toString());
+      return _buildDiagnosticError(
+        block,
+        e.toString(),
+        stackTrace: stack.toString(),
+      );
     }
   }
 
-  Widget _buildDiagnosticError(Map<String, dynamic> block, String error, {String? stackTrace}) {
+  Widget _buildDiagnosticError(
+    Map<String, dynamic> block,
+    String error, {
+    String? stackTrace,
+  }) {
     String type = block['type'] ?? 'MISSING';
     String moduleTitle = _metadata?['title'] ?? 'Unknown Module';
     String fileInfo = '${widget.moduleId}/blocks.json';
-    
+
     // Attempt to parse out expected/received from our custom FormatExceptions
     String expected = 'Valid Block Structure';
     String received = 'Malformed JSON';
     String valueInfo = block.containsKey('id') ? block['id'] : 'UNKNOWN_ID';
-    
+
     if (error.contains("Expected key") && error.contains("to be")) {
       // Very basic parsing for demonstration of desired format
       try {
@@ -279,11 +310,21 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
             children: [
               Icon(Icons.error_outline, color: Colors.red),
               const SizedBox(width: 8),
-              Text(TrilingualService.instance.getUIText("Block Render Error"), style: TextStyle(color: Colors.red[900], fontWeight: FontWeight.bold, fontSize: 16)),
+              Text(
+                TrilingualService.instance.getUIText("Block Render Error"),
+                style: TextStyle(
+                  color: Colors.red[900],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
             ],
           ),
           const Divider(color: Colors.red),
-          Text("Chapter:\n$moduleTitle", style: TextStyle(fontWeight: FontWeight.bold)),
+          Text(
+            "Chapter:\n$moduleTitle",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 8),
           Text("Block:\n$type", style: TextStyle(fontWeight: FontWeight.bold)),
           const SizedBox(height: 8),
@@ -295,7 +336,10 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
           const SizedBox(height: 8),
           Text("File:\n$fileInfo", style: TextStyle(color: Colors.blue)),
           const SizedBox(height: 16),
-          Text(TrilingualService.instance.getUIText("Raw Data:"), style: TextStyle(fontWeight: FontWeight.bold)),
+          Text(
+            TrilingualService.instance.getUIText("Raw Data:"),
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           Container(
             padding: const EdgeInsets.all(8),
             color: Colors.white,
@@ -322,214 +366,239 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     if (_error.isNotEmpty) {
       return Scaffold(
         appBar: const BrandAppBar(title: 'Error'),
-        body: Center(child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(_error),
-        )),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(_error),
+          ),
+        ),
       );
     }
 
-    if (_isComingSoon) {
-      return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: BrandAppBar(
-      bottom: _isTranslating ? const PreferredSize(preferredSize: Size.fromHeight(4), child: LinearProgressIndicator(color: Colors.yellow)) : null,title: widget.moduleId.split('_').join(' ').toUpperCase()),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.construction, size: 80, color: Colors.orange[400]),
-                const SizedBox(height: 24),
-                Text(TrilingualService.instance.getUIText("Module Coming Soon"),
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: AppColors.primary),
-                ),
-                const SizedBox(height: 16),
-                Text(TrilingualService.instance.getUIText("Our Gold Standard Educators are currently crafting this chapter. It will be available in the next curriculum update!"),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Theme.of(context).colorScheme.onSurfaceVariant),
-                ),
-                const SizedBox(height: 32),
-                ElevatedButton.icon(
-                  onPressed: () => context.pop(),
-                  icon: Icon(Icons.arrow_back),
-                  label: Text(TrilingualService.instance.getUIText("Go Back")),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primary,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                  ),
-                  )
-                ],
-              ),
-            ),
-          ),
-        );
-    }
-    final rawTitle = _metadata?['title'] ?? _metadata?['term']?['english'] ?? 'Learning Module';
-    final String title = rawTitle is String ? rawTitle : (rawTitle is Map ? (rawTitle['en'] ?? rawTitle['english'] ?? 'Module') : 'Module');
+    final rawTitle =
+        _metadata?['title'] ??
+        _metadata?['term']?['english'] ??
+        'Learning Module';
+    final String title = rawTitle is String
+        ? rawTitle
+        : (rawTitle is Map
+              ? (rawTitle['en'] ?? rawTitle['english'] ?? 'Module')
+              : 'Module');
     final isDictionary = widget.moduleId.contains('DICT');
 
     return ListenableBuilder(
       listenable: TrilingualService.instance,
       builder: (context, _) {
-      return Scaffold(
-        backgroundColor: Colors.grey[50],
-        appBar: BrandAppBar(
-          title: title,
-          actions: isDictionary ? null : [
-            ValueListenableBuilder<bool>(
-              valueListenable: PresentationService.isPresentationMode,
-              builder: (context, isPresentation, child) {
-                return IconButton(
-                  icon: Icon(
-                    isPresentation ? Icons.desktop_windows : Icons.smartphone,
-                    color: isPresentation ? Colors.yellow : Colors.white,
-                  ),
-                  tooltip: isPresentation ? 'Presentation Mode: ON' : 'Presentation Mode: OFF',
+        return Scaffold(
+          backgroundColor: Colors.grey[50],
+          appBar: BrandAppBar(
+            title: title,
+            actions: isDictionary
+                ? null
+                : [
+                    ValueListenableBuilder<bool>(
+                      valueListenable: PresentationService.isPresentationMode,
+                      builder: (context, isPresentation, child) {
+                        return IconButton(
+                          icon: Icon(
+                            isPresentation
+                                ? Icons.desktop_windows
+                                : Icons.smartphone,
+                            color: isPresentation
+                                ? Colors.yellow
+                                : Colors.white,
+                          ),
+                          tooltip: isPresentation
+                              ? 'Presentation Mode: ON'
+                              : 'Presentation Mode: OFF',
+                          onPressed: () {
+                            PresentationService.toggle();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  isPresentation
+                                      ? "Standard Mode Activated"
+                                      : "Presentation Mode Activated (Large Text)",
+                                ),
+                                duration: const Duration(seconds: 2),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.picture_as_pdf),
+                      tooltip: 'Download as PDF',
+                      onPressed: () {
+                        if (_metadata != null) {
+                          _showPdfMetadataDialog();
+                        }
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.assignment),
+                      tooltip: 'Generate Exam',
+                      onPressed: () {
+                        context.push('/assessment/bank/${widget.moduleId}');
+                      },
+                    ),
+                  ],
+          ),
+          body: SafeArea(
+            child: Focus(
+              focusNode: _focusNode,
+              autofocus: true,
+              onKeyEvent: (FocusNode node, KeyEvent event) {
+                if (event is KeyDownEvent || event is KeyRepeatEvent) {
+                  const scrollAmount = 300.0; // Distance to jump per click
+
+                  if (event.logicalKey == LogicalKeyboardKey.arrowDown ||
+                      event.logicalKey == LogicalKeyboardKey.pageDown ||
+                      event.logicalKey == LogicalKeyboardKey.space) {
+                    _scrollController.animateTo(
+                      (_scrollController.offset + scrollAmount).clamp(
+                        0.0,
+                        _scrollController.position.maxScrollExtent,
+                      ),
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOut,
+                    );
+                    return KeyEventResult.handled;
+                  }
+
+                  if (event.logicalKey == LogicalKeyboardKey.arrowUp ||
+                      event.logicalKey == LogicalKeyboardKey.pageUp) {
+                    _scrollController.animateTo(
+                      (_scrollController.offset - scrollAmount).clamp(
+                        0.0,
+                        _scrollController.position.maxScrollExtent,
+                      ),
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOut,
+                    );
+                    return KeyEventResult.handled;
+                  }
+                }
+                return KeyEventResult.ignored;
+              },
+              child: isDictionary
+                  ? ListView(
+                      key: ValueKey(
+                        TrilingualService.instance.activeViewLanguage,
+                      ),
+                      controller: _scrollController,
+                      padding: const EdgeInsets.all(20),
+                      children: [DictionaryTermWidget(data: _metadata!)],
+                    )
+                  : ListView.builder(
+                      key: ValueKey(
+                        TrilingualService.instance.activeViewLanguage,
+                      ),
+                      controller: _scrollController,
+                      padding: const EdgeInsets.all(20),
+                      itemCount:
+                          _blocks.length +
+                          (_showDictionaryHint ? 1 : 0) +
+                          (_boardBlocks.isNotEmpty && !_showBoardQuestions
+                              ? 1
+                              : 0),
+                      itemBuilder: (context, index) {
+                        if (_showDictionaryHint && index == 0) {
+                          return Container(
+                            margin: const EdgeInsets.only(bottom: 24),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.blue.shade50,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: Colors.blue.shade200),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.lightbulb_outline,
+                                  color: Colors.blue,
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Text(
+                                    TrilingualService.instance.getUIText(
+                                      "Tip: Double-tap ANY word to start speaking from there!",
+                                    ),
+                                    style: TextStyle(
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                IconButton(
+                                  icon: Icon(
+                                    Icons.close,
+                                    size: 20,
+                                    color: Colors.blue,
+                                  ),
+                                  onPressed: () => setState(
+                                    () => _showDictionaryHint = false,
+                                  ),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
+                              ],
+                            ),
+                          );
+                        }
+
+                        int gatewayIndex =
+                            _blocks.length + (_showDictionaryHint ? 1 : 0);
+                        if (_boardBlocks.isNotEmpty &&
+                            !_showBoardQuestions &&
+                            index == gatewayIndex) {
+                          return _buildBoardGateway(context);
+                        }
+
+                        final actualIndex = _showDictionaryHint
+                            ? index - 1
+                            : index;
+                        final block = _blocks[actualIndex];
+                        final childWidget = _buildBlock(block);
+                        return UniversalBlockWrapper(
+                          block: block,
+                          child: childWidget,
+                        );
+                      },
+                    ),
+            ),
+          ),
+          floatingActionButton: (!_isLoading && _error.isEmpty && !isDictionary)
+              ? FloatingActionButton.extended(
                   onPressed: () {
-                    PresentationService.toggle();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(isPresentation ? "Standard Mode Activated" : "Presentation Mode Activated (Large Text)"),
-                        duration: const Duration(seconds: 2),
+                    showModalBottomSheet(
+                      context: context,
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      builder: (context) => Padding(
+                        padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).padding.top + 40,
+                        ),
+                        child: AiTutorScreen(
+                          blockContext: _metadata ?? {'title': title},
+                        ),
                       ),
                     );
                   },
-                );
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.picture_as_pdf),
-              tooltip: 'Download as PDF',
-              onPressed: () {
-                if (_metadata != null) {
-                  _showPdfMetadataDialog();
-                }
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.assignment),
-              tooltip: 'Generate Exam',
-              onPressed: () {
-                context.push('/assessment/bank/${widget.moduleId}');
-              },
-            )
-          ],
-        ),
-        body: SafeArea(
-          child: Focus(
-            focusNode: _focusNode,
-            autofocus: true,
-            onKeyEvent: (FocusNode node, KeyEvent event) {
-              if (event is KeyDownEvent || event is KeyRepeatEvent) {
-                const scrollAmount = 300.0; // Distance to jump per click
-                
-                if (event.logicalKey == LogicalKeyboardKey.arrowDown || 
-                    event.logicalKey == LogicalKeyboardKey.pageDown ||
-                    event.logicalKey == LogicalKeyboardKey.space) {
-                  _scrollController.animateTo(
-                    (_scrollController.offset + scrollAmount).clamp(
-                      0.0, _scrollController.position.maxScrollExtent
-                    ),
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeOut,
-                  );
-                  return KeyEventResult.handled;
-                }
-                
-                if (event.logicalKey == LogicalKeyboardKey.arrowUp || 
-                    event.logicalKey == LogicalKeyboardKey.pageUp) {
-                  _scrollController.animateTo(
-                    (_scrollController.offset - scrollAmount).clamp(
-                      0.0, _scrollController.position.maxScrollExtent
-                    ),
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeOut,
-                  );
-                  return KeyEventResult.handled;
-                }
-              }
-              return KeyEventResult.ignored;
-            },
-            child: isDictionary
-                ? ListView(
-                    key: ValueKey(TrilingualService.instance.activeViewLanguage),
-                    controller: _scrollController,
-                    padding: const EdgeInsets.all(20),
-                    children: [
-                      DictionaryTermWidget(data: _metadata!),
-                    ],
-                  )
-                : ListView.builder(
-                    key: ValueKey(TrilingualService.instance.activeViewLanguage),
-                    controller: _scrollController,
-                    padding: const EdgeInsets.all(20),
-                    itemCount: _blocks.length + (_showDictionaryHint ? 1 : 0) + (_boardBlocks.isNotEmpty && !_showBoardQuestions ? 1 : 0),
-                    itemBuilder: (context, index) {
-                      if (_showDictionaryHint && index == 0) {
-                        return Container(
-                          margin: const EdgeInsets.only(bottom: 24),
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                          decoration: BoxDecoration(
-                            color: Colors.blue.shade50,
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: Colors.blue.shade200),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.lightbulb_outline, color: Colors.blue),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Text(TrilingualService.instance.getUIText("Tip: Double-tap ANY word to start speaking from there!"),
-                                  style: TextStyle(color: Colors.blue.shade900, fontWeight: FontWeight.w500, fontSize: 15),
-                                ),
-                              ),
-                              IconButton(
-                                icon: Icon(Icons.close, size: 20, color: Colors.blue),
-                                onPressed: () => setState(() => _showDictionaryHint = false),
-                                padding: EdgeInsets.zero,
-                                constraints: const BoxConstraints(),
-                              )
-                            ],
-                          ),
-                        );
-                      }
-  
-                      int gatewayIndex = _blocks.length + (_showDictionaryHint ? 1 : 0);
-                      if (_boardBlocks.isNotEmpty && !_showBoardQuestions && index == gatewayIndex) {
-                        return _buildBoardGateway(context);
-                      }
-  
-                      final actualIndex = _showDictionaryHint ? index - 1 : index;
-                      final block = _blocks[actualIndex];
-                      final childWidget = _buildBlock(block);
-                      return UniversalBlockWrapper(block: block, child: childWidget);
-                    },
+                  icon: Icon(Icons.auto_awesome),
+                  label: Text(
+                    TrilingualService.instance.getUIText('Ask AI Tutor'),
                   ),
-          ),
-        ),
-        floatingActionButton: (!_isLoading && _error.isEmpty && !isDictionary)
-            ? FloatingActionButton.extended(
-                onPressed: () {
-                  showModalBottomSheet(
-                    context: context,
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    builder: (context) => Padding(
-                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 40),
-                      child: AiTutorScreen(blockContext: _metadata ?? {'title': title}),
-                    ),
-                  );
-                },
-                icon: Icon(Icons.auto_awesome),
-                label: Text(TrilingualService.instance.getUIText('Ask AI Tutor')),
-                backgroundColor: Colors.purple,
-                foregroundColor: Colors.white,
-              )
-            : null,
-      );
+                  backgroundColor: Colors.purple,
+                  foregroundColor: Colors.white,
+                )
+              : null,
+        );
       },
     );
   }
@@ -548,7 +617,10 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
         children: [
           Icon(Icons.military_tech, size: 64, color: Colors.indigo.shade700),
           const SizedBox(height: 16),
-          Text(TrilingualService.instance.getUIText("Board Preparations (Solved Question Papers)"),
+          Text(
+            TrilingualService.instance.getUIText(
+              "Board Preparations (Solved Question Papers)",
+            ),
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 22,
@@ -557,7 +629,10 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
             ),
           ),
           const SizedBox(height: 8),
-          Text(TrilingualService.instance.getUIText("Ready for a challenge? You can play this as a timed gamified quiz to earn badges, or simply view them as standard practice questions at your own pace."),
+          Text(
+            TrilingualService.instance.getUIText(
+              "Ready for a challenge? You can play this as a timed gamified quiz to earn badges, or simply view them as standard practice questions at your own pace.",
+            ),
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 15,
@@ -574,12 +649,16 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
                     context.push('/assessment/bank/${widget.moduleId}');
                   },
                   icon: Icon(Icons.gamepad),
-                  label: Text(TrilingualService.instance.getUIText("Gamified Challenge")),
+                  label: Text(
+                    TrilingualService.instance.getUIText("Gamified Challenge"),
+                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.indigo.shade700,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
               ),
@@ -593,42 +672,57 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
                     });
                   },
                   icon: Icon(Icons.menu_book),
-                  label: Text(TrilingualService.instance.getUIText("Standard Practice")),
+                  label: Text(
+                    TrilingualService.instance.getUIText("Standard Practice"),
+                  ),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.indigo.shade700,
                     side: BorderSide(color: Colors.indigo.shade300, width: 2),
                     padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
   }
+
   void _showPdfMetadataDialog() {
     final studentNameCtrl = TextEditingController();
-    
+
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text(TrilingualService.instance.getUIText('PDF Details'), style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+          title: Text(
+            TrilingualService.instance.getUIText('PDF Details'),
+            style: GoogleFonts.inter(fontWeight: FontWeight.bold),
+          ),
           content: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  TrilingualService.instance.getUIText('Enter the student name for watermarking to protect material.'),
-                  style: GoogleFonts.inter(fontSize: 14, color: Colors.grey.shade700),
+                  TrilingualService.instance.getUIText(
+                    'Enter the student name for watermarking to protect material.',
+                  ),
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
+                    color: Colors.grey.shade700,
+                  ),
                 ),
                 const SizedBox(height: 12),
                 TextFormField(
                   controller: studentNameCtrl,
                   decoration: InputDecoration(
-                    labelText: TrilingualService.instance.getUIText('Student Name'),
+                    labelText: TrilingualService.instance.getUIText(
+                      'Student Name',
+                    ),
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -641,24 +735,51 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
               child: Text(TrilingualService.instance.getUIText('Cancel')),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[700], foregroundColor: Colors.white),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue[700],
+                foregroundColor: Colors.white,
+              ),
               onPressed: () async {
                 final name = studentNameCtrl.text.trim();
                 if (name.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Please enter a valid name'))));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        TrilingualService.instance.getUIText(
+                          'Please enter a valid name',
+                        ),
+                      ),
+                    ),
+                  );
                   return;
                 }
                 Navigator.pop(context);
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Generating PDF...'))));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      TrilingualService.instance.getUIText('Generating PDF...'),
+                    ),
+                  ),
+                );
                 try {
-                  await PdfExportService.generateAndPrintChapter(context, _metadata!, _blocks, studentName: name);
+                  await PdfExportService.generateAndPrintChapter(
+                    context,
+                    _metadata!,
+                    _blocks,
+                    studentName: name,
+                  );
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
                   }
                 } catch (e) {
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error generating PDF: $e'), backgroundColor: Colors.red));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Error generating PDF: $e'),
+                        backgroundColor: Colors.red,
+                      ),
+                    );
                   }
                 }
               },
@@ -666,7 +787,7 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
             ),
           ],
         );
-      }
+      },
     );
   }
 }

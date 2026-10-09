@@ -1,278 +1,262 @@
 import json
-import shutil
+
+def get_block(block_type, block_id, title_en, title_hi, title_gu, body_en, body_hi, body_gu, extra=None):
+    b = {
+        "id": block_id,
+        "type": block_type,
+        "title": title_en,
+        "title_hi": title_hi,
+        "title_gu": title_gu,
+        "body": body_en,
+        "body_hi": body_hi,
+        "body_gu": body_gu,
+        "difficulty": "Beginner",
+        "estimated_minutes": 5,
+        "bloom": "Understand"
+    }
+    if extra:
+        b.update(extra)
+    return b
+
+def get_mcq(block_id, question_en, question_hi, question_gu, options, correct_index, explanation_en, explanation_hi, explanation_gu):
+    return {
+        "id": block_id,
+        "type": "mcq",
+        "question": question_en,
+        "question_hi": question_hi,
+        "question_gu": question_gu,
+        "options": [opt[0] for opt in options],
+        "options_hi": [opt[1] for opt in options],
+        "options_gu": [opt[2] for opt in options],
+        "correct_index": correct_index,
+        "explanation": explanation_en,
+        "explanation_hi": explanation_hi,
+        "explanation_gu": explanation_gu,
+        "difficulty": "Intermediate",
+        "estimated_minutes": 2,
+        "bloom": "Understand"
+    }
 
 blocks = []
 
-# --- 8-Step Socratic Arc for Introduction ---
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_01_HOOK",
-    "type": "theory",
-    "title": "The Ladder and The Bank",
-    "title_hi": "सीढ़ी और बैंक",
-    "body": "• Have you noticed the rungs of a ladder?\\n• Or how your money grows in a piggy bank if you add ₹10 every day?\\n• There is a hidden pattern in these real-life scenarios!\\n• The difference between consecutive steps or consecutive days is always the same.",
-    "body_hi": "• क्या आपने सीढ़ी के डंडों पर ध्यान दिया है?\\n• या यदि आप हर दिन ₹10 डालते हैं तो गुल्लक में आपका पैसा कैसे बढ़ता है?\\n• इन वास्तविक जीवन के परिदृश्यों में एक छिपा हुआ पैटर्न है!\\n• लगातार चरणों या लगातार दिनों के बीच का अंतर हमेशा समान होता है।"
-})
+# Part I: A Baker from Goa
+blocks.append(get_block("theory", "gseb_class10_english_ch5_1", "Hook: A Baker from Goa", "हुक: गोवा से एक बेकर", "હૂક: ગોવામાંથી એક બેકર", 
+"Have you ever smelled fresh bread baking in the morning? In Goa, the traditional baker (pader) still holds a very important place.",
+"क्या आपने कभी सुबह ताजा बेक की गई ब्रेड की महक सूंघी है? गोवा में, पारंपरिक बेकर (पाडेर) का अभी भी बहुत महत्वपूर्ण स्थान है।",
+"શું તમે ક્યારેય સવારે તાજી બેક કરેલી બ્રેડની સુગંધ અનુભવી છે? ગોવામાં, પરંપરાગત બેકર (પાડેર) નું હજુ પણ ખૂબ મહત્વનું સ્થાન છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_02_SOCRATIC",
-    "type": "socratic_question",
-    "question": "If you start with ₹100 and add ₹20 every month, how much will you have in the 2nd and 3rd month?",
-    "question_hi": "यदि आप ₹100 से शुरू करते हैं और हर महीने ₹20 जोड़ते हैं, तो दूसरे और तीसरे महीने में आपके पास कितने पैसे होंगे?",
-    "options": [
-        "120, 130",
-        "120, 140",
-        "100, 120",
-        "140, 160"
-    ],
-    "options_hi": [
-        "120, 130",
-        "120, 140",
-        "100, 120",
-        "140, 160"
-    ],
-    "correct_index": 1,
-    "explanation": "• Month 1 = ₹100\\n• Month 2 = 100 + 20 = ₹120\\n• Month 3 = 120 + 20 = ₹140.",
-    "explanation_hi": "• महीना 1 = ₹100\\n• महीना 2 = 100 + 20 = ₹120\\n• महीना 3 = 120 + 20 = ₹140।"
-})
+blocks.append(get_block("socratic_question", "gseb_class10_english_ch5_2", "Socratic Thinking", "सुकराती सोच", "સોક્રેટીસ વિચાર", 
+"Why do you think some old traditions like baking bread continue to exist even when the people who started them have left?",
+"आपको क्या लगता है कि ब्रेड बेक करने जैसी कुछ पुरानी परंपराएं उन लोगों के चले जाने के बाद भी क्यों मौजूद हैं जिन्होंने उन्हें शुरू किया था?",
+"તમને શું લાગે છે કે બ્રેડ બનાવવાની કેટલીક જૂની પરંપરાઓ કેમ ચાલુ રહે છે, ભલે જે લોકોએ તે શરૂ કરી હતી તે ચાલ્યા ગયા હોય?"))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_03_REVEAL",
-    "type": "definition",
-    "title": "Arithmetic Progression (A.P.)",
-    "title_hi": "समांतर श्रेढ़ी (A.P.)",
-    "body": "• An Arithmetic Progression is a list of numbers in which each term is obtained by adding a fixed number to the preceding term.\\n• This fixed number is called the **common difference (d)**.\\n• The first term is usually denoted by **a**.",
-    "body_hi": "• समांतर श्रेढ़ी संख्याओं की एक ऐसी सूची है जिसमें प्रत्येक पद अपने पिछले पद में एक निश्चित संख्या जोड़ने पर प्राप्त होता है।\\n• इस निश्चित संख्या को **सार्व अंतर (d)** कहा जाता है।\\n• पहले पद को आमतौर पर **a** द्वारा दर्शाया जाता है।"
-})
+blocks.append(get_block("theory", "gseb_class10_english_ch5_3", "Discovery", "खोज", "શોધ", 
+"During the Portuguese rule, bread became a part of Goan culture. Today, the mixers, moulders, and furnaces still exist. The baker's bamboo staff makes a 'jhang, jhang' sound.",
+"पुर्तगाली शासन के दौरान, ब्रेड गोवा की संस्कृति का हिस्सा बन गई। आज भी मिक्सर, मोल्डर और भट्टियां मौजूद हैं। बेकर की बांस की छड़ी 'झंग, झंग' की आवाज करती है।",
+"પોર્ટુગીઝ શાસન દરમિયાન, બ્રેડ ગોવાની સંસ્કૃતિનો ભાગ બની ગઈ. આજે પણ મિક્સર, મોલ્ડર અને ભઠ્ઠીઓ અસ્તિત્વમાં છે. બેકરની વાંસની લાકડી 'ઝંગ, ઝંગ' નો અવાજ કરે છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_04_TEACHER_TIP",
-    "type": "teacher_tip",
-    "body": "• The common difference 'd' can be positive, negative, or even zero!\\n• If d > 0, the A.P. is increasing.\\n• If d < 0, the A.P. is decreasing.",
-    "body_hi": "• सार्व अंतर 'd' धनात्मक, ऋणात्मक, या शून्य भी हो सकता है!\\n• यदि d > 0 है, तो A.P. बढ़ रही है।\\n• यदि d < 0 है, तो A.P. घट रही है।"
-})
+blocks.append(get_block("theory", "gseb_class10_english_ch5_4", "Reveal", "प्रकट", "પ્રગટ", 
+"Marriage gifts are meaningless without 'bol' (sweet bread). Cakes and 'bolinhas' are a must for Christmas. The traditional dress of the baker is called 'kabai'.",
+"विवाह के उपहार 'बोल' (मीठी ब्रेड) के बिना अर्थहीन हैं। क्रिसमस के लिए केक और 'बोलिन्हा' जरूरी हैं। बेकर की पारंपरिक पोशाक को 'कबाई' कहा जाता है।",
+"લગ્નની ભેટ 'બોલ' (મીઠી બ્રેડ) વિના અર્થહીન છે. ક્રિસમસ માટે કેક અને 'બોલિન્હા' આવશ્યક છે. બેકરના પરંપરાગત પોશાકને 'કબાઈ' કહેવામાં આવે છે."))
 
-# --- N-th Term Arc ---
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_05_DISCOVERY_NTH",
-    "type": "theory",
-    "title": "Jumping to the Future",
-    "title_hi": "भविष्य की छलांग",
-    "body": "• What if you need to find the amount in your bank after 50 months?\\n• Adding ₹20 fifty times manually is too slow!\\n• Let's build a formula:\\n  • Term 1 (a₁) = a\\n  • Term 2 (a₂) = a + d\\n  • Term 3 (a₃) = a + 2d\\n  • Term 4 (a₄) = a + 3d\\n• Notice the pattern? The multiplier for 'd' is always one less than the term number!",
-    "body_hi": "• क्या होगा यदि आपको 50 महीनों के बाद अपने बैंक में राशि ज्ञात करनी हो?\\n• 50 बार ₹20 मैन्युअल रूप से जोड़ना बहुत धीमा है!\\n• आइए एक सूत्र बनाएँ:\\n  • पद 1 (a₁) = a\\n  • पद 2 (a₂) = a + d\\n  • पद 3 (a₃) = a + 2d\\n  • पद 4 (a₄) = a + 3d\\n• क्या आपने पैटर्न देखा? 'd' का गुणक हमेशा पद संख्या से एक कम होता है!"
-})
+blocks.append(get_mcq("gseb_class10_english_ch5_5", "What is the traditional dress of the baker called?", "बेकर की पारंपरिक पोशाक को क्या कहा जाता है?", "બેકરના પરંપરાગત પોશાકને શું કહેવામાં આવે છે?", 
+[("Pader", "पाडेर", "પાડેર"), ("Bol", "बोल", "બોલ"), ("Kabai", "कबाई", "કબાઈ"), ("Bolinhas", "बोलिन्हा", "બોલિન્હા")], 2, "It is called kabai.", "इसे कबाई कहा जाता है।", "તેને કબાઈ કહેવાય છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_06_FORMULA",
-    "type": "definition",
-    "title": "nth Term Formula",
-    "title_hi": "nवाँ पद सूत्र",
-    "body": "• The nth term (aₙ) of an A.P. with first term 'a' and common difference 'd' is given by:\\n• **aₙ = a + (n - 1)d**\\n• Sometimes, aₙ is also called the general term or the last term (l).",
-    "body_hi": "• एक A.P. जिसका पहला पद 'a' और सार्व अंतर 'd' है, उसका nवाँ पद (aₙ) निम्न द्वारा दिया जाता है:\\n• **aₙ = a + (n - 1)d**\\n• कभी-कभी, aₙ को व्यापक पद या अंतिम पद (l) भी कहा जाता है।"
-})
+blocks.append(get_block("reflection", "gseb_class10_english_ch5_6", "Reflection", "प्रतिबिंब", "પ્રતિબિંબ", 
+"Think of a local food tradition in your own town. How does it connect people during festivals?",
+"अपने शहर की किसी स्थानीय भोजन परंपरा के बारे में सोचें। त्योहारों के दौरान यह लोगों को कैसे जोड़ता है?",
+"તમારા પોતાના શહેરની સ્થાનિક ભોજન પરંપરા વિશે વિચારો. તહેવારો દરમિયાન તે લોકોને કેવી રીતે જોડે છે?"))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_07_EXAMPLE_1",
-    "type": "worked_example",
-    "title": "Example 1: Finding the nth Term",
-    "title_hi": "उदाहरण 1: nवाँ पद ज्ञात करना",
-    "body": "**Problem:**\\nFind the 10th term of the A.P. : 2, 7, 12, ...\\n\\n**Step-by-Step Solution:**\\n1. Identify the first term (a) = 2.\\n2. Find common difference (d) = 7 - 2 = 5.\\n3. We need to find the 10th term, so n = 10.\\n4. Use formula: aₙ = a + (n - 1)d\\n5. a₁₀ = 2 + (10 - 1)5\\n6. a₁₀ = 2 + (9)5\\n7. a₁₀ = 2 + 45 = 47\\n8. Conclusion: The 10th term is 47.",
-    "body_hi": "**समस्या:**\\nA.P. : 2, 7, 12, ... का 10वाँ पद ज्ञात कीजिए।\\n\\n**चरण-दर-चरण समाधान:**\\n1. पहला पद (a) = 2 पहचानें।\\n2. सार्व अंतर (d) = 7 - 2 = 5 ज्ञात करें।\\n3. हमें 10वाँ पद ज्ञात करना है, इसलिए n = 10.\\n4. सूत्र का प्रयोग करें: aₙ = a + (n - 1)d\\n5. a₁₀ = 2 + (10 - 1)5\\n6. a₁₀ = 2 + (9)5\\n7. a₁₀ = 2 + 45 = 47\\n8. निष्कर्ष: 10वाँ पद 47 है।"
-})
+blocks.append(get_block("theory", "gseb_class10_english_ch5_7", "Connection", "संबंध", "સંબંધ", 
+"The presence of Portuguese culture in Goa shows how history shapes the daily habits, food, and clothing of a region.",
+"गोवा में पुर्तगाली संस्कृति की उपस्थिति दिखाती है कि इतिहास कैसे किसी क्षेत्र की दैनिक आदतों, भोजन और कपड़ों को आकार देता है।",
+"ગોવામાં પોર્ટુગીઝ સંસ્કૃતિની હાજરી બતાવે છે કે ઈતિહાસ કેવી રીતે પ્રદેશની દૈનિક આદતો, ખોરાક અને કપડાંને આકાર આપે છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_08_EXAMPLE_2",
-    "type": "worked_example",
-    "title": "Example 2: Finding the Number of Terms",
-    "title_hi": "उदाहरण 2: पदों की संख्या ज्ञात करना",
-    "body": "**Problem:**\\nWhich term of the A.P. : 21, 18, 15, ... is -81?\\n\\n**Step-by-Step Solution:**\\n1. First term (a) = 21.\\n2. Common difference (d) = 18 - 21 = -3.\\n3. Let the nth term be -81. So, aₙ = -81.\\n4. Use formula: aₙ = a + (n - 1)d\\n5. -81 = 21 + (n - 1)(-3)\\n6. -81 - 21 = (n - 1)(-3)\\n7. -102 = (n - 1)(-3)\\n8. Divide by -3: n - 1 = 34\\n9. n = 34 + 1 = 35\\n10. Conclusion: The 35th term is -81.",
-    "body_hi": "**समस्या:**\\nA.P. : 21, 18, 15, ... का कौन सा पद -81 है?\\n\\n**चरण-दर-चरण समाधान:**\\n1. पहला पद (a) = 21.\\n2. सार्व अंतर (d) = 18 - 21 = -3.\\n3. मान लीजिए कि nवाँ पद -81 है। इसलिए, aₙ = -81.\\n4. सूत्र का प्रयोग करें: aₙ = a + (n - 1)d\\n5. -81 = 21 + (n - 1)(-3)\\n6. -81 - 21 = (n - 1)(-3)\\n7. -102 = (n - 1)(-3)\\n8. -3 से भाग दें: n - 1 = 34\\n9. n = 34 + 1 = 35\\n10. निष्कर्ष: 35वाँ पद -81 है।"
-})
+blocks.append(get_block("project", "gseb_class10_english_ch5_8", "Mastery", "महारत", "મહારત", 
+"Interview an elder about a profession or craft that used to be popular but is now fading.",
+"किसी बुजुर्ग से उस पेशे या शिल्प के बारे में साक्षात्कार लें जो पहले लोकप्रिय था लेकिन अब लुप्त हो रहा है।",
+"કોઈ વડીલને એવા વ્યવસાય અથવા હસ્તકલા વિશે પૂછો જે પહેલા લોકપ્રિય હતો પરંતુ હવે લુપ્ત થઈ રહ્યો છે."))
 
-# --- Sum of n Terms Arc ---
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_09_HOOK_SUM",
-    "type": "theory",
-    "title": "The Story of Young Gauss",
-    "title_hi": "युवा गॉस की कहानी",
-    "body": "• When the famous mathematician Carl Friedrich Gauss was 10 years old, his teacher asked the class to add all numbers from 1 to 100.\\n• The teacher expected them to take hours.\\n• Gauss gave the answer in seconds: 5050!\\n• How did he do it? He paired the numbers: 1+100=101, 2+99=101, etc. He had 50 such pairs.\\n• 50 × 101 = 5050. This is the logic behind the sum of an A.P.!",
-    "body_hi": "• जब प्रसिद्ध गणितज्ञ कार्ल फ्रेडरिक गॉस 10 वर्ष के थे, तब उनके शिक्षक ने कक्षा को 1 से 100 तक की सभी संख्याओं को जोड़ने के लिए कहा।\\n• शिक्षक को लगा कि उन्हें घंटों लगेंगे।\\n• गॉस ने कुछ ही सेकंड में उत्तर दे दिया: 5050!\\n• उन्होंने यह कैसे किया? उन्होंने संख्याओं के जोड़े बनाए: 1+100=101, 2+99=101, आदि। उनके पास ऐसे 50 जोड़े थे।\\n• 50 × 101 = 5050. एक A.P. के योग के पीछे यही तर्क है!"
-})
+# Part I Exercises
+blocks.append(get_mcq("gseb_class10_english_ch5_9", "What are the elders in Goa nostalgic about?", "गोवा में बुजुर्ग किस बात को लेकर भावुक हैं?", "ગોવામાં વડીલો કઈ વાતને લઈને ભાવુક છે?", 
+[("The Portuguese days", "पुर्तगाली दिन", "પોર્ટુગીઝ દિવસો"), ("The British days", "ब्रिटिश दिन", "બ્રિટિશ દિવસો"), ("The French days", "फ्रांसीसी दिन", "ફ્રેન્ચ દિવસો"), ("The Dutch days", "डच दिन", "ડચ દિવસો")], 0, "They are nostalgic about those good old Portuguese days.", "वे उन अच्छे पुराने पुर्तगाली दिनों के बारे में याद कर रहे हैं।", "તેઓ તે સારા જૂના પોર્ટુગીઝ દિવસોને યાદ કરે છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_10_FORMULA_SUM",
-    "type": "definition",
-    "title": "Sum of First n Terms Formula",
-    "title_hi": "प्रथम n पदों के योग का सूत्र",
-    "body": "• The sum of the first 'n' terms (Sₙ) of an A.P. is given by:\\n• **Sₙ = n/2 [2a + (n - 1)d]**\\n• If the last term (l) is known, you can use the shortcut:\\n• **Sₙ = n/2 (a + l)**",
-    "body_hi": "• एक A.P. के प्रथम 'n' पदों का योग (Sₙ) निम्न द्वारा दिया जाता है:\\n• **Sₙ = n/2 [2a + (n - 1)d]**\\n• यदि अंतिम पद (l) ज्ञात हो, तो आप शॉर्टकट का उपयोग कर सकते हैं:\\n• **Sₙ = n/2 (a + l)**"
-})
+blocks.append(get_mcq("gseb_class10_english_ch5_10", "What is the baker called?", "बेकर को क्या कहा जाता है?", "બેકરને શું કહેવાય છે?", 
+[("Pader", "पाडेर", "પાડેર"), ("Mixer", "मिक्सर", "મિક્સર"), ("Moulder", "मोल्डर", "મોલ્ડર"), ("Chef", "शेफ", "શેફ")], 0, "Bakers are known as pader in Goa.", "गोवा में बेकर्स को पाडेर कहा जाता है।", "ગોવામાં બેકર્સને પાડેર કહેવામાં આવે છે."))
 
-blocks.append({
-    "id": "KOBJ_CLASS10_MATH_CH5_11_EXAMPLE_3",
-    "type": "worked_example",
-    "title": "Example 3: Sum of First n Terms",
-    "title_hi": "उदाहरण 3: प्रथम n पदों का योग",
-    "body": "**Problem:**\\nFind the sum of the first 22 terms of the A.P. : 8, 3, -2, ...\\n\\n**Step-by-Step Solution:**\\n1. a = 8\\n2. d = 3 - 8 = -5\\n3. n = 22\\n4. Formula: Sₙ = n/2 [2a + (n - 1)d]\\n5. S₂₂ = 22/2 [2(8) + (22 - 1)(-5)]\\n6. S₂₂ = 11 [16 + (21)(-5)]\\n7. S₂₂ = 11 [16 - 105]\\n8. S₂₂ = 11 [-89]\\n9. S₂₂ = -979",
-    "body_hi": "**समस्या:**\\nA.P. : 8, 3, -2, ... के प्रथम 22 पदों का योग ज्ञात कीजिए।\\n\\n**चरण-दर-चरण समाधान:**\\n1. a = 8\\n2. d = 3 - 8 = -5\\n3. n = 22\\n4. सूत्र: Sₙ = n/2 [2a + (n - 1)d]\\n5. S₂₂ = 22/2 [2(8) + (22 - 1)(-5)]\\n6. S₂₂ = 11 [16 + (21)(-5)]\\n7. S₂₂ = 11 [16 - 105]\\n8. S₂₂ = 11 [-89]\\n9. S₂₂ = -979"
-})
+blocks.append(get_mcq("gseb_class10_english_ch5_11", "Is bread-making still popular in Goa?", "क्या गोवा में ब्रेड बनाना अभी भी लोकप्रिय है?", "શું ગોવામાં બ્રેડ બનાવવાનું હજુ પણ લોકપ્રિય છે?", 
+[("Yes", "हाँ", "હા"), ("No", "नहीं", "ના"), ("Rarely", "शायद ही", "ભાગ્યે જ"), ("Only in cities", "केवल शहरों में", "ફક્ત શહેરોમાં")], 0, "Yes, the mixers, moulders, and those who bake the loaves are still there.", "हाँ, मिक्सर, मोल्डर और जो लोग रोटियां सेंकते हैं, वे अभी भी वहां हैं।", "હા, મિક્સર, મોલ્ડર અને જેઓ બ્રેડ બનાવે છે તેઓ હજુ પણ ત્યાં છે."))
 
-# --- MCQs for Mock Test ---
-mcqs = [
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_101_MCQ",
-        "type": "mcq",
-        "question": "In an A.P., if a = 28, d = -4, n = 7, then aₙ is:",
-        "question_hi": "एक A.P. में, यदि a = 28, d = -4, n = 7 है, तो aₙ है:",
-        "options": ["4", "5", "3", "7"],
-        "options_hi": ["4", "5", "3", "7"],
-        "correct_index": 0,
-        "explanation": "aₙ = a + (n - 1)d = 28 + (7 - 1)(-4) = 28 + 6(-4) = 28 - 24 = 4.",
-        "explanation_hi": "aₙ = a + (n - 1)d = 28 + (7 - 1)(-4) = 28 + 6(-4) = 28 - 24 = 4।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_102_MCQ",
-        "type": "mcq",
-        "question": "If a = 10 and d = 10, then the first four terms will be:",
-        "question_hi": "यदि a = 10 और d = 10 है, तो पहले चार पद होंगे:",
-        "options": ["10, 30, 50, 70", "10, 20, 30, 40", "10, 15, 20, 25", "10, 0, -10, -20"],
-        "options_hi": ["10, 30, 50, 70", "10, 20, 30, 40", "10, 15, 20, 25", "10, 0, -10, -20"],
-        "correct_index": 1,
-        "explanation": "Terms are a, a+d, a+2d, a+3d = 10, 20, 30, 40.",
-        "explanation_hi": "पद a, a+d, a+2d, a+3d = 10, 20, 30, 40 हैं।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_103_MCQ",
-        "type": "mcq",
-        "question": "The 30th term of the A.P: 10, 7, 4, ..., is:",
-        "question_hi": "A.P: 10, 7, 4, ... का 30वाँ पद है:",
-        "options": ["97", "77", "-77", "-87"],
-        "options_hi": ["97", "77", "-77", "-87"],
-        "correct_index": 2,
-        "explanation": "a = 10, d = -3, n = 30. a₃₀ = 10 + 29(-3) = 10 - 87 = -77.",
-        "explanation_hi": "a = 10, d = -3, n = 30. a₃₀ = 10 + 29(-3) = 10 - 87 = -77।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_104_MCQ",
-        "type": "mcq",
-        "question": "The common difference of the A.P. 1/p, (1-p)/p, (1-2p)/p, ... is:",
-        "question_hi": "A.P. 1/p, (1-p)/p, (1-2p)/p, ... का सार्व अंतर है:",
-        "options": ["1", "1/p", "-1", "-1/p"],
-        "options_hi": ["1", "1/p", "-1", "-1/p"],
-        "correct_index": 2,
-        "explanation": "d = a₂ - a₁ = [(1-p)/p] - [1/p] = (1 - p - 1) / p = -p / p = -1.",
-        "explanation_hi": "d = a₂ - a₁ = [(1-p)/p] - [1/p] = (1 - p - 1) / p = -p / p = -1।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_105_MCQ",
-        "type": "mcq",
-        "question": "The 11th term of the A.P: -3, -1/2, 2, ..., is:",
-        "question_hi": "A.P: -3, -1/2, 2, ... का 11वाँ पद है:",
-        "options": ["28", "22", "-38", "-48"],
-        "options_hi": ["28", "22", "-38", "-48"],
-        "correct_index": 1,
-        "explanation": "a = -3, d = (-1/2) - (-3) = 5/2. a₁₁ = -3 + 10(5/2) = -3 + 25 = 22.",
-        "explanation_hi": "a = -3, d = (-1/2) - (-3) = 5/2. a₁₁ = -3 + 10(5/2) = -3 + 25 = 22।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_106_MCQ",
-        "type": "mcq",
-        "question": "If the sum of first n terms of an A.P. is 3n² + n, what is the first term?",
-        "question_hi": "यदि एक A.P. के प्रथम n पदों का योग 3n² + n है, तो पहला पद क्या है?",
-        "options": ["2", "3", "4", "6"],
-        "options_hi": ["2", "3", "4", "6"],
-        "correct_index": 2,
-        "explanation": "S₁ = a₁. For n = 1, S₁ = 3(1)² + 1 = 4. So the first term is 4.",
-        "explanation_hi": "S₁ = a₁ होता है। n = 1 के लिए, S₁ = 3(1)² + 1 = 4. तो पहला पद 4 है।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_107_MCQ",
-        "type": "mcq",
-        "question": "What is the sum of the first 100 positive integers?",
-        "question_hi": "प्रथम 100 धनात्मक पूर्णांकों का योग क्या है?",
-        "options": ["5000", "5050", "5500", "5100"],
-        "options_hi": ["5000", "5050", "5500", "5100"],
-        "correct_index": 1,
-        "explanation": "Using formula Sₙ = n(n+1)/2. For n = 100, S₁₀₀ = 100(101)/2 = 5050.",
-        "explanation_hi": "सूत्र Sₙ = n(n+1)/2 का उपयोग करने पर। n = 100 के लिए, S₁₀₀ = 100(101)/2 = 5050।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_108_MCQ",
-        "type": "mcq",
-        "question": "The sum of the first 15 multiples of 8 is:",
-        "question_hi": "8 के प्रथम 15 गुणजों (multiples) का योग है:",
-        "options": ["960", "840", "900", "1000"],
-        "options_hi": ["960", "840", "900", "1000"],
-        "correct_index": 0,
-        "explanation": "The A.P. is 8, 16, 24... Here a = 8, d = 8. S₁₅ = (15/2) [2(8) + 14(8)] = (15/2) [16 + 112] = 15/2 × 128 = 15 × 64 = 960.",
-        "explanation_hi": "A.P. है 8, 16, 24... यहाँ a = 8, d = 8. S₁₅ = (15/2) [2(8) + 14(8)] = (15/2) [16 + 112] = 15/2 × 128 = 15 × 64 = 960।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_109_MCQ",
-        "type": "mcq",
-        "question": "If 2x, x+10, 3x+2 are in A.P., then x is equal to:",
-        "question_hi": "यदि 2x, x+10, 3x+2 A.P. में हैं, तो x किसके बराबर है?",
-        "options": ["4", "5", "6", "7"],
-        "options_hi": ["4", "5", "6", "7"],
-        "correct_index": 2,
-        "explanation": "For A.P., 2b = a + c ⇒ 2(x + 10) = 2x + (3x + 2) ⇒ 2x + 20 = 5x + 2 ⇒ 3x = 18 ⇒ x = 6.",
-        "explanation_hi": "A.P. के लिए, 2b = a + c ⇒ 2(x + 10) = 2x + (3x + 2) ⇒ 2x + 20 = 5x + 2 ⇒ 3x = 18 ⇒ x = 6।"
-    },
-    {
-        "id": "KOBJ_CLASS10_MATH_CH5_110_MCQ",
-        "type": "mcq",
-        "question": "The number of two-digit numbers divisible by 3 is:",
-        "question_hi": "3 से विभाज्य दो अंकों की संख्याओं की संख्या है:",
-        "options": ["30", "20", "29", "31"],
-        "options_hi": ["30", "20", "29", "31"],
-        "correct_index": 0,
-        "explanation": "The A.P. is 12, 15, ..., 99. Here a = 12, d = 3, l = 99. Using l = a + (n-1)d ⇒ 99 = 12 + (n-1)3 ⇒ 87 = (n-1)3 ⇒ 29 = n-1 ⇒ n = 30.",
-        "explanation_hi": "A.P. है 12, 15, ..., 99. यहाँ a = 12, d = 3, l = 99. l = a + (n-1)d का उपयोग करने पर ⇒ 99 = 12 + (n-1)3 ⇒ 87 = (n-1)3 ⇒ 29 = n-1 ⇒ n = 30।"
-    }
-]
+blocks.append(get_mcq("gseb_class10_english_ch5_12", "When would the baker come everyday?", "बेकर हर रोज कब आता था?", "બેકર દરરોજ ક્યારે આવતો?", 
+[("Once a day", "दिन में एक बार", "દિવસમાં એક વાર"), ("Twice a day", "दिन में दो बार", "દિવસમાં બે વાર"), ("Thrice a day", "दिन में तीन बार", "દિવસમાં ત્રણ વાર"), ("Once a week", "सप्ताह में एक बार", "અઠવાડિયામાં એક વાર")], 1, "He used to come at least twice a day.", "वह दिन में कम से कम दो बार आता था।", "તે દિવસમાં ઓછામાં ઓછા બે વાર આવતો હતો."))
 
-blocks.extend(mcqs)
+blocks.append(get_mcq("gseb_class10_english_ch5_13", "Match the following: What is a must as marriage gifts?", "निम्नलिखित का मिलान करें: शादी के उपहार के रूप में क्या जरूरी है?", "નીચેનાને જોડો: લગ્નની ભેટ તરીકે શું જરૂરી છે?", 
+[("Sweet bread called bol", "बोल नामक मीठी ब्रेड", "બોલ નામની મીઠી બ્રેડ"), ("Sandwiches", "सैंडविच", "સેન્ડવિચ"), ("Cakes", "केक", "કેક"), ("Bolinhas", "बोलिन्हा", "બોલિન્હા")], 0, "Marriage gifts are meaningless without the sweet bread known as the bol.", "शादी के उपहार बोल नामक मीठी ब्रेड के बिना अर्थहीन हैं।", "લગ્નની ભેટો બોલ તરીકે ઓળખાતી મીઠી બ્રેડ વિના અર્થહીન છે."))
 
-cbse_json = {
+# Part II: Coorg
+blocks.append(get_block("theory", "gseb_class10_english_ch5_14", "Hook: Coorg", "हुक: कूर्ग", "હૂક: કૂર્ગ", 
+"Imagine a piece of heaven that must have drifted from the kingdom of god, full of rainforests and spices. This is Coorg.",
+"स्वर्ग के एक ऐसे टुकड़े की कल्पना करें जो भगवान के राज्य से बहकर आया हो, वर्षावनों और मसालों से भरा हो। यह कूर्ग है।",
+"સ્વર્ગના એવા ટુકડાની કલ્પના કરો જે ભગવાનના રાજ્યમાંથી વહીને આવ્યો હોય, જે વરસાદી જંગલો અને મસાલાઓથી ભરેલો હોય. આ કૂર્ગ છે."))
+
+blocks.append(get_block("socratic_question", "gseb_class10_english_ch5_15", "Socratic Thinking", "सुकराती सोच", "સોક્રેટીસ વિચાર", 
+"If a place is isolated by rolling hills and rainforests, how might its culture and people develop differently from the rest of the country?",
+"यदि कोई स्थान घुमावदार पहाड़ियों और वर्षावनों से अलग-थलग हो, तो उसकी संस्कृति और लोग देश के बाकी हिस्सों से अलग कैसे विकसित हो सकते हैं?",
+"જો કોઈ સ્થળ વળાંકવાળી ટેકરીઓ અને વરસાદી જંગલો દ્વારા અલગ પડેલું હોય, તો તેની સંસ્કૃતિ અને લોકો બાકીના દેશ કરતા કેવી રીતે અલગ રીતે વિકસી શકે?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_16", "Discovery", "खोज", "શોધ", 
+"Coorg is the smallest district of Karnataka. Its people are fiercely independent and are believed to be of Greek or Arabic descent. They wear a traditional coat called 'kuppia'.",
+"कूर्ग कर्नाटक का सबसे छोटा जिला है। यहाँ के लोग बेहद स्वतंत्र हैं और माना जाता है कि वे ग्रीक या अरबी मूल के हैं। वे 'कुप्पिया' नामक पारंपरिक कोट पहनते हैं।",
+"કૂર્ગ કર્ણાટકનો સૌથી નાનો જિલ્લો છે. તેના લોકો અત્યંત સ્વતંત્ર છે અને એવું માનવામાં આવે છે કે તેઓ ગ્રીક અથવા અરબી મૂળના છે. તેઓ 'કુપ્પિયા' નામનો પરંપરાગત કોટ પહેરે છે."))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_17", "Reveal", "प्रकट", "પ્રગટ", 
+"The Coorg Regiment is highly decorated. Kodavus are the only people in India permitted to carry firearms without a licence. The river Kaveri gets its water from Coorg.",
+"कूर्ग रेजीमेंट को बहुत सम्मान प्राप्त है। कोडावा भारत के एकमात्र ऐसे लोग हैं जिन्हें बिना लाइसेंस के आग्नेयास्त्र (हथियार) रखने की अनुमति है। कावेरी नदी को कूर्ग से पानी मिलता है।",
+"કૂર્ગ રેજિમેન્ટ ખૂબ જ સન્માનિત છે. કોડાવા ભારતમાં એકમાત્ર એવા લોકો છે જેમને લાયસન્સ વિના હથિયારો રાખવાની મંજૂરી છે. કાવેરી નદીને કૂર્ગમાંથી પાણી મળે છે."))
+
+blocks.append(get_mcq("gseb_class10_english_ch5_18", "What is the traditional long, black coat with an embroidered waist-belt called?", "कढ़ाई वाली कमर बेल्ट के साथ पारंपरिक लंबे, काले कोट को क्या कहा जाता है?", "ભરતકામવાળા કમરના પટ્ટાવાળા પરંપરાગત લાંબા, કાળા કોટને શું કહેવાય છે?", 
+[("Kabai", "कबाई", "કબાઈ"), ("Kuppia", "कुप्पिया", "કુપ્પિયા"), ("Pader", "पाडेर", "પાડેર"), ("Bol", "बोल", "બોલ")], 1, "It is known as kuppia.", "इसे कुप्पिया के नाम से जाना जाता है।", "તેને કુપ્પિયા તરીકે ઓળખવામાં આવે છે."))
+
+blocks.append(get_block("reflection", "gseb_class10_english_ch5_19", "Reflection", "प्रतिबिंब", "પ્રતિબિંબ", 
+"Why do you think stories of valour are so important to the people of Coorg?",
+"आपको क्या लगता है कि कूर्ग के लोगों के लिए वीरता की कहानियां इतनी महत्वपूर्ण क्यों हैं?",
+"તમને શું લાગે છે કે કૂર્ગના લોકો માટે વીરતાની વાર્તાઓ આટલી મહત્વપૂર્ણ શા માટે છે?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_20", "Connection", "संबंध", "સંબંધ", 
+"The blend of Greek/Arabic origins with local traditions creates a unique subculture within India, showcasing India's immense diversity.",
+"स्थानीय परंपराओं के साथ ग्रीक/अरबी मूल का मिश्रण भारत के भीतर एक अनूठी उपसंस्कृति बनाता है, जो भारत की अपार विविधता को दर्शाता है।",
+"સ્થાનિક પરંપરાઓ સાથે ગ્રીક/અરબી મૂળનું મિશ્રણ ભારતની અંદર એક અનોખી ઉપસંસ્કૃતિ બનાવે છે, જે ભારતની વિશાળ વિવિધતા દર્શાવે છે."))
+
+blocks.append(get_block("project", "gseb_class10_english_ch5_21", "Mastery", "महारत", "મહારત", 
+"Research the Coorg Regiment and find out more about General Cariappa's contributions.",
+"कूर्ग रेजीमेंट पर शोध करें और जनरल करियप्पा के योगदान के बारे में अधिक जानें।",
+"કૂર્ગ રેજિમેન્ટ પર સંશોધન કરો અને જનરલ કરિઅપ્પાના યોગદાન વિશે વધુ જાણો."))
+
+# Part II Exercises
+blocks.append(get_mcq("gseb_class10_english_ch5_22", "Where is Coorg?", "कूर्ग कहाँ है?", "કૂર્ગ ક્યાં છે?", 
+[("Midway between Mysore and Mangalore", "मैसूर और मंगलौर के बीच", "મૈસુર અને મેંગલોરની વચ્ચે"), ("Near Goa", "गोवा के पास", "ગોવા નજીક"), ("In Assam", "असम में", "આસામમાં"), ("In Kerala", "केरल में", "કેરળમાં")], 0, "Coorg is situated midway between Mysore and Mangalore in Karnataka.", "कूर्ग कर्नाटक में मैसूर और मंगलौर के बीच स्थित है।", "કૂર્ગ કર્ણાટકમાં મૈસુર અને મેંગલોરની વચ્ચે આવેલું છે."))
+
+blocks.append(get_mcq("gseb_class10_english_ch5_23", "What is the story about the Kodavu people's descent?", "कोडावा लोगों के वंश के बारे में क्या कहानी है?", "કોડાવા લોકોના વંશ વિશે શું વાર્તા છે?", 
+[("They are of Greek or Arabic descent", "वे ग्रीक या अरबी मूल के हैं", "તેઓ ગ્રીક અથવા અરબી મૂળના છે"), ("They are of Portuguese descent", "वे पुर्तगाली मूल के हैं", "તેઓ પોર્ટુગીઝ મૂળના છે"), ("They are of British descent", "वे ब्रिटिश मूल के हैं", "તેઓ બ્રિટિશ મૂળના છે"), ("They are of French descent", "वे फ्रांसीसी मूल के हैं", "તેઓ ફ્રેન્ચ મૂળના છે")], 0, "They are possibly of Greek or Arabic descent.", "वे संभवतः ग्रीक या अरबी मूल के हैं।", "તેઓ સંભવતઃ ગ્રીક અથવા અરબી મૂળના છે."))
+
+# Part III: Tea from Assam
+blocks.append(get_block("theory", "gseb_class10_english_ch5_24", "Hook: Tea from Assam", "हुक: असम की चाय", "હૂક: આસામની ચા", 
+"'Chai-garam... garam-chai', a familiar sound at Indian railway stations. Did you know over eighty crore cups of tea are drunk every day worldwide?",
+"'चाय-गरम... गरम-चाय', भारतीय रेलवे स्टेशनों पर एक परिचित आवाज। क्या आप जानते हैं कि दुनिया भर में हर दिन 80 करोड़ से ज्यादा कप चाय पी जाती है?",
+"'ચાય-ગરમ... ગરમ-ચાય', ભારતીય રેલ્વે સ્ટેશનો પર એક પરિચિત અવાજ. શું તમે જાણો છો કે વિશ્વભરમાં દરરોજ 80 કરોડથી વધુ કપ ચા પીવાય છે?"))
+
+blocks.append(get_block("socratic_question", "gseb_class10_english_ch5_25", "Socratic Thinking", "सुकराती सोच", "સોક્રેટીસ વિચાર", 
+"How do you think a simple leaf boiled in water became the world's most popular beverage?",
+"आपको क्या लगता है कि पानी में उबाला गया एक साधारण पत्ता दुनिया का सबसे लोकप्रिय पेय कैसे बन गया?",
+"તમને શું લાગે છે કે પાણીમાં ઉકાળેલું એક સાદું પાન વિશ્વનું સૌથી લોકપ્રિય પીણું કેવી રીતે બન્યું?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_26", "Discovery", "खोज", "શોધ", 
+"Assam has the largest concentration of tea plantations in the world. Rajvir and Pranjol travel through a sea of tea bushes in Dhekiabari Tea Estate.",
+"असम में दुनिया के सबसे अधिक चाय बागान हैं। राजवीर और प्रांजल ढेकियाबारी टी एस्टेट में चाय की झाड़ियों के समुद्र से होकर यात्रा करते हैं।",
+"આસામમાં વિશ્વમાં સૌથી વધુ ચાના બગીચા છે. રાજવીર અને પ્રાંજોલ ધેકિયાબારી ટી એસ્ટેટમાં ચાની ઝાડીઓના સમુદ્રમાંથી મુસાફરી કરે છે."))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_27", "Reveal", "प्रकट", "પ્રગટ", 
+"There are legends about tea's origin. One is Chinese (leaves falling in the Emperor's boiling water), another is Indian (plants growing from Bodhidharma's eyelids).",
+"चाय की उत्पत्ति के बारे में किंवदंतियां हैं। एक चीनी है (सम्राट के उबलते पानी में पत्तियां गिरना), दूसरी भारतीय है (बोधिधर्म की पलकों से पौधे उगना)।",
+"ચાના મૂળ વિશે દંતકથાઓ છે. એક ચાઈનીઝ છે (સમ્રાટના ઉકળતા પાણીમાં પાંદડા પડવા), બીજી ભારતીય છે (બોધિધર્મના પોપચામાંથી ઉગતા છોડ)."))
+
+blocks.append(get_mcq("gseb_class10_english_ch5_28", "According to the Indian legend, how did tea originate?", "भारतीय किंवदंती के अनुसार, चाय की उत्पत्ति कैसे हुई?", "ભારતીય દંતકથા અનુસાર, ચાની ઉત્પત્તિ કેવી રીતે થઈ?", 
+[("From the eyelids of Bodhidharma", "बोधिधर्म की पलकों से", "બોધિધર્મના પોપચામાંથી"), ("From the tears of a monk", "एक भिक्षु के आँसुओं से", "એક સાધુના આંસુમાંથી"), ("From a magic seed", "एक जादुई बीज से", "એક જાદુઈ બીજમાંથી"), ("From a tree in the forest", "जंगल के एक पेड़ से", "જંગલમાં એક ઝાડમાંથી")], 0, "Ten tea plants grew out of the eyelids of Bodhidharma.", "बोधिधर्म की पलकों से दस चाय के पौधे उग आए।", "બોધિધર્મના પોપચામાંથી ચાના દસ છોડ ઉગ્યા."))
+
+blocks.append(get_block("reflection", "gseb_class10_english_ch5_29", "Reflection", "प्रतिबिंब", "પ્રતિબિંબ", 
+"Why do you think people invent legends to explain the origin of things like tea?",
+"आपको क्या लगता है कि लोग चाय जैसी चीजों की उत्पत्ति को समझाने के लिए किंवदंतियों का आविष्कार क्यों करते हैं?",
+"તમને શું લાગે છે કે લોકો ચા જેવી વસ્તુઓની ઉત્પત્તિ સમજાવવા માટે દંતકથાઓની શોધ શા માટે કરે છે?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_30", "Connection", "संबंध", "સંબંધ", 
+"Words like 'chai' and 'chini' are derived from Chinese, showing the historical trade connections between nations.",
+"'चाय' और 'चीनी' जैसे शब्द चीनी भाषा से लिए गए हैं, जो राष्ट्रों के बीच ऐतिहासिक व्यापारिक संबंधों को दर्शाते हैं।",
+"'ચાય' અને 'ચીની' જેવા શબ્દો ચાઈનીઝમાંથી લેવામાં આવ્યા છે, જે રાષ્ટ્રો વચ્ચેના ઐતિહાસિક વેપારી સંબંધો દર્શાવે છે."))
+
+blocks.append(get_block("project", "gseb_class10_english_ch5_31", "Mastery", "महारत", "મહારત", 
+"Trace the journey of tea from China to Europe and India on a world map.",
+"विश्व मानचित्र पर चीन से यूरोप और भारत तक चाय की यात्रा का पता लगाएं।",
+"વિશ્વના નકશા પર ચીનથી યુરોપ અને ભારત સુધીની ચાની સફર શોધો."))
+
+# Poem: The Trees
+blocks.append(get_block("theory", "gseb_class10_english_ch5_32", "Hook: The Trees", "हुक: पेड़", "હૂક: વૃક્ષો", 
+"Can there be a forest without trees? Imagine if all the trees currently decorating our homes decided to break free and return to the forest.",
+"क्या पेड़ों के बिना जंगल हो सकता है? कल्पना करें कि यदि हमारे घरों को सजाने वाले सभी पेड़ मुक्त होकर जंगल में लौटने का फैसला करें।",
+"શું વૃક્ષો વિના જંગલ હોઈ શકે? કલ્પના કરો કે જો આપણા ઘરોને સજાવતા તમામ વૃક્ષો મુક્ત થઈને જંગલમાં પાછા ફરવાનું નક્કી કરે તો."))
+
+blocks.append(get_block("socratic_question", "gseb_class10_english_ch5_33", "Socratic Thinking", "सुकराती सोच", "સોક્રેટીસ વિચાર", 
+"Why might a poet compare trees trying to escape a house to 'newly discharged patients' moving to clinic doors?",
+"एक कवि घर से भागने की कोशिश कर रहे पेड़ों की तुलना क्लिनिक के दरवाजों की ओर जाने वाले 'नए छुट्टी प्राप्त मरीजों' से क्यों कर सकता है?",
+"કવિ ઘરમાંથી છટકી જવાનો પ્રયાસ કરતા વૃક્ષોની સરખામણી ક્લિનિકના દરવાજા તરફ જતા 'નવા રજા પામેલા દર્દીઓ' સાથે શા માટે કરી શકે?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_34", "Discovery", "खोज", "શોધ", 
+"The poem by Adrienne Rich describes trees inside moving out into the forest. Roots work all night to disengage from the veranda floor.",
+"एड्रिएन रिच की कविता अंदर के पेड़ों का जंगल में जाने का वर्णन करती है। जड़ें बरामदे के फर्श से खुद को अलग करने के लिए रात भर काम करती हैं।",
+"એડ્રિન રિચની કવિતા અંદરના વૃક્ષો જંગલમાં જતા હોવાનું વર્ણન કરે છે. મૂળિયાં વરંડાના ફ્લોર પરથી પોતાને અલગ કરવા માટે આખી રાત કામ કરે છે."))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_35", "Reveal", "प्रकट", "પ્રગટ", 
+"The trees represent nature restricted by humans, or metaphorically, women or marginalized groups breaking out of their societal confines to claim their space.",
+"पेड़ मनुष्यों द्वारा प्रतिबंधित प्रकृति का प्रतिनिधित्व करते हैं, या रूपक के रूप में, महिलाओं या हाशिए पर रहने वाले समूहों का अपनी जगह का दावा करने के लिए अपनी सामाजिक सीमाओं से बाहर निकलना।",
+"વૃક્ષો મનુષ્યો દ્વારા પ્રતિબંધિત પ્રકૃતિનું પ્રતિનિધિત્વ કરે છે, અથવા રૂપકાત્મક રીતે, સ્ત્રીઓ અથવા હાંસિયામાં ધકેલાઈ ગયેલા જૂથો તેમની જગ્યાનો દાવો કરવા માટે તેમની સામાજિક મર્યાદાઓમાંથી બહાર આવે છે."))
+
+blocks.append(get_mcq("gseb_class10_english_ch5_36", "What do the roots do all night?", "जड़ें सारी रात क्या करती हैं?", "મૂળિયાં આખી રાત શું કરે છે?", 
+[("Work to disengage themselves from the cracks", "दरारों से खुद को अलग करने का काम करती हैं", "તિરાડોમાંથી પોતાને અલગ કરવા માટે કામ કરે છે"), ("Grow deeper", "गहरी बढ़ती हैं", "ઊંડે સુધી વધે છે"), ("Drink water", "पानी पीती हैं", "પાણી પીવે છે"), ("Sleep", "सोती हैं", "ઊંઘે છે")], 0, "They work to disengage themselves from the cracks in the veranda floor.", "वे बरामदे के फर्श की दरारों से खुद को अलग करने का काम करती हैं।", "તેઓ વરંડાના ફ્લોરમાં પડેલી તિરાડોમાંથી પોતાને અલગ કરવાનું કામ કરે છે."))
+
+blocks.append(get_block("reflection", "gseb_class10_english_ch5_37", "Reflection", "प्रतिबिंब", "પ્રતિબિંબ", 
+"Why does the poet scarcely mention the departure of the forest in her long letters?",
+"कवयित्री अपने लंबे पत्रों में जंगल के प्रस्थान का उल्लेख शायद ही कभी क्यों करती है?",
+"કવિ તેમના લાંબા પત્રોમાં જંગલની વિદાયનો ભાગ્યે જ ઉલ્લેખ કેમ કરે છે?"))
+
+blocks.append(get_block("theory", "gseb_class10_english_ch5_38", "Connection", "संबंध", "સંબંધ", 
+"Compare this poem with 'A Tiger in the Zoo'. Both show the conflict between natural freedom and artificial imprisonment.",
+"इस कविता की तुलना 'A Tiger in the Zoo' से करें। दोनों प्राकृतिक स्वतंत्रता और कृत्रिम कारावास के बीच संघर्ष को दर्शाते हैं।",
+"આ કવિતાની સરખામણી 'A Tiger in the Zoo' સાથે કરો. બંને કુદરતી સ્વતંત્રતા અને કૃત્રિમ કેદ વચ્ચેનો સંઘર્ષ દર્શાવે છે."))
+
+blocks.append(get_block("project", "gseb_class10_english_ch5_39", "Mastery", "महारत", "મહારત", 
+"Write a short essay on how humans bring nature indoors but often destroy it outdoors.",
+"मनुष्य प्रकृति को घर के अंदर कैसे लाता है लेकिन अक्सर इसे बाहर कैसे नष्ट कर देता है, इस पर एक छोटा निबंध लिखें।",
+"મનુષ્યો કેવી રીતે પ્રકૃતિને ઘરની અંદર લાવે છે પરંતુ ઘણીવાર તેને બહાર નાશ કરે છે તેના પર એક ટૂંકો નિબંધ લખો."))
+
+# Extra Grammar & Text Exercises
+blocks.append(get_mcq("gseb_class10_english_ch5_40", "Select the correct collocation: 'culture'", "सही कोलोकेशन चुनें: 'culture'", "સાચું કોલોકેશન પસંદ કરો: 'culture'", 
+[("unique culture", "अनोखी संस्कृति", "અનોખી સંસ્કૃતિ"), ("terrible culture", "भयानक संस्कृति", "ભયાનક સંસ્કૃતિ"), ("sudden culture", "अचानक संस्कृति", "અચાનક સંસ્કૃતિ"), ("wide culture", "विस्तृत संस्कृति", "વિશાળ સંસ્કૃતિ")], 0, "Unique culture and ancient culture are correct collocations.", "अनोखी संस्कृति और प्राचीन संस्कृति सही कोलोकेशन हैं।", "અનોખી સંસ્કૃતિ અને પ્રાચીન સંસ્કૃતિ સાચા કોલોકેશન છે."))
+
+blocks.append(get_mcq("gseb_class10_english_ch5_41", "Select the correct phrasal verb: The Army attempted unsuccessfully to _____ the Government.", "सही वाक्यांश क्रिया चुनें: सेना ने सरकार को _____ करने का असफल प्रयास किया।", "સાચું ફ્રેઝલ વર્બ પસંદ કરો: સેનાએ સરકારને _____ કરવાનો અસફળ પ્રયાસ કર્યો.", 
+[("overthrow", "उखाड़ फेंकना (overthrow)", "ઉથલાવી દેવું (overthrow)"), ("throw over", "फेंकना (throw over)", "ફેંકવું (throw over)"), ("throw out", "बाहर निकालना (throw out)", "બહાર કાઢવું (throw out)"), ("downthrow", "नीचे गिराना (downthrow)", "નીચે પાડવું (downthrow)")], 0, "Overthrow means to remove a government from power by force.", "Overthrow का अर्थ है बलपूर्वक किसी सरकार को सत्ता से हटाना।", "Overthrow નો અર્થ થાય છે બળજબરીથી સરકારને સત્તા પરથી હટાવવી."))
+
+data = {
     "metadata": {
-        "id": "cbse_class10_maths_ch5",
-        "title": "Chapter 5: Arithmetic Progressions",
-        "subtitle": "The Ultimate Board Exam Mastery Guide",
-        "subject": "Maths",
+        "id": "gseb_class10_english_ch5",
+        "title": "Glimpses of India & The Trees",
+        "subtitle": "Chapter 5",
+        "subject": "English",
         "grade": "10",
-        "board": "NCERT/CBSE",
-        "curriculum": ["Universal"],
-        "language": "English/Hindi (Bilingual)",
+        "board": "GSEB",
+        "curriculum": ["GSEB", "CBSE"],
+        "language": "English",
         "difficulty": "Intermediate",
-        "estimated_minutes": 180,
-        "version": "4.0.0-SUPREME-MATHS",
-        "author": "Antigravity Supreme Intelligence",
-        "reviewed_by": "Chief Academic Architect",
-        "tags": ["maths", "arithmetic_progressions", "ap", "series", "board_special", "bilingual"],
+        "estimated_minutes": 120,
+        "version": "1.0",
+        "author": "Shine Academy",
+        "reviewed_by": "EduOS Platform",
+        "last_updated": "2026-10-02T00:00:00Z",
+        "tags": ["Goa", "Coorg", "Assam", "Culture", "Trees", "Nature"],
         "learning_outcomes": [
-          "Understand the concept of an Arithmetic Progression.",
-          "Identify the first term and common difference.",
-          "Calculate the nth term of an AP.",
-          "Calculate the sum of the first n terms of an AP."
+            "Understand the cultural diversity of India",
+            "Appreciate regional variations in lifestyle",
+            "Interpret poetry and metaphors"
         ],
         "ai_context": {
-          "learning_goal": "Make abstract algebraic concepts visual. Connect arithmetic progressions to real life patterns like saving money.",
-          "common_misconceptions": [
-            "Students confuse the formula for nth term with the sum formula.",
-            "Students forget that the common difference 'd' can be negative or zero."
-          ]
+            "learning_goal": "Explore India's diverse regions and poetic themes of nature.",
+            "common_misconceptions": [],
+            "tutor_hint": "Focus on the unique aspects of Goa, Coorg, and Assam.",
+            "next_topics": []
         }
     },
     "blocks": blocks
 }
 
-gseb_json = cbse_json.copy()
-gseb_json["metadata"] = cbse_json["metadata"].copy()
-gseb_json["metadata"]["id"] = "gseb_class10_maths_ch5"
-
-with open("/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/cbse_class10_maths_ch5.json", "w", encoding="utf-8") as f:
-    json.dump(cbse_json, f, ensure_ascii=False, indent=2)
-
-with open("/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/gseb_class10_maths_ch5.json", "w", encoding="utf-8") as f:
-    json.dump(gseb_json, f, ensure_ascii=False, indent=2)
-
-print("Chapter 5 generated for both CBSE and GSEB successfully!")
+with open('/home/ubuntu/Shine_Academy_Naroda/app_core/chapters/gseb_class10_english_ch5.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("Saved JSON successfully.")

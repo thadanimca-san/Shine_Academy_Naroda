@@ -1,82 +1,1247 @@
 [
   {
-    "id": "KOBJ_C10_MATH_CH1_THEO_001",
-    "type": "theory",
-    "title": "Introduction to Mathematics",
-    "title_hi": "गणित का परिचय",
+    "id": "C10M_CH1_HOOK_001",
+    "type": "hook",
+    "title": "The Secret Code of Every Number",
+    "title_hi": "हर संख्या का गुप्त कोड",
+    "title_gu": "દરેક સંખ્યાનો ગુપ્ત કોડ",
+    "body": "Imagine you are a master locksmith. Every number in the universe is a lock, and prime numbers are the only keys. Here is the magical truth: **every whole number greater than 1 can be unlocked using a unique combination of prime number keys — and this combination is always the same, no matter how you try to unlock it!** This is the secret that ancient mathematicians discovered thousands of years ago. In this chapter, you will learn Euclid's powerful tools, the Fundamental Theorem of Arithmetic, and how to prove that some numbers — like √2 — can never be written as a fraction. Get ready to think like a mathematician!",
+    "body_hi": "कल्पना करो कि तुम एक महान ताला बनाने वाले हो। ब्रह्मांड की हर संख्या एक ताला है, और अभाज्य संख्याएँ (Prime Numbers) ही एकमात्र चाबियाँ हैं। यह जादुई सत्य है: **1 से बड़ी हर पूर्ण संख्या को अभाज्य संख्याओं की एक अनूठी मेल से खोला जा सकता है — और यह मेल हमेशा एक जैसी होती है!** यही वह रहस्य है जो प्राचीन गणितज्ञों ने हजारों साल पहले खोजा था। इस अध्याय में, तुम यूक्लिड के शक्तिशाली नियम, अंकगणित का मूल प्रमेय, और यह साबित करना सीखोगे कि कुछ संख्याएँ — जैसे √2 — कभी भी एक भिन्न के रूप में नहीं लिखी जा सकतीं।",
+    "body_gu": "કલ્પના કરો કે તમે એક મહાન તાળા બનાવનાર છો. બ્રહ્માંડની દરેક સંખ્યા એક તાળું છે, અને અવિભાજ્ય સંખ્યાઓ (Prime Numbers) એ એકમાત્ર ચાવી છે. આ જાદુઈ સત્ય છે: **1 કરતાં મોટી દરેક પૂર્ણ સંખ્યાને અવિભાજ્ય સંખ્યાઓના એક અનોખા સંયોજન વડે ખોળી શકાય — અને આ સંયોજન હંમેશાં સરખું જ હોય!** આ તે રહસ્ય છે જે પ્રાચીન ગણિતજ્ઞોએ હજારો વર્ષ પહેલાં શોધ્યું હતું. આ પ્રકરણમાં, તમે યુક્લિડના શક્તિશાળી નિયમો, અંકગણિતનો મૂળ પ્રમેય, અને √2 જેવી સંખ્યાઓ અપ્રમેય (irrational) છે તે સાબિત કરવાનું શીખશો.",
+    "bloom": "Remember",
     "difficulty": "Beginner",
-    "bloom": "Understand",
-    "estimated_minutes": 2,
-    "body": "Welcome to the incredible world of Mathematics! This module will lay the foundation for everything you are about to learn.",
-    "body_hi": "गणित की अद्भुत दुनिया में आपका स्वागत है! यह मॉड्यूल उन सभी चीज़ों की नींव रखेगा जो आप सीखने वाले हैं।"
+    "estimated_minutes": 2
   },
   {
-    "id": "KOBJ_C10_MATH_CH1_MCQ_001",
-    "type": "mcq",
-    "question": "The product of a rational number and an irrational number is",
-    "question_hi": "एक परिमेय संख्या और एक अपरिमेय संख्या का गुणनफल होता है",
+    "id": "C10M_CH1_SOCRATIC_001",
+    "type": "socratic_question",
+    "question": "If you have 100 mangoes and you want to pack them in boxes of 7 each, how many full boxes can you fill? Will any mangoes be left over? Can the leftover ever be 7 or more?",
+    "question_hi": "अगर तुम्हारे पास 100 आम हैं और तुम उन्हें 7-7 के डिब्बों में भरना चाहते हो — कितने पूरे डिब्बे भरेंगे? क्या कुछ आम बचेंगे? क्या बचे हुए आम 7 या उससे ज़्यादा हो सकते हैं?",
+    "question_gu": "જો તમારી પાસે 100 કેરી છે અને તમે 7-7 ની ટોપલીઓ ભરવા ઇચ્છો — કેટલી ભરેલી ટોપલીઓ મળશે? શું કેટલીક કેરીઓ વધશે? શું વધેલી કેરીઓ 7 કે તેથી વધુ હોઈ શકે?",
+    "hint": "Think about what division really means. The remainder must always be less than the divisor!",
+    "hint_hi": "सोचो कि भाग का असली मतलब क्या है। शेषफल हमेशा भाजक से कम होना चाहिए!",
+    "hint_gu": "વિચારો કે ભાગ (division) નો ખરો અર્થ શો છે. શેષ (remainder) હંમેશાં ભાજક (divisor) કરતાં ઓછો હોવો જ જોઈએ!",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_THEO_001",
+    "type": "theory",
+    "title": "Euclid's Division Lemma",
+    "title_hi": "यूक्लिड का विभाजन सहप्रमेय",
+    "title_gu": "યુક્લિડનો વિભાજન સહ-પ્રમેય",
+    "body": "**Euclid's Division Lemma** states: For any two positive integers a and b, there exist **unique** integers q (quotient) and r (remainder) such that:\n\na = bq + r,    0 ≤ r < b\n\n**Example:** For a = 17 and b = 5:\n17 = 5 × 3 + 2, so q = 3, r = 2.\n\n**Key Points:**\n- The remainder r is always ≥ 0 and < b\n- If r = 0, then b divides a exactly (i.e., b is a factor of a)\n- This is NOT just a formula — it guarantees a **unique** solution always exists\n- This lemma is the foundation of the **Euclidean Algorithm** for finding HCF",
+    "body_hi": "**यूक्लिड का विभाजन सहप्रमेय** कहता है: किन्हीं दो धनात्मक पूर्णांकों a और b के लिए, **अद्वितीय** पूर्णांक q (भागफल) और r (शेषफल) मौजूद होते हैं जो इस समीकरण को पूरा करते हैं:\n\na = bq + r,    0 ≤ r < b\n\n**उदाहरण:** a = 17 और b = 5 के लिए:\n17 = 5 × 3 + 2, इसलिए q = 3, r = 2।\n\n**मुख्य बातें:**\n- शेषफल r हमेशा ≥ 0 और < b होता है\n- अगर r = 0 हो, तो b, a को पूरी तरह विभाजित करता है\n- यह सिर्फ एक सूत्र नहीं है — यह गारंटी देता है कि हल हमेशा **अद्वितीय** होगा\n- यह सहप्रमेय HCF निकालने वाले **यूक्लिड एल्गोरिथ्म** की नींव है",
+    "body_gu": "**યુક્લિડનો વિભાજન સહ-પ્રમેય** કહે છે: કોઈ પણ બે ધન પૂર્ણાંકો a અને b માટે, **અનન્ય** પૂર્ણાંકો q (ભાગ) અને r (શેષ) અસ્તિત્વ ધરાવે છે:\n\na = bq + r,    0 ≤ r < b\n\n**ઉદાહરણ:** a = 17 અને b = 5 માટે:\n17 = 5 × 3 + 2, એટલે q = 3, r = 2.\n\n**મુખ્ય મુદ્દા:**\n- શેષ r હંમેશાં ≥ 0 અને < b હોય\n- જો r = 0 હોય, તો b, a ને સંપૂર્ણ ભાગ આપે\n- આ ફક્ત સૂત્ર નથી — ઉકેલ **અનન્ય** હોય છે\n- આ **HCF** શોધવાના Euclidean Algorithm નો આધાર છે",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_TIP_001",
+    "type": "teacher_tip",
+    "title": "The Juice Box Analogy",
+    "title_hi": "जूस बॉक्स की उपमा",
+    "title_gu": "જ્યૂસ બૉક્સ ઉપમા",
+    "body": "Tell students: 'Think of Euclid's Division Lemma like packing juice boxes. If you have a juice boxes and each carton holds b boxes, you fill q full cartons with exactly r boxes left over. The remainder r must always be **less than b** — if it were b or more, you could pack one more carton!' This makes the constraint 0 ≤ r < b feel completely natural.",
+    "body_hi": "छात्रों से कहो: 'यूक्लिड के सहप्रमेय को जूस बॉक्स पैक करने जैसा समझो। अगर a जूस बॉक्स हैं और हर डिब्बे में b बॉक्स आते हैं, तो q पूरे डिब्बे भरते हो और r बॉक्स बचते हैं। शेषफल r हमेशा **b से कम** होना चाहिए — अगर b या उससे ज़्यादा होता, तो एक और डिब्बा भर सकते थे!'",
+    "body_gu": "વિદ્યાર્થીઓને કહો: 'યુક્લિડના સહ-પ્રમેયને જ્યૂસ બૉક્સ ભરવા જેવો વિચારો. a જ્યૂસ બૉક્સ છે અને દરેક કાર્ટનમાં b બૉક્સ આવે, તો q પૂર્ણ કાર્ટન ભરાય અને r બૉક્સ વધે. શેષ r **b કરતાં ઓછો** જ હોઈ શકે — b કે વધુ હોય તો વધુ એક કાર્ટન ભરી શકાત!'",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_001",
+    "type": "worked_example",
+    "title": "Example 1: Use Euclid's Algorithm to find HCF(135, 225)",
+    "title_hi": "उदाहरण 1: यूक्लिड एल्गोरिथ्म से HCF(135, 225) निकालो",
+    "title_gu": "ઉદાહરણ 1: HCF(135, 225) શોધો",
+    "steps": [
+      "Step 1: Since 225 > 135, apply lemma: 225 = 135 × 1 + 90",
+      "Step 2: Now apply to 135 and 90: 135 = 90 × 1 + 45",
+      "Step 3: Apply to 90 and 45: 90 = 45 × 2 + 0",
+      "Step 4: Remainder is 0. HCF = 45 ✓"
+    ],
+    "steps_hi": [
+      "चरण 1: 225 > 135, सहप्रमेय लगाओ: 225 = 135 × 1 + 90",
+      "चरण 2: 135 और 90 पर: 135 = 90 × 1 + 45",
+      "चरण 3: 90 और 45 पर: 90 = 45 × 2 + 0",
+      "चरण 4: शेषफल 0 है। HCF = 45 ✓"
+    ],
+    "steps_gu": [
+      "પગલું 1: 225 > 135, 225 = 135 × 1 + 90",
+      "પગલું 2: 135 = 90 × 1 + 45",
+      "પગલું 3: 90 = 45 × 2 + 0",
+      "પગલું 4: શેષ 0, HCF = 45 ✓"
+    ],
+    "answer": "HCF(135, 225) = 45",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_002",
+    "type": "worked_example",
+    "title": "Example 2: Find HCF(196, 38220) using Euclid's Algorithm",
+    "title_hi": "उदाहरण 2: HCF(196, 38220) निकालो",
+    "title_gu": "ઉદાહરણ 2: HCF(196, 38220) શોધો",
+    "steps": [
+      "Step 1: 38220 = 196 × 195 + 0",
+      "Step 2: Remainder is 0 immediately!",
+      "Step 3: HCF = 196 ✓ (196 divides 38220 exactly)"
+    ],
+    "steps_hi": [
+      "चरण 1: 38220 = 196 × 195 + 0",
+      "चरण 2: शेषफल तुरंत 0 है!",
+      "चरण 3: HCF = 196 ✓ (196, 38220 को पूरी तरह विभाजित करता है)"
+    ],
+    "steps_gu": [
+      "પગલું 1: 38220 = 196 × 195 + 0",
+      "પગલું 2: શેષ તરત 0 છે!",
+      "પગલું 3: HCF = 196 ✓"
+    ],
+    "answer": "HCF(196, 38220) = 196",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EX1_HEADER",
+    "type": "theory",
+    "title": "Exercise 1.1 — Euclid's Division Algorithm",
+    "title_hi": "अभ्यास 1.1 — यूक्लिड विभाजन एल्गोरिथ्म",
+    "title_gu": "કસરત 1.1 — યુક્લિડ વિભાજન અલ્ગોરિધ્મ",
+    "body": "Use Euclid's Division Algorithm to find the HCF of the following pairs. Remember: always apply the lemma a = bq + r repeatedly until the remainder is 0. The last non-zero remainder is the HCF.",
+    "body_hi": "यूक्लिड विभाजन एल्गोरिथ्म का उपयोग करके निम्नलिखित जोड़ों का HCF निकालो। याद रखो: a = bq + r को बार-बार लगाओ जब तक शेषफल 0 न हो जाए। अंतिम गैर-शून्य शेषफल ही HCF है।",
+    "body_gu": "નીચે આપેલ જોડીઓનો HCF Euclid Algorithm વડે શોધો. a = bq + r વારંવાર લગાવો જ્યાં સુધી શેષ 0 ન આવે. છેલ્લો અ-શૂન્ય શેષ HCF છે.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_EX1Q1",
+    "type": "practice_question",
+    "question": "Exercise 1.1, Q1: Use Euclid's division algorithm to find the HCF of:\n(i) 135 and 225\n(ii) 196 and 38220\n(iii) 867 and 255",
+    "question_hi": "अभ्यास 1.1, प्र.1: यूक्लिड विभाजन एल्गोरिथ्म का उपयोग करके HCF निकालो:\n(i) 135 और 225\n(ii) 196 और 38220\n(iii) 867 और 255",
+    "question_gu": "કસરત 1.1, પ્ર.1: Euclid algorithm વડે HCF શોધો:\n(i) 135 અને 225\n(ii) 196 અને 38220\n(iii) 867 અને 255",
+    "solution": "(i) 225 = 135×1+90; 135 = 90×1+45; 90 = 45×2+0 → **HCF = 45**\n(ii) 38220 = 196×195+0 → **HCF = 196**\n(iii) 867 = 255×3+102; 255 = 102×2+51; 102 = 51×2+0 → **HCF = 51**",
+    "solution_hi": "(i) 225 = 135×1+90; 135 = 90×1+45; 90 = 45×2+0 → **HCF = 45**\n(ii) 38220 = 196×195+0 → **HCF = 196**\n(iii) 867 = 255×3+102; 255 = 102×2+51; 102 = 51×2+0 → **HCF = 51**",
+    "solution_gu": "(i) HCF = 45  (ii) HCF = 196  (iii) HCF = 51",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_EX1Q2",
+    "type": "practice_question",
+    "question": "Exercise 1.1, Q2: Show that any positive odd integer is of the form 6q+1, 6q+3, or 6q+5, where q is some integer.",
+    "question_hi": "अभ्यास 1.1, प्र.2: दर्शाओ कि कोई भी धनात्मक विषम पूर्णांक 6q+1, 6q+3, या 6q+5 के रूप में होता है, जहाँ q कोई पूर्णांक है।",
+    "question_gu": "કસરત 1.1, પ્ર.2: બતાવો કે કોઈ પણ ધન વિષમ (odd) પૂર્ણાંક 6q+1, 6q+3 અથવા 6q+5 સ્વરૂપ ધરાવે છે.",
+    "solution": "Let a be any positive integer. By Euclid's lemma with b=6:\na = 6q + r, where r \\in \\0,1,2,3,4,5\\).\n\n- r=0: a=6q → even\n- r=1: a=6q+1 → **odd** ✓\n- r=2: a=6q+2 → even\n- r=3: a=6q+3 → **odd** ✓\n- r=4: a=6q+4 → even\n- r=5: a=6q+5 → **odd** ✓\n\nSince a is odd, it must be of the form 6q+1, 6q+3, or 6q+5. ∎",
+    "solution_hi": "a को कोई भी धनात्मक पूर्णांक मानो। b=6 के साथ सहप्रमेय से:\na = 6q + r, जहाँ r \\in \\0,1,2,3,4,5\\)।\n- r=0: 6q → सम; r=1: 6q+1 → **विषम** ✓; r=2: सम; r=3: 6q+3 → **विषम** ✓; r=4: सम; r=5: 6q+5 → **विषम** ✓\nचूँकि a विषम है, यह 6q+1, 6q+3, या 6q+5 रूप में होगा। ∎",
+    "solution_gu": "a ધન પૂર્ણાંક, b=6 સાથે: a = 6q + r, r \\in \\0,1,2,3,4,5\\). r = 0,2,4 → સમ; r = 1,3,5 → **વિષમ** ✓. આમ, a = 6q+1, 6q+3, 6q+5 સ્વરૂપ ∎",
+    "bloom": "Analyze",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 6
+  },
+  {
+    "id": "C10M_CH1_EX1Q3",
+    "type": "practice_question",
+    "question": "Exercise 1.1, Q3: An army contingent of 616 members is to march behind an army band of 32 members. The two groups are to march in the same number of columns. What is the maximum number of columns in which they can march?",
+    "question_hi": "अभ्यास 1.1, प्र.3: 616 सदस्यों की एक सैनिक टुकड़ी, 32 सदस्यों के एक बैंड के पीछे मार्च करनी है। दोनों समूह समान कॉलमों में मार्च करें। अधिकतम कॉलमों की संख्या क्या होगी?",
+    "question_gu": "કસરત 1.1, પ્ર.3: 616 સૈનિકો 32 સભ્યોના બૅન્ડ પાછળ કૂચ કરે. બંને સમૂહ સ્તંભ (columns) ની સમાન સંખ્યામાં ચાલે. મહત્તમ સ્તંભ સંખ્યા?",
+    "solution": "Maximum columns = HCF(616, 32).\n616 = 32×19 + 8\n32 = 8×4 + 0\n**HCF = 8**\nMaximum number of columns = **8**",
+    "solution_hi": "अधिकतम कॉलम = HCF(616, 32).\n616 = 32×19 + 8; 32 = 8×4 + 0 → **HCF = 8**\nअधिकतम कॉलमों की संख्या = **8**",
+    "solution_gu": "HCF(616,32): 616=32×19+8; 32=8×4+0 → **HCF=8** → મહત્તમ 8 સ્તંભ",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH1_EX1Q4",
+    "type": "practice_question",
+    "question": "Exercise 1.1, Q4: Use Euclid's lemma to show that the square of any positive integer is either of the form 3m or 3m+1 for some integer m.",
+    "question_hi": "अभ्यास 1.1, प्र.4: यूक्लिड के सहप्रमेय का उपयोग करके दर्शाओ कि किसी भी धनात्मक पूर्णांक का वर्ग 3m या 3m+1 रूप में होता है।",
+    "question_gu": "કસરત 1.1, પ્ર.4: Euclid's lemma વડે બતાવો કે ધન પૂર્ણાંકનો વર્ગ 3m અથવા 3m+1 સ્વરૂપ ધરાવે છે.",
+    "solution": "Let a be a positive integer. By b=3: a = 3q, 3q+1, or 3q+2.\n\n**Case 1:** a=3q → a² = 9q² = 3(3q²) = 3m ✓\n**Case 2:** a=3q+1 → a² = 9q²+6q+1 = 3(3q²+2q)+1 = 3m+1 ✓\n**Case 3:** a=3q+2 → a² = 9q²+12q+4 = 9q²+12q+3+1 = 3(3q²+4q+1)+1 = 3m+1 ✓\n\nSo a² is always of the form 3m or 3m+1. ∎",
+    "solution_hi": "a को धनात्मक पूर्णांक, b=3: a = 3q, 3q+1, 3q+2\n- a=3q: a²=3(3q²)=3m ✓\n- a=3q+1: a²=3(3q²+2q)+1=3m+1 ✓\n- a=3q+2: a²=3(3q²+4q+1)+1=3m+1 ✓\nअतः a², 3m या 3m+1 रूप में है। ∎",
+    "solution_gu": "a=3q, 3q+1, 3q+2 → a² = 3m અથવા 3m+1 ✓ ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 7
+  },
+  {
+    "id": "C10M_CH1_EX1Q5",
+    "type": "practice_question",
+    "question": "Exercise 1.1, Q5: Use Euclid's lemma to show that the cube of any positive integer is of the form 9m, 9m+1, or 9m+8.",
+    "question_hi": "अभ्यास 1.1, प्र.5: यूक्लिड के सहप्रमेय से दर्शाओ कि किसी भी धनात्मक पूर्णांक का घन 9m, 9m+1, या 9m+8 रूप में होता है।",
+    "question_gu": "કસરત 1.1, પ્ર.5: ધન પૂર્ણાંકનો ઘન 9m, 9m+1 અથવા 9m+8 સ્વરૂપ ધરાવે છે — Euclid's lemma વડે બતાવો.",
+    "solution": "By b=3: a = 3q, 3q+1, 3q+2.\n\n**Case 1:** (3q)³ = 27q³ = 9(3q³) = 9m ✓\n**Case 2:** (3q+1)³ = 27q³+27q²+9q+1 = 9(3q³+3q²+q)+1 = 9m+1 ✓\n**Case 3:** (3q+2)³ = 27q³+54q²+36q+8 = 9(3q³+6q²+4q)+8 = 9m+8 ✓\n\nHence cube of any positive integer is of form 9m, 9m+1, or 9m+8. ∎",
+    "solution_hi": "a = 3q, 3q+1, 3q+2 लो:\n- (3q)³ = 9(3q³) = 9m ✓\n- (3q+1)³ = 9m+1 ✓\n- (3q+2)³ = 9m+8 ✓\nसिद्ध ∎",
+    "solution_gu": "ઘન =9m, 9m+1, 9m+8 ✓ ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_QUIZ_001",
+    "type": "quiz",
+    "question": "What is HCF(867, 255) using Euclid's Algorithm?",
+    "question_hi": "यूक्लिड एल्गोरिथ्म से HCF(867, 255) क्या है?",
+    "question_gu": "HCF(867, 255) = ?",
     "options": [
-      "a rational number only",
-      "an integer",
-      "an irrational number only",
-      "both rational and irrational number"
+      "17",
+      "51",
+      "85",
+      "3"
     ],
     "options_hi": [
-      "केवल एक परिमेय संख्या",
-      "एक पूर्णांक",
-      "केवल एक अपरिमेय संख्या",
-      "परिमेय और अपरिमेय संख्या दोनों"
+      "17",
+      "51",
+      "85",
+      "3"
+    ],
+    "options_gu": [
+      "17",
+      "51",
+      "85",
+      "3"
+    ],
+    "correct_index": 1,
+    "explanation": "867 = 255×3+102; 255 = 102×2+51; 102 = 51×2+0 → HCF = 51",
+    "explanation_hi": "867 = 255×3+102; 255 = 102×2+51; 102 = 51×2+0 → HCF = 51",
+    "explanation_gu": "867 = 255×3+102; 255 = 102×2+51; 102 = 51×2+0 → HCF = 51",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_SOCRATIC_002",
+    "type": "socratic_question",
+    "question": "Can the number 12 be written as a product of primes in more than one way? Try: 12 = 2×6 = 2×2×3 = 3×4 = 3×2×2. Are these really different, or the same?",
+    "question_hi": "क्या 12 को प्राइम का गुणनफल एक से ज़्यादा तरीकों से लिखा जा सकता है? 12 = 2×6 = 2×2×3 = 3×4 — क्या ये सच में अलग हैं, या एक जैसे?",
+    "question_gu": "12ને અવિભાજ્ય ગુણકોના ગુણાકાર તરીકે એક કરતાં વધુ રીતે લખી શકાય? 12 = 2×6 = 2×2×3 = 3×4 — આ ખરેખર અલગ છે, કે સરખા?",
+    "hint": "Ignore the order of multiplication — focus only on which primes appear and how many times.",
+    "hint_hi": "गुणन का क्रम नज़रअंदाज़ करो — केवल देखो कि कौन-से प्राइम कितनी बार आते हैं।",
+    "hint_gu": "ગુણાકારનો ક્રમ ભૂલો — ફક્ત જુઓ કે કયા prime કેટલી વાર આવે છે.",
+    "bloom": "Analyze",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_THEO_002",
+    "type": "theory",
+    "title": "The Fundamental Theorem of Arithmetic (FTA)",
+    "title_hi": "अंकगणित का मूल प्रमेय (FTA)",
+    "title_gu": "અંકગણિતનો મૂળ પ્રમેય (FTA)",
+    "body": "**Fundamental Theorem of Arithmetic:** Every composite number can be expressed (factorized) as a product of primes, and this factorization is **unique**, apart from the order in which the prime factors occur.\n\nIn other words: Every integer n > 1 has a unique prime factorization:\nn = p₁^a₁) × p₂^a₂) × ... × pk^ak)\n\n**Examples:**\n- 12 = 2² × 3 (unique!)\n- 140 = 2² × 5 × 7 (unique!)\n- 3825 = 3² × 5² × 17 (unique!)\n\n**Using FTA for HCF and LCM:**\n- **HCF** = Product of the **smallest powers** of common prime factors\n- **LCM** = Product of the **greatest powers** of all prime factors\n- Key relation: **HCF × LCM = Product of the two numbers**",
+    "body_hi": "**अंकगणित का मूल प्रमेय:** प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में व्यक्त किया जा सकता है, और यह गुणनखंडन क्रम को छोड़कर **अद्वितीय** होता है।\n\nn = p₁^a₁) × p₂^a₂) × ... × pk^ak)\n\n**उदाहरण:** 12 = 2² × 3; 140 = 2² × 5 × 7; 3825 = 3² × 5² × 17\n\n**HCF और LCM:**\n- **HCF** = साझा अभाज्य गुणनखंडों की **सबसे छोटी घातों** का गुणनफल\n- **LCM** = सभी अभाज्य गुणनखंडों की **सबसे बड़ी घातों** का गुणनफल\n- **HCF × LCM = दोनों संख्याओं का गुणनफल**",
+    "body_gu": "**અંકગણિતનો મૂળ પ્રમેય:** દરેક સંયુક્ત સંખ્યા (composite number) ને અવિભાજ્ય ગુણકોના ગુણાકાર રૂપે, **અનન્ય** રીતે, દર્શાવી શકાય.\n\n**ઉદાહરણ:** 12 = 2² × 3; 140 = 2² × 5 × 7\n\n**HCF અને LCM:**\n- **HCF** = સહ-અવિભાજ્ય ગુણકોની **નાનામાં નાની ઘાત**\n- **LCM** = બધા ગુણકોની **મોટામાં મોટી ઘાત**\n- **HCF × LCM = બે સંખ્યાઓનો ગુણાકાર**",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_TIP_002",
+    "type": "teacher_tip",
+    "title": "Factor Tree Technique",
+    "title_hi": "गुणनखंड वृक्ष तकनीक",
+    "title_gu": "ગુણક વૃક્ષ ટેકનિક",
+    "body": "Draw a factor tree! Start with the number at the top, branch into any two factors, keep branching until all leaves are prime. Circle all the leaves — those are your prime factors. For HCF: take only factors that appear in ALL trees, using the smallest power. For LCM: take ALL factors from ALL trees, using the largest power.",
+    "body_hi": "गुणनखंड वृक्ष (Factor Tree) बनाओ! ऊपर संख्या लिखो, किन्हीं दो गुणनखंडों में तोड़ो, जब तक सब पत्तियाँ अभाज्य न हों। सब पत्तियों को घेरो — यही तुम्हारे अभाज्य गुणनखंड हैं। HCF के लिए: सबसे छोटी साझा घात लो। LCM के लिए: सबसे बड़ी घात लो।",
+    "body_gu": "Factor Tree બનાવો! ઉપર સંખ્યા, કોઈ પણ બે ગુણકમાં વહેંચો, બધાં પાન (leaves) prime ન થાય ત્યાં સુધી ચાલુ રાખો. HCF: નાનામાં નાની ઘાત; LCM: મોટામાં મોટી ઘાત.",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_003",
+    "type": "worked_example",
+    "title": "Example 3: Find HCF and LCM of 6, 72, and 120 using FTA",
+    "title_hi": "उदाहरण 3: 6, 72, 120 का HCF और LCM FTA से निकालो",
+    "title_gu": "ઉદાહરણ 3: HCF & LCM(6, 72, 120)",
+    "steps": [
+      "6 = 2¹ × 3¹",
+      "72 = 2³ × 3²",
+      "120 = 2³ × 3¹ × 5¹",
+      "HCF = 2¹ × 3¹ = 6 (smallest powers of common factors 2 and 3)",
+      "LCM = 2³ × 3² × 5¹ = 8 × 9 × 5 = 360 (greatest powers of all factors)"
+    ],
+    "steps_hi": [
+      "6 = 2¹ × 3¹",
+      "72 = 2³ × 3²",
+      "120 = 2³ × 3¹ × 5¹",
+      "HCF = 2¹ × 3¹ = 6",
+      "LCM = 2³ × 3² × 5¹ = 360"
+    ],
+    "steps_gu": [
+      "6=2¹×3¹; 72=2³×3²; 120=2³×3¹×5¹",
+      "HCF=2¹×3¹=6; LCM=2³×3²×5¹=360"
+    ],
+    "answer": "HCF = 6, LCM = 360",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH1_EX2_HEADER",
+    "type": "theory",
+    "title": "Exercise 1.2 — Fundamental Theorem of Arithmetic",
+    "title_hi": "अभ्यास 1.2 — अंकगणित का मूल प्रमेय",
+    "title_gu": "કસરત 1.2 — અંકગણિતનો મૂળ પ્રમેય",
+    "body": "Apply the Fundamental Theorem of Arithmetic to find prime factorizations, HCF, LCM, and solve problems.",
+    "body_hi": "अंकगणित के मूल प्रमेय का उपयोग करके अभाज्य गुणनखंड, HCF, LCM निकालो और समस्याएँ हल करो।",
+    "body_gu": "FTA વડે prime factorization, HCF, LCM શોધો.",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_EX2Q1",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q1: Express each number as a product of its prime factors:\n(i) 140\n(ii) 156\n(iii) 3825\n(iv) 5005\n(v) 7429",
+    "question_hi": "अभ्यास 1.2, प्र.1: प्रत्येक संख्या को अभाज्य गुणनखंडों के गुणनफल के रूप में लिखो:\n(i) 140\n(ii) 156\n(iii) 3825\n(iv) 5005\n(v) 7429",
+    "question_gu": "કસરત 1.2, પ્ર.1: prime factorization:\n(i)140 (ii)156 (iii)3825 (iv)5005 (v)7429",
+    "solution": "(i) 140 = **2² × 5 × 7**\n(ii) 156 = **2² × 3 × 13**\n(iii) 3825 = **3² × 5² × 17**\n(iv) 5005 = **5 × 7 × 11 × 13**\n(v) 7429 = **17 × 19 × 23**",
+    "solution_hi": "(i) 2²×5×7 (ii) 2²×3×13 (iii) 3²×5²×17 (iv) 5×7×11×13 (v) 17×19×23",
+    "solution_gu": "(i)2²×5×7 (ii)2²×3×13 (iii)3²×5²×17 (iv)5×7×11×13 (v)17×19×23",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 6
+  },
+  {
+    "id": "C10M_CH1_EX2Q2",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q2: Find the LCM and HCF of the following pairs using prime factorisation:\n(i) 12, 15, 21\n(ii) 17, 23, 29\n(iii) 8, 9, 25",
+    "question_hi": "अभ्यास 1.2, प्र.2: अभाज्य गुणनखंड विधि से LCM और HCF निकालो:\n(i) 12, 15, 21\n(ii) 17, 23, 29\n(iii) 8, 9, 25",
+    "question_gu": "કસરત 1.2, પ્ર.2: prime factorisation: LCM & HCF:\n(i)12,15,21 (ii)17,23,29 (iii)8,9,25",
+    "solution": "(i) 12=2²×3; 15=3×5; 21=3×7\n→ **HCF=3**, **LCM=2²×3×5×7=420**\n\n(ii) 17,23,29 are all primes\n→ **HCF=1**, **LCM=17×23×29=11339**\n\n(iii) 8=2³; 9=3²; 25=5²\n→ **HCF=1**, **LCM=2³×3²×5²=1800**",
+    "solution_hi": "(i) HCF=3, LCM=420\n(ii) HCF=1, LCM=11339\n(iii) HCF=1, LCM=1800",
+    "solution_gu": "(i)HCF=3,LCM=420 (ii)HCF=1,LCM=11339 (iii)HCF=1,LCM=1800",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 6
+  },
+  {
+    "id": "C10M_CH1_EX2Q3",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q3: Find the LCM and HCF of the following integers by applying the prime factorisation method:\n(i) 12 and 15\n(ii) 35 and 49\n(iii) 96 and 404\n(iv) 6 and 20\n(v) 26 and 91",
+    "question_hi": "अभ्यास 1.2, प्र.3: अभाज्य गुणनखंड विधि से LCM और HCF:\n(i) 12 और 15\n(ii) 35 और 49\n(iii) 96 और 404\n(iv) 6 और 20\n(v) 26 और 91",
+    "question_gu": "કસરત 1.2, પ્ર.3: LCM & HCF:\n(i)12,15 (ii)35,49 (iii)96,404 (iv)6,20 (v)26,91",
+    "solution": "(i) 12=2²×3; 15=3×5 → **HCF=3, LCM=60**\n(ii) 35=5×7; 49=7² → **HCF=7, LCM=245**\n(iii) 96=2⁵×3; 404=2²×101 → **HCF=4, LCM=9696**\n(iv) 6=2×3; 20=2²×5 → **HCF=2, LCM=60**\n(v) 26=2×13; 91=7×13 → **HCF=13, LCM=182**",
+    "solution_hi": "(i)HCF=3,LCM=60 (ii)HCF=7,LCM=245 (iii)HCF=4,LCM=9696 (iv)HCF=2,LCM=60 (v)HCF=13,LCM=182",
+    "solution_gu": "(i)3,60 (ii)7,245 (iii)4,9696 (iv)2,60 (v)13,182",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_EX2Q4",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q4: Given that HCF(306, 657) = 9, find LCM(306, 657).",
+    "question_hi": "अभ्यास 1.2, प्र.4: दिया है HCF(306, 657) = 9, LCM(306, 657) निकालो।",
+    "question_gu": "કસરત 1.2, પ્ર.4: HCF(306,657)=9, LCM=?",
+    "solution": "Using the relation: HCF × LCM = Product of numbers\n9 × LCM = 306 × 657\nLCM = (306 × 657) / 9 = 201042 / 9 = **22338**",
+    "solution_hi": "HCF × LCM = 306 × 657\n9 × LCM = 201042\nLCM = **22338**",
+    "solution_gu": "9 × LCM = 306×657 = 201042 → LCM = **22338**",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_EX2Q5",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q5: Check whether 6ⁿ can end with the digit 0 for any natural number n.",
+    "question_hi": "अभ्यास 1.2, प्र.5: जाँचो कि क्या 6ⁿ किसी प्राकृत संख्या n के लिए अंक 0 पर समाप्त हो सकता है।",
+    "question_gu": "કસરત 1.2, પ્ર.5: શું 6ⁿ ક્યારેય 0 પર પૂર્ણ થઈ શકે?",
+    "solution": "For 6ⁿ to end in 0, it must be divisible by 10 = 2 × 5.\n6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ.\nThe prime factorization of 6ⁿ contains only 2 and 3, **never 5**.\nBy FTA, 5 is not a factor of 6ⁿ for any n.\nTherefore, **6ⁿ can never end with digit 0**. ∎",
+    "solution_hi": "6ⁿ = 2ⁿ × 3ⁿ — इसमें 5 कभी नहीं आता। 0 के लिए 2 और 5 दोनों चाहिए। अतः **6ⁿ कभी 0 पर समाप्त नहीं होता।** ∎",
+    "solution_gu": "6ⁿ=2ⁿ×3ⁿ — 5 ક્યારેય ગુણક નથી → 0 ક્યારેય ન આવે ∎",
+    "bloom": "Analyze",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH1_EX2Q6",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q6: Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+    "question_hi": "अभ्यास 1.2, प्र.6: समझाओ कि 7×11×13+13 और 7×6×5×4×3×2×1+5 भाज्य संख्याएँ क्यों हैं।",
+    "question_gu": "કસરત 1.2, પ્ર.6: 7×11×13+13 અને 7! + 5 ભાજ્ય (composite) કેમ?",
+    "solution": "**Part (i):** 7×11×13+13 = 13×(7×11+1) = 13×(77+1) = 13×78 = 13×2×3×13\nThis has factors other than 1 and itself → **composite** ✓\n\n**Part (ii):** 7×6×5×4×3×2×1+5 = 5×(7×6×4×3×2×1+1) = 5×(1008+1) = 5×1009\nThis has 5 as a factor → **composite** ✓",
+    "solution_hi": "(i) 7×11×13+13 = 13×78 = composite ✓\n(ii) 7!+5 = 5×(7!/5+1) = 5×1009 = composite ✓",
+    "solution_gu": "(i)13×78 → composite ✓ (ii)5×1009 → composite ✓",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_EX2Q7",
+    "type": "practice_question",
+    "question": "Exercise 1.2, Q7: There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+    "question_hi": "अभ्यास 1.2, प्र.7: सोनिया एक मैदान का चक्कर 18 मिनट में और रवि 12 मिनट में लगाते हैं। वे एक साथ शुरुआती बिंदु से निकलते हैं। कितने मिनट बाद वे फिर उसी बिंदु पर मिलेंगे?",
+    "question_gu": "કસરત 1.2, પ્ર.7: સોનિયા 18 મિ. અને રવિ 12 મિ.માં ગ્રાઉન્ડ ફરે. કેટલા મિ. પછી ફરી મળશે?",
+    "solution": "They will meet again after LCM(18, 12) minutes.\n18 = 2 × 3²\n12 = 2² × 3\nLCM = 2² × 3² = **36 minutes**",
+    "solution_hi": "LCM(18,12) मिनट बाद: 18=2×3²; 12=2²×3 → LCM=2²×3²=**36 मिनट**",
+    "solution_gu": "LCM(18,12)=36 → **36 મિનિટ** પછી",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH1_QUIZ_002",
+    "type": "quiz",
+    "question": "If HCF(a, b) = 12 and their LCM is 240, what is a × b?",
+    "question_hi": "अगर HCF(a,b) = 12 और LCM = 240 है, तो a × b क्या है?",
+    "question_gu": "HCF=12, LCM=240 → a×b=?",
+    "options": [
+      "252",
+      "2880",
+      "228",
+      "480"
+    ],
+    "options_hi": [
+      "252",
+      "2880",
+      "228",
+      "480"
+    ],
+    "options_gu": [
+      "252",
+      "2880",
+      "228",
+      "480"
+    ],
+    "correct_index": 1,
+    "explanation": "HCF × LCM = a × b → 12 × 240 = 2880",
+    "explanation_hi": "HCF × LCM = a × b → 12 × 240 = 2880",
+    "explanation_gu": "HCF × LCM = a × b = 12 × 240 = 2880",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_MEMORY_001",
+    "type": "memory_trick",
+    "title": "HCF vs LCM — The H-L Trick",
+    "title_hi": "HCF बनाम LCM — H-L ट्रिक",
+    "title_gu": "HCF vs LCM — H-L ટ્રિક",
+    "body": "**H**CF → **H**umble (Small) — take the **H**umblest (smallest) power of COMMON factors.\n**L**CM → **L**argest — take the **L**argest power of ALL factors.\nMemory hook: **HCF = Humble, LCM = Large!**",
+    "body_hi": "**H**CF → **H**ल्का (छोटा) — साझा गुणनखंडों की सबसे **छोटी** घात लो।\n**L**CM → **L**म्बा (बड़ा) — सभी गुणनखंडों की सबसे **बड़ी** घात लो।\nयाद रखो: **HCF = हल्का, LCM = लम्बा!**",
+    "body_gu": "**H**CF = **H**ળवो (નાનો) → સહ-ગુણક ની **નાની** ઘાત\n**L**CM = **L**ાંbો (મોટો) → બધા ગુણકોની **મોટી** ઘાત",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_SOCRATIC_003",
+    "type": "socratic_question",
+    "question": "Suppose √2 = p/q (a fraction in its simplest form). If we square both sides, we get 2 = p²/q². So p² = 2q². Does 2 divide p? If yes, what does that tell us about p? Then check: does 2 also divide q? What's the problem with that?",
+    "question_hi": "मान लो √2 = p/q (सरलतम रूप में भिन्न)। दोनों पक्षों का वर्ग करो: p² = 2q²। क्या 2, p को विभाजित करता है? अगर हाँ, तो p के बारे में क्या पता चलता है? क्या 2, q को भी विभाजित करता है? इसमें समस्या क्या है?",
+    "question_gu": "ધારો √2 = p/q (સ.ભ.=1). p² = 2q² → 2|p? → p=2c → q² = 2c² → 2|q? → p,q બন્ને 2 ના ગુણક — સ.ભ.=1 ખોટું! આ વિરોધ શું છે?",
+    "hint": "If p² is even, then p must be even (because if p were odd, p² would also be odd). This is a key number theory fact!",
+    "hint_hi": "अगर p² सम है, तो p भी सम होना चाहिए (क्योंकि विषम × विषम = विषम)।",
+    "hint_gu": "p² સમ (even) → p સમ (even) — कारण: odd × odd = odd.",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_THEO_003",
+    "type": "theory",
+    "title": "Irrational Numbers and Proof by Contradiction",
+    "title_hi": "अपरिमेय संख्याएँ और विरोधाभास द्वारा प्रमाण",
+    "title_gu": "અપ્રમેય સંખ્યાઓ અને વિરોધ-પ્રમાણ",
+    "body": "**Irrational numbers** cannot be written in the form p/q where p, q are integers and q ≠ 0. Their decimal expansion is **non-terminating and non-recurring** (e.g., √2 = 1.41421356...)\n\n**Proof that √2 is irrational:**\nAssume √2 = r/s, where r, s are coprime integers (HCF=1), s≠0.\n\n**Step 1:** Squaring: 2 = r²/s² → r² = 2s²\n\n**Step 2:** So 2 divides r². By theorem (if prime p|a², then p|a), 2 divides r.\n\n**Step 3:** Write r = 2c. Then (2c)² = 2s² → 4c² = 2s² → s² = 2c²\n\n**Step 4:** So 2 divides s² → 2 divides s.\n\n**Step 5:** Both r and s are divisible by 2 — this **contradicts** HCF(r,s) = 1!\n\n**Conclusion:** Our assumption was wrong. √2 is **irrational**. ∎\n\nThis same method proves √3, √5, √7, and many more are irrational.",
+    "body_hi": "**अपरिमेय संख्याएँ** p/q रूप में नहीं लिखी जा सकतीं। उनका दशमलव विस्तार **अनवसानी और अनावर्ती** होता है (जैसे √2 = 1.41421356...)\n\n**√2 के अपरिमेय होने का प्रमाण:**\nमान लो √2 = r/s (जहाँ r,s सहभाज्य, HCF=1, s≠0)\n\n**चरण 1:** वर्ग करो: r² = 2s² → 2, r को विभाजित करता है → r = 2c\n\n**चरण 2:** (2c)² = 2s² → s² = 2c² → 2, s को भी विभाजित करता है\n\n**चरण 3:** r और s दोनों सम हैं — यह HCF=1 से **विरोधाभास** है!\n\n**निष्कर्ष:** हमारी मान्यता गलत थी। √2 **अपरिमेय** है। ∎",
+    "body_gu": "**અપ્રમેય (Irrational)** = p/q સ્વરૂપ ના હોય. decimal → non-terminating, non-recurring.\n\n**√2 અપ્રમેય છે — પ્રમાણ:**\nધારો √2=r/s (HCF=1). → r²=2s² → 2|r → r=2c → s²=2c² → 2|s → r,s બંનેના 2 ગુણક → HCF≠1 **વિરોધ!** → √2 અપ્રમેય ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_TIP_003",
+    "type": "teacher_tip",
+    "title": "The Detective Analogy for Proof by Contradiction",
+    "title_hi": "विरोधाभास प्रमाण के लिए जासूस की उपमा",
+    "title_gu": "વિરોધ-પ્રમાણ = ડિટેક્ટિવ ટ્રિક",
+    "body": "Tell students: 'Proof by contradiction is detective work! You assume the suspect (√2) is innocent (rational). Then you follow the clues step by step. Eventually you find an impossible situation — the suspect was in two places at once! That impossibility proves the assumption was wrong — √2 is guilty of being irrational!' For EXAM: To prove √5, √3 irrational, simply replace √2 with √5 or √3 in the same proof structure.",
+    "body_hi": "छात्रों से कहो: 'विरोधाभास प्रमाण जासूसी की तरह है! मान लो √2 निर्दोष है (परिमेय)। क्लू फॉलो करते-करते एक असंभव स्थिति मिलती है — यही विरोधाभास है! इसलिए √2 अपरिमेय है।' परीक्षा टिप्स: √5 या √3 के लिए उसी संरचना में बस √2 को बदलो।",
+    "body_gu": "√2 ની જગ્યા √3, √5 મૂકીને સ્ટ્રક્ચર ઉપયોગ કરો — exam ટ્રિક!",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_004",
+    "type": "worked_example",
+    "title": "Example 4: Prove that √3 is irrational",
+    "title_hi": "उदाहरण 4: साबित करो कि √3 अपरिमेय है",
+    "title_gu": "ઉદાહરણ 4: √3 અપ્રમેય છે",
+    "steps": [
+      "Assume √3 = r/s (coprime, s≠0)",
+      "Squaring: r² = 3s² → 3 divides r² → 3 divides r",
+      "Write r = 3c → (3c)² = 3s² → 9c² = 3s² → s² = 3c²",
+      "So 3 divides s² → 3 divides s",
+      "Both r and s divisible by 3 → contradicts HCF(r,s)=1",
+      "∴ √3 is irrational ∎"
+    ],
+    "steps_hi": [
+      "√3 = r/s मानो (HCF=1)",
+      "r² = 3s² → 3|r → r = 3c",
+      "(3c)² = 3s² → s² = 3c² → 3|s",
+      "r और s दोनों 3 से विभाज्य → HCF≠1, विरोधाभास!",
+      "∴ √3 अपरिमेय है ∎"
+    ],
+    "steps_gu": [
+      "√3=r/s ધારો → r²=3s² → 3|r → r=3c → s²=3c² → 3|s → विरोध → √3 અپ્રમેय ∎"
+    ],
+    "answer": "√3 is irrational",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_005",
+    "type": "worked_example",
+    "title": "Example 5: Prove that 3 + 2√5 is irrational",
+    "title_hi": "उदाहरण 5: साबित करो कि 3 + 2√5 अपरिमेय है",
+    "title_gu": "ઉદાહરણ 5: 3+2√5 અપ્રમેય",
+    "steps": [
+      "Assume 3+2√5 is rational. Let 3+2√5 = a/b (coprime integers, b≠0).",
+      "Then 2√5 = a/b - 3 = (a - 3b)/b",
+      "So √5 = (a - 3b)/(2b)",
+      "Since a, b are integers, (a-3b)/(2b) is rational → √5 is rational.",
+      "But √5 is irrational (known fact) — CONTRADICTION!",
+      "∴ 3 + 2√5 is irrational. ∎"
+    ],
+    "steps_hi": [
+      "मान लो 3+2√5 = a/b (परिमेय)",
+      "√5 = (a-3b)/(2b) → √5 परिमेय होगा",
+      "पर √5 अपरिमेय है — विरोधाभास!",
+      "∴ 3+2√5 अपरिमेय है ∎"
+    ],
+    "steps_gu": [
+      "3+2√5=a/b ध्यारो → √5=(a-3b)/2b → √5 પ્રમેય → विरोध → 3+2√5 अप्रमेय ∎"
+    ],
+    "answer": "3 + 2√5 is irrational ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_EX3_HEADER",
+    "type": "theory",
+    "title": "Exercise 1.3 — Irrational Numbers",
+    "title_hi": "अभ्यास 1.3 — अपरिमेय संख्याएँ",
+    "title_gu": "કસરત 1.3 — અપ્રમેય સંખ્યાઓ",
+    "body": "Prove the following numbers are irrational using proof by contradiction. Key fact used: If prime p divides a², then p divides a.",
+    "body_hi": "विरोधाभास प्रमाण से निम्नलिखित संख्याओं को अपरिमेय सिद्ध करो। मुख्य तथ्य: अगर अभाज्य p, a² को विभाजित करे तो p, a को भी विभाजित करता है।",
+    "body_gu": "Proof by contradiction: यदि prime p | a² तो p | a.",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_EX3Q1",
+    "type": "practice_question",
+    "question": "Exercise 1.3, Q1: Prove that the following are irrationals:\n(i) 1/√2\n(ii) 7√5\n(iii) 6 + √2",
+    "question_hi": "अभ्यास 1.3, प्र.1: सिद्ध करो कि निम्नलिखित अपरिमेय हैं:\n(i) 1/√2\n(ii) 7√5\n(iii) 6 + √2",
+    "question_gu": "કसरत 1.3, પ્ર.1: સિद્ધ કरો:\n(i) 1/√2 (ii) 7√5 (iii) 6+√2",
+    "solution": "**(i) 1/√2:** Assume 1/√2 = a/b → √2 = b/a → √2 is rational → Contradiction (√2 is irrational) ∎\n\n**(ii) 7√5:** Assume 7√5 = a/b → √5 = a/(7b) → √5 is rational → Contradiction ∎\n\n**(iii) 6+√2:** Assume 6+√2 = a/b → √2 = a/b - 6 = (a-6b)/b → √2 is rational → Contradiction ∎",
+    "solution_hi": "(i) √2 = b/a → परिमेय → विरोधाभास ∎\n(ii) √5 = a/7b → परिमेय → विरोधाभास ∎\n(iii) √2 = (a-6b)/b → परिमेय → विरोधाभास ∎",
+    "solution_gu": "(i)√2=b/a→विरोध∎ (ii)√5=a/7b→विरोध∎ (iii)√2=(a-6b)/b→विरोध∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_EX3Q2",
+    "type": "practice_question",
+    "question": "Exercise 1.3, Q2: Prove that 3 + 2√3 is irrational.",
+    "question_hi": "अभ्यास 1.3, प्र.2: सिद्ध करो कि 3 + 2√3 अपरिमेय है।",
+    "question_gu": "कسरत 1.3, प्र.2: 3+2√3 अप्रमेय सिद्ध करो.",
+    "solution": "Assume 3+2√3 = a/b (a,b coprime integers, b≠0).\nThen 2√3 = a/b - 3 = (a-3b)/b\nSo √3 = (a-3b)/(2b) — this is rational.\nBut √3 is irrational → **Contradiction!** ∴ 3+2√3 is irrational. ∎",
+    "solution_hi": "√3 = (a-3b)/2b → परिमेय → √3 परिमेय → विरोधाभास → 3+2√3 अपरिमेय ∎",
+    "solution_gu": "√3=(a-3b)/2b → पूर्ण सिद्ध ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_EX3Q3",
+    "type": "practice_question",
+    "question": "Exercise 1.3, Q3: Prove that the following are irrational:\n(i) 2+√3\n(ii) 5 - √3\n(iii) 1/(2-√3)",
+    "question_hi": "अभ्यास 1.3, प्र.3: सिद्ध करो अपरिमेय:\n(i) 2+√3\n(ii) 5-√3\n(iii) 1/(2-√3)",
+    "question_gu": "کसरत 1.3, प्र.3: अप्रमेय सिद्ध:\n(i)2+√3 (ii)5-√3 (iii)1/(2-√3)",
+    "solution": "**(i)** Assume 2+√3 = a/b → √3 = a/b - 2 = (a-2b)/b → rational → Contradiction ∎\n\n**(ii)** Assume 5-√3 = a/b → √3 = 5 - a/b = (5b-a)/b → rational → Contradiction ∎\n\n**(iii)** Rationalize: 1/(2-√3) = (2+√3)/((2-√3)(2+√3)) = (2+√3)/(4-3) = 2+√3\nSince 2+√3 is irrational (proved in i), 1/(2-√3) is **irrational**. ∎",
+    "solution_hi": "(i) √3=(a-2b)/b → परिमेय → विरोधाभास ∎\n(ii) √3=(5b-a)/b → परिमेय → विरोधाभास ∎\n(iii) 1/(2-√3) = 2+√3 = अपरिमेय ∎",
+    "solution_gu": "(i)विरोध∎ (ii)विरोध∎ (iii)=2+√3=अपर्मेय∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_QUIZ_003",
+    "type": "quiz",
+    "question": "In the proof that √2 is irrational, what conclusion do we reach that creates the contradiction?",
+    "question_hi": "√2 के अपरिमेय होने के प्रमाण में, क्या निष्कर्ष विरोधाभास उत्पन्न करता है?",
+    "question_gu": "√2 અپ્રมেय ——prove में कौन सा विरोध?",
+    "options": [
+      "That r and s are both even, contradicting their coprimeness (HCF=1)",
+      "That r² is odd when it should be even",
+      "That the square root of an even number is always rational"
+    ],
+    "options_hi": [
+      "r और s दोनों सम हैं, जो HCF=1 से विरोधाभास है",
+      "r² विषम है जबकि सम होना चाहिए",
+      "सम संख्या का वर्गमूल हमेशा परिमेय होता है"
+    ],
+    "options_gu": [
+      "r,s બંને સમ → HCF≠1 — વિraud",
+      "r² = odd",
+      "√even = rational"
+    ],
+    "correct_index": 0,
+    "explanation": "We show both r and s are divisible by 2, which contradicts the initial assumption that HCF(r,s)=1 (i.e., they are coprime).",
+    "explanation_hi": "हम साबित करते हैं कि r और s दोनों 2 से विभाज्य हैं, जो HCF(r,s)=1 की मान्यता से विरोधाभास है।",
+    "explanation_gu": "r,s બંને 2 ના ગुণित → HCF≠1 → विरोध",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_SOCRATIC_004",
+    "type": "socratic_question",
+    "question": "Calculate 1/4 and 1/3 on your calculator. Notice that 1/4 = 0.25 (stops!) while 1/3 = 0.333... (goes on forever). Why does one stop and the other doesn't? What is different about the denominators 4 and 3?",
+    "question_hi": "कैलकुलेटर पर 1/4 और 1/3 निकालो। 1/4 = 0.25 (रुक जाता है!) लेकिन 1/3 = 0.333... (कभी नहीं रुकता)। एक क्यों रुकता है और दूसरा नहीं? 4 और 3 में क्या अंतर है?",
+    "question_gu": "1/4=0.25 (અटके), 1/3=0.333... (ચાલu). Denominator 4 vs 3 — शो फरक?",
+    "hint": "Look at the prime factors of 4 and 3. 4 = 2², 3 = 3. Which prime factors does 10 have?",
+    "hint_hi": "4 = 2² और 3 = 3। 10 = 2 × 5। किसके गुणनखंड 10 से मिलते हैं?",
+    "hint_gu": "10=2×5. 4=2² → 2,5 ગुणक → terminates!",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_THEO_004",
+    "type": "theory",
+    "title": "Decimal Expansions of Rational Numbers",
+    "title_hi": "परिमेय संख्याओं का दशमलव विस्तार",
+    "title_gu": "પ્રમેય સংخ्याओनો decimal expansion",
+    "body": "**Theorem 1:** Let x = p/q be a rational number in simplest form. If the prime factorization of q is of the form **2ⁿ × 5ᵐ** (where n, m ≥ 0), then x has a **terminating** decimal expansion.\n\n**Theorem 2:** If the prime factorization of q is **NOT** of the form 2ⁿ × 5ᵐ (i.e., it contains other prime factors like 3, 7, 11, ...), then x has a **non-terminating repeating (recurring)** decimal expansion.\n\n**Examples:**\n| Fraction | Denominator | Factorization | Type |\n|----------|-------------|---------------|------|\n| 3/8 | 8 | 2³ | **Terminating** (= 0.375) |\n| 13/3125 | 3125 | 5⁵ | **Terminating** |\n| 7/6 | 6 | 2 × 3 | **Non-terminating repeating** |\n| 2/11 | 11 | 11 | **Non-terminating repeating** |\n| 1/15 | 15 | 3 × 5 | **Non-terminating repeating** |\n\n**Key Insight:** To convert a terminating decimal, multiply numerator and denominator to make the denominator a power of 10.\n\nExample: 13/3125 = 13/5⁵ = (13 × 2⁵)/(5⁵ × 2⁵) = 416/100000 = 0.00416",
+    "body_hi": "**प्रमेय 1:** यदि q का अभाज्य गुणनखंड **2ⁿ × 5ᵐ** रूप में हो, तो p/q का **सांत दशमलव विस्तार** होगा।\n\n**प्रमेय 2:** यदि q में 2 और 5 के अलावा भी अभाज्य गुणनखंड हों, तो p/q का **असांत आवर्ती दशमलव विस्तार** होगा।\n\n**उदाहरण:**\n- 3/8 = 0.375 → **सांत** (8 = 2³)\n- 7/6 → **असांत आवर्ती** (6 = 2 × 3)\n- 1/15 → **असांत आवर्ती** (15 = 3 × 5)",
+    "body_gu": "**Theorem 1:** q=2ⁿ×5ᵐ → **Terminating**\n**Theorem 2:** q ≠ 2ⁿ×5ᵐ → **Non-terminating recurring**\n\nઉdaheran:\n- 3/8 → terminating (0.375)\n- 7/6 → non-terminating recurring\n- 1/15 → non-terminating recurring",
+    "bloom": "Understand",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 6
+  },
+  {
+    "id": "C10M_CH1_TIP_004",
+    "type": "teacher_tip",
+    "title": "The 'Look at Denominator Only' Shortcut",
+    "title_hi": "'केवल हर देखो' शॉर्टकट",
+    "title_gu": "ફક્ત Denominator જ देखো — Trick",
+    "body": "Exam shortcut: Simplify the fraction first. Then look ONLY at the denominator. If ALL its prime factors are from {2, 5} only → terminating. If ANY other prime (3, 7, 11, 13...) appears → non-terminating repeating. You do NOT need to actually divide!",
+    "body_hi": "परीक्षा शॉर्टकट: पहले भिन्न सरल करो। फिर केवल हर देखो। अगर सभी अभाज्य गुणनखंड {2, 5} में से हों → सांत। अगर कोई और प्राइम हो (3, 7, 11...) → असांत आवर्ती। भाग करने की ज़रूरत नहीं!",
+    "body_gu": "Fraction simplify → denominator → ফক्त {2,5} → terminating; अन्य prime → non-terminating!",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_006",
+    "type": "worked_example",
+    "title": "Example 6: Without actual division, determine the nature of decimal expansion of 29/343",
+    "title_hi": "उदाहरण 6: 29/343 का दशमलव विस्तार बिना भाग किए निर्धारित करो",
+    "title_gu": "ઉदाहरण 6: 29/343 — decimal expansion ना जोया",
+    "steps": [
+      "343 = 7³",
+      "The denominator has only the prime factor 7 (not 2 or 5)",
+      "Therefore, 29/343 has a NON-TERMINATING REPEATING decimal expansion"
+    ],
+    "steps_hi": [
+      "343 = 7³ — केवल 7 है (2 या 5 नहीं)",
+      "अतः 29/343 → असांत आवर्ती दशमलव विस्तार"
+    ],
+    "steps_gu": [
+      "343=7³ → prime factor = 7 (not 2 or 5) → Non-terminating repeating"
+    ],
+    "answer": "Non-terminating repeating",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_EXAMPLE_007",
+    "type": "worked_example",
+    "title": "Example 7: Write the decimal expansion of 13/3125 and verify it terminates",
+    "title_hi": "उदाहरण 7: 13/3125 का दशमलव विस्तार लिखो",
+    "title_gu": "ઉदाहरण 7: 13/3125 decimal expand",
+    "steps": [
+      "3125 = 5⁵ → denominator is of form 2⁰ × 5⁵ → terminates",
+      "13/3125 = 13/(5⁵) = (13 × 2⁵)/(5⁵ × 2⁵) = (13 × 32)/10⁵",
+      "= 416/100000 = 0.00416"
+    ],
+    "steps_hi": [
+      "3125 = 5⁵ → सांत दशमलव",
+      "13/3125 = 416/100000 = 0.00416"
+    ],
+    "steps_gu": [
+      "3125=5⁵ → terminates; 13/3125 = 416/100000 = 0.00416"
+    ],
+    "answer": "0.00416 (terminating)",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_EX4_HEADER",
+    "type": "theory",
+    "title": "Exercise 1.4 — Decimal Expansions of Rational Numbers",
+    "title_hi": "अभ्यास 1.4 — परिमेय संख्याओं का दशमलव विस्तार",
+    "title_gu": "કसरत 1.4 — Decimal Expansions",
+    "body": "Determine whether the decimal expansion terminates or repeats, without performing actual long division.",
+    "body_hi": "भाग किए बिना निर्धारित करो कि दशमलव विस्तार सांत है या आवर्ती।",
+    "body_gu": "ভाग ব্যতীत: terminating या non-terminating?",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_EX4Q1",
+    "type": "practice_question",
+    "question": "Exercise 1.4, Q1: Without performing long division, state whether the following rational numbers will have a terminating or a non-terminating repeating decimal expansion:\n(i) 13/3125\n(ii) 17/8\n(iii) 64/455\n(iv) 15/1600\n(v) 29/343\n(vi) 23/(2³ × 5²)\n(vii) 129/(2² × 5⁷ × 7⁵)\n(viii) 6/15\n(ix) 35/50\n(x) 77/210",
+    "question_hi": "अभ्यास 1.4, प्र.1: बिना भाग किए बताओ: सांत या असांत आवर्ती?\n(i)13/3125 (ii)17/8 (iii)64/455 (iv)15/1600 (v)29/343 (vi)23/(2³×5²) (vii)129/(2²×5⁷×7⁵) (viii)6/15 (ix)35/50 (x)77/210",
+    "question_gu": "ভाग ব্যতীत: terminating/non-terminating?\n(i-x) নিচে",
+    "solution": "(i) 3125=5⁵ → **Terminating** (0.00416)\n(ii) 8=2³ → **Terminating** (2.125)\n(iii) 455=5×7×13 → 7 and 13 present → **Non-terminating repeating**\n(iv) 1600=2⁶×5² → **Terminating** (0.009375)\n(v) 343=7³ → 7 present → **Non-terminating repeating**\n(vi) 2³×5² only → **Terminating** (0.115)\n(vii) 7⁵ present → **Non-terminating repeating**\n(viii) 6/15 = 2/5 (simplified) → denominator=5¹ → **Terminating** (0.4)\n(ix) 35/50 = 7/10 → 10=2×5 → **Terminating** (0.7)\n(x) 77/210 = 11/30, 30=2×3×5 → 3 present → **Non-terminating repeating**",
+    "solution_hi": "(i)T (ii)T (iii)NT (iv)T (v)NT (vi)T (vii)NT (viii)T (ix)T (x)NT\n[T=सांत, NT=असांत आवर्ती]",
+    "solution_gu": "(i)T (ii)T (iii)NT (iv)T (v)NT (vi)T (vii)NT (viii)T (ix)T (x)NT",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 8
+  },
+  {
+    "id": "C10M_CH1_EX4Q2",
+    "type": "practice_question",
+    "question": "Exercise 1.4, Q2: Write down the decimal expansions of those rational numbers in Question 1 above which have terminating decimal expansions.",
+    "question_hi": "अभ्यास 1.4, प्र.2: ऊपर के प्रश्न 1 में जो संख्याओं का सांत दशमलव विस्तार है, उन्हें लिखो।",
+    "question_gu": "Q1 ना terminating fractions ना decimal expansion:",
+    "solution": "(i) 13/3125 = 13×2⁵/(5⁵×2⁵) = 416/100000 = **0.00416**\n(ii) 17/8 = 17×5³/(2³×5³) = 2125/1000 = **2.125**\n(iv) 15/1600 = 15/(2⁶×5²) = 15×5⁴/(2⁶×5⁶) = 15×625/10⁸ = 9375/10000000 → simplify: **0.009375**\n(vi) 23/(2³×5²) = 23×5/(2³×5³) = 115/1000 = **0.115**\n(viii) 6/15 = 2/5 = **0.4**\n(ix) 35/50 = 7/10 = **0.7**",
+    "solution_hi": "(i)0.00416 (ii)2.125 (iv)0.009375 (vi)0.115 (viii)0.4 (ix)0.7",
+    "solution_gu": "(i)0.00416 (ii)2.125 (iv)0.009375 (vi)0.115 (viii)0.4 (ix)0.7",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 6
+  },
+  {
+    "id": "C10M_CH1_EX4Q3",
+    "type": "practice_question",
+    "question": "Exercise 1.4, Q3: The following real numbers have decimal expansions as given below. In each case, decide whether they are rational or irrational:\n(i) 43.123456789\n(ii) 0.120120012000120000...\n(iii) 43.̄1̄2̄3̄4̄5̄6̄7̄8̄9̄ (43.123456789 recurring)",
+    "question_hi": "अभ्यास 1.4, प्र.3: नीचे दिए गए दशमलव विस्तार वाली वास्तविक संख्याएँ परिमेय हैं या अपरिमेय?\n(i) 43.123456789\n(ii) 0.120120012000120000...\n(iii) 43.123456789123456789... (आवर्ती)",
+    "question_gu": "ये real numbers rational या irrational?\n(i)43.123456789 (ii)0.120120012000... (iii)43.12345678̄9̄ recurring",
+    "solution": "(i) 43.123456789 — terminating decimal → **Rational** (= 43123456789/1000000000)\n\n(ii) 0.120120012000120000... — non-terminating and NON-RECURRING (pattern grows: 12, 1200, 120000...) → **Irrational**\n\n(iii) 43.123456789123456789... — non-terminating but RECURRING (block 123456789 repeats) → **Rational**",
+    "solution_hi": "(i) सांत → **परिमेय** ✓\n(ii) असांत + अनावर्ती → **अपरिमेय** ✓\n(iii) असांत + आवर्ती → **परिमेय** ✓",
+    "solution_gu": "(i)Rational (ii)Irrational (iii)Rational",
+    "bloom": "Analyze",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 5
+  },
+  {
+    "id": "C10M_CH1_BOARD_HEADER",
+    "type": "theory",
+    "title": "Important Board Exam Questions",
+    "title_hi": "महत्त्वपूर्ण बोर्ड परीक्षा प्रश्न",
+    "title_gu": "Important Board Exam Questions",
+    "body": "These questions have frequently appeared in CBSE board examinations. Master these!",
+    "body_hi": "ये प्रश्न CBSE बोर्ड परीक्षाओं में बार-बार आए हैं। इन्हें ज़रूर अभ्यास करो!",
+    "body_gu": "CBSE Board exam मां baar baar aavta questions:",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_BOARD_001",
+    "type": "quiz",
+    "question": "BOARD: The product of two numbers is 1080 and their HCF is 30. Find their LCM.",
+    "question_hi": "बोर्ड: दो संख्याओं का गुणनफल 1080 और HCF 30 है। LCM निकालो।",
+    "question_gu": "BOARD: product=1080, HCF=30, LCM=?",
+    "options": [
+      "36",
+      "360",
+      "54",
+      "3240"
+    ],
+    "options_hi": [
+      "36",
+      "360",
+      "54",
+      "3240"
+    ],
+    "options_gu": [
+      "36",
+      "360",
+      "54",
+      "3240"
+    ],
+    "correct_index": 0,
+    "explanation": "LCM = Product / HCF = 1080 / 30 = 36",
+    "explanation_hi": "LCM = 1080 / 30 = 36",
+    "explanation_gu": "LCM = 1080/30 = 36",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_BOARD_002",
+    "type": "quiz",
+    "question": "BOARD: Which of the following has a terminating decimal expansion?",
+    "question_hi": "बोर्ड: किसका सांत दशमलव विस्तार है?",
+    "question_gu": "BOARD: terminating decimal?",
+    "options": [
+      "7/6",
+      "2/3",
+      "3/8",
+      "1/7"
+    ],
+    "options_hi": [
+      "7/6",
+      "2/3",
+      "3/8",
+      "1/7"
+    ],
+    "options_gu": [
+      "7/6",
+      "2/3",
+      "3/8",
+      "1/7"
+    ],
+    "correct_index": 2,
+    "explanation": "8 = 2³. Only prime factor is 2. So 3/8 has a terminating decimal expansion (= 0.375).",
+    "explanation_hi": "8 = 2³। केवल 2 है। इसलिए 3/8 का सांत दशमलव विस्तार है (= 0.375)।",
+    "explanation_gu": "8=2³ → terminating (0.375)",
+    "bloom": "Apply",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_BOARD_003",
+    "type": "quiz",
+    "question": "BOARD: The HCF of two numbers is 9 and their LCM is 2016. If one number is 54, find the other.",
+    "question_hi": "बोर्ड: दो संख्याओं का HCF 9 और LCM 2016 है। एक संख्या 54 है। दूसरी संख्या निकालो।",
+    "question_gu": "HCF=9, LCM=2016, एक=54, दूसरी=?",
+    "options": [
+      "336",
+      "324",
+      "288",
+      "252"
+    ],
+    "options_hi": [
+      "336",
+      "324",
+      "288",
+      "252"
+    ],
+    "options_gu": [
+      "336",
+      "324",
+      "288",
+      "252"
+    ],
+    "correct_index": 0,
+    "explanation": "Other = (HCF × LCM) / 54 = (9 × 2016) / 54 = 18144 / 54 = 336",
+    "explanation_hi": "दूसरी = (9 × 2016) / 54 = 336",
+    "explanation_gu": "(9×2016)/54 = 336",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_BOARD_004",
+    "type": "quiz",
+    "question": "BOARD: Prove that 5 is irrational. (Short answer: which key step makes the contradiction?)",
+    "question_hi": "बोर्ड: √5 अपरिमेय है — प्रमाण में विरोधाभास कौन-सा है?",
+    "question_gu": "√5 irrational proof — कौन विरोध?",
+    "options": [
+      "Both r and s are divisible by 5, contradicting HCF(r,s)=1",
+      "r² = 5 leads to r being irrational",
+      "5 cannot be written in any form"
+    ],
+    "options_hi": [
+      "r और s दोनों 5 से विभाज्य → HCF≠1, विरोधाभास",
+      "r² = 5 → r अपरिमेय होगा",
+      "5 किसी भी रूप में नहीं लिखा जा सकता"
+    ],
+    "options_gu": [
+      "r,s दोनों 5 के गुणज → HCF≠1",
+      "r² = 5 → r irrational",
+      "5 किसी form में नहीं"
+    ],
+    "correct_index": 0,
+    "explanation": "Assume √5 = r/s (coprime). Then r²=5s² → 5|r → r=5c → s²=5c² → 5|s. Both r,s divisible by 5 → contradicts HCF(r,s)=1. ∴ √5 is irrational.",
+    "explanation_hi": "r²=5s² → 5|r → r=5c → s²=5c² → 5|s → HCF≠1 → विरोधाभास → √5 अपरिमेय ∎",
+    "explanation_gu": "r,s बंने 5 ना गुणज → HCF≠1 → विरोध → √5 अप्रमेय ∎",
+    "bloom": "Analyze",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_BOARD_005",
+    "type": "quiz",
+    "question": "BOARD: Can LCM of two numbers ever be smaller than their HCF?",
+    "question_hi": "बोर्ड: क्या LCM कभी HCF से छोटा हो सकता है?",
+    "question_gu": "LCM < HCF? — शक्य?",
+    "options": [
+      "No, LCM is always ≥ HCF for any two natural numbers",
+      "Yes, when one number divides the other",
+      "Yes, when both numbers are prime"
+    ],
+    "options_hi": [
+      "नहीं, LCM हमेशा ≥ HCF होता है",
+      "हाँ, जब एक दूसरे को विभाजित करता है",
+      "हाँ, जब दोनों अभाज्य हों"
+    ],
+    "options_gu": [
+      "ना, LCM ≥ HCF हमेशा",
+      "हाँ, एक बीजाकरण से",
+      "हाँ, prime नंबर"
+    ],
+    "correct_index": 0,
+    "explanation": "LCM is always a multiple of HCF. So LCM ≥ HCF always. LCM = HCF only when both numbers are equal.",
+    "explanation_hi": "LCM, HCF का गुणज होता है। अतः LCM ≥ HCF हमेशा। LCM = HCF तभी जब दोनों संख्याएँ बराबर हों।",
+    "explanation_gu": "LCM, HCF नो ગুणаकار → LCM ≥ HCF हमेशा",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_EXAM_TIPS",
+    "type": "exam_tips",
+    "title": "Exam Tips for Chapter 1: Real Numbers",
+    "title_hi": "परीक्षा टिप्स: अध्याय 1 वास्तविक संख्याएँ",
+    "title_gu": "પરીક્ષા માટેની ટિપ્સ: પ્રકરણ 1 વાસ્તવિક સંખ્યાઓ",
+    "tips": [
+      "Always simplify the fraction FIRST before checking denominator for terminating/non-terminating",
+      "For irrationality proofs: use the template — Assume rational → square both sides → show prime divides both → contradiction",
+      "Remember: HCF × LCM = a × b (for exactly TWO numbers, not three!)",
+      "Euclid's Algorithm: always apply a = bq + r with the LARGER number as 'a'",
+      "Know by heart: √2, √3, √5, √7 are all irrational",
+      "6ⁿ never ends in 0. 10ⁿ always ends in 0.",
+      "FTA says prime factorization is UNIQUE (ignore order)"
+    ],
+    "tips_hi": [
+      "पहले भिन्न सरल करो, फिर हर की जाँच करो",
+      "अपरिमेयता प्रमाण: मान लो परिमेय → वर्ग → विरोधाभास",
+      "HCF × LCM = a × b (दो संख्याओं के लिए, तीन नहीं!)",
+      "यूक्लिड एल्गोरिथ्म: बड़ी संख्या को 'a' रखो",
+      "याद रखो: √2, √3, √5, √7 अपरिमेय हैं",
+      "6ⁿ कभी 0 पर नहीं समाप्त होता",
+      "FTA: अभाज्य गुणनखंडन अद्वितीय होता है"
+    ],
+    "tips_gu": [
+      "શાંત/અનંત આવૃત્ત માટે છેદ તપાસતા પહેલા હંમેશા અપૂર્ણાંકનું અતિસંક્ષિપ્ત રૂપ આપો",
+      "અસંમેય સાબિતી માટે: સંમેય ધારો → બંને બાજુ વર્ગ કરો → વિરોધાભાસ દર્શાવો",
+      "યાદ રાખો: ગુ.સા.અ. × લ.સા.અ. = a × b (માત્ર બે સંખ્યાઓ માટે!)",
+      "યુક્લિડની પ્રવિધિ: હંમેશા મોટી સંખ્યાને 'a' તરીકે લો",
+      "યાદ રાખો: √2, √3, √5, √7 બધી અસંમેય સંખ્યાઓ છે",
+      "6ⁿ નો અંત ક્યારેય 0 થી થતો નથી. 10ⁿ નો અંત હંમેશા 0 થી થાય છે.",
+      "અંકગણિતનો મૂળભૂત પ્રમેય કહે છે કે અવિભાજ્ય અવયવીકરણ અનન્ય (unique) છે"
+    ],
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_MISTAKES",
+    "type": "common_mistakes",
+    "title": "Common Mistakes — Real Numbers",
+    "title_hi": "सामान्य गलतियाँ — वास्तविक संख्याएँ",
+    "title_gu": "સામાન્ય ભૂલો — વાસ્તવિક સંખ્યાઓ",
+    "body": "**Mistake 1:** Using HCF × LCM = a × b for three numbers. ❌\n→ This formula works ONLY for TWO numbers.\n\n**Mistake 2:** Forgetting to simplify before checking decimal type. ❌\n→ Always simplify 6/15 to 2/5 first!\n\n**Mistake 3:** Starting proof by contradiction without saying 'Let r and s be coprime.' ❌\n→ Always state HCF(r,s)=1 at the beginning.\n\n**Mistake 4:** Saying LCM is always larger than HCF. ❌\n→ LCM = HCF when both numbers are equal (e.g., HCF(5,5)=LCM(5,5)=5).\n\n**Mistake 5:** Confusing terminating with non-recurring. ❌\n→ Terminating = stops. Non-terminating recurring = goes on with repeating block. Non-terminating non-recurring = irrational!",
+    "body_hi": "**गलती 1:** तीन संख्याओं के लिए HCF×LCM=a×b लगाना ❌\n**गलती 2:** सरल किए बिना हर देखना ❌\n**गलती 3:** प्रमाण में HCF(r,s)=1 न लिखना ❌\n**गलती 4:** LCM हमेशा HCF से बड़ा सोचना ❌\n**गलती 5:** सांत और अनावर्ती में फर्क न करना ❌",
+    "body_gu": "**ભૂલ 1:** ત્રણ સંખ્યાઓ માટે ગુ.સા.અ. × લ.સા.અ. = a × b નો ઉપયોગ કરવો ❌\n→ આ સૂત્ર માત્ર બે સંખ્યાઓ માટે જ કામ કરે છે.\n\n**ભૂલ 2:** દશાંશ પ્રકાર તપાસતા પહેલા અતિસંક્ષિપ્ત રૂપ આપવાનું ભૂલી જવું ❌\n→ હંમેશા પહેલા 6/15 નું 2/5 માં અતિસંક્ષિપ્ત રૂપ આપો!\n\n**ભૂલ 3:** ગુ.સા.અ.(r,s)=1 દર્શાવ્યા વગર વિરોધાભાસની સાબિતી શરૂ કરવી ❌\n→ શરૂઆતમાં હંમેશા ગુ.સા.અ.(r,s)=1 દર્શાવો.\n\n**ભૂલ 4:** એવું કહેવું કે લ.સા.અ. હંમેશા ગુ.સા.અ. કરતાં મોટો હોય છે ❌\n→ જ્યારે બંને સંખ્યાઓ સમાન હોય ત્યારે લ.સા.અ. = ગુ.સા.અ. થાય છે.\n\n**ભૂલ 5:** શાંત અને અનંત અનાવૃત્ત વચ્ચે ગૂંચવણ ❌\n→ શાંત = અટકી જાય છે. અનંત આવૃત્ત = એક સમાન બ્લોકનું પુનરાવર્તન થાય છે. અનંત અનાવૃત્ત = અસંમેય!",
+    "bloom": "Evaluate",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_FLASH_001",
+    "type": "flashcard",
+    "front": "State Euclid's Division Lemma.",
+    "front_hi": "यूक्लिड का विभाजन सहप्रमेय बताओ।",
+    "front_gu": "યુક્લિડનું ભાગાકારનું પૂર્વપ્રમેય જણાવો.",
+    "back": "For positive integers a and b: a = bq + r, where 0 ≤ r < b (q and r are unique).",
+    "back_hi": "धनात्मक पूर्णांकों a और b के लिए: a = bq + r, जहाँ 0 ≤ r < b (q और r अद्वितीय हैं)।",
+    "back_gu": "ધન પૂર્ણાંકો a અને b માટે: a = bq + r, જ્યાં 0 ≤ r < b (q અને r અનન્ય છે).",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_FLASH_002",
+    "type": "flashcard",
+    "front": "What does the Fundamental Theorem of Arithmetic state?",
+    "front_hi": "अंकगणित का मूल प्रमेय क्या कहता है?",
+    "front_gu": "અંકગણિતનું મૂળભૂત પ્રમેય શું જણાવે છે?",
+    "back": "Every composite number can be expressed as a product of primes in a UNIQUE way (apart from the order).",
+    "back_hi": "प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में अद्वितीय तरीके से (क्रम को छोड़कर) व्यक्त किया जा सकता है।",
+    "back_gu": "દરેક વિભાજ્ય સંખ્યાને અવિભાજ્ય સંખ્યાઓના ગુણાકાર સ્વરૂપે (ક્રમને અવગણીને) અનન્ય રીતે દર્શાવી શકાય છે.",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_FLASH_003",
+    "type": "flashcard",
+    "front": "What condition makes p/q a terminating decimal?",
+    "front_hi": "p/q सांत दशमलव कब होता है?",
+    "front_gu": "કઈ શરત p/q ને શાંત દશાંશ બનાવે છે?",
+    "back": "When the prime factorization of q (in simplest form) is of the form 2ⁿ × 5ᵐ (n, m ≥ 0).",
+    "back_hi": "जब q के अभाज्य गुणनखंड केवल 2 या 5 (या दोनों) हों।",
+    "back_gu": "જો q ના અવિભાજ્ય અવયવો માત્ર 2 અથવા 5 (અથવા બંને) હોય.",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_FLASH_004",
+    "type": "flashcard",
+    "front": "What is the relationship between HCF, LCM, and the product of two numbers?",
+    "front_hi": "HCF, LCM और दो संख्याओं के गुणनफल में क्या संबंध है?",
+    "front_gu": "ગુ.સા.અ., લ.સા.અ. અને બે સંખ્યાઓના ગુણાકાર વચ્ચે શું સંબંધ છે?",
+    "back": "HCF(a, b) × LCM(a, b) = a × b\n(Valid for exactly TWO positive integers only)",
+    "back_hi": "HCF(a, b) × LCM(a, b) = a × b\n(केवल दो धनात्मक पूर्णांकों के लिए)",
+    "back_gu": "ગુ.સા.અ.(a, b) × લ.સા.અ.(a, b) = a × b",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_FLASH_005",
+    "type": "flashcard",
+    "front": "What is the decimal expansion of an irrational number like?",
+    "front_hi": "अपरिमेय संख्या का दशमलव विस्तार कैसा होता है?",
+    "front_gu": "અસંમેય સંખ્યાનું દશાંશ વિસ્તરણ કેવું હોય છે?",
+    "back": "Non-terminating and Non-recurring (non-repeating). Example: √2 = 1.41421356...",
+    "back_hi": "असांत और अनावर्ती (कभी नहीं रुकता, कोई दोहराव नहीं)। उदाहरण: √2 = 1.41421356...",
+    "back_gu": "અનંત અને અનાવૃત્ત (Non-terminating and non-recurring).",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_SUMMARY",
+    "type": "summary",
+    "title": "Chapter Summary: Real Numbers",
+    "title_hi": "अध्याय सारांश: वास्तविक संख्याएँ",
+    "title_gu": "Chapter Summary: Real Numbers",
+    "body": "**What We Learned:**\n\n🔷 **Euclid's Division Lemma:** a = bq + r (0 ≤ r < b) — basis for finding HCF step by step.\n\n🔷 **Fundamental Theorem of Arithmetic:** Every composite number has a **unique** prime factorization.\n\n🔷 **HCF by FTA:** Smallest powers of common prime factors.\n\n🔷 **LCM by FTA:** Greatest powers of all prime factors.\n\n🔷 **Key Formula:** HCF × LCM = a × b (for two numbers).\n\n🔷 **Irrationality:** √2, √3, √5, √7 are all irrational. Proved by contradiction — assume rational, derive impossible conclusion.\n\n🔷 **Decimal Expansions:**\n  - q = 2ⁿ5ᵐ → Terminating\n  - q ≠ 2ⁿ5ᵐ → Non-terminating repeating\n  - Irrational → Non-terminating non-repeating",
+    "body_hi": "**हमने क्या सीखा:**\n\n🔷 **यूक्लिड का सहप्रमेय:** a = bq + r → HCF निकालने का आधार\n🔷 **FTA:** हर भाज्य संख्या का **अद्वितीय** अभाज्य गुणनखंडन\n🔷 **HCF:** साझा गुणनखंडों की सबसे छोटी घात\n🔷 **LCM:** सभी गुणनखंडों की सबसे बड़ी घात\n🔷 **सूत्र:** HCF × LCM = a × b\n🔷 **अपरिमेयता:** √2, √3, √5, √7 अपरिमेय हैं\n🔷 **दशमलव:** q=2ⁿ5ᵐ → सांत; अन्यथा → असांत आवर्ती; अपरिमेय → असांत अनावर्ती",
+    "body_gu": "**Chapter ना मुখ्य points:**\n🔷 Euclid Lemma: a=bq+r\n🔷 FTA: unique prime factorization\n🔷 HCF: smallest power of common factors\n🔷 LCM: largest power of all factors\n🔷 HCF×LCM = a×b\n🔷 √2,√3,√5,√7 = irrational\n🔷 q=2ⁿ5ᵐ → terminating; otherwise → recurring",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_CHALLENGE_001",
+    "type": "challenge_question",
+    "question": "CHALLENGE: Without a calculator, find the LCM of 2³ × 3² × 5 and 2² × 3³ × 7.",
+    "question_hi": "चुनौती: बिना कैलकुलेटर के LCM निकालो: 2³×3² ×5 और 2²×3³×7",
+    "question_gu": "CHALLENGE: LCM(2³×3²×5, 2²×3³×7) = ?",
+    "hint": "For LCM, take EACH prime to its HIGHEST power across both numbers.",
+    "hint_hi": "LCM के लिए: हर अभाज्य की सबसे बड़ी घात लो।",
+    "hint_gu": "LCM: दरेक prime ни highest power.",
+    "solution": "LCM = 2³ × 3³ × 5 × 7 = 8 × 27 × 5 × 7 = **7560**",
+    "solution_hi": "LCM = 2³×3³×5×7 = 8×27×5×7 = **7560**",
+    "solution_gu": "LCM = 2³×3³×5×7 = 7560",
+    "bloom": "Apply",
+    "difficulty": "Advanced",
+    "estimated_minutes": 3
+  },
+  {
+    "id": "C10M_CH1_CHALLENGE_002",
+    "type": "challenge_question",
+    "question": "CHALLENGE: Three bells ring at intervals of 8, 12, and 15 minutes. They rang together at 12:00 noon. When will they ring together again?",
+    "question_hi": "चुनौती: तीन घंटियाँ 8, 12, और 15 मिनट के अंतराल पर बजती हैं। दोपहर 12 बजे एक साथ बजीं। फिर कब एक साथ बजेंगी?",
+    "question_gu": "CHALLENGE: 3 bell: 8, 12, 15 min. 12 noon पर साथ. फिर कब?",
+    "hint": "Find LCM(8, 12, 15)",
+    "hint_hi": "LCM(8, 12, 15) निकालो",
+    "hint_gu": "LCM(8,12,15)",
+    "solution": "8 = 2³, 12 = 2² × 3, 15 = 3 × 5\nLCM = 2³ × 3 × 5 = **120 minutes = 2 hours**\nThey will ring together at **2:00 PM**.",
+    "solution_hi": "LCM(8,12,15) = 120 मिनट = 2 घंटे → **दोपहर 2 बजे**",
+    "solution_gu": "LCM=120 min = 2 hours → **2:00 PM**",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 4
+  },
+  {
+    "id": "C10M_CH1_TF_001",
+    "type": "true_false",
+    "statement": "Every irrational number is a real number.",
+    "statement_hi": "प्रत्येक अपरिमेय संख्या एक वास्तविक संख्या है।",
+    "statement_gu": "दरेक irrational number real number छे.",
+    "answer": true,
+    "explanation": "TRUE. Real numbers include both rational AND irrational numbers. ℝ = ℚ ∪ Irrationals.",
+    "explanation_hi": "सत्य। वास्तविक संख्याओं में परिमेय और अपरिमेय दोनों शामिल हैं।",
+    "explanation_gu": "TRUE. Real = Rational ∪ Irrational.",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_TF_002",
+    "type": "true_false",
+    "statement": "The LCM of two co-prime numbers is their product.",
+    "statement_hi": "दो सहभाज्य संख्याओं का LCM उनका गुणनफल होता है।",
+    "statement_gu": "बे coprime numbers नो LCM = तेमनो product.",
+    "answer": true,
+    "explanation": "TRUE. If HCF(a,b) = 1, then HCF × LCM = a × b → LCM = a × b.",
+    "explanation_hi": "सत्य। अगर HCF=1, तो LCM = a × b।",
+    "explanation_gu": "TRUE. HCF=1 → LCM = a×b",
+    "bloom": "Understand",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_TF_003",
+    "type": "true_false",
+    "statement": "√4 is an irrational number.",
+    "statement_hi": "√4 एक अपरिमेय संख्या है।",
+    "statement_gu": "√4 irrational number छे?",
+    "answer": false,
+    "explanation": "FALSE. √4 = 2, which is a rational (in fact, a natural) number.",
+    "explanation_hi": "असत्य। √4 = 2, जो एक परिमेय संख्या है।",
+    "explanation_gu": "FALSE. √4=2 = rational number.",
+    "bloom": "Remember",
+    "difficulty": "Beginner",
+    "estimated_minutes": 1
+  },
+  {
+    "id": "C10M_CH1_FINAL_QUIZ_001",
+    "type": "quiz",
+    "question": "What is the prime factorization of 5005?",
+    "question_hi": "5005 का अभाज्य गुणनखंड क्या है?",
+    "question_gu": "5005 नी prime factorization?",
+    "options": [
+      "5 × 7 × 11 × 13",
+      "5 × 7 × 143",
+      "5 × 1001",
+      "All of the above are equivalent"
+    ],
+    "options_hi": [
+      "5 × 7 × 11 × 13",
+      "5 × 7 × 143",
+      "5 × 1001",
+      "ऊपर सभी समतुल्य हैं"
+    ],
+    "options_gu": [
+      "5×7×11×13",
+      "5×7×143",
+      "5×1001",
+      "उपर्युक्त सर्व सरखा"
+    ],
+    "correct_index": 0,
+    "explanation": "5005 = 5 × 1001 = 5 × 7 × 143 = 5 × 7 × 11 × 13. The unique PRIME factorization is 5 × 7 × 11 × 13.",
+    "explanation_hi": "5005 = 5×7×11×13 ही अद्वितीय अभाज्य गुणनखंड है।",
+    "explanation_gu": "5005=5×7×11×13",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_FINAL_QUIZ_002",
+    "type": "quiz",
+    "question": "What is the HCF of 2³ × 3² × 5 and 2² × 3⁴?",
+    "question_hi": "2³×3²×5 और 2²×3⁴ का HCF क्या है?",
+    "question_gu": "HCF(2³×3²×5, 2²×3⁴) = ?",
+    "options": [
+      "2² × 3² = 36",
+      "2³ × 3⁴ × 5 = 3240",
+      "2 × 3 = 6",
+      "2² × 3 = 12"
+    ],
+    "options_hi": [
+      "36",
+      "3240",
+      "6",
+      "12"
+    ],
+    "options_gu": [
+      "36",
+      "3240",
+      "6",
+      "12"
+    ],
+    "correct_index": 0,
+    "explanation": "HCF = smallest powers of COMMON factors. Both have 2 and 3. Smallest: 2² and 3². HCF = 2²×3² = 4×9 = 36.",
+    "explanation_hi": "HCF = साझा गुणनखंडों की सबसे छोटी घात = 2²×3² = 36",
+    "explanation_gu": "HCF = 2²×3² = 36",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
+  },
+  {
+    "id": "C10M_CH1_FINAL_QUIZ_003",
+    "type": "quiz",
+    "question": "Which of the following numbers has a non-terminating repeating decimal expansion?",
+    "question_hi": "निम्नलिखित में से किसका असांत आवर्ती दशमलव विस्तार है?",
+    "question_gu": "non-terminating repeating decimal?",
+    "options": [
+      "17/8",
+      "13/3125",
+      "7/80",
+      "17/6"
+    ],
+    "options_hi": [
+      "17/8",
+      "13/3125",
+      "7/80",
+      "17/6"
+    ],
+    "options_gu": [
+      "17/8",
+      "13/3125",
+      "7/80",
+      "17/6"
     ],
     "correct_index": 3,
-    "explanation": "The product of a rational number and an irrational number can be either a rational number or an irrational number. e.g √5 × √2 = √10 which is irrational. But 0 × √3 = 0 which is rational.",
-    "explanation_hi": "एक परिमेय संख्या और एक अपरिमेय संख्या का गुणनफल परिमेय संख्या या अपरिमेय संख्या हो सकता है। उदा. √5 × √2 = √10 जो अपरिमेय है। लेकिन 0 × √3 = 0 जो परिमेय है।"
+    "explanation": "8=2³, 3125=5⁵, 80=2⁴×5 → all terminating. But 6=2×3 → has prime factor 3 → 17/6 is non-terminating repeating.",
+    "explanation_hi": "6=2×3 → 3 मौजूद → 17/6 असांत आवर्ती है।",
+    "explanation_gu": "6=2×3 → prime 3 → non-terminating recurring",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
   },
   {
-    "id": "KOBJ_C10_MATH_CH1_THEO_002",
-    "type": "theory",
-    "title": "The Fundamental Theorem of Arithmetic",
-    "title_hi": "अंकगणित की आधारभूत प्रमेय",
-    "body": "Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur. For example, 32760 = 2³ × 3² × 5 × 7 × 13.",
-    "body_hi": "प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के एक गुणनफल के रूप में व्यक्त (गुणनखंडित) किया जा सकता है, तथा यह गुणनखंडन अभाज्य गुणनखंडों के आने वाले क्रम के बिना अद्वितीय होता है। उदाहरण के लिए, 32760 = 2³ × 3² × 5 × 7 × 13."
-  },
-  {
-    "id": "KOBJ_C10_MATH_CH1_THEO_003",
-    "type": "theory",
-    "title": "HCF and LCM Relationship",
-    "title_hi": "HCF और LCM में संबंध",
-    "body": "For any two positive integers a and b, HCF(a, b) × LCM(a, b) = a × b. \nNote: HCF is the product of the smallest power of each common prime factor. LCM is the product of the greatest power of each prime factor involved.",
-    "body_hi": "किन्हीं दो धनात्मक पूर्णांकों a और b के लिए, HCF(a, b) × LCM(a, b) = a × b.\nध्यान दें: HCF प्रत्येक उभयनिष्ठ अभाज्य गुणनखंड की सबसे छोटी घात का गुणनफल है। LCM शामिल प्रत्येक अभाज्य गुणनखंड की सबसे बड़ी घात का गुणनफल है।"
-  },
-  {
-    "id": "KOBJ_C10_MATH_CH1_WORKED_001",
-    "type": "worked_example",
-    "title": "Example: Find HCF and LCM",
-    "title_hi": "उदाहरण: HCF और LCM ज्ञात करें",
-    "body": "Find the HCF and LCM of 96 and 404 by prime factorisation.\n\nStep 1: Factorise\n96 = 2⁵ × 3\n404 = 2² × 101\n\nStep 2: Find HCF (smallest powers of common factors)\nCommon factor is 2. Smallest power is 2².\nHCF = 4.\n\nStep 3: Find LCM using the formula\nLCM(96, 404) = (96 × 404) / HCF\nLCM = (96 × 404) / 4 = 9696.",
-    "body_hi": "अभाज्य गुणनखंडन विधि द्वारा 96 और 404 का HCF और LCM ज्ञात कीजिए।\n\nचरण 1: गुणनखंडन\n96 = 2⁵ × 3\n404 = 2² × 101\n\nचरण 2: HCF ज्ञात करें (उभयनिष्ठ गुणनखंडों की सबसे छोटी घातें)\nउभयनिष्ठ गुणनखंड 2 है। सबसे छोटी घात 2² है।\nHCF = 4.\n\nचरण 3: सूत्र का उपयोग करके LCM ज्ञात करें\nLCM(96, 404) = (96 × 404) / HCF\nLCM = (96 × 404) / 4 = 9696."
-  },
-  {
-    "id": "KOBJ_C10_MATH_CH1_THEO_004",
-    "type": "theory",
-    "title": "Proving Irrationality",
-    "title_hi": "अपरिमेयता सिद्ध करना",
-    "body": "To prove numbers like √2 or √3 are irrational, we use 'proof by contradiction'. \nKey Theorem: Let p be a prime number. If p divides a², then p divides a, where a is a positive integer.",
-    "body_hi": "√2 या √3 जैसी संख्याओं को अपरिमेय सिद्ध करने के लिए, हम 'विरोधाभास द्वारा प्रमाण' का उपयोग करते हैं।\nमुख्य प्रमेय: मान लीजिए p एक अभाज्य संख्या है। यदि p, a² को विभाजित करती है, तो p, a को भी विभाजित करेगी, जहाँ a एक धनात्मक पूर्णांक है।"
-  },
-  {
-    "id": "KOBJ_C10_MATH_CH1_WORKED_002",
-    "type": "worked_example",
-    "title": "Example: Prove √2 is irrational",
-    "title_hi": "उदाहरण: सिद्ध कीजिए कि √2 एक अपरिमेय संख्या है",
-    "body": "Assume √2 is rational, meaning √2 = a/b (where a and b are coprime integers, b ≠ 0).\n\nStep 1: Square both sides\n2 = a² / b²  =>  a² = 2b²\nThis means 2 divides a², so 2 divides a.\n\nStep 2: Let a = 2c\nSubstitute a in the equation: (2c)² = 2b² => 4c² = 2b² => b² = 2c²\nThis means 2 divides b², so 2 divides b.\n\nStep 3: Contradiction\nBoth a and b are divisible by 2. But we assumed they are coprime (no common factor). This contradiction means our assumption was wrong. Hence, √2 is irrational.",
-    "body_hi": "मान लीजिए √2 एक परिमेय संख्या है, जिसका अर्थ है √2 = a/b (जहाँ a और b सह-अभाज्य पूर्णांक हैं, b ≠ 0)।\n\nचरण 1: दोनों पक्षों का वर्ग करें\n2 = a² / b²  =>  a² = 2b²\nइसका अर्थ है कि 2, a² को विभाजित करता है, इसलिए 2, a को विभाजित करेगा।\n\nचरण 2: माना a = 2c\nसमीकरण में a का मान रखें: (2c)² = 2b² => 4c² = 2b² => b² = 2c²\nइसका अर्थ है कि 2, b² को विभाजित करता है, इसलिए 2, b को विभाजित करेगा।\n\nचरण 3: विरोधाभास\na और b दोनों 2 से विभाज्य हैं। लेकिन हमने माना था कि वे सह-अभाज्य हैं (कोई उभयनिष्ठ गुणनखंड नहीं है)। इस विरोधाभास का अर्थ है कि हमारी धारणा गलत थी। अतः, √2 एक अपरिमेय संख्या है।"
-  },
-  {
-    "id": "KOBJ_C10_MATH_CH1_WORKED_003",
-    "type": "worked_example",
-    "title": "Example: Prove 5 - √3 is irrational",
-    "title_hi": "उदाहरण: सिद्ध कीजिए कि 5 - √3 एक अपरिमेय संख्या है",
-    "body": "Assume 5 - √3 is rational, so it equals a/b (where a, b are coprime integers, b ≠ 0).\n\n5 - √3 = a/b\nRearranging: √3 = 5 - a/b\n√3 = (5b - a) / b\n\nSince a and b are integers, (5b - a)/b is a rational number. This means √3 is rational.\nBut we know √3 is irrational! This is a contradiction. \nTherefore, 5 - √3 must be irrational.",
-    "body_hi": "मान लीजिए 5 - √3 एक परिमेय संख्या है, इसलिए यह a/b के बराबर है (जहाँ a, b सह-अभाज्य पूर्णांक हैं, b ≠ 0)।\n\n5 - √3 = a/b\nव्यवस्थित करने पर: √3 = 5 - a/b\n√3 = (5b - a) / b\n\nचूंकि a और b पूर्णांक हैं, इसलिए (5b - a)/b एक परिमेय संख्या है। इसका अर्थ है कि √3 एक परिमेय संख्या है।\nलेकिन हम जानते हैं कि √3 अपरिमेय है! यह एक विरोधाभास है।\nइसलिए, 5 - √3 अपरिमेय होना चाहिए।"
+    "id": "C10M_CH1_FINAL_QUIZ_004",
+    "type": "quiz",
+    "question": "Two positive integers have HCF = 18 and LCM = 108. One number is 36. What is the other?",
+    "question_hi": "दो धनात्मक पूर्णांकों का HCF = 18 और LCM = 108 है। एक संख्या 36 है। दूसरी क्या है?",
+    "question_gu": "HCF=18, LCM=108, one=36. Other=?",
+    "options": [
+      "54",
+      "72",
+      "48",
+      "18"
+    ],
+    "options_hi": [
+      "54",
+      "72",
+      "48",
+      "18"
+    ],
+    "options_gu": [
+      "54",
+      "72",
+      "48",
+      "18"
+    ],
+    "correct_index": 0,
+    "explanation": "Other = (HCF × LCM) / 36 = (18 × 108) / 36 = 1944 / 36 = 54",
+    "explanation_hi": "दूसरी = (18 × 108) / 36 = 54",
+    "explanation_gu": "= 18×108/36 = 54",
+    "bloom": "Apply",
+    "difficulty": "Intermediate",
+    "estimated_minutes": 2
   }
 ]

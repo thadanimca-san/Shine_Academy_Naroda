@@ -1,0 +1,513 @@
+import json
+
+def generate_blocks():
+    blocks = []
+    
+    # -------------------------------------------------------------------------
+    # PART 1: INTRODUCTION & GEOMETRICAL MEANING OF ZEROES (EXERCISE 2.1)
+    # -------------------------------------------------------------------------
+    
+    # Hook
+    blocks.append({
+        "id": "C10M_CH2_1",
+        "type": "hook",
+        "title": "The Roller Coaster Ride",
+        "body": "Imagine a roller coaster track. It goes up, comes down, dips below the ground level, and rises again. The path it takes can be described using Mathematics! Every time the track touches the ground level, we call it a 'zero' of that mathematical path. In this chapter, we will learn how to describe these paths using Polynomials.",
+        "title_hi": "रोलर कोस्टर की सवारी",
+        "body_hi": "एक रोलर कोस्टर ट्रैक की कल्पना करें। यह ऊपर जाता है, नीचे आता है, जमीन के स्तर से नीचे गोता लगाता है, और फिर से ऊपर उठता है। इसके द्वारा लिए गए पथ को गणित का उपयोग करके वर्णित किया जा सकता है! हर बार जब ट्रैक जमीन के स्तर को छूता है, तो हम इसे उस गणितीय पथ का 'शून्यक' (zero) कहते हैं। इस अध्याय में, हम सीखेंगे कि बहुपदों (Polynomials) का उपयोग करके इन पथों का वर्णन कैसे किया जाए।",
+        "title_gu": "રોલર કોસ્ટર રાઈડ",
+        "body_gu": "રોલર કોસ્ટર ટ્રેકની કલ્પના કરો. તે ઉપર જાય છે, નીચે આવે છે, જમીનના સ્તરની નીચે ડૂબકી લગાવે છે અને ફરીથી ઉપર આવે છે. તે જે માર્ગ લે છે તેને ગણિતનો ઉપયોગ કરીને વર્ણવી શકાય છે! દર વખતે જ્યારે ટ્રેક જમીનના સ્તરને સ્પર્શે છે, ત્યારે આપણે તેને તે ગાણિતિક માર્ગનો 'શૂન્ય' (zero) કહીએ છીએ. આ પ્રકરણમાં, આપણે શીખીશું કે બહુપદીઓ (Polynomials) નો ઉપયોગ કરીને આ માર્ગોનું વર્ણન કેવી રીતે કરવું.",
+        "bloom": "Understand",
+        "difficulty": "Beginner",
+        "estimated_minutes": 2
+    })
+    
+    # Socratic Thinking
+    blocks.append({
+        "id": "C10M_CH2_2",
+        "type": "socratic_question",
+        "question": "If a roller coaster track touches the ground exactly 3 times, how many 'zeroes' do you think its mathematical path has?",
+        "options": ["1", "2", "3", "0"],
+        "correct_index": 2,
+        "explanation": "Every time it touches the ground, it creates a 'zero'. So touching 3 times means 3 zeroes!",
+        "question_hi": "यदि कोई रोलर कोस्टर ट्रैक ठीक 3 बार जमीन को छूता है, तो आपको क्या लगता है कि उसके गणितीय पथ में कितने 'शून्यक' हैं?",
+        "options_hi": ["1", "2", "3", "0"],
+        "explanation_hi": "हर बार जब यह जमीन को छूता है, तो यह एक 'शून्यक' बनाता है। तो 3 बार छूने का मतलब है 3 शून्यक!",
+        "question_gu": "જો કોઈ રોલર કોસ્ટર ટ્રેક બરાબર 3 વખત જમીનને સ્પર્શે છે, તો તમને શું લાગે છે કે તેના ગાણિતિક માર્ગમાં કેટલા 'શૂન્યો' છે?",
+        "options_gu": ["1", "2", "3", "0"],
+        "explanation_gu": "દર વખતે જ્યારે તે જમીનને સ્પર્શે છે, ત્યારે તે એક 'શૂન્ય' બનાવે છે. તો 3 વખત સ્પર્શ કરવાનો અર્થ છે 3 શૂન્યો!",
+        "bloom": "Apply",
+        "difficulty": "Beginner",
+        "estimated_minutes": 1
+    })
+
+    # Theory: Degrees of Polynomial
+    blocks.append({
+        "id": "C10M_CH2_3",
+        "type": "theory",
+        "title": "Degree of a Polynomial",
+        "body": "The highest power of the variable x in a polynomial p(x) is called the **degree** of the polynomial.\n\n1. A polynomial of degree 1 is called a **linear polynomial**. Example: 2x - 3\n2. A polynomial of degree 2 is called a **quadratic polynomial**. Example: x² - 3x + 2\n3. A polynomial of degree 3 is called a **cubic polynomial**. Example: 2x³ - 3x² + x - 1",
+        "title_hi": "बहुपद की घात",
+        "body_hi": "किसी बहुपद p(x) में चर x की उच्चतम घात को बहुपद की **घात (degree)** कहा जाता है।\n\n1. 1 घात वाले बहुपद को **रैखिक बहुपद (linear polynomial)** कहा जाता है। उदाहरण: 2x - 3\n2. 2 घात वाले बहुपद को **द्विघात बहुपद (quadratic polynomial)** कहा जाता है। उदाहरण: x² - 3x + 2\n3. 3 घात वाले बहुपद को **त्रिघात बहुपद (cubic polynomial)** कहा जाता है। उदाहरण: 2x³ - 3x² + x - 1",
+        "title_gu": "બહુપદીની ઘાત",
+        "body_gu": "બહુપદી p(x) માં ચલ x ની સૌથી મોટી ઘાતને બહુપદીની **ઘાત (degree)** કહેવામાં આવે છે.\n\n1. 1 ઘાતવાળી બહુપદીને **સુરેખ બહુપદી (linear polynomial)** કહેવાય છે. ઉદાહરણ: 2x - 3\n2. 2 ઘાતવાળી બહુપદીને **દ્વિઘાત બહુપદી (quadratic polynomial)** કહેવાય છે. ઉદાહરણ: x² - 3x + 2\n3. 3 ઘાતવાળી બહુપદીને **ત્રિઘાત બહુપદી (cubic polynomial)** કહેવાય છે. ઉદાહરણ: 2x³ - 3x² + x - 1",
+        "bloom": "Understand",
+        "difficulty": "Beginner",
+        "estimated_minutes": 4
+    })
+    
+    # Theory: Geometrical Meaning
+    blocks.append({
+        "id": "C10M_CH2_4",
+        "type": "theory",
+        "title": "Geometrical Meaning of the Zeroes of a Polynomial",
+        "body": "For a polynomial p(x), the zeroes are precisely the x-coordinates of the points where the graph of y = p(x) intersects the **x-axis**.\n\n- A linear polynomial has exactly 1 zero (it intersects the x-axis at exactly 1 point).\n- A quadratic polynomial can have at most 2 zeroes.\n- In general, a polynomial of degree *n* can have at most *n* zeroes, which means its graph intersects the x-axis at most *n* times.",
+        "title_hi": "बहुपद के शून्यकों का ज्यामितीय अर्थ",
+        "body_hi": "एक बहुपद p(x) के लिए, शून्यक (zeroes) ठीक उन बिंदुओं के x-निर्देशांक होते हैं जहाँ y = p(x) का ग्राफ **x-अक्ष** को प्रतिच्छेद (intersect) करता है।\n\n- एक रैखिक बहुपद का ठीक 1 शून्यक होता है (यह x-अक्ष को ठीक 1 बिंदु पर काटता है)।\n- एक द्विघात बहुपद के अधिकतम 2 शून्यक हो सकते हैं।\n- सामान्य तौर पर, *n* घात वाले बहुपद के अधिकतम *n* शून्यक हो सकते हैं, जिसका अर्थ है कि इसका ग्राफ x-अक्ष को अधिकतम *n* बार काटता है।",
+        "title_gu": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+        "body_gu": "બહુપદી p(x) માટે, શૂન્યો (zeroes) એ બિંદુઓના x-યામ છે જ્યાં y = p(x) નો આલેખ **x-અક્ષ** ને છેદે છે.\n\n- સુરેખ બહુપદીને બરાબર 1 શૂન્ય હોય છે (તે x-અક્ષને બરાબર 1 બિંદુ પર છેદે છે).\n- દ્વિઘાત બહુપદીને વધુમાં વધુ 2 શૂન્યો હોઈ શકે છે.\n- સામાન્ય રીતે, *n* ઘાતવાળી બહુપદીને વધુમાં વધુ *n* શૂન્યો હોઈ શકે છે, જેનો અર્થ છે કે તેનો આલેખ x-અક્ષને વધુમાં વધુ *n* વખત છેદે છે.",
+        "bloom": "Understand",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4
+    })
+
+    # Teacher Tip
+    blocks.append({
+        "id": "C10M_CH2_5",
+        "type": "teacher_tip",
+        "title": "Count the Cuts!",
+        "body": "Whenever you see a graph and need to find the number of zeroes of p(x), just count how many times the curve cuts or touches the horizontal line (the x-axis). Ignore the vertical y-axis completely!",
+        "title_hi": "कटौती की गिनती करें!",
+        "body_hi": "जब भी आप कोई ग्राफ देखें और p(x) के शून्यकों की संख्या ज्ञात करनी हो, तो बस यह गिनें कि वक्र क्षैतिज रेखा (x-अक्ष) को कितनी बार काटता है या छूता है। ऊर्ध्वाधर y-अक्ष को पूरी तरह से अनदेखा करें!",
+        "title_gu": "કાપ ગણો!",
+        "body_gu": "જ્યારે પણ તમે આલેખ જુઓ અને p(x) ના શૂન્યોની સંખ્યા શોધવાની જરૂર હોય, ત્યારે માત્ર એટલું ગણો કે વળાંક આડી રેખા (x-અક્ષ) ને કેટલી વાર કાપે છે અથવા સ્પર્શે છે. ઊભી y-અક્ષને સંપૂર્ણપણે અવગણો!",
+        "bloom": "Apply",
+        "difficulty": "Beginner",
+        "estimated_minutes": 1
+    })
+
+    # EXERCISE 2.1
+    # We will simulate Ex 2.1 with specific descriptions since we can't draw the exact graphs, we will describe them.
+    # Ex 2.1 Q1 (i to vi)
+    
+    ex_2_1_graphs = [
+        ("a straight line parallel to the x-axis, not touching it at all", 0),
+        ("a curve that cuts the x-axis at exactly 1 point", 1),
+        ("a curve that cuts the x-axis at exactly 3 points", 3),
+        ("a parabola that cuts the x-axis at exactly 2 points", 2),
+        ("a curve that cuts the x-axis at exactly 4 points", 4),
+        ("a curve that cuts the x-axis at 1 point and touches it at 2 other points (total 3 points of contact)", 3)
+    ]
+    
+    ex_2_1_graphs_hi = [
+        "x-अक्ष के समानांतर एक सीधी रेखा, जो इसे बिल्कुल नहीं छूती है",
+        "एक वक्र जो x-अक्ष को ठीक 1 बिंदु पर काटता है",
+        "एक वक्र जो x-अक्ष को ठीक 3 बिंदुओं पर काटता है",
+        "एक परवलय (parabola) जो x-अक्ष को ठीक 2 बिंदुओं पर काटता है",
+        "एक वक्र जो x-अक्ष को ठीक 4 बिंदुओं पर काटता है",
+        "एक वक्र जो x-अक्ष को 1 बिंदु पर काटता है और 2 अन्य बिंदुओं पर छूता है (संपर्क के कुल 3 बिंदु)"
+    ]
+    
+    ex_2_1_graphs_gu = [
+        "x-અક્ષને સમાંતર સીધી રેખા, જે તેને બિલકુલ સ્પર્શતી નથી",
+        "એક વળાંક જે x-અક્ષને બરાબર 1 બિંદુ પર કાપે છે",
+        "એક વળાંક જે x-અક્ષને બરાબર 3 બિંદુઓ પર કાપે છે",
+        "એક પરવલય (parabola) જે x-અક્ષને બરાબર 2 બિંદુઓ પર કાપે છે",
+        "એક વળાંક જે x-અક્ષને બરાબર 4 બિંદુઓ પર કાપે છે",
+        "એક વળાંક જે x-અક્ષને 1 બિંદુ પર કાપે છે અને અન્ય 2 બિંદુઓ પર સ્પર્શે છે (સંપર્કના કુલ 3 બિંદુઓ)"
+    ]
+
+    for i in range(6):
+        blocks.append({
+            "id": f"C10M_CH2_EX2.1_Q1_part{i+1}",
+            "type": "quiz",
+            "question": f"Exercise 2.1 (Q{i+1}): The graph of y = p(x) is given as {ex_2_1_graphs[i][0]}. Find the number of zeroes of p(x).",
+            "options": ["0", "1", "2", "3", "4"],
+            "correct_index": ["0", "1", "2", "3", "4"].index(str(ex_2_1_graphs[i][1])),
+            "explanation": f"The number of zeroes is {ex_2_1_graphs[i][1]} as the graph intersects the x-axis at {ex_2_1_graphs[i][1]} points.",
+            "question_hi": f"प्रश्नावली 2.1 (Q{i+1}): y = p(x) का ग्राफ {ex_2_1_graphs_hi[i]} के रूप में दिया गया है। p(x) के शून्यकों की संख्या ज्ञात कीजिए।",
+            "options_hi": ["0", "1", "2", "3", "4"],
+            "explanation_hi": f"शून्यकों की संख्या {ex_2_1_graphs[i][1]} है क्योंकि ग्राफ x-अक्ष को {ex_2_1_graphs[i][1]} बिंदुओं पर प्रतिच्छेद करता है।",
+            "question_gu": f"સ્વાધ્યાય 2.1 (Q{i+1}): y = p(x) નો આલેખ {ex_2_1_graphs_gu[i]} તરીકે આપવામાં આવ્યો છે. p(x) ના શૂન્યોની સંખ્યા શોધો.",
+            "options_gu": ["0", "1", "2", "3", "4"],
+            "explanation_gu": f"શૂન્યોની સંખ્યા {ex_2_1_graphs[i][1]} છે કારણ કે આલેખ x-અક્ષને {ex_2_1_graphs[i][1]} બિંદુઓ પર છેદે છે.",
+            "bloom": "Apply",
+            "difficulty": "Beginner",
+            "estimated_minutes": 1
+        })
+
+    # -------------------------------------------------------------------------
+    # PART 2: RELATIONSHIP BETWEEN ZEROES AND COEFFICIENTS (EXERCISE 2.2)
+    # -------------------------------------------------------------------------
+
+    blocks.append({
+        "id": "C10M_CH2_12",
+        "type": "theory",
+        "title": "Relationship between Zeroes and Coefficients",
+        "body": "For a quadratic polynomial p(x) = ax² + bx + c, let its zeroes be α (alpha) and β (beta).\n\n1. **Sum of zeroes:** α + β = -b/a = -(Coefficient of x) / (Coefficient of x²)\n2. **Product of zeroes:** α × β = c/a = (Constant term) / (Coefficient of x²)\n\nTo find the quadratic polynomial when sum (S) and product (P) of its zeroes are given, we use the formula:\np(x) = k [x² - (Sum of zeroes)x + (Product of zeroes)] = k(x² - Sx + P), where k is a real number.",
+        "title_hi": "शून्यकों और गुणांकों के बीच संबंध",
+        "body_hi": "एक द्विघात बहुपद p(x) = ax² + bx + c के लिए, मान लीजिए कि इसके शून्यक α (अल्फा) और β (बीटा) हैं।\n\n1. **शून्यकों का योग:** α + β = -b/a = -(x का गुणांक) / (x² का गुणांक)\n2. **शून्यकों का गुणनफल:** α × β = c/a = (अचर पद) / (x² का गुणांक)\n\nजब शून्यकों का योग (S) और गुणनफल (P) दिया गया हो, तो द्विघात बहुपद ज्ञात करने के लिए हम इस सूत्र का उपयोग करते हैं:\np(x) = k [x² - (शून्यकों का योग)x + (शून्यकों का गुणनफल)] = k(x² - Sx + P), जहाँ k एक वास्तविक संख्या है।",
+        "title_gu": "શૂન્યો અને સહગુણકો વચ્ચેનો સંબંધ",
+        "body_gu": "દ્વિઘાત બહુપદી p(x) = ax² + bx + c માટે, ધારો કે તેના શૂન્યો α (આલ્ફા) અને β (બીટા) છે.\n\n1. **શૂન્યોનો સરવાળો:** α + β = -b/a = -(x નો સહગુણક) / (x² નો સહગુણક)\n2. **શૂન્યોનો ગુણાકાર:** α × β = c/a = (અચળ પદ) / (x² નો સહગુણક)\n\nજ્યારે શૂન્યોનો સરવાળો (S) અને ગુણાકાર (P) આપેલ હોય, ત્યારે દ્વિઘાત બહુપદી શોધવા માટે આપણે આ સૂત્રનો ઉપયોગ કરીએ છીએ:\np(x) = k [x² - (શૂન્યોનો સરવાળો)x + (શૂન્યોનો ગુણાકાર)] = k(x² - Sx + P), જ્યાં k એક વાસ્તવિક સંખ્યા છે.",
+        "bloom": "Understand",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 5
+    })
+
+    blocks.append({
+        "id": "C10M_CH2_13",
+        "type": "teacher_tip",
+        "title": "Don't Forget the Minus Sign!",
+        "body": "When verifying the sum of zeroes, remember that it is **-b/a**, not b/a. The minus sign is extremely important and is the most common mistake students make in exams!",
+        "title_hi": "ऋण चिह्न न भूलें!",
+        "body_hi": "शून्यकों के योग की जाँच करते समय, याद रखें कि यह **-b/a** है, b/a नहीं। ऋण चिह्न अत्यंत महत्वपूर्ण है और यह सबसे आम गलती है जो छात्र परीक्षा में करते हैं!",
+        "title_gu": "માઈનસ ચિહ્ન ભૂલશો નહીં!",
+        "body_gu": "શૂન્યોના સરવાળાની ચકાસણી કરતી વખતે, યાદ રાખો કે તે **-b/a** છે, b/a નથી. માઈનસ ચિહ્ન અત્યંત મહત્વપૂર્ણ છે અને તે સૌથી સામાન્ય ભૂલ છે જે વિદ્યાર્થીઓ પરીક્ષામાં કરે છે!",
+        "bloom": "Remember",
+        "difficulty": "Beginner",
+        "estimated_minutes": 1
+    })
+
+    # EXERCISE 2.2 Question 1 (i to vi)
+    # Find the zeroes of the following quadratic polynomials and verify the relationship between the zeroes and the coefficients.
+    
+    ex_2_2_q1 = [
+        ("x² - 2x - 8", "4, -2"),
+        ("4s² - 4s + 1", "1/2, 1/2"),
+        ("6x² - 3 - 7x", "3/2, -1/3"),
+        ("4u² + 8u", "0, -2"),
+        ("t² - 15", "√15, -√15"),
+        ("3x² - x - 4", "4/3, -1")
+    ]
+    
+    for i in range(6):
+        blocks.append({
+            "id": f"C10M_CH2_EX2.2_Q1_part{i+1}",
+            "type": "quiz",
+            "question": f"Exercise 2.2 (Q1.{i+1}): Find the zeroes of the quadratic polynomial: {ex_2_2_q1[i][0]}",
+            "options": [
+                ex_2_2_q1[i][1],
+                "2, 4",
+                "-1/2, 1/2",
+                "0, 2"
+            ],
+            "correct_index": 0,
+            "explanation": f"To find zeroes, set the polynomial to 0 and factorize. The zeroes are {ex_2_2_q1[i][1]}.",
+            "question_hi": f"प्रश्नावली 2.2 (Q1.{i+1}): द्विघात बहुपद के शून्यक ज्ञात कीजिए: {ex_2_2_q1[i][0]}",
+            "options_hi": [
+                ex_2_2_q1[i][1],
+                "2, 4",
+                "-1/2, 1/2",
+                "0, 2"
+            ],
+            "explanation_hi": f"शून्यक ज्ञात करने के लिए, बहुपद को 0 के बराबर सेट करें और गुणनखंड करें। शून्यक {ex_2_2_q1[i][1]} हैं।",
+            "question_gu": f"સ્વાધ્યાય 2.2 (Q1.{i+1}): દ્વિઘાત બહુપદીના શૂન્યો શોધો: {ex_2_2_q1[i][0]}",
+            "options_gu": [
+                ex_2_2_q1[i][1],
+                "2, 4",
+                "-1/2, 1/2",
+                "0, 2"
+            ],
+            "explanation_gu": f"શૂન્યો શોધવા માટે, બહુપદીને 0 ની બરાબર સેટ કરો અને અવયવ પાડો. શૂન્યો {ex_2_2_q1[i][1]} છે.",
+            "bloom": "Apply",
+            "difficulty": "Intermediate",
+            "estimated_minutes": 3
+        })
+
+    # EXERCISE 2.2 Question 2 (i to vi)
+    # Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively.
+    ex_2_2_q2 = [
+        ("1/4, -1", "4x² - x - 4"),
+        ("√2, 1/3", "3x² - 3√2x + 1"),
+        ("0, √5", "x² + √5"),
+        ("1, 1", "x² - x + 1"),
+        ("-1/4, 1/4", "4x² + x + 1"),
+        ("4, 1", "x² - 4x + 1")
+    ]
+    
+    for i in range(6):
+        blocks.append({
+            "id": f"C10M_CH2_EX2.2_Q2_part{i+1}",
+            "type": "quiz",
+            "question": f"Exercise 2.2 (Q2.{i+1}): Find a quadratic polynomial with the given numbers as the sum and product of its zeroes respectively: {ex_2_2_q2[i][0]}",
+            "options": [
+                ex_2_2_q2[i][1],
+                "x² - x - 1",
+                "4x² + x - 4",
+                "3x² + 3√2x + 1"
+            ],
+            "correct_index": 0,
+            "explanation": f"Using the formula p(x) = k(x² - Sx + P), we get {ex_2_2_q2[i][1]}.",
+            "question_hi": f"प्रश्नावली 2.2 (Q2.{i+1}): एक द्विघात बहुपद ज्ञात कीजिए जिसके शून्यकों का योग और गुणनफल क्रमशः दी गई संख्याएँ हैं: {ex_2_2_q2[i][0]}",
+            "options_hi": [
+                ex_2_2_q2[i][1],
+                "x² - x - 1",
+                "4x² + x - 4",
+                "3x² + 3√2x + 1"
+            ],
+            "explanation_hi": f"सूत्र p(x) = k(x² - Sx + P) का उपयोग करते हुए, हमें {ex_2_2_q2[i][1]} मिलता है।",
+            "question_gu": f"સ્વાધ્યાય 2.2 (Q2.{i+1}): એક દ્વિઘાત બહુપદી શોધો જેના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે આપેલ સંખ્યાઓ છે: {ex_2_2_q2[i][0]}",
+            "options_gu": [
+                ex_2_2_q2[i][1],
+                "x² - x - 1",
+                "4x² + x - 4",
+                "3x² + 3√2x + 1"
+            ],
+            "explanation_gu": f"સૂત્ર p(x) = k(x² - Sx + P) નો ઉપયોગ કરીને, આપણને {ex_2_2_q2[i][1]} મળે છે.",
+            "bloom": "Apply",
+            "difficulty": "Intermediate",
+            "estimated_minutes": 2
+        })
+
+    # -------------------------------------------------------------------------
+    # PART 3: DIVISION ALGORITHM FOR POLYNOMIALS (EXERCISE 2.3)
+    # -------------------------------------------------------------------------
+
+    blocks.append({
+        "id": "C10M_CH2_26",
+        "type": "theory",
+        "title": "Division Algorithm for Polynomials",
+        "body": "If p(x) and g(x) are any two polynomials with g(x) ≠ 0, then we can find polynomials q(x) and r(x) such that:\n\n**p(x) = g(x) × q(x) + r(x)**\n\nwhere r(x) = 0 or degree of r(x) < degree of g(x).\nThis is known as the Division Algorithm for polynomials. It is exactly like division of numbers: **Dividend = Divisor × Quotient + Remainder**.",
+        "title_hi": "बहुपदों के लिए विभाजन एल्गोरिथ्म",
+        "body_hi": "यदि p(x) और g(x) कोई दो बहुपद हैं जहाँ g(x) ≠ 0, तो हम ऐसे बहुपद q(x) और r(x) प्राप्त कर सकते हैं कि:\n\n**p(x) = g(x) × q(x) + r(x)**\n\nजहाँ r(x) = 0 या r(x) की घात < g(x) की घात।\nइसे बहुपदों के लिए विभाजन एल्गोरिथ्म कहा जाता है। यह बिल्कुल संख्याओं के विभाजन की तरह है: **भाज्य = भाजक × भागफल + शेषफल**।",
+        "title_gu": "બહુપદીઓ માટે ભાગાકાર પ્રવિધિ",
+        "body_gu": "જો p(x) અને g(x) કોઈપણ બે બહુપદી હોય જ્યાં g(x) ≠ 0, તો આપણે એવી બહુપદીઓ q(x) અને r(x) શોધી શકીએ છીએ કે:\n\n**p(x) = g(x) × q(x) + r(x)**\n\nજ્યાં r(x) = 0 અથવા r(x) ની ઘાત < g(x) ની ઘાત.\nઆને બહુપદીઓ માટે ભાગાકાર પ્રવિધિ કહેવામાં આવે છે. આ બરાબર સંખ્યાઓના ભાગાકાર જેવું જ છે: **ભાજ્ય = ભાજક × ભાગફળ + શેષ**.",
+        "bloom": "Understand",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 4
+    })
+
+    blocks.append({
+        "id": "C10M_CH2_27",
+        "type": "teacher_tip",
+        "title": "Standard Form First!",
+        "body": "Before dividing polynomials, always arrange the terms of the dividend and divisor in descending order of their degrees. This is called the **standard form**.",
+        "title_hi": "मानक रूप पहले!",
+        "body_hi": "बहुपदों को विभाजित करने से पहले, हमेशा भाज्य और भाजक के पदों को उनकी घातों के अवरोही क्रम में व्यवस्थित करें। इसे **मानक रूप (standard form)** कहा जाता है।",
+        "title_gu": "પ્રમાણિત સ્વરૂપ પહેલા!",
+        "body_gu": "બહુપદીઓનો ભાગાકાર કરતા પહેલા, હંમેશા ભાજ્ય અને ભાજકના પદોને તેમની ઘાતના ઉતરતા ક્રમમાં ગોઠવો. આને **પ્રમાણિત સ્વરૂપ (standard form)** કહેવાય છે.",
+        "bloom": "Apply",
+        "difficulty": "Beginner",
+        "estimated_minutes": 1
+    })
+
+    # EXERCISE 2.3 Question 1 (i to iii)
+    # Divide the polynomial p(x) by the polynomial g(x) and find the quotient and remainder in each of the following:
+    ex_2_3_q1 = [
+        ("p(x) = x³ - 3x² + 5x - 3, g(x) = x² - 2", "Quotient = x - 3, Remainder = 7x - 9"),
+        ("p(x) = x⁴ - 3x² + 4x + 5, g(x) = x² + 1 - x", "Quotient = x² + x - 3, Remainder = 8"),
+        ("p(x) = x⁴ - 5x + 6, g(x) = 2 - x²", "Quotient = -x² - 2, Remainder = -5x + 10")
+    ]
+    
+    for i in range(3):
+        blocks.append({
+            "id": f"C10M_CH2_EX2.3_Q1_part{i+1}",
+            "type": "quiz",
+            "question": f"Exercise 2.3 (Q1.{i+1}): Divide p(x) by g(x) and find the quotient and remainder: {ex_2_3_q1[i][0]}",
+            "options": [
+                ex_2_3_q1[i][1],
+                "Quotient = x + 3, Remainder = 7x + 9",
+                "Quotient = x² - 1, Remainder = 5x",
+                "Quotient = -x² + 2, Remainder = 5x - 10"
+            ],
+            "correct_index": 0,
+            "explanation": f"Using long division for polynomials, we obtain {ex_2_3_q1[i][1]}.",
+            "question_hi": f"प्रश्नावली 2.3 (Q1.{i+1}): p(x) को g(x) से भाग दें और भागफल और शेषफल ज्ञात करें: {ex_2_3_q1[i][0]}",
+            "options_hi": [
+                ex_2_3_q1[i][1],
+                "भागफल = x + 3, शेषफल = 7x + 9",
+                "भागफल = x² - 1, शेषफल = 5x",
+                "भागफल = -x² + 2, शेषफल = 5x - 10"
+            ],
+            "explanation_hi": f"बहुपदों के लिए लंबे विभाजन का उपयोग करके, हम प्राप्त करते हैं {ex_2_3_q1[i][1]}।",
+            "question_gu": f"સ્વાધ્યાય 2.3 (Q1.{i+1}): p(x) ને g(x) વડે ભાગો અને ભાગફળ અને શેષ શોધો: {ex_2_3_q1[i][0]}",
+            "options_gu": [
+                ex_2_3_q1[i][1],
+                "ભાગફળ = x + 3, શેષ = 7x + 9",
+                "ભાગફળ = x² - 1, શેષ = 5x",
+                "ભાગફળ = -x² + 2, શેષ = 5x - 10"
+            ],
+            "explanation_gu": f"બહુપદીઓ માટે લાંબા ભાગાકારનો ઉપયોગ કરીને, આપણે મેળવીએ છીએ {ex_2_3_q1[i][1]}.",
+            "bloom": "Apply",
+            "difficulty": "Hard",
+            "estimated_minutes": 5
+        })
+
+    # EXERCISE 2.3 Question 2 (i to iii)
+    # Check whether the first polynomial is a factor of the second polynomial by dividing the second polynomial by the first polynomial.
+    ex_2_3_q2 = [
+        ("t² - 3, 2t⁴ + 3t³ - 2t² - 9t - 12", "Yes, Remainder is 0"),
+        ("x² + 3x + 1, 3x⁴ + 5x³ - 7x² + 2x + 2", "Yes, Remainder is 0"),
+        ("x³ - 3x + 1, x⁵ - 4x³ + x² + 3x + 1", "No, Remainder is 2")
+    ]
+    
+    for i in range(3):
+        blocks.append({
+            "id": f"C10M_CH2_EX2.3_Q2_part{i+1}",
+            "type": "quiz",
+            "question": f"Exercise 2.3 (Q2.{i+1}): Check whether the first polynomial is a factor of the second polynomial: {ex_2_3_q2[i][0]}",
+            "options": [
+                ex_2_3_q2[i][1],
+                "No, Remainder is not 0",
+                "Yes, Remainder is 1",
+                "Cannot be determined"
+            ],
+            "correct_index": 0,
+            "explanation": f"If the remainder is 0, the first polynomial is a factor. In this case, {ex_2_3_q2[i][1]}.",
+            "question_hi": f"प्रश्नावली 2.3 (Q2.{i+1}): जाँच करें कि क्या पहला बहुपद दूसरे बहुपद का गुणनखंड है: {ex_2_3_q2[i][0]}",
+            "options_hi": [
+                ex_2_3_q2[i][1],
+                "नहीं, शेषफल 0 नहीं है",
+                "हाँ, शेषफल 1 है",
+                "निर्धारित नहीं किया जा सकता"
+            ],
+            "explanation_hi": f"यदि शेषफल 0 है, तो पहला बहुपद एक गुणनखंड है। इस मामले में, {ex_2_3_q2[i][1]}।",
+            "question_gu": f"સ્વાધ્યાય 2.3 (Q2.{i+1}): ચકાસો કે પ્રથમ બહુપદી એ બીજી બહુપદીનો અવયવ છે કે નહીં: {ex_2_3_q2[i][0]}",
+            "options_gu": [
+                ex_2_3_q2[i][1],
+                "ના, શેષ 0 નથી",
+                "હા, શેષ 1 છે",
+                "નક્કી કરી શકાતું નથી"
+            ],
+            "explanation_gu": f"જો શેષ 0 હોય, તો પ્રથમ બહુપદી અવયવ છે. આ કિસ્સામાં, {ex_2_3_q2[i][1]}.",
+            "bloom": "Apply",
+            "difficulty": "Hard",
+            "estimated_minutes": 5
+        })
+
+    # EXERCISE 2.3 Question 3
+    blocks.append({
+        "id": "C10M_CH2_EX2.3_Q3",
+        "type": "quiz",
+        "question": "Exercise 2.3 (Q3): Obtain all other zeroes of 3x⁴ + 6x³ - 2x² - 10x - 5, if two of its zeroes are √(5/3) and -√(5/3).",
+        "options": [
+            "-1 and -1",
+            "1 and -1",
+            "1 and 1",
+            "-1 and 2"
+        ],
+        "correct_index": 0,
+        "explanation": "Since √(5/3) and -√(5/3) are zeroes, (x - √(5/3))(x + √(5/3)) = x² - 5/3 is a factor. Dividing the given polynomial by 3x² - 5 gives x² + 2x + 1. Its zeroes are -1 and -1.",
+        "question_hi": "प्रश्नावली 2.3 (Q3): 3x⁴ + 6x³ - 2x² - 10x - 5 के अन्य सभी शून्यक ज्ञात कीजिए, यदि इसके दो शून्यक √(5/3) और -√(5/3) हैं।",
+        "options_hi": [
+            "-1 और -1",
+            "1 और -1",
+            "1 और 1",
+            "-1 और 2"
+        ],
+        "explanation_hi": "चूँकि √(5/3) और -√(5/3) शून्यक हैं, (x - √(5/3))(x + √(5/3)) = x² - 5/3 एक गुणनखंड है। दिए गए बहुपद को 3x² - 5 से भाग देने पर x² + 2x + 1 प्राप्त होता है। इसके शून्यक -1 और -1 हैं।",
+        "question_gu": "સ્વાધ્યાય 2.3 (Q3): 3x⁴ + 6x³ - 2x² - 10x - 5 ના અન્ય તમામ શૂન્યો મેળવો, જો તેના બે શૂન્યો √(5/3) અને -√(5/3) હોય.",
+        "options_gu": [
+            "-1 અને -1",
+            "1 અને -1",
+            "1 અને 1",
+            "-1 અને 2"
+        ],
+        "explanation_gu": "કારણ કે √(5/3) અને -√(5/3) શૂન્યો છે, (x - √(5/3))(x + √(5/3)) = x² - 5/3 એક અવયવ છે. આપેલ બહુપદીને 3x² - 5 વડે ભાગવાથી x² + 2x + 1 મળે છે. તેના શૂન્યો -1 અને -1 છે.",
+        "bloom": "Apply",
+        "difficulty": "Hard",
+        "estimated_minutes": 10
+    })
+
+    # EXERCISE 2.3 Question 4
+    blocks.append({
+        "id": "C10M_CH2_EX2.3_Q4",
+        "type": "quiz",
+        "question": "Exercise 2.3 (Q4): On dividing x³ - 3x² + x + 2 by a polynomial g(x), the quotient and remainder were x - 2 and -2x + 4, respectively. Find g(x).",
+        "options": [
+            "x² - x + 1",
+            "x² + x - 1",
+            "x² - 2x + 1",
+            "x² + x + 1"
+        ],
+        "correct_index": 0,
+        "explanation": "Dividend = Divisor × Quotient + Remainder. So, x³ - 3x² + x + 2 = g(x) × (x - 2) + (-2x + 4). Solving for g(x) gives (x³ - 3x² + 3x - 2) / (x - 2) = x² - x + 1.",
+        "question_hi": "प्रश्नावली 2.3 (Q4): यदि x³ - 3x² + x + 2 को एक बहुपद g(x) से भाग देने पर, भागफल और शेषफल क्रमशः x - 2 और -2x + 4 आते हैं, तो g(x) ज्ञात कीजिए।",
+        "options_hi": [
+            "x² - x + 1",
+            "x² + x - 1",
+            "x² - 2x + 1",
+            "x² + x + 1"
+        ],
+        "explanation_hi": "भाज्य = भाजक × भागफल + शेषफल। इसलिए, x³ - 3x² + x + 2 = g(x) × (x - 2) + (-2x + 4)। g(x) के लिए हल करने पर (x³ - 3x² + 3x - 2) / (x - 2) = x² - x + 1 प्राप्त होता है।",
+        "question_gu": "સ્વાધ્યાય 2.3 (Q4): x³ - 3x² + x + 2 ને બહુપદી g(x) વડે ભાગતા, ભાગફળ અને શેષ અનુક્રમે x - 2 અને -2x + 4 મળે છે. g(x) શોધો.",
+        "options_gu": [
+            "x² - x + 1",
+            "x² + x - 1",
+            "x² - 2x + 1",
+            "x² + x + 1"
+        ],
+        "explanation_gu": "ભાજ્ય = ભાજક × ભાગફળ + શેષ. તેથી, x³ - 3x² + x + 2 = g(x) × (x - 2) + (-2x + 4). g(x) માટે ઉકેલવાથી (x³ - 3x² + 3x - 2) / (x - 2) = x² - x + 1 મળે છે.",
+        "bloom": "Apply",
+        "difficulty": "Hard",
+        "estimated_minutes": 8
+    })
+    
+    # EXERCISE 2.3 Question 5
+    blocks.append({
+        "id": "C10M_CH2_EX2.3_Q5",
+        "type": "quiz",
+        "question": "Exercise 2.3 (Q5): Give an example of polynomials p(x), g(x), q(x) and r(x), which satisfy the division algorithm and deg p(x) = deg q(x).",
+        "options": [
+            "p(x) = 2x² - 2x + 14, g(x) = 2, q(x) = x² - x + 7, r(x) = 0",
+            "p(x) = x³, g(x) = x, q(x) = x², r(x) = 0",
+            "p(x) = x² + 1, g(x) = x, q(x) = x, r(x) = 1",
+            "p(x) = x, g(x) = x², q(x) = 0, r(x) = x"
+        ],
+        "correct_index": 0,
+        "explanation": "If deg p(x) = deg q(x), then the divisor g(x) must be a constant polynomial. In option A, deg p(x) = 2 and deg q(x) = 2.",
+        "question_hi": "प्रश्नावली 2.3 (Q5): बहुपदों p(x), g(x), q(x) और r(x) का एक उदाहरण दें, जो विभाजन एल्गोरिथ्म को संतुष्ट करते हैं और deg p(x) = deg q(x)।",
+        "options_hi": [
+            "p(x) = 2x² - 2x + 14, g(x) = 2, q(x) = x² - x + 7, r(x) = 0",
+            "p(x) = x³, g(x) = x, q(x) = x², r(x) = 0",
+            "p(x) = x² + 1, g(x) = x, q(x) = x, r(x) = 1",
+            "p(x) = x, g(x) = x², q(x) = 0, r(x) = x"
+        ],
+        "explanation_hi": "यदि deg p(x) = deg q(x), तो भाजक g(x) एक अचर (constant) बहुपद होना चाहिए। विकल्प A में, deg p(x) = 2 और deg q(x) = 2।",
+        "question_gu": "સ્વાધ્યાય 2.3 (Q5): બહુપદીઓ p(x), g(x), q(x) અને r(x) નું ઉદાહરણ આપો, જે ભાગાકાર પ્રવિધિને સંતોષે છે અને deg p(x) = deg q(x).",
+        "options_gu": [
+            "p(x) = 2x² - 2x + 14, g(x) = 2, q(x) = x² - x + 7, r(x) = 0",
+            "p(x) = x³, g(x) = x, q(x) = x², r(x) = 0",
+            "p(x) = x² + 1, g(x) = x, q(x) = x, r(x) = 1",
+            "p(x) = x, g(x) = x², q(x) = 0, r(x) = x"
+        ],
+        "explanation_gu": "જો deg p(x) = deg q(x) હોય, તો ભાજક g(x) એ અચળ બહુપદી હોવી જોઈએ. વિકલ્પ A માં, deg p(x) = 2 અને deg q(x) = 2.",
+        "bloom": "Create",
+        "difficulty": "Hard",
+        "estimated_minutes": 5
+    })
+
+    return blocks
+
+def get_metadata():
+    return {
+        "id": "ncert_class10_maths_ch2",
+        "title": "Chapter 2: Polynomials",
+        "title_hi": "अध्याय 2: बहुपद",
+        "title_gu": "પ્રકરણ 2: બહુપદીઓ",
+        "subject": "Mathematics",
+        "grade": "10",
+        "board": "CBSE/GSEB",
+        "curriculum": ["CBSE", "NCERT", "GSEB"],
+        "language": "English, Hindi, Gujarati",
+        "difficulty": "Intermediate",
+        "estimated_minutes": 180,
+        "version": "1.0.0",
+        "author": "Shine Academy EduOS",
+        "last_updated": "2026-09-30",
+        "tags": ["polynomials", "zeroes", "coefficients", "division_algorithm"]
+    }
+
+def generate_chapter():
+    chapter_data = {
+        "metadata": get_metadata(),
+        "blocks": generate_blocks()
+    }
+    
+    with open('app_core/chapters/ncert_class10_maths_ch2.json', 'w', encoding='utf-8') as f:
+        json.dump(chapter_data, f, indent=2, ensure_ascii=False)
+        
+    print("Generated ncert_class10_maths_ch2.json successfully!")
+
+if __name__ == "__main__":
+    generate_chapter()

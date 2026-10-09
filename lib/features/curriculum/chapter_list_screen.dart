@@ -7,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/services/activation_service.dart';
 import '../../foundation/theme/app_colors.dart';
 import '../../foundation/theme/brand_app_bar.dart';
-import '../learning/learning_engine/services/pdf_export_service.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class ChapterListScreen extends StatefulWidget {
@@ -95,11 +94,22 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
           
           bool isLocked = false;
           if (!isActivated) {
-            final parsedNum = int.tryParse(rawChapterNum.toString());
-            if (parsedNum == 1 || parsedNum == 2) {
+            // Explicit JSON override check:
+            final bool? explicitFree = chapter['is_free'] ?? chapter['is_unlocked'] ?? chapter['unlocked'] ?? chapter['free'];
+            final bool? explicitLocked = chapter['is_locked'] ?? chapter['locked'];
+
+            if (explicitFree == true) {
               isLocked = false;
-            } else {
+            } else if (explicitLocked == true) {
               isLocked = true;
+            } else {
+              // Default rule before activation: Chapters 1 & 2 are unlocked for every student; Chapters 3+ are locked.
+              final parsedNum = int.tryParse(chapterNum.toString()) ?? (index + 1);
+              if (parsedNum <= 2 || index <= 1) {
+                isLocked = false;
+              } else {
+                isLocked = true;
+              }
             }
           }
           
