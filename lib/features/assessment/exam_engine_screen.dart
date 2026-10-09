@@ -15,6 +15,8 @@ import '../../core/services/gamification_service.dart';
 import '../gamification/widgets/mast_hai_dialog.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../core/engine/content_repository.dart';
+import '../../core/engine/block_registry.dart';
+import '../common/widgets/tts_interactive_text.dart';
 
 class ExamEngineScreen extends StatefulWidget {
   final String moduleId;
@@ -578,10 +580,15 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
                       ),
                     ),
                   ],
-                  Text(
-                    questionText,
+                  TtsInteractiveText(
+                    text: questionText,
                     style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
                   ),
+                  if (_questions[_currentIndex].figure != null)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: BlockRegistry.instance.build(_questions[_currentIndex].figure!) ?? const SizedBox.shrink(),
+                    ),
                   const SizedBox(height: 24),
                   ...List.generate(options.length, (optIndex) {
                     bool isSelected = _selectedAnswers[_currentIndex] == optIndex;
@@ -620,8 +627,9 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      options[optIndex].toString(),
+                                    TtsInteractiveText(
+                                      text: options[optIndex].toString(),
+                                      enableWordTap: false,
                                       style: GoogleFonts.inter(
                                         fontSize: 16, color: AppColors.textPrimary),
                                     ),
@@ -868,11 +876,11 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
                               return Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(qText, style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.w600)),
+                                  TtsInteractiveText(text: qText, style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.w600)),
                                   const SizedBox(height: 16),
-                                  Text('Your Answer: $userAns', style: GoogleFonts.inter(color: statusColor)),
+                                  TtsInteractiveText(text: 'Your Answer: $userAns', style: GoogleFonts.inter(color: statusColor)),
                                   if (!isCorrect)
-                                    Text('Correct Answer: $correctAns', style: GoogleFonts.inter(color: Colors.green, fontWeight: FontWeight.bold)),
+                                    TtsInteractiveText(text: 'Correct Answer: $correctAns', style: GoogleFonts.inter(color: Colors.green, fontWeight: FontWeight.bold)),
                                   
                                   if (explText != null) ...[
                                     const SizedBox(height: 16),
@@ -894,7 +902,7 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
                                             ],
                                           ),
                                           const SizedBox(height: 8),
-                                          Text(explText, style: GoogleFonts.inter(color: Colors.blue.shade900)),
+                                          TtsInteractiveText(text: explText, style: GoogleFonts.inter(color: Colors.blue.shade900)),
                                         ],
                                       ),
                                     ),

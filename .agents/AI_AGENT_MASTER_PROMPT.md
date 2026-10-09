@@ -229,3 +229,23 @@ Before stopping, confirm:
 3. All new block types registered in default_blocks.dart
 4. All new module folders added to pubspec.yaml
 5. PROJECT_STATUS.md updated if needed
+
+---
+
+## NEW CONTENT FORMAT (from 2026-10-10) — USE THIS FOR ALL NEW CHAPTERS
+
+Design: `docs/CONTENT_FORMAT_DESIGN.md`. Decisions: `docs/DECISIONS_LOG.md`.
+
+- New chapters live ONLY in `app_core/content/<board>/<class>/<subject>/<book>/chNN_name/`
+  as `chapter.json` (Learn, in sections) and `questions.json` (Practice + paper generator).
+- List every chapter in `app_core/content/index.json`, with the old module ids as `aliases`,
+  and add its folder to `pubspec.yaml` assets.
+- Do NOT add new chapters to `app_core/chapters/`, `learning_modules/` or `master_curriculum.json`.
+- Status is `draft` / `reviewed` / `approved`. Release builds show only `approved` (teacher-checked).
+- Maths is LaTeX inside `$...$` / `$$...$$`. In JSON every backslash is doubled: `\\frac`.
+- Question `marks` must match its type: mcq/assertion_reason 1, very_short_answer 2,
+  short_answer 3, case_based 4, long_answer 5. Written questions need `answer_steps` and `marking_scheme`.
+- Label sources honestly: `ncert_exercise` (with exercise + question), `ncert_example`, `pyq` (only with
+  a real paper), `sample_paper`, `shine` (our own).
+- Verify every numerical answer with a script (sympy) before saving.
+- Before claiming done, run: `flutter test test/content/content_check_test.dart`

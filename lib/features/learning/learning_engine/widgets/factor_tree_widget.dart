@@ -60,10 +60,19 @@ class _FactorTreeWidgetState extends State<FactorTreeWidget> with SingleTickerPr
     duration: _stepDuration * math.max(_levels.length, 1),
   );
 
+  bool _hasStarted = false;
+
   @override
-  void initState() {
-    super.initState();
-    _controller.forward();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Reduced motion (an accessibility setting, also used for PDF capture)
+    // shows the finished picture straight away.
+    if (MediaQuery.of(context).disableAnimations) {
+      _controller.value = 1;
+    } else if (!_hasStarted) {
+      _hasStarted = true;
+      _controller.forward();
+    }
   }
 
   @override

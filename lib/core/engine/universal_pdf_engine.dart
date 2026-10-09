@@ -216,7 +216,8 @@ class UniversalPdfEngine {
   /// registration above, this guarantees proper Gujarati shaping.
   static Widget _wrapInTheme(Widget child) {
     return MediaQuery(
-      data: const MediaQueryData(size: Size(794, 2000)),
+      // disableAnimations makes animated blocks render their final frame.
+      data: const MediaQueryData(size: Size(794, 2000), disableAnimations: true),
       child: Directionality(
         textDirection: TextDirection.ltr,
         child: Theme(

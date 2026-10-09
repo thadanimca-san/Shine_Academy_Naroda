@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/engine/assessment_engine.dart';
+import '../../../core/engine/block_registry.dart';
 import '../../../core/services/trilingual_service.dart';
 import '../../../foundation/theme/app_typography.dart';
 import '../../common/widgets/tts_interactive_text.dart';
@@ -89,6 +90,11 @@ class PaperQuestionTile extends StatelessWidget {
               Text('[${question.marks}]', style: small.copyWith(color: Colors.grey.shade700)),
             ],
           ),
+          if (question.figure != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 8, left: 32),
+              child: BlockRegistry.instance.build(question.figure!) ?? const SizedBox.shrink(),
+            ),
           if (isObjective)
             Padding(
               padding: const EdgeInsets.only(top: 6, left: 32),

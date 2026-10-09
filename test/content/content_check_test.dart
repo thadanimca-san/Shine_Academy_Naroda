@@ -77,6 +77,22 @@ void checkFormulas(String text, String where, Problems problems) {
   }
 }
 
+/// Figures and graph blocks must be registered blocks, and every zero marked
+/// on a graph must really be a zero of its polynomial.
+void checkVisual(Map<String, dynamic> block, String where, Problems problems) {
+  final type = block['type'];
+  if (type is! String || !BlockRegistry.instance.hasBlock(type)) {
+    problems.add(where, 'figure type "$type" is not registered in default_blocks.dart');
+  }
+  if (type == 'function_graph') {
+    final coefficients = (block['polynomial'] as List? ?? const []).map((c) => (c as num).toDouble()).toList();
+    for (final zero in (block['zeroes'] as List? ?? const []).map((z) => (z as num).toDouble())) {
+      final value = coefficients.fold(0.0, (v, c) => v * zero + c);
+      if (value.abs() > 1e-9) problems.add(where, 'graph marks $zero as a zero, but p($zero) = $value');
+    }
+  }
+}
+
 void checkOptions(Map<String, dynamic> item, String where, Problems problems) {
   final options = item['options'];
   final correct = item['correct_index'];
@@ -113,6 +129,7 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
         problems.add(where, 'block type "$type" is not registered in default_blocks.dart');
       }
       if (optionBlockTypes.contains(type)) checkOptions(block, where, problems);
+      if (type == 'function_graph') checkVisual(block, where, problems);
       if (block.containsKey('content') && block['content'] is Map) {
         problems.add(where, 'fields must be at the top level, not inside "content"');
       }
@@ -149,6 +166,7 @@ void checkQuestions(Map<String, dynamic> entry, Problems problems) {
       problems.add(where, 'NCERT exercise questions need source.exercise and source.question');
     }
 
+    if (q['figure'] is Map<String, dynamic>) checkVisual(q['figure'] as Map<String, dynamic>, where, problems);
     if (objectiveTypes.contains(type)) {
       checkOptions(q, where, problems);
       if ((q['explanation'] as String? ?? '').trim().isEmpty) problems.add(where, 'needs an explanation');

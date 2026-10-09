@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch02",
+  "title": "Polynomials",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 2,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: zeroes of a polynomial and the relationship between zeroes and coefficients of quadratic polynomials. The division algorithm and cubic relationships are not in the board syllabus and are not included.",
+  "concepts": [
+    "polynomial_degree",
+    "zeroes_of_polynomial",
+    "graph_of_polynomial",
+    "zeroes_coefficients_relationship"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Curves around us",
+      "blocks": [
+        {
+          "id": "ch02.s1.hook",
+          "type": "hook",
+          "title": "Where will the ball land?",
+          "body": "Throw a ball and its path makes a curve. Engineers who design bridges, fountains and cricket-ball tracking systems describe such curves with **polynomials**.\n\nThe points where the curve meets the ground are special: they are the **zeroes** of the polynomial. In this chapter you will find zeroes, see them on graphs, and discover a beautiful link between the zeroes and the numbers in the polynomial."
+        },
+        {
+          "id": "ch02.s1.socratic",
+          "type": "socratic_question",
+          "question": "For $p(x) = x - 3$, for which value of $x$ is $p(x) = 0$?",
+          "options": [
+            "$x = 3$",
+            "$x = -3$",
+            "$x = 0$"
+          ],
+          "correct_index": 0,
+          "explanation": "$p(3) = 3 - 3 = 0$. A value of $x$ that makes $p(x) = 0$ is called a **zero** of the polynomial."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Polynomials and their zeroes",
+      "blocks": [
+        {
+          "id": "ch02.s2.reveal",
+          "type": "theory",
+          "title": "Degree, value and zero of a polynomial",
+          "body": "- The highest power of $x$ in $p(x)$ is its **degree**. $4x + 2$ has degree 1, $2y^{2} - 3y + 4$ has degree 2, $5x^{3} - 4x^{2} + x - \\sqrt{2}$ has degree 3.\n- Degree 1: **linear** ($ax + b$, $a \\neq 0$). Degree 2: **quadratic** ($ax^{2} + bx + c$, $a \\neq 0$). Degree 3: **cubic**.\n- Putting $x = k$ gives the **value** $p(k)$.\n- $k$ is a **zero** of $p(x)$ if $p(k) = 0$.\n\nThe zero of the linear polynomial $ax + b$ is $-\\dfrac{b}{a}$."
+        },
+        {
+          "id": "ch02.s2.eg",
+          "type": "worked_example",
+          "title": "Checking zeroes",
+          "problem": "Show that $-1$ and $4$ are zeroes of $p(x) = x^{2} - 3x - 4$.",
+          "steps": [
+            "$p(-1) = (-1)^{2} - 3(-1) - 4 = 1 + 3 - 4 = 0$",
+            "$p(4) = 4^{2} - 3(4) - 4 = 16 - 12 - 4 = 0$"
+          ],
+          "answer": "Both values give $p(x) = 0$, so $-1$ and $4$ are zeroes."
+        },
+        {
+          "id": "ch02.s2.check",
+          "type": "knowledge_check",
+          "question": "The degree of $4x^{3} - 2x + 1$ is:",
+          "options": [
+            "$3$",
+            "$4$",
+            "$1$",
+            "$2$"
+          ],
+          "correct_index": 0,
+          "explanation": "The highest power of $x$ is 3."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "What zeroes look like on a graph",
+      "blocks": [
+        {
+          "id": "ch02.s3.discovery",
+          "type": "discovery",
+          "title": "Watch the curve meet the x-axis",
+          "body": "On the graph of $y = p(x)$, a zero is an $x$ where $y = 0$: the point where the curve meets the **x-axis**. Watch the curves below being drawn and count where they meet the x-axis."
+        },
+        {
+          "id": "ch02.s3.g1",
+          "type": "function_graph",
+          "polynomial": [
+            2,
+            3
+          ],
+          "x_range": [
+            -4,
+            3
+          ],
+          "zeroes": [
+            -1.5
+          ],
+          "title": "A linear polynomial: one zero",
+          "label": "y = 2x + 3",
+          "zero_labels": [
+            "-3/2"
+          ]
+        },
+        {
+          "id": "ch02.s3.g2",
+          "type": "function_graph",
+          "polynomial": [
+            1,
+            -3,
+            -4
+          ],
+          "x_range": [
+            -3,
+            6
+          ],
+          "zeroes": [
+            -1.0,
+            4.0
+          ],
+          "title": "A quadratic meeting the x-axis twice",
+          "label": "y = x^{2} - 3x - 4"
+        },
+        {
+          "id": "ch02.s3.g3",
+          "type": "function_graph",
+          "polynomial": [
+            1,
+            -4,
+            4
+          ],
+          "x_range": [
+            -1,
+            5
+          ],
+          "zeroes": [
+            2.0
+          ],
+          "title": "A quadratic touching the x-axis once",
+          "label": "y = x^{2} - 4x + 4"
+        },
+        {
+          "id": "ch02.s3.g4",
+          "type": "function_graph",
+          "polynomial": [
+            1,
+            0,
+            1
+          ],
+          "x_range": [
+            -3,
+            3
+          ],
+          "zeroes": [],
+          "title": "A quadratic that never meets the x-axis",
+          "label": "y = x^{2} + 1"
+        },
+        {
+          "id": "ch02.s3.reveal",
+          "type": "theory",
+          "title": "Zeroes and the graph",
+          "body": "- The zeroes of $p(x)$ are the $x$-coordinates of the points where the graph of $y = p(x)$ **intersects or touches the x-axis**.\n- The graph of a quadratic $ax^{2} + bx + c$ is a **parabola**: it opens upwards if $a > 0$ and downwards if $a < 0$.\n- A quadratic can have **two**, **one** or **no** zeroes, so **at most 2**. A cubic has at most 3. In general, a polynomial of degree $n$ has at most $n$ zeroes."
+        },
+        {
+          "id": "ch02.s3.check",
+          "type": "knowledge_check",
+          "question": "The graph of $y = p(x)$ meets the x-axis at exactly 3 points. How many zeroes does $p(x)$ have?",
+          "options": [
+            "$2$",
+            "$1$",
+            "Cannot be found",
+            "$3$"
+          ],
+          "correct_index": 3,
+          "explanation": "Each meeting point with the x-axis gives one zero."
+        },
+        {
+          "id": "ch02.s3.tip",
+          "type": "teacher_tip",
+          "title": "Use the panel",
+          "body": "On the classroom panel, replay the four graphs and pause each one exactly when it meets the x-axis. Ask: 'What is $y$ here?' Students answer 'zero' and the definition of a zero becomes visual."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Zeroes and coefficients",
+      "blocks": [
+        {
+          "id": "ch02.s4.socratic",
+          "type": "socratic_question",
+          "question": "$(x - 2)(x - 3) = x^{2} - 5x + 6$. The zeroes are 2 and 3. Do you notice a link between 2, 3 and the numbers $-5$ and $6$?",
+          "options": [
+            "Sum $2 + 3 = 5$ and product $2 \\times 3 = 6$",
+            "No link at all",
+            "Only the product is linked"
+          ],
+          "correct_index": 0,
+          "explanation": "The sum of the zeroes is $5 = -(-5)$ and their product is $6$. This works for every quadratic, as you will see."
+        },
+        {
+          "id": "ch02.s4.reveal",
+          "type": "theory",
+          "title": "The relationship",
+          "body": "If $\\alpha$ and $\\beta$ are the zeroes of $p(x) = ax^{2} + bx + c$ ($a \\neq 0$), then\n\n$$\\alpha + \\beta = -\\frac{b}{a}, \\qquad \\alpha\\beta = \\frac{c}{a}$$\n\n*Why:* $p(x) = a(x - \\alpha)(x - \\beta) = ax^{2} - a(\\alpha + \\beta)x + a\\alpha\\beta$. Comparing with $ax^{2} + bx + c$ gives $b = -a(\\alpha + \\beta)$ and $c = a\\alpha\\beta$.\n\n**Building a quadratic from its zeroes:** if the sum is $S$ and the product is $P$, then $k(x^{2} - Sx + P)$ works for any $k \\neq 0$."
+        },
+        {
+          "id": "ch02.s4.eg2",
+          "type": "worked_example",
+          "title": "NCERT Example 2",
+          "problem": "Find the zeroes of $x^{2} + 7x + 10$, and verify the relationship between the zeroes and the coefficients.",
+          "steps": [
+            "$x^{2} + 7x + 10 = (x + 2)(x + 5)$, so the zeroes are $-2$ and $-5$.",
+            "Sum $= -2 + (-5) = -7 = -\\dfrac{7}{1} = -\\dfrac{b}{a}$ ✓",
+            "Product $= (-2)(-5) = 10 = \\dfrac{10}{1} = \\dfrac{c}{a}$ ✓"
+          ],
+          "answer": "Zeroes $-2$ and $-5$; relationship verified."
+        },
+        {
+          "id": "ch02.s4.eg3",
+          "type": "worked_example",
+          "title": "NCERT Example 3",
+          "problem": "Find the zeroes of $x^{2} - 3$ and verify the relationship between the zeroes and the coefficients.",
+          "steps": [
+            "$x^{2} - 3 = (x - \\sqrt{3})(x + \\sqrt{3})$, so the zeroes are $\\sqrt{3}$ and $-\\sqrt{3}$.",
+            "Here $a = 1$, $b = 0$, $c = -3$.",
+            "Sum $= \\sqrt{3} - \\sqrt{3} = 0 = -\\dfrac{0}{1}$ ✓, product $= -3 = \\dfrac{-3}{1}$ ✓"
+          ],
+          "answer": "Zeroes $\\pm\\sqrt{3}$; relationship verified."
+        },
+        {
+          "id": "ch02.s4.eg4",
+          "type": "worked_example",
+          "title": "NCERT Example 4",
+          "problem": "Find a quadratic polynomial, the sum and product of whose zeroes are $-3$ and $2$, respectively.",
+          "steps": [
+            "Use $k(x^{2} - Sx + P)$ with $S = -3$, $P = 2$.",
+            "$x^{2} - (-3)x + 2 = x^{2} + 3x + 2$ (taking $k = 1$)."
+          ],
+          "answer": "$x^{2} + 3x + 2$ (or any $k(x^{2} + 3x + 2)$, $k \\neq 0$)"
+        },
+        {
+          "id": "ch02.s4.memory",
+          "type": "memory_trick",
+          "title": "Sum has a minus, product does not",
+          "body": "**S**um $= -\\dfrac{b}{a}$ (the **s**ign flips). **P**roduct $= \\dfrac{c}{a}$ (no change).\n\nTo build a quadratic: $x^{2} - (\\text{sum})x + (\\text{product})$."
+        },
+        {
+          "id": "ch02.s4.check1",
+          "type": "knowledge_check",
+          "question": "If $\\alpha$ and $\\beta$ are the zeroes of $2x^{2} - 5x + 3$, then $\\alpha + \\beta$ is:",
+          "options": [
+            "$5$",
+            "$\\dfrac{5}{2}$",
+            "$-\\dfrac{5}{2}$",
+            "$\\dfrac{3}{2}$"
+          ],
+          "correct_index": 1,
+          "explanation": "$\\alpha + \\beta = -\\dfrac{b}{a} = -\\dfrac{-5}{2} = \\dfrac{5}{2}$."
+        },
+        {
+          "id": "ch02.s4.check2",
+          "type": "knowledge_check",
+          "question": "A quadratic polynomial whose zeroes are $-2$ and $5$ is:",
+          "options": [
+            "$x^{2} - 3x - 10$",
+            "$x^{2} + 3x - 10$",
+            "$x^{2} - 3x + 10$",
+            "$x^{2} + 7x - 10$"
+          ],
+          "correct_index": 0,
+          "explanation": "Sum $= 3$, product $= -10$, so $x^{2} - 3x - 10$."
+        },
+        {
+          "id": "ch02.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Writing sum $= \\dfrac{b}{a}$. It is $-\\dfrac{b}{a}$.\n- Reading $a, b, c$ before arranging the polynomial in standard form: in $6x^{2} - 3 - 7x$, $b = -7$ and $c = -3$.\n- When $b$ or $c$ is missing, it is 0: in $x^{2} - 15$, $b = 0$.\n- Forgetting that $4s^{2} - 4s + 1 = (2s - 1)^{2}$ has the zero $\\dfrac{1}{2}$ twice."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch02.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why a quadratic can never have three zeroes, using the picture of a parabola."
+        },
+        {
+          "id": "ch02.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 4, Quadratic Equations:** solving $ax^{2} + bx + c = 0$ means finding the zeroes of a quadratic polynomial.\n- **Coordinate Geometry:** graphs of linear polynomials are straight lines.\n- **Physics:** the height of a thrown ball over time is a quadratic; its zeroes tell when it is at ground level."
+        },
+        {
+          "id": "ch02.s5.arch",
+          "type": "function_graph",
+          "polynomial": [
+            -1,
+            2,
+            8
+          ],
+          "x_range": [
+            -3,
+            5
+          ],
+          "zeroes": [
+            -2.0,
+            4.0
+          ],
+          "title": "A bridge arch",
+          "label": "y = -x^{2} + 2x + 8"
+        },
+        {
+          "id": "ch02.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "One zero of $3x^{2} - 8x + 2k + 1$ is seven times the other. Find the zeroes and the value of $k$.\n\n**Answer:** let the zeroes be $\\alpha$ and $7\\alpha$. Sum: $8\\alpha = \\dfrac{8}{3}$, so $\\alpha = \\dfrac{1}{3}$ and the zeroes are $\\dfrac{1}{3}, \\dfrac{7}{3}$. Product: $\\dfrac{7}{9} = \\dfrac{2k + 1}{3}$, so $2k + 1 = \\dfrac{7}{3}$ and $k = \\dfrac{2}{3}$."
+        },
+        {
+          "id": "ch02.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Polynomials of degree 1, 2 and 3 are linear, quadratic and cubic.\n- Zeroes of $p(x)$ are the $x$-coordinates where the graph of $y = p(x)$ meets the x-axis.\n- A quadratic has at most 2 zeroes; a polynomial of degree $n$ has at most $n$.\n- For $ax^{2} + bx + c$: $\\alpha + \\beta = -\\dfrac{b}{a}$, $\\alpha\\beta = \\dfrac{c}{a}$.\n- A quadratic with zero-sum $S$ and product $P$: $k(x^{2} - Sx + P)$."
+        },
+        {
+          "id": "ch02.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Factorise by splitting the middle term, then **write both zeroes clearly**.\n- In 'verify' questions, show sum and product separately with $-\\dfrac{b}{a}$ and $\\dfrac{c}{a}$.\n- Expressions like $\\alpha^{2} + \\beta^{2}$ or $\\dfrac{1}{\\alpha} + \\dfrac{1}{\\beta}$: rewrite using $\\alpha + \\beta$ and $\\alpha\\beta$; do **not** find the zeroes separately unless asked.\n- Graph questions: count points where the curve **meets** the x-axis, including touching points."
+        },
+        {
+          "id": "ch02.s5.flash1",
+          "type": "flashcard",
+          "front": "Sum and product of the zeroes of $ax^{2} + bx + c$?",
+          "back": "Sum $= -\\dfrac{b}{a}$, product $= \\dfrac{c}{a}$."
+        },
+        {
+          "id": "ch02.s5.flash2",
+          "type": "flashcard",
+          "front": "How many zeroes can a quadratic polynomial have?",
+          "back": "At most 2: two, one, or none."
+        },
+        {
+          "id": "ch02.s5.flash3",
+          "type": "flashcard",
+          "front": "Quadratic with zero-sum $S$ and product $P$?",
+          "back": "$k(x^{2} - Sx + P)$, $k \\neq 0$."
+        }
+      ]
+    }
+  ]
+}

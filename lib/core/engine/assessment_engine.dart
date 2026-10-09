@@ -56,6 +56,9 @@ class AssessmentQuestion {
   final int marks;
   final String? section;
 
+  /// Optional block (e.g. a `function_graph`) drawn below the question text.
+  final Map<String, dynamic>? figure;
+
   AssessmentQuestion({
     required this.moduleId,
     required this.type,
@@ -79,6 +82,7 @@ class AssessmentQuestion {
     this.aiHint,
     this.marks = 1,
     this.section,
+    this.figure,
   });
 
   /// Question types in the new question bank that have options to choose from.
@@ -102,6 +106,7 @@ class AssessmentQuestion {
         correctIndexOrAnswer: q['correct_index'] ?? 0,
         explanationEn: q['explanation'] as String?,
         marks: marks,
+        figure: q['figure'] as Map<String, dynamic>?,
       );
     }
 
@@ -114,6 +119,7 @@ class AssessmentQuestion {
       correctIndexOrAnswer: steps ?? q['answer'] ?? '',
       explanationEn: markingScheme,
       marks: marks,
+      figure: q['figure'] as Map<String, dynamic>?,
     );
   }
 
@@ -140,6 +146,7 @@ class AssessmentQuestion {
     String? aiHint,
     int? marks,
     String? section,
+    Map<String, dynamic>? figure,
   }) {
     return AssessmentQuestion(
       moduleId: moduleId ?? this.moduleId,
@@ -164,6 +171,7 @@ class AssessmentQuestion {
       aiHint: aiHint ?? this.aiHint,
       marks: marks ?? this.marks,
       section: section ?? this.section,
+      figure: figure ?? this.figure,
     );
   }
 }

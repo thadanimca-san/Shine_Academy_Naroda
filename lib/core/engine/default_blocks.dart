@@ -23,6 +23,7 @@ import '../../features/learning/learning_engine/widgets/phonics_blender_widget.d
 import '../../features/learning/learning_engine/widgets/abacus_simulation_widget.dart';
 import '../../features/learning/learning_engine/widgets/markdown_table_widget.dart';
 import '../../features/learning/learning_engine/widgets/factor_tree_widget.dart';
+import '../../features/learning/learning_engine/widgets/function_graph_widget.dart';
 
 // Pedagogy Arc Widgets
 import '../../features/learning/learning_engine/widgets/hook_widget.dart';
@@ -379,6 +380,17 @@ void registerDefaultBlocks() {
       type: 'factor_tree',
       validator: (block) => BlockValidationUtils.require(block, 'number', int),
       builder: (block) => FactorTreeWidget(data: block),
+    ),
+  );
+
+  // ─────────────────────────────────────────────────────────────────
+  // FUNCTION GRAPH (animated polynomial plot with zeroes)
+  // ─────────────────────────────────────────────────────────────────
+  registry.register(
+    BlockDefinition(
+      type: 'function_graph',
+      validator: (block) => BlockValidationUtils.require(block, 'polynomial', List),
+      builder: (block) => FunctionGraphWidget(data: block),
     ),
   );
 
