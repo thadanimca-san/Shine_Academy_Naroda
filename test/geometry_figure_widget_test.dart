@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shine_academy_naroda/features/learning/learning_engine/widgets/geometry_figure_widget.dart';
@@ -71,5 +73,30 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: Scaffold(body: SingleChildScrollView(child: GeometryFigureWidget(data: data)))));
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('shades a sector and a segment', (tester) async {
+    const data = {
+      'title': 'Sector and segment',
+      'points': {'O': [0, 0], 'A': [3, 0], 'B': [0, 3], 'C': [-3, 0]},
+      'circles': [{'centre': 'O', 'radius': 3, 'through': ['A', 'B', 'C']}],
+      'shaded': [{'kind': 'sector', 'centre': 'O', 'from': 'A', 'to': 'B'}, {'kind': 'segment', 'centre': 'O', 'from': 'B', 'to': 'C'}],
+    };
+    final regions = geometryRegions(data);
+    expect(regions.first.isSector, isTrue);
+    final arc = regionArc(regions.first, geometryPoints(data), samples: 2);
+    expect(arc[1].dx, closeTo(3 * math.cos(math.pi / 4), 1e-9));
+    expect(arc[1].dy, closeTo(3 * math.sin(math.pi / 4), 1e-9), reason: 'anticlockwise from A to B');
+    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: SingleChildScrollView(child: GeometryFigureWidget(data: data)))));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
+
+  test('a corner sector only widens the figure by its arc', () {
+    const data = {
+      'points': {'A': [0, 0], 'P': [5, 0], 'Q': [0, 5], 'C': [15, 15]},
+      'shaded': [{'kind': 'sector', 'centre': 'A', 'from': 'P', 'to': 'Q'}],
+    };
+    expect(geometryBounds(data, geometryPoints(data)).left, closeTo(0, 1e-9));
   });
 }

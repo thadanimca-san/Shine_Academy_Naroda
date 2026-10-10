@@ -63,6 +63,41 @@ List<GeometryCircle> geometryCircles(Map<String, dynamic> data) => [
         GeometryCircle(c['centre'] as String, (c['radius'] as num).toDouble(), _names(c['through'])),
     ];
 
+/// A shaded sector or segment of a circle, running anticlockwise from [from]
+/// to [to] about [centre]. A segment is the part cut off by the chord.
+class GeometryRegion {
+  final String kind;
+  final String centre;
+  final String from;
+  final String to;
+  const GeometryRegion(this.kind, this.centre, this.from, this.to);
+
+  bool get isSector => kind == 'sector';
+}
+
+/// Shaded regions are written as `{"kind": "sector", "centre": "O", "from": "A", "to": "B"}`.
+List<GeometryRegion> geometryRegions(Map<String, dynamic> data) => [
+      for (final r in (data['shaded'] as List? ?? const []).cast<Map>())
+        GeometryRegion(r['kind'] as String, r['centre'] as String, r['from'] as String, r['to'] as String),
+    ];
+
+/// Points along the arc of [region], anticlockwise from its first to its last
+/// point (in maths coordinates). Empty when a point is unknown.
+List<Offset> regionArc(GeometryRegion region, Map<String, Offset> points, {int samples = 64}) {
+  final o = points[region.centre], a = points[region.from], b = points[region.to];
+  if (o == null || a == null || b == null) return const [];
+  final radius = (a - o).distance;
+  final start = math.atan2((a - o).dy, (a - o).dx);
+  var sweep = math.atan2((b - o).dy, (b - o).dx) - start;
+  while (sweep <= 0) {
+    sweep += 2 * math.pi;
+  }
+  return [
+    for (var i = 0; i <= samples; i++)
+      o + Offset(math.cos(start + sweep * i / samples), math.sin(start + sweep * i / samples)) * radius,
+  ];
+}
+
 /// The region of the plane the figure shows. With `"axes": true` it also
 /// includes the origin and one unit of space around the points.
 Rect geometryBounds(Map<String, dynamic> data, Map<String, Offset> points) {
@@ -76,6 +111,12 @@ Rect geometryBounds(Map<String, dynamic> data, Map<String, Offset> points) {
     if (centre == null) continue;
     xs.addAll([centre.dx - c.radius, centre.dx + c.radius]);
     ys.addAll([centre.dy - c.radius, centre.dy + c.radius]);
+  }
+  for (final region in geometryRegions(data)) {
+    for (final p in regionArc(region, points)) {
+      xs.add(p.dx);
+      ys.add(p.dy);
+    }
   }
   final pad = data['axes'] == true ? 1.0 : 0.0;
   return Rect.fromLTRB(xs.reduce(math.min) - pad, ys.reduce(math.min) - pad, xs.reduce(math.max) + pad, ys.reduce(math.max) + pad);
@@ -97,6 +138,8 @@ List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 /// For coordinate geometry add `"axes": true` (x- and y-axes with a grid) and
 /// `"labels": {"A": "A(2, 3)"}` to show coordinates beside the points.
 /// Circles: `"circles": [{"centre": "O", "radius": 5, "through": ["A", "B"]}]`.
+/// Shaded sectors and segments: `"shaded": [{"kind": "segment", "centre": "O", "from": "A", "to": "B"}]`
+/// (anticlockwise from A to B; swap the points for the major one).
 class GeometryFigureWidget extends StatefulWidget {
   final Map<String, dynamic> data;
   const GeometryFigureWidget({super.key, required this.data});
@@ -238,6 +281,24 @@ class _FigurePainter extends CustomPainter {
             ..color = lineColor
             ..strokeWidth = 2.5
             ..style = PaintingStyle.stroke);
+    }
+
+    // Shaded sectors and segments fade in while the circles are traced.
+    final fade = (progress / (_drawShare / 2)).clamp(0.0, 1.0);
+    for (final region in geometryRegions(data)) {
+      final arc = regionArc(region, points).map(toCanvas).toList();
+      if (arc.isEmpty || fade <= 0) continue;
+      final outline = Path()..moveTo(arc.first.dx, arc.first.dy);
+      for (final p in arc.skip(1)) {
+        outline.lineTo(p.dx, p.dy);
+      }
+      final shape = Path.from(outline);
+      if (region.isSector) shape.lineTo(canvasPoints[region.centre]!.dx, canvasPoints[region.centre]!.dy);
+      canvas.drawPath(shape..close(), Paint()..color = highlightColor.withValues(alpha: 0.25 * fade));
+      canvas.drawPath(outline, Paint()
+        ..color = lineColor.withValues(alpha: fade)
+        ..strokeWidth = 2.5
+        ..style = PaintingStyle.stroke);
     }
 
     // Segments, one after another.
