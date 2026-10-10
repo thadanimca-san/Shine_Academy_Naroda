@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch13",
+  "title": "Statistics",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 13,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: mean, median and mode of grouped data (bimodal situations to be avoided).",
+  "concepts": [
+    "mean_grouped",
+    "mode_grouped",
+    "median_grouped"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Data in groups",
+      "blocks": [
+        {
+          "id": "ch13.s1.hook",
+          "type": "hook",
+          "title": "What is a 'typical' mark?",
+          "body": "Your teacher has the marks of 40 students. Writing all 40 numbers tells us little. So the marks are grouped into classes (0–10, 10–20, …) with the number of students in each.\n\nFrom such a table we can still find three 'centres' of the data: the **mean** (the average), the **mode** (the most common value) and the **median** (the middle value). This chapter shows how."
+        },
+        {
+          "id": "ch13.s1.inspiration",
+          "type": "inspiration",
+          "title": "The man who counted India",
+          "person": "Prasanta Chandra Mahalanobis",
+          "years": "1893–1972",
+          "body": "P. C. Mahalanobis studied physics, but he fell in love with statistics. In 1931 he founded the **Indian Statistical Institute** in Kolkata, and he designed large sample surveys, showing that a carefully chosen sample can tell us about crores of people. The National Sample Survey he started in 1950 still measures how India lives and spends.\n\nHis work shaped India's Second Five-Year Plan. India celebrates his birthday, 29 June, as **National Statistics Day**.",
+          "quote": "Statistics is the key technology for turning numbers into decisions that help people.",
+          "future": "Statistics is used in elections, medicine trials, cricket analysis, weather forecasting, business, banking and government planning."
+        },
+        {
+          "id": "ch13.s1.socratic",
+          "type": "socratic_question",
+          "question": "What single number would you use to represent the class 10–20?",
+          "options": [
+            "$20$, its upper limit",
+            "$15$, its class mark",
+            "$10$, its lower limit"
+          ],
+          "correct_index": 1,
+          "explanation": "We assume the values in a class are spread around its middle, so we use the class mark $\\dfrac{10 + 20}{2} = 15$."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Mean of grouped data",
+      "blocks": [
+        {
+          "id": "ch13.s2.reveal",
+          "type": "theory",
+          "title": "Three ways to find the mean",
+          "revision": true,
+          "body": "Let $x_i$ be the class mark (middle value) of each class and $f_i$ its frequency.\n\n- **Direct method:** $\\bar{x} = \\dfrac{\\sum f_i x_i}{\\sum f_i}$\n- **Assumed mean method:** choose $a$ (a class mark near the middle), let $d_i = x_i - a$; then $\\bar{x} = a + \\dfrac{\\sum f_i d_i}{\\sum f_i}$\n- **Step-deviation method:** also divide by the class size $h$: $u_i = \\dfrac{x_i - a}{h}$ and $\\bar{x} = a + h \\times \\dfrac{\\sum f_i u_i}{\\sum f_i}$\n\nAll three give the same answer; the last two just make the numbers smaller."
+        },
+        {
+          "id": "ch13.s2.table",
+          "type": "markdown_table",
+          "title": "Marks of 40 students: the working table",
+          "revision": false,
+          "body": "| Class | $f_i$ | $x_i$ | $f_i x_i$ | $u_i = \\dfrac{x_i - 35}{10}$ | $f_i u_i$ | $cf$ |\n|---|---|---|---|---|---|---|\n| $0 - 10$ | $3$ | $5$ | $15$ | $-3$ | $-9$ | $3$ |\n| $10 - 20$ | $5$ | $15$ | $75$ | $-2$ | $-10$ | $8$ |\n| $20 - 30$ | $9$ | $25$ | $225$ | $-1$ | $-9$ | $17$ |\n| $30 - 40$ | $12$ | $35$ | $420$ | $0$ | $0$ | $29$ |\n| $40 - 50$ | $7$ | $45$ | $315$ | $1$ | $7$ | $36$ |\n| $50 - 60$ | $4$ | $55$ | $220$ | $2$ | $8$ | $40$ |\n| **Total** | $40$ | | $1270$ | | $-13$ | |"
+        },
+        {
+          "id": "ch13.s2.eg1",
+          "type": "worked_example",
+          "title": "Mean by two methods",
+          "problem": "Find the mean marks of the 40 students in the table above.",
+          "steps": [
+            "Direct method: $\\bar{x} = \\dfrac{1270}{40} = 31.75$",
+            "Step deviation with $a = 35$, $h = 10$: $\\sum f_i u_i = -13$",
+            "$\\bar{x} = 35 + 10 \\times \\dfrac{-13}{40} = 35 - 3.25 = 31.75$"
+          ],
+          "answer": "Mean $= 31.75$ marks"
+        },
+        {
+          "id": "ch13.s2.check",
+          "type": "knowledge_check",
+          "question": "The class mark of the class 20–30 is:",
+          "options": [
+            "$30$",
+            "$10$",
+            "$25$",
+            "$20$"
+          ],
+          "correct_index": 2,
+          "explanation": "$\\dfrac{20 + 30}{2} = 25$.",
+          "option_feedback": [
+            "That is the upper limit.",
+            "That is the class size.",
+            "Correct! $\\dfrac{20 + 30}{2}$.",
+            "That is the lower limit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Mode of grouped data",
+      "blocks": [
+        {
+          "id": "ch13.s3.thm",
+          "type": "theory",
+          "title": "Mode",
+          "revision": true,
+          "body": "The class with the highest frequency is the **modal class**. The mode lies inside it:\n\n$$\\text{Mode} = l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\times h$$\n\nwhere $l$ is the lower limit of the modal class, $h$ the class size, $f_1$ the frequency of the modal class, $f_0$ of the class before it and $f_2$ of the class after it."
+        },
+        {
+          "id": "ch13.s3.eg1",
+          "type": "worked_example",
+          "title": "Mode of the marks",
+          "problem": "Find the mode of the marks of the 40 students.",
+          "steps": [
+            "Modal class: $30 - 40$ (highest frequency $12$), with $f_0 = 9$ and $f_2 = 7$.",
+            "Mode $= 30 + \\dfrac{12 - 9}{24 - 9 - 7} \\times 10 = 30 + \\dfrac{30}{8}$"
+          ],
+          "answer": "Mode $= 33.75$ marks"
+        },
+        {
+          "id": "ch13.s3.check",
+          "type": "knowledge_check",
+          "question": "In the mode formula, $f_0$ is the frequency of:",
+          "options": [
+            "the first class",
+            "the class just before the modal class",
+            "the modal class",
+            "the class just after the modal class"
+          ],
+          "correct_index": 1,
+          "explanation": "$f_1$ is the modal class, $f_0$ the class before it and $f_2$ the class after it.",
+          "option_feedback": [
+            "$f_0$ is the neighbour just before the modal class.",
+            "Correct!",
+            "The modal class frequency is $f_1$.",
+            "That is $f_2$."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Median of grouped data",
+      "blocks": [
+        {
+          "id": "ch13.s4.thm",
+          "type": "theory",
+          "title": "Median",
+          "revision": true,
+          "body": "1. Add the frequencies one by one to get the **cumulative frequencies** $cf$.\n2. Find $\\dfrac{n}{2}$. The first class whose $cf$ is $\\geq \\dfrac{n}{2}$ is the **median class**.\n3. Then\n\n$$\\text{Median} = l + \\dfrac{\\frac{n}{2} - cf}{f} \\times h$$\n\nwhere $l$ is the lower limit of the median class, $cf$ the cumulative frequency of the class **before** it, $f$ its frequency and $h$ the class size.\n\nIf the classes are like 118–126, 127–135, first make them continuous: 117.5–126.5, 126.5–135.5, …"
+        },
+        {
+          "id": "ch13.s4.eg1",
+          "type": "worked_example",
+          "title": "Median of the marks",
+          "problem": "Find the median of the marks of the 40 students.",
+          "steps": [
+            "$\\dfrac{n}{2} = 20$; cumulative frequencies: $3, 8, 17, 29, 36, 40$",
+            "Median class: $30 - 40$, with $cf = 17$, $f = 12$, $h = 10$",
+            "Median $= 30 + \\dfrac{20 - 17}{12} \\times 10$"
+          ],
+          "answer": "Median $= 32.5$ marks"
+        },
+        {
+          "id": "ch13.s4.relation",
+          "type": "theory",
+          "title": "A useful relation",
+          "revision": true,
+          "body": "For many distributions, the three measures are connected by the empirical relation\n\n$$3 \\times \\text{Median} = \\text{Mode} + 2 \\times \\text{Mean}$$\n\nFor our marks: $3 \\times 32.5 = 97.5$ and $33.75 + 2 \\times 31.75 = 97.25$: very close. CBSE uses this relation in questions."
+        },
+        {
+          "id": "ch13.s4.check",
+          "type": "knowledge_check",
+          "question": "For 40 observations with cumulative frequencies $5, 13, 25, 33, 40$ for the classes $0 - 10$, $10 - 20$, $20 - 30$, $30 - 40$, $40 - 50$, the median class is:",
+          "options": [
+            "$20 - 30$",
+            "$10 - 20$",
+            "$30 - 40$",
+            "$0 - 10$"
+          ],
+          "correct_index": 0,
+          "explanation": "$\\dfrac{n}{2} = 20$, and the first cumulative frequency $\\geq 20$ is $25$, for $20 - 30$.",
+          "option_feedback": [
+            "Correct!",
+            "Its $cf$ is 13, less than 20.",
+            "$25$ already reaches 20 in the class before.",
+            "Its $cf$ is only 5."
+          ]
+        },
+        {
+          "id": "ch13.s4.memory",
+          "type": "memory_trick",
+          "title": "Which formula when?",
+          "revision": true,
+          "body": "- **Mean:** class marks $x_i$, multiply by $f_i$, add, divide.\n- **Mode:** look at the **biggest** frequency and its two neighbours.\n- **Median:** find $\\dfrac{n}{2}$ in the **running total** $cf$.\n- In both formulas, $l$ is the **lower** limit and $h$ the class size."
+        },
+        {
+          "id": "ch13.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Using the lower limit instead of the class mark for the mean.\n- In the median formula, using the $cf$ of the median class itself instead of the class before it.\n- In the mode formula, using $f_1 + f_0$ in place of $f_1 - f_0$, or forgetting the 2 in $2f_1$.\n- Not making classes continuous (118–126, 127–135, …) before using the formulas.\n- Taking the modal class as the class with the biggest class mark instead of the biggest frequency."
+        },
+        {
+          "id": "ch13.s4.tip",
+          "type": "teacher_tip",
+          "title": "Use the class's own data",
+          "body": "Ask every student how many minutes they travelled to school today. Group the answers into classes of 5 minutes on the board, then find the mean, median and mode together. Students remember the formulas better when the data is about themselves."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch13.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend when the median is a better 'typical value' than the mean. (Hint: think of the salaries in a company where the owner earns a hundred times more than the others.)"
+        },
+        {
+          "id": "ch13.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 14, Probability:** frequencies become chances.\n- **Class 11 Statistics:** spread of data (variance and standard deviation).\n- **Real life:** average rainfall, median income, the most common shoe size a shop should stock."
+        },
+        {
+          "id": "ch13.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "The mean of the following distribution of 120 observations is 50. Find the missing frequencies $f_1$ and $f_2$.\n\nClasses $0 - 20$, $20 - 40$, $40 - 60$, $60 - 80$, $80 - 100$ with frequencies $17$, $f_1$, $32$, $f_2$, $19$.\n\n**Answer:** $f_1 + f_2 = 120 - 68 = 52$. With class marks $10, 30, 50, 70, 90$: $\\sum f_i x_i = 3480 + 30f_1 + 70f_2 = 50 \\times 120 = 6000$, so $3f_1 + 7f_2 = 252$. Solving, $f_1 = 28$ and $f_2 = 24$."
+        },
+        {
+          "id": "ch13.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Mean: $\\bar{x} = \\dfrac{\\sum f_i x_i}{\\sum f_i}$, or $\\bar{x} = a + h \\times \\dfrac{\\sum f_i u_i}{\\sum f_i}$\n- Mode: $l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\times h$, in the modal class\n- Median: $l + \\dfrac{\\frac{n}{2} - cf}{f} \\times h$, in the median class\n- Empirical relation: $3 \\times$ Median $=$ Mode $+ 2 \\times$ Mean"
+        },
+        {
+          "id": "ch13.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Always draw the working table with columns $x_i$, $f_i x_i$ (or $u_i$, $f_i u_i$) and $cf$: it earns method marks.\n- Write the formula, then list $l$, $h$, $f_1$, $f_0$, $f_2$ (or $cf$, $f$) before substituting.\n- Check that your answer lies inside the modal or median class.\n- Questions with a missing frequency: write the sum of frequencies as one equation and the given mean, median or mode as the other."
+        },
+        {
+          "id": "ch13.s5.flash1",
+          "type": "flashcard",
+          "front": "Formula for the mode of grouped data",
+          "back": "$l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\times h$"
+        },
+        {
+          "id": "ch13.s5.flash2",
+          "type": "flashcard",
+          "front": "Formula for the median of grouped data",
+          "back": "$l + \\dfrac{\\frac{n}{2} - cf}{f} \\times h$"
+        },
+        {
+          "id": "ch13.s5.flash3",
+          "type": "flashcard",
+          "front": "Empirical relation between mean, median and mode",
+          "back": "$3 \\times$ Median $=$ Mode $+ 2 \\times$ Mean"
+        }
+      ]
+    }
+  ]
+}
