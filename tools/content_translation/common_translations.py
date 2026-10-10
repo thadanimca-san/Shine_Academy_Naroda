@@ -542,6 +542,8 @@ MARKING = {
  '2 marks: table': ('2 अंक: सारणी', '2 ગુણ: કોષ્ટક'),
  "(iii) 1 mark equation, 1 mark type": ("(iii) समीकरण के लिए 1 अंक, प्रकार के लिए 1 अंक", "(iii) સમીકરણ માટે 1 ગુણ, પ્રકાર માટે 1 ગુણ"),
  "(iii) 1 mark reason, 1 mark prevention": ("(iii) कारण के लिए 1 अंक, रोकथाम के लिए 1 अंक", "(iii) કારણ માટે 1 ગુણ, અટકાવ માટે 1 ગુણ"),
+ "A: 1 mark": ("A: 1 अंक", "A: 1 ગુણ"), "B: 2 marks": ("B: 2 अंक", "B: 2 ગુણ"), "C: 1 mark": ("C: 1 अंक", "C: 1 ગુણ"),
+ "(iii) 1 mark method, 1 mark equation": ("(iii) विधि के लिए 1 अंक, समीकरण के लिए 1 अंक", "(iii) રીત માટે 1 ગુણ, સમીકરણ માટે 1 ગુણ"),
 }
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
@@ -561,6 +563,12 @@ MARK_LABELS = {
  "types named correctly": ("सही प्रकारों के नाम", "પ્રકારોનાં સાચાં નામ"), "answer": ("उत्तर", "જવાબ"), "reason": ("कारण", "કારણ"), "equation": ("समीकरण", "સમીકરણ"),
  "first part": ("पहला भाग", "પહેલો ભાગ"), "second part": ("दूसरा भाग", "બીજો ભાગ"), "balanced equation": ("संतुलित समीकरण", "સમતોલિત સમીકરણ"), "difference": ("अंतर", "તફાવત"),
  "explanation": ("व्याख्या", "સમજૂતી"),
+ # Science Ch 2 (acids, bases and salts)
+ "A and the gas": ("A और गैस", "A અને વાયુ"), "(a) to (c)": ("(a) से (c)", "(a) થી (c)"), "baking soda": ("बेकिंग सोडा", "ખાવાનો સોડા"), "(b) cause": ("(b) कारण", "(b) કારણ"),
+ "chlorine": ("क्लोरीन", "ક્લોરિન"), "clear again": ("फिर से स्वच्छ", "ફરી સ્વચ્છ"), "example": ("उदाहरण", "ઉદાહરણ"), "formation": ("निर्माण", "બનાવટ"), "gas": ("गैस", "વાયુ"),
+ "metal oxide": ("धात्विक ऑक्साइड", "ધાતુ ઑક્સાઇડ"), "milky": ("दूधिया", "દૂધિયું"), "non-metal oxide": ("अधात्विक ऑक्साइड", "અધાતુ ઑક્સાઇડ"), "observations": ("प्रेक्षण", "અવલોકનો"),
+ "order": ("क्रम", "ક્રમ"), "pH scale": ("pH स्केल", "pH માપક્રમ"), "test": ("परीक्षण", "કસોટી"), "uses": ("उपयोग", "ઉપયોગ"), "washing soda": ("धोने का सोडा", "ધોવાનો સોડા"),
+ "water": ("जल", "પાણી"), "word equations": ("शब्द समीकरण", "શાબ્દિક સમીકરણો"),
 }
 _PART_LABELS = re.compile(r"^(\([a-z]+\)|[A-E])((, | and )(\([a-z]+\)|[A-E]))*$")
 
@@ -625,6 +633,6 @@ def by_template(text, lang):
 def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
-    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|m|kg|g)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
+    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|mL|m|kg|g|K|ppm)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
     outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii|[a-f])\)", "", outside)  # part labels like (ii) or (b)
     return not re.search(r"[A-Za-z]", outside)
