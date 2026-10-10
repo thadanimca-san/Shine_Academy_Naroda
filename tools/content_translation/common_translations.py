@@ -551,6 +551,10 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 6 (control and coordination)
+ "brain": ("मस्तिष्क", "મગજ"), "example of effect": ("प्रभाव का उदाहरण", "અસરનું ઉદાહરણ"), "first deficiency": ("पहली कमी", "પહેલી ઊણપ"), "second deficiency": ("दूसरी कमी", "બીજી ઊણપ"),
+ "function": ("कार्य", "કાર્ય"), "gonads": ("जनन ग्रंथियाँ", "જનનગ્રંથિઓ"), "location": ("स्थान", "સ્થાન"), "pancreas and adrenal": ("अग्न्याशय और अधिवृक्क", "સ્વાદુપિંડ અને એડ્રિનલ"),
+ "path": ("मार्ग", "માર્ગ"), "pituitary and thyroid": ("पीयूष और थायरॉइड", "પિટ્યુટરી અને થાયરૉઇડ"),
  # Science Ch 5 (life processes)
  "first point": ("पहला बिंदु", "પહેલો મુદ્દો"), "second point": ("दूसरा बिंदु", "બીજો મુદ્દો"), "third point": ("तीसरा बिंदु", "ત્રીજો મુદ્દો"),
  "absorption": ("अवशोषण", "શોષણ"), "alveoli function": ("कूपिकाओं का कार्य", "વાયુકોષ્ઠોનું કાર્ય"), "alveoli structure": ("कूपिकाओं की रचना", "વાયુકોષ્ઠોની રચના"),
