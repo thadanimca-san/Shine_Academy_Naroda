@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch07",
+  "title": "Coordinate Geometry",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 7,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: distance formula and section formula (internal division). The area of a triangle is not in the board syllabus and is not included.",
+  "concepts": [
+    "coordinates",
+    "distance_formula",
+    "section_formula",
+    "coordinate_applications"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Points on a plane",
+      "blocks": [
+        {
+          "id": "ch07.s1.hook",
+          "type": "hook",
+          "title": "Two numbers that find you anywhere",
+          "body": "When you share your location on a phone, it sends just two numbers: how far north and how far east you are. With only those two numbers, anyone can find you on a map.\n\nIn Class 9 you learnt to mark points like $(3, 4)$ on a graph. In this chapter you will use the coordinates of points to find **distances** between them and to find the point that **divides** a line segment in a given ratio, without measuring anything."
+        },
+        {
+          "id": "ch07.s1.inspiration",
+          "type": "inspiration",
+          "title": "The thinker who joined algebra and geometry",
+          "person": "René Descartes",
+          "years": "1596–1650",
+          "body": "René Descartes was a French philosopher and mathematician. A popular story says that, lying in bed, he watched a fly on the ceiling and realised its position could be described by two numbers: its distances from two walls.\n\nIn 1637 he published *La Géométrie*, which turned shapes into equations and equations into shapes. In his honour, the $x$-$y$ system is called the **Cartesian** coordinate system.",
+          "quote": "Join two ideas that seem far apart, and you can create something new.",
+          "future": "Coordinate geometry powers GPS and maps, computer graphics and video games, robotics, and the design of buildings and bridges."
+        },
+        {
+          "id": "ch07.s1.socratic",
+          "type": "socratic_question",
+          "question": "Which of these points lies on the $y$-axis?",
+          "options": [
+            "$(5, 5)$",
+            "$(0, 5)$",
+            "$(5, 0)$"
+          ],
+          "correct_index": 1,
+          "explanation": "Every point on the $y$-axis has $x$-coordinate 0, so $(0, 5)$ lies on it. Points on the $x$-axis have $y$-coordinate 0, like $(5, 0)$."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Distance formula",
+      "blocks": [
+        {
+          "id": "ch07.s2.recap",
+          "type": "theory",
+          "title": "Coordinates: a quick recap",
+          "body": "A point $P(x, y)$ is $|x|$ units from the $y$-axis and $|y|$ units from the $x$-axis. The $x$-coordinate is called the **abscissa** and the $y$-coordinate the **ordinate**.\n\nPoints on the $x$-axis have the form $(x, 0)$ and points on the $y$-axis have the form $(0, y)$. The origin is $O(0, 0)$."
+        },
+        {
+          "id": "ch07.s2.discovery",
+          "type": "discovery",
+          "title": "Make a right triangle",
+          "body": "To find the distance between $P(x_1, y_1)$ and $Q(x_2, y_2)$, draw a horizontal line through $P$ and a vertical line through $Q$. They meet at $T$, making a right angle. The horizontal side is $x_2 - x_1$ and the vertical side is $y_2 - y_1$. Now Pythagoras does the rest."
+        },
+        {
+          "id": "ch07.s2.fig",
+          "type": "geometry_figure",
+          "title": "Distance between two points",
+          "axes": true,
+          "points": {
+            "P": [
+              1,
+              2
+            ],
+            "Q": [
+              5,
+              5
+            ],
+            "T": [
+              5,
+              2
+            ]
+          },
+          "segments": [
+            {
+              "from": "P",
+              "to": "Q",
+              "highlight": true
+            },
+            {
+              "from": "P",
+              "to": "T",
+              "dashed": true
+            },
+            {
+              "from": "T",
+              "to": "Q",
+              "dashed": true
+            }
+          ],
+          "labels": {
+            "P": "P(x₁, y₁)",
+            "Q": "Q(x₂, y₂)",
+            "T": "T"
+          },
+          "right_angles": [
+            [
+              "P",
+              "T",
+              "Q"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "P",
+              "to": "T",
+              "label": "x₂ − x₁"
+            },
+            {
+              "from": "T",
+              "to": "Q",
+              "label": "y₂ − y₁"
+            }
+          ]
+        },
+        {
+          "id": "ch07.s2.reveal",
+          "type": "theory",
+          "title": "The distance formula",
+          "revision": true,
+          "body": "The distance between $P(x_1, y_1)$ and $Q(x_2, y_2)$ is\n\n$$PQ = \\sqrt{(x_2 - x_1)^{2} + (y_2 - y_1)^{2}}$$\n\nThe distance of $P(x, y)$ from the origin is $\\sqrt{x^{2} + y^{2}}$.\n\n**Uses:** three points are **collinear** when the sum of two of the distances equals the third; a triangle is **isosceles** when two sides are equal; a quadrilateral with four equal sides and equal diagonals is a **square**."
+        },
+        {
+          "id": "ch07.s2.eg1",
+          "type": "worked_example",
+          "title": "Finding a distance",
+          "problem": "Find the distance between the points $(2, 3)$ and $(4, 1)$.",
+          "steps": [
+            "$x_2 - x_1 = 4 - 2 = 2$ and $y_2 - y_1 = 1 - 3 = -2$.",
+            "Distance $= \\sqrt{2^{2} + (-2)^{2}} = \\sqrt{8}$"
+          ],
+          "answer": "$2\\sqrt{2}$ units"
+        },
+        {
+          "id": "ch07.s2.eg2",
+          "type": "worked_example",
+          "title": "NCERT example: is it a triangle?",
+          "problem": "Do the points $P(3, 2)$, $Q(-2, -3)$ and $R(2, 3)$ form a triangle? If so, name the type of triangle.",
+          "steps": [
+            "$PQ = \\sqrt{25 + 25} = \\sqrt{50}$, $QR = \\sqrt{16 + 36} = \\sqrt{52}$, $PR = \\sqrt{1 + 1} = \\sqrt{2}$.",
+            "No distance equals the sum of the other two, so the points are not collinear: they form a triangle.",
+            "$PQ^{2} + PR^{2} = 50 + 2 = 52 = QR^{2}$, so by the converse of Pythagoras the angle at $P$ is $90^\\circ$."
+          ],
+          "answer": "Yes: a right triangle, right-angled at $P$."
+        },
+        {
+          "id": "ch07.s2.eg3",
+          "type": "worked_example",
+          "title": "NCERT exercise: a point on the x-axis",
+          "problem": "Find the point on the $x$-axis which is equidistant from $(2, -5)$ and $(-2, 9)$.",
+          "steps": [
+            "Let the point be $(x, 0)$.",
+            "$(x - 2)^{2} + 25 = (x + 2)^{2} + 81$",
+            "$-4x + 29 = 4x + 85$, so $x = -7$."
+          ],
+          "answer": "$(-7, 0)$"
+        },
+        {
+          "id": "ch07.s2.check1",
+          "type": "knowledge_check",
+          "question": "The distance of the point $(3, 4)$ from the origin is:",
+          "options": [
+            "$25$",
+            "$1$",
+            "$5$",
+            "$7$"
+          ],
+          "correct_index": 2,
+          "explanation": "$\\sqrt{3^{2} + 4^{2}} = \\sqrt{25} = 5$.",
+          "option_feedback": [
+            "25 is $3^{2} + 4^{2}$; take the square root.",
+            "That is $4 - 3$. Use $\\sqrt{x^{2} + y^{2}}$.",
+            "Correct! $\\sqrt{9 + 16} = 5$.",
+            "Don't add the coordinates: square them, add, then take the root."
+          ]
+        },
+        {
+          "id": "ch07.s2.check2",
+          "type": "knowledge_check",
+          "question": "The distance of the point $(2, 3)$ from the $y$-axis is:",
+          "options": [
+            "$5$",
+            "$2$",
+            "$3$",
+            "$\\sqrt{13}$"
+          ],
+          "correct_index": 1,
+          "explanation": "The distance from the $y$-axis is the $x$-coordinate (in absolute value): 2.",
+          "option_feedback": [
+            "Adding the coordinates does not give a distance.",
+            "Correct! The distance from the $y$-axis is the $x$-coordinate.",
+            "3 is the distance from the $x$-axis.",
+            "$\\sqrt{13}$ is the distance from the origin."
+          ]
+        },
+        {
+          "id": "ch07.s2.tip",
+          "type": "teacher_tip",
+          "title": "Square both sides",
+          "body": "When a question says 'equidistant', write $PA^{2} = PB^{2}$ straight away: squaring removes the roots and the algebra becomes linear. On the panel, draw the right triangle under every distance once or twice so students see that the formula is only Pythagoras."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Section formula",
+      "blocks": [
+        {
+          "id": "ch07.s3.discovery",
+          "type": "discovery",
+          "title": "Dividing a segment",
+          "body": "On the graph, $P$ lies on $AB$ with $AP : PB = 2 : 1$. Going from $A(1, 1)$ to $B(7, 4)$, $x$ rises by 6 and $y$ by 3. Two-thirds of the way along, $x$ has risen by 4 and $y$ by 2, so $P = (5, 3)$. The section formula does this for any ratio."
+        },
+        {
+          "id": "ch07.s3.fig",
+          "type": "geometry_figure",
+          "title": "P divides AB in the ratio 2 : 1",
+          "axes": true,
+          "points": {
+            "A": [
+              1,
+              1
+            ],
+            "B": [
+              7,
+              4
+            ],
+            "P": [
+              5,
+              3
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "P"
+            ],
+            {
+              "from": "P",
+              "to": "B",
+              "highlight": true
+            }
+          ],
+          "labels": {
+            "A": "A(1, 1)",
+            "B": "B(7, 4)",
+            "P": "P(5, 3)"
+          },
+          "lengths": [
+            {
+              "from": "A",
+              "to": "P",
+              "label": "2 parts"
+            },
+            {
+              "from": "P",
+              "to": "B",
+              "label": "1 part"
+            }
+          ]
+        },
+        {
+          "id": "ch07.s3.reveal",
+          "type": "theory",
+          "title": "Section formula",
+          "revision": true,
+          "body": "The point $P$ that divides the line segment joining $A(x_1, y_1)$ and $B(x_2, y_2)$ internally in the ratio $m_1 : m_2$ is\n\n$$P\\left(\\dfrac{m_1x_2 + m_2x_1}{m_1 + m_2}, \\; \\dfrac{m_1y_2 + m_2y_1}{m_1 + m_2}\\right)$$\n\n**Mid-point** (ratio $1 : 1$): $\\left(\\dfrac{x_1 + x_2}{2}, \\dfrac{y_1 + y_2}{2}\\right)$.\n\nTo find an unknown ratio, take it as $k : 1$, use the section formula for one coordinate, and solve for $k$. The points of **trisection** divide a segment in the ratios $1 : 2$ and $2 : 1$."
+        },
+        {
+          "id": "ch07.s3.eg1",
+          "type": "worked_example",
+          "title": "NCERT example",
+          "problem": "Find the coordinates of the point which divides the line segment joining $(4, -3)$ and $(8, 5)$ in the ratio $3 : 1$ internally.",
+          "steps": [
+            "$m_1 = 3$, $m_2 = 1$, $(x_1, y_1) = (4, -3)$, $(x_2, y_2) = (8, 5)$.",
+            "$x = \\dfrac{3 \\times 8 + 1 \\times 4}{4} = 7$ and $y = \\dfrac{3 \\times 5 + 1 \\times (-3)}{4} = 3$"
+          ],
+          "answer": "$(7, 3)$"
+        },
+        {
+          "id": "ch07.s3.eg2",
+          "type": "worked_example",
+          "title": "NCERT example: finding the ratio",
+          "problem": "In what ratio does the point $(-4, 6)$ divide the line segment joining $A(-6, 10)$ and $B(3, -8)$?",
+          "steps": [
+            "Let the ratio be $k : 1$. Then $\\dfrac{3k - 6}{k + 1} = -4$.",
+            "$3k - 6 = -4k - 4$, so $k = \\dfrac{2}{7}$.",
+            "Check $y$: $\\dfrac{-8 \\times \\frac{2}{7} + 10}{\\frac{2}{7} + 1} = 6$ ✓"
+          ],
+          "answer": "$2 : 7$"
+        },
+        {
+          "id": "ch07.s3.eg3",
+          "type": "worked_example",
+          "title": "NCERT example: points of trisection",
+          "problem": "Find the coordinates of the points of trisection of the line segment joining $A(2, -2)$ and $B(-7, 4)$.",
+          "steps": [
+            "$P$ divides $AB$ in $1 : 2$: $P = \\left(\\dfrac{-7 + 4}{3}, \\dfrac{4 - 4}{3}\\right) = (-1, 0)$.",
+            "$Q$ divides $AB$ in $2 : 1$: $Q = \\left(\\dfrac{-14 + 2}{3}, \\dfrac{8 - 2}{3}\\right) = (-4, 2)$."
+          ],
+          "answer": "$(-1, 0)$ and $(-4, 2)$"
+        },
+        {
+          "id": "ch07.s3.eg4",
+          "type": "worked_example",
+          "title": "NCERT example: a parallelogram",
+          "problem": "If the points $A(6, 1)$, $B(8, 2)$, $C(9, 4)$ and $D(p, 3)$ are the vertices of a parallelogram, taken in order, find the value of $p$.",
+          "steps": [
+            "The diagonals of a parallelogram bisect each other, so the mid-points of $AC$ and $BD$ are the same.",
+            "Mid-point of $AC = \\left(\\dfrac{15}{2}, \\dfrac{5}{2}\\right)$, mid-point of $BD = \\left(\\dfrac{8 + p}{2}, \\dfrac{5}{2}\\right)$.",
+            "$\\dfrac{8 + p}{2} = \\dfrac{15}{2}$"
+          ],
+          "answer": "$p = 7$"
+        },
+        {
+          "id": "ch07.s3.check1",
+          "type": "knowledge_check",
+          "question": "The mid-point of the line segment joining $(2, 5)$ and $(6, -1)$ is:",
+          "options": [
+            "$(4, 3)$",
+            "$(4, 2)$",
+            "$(8, 4)$",
+            "$(2, 3)$"
+          ],
+          "correct_index": 1,
+          "explanation": "$\\left(\\dfrac{2 + 6}{2}, \\dfrac{5 - 1}{2}\\right) = (4, 2)$.",
+          "option_feedback": [
+            "$\\dfrac{5 + (-1)}{2} = 2$, not 3.",
+            "Correct! $\\left(\\dfrac{8}{2}, \\dfrac{4}{2}\\right)$.",
+            "Remember to divide the sums by 2.",
+            "Add the coordinates, don't subtract them: $\\dfrac{2 + 6}{2} = 4$."
+          ]
+        },
+        {
+          "id": "ch07.s3.check2",
+          "type": "knowledge_check",
+          "question": "The point dividing the join of $(0, 0)$ and $(6, 9)$ in the ratio $1 : 2$ is:",
+          "options": [
+            "$(2, 3)$",
+            "$(4, 6)$",
+            "$(3, 4.5)$",
+            "$(1, 1.5)$"
+          ],
+          "correct_index": 0,
+          "explanation": "$\\left(\\dfrac{1 \\times 6 + 2 \\times 0}{3}, \\dfrac{1 \\times 9 + 2 \\times 0}{3}\\right) = (2, 3)$: one-third of the way from $(0, 0)$.",
+          "option_feedback": [
+            "Correct! One-third of the way from $(0, 0)$ to $(6, 9)$.",
+            "That divides it in $2 : 1$, two-thirds of the way.",
+            "That is the mid-point (ratio $1 : 1$).",
+            "That is one-sixth of the way. Divide by $1 + 2 = 3$."
+          ]
+        },
+        {
+          "id": "ch07.s3.memory",
+          "type": "memory_trick",
+          "title": "Cross over",
+          "revision": true,
+          "body": "In the section formula, each ratio number multiplies the **far** end: $m_1$ goes with $B(x_2, y_2)$ and $m_2$ with $A(x_1, y_1)$. Think: 'the bigger the share near $A$, the more the point is pulled towards $B$'. Check your answer: $P$ must lie between $A$ and $B$."
+        },
+        {
+          "id": "ch07.s3.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Multiplying $m_1$ with $x_1$ instead of $x_2$ in the section formula.\n- Forgetting to square negative differences correctly: $(-3)^{2} = 9$, not $-9$.\n- Writing a point on the $x$-axis as $(0, y)$: it is $(x, 0)$.\n- Checking only three sides for a square: you also need equal diagonals.\n- In ratio questions, using both coordinates to find $k$ and getting confused: one coordinate is enough, and the other is a check."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch07.s4.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why the distance formula is just the Pythagoras theorem, using the figure of the right triangle."
+        },
+        {
+          "id": "ch07.s4.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 3:** the graph of a linear equation is a line made of points $(x, y)$; now you can measure along it.\n- **Chapter 6, Triangles:** the section formula is the Basic Proportionality Theorem written with coordinates.\n- **Class 11:** straight lines, circles and parabolas are all studied with coordinates."
+        },
+        {
+          "id": "ch07.s4.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "Find the point on the $y$-axis which is equidistant from $A(6, 5)$ and $B(-4, 3)$.\n\n**Answer:** Let the point be $(0, y)$. $36 + (y - 5)^{2} = 16 + (y - 3)^{2}$ gives $61 - 10y = 25 - 6y$, so $y = 9$. The point is $(0, 9)$."
+        },
+        {
+          "id": "ch07.s4.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Distance between $(x_1, y_1)$ and $(x_2, y_2)$: $\\sqrt{(x_2 - x_1)^{2} + (y_2 - y_1)^{2}}$.\n- Distance of $(x, y)$ from the origin: $\\sqrt{x^{2} + y^{2}}$.\n- Point dividing the join in the ratio $m_1 : m_2$: $\\left(\\dfrac{m_1x_2 + m_2x_1}{m_1 + m_2}, \\dfrac{m_1y_2 + m_2y_1}{m_1 + m_2}\\right)$.\n- Mid-point: $\\left(\\dfrac{x_1 + x_2}{2}, \\dfrac{y_1 + y_2}{2}\\right)$."
+        },
+        {
+          "id": "ch07.s4.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Write the formula first, then substitute with brackets around negative numbers.\n- For 'equidistant' questions, equate the squares of the distances.\n- To prove a figure is a square, rhombus or parallelogram, show all the sides **and** the diagonals you need, and state the conclusion.\n- In ratio questions, take the ratio as $k : 1$ and write the final answer as a ratio of whole numbers."
+        },
+        {
+          "id": "ch07.s4.flash1",
+          "type": "flashcard",
+          "front": "What is the distance formula?",
+          "back": "$\\sqrt{(x_2 - x_1)^{2} + (y_2 - y_1)^{2}}$"
+        },
+        {
+          "id": "ch07.s4.flash2",
+          "type": "flashcard",
+          "front": "What is the section formula?",
+          "back": "$\\left(\\dfrac{m_1x_2 + m_2x_1}{m_1 + m_2}, \\dfrac{m_1y_2 + m_2y_1}{m_1 + m_2}\\right)$ for the ratio $m_1 : m_2$."
+        },
+        {
+          "id": "ch07.s4.flash3",
+          "type": "flashcard",
+          "front": "What form does a point on the x-axis have?",
+          "back": "$(x, 0)$. A point on the $y$-axis has the form $(0, y)$."
+        }
+      ]
+    }
+  ]
+}
