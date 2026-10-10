@@ -147,6 +147,8 @@ TEMPLATES = [
 ]
 
 MARKING = {
+ "(i) 2 marks": ("(i) 2 अंक", "(i) 2 ગુણ"),
+ "(iii) 1 mark": ("(iii) 1 अंक", "(iii) 1 ગુણ"),
  "(i) 1 mark": ("(i) 1 अंक", "(i) 1 ગુણ"),
  "(ii) 1 mark": ("(ii) 1 अंक", "(ii) 1 ગુણ"),
  "(iii) 1 mark factorisation, 1 mark answer": ("(iii) गुणनखंडन के लिए 1 अंक, उत्तर के लिए 1 अंक", "(iii) અવયવીકરણ માટે 1 ગુણ, જવાબ માટે 1 ગુણ"),
@@ -549,6 +551,15 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 5 (life processes)
+ "first point": ("पहला बिंदु", "પહેલો મુદ્દો"), "second point": ("दूसरा बिंदु", "બીજો મુદ્દો"), "third point": ("तीसरा बिंदु", "ત્રીજો મુદ્દો"),
+ "absorption": ("अवशोषण", "શોષણ"), "alveoli function": ("कूपिकाओं का कार्य", "વાયુકોષ્ઠોનું કાર્ય"), "alveoli structure": ("कूपिकाओं की रचना", "વાયુકોષ્ઠોની રચના"),
+ "byproducts": ("उपोत्पाद", "આડપેદાશો"), "conditions": ("परिस्थितियाँ", "પરિસ્થિતિઓ"), "diagram": ("चित्र", "આકૃતિ"), "dialysis": ("अपोहन", "ડાયાલિસિસ"),
+ "filtration": ("निस्यंदन", "ગાળણ"), "functions of lymph": ("लसीका के कार्य", "લસિકાનાં કાર્યો"), "labels": ("नामांकन", "નામનિર્દેશ"), "large intestine": ("बृहदांत्र", "મોટું આંતરડું"),
+ "left side": ("बायाँ भाग", "ડાબી બાજુ"), "right side": ("दायाँ भाग", "જમણી બાજુ"), "lungs": ("फुफ्फुस", "ફેફસાં"), "lymph": ("लसीका", "લસિકા"), "mouth": ("मुँह", "મુખ"),
+ "need": ("आवश्यकता", "જરૂરિયાત"), "nephron function": ("वृक्काणु का कार्य", "ઉત્સર્ગ એકમનું કાર્ય"), "nephron structure": ("वृक्काणु की रचना", "ઉત્સર્ગ એકમની રચના"),
+ "organs": ("अंग", "અંગો"), "path of urine": ("मूत्र का मार्ग", "મૂત્રનો માર્ગ"), "reabsorption": ("पुनरवशोषण", "પુનઃશોષણ"), "small intestine": ("क्षुद्रांत्र", "નાનું આંતરડું"),
+ "stomach": ("आमाशय", "જઠર"), "xylem and phloem": ("जाइलम और फ्लोएम", "જલવાહક અને અન્નવાહક"),
  # Science Ch 4 (carbon compounds)
  "catenation": ("शृंखलन", "શૃંખલન"), "chemical test": ("रासायनिक परीक्षण", "રાસાયણિક કસોટી"), "glacial acetic acid": ("ग्लेशियल ऐसीटिक अम्ल", "ગ્લેશિયલ એસિટિક ઍસિડ"),
  "isomers": ("समावयवी", "સમઘટકો"), "micelle": ("मिसेल", "મિસેલ"), "names or structures": ("नाम या संरचनाएँ", "નામ કે રચનાઓ"), "octets shown": ("अष्टक दर्शाए", "અષ્ટક દર્શાવ્યાં"),
