@@ -16,7 +16,7 @@ void main() {
     LocalContentManager.instance.init(force: true);
   });
 
-  for (final chapter in ['ncert_class10_maths_ch1', 'ncert_class10_maths_ch2', 'ncert_class10_maths_ch3', 'ncert_class10_maths_ch4', 'ncert_class10_maths_ch5']) {
+  for (final chapter in ['ncert_class10_maths_ch1', 'ncert_class10_maths_ch2', 'ncert_class10_maths_ch3', 'ncert_class10_maths_ch4', 'ncert_class10_maths_ch5', 'ncert_class10_maths_ch6']) {
     testWidgets('$chapter: plays a round of 10 game questions', (tester) async {
       await tester.pumpWidget(MaterialApp(home: QuizGameScreen(moduleId: chapter)));
       // Content is read from disk, which needs real async time.

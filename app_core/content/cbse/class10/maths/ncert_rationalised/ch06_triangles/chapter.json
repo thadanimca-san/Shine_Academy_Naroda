@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch06",
+  "title": "Triangles",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 6,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: similar figures, Basic Proportionality Theorem (proof) and its converse, and the AAA, SSS and SAS criteria. Areas of similar triangles and the Pythagoras theorem are not in the board syllabus and are not included. NCERT Exercise 6.3 Q1 depends on the textbook figure and is not reproduced.",
+  "concepts": [
+    "similar_figures",
+    "basic_proportionality_theorem",
+    "similarity_criteria",
+    "similarity_applications"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Same shape, different size",
+      "blocks": [
+        {
+          "id": "ch06.s1.hook",
+          "type": "hook",
+          "title": "Measuring a pyramid with a stick",
+          "body": "How would you find the height of a building without climbing it? You cannot reach the top with a measuring tape.\n\nOn a sunny day, stand a stick upright and measure its shadow. At the same moment, measure the building's shadow. The stick and its shadow make a small triangle; the building and its shadow make a big triangle of **the same shape**. In this chapter you will learn why such triangles are *similar*, and how that lets you measure what you cannot reach."
+        },
+        {
+          "id": "ch06.s1.inspiration",
+          "type": "inspiration",
+          "title": "The man who measured a pyramid",
+          "person": "Thales of Miletus",
+          "years": "about 624–546 BCE",
+          "body": "Thales was a Greek merchant who became one of the first mathematicians known by name. Ancient writers tell that he found the height of the Great Pyramid of Egypt by comparing its shadow with the shadow of a stick: he waited until a stick's shadow was as long as the stick itself, and then the pyramid's shadow was as long as the pyramid was tall.\n\nThe Basic Proportionality Theorem you will prove in this chapter is often called **Thales' theorem** in his honour.",
+          "quote": "You don't need to climb the mountain to know its height. Think, and the triangle will tell you.",
+          "future": "Similar triangles are used to make maps and scale models, in cameras and projectors, by surveyors and engineers, and in Chapter 9 of this book to find heights and distances."
+        },
+        {
+          "id": "ch06.s1.socratic",
+          "type": "socratic_question",
+          "question": "A photo of you is enlarged to twice its size. Which of these changes?",
+          "options": [
+            "The angles double, but the lengths stay the same",
+            "Both the lengths and the angles double",
+            "The lengths double, but the angles stay the same"
+          ],
+          "correct_index": 2,
+          "explanation": "Enlarging keeps the shape: every angle stays the same and every length is multiplied by the same number. Figures with the same shape are called similar."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Similar figures",
+      "blocks": [
+        {
+          "id": "ch06.s2.reveal",
+          "type": "theory",
+          "title": "Similar and congruent",
+          "revision": true,
+          "body": "Two figures with the **same shape** (but not necessarily the same size) are **similar**. Two figures with the same shape **and** the same size are **congruent**. So all congruent figures are similar, but similar figures need not be congruent.\n\nTwo polygons with the same number of sides are **similar** if\n\n1. their corresponding angles are **equal**, and\n2. their corresponding sides are in the **same ratio** (proportional).\n\nBoth conditions are needed. All circles are similar, all squares are similar and all equilateral triangles are similar."
+        },
+        {
+          "id": "ch06.s2.eg1",
+          "type": "worked_example",
+          "title": "Why both conditions are needed",
+          "problem": "Is a square of side 2 cm similar to (i) a rhombus of side 4 cm with an angle of $60^\\circ$? (ii) a rectangle of sides 2 cm and 5 cm?",
+          "steps": [
+            "(i) The sides are in the ratio $2 : 4$, all the same, but the angles ($90^\\circ$ and $60^\\circ$) are not equal: not similar.",
+            "(ii) All angles are $90^\\circ$, but the sides are not in the same ratio ($\\dfrac{2}{2} \\neq \\dfrac{2}{5}$): not similar."
+          ],
+          "answer": "Neither is similar to the square."
+        },
+        {
+          "id": "ch06.s2.fig",
+          "type": "geometry_figure",
+          "title": "Same shape, different size",
+          "points": {
+            "A": [
+              1,
+              3
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              4,
+              0
+            ],
+            "P": [
+              7.5,
+              4.5
+            ],
+            "Q": [
+              6,
+              0
+            ],
+            "R": [
+              12,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "P"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "C",
+                "B",
+                "A"
+              ],
+              "label": "x"
+            },
+            {
+              "points": [
+                "R",
+                "Q",
+                "P"
+              ],
+              "label": "x"
+            },
+            {
+              "points": [
+                "A",
+                "C",
+                "B"
+              ],
+              "label": "y"
+            },
+            {
+              "points": [
+                "P",
+                "R",
+                "Q"
+              ],
+              "label": "y"
+            }
+          ]
+        },
+        {
+          "id": "ch06.s2.check",
+          "type": "knowledge_check",
+          "question": "Which pair of figures is always similar?",
+          "options": [
+            "Two squares",
+            "Two rectangles",
+            "Two rhombuses",
+            "Two isosceles triangles"
+          ],
+          "correct_index": 0,
+          "explanation": "Every square has four $90^\\circ$ angles and four equal sides, so any two squares have equal angles and proportional sides.",
+          "option_feedback": [
+            "Correct! All angles are $90^\\circ$ and all sides are equal, so any two squares are similar.",
+            "A 2 × 2 and a 2 × 5 rectangle have equal angles but sides not in the same ratio.",
+            "Rhombuses can have different angles, e.g. $60^\\circ$ and $90^\\circ$.",
+            "Their angles can differ, e.g. $70^\\circ, 70^\\circ, 40^\\circ$ and $30^\\circ, 30^\\circ, 120^\\circ$."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Basic Proportionality Theorem",
+      "blocks": [
+        {
+          "id": "ch06.s3.discovery",
+          "type": "discovery",
+          "title": "Cut a triangle with a parallel line",
+          "body": "Draw any triangle ABC and a line DE parallel to BC, cutting AB at D and AC at E. Measure AD, DB, AE and EC. Whatever triangle you draw, you will find $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$. In the figure, $AD : DB = AE : EC = 1 : 2$."
+        },
+        {
+          "id": "ch06.s3.fig",
+          "type": "geometry_figure",
+          "title": "DE is parallel to BC",
+          "points": {
+            "A": [
+              1.5,
+              4.5
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              6,
+              0
+            ],
+            "D": [
+              1.0,
+              3.0
+            ],
+            "E": [
+              3.0,
+              3.0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            {
+              "from": "D",
+              "to": "E",
+              "highlight": true
+            }
+          ],
+          "parallel": [
+            [
+              "D",
+              "E",
+              "B",
+              "C"
+            ]
+          ]
+        },
+        {
+          "id": "ch06.s3.reveal",
+          "type": "theory",
+          "title": "Theorem 6.1 and its converse",
+          "revision": true,
+          "body": "**Theorem 6.1 (Basic Proportionality Theorem):** If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.\n\nIn $\\triangle ABC$, if $DE \\parallel BC$, then $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$.\n\n**Theorem 6.2 (Converse):** If a line divides any two sides of a triangle in the same ratio, then the line is parallel to the third side.\n\nUseful forms: $\\dfrac{AD}{AB} = \\dfrac{AE}{AC}$ and $\\dfrac{DB}{AB} = \\dfrac{EC}{AC}$."
+        },
+        {
+          "id": "ch06.s3.proof",
+          "type": "worked_example",
+          "title": "Proof of Theorem 6.1",
+          "problem": "In $\\triangle ABC$, a line parallel to $BC$ meets $AB$ at $D$ and $AC$ at $E$. Prove that $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$.",
+          "steps": [
+            "Join $BE$ and $CD$. Draw $DM \\perp AC$ and $EN \\perp AB$.",
+            "$\\text{ar}(ADE) = \\dfrac{1}{2} \\times AD \\times EN$ and $\\text{ar}(BDE) = \\dfrac{1}{2} \\times DB \\times EN$, so $\\dfrac{\\text{ar}(ADE)}{\\text{ar}(BDE)} = \\dfrac{AD}{DB}$.",
+            "Similarly, $\\dfrac{\\text{ar}(ADE)}{\\text{ar}(DEC)} = \\dfrac{AE}{EC}$.",
+            "$\\triangle BDE$ and $\\triangle DEC$ are on the same base $DE$ and between the same parallels $BC$ and $DE$, so $\\text{ar}(BDE) = \\text{ar}(DEC)$.",
+            "Hence $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$."
+          ],
+          "answer": "Proved."
+        },
+        {
+          "id": "ch06.s3.prooffig",
+          "type": "geometry_figure",
+          "title": "Proof: join BE and CD",
+          "points": {
+            "A": [
+              1.5,
+              4.5
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              6,
+              0
+            ],
+            "D": [
+              1.0,
+              3.0
+            ],
+            "E": [
+              3.0,
+              3.0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            {
+              "from": "D",
+              "to": "E",
+              "highlight": true
+            },
+            {
+              "from": "B",
+              "to": "E",
+              "dashed": true
+            },
+            {
+              "from": "C",
+              "to": "D",
+              "dashed": true
+            }
+          ],
+          "parallel": [
+            [
+              "D",
+              "E",
+              "B",
+              "C"
+            ]
+          ]
+        },
+        {
+          "id": "ch06.s3.eg1",
+          "type": "worked_example",
+          "title": "Using the theorem",
+          "problem": "In $\\triangle ABC$, $DE \\parallel BC$ with $D$ on $AB$ and $E$ on $AC$. If $AD = 1.5$ cm, $DB = 3$ cm and $AE = 1$ cm, find $EC$.",
+          "steps": [
+            "By Theorem 6.1, $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$.",
+            "$\\dfrac{1.5}{3} = \\dfrac{1}{EC}$, so $EC = \\dfrac{3}{1.5} = 2$."
+          ],
+          "answer": "$EC = 2$ cm"
+        },
+        {
+          "id": "ch06.s3.eg2",
+          "type": "worked_example",
+          "title": "Using the converse",
+          "problem": "In $\\triangle PQR$, $E$ and $F$ are points on $PQ$ and $PR$ with $PE = 4$ cm, $QE = 4.5$ cm, $PF = 8$ cm and $RF = 9$ cm. Is $EF \\parallel QR$?",
+          "steps": [
+            "$\\dfrac{PE}{EQ} = \\dfrac{4}{4.5} = \\dfrac{8}{9}$ and $\\dfrac{PF}{FR} = \\dfrac{8}{9}$.",
+            "The sides are divided in the same ratio, so by Theorem 6.2, $EF \\parallel QR$."
+          ],
+          "answer": "Yes, $EF \\parallel QR$."
+        },
+        {
+          "id": "ch06.s3.check",
+          "type": "knowledge_check",
+          "question": "In $\\triangle ABC$, $DE \\parallel BC$, $AD = 2$ cm, $DB = 3$ cm and $AE = 4$ cm. Then $EC$ is:",
+          "options": [
+            "$\\dfrac{8}{3}$ cm",
+            "$1.5$ cm",
+            "$5$ cm",
+            "$6$ cm"
+          ],
+          "correct_index": 3,
+          "explanation": "$\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$ gives $\\dfrac{2}{3} = \\dfrac{4}{EC}$, so $EC = 6$ cm.",
+          "option_feedback": [
+            "That uses $\\dfrac{AD}{DB} = \\dfrac{EC}{AE}$ upside down. Use $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$.",
+            "Check: $\\dfrac{4}{1.5} \\neq \\dfrac{2}{3}$. Use $\\dfrac{AD}{DB} = \\dfrac{AE}{EC}$.",
+            "Adding the same amount does not keep the ratio. $\\dfrac{2}{3} = \\dfrac{4}{EC}$.",
+            "Correct! $\\dfrac{2}{3} = \\dfrac{4}{EC}$ gives $EC = 6$ cm."
+          ]
+        },
+        {
+          "id": "ch06.s3.tip",
+          "type": "teacher_tip",
+          "title": "Let students discover it",
+          "body": "Before stating the theorem, ask each student to draw a different triangle and a parallel line, measure the four lengths and report $\\dfrac{AD}{DB}$ and $\\dfrac{AE}{EC}$. When the whole class finds the ratios equal, the proof feels necessary rather than imposed. In the board exam, the proof of Theorem 6.1 often comes as a 5-mark question."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Criteria for similarity of triangles",
+      "blocks": [
+        {
+          "id": "ch06.s4.reveal",
+          "type": "theory",
+          "title": "AAA, SSS and SAS",
+          "revision": true,
+          "body": "$\\triangle ABC \\sim \\triangle DEF$ means $\\angle A = \\angle D$, $\\angle B = \\angle E$, $\\angle C = \\angle F$ and $\\dfrac{AB}{DE} = \\dfrac{BC}{EF} = \\dfrac{CA}{FD}$. The **order of letters** shows which parts correspond.\n\nYou do not need to check all six facts. Any one of these is enough:\n\n- **AAA (or AA):** the corresponding angles are equal. Two equal angles are enough, because the third then also matches.\n- **SSS:** the corresponding sides are in the same ratio.\n- **SAS:** one angle is equal and the sides **including** that angle are in the same ratio."
+        },
+        {
+          "id": "ch06.s4.eg1",
+          "type": "worked_example",
+          "title": "NCERT exercise: the tower's height",
+          "problem": "A vertical pole of length 6 m casts a shadow 4 m long on the ground, and at the same time a tower casts a shadow 28 m long. Find the height of the tower.",
+          "steps": [
+            "The pole and the tower are vertical, so each makes a right angle with the ground.",
+            "The sun's rays fall at the same angle on both, so the two triangles are similar (AA).",
+            "$\\dfrac{h}{6} = \\dfrac{28}{4}$, so $h = 6 \\times 7 = 42$."
+          ],
+          "answer": "The tower is 42 m high."
+        },
+        {
+          "id": "ch06.s4.fig",
+          "type": "geometry_figure",
+          "title": "Same sun, same angle",
+          "points": {
+            "A": [
+              0,
+              6
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              4,
+              0
+            ],
+            "P": [
+              10,
+              42
+            ],
+            "Q": [
+              10,
+              0
+            ],
+            "R": [
+              38,
+              0
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "to": "B",
+              "highlight": true
+            },
+            [
+              "B",
+              "C"
+            ],
+            {
+              "from": "A",
+              "to": "C",
+              "dashed": true
+            },
+            {
+              "from": "P",
+              "to": "Q",
+              "highlight": true
+            },
+            [
+              "Q",
+              "R"
+            ],
+            {
+              "from": "P",
+              "to": "R",
+              "dashed": true
+            }
+          ],
+          "right_angles": [
+            [
+              "A",
+              "B",
+              "C"
+            ],
+            [
+              "P",
+              "Q",
+              "R"
+            ]
+          ],
+          "parallel": [
+            [
+              "A",
+              "C",
+              "P",
+              "R"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "A",
+              "to": "B",
+              "label": "6 m"
+            },
+            {
+              "from": "B",
+              "to": "C",
+              "label": "4 m"
+            },
+            {
+              "from": "Q",
+              "to": "R",
+              "label": "28 m"
+            },
+            {
+              "from": "P",
+              "to": "Q",
+              "label": "h"
+            }
+          ]
+        },
+        {
+          "id": "ch06.s4.eg2",
+          "type": "worked_example",
+          "title": "NCERT exercise: angles in similar triangles",
+          "problem": "The lines $AC$ and $BD$ meet at $O$, and $\\triangle ODC \\sim \\triangle OBA$. If $\\angle BOC = 125^\\circ$ and $\\angle CDO = 70^\\circ$, find $\\angle DOC$, $\\angle DCO$ and $\\angle OAB$.",
+          "steps": [
+            "$\\angle DOC = 180^\\circ - 125^\\circ = 55^\\circ$ (linear pair).",
+            "In $\\triangle ODC$: $\\angle DCO = 180^\\circ - 70^\\circ - 55^\\circ = 55^\\circ$.",
+            "Since $\\triangle ODC \\sim \\triangle OBA$, $\\angle OAB = \\angle OCD = 55^\\circ$."
+          ],
+          "answer": "$\\angle DOC = \\angle DCO = \\angle OAB = 55^\\circ$"
+        },
+        {
+          "id": "ch06.s4.fig2",
+          "type": "geometry_figure",
+          "title": "ΔODC ~ ΔOBA",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "D": [
+              1.879385242,
+              2.684040287
+            ],
+            "C": [
+              3.758770483,
+              0.0
+            ],
+            "B": [
+              -2.443200814,
+              -3.489252373
+            ],
+            "A": [
+              -4.886401628,
+              0.0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "C"
+            ],
+            [
+              "B",
+              "D"
+            ],
+            [
+              "D",
+              "C"
+            ],
+            [
+              "A",
+              "B"
+            ]
+          ],
+          "parallel": [
+            [
+              "D",
+              "C",
+              "A",
+              "B"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "C",
+                "O",
+                "B"
+              ],
+              "label": "125°"
+            },
+            {
+              "points": [
+                "O",
+                "D",
+                "C"
+              ],
+              "label": "70°"
+            }
+          ]
+        },
+        {
+          "id": "ch06.s4.eg3",
+          "type": "worked_example",
+          "title": "NCERT exercise: a proof with AA",
+          "problem": "$D$ is a point on side $BC$ of $\\triangle ABC$ such that $\\angle ADC = \\angle BAC$. Show that $CA^{2} = CB \\cdot CD$.",
+          "steps": [
+            "In $\\triangle ADC$ and $\\triangle BAC$: $\\angle ADC = \\angle BAC$ (given) and $\\angle C$ is common.",
+            "So $\\triangle ADC \\sim \\triangle BAC$ (AA).",
+            "Corresponding sides are proportional: $\\dfrac{CA}{CB} = \\dfrac{CD}{CA}$."
+          ],
+          "answer": "$CA^{2} = CB \\cdot CD$"
+        },
+        {
+          "id": "ch06.s4.check1",
+          "type": "knowledge_check",
+          "question": "Triangles with sides 3 cm, 4 cm, 5 cm and 6 cm, 8 cm, 10 cm are similar by the criterion:",
+          "options": [
+            "RHS",
+            "SSS",
+            "SAS",
+            "AAA"
+          ],
+          "correct_index": 1,
+          "explanation": "$\\dfrac{3}{6} = \\dfrac{4}{8} = \\dfrac{5}{10} = \\dfrac{1}{2}$: all three sides are in the same ratio.",
+          "option_feedback": [
+            "RHS is a congruence criterion, not a similarity criterion.",
+            "Correct! $\\dfrac{3}{6} = \\dfrac{4}{8} = \\dfrac{5}{10}$.",
+            "SAS needs a known equal angle; here only sides are given.",
+            "No angles are given; the sides are what we can compare."
+          ]
+        },
+        {
+          "id": "ch06.s4.check2",
+          "type": "knowledge_check",
+          "question": "If $\\triangle ABC \\sim \\triangle PQR$, which of these is true?",
+          "options": [
+            "$\\dfrac{AB}{PQ} = \\dfrac{AC}{PR}$",
+            "$\\dfrac{AB}{PR} = \\dfrac{BC}{QR}$",
+            "$\\dfrac{AB}{QR} = \\dfrac{AC}{PQ}$",
+            "$\\dfrac{AB}{PQ} = \\dfrac{AC}{QR}$"
+          ],
+          "correct_index": 0,
+          "explanation": "Match the letters in order: $A \\leftrightarrow P$, $B \\leftrightarrow Q$, $C \\leftrightarrow R$. So $AB \\leftrightarrow PQ$ and $AC \\leftrightarrow PR$.",
+          "option_feedback": [
+            "Correct! $AB \\leftrightarrow PQ$ and $AC \\leftrightarrow PR$.",
+            "$AB$ matches $PQ$, not $PR$.",
+            "Match letters in order: $AB$ with $PQ$, $AC$ with $PR$.",
+            "$AC$ matches $PR$, not $QR$."
+          ]
+        },
+        {
+          "id": "ch06.s4.memory",
+          "type": "memory_trick",
+          "title": "Read the name in order",
+          "revision": true,
+          "body": "In $\\triangle ABC \\sim \\triangle PQR$, write the letters one below the other:\n\n$$\\begin{matrix} A & B & C \\\\ P & Q & R \\end{matrix}$$\n\nPairs of letters give the matching angles ($A$ with $P$), and pairs of pairs give the matching sides ($AB$ with $PQ$, $BC$ with $QR$, $CA$ with $RP$)."
+        },
+        {
+          "id": "ch06.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Writing the similarity in the wrong order, e.g. $\\triangle ABC \\sim \\triangle QPR$ when $A$ matches $P$.\n- Using SAS with an angle that is **not** between the two sides.\n- Using $\\dfrac{AD}{AB} = \\dfrac{AE}{EC}$, which mixes two different forms of the theorem.\n- Calling ASA or RHS a similarity criterion: those are congruence criteria.\n- In proofs, not writing the reason (given, common, alternate angles, etc.) for each step."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch06.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why two equal angles are enough to show that two triangles are similar, while for quadrilaterals equal angles are not enough."
+        },
+        {
+          "id": "ch06.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 8, Trigonometry:** trigonometric ratios make sense only because similar right triangles have equal ratios of sides.\n- **Chapter 9, Heights and Distances:** the shadow method grows into a full method for measuring heights.\n- **Geography and design:** map scales, architects' plans and scale models are all similar figures."
+        },
+        {
+          "id": "ch06.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "$ABCD$ is a trapezium with $AB \\parallel DC$. Its diagonals meet at $O$. Show that $\\dfrac{AO}{BO} = \\dfrac{CO}{DO}$.\n\n**Answer:** In $\\triangle AOB$ and $\\triangle COD$: $\\angle OAB = \\angle OCD$ and $\\angle OBA = \\angle ODC$ (alternate angles, $AB \\parallel DC$). So $\\triangle AOB \\sim \\triangle COD$ (AA), giving $\\dfrac{AO}{CO} = \\dfrac{BO}{DO}$, i.e. $\\dfrac{AO}{BO} = \\dfrac{CO}{DO}$."
+        },
+        {
+          "id": "ch06.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Figures with the same shape are similar; with the same shape and size they are congruent.\n- Polygons with the same number of sides are similar if corresponding angles are equal **and** corresponding sides are proportional.\n- **Basic Proportionality Theorem:** a line parallel to one side of a triangle divides the other two sides in the same ratio. Its converse is also true.\n- Triangles are similar by **AAA (AA)**, **SSS** or **SAS**."
+        },
+        {
+          "id": "ch06.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Learn the statement and proof of Theorem 6.1 thoroughly: it is a frequent 5-mark question.\n- Write similarity statements with the letters in corresponding order.\n- In every proof, give a reason for each step and name the criterion (AA, SSS or SAS).\n- In numerical questions, write the proportion first, then substitute."
+        },
+        {
+          "id": "ch06.s5.flash1",
+          "type": "flashcard",
+          "front": "State the Basic Proportionality Theorem.",
+          "back": "If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio."
+        },
+        {
+          "id": "ch06.s5.flash2",
+          "type": "flashcard",
+          "front": "Name the three criteria for similarity of triangles.",
+          "back": "AAA (or AA), SSS and SAS."
+        },
+        {
+          "id": "ch06.s5.flash3",
+          "type": "flashcard",
+          "front": "Are all congruent figures similar?",
+          "back": "Yes. But similar figures need not be congruent, because their sizes can differ."
+        }
+      ]
+    }
+  ]
+}
