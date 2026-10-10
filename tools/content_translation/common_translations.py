@@ -551,6 +551,15 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 11 (electricity)
+ "ammeter": ("ऐमीटर", "એમીટર"), "answers": ("उत्तर", "જવાબો"), "battery": ("बैटरी", "બૅટરી"), "(c) formula": ("(c) सूत्र", "(c) સૂત્ર"), "current": ("धारा", "પ્રવાહ"),
+ "current per lamp": ("प्रति लैंप धारा", "દરેક લૅમ્પમાં પ્રવાહ"), "currents": ("धाराएँ", "પ્રવાહો"), "daily energy": ("दैनिक ऊर्जा", "દૈનિક ઊર્જા"), "derivation": ("व्युत्पत्ति", "તારણ"),
+ "device": ("युक्ति", "સાધન"), "energies": ("ऊर्जाएँ", "ઊર્જાઓ"), "energy": ("ऊर्जा", "ઊર્જા"), "first wire": ("पहला तार", "પહેલો તાર"), "fuse": ("फ़्यूज़", "ફ્યૂઝ"),
+ "fuse in series": ("श्रेणीक्रम में फ़्यूज़", "શ્રેણીમાં ફ્યૂઝ"), "graph": ("ग्राफ़", "આલેખ"), "I": ("I", "I"), "law": ("नियम", "નિયમ"), "maximum": ("अधिकतम", "મહત્તમ"), "minimum": ("न्यूनतम", "લઘુતમ"),
+ "monthly energy": ("मासिक ऊर्जा", "માસિક ઊર્જા"), "n": ("n", "n"), "new resistance": ("नया प्रतिरोध", "નવો અવરોધ"), "new wire": ("नया तार", "નવો તાર"), "P1": ("P1", "P1"), "P2": ("P2", "P2"),
+ "parallel": ("पार्श्वक्रम", "સમાંતર"), "parallel appliances": ("पार्श्वक्रम में उपकरण", "સમાંતર ઉપકરણો"), "placing meters": ("मीटर लगाना", "મીટર જોડવાં"), "R": ("R", "R"),
+ "same V": ("समान V", "સરખો V"), "separately": ("पृथक्-पृथक्", "અલગ-અલગ"), "series": ("श्रेणीक्रम", "શ્રેણી"), "series loop": ("श्रेणी लूप", "શ્રેણી-લૂપ"), "slope": ("ढाल", "ઢાળ"),
+ "total power": ("कुल शक्ति", "કુલ પાવર"), "total R": ("कुल R", "કુલ R"), "voltmeter": ("वोल्टमीटर", "વૉલ્ટમીટર"),
  # Science Ch 10 (eye)
  "causes": ("कारण", "કારણો"), "correction": ("संशोधन", "સુધારો"), "defect": ("दोष", "ખામી"), "lens": ("लेंस", "લેન્સ"), "power and diagram": ("क्षमता और आरेख", "પાવર અને આકૃતિ"),
  # Science Ch 9 (light)
@@ -684,6 +693,6 @@ def by_template(text, lang):
 def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
-    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|mL|m|kg|g|K|ppm)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
+    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|mL|kWh|Wh|kW|kΩ|m|kg|g|K|ppm|A|V|W|J|C|D|s|Ω)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
     outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii|[a-f])\)", "", outside)  # part labels like (ii) or (b)
     return not re.search(r"[A-Za-z]", outside)
