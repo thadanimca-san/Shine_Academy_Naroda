@@ -151,7 +151,7 @@ void checkGeometry(Map<String, dynamic> block, String where, Problems problems) 
   }
   for (final r in geometryRegions(block)) {
     if (!known([r.centre, r.from, r.to])) continue;
-    if (r.kind != 'sector' && r.kind != 'segment') problems.add(where, 'shaded region kind must be sector or segment, not ${r.kind}');
+    if (!const {'sector', 'segment', 'arc'}.contains(r.kind)) problems.add(where, 'shaded region kind must be sector, segment or arc, not ${r.kind}');
     final ra = (points[r.from]! - points[r.centre]!).distance, rb = (points[r.to]! - points[r.centre]!).distance;
     if ((ra - rb).abs() > 1e-6 * ra) problems.add(where, 'shaded ${r.kind} ${r.from}${r.to}: the two points are not the same distance from ${r.centre}');
   }

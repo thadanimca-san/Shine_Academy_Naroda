@@ -63,8 +63,9 @@ List<GeometryCircle> geometryCircles(Map<String, dynamic> data) => [
         GeometryCircle(c['centre'] as String, (c['radius'] as num).toDouble(), _names(c['through'])),
     ];
 
-/// A shaded sector or segment of a circle, running anticlockwise from [from]
-/// to [to] about [centre]. A segment is the part cut off by the chord.
+/// A shaded sector or segment of a circle, or a plain arc, running
+/// anticlockwise from [from] to [to] about [centre]. A segment is the part cut
+/// off by the chord; an arc is drawn without any shading.
 class GeometryRegion {
   final String kind;
   final String centre;
@@ -73,9 +74,11 @@ class GeometryRegion {
   const GeometryRegion(this.kind, this.centre, this.from, this.to);
 
   bool get isSector => kind == 'sector';
+  bool get isArc => kind == 'arc';
 }
 
-/// Shaded regions are written as `{"kind": "sector", "centre": "O", "from": "A", "to": "B"}`.
+/// Shaded regions are written as `{"kind": "sector", "centre": "O", "from": "A", "to": "B"}`;
+/// `"kind"` is `sector`, `segment` or `arc`.
 List<GeometryRegion> geometryRegions(Map<String, dynamic> data) => [
       for (final r in (data['shaded'] as List? ?? const []).cast<Map>())
         GeometryRegion(r['kind'] as String, r['centre'] as String, r['from'] as String, r['to'] as String),
@@ -139,7 +142,8 @@ List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 /// `"labels": {"A": "A(2, 3)"}` to show coordinates beside the points.
 /// Circles: `"circles": [{"centre": "O", "radius": 5, "through": ["A", "B"]}]`.
 /// Shaded sectors and segments: `"shaded": [{"kind": "segment", "centre": "O", "from": "A", "to": "B"}]`
-/// (anticlockwise from A to B; swap the points for the major one).
+/// (anticlockwise from A to B; swap the points for the major one). `"kind": "arc"`
+/// draws just the arc, for side views of hemispheres and capsules.
 class GeometryFigureWidget extends StatefulWidget {
   final Map<String, dynamic> data;
   const GeometryFigureWidget({super.key, required this.data});
@@ -292,9 +296,11 @@ class _FigurePainter extends CustomPainter {
       for (final p in arc.skip(1)) {
         outline.lineTo(p.dx, p.dy);
       }
-      final shape = Path.from(outline);
-      if (region.isSector) shape.lineTo(canvasPoints[region.centre]!.dx, canvasPoints[region.centre]!.dy);
-      canvas.drawPath(shape..close(), Paint()..color = highlightColor.withValues(alpha: 0.25 * fade));
+      if (!region.isArc) {
+        final shape = Path.from(outline);
+        if (region.isSector) shape.lineTo(canvasPoints[region.centre]!.dx, canvasPoints[region.centre]!.dy);
+        canvas.drawPath(shape..close(), Paint()..color = highlightColor.withValues(alpha: 0.25 * fade));
+      }
       canvas.drawPath(outline, Paint()
         ..color = lineColor.withValues(alpha: fade)
         ..strokeWidth = 2.5

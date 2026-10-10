@@ -80,10 +80,11 @@ void main() {
       'title': 'Sector and segment',
       'points': {'O': [0, 0], 'A': [3, 0], 'B': [0, 3], 'C': [-3, 0]},
       'circles': [{'centre': 'O', 'radius': 3, 'through': ['A', 'B', 'C']}],
-      'shaded': [{'kind': 'sector', 'centre': 'O', 'from': 'A', 'to': 'B'}, {'kind': 'segment', 'centre': 'O', 'from': 'B', 'to': 'C'}],
+      'shaded': [{'kind': 'sector', 'centre': 'O', 'from': 'A', 'to': 'B'}, {'kind': 'segment', 'centre': 'O', 'from': 'B', 'to': 'C'}, {'kind': 'arc', 'centre': 'O', 'from': 'C', 'to': 'A'}],
     };
     final regions = geometryRegions(data);
     expect(regions.first.isSector, isTrue);
+    expect(regions.last.isArc, isTrue);
     final arc = regionArc(regions.first, geometryPoints(data), samples: 2);
     expect(arc[1].dx, closeTo(3 * math.cos(math.pi / 4), 1e-9));
     expect(arc[1].dy, closeTo(3 * math.sin(math.pi / 4), 1e-9), reason: 'anticlockwise from A to B');
