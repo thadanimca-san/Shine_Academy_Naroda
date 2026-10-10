@@ -96,12 +96,19 @@ class Chapter:
     def ar(self, id_, concepts, a_, r_, correct, explanation, source=SHINE):
         self.q(id_, "assertion_reason", 1, concepts, source, f"**Assertion (A):** {a_}\n\n**Reason (R):** {r_}", "medium", options=AR_OPTIONS, correct_index=correct, explanation=explanation)
 
+    def tf(self, id_, concepts, statement, true, explanation, source=SHINE, difficulty="easy"):
+        """True/false item; feedback repeats the explanation after 'Correct!' or 'Not quite.'."""
+        correct = 0 if true else 1
+        self.q(id_, "true_false", 1, concepts, source, f"State whether the following statement is true or false: {statement}", difficulty,
+               options=["True", "False"], correct_index=correct, explanation=explanation,
+               option_feedback=[("Correct! " if i == correct else "Not quite. ") + explanation for i in range(2)])
+
     def spread(self, item, keep=lambda item: False):
         """Moves the right answer to a position that depends on the id, so it is not always first.
         Board-paper items and assertion-reason items keep their printed order."""
         opts = item.get("options")
         kind = item.get("source", {}).get("kind")
-        if not opts or item.get("type") == "assertion_reason" or kind in ("sample_paper", "pyq") or keep(item):
+        if not opts or item.get("type") in ("assertion_reason", "true_false") or kind in ("sample_paper", "pyq") or keep(item):
             return
         shift = sum(map(ord, item["id"])) % len(opts)
         correct = opts[item["correct_index"]]
