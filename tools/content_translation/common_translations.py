@@ -112,6 +112,7 @@ TEMPLATES = [
  (r"^They are (\$[^$]+\$): (\d+) terms\.$", "ये {0} हैं: {1} पद।", "તે {0} છે: {1} પદ."),
  (r"^(\$[^$]+\$) is not a natural number, so (\$[^$]+\$) is not a term\.$", "{0} एक प्राकृत संख्या नहीं है, अतः {1} इसका पद नहीं है।", "{0} પ્રાકૃતિક સંખ્યા નથી, તેથી {1} તેનું પદ નથી."),
  (r"^(\$[^$]+\$), so (\$[^$]+\$)\.$", "{0}, अतः {1}।", "{0}, તેથી {1}."),
+ (r"^(\$[^$]+\$), so (\$[^$]+\$) (m|cm|km)\.$", "{0}, अतः {1} {2}।", "{0}, તેથી {1} {2}."),
  (r"^(\$[^$]+\$), so (\$[^$]+\$) and (\$[^$]+\$)\.$", "{0}, अतः {1} और {2}।", "{0}, તેથી {1} અને {2}."),
  (r"^(\$[^$]+\$), so (\$[^$]+\$), (\$[^$]+\$)\.$", "{0}, अतः {1}, {2}।", "{0}, તેથી {1}, {2}."),
  (r"^(\$[^$]+\$) and (\$[^$]+\$)\.$", "{0} और {1}।", "{0} અને {1}."),
@@ -393,6 +394,15 @@ MARKING = {
  "1 mark: simplifying to $\\cot^{2} \\theta$": ("1 अंक: $\\cot^{2} \\theta$ तक सरल करना", "1 ગુણ: $\\cot^{2} \\theta$ સુધી સાદું રૂપ"),
  "1 mark: substitution at $45^\\circ$": ("1 अंक: $45^\\circ$ पर प्रतिस्थापन", "1 ગુણ: $45^\\circ$ પર અવેજ"),
  "1 mark: third side": ("1 अंक: तीसरी भुजा", "1 ગુણ: ત્રીજી બાજુ"),
+ # Ch 9 (heights and distances)
+ "1 mark: angle": ("1 अंक: कोण", "1 ગુણ: ખૂણો"),
+ "1 mark: answer including her height": ("1 अंक: उसकी ऊँचाई जोड़कर उत्तर", "1 ગુણ: તેની ઊંચાઈ ઉમેરીને જવાબ"),
+ "1 mark: answer with units": ("1 अंक: मात्रक सहित उत्तर", "1 ગુણ: એકમ સાથે જવાબ"),
+ "1 mark: correct figure": ("1 अंक: सही आकृति", "1 ગુણ: સાચી આકૃતિ"),
+ "1 mark: correct trigonometric ratio": ("1 अंक: सही त्रिकोणमितीय अनुपात", "1 ગુણ: સાચો ત્રિકોણમિતીય ગુણોત્તર"),
+ "1 mark: first equation": ("1 अंक: पहला समीकरण", "1 ગુણ: પ્રથમ સમીકરણ"),
+ "1 mark: second equation": ("1 अंक: दूसरा समीकरण", "1 ગુણ: બીજું સમીકરણ"),
+ "1 mark: length": ("1 अंक: लंबाई", "1 ગુણ: લંબાઈ"),
 }
 
 AR_OPTIONS = (
@@ -440,6 +450,6 @@ def by_template(text, lang):
 def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
-    outside = re.sub(r"\b(cm|mm|km|m|kg|g)\b", "", outside)  # units read the same in all three languages
+    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|m|kg|g)(?![\w/])", "", outside)  # units read the same in all three languages
     outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii)\)", "", outside)  # part labels like (ii)
     return not re.search(r"[A-Za-z]", outside)

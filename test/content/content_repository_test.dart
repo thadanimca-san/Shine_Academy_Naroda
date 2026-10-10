@@ -14,8 +14,8 @@ void main() {
   });
 
   test('unknown ids fall back to legacy content', () async {
-    expect(await ContentRepository.instance.loadChapter('ncert_class10_maths_ch9'), isNull);
-    expect(await ContentRepository.instance.loadQuestions('ncert_class10_maths_ch9'), isNull);
+    expect(await ContentRepository.instance.loadChapter('legacy_only_module_for_test'), isNull);
+    expect(await ContentRepository.instance.loadQuestions('legacy_only_module_for_test'), isNull);
   });
 
   test('question bank converts for the practice screens', () async {
