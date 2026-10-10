@@ -12,6 +12,7 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shine_academy_naroda/core/engine/block_registry.dart';
 import 'package:shine_academy_naroda/core/engine/default_blocks.dart';
+import 'package:shine_academy_naroda/features/learning/learning_engine/widgets/geometry_figure_widget.dart';
 
 const contentRoot = 'app_core/content';
 const statuses = {'draft', 'reviewed', 'approved'};
@@ -107,6 +108,38 @@ void checkVisual(Map<String, dynamic> block, String where, Problems problems) {
       }
     }
   }
+  if (type == 'geometry_figure') checkGeometry(block, where, problems);
+}
+
+/// A figure must show what it claims: every named point exists, and segments
+/// marked parallel or at right angles really are, so the picture never misleads.
+void checkGeometry(Map<String, dynamic> block, String where, Problems problems) {
+  final points = geometryPoints(block);
+  bool known(Iterable<String> names) {
+    final missing = names.where((n) => !points.containsKey(n)).toList();
+    if (missing.isNotEmpty) problems.add(where, 'figure uses unknown points $missing');
+    return missing.isEmpty;
+  }
+
+  for (final s in geometrySegments(block)) {
+    known([s.from, s.to]);
+  }
+  for (final group in (block['parallel'] as List? ?? const []).map((g) => (g as List).cast<String>())) {
+    if (!known(group) || group.length < 4 || group.length.isOdd) continue;
+    for (var k = 2; k + 1 < group.length; k += 2) {
+      if (!segmentsParallel(points[group[0]]!, points[group[1]]!, points[group[k]]!, points[group[k + 1]]!)) {
+        problems.add(where, '${group[0]}${group[1]} is marked parallel to ${group[k]}${group[k + 1]} but is not');
+      }
+    }
+  }
+  for (final r in (block['right_angles'] as List? ?? const []).map((g) => (g as List).cast<String>())) {
+    if (known(r) && !isRightAngle(points[r[0]]!, points[r[1]]!, points[r[2]]!)) {
+      problems.add(where, 'angle ${r.join()} is marked 90° but is not');
+    }
+  }
+  for (final a in (block['angles'] as List? ?? const []).cast<Map>()) {
+    known((a['points'] as List).cast<String>());
+  }
 }
 
 void checkOptions(Map<String, dynamic> item, String where, Problems problems, {bool needsFeedback = true}) {
@@ -199,7 +232,7 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
       }
       // Socratic questions are for thinking, not marking; they explain once.
       if (optionBlockTypes.contains(type)) checkOptions(block, where, problems, needsFeedback: type != 'socratic_question');
-      if (type == 'function_graph') checkVisual(block, where, problems);
+      if (type == 'function_graph' || type == 'geometry_figure') checkVisual(block, where, problems);
       checkTranslations(block, languages, where, problems);
       if (block.containsKey('content') && block['content'] is Map) {
         problems.add(where, 'fields must be at the top level, not inside "content"');

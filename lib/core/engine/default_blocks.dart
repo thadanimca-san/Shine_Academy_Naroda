@@ -26,6 +26,7 @@ import '../../features/learning/learning_engine/widgets/abacus_simulation_widget
 import '../../features/learning/learning_engine/widgets/markdown_table_widget.dart';
 import '../../features/learning/learning_engine/widgets/factor_tree_widget.dart';
 import '../../features/learning/learning_engine/widgets/function_graph_widget.dart';
+import '../../features/learning/learning_engine/widgets/geometry_figure_widget.dart';
 
 // Pedagogy Arc Widgets
 import '../../features/learning/learning_engine/widgets/hook_widget.dart';
@@ -399,6 +400,18 @@ void registerDefaultBlocks() {
         }
       },
       builder: (block) => FunctionGraphWidget(data: block),
+    ),
+  );
+
+  registry.register(
+    BlockDefinition(
+      type: 'geometry_figure',
+      validator: (block) {
+        if (block['points'] is! Map) {
+          throw const FormatException("geometry_figure needs 'points'.");
+        }
+      },
+      builder: (block) => GeometryFigureWidget(data: block),
     ),
   );
 

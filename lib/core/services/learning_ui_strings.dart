@@ -10,6 +10,8 @@ const Map<String, Map<String, String>> learningUiTranslations = {
   'Factor tree needs a composite number.': {'hi': 'गुणनखंड वृक्ष के लिए भाज्य संख्या चाहिए।', 'gu': 'અવયવ વૃક્ષ માટે વિભાજ્ય સંખ્યા જોઈએ.'},
   'Graph': {'hi': 'आलेख', 'gu': 'આલેખ'},
   'Graph data is missing.': {'hi': 'आलेख का डेटा उपलब्ध नहीं है।', 'gu': 'આલેખની માહિતી ઉપલબ્ધ નથી.'},
+  'Figure': {'hi': 'आकृति', 'gu': 'આકૃતિ'},
+  'Figure data is missing.': {'hi': 'आकृति का डेटा उपलब्ध नहीं है।', 'gu': 'આકૃતિની માહિતી ઉપલબ્ધ નથી.'},
   'Play again': {'hi': 'फिर से चलाएँ', 'gu': 'ફરી ચલાવો'},
   'You reached the end of the lesson!': {'hi': 'आपने पाठ पूरा पढ़ लिया!', 'gu': 'તમે પાઠ પૂરો વાંચી લીધો!'},
   'Chapter completed! Proud of you.': {'hi': 'अध्याय पूरा हुआ! हमें आप पर गर्व है।', 'gu': 'પ્રકરણ પૂર્ણ થયું! અમને તમારા પર ગર્વ છે.'},
