@@ -551,6 +551,9 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 8 (heredity)
+ "chromosomes": ("गुणसूत्र", "રંગસૂત્રો"), "cross": ("संकरण", "સંકરણ"), "F1": ("F1", "F1"), "F2": ("F2", "F2"), "gametes": ("युग्मक", "જન્યુઓ"),
+ "new combinations": ("नए संयोजन", "નવાં સંયોજનો"), "pure parents": ("शुद्ध जनक", "શુદ્ધ પિતૃઓ"), "reptiles": ("सरीसृप", "સરીસૃપો"), "snails": ("घोंघा", "ગોકળગાય"),
  # Science Ch 7 (reproduction)
  "artificial example": ("कृत्रिम उदाहरण", "કૃત્રિમ ઉદાહરણ"), "fertilisation": ("निषेचन", "ફલન"), "first advantage": ("पहला लाभ", "પહેલો ફાયદો"), "second advantage": ("दूसरा लाभ", "બીજો ફાયદો"),
  "answer": ("उत्तर", "જવાબ"), "difference": ("अंतर", "તફાવત"), "bad": ("हानि", "ગેરફાયદો"), "good": ("लाभ", "ફાયદો"), "cause": ("कारण", "કારણ"),
