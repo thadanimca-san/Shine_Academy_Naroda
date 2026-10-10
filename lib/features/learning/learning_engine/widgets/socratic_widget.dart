@@ -63,7 +63,8 @@ class _SocraticWidgetState extends State<SocraticWidget> {
       correctFeedback = widget.block['explanation_gu'];
     }
     
-    String incorrectFeedback = widget.block['feedback_incorrect'] ?? 'Good try, but think again!';
+    String incorrectFeedback = TrilingualService.instance.getLocalizedText(widget.block, 'feedback_incorrect');
+    if (incorrectFeedback.isEmpty) incorrectFeedback = TrilingualService.instance.getUIText('Good try, but think again!');
 
     final correctIndex = widget.block['correct_index'] as int? ?? 0;
     

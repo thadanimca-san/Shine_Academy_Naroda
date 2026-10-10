@@ -59,6 +59,10 @@ class AssessmentQuestion {
   /// Optional block (e.g. a `function_graph`) drawn below the question text.
   final Map<String, dynamic>? figure;
 
+  /// Model answer of a written question in Hindi / Gujarati (English is in [correctIndexOrAnswer]).
+  final String? answerHi;
+  final String? answerGu;
+
   /// One explanation per option: why that choice is right or wrong.
   final List<String>? optionFeedback;
   final List<String>? optionFeedbackHi;
@@ -88,6 +92,8 @@ class AssessmentQuestion {
     this.marks = 1,
     this.section,
     this.figure,
+    this.answerHi,
+    this.answerGu,
     this.optionFeedback,
     this.optionFeedbackHi,
     this.optionFeedbackGu,
@@ -138,6 +144,8 @@ class AssessmentQuestion {
       questionGu: q['question_gu'] as String?,
       options: const [],
       correctIndexOrAnswer: steps ?? q['answer'] ?? '',
+      answerHi: (q['answer_steps_hi'] as List?)?.join('\n'),
+      answerGu: (q['answer_steps_gu'] as List?)?.join('\n'),
       explanationEn: markingScheme,
       explanationHi: (q['marking_scheme_hi'] as List?)?.join('\n'),
       explanationGu: (q['marking_scheme_gu'] as List?)?.join('\n'),
@@ -170,6 +178,8 @@ class AssessmentQuestion {
     int? marks,
     String? section,
     Map<String, dynamic>? figure,
+    String? answerHi,
+    String? answerGu,
     List<String>? optionFeedback,
     List<String>? optionFeedbackHi,
     List<String>? optionFeedbackGu,
@@ -198,6 +208,8 @@ class AssessmentQuestion {
       marks: marks ?? this.marks,
       section: section ?? this.section,
       figure: figure ?? this.figure,
+      answerHi: answerHi ?? this.answerHi,
+      answerGu: answerGu ?? this.answerGu,
       optionFeedback: optionFeedback ?? this.optionFeedback,
       optionFeedbackHi: optionFeedbackHi ?? this.optionFeedbackHi,
       optionFeedbackGu: optionFeedbackGu ?? this.optionFeedbackGu,

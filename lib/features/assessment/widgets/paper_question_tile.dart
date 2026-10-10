@@ -22,6 +22,14 @@ extension LocalizedAssessmentQuestion on AssessmentQuestion {
     return explanationEn;
   }
 
+  /// Model answer of a written question in the chosen language.
+  String get localizedAnswer {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    if (lang == 'hi' && (answerHi?.isNotEmpty ?? false)) return answerHi!;
+    if (lang == 'gu' && (answerGu?.isNotEmpty ?? false)) return answerGu!;
+    return correctIndexOrAnswer.toString();
+  }
+
   List<String>? get localizedOptionFeedback {
     final lang = TrilingualService.instance.activeViewLanguage;
     if (lang == 'hi' && (optionFeedbackHi?.isNotEmpty ?? false)) return optionFeedbackHi;
@@ -139,7 +147,7 @@ class PaperQuestionTile extends StatelessWidget {
       lines.add(text('Answer: ${_optionLabel(answer)} ${options[answer]}', answerStyle));
     } else if (answer.toString().isNotEmpty) {
       lines.add(Text(TrilingualService.instance.getUIText('Model answer:'), style: answerStyle));
-      lines.addAll(answer.toString().split('\n').map((step) => text(step, body)));
+      lines.addAll(question.localizedAnswer.split('\n').map((step) => text(step, body)));
     }
     if (explanation != null && explanation.isNotEmpty) {
       final label = isObjective ? 'Explanation:' : 'Marking scheme:';

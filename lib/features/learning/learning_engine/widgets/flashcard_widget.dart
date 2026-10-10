@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class FlashcardWidget extends StatefulWidget {
   final Map<String, dynamic> data;
@@ -12,6 +13,11 @@ class FlashcardWidget extends StatefulWidget {
 
 class _FlashcardWidgetState extends State<FlashcardWidget> {
   bool _isFlipped = false;
+
+  String _localized(String key, String legacyKey) {
+    final text = TrilingualService.instance.getLocalizedText(widget.data, key);
+    return text.isNotEmpty ? text : TrilingualService.instance.getLocalizedText(widget.data, legacyKey);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,10 +63,9 @@ class _FlashcardWidgetState extends State<FlashcardWidget> {
             ),
             const SizedBox(height: 20),
             TtsInteractiveText(
-              text: (_isFlipped
-                      ? (widget.data['back'] ?? widget.data['definition'] ?? '')
-                      : (widget.data['front'] ?? widget.data['term'] ?? ''))
-                  .toString(),
+              text: _isFlipped
+                  ? _localized('back', 'definition')
+                  : _localized('front', 'term'),
               enableWordTap: false,
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(

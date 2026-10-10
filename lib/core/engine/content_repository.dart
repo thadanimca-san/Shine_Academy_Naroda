@@ -130,7 +130,13 @@ class ContentRepository {
     for (final section in (data['sections'] as List? ?? const []).cast<Map<String, dynamic>>()) {
       final sectionTitle = section['title'] as String?;
       if (sectionTitle != null && sectionTitle.isNotEmpty) {
-        blocks.add({'id': '${section['id']}.heading', 'type': 'heading', 'title': sectionTitle});
+        blocks.add({
+          'id': '${section['id']}.heading',
+          'type': 'heading',
+          'title': sectionTitle,
+          if (section['title_hi'] != null) 'title_hi': section['title_hi'],
+          if (section['title_gu'] != null) 'title_gu': section['title_gu'],
+        });
       }
       blocks.addAll((section['blocks'] as List? ?? const []).cast<Map<String, dynamic>>());
     }

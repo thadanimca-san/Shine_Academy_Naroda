@@ -71,6 +71,10 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   bool _showDictionaryHint = true;
   bool _showBoardQuestions = false;
 
+  /// New-format chapters carry teacher-checked translations, so they are
+  /// never machine-translated at runtime.
+  bool _isNewFormat = false;
+
   /// Quick Revision shows only the summary-type blocks of the lesson.
   bool _revisionMode = false;
 
@@ -124,6 +128,10 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
 
   Future<void> _translateBlocks() async {
     if (!mounted) return;
+    if (_isNewFormat) {
+      setState(() {});
+      return;
+    }
     setState(() {
       _isTranslating = true;
     });
@@ -171,6 +179,7 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
         if (newFormatChapter != null) {
           final rawBlocks = newFormatChapter.blocks;
           setState(() {
+            _isNewFormat = true;
             _metadata = newFormatChapter.metadata;
             _standardBlocks = rawBlocks.where((b) => b['is_board_challenge'] != true).toList();
             _boardBlocks = rawBlocks.where((b) => b['is_board_challenge'] == true).toList();
@@ -412,7 +421,7 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
         _metadata?['term']?['english'] ??
         'Learning Module';
     final String title = rawTitle is String
-        ? rawTitle
+        ? TrilingualService.instance.getLocalizedText(_metadata!, 'title')
         : (rawTitle is Map
               ? (rawTitle['en'] ?? rawTitle['english'] ?? 'Module')
               : 'Module');

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:translator/translator.dart';
 import 'package:shine_academy_naroda/core/services/presentation_service.dart';
+import 'learning_ui_strings.dart';
 
 class TrilingualService extends ChangeNotifier {
   static final TrilingualService instance = TrilingualService._internal();
@@ -326,6 +327,8 @@ class TrilingualService extends ChangeNotifier {
         return translations[lang]!;
       }
     }
+    final learningLabel = learningUiTranslations[key]?[lang];
+    if (learningLabel != null) return learningLabel;
     return key; // Fallback to key
   }
 }

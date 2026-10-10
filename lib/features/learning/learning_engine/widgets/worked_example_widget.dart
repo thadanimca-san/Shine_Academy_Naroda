@@ -15,13 +15,14 @@ class WorkedExampleWidget extends StatelessWidget {
     final title = TrilingualService.instance.getLocalizedText(payload, 'title').isNotEmpty
         ? TrilingualService.instance.getLocalizedText(payload, 'title')
         : (payload['title'] ?? 'Worked Example');
-    final problem = (payload['problem'] != null && payload['problem'].toString().isNotEmpty)
-        ? payload['problem'].toString()
-        : TrilingualService.instance.getLocalizedText(payload, 'body');
-    final given = payload['given'];
-    final formula = payload['formula'];
-    final steps = payload['steps'] as List<dynamic>? ?? [];
-    final answer = payload['answer'];
+    final localized = TrilingualService.instance.getLocalizedText;
+    final lang = TrilingualService.instance.activeViewLanguage;
+    final problem = localized(payload, 'problem').isNotEmpty ? localized(payload, 'problem') : localized(payload, 'body');
+    final given = localized(payload, 'given');
+    final formula = localized(payload, 'formula');
+    final localizedSteps = payload['steps_$lang'];
+    final steps = (lang != 'en' && localizedSteps is List && localizedSteps.isNotEmpty ? localizedSteps : payload['steps'] as List<dynamic>?) ?? [];
+    final answer = localized(payload, 'answer');
 
     return PresentationBuilder(
       builder: (context, scale) {

@@ -113,6 +113,45 @@ void checkOptions(Map<String, dynamic> item, String where, Problems problems, {b
   }
 }
 
+const translatableTextFields = {
+  'title', 'body', 'question', 'explanation', 'problem', 'given', 'formula', 'answer', 'front', 'back',
+  'person', 'quote', 'future', 'feedback_incorrect', 'statement',
+};
+const translatableListFields = {'options', 'option_feedback', 'steps', 'answer_steps', 'marking_scheme'};
+
+int formulaCount(String text) => _formula.allMatches(text).length;
+
+/// For every language the chapter promises, each translatable field needs a
+/// translation, lists must keep their length, and formulas must not be lost.
+void checkTranslations(Map<String, dynamic> item, List<String> languages, String where, Problems problems) {
+  for (final lang in languages.where((l) => l != 'en')) {
+    for (final field in translatableTextFields) {
+      final english = item[field];
+      if (english is! String || english.trim().isEmpty) continue;
+      final translated = item['${field}_$lang'];
+      if (translated is! String || translated.trim().isEmpty) {
+        problems.add(where, 'missing ${field}_$lang');
+      } else if (formulaCount(translated) != formulaCount(english)) {
+        problems.add(where, '${field}_$lang has ${formulaCount(translated)} formulas, English has ${formulaCount(english)}');
+      }
+    }
+    for (final field in translatableListFields) {
+      final english = item[field];
+      if (english is! List || english.isEmpty) continue;
+      final translated = item['${field}_$lang'];
+      if (translated is! List || translated.length != english.length) {
+        problems.add(where, '${field}_$lang must have ${english.length} entries');
+        continue;
+      }
+      for (var i = 0; i < english.length; i++) {
+        if (english[i] is String && formulaCount(translated[i] as String) != formulaCount(english[i] as String)) {
+          problems.add(where, '${field}_$lang[$i] lost or added a formula');
+        }
+      }
+    }
+  }
+}
+
 void checkChapter(Map<String, dynamic> entry, Problems problems) {
   final file = '${entry['path']}/chapter.json';
   final chapter = readJson(file);
@@ -123,6 +162,9 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
   if (chapter['id'] != entry['id']) problems.add(file, 'id "${chapter['id']}" does not match the index "${entry['id']}"');
   if (!statuses.contains(chapter['status'])) problems.add(file, 'status must be one of $statuses');
 
+  final languages = List<String>.from(chapter['languages'] ?? const ['en']);
+  checkTranslations(chapter, languages, '$file#metadata', problems);
+
   final ids = <String>{};
   final sections = chapter['sections'] as List? ?? const [];
   if (sections.isEmpty) problems.add(file, 'has no sections');
@@ -130,6 +172,7 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
   for (final section in sections.cast<Map<String, dynamic>>()) {
     final sectionId = section['id'];
     if (sectionId is! String || !ids.add(sectionId)) problems.add(file, 'section id "$sectionId" is missing or repeated');
+    checkTranslations(section, languages, '$file#$sectionId', problems);
     for (final block in (section['blocks'] as List? ?? const []).cast<Map<String, dynamic>>()) {
       final id = block['id'];
       final where = '$file#$id';
@@ -141,6 +184,7 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
       // Socratic questions are for thinking, not marking; they explain once.
       if (optionBlockTypes.contains(type)) checkOptions(block, where, problems, needsFeedback: type != 'socratic_question');
       if (type == 'function_graph') checkVisual(block, where, problems);
+      checkTranslations(block, languages, where, problems);
       if (block.containsKey('content') && block['content'] is Map) {
         problems.add(where, 'fields must be at the top level, not inside "content"');
       }
@@ -154,10 +198,12 @@ void checkQuestions(Map<String, dynamic> entry, Problems problems) {
   final bank = readJson(file);
   if (bank['chapter_id'] != entry['id']) problems.add(file, 'chapter_id must be "${entry['id']}"');
 
+  final languages = List<String>.from(readJson('${entry['path']}/chapter.json')['languages'] ?? const ['en']);
   final ids = <String>{};
   for (final q in (bank['questions'] as List? ?? const []).cast<Map<String, dynamic>>()) {
     final id = q['id'];
     final where = '$file#$id';
+    checkTranslations(q, languages, where, problems);
     if (id is! String || !ids.add(id)) problems.add(where, 'question id is missing or repeated');
 
     final type = q['type'];

@@ -8,7 +8,9 @@
   "subject": "maths",
   "chapter_number": 1,
   "languages": [
-    "en"
+    "en",
+    "hi",
+    "gu"
   ],
   "status": "reviewed",
   "reviewed_by": "Claude (AI) - awaiting teacher approval",
@@ -30,7 +32,11 @@
           "id": "ch01.s1.hook",
           "type": "hook",
           "title": "The secret code inside every number",
-          "body": "A bank locker opens only with the right combination. Numbers work the same way. Every whole number bigger than 1 is built from a few **prime numbers**, multiplied together, and each number has **exactly one** such combination.\n\nIn this chapter you will learn to read that code, use it to find HCF and LCM quickly, and prove that numbers like $\\sqrt{2}$ can never be written as a fraction."
+          "body": "A bank locker opens only with the right combination. Numbers work the same way. Every whole number bigger than 1 is built from a few **prime numbers**, multiplied together, and each number has **exactly one** such combination.\n\nIn this chapter you will learn to read that code, use it to find HCF and LCM quickly, and prove that numbers like $\\sqrt{2}$ can never be written as a fraction.",
+          "title_hi": "हर संख्या के अंदर छिपा गुप्त कोड",
+          "title_gu": "દરેક સંખ્યામાં છુપાયેલો ગુપ્ત કોડ",
+          "body_hi": "बैंक का लॉकर केवल सही संयोजन (कॉम्बिनेशन) से ही खुलता है। संख्याएँ भी इसी तरह काम करती हैं। 1 से बड़ी हर पूर्ण संख्या कुछ **अभाज्य संख्याओं** के गुणनफल से बनी होती है, और हर संख्या का ऐसा संयोजन **केवल एक** ही होता है।\n\nइस अध्याय में आप यह कोड पढ़ना सीखेंगे, इससे HCF और LCM जल्दी निकालेंगे, और सिद्ध करेंगे कि $\\sqrt{2}$ जैसी संख्याओं को कभी भी भिन्न के रूप में नहीं लिखा जा सकता।",
+          "body_gu": "બેંકનું લોકર ફક્ત સાચા સંયોજન (કોમ્બિનેશન) થી જ ખૂલે છે. સંખ્યાઓ પણ આ જ રીતે કામ કરે છે. 1 થી મોટી દરેક પૂર્ણ સંખ્યા થોડી **અવિભાજ્ય સંખ્યાઓ** ના ગુણાકારથી બનેલી હોય છે, અને દરેક સંખ્યાનું આવું સંયોજન **ફક્ત એક** જ હોય છે.\n\nઆ પ્રકરણમાં તમે આ કોડ વાંચતા શીખશો, તેનાથી ગુ.સા.અ. અને લ.સા.અ. ઝડપથી શોધશો, અને સાબિત કરશો કે $\\sqrt{2}$ જેવી સંખ્યાઓ ક્યારેય અપૂર્ણાંક તરીકે લખી શકાતી નથી."
         },
         {
           "id": "ch01.s1.inspiration",
@@ -40,7 +46,17 @@
           "years": "1887–1920",
           "body": "Ramanujan grew up in a poor family in Kumbakonam, Tamil Nadu. He had no teacher for advanced mathematics. He got hold of one old book of formulas and worked through it on his own, filling notebooks with thousands of new results. Because he spent all his time on mathematics he failed his college exams in other subjects, and had to take a clerk's job.\n\nIn 1913 he wrote a letter full of formulas to Professor G. H. Hardy at Cambridge. Hardy saw a genius and invited him to England, where Ramanujan became a Fellow of the Royal Society, one of the highest honours in science.\n\nOnce Hardy came to visit him in taxi number 1729 and called it a dull number. Ramanujan replied at once that it is very interesting: it is the smallest number that can be written as the sum of two cubes in two different ways, $1729 = 1^{3} + 12^{3} = 9^{3} + 10^{3}$. Its prime factorisation is $7 \\times 13 \\times 19$: you will learn to find such factorisations in this chapter.\n\nIndia celebrates his birthday, 22 December, as National Mathematics Day.",
           "quote": "No, Hardy, it is a very interesting number! (Ramanujan, about 1729)",
-          "future": "Prime numbers protect your UPI payments, bank accounts and messages: internet security is built on how hard it is to find the prime factors of huge numbers. This leads to careers in cyber-security, computer science, data science and banking."
+          "future": "Prime numbers protect your UPI payments, bank accounts and messages: internet security is built on how hard it is to find the prime factors of huge numbers. This leads to careers in cyber-security, computer science, data science and banking.",
+          "title_hi": "वह व्यक्ति जो अनंत को जानता था",
+          "title_gu": "અનંતને જાણનાર માણસ",
+          "body_hi": "रामानुजन तमिलनाडु के कुंभकोणम में एक गरीब परिवार में बड़े हुए। उच्च गणित सिखाने के लिए उनके पास कोई शिक्षक नहीं था। उन्हें सूत्रों की एक पुरानी किताब मिली और उन्होंने स्वयं उस पर काम किया, हज़ारों नए परिणामों से अपनी कॉपियाँ भर दीं। वे अपना सारा समय गणित को देते थे, इसलिए कॉलेज में दूसरे विषयों की परीक्षा में असफल हो गए और उन्हें क्लर्क की नौकरी करनी पड़ी।\n\n1913 में उन्होंने कैम्ब्रिज के प्रोफ़ेसर जी. एच. हार्डी को सूत्रों से भरा एक पत्र लिखा। हार्डी ने उनमें प्रतिभा देखी और उन्हें इंग्लैंड बुलाया, जहाँ रामानुजन रॉयल सोसाइटी के फ़ेलो बने, जो विज्ञान के सबसे बड़े सम्मानों में से एक है।\n\nएक बार हार्डी टैक्सी नंबर 1729 में उनसे मिलने आए और कहा कि यह एक नीरस संख्या है। रामानुजन ने तुरंत उत्तर दिया कि यह बहुत रोचक संख्या है: यह वह सबसे छोटी संख्या है जिसे दो घनों के योग के रूप में दो अलग-अलग तरीकों से लिखा जा सकता है, $1729 = 1^{3} + 12^{3} = 9^{3} + 10^{3}$। इसका अभाज्य गुणनखंडन $7 \\times 13 \\times 19$ है: ऐसे गुणनखंडन निकालना आप इसी अध्याय में सीखेंगे।\n\nभारत उनके जन्मदिन, 22 दिसंबर, को राष्ट्रीय गणित दिवस के रूप में मनाता है।",
+          "body_gu": "રામાનુજન તમિલનાડુના કુંભકોણમમાં એક ગરીબ પરિવારમાં મોટા થયા. ઉચ્ચ ગણિત શીખવવા માટે તેમની પાસે કોઈ શિક્ષક ન હતા. તેમને સૂત્રોનું એક જૂનું પુસ્તક મળ્યું અને તેમણે જાતે જ તેના પર કામ કર્યું, હજારો નવાં પરિણામોથી પોતાની નોટબુકો ભરી દીધી. તેઓ પોતાનો બધો સમય ગણિતને આપતા, તેથી કૉલેજમાં બીજા વિષયોની પરીક્ષામાં નાપાસ થયા અને તેમને કારકુનની નોકરી કરવી પડી.\n\n1913માં તેમણે કેમ્બ્રિજના પ્રોફેસર જી. એચ. હાર્ડીને સૂત્રોથી ભરેલો એક પત્ર લખ્યો. હાર્ડીએ તેમનામાં પ્રતિભા જોઈ અને તેમને ઇંગ્લેન્ડ બોલાવ્યા, જ્યાં રામાનુજન રોયલ સોસાયટીના ફેલો બન્યા, જે વિજ્ઞાનનાં સૌથી મોટાં સન્માનોમાંનું એક છે.\n\nએક વાર હાર્ડી ટેક્સી નંબર 1729માં તેમને મળવા આવ્યા અને કહ્યું કે આ એક નીરસ સંખ્યા છે. રામાનુજને તરત જવાબ આપ્યો કે આ ખૂબ જ રસપ્રદ સંખ્યા છે: આ એવી સૌથી નાની સંખ્યા છે જેને બે ઘનના સરવાળા તરીકે બે જુદી જુદી રીતે લખી શકાય, $1729 = 1^{3} + 12^{3} = 9^{3} + 10^{3}$. તેનું અવિભાજ્ય અવયવીકરણ $7 \\times 13 \\times 19$ છે: આવાં અવયવીકરણ શોધતાં તમે આ જ પ્રકરણમાં શીખશો.\n\nભારત તેમના જન્મદિવસ, 22 ડિસેમ્બરને, રાષ્ટ્રીય ગણિત દિવસ તરીકે ઉજવે છે.",
+          "person_hi": "श्रीनिवास रामानुजन",
+          "person_gu": "શ્રીનિવાસ રામાનુજન",
+          "quote_hi": "नहीं हार्डी, यह बहुत रोचक संख्या है! (रामानुजन, 1729 के बारे में)",
+          "quote_gu": "ના હાર્ડી, આ ખૂબ જ રસપ્રદ સંખ્યા છે! (રામાનુજન, 1729 વિશે)",
+          "future_hi": "अभाज्य संख्याएँ आपके UPI भुगतान, बैंक खाते और संदेशों की रक्षा करती हैं: इंटरनेट सुरक्षा इस बात पर आधारित है कि बहुत बड़ी संख्याओं के अभाज्य गुणनखंड निकालना कितना कठिन है। इससे साइबर-सुरक्षा, कंप्यूटर विज्ञान, डेटा विज्ञान और बैंकिंग में करियर बनते हैं।",
+          "future_gu": "અવિભાજ્ય સંખ્યાઓ તમારાં UPI ચુકવણી, બેંક ખાતાં અને સંદેશાઓનું રક્ષણ કરે છે: ઇન્ટરનેટ સુરક્ષા એ વાત પર આધારિત છે કે ખૂબ મોટી સંખ્યાઓના અવિભાજ્ય અવયવો શોધવા કેટલું અઘરું છે. તેનાથી સાયબર-સુરક્ષા, કમ્પ્યુટર વિજ્ઞાન, ડેટા વિજ્ઞાન અને બેંકિંગમાં કારકિર્દી બને છે."
         },
         {
           "id": "ch01.s1.socratic",
@@ -53,9 +69,27 @@
           ],
           "correct_index": 1,
           "explanation": "Break $6 = 2 \\times 3$ and $4 = 2 \\times 2$. All three reach $2 \\times 2 \\times 3$. Only the order can change. Keep this idea in mind: it is the heart of this chapter.",
-          "feedback_incorrect": "Try it: break 6 and 4 into primes and compare with Neha's answer."
+          "feedback_incorrect": "Try it: break 6 and 4 into primes and compare with Neha's answer.",
+          "question_hi": "रिया लिखती है $12 = 2 \\times 6$, अमन लिखता है $12 = 3 \\times 4$, और नेहा लिखती है $12 = 2 \\times 2 \\times 3$। यदि हर कोई अपने गुणनखंडों को तब तक तोड़ता रहे जब तक केवल अभाज्य संख्याएँ न बचें, तो क्या होगा?",
+          "question_gu": "રિયા લખે છે $12 = 2 \\times 6$, અમન લખે છે $12 = 3 \\times 4$, અને નેહા લખે છે $12 = 2 \\times 2 \\times 3$. જો દરેક જણ પોતાના અવયવોને ત્યાં સુધી તોડતા રહે જ્યાં સુધી ફક્ત અવિભાજ્ય સંખ્યાઓ જ બાકી રહે, તો શું થશે?",
+          "explanation_hi": "$6 = 2 \\times 3$ और $4 = 2 \\times 2$ को तोड़िए। तीनों $2 \\times 2 \\times 3$ पर पहुँचते हैं। केवल क्रम बदल सकता है। यह विचार याद रखिए: यही इस अध्याय का मूल है।",
+          "explanation_gu": "$6 = 2 \\times 3$ અને $4 = 2 \\times 2$ ને તોડો. ત્રણેય $2 \\times 2 \\times 3$ પર પહોંચે છે. ફક્ત ક્રમ બદલાઈ શકે. આ વિચાર યાદ રાખો: આ જ આ પ્રકરણનું હૃદય છે.",
+          "feedback_incorrect_hi": "करके देखिए: 6 और 4 को अभाज्य संख्याओं में तोड़िए और नेहा के उत्तर से मिलाइए।",
+          "feedback_incorrect_gu": "કરી જુઓ: 6 અને 4 ને અવિભાજ્ય સંખ્યાઓમાં તોડો અને નેહાના જવાબ સાથે સરખાવો.",
+          "options_hi": [
+            "यह इस पर निर्भर करता है कि आप कहाँ से शुरू करते हैं",
+            "सबके पास एक जैसी अभाज्य संख्याएँ आएँगी: $2 \\times 2 \\times 3$",
+            "सबके पास अलग-अलग अभाज्य संख्याएँ आएँगी"
+          ],
+          "options_gu": [
+            "તે તમે ક્યાંથી શરૂ કરો છો તેના પર આધાર રાખે છે",
+            "બધાને એકસરખી અવિભાજ્ય સંખ્યાઓ મળશે: $2 \\times 2 \\times 3$",
+            "બધાને જુદી જુદી અવિભાજ્ય સંખ્યાઓ મળશે"
+          ]
         }
-      ]
+      ],
+      "title_hi": "वास्तविक संख्याएँ क्यों?",
+      "title_gu": "વાસ્તવિક સંખ્યાઓ શા માટે?"
     },
     {
       "id": "s2",
@@ -65,20 +99,30 @@
           "id": "ch01.s2.discovery",
           "type": "discovery",
           "title": "Build a factor tree",
-          "body": "Take 140. Split it into any two factors, then keep splitting until every branch ends in a prime.\n\n$140 = 2 \\times 70$, $70 = 2 \\times 35$, $35 = 5 \\times 7$.\n\nThe primes at the ends of the branches are $2, 2, 5, 7$. So $140 = 2^{2} \\times 5 \\times 7$.\n\nNow start differently: $140 = 10 \\times 14 = (2 \\times 5) \\times (2 \\times 7)$. Same primes! Watch the tree below grow."
+          "body": "Take 140. Split it into any two factors, then keep splitting until every branch ends in a prime.\n\n$140 = 2 \\times 70$, $70 = 2 \\times 35$, $35 = 5 \\times 7$.\n\nThe primes at the ends of the branches are $2, 2, 5, 7$. So $140 = 2^{2} \\times 5 \\times 7$.\n\nNow start differently: $140 = 10 \\times 14 = (2 \\times 5) \\times (2 \\times 7)$. Same primes! Watch the tree below grow.",
+          "title_hi": "गुणनखंड वृक्ष बनाइए",
+          "title_gu": "અવયવ વૃક્ષ બનાવો",
+          "body_hi": "140 लीजिए। इसे किन्हीं दो गुणनखंडों में बाँटिए, फिर तब तक बाँटते रहिए जब तक हर शाखा एक अभाज्य संख्या पर समाप्त न हो।\n\n$140 = 2 \\times 70$, $70 = 2 \\times 35$, $35 = 5 \\times 7$।\n\nशाखाओं के अंत में अभाज्य संख्याएँ $2, 2, 5, 7$ हैं। अतः $140 = 2^{2} \\times 5 \\times 7$।\n\nअब अलग तरह से शुरू कीजिए: $140 = 10 \\times 14 = (2 \\times 5) \\times (2 \\times 7)$। वही अभाज्य संख्याएँ! नीचे वृक्ष को बढ़ते हुए देखिए।",
+          "body_gu": "140 લો. તેને કોઈ પણ બે અવયવોમાં વહેંચો, પછી જ્યાં સુધી દરેક શાખા અવિભાજ્ય સંખ્યા પર પૂરી ન થાય ત્યાં સુધી વહેંચતા રહો.\n\n$140 = 2 \\times 70$, $70 = 2 \\times 35$, $35 = 5 \\times 7$.\n\nશાખાઓના છેડે અવિભાજ્ય સંખ્યાઓ $2, 2, 5, 7$ છે. તેથી $140 = 2^{2} \\times 5 \\times 7$.\n\nહવે જુદી રીતે શરૂ કરો: $140 = 10 \\times 14 = (2 \\times 5) \\times (2 \\times 7)$. એ જ અવિભાજ્ય સંખ્યાઓ! નીચે વૃક્ષને વધતું જુઓ."
         },
         {
           "id": "ch01.s2.tree",
           "type": "factor_tree",
           "number": 140,
-          "title": "Factor tree of 140"
+          "title": "Factor tree of 140",
+          "title_hi": "140 का गुणनखंड वृक्ष",
+          "title_gu": "140 નું અવયવ વૃક્ષ"
         },
         {
           "id": "ch01.s2.reveal",
           "type": "theory",
           "title": "Theorem 1.1: The Fundamental Theorem of Arithmetic",
           "body": "**Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.**\n\nIn general, a composite number $x$ can be written as\n\n$$x = p_1 \\, p_2 \\, p_3 \\cdots p_n$$\n\nwhere $p_1, p_2, \\ldots, p_n$ are primes written in ascending order. Collecting equal primes gives powers, for example $32760 = 2^{3} \\times 3^{2} \\times 5 \\times 7 \\times 13$.\n\n- **Prime number:** has exactly two factors, 1 and itself (2, 3, 5, 7, 11, ...).\n- **Composite number:** has more than two factors (4, 6, 8, 9, ...).\n- **1 is neither prime nor composite.**",
-          "revision": true
+          "revision": true,
+          "title_hi": "प्रमेय 1.1: अंकगणित की आधारभूत प्रमेय",
+          "title_gu": "પ્રમેય 1.1: અંકગણિતનું મૂળભૂત પ્રમેય",
+          "body_hi": "**प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में व्यक्त (गुणनखंडित) किया जा सकता है, तथा यह गुणनखंडन अद्वितीय होता है, इस बात को छोड़कर कि अभाज्य गुणनखंड किस क्रम में आते हैं।**\n\nव्यापक रूप में, एक भाज्य संख्या $x$ को इस प्रकार लिखा जा सकता है\n\n$$x = p_1 \\, p_2 \\, p_3 \\cdots p_n$$\n\nजहाँ $p_1, p_2, \\ldots, p_n$ आरोही क्रम में लिखी अभाज्य संख्याएँ हैं। समान अभाज्य संख्याओं को एक साथ लिखने पर घातें बनती हैं, उदाहरण के लिए $32760 = 2^{3} \\times 3^{2} \\times 5 \\times 7 \\times 13$।\n\n- **अभाज्य संख्या:** जिसके ठीक दो गुणनखंड होते हैं, 1 और वह स्वयं (2, 3, 5, 7, 11, ...)।\n- **भाज्य संख्या:** जिसके दो से अधिक गुणनखंड होते हैं (4, 6, 8, 9, ...)।\n- **1 न तो अभाज्य है और न ही भाज्य।**",
+          "body_gu": "**દરેક વિભાજ્ય સંખ્યાને અવિભાજ્ય સંખ્યાઓના ગુણાકાર સ્વરૂપે દર્શાવી (અવયવીકરણ કરી) શકાય છે, અને અવિભાજ્ય અવયવોના ક્રમને બાદ કરતાં આ અવયવીકરણ અનન્ય છે.**\n\nવ્યાપક રીતે, વિભાજ્ય સંખ્યા $x$ ને આ રીતે લખી શકાય\n\n$$x = p_1 \\, p_2 \\, p_3 \\cdots p_n$$\n\nજ્યાં $p_1, p_2, \\ldots, p_n$ ચડતા ક્રમમાં લખેલી અવિભાજ્ય સંખ્યાઓ છે. સરખી અવિભાજ્ય સંખ્યાઓ ભેગી કરતાં ઘાત મળે છે, ઉદાહરણ તરીકે $32760 = 2^{3} \\times 3^{2} \\times 5 \\times 7 \\times 13$.\n\n- **અવિભાજ્ય સંખ્યા:** જેના બરાબર બે અવયવ હોય, 1 અને તે પોતે (2, 3, 5, 7, 11, ...).\n- **વિભાજ્ય સંખ્યા:** જેના બે કરતાં વધુ અવયવ હોય (4, 6, 8, 9, ...).\n- **1 એ અવિભાજ્ય પણ નથી અને વિભાજ્ય પણ નથી.**"
         },
         {
           "id": "ch01.s2.ex1",
@@ -91,7 +135,25 @@
             "But $4^{n} = (2^{2})^{n} = 2^{2n}$. The only prime in its factorisation is 2.",
             "By the uniqueness in the Fundamental Theorem of Arithmetic, no other prime can appear, so 5 is never a factor."
           ],
-          "answer": "There is no natural number $n$ for which $4^{n}$ ends with the digit 0."
+          "answer": "There is no natural number $n$ for which $4^{n}$ ends with the digit 0.",
+          "title_hi": "NCERT उदाहरण 1",
+          "title_gu": "NCERT ઉદાહરણ 1",
+          "problem_hi": "संख्याओं $4^{n}$ पर विचार कीजिए, जहाँ $n$ एक प्राकृत संख्या है। जाँच कीजिए कि क्या $n$ का कोई ऐसा मान है जिसके लिए $4^{n}$ अंक शून्य पर समाप्त होता है।",
+          "problem_gu": "સંખ્યાઓ $4^{n}$ નો વિચાર કરો, જ્યાં $n$ પ્રાકૃતિક સંખ્યા છે. ચકાસો કે $n$ ની એવી કોઈ કિંમત છે કે જેના માટે $4^{n}$ નો છેલ્લો અંક શૂન્ય હોય.",
+          "answer_hi": "ऐसी कोई प्राकृत संख्या $n$ नहीं है जिसके लिए $4^{n}$ अंक 0 पर समाप्त हो।",
+          "answer_gu": "એવી કોઈ પ્રાકૃતિક સંખ્યા $n$ નથી કે જેના માટે $4^{n}$ નો છેલ્લો અંક 0 હોય.",
+          "steps_hi": [
+            "कोई संख्या 0 पर तभी समाप्त होती है जब वह 10 से, अर्थात् 2 और 5 दोनों से विभाज्य हो।",
+            "अतः $4^{n}$ के अभाज्य गुणनखंडन में अभाज्य संख्या 5 होनी चाहिए।",
+            "परंतु $4^{n} = (2^{2})^{n} = 2^{2n}$। इसके गुणनखंडन में केवल अभाज्य संख्या 2 है।",
+            "अंकगणित की आधारभूत प्रमेय की अद्वितीयता से कोई अन्य अभाज्य संख्या नहीं आ सकती, इसलिए 5 कभी गुणनखंड नहीं होगा।"
+          ],
+          "steps_gu": [
+            "કોઈ સંખ્યાનો છેલ્લો અંક 0 ત્યારે જ હોય જ્યારે તે 10 વડે, એટલે કે 2 અને 5 બંને વડે વિભાજ્ય હોય.",
+            "તેથી $4^{n}$ ના અવિભાજ્ય અવયવીકરણમાં અવિભાજ્ય સંખ્યા 5 હોવી જોઈએ.",
+            "પરંતુ $4^{n} = (2^{2})^{n} = 2^{2n}$. તેના અવયવીકરણમાં ફક્ત અવિભાજ્ય સંખ્યા 2 છે.",
+            "અંકગણિતના મૂળભૂત પ્રમેયની અનન્યતાને કારણે બીજી કોઈ અવિભાજ્ય સંખ્યા આવી શકે નહીં, તેથી 5 ક્યારેય અવયવ નહીં બને."
+          ]
         },
         {
           "id": "ch01.s2.check",
@@ -110,15 +172,49 @@
             "Correct! $156 = 2 \\times 2 \\times 3 \\times 13$, all primes.",
             "78 is not prime ($78 = 2 \\times 3 \\times 13$). Keep breaking it down.",
             "4 is not prime. Write it as $2^{2}$."
+          ],
+          "question_hi": "156 का अभाज्य गुणनखंडन कौन-सा है?",
+          "question_gu": "156 નું અવિભાજ્ય અવયવીકરણ કયું છે?",
+          "explanation_hi": "$156 = 2 \\times 78 = 2 \\times 2 \\times 39 = 2 \\times 2 \\times 3 \\times 13 = 2^{2} \\times 3 \\times 13$। अन्य विकल्पों में अभी भी भाज्य गुणनखंड (78, 4, 39) हैं।",
+          "explanation_gu": "$156 = 2 \\times 78 = 2 \\times 2 \\times 39 = 2 \\times 2 \\times 3 \\times 13 = 2^{2} \\times 3 \\times 13$. બાકીના વિકલ્પોમાં હજુ વિભાજ્ય અવયવો (78, 4, 39) છે.",
+          "options_hi": [
+            "$2^{2} \\times 39$",
+            "$2^{2} \\times 3 \\times 13$",
+            "$2 \\times 78$",
+            "$4 \\times 3 \\times 13$"
+          ],
+          "options_gu": [
+            "$2^{2} \\times 39$",
+            "$2^{2} \\times 3 \\times 13$",
+            "$2 \\times 78$",
+            "$4 \\times 3 \\times 13$"
+          ],
+          "option_feedback_hi": [
+            "39 अभाज्य नहीं है ($39 = 3 \\times 13$)। इसे और तोड़िए।",
+            "सही! $156 = 2 \\times 2 \\times 3 \\times 13$, सभी अभाज्य हैं।",
+            "78 अभाज्य नहीं है ($78 = 2 \\times 3 \\times 13$)। इसे और तोड़िए।",
+            "4 अभाज्य नहीं है। इसे $2^{2}$ लिखिए।"
+          ],
+          "option_feedback_gu": [
+            "39 અવિભાજ્ય નથી ($39 = 3 \\times 13$). તેને હજુ તોડો.",
+            "સાચું! $156 = 2 \\times 2 \\times 3 \\times 13$, બધા અવિભાજ્ય છે.",
+            "78 અવિભાજ્ય નથી ($78 = 2 \\times 3 \\times 13$). તેને હજુ તોડો.",
+            "4 અવિભાજ્ય નથી. તેને $2^{2}$ લખો."
           ]
         },
         {
           "id": "ch01.s2.tip",
           "type": "teacher_tip",
           "title": "Teaching the factor tree",
-          "body": "Ask three students to factorise the same number starting from different pairs, on the board at the same time. When all three trees end with the same primes, students *see* uniqueness instead of memorising it. Always ask them to write the final answer with primes in ascending order and powers."
+          "body": "Ask three students to factorise the same number starting from different pairs, on the board at the same time. When all three trees end with the same primes, students *see* uniqueness instead of memorising it. Always ask them to write the final answer with primes in ascending order and powers.",
+          "title_hi": "गुणनखंड वृक्ष कैसे सिखाएँ",
+          "title_gu": "અવયવ વૃક્ષ કેવી રીતે શીખવવું",
+          "body_hi": "तीन विद्यार्थियों से एक ही संख्या का गुणनखंडन अलग-अलग जोड़ियों से शुरू करके, एक साथ बोर्ड पर कराइए। जब तीनों वृक्ष एक जैसी अभाज्य संख्याओं पर समाप्त होते हैं, तो विद्यार्थी अद्वितीयता को रटने के बजाय *देखते* हैं। अंतिम उत्तर हमेशा आरोही क्रम में और घात के रूप में लिखवाइए।",
+          "body_gu": "ત્રણ વિદ્યાર્થીઓ પાસે એક જ સંખ્યાનું અવયવીકરણ જુદી જુદી જોડીથી શરૂ કરીને, એકસાથે બોર્ડ પર કરાવો. જ્યારે ત્રણેય વૃક્ષ એકસરખી અવિભાજ્ય સંખ્યાઓ પર પૂરાં થાય, ત્યારે વિદ્યાર્થીઓ અનન્યતા ગોખવાને બદલે *જુએ* છે. અંતિમ જવાબ હંમેશાં ચડતા ક્રમમાં અને ઘાત સ્વરૂપે લખાવો."
         }
-      ]
+      ],
+      "title_hi": "अंकगणित की आधारभूत प्रमेय",
+      "title_gu": "અંકગણિતનું મૂળભૂત પ્રમેય"
     },
     {
       "id": "s3",
@@ -134,14 +230,32 @@
             "Only primes that appear in both numbers"
           ],
           "correct_index": 2,
-          "explanation": "A factor of both numbers can only use primes present in **both**, and no more copies than either has. Here only 2 is common, and the smaller power is $2^{1}$, so $\\text{HCF}(6, 20) = 2$."
+          "explanation": "A factor of both numbers can only use primes present in **both**, and no more copies than either has. Here only 2 is common, and the smaller power is $2^{1}$, so $\\text{HCF}(6, 20) = 2$.",
+          "question_hi": "$6 = 2 \\times 3$ और $20 = 2^{2} \\times 5$। HCF को दोनों संख्याओं को विभाजित करना चाहिए। HCF में कौन-सी अभाज्य संख्याएँ हो सकती हैं?",
+          "question_gu": "$6 = 2 \\times 3$ અને $20 = 2^{2} \\times 5$. ગુ.સા.અ. બંને સંખ્યાઓને નિઃશેષ ભાગતો હોવો જોઈએ. ગુ.સા.અ.માં કઈ અવિભાજ્ય સંખ્યાઓ હોઈ શકે?",
+          "explanation_hi": "दोनों संख्याओं का गुणनखंड केवल उन्हीं अभाज्य संख्याओं से बन सकता है जो **दोनों** में हैं, और उतनी ही बार जितनी कम से कम है। यहाँ केवल 2 उभयनिष्ठ है, और छोटी घात $2^{1}$ है, अतः $\\text{HCF}(6, 20) = 2$।",
+          "explanation_gu": "બંને સંખ્યાઓનો અવયવ ફક્ત એ જ અવિભાજ્ય સંખ્યાઓથી બની શકે જે **બંનેમાં** હોય, અને ઓછામાં ઓછી જેટલી વાર હોય તેટલી જ વાર. અહીં ફક્ત 2 સામાન્ય છે, અને નાની ઘાત $2^{1}$ છે, તેથી $\\text{HCF}(6, 20) = 2$.",
+          "options_hi": [
+            "किसी भी एक संख्या में आने वाली हर अभाज्य संख्या",
+            "केवल अभाज्य संख्या 5",
+            "केवल वे अभाज्य संख्याएँ जो दोनों संख्याओं में हैं"
+          ],
+          "options_gu": [
+            "કોઈ પણ એક સંખ્યામાં આવતી દરેક અવિભાજ્ય સંખ્યા",
+            "ફક્ત અવિભાજ્ય સંખ્યા 5",
+            "ફક્ત એ જ અવિભાજ્ય સંખ્યાઓ જે બંને સંખ્યાઓમાં હોય"
+          ]
         },
         {
           "id": "ch01.s3.reveal",
           "type": "theory",
           "title": "The rule for HCF and LCM",
           "body": "Write each number as a product of primes with powers. Then:\n\n- **HCF** = product of the **smallest power** of each **common** prime factor.\n- **LCM** = product of the **greatest power** of **each** prime factor involved.\n\nFor any two positive integers $a$ and $b$:\n\n$$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$$\n\n**Careful:** this product rule is true for **two** numbers only. For $6, 72, 120$: $\\text{HCF} \\times \\text{LCM} = 6 \\times 360 = 2160$, while $6 \\times 72 \\times 120 = 51840$.",
-          "revision": true
+          "revision": true,
+          "title_hi": "HCF और LCM का नियम",
+          "title_gu": "ગુ.સા.અ. અને લ.સા.અ.નો નિયમ",
+          "body_hi": "प्रत्येक संख्या को घातों के साथ अभाज्य संख्याओं के गुणनफल के रूप में लिखिए। फिर:\n\n- **HCF (महत्तम समापवर्तक)** = प्रत्येक **उभयनिष्ठ** अभाज्य गुणनखंड की **सबसे छोटी घात** का गुणनफल।\n- **LCM (लघुत्तम समापवर्त्य)** = संबंधित **प्रत्येक** अभाज्य गुणनखंड की **सबसे बड़ी घात** का गुणनफल।\n\nकिन्हीं दो धनात्मक पूर्णांकों $a$ और $b$ के लिए:\n\n$$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$$\n\n**सावधान:** गुणनफल का यह नियम केवल **दो** संख्याओं के लिए सत्य है। $6, 72, 120$ के लिए: $\\text{HCF} \\times \\text{LCM} = 6 \\times 360 = 2160$, जबकि $6 \\times 72 \\times 120 = 51840$।",
+          "body_gu": "દરેક સંખ્યાને ઘાત સાથે અવિભાજ્ય સંખ્યાઓના ગુણાકાર સ્વરૂપે લખો. પછી:\n\n- **ગુ.સા.અ. (HCF)** = દરેક **સામાન્ય** અવિભાજ્ય અવયવની **નાનામાં નાની ઘાત** નો ગુણાકાર.\n- **લ.સા.અ. (LCM)** = સંકળાયેલા **દરેક** અવિભાજ્ય અવયવની **મોટામાં મોટી ઘાત** નો ગુણાકાર.\n\nકોઈ પણ બે ધન પૂર્ણાંકો $a$ અને $b$ માટે:\n\n$$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$$\n\n**ધ્યાન રાખો:** ગુણાકારનો આ નિયમ ફક્ત **બે** સંખ્યાઓ માટે જ સાચો છે. $6, 72, 120$ માટે: $\\text{HCF} \\times \\text{LCM} = 6 \\times 360 = 2160$, જ્યારે $6 \\times 72 \\times 120 = 51840$."
         },
         {
           "id": "ch01.s3.ex2",
@@ -154,7 +268,25 @@
             "All primes: 2, 3, 5. Greatest powers: $2^{2}, 3^{1}, 5^{1}$. So $\\text{LCM}(6, 20) = 2^{2} \\times 3 \\times 5 = 60$.",
             "Check: $\\text{HCF} \\times \\text{LCM} = 2 \\times 60 = 120 = 6 \\times 20$ ✓"
           ],
-          "answer": "HCF = 2, LCM = 60"
+          "answer": "HCF = 2, LCM = 60",
+          "title_hi": "NCERT उदाहरण 2",
+          "title_gu": "NCERT ઉદાહરણ 2",
+          "problem_hi": "अभाज्य गुणनखंडन विधि द्वारा 6 और 20 का LCM और HCF ज्ञात कीजिए।",
+          "problem_gu": "અવિભાજ્ય અવયવીકરણની રીતે 6 અને 20 ના લ.સા.અ. અને ગુ.સા.અ. શોધો.",
+          "answer_hi": "HCF = 2, LCM = 60",
+          "answer_gu": "ગુ.સા.અ. = 2, લ.સા.અ. = 60",
+          "steps_hi": [
+            "$6 = 2^{1} \\times 3^{1}$ और $20 = 2^{2} \\times 5^{1}$",
+            "उभयनिष्ठ अभाज्य संख्या: 2। सबसे छोटी घात: $2^{1}$। अतः $\\text{HCF}(6, 20) = 2$।",
+            "सभी अभाज्य संख्याएँ: 2, 3, 5। सबसे बड़ी घातें: $2^{2}, 3^{1}, 5^{1}$। अतः $\\text{LCM}(6, 20) = 2^{2} \\times 3 \\times 5 = 60$।",
+            "जाँच: $\\text{HCF} \\times \\text{LCM} = 2 \\times 60 = 120 = 6 \\times 20$ ✓"
+          ],
+          "steps_gu": [
+            "$6 = 2^{1} \\times 3^{1}$ અને $20 = 2^{2} \\times 5^{1}$",
+            "સામાન્ય અવિભાજ્ય સંખ્યા: 2. નાનામાં નાની ઘાત: $2^{1}$. તેથી $\\text{HCF}(6, 20) = 2$.",
+            "બધી અવિભાજ્ય સંખ્યાઓ: 2, 3, 5. મોટામાં મોટી ઘાત: $2^{2}, 3^{1}, 5^{1}$. તેથી $\\text{LCM}(6, 20) = 2^{2} \\times 3 \\times 5 = 60$.",
+            "ચકાસણી: $\\text{HCF} \\times \\text{LCM} = 2 \\times 60 = 120 = 6 \\times 20$ ✓"
+          ]
         },
         {
           "id": "ch01.s3.ex3",
@@ -166,7 +298,23 @@
             "Common prime: 2, smallest power $2^{2}$. So $\\text{HCF}(96, 404) = 4$.",
             "$\\text{LCM} = \\dfrac{96 \\times 404}{\\text{HCF}} = \\dfrac{96 \\times 404}{4} = 9696$"
           ],
-          "answer": "HCF = 4, LCM = 9696"
+          "answer": "HCF = 4, LCM = 9696",
+          "title_hi": "NCERT उदाहरण 3",
+          "title_gu": "NCERT ઉદાહરણ 3",
+          "problem_hi": "अभाज्य गुणनखंडन विधि द्वारा 96 और 404 का HCF ज्ञात कीजिए। इसके बाद इनका LCM ज्ञात कीजिए।",
+          "problem_gu": "અવિભાજ્ય અવયવીકરણની રીતે 96 અને 404 નો ગુ.સા.અ. શોધો. તે પરથી તેમનો લ.સા.અ. શોધો.",
+          "answer_hi": "HCF = 4, LCM = 9696",
+          "answer_gu": "ગુ.સા.અ. = 4, લ.સા.અ. = 9696",
+          "steps_hi": [
+            "$96 = 2^{5} \\times 3$ और $404 = 2^{2} \\times 101$",
+            "उभयनिष्ठ अभाज्य संख्या 2, सबसे छोटी घात $2^{2}$। अतः $\\text{HCF}(96, 404) = 4$।",
+            "$\\text{LCM} = \\dfrac{96 \\times 404}{\\text{HCF}} = \\dfrac{96 \\times 404}{4} = 9696$"
+          ],
+          "steps_gu": [
+            "$96 = 2^{5} \\times 3$ અને $404 = 2^{2} \\times 101$",
+            "સામાન્ય અવિભાજ્ય સંખ્યા 2, નાનામાં નાની ઘાત $2^{2}$. તેથી $\\text{HCF}(96, 404) = 4$.",
+            "$\\text{LCM} = \\dfrac{96 \\times 404}{\\text{HCF}} = \\dfrac{96 \\times 404}{4} = 9696$"
+          ]
         },
         {
           "id": "ch01.s3.ex4",
@@ -179,13 +327,35 @@
             "All primes: 2, 3, 5, greatest powers $2^{3}, 3^{2}, 5^{1}$. So LCM $= 2^{3} \\times 3^{2} \\times 5 = 360$.",
             "Note: $6 \\times 72 \\times 120 \\neq \\text{HCF} \\times \\text{LCM}$. The product rule is only for two numbers."
           ],
-          "answer": "HCF = 6, LCM = 360"
+          "answer": "HCF = 6, LCM = 360",
+          "title_hi": "NCERT उदाहरण 4",
+          "title_gu": "NCERT ઉદાહરણ 4",
+          "problem_hi": "अभाज्य गुणनखंडन विधि का प्रयोग करके 6, 72 और 120 का HCF और LCM ज्ञात कीजिए।",
+          "problem_gu": "અવિભાજ્ય અવયવીકરણની રીતનો ઉપયોગ કરીને 6, 72 અને 120 ના ગુ.સા.અ. અને લ.સા.અ. શોધો.",
+          "answer_hi": "HCF = 6, LCM = 360",
+          "answer_gu": "ગુ.સા.અ. = 6, લ.સા.અ. = 360",
+          "steps_hi": [
+            "$6 = 2 \\times 3$, $72 = 2^{3} \\times 3^{2}$, $120 = 2^{3} \\times 3 \\times 5$",
+            "उभयनिष्ठ अभाज्य संख्याएँ: 2 और 3, सबसे छोटी घातें $2^{1}$ और $3^{1}$। अतः HCF $= 2 \\times 3 = 6$।",
+            "सभी अभाज्य संख्याएँ: 2, 3, 5, सबसे बड़ी घातें $2^{3}, 3^{2}, 5^{1}$। अतः LCM $= 2^{3} \\times 3^{2} \\times 5 = 360$।",
+            "ध्यान दें: $6 \\times 72 \\times 120 \\neq \\text{HCF} \\times \\text{LCM}$। गुणनफल का नियम केवल दो संख्याओं के लिए है।"
+          ],
+          "steps_gu": [
+            "$6 = 2 \\times 3$, $72 = 2^{3} \\times 3^{2}$, $120 = 2^{3} \\times 3 \\times 5$",
+            "સામાન્ય અવિભાજ્ય સંખ્યાઓ: 2 અને 3, નાનામાં નાની ઘાત $2^{1}$ અને $3^{1}$. તેથી ગુ.સા.અ. $= 2 \\times 3 = 6$.",
+            "બધી અવિભાજ્ય સંખ્યાઓ: 2, 3, 5, મોટામાં મોટી ઘાત $2^{3}, 3^{2}, 5^{1}$. તેથી લ.સા.અ. $= 2^{3} \\times 3^{2} \\times 5 = 360$.",
+            "નોંધ: $6 \\times 72 \\times 120 \\neq \\text{HCF} \\times \\text{LCM}$. ગુણાકારનો નિયમ ફક્ત બે સંખ્યાઓ માટે છે."
+          ]
         },
         {
           "id": "ch01.s3.memory",
           "type": "memory_trick",
           "title": "HCF is humble, LCM is large",
-          "body": "**H**CF takes the **h**umble (smallest) power of the **common** primes.\n\n**L**CM takes the **l**argest power of **all** the primes."
+          "body": "**H**CF takes the **h**umble (smallest) power of the **common** primes.\n\n**L**CM takes the **l**argest power of **all** the primes.",
+          "title_hi": "HCF विनम्र है, LCM विशाल है",
+          "title_gu": "ગુ.સા.અ. નાનો, લ.સા.અ. મોટો",
+          "body_hi": "**H**CF **उभयनिष्ठ** अभाज्य संख्याओं की **सबसे छोटी** घात लेता है (H = Humble, विनम्र)।\n\n**L**CM **सभी** अभाज्य संख्याओं की **सबसे बड़ी** घात लेता है (L = Large, विशाल)।",
+          "body_gu": "**ગુ**.સા.અ. **સામાન્ય** અવિભાજ્ય સંખ્યાઓની **નાનામાં નાની** ઘાત લે છે.\n\n**લ**.સા.અ. **બધી** અવિભાજ્ય સંખ્યાઓની **મોટામાં મોટી** ઘાત લે છે.\n\nયાદ રાખો: ગુ.સા.અ. ≤ દરેક સંખ્યા ≤ લ.સા.અ."
         },
         {
           "id": "ch01.s3.check1",
@@ -204,6 +374,34 @@
             "$6 = 2 \\times 3$ uses the primes correctly, but with power 1. Both numbers have at least $2^{2}$ and $3^{2}$, so use those powers.",
             "$180 = 2^{2} \\times 3^{2} \\times 5$. But 5 is not a factor of the second number, so it cannot be in the HCF. Use only common primes.",
             "Correct! The common primes are 2 and 3. Take the smallest powers: $2^{2} \\times 3^{2} = 36$."
+          ],
+          "question_hi": "$2^{3} \\times 3^{2} \\times 5$ और $2^{2} \\times 3^{3} \\times 7$ का HCF क्या है?",
+          "question_gu": "$2^{3} \\times 3^{2} \\times 5$ અને $2^{2} \\times 3^{3} \\times 7$ નો ગુ.સા.અ. શું છે?",
+          "explanation_hi": "उभयनिष्ठ अभाज्य संख्याएँ 2 और 3 हैं। सबसे छोटी घातें: $2^{2}$ और $3^{2}$। HCF $= 4 \\times 9 = 36$।",
+          "explanation_gu": "સામાન્ય અવિભાજ્ય સંખ્યાઓ 2 અને 3 છે. નાનામાં નાની ઘાત: $2^{2}$ અને $3^{2}$. ગુ.સા.અ. $= 4 \\times 9 = 36$.",
+          "options_hi": [
+            "$7560$",
+            "$6$",
+            "$180$",
+            "$36$"
+          ],
+          "options_gu": [
+            "$7560$",
+            "$6$",
+            "$180$",
+            "$36$"
+          ],
+          "option_feedback_hi": [
+            "यह LCM है (सभी अभाज्य संख्याओं की सबसे बड़ी घातें)। HCF के लिए केवल उभयनिष्ठ अभाज्य संख्याओं की सबसे छोटी घातें लीजिए।",
+            "$6 = 2 \\times 3$ में अभाज्य संख्याएँ सही हैं, पर घात 1 है। दोनों संख्याओं में कम से कम $2^{2}$ और $3^{2}$ हैं, इसलिए यही घातें लीजिए।",
+            "$180 = 2^{2} \\times 3^{2} \\times 5$। परंतु 5 दूसरी संख्या का गुणनखंड नहीं है, इसलिए यह HCF में नहीं आ सकता। केवल उभयनिष्ठ अभाज्य संख्याएँ लीजिए।",
+            "सही! उभयनिष्ठ अभाज्य संख्याएँ 2 और 3 हैं। सबसे छोटी घातें लीजिए: $2^{2} \\times 3^{2} = 36$।"
+          ],
+          "option_feedback_gu": [
+            "આ લ.સા.અ. છે (બધી અવિભાજ્ય સંખ્યાઓની મોટામાં મોટી ઘાત). ગુ.સા.અ. માટે ફક્ત સામાન્ય અવિભાજ્ય સંખ્યાઓની નાનામાં નાની ઘાત લો.",
+            "$6 = 2 \\times 3$ માં અવિભાજ્ય સંખ્યાઓ સાચી છે, પણ ઘાત 1 છે. બંને સંખ્યાઓમાં ઓછામાં ઓછા $2^{2}$ અને $3^{2}$ છે, તેથી એ જ ઘાત લો.",
+            "$180 = 2^{2} \\times 3^{2} \\times 5$. પરંતુ 5 બીજી સંખ્યાનો અવયવ નથી, તેથી તે ગુ.સા.અ.માં આવી શકે નહીં. ફક્ત સામાન્ય અવિભાજ્ય સંખ્યાઓ લો.",
+            "સાચું! સામાન્ય અવિભાજ્ય સંખ્યાઓ 2 અને 3 છે. નાનામાં નાની ઘાત લો: $2^{2} \\times 3^{2} = 36$."
           ]
         },
         {
@@ -223,15 +421,49 @@
             "You subtracted. The rule is product $= \\text{HCF} \\times \\text{LCM}$.",
             "Correct! $12 \\times 240 = 2880$. For example, 48 and 60 have HCF 12 and LCM 240, and $48 \\times 60 = 2880$.",
             "You added HCF and LCM. The rule multiplies them: $12 \\times 240$."
+          ],
+          "question_hi": "दो संख्याओं का HCF 12 और LCM 240 है। उनका गुणनफल क्या है?",
+          "question_gu": "બે સંખ્યાઓનો ગુ.સા.અ. 12 અને લ.સા.અ. 240 છે. તેમનો ગુણાકાર શું છે?",
+          "explanation_hi": "दो संख्याओं के लिए, गुणनफल $= \\text{HCF} \\times \\text{LCM} = 12 \\times 240 = 2880$ (उदाहरण के लिए 48 और 60)।",
+          "explanation_gu": "બે સંખ્યાઓ માટે, ગુણાકાર $= \\text{HCF} \\times \\text{LCM} = 12 \\times 240 = 2880$ (ઉદાહરણ તરીકે 48 અને 60).",
+          "options_hi": [
+            "$20$",
+            "$228$",
+            "$2880$",
+            "$252$"
+          ],
+          "options_gu": [
+            "$20$",
+            "$228$",
+            "$2880$",
+            "$252$"
+          ],
+          "option_feedback_hi": [
+            "आपने LCM को HCF से भाग दिया। संख्याओं का गुणनफल HCF $\\times$ LCM होता है।",
+            "आपने घटाया। नियम है गुणनफल $= \\text{HCF} \\times \\text{LCM}$।",
+            "सही! $12 \\times 240 = 2880$। उदाहरण के लिए, 48 और 60 का HCF 12 और LCM 240 है, और $48 \\times 60 = 2880$।",
+            "आपने HCF और LCM को जोड़ा। नियम उन्हें गुणा करता है: $12 \\times 240$।"
+          ],
+          "option_feedback_gu": [
+            "તમે લ.સા.અ.ને ગુ.સા.અ. વડે ભાગ્યો. સંખ્યાઓનો ગુણાકાર ગુ.સા.અ. $\\times$ લ.સા.અ. હોય છે.",
+            "તમે બાદબાકી કરી. નિયમ છે ગુણાકાર $= \\text{HCF} \\times \\text{LCM}$.",
+            "સાચું! $12 \\times 240 = 2880$. ઉદાહરણ તરીકે, 48 અને 60 નો ગુ.સા.અ. 12 અને લ.સા.અ. 240 છે, અને $48 \\times 60 = 2880$.",
+            "તમે ગુ.સા.અ. અને લ.સા.અ.નો સરવાળો કર્યો. નિયમમાં ગુણાકાર થાય છે: $12 \\times 240$."
           ]
         },
         {
           "id": "ch01.s3.mistakes",
           "type": "common_mistakes",
           "title": "Common mistakes",
-          "body": "- Using $\\text{HCF} \\times \\text{LCM} = $ product for **three** numbers. It works for two only.\n- Writing $4$ or $9$ as a 'prime factor'. Break everything down to primes.\n- For HCF, taking primes that are **not common** to all the numbers.\n- Forgetting that the LCM is always a multiple of the HCF. If your LCM is not, recheck."
+          "body": "- Using $\\text{HCF} \\times \\text{LCM} = $ product for **three** numbers. It works for two only.\n- Writing $4$ or $9$ as a 'prime factor'. Break everything down to primes.\n- For HCF, taking primes that are **not common** to all the numbers.\n- Forgetting that the LCM is always a multiple of the HCF. If your LCM is not, recheck.",
+          "title_hi": "सामान्य गलतियाँ",
+          "title_gu": "સામાન્ય ભૂલો",
+          "body_hi": "- **तीन** संख्याओं के लिए $\\text{HCF} \\times \\text{LCM} = $ गुणनफल का प्रयोग करना। यह केवल दो संख्याओं के लिए सत्य है।\n- $4$ या $9$ को 'अभाज्य गुणनखंड' लिखना। सब कुछ अभाज्य संख्याओं तक तोड़िए।\n- HCF के लिए ऐसी अभाज्य संख्याएँ लेना जो सभी संख्याओं में **उभयनिष्ठ नहीं** हैं।\n- यह भूल जाना कि LCM हमेशा HCF का गुणज होता है। यदि आपका LCM ऐसा नहीं है, तो दोबारा जाँचिए।",
+          "body_gu": "- **ત્રણ** સંખ્યાઓ માટે $\\text{HCF} \\times \\text{LCM} = $ ગુણાકારનો ઉપયોગ કરવો. તે ફક્ત બે સંખ્યાઓ માટે જ સાચું છે.\n- $4$ કે $9$ ને 'અવિભાજ્ય અવયવ' તરીકે લખવા. બધું અવિભાજ્ય સંખ્યાઓ સુધી તોડો.\n- ગુ.સા.અ. માટે એવી અવિભાજ્ય સંખ્યાઓ લેવી જે બધી સંખ્યાઓમાં **સામાન્ય નથી**.\n- ભૂલી જવું કે લ.સા.અ. હંમેશાં ગુ.સા.અ.નો ગુણિત હોય છે. જો તમારો લ.સા.અ. એવો ન હોય, તો ફરી ચકાસો."
         }
-      ]
+      ],
+      "title_hi": "अभाज्य गुणनखंडन से HCF और LCM",
+      "title_gu": "અવિભાજ્ય અવયવીકરણથી ગુ.સા.અ. અને લ.સા.અ."
     },
     {
       "id": "s4",
@@ -247,14 +479,32 @@
             "$a$ must be odd"
           ],
           "correct_index": 1,
-          "explanation": "$a^{2} = 2b^{2}$ is even. If $a$ were odd, $a^{2}$ would be odd. So $a$ is even. Hold on to this: it is the first step of a famous proof."
+          "explanation": "$a^{2} = 2b^{2}$ is even. If $a$ were odd, $a^{2}$ would be odd. So $a$ is even. Hold on to this: it is the first step of a famous proof.",
+          "question_hi": "मान लीजिए $\\sqrt{2} = \\dfrac{a}{b}$ सरलतम रूप में है। वर्ग करने पर $a^{2} = 2b^{2}$ मिलता है। $a$ के बारे में आप क्या कह सकते हैं?",
+          "question_gu": "ધારો કે $\\sqrt{2} = \\dfrac{a}{b}$ અતિસંક્ષિપ્ત સ્વરૂપમાં છે. વર્ગ કરતાં $a^{2} = 2b^{2}$ મળે છે. $a$ વિશે તમે શું કહી શકો?",
+          "explanation_hi": "$a^{2} = 2b^{2}$ सम है। यदि $a$ विषम होता, तो $a^{2}$ भी विषम होता। अतः $a$ सम है। इसे याद रखिए: यह एक प्रसिद्ध उपपत्ति का पहला कदम है।",
+          "explanation_gu": "$a^{2} = 2b^{2}$ યુગ્મ છે. જો $a$ અયુગ્મ હોત, તો $a^{2}$ પણ અયુગ્મ હોત. તેથી $a$ યુગ્મ છે. આ યાદ રાખો: આ એક પ્રખ્યાત સાબિતીનું પહેલું પગલું છે.",
+          "options_hi": [
+            "कुछ नहीं कहा जा सकता",
+            "$a$ सम होना चाहिए",
+            "$a$ विषम होना चाहिए"
+          ],
+          "options_gu": [
+            "કંઈ કહી શકાય નહીં",
+            "$a$ યુગ્મ હોવો જોઈએ",
+            "$a$ અયુગ્મ હોવો જોઈએ"
+          ]
         },
         {
           "id": "ch01.s4.reveal",
           "type": "theory",
           "title": "What is an irrational number?",
           "body": "A number $s$ is **irrational** if it **cannot** be written as $\\dfrac{p}{q}$, where $p$ and $q$ are integers and $q \\neq 0$.\n\nExamples: $\\sqrt{2}, \\sqrt{3}, \\sqrt{15}, \\pi, 0.10110111011110\\ldots$\n\n**Theorem 1.2:** Let $p$ be a prime number. If $p$ divides $a^{2}$, then $p$ divides $a$, where $a$ is a positive integer.\n\n*Why:* write $a = p_1 p_2 \\cdots p_n$. Then $a^{2} = (p_1 p_2 \\cdots p_n)(p_1 p_2 \\cdots p_n)$. If $p$ divides $a^{2}$, then by the Fundamental Theorem of Arithmetic $p$ is one of $p_1, \\ldots, p_n$, so $p$ divides $a$.",
-          "revision": true
+          "revision": true,
+          "title_hi": "अपरिमेय संख्या क्या है?",
+          "title_gu": "અસંમેય સંખ્યા એટલે શું?",
+          "body_hi": "कोई संख्या $s$ **अपरिमेय** कहलाती है यदि उसे $\\dfrac{p}{q}$ के रूप में **नहीं** लिखा जा सकता, जहाँ $p$ और $q$ पूर्णांक हैं और $q \\neq 0$।\n\nउदाहरण: $\\sqrt{2}, \\sqrt{3}, \\sqrt{15}, \\pi, 0.10110111011110\\ldots$\n\n**प्रमेय 1.2:** मान लीजिए $p$ एक अभाज्य संख्या है। यदि $p$, $a^{2}$ को विभाजित करती है, तो $p$, $a$ को भी विभाजित करेगी, जहाँ $a$ एक धनात्मक पूर्णांक है।\n\n*क्यों:* $a = p_1 p_2 \\cdots p_n$ लिखिए। तब $a^{2} = (p_1 p_2 \\cdots p_n)(p_1 p_2 \\cdots p_n)$। यदि $p$, $a^{2}$ को विभाजित करती है, तो अंकगणित की आधारभूत प्रमेय से $p$ इन्हीं $p_1, \\ldots, p_n$ में से एक है, अतः $p$, $a$ को विभाजित करती है।",
+          "body_gu": "કોઈ સંખ્યા $s$ ને **અસંમેય** કહેવાય જો તેને $\\dfrac{p}{q}$ સ્વરૂપે લખી **ન** શકાય, જ્યાં $p$ અને $q$ પૂર્ણાંકો છે અને $q \\neq 0$.\n\nઉદાહરણ: $\\sqrt{2}, \\sqrt{3}, \\sqrt{15}, \\pi, 0.10110111011110\\ldots$\n\n**પ્રમેય 1.2:** ધારો કે $p$ અવિભાજ્ય સંખ્યા છે. જો $p$ એ $a^{2}$ ને નિઃશેષ ભાગે, તો $p$ એ $a$ ને પણ નિઃશેષ ભાગે, જ્યાં $a$ ધન પૂર્ણાંક છે.\n\n*શા માટે:* $a = p_1 p_2 \\cdots p_n$ લખો. તો $a^{2} = (p_1 p_2 \\cdots p_n)(p_1 p_2 \\cdots p_n)$. જો $p$ એ $a^{2}$ ને ભાગે, તો અંકગણિતના મૂળભૂત પ્રમેય પ્રમાણે $p$ એ $p_1, \\ldots, p_n$ પૈકી એક છે, તેથી $p$ એ $a$ ને ભાગે છે."
         },
         {
           "id": "ch01.s4.proof2",
@@ -269,7 +519,29 @@
             "Now 2 divides both $r$ and $s$. This contradicts that $r$ and $s$ are coprime.",
             "The contradiction came from assuming $\\sqrt{2}$ is rational. So $\\sqrt{2}$ is irrational."
           ],
-          "answer": "$\\sqrt{2}$ is irrational."
+          "answer": "$\\sqrt{2}$ is irrational.",
+          "title_hi": "प्रमेय 1.3: $\\sqrt{2}$ अपरिमेय है",
+          "title_gu": "પ્રમેય 1.3: $\\sqrt{2}$ અસંમેય છે",
+          "problem_hi": "सिद्ध कीजिए कि $\\sqrt{2}$ अपरिमेय है।",
+          "problem_gu": "સાબિત કરો કે $\\sqrt{2}$ અસંમેય છે.",
+          "answer_hi": "$\\sqrt{2}$ अपरिमेय है।",
+          "answer_gu": "$\\sqrt{2}$ અસંમેય છે.",
+          "steps_hi": [
+            "इसके विपरीत मान लीजिए: $\\sqrt{2}$ परिमेय है। तब पूर्णांकों $r, s$ ($s \\neq 0$) के लिए $\\sqrt{2} = \\dfrac{r}{s}$।",
+            "उभयनिष्ठ गुणनखंड हटा दीजिए ताकि $r$ और $s$ सह-अभाज्य हों (उनका HCF 1 हो)।",
+            "तब $s\\sqrt{2} = r$। वर्ग करने पर: $2s^{2} = r^{2}$, अतः 2, $r^{2}$ को विभाजित करता है, और प्रमेय 1.2 से 2, $r$ को विभाजित करता है।",
+            "$r = 2c$ लिखिए। तब $2s^{2} = 4c^{2}$, अतः $s^{2} = 2c^{2}$। इसलिए 2, $s^{2}$ को विभाजित करता है, और अतः 2, $s$ को विभाजित करता है।",
+            "अब 2, $r$ और $s$ दोनों को विभाजित करता है। यह इस तथ्य का विरोधाभास है कि $r$ और $s$ सह-अभाज्य हैं।",
+            "यह विरोधाभास $\\sqrt{2}$ को परिमेय मानने से आया। अतः $\\sqrt{2}$ अपरिमेय है।"
+          ],
+          "steps_gu": [
+            "વિરુદ્ધ ધારો: $\\sqrt{2}$ સંમેય છે. તો પૂર્ણાંકો $r, s$ ($s \\neq 0$) માટે $\\sqrt{2} = \\dfrac{r}{s}$.",
+            "સામાન્ય અવયવો દૂર કરો જેથી $r$ અને $s$ પરસ્પર અવિભાજ્ય થાય (તેમનો ગુ.સા.અ. 1 થાય).",
+            "તો $s\\sqrt{2} = r$. વર્ગ કરતાં: $2s^{2} = r^{2}$, તેથી 2 એ $r^{2}$ ને ભાગે છે, અને પ્રમેય 1.2 પ્રમાણે 2 એ $r$ ને ભાગે છે.",
+            "$r = 2c$ લખો. તો $2s^{2} = 4c^{2}$, તેથી $s^{2} = 2c^{2}$. એટલે 2 એ $s^{2}$ ને ભાગે છે, અને તેથી 2 એ $s$ ને ભાગે છે.",
+            "હવે 2 એ $r$ અને $s$ બંનેને ભાગે છે. આ $r$ અને $s$ પરસ્પર અવિભાજ્ય હોવાની હકીકતનો વિરોધાભાસ છે.",
+            "આ વિરોધાભાસ $\\sqrt{2}$ ને સંમેય ધારવાથી આવ્યો. તેથી $\\sqrt{2}$ અસંમેય છે."
+          ]
         },
         {
           "id": "ch01.s4.ex5",
@@ -282,14 +554,36 @@
             "Write $a = 3c$: $3b^{2} = 9c^{2}$, so $b^{2} = 3c^{2}$. Hence 3 divides $b^{2}$ and so 3 divides $b$.",
             "So 3 divides both $a$ and $b$, contradicting that they are coprime. Hence $\\sqrt{3}$ is irrational."
           ],
-          "answer": "$\\sqrt{3}$ is irrational."
+          "answer": "$\\sqrt{3}$ is irrational.",
+          "title_hi": "NCERT उदाहरण 5",
+          "title_gu": "NCERT ઉદાહરણ 5",
+          "problem_hi": "सिद्ध कीजिए कि $\\sqrt{3}$ अपरिमेय है।",
+          "problem_gu": "સાબિત કરો કે $\\sqrt{3}$ અસંમેય છે.",
+          "answer_hi": "$\\sqrt{3}$ अपरिमेय है।",
+          "answer_gu": "$\\sqrt{3}$ અસંમેય છે.",
+          "steps_hi": [
+            "मान लीजिए $\\sqrt{3} = \\dfrac{a}{b}$ जहाँ $a, b$ सह-अभाज्य पूर्णांक हैं और $b \\neq 0$।",
+            "तब $b\\sqrt{3} = a$। वर्ग करने पर: $3b^{2} = a^{2}$, अतः 3, $a^{2}$ को विभाजित करता है और इसलिए 3, $a$ को विभाजित करता है (प्रमेय 1.2)।",
+            "$a = 3c$ लिखिए: $3b^{2} = 9c^{2}$, अतः $b^{2} = 3c^{2}$। इसलिए 3, $b^{2}$ को विभाजित करता है और अतः 3, $b$ को विभाजित करता है।",
+            "अतः 3, $a$ और $b$ दोनों को विभाजित करता है, जो उनके सह-अभाज्य होने का विरोधाभास है। अतः $\\sqrt{3}$ अपरिमेय है।"
+          ],
+          "steps_gu": [
+            "ધારો કે $\\sqrt{3} = \\dfrac{a}{b}$ જ્યાં $a, b$ પરસ્પર અવિભાજ્ય પૂર્ણાંકો છે અને $b \\neq 0$.",
+            "તો $b\\sqrt{3} = a$. વર્ગ કરતાં: $3b^{2} = a^{2}$, તેથી 3 એ $a^{2}$ ને ભાગે છે અને એટલે 3 એ $a$ ને ભાગે છે (પ્રમેય 1.2).",
+            "$a = 3c$ લખો: $3b^{2} = 9c^{2}$, તેથી $b^{2} = 3c^{2}$. એટલે 3 એ $b^{2}$ ને ભાગે છે અને તેથી 3 એ $b$ ને ભાગે છે.",
+            "આમ 3 એ $a$ અને $b$ બંનેને ભાગે છે, જે તેમના પરસ્પર અવિભાજ્ય હોવાનો વિરોધાભાસ છે. તેથી $\\sqrt{3}$ અસંમેય છે."
+          ]
         },
         {
           "id": "ch01.s4.facts",
           "type": "theory",
           "title": "Building new irrational numbers",
           "body": "If $q$ is rational and $s$ is irrational, then:\n\n- $q + s$ and $q - s$ are irrational;\n- $qs$ and $\\dfrac{q}{s}$ are irrational, provided $q \\neq 0$.\n\n**Method:** assume the number is rational, rearrange to make $\\sqrt{\\;}$ the subject, and show it would then be rational. Contradiction!",
-          "revision": true
+          "revision": true,
+          "title_hi": "नई अपरिमेय संख्याएँ बनाना",
+          "title_gu": "નવી અસંમેય સંખ્યાઓ બનાવવી",
+          "body_hi": "यदि $q$ परिमेय है और $s$ अपरिमेय है, तो:\n\n- $q + s$ और $q - s$ अपरिमेय हैं;\n- $qs$ और $\\dfrac{q}{s}$ अपरिमेय हैं, बशर्ते $q \\neq 0$।\n\n**विधि:** मान लीजिए कि संख्या परिमेय है, $\\sqrt{\\;}$ को अकेला कीजिए, और दिखाइए कि तब वह परिमेय हो जाएगा। विरोधाभास!",
+          "body_gu": "જો $q$ સંમેય હોય અને $s$ અસંમેય હોય, તો:\n\n- $q + s$ અને $q - s$ અસંમેય છે;\n- $qs$ અને $\\dfrac{q}{s}$ અસંમેય છે, જો $q \\neq 0$.\n\n**રીત:** ધારો કે સંખ્યા સંમેય છે, $\\sqrt{\\;}$ ને એકલું કરો, અને બતાવો કે તો તે સંમેય થઈ જાય. વિરોધાભાસ!"
         },
         {
           "id": "ch01.s4.ex6",
@@ -302,7 +596,25 @@
             "Since $a, b$ are integers, $\\dfrac{5b - a}{b}$ is rational, so $\\sqrt{3}$ would be rational.",
             "This contradicts the fact that $\\sqrt{3}$ is irrational. Hence $5 - \\sqrt{3}$ is irrational."
           ],
-          "answer": "$5 - \\sqrt{3}$ is irrational."
+          "answer": "$5 - \\sqrt{3}$ is irrational.",
+          "title_hi": "NCERT उदाहरण 6",
+          "title_gu": "NCERT ઉદાહરણ 6",
+          "problem_hi": "दर्शाइए कि $5 - \\sqrt{3}$ अपरिमेय है।",
+          "problem_gu": "બતાવો કે $5 - \\sqrt{3}$ અસંમેય છે.",
+          "answer_hi": "$5 - \\sqrt{3}$ अपरिमेय है।",
+          "answer_gu": "$5 - \\sqrt{3}$ અસંમેય છે.",
+          "steps_hi": [
+            "मान लीजिए $5 - \\sqrt{3} = \\dfrac{a}{b}$, जहाँ $a, b$ सह-अभाज्य पूर्णांक हैं और $b \\neq 0$।",
+            "तब $\\sqrt{3} = 5 - \\dfrac{a}{b} = \\dfrac{5b - a}{b}$।",
+            "चूँकि $a, b$ पूर्णांक हैं, $\\dfrac{5b - a}{b}$ परिमेय है, अतः $\\sqrt{3}$ परिमेय हो जाएगा।",
+            "यह इस तथ्य का विरोधाभास है कि $\\sqrt{3}$ अपरिमेय है। अतः $5 - \\sqrt{3}$ अपरिमेय है।"
+          ],
+          "steps_gu": [
+            "ધારો કે $5 - \\sqrt{3} = \\dfrac{a}{b}$, જ્યાં $a, b$ પરસ્પર અવિભાજ્ય પૂર્ણાંકો છે અને $b \\neq 0$.",
+            "તો $\\sqrt{3} = 5 - \\dfrac{a}{b} = \\dfrac{5b - a}{b}$.",
+            "$a, b$ પૂર્ણાંકો હોવાથી $\\dfrac{5b - a}{b}$ સંમેય છે, તેથી $\\sqrt{3}$ સંમેય થઈ જાય.",
+            "આ $\\sqrt{3}$ અસંમેય હોવાની હકીકતનો વિરોધાભાસ છે. તેથી $5 - \\sqrt{3}$ અસંમેય છે."
+          ]
         },
         {
           "id": "ch01.s4.ex7",
@@ -314,13 +626,33 @@
             "Then $\\sqrt{2} = \\dfrac{a}{3b}$, which is rational because $a$ and $3b$ are integers.",
             "This contradicts the fact that $\\sqrt{2}$ is irrational. Hence $3\\sqrt{2}$ is irrational."
           ],
-          "answer": "$3\\sqrt{2}$ is irrational."
+          "answer": "$3\\sqrt{2}$ is irrational.",
+          "title_hi": "NCERT उदाहरण 7",
+          "title_gu": "NCERT ઉદાહરણ 7",
+          "problem_hi": "दर्शाइए कि $3\\sqrt{2}$ अपरिमेय है।",
+          "problem_gu": "બતાવો કે $3\\sqrt{2}$ અસંમેય છે.",
+          "answer_hi": "$3\\sqrt{2}$ अपरिमेय है।",
+          "answer_gu": "$3\\sqrt{2}$ અસંમેય છે.",
+          "steps_hi": [
+            "मान लीजिए $3\\sqrt{2} = \\dfrac{a}{b}$, जहाँ $a, b$ सह-अभाज्य पूर्णांक हैं और $b \\neq 0$।",
+            "तब $\\sqrt{2} = \\dfrac{a}{3b}$, जो परिमेय है क्योंकि $a$ और $3b$ पूर्णांक हैं।",
+            "यह इस तथ्य का विरोधाभास है कि $\\sqrt{2}$ अपरिमेय है। अतः $3\\sqrt{2}$ अपरिमेय है।"
+          ],
+          "steps_gu": [
+            "ધારો કે $3\\sqrt{2} = \\dfrac{a}{b}$, જ્યાં $a, b$ પરસ્પર અવિભાજ્ય પૂર્ણાંકો છે અને $b \\neq 0$.",
+            "તો $\\sqrt{2} = \\dfrac{a}{3b}$, જે સંમેય છે કારણ કે $a$ અને $3b$ પૂર્ણાંકો છે.",
+            "આ $\\sqrt{2}$ અસંમેય હોવાની હકીકતનો વિરોધાભાસ છે. તેથી $3\\sqrt{2}$ અસંમેય છે."
+          ]
         },
         {
           "id": "ch01.s4.tip",
           "type": "teacher_tip",
           "title": "Proof by contradiction as detective work",
-          "body": "Tell students: we pretend the suspect is innocent ($\\sqrt{2}$ is rational) and follow the clues. When the clues lead to something impossible (a fraction in lowest terms that still has a common factor 2), the pretending must be wrong. In exams, the first line **'Let us assume, to the contrary, that ... is rational'** and the word **coprime** each carry marks."
+          "body": "Tell students: we pretend the suspect is innocent ($\\sqrt{2}$ is rational) and follow the clues. When the clues lead to something impossible (a fraction in lowest terms that still has a common factor 2), the pretending must be wrong. In exams, the first line **'Let us assume, to the contrary, that ... is rational'** and the word **coprime** each carry marks.",
+          "title_hi": "विरोधाभास द्वारा उपपत्ति: एक जासूसी कहानी",
+          "title_gu": "વિરોધાભાસથી સાબિતી: એક જાસૂસી વાર્તા",
+          "body_hi": "विद्यार्थियों से कहिए: हम मान लेते हैं कि संदिग्ध निर्दोष है ($\\sqrt{2}$ परिमेय है) और सुरागों का पीछा करते हैं। जब सुराग किसी असंभव स्थिति तक ले जाते हैं (सरलतम रूप की भिन्न में फिर भी उभयनिष्ठ गुणनखंड 2), तो हमारा मान लेना गलत था। परीक्षा में पहली पंक्ति **'इसके विपरीत, मान लीजिए कि ... परिमेय है'** और शब्द **सह-अभाज्य**, दोनों पर अंक मिलते हैं।",
+          "body_gu": "વિદ્યાર્થીઓને કહો: આપણે ધારીએ છીએ કે શંકાસ્પદ નિર્દોષ છે ($\\sqrt{2}$ સંમેય છે) અને કડીઓને અનુસરીએ છીએ. જ્યારે કડીઓ કોઈ અશક્ય સ્થિતિ સુધી લઈ જાય (અતિસંક્ષિપ્ત અપૂર્ણાંકમાં પણ સામાન્ય અવયવ 2), ત્યારે આપણી ધારણા ખોટી હતી. પરીક્ષામાં પહેલી લીટી **'વિરુદ્ધ ધારો કે ... સંમેય છે'** અને શબ્દ **પરસ્પર અવિભાજ્ય**, બંનેના ગુણ મળે છે."
         },
         {
           "id": "ch01.s4.check1",
@@ -339,6 +671,34 @@
             "$0.333\\ldots = \\dfrac{1}{3}$. A repeating decimal is always rational.",
             "Correct! $\\sqrt{12} = 2\\sqrt{3}$: a non-zero rational times an irrational, so it is irrational.",
             "$\\sqrt{49} = 7$, a whole number, so it is rational."
+          ],
+          "question_hi": "इनमें से कौन-सी संख्या अपरिमेय है?",
+          "question_gu": "આમાંથી કઈ સંખ્યા અસંમેય છે?",
+          "explanation_hi": "$\\sqrt{49} = 7$, $\\sqrt{36/25} = 6/5$ और $0.\\overline{3} = 1/3$ परिमेय हैं। $\\sqrt{12} = 2\\sqrt{3}$, एक शून्येतर परिमेय गुणा एक अपरिमेय, अतः यह अपरिमेय है।",
+          "explanation_gu": "$\\sqrt{49} = 7$, $\\sqrt{36/25} = 6/5$ અને $0.\\overline{3} = 1/3$ સંમેય છે. $\\sqrt{12} = 2\\sqrt{3}$, શૂન્યેતર સંમેય ગુણ્યા અસંમેય, તેથી તે અસંમેય છે.",
+          "options_hi": [
+            "$\\sqrt{\\dfrac{36}{25}}$",
+            "$0.\\overline{3}$",
+            "$\\sqrt{12}$",
+            "$\\sqrt{49}$"
+          ],
+          "options_gu": [
+            "$\\sqrt{\\dfrac{36}{25}}$",
+            "$0.\\overline{3}$",
+            "$\\sqrt{12}$",
+            "$\\sqrt{49}$"
+          ],
+          "option_feedback_hi": [
+            "$\\sqrt{\\dfrac{36}{25}} = \\dfrac{6}{5}$, जो पूर्णांकों की भिन्न है, अतः परिमेय है।",
+            "$0.333\\ldots = \\dfrac{1}{3}$। आवर्ती दशमलव हमेशा परिमेय होता है।",
+            "सही! $\\sqrt{12} = 2\\sqrt{3}$: एक शून्येतर परिमेय गुणा एक अपरिमेय, अतः यह अपरिमेय है।",
+            "$\\sqrt{49} = 7$, एक पूर्ण संख्या, अतः परिमेय है।"
+          ],
+          "option_feedback_gu": [
+            "$\\sqrt{\\dfrac{36}{25}} = \\dfrac{6}{5}$, જે પૂર્ણાંકોનો અપૂર્ણાંક છે, તેથી સંમેય છે.",
+            "$0.333\\ldots = \\dfrac{1}{3}$. આવૃત્ત દશાંશ હંમેશાં સંમેય હોય છે.",
+            "સાચું! $\\sqrt{12} = 2\\sqrt{3}$: શૂન્યેતર સંમેય ગુણ્યા અસંમેય, તેથી તે અસંમેય છે.",
+            "$\\sqrt{49} = 7$, પૂર્ણ સંખ્યા છે, તેથી સંમેય છે."
           ]
         },
         {
@@ -358,9 +718,39 @@
             "Correct! $3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$.",
             "Use $(a + b)(a - b) = a^{2} - b^{2}$: you get $9 - 5 = 4$.",
             "Neither factor is 0. The product is $9 - 5 = 4$."
+          ],
+          "question_hi": "$(3 + \\sqrt{5})(3 - \\sqrt{5})$ है:",
+          "question_gu": "$(3 + \\sqrt{5})(3 - \\sqrt{5})$ એ:",
+          "explanation_hi": "$(3 + \\sqrt{5})(3 - \\sqrt{5}) = 3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$, जो परिमेय है। दो अपरिमेय संख्याओं का गुणनफल परिमेय हो सकता है!",
+          "explanation_gu": "$(3 + \\sqrt{5})(3 - \\sqrt{5}) = 3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$, જે સંમેય છે. બે અસંમેય સંખ્યાઓનો ગુણાકાર સંમેય હોઈ શકે!",
+          "options_hi": [
+            "वास्तविक संख्या नहीं है",
+            "एक परिमेय संख्या है",
+            "एक अपरिमेय संख्या है",
+            "शून्य है"
+          ],
+          "options_gu": [
+            "વાસ્તવિક સંખ્યા નથી",
+            "સંમેય સંખ્યા છે",
+            "અસંમેય સંખ્યા છે",
+            "શૂન્ય છે"
+          ],
+          "option_feedback_hi": [
+            "दोनों गुणनखंड वास्तविक हैं, अतः उनका गुणनफल भी वास्तविक है।",
+            "सही! $3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$।",
+            "$(a + b)(a - b) = a^{2} - b^{2}$ का प्रयोग कीजिए: आपको $9 - 5 = 4$ मिलेगा।",
+            "कोई भी गुणनखंड 0 नहीं है। गुणनफल $9 - 5 = 4$ है।"
+          ],
+          "option_feedback_gu": [
+            "બંને અવયવ વાસ્તવિક છે, તેથી તેમનો ગુણાકાર પણ વાસ્તવિક છે.",
+            "સાચું! $3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$.",
+            "$(a + b)(a - b) = a^{2} - b^{2}$ નો ઉપયોગ કરો: તમને $9 - 5 = 4$ મળશે.",
+            "કોઈ પણ અવયવ 0 નથી. ગુણાકાર $9 - 5 = 4$ છે."
           ]
         }
-      ]
+      ],
+      "title_hi": "अपरिमेय संख्याएँ",
+      "title_gu": "અસંમેય સંખ્યાઓ"
     },
     {
       "id": "s5",
@@ -370,57 +760,97 @@
           "id": "ch01.s5.reflection",
           "type": "reflection",
           "title": "Explain it in your own words",
-          "body": "Explain to a friend, without using the word 'theorem', why $6^{n}$ can never end in 0. Then explain why the proof that $\\sqrt{2}$ is irrational needs the words 'in lowest terms'."
+          "body": "Explain to a friend, without using the word 'theorem', why $6^{n}$ can never end in 0. Then explain why the proof that $\\sqrt{2}$ is irrational needs the words 'in lowest terms'.",
+          "title_hi": "अपने शब्दों में समझाइए",
+          "title_gu": "તમારા શબ્દોમાં સમજાવો",
+          "body_hi": "'प्रमेय' शब्द का प्रयोग किए बिना अपने मित्र को समझाइए कि $6^{n}$ कभी 0 पर समाप्त क्यों नहीं हो सकता। फिर समझाइए कि $\\sqrt{2}$ के अपरिमेय होने की उपपत्ति में 'सरलतम रूप' शब्दों की आवश्यकता क्यों है।",
+          "body_gu": "'પ્રમેય' શબ્દનો ઉપયોગ કર્યા વગર તમારા મિત્રને સમજાવો કે $6^{n}$ નો છેલ્લો અંક ક્યારેય 0 કેમ ન હોઈ શકે. પછી સમજાવો કે $\\sqrt{2}$ અસંમેય હોવાની સાબિતીમાં 'અતિસંક્ષિપ્ત સ્વરૂપ' શબ્દોની જરૂર કેમ છે."
         },
         {
           "id": "ch01.s5.connection",
           "type": "connection",
           "title": "Where this leads",
-          "body": "- **Class 9:** you met irrational numbers on the number line; now you can *prove* a number is irrational.\n- **Polynomials (Chapter 2) and Quadratic Equations (Chapter 4):** roots like $2 + \\sqrt{3}$ are irrational numbers.\n- **Real life:** gear wheels, traffic signals and bus timetables repeat after the **LCM** of their cycles; cutting cloth or tiles into the largest equal pieces uses the **HCF**.\n- **Computers:** internet security (RSA encryption) relies on how hard it is to find the prime factors of very large numbers."
+          "body": "- **Class 9:** you met irrational numbers on the number line; now you can *prove* a number is irrational.\n- **Polynomials (Chapter 2) and Quadratic Equations (Chapter 4):** roots like $2 + \\sqrt{3}$ are irrational numbers.\n- **Real life:** gear wheels, traffic signals and bus timetables repeat after the **LCM** of their cycles; cutting cloth or tiles into the largest equal pieces uses the **HCF**.\n- **Computers:** internet security (RSA encryption) relies on how hard it is to find the prime factors of very large numbers.",
+          "title_hi": "यह आगे कहाँ ले जाता है",
+          "title_gu": "આ આગળ ક્યાં લઈ જાય છે",
+          "body_hi": "- **कक्षा 9:** आपने संख्या रेखा पर अपरिमेय संख्याएँ देखी थीं; अब आप किसी संख्या का अपरिमेय होना *सिद्ध* कर सकते हैं।\n- **बहुपद (अध्याय 2) और द्विघात समीकरण (अध्याय 4):** $2 + \\sqrt{3}$ जैसे मूल अपरिमेय संख्याएँ हैं।\n- **दैनिक जीवन:** गियर के पहिए, ट्रैफ़िक सिग्नल और बसों की समय-सारणी अपने चक्रों के **LCM** के बाद दोहराते हैं; कपड़े या टाइलों को सबसे बड़े बराबर टुकड़ों में काटने में **HCF** का प्रयोग होता है।\n- **कंप्यूटर:** इंटरनेट सुरक्षा (RSA एन्क्रिप्शन) इस बात पर निर्भर है कि बहुत बड़ी संख्याओं के अभाज्य गुणनखंड निकालना कितना कठिन है।",
+          "body_gu": "- **ધોરણ 9:** તમે સંખ્યારેખા પર અસંમેય સંખ્યાઓ જોઈ હતી; હવે તમે કોઈ સંખ્યા અસંમેય છે તે *સાબિત* કરી શકો છો.\n- **બહુપદીઓ (પ્રકરણ 2) અને દ્વિઘાત સમીકરણો (પ્રકરણ 4):** $2 + \\sqrt{3}$ જેવાં બીજ અસંમેય સંખ્યાઓ છે.\n- **રોજિંદું જીવન:** ગિયરનાં પૈડાં, ટ્રાફિક સિગ્નલ અને બસનાં સમયપત્રક તેમનાં ચક્રોના **લ.સા.અ.** પછી ફરી પુનરાવર્તિત થાય છે; કાપડ કે ટાઇલ્સને સૌથી મોટા સરખા ટુકડામાં કાપવા **ગુ.સા.અ.** વપરાય છે.\n- **કમ્પ્યુટર:** ઇન્ટરનેટ સુરક્ષા (RSA એન્ક્રિપ્શન) એ વાત પર આધારિત છે કે ખૂબ મોટી સંખ્યાઓના અવિભાજ્ય અવયવો શોધવા કેટલું અઘરું છે."
         },
         {
           "id": "ch01.s5.mastery",
           "type": "mastery",
           "title": "Mastery challenge",
-          "body": "Three traffic lights change after every 48 seconds, 72 seconds and 108 seconds. They change together at 7:00:00 am. At what time will they next change together?\n\n*Hint:* write each number as a product of primes first.\n\n**Answer:** $48 = 2^{4} \\times 3$, $72 = 2^{3} \\times 3^{2}$, $108 = 2^{2} \\times 3^{3}$. LCM $= 2^{4} \\times 3^{3} = 432$ seconds $= 7$ min $12$ s, so at **7:07:12 am**."
+          "body": "Three traffic lights change after every 48 seconds, 72 seconds and 108 seconds. They change together at 7:00:00 am. At what time will they next change together?\n\n*Hint:* write each number as a product of primes first.\n\n**Answer:** $48 = 2^{4} \\times 3$, $72 = 2^{3} \\times 3^{2}$, $108 = 2^{2} \\times 3^{3}$. LCM $= 2^{4} \\times 3^{3} = 432$ seconds $= 7$ min $12$ s, so at **7:07:12 am**.",
+          "title_hi": "निपुणता चुनौती",
+          "title_gu": "નિપુણતા પડકાર",
+          "body_hi": "तीन ट्रैफ़िक लाइटें क्रमशः हर 48 सेकंड, 72 सेकंड और 108 सेकंड बाद बदलती हैं। वे सुबह 7:00:00 बजे एक साथ बदलती हैं। वे अगली बार एक साथ कब बदलेंगी?\n\n*संकेत:* पहले प्रत्येक संख्या को अभाज्य संख्याओं के गुणनफल के रूप में लिखिए।\n\n**उत्तर:** $48 = 2^{4} \\times 3$, $72 = 2^{3} \\times 3^{2}$, $108 = 2^{2} \\times 3^{3}$। LCM $= 2^{4} \\times 3^{3} = 432$ सेकंड $= 7$ मिनट $12$ सेकंड, अतः **सुबह 7:07:12 बजे**।",
+          "body_gu": "ત્રણ ટ્રાફિક લાઇટ અનુક્રમે દર 48 સેકન્ડ, 72 સેકન્ડ અને 108 સેકન્ડ પછી બદલાય છે. તે સવારે 7:00:00 વાગ્યે એકસાથે બદલાય છે. હવે પછી તે ફરી એકસાથે ક્યારે બદલાશે?\n\n*સંકેત:* પહેલાં દરેક સંખ્યાને અવિભાજ્ય સંખ્યાઓના ગુણાકાર તરીકે લખો.\n\n**જવાબ:** $48 = 2^{4} \\times 3$, $72 = 2^{3} \\times 3^{2}$, $108 = 2^{2} \\times 3^{3}$. લ.સા.અ. $= 2^{4} \\times 3^{3} = 432$ સેકન્ડ $= 7$ મિનિટ $12$ સેકન્ડ, તેથી **સવારે 7:07:12 વાગ્યે**."
         },
         {
           "id": "ch01.s5.summary",
           "type": "summary",
           "title": "Chapter summary",
-          "body": "- **Fundamental Theorem of Arithmetic:** every composite number is a product of primes in exactly one way, apart from order.\n- **HCF** = smallest powers of common primes. **LCM** = greatest powers of all primes.\n- For two numbers: $\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$.\n- If a prime $p$ divides $a^{2}$, then $p$ divides $a$.\n- $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}$ (in general $\\sqrt{p}$ for prime $p$) are irrational, proved by contradiction.\n- Rational $\\pm$ irrational, and non-zero rational $\\times$ or $\\div$ irrational, are irrational."
+          "body": "- **Fundamental Theorem of Arithmetic:** every composite number is a product of primes in exactly one way, apart from order.\n- **HCF** = smallest powers of common primes. **LCM** = greatest powers of all primes.\n- For two numbers: $\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$.\n- If a prime $p$ divides $a^{2}$, then $p$ divides $a$.\n- $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}$ (in general $\\sqrt{p}$ for prime $p$) are irrational, proved by contradiction.\n- Rational $\\pm$ irrational, and non-zero rational $\\times$ or $\\div$ irrational, are irrational.",
+          "title_hi": "अध्याय सारांश",
+          "title_gu": "પ્રકરણ સારાંશ",
+          "body_hi": "- **अंकगणित की आधारभूत प्रमेय:** प्रत्येक भाज्य संख्या, क्रम को छोड़कर, ठीक एक ही तरह से अभाज्य संख्याओं का गुणनफल होती है।\n- **HCF** = उभयनिष्ठ अभाज्य संख्याओं की सबसे छोटी घातें। **LCM** = सभी अभाज्य संख्याओं की सबसे बड़ी घातें।\n- दो संख्याओं के लिए: $\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$।\n- यदि कोई अभाज्य $p$, $a^{2}$ को विभाजित करता है, तो $p$, $a$ को विभाजित करता है।\n- $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}$ (व्यापक रूप में अभाज्य $p$ के लिए $\\sqrt{p}$) अपरिमेय हैं, जो विरोधाभास द्वारा सिद्ध होता है।\n- परिमेय $\\pm$ अपरिमेय, और शून्येतर परिमेय $\\times$ या $\\div$ अपरिमेय, अपरिमेय होते हैं।",
+          "body_gu": "- **અંકગણિતનું મૂળભૂત પ્રમેય:** દરેક વિભાજ્ય સંખ્યા, ક્રમને બાદ કરતાં, બરાબર એક જ રીતે અવિભાજ્ય સંખ્યાઓનો ગુણાકાર છે.\n- **ગુ.સા.અ.** = સામાન્ય અવિભાજ્ય સંખ્યાઓની નાનામાં નાની ઘાત. **લ.સા.અ.** = બધી અવિભાજ્ય સંખ્યાઓની મોટામાં મોટી ઘાત.\n- બે સંખ્યાઓ માટે: $\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$.\n- જો અવિભાજ્ય $p$ એ $a^{2}$ ને ભાગે, તો $p$ એ $a$ ને ભાગે છે.\n- $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}$ (વ્યાપક રીતે અવિભાજ્ય $p$ માટે $\\sqrt{p}$) અસંમેય છે, જે વિરોધાભાસથી સાબિત થાય છે.\n- સંમેય $\\pm$ અસંમેય, અને શૂન્યેતર સંમેય $\\times$ કે $\\div$ અસંમેય, અસંમેય હોય છે."
         },
         {
           "id": "ch01.s5.examtips",
           "type": "exam_tips",
           "title": "Board exam tips",
-          "body": "- Write prime factorisations in **power form, ascending order**: $2^{3} \\times 3^{2} \\times 5$.\n- In 'verify' questions, show both sides of $\\text{HCF} \\times \\text{LCM} = a \\times b$ separately.\n- In irrationality proofs, write: *assume to the contrary*, *coprime*, *$p$ divides $a^{2}$ so $p$ divides $a$*, *contradiction*.\n- For 'when will they meet again' questions use **LCM**; for 'largest equal group or piece' questions use **HCF**."
+          "body": "- Write prime factorisations in **power form, ascending order**: $2^{3} \\times 3^{2} \\times 5$.\n- In 'verify' questions, show both sides of $\\text{HCF} \\times \\text{LCM} = a \\times b$ separately.\n- In irrationality proofs, write: *assume to the contrary*, *coprime*, *$p$ divides $a^{2}$ so $p$ divides $a$*, *contradiction*.\n- For 'when will they meet again' questions use **LCM**; for 'largest equal group or piece' questions use **HCF**.",
+          "title_hi": "बोर्ड परीक्षा के सुझाव",
+          "title_gu": "બોર્ડ પરીક્ષા માટેની ટિપ્સ",
+          "body_hi": "- अभाज्य गुणनखंडन **घात के रूप में, आरोही क्रम** में लिखिए: $2^{3} \\times 3^{2} \\times 5$।\n- 'सत्यापित कीजिए' वाले प्रश्नों में $\\text{HCF} \\times \\text{LCM} = a \\times b$ के दोनों पक्ष अलग-अलग दिखाइए।\n- अपरिमेयता की उपपत्तियों में लिखिए: *इसके विपरीत मान लीजिए*, *सह-अभाज्य*, *$p$, $a^{2}$ को विभाजित करता है अतः $p$, $a$ को विभाजित करता है*, *विरोधाभास*।\n- 'वे फिर कब मिलेंगे' जैसे प्रश्नों में **LCM**; 'सबसे बड़ा बराबर समूह या टुकड़ा' जैसे प्रश्नों में **HCF** का प्रयोग कीजिए।",
+          "body_gu": "- અવિભાજ્ય અવયવીકરણ **ઘાત સ્વરૂપે, ચડતા ક્રમમાં** લખો: $2^{3} \\times 3^{2} \\times 5$.\n- 'ચકાસો' પ્રકારના પ્રશ્નોમાં $\\text{HCF} \\times \\text{LCM} = a \\times b$ ની બંને બાજુ અલગ અલગ બતાવો.\n- અસંમેયતાની સાબિતીમાં લખો: *વિરુદ્ધ ધારો*, *પરસ્પર અવિભાજ્ય*, *$p$ એ $a^{2}$ ને ભાગે છે તેથી $p$ એ $a$ ને ભાગે છે*, *વિરોધાભાસ*.\n- 'તેઓ ફરી ક્યારે મળશે' પ્રકારના પ્રશ્નોમાં **લ.સા.અ.**; 'સૌથી મોટું સરખું જૂથ કે ટુકડો' પ્રકારના પ્રશ્નોમાં **ગુ.સા.અ.** વાપરો."
         },
         {
           "id": "ch01.s5.flash1",
           "type": "flashcard",
           "front": "State the Fundamental Theorem of Arithmetic.",
-          "back": "Every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of the factors."
+          "back": "Every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of the factors.",
+          "front_hi": "अंकगणित की आधारभूत प्रमेय का कथन लिखिए।",
+          "front_gu": "અંકગણિતના મૂળભૂત પ્રમેયનું વિધાન લખો.",
+          "back_hi": "प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में व्यक्त किया जा सकता है, और गुणनखंडों के क्रम को छोड़कर यह गुणनखंडन अद्वितीय है।",
+          "back_gu": "દરેક વિભાજ્ય સંખ્યાને અવિભાજ્ય સંખ્યાઓના ગુણાકાર સ્વરૂપે દર્શાવી શકાય છે, અને અવયવોના ક્રમને બાદ કરતાં આ અવયવીકરણ અનન્ય છે."
         },
         {
           "id": "ch01.s5.flash2",
           "type": "flashcard",
           "front": "HCF and LCM of two numbers: what is the relation?",
-          "back": "$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$ (two numbers only)."
+          "back": "$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$ (two numbers only).",
+          "front_hi": "दो संख्याओं के HCF और LCM: इनमें क्या संबंध है?",
+          "front_gu": "બે સંખ્યાઓના ગુ.સા.અ. અને લ.સા.અ.: તેમની વચ્ચે શો સંબંધ છે?",
+          "back_hi": "$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$ (केवल दो संख्याओं के लिए)।",
+          "back_gu": "$\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$ (ફક્ત બે સંખ્યાઓ માટે)."
         },
         {
           "id": "ch01.s5.flash3",
           "type": "flashcard",
           "front": "If a prime $p$ divides $a^{2}$, then ...?",
-          "back": "$p$ divides $a$ (Theorem 1.2)."
+          "back": "$p$ divides $a$ (Theorem 1.2).",
+          "front_hi": "यदि अभाज्य $p$, $a^{2}$ को विभाजित करता है, तो ...?",
+          "front_gu": "જો અવિભાજ્ય $p$ એ $a^{2}$ ને ભાગે, તો ...?",
+          "back_hi": "$p$, $a$ को विभाजित करता है (प्रमेय 1.2)।",
+          "back_gu": "$p$ એ $a$ ને ભાગે છે (પ્રમેય 1.2)."
         },
         {
           "id": "ch01.s5.flash4",
           "type": "flashcard",
           "front": "Why can $6^{n}$ never end with 0?",
-          "back": "$6^{n} = 2^{n} \\times 3^{n}$ has no factor 5, and by uniqueness of prime factorisation it can never get one."
+          "back": "$6^{n} = 2^{n} \\times 3^{n}$ has no factor 5, and by uniqueness of prime factorisation it can never get one.",
+          "front_hi": "$6^{n}$ कभी 0 पर समाप्त क्यों नहीं होता?",
+          "front_gu": "$6^{n}$ નો છેલ્લો અંક ક્યારેય 0 કેમ નથી હોતો?",
+          "back_hi": "$6^{n} = 2^{n} \\times 3^{n}$ में गुणनखंड 5 नहीं है, और अभाज्य गुणनखंडन की अद्वितीयता के कारण यह कभी नहीं आ सकता।",
+          "back_gu": "$6^{n} = 2^{n} \\times 3^{n}$ માં અવયવ 5 નથી, અને અવિભાજ્ય અવયવીકરણની અનન્યતાને કારણે તે ક્યારેય આવી શકે નહીં."
         }
-      ]
+      ],
+      "title_hi": "सोचें, जोड़ें, निपुण बनें",
+      "title_gu": "વિચારો, જોડો, નિપુણ બનો"
     }
-  ]
+  ],
+  "title_hi": "वास्तविक संख्याएँ",
+  "title_gu": "વાસ્તવિક સંખ્યાઓ"
 }
