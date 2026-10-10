@@ -540,7 +540,45 @@ MARKING = {
  '1 mark: total and favourable outcomes': ('1 अंक: कुल और अनुकूल परिणाम', '1 ગુણ: કુલ અને સાનુકૂળ પરિણામ'),
  '1 mark: total outcomes': ('1 अंक: कुल परिणाम', '1 ગુણ: કુલ પરિણામ'),
  '2 marks: table': ('2 अंक: सारणी', '2 ગુણ: કોષ્ટક'),
+ "(iii) 1 mark equation, 1 mark type": ("(iii) समीकरण के लिए 1 अंक, प्रकार के लिए 1 अंक", "(iii) સમીકરણ માટે 1 ગુણ, પ્રકાર માટે 1 ગુણ"),
+ "(iii) 1 mark reason, 1 mark prevention": ("(iii) कारण के लिए 1 अंक, रोकथाम के लिए 1 अंक", "(iii) કારણ માટે 1 ગુણ, અટકાવ માટે 1 ગુણ"),
 }
+
+# Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
+MARK_LABELS = {
+ # Science Ch 1 (chemical reactions)
+ "acid": ("अम्ल", "ઍસિડ"), "coefficients": ("गुणांक", "સહગુણકો"), "combination equation": ("संयोजन का समीकरण", "સંયોગીકરણનું સમીકરણ"),
+ "correct formulas throughout": ("सभी सूत्र सही", "બધાં સૂત્રો સાચાં"), "corrosion with example": ("उदाहरण सहित संक्षारण", "ઉદાહરણ સાથે ક્ષારણ"),
+ "decomposition equation": ("वियोजन का समीकरण", "વિઘટનનું સમીકરણ"), "definition": ("परिभाषा", "વ્યાખ્યા"), "displacement": ("विस्थापन", "વિસ્થાપન"),
+ "double displacement": ("द्विविस्थापन", "દ્વિ-વિસ્થાપન"), "electricity": ("विद्युत", "વિદ્યુત"), "endothermic with example": ("उदाहरण सहित ऊष्माशोषी", "ઉદાહરણ સાથે ઉષ્માશોષક"),
+ "equations": ("समीकरण", "સમીકરણો"), "exothermic with example": ("उदाहरण सहित ऊष्माक्षेपी", "ઉદાહરણ સાથે ઉષ્માક્ષેપક"), "first example": ("पहला उदाहरण", "પહેલું ઉદાહરણ"),
+ "second example": ("दूसरा उदाहरण", "બીજું ઉદાહરણ"), "first observation and equation": ("पहला प्रेक्षण और समीकरण", "પહેલું અવલોકન અને સમીકરણ"),
+ "second observation and equation": ("दूसरा प्रेक्षण और समीकरण", "બીજું અવલોકન અને સમીકરણ"), "gases at electrodes": ("इलेक्ट्रोडों पर गैसें", "ઇલેક્ટ્રોડ પરના વાયુઓ"),
+ "heat": ("ऊष्मा", "ઉષ્મા"), "light": ("प्रकाश", "પ્રકાશ"), "naming what is oxidised and reduced": ("उपचयित और अपचयित पदार्थों के नाम", "ઑક્સિડેશન અને રિડક્શન પામતા પદાર્થોનાં નામ"),
+ "oxidation with examples": ("उदाहरणों सहित उपचयन", "ઉદાહરણો સાથે ઑક્સિડેશન"), "reduction with examples": ("उदाहरणों सहित अपचयन", "ઉદાહરણો સાથે રિડક્શન"),
+ "prevention": ("रोकथाम", "અટકાવ"), "rancidity with example": ("उदाहरण सहित विकृतगंधिता", "ઉદાહરણ સાથે ખોરાપણું"), "ratio and equation": ("अनुपात और समीकरण", "ગુણોત્તર અને સમીકરણ"),
+ "reason or equation": ("कारण या समीकरण", "કારણ કે સમીકરણ"), "set-up": ("उपकरण की व्यवस्था", "સાધનની ગોઠવણી"), "tests": ("परीक्षण", "કસોટીઓ"), "type": ("प्रकार", "પ્રકાર"),
+ "types named correctly": ("सही प्रकारों के नाम", "પ્રકારોનાં સાચાં નામ"), "answer": ("उत्तर", "જવાબ"), "reason": ("कारण", "કારણ"), "equation": ("समीकरण", "સમીકરણ"),
+ "first part": ("पहला भाग", "પહેલો ભાગ"), "second part": ("दूसरा भाग", "બીજો ભાગ"), "balanced equation": ("संतुलित समीकरण", "સમતોલિત સમીકરણ"), "difference": ("अंतर", "તફાવત"),
+ "explanation": ("व्याख्या", "સમજૂતી"),
+}
+_PART_LABELS = re.compile(r"^(\([a-z]+\)|[A-E])((, | and )(\([a-z]+\)|[A-E]))*$")
+
+
+def mark_label(text, lang):
+    """'1 mark: definition' -> '1 अंक: परिभाषा'; part labels such as '(c)' or 'A and B' are kept."""
+    m = re.match(r"^(\d+) marks?: (.+)$", text)
+    if not m:
+        return None
+    n, label = m.groups()
+    hi = lang == "hi"
+    if _PART_LABELS.match(label):
+        translated = label.replace(" and ", " और " if hi else " અને ")
+    elif label in MARK_LABELS:
+        translated = MARK_LABELS[label][0 if hi else 1]
+    else:
+        return None
+    return f"{n} {'अंक' if hi else 'ગુણ'}: {translated}"
 
 AR_OPTIONS = (
  ["अभिकथन (A) और कारण (R) दोनों सत्य हैं और कारण (R), अभिकथन (A) की सही व्याख्या करता है।",
@@ -588,5 +626,5 @@ def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
     outside = re.sub(r"\b(m/s|km/h|cm|mm|km|m|kg|g)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
-    outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii)\)", "", outside)  # part labels like (ii)
+    outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii|[a-f])\)", "", outside)  # part labels like (ii) or (b)
     return not re.search(r"[A-Za-z]", outside)

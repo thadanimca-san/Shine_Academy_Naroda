@@ -1,5 +1,3 @@
-# Part of tools/content_translation. Chapter-specific translation tables are
-# written per chapter (see tr_*.py examples in docs) and passed by module name.
 """Writes Hindi/Gujarati fields into a chapter's chapter.json and questions.json.
 
 usage: apply_translations.py <chapter folder> <lesson module> <questions module>
@@ -8,7 +6,7 @@ Stops with a list of every untranslated text, so nothing is silently left in
 English. Marks the chapter as available in en/hi/gu only when complete."""
 import importlib, json, sys, os
 sys.path.insert(0, os.path.dirname(__file__))
-from common_translations import MARKING, AR_OPTIONS, AR_LABELS, ar_feedback, by_template, is_math_only
+from common_translations import MARKING, AR_OPTIONS, AR_LABELS, ar_feedback, by_template, is_math_only, mark_label
 
 TEXT = ["title", "body", "question", "explanation", "problem", "given", "formula", "answer", "front", "back",
         "person", "quote", "future", "feedback_incorrect", "statement"]
@@ -28,6 +26,8 @@ def auto(text, lang, field):
         return t
     if field == "marking_scheme" and text in MARKING:
         return MARKING[text][0 if lang == "hi" else 1]
+    if field == "marking_scheme":
+        return mark_label(text, lang)
     return None
 
 def translate_item(item, table):
