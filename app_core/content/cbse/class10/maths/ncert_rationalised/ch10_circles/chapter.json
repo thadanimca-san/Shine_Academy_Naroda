@@ -1,0 +1,688 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch10",
+  "title": "Circles",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 10,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: tangent to a circle at the point of contact; proofs that the tangent is perpendicular to the radius and that the tangents from an external point are equal.",
+  "concepts": [
+    "tangent_basics",
+    "tangent_radius",
+    "equal_tangents"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "A line that just touches",
+      "blocks": [
+        {
+          "id": "ch10.s1.hook",
+          "type": "hook",
+          "title": "Where does a wheel touch the road?",
+          "body": "Look at a bicycle wheel standing on a flat road. The wheel touches the road at exactly **one** point, and the spoke to that point stands straight up, at right angles to the road.\n\nThe road is a **tangent** to the wheel. In this chapter you will prove why a tangent is always perpendicular to the radius, and why the two tangents from an outside point are always equal."
+        },
+        {
+          "id": "ch10.s1.inspiration",
+          "type": "inspiration",
+          "title": "Geometry at the altar",
+          "person": "Baudhayana",
+          "years": "about 800 BCE",
+          "body": "Long ago in India, fire altars had to be built in exact shapes, some square and some circular, with equal areas. The rules for building them were written in the *Sulba Sutras*.\n\nThe *Baudhayana Sulba Sutra* gives ways to turn a square into a circle of nearly equal area, and it states the rule we now call the **Pythagoras theorem**, centuries before Pythagoras. You will use that rule again and again in this chapter, because every tangent makes a right angle with a radius.",
+          "quote": "Careful work done for a small task can carry ideas that last thousands of years.",
+          "future": "Tangents and circles appear in the design of gears, wheels and belts, roads and railway curves, lenses, and in computer graphics."
+        },
+        {
+          "id": "ch10.s1.socratic",
+          "type": "socratic_question",
+          "question": "In how many points can a straight line and a circle meet?",
+          "options": [
+            "Any number",
+            "0, 1 or 2",
+            "Only 2"
+          ],
+          "correct_index": 1,
+          "explanation": "A line can miss the circle (0 points), just touch it (1 point: a tangent) or cut it (2 points: a secant). It can never meet a circle in three points."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Tangent to a circle",
+      "blocks": [
+        {
+          "id": "ch10.s2.reveal",
+          "type": "theory",
+          "title": "Tangents and secants",
+          "revision": true,
+          "body": "A line and a circle can be related in three ways:\n\n- **non-intersecting**: no common point;\n- **secant**: two common points;\n- **tangent**: exactly one common point, called the **point of contact**.\n\nThere is only one tangent at a point of a circle, and a circle has infinitely many tangents. A circle can have at most two tangents parallel to a given line."
+        },
+        {
+          "id": "ch10.s2.fig",
+          "type": "geometry_figure",
+          "title": "A tangent and a secant",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              0,
+              3
+            ],
+            "A": [
+              -4,
+              3
+            ],
+            "B": [
+              4,
+              3
+            ],
+            "C": [
+              -2.819077862,
+              -1.02606043
+            ],
+            "D": [
+              2.819077862,
+              -1.02606043
+            ],
+            "E": [
+              -4.5,
+              -1.02606043
+            ],
+            "F": [
+              4.5,
+              -1.02606043
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "to": "B",
+              "highlight": true
+            },
+            [
+              "E",
+              "F"
+            ],
+            {
+              "from": "O",
+              "to": "P",
+              "dashed": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "P",
+                "C",
+                "D"
+              ]
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "P",
+              "B"
+            ]
+          ],
+          "parallel": [
+            [
+              "A",
+              "B",
+              "E",
+              "F"
+            ]
+          ]
+        },
+        {
+          "id": "ch10.s2.thm",
+          "type": "theory",
+          "title": "Theorem 10.1",
+          "revision": true,
+          "body": "**The tangent at any point of a circle is perpendicular to the radius through the point of contact.**\n\n*Proof idea:* Let the tangent $XY$ touch the circle with centre $O$ at $P$. Take any other point $Q$ on $XY$. $Q$ lies outside the circle (a tangent meets the circle only at $P$), so $OQ > OP$. So $OP$ is the shortest distance from $O$ to the line $XY$, and the shortest segment from a point to a line is perpendicular to it. Hence $OP \\perp XY$."
+        },
+        {
+          "id": "ch10.s2.eg1",
+          "type": "worked_example",
+          "title": "CBSE sample paper",
+          "problem": "Find the length of a tangent drawn to a circle of radius 9 cm from a point at a distance of 41 cm from the centre.",
+          "steps": [
+            "The tangent is perpendicular to the radius, so the triangle $OPT$ is right-angled at $T$.",
+            "$TP^{2} = OP^{2} - OT^{2} = 41^{2} - 9^{2} = 1681 - 81 = 1600$"
+          ],
+          "answer": "$TP = 40$ cm"
+        },
+        {
+          "id": "ch10.s2.check",
+          "type": "knowledge_check",
+          "question": "A tangent PQ at a point P of a circle of radius 5 cm meets a line through the centre O at Q so that OQ = 12 cm. The length PQ is:",
+          "options": [
+            "$8.5$ cm",
+            "$\\sqrt{119}$ cm",
+            "$12$ cm",
+            "$13$ cm"
+          ],
+          "correct_index": 1,
+          "explanation": "$PQ^{2} = OQ^{2} - OP^{2} = 144 - 25 = 119$.",
+          "option_feedback": [
+            "Use Pythagoras: $PQ^{2} = 12^{2} - 5^{2}$.",
+            "Correct! $144 - 25 = 119$.",
+            "12 cm is $OQ$, the hypotenuse.",
+            "That adds the squares; $OQ$ is the hypotenuse, so subtract."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Tangents from a point outside",
+      "blocks": [
+        {
+          "id": "ch10.s3.discovery",
+          "type": "discovery",
+          "title": "How many tangents?",
+          "body": "From a point **inside** a circle, no tangent can be drawn: every line through it cuts the circle twice. From a point **on** the circle there is exactly one. From a point **outside** there are exactly two, and when you measure them you always find them equal."
+        },
+        {
+          "id": "ch10.s3.fig",
+          "type": "geometry_figure",
+          "title": "Two tangents from P",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              6,
+              0
+            ],
+            "A": [
+              1.5,
+              2.598076211
+            ],
+            "B": [
+              1.5,
+              -2.598076211
+            ]
+          },
+          "segments": [
+            {
+              "from": "P",
+              "to": "A",
+              "highlight": true
+            },
+            {
+              "from": "P",
+              "to": "B",
+              "highlight": true
+            },
+            [
+              "O",
+              "A"
+            ],
+            [
+              "O",
+              "B"
+            ],
+            {
+              "from": "O",
+              "to": "P",
+              "dashed": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "A",
+              "P"
+            ],
+            [
+              "O",
+              "B",
+              "P"
+            ]
+          ]
+        },
+        {
+          "id": "ch10.s3.thm",
+          "type": "theory",
+          "title": "Theorem 10.2",
+          "revision": true,
+          "body": "**The lengths of tangents drawn from an external point to a circle are equal.**\n\n*Proof:* Let $PA$ and $PB$ be tangents from $P$ to the circle with centre $O$. In $\\triangle OAP$ and $\\triangle OBP$: $OA = OB$ (radii), $OP$ is common, and $\\angle OAP = \\angle OBP = 90^\\circ$ (Theorem 10.1). So $\\triangle OAP \\cong \\triangle OBP$ (RHS), and $PA = PB$ (CPCT).\n\nThe same congruence also gives $\\angle OPA = \\angle OPB$: the centre lies on the bisector of the angle between the tangents. In quadrilateral $OAPB$, $\\angle AOB + \\angle APB = 180^\\circ$."
+        },
+        {
+          "id": "ch10.s3.eg1",
+          "type": "worked_example",
+          "title": "NCERT exercise: angle between tangents",
+          "problem": "TP and TQ are two tangents to a circle with centre O so that $\\angle POQ = 110^\\circ$. Find $\\angle PTQ$.",
+          "steps": [
+            "In quadrilateral $OPTQ$, $\\angle OPT = \\angle OQT = 90^\\circ$.",
+            "$\\angle PTQ = 360^\\circ - 90^\\circ - 90^\\circ - 110^\\circ$"
+          ],
+          "answer": "$\\angle PTQ = 70^\\circ$"
+        },
+        {
+          "id": "ch10.s3.eg2",
+          "type": "worked_example",
+          "title": "NCERT exercise: concentric circles",
+          "problem": "Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+          "steps": [
+            "The chord $AB$ touches the smaller circle at $P$, so $OP \\perp AB$ (Theorem 10.1) and $OP = 3$ cm.",
+            "In right $\\triangle OPA$: $AP = \\sqrt{5^{2} - 3^{2}} = 4$ cm.",
+            "The perpendicular from the centre bisects the chord, so $AB = 2 \\times 4$."
+          ],
+          "answer": "$AB = 8$ cm"
+        },
+        {
+          "id": "ch10.s3.fig2",
+          "type": "geometry_figure",
+          "title": "Chord AB touches the inner circle at P",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              0,
+              3
+            ],
+            "A": [
+              -4,
+              3
+            ],
+            "B": [
+              4,
+              3
+            ]
+          },
+          "segments": [
+            {
+              "from": "A",
+              "to": "B",
+              "highlight": true
+            },
+            [
+              "O",
+              "P"
+            ],
+            {
+              "from": "O",
+              "to": "A",
+              "dashed": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 5,
+              "through": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "P"
+              ]
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "P",
+              "B"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "5 cm"
+            },
+            {
+              "from": "O",
+              "to": "P",
+              "label": "3 cm"
+            }
+          ]
+        },
+        {
+          "id": "ch10.s3.eg3",
+          "type": "worked_example",
+          "title": "NCERT exercise: a circumscribed quadrilateral",
+          "problem": "A quadrilateral ABCD is drawn to circumscribe a circle. Prove that $AB + CD = AD + BC$.",
+          "steps": [
+            "Let the sides touch the circle at $P$ (on $AB$), $Q$ (on $BC$), $R$ (on $CD$) and $S$ (on $DA$).",
+            "Tangents from a point are equal: $AP = AS$, $BP = BQ$, $CR = CQ$, $DR = DS$.",
+            "Adding: $(AP + BP) + (CR + DR) = (AS + DS) + (BQ + CQ)$, i.e. $AB + CD = AD + BC$."
+          ],
+          "answer": "Proved."
+        },
+        {
+          "id": "ch10.s3.fig3",
+          "type": "geometry_figure",
+          "title": "ABCD circumscribes the circle",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "A": [
+              -3.698409155,
+              3.698409155
+            ],
+            "B": [
+              -2.58965397,
+              -2.58965397
+            ],
+            "C": [
+              2.433478726,
+              -3.475367792
+            ],
+            "D": [
+              3.475367792,
+              2.433478726
+            ],
+            "P": [
+              0.520944533,
+              2.954423259
+            ],
+            "Q": [
+              -2.954423259,
+              -0.520944533
+            ],
+            "R": [
+              -0.520944533,
+              -2.954423259
+            ],
+            "S": [
+              2.954423259,
+              -0.520944533
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ]
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "P",
+                "Q",
+                "R",
+                "S"
+              ]
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "P",
+              "A"
+            ],
+            [
+              "O",
+              "Q",
+              "B"
+            ],
+            [
+              "O",
+              "R",
+              "C"
+            ],
+            [
+              "O",
+              "S",
+              "D"
+            ]
+          ]
+        },
+        {
+          "id": "ch10.s3.check1",
+          "type": "knowledge_check",
+          "question": "If tangents PA and PB from P to a circle with centre O are inclined to each other at $80^\\circ$, then $\\angle POA$ is:",
+          "options": [
+            "$40^\\circ$",
+            "$80^\\circ$",
+            "$100^\\circ$",
+            "$50^\\circ$"
+          ],
+          "correct_index": 3,
+          "explanation": "$\\angle AOB = 180^\\circ - 80^\\circ = 100^\\circ$, and $OP$ bisects it, so $\\angle POA = 50^\\circ$.",
+          "option_feedback": [
+            "That is $\\angle APO$, half of $80^\\circ$.",
+            "$\\angle AOB = 100^\\circ$; $\\angle POA$ is half of it.",
+            "That is the whole $\\angle AOB$; $OP$ bisects it.",
+            "Correct! Half of $100^\\circ$."
+          ]
+        },
+        {
+          "id": "ch10.s3.check2",
+          "type": "knowledge_check",
+          "question": "How many tangents can be drawn to a circle from a point inside it?",
+          "options": [
+            "Two",
+            "Infinitely many",
+            "None",
+            "One"
+          ],
+          "correct_index": 2,
+          "explanation": "Every line through an inside point cuts the circle in two points, so none of them is a tangent.",
+          "option_feedback": [
+            "Two tangents come from a point outside.",
+            "The circle has infinitely many tangents, but none passes through an inside point.",
+            "Correct!",
+            "One tangent is possible only from a point on the circle."
+          ]
+        },
+        {
+          "id": "ch10.s3.memory",
+          "type": "memory_trick",
+          "title": "Two facts solve almost everything",
+          "revision": true,
+          "body": "1. **Radius ⊥ tangent** at the point of contact: look for a right triangle and use Pythagoras.\n2. **Tangents from one point are equal**: mark equal lengths with the same letter (like $x$) and add up sides.\n\nAnd in the kite $OAPB$: $\\angle AOB + \\angle APB = 180^\\circ$."
+        },
+        {
+          "id": "ch10.s3.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Forgetting to write the reason 'radius ⊥ tangent' before using a right angle.\n- Using the hypotenuse wrongly: the line to the centre $OP$ is the hypotenuse, not the tangent.\n- Taking $\\angle AOB = \\angle APB$ instead of $\\angle AOB + \\angle APB = 180^\\circ$.\n- In circumscribed figures, pairing the wrong tangent segments: each vertex has its own two equal tangents.\n- Calling a line a tangent because it 'looks' like one: it must meet the circle at exactly one point."
+        },
+        {
+          "id": "ch10.s3.tip",
+          "type": "teacher_tip",
+          "title": "Measure, then prove",
+          "body": "Ask each student to draw a circle, mark a point outside it, draw both tangents with a ruler and measure them. Everyone finds them equal. Then the RHS proof answers the question 'why?'. For circumscribed figures, colour each pair of equal tangents in the same colour on the board."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch10.s4.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why no tangent can be drawn to a circle from a point inside it, and why exactly two can be drawn from a point outside it."
+        },
+        {
+          "id": "ch10.s4.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 6:** the congruence and similarity ideas you used here come from triangles.\n- **Chapter 11, Areas Related to Circles:** sectors and segments of circles.\n- **Engineering:** belts over pulleys and gears touch along tangents; railway curves join straight tracks along tangents."
+        },
+        {
+          "id": "ch10.s4.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "A triangle ABC is drawn to circumscribe a circle of radius 4 cm such that the segments BD and DC into which BC is divided by the point of contact D are of lengths 8 cm and 6 cm. Find AB and AC.\n\n**Answer:** Let the tangents from $A$ be $x$. Then $AB = x + 8$, $AC = x + 6$, $BC = 14$ and $s = 14 + x$. Area $= rs = 4(14 + x)$ and, by Heron's formula, $\\sqrt{(14 + x) \\cdot x \\cdot 6 \\cdot 8}$. Equating gives $x = 7$, so $AB = 15$ cm and $AC = 13$ cm."
+        },
+        {
+          "id": "ch10.s4.fig",
+          "type": "geometry_figure",
+          "title": "The incircle of △ABC",
+          "points": {
+            "A": [
+              9,
+              12
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              14,
+              0
+            ],
+            "O": [
+              8,
+              4
+            ],
+            "D": [
+              8,
+              0
+            ],
+            "E": [
+              11.692307692,
+              5.538461538
+            ],
+            "F": [
+              4.8,
+              6.4
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            {
+              "from": "O",
+              "to": "D",
+              "dashed": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 4,
+              "through": [
+                "D",
+                "E",
+                "F"
+              ]
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "D",
+              "C"
+            ],
+            [
+              "O",
+              "E",
+              "A"
+            ],
+            [
+              "O",
+              "F",
+              "B"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "B",
+              "to": "D",
+              "label": "8 cm"
+            },
+            {
+              "from": "D",
+              "to": "C",
+              "label": "6 cm"
+            }
+          ]
+        },
+        {
+          "id": "ch10.s4.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- A tangent meets a circle in exactly one point; a secant meets it in two.\n- The tangent at any point of a circle is perpendicular to the radius through the point of contact.\n- From a point inside a circle no tangent can be drawn; from a point on it, one; from a point outside, two.\n- The lengths of the two tangents from an external point are equal."
+        },
+        {
+          "id": "ch10.s4.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Learn the proofs of Theorems 10.1 and 10.2: they are asked as 3-mark questions.\n- Draw the figure, join the centre to the points of contact, and mark the right angles.\n- In every step write the reason: 'radius ⊥ tangent', 'tangents from an external point are equal', 'CPCT'.\n- For numerical questions, the right triangle with the line to the centre as hypotenuse is almost always the key."
+        },
+        {
+          "id": "ch10.s4.flash1",
+          "type": "flashcard",
+          "front": "What angle does a tangent make with the radius at the point of contact?",
+          "back": "$90^\\circ$"
+        },
+        {
+          "id": "ch10.s4.flash2",
+          "type": "flashcard",
+          "front": "What do you know about the two tangents from an external point?",
+          "back": "They are equal in length, and the line to the centre bisects the angle between them."
+        },
+        {
+          "id": "ch10.s4.flash3",
+          "type": "flashcard",
+          "front": "If ABCD circumscribes a circle, what is true?",
+          "back": "$AB + CD = AD + BC$"
+        }
+      ]
+    }
+  ]
+}

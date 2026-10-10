@@ -126,7 +126,7 @@ not just a few quiz blocks.
 - `type`: `mcq`, `assertion_reason`, `true_false`, `fill_blank`, `very_short_answer`,
   `short_answer`, `long_answer`, `case_based`, `numerical`, plus accounts types.
   MCQs keep `options` and `correct_index` (an integer), as today.
-- `source.kind`: `ncert_exercise` (with exercise and question number), `ncert_example`,
+- `source.kind`: `ncert_exercise` (with exercise and question number), `ncert_example`, `ncert_theorem` (with theorem number),
   `pyq` (year and paper code), `sample_paper`, `shine` (our own).
   This answers "every NCERT exercise question is present?" with a simple count.
 - `marking_scheme` lets the answer key show what a board examiner expects.
