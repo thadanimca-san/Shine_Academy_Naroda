@@ -549,6 +549,12 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 4 (carbon compounds)
+ "catenation": ("शृंखलन", "શૃંખલન"), "chemical test": ("रासायनिक परीक्षण", "રાસાયણિક કસોટી"), "glacial acetic acid": ("ग्लेशियल ऐसीटिक अम्ल", "ગ્લેશિયલ એસિટિક ઍસિડ"),
+ "isomers": ("समावयवी", "સમઘટકો"), "micelle": ("मिसेल", "મિસેલ"), "names or structures": ("नाम या संरचनाएँ", "નામ કે રચનાઓ"), "octets shown": ("अष्टक दर्शाए", "અષ્ટક દર્શાવ્યાં"),
+ "physical": ("भौतिक", "ભૌતિક"), "propanol": ("प्रोपेनॉल", "પ્રોપેનૉલ"), "propanone": ("प्रोपेनोन", "પ્રોપેનોન"), "properties": ("गुणधर्म", "ગુણધર્મો"),
+ "removal": ("मैल हटना", "મેલ દૂર થવો"), "ring structure": ("वलय संरचना", "વલય રચના"), "saturated": ("संतृप्त", "સંતૃપ્ત"), "sharing": ("साझेदारी", "ભાગીદારી"),
+ "structure": ("संरचना", "રચના"), "tetravalency": ("चतुःसंयोजकता", "ચતુઃસંયોજકતા"), "unsaturated": ("असंतृप्त", "અસંતૃપ્ત"), "valence electrons": ("संयोजकता इलेक्ट्रॉन", "સંયોજકતા ઇલેક્ટ્રૉન"),
  # Science Ch 1 (chemical reactions)
  "acid": ("अम्ल", "ઍસિડ"), "coefficients": ("गुणांक", "સહગુણકો"), "combination equation": ("संयोजन का समीकरण", "સંયોગીકરણનું સમીકરણ"),
  "correct formulas throughout": ("सभी सूत्र सही", "બધાં સૂત્રો સાચાં"), "corrosion with example": ("उदाहरण सहित संक्षारण", "ઉદાહરણ સાથે ક્ષારણ"),
