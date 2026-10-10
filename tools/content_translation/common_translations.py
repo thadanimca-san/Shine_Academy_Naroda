@@ -418,6 +418,35 @@ MARKING = {
  "1 mark: secant": ("1 अंक: छेदक रेखा", "1 ગુણ: છેદિકા"),
  "1 mark: tangent": ("1 अंक: स्पर्श रेखा", "1 ગુણ: સ્પર્શક"),
  "1 mark: sides in terms of $x$": ("1 अंक: $x$ के पदों में भुजाएँ", "1 ગુણ: $x$ ના પદમાં બાજુઓ"),
+ # Ch 11 (areas related to circles)
+ '1 mark: formula with values': ('1 अंक: मान रखकर सूत्र', '1 ગુણ: કિંમતો મૂકીને સૂત્ર'),
+ '1 mark: area of the sector': ('1 अंक: त्रिज्यखंड का क्षेत्रफल', '1 ગુણ: વૃત્તાંશનું ક્ષેત્રફળ'),
+ '1 mark: area of the triangle': ('1 अंक: त्रिभुज का क्षेत्रफल', '1 ગુણ: ત્રિકોણનું ક્ષેત્રફળ'),
+ '1 mark: area of the segment': ('1 अंक: वृत्तखंड का क्षेत्रफल', '1 ગુણ: વૃત્તખંડનું ક્ષેત્રફળ'),
+ '1 mark: angle $30^\\circ$': ('1 अंक: कोण $30^\\circ$', '1 ગુણ: ખૂણો $30^\\circ$'),
+ '1 mark: angle $60^\\circ$': ('1 अंक: कोण $60^\\circ$', '1 ગુણ: ખૂણો $60^\\circ$'),
+ '1 mark: minor sector and triangle': ('1 अंक: लघु त्रिज्यखंड और त्रिभुज', '1 ગુણ: લઘુવૃત્તાંશ અને ત્રિકોણ'),
+ '1 mark: minor segment': ('1 अंक: लघु वृत्तखंड', '1 ગુણ: લઘુવૃત્તખંડ'),
+ '1 mark: major sector': ('1 अंक: दीर्घ त्रिज्यखंड', '1 ગુણ: ગુરુવૃત્તાંશ'),
+ '1 mark: major segment': ('1 अंक: दीर्घ वृत्तखंड', '1 ગુણ: ગુરુવૃત્તખંડ'),
+ '1 mark: arc': ('1 अंक: चाप', '1 ગુણ: ચાપ'),
+ '1 mark: sector': ('1 अंक: त्रिज्यखंड', '1 ગુણ: વૃત્તાંશ'),
+ '1 mark: segment': ('1 अंक: वृत्तखंड', '1 ગુણ: વૃત્તખંડ'),
+ '1 mark: both segments': ('1 अंक: दोनों वृत्तखंड', '1 ગુણ: બંને વૃત્તખંડ'),
+ '1 mark: quadrant': ('1 अंक: चतुर्थांश', '1 ગુણ: ચતુર્થાંશ'),
+ '1 mark: circumference': ('1 अंक: परिधि', '1 ગુણ: પરિઘ'),
+ '1 mark: total wire': ('1 अंक: कुल तार', '1 ગુણ: કુલ તાર'),
+ '1 mark: sector area': ('1 अंक: त्रिज्यखंड का क्षेत्रफल', '1 ગુણ: વૃત્તાંશનું ક્ષેત્રફળ'),
+ '1 mark: one blade': ('1 अंक: एक पत्ती', '1 ગુણ: એક પાંખિયું'),
+ '1 mark: total': ('1 अंक: कुल', '1 ગુણ: કુલ'),
+ '1 mark: triangle': ('1 अंक: त्रिभुज', '1 ગુણ: ત્રિકોણ'),
+ '1 mark: area of the designs': ('1 अंक: डिज़ाइनों का क्षेत्रफल', '1 ગુણ: ડિઝાઇનનું ક્ષેત્રફળ'),
+ '1 mark: cost': ('1 अंक: लागत', '1 ગુણ: ખર્ચ'),
+ '1 mark: sum of angles $180^\\circ$': ('1 अंक: कोणों का योग $180^\\circ$', '1 ગુણ: ખૂણાઓનો સરવાળો $180^\\circ$'),
+ '1 mark: arc formula': ('1 अंक: चाप का सूत्र', '1 ગુણ: ચાપનું સૂત્ર'),
+ '1 mark: four quadrants': ('1 अंक: चार चतुर्थांश', '1 ગુણ: ચાર ચતુર્થાંશ'),
+ '1 mark: square': ('1 अंक: वर्ग', '1 ગુણ: ચોરસ'),
+ '1 mark: circle': ('1 अंक: वृत्त', '1 ગુણ: વર્તુળ'),
 }
 
 AR_OPTIONS = (
@@ -465,6 +494,6 @@ def by_template(text, lang):
 def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
-    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|m|kg|g)(?![\w/])", "", outside)  # units read the same in all three languages
+    outside = re.sub(r"\b(m/s|km/h|cm|mm|km|m|kg|g)[²³]?(?![\w/])", "", outside)  # units read the same in all three languages
     outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii)\)", "", outside)  # part labels like (ii)
     return not re.search(r"[A-Za-z]", outside)
