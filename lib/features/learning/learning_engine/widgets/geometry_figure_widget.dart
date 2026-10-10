@@ -49,6 +49,18 @@ bool isRightAngle(Offset a, Offset vertex, Offset b) {
   return dot.abs() <= 1e-6 * u.distance * v.distance;
 }
 
+/// The region of the plane the figure shows. With `"axes": true` it also
+/// includes the origin and one unit of space around the points.
+Rect geometryBounds(Map<String, dynamic> data, Map<String, Offset> points) {
+  final xs = [...points.values.map((p) => p.dx)], ys = [...points.values.map((p) => p.dy)];
+  if (data['axes'] == true) {
+    xs.add(0);
+    ys.add(0);
+  }
+  final pad = data['axes'] == true ? 1.0 : 0.0;
+  return Rect.fromLTRB(xs.reduce(math.min) - pad, ys.reduce(math.min) - pad, xs.reduce(math.max) + pad, ys.reduce(math.max) + pad);
+}
+
 List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 
 /// Block `geometry_figure`: a labelled diagram of points and segments, drawn
@@ -62,6 +74,8 @@ List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 ///    "right_angles": [["A", "D", "B"]],           // square mark at the middle point
 ///    "angles": [{"points": ["B", "A", "C"], "label": "x"}],   // arc at the middle point
 ///    "lengths": [{"from": "A", "to": "D", "label": "1.5 cm"}]}
+/// For coordinate geometry add `"axes": true` (x- and y-axes with a grid) and
+/// `"labels": {"A": "A(2, 3)"}` to show coordinates beside the points.
 class GeometryFigureWidget extends StatefulWidget {
   final Map<String, dynamic> data;
   const GeometryFigureWidget({super.key, required this.data});
@@ -104,9 +118,8 @@ class _GeometryFigureWidgetState extends State<GeometryFigureWidget> with Single
     if (points.isEmpty) {
       return Text(TrilingualService.instance.getUIText('Figure data is missing.'), style: textStyle);
     }
-    final xs = points.values.map((p) => p.dx), ys = points.values.map((p) => p.dy);
-    final width = xs.reduce(math.max) - xs.reduce(math.min), height = ys.reduce(math.max) - ys.reduce(math.min);
-    final aspect = height <= 0 ? 2.0 : (width / height).clamp(0.8, 2.0);
+    final bounds = geometryBounds(widget.data, points);
+    final aspect = bounds.height <= 0 ? 2.0 : (bounds.width / bounds.height).clamp(0.8, 2.0);
 
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8),
@@ -183,15 +196,15 @@ class _FigurePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final xs = points.values.map((p) => p.dx), ys = points.values.map((p) => p.dy);
-    final minX = xs.reduce(math.min), maxX = xs.reduce(math.max);
-    final minY = ys.reduce(math.min), maxY = ys.reduce(math.max);
+    final bounds = geometryBounds(data, points);
+    final minX = bounds.left, maxX = bounds.right, minY = bounds.top, maxY = bounds.bottom;
     final spanX = math.max(maxX - minX, 1e-9), spanY = math.max(maxY - minY, 1e-9);
     final scale = math.min((size.width - 2 * _margin) / spanX, (size.height - 2 * _margin) / spanY);
     final offsetX = (size.width - spanX * scale) / 2, offsetY = (size.height - spanY * scale) / 2;
     Offset toCanvas(Offset p) => Offset(offsetX + (p.dx - minX) * scale, size.height - offsetY - (p.dy - minY) * scale);
     final canvasPoints = {for (final e in points.entries) e.key: toCanvas(e.value)};
     final centre = canvasPoints.values.reduce((a, b) => a + b) / canvasPoints.length.toDouble();
+    if (data['axes'] == true) _drawAxes(canvas, toCanvas, minX, maxX, minY, maxY);
 
     // Segments, one after another.
     final shown = <String>{};
@@ -221,7 +234,8 @@ class _FigurePainter extends CustomPainter {
       canvas.drawCircle(p, 3, Paint()..color = lineColor);
       final away = p - centre;
       final direction = away.distance < 1e-6 ? const Offset(0, -1) : away / away.distance;
-      _drawText(canvas, name, p + direction * 16, bold: true);
+      final label = (data['labels'] as Map?)?[name] as String? ?? name;
+      _drawText(canvas, label, p + direction * (label.length > 2 ? 26 : 16), bold: true);
     }
 
     if (progress < _drawShare) return;
@@ -277,6 +291,26 @@ class _FigurePainter extends CustomPainter {
       if ((mid + normal - centre).distance < (mid - centre).distance) normal = -normal;
       _drawText(canvas, length['label'] as String? ?? '', mid + normal * 14);
     }
+  }
+
+  void _drawAxes(Canvas canvas, Offset Function(Offset) toCanvas, double minX, double maxX, double minY, double maxY) {
+    final span = math.max(maxX - minX, maxY - minY);
+    final step = span <= 24 ? 1 : (span / 12).ceil();
+    final grid = Paint()..color = markColor.withValues(alpha: 0.12);
+    for (var x = (minX / step).ceil() * step; x <= maxX; x += step) {
+      canvas.drawLine(toCanvas(Offset(x.toDouble(), minY)), toCanvas(Offset(x.toDouble(), maxY)), grid);
+    }
+    for (var y = (minY / step).ceil() * step; y <= maxY; y += step) {
+      canvas.drawLine(toCanvas(Offset(minX, y.toDouble())), toCanvas(Offset(maxX, y.toDouble())), grid);
+    }
+    final axis = Paint()
+      ..color = markColor
+      ..strokeWidth = 1.5;
+    canvas.drawLine(toCanvas(Offset(minX, 0)), toCanvas(Offset(maxX, 0)), axis);
+    canvas.drawLine(toCanvas(Offset(0, minY)), toCanvas(Offset(0, maxY)), axis);
+    _drawText(canvas, 'x', toCanvas(Offset(maxX, 0)) + const Offset(-8, 12));
+    _drawText(canvas, 'y', toCanvas(Offset(0, maxY)) + const Offset(12, 8));
+    _drawText(canvas, 'O', toCanvas(Offset.zero) + const Offset(-10, 10));
   }
 
   void _drawDashed(Canvas canvas, Offset from, Offset to, Paint paint) {

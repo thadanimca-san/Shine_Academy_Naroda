@@ -43,4 +43,18 @@ void main() {
     await tester.pump();
     expect(tester.hasRunningAnimations, isFalse);
   });
+
+  test('axes include the origin with a unit of space', () {
+    const data = {'axes': true, 'points': {'A': [2, 3], 'B': [5, 7]}};
+    final bounds = geometryBounds(data, geometryPoints(data));
+    expect(bounds, const Rect.fromLTRB(-1, -1, 6, 8));
+  });
+
+  testWidgets('draws a coordinate plane with labelled points', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: SingleChildScrollView(child: GeometryFigureWidget(data: {
+      'title': 'Distance AB', 'axes': true, 'points': {'A': [2, 3], 'B': [-4, 1]}, 'segments': [['A', 'B']], 'labels': {'A': 'A(2, 3)', 'B': 'B(-4, 1)'},
+    })))));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
 }
