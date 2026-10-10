@@ -551,6 +551,11 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+    # Science Ch 13
+    "10% law": ("10% नियम", "10 % નો નિયમ"), "artificial": ("कृत्रिम", "કૃત્રિમ"), "depletion": ("अवक्षय", "ક્ષય"),
+    "energy decreases": ("ऊर्जा घटती है", "ઊર્જા ઘટે છે"), "food chain": ("आहार श्रृंखला", "આહારશૃંખલા"), "food web": ("आहार जाल", "આહારજાળ"),
+    "humans": ("मनुष्य", "માણસો"), "levels": ("स्तर", "સ્તરો"), "magnification": ("जैव आवर्धन", "જૈવિક વિશાલન"), "natural": ("प्राकृतिक", "કુદરતી"),
+    "steps taken": ("उठाए गए कदम", "લેવાયેલાં પગલાં"), "two chains": ("दो श्रृंखलाएँ", "બે શૃંખલાઓ"),
  # Science Ch 12 (magnetic effects)
  "arrows": ("तीर", "તીર"), "circuit": ("परिपथ", "પરિપથ"), "contrast": ("तुलना", "સરખામણી"), "current direction": ("धारा की दिशा", "પ્રવાહની દિશા"), "earth": ("भूसंपर्क", "અર્થિંગ"),
  "earth wire": ("भूसंपर्क तार", "અર્થિંગ તાર"), "inside": ("अंदर", "અંદર"), "outside": ("बाहर", "બહાર"), "live and neutral": ("विद्युन्मय और उदासीन", "જીવંત અને તટસ્થ"),
