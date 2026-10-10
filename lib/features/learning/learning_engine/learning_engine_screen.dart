@@ -42,6 +42,8 @@ import '../../../core/services/presentation_service.dart';
 import 'widgets/worked_example_widget.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../core/engine/content_repository.dart';
+import 'lesson_revision.dart';
+import 'widgets/chapter_finish_card.dart';
 
 class LearningEngineScreen extends StatefulWidget {
   final String moduleId;
@@ -68,6 +70,19 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
   String _error = '';
   bool _showDictionaryHint = true;
   bool _showBoardQuestions = false;
+
+  /// Quick Revision shows only the summary-type blocks of the lesson.
+  bool _revisionMode = false;
+
+  void _setRevisionMode(bool on) {
+    setState(() {
+      _revisionMode = on;
+      _blocks = on
+          ? revisionBlocks(_standardBlocks)
+          : (_showBoardQuestions ? [..._standardBlocks, ..._boardBlocks] : _standardBlocks);
+    });
+    if (_scrollController.hasClients) _scrollController.jumpTo(0);
+  }
   bool _isTranslating = false;
   late String _lastLang;
 
@@ -262,6 +277,8 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     }
   }
 
+  bool get _showBoardGateway => _boardBlocks.isNotEmpty && !_showBoardQuestions && !_revisionMode;
+
   Widget _buildBlock(Map<String, dynamic> block) {
     try {
       BlockValidator.validateBlock(block);
@@ -408,6 +425,26 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
           backgroundColor: Colors.grey[50],
           appBar: BrandAppBar(
             title: title,
+            bottom: !isDictionary && hasRevisionContent(_standardBlocks)
+                ? PreferredSize(
+                    preferredSize: const Size.fromHeight(56),
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: SegmentedButton<bool>(
+                        style: SegmentedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          selectedBackgroundColor: Colors.amber.shade200,
+                        ),
+                        segments: [
+                          ButtonSegment(value: false, icon: const Icon(Icons.menu_book), label: Text(TrilingualService.instance.getUIText('Full lesson'))),
+                          ButtonSegment(value: true, icon: const Icon(Icons.bolt), label: Text(TrilingualService.instance.getUIText('Quick revision'))),
+                        ],
+                        selected: {_revisionMode},
+                        onSelectionChanged: (selection) => _setRevisionMode(selection.first),
+                      ),
+                    ),
+                  )
+                : null,
             actions: isDictionary
                 ? null
                 : [
@@ -515,10 +552,17 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
                       itemCount:
                           _blocks.length +
                           (_showDictionaryHint ? 1 : 0) +
-                          (_boardBlocks.isNotEmpty && !_showBoardQuestions
-                              ? 1
-                              : 0),
+                          (_showBoardGateway ? 1 : 0) +
+                          1, // chapter finish card
                       itemBuilder: (context, index) {
+                        final finishIndex = _blocks.length + (_showDictionaryHint ? 1 : 0) + (_showBoardGateway ? 1 : 0);
+                        if (index == finishIndex) {
+                          return ChapterFinishCard(
+                            moduleId: widget.moduleId,
+                            onPlayQuiz: () => context.push('/assessment/game/${widget.moduleId}'),
+                            onQuickRevision: () => _setRevisionMode(true),
+                          );
+                        }
                         if (_showDictionaryHint && index == 0) {
                           return Container(
                             margin: const EdgeInsets.only(bottom: 24),
@@ -569,9 +613,7 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
 
                         int gatewayIndex =
                             _blocks.length + (_showDictionaryHint ? 1 : 0);
-                        if (_boardBlocks.isNotEmpty &&
-                            !_showBoardQuestions &&
-                            index == gatewayIndex) {
+                        if (_showBoardGateway && index == gatewayIndex) {
                           return _buildBoardGateway(context);
                         }
 

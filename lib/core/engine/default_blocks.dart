@@ -12,6 +12,7 @@ import '../../features/learning/learning_engine/widgets/media_widget.dart';
 import '../../features/learning/learning_engine/widgets/activity_widget.dart';
 import '../../features/learning/learning_engine/widgets/quiz_widget.dart';
 import '../../features/learning/learning_engine/widgets/game_quiz_card.dart';
+import '../../features/learning/learning_engine/widgets/inspiration_widget.dart';
 import '../../features/learning/learning_engine/widgets/nursery_rhyme_widget.dart';
 import '../../features/learning/learning_engine/widgets/trace_alphabet_widget.dart';
 import '../../features/learning/learning_engine/widgets/counting_game_widget.dart';
@@ -394,6 +395,17 @@ void registerDefaultBlocks() {
       type: 'function_graph',
       validator: (block) => BlockValidationUtils.require(block, 'polynomial', List),
       builder: (block) => FunctionGraphWidget(data: block),
+    ),
+  );
+
+  // ─────────────────────────────────────────────────────────────────
+  // INSPIRATION (true story + where the topic leads)
+  // ─────────────────────────────────────────────────────────────────
+  registry.register(
+    BlockDefinition(
+      type: 'inspiration',
+      validator: (block) {},
+      builder: (block) => InspirationWidget(data: block),
     ),
   );
 

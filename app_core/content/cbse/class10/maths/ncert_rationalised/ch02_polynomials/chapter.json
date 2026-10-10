@@ -32,6 +32,16 @@
           "body": "Throw a ball and its path makes a curve. Engineers who design bridges, fountains and cricket-ball tracking systems describe such curves with **polynomials**.\n\nThe points where the curve meets the ground are special: they are the **zeroes** of the polynomial. In this chapter you will find zeroes, see them on graphs, and discover a beautiful link between the zeroes and the numbers in the polynomial."
         },
         {
+          "id": "ch02.s1.inspiration",
+          "type": "inspiration",
+          "title": "The mathematician who gave rules to zero",
+          "person": "Brahmagupta",
+          "years": "598–668 CE",
+          "body": "Brahmagupta lived in Bhillamala, today's Bhinmal in Rajasthan, close to Gujarat. In the year 628 he wrote a great book, the *Brahmasphutasiddhanta*. In it he gave clear rules for calculating with **zero** and with **negative numbers**, which he called 'debts', and he showed how to solve **quadratic equations**: the same kind of polynomials you are learning now.\n\nWithout zero there would be no place value, no algebra and no computers. A mathematician from our own part of India helped the whole world learn to calculate.",
+          "quote": "A debt minus zero is a debt. A fortune minus zero is a fortune. Zero minus zero is zero. (Brahmagupta's rules for zero, 628 CE)",
+          "future": "Engineers use polynomials to design bridges, roller-coasters and car bodies; game developers use them to move characters smoothly; economists use them to find the price that gives maximum profit."
+        },
+        {
           "id": "ch02.s1.socratic",
           "type": "socratic_question",
           "question": "For $p(x) = x - 3$, for which value of $x$ is $p(x) = 0$?",
@@ -53,7 +63,8 @@
           "id": "ch02.s2.reveal",
           "type": "theory",
           "title": "Degree, value and zero of a polynomial",
-          "body": "- The highest power of $x$ in $p(x)$ is its **degree**. $4x + 2$ has degree 1, $2y^{2} - 3y + 4$ has degree 2, $5x^{3} - 4x^{2} + x - \\sqrt{2}$ has degree 3.\n- Degree 1: **linear** ($ax + b$, $a \\neq 0$). Degree 2: **quadratic** ($ax^{2} + bx + c$, $a \\neq 0$). Degree 3: **cubic**.\n- Putting $x = k$ gives the **value** $p(k)$.\n- $k$ is a **zero** of $p(x)$ if $p(k) = 0$.\n\nThe zero of the linear polynomial $ax + b$ is $-\\dfrac{b}{a}$."
+          "body": "- The highest power of $x$ in $p(x)$ is its **degree**. $4x + 2$ has degree 1, $2y^{2} - 3y + 4$ has degree 2, $5x^{3} - 4x^{2} + x - \\sqrt{2}$ has degree 3.\n- Degree 1: **linear** ($ax + b$, $a \\neq 0$). Degree 2: **quadratic** ($ax^{2} + bx + c$, $a \\neq 0$). Degree 3: **cubic**.\n- Putting $x = k$ gives the **value** $p(k)$.\n- $k$ is a **zero** of $p(x)$ if $p(k) = 0$.\n\nThe zero of the linear polynomial $ax + b$ is $-\\dfrac{b}{a}$.",
+          "revision": true
         },
         {
           "id": "ch02.s2.eg",
@@ -174,7 +185,8 @@
           "id": "ch02.s3.reveal",
           "type": "theory",
           "title": "Zeroes and the graph",
-          "body": "- The zeroes of $p(x)$ are the $x$-coordinates of the points where the graph of $y = p(x)$ **intersects or touches the x-axis**.\n- The graph of a quadratic $ax^{2} + bx + c$ is a **parabola**: it opens upwards if $a > 0$ and downwards if $a < 0$.\n- A quadratic can have **two**, **one** or **no** zeroes, so **at most 2**. A cubic has at most 3. In general, a polynomial of degree $n$ has at most $n$ zeroes."
+          "body": "- The zeroes of $p(x)$ are the $x$-coordinates of the points where the graph of $y = p(x)$ **intersects or touches the x-axis**.\n- The graph of a quadratic $ax^{2} + bx + c$ is a **parabola**: it opens upwards if $a > 0$ and downwards if $a < 0$.\n- A quadratic can have **two**, **one** or **no** zeroes, so **at most 2**. A cubic has at most 3. In general, a polynomial of degree $n$ has at most $n$ zeroes.",
+          "revision": true
         },
         {
           "id": "ch02.s3.check",
@@ -223,7 +235,8 @@
           "id": "ch02.s4.reveal",
           "type": "theory",
           "title": "The relationship",
-          "body": "If $\\alpha$ and $\\beta$ are the zeroes of $p(x) = ax^{2} + bx + c$ ($a \\neq 0$), then\n\n$$\\alpha + \\beta = -\\frac{b}{a}, \\qquad \\alpha\\beta = \\frac{c}{a}$$\n\n*Why:* $p(x) = a(x - \\alpha)(x - \\beta) = ax^{2} - a(\\alpha + \\beta)x + a\\alpha\\beta$. Comparing with $ax^{2} + bx + c$ gives $b = -a(\\alpha + \\beta)$ and $c = a\\alpha\\beta$.\n\n**Building a quadratic from its zeroes:** if the sum is $S$ and the product is $P$, then $k(x^{2} - Sx + P)$ works for any $k \\neq 0$."
+          "body": "If $\\alpha$ and $\\beta$ are the zeroes of $p(x) = ax^{2} + bx + c$ ($a \\neq 0$), then\n\n$$\\alpha + \\beta = -\\frac{b}{a}, \\qquad \\alpha\\beta = \\frac{c}{a}$$\n\n*Why:* $p(x) = a(x - \\alpha)(x - \\beta) = ax^{2} - a(\\alpha + \\beta)x + a\\alpha\\beta$. Comparing with $ax^{2} + bx + c$ gives $b = -a(\\alpha + \\beta)$ and $c = a\\alpha\\beta$.\n\n**Building a quadratic from its zeroes:** if the sum is $S$ and the product is $P$, then $k(x^{2} - Sx + P)$ works for any $k \\neq 0$.",
+          "revision": true
         },
         {
           "id": "ch02.s4.eg2",
