@@ -89,10 +89,22 @@ void checkVisual(Map<String, dynamic> block, String where, Problems problems) {
     problems.add(where, 'figure type "$type" is not registered in default_blocks.dart');
   }
   if (type == 'function_graph') {
-    final coefficients = (block['polynomial'] as List? ?? const []).map((c) => (c as num).toDouble()).toList();
+    double eval(List coefficients, double x) => coefficients.fold(0.0, (v, c) => v * x + (c as num).toDouble());
+    final curves = block['curves'] is List
+        ? (block['curves'] as List).map((c) => (c as Map)['polynomial'] as List).toList()
+        : [block['polynomial'] as List? ?? const []];
     for (final zero in (block['zeroes'] as List? ?? const []).map((z) => (z as num).toDouble())) {
-      final value = coefficients.fold(0.0, (v, c) => v * zero + c);
+      final value = eval(curves.first, zero);
       if (value.abs() > 1e-9) problems.add(where, 'graph marks $zero as a zero, but p($zero) = $value');
+    }
+    // Each marked point must lie on the curves it names in "on" (e.g. both lines for an intersection).
+    for (final point in (block['points'] as List? ?? const []).cast<Map<String, dynamic>>()) {
+      final x = (point['x'] as num).toDouble(), y = (point['y'] as num).toDouble();
+      for (final index in (point['on'] as List? ?? const []).cast<int>()) {
+        if (index >= curves.length || (eval(curves[index], x) - y).abs() > 1e-9) {
+          problems.add(where, 'point (${point['x']}, ${point['y']}) is not on curve $index');
+        }
+      }
     }
   }
 }

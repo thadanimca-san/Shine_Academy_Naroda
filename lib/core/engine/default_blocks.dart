@@ -393,7 +393,11 @@ void registerDefaultBlocks() {
   registry.register(
     BlockDefinition(
       type: 'function_graph',
-      validator: (block) => BlockValidationUtils.require(block, 'polynomial', List),
+      validator: (block) {
+        if (block['polynomial'] is! List && block['curves'] is! List) {
+          throw const FormatException("function_graph needs 'polynomial' or 'curves'.");
+        }
+      },
       builder: (block) => FunctionGraphWidget(data: block),
     ),
   );

@@ -30,4 +30,21 @@ void main() {
     await tester.pump();
     expect(tester.hasRunningAnimations, isFalse);
   });
+
+  testWidgets('draws a pair of lines with their intersection point', (tester) async {
+    const data = {
+      'curves': [
+        {'polynomial': [-1, 10], 'label': 'x + y = 10'},
+        {'polynomial': [1, -4], 'label': 'x - y = 4'},
+      ],
+      'points': [{'x': 7, 'y': 3, 'label': '(7, 3)', 'on': [0, 1]}],
+      'x_range': [-1, 11],
+      'title': 'Two lines',
+    };
+    expect(graphCurves(data), hasLength(2));
+    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: SingleChildScrollView(child: FunctionGraphWidget(data: data)))));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+    expect(find.text('Two lines'), findsOneWidget);
+  });
 }
