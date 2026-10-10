@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch08",
+  "title": "Introduction to Trigonometry",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 8,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: trigonometric ratios of an acute angle of a right triangle, ratios of 0°, 30°, 45°, 60° and 90°, and the identity sin²A + cos²A = 1 with its use. Trigonometric ratios of complementary angles are not in the board syllabus and are not included.",
+  "concepts": [
+    "trig_ratios",
+    "special_angles",
+    "trig_identities"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Measuring with angles",
+      "blocks": [
+        {
+          "id": "ch08.s1.hook",
+          "type": "hook",
+          "title": "How tall is that tree?",
+          "body": "A student stands 20 m away from a tall tree and looks up at its top. The line of sight makes an angle of $30^\\circ$ with the ground. Without climbing, can she find the height of the tree?\n\nYes! In any right triangle, the angles decide the **ratios** of the sides. Trigonometry, from Greek words meaning 'triangle measurement', gives names to these ratios. In this chapter you will meet them; in Chapter 9 you will use them to find heights and distances."
+        },
+        {
+          "id": "ch08.s1.inspiration",
+          "type": "inspiration",
+          "title": "The journey of the word 'sine'",
+          "person": "Aryabhata",
+          "years": "476–550 CE",
+          "body": "In the *Aryabhatiya*, Aryabhata gave a table of half-chords, which he called *ardha-jya* or simply *jya*. This is what we now call the **sine**.\n\nArab scholars wrote *jya* as *jiba*. Later it was read as *jaib*, an Arabic word meaning a fold or pocket, and translated into Latin as *sinus*, which means the same thing. That became the English word **sine**. So every time you write $\\sin A$, you are using a word that travelled from India across the world.",
+          "quote": "Great ideas travel far. The work you do today could be used by people a thousand years from now.",
+          "future": "Trigonometry is used in surveying land, navigation of ships and aircraft, satellite communication, sound and music, engineering and computer games."
+        },
+        {
+          "id": "ch08.s1.socratic",
+          "type": "socratic_question",
+          "question": "Two right triangles both have an angle of $30^\\circ$, but one is twice as big as the other. Is $\\dfrac{\\text{side opposite } 30^\\circ}{\\text{hypotenuse}}$ the same in both?",
+          "options": [
+            "Yes, the triangles are similar, so the ratio is the same",
+            "No, the bigger triangle has a bigger ratio",
+            "It depends on the length of the hypotenuse"
+          ],
+          "correct_index": 0,
+          "explanation": "The triangles are similar (AA, from Chapter 6), so the ratios of their sides are equal. That is why a ratio like this depends only on the angle, not on the size of the triangle."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Trigonometric ratios",
+      "blocks": [
+        {
+          "id": "ch08.s2.fig",
+          "type": "geometry_figure",
+          "title": "Sides with respect to ∠A",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              4,
+              0
+            ],
+            "C": [
+              4,
+              3
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            {
+              "from": "C",
+              "to": "A",
+              "highlight": true
+            }
+          ],
+          "right_angles": [
+            [
+              "A",
+              "B",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "C"
+              ],
+              "label": "A"
+            }
+          ],
+          "lengths": [
+            {
+              "from": "C",
+              "to": "A",
+              "label": "hypotenuse",
+              "label_hi": "कर्ण",
+              "label_gu": "કર્ણ"
+            },
+            {
+              "from": "B",
+              "to": "C",
+              "label": "opposite",
+              "label_hi": "सम्मुख भुजा",
+              "label_gu": "સામેની બાજુ"
+            },
+            {
+              "from": "A",
+              "to": "B",
+              "label": "adjacent",
+              "label_hi": "संलग्न भुजा",
+              "label_gu": "પાસેની બાજુ"
+            }
+          ]
+        },
+        {
+          "id": "ch08.s2.reveal",
+          "type": "theory",
+          "title": "The six ratios",
+          "revision": true,
+          "body": "In $\\triangle ABC$, right-angled at $B$, with respect to $\\angle A$:\n\n- $\\sin A = \\dfrac{\\text{side opposite to } \\angle A}{\\text{hypotenuse}} = \\dfrac{BC}{AC}$\n- $\\cos A = \\dfrac{\\text{side adjacent to } \\angle A}{\\text{hypotenuse}} = \\dfrac{AB}{AC}$\n- $\\tan A = \\dfrac{\\text{side opposite to } \\angle A}{\\text{side adjacent to } \\angle A} = \\dfrac{BC}{AB}$\n\nThe other three are their reciprocals: $\\text{cosec } A = \\dfrac{1}{\\sin A}$, $\\sec A = \\dfrac{1}{\\cos A}$ and $\\cot A = \\dfrac{1}{\\tan A}$.\n\nAlso $\\tan A = \\dfrac{\\sin A}{\\cos A}$ and $\\cot A = \\dfrac{\\cos A}{\\sin A}$. Since the hypotenuse is the longest side, $\\sin A$ and $\\cos A$ are never more than 1 for an acute angle."
+        },
+        {
+          "id": "ch08.s2.memory",
+          "type": "memory_trick",
+          "title": "Pandit Badri Prasad Har Har Bole",
+          "revision": true,
+          "body": "Take the first letters: **P**andit **B**adri **P**rasad over **H**ar **H**ar **B**ole.\n\n$\\sin = \\dfrac{P}{H}$, $\\cos = \\dfrac{B}{H}$, $\\tan = \\dfrac{P}{B}$, where $P$ is the perpendicular (side opposite the angle), $B$ the base (side adjacent to it) and $H$ the hypotenuse."
+        },
+        {
+          "id": "ch08.s2.eg1",
+          "type": "worked_example",
+          "title": "NCERT example",
+          "problem": "Given $\\tan A = \\dfrac{4}{3}$, find the other trigonometric ratios of the angle A.",
+          "steps": [
+            "Take $BC = 4k$ and $AB = 3k$. Then $AC = \\sqrt{16k^{2} + 9k^{2}} = 5k$.",
+            "$\\sin A = \\dfrac{4}{5}$, $\\cos A = \\dfrac{3}{5}$, $\\cot A = \\dfrac{3}{4}$",
+            "$\\text{cosec } A = \\dfrac{5}{4}$, $\\sec A = \\dfrac{5}{3}$"
+          ],
+          "answer": "$\\sin A = \\dfrac{4}{5}$, $\\cos A = \\dfrac{3}{5}$, $\\cot A = \\dfrac{3}{4}$, $\\text{cosec } A = \\dfrac{5}{4}$, $\\sec A = \\dfrac{5}{3}$"
+        },
+        {
+          "id": "ch08.s2.eg2",
+          "type": "worked_example",
+          "title": "NCERT exercise: using Pythagoras",
+          "problem": "In $\\triangle ABC$, right-angled at $B$, $AB = 24$ cm and $BC = 7$ cm. Determine $\\sin A$, $\\cos A$, $\\sin C$ and $\\cos C$.",
+          "steps": [
+            "$AC = \\sqrt{24^{2} + 7^{2}} = \\sqrt{625} = 25$ cm",
+            "$\\sin A = \\dfrac{BC}{AC} = \\dfrac{7}{25}$, $\\cos A = \\dfrac{AB}{AC} = \\dfrac{24}{25}$",
+            "For $\\angle C$ the opposite side is $AB$: $\\sin C = \\dfrac{24}{25}$, $\\cos C = \\dfrac{7}{25}$"
+          ],
+          "answer": "$\\sin A = \\dfrac{7}{25}$, $\\cos A = \\dfrac{24}{25}$, $\\sin C = \\dfrac{24}{25}$, $\\cos C = \\dfrac{7}{25}$"
+        },
+        {
+          "id": "ch08.s2.fig2",
+          "type": "geometry_figure",
+          "title": "AB = 24 cm, BC = 7 cm",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              24,
+              0
+            ],
+            "C": [
+              24,
+              7
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ],
+          "right_angles": [
+            [
+              "A",
+              "B",
+              "C"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "A",
+              "to": "B",
+              "label": "24 cm"
+            },
+            {
+              "from": "B",
+              "to": "C",
+              "label": "7 cm"
+            }
+          ]
+        },
+        {
+          "id": "ch08.s2.check1",
+          "type": "knowledge_check",
+          "question": "In a right triangle, if $\\sin A = \\dfrac{3}{5}$, then $\\cos A$ is:",
+          "options": [
+            "$\\dfrac{2}{5}$",
+            "$\\dfrac{4}{5}$",
+            "$\\dfrac{3}{4}$",
+            "$\\dfrac{5}{3}$"
+          ],
+          "correct_index": 1,
+          "explanation": "Opposite $= 3k$, hypotenuse $= 5k$, so adjacent $= 4k$ and $\\cos A = \\dfrac{4}{5}$.",
+          "option_feedback": [
+            "$\\cos A$ is not $1 - \\sin A$. Use $\\sin^{2} A + \\cos^{2} A = 1$.",
+            "Correct! Sides 3, 4, 5: $\\cos A = \\dfrac{4}{5}$.",
+            "That is $\\tan A$: opposite over adjacent.",
+            "That is $\\text{cosec } A$, the reciprocal of $\\sin A$."
+          ]
+        },
+        {
+          "id": "ch08.s2.check2",
+          "type": "knowledge_check",
+          "question": "Which of these is the reciprocal of $\\cos A$?",
+          "options": [
+            "$\\sec A$",
+            "$\\text{cosec } A$",
+            "$\\cot A$",
+            "$\\tan A$"
+          ],
+          "correct_index": 0,
+          "explanation": "$\\sec A = \\dfrac{1}{\\cos A}$.",
+          "option_feedback": [
+            "Correct! $\\sec A = \\dfrac{1}{\\cos A}$.",
+            "$\\text{cosec } A$ is the reciprocal of $\\sin A$.",
+            "$\\cot A$ is the reciprocal of $\\tan A$.",
+            "$\\tan A = \\dfrac{\\sin A}{\\cos A}$, not $\\dfrac{1}{\\cos A}$."
+          ]
+        },
+        {
+          "id": "ch08.s2.tip",
+          "type": "teacher_tip",
+          "title": "Label before you calculate",
+          "body": "Ask students to mark 'opposite', 'adjacent' and 'hypotenuse' on the triangle for the angle in question before writing any ratio. Then switch the angle (from $A$ to $C$) and let them see that the opposite and adjacent sides swap while the hypotenuse stays the same."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Ratios of special angles",
+      "blocks": [
+        {
+          "id": "ch08.s3.discovery",
+          "type": "discovery",
+          "title": "Two special triangles",
+          "body": "In an isosceles right triangle both acute angles are $45^\\circ$ and the sides are $a, a, \\sqrt{2}a$, so $\\sin 45^\\circ = \\cos 45^\\circ = \\dfrac{1}{\\sqrt{2}}$ and $\\tan 45^\\circ = 1$.\n\nCut an equilateral triangle of side $2a$ in half: you get a right triangle with angles $30^\\circ$ and $60^\\circ$ and sides $a$, $\\sqrt{3}a$, $2a$. From it, $\\sin 30^\\circ = \\dfrac{1}{2}$ and $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$."
+        },
+        {
+          "id": "ch08.s3.fig45",
+          "type": "geometry_figure",
+          "title": "An isosceles right triangle",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              3,
+              0
+            ],
+            "C": [
+              3,
+              3
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            {
+              "from": "C",
+              "to": "A",
+              "highlight": true
+            }
+          ],
+          "right_angles": [
+            [
+              "A",
+              "B",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "B",
+                "A",
+                "C"
+              ],
+              "label": "45°"
+            }
+          ],
+          "lengths": [
+            {
+              "from": "A",
+              "to": "B",
+              "label": "a"
+            },
+            {
+              "from": "B",
+              "to": "C",
+              "label": "a"
+            },
+            {
+              "from": "C",
+              "to": "A",
+              "label": "√2 a"
+            }
+          ]
+        },
+        {
+          "id": "ch08.s3.fig30",
+          "type": "geometry_figure",
+          "title": "Half of an equilateral triangle",
+          "points": {
+            "A": [
+              1,
+              1.7320508075688772
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              2,
+              0
+            ],
+            "D": [
+              1,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            {
+              "from": "A",
+              "to": "D",
+              "highlight": true
+            }
+          ],
+          "right_angles": [
+            [
+              "A",
+              "D",
+              "B"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "D",
+                "B",
+                "A"
+              ],
+              "label": "60°"
+            },
+            {
+              "points": [
+                "B",
+                "A",
+                "D"
+              ],
+              "label": "30°"
+            }
+          ],
+          "lengths": [
+            {
+              "from": "A",
+              "to": "B",
+              "label": "2a"
+            },
+            {
+              "from": "B",
+              "to": "D",
+              "label": "a"
+            },
+            {
+              "from": "A",
+              "to": "D",
+              "label": "√3 a"
+            }
+          ]
+        },
+        {
+          "id": "ch08.s3.table",
+          "type": "markdown_table",
+          "title": "Values to remember",
+          "revision": true,
+          "body": "| $\\angle A$ | $0^\\circ$ | $30^\\circ$ | $45^\\circ$ | $60^\\circ$ | $90^\\circ$ |\n|---|---|---|---|---|---|\n| $\\sin A$ | $0$ | $\\frac{1}{2}$ | $\\frac{1}{\\sqrt{2}}$ | $\\frac{\\sqrt{3}}{2}$ | $1$ |\n| $\\cos A$ | $1$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{\\sqrt{2}}$ | $\\frac{1}{2}$ | $0$ |\n| $\\tan A$ | $0$ | $\\frac{1}{\\sqrt{3}}$ | $1$ | $\\sqrt{3}$ | $-$ |\n| $\\text{cosec } A$ | $-$ | $2$ | $\\sqrt{2}$ | $\\frac{2}{\\sqrt{3}}$ | $1$ |\n| $\\sec A$ | $1$ | $\\frac{2}{\\sqrt{3}}$ | $\\sqrt{2}$ | $2$ | $-$ |\n| $\\cot A$ | $-$ | $\\sqrt{3}$ | $1$ | $\\frac{1}{\\sqrt{3}}$ | $0$ |"
+        },
+        {
+          "id": "ch08.s3.memory",
+          "type": "memory_trick",
+          "title": "The square-root trick",
+          "revision": true,
+          "body": "For $\\sin$ at $0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$, write $\\dfrac{\\sqrt{0}}{2}, \\dfrac{\\sqrt{1}}{2}, \\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{3}}{2}, \\dfrac{\\sqrt{4}}{2}$. For $\\cos$, write the same values in reverse order. Then $\\tan = \\dfrac{\\sin}{\\cos}$."
+        },
+        {
+          "id": "ch08.s3.eg1",
+          "type": "worked_example",
+          "title": "NCERT exercise: evaluate",
+          "problem": "Evaluate $2\\tan^{2} 45^\\circ + \\cos^{2} 30^\\circ - \\sin^{2} 60^\\circ$.",
+          "steps": [
+            "$2 \\times 1^{2} + \\left(\\dfrac{\\sqrt{3}}{2}\\right)^{2} - \\left(\\dfrac{\\sqrt{3}}{2}\\right)^{2}$",
+            "$= 2 + \\dfrac{3}{4} - \\dfrac{3}{4}$"
+          ],
+          "answer": "$2$"
+        },
+        {
+          "id": "ch08.s3.eg2",
+          "type": "worked_example",
+          "title": "NCERT example: finding angles",
+          "problem": "If $\\sin(A - B) = \\dfrac{1}{2}$ and $\\cos(A + B) = \\dfrac{1}{2}$, $0^\\circ < A + B \\leq 90^\\circ$ and $A > B$, find $A$ and $B$.",
+          "steps": [
+            "$\\sin(A - B) = \\dfrac{1}{2} = \\sin 30^\\circ$, so $A - B = 30^\\circ$.",
+            "$\\cos(A + B) = \\dfrac{1}{2} = \\cos 60^\\circ$, so $A + B = 60^\\circ$.",
+            "Adding: $2A = 90^\\circ$."
+          ],
+          "answer": "$A = 45^\\circ$ and $B = 15^\\circ$"
+        },
+        {
+          "id": "ch08.s3.check",
+          "type": "knowledge_check",
+          "question": "The value of $\\sin 30^\\circ + \\cos 60^\\circ$ is:",
+          "options": [
+            "$0$",
+            "$1$",
+            "$\\dfrac{1}{2}$",
+            "$\\sqrt{3}$"
+          ],
+          "correct_index": 1,
+          "explanation": "$\\dfrac{1}{2} + \\dfrac{1}{2} = 1$.",
+          "option_feedback": [
+            "They are equal, so the sum (not the difference) is 1.",
+            "Correct! $\\dfrac{1}{2} + \\dfrac{1}{2} = 1$.",
+            "Both terms are $\\dfrac{1}{2}$; add them.",
+            "$\\sin 30^\\circ = \\cos 60^\\circ = \\dfrac{1}{2}$."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Trigonometric identities",
+      "blocks": [
+        {
+          "id": "ch08.s4.reveal",
+          "type": "theory",
+          "title": "Three identities",
+          "revision": true,
+          "body": "In right $\\triangle ABC$, $AB^{2} + BC^{2} = AC^{2}$. Dividing by $AC^{2}$, then by $AB^{2}$, then by $BC^{2}$ gives:\n\n$$\\sin^{2} A + \\cos^{2} A = 1$$\n\n$$1 + \\tan^{2} A = \\sec^{2} A$$\n\n$$1 + \\cot^{2} A = \\text{cosec}^{2} A$$\n\nAn **identity** is true for every angle for which both sides are defined. Use these to express any ratio in terms of another, and to prove other identities."
+        },
+        {
+          "id": "ch08.s4.eg1",
+          "type": "worked_example",
+          "title": "NCERT example: proving an identity",
+          "problem": "Prove that $\\sec A(1 - \\sin A)(\\sec A + \\tan A) = 1$.",
+          "steps": [
+            "LHS $= \\dfrac{1}{\\cos A}(1 - \\sin A)\\left(\\dfrac{1 + \\sin A}{\\cos A}\\right)$",
+            "$= \\dfrac{1 - \\sin^{2} A}{\\cos^{2} A} = \\dfrac{\\cos^{2} A}{\\cos^{2} A}$",
+            "$= 1 =$ RHS"
+          ],
+          "answer": "Proved."
+        },
+        {
+          "id": "ch08.s4.eg2",
+          "type": "worked_example",
+          "title": "NCERT example",
+          "problem": "Prove that $\\dfrac{\\cot A - \\cos A}{\\cot A + \\cos A} = \\dfrac{\\text{cosec } A - 1}{\\text{cosec } A + 1}$.",
+          "steps": [
+            "LHS $= \\dfrac{\\frac{\\cos A}{\\sin A} - \\cos A}{\\frac{\\cos A}{\\sin A} + \\cos A}$",
+            "Take $\\cos A$ common and multiply by $\\sin A$: $= \\dfrac{\\cos A\\left(\\frac{1}{\\sin A} - 1\\right)}{\\cos A\\left(\\frac{1}{\\sin A} + 1\\right)}$",
+            "$= \\dfrac{\\text{cosec } A - 1}{\\text{cosec } A + 1} =$ RHS"
+          ],
+          "answer": "Proved."
+        },
+        {
+          "id": "ch08.s4.check",
+          "type": "knowledge_check",
+          "question": "The value of $9\\sec^{2} A - 9\\tan^{2} A$ is:",
+          "options": [
+            "$9$",
+            "$1$",
+            "$8$",
+            "$0$"
+          ],
+          "correct_index": 0,
+          "explanation": "$9(\\sec^{2} A - \\tan^{2} A) = 9 \\times 1 = 9$.",
+          "option_feedback": [
+            "Correct! $9(\\sec^{2} A - \\tan^{2} A) = 9 \\times 1$.",
+            "Don't forget the factor 9.",
+            "$\\sec^{2} A - \\tan^{2} A = 1$, so the answer is $9 \\times 1$.",
+            "$\\sec^{2} A$ and $\\tan^{2} A$ differ by 1, not 0."
+          ]
+        },
+        {
+          "id": "ch08.s4.tip",
+          "type": "memory_trick",
+          "title": "How to prove an identity",
+          "body": "- Start from the more complicated side.\n- Change everything to $\\sin$ and $\\cos$ if you are stuck.\n- Look for $1 - \\sin^{2}$, $\\sec^{2} - 1$ and similar pairs, and replace them using the three identities.\n- Never move terms across the '$=$' sign: work on one side until it becomes the other."
+        },
+        {
+          "id": "ch08.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Writing $\\sin A$ as $\\sin \\times A$: $\\sin A$ is one number, the sine of the angle $A$.\n- Thinking $\\sin(A + B) = \\sin A + \\sin B$: check with $A = B = 30^\\circ$.\n- Writing $\\sin^{2} A$ as $\\sin A^{2}$: $\\sin^{2} A$ means $(\\sin A)^{2}$.\n- Swapping opposite and adjacent sides when the angle changes from $A$ to $C$.\n- Treating both sides of an identity as an equation and cross-multiplying."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch08.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why $\\sin A$ can never be more than 1, but $\\tan A$ can be as large as you like."
+        },
+        {
+          "id": "ch08.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 9, Some Applications of Trigonometry:** find heights and distances using these ratios.\n- **Chapter 6, Triangles:** the ratios depend only on the angle because similar triangles have proportional sides.\n- **Class 11 Physics and Maths:** forces, waves and circular motion all use sine and cosine."
+        },
+        {
+          "id": "ch08.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "In $\\triangle PQR$, right-angled at $Q$, $PR + QR = 25$ cm and $PQ = 5$ cm. Find $\\sin P$, $\\cos P$ and $\\tan P$.\n\n**Answer:** $PR^{2} - QR^{2} = PQ^{2} = 25$, so $(PR - QR)(PR + QR) = 25$ and $PR - QR = 1$. Hence $PR = 13$, $QR = 12$, and $\\sin P = \\dfrac{12}{13}$, $\\cos P = \\dfrac{5}{13}$, $\\tan P = \\dfrac{12}{5}$."
+        },
+        {
+          "id": "ch08.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- $\\sin A = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}$, $\\cos A = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}}$, $\\tan A = \\dfrac{\\text{opposite}}{\\text{adjacent}}$.\n- $\\text{cosec } A$, $\\sec A$ and $\\cot A$ are the reciprocals of $\\sin A$, $\\cos A$ and $\\tan A$.\n- If one ratio of an acute angle is known, all the others can be found.\n- Know the values for $0^\\circ$, $30^\\circ$, $45^\\circ$, $60^\\circ$ and $90^\\circ$.\n- $\\sin^{2} A + \\cos^{2} A = 1$, $\\sec^{2} A - \\tan^{2} A = 1$, $\\text{cosec}^{2} A - \\cot^{2} A = 1$."
+        },
+        {
+          "id": "ch08.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Draw the right triangle and mark the sides for the given angle before writing any ratio.\n- In 'evaluate' questions, write each value first, then simplify, and rationalise the denominator if asked.\n- In proofs, write LHS and RHS clearly and show every identity you use.\n- Learn the table of special angles thoroughly: it gives quick 1-mark answers."
+        },
+        {
+          "id": "ch08.s5.flash1",
+          "type": "flashcard",
+          "front": "What is $\\sin^{2} A + \\cos^{2} A$?",
+          "back": "$1$, for every angle $A$."
+        },
+        {
+          "id": "ch08.s5.flash2",
+          "type": "flashcard",
+          "front": "What are $\\sin 30^\\circ$, $\\cos 30^\\circ$ and $\\tan 30^\\circ$?",
+          "back": "$\\dfrac{1}{2}$, $\\dfrac{\\sqrt{3}}{2}$ and $\\dfrac{1}{\\sqrt{3}}$."
+        },
+        {
+          "id": "ch08.s5.flash3",
+          "type": "flashcard",
+          "front": "What is $1 + \\tan^{2} A$ equal to?",
+          "back": "$\\sec^{2} A$"
+        }
+      ]
+    }
+  ]
+}

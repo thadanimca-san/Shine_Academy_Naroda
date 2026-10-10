@@ -73,7 +73,7 @@ List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 ///    "parallel": [["D", "E", "B", "C"]],          // arrow marks: DE ∥ BC
 ///    "right_angles": [["A", "D", "B"]],           // square mark at the middle point
 ///    "angles": [{"points": ["B", "A", "C"], "label": "x"}],   // arc at the middle point
-///    "lengths": [{"from": "A", "to": "D", "label": "1.5 cm"}]}
+///    "lengths": [{"from": "A", "to": "D", "label": "1.5 cm"}]}   // optional "label_hi" / "label_gu"
 /// For coordinate geometry add `"axes": true` (x- and y-axes with a grid) and
 /// `"labels": {"A": "A(2, 3)"}` to show coordinates beside the points.
 class GeometryFigureWidget extends StatefulWidget {
@@ -289,7 +289,7 @@ class _FigurePainter extends CustomPainter {
       final along = (b - a) / (b - a).distance;
       var normal = Offset(-along.dy, along.dx);
       if ((mid + normal - centre).distance < (mid - centre).distance) normal = -normal;
-      _drawText(canvas, length['label'] as String? ?? '', mid + normal * 14);
+      _drawText(canvas, TrilingualService.instance.getLocalizedText(Map<String, dynamic>.from(length), 'label'), mid + normal * 14);
     }
   }
 
