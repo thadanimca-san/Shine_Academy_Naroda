@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.science.ncert_rationalised.ch09",
+  "title": "Light – Reflection and Refraction",
+  "book": "NCERT Science, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "science",
+  "chapter_number": 9,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: reflection of light by curved surfaces; images formed by spherical mirrors, centre of curvature, principal axis, principal focus, focal length, mirror formula (derivation not required), magnification; refraction, laws of refraction, significance of refractive index; refraction of light by spherical lens; image formed by spherical lenses; lens formula (derivation not required); magnification; power of a lens.",
+  "concepts": [
+    "reflection",
+    "refraction",
+    "lenses"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Seeing the world with light",
+      "blocks": [
+        {
+          "id": "sci10ch09.s1.hook",
+          "type": "hook",
+          "title": "Why does the spoon look bent?",
+          "body": "Put a spoon in a glass of water and it looks broken at the surface. Look into the back of a shining steel spoon and your face appears upside down; turn it over and your face is upright but smaller.\n\nAll of this happens because light **reflects** from surfaces and **bends** when it passes from one material into another. In this chapter you will learn the rules of reflection by mirrors and refraction by lenses, and use simple formulas to find exactly where an image is formed."
+        },
+        {
+          "id": "sci10ch09.s1.inspiration",
+          "type": "inspiration",
+          "title": "Light that bends around corners",
+          "person": "Narinder Singh Kapany",
+          "years": "1926–2020",
+          "body": "Narinder Singh Kapany, born in Moga, Punjab, showed in the 1950s that images can be sent through a bundle of thin glass fibres, because light keeps reflecting inside them. He coined the term **fibre optics**.\n\nToday optical fibres carry internet signals across oceans and let doctors look inside the body with an endoscope.",
+          "future": "Optics leads to careers in engineering, telecommunications, ophthalmology and optometry, photography, astronomy and laser technology."
+        },
+        {
+          "id": "sci10ch09.s1.socratic",
+          "type": "socratic_question",
+          "question": "You stand far from a shop's security mirror and still see your image upright but small. What kind of mirror is it?",
+          "options": [
+            "Convex",
+            "Concave",
+            "Plane"
+          ],
+          "correct_index": 0,
+          "explanation": "A convex mirror always gives a virtual, erect, diminished image and a wide field of view."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Reflection and spherical mirrors",
+      "blocks": [
+        {
+          "id": "sci10ch09.s2.reveal",
+          "type": "theory",
+          "title": "Laws of reflection and mirror words",
+          "revision": true,
+          "body": "**Laws of reflection** (true for all reflecting surfaces, plane or curved):\n1. The angle of incidence equals the angle of reflection.\n2. The incident ray, the normal at the point of incidence and the reflected ray all lie in the same plane.\n\nA plane mirror forms an image that is virtual, erect, of the same size, as far behind the mirror as the object is in front, and laterally inverted.\n\nA **spherical mirror** is part of a hollow sphere. If the reflecting surface curves inwards, it is **concave**; if it bulges outwards, it is **convex**.\n- **Pole (P):** the centre of the reflecting surface.\n- **Centre of curvature (C):** the centre of the sphere of which the mirror is a part; it is in front of a concave mirror and behind a convex mirror.\n- **Radius of curvature (R):** the radius of that sphere.\n- **Principal axis:** the straight line through P and C.\n- **Principal focus (F):** rays parallel to the principal axis, after reflection, meet at F (concave mirror) or appear to come from F (convex mirror).\n- **Focal length (f):** the distance PF. For mirrors of small aperture, **R = 2f**."
+        },
+        {
+          "id": "sci10ch09.s2.check",
+          "type": "knowledge_check",
+          "question": "The radius of curvature of a spherical mirror is 20 cm. Its focal length is:",
+          "options": [
+            "5 cm",
+            "10 cm",
+            "20 cm",
+            "40 cm"
+          ],
+          "correct_index": 1,
+          "explanation": "f = R/2 = 20/2 = 10 cm.",
+          "option_feedback": [
+            "f = R/2 = 10 cm.",
+            "Correct!",
+            "That is R, not f.",
+            "f is half of R, not double."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Images formed by spherical mirrors",
+      "blocks": [
+        {
+          "id": "sci10ch09.s3.thm",
+          "type": "theory",
+          "title": "Rays that make drawing easy",
+          "revision": true,
+          "body": "To draw an image, use any two of these rays from the top of the object; the image is where the reflected rays meet (real) or appear to meet (virtual):\n1. A ray parallel to the principal axis passes through F after reflection (concave), or appears to come from F (convex).\n2. A ray through F (concave), or directed towards F (convex), becomes parallel to the principal axis.\n3. A ray through C (concave), or directed towards C (convex), is reflected back along the same path.\n4. A ray hitting the pole obliquely is reflected obliquely, making equal angles with the principal axis.\n\n**Convex mirror:** whatever the position of the object, the image is **virtual, erect and diminished**, behind the mirror between P and F (at F when the object is at infinity).\n\n**Uses:** concave mirrors in torches and headlights (strong parallel beam), shaving and dentists' mirrors (enlarged image), and solar furnaces (to concentrate sunlight). Convex mirrors as rear-view mirrors in vehicles, because they always give an erect image and a much wider field of view."
+        },
+        {
+          "id": "sci10ch09.s3.table",
+          "type": "markdown_table",
+          "title": "Image formation by a concave mirror",
+          "revision": true,
+          "body": "| Position of object | Position of image | Size of image | Nature of image |\n|---|---|---|---|\n| At infinity | At the focus F | Highly diminished, point-sized | Real and inverted |\n| Beyond C | Between F and C | Diminished | Real and inverted |\n| At C | At C | Same size | Real and inverted |\n| Between C and F | Beyond C | Enlarged | Real and inverted |\n| At F | At infinity | Highly enlarged | Real and inverted |\n| Between P and F | Behind the mirror | Enlarged | Virtual and erect |"
+        },
+        {
+          "id": "sci10ch09.s3.check",
+          "type": "knowledge_check",
+          "question": "To get a virtual, erect and enlarged image from a concave mirror, the object must be placed:",
+          "options": [
+            "between P and F",
+            "at C",
+            "beyond C",
+            "at F"
+          ],
+          "correct_index": 0,
+          "explanation": "Only when the object is between the pole and the focus does a concave mirror give a virtual, erect, enlarged image.",
+          "option_feedback": [
+            "Correct!",
+            "That gives a real image of the same size.",
+            "That gives a real, diminished image.",
+            "That gives an image at infinity."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Mirror formula and magnification",
+      "blocks": [
+        {
+          "id": "sci10ch09.s4.thm",
+          "type": "theory",
+          "title": "New Cartesian sign convention",
+          "revision": true,
+          "body": "**Sign convention:** the pole is the origin and the principal axis is the x-axis. The object is placed to the left of the mirror.\n- Distances measured in the direction of the incident light (to the right) are **positive**; against it (to the left) are **negative**.\n- Heights measured upwards are **positive**; downwards are **negative**.\n\nSo the object distance u is always negative; f is negative for a concave mirror and positive for a convex mirror.\n\n**Mirror formula:** $\\dfrac{1}{v} + \\dfrac{1}{u} = \\dfrac{1}{f}$\n\n**Magnification:** $m = \\dfrac{h'}{h} = -\\dfrac{v}{u}$\n\nA negative m means a real, inverted image; a positive m means a virtual, erect image. |m| > 1 means enlarged."
+        },
+        {
+          "id": "sci10ch09.s4.example",
+          "type": "worked_example",
+          "title": "Worked example: concave mirror",
+          "problem": "An object is placed 20 cm in front of a concave mirror of focal length 15 cm. Find the position and nature of the image.",
+          "steps": [
+            "$u = -20$ cm, $f = -15$ cm",
+            "$\\dfrac{1}{v} = \\dfrac{1}{f} - \\dfrac{1}{u} = -\\dfrac{1}{15} + \\dfrac{1}{20} = -\\dfrac{1}{60}$, so $v = -60$ cm",
+            "$m = -\\dfrac{v}{u} = -\\dfrac{-60}{-20} = -3$"
+          ],
+          "answer": "The image is 60 cm in front of the mirror, real, inverted and three times enlarged (the object is between C and F)."
+        },
+        {
+          "id": "sci10ch09.s4.check",
+          "type": "knowledge_check",
+          "question": "A mirror gives magnification m = −2. The image is:",
+          "options": [
+            "virtual, erect and enlarged",
+            "real, erect and diminished",
+            "virtual, inverted and diminished",
+            "real, inverted and enlarged"
+          ],
+          "correct_index": 3,
+          "explanation": "Negative m means real and inverted; |m| = 2 means twice the size.",
+          "option_feedback": [
+            "A negative m means real and inverted.",
+            "|m| = 2 means enlarged, and real images are inverted.",
+            "A negative m means real; |m| = 2 means enlarged.",
+            "Correct!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Refraction of light",
+      "blocks": [
+        {
+          "id": "sci10ch09.s5.thm",
+          "type": "theory",
+          "title": "Bending at a boundary",
+          "revision": true,
+          "body": "Light changes direction when it goes obliquely from one transparent medium into another, because its **speed** changes. This is **refraction**. It explains why a pond looks shallower and a pencil in water looks bent.\n\n- Going from a rarer to a denser medium (air to glass), light slows down and bends **towards** the normal.\n- Going from a denser to a rarer medium, it speeds up and bends **away** from the normal.\n- Through a rectangular glass slab, the emergent ray is **parallel** to the incident ray but shifted sideways (lateral displacement).\n- A ray along the normal goes straight through.\n\n**Laws of refraction:**\n1. The incident ray, the refracted ray and the normal at the point of incidence lie in the same plane.\n2. **Snell's law:** for a given pair of media and a given colour of light, $\\dfrac{\\sin i}{\\sin r} = \\text{constant}$.\n\n**Refractive index:** the constant above is the refractive index of the second medium with respect to the first. The **absolute refractive index** of a medium is $n_{m} = \\dfrac{c}{v}$, where c is the speed of light in vacuum (3 × 10⁸ m/s) and v its speed in the medium. A medium with a larger refractive index is **optically denser**; optical density is not the same as mass density (kerosene is optically denser than water, but lighter)."
+        },
+        {
+          "id": "sci10ch09.s5.table",
+          "type": "markdown_table",
+          "title": "Absolute refractive index of some media",
+          "revision": true,
+          "body": "| Medium | Refractive index | Medium | Refractive index |\n|---|---|---|---|\n| Air | 1.0003 | Canada balsam | 1.53 |\n| Ice | 1.31 | Rock salt | 1.54 |\n| Water | 1.33 | Carbon disulphide | 1.63 |\n| Alcohol | 1.36 | Dense flint glass | 1.65 |\n| Kerosene | 1.44 | Ruby | 1.71 |\n| Fused quartz | 1.46 | Sapphire | 1.77 |\n| Turpentine oil | 1.47 | Diamond | 2.42 |\n| Benzene | 1.50 | Crown glass | 1.52 |"
+        },
+        {
+          "id": "sci10ch09.s5.check",
+          "type": "knowledge_check",
+          "question": "In which of these does light travel fastest?",
+          "options": [
+            "Turpentine oil (1.47)",
+            "Crown glass (1.52)",
+            "Water (1.33)",
+            "Kerosene (1.44)"
+          ],
+          "correct_index": 2,
+          "explanation": "The smaller the refractive index, the faster light travels; water has the smallest of these.",
+          "option_feedback": [
+            "Its refractive index is higher than water's.",
+            "It has the highest refractive index here.",
+            "Correct!",
+            "Its refractive index is higher than water's."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "Spherical lenses",
+      "blocks": [
+        {
+          "id": "sci10ch09.s6.thm",
+          "type": "theory",
+          "title": "Convex and concave lenses",
+          "revision": true,
+          "body": "A **convex lens** is thicker in the middle and **converges** parallel rays to a point; a **concave lens** is thicker at the edges and **diverges** them. The centre of a lens is its **optical centre (O)**; a ray through O goes straight. A lens has two principal foci, F₁ and F₂, one on each side, and 2F₁, 2F₂ at twice the focal length.\n\n**Concave lens:** whatever the position of the object, the image is **virtual, erect and diminished**, on the same side as the object, between the focus and O.\n\n**Sign convention** is the same as for mirrors, measured from O: f is **positive** for a convex lens and **negative** for a concave lens.\n\n**Lens formula:** $\\dfrac{1}{v} - \\dfrac{1}{u} = \\dfrac{1}{f}$\n\n**Magnification:** $m = \\dfrac{h'}{h} = \\dfrac{v}{u}$\n\n**Power of a lens:** $P = \\dfrac{1}{f}$, with f in metres. Its SI unit is the **dioptre (D)**: 1 D is the power of a lens of focal length 1 m. A convex lens has positive power; a concave lens, negative power. For lenses in contact, the powers add: P = P₁ + P₂ + ..."
+        },
+        {
+          "id": "sci10ch09.s6.table",
+          "type": "markdown_table",
+          "title": "Image formation by a convex lens",
+          "revision": true,
+          "body": "| Position of object | Position of image | Size of image | Nature of image |\n|---|---|---|---|\n| At infinity | At the focus F₂ | Highly diminished, point-sized | Real and inverted |\n| Beyond 2F₁ | Between F₂ and 2F₂ | Diminished | Real and inverted |\n| At 2F₁ | At 2F₂ | Same size | Real and inverted |\n| Between F₁ and 2F₁ | Beyond 2F₂ | Enlarged | Real and inverted |\n| At F₁ | At infinity | Highly enlarged | Real and inverted |\n| Between F₁ and the optical centre O | On the same side as the object | Enlarged | Virtual and erect |"
+        },
+        {
+          "id": "sci10ch09.s6.example",
+          "type": "worked_example",
+          "title": "Worked example: convex lens",
+          "problem": "An object is placed 15 cm from a convex lens of focal length 10 cm. Find the position and nature of the image.",
+          "steps": [
+            "$u = -15$ cm, $f = +10$ cm",
+            "$\\dfrac{1}{v} = \\dfrac{1}{f} + \\dfrac{1}{u} = \\dfrac{1}{10} - \\dfrac{1}{15} = \\dfrac{1}{30}$, so $v = 30$ cm",
+            "$m = \\dfrac{v}{u} = \\dfrac{30}{-15} = -2$"
+          ],
+          "answer": "The image is 30 cm on the other side of the lens, real, inverted and twice the size (the object is between F₁ and 2F₁)."
+        },
+        {
+          "id": "sci10ch09.s6.check",
+          "type": "knowledge_check",
+          "question": "A lens has a power of −2.0 D. It is a:",
+          "options": [
+            "convex lens of focal length 2 m",
+            "concave lens of focal length 50 cm",
+            "convex lens of focal length 50 cm",
+            "concave lens of focal length 2 m"
+          ],
+          "correct_index": 1,
+          "explanation": "f = 1/P = 1/(−2) m = −0.5 m = −50 cm; negative f means a concave lens.",
+          "option_feedback": [
+            "Negative power means concave, and f = 0.5 m.",
+            "Correct!",
+            "Negative power means a concave lens.",
+            "f = 1/P = 1/2 m = 0.5 m."
+          ]
+        },
+        {
+          "id": "sci10ch09.s6.memory",
+          "type": "memory_trick",
+          "title": "Signs and formulas without confusion",
+          "body": "- **Mirror: plus; lens: minus.** Mirror formula 1/v **+** 1/u = 1/f; lens formula 1/v **−** 1/u = 1/f.\n- **Magnification:** mirror m = **−**v/u; lens m = v/u.\n- **Concave mirror and convex lens** are the converging pair (f of the mirror is negative, of the lens positive). **Convex mirror and concave lens** always give virtual, erect, diminished images.\n- **u is always negative** (the object is on the left)."
+        },
+        {
+          "id": "sci10ch09.s6.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Forgetting signs: putting u = +20 cm for an object in front of a mirror or lens.\n- Using the mirror formula for a lens, or −v/u for a lens.\n- Writing power with f in centimetres: always convert f to metres first.\n- Saying a convex mirror can form a real image: it never does.\n- Mixing up optical density with mass density."
+        },
+        {
+          "id": "sci10ch09.s6.tip",
+          "type": "teacher_tip",
+          "title": "Try it in class",
+          "body": "Use a magnifying glass to focus the image of a distant tree or window on a sheet of paper; the distance from the lens to the paper is its approximate focal length. Move a candle closer to a concave mirror to show the image growing and finally becoming virtual. Students can verify the mirror formula with their own readings."
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "sci10ch09.s7.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why vehicles use a convex mirror as a rear-view mirror, and why a concave mirror is used in a torch."
+        },
+        {
+          "id": "sci10ch09.s7.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 10, The Human Eye and the Colourful World:** the eye lens, defects of vision corrected by lenses, and refraction through a prism.\n- **Class 12 Physics:** ray optics, total internal reflection and optical instruments in detail.\n- **Everyday life:** cameras, spectacles, microscopes, telescopes and optical fibres all use these rules."
+        },
+        {
+          "id": "sci10ch09.s7.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "An object 4 cm tall is placed 30 cm from a lens, and a real image is formed 60 cm on the other side.\n\n(a) Is the lens convex or concave? (b) Find its focal length and power. (c) Find the size of the image.\n\n**Answer:** (a) Convex, because a real image is formed. (b) $u = -30$ cm, $v = +60$ cm: $\\dfrac{1}{f} = \\dfrac{1}{v} - \\dfrac{1}{u} = \\dfrac{1}{60} + \\dfrac{1}{30} = \\dfrac{1}{20}$, so $f = 20$ cm and $P = \\dfrac{1}{0.2} = +5$ D. (c) $m = \\dfrac{v}{u} = \\dfrac{60}{-30} = -2$, so $h' = -8$ cm: the image is 8 cm tall and inverted."
+        },
+        {
+          "id": "sci10ch09.s7.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Light reflects with the angle of incidence equal to the angle of reflection; spherical mirrors are concave or convex, with R = 2f.\n- A concave mirror gives real, inverted images except when the object is between P and F; a convex mirror always gives virtual, erect, diminished images.\n- With the New Cartesian sign convention: mirror formula 1/v + 1/u = 1/f, m = −v/u.\n- Refraction is due to the change in the speed of light; sin i / sin r is constant (Snell's law), and n = c/v.\n- A convex lens converges and a concave lens diverges light; lens formula 1/v − 1/u = 1/f, m = v/u.\n- Power P = 1/f (f in metres), in dioptres; convex lenses have positive power."
+        },
+        {
+          "id": "sci10ch09.s7.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Write the given values with signs first (u, f, v, h), then the formula, then substitute.\n- Always state the nature of the image (real/virtual, erect/inverted, enlarged/diminished) and its position.\n- Practise ray diagrams for all six object positions of a concave mirror and of a convex lens, and one each for a convex mirror and a concave lens.\n- Convert focal length to metres before finding power."
+        },
+        {
+          "id": "sci10ch09.s7.flash1",
+          "type": "flashcard",
+          "front": "Relation between focal length and radius of curvature",
+          "back": "R = 2f"
+        },
+        {
+          "id": "sci10ch09.s7.flash2",
+          "type": "flashcard",
+          "front": "Lens formula",
+          "back": "1/v − 1/u = 1/f"
+        },
+        {
+          "id": "sci10ch09.s7.flash3",
+          "type": "flashcard",
+          "front": "1 dioptre",
+          "back": "The power of a lens of focal length 1 metre."
+        }
+      ]
+    }
+  ]
+}
