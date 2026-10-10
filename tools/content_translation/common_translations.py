@@ -551,6 +551,8 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 10 (eye)
+ "causes": ("कारण", "કારણો"), "correction": ("संशोधन", "સુધારો"), "defect": ("दोष", "ખામી"), "lens": ("लेंस", "લેન્સ"), "power and diagram": ("क्षमता और आरेख", "પાવર અને આકૃતિ"),
  # Science Ch 9 (light)
  "experiment": ("प्रयोग", "પ્રયોગ"), "f": ("f", "f"), "first ray": ("पहली किरण", "પહેલું કિરણ"), "second ray": ("दूसरी किरण", "બીજું કિરણ"), "focal length": ("फ़ोकस दूरी", "કેન્દ્રલંબાઈ"),
  "h'": ("h'", "h'"), "image": ("प्रतिबिंब", "પ્રતિબિંબ"), "m": ("m", "m"), "m = −3": ("m = −3", "m = −3"), "nature": ("प्रकृति", "પ્રકાર"),
