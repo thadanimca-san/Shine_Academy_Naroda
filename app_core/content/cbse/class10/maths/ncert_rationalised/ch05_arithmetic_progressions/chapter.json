@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch05",
+  "title": "Arithmetic Progressions",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 5,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: motivation for studying AP, derivation of the nth term and the sum of the first n terms, and their application in solving daily life problems.",
+  "concepts": [
+    "arithmetic_progression",
+    "nth_term",
+    "sum_of_ap",
+    "ap_word_problems"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Patterns that grow evenly",
+      "blocks": [
+        {
+          "id": "ch05.s1.hook",
+          "type": "hook",
+          "title": "Reena's piggy bank",
+          "body": "Reena puts ₹5 in her piggy bank in the first week, ₹10 in the second week, ₹15 in the third, and keeps adding ₹5 more every week.\n\nHow much will she put in during the 20th week? How much will she have saved in a year? You could add week by week, but there is a much faster way. Lists of numbers that grow (or shrink) by the **same amount** every step are called **arithmetic progressions**, and in this chapter you will find any term and any sum in seconds."
+        },
+        {
+          "id": "ch05.s1.inspiration",
+          "type": "inspiration",
+          "title": "Adding 1 to 100 in a minute",
+          "person": "Carl Friedrich Gauss and Aryabhata",
+          "years": "1777–1855 and 476–550 CE",
+          "body": "The story goes that a schoolteacher in Germany asked his class to add all the numbers from 1 to 100, hoping to keep them busy. Within a minute, young Carl Gauss had the answer: **5050**.\n\nHe paired the numbers: $1 + 100$, $2 + 99$, $3 + 98$, and so on. Each pair makes 101, and there are 50 pairs, so the sum is $50 \\times 101 = 5050$.\n\nLong before that, in 499 CE, Aryabhata had already written rules for the sum of such series in his *Aryabhatiya*. Gauss grew up to be one of the greatest mathematicians in history.",
+          "quote": "Don't just work hard; look for the pattern. One clever idea can save an hour of work.",
+          "future": "Arithmetic progressions are used in loan instalments (EMIs), salary increments, seating plans in stadiums, and in computer programs that count in steps."
+        },
+        {
+          "id": "ch05.s1.socratic",
+          "type": "socratic_question",
+          "question": "What is the next number in the list $2, 5, 8, 11, \\ldots$?",
+          "options": [
+            "$14$",
+            "$13$",
+            "$22$"
+          ],
+          "correct_index": 0,
+          "explanation": "Each number is 3 more than the one before it: $11 + 3 = 14$. A list where you always add the same number is an arithmetic progression."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Arithmetic progressions",
+      "blocks": [
+        {
+          "id": "ch05.s2.reveal",
+          "type": "theory",
+          "title": "What is an arithmetic progression?",
+          "revision": true,
+          "body": "An **arithmetic progression (AP)** is a list of numbers in which each term is obtained by adding a fixed number to the preceding term (except the first term).\n\nThe fixed number is the **common difference** $d$. It can be positive, negative or zero. If the first term is $a$, the AP is\n\n$$a, \\; a + d, \\; a + 2d, \\; a + 3d, \\; \\ldots$$\n\nTo find $d$, subtract any term from the next one: $d = a_2 - a_1 = a_3 - a_2 = \\ldots$ If these differences are not all equal, the list is **not** an AP.\n\nAn AP with a last term is **finite**; one without a last term is **infinite**."
+        },
+        {
+          "id": "ch05.s2.g1",
+          "type": "function_graph",
+          "title": "Terms of an AP lie on a straight line",
+          "polynomial": [
+            3,
+            -1
+          ],
+          "label": "a_n = 3n - 1",
+          "x_range": [
+            0,
+            5
+          ],
+          "zeroes": [],
+          "points": [
+            {
+              "x": 1,
+              "y": 2,
+              "label": "(1, 2)",
+              "on": [
+                0
+              ]
+            },
+            {
+              "x": 2,
+              "y": 5,
+              "label": "(2, 5)",
+              "on": [
+                0
+              ]
+            },
+            {
+              "x": 3,
+              "y": 8,
+              "label": "(3, 8)",
+              "on": [
+                0
+              ]
+            },
+            {
+              "x": 4,
+              "y": 11,
+              "label": "(4, 11)",
+              "on": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch05.s2.eg1",
+          "type": "worked_example",
+          "title": "Is it an AP?",
+          "problem": "Which of these lists are APs? (i) $4, 10, 16, 22, \\ldots$ (ii) $1, -1, -3, -5, \\ldots$ (iii) $1, 1, 2, 2, 3, 3, \\ldots$",
+          "steps": [
+            "(i) $10 - 4 = 16 - 10 = 22 - 16 = 6$: an AP with $d = 6$.",
+            "(ii) $-1 - 1 = -3 - (-1) = -2$: an AP with $d = -2$.",
+            "(iii) $1 - 1 = 0$ but $2 - 1 = 1$: the differences are not equal, so it is not an AP."
+          ],
+          "answer": "(i) and (ii) are APs; (iii) is not."
+        },
+        {
+          "id": "ch05.s2.check",
+          "type": "knowledge_check",
+          "question": "The common difference of the AP $3, 1, -1, -3, \\ldots$ is:",
+          "options": [
+            "$-1$",
+            "$-2$",
+            "$2$",
+            "$3$"
+          ],
+          "correct_index": 1,
+          "explanation": "$d = 1 - 3 = -2$. Check: $-1 - 1 = -2$ too.",
+          "option_feedback": [
+            "$-1$ is the third term. $d = 1 - 3 = -2$.",
+            "Correct! $1 - 3 = -2$, and $-1 - 1 = -2$ too.",
+            "Subtract in the right order: $d = a_2 - a_1 = 1 - 3 = -2$.",
+            "3 is the first term, not the common difference."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "The nth term",
+      "blocks": [
+        {
+          "id": "ch05.s3.discovery",
+          "type": "discovery",
+          "title": "Spot the pattern",
+          "body": "In the AP $a, a + d, a + 2d, \\ldots$: the 2nd term has one $d$, the 3rd term has two $d$'s, the 4th term has three. So the $n$th term has $(n - 1)$ $d$'s."
+        },
+        {
+          "id": "ch05.s3.reveal",
+          "type": "theory",
+          "title": "The nth term formula",
+          "revision": true,
+          "body": "The $n$th term (general term) of an AP with first term $a$ and common difference $d$ is\n\n$$a_n = a + (n - 1)d$$\n\nIf the AP has $m$ terms, $a_m$ is the **last term** $l$. The $n$th term **from the end** is $l - (n - 1)d$.\n\nTo check whether a number is a term, solve $a + (n - 1)d = $ number: it is a term only if $n$ comes out as a **positive integer**."
+        },
+        {
+          "id": "ch05.s3.eg1",
+          "type": "worked_example",
+          "title": "NCERT example",
+          "problem": "Find the 10th term of the AP $2, 7, 12, \\ldots$",
+          "steps": [
+            "$a = 2$, $d = 7 - 2 = 5$, $n = 10$.",
+            "$a_{10} = 2 + (10 - 1) \\times 5 = 2 + 45$"
+          ],
+          "answer": "$a_{10} = 47$"
+        },
+        {
+          "id": "ch05.s3.eg2",
+          "type": "worked_example",
+          "title": "NCERT example: which term?",
+          "problem": "Which term of the AP $21, 18, 15, \\ldots$ is $-81$? Also, is any term $0$?",
+          "steps": [
+            "$a = 21$, $d = -3$. Solve $21 + (n - 1)(-3) = -81$: $(n - 1) = 34$, so $n = 35$.",
+            "For $0$: $21 + (n - 1)(-3) = 0$ gives $n - 1 = 7$, so $n = 8$."
+          ],
+          "answer": "$-81$ is the 35th term, and the 8th term is $0$."
+        },
+        {
+          "id": "ch05.s3.eg3",
+          "type": "worked_example",
+          "title": "NCERT example: counting with an AP",
+          "problem": "How many two-digit numbers are divisible by 3?",
+          "steps": [
+            "The two-digit multiples of 3 are $12, 15, 18, \\ldots, 99$: an AP with $a = 12$, $d = 3$, $a_n = 99$.",
+            "$12 + (n - 1) \\times 3 = 99$ gives $n - 1 = 29$, so $n = 30$."
+          ],
+          "answer": "30 two-digit numbers are divisible by 3."
+        },
+        {
+          "id": "ch05.s3.eg4",
+          "type": "worked_example",
+          "title": "NCERT example: from the end",
+          "problem": "Find the 11th term from the last term of the AP $10, 7, 4, \\ldots, -62$.",
+          "steps": [
+            "Reading from the end, the AP is $-62, -59, -56, \\ldots$ with first term $-62$ and $d = 3$.",
+            "11th term from the end $= -62 + (11 - 1) \\times 3 = -62 + 30$"
+          ],
+          "answer": "$-32$"
+        },
+        {
+          "id": "ch05.s3.check",
+          "type": "knowledge_check",
+          "question": "The 8th term of the AP $1, 5, 9, \\ldots$ is:",
+          "options": [
+            "$29$",
+            "$33$",
+            "$32$",
+            "$36$"
+          ],
+          "correct_index": 0,
+          "explanation": "$a_8 = 1 + 7 \\times 4 = 29$.",
+          "option_feedback": [
+            "Correct! $a_8 = 1 + 7 \\times 4 = 29$.",
+            "That is $1 + 8 \\times 4$. Use $(n - 1) = 7$, not 8.",
+            "That is $8 \\times 4$. Start from the first term: $1 + 7 \\times 4$.",
+            "Use $a_n = a + (n - 1)d = 1 + 7 \\times 4$."
+          ]
+        },
+        {
+          "id": "ch05.s3.tip",
+          "type": "teacher_tip",
+          "title": "Why (n − 1)?",
+          "body": "Ask students to count the 'jumps' between terms on a number line: from the 1st to the 5th term there are 4 jumps, not 5. This one picture removes the most common error in this chapter. For 'is it a term?' questions, insist that $n$ must be a natural number."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Sum of the first n terms",
+      "blocks": [
+        {
+          "id": "ch05.s4.socratic",
+          "type": "socratic_question",
+          "question": "Gauss paired $1 + 100$, $2 + 99$, $3 + 98$, ... to add 1 to 100. What is special about each pair?",
+          "options": [
+            "Every pair has the same sum, 101",
+            "Every pair has a different sum",
+            "The pairs get bigger each time"
+          ],
+          "correct_index": 0,
+          "explanation": "As the first number goes up by 1, the second goes down by 1, so the pair sum never changes. That is why the sum of an AP is (number of terms ÷ 2) × (first term + last term)."
+        },
+        {
+          "id": "ch05.s4.reveal",
+          "type": "theory",
+          "title": "Sum formulas",
+          "revision": true,
+          "body": "The sum of the first $n$ terms of an AP is\n\n$$S_n = \\dfrac{n}{2}\\left[2a + (n - 1)d\\right]$$\n\nIf the last term $l$ is known, this becomes\n\n$$S_n = \\dfrac{n}{2}(a + l)$$\n\nAlso, the $n$th term can be found from the sums: $a_n = S_n - S_{n-1}$.\n\nThe sum of the first $n$ positive integers is $\\dfrac{n(n + 1)}{2}$."
+        },
+        {
+          "id": "ch05.s4.eg1",
+          "type": "worked_example",
+          "title": "NCERT example",
+          "problem": "Find the sum of the first 22 terms of the AP $8, 3, -2, \\ldots$",
+          "steps": [
+            "$a = 8$, $d = -5$, $n = 22$.",
+            "$S_{22} = \\dfrac{22}{2}\\left[16 + 21 \\times (-5)\\right] = 11 \\times (16 - 105) = 11 \\times (-89)$"
+          ],
+          "answer": "$S_{22} = -979$"
+        },
+        {
+          "id": "ch05.s4.eg2",
+          "type": "worked_example",
+          "title": "NCERT example: two answers",
+          "problem": "How many terms of the AP $24, 21, 18, \\ldots$ must be taken so that their sum is 78?",
+          "steps": [
+            "$a = 24$, $d = -3$: $\\dfrac{n}{2}\\left[48 - 3(n - 1)\\right] = 78$, i.e. $n^{2} - 17n + 52 = 0$.",
+            "$(n - 4)(n - 13) = 0$, so $n = 4$ or $n = 13$.",
+            "Both are valid: the terms from the 5th to the 13th ($12, 9, \\ldots, -12$) add up to 0."
+          ],
+          "answer": "4 terms or 13 terms"
+        },
+        {
+          "id": "ch05.s4.check",
+          "type": "knowledge_check",
+          "question": "The sum of the first 10 terms of $3, 7, 11, \\ldots$ is:",
+          "options": [
+            "$195$",
+            "$420$",
+            "$39$",
+            "$210$"
+          ],
+          "correct_index": 3,
+          "explanation": "$S_{10} = \\dfrac{10}{2}(6 + 9 \\times 4) = 5 \\times 42 = 210$.",
+          "option_feedback": [
+            "Check $2a + (n - 1)d = 6 + 36 = 42$, then multiply by $\\dfrac{10}{2} = 5$.",
+            "Remember to multiply by $\\dfrac{n}{2} = 5$, not by $n = 10$.",
+            "39 is the 10th term. The question asks for the sum of 10 terms.",
+            "Correct! $5 \\times (6 + 36) = 210$."
+          ]
+        },
+        {
+          "id": "ch05.s4.memory",
+          "type": "memory_trick",
+          "title": "Average × count",
+          "revision": true,
+          "body": "The sum of an AP $=$ (number of terms) $\\times$ (average of the first and last terms). That is just $S_n = n \\times \\dfrac{a + l}{2}$. If you remember 'pairs from the ends', you will never forget the formula."
+        },
+        {
+          "id": "ch05.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Using $a + nd$ instead of $a + (n - 1)d$ for the $n$th term.\n- Taking $d$ the wrong way round: $d = a_2 - a_1$, not $a_1 - a_2$.\n- Accepting a fraction or negative value of $n$: the number of terms must be a natural number.\n- Mixing up $a_n$ (one term) and $S_n$ (the sum of $n$ terms).\n- Forgetting that 'between 10 and 250' does not include 10 and 250 themselves."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch05.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend, using Gauss's pairing idea, why $1 + 2 + 3 + \\ldots + n = \\dfrac{n(n + 1)}{2}$."
+        },
+        {
+          "id": "ch05.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 4, Quadratic Equations:** finding how many terms give a certain sum leads to a quadratic equation in $n$.\n- **Class 11:** geometric progressions, where each term is *multiplied* by a fixed number, and series.\n- **Commerce:** simple interest grows as an AP, and instalment plans are built from progressions."
+        },
+        {
+          "id": "ch05.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "Find the sum of all three-digit numbers that are divisible by 7.\n\n**Answer:** They are $105, 112, \\ldots, 994$. From $105 + (n - 1) \\times 7 = 994$, $n = 128$. So $S = \\dfrac{128}{2}(105 + 994) = 64 \\times 1099 = 70336$."
+        },
+        {
+          "id": "ch05.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- An AP is a list where each term after the first is obtained by adding a fixed number $d$, the common difference.\n- General form: $a, a + d, a + 2d, \\ldots$\n- $n$th term: $a_n = a + (n - 1)d$; $n$th term from the end: $l - (n - 1)d$.\n- Sum of the first $n$ terms: $S_n = \\dfrac{n}{2}\\left[2a + (n - 1)d\\right] = \\dfrac{n}{2}(a + l)$.\n- $a_n = S_n - S_{n-1}$."
+        },
+        {
+          "id": "ch05.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Always write $a$, $d$ and $n$ before using a formula.\n- In 'is it a term?' questions, show the value of $n$ and say clearly whether it is a natural number.\n- When a quadratic in $n$ gives two values, check both and reject any that is negative or not an integer.\n- In word problems, write the AP formed by the situation (for example, savings $50, 60, 70, \\ldots$) before calculating."
+        },
+        {
+          "id": "ch05.s5.flash1",
+          "type": "flashcard",
+          "front": "What is the nth term of an AP?",
+          "back": "$a_n = a + (n - 1)d$"
+        },
+        {
+          "id": "ch05.s5.flash2",
+          "type": "flashcard",
+          "front": "What is the sum of the first n terms of an AP?",
+          "back": "$S_n = \\dfrac{n}{2}\\left[2a + (n - 1)d\\right]$, or $\\dfrac{n}{2}(a + l)$ when the last term $l$ is known."
+        },
+        {
+          "id": "ch05.s5.flash3",
+          "type": "flashcard",
+          "front": "How do you find a term from the sums?",
+          "back": "$a_n = S_n - S_{n-1}$"
+        }
+      ]
+    }
+  ]
+}
