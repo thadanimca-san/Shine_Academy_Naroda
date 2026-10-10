@@ -72,6 +72,10 @@ void checkFormulas(String text, String where, Problems problems) {
       problems.add(where, 'formula "$tex" has a broken backslash (write \\\\ in JSON)');
       continue;
     }
+    if (RegExp('[\u0900-\u0AFF]').hasMatch(tex)) {
+      problems.add(where, 'formula "$tex" contains Hindi/Gujarati letters; keep words outside \$...\$');
+      continue;
+    }
     final error = Math.tex(tex).parseError;
     if (error != null) problems.add(where, 'formula "$tex" does not render: ${error.message}');
   }

@@ -249,3 +249,8 @@ Design: `docs/CONTENT_FORMAT_DESIGN.md`. Decisions: `docs/DECISIONS_LOG.md`.
   a real paper), `sample_paper`, `shine` (our own).
 - Verify every numerical answer with a script (sympy) before saving.
 - Before claiming done, run: `flutter test test/content/content_check_test.dart`
+- Every new chapter ships in English, Hindi and Gujarati (`languages: ["en","hi","gu"]`).
+  Use NCERT Hindi-medium and GSEB Gujarati-medium terms (HCF = महत्तम समापवर्तक / ગુ.સા.અ.).
+  Keep formulas identical across languages and never put Hindi/Gujarati words inside `$...$`.
+  Tools: `tools/content_translation/` (templates, marking-scheme phrases, and a merge script
+  that refuses to finish while any text is untranslated). The checker verifies completeness.
