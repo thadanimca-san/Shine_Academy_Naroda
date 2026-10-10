@@ -128,6 +128,9 @@ TEMPLATES = [
  (r"^So (\$[^$]+\$) and (\$[^$]+\$)\.$", "अतः {0} और {1}।", "તેથી {0} અને {1}."),
  (r"^From the end: (\$[^$]+\$), (\$[^$]+\$)\.$", "अंत से: {0}, {1}।", "છેડેથી: {0}, {1}."),
  (r"^From the end: first term (\$[^$]+\$), (\$[^$]+\$)\.$", "अंत से: प्रथम पद {0}, {1}।", "છેડેથી: પ્રથમ પદ {0}, {1}."),
+ # Marking schemes whose item is only a formula, e.g. "1 mark: $x = 6$".
+ (r"^(\d) marks?: (\$[^$]+\$)$", "{0} अंक: {1}", "{0} ગુણ: {1}"),
+ (r"^(\d) marks?: (\$[^$]+\$) and (\$[^$]+\$)$", "{0} अंक: {1} और {2}", "{0} ગુણ: {1} અને {2}"),
 ]
 
 MARKING = {
@@ -334,6 +337,31 @@ MARKING = {
  "1 mark: $PM = 3.3$ cm": ("1 अंक: $PM = 3.3$ cm", "1 ગુણ: $PM = 3.3$ cm"),
  "1 mark: statement": ("1 अंक: कथन", "1 ગુણ: વિધાન"),
  "2 marks: proof": ("2 अंक: उपपत्ति", "2 ગુણ: સાબિતી"),
+ # Ch 7 (coordinate geometry)
+ "1 mark: $BC$ and conclusion": ("1 अंक: $BC$ और निष्कर्ष", "1 ગુણ: $BC$ અને નિષ્કર્ષ"),
+ "1 mark: comparison": ("1 अंक: तुलना", "1 ગુણ: સરખામણી"),
+ "1 mark: coordinates of the flags": ("1 अंक: झंडों के निर्देशांक", "1 ગુણ: ધજાઓના યામ"),
+ "1 mark: correct formula and ratio": ("1 अंक: सही सूत्र और अनुपात", "1 ગુણ: સાચું સૂત્ર અને ગુણોત્તર"),
+ "1 mark: correct substitution in the formula": ("1 अंक: सूत्र में सही प्रतिस्थापन", "1 ગુણ: સૂત્રમાં સાચી અવેજી"),
+ "1 mark: diagonals bisect each other": ("1 अंक: विकर्ण परस्पर समद्विभाजित करते हैं", "1 ગુણ: વિકર્ણો પરસ્પર દુભાગે છે"),
+ "1 mark: diagonals or the needed comparison": ("1 अंक: विकर्ण या आवश्यक तुलना", "1 ગુણ: વિકર્ણો અથવા જરૂરી સરખામણી"),
+ "1 mark: distance": ("1 अंक: दूरी", "1 ગુણ: અંતર"),
+ "1 mark: each point": ("1 अंक: प्रत्येक बिंदु", "1 ગુણ: દરેક બિંદુ"),
+ "1 mark: equation for $k$": ("1 अंक: $k$ के लिए समीकरण", "1 ગુણ: $k$ માટે સમીકરણ"),
+ "1 mark: first coordinate": ("1 अंक: पहला निर्देशांक", "1 ગુણ: પ્રથમ યામ"),
+ "1 mark: second coordinate": ("1 अंक: दूसरा निर्देशांक", "1 ગુણ: બીજો યામ"),
+ "1 mark: first diagonal": ("1 अंक: पहला विकर्ण", "1 ગુણ: પ્રથમ વિકર્ણ"),
+ "1 mark: second diagonal": ("1 अंक: दूसरा विकर्ण", "1 ગુણ: બીજો વિકર્ણ"),
+ "1 mark: first point": ("1 अंक: पहला बिंदु", "1 ગુણ: પ્રથમ બિંદુ"),
+ "1 mark: second point": ("1 अंक: दूसरा बिंदु", "1 ગુણ: બીજું બિંદુ"),
+ "1 mark: lengths of the sides": ("1 अंक: भुजाओं की लंबाइयाँ", "1 ગુણ: બાજુઓની લંબાઈ"),
+ "1 mark: point": ("1 अंक: बिंदु", "1 ગુણ: બિંદુ"),
+ "1 mark: position of the blue flag": ("1 अंक: नीले झंडे की स्थिति", "1 ગુણ: ભૂરી ધજાનું સ્થાન"),
+ "1 mark: ratios": ("1 अंक: अनुपात", "1 ગુણ: ગુણોત્તર"),
+ "1 mark: section formula": ("1 अंक: विभाजन सूत्र", "1 ગુણ: વિભાજન સૂત્ર"),
+ "1 mark: the three distances": ("1 अंक: तीनों दूरियाँ", "1 ગુણ: ત્રણેય અંતર"),
+ "1 mark: the three sides": ("1 अंक: तीनों भुजाएँ", "1 ગુણ: ત્રણેય બાજુઓ"),
+ "1 mark: two equal sides": ("1 अंक: दो बराबर भुजाएँ", "1 ગુણ: બે સરખી બાજુઓ"),
 }
 
 AR_OPTIONS = (
@@ -382,4 +410,5 @@ def is_math_only(text):
     """True when nothing outside $...$ needs translating (only digits, symbols, spaces)."""
     outside = re.sub(r"\$\$[\s\S]+?\$\$|\$[^$]+?\$", "", text)
     outside = re.sub(r"\b(cm|mm|km|m|kg|g)\b", "", outside)  # units read the same in all three languages
+    outside = re.sub(r"\((?:i|ii|iii|iv|v|vi|vii|viii)\)", "", outside)  # part labels like (ii)
     return not re.search(r"[A-Za-z]", outside)
