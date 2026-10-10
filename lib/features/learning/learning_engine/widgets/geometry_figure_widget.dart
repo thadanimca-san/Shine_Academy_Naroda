@@ -49,6 +49,20 @@ bool isRightAngle(Offset a, Offset vertex, Offset b) {
   return dot.abs() <= 1e-6 * u.distance * v.distance;
 }
 
+/// A circle with a named centre, a radius and the named points that lie on it.
+class GeometryCircle {
+  final String centre;
+  final double radius;
+  final List<String> through;
+  const GeometryCircle(this.centre, this.radius, this.through);
+}
+
+/// Circles are written as `{"centre": "O", "radius": 5, "through": ["A", "B"]}`.
+List<GeometryCircle> geometryCircles(Map<String, dynamic> data) => [
+      for (final c in (data['circles'] as List? ?? const []).cast<Map>())
+        GeometryCircle(c['centre'] as String, (c['radius'] as num).toDouble(), _names(c['through'])),
+    ];
+
 /// The region of the plane the figure shows. With `"axes": true` it also
 /// includes the origin and one unit of space around the points.
 Rect geometryBounds(Map<String, dynamic> data, Map<String, Offset> points) {
@@ -56,6 +70,12 @@ Rect geometryBounds(Map<String, dynamic> data, Map<String, Offset> points) {
   if (data['axes'] == true) {
     xs.add(0);
     ys.add(0);
+  }
+  for (final c in geometryCircles(data)) {
+    final centre = points[c.centre];
+    if (centre == null) continue;
+    xs.addAll([centre.dx - c.radius, centre.dx + c.radius]);
+    ys.addAll([centre.dy - c.radius, centre.dy + c.radius]);
   }
   final pad = data['axes'] == true ? 1.0 : 0.0;
   return Rect.fromLTRB(xs.reduce(math.min) - pad, ys.reduce(math.min) - pad, xs.reduce(math.max) + pad, ys.reduce(math.max) + pad);
@@ -76,6 +96,7 @@ List<String> _names(Object? list) => (list as List? ?? const []).cast<String>();
 ///    "lengths": [{"from": "A", "to": "D", "label": "1.5 cm"}]}   // optional "label_hi" / "label_gu"
 /// For coordinate geometry add `"axes": true` (x- and y-axes with a grid) and
 /// `"labels": {"A": "A(2, 3)"}` to show coordinates beside the points.
+/// Circles: `"circles": [{"centre": "O", "radius": 5, "through": ["A", "B"]}]`.
 class GeometryFigureWidget extends StatefulWidget {
   final Map<String, dynamic> data;
   const GeometryFigureWidget({super.key, required this.data});
@@ -205,6 +226,19 @@ class _FigurePainter extends CustomPainter {
     final canvasPoints = {for (final e in points.entries) e.key: toCanvas(e.value)};
     final centre = canvasPoints.values.reduce((a, b) => a + b) / canvasPoints.length.toDouble();
     if (data['axes'] == true) _drawAxes(canvas, toCanvas, minX, maxX, minY, maxY);
+
+    // Circles first, traced during the first part of the animation.
+    for (final c in geometryCircles(data)) {
+      final centre = canvasPoints[c.centre];
+      if (centre == null) continue;
+      final sweep = (progress / (_drawShare / 2)).clamp(0.0, 1.0) * 2 * math.pi;
+      if (sweep <= 0) continue;
+      canvas.drawArc(Rect.fromCircle(center: centre, radius: c.radius * scale), 0, -sweep, false,
+          Paint()
+            ..color = lineColor
+            ..strokeWidth = 2.5
+            ..style = PaintingStyle.stroke);
+    }
 
     // Segments, one after another.
     final shown = <String>{};

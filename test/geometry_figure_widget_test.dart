@@ -57,4 +57,19 @@ void main() {
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('draws a circle with a tangent', (tester) async {
+    const data = {
+      'title': 'Tangent at P',
+      'points': {'O': [0, 0], 'P': [0, 3], 'T': [4, 3]},
+      'circles': [{'centre': 'O', 'radius': 3, 'through': ['P']}],
+      'segments': [['O', 'P'], ['P', 'T']],
+      'right_angles': [['O', 'P', 'T']],
+    };
+    expect(geometryCircles(data).single.radius, 3);
+    expect(geometryBounds(data, geometryPoints(data)).left, -3);
+    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: SingleChildScrollView(child: GeometryFigureWidget(data: data)))));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
 }

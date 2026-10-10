@@ -140,6 +140,15 @@ void checkGeometry(Map<String, dynamic> block, String where, Problems problems) 
   for (final a in (block['angles'] as List? ?? const []).cast<Map>()) {
     known((a['points'] as List).cast<String>());
   }
+  for (final c in geometryCircles(block)) {
+    if (!known([c.centre, ...c.through])) continue;
+    for (final name in c.through) {
+      final distance = (points[name]! - points[c.centre]!).distance;
+      if ((distance - c.radius).abs() > 1e-6 * c.radius) {
+        problems.add(where, '$name is marked on the circle with centre ${c.centre} but is $distance from it, not ${c.radius}');
+      }
+    }
+  }
 }
 
 void checkOptions(Map<String, dynamic> item, String where, Problems problems, {bool needsFeedback = true}) {
