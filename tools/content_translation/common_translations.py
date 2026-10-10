@@ -551,6 +551,10 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 12 (magnetic effects)
+ "arrows": ("तीर", "તીર"), "circuit": ("परिपथ", "પરિપથ"), "contrast": ("तुलना", "સરખામણી"), "current direction": ("धारा की दिशा", "પ્રવાહની દિશા"), "earth": ("भूसंपर्क", "અર્થિંગ"),
+ "earth wire": ("भूसंपर्क तार", "અર્થિંગ તાર"), "inside": ("अंदर", "અંદર"), "outside": ("बाहर", "બહાર"), "live and neutral": ("विद्युन्मय और उदासीन", "જીવંત અને તટસ્થ"),
+ "result": ("परिणाम", "પરિણામ"), "shape": ("आकृति", "આકાર"), "short circuit": ("लघुपथन", "શૉર્ટ સર્કિટ"),
  # Science Ch 11 (electricity)
  "ammeter": ("ऐमीटर", "એમીટર"), "answers": ("उत्तर", "જવાબો"), "battery": ("बैटरी", "બૅટરી"), "(c) formula": ("(c) सूत्र", "(c) સૂત્ર"), "current": ("धारा", "પ્રવાહ"),
  "current per lamp": ("प्रति लैंप धारा", "દરેક લૅમ્પમાં પ્રવાહ"), "currents": ("धाराएँ", "પ્રવાહો"), "daily energy": ("दैनिक ऊर्जा", "દૈનિક ઊર્જા"), "derivation": ("व्युत्पत्ति", "તારણ"),
