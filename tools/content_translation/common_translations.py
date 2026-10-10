@@ -551,6 +551,12 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+ # Science Ch 7 (reproduction)
+ "artificial example": ("कृत्रिम उदाहरण", "કૃત્રિમ ઉદાહરણ"), "fertilisation": ("निषेचन", "ફલન"), "first advantage": ("पहला लाभ", "પહેલો ફાયદો"), "second advantage": ("दूसरा लाभ", "બીજો ફાયદો"),
+ "answer": ("उत्तर", "જવાબ"), "difference": ("अंतर", "તફાવત"), "bad": ("हानि", "ગેરફાયદો"), "good": ("लाभ", "ફાયદો"), "cause": ("कारण", "કારણ"),
+ "fruit": ("फल", "ફળ"), "seed": ("बीज", "બીજ"), "other parts": ("अन्य भाग", "બીજા ભાગો"), "method": ("विधि", "પદ્ધતિ"), "unisexual": ("एकलिंगी", "એકલિંગી"),
+ "implantation": ("स्थापन", "સ્થાપન"), "natural examples": ("प्राकृतिक उदाहरण", "કુદરતી ઉદાહરણો"), "ovaries": ("अंडाशय", "અંડપિંડો"), "oviduct and uterus": ("अंडवाहिनी और गर्भाशय", "અંડવાહિની અને ગર્ભાશય"),
+ "placenta": ("प्लेसेंटा", "જરાયુ"), "sperms": ("शुक्राणु", "શુક્રકોષો"), "testosterone": ("टेस्टोस्टेरॉन", "ટેસ્ટોસ્ટેરોન"),
  # Science Ch 6 (control and coordination)
  "brain": ("मस्तिष्क", "મગજ"), "example of effect": ("प्रभाव का उदाहरण", "અસરનું ઉદાહરણ"), "first deficiency": ("पहली कमी", "પહેલી ઊણપ"), "second deficiency": ("दूसरी कमी", "બીજી ઊણપ"),
  "function": ("कार्य", "કાર્ય"), "gonads": ("जनन ग्रंथियाँ", "જનનગ્રંથિઓ"), "location": ("स्थान", "સ્થાન"), "pancreas and adrenal": ("अग्न्याशय और अधिवृक्क", "સ્વાદુપિંડ અને એડ્રિનલ"),
@@ -616,6 +622,8 @@ def mark_label(text, lang):
         translated = label.replace(" and ", " और " if hi else " અને ")
     elif label in MARK_LABELS:
         translated = MARK_LABELS[label][0 if hi else 1]
+    elif (part := re.match(r"^(\([ivx]+\)|\([a-f]\)) (.+)$", label)) and part.group(2) in MARK_LABELS:
+        translated = f"{part.group(1)} {MARK_LABELS[part.group(2)][0 if hi else 1]}"
     else:
         return None
     return f"{n} {'अंक' if hi else 'ગુણ'}: {translated}"
