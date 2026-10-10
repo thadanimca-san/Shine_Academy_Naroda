@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.science.ncert_rationalised.ch01",
+  "title": "Chemical Reactions and Equations",
+  "book": "NCERT Science, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "science",
+  "chapter_number": 1,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: chemical equations, balanced chemical equations and their implications, and the types of chemical reactions: combination, decomposition, displacement, double displacement, precipitation, endothermic and exothermic reactions, oxidation and reduction.",
+  "concepts": [
+    "equations",
+    "reaction_types",
+    "redox"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Signs of a chemical change",
+      "blocks": [
+        {
+          "id": "sci10ch01.s1.hook",
+          "type": "hook",
+          "title": "What changed?",
+          "body": "Milk turns sour in summer. An iron nail left in damp air turns brown. Food is cooked, digested, and gives us energy when we breathe.\n\nIn each case the substance we started with is gone and something new has formed. That is a **chemical reaction**. In this chapter you will learn to recognise reactions, write them as balanced chemical equations, and sort them into types."
+        },
+        {
+          "id": "sci10ch01.s1.inspiration",
+          "type": "inspiration",
+          "title": "The father of Indian chemistry",
+          "person": "Acharya Prafulla Chandra Ray",
+          "years": "1861–1944",
+          "body": "P. C. Ray taught chemistry at Presidency College, Kolkata. In 1896 he prepared a new compound, **mercurous nitrite**, and went on to study many more.\n\nHe believed India must make its own chemicals and medicines, so in 1901 he founded **Bengal Chemicals and Pharmaceuticals**, one of India's first chemical companies. He also wrote *A History of Hindu Chemistry*, showing that Indians had practised chemistry since ancient times.",
+          "quote": "Science can wait, but Swaraj cannot.",
+          "future": "Chemists design medicines, fertilisers, cleaner fuels, batteries, paints and plastics, and they test food and water for safety."
+        },
+        {
+          "id": "sci10ch01.s1.discovery",
+          "type": "discovery",
+          "title": "Activities 1.1 to 1.3: watch for the signs",
+          "body": "- **Burn a magnesium ribbon** (with your teacher): it burns with a dazzling white flame and leaves a white powder, magnesium oxide.\n- **Add potassium iodide solution to lead nitrate solution:** a yellow solid (precipitate) appears.\n- **Add dilute acid to zinc granules:** bubbles of hydrogen gas form and the flask gets warm.\n\nSo a chemical reaction can be recognised by a **change in state, a change in colour, the evolution of a gas, or a change in temperature**."
+        },
+        {
+          "id": "sci10ch01.s1.socratic",
+          "type": "socratic_question",
+          "question": "Which of these is NOT a sign that a chemical reaction has taken place?",
+          "options": [
+            "A gas being given off",
+            "A change in colour",
+            "Ice melting into water"
+          ],
+          "correct_index": 2,
+          "explanation": "Melting is a physical change: water is still water. No new substance forms."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Chemical equations",
+      "blocks": [
+        {
+          "id": "sci10ch01.s2.reveal",
+          "type": "theory",
+          "title": "Writing a chemical equation",
+          "revision": true,
+          "body": "A reaction written in words is a **word equation**: magnesium + oxygen → magnesium oxide. Using formulas, it becomes a **chemical equation**: $\\mathrm{2Mg(s) + O_{2}(g) \\rightarrow 2MgO(s)}$\n\n- Substances on the left are **reactants**; those on the right are **products**. The arrow shows the direction of the reaction.\n- **State symbols** show the physical state: (s) solid, (l) liquid, (g) gas, (aq) solution in water.\n- Conditions such as heat are written above the arrow; Δ means heat.\n- Mass can neither be created nor destroyed, so the number of atoms of each element must be the **same on both sides**: the equation must be **balanced**."
+        },
+        {
+          "id": "sci10ch01.s2.eg1",
+          "type": "worked_example",
+          "title": "Balancing step by step",
+          "problem": "Balance the equation for iron reacting with steam: $\\mathrm{Fe + H_{2}O \\rightarrow Fe_{3}O_{4} + H_{2}}$",
+          "steps": [
+            "Start with the compound having the most atoms, $\\mathrm{Fe_{3}O_{4}}$: it has 4 oxygen atoms, so take 4 molecules of water.",
+            "Now there are 8 hydrogen atoms on the left, so take 4 molecules of hydrogen on the right.",
+            "There are 3 iron atoms on the right, so take 3 atoms of iron on the left. Check every element: Fe 3 = 3, O 4 = 4, H 8 = 8."
+          ],
+          "answer": "$\\mathrm{3Fe(s) + 4H_{2}O(g) \\rightarrow Fe_{3}O_{4}(s) + 4H_{2}(g)}$"
+        },
+        {
+          "id": "sci10ch01.s2.check",
+          "type": "knowledge_check",
+          "question": "In the balanced equation for $\\mathrm{H_{2} + Cl_{2} \\rightarrow 2HCl}$, how many molecules of hydrogen chloride form?",
+          "options": [
+            "$3$",
+            "$2$",
+            "$1$",
+            "$4$"
+          ],
+          "correct_index": 1,
+          "explanation": "One molecule each of hydrogen and chlorine gives two molecules of hydrogen chloride: 2 H and 2 Cl on each side.",
+          "option_feedback": [
+            "Count the atoms: 2 H and 2 Cl.",
+            "Correct! 2 H and 2 Cl on each side.",
+            "One molecule of HCl has only one H and one Cl.",
+            "That would need two molecules of each gas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Types of chemical reactions",
+      "blocks": [
+        {
+          "id": "sci10ch01.s3.combination",
+          "type": "theory",
+          "title": "Combination reaction",
+          "revision": true,
+          "body": "Two or more substances combine to form a single product.\n\n- Quicklime and water (Activity 1.4): $\\mathrm{CaO(s) + H_{2}O(l) \\rightarrow Ca(OH)_{2}(aq)}$ A lot of heat is given out.\n- Burning coal: $\\mathrm{C(s) + O_{2}(g) \\rightarrow CO_{2}(g)}$\n- Forming water: $\\mathrm{2H_{2}(g) + O_{2}(g) \\rightarrow 2H_{2}O(l)}$\n\nReactions that give out heat are **exothermic**. Burning natural gas, respiration and the decomposition of vegetable matter into compost are exothermic.\n\nThe slaked lime used for whitewashing reacts slowly with carbon dioxide in air to form a thin shiny layer of calcium carbonate: $\\mathrm{Ca(OH)_{2}(aq) + CO_{2}(g) \\rightarrow CaCO_{3}(s) + H_{2}O(l)}$"
+        },
+        {
+          "id": "sci10ch01.s3.decomposition",
+          "type": "theory",
+          "title": "Decomposition reaction",
+          "revision": true,
+          "body": "A single substance breaks down into two or more simpler substances. It needs energy, so decomposition reactions are usually **endothermic**.\n\n- By **heat** (thermal decomposition): $\\mathrm{2FeSO_{4}(s) \\xrightarrow{\\Delta} Fe_{2}O_{3}(s) + SO_{2}(g) + SO_{3}(g)}$ (green crystals turn brown); $\\mathrm{CaCO_{3}(s) \\xrightarrow{\\Delta} CaO(s) + CO_{2}(g)}$; $\\mathrm{2Pb(NO_{3})_{2}(s) \\xrightarrow{\\Delta} 2PbO(s) + 4NO_{2}(g) + O_{2}(g)}$ (brown fumes of nitrogen dioxide).\n- By **electricity** (electrolysis of water): $\\mathrm{2H_{2}O(l) \\rightarrow 2H_{2}(g) + O_{2}(g)}$ The volume of hydrogen is double that of oxygen.\n- By **light** (in sunlight): $\\mathrm{2AgCl(s) \\rightarrow 2Ag(s) + Cl_{2}(g)}$ White silver chloride turns grey. Silver bromide behaves the same way, which is used in black and white photography."
+        },
+        {
+          "id": "sci10ch01.s3.displacement",
+          "type": "theory",
+          "title": "Displacement reaction",
+          "revision": true,
+          "body": "A more reactive element displaces a less reactive element from its compound.\n\n- An iron nail in copper sulphate solution (Activity 1.9): $\\mathrm{Fe(s) + CuSO_{4}(aq) \\rightarrow FeSO_{4}(aq) + Cu(s)}$ The nail gets a brownish coating of copper and the blue colour fades as pale green iron sulphate forms.\n- $\\mathrm{Zn(s) + CuSO_{4}(aq) \\rightarrow ZnSO_{4}(aq) + Cu(s)}$\n- $\\mathrm{Pb(s) + CuCl_{2}(aq) \\rightarrow PbCl_{2}(aq) + Cu(s)}$\n\nZinc, lead and iron are more reactive than copper."
+        },
+        {
+          "id": "sci10ch01.s3.double",
+          "type": "theory",
+          "title": "Double displacement reaction",
+          "revision": true,
+          "body": "Two compounds exchange their ions. Mixing sodium sulphate and barium chloride solutions (Activity 1.10): $\\mathrm{Na_{2}SO_{4}(aq) + BaCl_{2}(aq) \\rightarrow BaSO_{4}(s) + 2NaCl(aq)}$\n\nThe white insoluble barium sulphate is a **precipitate**, so this is also a **precipitation reaction**. Another example: $\\mathrm{Pb(NO_{3})_{2}(aq) + 2KI(aq) \\rightarrow PbI_{2}(s) + 2KNO_{3}(aq)}$ gives yellow lead iodide."
+        },
+        {
+          "id": "sci10ch01.s3.redox",
+          "type": "theory",
+          "title": "Oxidation and reduction",
+          "revision": true,
+          "body": "- **Oxidation:** gain of oxygen or loss of hydrogen.\n- **Reduction:** loss of oxygen or gain of hydrogen.\n\nHeating copper powder (Activity 1.11): $\\mathrm{2Cu + O_{2} \\xrightarrow{\\Delta} 2CuO}$ The brown surface turns black. Passing hydrogen over the hot black copper oxide reverses it: $\\mathrm{CuO + H_{2} \\xrightarrow{\\Delta} Cu + H_{2}O}$\n\nIn the second reaction copper oxide loses oxygen (it is **reduced**) and hydrogen gains oxygen (it is **oxidised**). One substance is oxidised while another is reduced, so these are **redox** reactions. More examples: $\\mathrm{ZnO + C \\rightarrow Zn + CO}$ and $\\mathrm{MnO_{2} + 4HCl \\rightarrow MnCl_{2} + 2H_{2}O + Cl_{2}}$"
+        },
+        {
+          "id": "sci10ch01.s3.table",
+          "type": "markdown_table",
+          "title": "The types at a glance",
+          "revision": true,
+          "body": "| Type | What happens | Example |\n|---|---|---|\n| Combination | Two or more substances form one product | $\\mathrm{CaO(s) + H_{2}O(l) \\rightarrow Ca(OH)_{2}(aq)}$ |\n| Decomposition | One substance breaks into two or more | $\\mathrm{CaCO_{3}(s) \\xrightarrow{\\Delta} CaO(s) + CO_{2}(g)}$ |\n| Displacement | A more reactive element pushes out a less reactive one | $\\mathrm{Fe(s) + CuSO_{4}(aq) \\rightarrow FeSO_{4}(aq) + Cu(s)}$ |\n| Double displacement | Two compounds exchange ions | $\\mathrm{Na_{2}SO_{4}(aq) + BaCl_{2}(aq) \\rightarrow BaSO_{4}(s) + 2NaCl(aq)}$ |\n| Redox | One substance is oxidised while another is reduced | $\\mathrm{CuO + H_{2} \\xrightarrow{\\Delta} Cu + H_{2}O}$ |"
+        },
+        {
+          "id": "sci10ch01.s3.check1",
+          "type": "knowledge_check",
+          "question": "The reaction $\\mathrm{CaCO_{3}(s) \\xrightarrow{\\Delta} CaO(s) + CO_{2}(g)}$ is a:",
+          "options": [
+            "combination reaction",
+            "displacement reaction",
+            "double displacement reaction",
+            "decomposition reaction"
+          ],
+          "correct_index": 3,
+          "explanation": "One substance, calcium carbonate, breaks down into two.",
+          "option_feedback": [
+            "Here one substance breaks up; it does not combine.",
+            "No element takes another's place.",
+            "There is only one reactant.",
+            "Correct!"
+          ]
+        },
+        {
+          "id": "sci10ch01.s3.check2",
+          "type": "knowledge_check",
+          "question": "In $\\mathrm{CuO + H_{2} \\xrightarrow{\\Delta} Cu + H_{2}O}$, the substance that is reduced is:",
+          "options": [
+            "$\\mathrm{Cu}$",
+            "$\\mathrm{H_{2}O}$",
+            "$\\mathrm{CuO}$",
+            "$\\mathrm{H_{2}}$"
+          ],
+          "correct_index": 2,
+          "explanation": "Copper oxide loses oxygen, so it is reduced; hydrogen gains oxygen and is oxidised.",
+          "option_feedback": [
+            "Copper is a product.",
+            "Water is a product.",
+            "Correct! It loses oxygen.",
+            "Hydrogen gains oxygen: it is oxidised."
+          ]
+        },
+        {
+          "id": "sci10ch01.s3.memory",
+          "type": "memory_trick",
+          "title": "Sort it by counting",
+          "revision": true,
+          "body": "- **1 product** from many → combination.\n- **1 reactant** into many → decomposition.\n- **Element + compound** → element + compound: displacement.\n- **Compound + compound** swapping partners → double displacement.\n- **Oxygen in = oxidation; oxygen out = reduction** (and the opposite for hydrogen)."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Oxidation in everyday life",
+      "blocks": [
+        {
+          "id": "sci10ch01.s4.corrosion",
+          "type": "theory",
+          "title": "Corrosion and rancidity",
+          "revision": true,
+          "body": "- **Corrosion:** a metal is slowly attacked by moisture, air or acids around it. Iron gets a reddish-brown coating of **rust**, silver turns black, copper gets a green coating. Corrosion damages car bodies, bridges, iron railings and ships; painting, oiling and galvanising prevent it.\n- **Rancidity:** fats and oils in food get oxidised and their smell and taste change. Antioxidants are added, and bags of chips are flushed with **nitrogen**, an unreactive gas, to slow this oxidation."
+        },
+        {
+          "id": "sci10ch01.s4.check",
+          "type": "knowledge_check",
+          "question": "Why are bags of potato chips filled with nitrogen?",
+          "options": [
+            "To make the chips crisper by heating",
+            "To add flavour",
+            "To make the bag heavier",
+            "To prevent the oil in them from getting oxidised"
+          ],
+          "correct_index": 3,
+          "explanation": "Nitrogen keeps out oxygen, so the oils do not become rancid.",
+          "option_feedback": [
+            "Nitrogen is not used for heating.",
+            "Nitrogen has no taste.",
+            "The purpose is to keep oxygen out.",
+            "Correct!"
+          ]
+        },
+        {
+          "id": "sci10ch01.s4.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Changing the small numbers inside a formula to balance an equation: change only the coefficients in front.\n- Forgetting state symbols when the question asks for them.\n- Calling a reaction 'oxidation' when a substance is reduced at the same time: name both, it is redox.\n- Mixing up displacement (element + compound) and double displacement (compound + compound).\n- Writing 'lead is reduced' when it is lead oxide that loses oxygen."
+        },
+        {
+          "id": "sci10ch01.s4.tip",
+          "type": "teacher_tip",
+          "title": "Make the signs visible",
+          "body": "Do Activities 1.2, 1.9 and 1.10 as a quick demonstration with very small amounts. Ask students to write only what they see (colour, gas, heat, solid) before naming the reaction. Then let pairs balance the equation on mini whiteboards and check each other's atom counts."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "sci10ch01.s5.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why we must balance a chemical equation, and why decomposition reactions usually need energy while combination reactions often give it out."
+        },
+        {
+          "id": "sci10ch01.s5.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 2, Acids, Bases and Salts:** neutralisation is a double displacement reaction.\n- **Chapter 3, Metals and Non-metals:** the reactivity series explains displacement reactions and corrosion.\n- **Chapter 5, Life Processes:** respiration is an exothermic reaction inside every cell."
+        },
+        {
+          "id": "sci10ch01.s5.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "A student heats green crystals of a salt in a dry boiling tube. The crystals turn white and then brown, and a gas with the smell of burning sulphur is given off.\n\n**Answer:** The salt is ferrous sulphate. It first loses its water of crystallisation and then decomposes: $\\mathrm{2FeSO_{4}(s) \\xrightarrow{\\Delta} Fe_{2}O_{3}(s) + SO_{2}(g) + SO_{3}(g)}$ The brown solid is ferric oxide and the gases are sulphur dioxide and sulphur trioxide. It is a thermal decomposition, and it is endothermic."
+        },
+        {
+          "id": "sci10ch01.s5.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- A complete chemical equation shows the reactants, the products and their states, and it must be balanced.\n- Combination: one product. Decomposition: one reactant. Displacement: a more reactive element takes the place of a less reactive one. Double displacement: ions are exchanged.\n- Precipitation reactions give insoluble salts.\n- Exothermic reactions give out heat; endothermic reactions absorb energy.\n- Oxidation is the gain of oxygen or loss of hydrogen; reduction is the loss of oxygen or gain of hydrogen.\n- Corrosion and rancidity are effects of oxidation in daily life."
+        },
+        {
+          "id": "sci10ch01.s5.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Always write balanced equations, with state symbols when asked; an unbalanced equation loses marks.\n- When asked 'identify the type', give every type that applies (for example: double displacement and precipitation).\n- Learn the colour changes: green ferrous sulphate to brown, white silver chloride to grey, blue copper sulphate to pale green, yellow lead iodide.\n- For redox, name the substance oxidised and the substance reduced."
+        },
+        {
+          "id": "sci10ch01.s5.flash1",
+          "type": "flashcard",
+          "front": "Oxidation and reduction (in terms of oxygen)",
+          "back": "Oxidation: gain of oxygen. Reduction: loss of oxygen."
+        },
+        {
+          "id": "sci10ch01.s5.flash2",
+          "type": "flashcard",
+          "front": "What is a precipitation reaction?",
+          "back": "A reaction that produces an insoluble substance (a precipitate)."
+        },
+        {
+          "id": "sci10ch01.s5.flash3",
+          "type": "flashcard",
+          "front": "Name the gas used to flush bags of chips",
+          "back": "Nitrogen"
+        }
+      ]
+    }
+  ]
+}

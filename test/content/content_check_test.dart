@@ -29,7 +29,7 @@ const marksByQuestionType = {
   'case_based': 4,
 };
 const objectiveTypes = {'mcq', 'assertion_reason', 'true_false'};
-const sourceKinds = {'ncert_exercise', 'ncert_example', 'ncert_theorem', 'pyq', 'sample_paper', 'shine'};
+const sourceKinds = {'ncert_exercise', 'ncert_intext', 'ncert_example', 'ncert_theorem', 'pyq', 'sample_paper', 'shine'};
 
 /// Block types that ask a question with options and must carry a valid answer.
 const optionBlockTypes = {'mcq', 'quiz', 'knowledge_check', 'socratic_question', 'true_false'};
