@@ -11,6 +11,7 @@ import '../../features/learning/learning_engine/widgets/example_widget.dart';
 import '../../features/learning/learning_engine/widgets/media_widget.dart';
 import '../../features/learning/learning_engine/widgets/activity_widget.dart';
 import '../../features/learning/learning_engine/widgets/quiz_widget.dart';
+import '../../features/learning/learning_engine/widgets/game_quiz_card.dart';
 import '../../features/learning/learning_engine/widgets/nursery_rhyme_widget.dart';
 import '../../features/learning/learning_engine/widgets/trace_alphabet_widget.dart';
 import '../../features/learning/learning_engine/widgets/counting_game_widget.dart';
@@ -98,7 +99,9 @@ void registerDefaultBlocks() {
       BlockDefinition(
         type: type,
         validator: (block) {}, // Soft: QuizWidget handles missing fields with fallbacks
-        builder: (block) => QuizWidget(data: block),
+        // Questions with plain options are played as a game with per-option
+        // explanations; older formats keep the classic quiz widget.
+        builder: (block) => GameQuizBlock.canHandle(block) ? GameQuizBlock(block: block) : QuizWidget(data: block),
       ),
     );
   }

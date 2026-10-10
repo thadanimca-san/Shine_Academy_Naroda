@@ -101,6 +101,18 @@ class GamificationService {
     return await addXp(50);
   }
 
+  /// XP for a correct quiz answer: full on the first try, less after a retry.
+  static int quizAnswerXp({required int attempt}) => attempt == 1 ? 50 : 20;
+
+  /// Extra XP per question while a student keeps a run of correct answers.
+  static const int answerStreakBonusXp = 10;
+  static const int answerStreakBonusFrom = 3;
+
+  Future<bool> addQuizAnswerXp({required int attempt, int answerStreak = 0}) {
+    final bonus = answerStreak >= answerStreakBonusFrom ? answerStreakBonusXp : 0;
+    return addXp(quizAnswerXp(attempt: attempt) + bonus);
+  }
+
   /// 10 XP for viewing/reading a block (not yet triggered automatically to avoid spam)
   Future<bool> addBlockReadXp() async {
     return await addXp(10);

@@ -93,7 +93,13 @@
             "$4 \\times 3 \\times 13$"
           ],
           "correct_index": 1,
-          "explanation": "$156 = 2 \\times 78 = 2 \\times 2 \\times 39 = 2 \\times 2 \\times 3 \\times 13 = 2^{2} \\times 3 \\times 13$. The other options still contain composite factors (78, 4, 39)."
+          "explanation": "$156 = 2 \\times 78 = 2 \\times 2 \\times 39 = 2 \\times 2 \\times 3 \\times 13 = 2^{2} \\times 3 \\times 13$. The other options still contain composite factors (78, 4, 39).",
+          "option_feedback": [
+            "39 is not prime ($39 = 3 \\times 13$). Keep breaking it down.",
+            "Correct! $156 = 2 \\times 2 \\times 3 \\times 13$, all primes.",
+            "78 is not prime ($78 = 2 \\times 3 \\times 13$). Keep breaking it down.",
+            "4 is not prime. Write it as $2^{2}$."
+          ]
         },
         {
           "id": "ch01.s2.tip",
@@ -180,7 +186,13 @@
             "$36$"
           ],
           "correct_index": 3,
-          "explanation": "Common primes are 2 and 3. Smallest powers: $2^{2}$ and $3^{2}$. HCF $= 4 \\times 9 = 36$."
+          "explanation": "Common primes are 2 and 3. Smallest powers: $2^{2}$ and $3^{2}$. HCF $= 4 \\times 9 = 36$.",
+          "option_feedback": [
+            "That is the LCM (greatest powers of all primes). For the HCF, take the smallest powers of the common primes only.",
+            "$6 = 2 \\times 3$ uses the primes correctly, but with power 1. Both numbers have at least $2^{2}$ and $3^{2}$, so use those powers.",
+            "$180 = 2^{2} \\times 3^{2} \\times 5$. But 5 is not a factor of the second number, so it cannot be in the HCF. Use only common primes.",
+            "Correct! The common primes are 2 and 3. Take the smallest powers: $2^{2} \\times 3^{2} = 36$."
+          ]
         },
         {
           "id": "ch01.s3.check2",
@@ -193,7 +205,13 @@
             "$252$"
           ],
           "correct_index": 2,
-          "explanation": "For two numbers, product $= \\text{HCF} \\times \\text{LCM} = 12 \\times 240 = 2880$ (for example 48 and 60)."
+          "explanation": "For two numbers, product $= \\text{HCF} \\times \\text{LCM} = 12 \\times 240 = 2880$ (for example 48 and 60).",
+          "option_feedback": [
+            "You divided LCM by HCF. The product of the numbers is HCF $\\times$ LCM.",
+            "You subtracted. The rule is product $= \\text{HCF} \\times \\text{LCM}$.",
+            "Correct! $12 \\times 240 = 2880$. For example, 48 and 60 have HCF 12 and LCM 240, and $48 \\times 60 = 2880$.",
+            "You added HCF and LCM. The rule multiplies them: $12 \\times 240$."
+          ]
         },
         {
           "id": "ch01.s3.mistakes",
@@ -301,7 +319,13 @@
             "$\\sqrt{49}$"
           ],
           "correct_index": 2,
-          "explanation": "$\\sqrt{49} = 7$, $\\sqrt{36/25} = 6/5$ and $0.\\overline{3} = 1/3$ are rational. $\\sqrt{12} = 2\\sqrt{3}$, a non-zero rational times an irrational, so it is irrational."
+          "explanation": "$\\sqrt{49} = 7$, $\\sqrt{36/25} = 6/5$ and $0.\\overline{3} = 1/3$ are rational. $\\sqrt{12} = 2\\sqrt{3}$, a non-zero rational times an irrational, so it is irrational.",
+          "option_feedback": [
+            "$\\sqrt{\\dfrac{36}{25}} = \\dfrac{6}{5}$, which is a fraction of integers, so it is rational.",
+            "$0.333\\ldots = \\dfrac{1}{3}$. A repeating decimal is always rational.",
+            "Correct! $\\sqrt{12} = 2\\sqrt{3}$: a non-zero rational times an irrational, so it is irrational.",
+            "$\\sqrt{49} = 7$, a whole number, so it is rational."
+          ]
         },
         {
           "id": "ch01.s4.check2",
@@ -314,7 +338,13 @@
             "zero"
           ],
           "correct_index": 1,
-          "explanation": "$(3 + \\sqrt{5})(3 - \\sqrt{5}) = 3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$, which is rational. The product of two irrationals can be rational!"
+          "explanation": "$(3 + \\sqrt{5})(3 - \\sqrt{5}) = 3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$, which is rational. The product of two irrationals can be rational!",
+          "option_feedback": [
+            "Both factors are real, so their product is real.",
+            "Correct! $3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$.",
+            "Use $(a + b)(a - b) = a^{2} - b^{2}$: you get $9 - 5 = 4$.",
+            "Neither factor is 0. The product is $9 - 5 = 4$."
+          ]
         }
       ]
     },

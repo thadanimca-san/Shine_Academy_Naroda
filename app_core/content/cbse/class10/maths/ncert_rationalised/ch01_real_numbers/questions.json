@@ -706,7 +706,13 @@
         "$6$"
       ],
       "correct_index": 1,
-      "explanation": "Smallest powers of the common primes: $2^{2} \\times 3^{2} = 36$."
+      "explanation": "Smallest powers of the common primes: $2^{2} \\times 3^{2} = 36$.",
+      "option_feedback": [
+        "$180 = 2^{2} \\times 3^{2} \\times 5$. But 5 is not a factor of the second number, so it cannot be in the HCF. Use only common primes.",
+        "Correct! The common primes are 2 and 3. Take the smallest powers: $2^{2} \\times 3^{2} = 36$.",
+        "That is the LCM (greatest powers of all primes). For the HCF, take the smallest powers of the common primes only.",
+        "$6 = 2 \\times 3$ uses the primes correctly, but with power 1. Both numbers have at least $2^{2}$ and $3^{2}$, so use those powers."
+      ]
     },
     {
       "id": "ch01.q.mcq02",
@@ -729,7 +735,13 @@
         "$3780$"
       ],
       "correct_index": 0,
-      "explanation": "Greatest powers of all primes: $2^{3} \\times 3^{3} \\times 5 \\times 7 = 7560$."
+      "explanation": "Greatest powers of all primes: $2^{3} \\times 3^{3} \\times 5 \\times 7 = 7560$.",
+      "option_feedback": [
+        "Correct! LCM takes every prime with its greatest power: $2^{3} \\times 3^{3} \\times 5 \\times 7 = 7560$.",
+        "That is the HCF. For the LCM, take all primes (2, 3, 5, 7) with their greatest powers.",
+        "$1260 = 2^{2} \\times 3^{2} \\times 5 \\times 7$. You took the smallest powers of 2 and 3; the LCM needs the greatest: $2^{3}$ and $3^{3}$.",
+        "$3780 = 2^{2} \\times 3^{3} \\times 5 \\times 7$. Check the power of 2: the first number has $2^{3}$, so the LCM needs $2^{3}$."
+      ]
     },
     {
       "id": "ch01.q.mcq03",
@@ -752,7 +764,13 @@
         "$2880$"
       ],
       "correct_index": 3,
-      "explanation": "Product $= 12 \\times 240 = 2880$."
+      "explanation": "Product $= 12 \\times 240 = 2880$.",
+      "option_feedback": [
+        "You added HCF and LCM ($12 + 240$). The rule multiplies them: $12 \\times 240$.",
+        "You divided LCM by HCF ($240 \\div 12$). The product of the numbers is HCF $\\times$ LCM.",
+        "You subtracted ($240 - 12$). The rule is product $= \\text{HCF} \\times \\text{LCM}$.",
+        "Correct! For two numbers, product $= \\text{HCF} \\times \\text{LCM} = 12 \\times 240 = 2880$."
+      ]
     },
     {
       "id": "ch01.q.mcq04",
@@ -774,7 +792,13 @@
         "$\\sqrt{49}$"
       ],
       "correct_index": 2,
-      "explanation": "$\\sqrt{12} = 2\\sqrt{3}$ is irrational; the others are rational."
+      "explanation": "$\\sqrt{12} = 2\\sqrt{3}$ is irrational; the others are rational.",
+      "option_feedback": [
+        "$\\sqrt{\\dfrac{36}{25}} = \\dfrac{6}{5}$, which is a fraction of integers, so it is rational.",
+        "$0.333\\ldots = \\dfrac{1}{3}$. A repeating decimal is always rational.",
+        "Correct! $\\sqrt{12} = 2\\sqrt{3}$: a non-zero rational times an irrational, so it is irrational.",
+        "$\\sqrt{49} = 7$, a whole number, so it is rational."
+      ]
     },
     {
       "id": "ch01.q.mcq05",
@@ -796,7 +820,13 @@
         "$2^{2} \\times 39$"
       ],
       "correct_index": 1,
-      "explanation": "Only $2^{2} \\times 3 \\times 13$ contains primes alone."
+      "explanation": "Only $2^{2} \\times 3 \\times 13$ contains primes alone.",
+      "option_feedback": [
+        "The value is right, but 4 is not prime. Break it: $4 = 2^{2}$.",
+        "Correct! Every factor here is prime: $156 = 2 \\times 2 \\times 3 \\times 13$.",
+        "26 is not prime ($26 = 2 \\times 13$). Keep breaking until only primes are left.",
+        "39 is not prime ($39 = 3 \\times 13$). A prime factorisation must contain primes only."
+      ]
     },
     {
       "id": "ch01.q.mcq06",
@@ -818,7 +848,13 @@
         "$p$ does not divide $a$"
       ],
       "correct_index": 0,
-      "explanation": "This is Theorem 1.2."
+      "explanation": "This is Theorem 1.2.",
+      "option_feedback": [
+        "Correct! This is Theorem 1.2. For example, 3 divides $36 = 6^{2}$, and 3 divides 6.",
+        "Try $p = 3, a = 6$: 3 divides 36, but 6 does not divide 3. The theorem says $p$ divides $a$.",
+        "Try $p = 2, a = 2$: 2 divides 4, but 4 does not divide 2. The theorem only says $p$ divides $a$.",
+        "If $p$ divides $a^{2}$, then $p$ is one of the prime factors of $a$, so it must divide $a$."
+      ]
     },
     {
       "id": "ch01.q.mcq07",
@@ -840,7 +876,13 @@
         "$4$"
       ],
       "correct_index": 3,
-      "explanation": "$144 = 2^{4} \\times 3^{2}$."
+      "explanation": "$144 = 2^{4} \\times 3^{2}$.",
+      "option_feedback": [
+        "2 is the exponent of 3 here ($3^{2}$). Divide 144 by 2 repeatedly: 72, 36, 18, 9. That is four times.",
+        "Count again: $144 \\div 2 = 72$, $\\div 2 = 36$, $\\div 2 = 18$, $\\div 2 = 9$. Four divisions, so $2^{4}$.",
+        "$2^{5} = 32$ does not divide 144. Only $2^{4} = 16$ does: $144 = 16 \\times 9$.",
+        "Correct! $144 = 2^{4} \\times 3^{2}$, so the exponent (power) of 2 is 4."
+      ]
     },
     {
       "id": "ch01.q.mcq08",
@@ -862,7 +904,13 @@
         "$10$"
       ],
       "correct_index": 2,
-      "explanation": "Smallest two-digit composite is 10, smallest composite is 4; $\\text{LCM}(10, 4) = 20$."
+      "explanation": "Smallest two-digit composite is 10, smallest composite is 4; $\\text{LCM}(10, 4) = 20$.",
+      "option_feedback": [
+        "$40 = 10 \\times 4$ is the product. Since 10 and 4 share the factor 2, the LCM is smaller: 20.",
+        "4 is the smallest composite number, not the LCM. The LCM must be a multiple of both 10 and 4.",
+        "Correct! The smallest two-digit composite number is 10, the smallest composite is 4. $\\text{LCM}(10, 4) = 2^{2} \\times 5 = 20$.",
+        "10 is not a multiple of 4. The LCM must be divisible by both numbers: 20."
+      ]
     },
     {
       "id": "ch01.q.mcq09",
@@ -884,7 +932,13 @@
         "$1$"
       ],
       "correct_index": 1,
-      "explanation": "$\\text{HCF}(2, 4) = 2$."
+      "explanation": "$\\text{HCF}(2, 4) = 2$.",
+      "option_feedback": [
+        "8 is the product $2 \\times 4$. The HCF cannot be larger than either number.",
+        "Correct! The smallest prime is 2 and the smallest composite is 4. $\\text{HCF}(2, 4) = 2$.",
+        "4 does not divide 2, so it cannot be a common factor.",
+        "Remember: the smallest prime is 2 (1 is not prime). 2 divides both 2 and 4, so the HCF is 2."
+      ]
     },
     {
       "id": "ch01.q.mcq10",
@@ -907,7 +961,13 @@
         "$ab$"
       ],
       "correct_index": 1,
-      "explanation": "Smallest powers: $a^{2}$ and $b^{1}$."
+      "explanation": "Smallest powers: $a^{2}$ and $b^{1}$.",
+      "option_feedback": [
+        "$b^{2}$ does not divide $q = a^{3}b$. Take the smallest power of $b$, which is $b^{1}$.",
+        "Correct! The smallest power of $a$ is $a^{2}$ and of $b$ is $b^{1}$.",
+        "That is the LCM (greatest powers). The HCF takes the smallest powers.",
+        "$a^{2}$ divides both $p$ and $q$, so the HCF has $a^{2}$, not just $a$."
+      ]
     },
     {
       "id": "ch01.q.mcq11",
@@ -930,7 +990,13 @@
         "$ab$"
       ],
       "correct_index": 0,
-      "explanation": "Greatest powers: $a^{3}$ and $b^{3}$."
+      "explanation": "Greatest powers: $a^{3}$ and $b^{3}$.",
+      "option_feedback": [
+        "Correct! The greatest powers are $a^{3}$ and $b^{3}$.",
+        "That is the HCF. The LCM takes the greatest power of each prime.",
+        "That is $p \\times q$. Since $p$ and $q$ share factors, the LCM is smaller than the product.",
+        "The LCM must be a multiple of both numbers, so it cannot be smaller than either of them."
+      ]
     },
     {
       "id": "ch01.q.mcq12",
@@ -943,16 +1009,22 @@
       "source": {
         "kind": "shine"
       },
-      "question": "For any natural number $n$, $6^{n}$ cannot end with the digit:",
+      "question": "$6^{n}$ can never end with the digit 0, for any natural number $n$, because the prime factorisation of $6^{n}$ does not contain the prime:",
       "status": "reviewed",
       "options": [
-        "$6$",
+        "$3$",
+        "$5$",
         "$2$",
-        "$4$",
-        "$0$"
+        "$7$"
       ],
-      "correct_index": 3,
-      "explanation": "$6^{n}$ has no factor 5, so it cannot end with 0. (In fact $6^{n}$ always ends with 6.)"
+      "correct_index": 1,
+      "explanation": "A number ending in 0 is divisible by 10 = 2 × 5. $6^{n} = 2^{n} \\times 3^{n}$ has no factor 5.",
+      "option_feedback": [
+        "3 is in the factorisation: $6^{n} = 2^{n} \\times 3^{n}$. Which prime of 10 = 2 × 5 is missing?",
+        "Correct! To end in 0 a number must be divisible by 10 = 2 × 5. $6^{n} = 2^{n} \\times 3^{n}$ never contains 5.",
+        "2 is in the factorisation of $6^{n}$. The missing prime needed for a final 0 is 5.",
+        "7 is also absent, but it has nothing to do with ending in 0. Ending in 0 needs the primes of 10: 2 and 5."
+      ]
     },
     {
       "id": "ch01.q.mcq13",
@@ -974,7 +1046,13 @@
         "always rational"
       ],
       "correct_index": 2,
-      "explanation": "If $q \\neq 0$ is rational and $s$ is irrational, $qs$ is irrational."
+      "explanation": "If $q \\neq 0$ is rational and $s$ is irrational, $qs$ is irrational.",
+      "option_feedback": [
+        "It can never be rational when the rational number is non-zero. Try dividing back to get a contradiction.",
+        "There is no reason the product should be 1. For example, $2 \\times \\sqrt{3} = 2\\sqrt{3}$.",
+        "Correct! If $q \\neq 0$ is rational and $qs$ were rational, then $s = \\dfrac{qs}{q}$ would be rational too.",
+        "Take $2 \\times \\sqrt{3} = 2\\sqrt{3}$: it is irrational."
+      ]
     },
     {
       "id": "ch01.q.mcq14",
@@ -996,7 +1074,13 @@
         "equal to $0$"
       ],
       "correct_index": 1,
-      "explanation": "$9 - 5 = 4$, rational."
+      "explanation": "$9 - 5 = 4$, rational.",
+      "option_feedback": [
+        "Both factors are real numbers, and real numbers multiply to give a real number.",
+        "Correct! $(a + b)(a - b) = a^{2} - b^{2}$, so the product is $9 - 5 = 4$.",
+        "Multiply it out: $3^{2} - (\\sqrt{5})^{2} = 9 - 5 = 4$. The square roots cancel!",
+        "It would be 0 only if one factor were 0. The product is $9 - 5 = 4$."
+      ]
     },
     {
       "id": "ch01.q.mcq15",
@@ -1018,7 +1102,13 @@
         "their product"
       ],
       "correct_index": 0,
-      "explanation": "Any common factor would divide their difference, 1."
+      "explanation": "Any common factor would divide their difference, 1.",
+      "option_feedback": [
+        "Correct! A common factor of $n$ and $n + 1$ would divide their difference, 1. So the HCF is 1.",
+        "0 is never a factor of a natural number. Every pair has at least the common factor 1.",
+        "Try 5 and 6: 5 does not divide 6. Consecutive numbers have no common factor except 1.",
+        "The product is a multiple, not a factor. That idea belongs to the LCM."
+      ]
     },
     {
       "id": "ch01.q.ar1",
@@ -1040,7 +1130,13 @@
         "Assertion (A) is false but Reason (R) is true."
       ],
       "correct_index": 0,
-      "explanation": "$12^{n} = 2^{2n} \\times 3^{n}$ has no factor 5, which is exactly why it cannot end in 0."
+      "explanation": "$12^{n} = 2^{2n} \\times 3^{n}$ has no factor 5, which is exactly why it cannot end in 0.",
+      "option_feedback": [
+        "Correct! A is true: $12^{n} = 2^{2n} \\times 3^{n}$ has no factor 5, so it cannot end in 0. R is true: the factorisation of $12^{n}$ has only 2 and 3.",
+        "R does explain A: the factorisation of $12^{n}$ has only 2 and 3.",
+        "Check the Reason again: it is true, because the factorisation of $12^{n}$ has only 2 and 3.",
+        "Check the Assertion again: it is true, because $12^{n} = 2^{2n} \\times 3^{n}$ has no factor 5, so it cannot end in 0."
+      ]
     },
     {
       "id": "ch01.q.ar2",
@@ -1063,7 +1159,13 @@
         "Assertion (A) is false but Reason (R) is true."
       ],
       "correct_index": 0,
-      "explanation": "LCM $= 1215 \\div 9 = 135$ (for example 9 and 135), using the reason."
+      "explanation": "LCM $= 1215 \\div 9 = 135$ (for example 9 and 135), using the reason.",
+      "option_feedback": [
+        "Correct! A is true: LCM $= 1215 \\div 9 = 135$. R is true: this is the HCF × LCM rule for two numbers, which is exactly how A is worked out.",
+        "R does explain A: this is the HCF × LCM rule for two numbers, which is exactly how A is worked out.",
+        "Check the Reason again: it is true, because this is the HCF × LCM rule for two numbers, which is exactly how A is worked out.",
+        "Check the Assertion again: it is true, because LCM $= 1215 \\div 9 = 135$."
+      ]
     },
     {
       "id": "ch01.q.ar3",
@@ -1085,7 +1187,13 @@
         "Assertion (A) is false but Reason (R) is true."
       ],
       "correct_index": 0,
-      "explanation": "5 is rational and $\\sqrt{3}$ is irrational."
+      "explanation": "5 is rational and $\\sqrt{3}$ is irrational.",
+      "option_feedback": [
+        "Correct! A is true: 5 is rational and $\\sqrt{3}$ is irrational. R is true: rational minus irrational is irrational, which is exactly why A is true.",
+        "R does explain A: rational minus irrational is irrational, which is exactly why A is true.",
+        "Check the Reason again: it is true, because rational minus irrational is irrational, which is exactly why A is true.",
+        "Check the Assertion again: it is true, because 5 is rational and $\\sqrt{3}$ is irrational."
+      ]
     },
     {
       "id": "ch01.q.ar4",
@@ -1108,7 +1216,13 @@
         "Assertion (A) is false but Reason (R) is true."
       ],
       "correct_index": 2,
-      "explanation": "A is true. R is false: for 6, 72, 120, HCF $\\times$ LCM $= 6 \\times 360 = 2160$ but the product is 51840."
+      "explanation": "A is true. R is false: for 6, 72, 120, HCF $\\times$ LCM $= 6 \\times 360 = 2160$ but the product is 51840.",
+      "option_feedback": [
+        "Check the Reason again: it is false, because the product rule works only for two numbers: for 6, 72, 120, HCF × LCM = 2160 but the product is 51840.",
+        "Check the Reason again: it is false, because the product rule works only for two numbers: for 6, 72, 120, HCF × LCM = 2160 but the product is 51840.",
+        "Correct! A is true: $\\text{LCM}(8, 9, 25) = 2^{3} \\times 3^{2} \\times 5^{2} = 1800$. R is false: the product rule works only for two numbers: for 6, 72, 120, HCF × LCM = 2160 but the product is 51840.",
+        "Check the Assertion again: it is true, because $\\text{LCM}(8, 9, 25) = 2^{3} \\times 3^{2} \\times 5^{2} = 1800$."
+      ]
     },
     {
       "id": "ch01.q.ar5",
@@ -1130,7 +1244,13 @@
         "Assertion (A) is false but Reason (R) is true."
       ],
       "correct_index": 3,
-      "explanation": "$\\sqrt{9} = 3$ is rational, so A is false; R is true."
+      "explanation": "$\\sqrt{9} = 3$ is rational, so A is false; R is true.",
+      "option_feedback": [
+        "Check the Assertion again: it is false, because $\\sqrt{9} = 3$ is rational.",
+        "Check the Assertion again: it is false, because $\\sqrt{9} = 3$ is rational.",
+        "Check the Assertion again: it is false, because $\\sqrt{9} = 3$ is rational.",
+        "Correct! A is false: $\\sqrt{9} = 3$ is rational. R is true: $\\sqrt{p}$ is irrational for every prime $p$."
+      ]
     },
     {
       "id": "ch01.q.vsa1",

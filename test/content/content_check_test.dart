@@ -93,13 +93,23 @@ void checkVisual(Map<String, dynamic> block, String where, Problems problems) {
   }
 }
 
-void checkOptions(Map<String, dynamic> item, String where, Problems problems) {
+void checkOptions(Map<String, dynamic> item, String where, Problems problems, {bool needsFeedback = true}) {
   final options = item['options'];
   final correct = item['correct_index'];
   if (options is! List || options.length < 2) {
     problems.add(where, 'needs at least 2 options');
+    return;
   } else if (correct is! int || correct < 0 || correct >= options.length) {
     problems.add(where, 'correct_index must be a whole number from 0 to ${options.length - 1}');
+  }
+  if (!needsFeedback) return;
+  // Game-style quizzes teach through one explanation per option.
+  for (final key in ['option_feedback', 'option_feedback_hi', 'option_feedback_gu']) {
+    final feedback = item[key];
+    if (feedback == null && key != 'option_feedback') continue;
+    if (feedback is! List || feedback.length != options.length || feedback.any((f) => f is! String || f.trim().isEmpty)) {
+      problems.add(where, '$key needs one explanation for each of the ${options.length} options');
+    }
   }
 }
 
@@ -128,7 +138,8 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
       if (type is! String || !BlockRegistry.instance.hasBlock(type)) {
         problems.add(where, 'block type "$type" is not registered in default_blocks.dart');
       }
-      if (optionBlockTypes.contains(type)) checkOptions(block, where, problems);
+      // Socratic questions are for thinking, not marking; they explain once.
+      if (optionBlockTypes.contains(type)) checkOptions(block, where, problems, needsFeedback: type != 'socratic_question');
       if (type == 'function_graph') checkVisual(block, where, problems);
       if (block.containsKey('content') && block['content'] is Map) {
         problems.add(where, 'fields must be at the top level, not inside "content"');

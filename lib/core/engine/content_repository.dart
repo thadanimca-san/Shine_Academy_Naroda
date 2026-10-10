@@ -74,6 +74,9 @@ class ContentRepository {
 
   Future<List<ContentIndexEntry>> get index => _indexFuture ??= _loadIndex();
 
+  /// Forgets the loaded index so it is read again (after content edits, and in tests).
+  void clearCache() => _indexFuture = null;
+
   Future<List<ContentIndexEntry>> _loadIndex() async {
     try {
       final data = await LocalContentManager.instance.readLocalJson(indexPath);

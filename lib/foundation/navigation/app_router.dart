@@ -19,6 +19,7 @@ import '../../features/curriculum/chapter_list_screen.dart';
 import '../../features/learning/learning_engine/learning_engine_screen.dart';
 import '../../features/learning/pedagogy_engine_screen.dart';
 import '../../features/assessment/exam_engine_screen.dart';
+import '../../features/assessment/quiz_game_screen.dart';
 import '../../features/assessment/question_bank_screen.dart';
 import '../../features/assessment/question_paper_view_screen.dart';
 import '../../features/activation/activation_screen.dart';
@@ -195,6 +196,10 @@ final router = GoRouter(
             final chapterId = state.pathParameters['chapterId']!;
             return ExamEngineScreen(moduleId: chapterId);
           },
+        ),
+        GoRoute(
+          path: '/assessment/game/:chapterId',
+          builder: (context, state) => QuizGameScreen(moduleId: state.pathParameters['chapterId']!),
         ),
         GoRoute(
           path: '/assessment/bank/:chapterId',

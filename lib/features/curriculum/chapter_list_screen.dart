@@ -182,9 +182,7 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                               padding: const EdgeInsets.symmetric(horizontal: 12),
                             ),
                             onPressed: () {
-                              if (moduleId != null) {
-                                context.push('/assessment/engine/$moduleId');
-                              }
+                              if (moduleId != null) _choosePracticeMode(context, moduleId);
                             },
                             icon: const Icon(Icons.assignment, color: Colors.white, size: 20),
                             label: Text(TrilingualService.instance.getUIText('Practice'), style: const TextStyle(color: Colors.white)),
@@ -221,4 +219,38 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
     );
   }
 
+
+  /// Practice opens as a game (learn from every answer) or a timed exam.
+  void _choosePracticeMode(BuildContext context, String moduleId) {
+    final ui = TrilingualService.instance.getUIText;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.sports_esports, color: Colors.deepPurple),
+              title: Text(ui('Quiz Game')),
+              subtitle: Text(ui('Learn from every answer, earn XP')),
+              onTap: () {
+                Navigator.pop(sheetContext);
+                context.push('/assessment/game/$moduleId');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.timer, color: Colors.orange),
+              title: Text(ui('Exam Mode')),
+              subtitle: Text(ui('Timed, like the board exam')),
+              onTap: () {
+                Navigator.pop(sheetContext);
+                context.push('/assessment/engine/$moduleId');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

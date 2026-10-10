@@ -59,6 +59,11 @@ class AssessmentQuestion {
   /// Optional block (e.g. a `function_graph`) drawn below the question text.
   final Map<String, dynamic>? figure;
 
+  /// One explanation per option: why that choice is right or wrong.
+  final List<String>? optionFeedback;
+  final List<String>? optionFeedbackHi;
+  final List<String>? optionFeedbackGu;
+
   AssessmentQuestion({
     required this.moduleId,
     required this.type,
@@ -83,6 +88,9 @@ class AssessmentQuestion {
     this.marks = 1,
     this.section,
     this.figure,
+    this.optionFeedback,
+    this.optionFeedbackHi,
+    this.optionFeedbackGu,
   });
 
   /// Question types in the new question bank that have options to choose from.
@@ -97,16 +105,27 @@ class AssessmentQuestion {
     final marks = (q['marks'] as num?)?.toInt() ?? 1;
     final markingScheme = (q['marking_scheme'] as List?)?.join('\n');
 
+    List<String>? list(String key) => (q[key] as List?)?.cast<String>();
+
     if (objectiveBankTypes.contains(type)) {
       return AssessmentQuestion(
         moduleId: moduleId,
         type: 'quiz',
         question: q['question'] as String? ?? '',
+        questionHi: q['question_hi'] as String?,
+        questionGu: q['question_gu'] as String?,
         options: List<String>.from(q['options'] ?? const []),
+        optionsHi: list('options_hi'),
+        optionsGu: list('options_gu'),
         correctIndexOrAnswer: q['correct_index'] ?? 0,
         explanationEn: q['explanation'] as String?,
+        explanationHi: q['explanation_hi'] as String?,
+        explanationGu: q['explanation_gu'] as String?,
         marks: marks,
         figure: q['figure'] as Map<String, dynamic>?,
+        optionFeedback: list('option_feedback'),
+        optionFeedbackHi: list('option_feedback_hi'),
+        optionFeedbackGu: list('option_feedback_gu'),
       );
     }
 
@@ -115,9 +134,13 @@ class AssessmentQuestion {
       moduleId: moduleId,
       type: 'descriptive',
       question: q['question'] as String? ?? '',
+      questionHi: q['question_hi'] as String?,
+      questionGu: q['question_gu'] as String?,
       options: const [],
       correctIndexOrAnswer: steps ?? q['answer'] ?? '',
       explanationEn: markingScheme,
+      explanationHi: (q['marking_scheme_hi'] as List?)?.join('\n'),
+      explanationGu: (q['marking_scheme_gu'] as List?)?.join('\n'),
       marks: marks,
       figure: q['figure'] as Map<String, dynamic>?,
     );
@@ -147,6 +170,9 @@ class AssessmentQuestion {
     int? marks,
     String? section,
     Map<String, dynamic>? figure,
+    List<String>? optionFeedback,
+    List<String>? optionFeedbackHi,
+    List<String>? optionFeedbackGu,
   }) {
     return AssessmentQuestion(
       moduleId: moduleId ?? this.moduleId,
@@ -172,6 +198,9 @@ class AssessmentQuestion {
       marks: marks ?? this.marks,
       section: section ?? this.section,
       figure: figure ?? this.figure,
+      optionFeedback: optionFeedback ?? this.optionFeedback,
+      optionFeedbackHi: optionFeedbackHi ?? this.optionFeedbackHi,
+      optionFeedbackGu: optionFeedbackGu ?? this.optionFeedbackGu,
     );
   }
 }

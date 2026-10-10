@@ -22,6 +22,13 @@ extension LocalizedAssessmentQuestion on AssessmentQuestion {
     return explanationEn;
   }
 
+  List<String>? get localizedOptionFeedback {
+    final lang = TrilingualService.instance.activeViewLanguage;
+    if (lang == 'hi' && (optionFeedbackHi?.isNotEmpty ?? false)) return optionFeedbackHi;
+    if (lang == 'gu' && (optionFeedbackGu?.isNotEmpty ?? false)) return optionFeedbackGu;
+    return optionFeedback;
+  }
+
   List<String> get localizedOptions {
     final lang = TrilingualService.instance.activeViewLanguage;
     if (lang == 'hi' && (optionsHi?.isNotEmpty ?? false)) return optionsHi!;
