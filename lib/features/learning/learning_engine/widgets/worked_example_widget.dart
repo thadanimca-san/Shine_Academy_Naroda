@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/widgets/presentation_builder.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class WorkedExampleWidget extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -56,7 +57,7 @@ class WorkedExampleWidget extends StatelessWidget {
                     Icon(Icons.lightbulb_outline, color: Colors.teal.shade700),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Text(
+                      child: MathTitle(
                         title,
                         style: GoogleFonts.poppins(
                           fontSize: 18 * scale,

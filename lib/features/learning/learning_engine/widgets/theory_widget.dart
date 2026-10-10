@@ -7,6 +7,7 @@ import '../../../../core/services/trilingual_service.dart';
 import '../../../common/widgets/tts_speed_controller.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
 import '../../../../foundation/theme/app_typography.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class TheoryWidget extends StatefulWidget {
   final Map<String, dynamic> block;
@@ -82,7 +83,7 @@ class _TheoryWidgetState extends State<TheoryWidget> {
                   const SizedBox(width: 12),
                 ],
                 Expanded(
-                  child: Text(
+                  child: MathTitle(
                     TrilingualService.instance.getLocalizedText(widget.block, 'title'),
                     style: AppTypography.h4(context, color: Theme.of(context).colorScheme.onSurface, fontWeight: FontWeight.bold),
                   ),

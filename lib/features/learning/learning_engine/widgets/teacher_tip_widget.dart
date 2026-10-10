@@ -6,6 +6,7 @@ import '../../../../core/services/trilingual_service.dart';
 import '../../../common/widgets/tts_speed_controller.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 class TeacherTipWidget extends StatefulWidget {
   final Map<String, dynamic> block;
   const TeacherTipWidget({super.key, required this.block});
@@ -61,7 +62,7 @@ class _TeacherTipWidgetState extends State<TeacherTipWidget> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                MathTitle(
                   TrilingualService.instance.getLocalizedText(widget.block, 'title').isNotEmpty 
                       ? TrilingualService.instance.getLocalizedText(widget.block, 'title') 
                       : TrilingualService.instance.getUIText("Teacher's Tip"),

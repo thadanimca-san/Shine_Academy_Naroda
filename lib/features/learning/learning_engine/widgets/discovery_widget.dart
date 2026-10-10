@@ -4,6 +4,7 @@ import '../../../../../foundation/theme/app_typography.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../core/services/tts_service.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class DiscoveryWidget extends StatefulWidget {
   final Map<String, dynamic> block;
@@ -79,7 +80,7 @@ class _DiscoveryWidgetState extends State<DiscoveryWidget> {
                 Icon(Icons.explore, color: Colors.cyan.shade700),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: MathTitle(
                     title.isEmpty ? TrilingualService.instance.getUIText('Discovery') : title,
                     style: AppTypography.h4(context, color: Colors.cyan.shade900, fontWeight: FontWeight.bold),
                   ),

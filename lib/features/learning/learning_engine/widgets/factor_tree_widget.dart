@@ -6,6 +6,7 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
 import '../../../../foundation/theme/app_typography.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 /// Splits [number] into one level per step: at each level the current value
 /// is divided by its smallest prime. 140 gives (2, 70), (2, 35), (5, 7).
@@ -108,7 +109,7 @@ class _FactorTreeWidgetState extends State<FactorTreeWidget> with SingleTickerPr
               children: [
                 const Icon(Icons.account_tree, color: AppColors.primary),
                 const SizedBox(width: 8),
-                Expanded(child: Text(title.isEmpty ? TrilingualService.instance.getUIText('Factor tree') : title, style: labelStyle)),
+                Expanded(child: MathTitle(title.isEmpty ? TrilingualService.instance.getUIText('Factor tree') : title, style: labelStyle)),
                 IconButton(
                   tooltip: TrilingualService.instance.getUIText('Play again'),
                   icon: const Icon(Icons.replay),

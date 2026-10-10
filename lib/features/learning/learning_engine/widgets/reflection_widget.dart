@@ -4,6 +4,7 @@ import '../../../../../foundation/theme/app_typography.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../core/services/tts_service.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class ReflectionWidget extends StatefulWidget {
   final Map<String, dynamic> block;
@@ -72,7 +73,7 @@ class _ReflectionWidgetState extends State<ReflectionWidget> {
                 Icon(Icons.self_improvement, color: Colors.teal.shade800),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: MathTitle(
                     title.isEmpty ? TrilingualService.instance.getUIText('Reflection') : title,
                     style: AppTypography.h4(context, color: Colors.teal.shade900, fontWeight: FontWeight.bold),
                   ),

@@ -6,6 +6,7 @@ import '../../../common/widgets/tts_speed_controller.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../../../foundation/theme/app_typography.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class HookWidget extends StatefulWidget {
   final Map<String, dynamic> block;
@@ -64,7 +65,7 @@ class _HookWidgetState extends State<HookWidget> {
                 Icon(Icons.lightbulb, color: Colors.orange),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: MathTitle(
                     title.isEmpty ? 'The Hook' : title,
                     style: AppTypography.h4(context, color: Colors.orange.shade900, fontWeight: FontWeight.bold),
                   ),

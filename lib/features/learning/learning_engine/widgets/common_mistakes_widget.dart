@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class CommonMistakesWidget extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -30,7 +31,7 @@ class CommonMistakesWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                MathTitle(
                   data['title'] ?? "Common Mistake",
                   style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.red[800]),
                 ),

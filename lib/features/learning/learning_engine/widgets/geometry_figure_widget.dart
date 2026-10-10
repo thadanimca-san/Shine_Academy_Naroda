@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
 import '../../../../foundation/theme/app_typography.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 /// Named points of a `geometry_figure` block, in maths coordinates (y up).
 Map<String, Offset> geometryPoints(Map<String, dynamic> data) {
@@ -120,7 +121,7 @@ class _GeometryFigureWidgetState extends State<GeometryFigureWidget> with Single
                 const Icon(Icons.change_history, color: AppColors.primary),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(title.isEmpty ? TrilingualService.instance.getUIText('Figure') : title,
+                  child: MathTitle(title.isEmpty ? TrilingualService.instance.getUIText('Figure') : title,
                       style: AppTypography.body(context, color: onSurface, fontWeight: FontWeight.bold)),
                 ),
                 IconButton(

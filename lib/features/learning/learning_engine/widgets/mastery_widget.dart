@@ -4,6 +4,7 @@ import '../../../../../foundation/theme/app_typography.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../core/services/tts_service.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 class MasteryWidget extends StatefulWidget {
   final Map<String, dynamic> block;
@@ -83,7 +84,7 @@ class _MasteryWidgetState extends State<MasteryWidget> {
                 Icon(Icons.military_tech, color: Colors.amber.shade900, size: 28),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: MathTitle(
                     title.isEmpty ? TrilingualService.instance.getUIText('Mastery Challenge') : title,
                     style: AppTypography.h4(context, color: Colors.amber.shade900, fontWeight: FontWeight.bold),
                   ),

@@ -6,6 +6,7 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
 import '../../../../foundation/theme/app_typography.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 /// Value of the polynomial with [coefficients] (highest power first) at [x].
 double evaluatePolynomial(List<double> coefficients, double x) =>
@@ -115,7 +116,7 @@ class _FunctionGraphWidgetState extends State<FunctionGraphWidget> with SingleTi
                 const Icon(Icons.show_chart, color: AppColors.primary),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(title.isEmpty ? TrilingualService.instance.getUIText('Graph') : title,
+                  child: MathTitle(title.isEmpty ? TrilingualService.instance.getUIText('Graph') : title,
                       style: AppTypography.body(context, color: onSurface, fontWeight: FontWeight.bold)),
                 ),
                 IconButton(

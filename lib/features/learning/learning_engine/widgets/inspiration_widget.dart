@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_typography.dart';
 import '../../../common/widgets/tts_interactive_text.dart';
+import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
 
 /// Block `inspiration`: a short true story of a person behind the chapter's
 /// ideas, a quote, and where this topic can take the student in life.
@@ -39,7 +40,7 @@ class InspirationWidget extends StatelessWidget {
               Icon(Icons.auto_awesome, color: Colors.amber.shade800),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(title.isEmpty ? ui('A story to inspire you') : title,
+                child: MathTitle(title.isEmpty ? ui('A story to inspire you') : title,
                     style: AppTypography.h4(context, color: ink)),
               ),
             ],
