@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "id": "cbse.c10.maths.ncert_rationalised.ch11",
+  "title": "Areas Related to Circles",
+  "book": "NCERT Mathematics, Class 10 (rationalised edition)",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "maths",
+  "chapter_number": 11,
+  "languages": [
+    "en"
+  ],
+  "status": "reviewed",
+  "reviewed_by": "Claude (AI) - awaiting teacher approval",
+  "reviewed_on": "2026-10-10",
+  "syllabus_note": "Follows the CBSE 2025-26 syllabus: areas of sectors and segments of a circle, and problems on areas and perimeters of these figures; segments only with central angles of 60°, 90° and 120°.",
+  "concepts": [
+    "sector_arc",
+    "segment",
+    "applications"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Slices of a circle",
+      "blocks": [
+        {
+          "id": "ch11.s1.hook",
+          "type": "hook",
+          "title": "How big is one slice?",
+          "body": "A round pizza is cut into 8 equal slices. Each slice is a **sector**: a part of the circle between two radii and an arc. Its corner angle is $360^\\circ \\div 8 = 45^\\circ$, so it is $\\dfrac{45}{360} = \\dfrac{1}{8}$ of the whole pizza.\n\nIn this chapter you will find the area of such a slice, the length of its curved edge, and the area of the piece cut off by a straight chord."
+        },
+        {
+          "id": "ch11.s1.inspiration",
+          "type": "inspiration",
+          "title": "The number that measures every circle",
+          "person": "Aryabhata",
+          "years": "476–550 CE",
+          "body": "In his book *Aryabhatiya*, written in 499 CE, the young astronomer Aryabhata gave this rule: add 4 to 100, multiply by 8 and add 62,000. The result is the circumference of a circle of diameter 20,000, *approximately*.\n\nThat gives $\\pi \\approx \\dfrac{62832}{20000} = 3.1416$, correct to four decimal places. Aryabhata even used the word *āsanna*, 'approaching', as if he knew that $\\pi$ can never be written exactly as a fraction. Every area in this chapter uses his number.",
+          "quote": "A good approximation, honestly labelled, is real knowledge.",
+          "future": "Areas of sectors are used in designing gears, clock faces, fans, stadium seating, radar and lighthouse beams, and pie charts."
+        },
+        {
+          "id": "ch11.s1.socratic",
+          "type": "socratic_question",
+          "question": "A circle is cut into 8 equal sectors. What is the angle at the centre of each sector?",
+          "options": [
+            "$45^\\circ$",
+            "$8^\\circ$",
+            "$80^\\circ$"
+          ],
+          "correct_index": 0,
+          "explanation": "The full angle at the centre is $360^\\circ$, and $360^\\circ \\div 8 = 45^\\circ$."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Sector and arc",
+      "blocks": [
+        {
+          "id": "ch11.s2.reveal",
+          "type": "theory",
+          "title": "Sectors and arcs",
+          "revision": true,
+          "body": "The part of a circle between two radii and the arc joining their ends is a **sector**. The smaller one is the **minor sector**; the rest of the circle is the **major sector**.\n\nA sector of angle $\\theta$ is $\\dfrac{\\theta}{360}$ of the whole circle, so:\n\n- Area of the sector $= \\dfrac{\\theta}{360} \\times \\pi r^{2}$\n- Length of the arc $= \\dfrac{\\theta}{360} \\times 2 \\pi r$\n- Area of the major sector $= \\pi r^{2} -$ area of the minor sector (its angle is $360^\\circ - \\theta$)\n\nDividing the two formulas gives a useful shortcut: area of the sector $= \\dfrac{1}{2} \\times l \\times r$, where $l$ is the arc length."
+        },
+        {
+          "id": "ch11.s2.fig",
+          "type": "geometry_figure",
+          "title": "Minor sector OAPB",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "A": [
+              2.954423259,
+              -0.520944533
+            ],
+            "P": [
+              2.598076211,
+              1.5
+            ],
+            "B": [
+              1.02606043,
+              2.819077862
+            ]
+          },
+          "segments": [
+            [
+              "O",
+              "A"
+            ],
+            [
+              "O",
+              "B"
+            ]
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "A",
+                "P",
+                "B"
+              ]
+            }
+          ],
+          "shaded": [
+            {
+              "kind": "sector",
+              "centre": "O",
+              "from": "A",
+              "to": "B"
+            }
+          ],
+          "angles": [
+            {
+              "points": [
+                "A",
+                "O",
+                "B"
+              ],
+              "label": "θ"
+            }
+          ]
+        },
+        {
+          "id": "ch11.s2.eg1",
+          "type": "worked_example",
+          "title": "NCERT Example 1",
+          "problem": "Find the area of the sector of a circle with radius 4 cm and of angle $30^\\circ$. Also, find the area of the corresponding major sector. (Use $\\pi = 3.14$)",
+          "steps": [
+            "Area of the sector $= \\dfrac{30}{360} \\times 3.14 \\times 4 \\times 4 = \\dfrac{50.24}{12} \\approx 4.19$ cm²",
+            "Area of the circle $= 3.14 \\times 16 = 50.24$ cm²",
+            "Area of the major sector $= 50.24 - 4.19$"
+          ],
+          "answer": "$4.19$ cm² (approx.) and $46.05$ cm² (approx.)"
+        },
+        {
+          "id": "ch11.s2.eg2",
+          "type": "worked_example",
+          "title": "CBSE sample paper",
+          "problem": "Find the area of a sector of a circle of radius 21 cm cut off by an arc of length 22 cm.",
+          "steps": [
+            "Area of the sector $= \\dfrac{1}{2} \\times l \\times r$",
+            "$= \\dfrac{1}{2} \\times 22 \\times 21$"
+          ],
+          "answer": "$231$ cm²"
+        },
+        {
+          "id": "ch11.s2.check",
+          "type": "knowledge_check",
+          "question": "The area of a quadrant of a circle of radius 14 cm is:",
+          "options": [
+            "$154$ cm²",
+            "$616$ cm²",
+            "$22$ cm²",
+            "$308$ cm²"
+          ],
+          "correct_index": 0,
+          "explanation": "$\\dfrac{90}{360} \\times \\dfrac{22}{7} \\times 14 \\times 14 = 154$ cm².",
+          "option_feedback": [
+            "Correct! A quadrant is $\\dfrac{1}{4}$ of $616$ cm².",
+            "That is the whole circle; a quadrant is a quarter of it.",
+            "That is the length of the quadrant's arc in cm, not an area.",
+            "That is a semicircle; a quadrant is half of that."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Segment of a circle",
+      "blocks": [
+        {
+          "id": "ch11.s3.discovery",
+          "type": "discovery",
+          "title": "Cut the slice with a straight line",
+          "body": "Join the ends of the arc of a sector with a straight chord. The sector splits into two pieces: the triangle $OAB$ and the curved piece between the chord and the arc. That curved piece is a **segment**. So the segment is simply the sector with the triangle taken away."
+        },
+        {
+          "id": "ch11.s3.fig",
+          "type": "geometry_figure",
+          "title": "Segment cut off by the chord AB",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "A": [
+              2.598076211,
+              1.5
+            ],
+            "B": [
+              -2.598076211,
+              1.5
+            ],
+            "M": [
+              0,
+              1.5
+            ]
+          },
+          "segments": [
+            [
+              "O",
+              "A"
+            ],
+            [
+              "O",
+              "B"
+            ],
+            {
+              "from": "A",
+              "to": "B",
+              "highlight": true
+            },
+            {
+              "from": "O",
+              "to": "M",
+              "dashed": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 3,
+              "through": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "shaded": [
+            {
+              "kind": "segment",
+              "centre": "O",
+              "from": "A",
+              "to": "B"
+            }
+          ],
+          "right_angles": [
+            [
+              "O",
+              "M",
+              "A"
+            ]
+          ],
+          "angles": [
+            {
+              "points": [
+                "A",
+                "O",
+                "B"
+              ],
+              "label": "120°"
+            }
+          ]
+        },
+        {
+          "id": "ch11.s3.thm",
+          "type": "theory",
+          "title": "Area of a segment",
+          "revision": true,
+          "body": "- Area of the minor segment $=$ area of the sector $-$ area of $\\triangle OAB$\n- Area of the major segment $= \\pi r^{2} -$ area of the minor segment\n\nThe CBSE syllabus uses only the angles $60^\\circ$, $90^\\circ$ and $120^\\circ$, and the triangle is easy for each:\n\n- $60^\\circ$: $\\triangle OAB$ is equilateral, area $= \\dfrac{\\sqrt{3}}{4} r^{2}$\n- $90^\\circ$: right triangle, area $= \\dfrac{1}{2} r^{2}$\n- $120^\\circ$: draw $OM \\perp AB$. Then $OM = \\dfrac{r}{2}$ and $AB = \\sqrt{3}\\, r$, so the area $= \\dfrac{1}{2} \\times \\sqrt{3}\\, r \\times \\dfrac{r}{2} = \\dfrac{\\sqrt{3}}{4} r^{2}$"
+        },
+        {
+          "id": "ch11.s3.eg1",
+          "type": "worked_example",
+          "title": "NCERT Example 2",
+          "problem": "Find the area of the segment of a circle of radius 21 cm, if the chord subtends $\\angle AOB = 120^\\circ$ at the centre. (Use $\\pi = \\dfrac{22}{7}$)",
+          "steps": [
+            "Area of the sector $= \\dfrac{120}{360} \\times \\dfrac{22}{7} \\times 21 \\times 21 = 462$ cm²",
+            "Draw $OM \\perp AB$: $OM = \\dfrac{21}{2}$ cm and $AB = 21\\sqrt{3}$ cm.",
+            "Area of $\\triangle OAB = \\dfrac{1}{2} \\times 21\\sqrt{3} \\times \\dfrac{21}{2} = \\dfrac{441\\sqrt{3}}{4}$ cm²"
+          ],
+          "answer": "Area of the segment $= \\left(462 - \\dfrac{441\\sqrt{3}}{4}\\right)$ cm²"
+        },
+        {
+          "id": "ch11.s3.eg2",
+          "type": "worked_example",
+          "title": "CBSE sample paper",
+          "problem": "Find the area of the major segment (in terms of $\\pi$) of a circle of radius 5 cm, formed by a chord subtending an angle of $90^\\circ$ at the centre.",
+          "steps": [
+            "Minor segment $= \\dfrac{90}{360} \\times \\pi \\times 5^{2} - \\dfrac{1}{2} \\times 5 \\times 5 = \\left(\\dfrac{25\\pi}{4} - \\dfrac{25}{2}\\right)$ cm²",
+            "Major segment $= 25\\pi - \\left(\\dfrac{25\\pi}{4} - \\dfrac{25}{2}\\right)$"
+          ],
+          "answer": "$\\left(\\dfrac{75\\pi}{4} + \\dfrac{25}{2}\\right)$ cm²"
+        },
+        {
+          "id": "ch11.s3.fig2",
+          "type": "geometry_figure",
+          "title": "Major segment of a circle of radius 5 cm",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "A": [
+              5,
+              0
+            ],
+            "B": [
+              0,
+              5
+            ]
+          },
+          "segments": [
+            [
+              "O",
+              "A"
+            ],
+            [
+              "O",
+              "B"
+            ],
+            {
+              "from": "A",
+              "to": "B",
+              "highlight": true
+            }
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 5,
+              "through": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "shaded": [
+            {
+              "kind": "segment",
+              "centre": "O",
+              "from": "B",
+              "to": "A"
+            }
+          ],
+          "right_angles": [
+            [
+              "A",
+              "O",
+              "B"
+            ]
+          ],
+          "lengths": [
+            {
+              "from": "O",
+              "to": "A",
+              "label": "5 cm"
+            }
+          ]
+        },
+        {
+          "id": "ch11.s3.check1",
+          "type": "knowledge_check",
+          "question": "The area of the minor segment of a circle of radius 10 cm whose chord subtends $90^\\circ$ at the centre is ($\\pi = 3.14$):",
+          "options": [
+            "$50$ cm²",
+            "$235.5$ cm²",
+            "$28.5$ cm²",
+            "$78.5$ cm²"
+          ],
+          "correct_index": 2,
+          "explanation": "Sector $78.5$ minus triangle $\\dfrac{1}{2} \\times 10 \\times 10 = 50$ gives $28.5$ cm².",
+          "option_feedback": [
+            "That is the triangle; the segment is sector minus triangle.",
+            "That is the major sector.",
+            "Correct! $78.5 - 50$.",
+            "That is the sector; subtract the triangle."
+          ]
+        },
+        {
+          "id": "ch11.s3.check2",
+          "type": "knowledge_check",
+          "question": "The area of the minor segment + the area of the major segment of the same chord equals:",
+          "options": [
+            "the area of the minor sector",
+            "the area of the circle",
+            "the area of the major sector",
+            "the area of the triangle"
+          ],
+          "correct_index": 1,
+          "explanation": "Together the two segments make up the whole circle.",
+          "option_feedback": [
+            "The two segments cover the whole circle.",
+            "Correct!",
+            "The major segment alone is bigger than the major sector.",
+            "The triangle is only part of the minor sector."
+          ]
+        },
+        {
+          "id": "ch11.s3.memory",
+          "type": "memory_trick",
+          "title": "Slice minus triangle",
+          "revision": true,
+          "body": "- **Sector** = fraction of the circle: $\\dfrac{\\theta}{360}$ of $\\pi r^{2}$ (area) or of $2\\pi r$ (arc).\n- **Segment** = slice minus triangle.\n- **Major** = whole circle minus minor.\n- Clock: the minute hand turns $6^\\circ$ every minute, the hour hand $30^\\circ$ every hour."
+        },
+        {
+          "id": "ch11.s3.mistakes",
+          "type": "common_mistakes",
+          "title": "Common mistakes",
+          "body": "- Using the diameter in place of the radius.\n- Using $2\\pi r$ for area or $\\pi r^{2}$ for arc length.\n- Forgetting to subtract the triangle when a segment is asked.\n- Using $\\dfrac{\\theta}{180}$ instead of $\\dfrac{\\theta}{360}$.\n- Writing the perimeter of a sector as only the arc: the perimeter also includes the two radii.\n- Using a different value of $\\pi$ from the one given in the question."
+        },
+        {
+          "id": "ch11.s3.tip",
+          "type": "teacher_tip",
+          "title": "Fold a paper circle",
+          "body": "Give each student a paper circle. Fold it into halves, quarters and eighths, and colour one piece: the fraction of the circle they coloured is the fraction $\\dfrac{\\theta}{360}$. Then draw the chord of the coloured piece and cut along it, so they literally hold the triangle and the segment separately."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Think, connect, master",
+      "blocks": [
+        {
+          "id": "ch11.s4.reflection",
+          "type": "reflection",
+          "title": "Explain it in your own words",
+          "body": "Explain to a friend why the area of a sector of angle $\\theta$ is $\\dfrac{\\theta}{360} \\times \\pi r^{2}$, and why a segment is smaller than its sector."
+        },
+        {
+          "id": "ch11.s4.connection",
+          "type": "connection",
+          "title": "Where this leads",
+          "body": "- **Chapter 10, Circles:** radii, chords and tangents give the triangles you subtract here.\n- **Chapter 12, Surface Areas and Volumes:** the curved surfaces of cylinders and cones are made from rectangles and sectors.\n- **Real life:** pie charts, wiper blades, fans, clock faces and lighthouse beams all sweep out sectors."
+        },
+        {
+          "id": "ch11.s4.mastery",
+          "type": "mastery",
+          "title": "Mastery challenge",
+          "body": "Two circles of radius 6 cm are drawn so that each passes through the centre of the other. Find the area common to both circles. (Use $\\pi = 3.14$, $\\sqrt{3} = 1.73$)\n\n**Answer:** The common chord $XY$ subtends $120^\\circ$ at each centre, because $\\triangle OXO'$ is equilateral. Each segment is $\\dfrac{120}{360} \\times 3.14 \\times 36 - \\dfrac{\\sqrt{3}}{4} \\times 36 = 37.68 - 15.57 = 22.11$ cm². The common area is two such segments: $44.22$ cm²."
+        },
+        {
+          "id": "ch11.s4.fig",
+          "type": "geometry_figure",
+          "title": "Two circles through each other's centres",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "O′": [
+              6,
+              0
+            ],
+            "X": [
+              3,
+              5.196152423
+            ],
+            "Y": [
+              3,
+              -5.196152423
+            ]
+          },
+          "segments": [
+            {
+              "from": "X",
+              "to": "Y",
+              "highlight": true
+            },
+            [
+              "O",
+              "O′"
+            ]
+          ],
+          "circles": [
+            {
+              "centre": "O",
+              "radius": 6,
+              "through": [
+                "X",
+                "Y",
+                "O′"
+              ]
+            },
+            {
+              "centre": "O′",
+              "radius": 6,
+              "through": [
+                "X",
+                "Y",
+                "O"
+              ]
+            }
+          ],
+          "shaded": [
+            {
+              "kind": "segment",
+              "centre": "O",
+              "from": "Y",
+              "to": "X"
+            },
+            {
+              "kind": "segment",
+              "centre": "O′",
+              "from": "X",
+              "to": "Y"
+            }
+          ]
+        },
+        {
+          "id": "ch11.s4.summary",
+          "type": "summary",
+          "title": "Chapter summary",
+          "body": "- Area of a sector of angle $\\theta$ $= \\dfrac{\\theta}{360} \\times \\pi r^{2}$\n- Length of an arc of angle $\\theta$ $= \\dfrac{\\theta}{360} \\times 2 \\pi r$\n- Area of a segment $=$ area of the sector $-$ area of the corresponding triangle\n- Area of the major sector or major segment $= \\pi r^{2} -$ the minor one"
+        },
+        {
+          "id": "ch11.s4.examtips",
+          "type": "exam_tips",
+          "title": "Board exam tips",
+          "body": "- Use exactly the value of $\\pi$ (and $\\sqrt{3}$) given in the question; if none is given, CBSE expects $\\pi = \\dfrac{22}{7}$.\n- Write the formula first, then substitute: the formula step earns a mark.\n- When the answer is asked 'in terms of $\\pi$', do not substitute a value.\n- Always write units: cm for lengths, cm² for areas."
+        },
+        {
+          "id": "ch11.s4.flash1",
+          "type": "flashcard",
+          "front": "Area of a sector of angle $\\theta$",
+          "back": "$\\dfrac{\\theta}{360} \\times \\pi r^{2}$"
+        },
+        {
+          "id": "ch11.s4.flash2",
+          "type": "flashcard",
+          "front": "Length of an arc of angle $\\theta$",
+          "back": "$\\dfrac{\\theta}{360} \\times 2 \\pi r$"
+        },
+        {
+          "id": "ch11.s4.flash3",
+          "type": "flashcard",
+          "front": "Area of a segment",
+          "back": "Area of the sector minus the area of the corresponding triangle."
+        }
+      ]
+    }
+  ]
+}
