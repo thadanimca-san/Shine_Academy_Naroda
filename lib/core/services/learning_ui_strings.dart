@@ -2,6 +2,8 @@
 /// screens. Looked up by [TrilingualService.getUIText] after its main table.
 const Map<String, Map<String, String>> learningUiTranslations = {
   // Lessons
+  'Hello, English Improver!': {'hi': 'नमस्ते, इंग्लिश सुधारक!', 'gu': 'નમસ્તે, ઇંગ્લિશ સુધારક!'},
+  'English Improver': {'hi': 'इंग्लिश सुधारक', 'gu': 'ઇંગ્લિશ સુધારક'},
   'Full lesson': {'hi': 'पूरा पाठ', 'gu': 'સંપૂર્ણ પાઠ'},
   'Quick revision': {'hi': 'त्वरित पुनरावृत्ति', 'gu': 'ઝડપી પુનરાવર્તન'},
   'A story to inspire you': {'hi': 'प्रेरणा देने वाली कहानी', 'gu': 'પ્રેરણા આપતી વાર્તા'},

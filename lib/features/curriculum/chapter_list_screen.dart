@@ -22,6 +22,42 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
   Map<String, dynamic>? _subjectData;
   bool _isLoading = true;
   String _error = '';
+  int _selectedLevel = 0; // 0: All, 1: Level 1, 2: Level 2, 3: Level 3
+
+  int _getChapterLevel(dynamic chapter, int index) {
+    if (chapter['level'] is int) return chapter['level'] as int;
+    final rawChapterNum = chapter['chapter_number'] ?? chapter['chapter_no'];
+    final parsed = int.tryParse(rawChapterNum?.toString().replaceAll(RegExp(r'[^0-9]'), '') ?? '') ?? (index + 1);
+    if (parsed <= 20) return 1;
+    if (parsed <= 40) return 2;
+    return 3;
+  }
+
+  String _getLevelBadgeLabel(int level) {
+    switch (level) {
+      case 1:
+        return '🌱 Level 1: Beginner Foundation';
+      case 2:
+        return '🚀 Level 2: Everyday Fluency';
+      case 3:
+        return '💼 Level 3: Professional Mastery';
+      default:
+        return 'Level $level';
+    }
+  }
+
+  Color _getLevelColor(int level) {
+    switch (level) {
+      case 1:
+        return Colors.green.shade700;
+      case 2:
+        return Colors.blue.shade700;
+      case 3:
+        return Colors.purple.shade700;
+      default:
+        return Colors.blueGrey;
+    }
+  }
 
   @override
   void initState() {
@@ -76,21 +112,97 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
     final color = Color(int.parse(colorString.replaceAll('0x', ''), radix: 16));
     final chapters = _subjectData!['chapters'] as List;
     final isActivated = ActivationService.isActivated;
+    final bool showLevels = widget.curriculumId.contains('english') || chapters.length >= 20;
+
+    final displayedChapters = _selectedLevel == 0
+        ? chapters
+        : chapters.where((c) => _getChapterLevel(c, chapters.indexOf(c)) == _selectedLevel).toList();
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: BrandAppBar(
         title: subjectName,
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(20),
-        itemCount: chapters.length,
-        itemBuilder: (context, index) {
-          final chapter = chapters[index];
-          final moduleId = chapter['module_id'] ?? chapter['id'];
-          final isAvailable = chapter['is_available'] == true || moduleId != null || chapter.containsKey('data_file');
-          final rawChapterNum = chapter['chapter_number'] ?? chapter['chapter_no'];
-          final chapterNum = rawChapterNum ?? index + 1;
+      body: Column(
+        children: [
+          if (showLevels)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              color: Colors.white,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ChoiceChip(
+                      label: Text(
+                        '${TrilingualService.instance.getUIText('All')} (${chapters.length})',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: _selectedLevel == 0 ? Colors.white : Colors.black87,
+                        ),
+                      ),
+                      selected: _selectedLevel == 0,
+                      selectedColor: color,
+                      onSelected: (_) => setState(() => _selectedLevel = 0),
+                    ),
+                    const SizedBox(width: 8),
+                    ChoiceChip(
+                      avatar: const Icon(Icons.eco, size: 16, color: Colors.green),
+                      label: Text(
+                        TrilingualService.instance.getUIText('Level 1: Beginner (1–20)'),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: _selectedLevel == 1 ? Colors.white : Colors.green.shade800,
+                        ),
+                      ),
+                      selected: _selectedLevel == 1,
+                      selectedColor: Colors.green.shade700,
+                      onSelected: (_) => setState(() => _selectedLevel = 1),
+                    ),
+                    const SizedBox(width: 8),
+                    ChoiceChip(
+                      avatar: const Icon(Icons.rocket_launch, size: 16, color: Colors.blue),
+                      label: Text(
+                        TrilingualService.instance.getUIText('Level 2: Intermediate (21–40)'),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: _selectedLevel == 2 ? Colors.white : Colors.blue.shade800,
+                        ),
+                      ),
+                      selected: _selectedLevel == 2,
+                      selectedColor: Colors.blue.shade700,
+                      onSelected: (_) => setState(() => _selectedLevel = 2),
+                    ),
+                    const SizedBox(width: 8),
+                    ChoiceChip(
+                      avatar: const Icon(Icons.business_center, size: 16, color: Colors.purple),
+                      label: Text(
+                        TrilingualService.instance.getUIText('Level 3: Professional (41–63)'),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: _selectedLevel == 3 ? Colors.white : Colors.purple.shade800,
+                        ),
+                      ),
+                      selected: _selectedLevel == 3,
+                      selectedColor: Colors.purple.shade700,
+                      onSelected: (_) => setState(() => _selectedLevel = 3),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.all(20),
+              itemCount: displayedChapters.length,
+              itemBuilder: (context, index) {
+                final chapter = displayedChapters[index];
+                final originalIndex = chapters.indexOf(chapter);
+                final chapterLevel = _getChapterLevel(chapter, originalIndex);
+                final moduleId = chapter['module_id'] ?? chapter['id'];
+                final isAvailable = chapter['is_available'] == true || moduleId != null || chapter.containsKey('data_file');
+                final rawChapterNum = chapter['chapter_number'] ?? chapter['chapter_no'];
+                final chapterNum = rawChapterNum ?? (originalIndex + 1);
           
           bool isLocked = false;
           if (!isActivated) {
@@ -135,12 +247,35 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                       ),
                     ),
                   ),
-                  title: Text(
-                    chapter['title'],
-                    style: GoogleFonts.inter(
-                      fontWeight: isAvailable ? FontWeight.bold : FontWeight.normal,
-                      color: isAvailable ? AppColors.textPrimary : Colors.grey,
-                    ),
+                  title: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (showLevels)
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                          margin: const EdgeInsets.only(bottom: 4),
+                          decoration: BoxDecoration(
+                            color: _getLevelColor(chapterLevel).withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: _getLevelColor(chapterLevel).withValues(alpha: 0.3)),
+                          ),
+                          child: Text(
+                            TrilingualService.instance.getUIText(_getLevelBadgeLabel(chapterLevel)),
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: _getLevelColor(chapterLevel),
+                            ),
+                          ),
+                        ),
+                      Text(
+                        chapter['title'],
+                        style: GoogleFonts.inter(
+                          fontWeight: isAvailable ? FontWeight.bold : FontWeight.normal,
+                          color: isAvailable ? AppColors.textPrimary : Colors.grey,
+                        ),
+                      ),
+                    ],
                   ),
                   subtitle: isLocked 
                       ? Text(TrilingualService.instance.getUIText('Premium Content - Requires Activation'), style: TextStyle(color: Colors.orange.shade800, fontSize: 12, fontWeight: FontWeight.bold))
@@ -216,8 +351,11 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
           );
         },
       ),
-    );
-  }
+    ),
+  ],
+),
+);
+}
 
 
   /// Practice opens as a game (learn from every answer) or a timed exam.

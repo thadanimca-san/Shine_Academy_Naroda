@@ -75,9 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     
-    String greeting = "Learner";
+    String greeting = "English Improver";
     if (userProfile != null && userProfile!['role']!.isNotEmpty) {
-      if (userProfile!['role'] == 'Student') {
+      if (flavor == 'skillup') {
+        greeting = "English Improver";
+      } else if (userProfile!['role'] == 'Student') {
         String stageName = userProfile!['stage'] ?? '';
         if (stageName.contains('Pre-School')) {
           greeting = "Pre-School Student";
@@ -90,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
         } else if (stageName.contains('Competitive')) {
           greeting = "Competitive Aspirant";
         } else {
-          greeting = "Student";
+          greeting = "English Improver";
         }
       } else {
         greeting = "${userProfile!['role']}";
@@ -139,6 +141,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               IconButton(
+                icon: const Icon(Icons.support_agent, color: Colors.white),
+                tooltip: 'WhatsApp Support',
+                onPressed: _launchWhatsApp,
+              ),
+              IconButton(
                 icon: Icon(Icons.settings_voice, color: Colors.white),
                 tooltip: 'Open TTS Settings (Fix Voice)',
                 onPressed: () async {
@@ -176,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             shape: BoxShape.circle,
                             boxShadow: [
                               BoxShadow(
-                                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.26),
+                                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.26),
                                 blurRadius: 10,
                                 offset: Offset(0, 4),
                               ),
@@ -204,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Hello, $greeting!",
+                    TrilingualService.instance.getUIText("Hello, $greeting!"),
                     style: GoogleFonts.poppins(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -588,6 +595,25 @@ class _HomeScreenState extends State<HomeScreen> {
       cards.add(const SizedBox(width: 16));
       cards.add(buildCard("Spoken\nEnglish", Icons.record_voice_over, AppColors.englishColor, '/learning/eng3to6'));
 
+      roleSpecificWidgets = SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: cards.map((c) => c is SizedBox ? c : SizedBox(width: 130, child: c)).toList(),
+          ),
+        ),
+      );
+    } else if (flavor == 'skillup') {
+      // SkillUp / Spoken English Flow — NO Science simulations!
+      cards.add(buildCard("Spoken\nEnglish", Icons.record_voice_over, const Color(0xFFE91E63), '/curriculum/govindsir_english'));
+      cards.add(const SizedBox(width: 16));
+      cards.add(buildCard("Speaking\nGame", Icons.sports_esports, Colors.deepPurple, '/assessment/game/govindsir_english_ch1'));
+      cards.add(const SizedBox(width: 16));
+      cards.add(buildCard("Word &\nPhonics Lab", Icons.menu_book, Colors.orange, '/dictionary'));
+      cards.add(const SizedBox(width: 16));
+      cards.add(buildCard("Practice\nDialogues", Icons.forum, Colors.teal, '/curriculum/govindsir_english'));
+      
       roleSpecificWidgets = SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: IntrinsicHeight(

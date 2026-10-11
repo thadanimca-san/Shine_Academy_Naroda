@@ -1,9 +1,12 @@
+library;
+
 /// Quick Revision: the short version of a chapter for students who are
 /// revising, built from the same blocks as the full lesson.
 
 /// Block types that always belong in Quick Revision.
 const Set<String> revisionBlockTypes = {
   'summary', 'formula', 'memory_trick', 'exam_tips', 'common_mistakes', 'flashcard', 'mind_map', 'revision',
+  'rule_card', 'sentence_puzzle', 'pronunciation_drill', 'vocabulary', 'key_points',
 };
 
 bool isRevisionBlock(Map<String, dynamic> block) =>
@@ -25,7 +28,22 @@ List<dynamic> revisionBlocks(List<dynamic> blocks) {
       result.add(block);
     }
   }
+
+  // If no explicit revision blocks matched, extract core high-yield blocks
+  if (result.isEmpty && blocks.isNotEmpty) {
+    for (final block in blocks.cast<Map<String, dynamic>>()) {
+      final t = block['type'];
+      if (t == 'dialogue' || t == 'example' || t == 'teacher_tip' || t == 'mcq' || t == 'quiz') {
+        result.add(block);
+      }
+    }
+    // Final fallback: first 5 blocks so revision mode is never empty
+    if (result.isEmpty) {
+      result.addAll(blocks.take(5));
+    }
+  }
+
   return result;
 }
 
-bool hasRevisionContent(List<dynamic> blocks) => blocks.cast<Map<String, dynamic>>().any(isRevisionBlock);
+bool hasRevisionContent(List<dynamic> blocks) => blocks.isNotEmpty;

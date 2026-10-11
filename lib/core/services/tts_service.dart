@@ -53,6 +53,7 @@ class TTSService {
 
   String _resolvedLanguage = 'en-IN';
   String _resolvedEngine = '';
+  Map<String, String>? _activeMaleVoice;
 
   void _log(String message) {
     debugPrint('[TTSService] $message');
@@ -270,9 +271,10 @@ class TTSService {
             "locale": selectedVoice['locale']?.toString() ?? ''
           };
           
+          _activeMaleVoice = voiceMap;
           await _flutterTts!.setVoice(voiceMap);
           _resolvedLanguage = voiceMap['locale']!;
-          _log('HARD FORCED Sweet Male voice: ${voiceMap['name']} (${voiceMap['locale']})');
+          _log('HARD FORCED Sweet Male Indian voice: ${voiceMap['name']} (${voiceMap['locale']})');
           return;
         } else {
           _log('Warning: No explicit Male voice tag identified in getVoices, attempting language fallback');
@@ -431,10 +433,39 @@ class TTSService {
         await _flutterTts!.setPitch(0.85);
         _log('Switching TTS language to gu-IN (pitch: 0.85) for Gujarati');
       } else {
-        await _flutterTts!.setLanguage(_resolvedLanguage); // Fallback to detected English
-        // Natural male pitch for English
-        await _flutterTts!.setPitch(0.85);
-        _log('Switching TTS language to $_resolvedLanguage (pitch: 0.85) for English');
+        // For English: DO NOT call setLanguage (it resets Android engine to default female voice!)
+        // Instead, re-apply the cached Indian Male voice
+        if (_activeMaleVoice != null && _activeMaleVoice!.isNotEmpty) {
+          await _flutterTts!.setVoice(_activeMaleVoice!);
+          _log('Using verified Indian Male voice: ${_activeMaleVoice!["name"]}');
+        } else {
+          // If no voice was cached, proactively bind to Indian male candidate voices
+          bool voiceFound = false;
+          final candidates = [
+            {"name": "en-in-x-end-local", "locale": "en-IN"},
+            {"name": "en-in-x-ene-local", "locale": "en-IN"},
+            {"name": "en-in-x-end-network", "locale": "en-IN"},
+            {"name": "en-in-x-ene-network", "locale": "en-IN"},
+            {"name": "en-in-x-ahp-local", "locale": "en-IN"},
+            {"name": "en-in-x-iip-local", "locale": "en-IN"},
+            {"name": "en_IN_#male", "locale": "en-IN"},
+          ];
+          for (final cand in candidates) {
+            try {
+              await _flutterTts!.setVoice(cand);
+              _activeMaleVoice = cand;
+              voiceFound = true;
+              _log('Enforced Indian male candidate voice: ${cand["name"]}');
+              break;
+            } catch (_) {}
+          }
+          if (!voiceFound) {
+            await _flutterTts!.setLanguage('en-IN');
+          }
+        }
+        // Warm, resonant, deep male Indian accent pitch
+        await _flutterTts!.setPitch(0.82);
+        _log('Set English speaking pitch to 0.82 (Resonant Male Indian Voice)');
       }
     } catch (e) {
       _log('stop/setLanguage before speak threw: $e');
