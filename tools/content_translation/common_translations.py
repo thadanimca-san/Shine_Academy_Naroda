@@ -552,6 +552,7 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+    "(A)": ("(A)", "(A)"), "(B)": ("(B)", "(B)"),
     "fourth point": ("चौथा बिंदु", "ચોથો મુદ્દો"), "fifth point": ("पाँचवाँ बिंदु", "પાંચમો મુદ્દો"),
     # Science Ch 13
     "10% law": ("10% नियम", "10 % નો નિયમ"), "artificial": ("कृत्रिम", "કૃત્રિમ"), "depletion": ("अवक्षय", "ક્ષય"),
