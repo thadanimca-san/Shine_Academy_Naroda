@@ -52,7 +52,7 @@ sections = [
   blk("s3.thm", "theory", title="Average income and its limits", revision=True,
     body="**How to compare countries:** for comparing countries, their **income** is considered one of the most important attributes. Countries with higher income are more developed than others with less income. But the total income of a country does not tell us what an average person is likely to earn, as populations differ. So we compare the **average income**:\n"
          "- **Average income = total income of the country ÷ total population.** It is also called **per capita income**.\n"
-         "- The **World Bank**, in its **World Development Report**, uses per capita income as the criterion for classifying countries. In the **World Development Report 2019** (as given in NCERT), countries with a per capita income of **US$ 12,056 per annum and above in 2017** are called **rich countries**, and those with **US$ 955 or less** are called **low-income countries**. **India** comes in the category of **low middle income countries** because its per capita income in 2017 was just **US$ 1,820** per annum. The rich countries, excluding countries of the Middle East and certain other small countries, are generally called **developed countries**.\n\n"
+         "- The **World Bank**, in its **World Development Report**, uses per capita income as the criterion for classifying countries. In the **World Development Report 2019** (as given in NCERT), countries with a per capita income of **USD 12,056 per annum and above in 2017** are called **rich countries**, and those with **USD 955 or less** are called **low-income countries**. **India** comes in the category of **low middle income countries** because its per capita income in 2017 was just **USD 1,820** per annum. The rich countries, excluding countries of the Middle East and certain other small countries, are generally called **developed countries**.\n\n"
          "**Limitation of averages:** while averages are useful for comparison, they **hide disparities**. Imagine two countries, each with an average income of Rs 10,000. In country A, all five citizens earn close to Rs 10,000; in country B, one citizen earns Rs 48,000 and four earn Rs 500 each. Both have the same average, but country A is more equitable: people are neither very rich nor extremely poor. In country B, most people are poor.\n\n"
          "**Income and other criteria:** is income enough? Compare three states (NCERT table below). **Haryana** has the highest per capita income and **Bihar** the lowest. But **Kerala**, with a lower per capita income than Haryana, has a much **lower infant mortality rate** and higher literacy and attendance.\n"
          "- **Infant mortality rate (IMR):** the number of children that die **before the age of one year** as a proportion of **1000 live children** born in that particular year.\n"
@@ -91,7 +91,7 @@ sections = [
  ]},
  {"id": "s5", "title": "Remember, avoid, practise", "blocks": [
   blk("s5.memory", "memory_trick", title="Memory tricks",
-    body="- **Per capita income = Total income ÷ Population.**\n- **World Bank (WDR 2019): Rich ≥ US$ 12,056; Low ≤ US$ 955; India = US$ 1,820 (low middle).**\n"
+    body="- **Per capita income = Total income ÷ Population.**\n- **World Bank (WDR 2019): Rich ≥ USD 12,056; Low ≤ USD 955; India = USD 1,820 (low middle).**\n"
          "- **UNDP HDI = \"HEI\"**: Health (life expectancy), Education (literacy, enrolment), Income (per capita, in PPP dollars).\n"
          "- **IMR = deaths before age 1 per 1000 live births; Literacy = age 7+; Attendance = age 14–15.**\n"
          "- **Kerala vs Haryana: \"Kerala Keeps Kids alive\"**: lower income, but IMR 7 against 30.\n- **Renewable = Replenished (groundwater); Non-renewable = Not replenished (crude oil).**"),
@@ -200,7 +200,7 @@ M("mcq07", INC, "Why do we use average income instead of total income to compare
 M("mcq08", INC, "Which organisation classifies countries mainly on the basis of per capita income?",
   [("the World Bank", ""), ("the UNDP", "The UNDP uses health, education and income."), ("the WTO", "The WTO deals with trade."), ("the RBI", "The RBI is India's central bank.")], "It publishes the World Development Report.")
 M("mcq09", INC, "In the World Development Report 2019 (as given in NCERT), India was classified as a:",
-  [("low middle income country", ""), ("rich country", "Rich countries had US$ 12,056 or more."), ("low-income country", "Low-income was US$ 955 or less."), ("developed country", "India is a developing country.")], "India's per capita income in 2017 was US$ 1,820.")
+  [("low middle income country", ""), ("rich country", "Rich countries had USD 12,056 or more."), ("low-income country", "Low-income was USD 955 or less."), ("developed country", "India is a developing country.")], "India's per capita income in 2017 was USD 1,820.")
 M("mcq10", INC, "The main limitation of an average is that it:",
   [("hides disparities", ""), ("is hard to calculate", "It is easy to calculate."), ("always overstates income", "Not always."), ("cannot be used for comparison", "It is useful for comparison.")], "Two countries with the same average can have very different distributions.")
 M("mcq11", INC, "Among Haryana, Kerala and Bihar (NCERT table), which state has the highest per capita income?",
@@ -274,7 +274,7 @@ W("la1", "long_answer", INC, "Compare Haryana, Kerala and Bihar using the NCERT 
    "So Kerala, though it has lower income than Haryana, does far better on health and education, because of adequate public health and educational facilities.",
    "The comparison shows that per capita income alone is not an adequate indicator of development; health, education and public facilities must also be considered."])
 W("la2", "long_answer", HUM, "How is the UNDP's method of measuring development better than the World Bank's?",
-  ["The World Bank classifies countries using only per capita income: in WDR 2019, rich countries had US$ 12,056 or more and low-income countries US$ 955 or less; India was low middle income at US$ 1,820.",
+  ["The World Bank classifies countries using only per capita income: in WDR 2019, rich countries had USD 12,056 or more and low-income countries USD 955 or less; India was low middle income at USD 1,820.",
    "Per capita income hides disparities and ignores health, education and public facilities.",
    "The UNDP's Human Development Report compares countries on educational levels, health status and per capita income together.",
    "It uses indicators like life expectancy at birth, gross enrolment ratio, and per capita income in PPP dollars, giving a fuller picture of people's lives.",
