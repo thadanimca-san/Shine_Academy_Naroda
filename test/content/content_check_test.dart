@@ -28,6 +28,15 @@ const marksByQuestionType = {
   'long_answer': 5,
   'case_based': 4,
 };
+
+/// Subjects whose board paper weights a type differently. English (184) asks
+/// 5-mark extracts and 6-mark long answers.
+const marksOverridesBySubject = {
+  'english_literature': {'case_based': 5, 'long_answer': 6},
+};
+
+int? marksFor(String subject, Object? type) => marksOverridesBySubject[subject]?[type] ?? marksByQuestionType[type];
+
 const objectiveTypes = {'mcq', 'assertion_reason', 'true_false'};
 const sourceKinds = {'ncert_exercise', 'ncert_intext', 'ncert_example', 'ncert_theorem', 'pyq', 'sample_paper', 'shine'};
 
@@ -273,10 +282,11 @@ void checkQuestions(Map<String, dynamic> entry, Problems problems) {
     if (id is! String || !ids.add(id)) problems.add(where, 'question id is missing or repeated');
 
     final type = q['type'];
-    if (!marksByQuestionType.containsKey(type)) {
+    final marks = marksFor(entry['subject'] as String? ?? '', type);
+    if (marks == null) {
       problems.add(where, 'unknown type "$type"');
-    } else if (q['marks'] != marksByQuestionType[type]) {
-      problems.add(where, '"$type" questions carry ${marksByQuestionType[type]} marks, not ${q['marks']}');
+    } else if (q['marks'] != marks) {
+      problems.add(where, '"$type" questions carry $marks marks, not ${q['marks']}');
     }
     if ((q['question'] as String? ?? '').trim().isEmpty) problems.add(where, 'question text is empty');
     if (!statuses.contains(q['status'])) problems.add(where, 'status must be one of $statuses');
