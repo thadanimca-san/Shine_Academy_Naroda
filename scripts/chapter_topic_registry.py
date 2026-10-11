@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+import json
+import os
+import re
+
+# Comprehensive Question Generator for GovindSir English (Chapters 1 to 63)
+# Produces 10-12 situational, practical spoken English questions per chapter.
+
+# Detailed topic mapping
+CHAPTER_TOPICS = {
+    1: ("Why Learn English?", "Importance of English, career growth, overcoming fear, daily habit", 1),
+    2: ("The English Alphabet and Sounds", "Vowel sounds, consonant clusters, silent letters: doubt, honest, knee, pronunciation rules", 1),
+    3: ("Basic Words for Daily Use", "Courteous words: please, thank you, sorry, excuse me, pardon, welcome, daily essentials", 1),
+    4: ("Making Your First Simple Sentences", "Subject + Verb + Object order, simple positive statements, stating facts", 1),
+    5: ("Introducing Yourself", "Professional self-introduction, name, background, profession, hobbies, closing introduction", 1),
+    6: ("Talking About Your Family", "Describing family members, relations, nuclear vs joint family, describing sibling occupations", 1),
+    7: ("Talking About Your School or Work", "Workplace responsibilities, daily duties, discussing projects, office hours", 1),
+    8: ("Asking Simple Questions", "Wh-questions (What, Where, When, Who, Why, How), asking for clarification", 1),
+    9: ("Answering Questions Correctly", "Polite short answers vs complete answers, affirmative and negative replies", 1),
+    10: ("Building Confidence in Speaking", "Body language, eye contact, pacing your voice, speaking aloud, overcoming shyness", 1),
+    11: ("Greeting People Politely", "Formal vs informal greetings, time-appropriate greetings: Good morning/afternoon/evening", 1),
+    12: ("Starting a Conversation", "Conversation starters, weather, genuine compliments, icebreakers in public places", 1),
+    13: ("Talking with Friends", "Casual English, catching up, making social plans, sharing news and laughter", 1),
+    14: ("Talking with Teachers", "Respectful tone, requesting guidance, submitting assignments, polite apologies", 1),
+    15: ("Asking for Information", "Inquiring about bus/train times, office hours, product prices, directions to counter", 1),
+    16: ("Talking About Your Hobbies", "Expressing personal interests, leisure activities, sports, music, creative hobbies", 1),
+    17: ("Talking About Your Daily Routine", "Morning rituals, commute, workday schedule, evening family time, sleep routine", 1),
+    18: ("Describing People", "Describing physical traits, personality qualities: kind, punctual, diligent, energetic", 1),
+    19: ("Describing Places", "Describing surroundings, home, hometown, tourist spots: clean, bustling, serene, spacious", 1),
+    20: ("Making Simple Conversations", "Casual social chats at weddings, community gatherings, bus stops, queues", 1),
+    21: ("Understanding Nouns", "Countable vs uncountable nouns, collective nouns: team, crowd, proper vs common nouns", 2),
+    22: ("Using Pronouns Correctly", "Subject vs object pronouns: He/Him, She/Her, They/Them, possessive pronouns", 2),
+    23: ("Understanding Verbs", "Action verbs vs state verbs, helping verbs: is/am/are/was/were/have/has/do/does", 2),
+    24: ("Present Tense for Daily Use", "Simple present for daily habits vs present continuous for current actions", 2),
+    25: ("Past Tense for Talking About Yesterday", "Simple past forms (went, saw, ate, called), describing yesterday's events", 2),
+    26: ("Future Tense for Talking About Plans", "Using 'will' and 'going to' for future plans, appointments, commitments", 2),
+    27: ("Making Negative Sentences", "Correct negative structures (do not, does not, did not), avoiding double negatives", 2),
+    28: ("Asking Questions Correctly", "Question inversion, auxiliary placement ('Do you need help?'), question tags", 2),
+    29: ("Common Mistakes in English", "Indian English errors ('discuss about', 'revert back', 'cousin brother', 'myself Rahul')", 2),
+    30: ("Speaking with Clear Sentences", "Linking words: because, although, however, therefore, in addition, so", 2),
+    31: ("Talking on the Phone", "Telephone etiquette, introducing caller, asking for someone, putting on hold, leaving message", 2),
+    32: ("Asking for Help", "Polite requests for assistance, offering a helping hand, expressing gratitude for help", 2),
+    33: ("Asking for Directions", "Asking road directions, left/right/straight, landmarks, distance, metro directions", 2),
+    34: ("Shopping Conversations", "Asking prices, requesting different sizes/colors, asking for discounts, paying by cash/UPI", 2),
+    35: ("Talking at a Restaurant", "Reserving a table, asking for menu recommendations, ordering food, requesting the bill", 2),
+    36: ("Traveling and Transportation", "Buying tickets, airport check-in, railway platforms, asking arrival/departure times", 2),
+    37: ("Talking at School or College", "Classroom queries, library book issuing, professor discussions, campus navigation", 2),
+    38: ("Talking in an Office", "Meeting updates, discussing deadlines, emailing colleagues, scheduling conference calls", 2),
+    39: ("Expressing Opinions", "Giving personal viewpoints ('In my opinion', 'From my experience'), justifying viewpoints", 2),
+    40: ("Agreeing and Disagreeing Politely", "Constructive agreement, polite disagreement ('I see your point, but...'), diplomacy", 2),
+    41: ("Describing Your Experiences", "Present perfect for life experiences ('I have worked here for 3 years'), past achievements", 3),
+    42: ("Talking About Your Goals", "Setting SMART goals, career aspirations, 5-year vision, step-by-step action plans", 3),
+    43: ("Giving Suggestions", "Constructive recommendations ('Why don't we...', 'How about...', 'I recommend that...')", 3),
+    44: ("Making Requests Politely", "High-level polite requests ('Would you mind...', 'Could you possibly...', 'I would appreciate')", 3),
+    45: ("Explaining Your Ideas", "Structuring presentations: First, Secondly, In addition, To summarize", 3),
+    46: ("Telling Short Stories", "Narrative flow, building suspense, emotional hooks, punchlines, concluding moral", 3),
+    47: ("Expressing Feelings and Emotions", "Professional empathy, workplace gratitude, handling disappointment constructively", 3),
+    48: ("Discussing Simple Topics", "Work-life balance, digital literacy, healthy living, environment protection", 3),
+    49: ("Improving Vocabulary", "Power words, professional adjectives, action verbs, replacing overused words", 3),
+    50: ("Speaking More Fluently", "Speech rhythm, intonation, eliminating verbal fillers (um, ah), connected speech", 3),
+    51: ("Speaking Without Fear", "Overcoming stage fright, public speaking mindset, managing adrenaline, audience rapport", 3),
+    52: ("Building Daily Speaking Habits", "Self-talk in English, shadowing audio, daily 15-minute speaking routine", 3),
+    53: ("Group Discussions", "Entering GD discussions politely, moderating speaking time, acknowledging peers", 3),
+    54: ("Asking and Answering Interview Questions", "Job interview mastery, 'Tell me about yourself', handling strengths/weaknesses", 3),
+    55: ("Presentation Skills", "Slide narration, engaging the room, handling challenging audience questions", 3),
+    56: ("Public Speaking Basics", "Voice modulation, body posture, stage presence, opening impact, memorable closings", 3),
+    57: ("Thinking in English", "Eliminating native language translation lag, thinking in English concepts and phrases", 3),
+    58: ("Avoiding Common Speaking Errors", "Subject-verb agreement nuances, preposition errors, modal verb accuracy", 3),
+    59: ("Practicing Real-life Conversations", "Role plays: bank manager inquiry, doctor consultation, hotel front desk, landlord", 3),
+    60: ("Your Journey to Confident English Speaking", "Lifelong learning habits, measuring speaking growth, lifelong fluency mindset", 3),
+    61: ("Grammar: Nouns and Pronouns", "Reflexive pronouns (myself, yourself), possessives, irregular noun plurals", 3),
+    62: ("Grammar: Tenses (Past, Present, Future)", "Mastery of perfect and continuous tenses across speaking scenarios", 3),
+    63: ("Grammar: Prepositions", "Prepositions of time, place, direction (in, on, at, between, among, beside, besides)", 3)
+}
+
+print(f"Total topics mapped: {len(CHAPTER_TOPICS)}")
