@@ -147,6 +147,7 @@ TEMPLATES = [
 ]
 
 MARKING = {
+ "(iii) 2 marks": ("(iii) 2 अंक", "(iii) 2 ગુણ"),
  "(i) 2 marks": ("(i) 2 अंक", "(i) 2 ગુણ"),
  "(iii) 1 mark": ("(iii) 1 अंक", "(iii) 1 ગુણ"),
  "(i) 1 mark": ("(i) 1 अंक", "(i) 1 ગુણ"),
@@ -551,6 +552,7 @@ MARKING = {
 
 # Labels after "N mark(s): " in marking schemes; the "N mark" part is added by mark_label().
 MARK_LABELS = {
+    "fourth point": ("चौथा बिंदु", "ચોથો મુદ્દો"), "fifth point": ("पाँचवाँ बिंदु", "પાંચમો મુદ્દો"),
     # Science Ch 13
     "10% law": ("10% नियम", "10 % નો નિયમ"), "artificial": ("कृत्रिम", "કૃત્રિમ"), "depletion": ("अवक्षय", "ક્ષય"),
     "energy decreases": ("ऊर्जा घटती है", "ઊર્જા ઘટે છે"), "food chain": ("आहार श्रृंखला", "આહારશૃંખલા"), "food web": ("आहार जाल", "આહારજાળ"),
