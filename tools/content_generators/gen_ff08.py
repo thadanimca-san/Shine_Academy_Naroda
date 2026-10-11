@@ -194,6 +194,38 @@ C.la("la2", SERMON, "'Not from weeping nor from grieving will anyone obtain peac
      ["The Buddha says grief only increases pain and makes the body sick.", "Death is natural: life is like ripe fruit and earthen pots.",
       "Peace comes from drawing out the 'arrow' of grief and accepting loss.", "Today too, people who share sorrow, support others and move on find strength, as Kisa Gotami did."])
 
+# ---------------- Top-up practice ----------------
+C.m("mcq14", LIFE, "Whom did Siddhartha marry after his schooling?",
+    [("a princess", ""), ("a farmer's daughter", "A princess."), ("no one", "He married a princess."), ("Kisa Gotami", "Kisa Gotami is a later character.")],
+    "They had a son.")
+C.m("mcq15", LIFE, "Under which tree did Siddhartha sit for enlightenment?",
+    [("a peepal tree", ""), ("a mango tree", "A peepal tree."), ("a banyan tree", "A peepal tree."), ("a neem tree", "A peepal tree.")],
+    "He renamed it the Bodhi Tree.")
+C.m("mcq16", LIFE, "The Buddha's dates are:",
+    [("563 B.C. – 483 B.C.", ""), ("483 B.C. – 563 B.C.", "Birth comes first: 563 B.C."), ("A.D. 563 – 483", "B.C., not A.D."), ("2700 B.C.", "That is tea's history.")],
+    "He lived about eighty years.")
+C.m("mcq17", KISA, "Why did people say Kisa Gotami had lost her senses?",
+    [("she asked for medicine for a child who was already dead", ""), ("she shouted at them", "She asked for medicine for a dead child."), ("she gave away her money", "She asked for medicine."), ("she sang in the street", "She asked for medicine.")],
+    "Grief had blinded her.")
+C.m("mcq18", KISA, "The phrase 'The living are few, but the dead are many' means:",
+    [("death has touched every family", ""), ("the city was empty", "It is about death in every home."), ("people live long", "It is about death."), ("the dead come back", "It is about death in every home.")],
+    "No house was free of death.")
+C.m("mcq19", SERMON, "The Buddha compares grief to:",
+    [("an arrow that must be drawn out", ""), ("a river", "An arrow."), ("a fire", "An arrow."), ("a flower", "An arrow.")],
+    "Drawing it out brings peace.")
+C.m("mcq20", LANG, "'Lamentation' means:",
+    [("crying aloud in grief", ""), ("laughing", "The opposite."), ("singing", "Crying in grief."), ("praying", "Crying in grief.")],
+    "The arrow of lamentation and grief.")
+C.m("mcq21", LIFE, "What did Siddhartha see while out hunting?",
+    [("signs of human suffering", ""), ("a tiger", "He saw suffering."), ("a battle", "He saw suffering."), ("a festival", "He saw suffering.")],
+    "A sick man, an aged man, a funeral and a monk.")
+C.tf("tf5", KISA, "The Buddha gave Kisa Gotami medicine to revive her son.", False, "He set her a task so she would understand death.")
+C.tf("tf6", LIFE, "Siddhartha was enlightened after seven days under the tree.", True, "He then named it the Bodhi Tree.")
+C.vsa("vsa1", SERMON, "Give the two comparisons the Buddha uses for human life.", ["Ripe fruits in danger of falling early.", "Earthen vessels that end in being broken."])
+C.vsa("vsa2", KISA, "What did Kisa Gotami realise when she sat at the wayside?", ["Death is common to all.", "She had been selfish in her grief."])
+C.sa("sa3", LIFE, "Why is Benares important in the Buddha's story?",
+     ["It is the holiest dipping place on the Ganges.", "The Buddha preached his first sermon there after his enlightenment."])
+
 chapter = header("ch08", 8, "The Sermon at Benares", "Betty Renshaw", "prose",
                  ["buddhas_life_and_enlightenment", "kisa_gotami", "the_sermon_on_death_and_grief", "vocabulary_and_style"],
                  "CBSE 2025-26 English Language and Literature (184): First Flight prose, Chapter 8. Assessed through extracts (5 marks), short answers in 40-50 words (3 marks) and long answers in 100-120 words (6 marks).")

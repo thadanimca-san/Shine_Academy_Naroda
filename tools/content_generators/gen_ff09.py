@@ -178,6 +178,49 @@ C.la("la2", HUMOUR, "How does Chekhov create humour in The Proposal?",
       "Irony: Chubukov's 'my angel' turns to 'intriguer'; 'conjugal bliss' begins with a quarrel.", "Exaggeration and stage action: fainting, shouting 'Bring him back!', champagne to drown the noise.",
       "The farce makes us laugh while showing the foolishness of pride and greed."])
 
+# ---------------- Top-up practice ----------------
+C.m("mcq11", CHARS, "How does Chubukov greet Lomov at first?",
+    [("very warmly, saying how glad he is to see him", ""), ("coldly", "He is warm at first."), ("angrily", "He is warm at first."), ("he ignores him", "He welcomes him warmly.")],
+    "His warmth turns to insults later.")
+C.m("mcq12", CHARS, "Why does Lomov think Natalya would make a good wife?",
+    [("she is a good housekeeper, not bad-looking and well educated", ""), ("she is very rich", "He names practical qualities."), ("she loves dogs", "He names housekeeping and education."), ("she is quiet", "She is anything but quiet.")],
+    "His reasons are practical.")
+C.m("mcq13", PLOT, "What is Natalya wearing when she first meets Lomov in the play?",
+    [("an apron", ""), ("a wedding dress", "She did not know about the proposal."), ("evening dress", "Lomov wears evening dress."), ("hunting clothes", "An apron.")],
+    "She had been shelling peas.")
+C.m("mcq14", QUARREL, "How much did Lomov pay for Guess?",
+    [("125 roubles", ""), ("85 roubles", "Lomov paid 125."), ("300 roubles", "125."), ("nothing", "He paid 125.")],
+    "He boasts about the price.")
+C.m("mcq15", HUMOUR, "Chubukov's sudden change from 'my angel' to insults shows that he is:",
+    [("hypocritical and short-tempered", ""), ("calm", "He loses his temper quickly."), ("shy", "He shouts insults."), ("forgiving", "He insults Lomov.")],
+    "His friendliness depends on his interests.")
+C.m("mcq16", PLOT, "Why does Natalya change the subject to hunting?",
+    [("to avoid another quarrel after learning of the proposal", ""), ("because she loves hunting more than Lomov", "She wants to avoid a fight."), ("to annoy Lomov", "She wanted peace."), ("her father asked her", "She did it herself.")],
+    "Ironically, it leads to the dog quarrel.")
+C.m("mcq17", LANG, "'Pettifogger' means a person who:",
+    [("argues over unimportant details", ""), ("is very generous", "It means a petty arguer."), ("works on a farm", "It means a petty arguer."), ("cooks well", "It means a petty arguer.")],
+    "One of the insults hurled in the first quarrel.")
+C.m("mcq18", CHARS, "Natalya's age is:",
+    [("25", ""), ("35", "That is Lomov."), ("18", "25."), ("30", "25.")],
+    "Chubukov is eager to marry her off.")
+C.sa("sa1", QUARREL, "Why does the quarrel over Oxen Meadows begin?",
+     ["Lomov mentions that his Oxen Meadows touch Natalya's birchwoods.", "Natalya says the Meadows belong to her family, and both refuse to give way."])
+C.sa("sa2", PLOT, "What happens after Lomov leaves the first time?",
+     ["Chubukov tells Natalya that Lomov had come to propose.", "Natalya becomes hysterical and demands that he be brought back at once."])
+C.sa("sa3", HUMOUR, "Why is the ending of the play comic?",
+     ["Lomov and Natalya are made to kiss and are engaged.", "Within moments they quarrel again about the dogs, and Chubukov shouts for champagne."])
+C.sa("sa4", CHARS, "Describe Natalya in two or three sentences.",
+     ["She is sharp-tongued and quarrelsome, ready to fight over land and dogs.", "She is eager to marry: she screams 'Bring him back!' when she learns of the proposal."])
+C.la("la3", PLOT, "Imagine you are Natalya. Write a diary entry about the day Lomov came to propose.",
+     ["Date and first-person voice; describe Lomov arriving in evening dress.", "The quarrel over Oxen Meadows and how you felt when you learned the real reason for his visit.",
+      "The dog quarrel, Lomov's faint, and the engagement.", "Your feelings: relief at being engaged, and a resolve to win the argument about the dogs."])
+
+C.tf("tf5", HUMOUR, "The Proposal is a tragedy about lost love.", False, "It is a farce, a comedy that satirises marriage for property.")
+C.tf("tf6", CHARS, "Chubukov at first suspects Lomov has come to borrow money.", True, "He resolves not to lend him any.")
+C.tf("tf7", QUARREL, "Natalya says Guess is overshot.", False, "Lomov says Squeezer is overshot; Natalya attacks Guess.")
+C.vsa("vsa1", PLOT, "Name the two things the characters quarrel about.", ["Oxen Meadows.", "Whether Guess or Squeezer is the better dog."])
+C.vsa("vsa2", CHARS, "Why does Lomov feel he must marry soon?", ["He is 35, which he calls a critical age.", "He wants a quiet, regular life and is troubled by nervous illness."])
+
 chapter = header("ch09", 9, "The Proposal", "Anton Chekhov", "play",
                  ["plot_of_the_play", "characters", "the_two_quarrels", "humour_and_satire", "vocabulary_and_style"],
                  "CBSE 2025-26 English Language and Literature (184): First Flight, Chapter 9 (play). Assessed through extracts (5 marks), short answers in 40-50 words (3 marks) and long answers in 100-120 words (6 marks).")

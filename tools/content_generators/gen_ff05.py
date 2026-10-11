@@ -227,6 +227,19 @@ C.la("la2", COORG, "Write a short travel brochure entry for Coorg using details 
      ["Heading and location: between Mysore and Mangalore, Karnataka's smallest district.", "Best time: September to March; coffee estates, rainforests, rolling hills.",
       "Things to do: river rafting, canoeing, rock climbing, Brahmagiri hills, Nisargadhama, Bylakuppe.", "People: the brave, hospitable Kodavus; the Coorg Regiment and General Cariappa."])
 
+# ---------------- Top-up practice ----------------
+C.m("mcq17", COORG, "How much of Coorg is covered by rainforests?",
+    [("30 per cent", ""), ("90 per cent", "30%."), ("none", "30%."), ("half", "30%.")],
+    "It is a land of evergreen forests.")
+C.m("mcq18", TEA, "Where did Pranjol's parents meet the boys?",
+    [("Mariani junction", ""), ("Dhekiabari", "That is the estate."), ("Guwahati", "Mariani junction."), ("the airport", "Mariani junction.")],
+    "They then drove to the tea estate.")
+C.m("mcq19", GOA, "When did the baker come to the narrator's house?",
+    [("at least twice a day", ""), ("once a week", "Twice a day."), ("only on festivals", "Twice a day."), ("never", "Twice a day.")],
+    "In the morning and again on his return.")
+C.tf("tf5", COORG, "Coorg's Kodavus are said to be possibly of Greek or Arabic descent.", True, "One story links them to Alexander's army.")
+C.vsa("vsa1", TEA, "Name the two boys in Tea from Assam.", ["Rajvir.", "Pranjol, whose father managed a tea garden."])
+
 chapter = header("ch05", 5, "Glimpses of India", "Lucio Rodrigues; Lokesh Abrol; Arup Kumar Datta", "prose",
                  ["baker_from_goa", "coorg", "tea_from_assam", "vocabulary_and_style"],
                  "CBSE 2025-26 English Language and Literature (184): First Flight prose, Chapter 5 (A Baker from Goa; Coorg; Tea from Assam). Assessed through extracts (5 marks), short answers in 40-50 words (3 marks) and long answers in 100-120 words (6 marks).")

@@ -197,6 +197,38 @@ C.la("la2", HABITS + GET, "Should wild animals like Mij be kept as pets? Give yo
       "Otters need water, space and company, which most homes cannot provide.", "Maxwell lived by the sea and studied animals; ordinary people cannot do this.",
       "So wild animals are better protected in their natural homes."])
 
+# ---------------- Top-up practice ----------------
+C.m("mcq13", GET, "In which city did Maxwell receive Mij?",
+    [("Basra", ""), ("Baghdad", "Basra."), ("London", "He received him in Iraq."), ("Paris", "Basra.")],
+    "He was at the Consulate-General there.")
+C.m("mcq14", GET, "Why did Maxwell want an otter rather than a dog?",
+    [("he thought an otter would suit his water-ringed home at Camusfeàrna", ""), ("dogs were not allowed in Scotland", "His home suited an otter."),
+     ("otters are cheaper", "His home suited an otter."), ("he disliked dogs", "His home suited an otter.")],
+    "Camusfeàrna was ringed by water.")
+C.m("mcq15", HABITS, "How did Mij behave in water?",
+    [("he went wild with joy, plunging and rolling", ""), ("he was afraid", "He loved water."), ("he refused to enter", "He loved water."), ("he sat still", "He played wildly.")],
+    "He splashed like a child.")
+C.m("mcq16", HABITS, "What game did Mij invent with a suitcase lid?",
+    [("rolling a ball down the sloping lid and catching it", ""), ("hiding inside the suitcase", "A ball game."), ("pushing the suitcase", "A ball game."), ("sleeping on it", "A ball game.")],
+    "This shows his intelligence.")
+C.m("mcq17", JOURNEY, "What was the box for Mij lined with?",
+    [("metal", ""), ("cloth", "Metal, which he tore."), ("straw", "Metal."), ("paper", "Metal.")],
+    "He tore it and bled.")
+C.m("mcq18", LONDON, "Why couldn't Londoners recognise Mij?",
+    [("otters were unfamiliar to them", ""), ("Mij was in disguise", "They had never seen an otter."), ("it was dark", "They had not seen otters."), ("Mij was very large", "Otters were unfamiliar.")],
+    "They guessed many animals.")
+C.m("mcq19", LANG, "'Indifferent' means:",
+    [("not interested", ""), ("very excited", "The opposite."), ("angry", "Not interested."), ("hungry", "Not interested.")],
+    "Mij was aloof and indifferent at first.")
+C.m("mcq20", JOURNEY, "Where was Mij's box to be kept on the plane?",
+    [("at Maxwell's feet", ""), ("in the cargo hold", "At his feet."), ("on the roof", "At his feet."), ("with the pilot", "At his feet.")],
+    "So Maxwell could watch over him.")
+C.tf("tf5", LONDON, "Some Londoners thought Mij was a baby seal.", True, "Others guessed a squirrel, a walrus and more.")
+C.tf("tf6", JOURNEY, "Mij stayed calm in his box throughout the journey.", False, "He tore the lining in panic and later escaped.")
+C.vsa("vsa1", HABITS, "Give two signs that Mij began to trust Maxwell.", ["He slept in the crook of Maxwell's knees.", "He followed Maxwell everywhere."])
+C.sa("sa3", GET, "What does the name 'Maxwell's otter' tell us?",
+     ["Mij belonged to a race of otter unknown to science.", "Zoologists named the new species after Gavin Maxwell."])
+
 chapter = header("ch06", 6, "Mijbil the Otter", "Gavin Maxwell", "prose",
                  ["getting_mijbil", "mijs_habits_and_intelligence", "journey_to_london", "mij_in_london", "vocabulary_and_style"],
                  "CBSE 2025-26 English Language and Literature (184): First Flight prose, Chapter 6. Assessed through extracts (5 marks), short answers in 40-50 words (3 marks) and long answers in 100-120 words (6 marks).")

@@ -190,6 +190,43 @@ C.la("la2", DEATH, "How does the outward journey differ from the return journey?
      ["Going, Valli is thrilled: she enjoys the canal, palm trees, mountains and laughs at the running cow.", "Returning, she sees the same cow dead and loses all interest in the view.",
       "The contrast moves the story from joy to sorrow.", "Valli learns that life includes death and loss, and she grows up a little."])
 
+# ---------------- Top-up practice ----------------
+C.m("mcq11", RIDE, "How did Valli pay her fare?",
+    [("she paid it herself like a grown-up", ""), ("the conductor let her travel free", "She paid thirty paise."), ("the elderly woman paid", "She paid herself."), ("she had a pass", "She paid herself.")],
+    "She wanted to be treated as an adult.")
+C.m("mcq12", RIDE, "What did the conductor offer Valli at the town?",
+    [("a cool drink at his own cost", ""), ("a free ride home", "He offered a drink."), ("sweets", "A drink."), ("a toy", "A drink.")],
+    "She politely refused.")
+C.m("mcq13", PLAN, "How far was the town from Valli's village?",
+    [("six miles", ""), ("sixty miles", "Six miles."), ("one mile", "Six miles."), ("twenty miles", "Six miles.")],
+    "The trip took forty-five minutes.")
+C.m("mcq14", VALLI, "What did Valli say when the elderly woman asked if she was travelling alone?",
+    [("that she could take care of herself", ""), ("that her mother was with her", "She was alone."), ("nothing at all", "She replied firmly."), ("that she was lost", "She was confident.")],
+    "She wanted no help.")
+C.m("mcq15", RIDE, "Valli wanted to sit by the window because:",
+    [("she wanted to see the views outside", ""), ("it was warmer", "To see outside."), ("the conductor told her to", "Her own wish."), ("she felt sick", "To see outside.")],
+    "She stood on the seat to look out.")
+C.m("mcq16", DEATH, "On the return journey, how did Valli feel about looking out of the window?",
+    [("she no longer wanted to look", ""), ("she was more excited", "The dead cow saddened her."), ("she counted the trees", "She lost interest."), ("she slept", "She was upset.")],
+    "Her joy had turned to sadness.")
+C.m("mcq17", LANG, "'Intently' means:",
+    [("with close attention", ""), ("carelessly", "The opposite."), ("angrily", "With attention."), ("quickly", "With attention.")],
+    "Valli listened intently to the neighbours' talk.")
+C.m("mcq18", VALLI, "Why did Valli keep the trip a secret?",
+    [("her mother would not have allowed it", ""), ("she forgot to tell", "She planned it secretly."), ("the conductor asked her to", "Her own choice."), ("it was a school trip", "It was her own trip.")],
+    "She went during her mother's nap.")
+C.sa("sa2", RIDE, "What did Valli see on the way to the town?",
+     ["A canal, palm trees, grassland, distant mountains and the blue sky.", "A young cow running in front of the bus with its tail up, which made her laugh."])
+C.sa("sa3", VALLI, "How did the conductor treat Valli? How did she respond?",
+     ["He teased her kindly, called her 'Madam' and offered her a drink.", "She answered with dignity, refused help and the drink, and insisted she was not a child."])
+C.sa("sa4", PLAN, "Why did Valli choose the afternoon for her trip?",
+     ["Her mother usually took a nap from one to four.", "She could go and return before her mother woke up."])
+C.sa("sa5", DEATH, "How is the dead cow a turning point in the story?",
+     ["On the way out the cow made Valli laugh; on the way back it lay dead.", "Her joy turned to sorrow and she learnt about death for the first time."])
+C.la("la3", PLAN, "Imagine you are Valli. Write a diary entry about your first bus ride.",
+     ["Date and first person; your long wish to ride the bus and how you saved sixty paise.", "The conductor's teasing, the elderly woman, the views and the running cow.",
+      "Staying on the bus at the town; the dead cow on the way back.", "Your feelings: pride, joy, then sadness; keeping the secret."])
+
 chapter = header("ch07", 7, "Madam Rides the Bus", "Vallikkannan", "prose",
                  ["vallis_plan", "the_bus_ride", "valli_as_a_person", "first_encounter_with_death", "vocabulary_and_style"],
                  "CBSE 2025-26 English Language and Literature (184): First Flight prose, Chapter 7. Assessed through extracts (5 marks), short answers in 40-50 words (3 marks) and long answers in 100-120 words (6 marks).")
