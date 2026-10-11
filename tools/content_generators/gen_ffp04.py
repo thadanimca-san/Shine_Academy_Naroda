@@ -67,11 +67,11 @@ sections = [
 C.sa("ex1", ANIMALS, "Which animal is described as 'a large and tawny beast'? How will you recognise it?",
      ["The Asian Lion.", "According to the poem, it roars at you as you are dying, so you recognise it only too late."], TP(1))
 C.sa("ex2", HUMOUR, "Do you think the poet's advice on recognising animals is serious? Why or why not?",
-     ["No, it is humorous.", "Every clue (roaring, eating, leaping, hugging) works only after the animal has attacked, which is useless as advice."], TP(2))
+     ["No, it is humorous.", "Every clue (roaring, eating, leaping, hugging) works only after the animal has attacked, which is useless as advice."])
 C.sa("ex3", DEV, "Find examples of poetic licence in the poem and say why the poet uses them.",
-     ["'Dyin'' instead of 'dying', and 'lep' / 'lept' instead of 'leap' / 'leapt'.", "She bends the spellings to keep the rhyme (dyin'/Lion) and the rhythm."], TP(3))
+     ["'Dyin'' instead of 'dying', and 'lep' / 'lept' instead of 'leap' / 'leapt'.", "She bends the spellings to keep the rhyme (dyin'/Lion) and the rhythm."])
 C.sa("ex4", ANIMALS, "How can you distinguish a hyena from a crocodile, according to the poem?",
-     ["Hyenas come with merry smiles.", "If they weep, they are crocodiles, a play on the idiom 'crocodile tears'."], TP(4))
+     ["Hyenas come with merry smiles.", "If they weep, they are crocodiles, a play on the idiom 'crocodile tears'."])
 
 C.extract("ext1", ANIMALS, "If ever you should go by chance\nTo jungles in the East;\nAnd if there should to you advance\nA large and tawny beast,",
   [("Which animal is being described?", "The Asian Lion."), ("What does 'tawny' mean?", "Brownish-yellow."),

@@ -67,7 +67,7 @@ C.sa("ex1", CAGE + WILD, "Read the poem again, and work in pairs or groups to co
 C.sa("ex2", DEV, "Notice the use of a word repeated in lines such as 'On pads of velvet quiet, / In his quiet rage.' What do you think is the effect of this repetition?",
      ["Repeating 'quiet' stresses that his movement is soft and silent.", "It also shows that his anger is held in silently, which makes it more powerful and sad."], TP(2))
 C.sa("ex3", DEV, "Notice the lines in the poem where the poet uses repetition: 'brilliant eyes' and 'brilliant stars'. What is the effect?",
-     ["The tiger's shining eyes are linked with the shining, free stars.", "It shows his longing for the freedom of the open sky."], TP(3))
+     ["The tiger's shining eyes are linked with the shining, free stars.", "It shows his longing for the freedom of the open sky."])
 C.sa("ex4", CAGE, "Why does the tiger ignore the visitors?",
      ["He is angry and helpless at being caged.", "The visitors mean nothing to him; his mind is on the freedom he has lost."])
 
