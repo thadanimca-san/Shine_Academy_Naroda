@@ -33,10 +33,28 @@ class TtsInteractiveText extends StatefulWidget {
   State<TtsInteractiveText> createState() => _TtsInteractiveTextState();
 }
 
+class _SpanEntry {
+  final InlineSpan span;
+  final int startOffset;
+  final int endOffset;
+  final bool isWord;
+  final int wordIndex;
+
+  _SpanEntry({
+    required this.span,
+    required this.startOffset,
+    required this.endOffset,
+    required this.isWord,
+    this.wordIndex = -1,
+  });
+}
+
 class _TtsInteractiveTextState extends State<TtsInteractiveText> {
-  List<InlineSpan> _spans = [];
+  final List<_SpanEntry> _entries = [];
   String _cleanText = '';
   String currentWord = '';
+  int _wordCounter = 0;
+  String _blockKey = '  ';
 
   @override
   void didChangeDependencies() {
@@ -66,6 +84,8 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         final String wordToCommit = currentWord;
         final int startOffset = _cleanText.length;
         _cleanText += wordToCommit;
+        final int endOffset = _cleanText.length;
+        final int assignedWordIndex = _wordCounter++;
 
         GestureRecognizer? recognizer;
         if (wordToCommit.trim().isNotEmpty && widget.enableWordTap) {
@@ -86,10 +106,16 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
           }
         }
 
-        _spans.add(TextSpan(
-          text: wordToCommit,
-          style: spanStyle,
-          recognizer: recognizer,
+        _entries.add(_SpanEntry(
+          span: TextSpan(
+            text: wordToCommit,
+            style: spanStyle,
+            recognizer: recognizer,
+          ),
+          startOffset: startOffset,
+          endOffset: endOffset,
+          isWord: true,
+          wordIndex: assignedWordIndex,
         ));
       }
       currentWord = '';
@@ -97,9 +123,10 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
   }
 
   void _parseText() {
-    _spans.clear();
+    _entries.clear();
     _cleanText = '';
     currentWord = '';
+    _wordCounter = 0;
 
     bool isBold = false;
     bool isItalic = false;
@@ -135,13 +162,34 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         
         if (end != -1) {
            final tex = repairLatexEscapes(text.substring(start, end));
+           final startOffset = _cleanText.length;
            _cleanText += ' '; // TTS skips formulas
-           if (isBlock) _spans.add(TextSpan(text: '\n', style: widget.style));
-           _spans.add(WidgetSpan(
-              alignment: PlaceholderAlignment.middle,
-              child: _buildMath(tex, isDisplay: isBlock),
+           final endOffset = _cleanText.length;
+           if (isBlock) {
+             _entries.add(_SpanEntry(
+               span: TextSpan(text: '\n', style: widget.style),
+               startOffset: startOffset,
+               endOffset: startOffset,
+               isWord: false,
+             ));
+           }
+           _entries.add(_SpanEntry(
+             span: WidgetSpan(
+               alignment: PlaceholderAlignment.middle,
+               child: _buildMath(tex, isDisplay: isBlock),
+             ),
+             startOffset: startOffset,
+             endOffset: endOffset,
+             isWord: false,
            ));
-           if (isBlock) _spans.add(TextSpan(text: '\n', style: widget.style));
+           if (isBlock) {
+             _entries.add(_SpanEntry(
+               span: TextSpan(text: '\n', style: widget.style),
+               startOffset: endOffset,
+               endOffset: endOffset,
+               isWord: false,
+             ));
+           }
            i = j - 1; // Advance outer loop
            continue;
         }
@@ -160,19 +208,36 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
         _commitWord(isBold, isItalic);
         isBold = !isBold;
         i++;
-      } else if (char == ' ' || char == '\n') {
+      } else if (char.trim().isEmpty) {
         _commitWord(isBold, isItalic);
+        final startOffset = _cleanText.length;
         _cleanText += char;
-        _spans.add(TextSpan(text: char, style: widget.style));
-      } else if (RegExp(r'''[.,!?;:()\[\]"'-]''').hasMatch(char)) {
+        final endOffset = _cleanText.length;
+        _entries.add(_SpanEntry(
+          span: TextSpan(text: char, style: widget.style),
+          startOffset: startOffset,
+          endOffset: endOffset,
+          isWord: false,
+        ));
+      } else if (isTtsWordSeparator(char)) {
+        // Same word boundaries as TTSService, so the spoken word index matches..
         _commitWord(isBold, isItalic);
+        final startOffset = _cleanText.length;
         _cleanText += char;
-        _spans.add(TextSpan(text: char, style: widget.style));
+        final endOffset = _cleanText.length;
+        _entries.add(_SpanEntry(
+          span: TextSpan(text: char, style: widget.style),
+          startOffset: startOffset,
+          endOffset: endOffset,
+          isWord: false,
+          wordIndex: -1,
+        ));
       } else {
         currentWord += char;
       }
     }
     _commitWord(isBold, isItalic, force: true);
+    _blockKey = ' ${ttsWordKey(_cleanText)} ';
   }
 
   Widget _buildMath(String tex, {required bool isDisplay}) {
@@ -192,18 +257,40 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
     );
   }
 
+  /// Maps the index of the word being spoken in [spokenText] to the index of
+  /// the same word in this block, or -1 if this block is not being read.
+  /// Texts are compared word by word, so bullets, punctuation and Markdown
+  /// differences between the spoken and the shown text do not matter. This also
+  /// covers reading that starts mid-block (double-tap) or spans several blocks.
+  int _localWordIndex(String spokenText, int spokenWordIndex) {
+    if (widget.fullTtsText != null && ttsWordKey(widget.fullTtsText!) != ttsWordKey(spokenText)) return -1;
+    final spoken = ' ${ttsWordKey(spokenText)} ';
+    final block = _blockKey;
+    if (block.trim().isEmpty) return -1;
+    int wordsBefore(String text, int at) => ' '.allMatches(text.substring(0, at + 1)).length - 1;
+    final blockAt = spoken.indexOf(block);
+    if (blockAt >= 0) {
+      final local = spokenWordIndex - wordsBefore(spoken, blockAt);
+      return local < _wordCounter ? local : -1;
+    }
+    final spokenAt = block.indexOf(spoken);
+    if (spokenAt >= 0) return spokenWordIndex + wordsBefore(block, spokenAt);
+    return -1;
+  }
+
   @override
   Widget build(BuildContext context) {
     if (widget.isPdfMode) {
       List<InlineSpan> builtSpans = [];
-      for (var span in _spans) {
-        if (span is TextSpan) {
+      for (var entry in _entries) {
+        if (entry.span is TextSpan) {
+          final s = entry.span as TextSpan;
           builtSpans.add(TextSpan(
-            text: span.text,
-            style: span.style,
+            text: s.text,
+            style: s.style,
           ));
         } else {
-          builtSpans.add(span);
+          builtSpans.add(entry.span);
         }
       }
       return RichText(
@@ -218,67 +305,32 @@ class _TtsInteractiveTextState extends State<TtsInteractiveText> {
     return ValueListenableBuilder<TtsProgress>(
       valueListenable: TTSService.instance.progress,
       builder: (context, progress, child) {
-        bool isCurrentlyReadingThisBlock = false;
-        
-        final String expectedTtsText = widget.fullTtsText != null ? widget.fullTtsText!.toLowerCase().trim() : _cleanText.toLowerCase().trim();
-
-        if (progress.text.isNotEmpty && TTSService.instance.isPlayingGlobal.value) {
-           final pText = progress.text.toLowerCase().trim();
-           if (pText == expectedTtsText || pText.contains(expectedTtsText) || expectedTtsText.contains(pText)) {
-              isCurrentlyReadingThisBlock = true;
-           }
-        }
-
-        int highlightStart = -1;
-        int highlightEnd = -1;
-
-        if (isCurrentlyReadingThisBlock && progress.startOffset != 0 && progress.endOffset != 0) {
-           final pTextLower = progress.text.toLowerCase();
-           final cTextLower = _cleanText.toLowerCase();
-           
-           if (pTextLower.contains(cTextLower)) {
-              int offsetInSpokenText = pTextLower.indexOf(cTextLower);
-              highlightStart = progress.startOffset - offsetInSpokenText;
-              highlightEnd = progress.endOffset - offsetInSpokenText;
-           } else {
-              int chunkOffset = cTextLower.indexOf(pTextLower);
-              if (chunkOffset != -1) {
-                 highlightStart = chunkOffset + progress.startOffset;
-                 highlightEnd = chunkOffset + progress.endOffset;
-              }
-           }
-        }
+        // Which of this block's words is being spoken right now (-1: none).
+        final activeWord = progress.wordIndex >= 0 && TTSService.instance.isPlayingGlobal.value
+            ? _localWordIndex(progress.text, progress.wordIndex)
+            : -1;
 
         List<InlineSpan> builtSpans = [];
-        int currentOffset = 0;
 
-        for (var span in _spans) {
-          if (span is TextSpan) {
-            TextStyle? spanStyle = span.style;
+        for (final entry in _entries) {
+          if (entry.span is TextSpan) {
+            final textSpan = entry.span as TextSpan;
+            TextStyle? spanStyle = textSpan.style;
 
-            if (span.text != null && span.text!.trim().isNotEmpty && !RegExp(r'''^[.,!?;:()\[\]"'-]+$''').hasMatch(span.text!)) {
-              if (highlightStart != -1 && highlightEnd != -1) {
-                if (currentOffset >= highlightStart && currentOffset < highlightEnd) {
-                  spanStyle = (spanStyle ?? widget.style)?.copyWith(
-                    backgroundColor: widget.highlightColor,
-                    color: Colors.black, // High contrast on yellow
-                  );
-                }
-              }
-            }
-
-            if (span.text != null) {
-              currentOffset += span.text!.length;
+            if (entry.isWord && entry.wordIndex == activeWord) {
+              spanStyle = (spanStyle ?? widget.style)?.copyWith(
+                backgroundColor: widget.highlightColor,
+                color: Colors.black, // High contrast black on yellow highlight
+              );
             }
 
             builtSpans.add(TextSpan(
-              text: span.text,
+              text: textSpan.text,
               style: spanStyle,
-              recognizer: span.recognizer,
+              recognizer: textSpan.recognizer,
             ));
           } else {
-            // Forward WidgetSpan directly
-            builtSpans.add(span);
+            builtSpans.add(entry.span);
           }
         }
 
