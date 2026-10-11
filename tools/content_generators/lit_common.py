@@ -58,3 +58,18 @@ def header(key, n, title, author, kind, concepts, note):
 
 def path(folder):
     return f"app_core/content/cbse/class10/english/first_flight/{folder}"
+
+
+def closing(C, memory, mistakes, tip, reflection, connection, mastery_q, mastery_a, summary, examtips, flashcards):
+    """The standard last section: memory tricks, mistakes, teacher tip, reflection, links, mastery, summary, exam tips, flashcards."""
+    blk = C.blk
+    blocks = [blk("s5.memory", "memory_trick", title="Memory tricks", body=memory),
+              blk("s5.mistakes", "common_mistakes", title="Common mistakes", body=mistakes),
+              blk("s5.tip", "teacher_tip", title="Try this in class", body=tip),
+              blk("s5.reflection", "reflection", title="Think and explain", body=reflection),
+              blk("s5.connection", "connection", title="Where this leads", body=connection),
+              blk("s5.mastery", "mastery", title="Mastery challenge", body=f"{mastery_q}\n\n**Model answer:** {mastery_a}"),
+              blk("s5.summary", "summary", title="Summary", body=summary),
+              blk("s5.examtips", "exam_tips", title="Exam tips", body=examtips)]
+    blocks += [blk(f"s5.flash{i}", "flashcard", front=f, back=b) for i, (f, b) in enumerate(flashcards, 1)]
+    return {"id": "s5", "title": "Remember, avoid, practise", "blocks": blocks}
