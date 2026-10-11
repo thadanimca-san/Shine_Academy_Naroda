@@ -3,43 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/engine/pedagogy_engine.dart';
 import '../../../../core/engine/block_validator.dart';
 import '../../../../core/engine/block_registry.dart';
 import '../../../../core/engine/curriculum_database.dart';
 import '../../../../core/engine/local_content_manager.dart';
 import '../../../../foundation/theme/app_colors.dart';
-import 'widgets/dictionary_term_widget.dart';
-import 'widgets/flashcard_widget.dart';
-import 'widgets/teacher_tip_widget.dart';
-import 'widgets/common_mistakes_widget.dart';
-import 'widgets/dictionary_link_widget.dart';
-import 'widgets/theory_widget.dart';
-import 'widgets/trilingual_card_widget.dart';
-import 'widgets/example_widget.dart';
-import 'widgets/media_widget.dart';
-import 'widgets/activity_widget.dart';
-import 'widgets/quiz_widget.dart';
-import 'widgets/nursery_rhyme_widget.dart';
-import 'widgets/trace_alphabet_widget.dart';
-import 'widgets/counting_game_widget.dart';
-import 'widgets/color_canvas_widget.dart';
-import '../../../foundation/theme/app_colors.dart';
 import '../../../foundation/theme/brand_app_bar.dart';
-import 'package:go_router/go_router.dart';
 import '../ai_tutor/ai_tutor_screen.dart';
-import '../../../core/engine/block_validator.dart';
 import 'services/pdf_export_service.dart';
-import 'package:flutter/services.dart';
-import 'widgets/presentation_widget.dart';
-import 'widgets/animated_diagram_widget.dart';
 import 'widgets/universal_block_wrapper.dart';
-import 'widgets/dialogue_widget.dart';
-import '../../../core/engine/pedagogy_engine.dart';
+import 'widgets/dictionary_term_widget.dart';
 import '../../../core/services/presentation_service.dart';
-
-import 'widgets/worked_example_widget.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../core/engine/content_repository.dart';
 import 'lesson_revision.dart';
@@ -87,7 +62,6 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     });
     if (_scrollController.hasClients) _scrollController.jumpTo(0);
   }
-  bool _isTranslating = false;
   late String _lastLang;
 
   // Phase 6: Smart Panel Remote Control Support
@@ -132,19 +106,13 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
       setState(() {});
       return;
     }
-    setState(() {
-      _isTranslating = true;
-    });
-
     await TrilingualService.instance.preTranslateBlocks(
       _blocks,
       isDictionary: widget.moduleId.contains('DICT'),
     );
 
     if (!mounted) return;
-    setState(() {
-      _isTranslating = false;
-    });
+    setState(() {});
   }
 
   Future<void> _loadModule() async {
