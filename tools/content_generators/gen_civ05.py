@@ -153,6 +153,14 @@ W("ex3", "short_answer", ECO, "Give arguments to refute the assertion: 'Industri
   ["Between 1950 and 2000, dictatorships grew only slightly faster than democracies, and among poor countries the difference (4.34% against 4.28%) is negligible.",
    "Economic development depends on several factors such as population size, the global situation, cooperation from other countries and economic priorities, not on dictatorship.",
    "Democracy also gives other benefits, such as accountable and legitimate government, dignity and freedom, so it is better to prefer democracy."], source=ex("3"))
+W("ex3b", "short_answer", ECO, "Give arguments to support or refute the assertion: 'Democracy can't reduce inequality of incomes between different citizens.'",
+  ["Support: democracies ensure political equality, but economic inequality is growing; the ultra-rich have an increasing share of income while the poor find it hard to meet basic needs.",
+   "Refute: the poor form a large share of voters, so they can use their votes to press governments for welfare and anti-poverty policies.",
+   "Conclusion: democracy does not reduce inequality by itself; it creates conditions that citizens must use to demand such policies."], source=ex("3"))
+W("ex3c", "short_answer", GOV, "Give arguments to refute the assertion: 'In a democracy all citizens have one vote, which means that there is absence of any domination and conflict.'",
+  ["One vote for every citizen ensures political equality, but it does not remove economic and social inequality.",
+   "Domination can continue through money and muscle power, caste and communal politics, or a fixed majority community.",
+   "Conflicts among groups still arise; democracy only provides peaceful ways to negotiate them, as Belgium did and Sri Lanka failed to do."], source=ex("3"))
 M("ex5", ECO, "In the context of democracies, which of the following ideas is correct? Democracies have successfully eliminated:",
   [("the idea of political inequality", ""), ("conflicts among people", "Democracies handle conflicts but do not eliminate them."), ("economic inequalities among people", "Economic inequality is growing."), ("differences of opinion about how marginalised sections are to be treated", "Such differences remain.")],
   "Every citizen has one vote and equal weight in electing representatives.", "medium", ex("5"), correct=0)
