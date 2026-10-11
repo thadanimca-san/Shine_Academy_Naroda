@@ -147,6 +147,8 @@ TEMPLATES = [
 ]
 
 MARKING = {
+ "One point on climate/irrigation: 1 mark": ("जलवायु/सिंचाई पर एक बिंदु: 1 अंक", "આબોહવા/સિંચાઈ પર એક મુદ્દો: 1 ગુણ"),
+ "One point on economic factors or farming practices: 1 mark": ("आर्थिक कारकों या कृषि पद्धतियों पर एक बिंदु: 1 अंक", "આર્થિક પરિબળો કે ખેતી પદ્ધતિઓ પર એક મુદ્દો: 1 ગુણ"),
  "(iii) 2 marks": ("(iii) 2 अंक", "(iii) 2 ગુણ"),
  "(i) 2 marks": ("(i) 2 अंक", "(i) 2 ગુણ"),
  "(iii) 1 mark": ("(iii) 1 अंक", "(iii) 1 ગુણ"),
