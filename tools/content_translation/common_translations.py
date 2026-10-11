@@ -147,6 +147,7 @@ TEMPLATES = [
 ]
 
 MARKING = {
+ "(ii) 2 marks": ("(ii) 2 अंक", "(ii) 2 ગુણ"),
  "Significance (at least two uses): 2 marks": ("महत्त्व (कम से कम दो उपयोग): 2 अंक", "મહત્ત્વ (ઓછામાં ઓછા બે ઉપયોગ): 2 ગુણ"),
  "Types of coal: 3 marks": ("कोयले के प्रकार: 3 अंक", "કોલસાના પ્રકારો: 3 ગુણ"),
  "One point on climate/irrigation: 1 mark": ("जलवायु/सिंचाई पर एक बिंदु: 1 अंक", "આબોહવા/સિંચાઈ પર એક મુદ્દો: 1 ગુણ"),
