@@ -126,3 +126,23 @@ def extend(p, q, x=None, t=None):
     if x is not None:
         t = (x - p[0]) / (q[0] - p[0])
     return lerp(p, q, t)
+
+
+def label(fig, target, at, text, size=16, color=BLACK, anchor=None):
+    """A text label at `at` with a thin leader line to the part it names."""
+    fig.line(target, at, GREY, 1.5)
+    fig.dot(target, 3, GREY)
+    if anchor is None:
+        anchor = "lm" if at[0] >= target[0] else "rm"
+    fig.text(at, text, size, color, anchor, dx=6 if anchor[0] == "l" else -6)
+
+
+def box(fig, centre, w, h, text, fill=(235, 243, 255), outline=BLUE, size=17, bold=True, sub=None):
+    """A rounded-looking labelled box for flow charts (sub is an optional second line)."""
+    x, y = centre
+    fig.rect((x - w / 2, y - h / 2), (x + w / 2, y + h / 2), fill, outline, 2.5)
+    if sub:
+        fig.text((x, y), text, size, BLACK, "mb", bold=bold, dy=-2)
+        fig.text((x, y), sub, size - 3, GREY, "mt", dy=4)
+    else:
+        fig.text((x, y), text, size, BLACK, "mm", bold=bold)
