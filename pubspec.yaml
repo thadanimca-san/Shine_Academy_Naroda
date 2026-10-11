@@ -56,7 +56,10 @@ flutter:
     - assets/fonts/
     - assets/branding/
     - assets/images/
-    - assets/images/science/
+    # Class 9/10 science pictures (113 MB) are not used by SkillUp; leaving them out
+    # keeps the SkillUp bundle under Google Play's 200 MB download limit.
+    - path: assets/images/science/
+      flavors: [primary, middle, highschool, commerce, achievers]
     - assets/dictionary/
     - assets/dictionary/universal_dictionary.db
     - assets/mentors/
