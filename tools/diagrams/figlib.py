@@ -77,9 +77,11 @@ class Fig:
         m = (p[0] + (q[0] - p[0]) * at, p[1] + (q[1] - p[1]) * at)
         self.head(m, (q[0] - p[0], q[1] - p[1]), color, 13)
 
-    def text(self, p, s, size=22, color=BLACK, anchor="mm", bold=False, dx=0, dy=0):
+    def text(self, p, s, size=22, color=BLACK, anchor="mm", bold=False, dx=0, dy=0, halo=False):
+        """halo=True outlines the text in white so it stays readable over lines."""
         x, y = self.px(p)
-        self.d.text((x + dx * SS, y + dy * SS), s, fill=color, font=self._font(size, bold), anchor=anchor)
+        extra = {"stroke_width": 4 * SS, "stroke_fill": "white"} if halo else {}
+        self.d.text((x + dx * SS, y + dy * SS), s, fill=color, font=self._font(size, bold), anchor=anchor, **extra)
 
     def dot(self, p, r=4, color=BLACK):
         x, y = self.px(p)
