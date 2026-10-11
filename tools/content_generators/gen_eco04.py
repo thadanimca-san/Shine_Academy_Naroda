@@ -194,7 +194,18 @@ M("mcq29", TECH, "Which is part of information and communication technology?",
   [("mobile phones and fax", ""), ("containers", "These are transport technology."), ("ships", "These are transport."), ("import taxes", "These are trade barriers.")], "Telecommunication links people across the world.")
 M("mcq30", TECH, "Computers and the internet have helped globalisation mainly by:",
   [("letting information and services move instantly across countries", ""), ("raising the cost of communication", "They reduced it."), ("stopping trade in services", "They increased it."), ("replacing all transport", "Goods still need transport.")], "They connect producers and buyers worldwide.")
+M("mcq31", GLO, "Which statement about foreign trade in the globalisation period is correct?",
+  [("Foreign trade has been rising rapidly, and a large part of it is controlled by MNCs", ""), ("Foreign trade has stopped", "It has risen rapidly."),
+   ("Only governments carry out foreign trade", "MNCs control a large part."), ("Foreign trade has no link with globalisation", "It is central to globalisation.")], "Trade and investment together integrate markets.")
+M("mcq32", LIB, "A government that imposes much fewer restrictions on trade than before is said to be:",
+  [("more liberal", ""), ("more protective", "Protection means more barriers."), ("closed", "It is more open."), ("socialist only", "The term is liberal.")], "This is the meaning of liberalisation.")
+M("mcq33", TECH, "Telecommunication facilities include:",
+  [("telegraph, telephone including mobile phones, and fax", ""), ("containers and ships", "These are transport."), ("dams and canals", "These are irrigation works."), ("taxes and quotas", "These are trade barriers.")], "They help people contact each other worldwide.")
+M("mcq34", MNC, "Besides cheap labour, MNCs choose locations that have:",
+  [("nearness to markets, good infrastructure and favourable government policies", ""), ("no roads or electricity", "They need good infrastructure."), ("very high taxes", "They prefer favourable policies."), ("no skilled workers", "They look for available skills.")], "These keep costs low.")
 # ---------------- True / false ----------------
+C.tf("tf5", TECH, "The cost of air transport has fallen, allowing larger volumes of goods to be carried by air.", True, "Cheaper air transport helped globalisation.")
+C.tf("tf6", LIB, "Liberalisation means adding more restrictions on foreign trade.", False, "Liberalisation means removing government barriers and restrictions.")
 C.tf("tf1", MNC, "An MNC owns or controls production in more than one nation.", True, "This is the NCERT definition.")
 C.tf("tf2", GLO, "Movement of people between countries has greatly increased in the past few decades.", False, "It has not increased much because of various restrictions.")
 C.tf("tf3", LIB, "A tax on imports is an example of a trade barrier.", True, "It restricts imports.")
