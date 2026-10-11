@@ -7,6 +7,7 @@ import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
 import '../../../../foundation/theme/app_typography.dart';
 import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
+import 'bounded_aspect_ratio.dart';
 
 /// Value of the polynomial with [coefficients] (highest power first) at [x].
 double evaluatePolynomial(List<double> coefficients, double x) =>
@@ -126,7 +127,7 @@ class _FunctionGraphWidgetState extends State<FunctionGraphWidget> with SingleTi
                 ),
               ],
             ),
-            AspectRatio(
+            BoundedAspectRatio(
               aspectRatio: 4 / 3,
               child: AnimatedBuilder(
                 animation: _controller,

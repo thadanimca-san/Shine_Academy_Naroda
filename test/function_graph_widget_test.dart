@@ -47,4 +47,16 @@ void main() {
     expect(tester.takeException(), isNull);
     expect(find.text('Two lines'), findsOneWidget);
   });
+
+  testWidgets('fits in one screen on a wide classroom panel', (tester) async {
+    tester.view.physicalSize = const Size(1920, 1080);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MaterialApp(
+      home: Scaffold(body: SingleChildScrollView(child: FunctionGraphWidget(data: {'polynomial': [1, 0, -4], 'zeroes': [-2, 2]}))),
+    ));
+    await tester.pumpAndSettle();
+    final graph = tester.getSize(find.byType(CustomPaint).last);
+    expect(graph.height, lessThanOrEqualTo(1080 * 0.55 + 1));
+  });
 }

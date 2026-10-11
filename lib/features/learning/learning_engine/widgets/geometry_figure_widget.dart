@@ -6,6 +6,7 @@ import '../../../../core/services/trilingual_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
 import '../../../../foundation/theme/app_typography.dart';
 import 'package:shine_academy_naroda/features/common/widgets/math_title.dart';
+import 'bounded_aspect_ratio.dart';
 
 /// Named points of a `geometry_figure` block, in maths coordinates (y up).
 Map<String, Offset> geometryPoints(Map<String, dynamic> data) {
@@ -212,7 +213,7 @@ class _GeometryFigureWidgetState extends State<GeometryFigureWidget> with Single
                 ),
               ],
             ),
-            AspectRatio(
+            BoundedAspectRatio(
               aspectRatio: aspect.toDouble(),
               child: AnimatedBuilder(
                 animation: _controller,
