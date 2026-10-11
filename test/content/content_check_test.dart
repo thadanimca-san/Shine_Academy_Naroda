@@ -249,6 +249,8 @@ void checkChapter(Map<String, dynamic> entry, Problems problems) {
       if (optionBlockTypes.contains(type)) checkOptions(block, where, problems, needsFeedback: type != 'socratic_question');
       if (type == 'function_graph' || type == 'geometry_figure') checkVisual(block, where, problems);
       checkTranslations(block, languages, where, problems);
+      final image = block['image_url'];
+      if (image is String && !File(image).existsSync()) problems.add(where, 'image $image not found');
       if (block.containsKey('content') && block['content'] is Map) {
         problems.add(where, 'fields must be at the top level, not inside "content"');
       }
