@@ -27,6 +27,7 @@ import '../../features/learning/learning_engine/widgets/markdown_table_widget.da
 import '../../features/learning/learning_engine/widgets/factor_tree_widget.dart';
 import '../../features/learning/learning_engine/widgets/function_graph_widget.dart';
 import '../../features/learning/learning_engine/widgets/geometry_figure_widget.dart';
+import '../../features/learning/learning_engine/widgets/sentence_puzzle_widget.dart';
 
 // Pedagogy Arc Widgets
 import '../../features/learning/learning_engine/widgets/hook_widget.dart';
@@ -354,6 +355,20 @@ void registerDefaultBlocks() {
       builder: (block) => DialogueWidget(data: block),
     ),
   );
+
+  // ─────────────────────────────────────────────────────────────────
+  // SENTENCE PUZZLE / WORD SCRAMBLE (Gamified Spoken English)
+  // ─────────────────────────────────────────────────────────────────
+  final puzzleTypes = ['sentence_puzzle', 'word_scramble', 'pronunciation_drill'];
+  for (final type in puzzleTypes) {
+    registry.register(
+      BlockDefinition(
+        type: type,
+        validator: (block) {},
+        builder: (block) => SentencePuzzleWidget(block: block),
+      ),
+    );
+  }
 
   // ─────────────────────────────────────────────────────────────────
   // CROSS SUBJECT LINK

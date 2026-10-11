@@ -194,35 +194,77 @@ class TTSService {
       _log('Exception forcing en-IN language: $e');
     }
 
-    // Step 2: Aggressively hunt for the actual Indian Voice in the installed voice list
+    // Step 2: Aggressively hunt for a sweet, impressive MALE voice
     try {
       final voices = await _flutterTts!.getVoices;
       if (voices != null) {
         final List<Map<Object?, Object?>> voiceList = List<Map<Object?, Object?>>.from(voices);
         
-        // Find all Indian English voices
-        final indianVoices = voiceList.where((v) {
+        bool isMaleVoice(Map<Object?, Object?> v) {
+          final name = (v['name']?.toString() ?? '').toLowerCase();
+          final gender = (v['gender']?.toString() ?? '').toLowerCase();
+          
+          // Definitively reject female voices
+          if (name.contains('female') || gender == 'female' ||
+              name.contains('ena-') || name.contains('enc-') ||
+              name.contains('cxx') || name.contains('#female')) {
+            return false;
+          }
+          
+          // Male markers across Google TTS, Samsung TTS, and system engines
+          return name.contains('male') || gender == 'male' ||
+                 name.contains('end-local') || name.contains('ene-local') || name.contains('enf-local') ||
+                 name.contains('end-network') || name.contains('ene-network') ||
+                 name.contains('rjs') || name.contains('gbc') || name.contains('gbb') || name.contains('gbf') ||
+                 name.contains('sfg#male') || name.contains('iom') || name.contains('iol') ||
+                 name.contains('-m-') || name.contains('_m_');
+        }
+
+        // Priority 1: Indian English (en-IN) Male Voice
+        final indianMaleVoices = voiceList.where((v) {
           final locale = (v['locale']?.toString() ?? '').toLowerCase();
-          return locale.contains('en-in') || locale.contains('en_in') || locale.contains('ind');
+          final isIndian = locale.contains('en-in') || locale.contains('en_in') || locale.contains('ind');
+          return isIndian && isMaleVoice(v);
         }).toList();
 
-        if (indianVoices.isNotEmpty) {
-          // Prioritize offline voices since the digital panel has no internet
-          final offlineIndianVoices = indianVoices.where((v) {
-            final name = (v['name']?.toString() ?? '').toLowerCase();
-            return !name.contains('network') && !name.contains('online');
-          }).toList();
+        // Priority 2: British English (en-GB) Male Voice (Classic sweet teacher tone)
+        final britishMaleVoices = voiceList.where((v) {
+          final locale = (v['locale']?.toString() ?? '').toLowerCase();
+          final isBritish = locale.contains('en-gb') || locale.contains('en_gb');
+          return isBritish && isMaleVoice(v);
+        }).toList();
 
-          // Google TTS uses 'end' and 'ene' for male en-IN voices
-          final maleVoices = offlineIndianVoices.where((v) {
-            final name = (v['name']?.toString() ?? '').toLowerCase();
-            return name.contains('male') || name.contains('end-local') || name.contains('ene-local') || name.contains('end-network') || name.contains('ene-network');
-          }).toList();
+        // Priority 3: American English (en-US) Male Voice
+        final usMaleVoices = voiceList.where((v) {
+          final locale = (v['locale']?.toString() ?? '').toLowerCase();
+          final isUs = locale.contains('en-us') || locale.contains('en_us');
+          return isUs && isMaleVoice(v);
+        }).toList();
 
-          final selectedVoice = maleVoices.isNotEmpty 
-            ? maleVoices.first 
-            : (offlineIndianVoices.isNotEmpty ? offlineIndianVoices.first : indianVoices.first);
-          
+        // Priority 4: Any English Male Voice
+        final anyEnglishMaleVoices = voiceList.where((v) {
+          final locale = (v['locale']?.toString() ?? '').toLowerCase();
+          return locale.startsWith('en') && isMaleVoice(v);
+        }).toList();
+
+        Map<Object?, Object?>? selectedVoice;
+        if (indianMaleVoices.isNotEmpty) {
+          // Prefer offline Indian male voice if available
+          final offline = indianMaleVoices.where((v) => !(v['name']?.toString() ?? '').toLowerCase().contains('network')).toList();
+          selectedVoice = offline.isNotEmpty ? offline.first : indianMaleVoices.first;
+          _log('Selected Indian English Male voice: ${selectedVoice['name']}');
+        } else if (britishMaleVoices.isNotEmpty) {
+          selectedVoice = britishMaleVoices.first;
+          _log('Selected British English Male voice: ${selectedVoice['name']}');
+        } else if (usMaleVoices.isNotEmpty) {
+          selectedVoice = usMaleVoices.first;
+          _log('Selected US English Male voice: ${selectedVoice['name']}');
+        } else if (anyEnglishMaleVoices.isNotEmpty) {
+          selectedVoice = anyEnglishMaleVoices.first;
+          _log('Selected English Male voice: ${selectedVoice['name']}');
+        }
+
+        if (selectedVoice != null) {
           final voiceMap = {
             "name": selectedVoice['name']?.toString() ?? '',
             "locale": selectedVoice['locale']?.toString() ?? ''
@@ -230,23 +272,23 @@ class TTSService {
           
           await _flutterTts!.setVoice(voiceMap);
           _resolvedLanguage = voiceMap['locale']!;
-          _log('HARD FORCED offline Indian voice: ${voiceMap['name']}');
-          return; // Success! We found and forced an Indian voice.
+          _log('HARD FORCED Sweet Male voice: ${voiceMap['name']} (${voiceMap['locale']})');
+          return;
         } else {
-          _log('CRITICAL: No Indian English (en-IN) voice is installed on this device!');
+          _log('Warning: No explicit Male voice tag identified in getVoices, attempting language fallback');
         }
       }
     } catch (e) {
-      _log('Exception while scanning getVoices: $e');
+      _log('Exception while scanning getVoices for male voice: $e');
     }
 
-    // Step 3: Absolute worst-case fallback if NO Indian voices are installed on the device at all
+    // Step 3: Fallback if no specific male voice found in list
     _log('Falling back to basic language search...');
     try {
       final List<dynamic>? languages = await _flutterTts!.getLanguages;
       if (languages == null || languages.isEmpty) return;
 
-      final preferred = ['en-gb', 'en-au', 'en-us', 'en'];
+      final preferred = ['en-in', 'en-gb', 'en-au', 'en-us', 'en'];
       String? chosen;
       for (final lang in preferred) {
         final match = languages.cast<String>().firstWhere(
@@ -267,7 +309,8 @@ class TTSService {
       _log('Fallback language detection failed: $e');
     }
   }
-Future<void> _applyDefaultSettings() async {
+
+  Future<void> _applyDefaultSettings() async {
     if (_flutterTts == null) return;
     try {
       await _flutterTts!.setVolume(1.0);
@@ -276,8 +319,9 @@ Future<void> _applyDefaultSettings() async {
       _log('setVolume error: $e');
     }
     try {
-      await _flutterTts!.setPitch(0.85);
-      _log('Pitch: 0.85');
+      // 0.94 produces a warm, resonant, articulate male baritone
+      await _flutterTts!.setPitch(0.94);
+      _log('Pitch: 0.94 (Sweet Male Voice)');
     } catch (e) {
       _log('setPitch error: $e');
     }
