@@ -29,6 +29,19 @@ COMMON = {
     "1 mark: accuracy of language (100-120 words)": ("1 अंक: भाषा की शुद्धता (100-120 शब्द)", "1 ગુણ: ભાષાની શુદ્ધતા (100-120 શબ્દો)"),
     "1 mark: first point": ("1 अंक: पहला बिंदु", "1 ગુણ: પહેલો મુદ્દો"),
     "1 mark: second point": ("1 अंक: दूसरा बिंदु", "1 ગુણ: બીજો મુદ્દો"),
+    # Block titles shared by every chapter.
+    "Memory tricks": ("याद रखने की तरकीबें", "યાદ રાખવાની યુક્તિઓ"),
+    "Common mistakes": ("आम ग़लतियाँ", "સામાન્ય ભૂલો"),
+    "Try this in class": ("कक्षा में करके देखें", "વર્ગમાં કરી જુઓ"),
+    "Think and explain": ("सोचिए और समझाइए", "વિચારો અને સમજાવો"),
+    "Where this leads": ("आगे कहाँ", "આગળ ક્યાં"),
+    "Mastery challenge": ("महारत चुनौती", "નિપુણતા પડકાર"),
+    "Summary": ("सारांश", "સારાંશ"),
+    "Exam tips": ("परीक्षा सुझाव", "પરીક્ષા માટેની ટિપ્સ"),
+    "The poet": ("कवि", "કવિ"),
+    "What the poem says": ("कविता क्या कहती है", "કવિતા શું કહે છે"),
+    "Remember, avoid, practise": ("याद रखें, बचें, अभ्यास करें", "યાદ રાખો, ટાળો, અભ્યાસ કરો"),
+    "The poem and its meaning": ("कविता और उसका अर्थ", "કવિતા અને તેનો અર્થ"),
 }
 for part in ("i", "ii", "iii", "iv", "v"):
     COMMON[f"({part}) 1 mark"] = (f"({part}) 1 अंक", f"({part}) 1 ગુણ")
@@ -144,8 +157,8 @@ prefix = chapter["sections"][0]["blocks"][0]["id"].split(".")[0]
 
 chapter["title_hi"], chapter["title_gu"] = M.META["title"]
 for section in chapter["sections"]:
-    if section["id"] in M.SECTIONS:
-        section["title_hi"], section["title_gu"] = M.SECTIONS[section["id"]]
+    if section["id"] in M.SECTIONS or section["title"] in E:
+        section["title_hi"], section["title_gu"] = M.SECTIONS.get(section["id"]) or E[section["title"]]
     else:
         missing.append(f"section {section['id']} title")
     for block in section["blocks"]:
