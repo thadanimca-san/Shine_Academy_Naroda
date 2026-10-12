@@ -67,7 +67,24 @@ flutter:
     - app_core/assessment/
     - app_core/knowledge_graph/dictionary/
     - app_core/knowledge_graph/dictionary_index.json
-    - app_core/universal_dictionary/
+    # Dictionary files the app reads. generated_massive_dict.json and anomalies_to_fix.json
+    # (88 MB) are working files for scripts/ and are not bundled into the apps.
+    - app_core/universal_dictionary/accounts_class12.json
+    - app_core/universal_dictionary/class3_picture_dict.json
+    - app_core/universal_dictionary/class4_to_10_picture_dict.json
+    - app_core/universal_dictionary/dictionary_index.json
+    - app_core/universal_dictionary/english_class10.json
+    - app_core/universal_dictionary/english_class3.json
+    - app_core/universal_dictionary/english_class4.json
+    - app_core/universal_dictionary/english_class5.json
+    - app_core/universal_dictionary/english_class6.json
+    - app_core/universal_dictionary/english_class7.json
+    - app_core/universal_dictionary/english_class8.json
+    - app_core/universal_dictionary/english_class9.json
+    - app_core/universal_dictionary/maths_class10.json
+    - app_core/universal_dictionary/physics_class12.json
+    - app_core/universal_dictionary/science_class10.json
+    - app_core/universal_dictionary/science_class9.json
     - app_core/curriculum/
     - app_core/learning_modules/master_curriculum.json
     - app_core/content_database/cbse_class10_maths/
