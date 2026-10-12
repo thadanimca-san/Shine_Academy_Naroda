@@ -1,13 +1,11 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:open_filex/open_filex.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:screenshot/screenshot.dart';
 import '../utils/pdf_branding_util.dart';
+import '../utils/pdf_viewer_util.dart';
 
 class UniversalPdfEngine {
   /// Whether we have already loaded fonts into dart:ui's global registry.
@@ -181,12 +179,9 @@ class UniversalPdfEngine {
     );
 
     final bytes = await pdf.save();
-    final dir = await getTemporaryDirectory();
     final prefix = isAnswerKey ? 'Answer_Key_' : 'Question_Paper_';
     final safeTitle = title.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
-    final file = File('${dir.path}/$prefix$safeTitle.pdf');
-    await file.writeAsBytes(bytes);
-    await OpenFilex.open(file.path);
+    await PdfViewerUtil.openPdfBytes(bytes, '$prefix$safeTitle.pdf');
   }
 
 
@@ -202,12 +197,9 @@ class UniversalPdfEngine {
       isAnswerKey: isAnswerKey,
       onProgress: onProgress,
     );
-    final dir = await getTemporaryDirectory();
     final prefix = isAnswerKey ? 'Answer_Key_' : 'Question_Paper_';
     final safeTitle = title.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
-    final file = File('${dir.path}/$prefix$safeTitle.pdf');
-    await file.writeAsBytes(bytes);
-    await OpenFilex.open(file.path);
+    await PdfViewerUtil.openPdfBytes(bytes, '$prefix$safeTitle.pdf');
   }
 
   /// Wraps the widget in a full Material app context.
