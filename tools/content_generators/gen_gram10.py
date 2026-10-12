@@ -176,6 +176,9 @@ C.tf("t02", STRUCT, "You should give your personal opinion in the conclusion.", 
 C.tf("t03", VOCAB, "'Fluctuated' means went up and down.", True, "Values changed irregularly.")
 C.tf("t04", TABLE, "Every number in the table must be written in the paragraph.", False, "Select the important figures.")
 C.tf("t05", GRAPH, "A pie chart shows percentages of a whole.", True, "They total 100%.")
+C.tf("t06", VOCAB, "'Doubled' means increased to twice the earlier value.", True, "From 50 to 100 is doubling.")
+C.tf("t07", CUES, "Link words like 'however' and 'moreover' make a paragraph flow better.", True, "They connect ideas logically.")
+M("m17", TABLE, "In a bar chart of five categories, the body should mainly:", [("rank and compare the categories", ""), ("describe colours of the bars", "Compare values."), ("copy the title", "Compare values."), ("list unrelated facts", "Compare values.")], "Highest to lowest, with gaps.")
 C.ar("ar1", STRUCT, "An analytical paragraph begins by stating what the data shows.", "The reader must know the topic and period before the details.", 0,
      "R explains A.", "the introduction names the data.", "context comes first.")
 C.ar("ar2", VOCAB, "'Sales plummeted' describes a small rise.", "'Plummet' means to fall suddenly and steeply.", 3,
