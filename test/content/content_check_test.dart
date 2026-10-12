@@ -33,6 +33,7 @@ const marksByQuestionType = {
 /// 5-mark extracts and 6-mark long answers.
 const marksOverridesBySubject = {
   'english_literature': {'case_based': 5, 'long_answer': 6},
+  'hindi_b': {'case_based': 5},
 };
 
 int? marksFor(String subject, Object? type) => marksOverridesBySubject[subject]?[type] ?? marksByQuestionType[type];
