@@ -6,7 +6,8 @@ subject "english_literature". Objective items follow ss_common: answer first, fe
 Extracts quote only a few lines of the text, as the board paper does."""
 from ss_common import SS, SHINE, check
 
-BOOK = "NCERT First Flight: Textbook in English for Class X"
+BOOKS = {"first_flight": "NCERT First Flight: Textbook in English for Class X",
+         "footprints": "NCERT Footprints without Feet: Supplementary Reader in English for Class X"}
 SUBJECT = "english_literature"
 MS3 = ["1 mark: content point 1", "1 mark: content point 2", "1 mark: expression and accuracy (40-50 words)"]
 MS6 = ["3 marks: content (relevant points from the text)", "2 marks: organisation and coherence",
@@ -48,16 +49,16 @@ def make(prefix):
     return c
 
 
-def header(key, n, title, author, kind, concepts, note):
-    """kind: 'prose', 'play' or 'poem'."""
-    return {"schema_version": 1, "id": f"cbse.c10.english.first_flight.{key}", "title": title, "book": BOOK, "board": "CBSE",
+def header(key, n, title, author, kind, concepts, note, book="first_flight"):
+    """kind: 'prose', 'play' or 'poem'; book: 'first_flight' or 'footprints'."""
+    return {"schema_version": 1, "id": f"cbse.c10.english.{book}.{key}", "title": title, "book": BOOKS[book], "board": "CBSE",
             "class": 10, "subject": SUBJECT, "chapter_number": n, "author": author, "text_type": kind, "languages": ["en"],
             "status": "reviewed", "reviewed_by": "Claude (AI) - awaiting teacher approval", "reviewed_on": "2026-10-12",
             "syllabus_note": note, "concepts": concepts}
 
 
-def path(folder):
-    return f"app_core/content/cbse/class10/english/first_flight/{folder}"
+def path(folder, book="first_flight"):
+    return f"app_core/content/cbse/class10/english/{book}/{folder}"
 
 
 def closing(C, memory, mistakes, tip, reflection, connection, mastery_q, mastery_a, summary, examtips, flashcards):
