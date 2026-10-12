@@ -10,6 +10,8 @@ SUBJECT = "hindi_b"
 BOOKS = {"sparsh": "NCERT स्पर्श भाग 2 (Sparsh Part 2)", "sanchayan": "NCERT संचयन भाग 2 (Sanchayan Part 2)",
          "vyakaran": "Shine Academy हिंदी व्याकरण (Hindi Grammar), Class 10 Course B", "rachna": "Shine Academy रचनात्मक लेखन (Writing), Class 10 Course B"}
 MS2 = ["1 mark: content (correct point from the text)", "1 mark: expression in Hindi (25-30 words)"]
+# Prose extracts are Shine retellings of the lesson in Hindi, not quotations from the book.
+PROSE_INTRO = "Read the passage (based on the lesson) and answer the questions."
 MS3 = ["2 marks: content (relevant points from the text)", "1 mark: expression in Hindi (50-60 words)"]
 
 
