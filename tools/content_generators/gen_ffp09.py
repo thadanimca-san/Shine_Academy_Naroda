@@ -55,7 +55,7 @@ sections = [
  closing(C,
    "- **Pets: Ink (kitten, black), Blink (mouse, grey), Mustard (dog, yellow), Custard (dragon).**\n- **Pirate: two pistols + cutlass in teeth.**\n- **Irony: braggarts run, coward fights.**",
    "1. Mixing up Ink and Blink: Ink is the **kitten**, Blink the **mouse**.\n2. Saying Belinda fought the pirate: she **cried for help**.\n3. Thinking Custard changes his nature: after the fight he again cries for a **safe cage**.",
-   "Act out the pirate scene with five students; others call out each similie as it appears.",
+   "Act out the pirate scene with five students; others call out each simile as it appears.",
    "Have you met someone quiet who turned out to be very brave? What happened?",
    "- **How to Tell Wild Animals:** another comic poem.\n- **The Proposal:** comedy that mocks boasting and pride.",
    "Who is the real hero of the poem, and why? Answer in about 120 words.",
