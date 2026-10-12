@@ -186,7 +186,7 @@ class _QuestionPaperViewScreenState extends State<QuestionPaperViewScreen> with 
     
     showDialog(
       context: context,
-      builder: (context) {
+      builder: (dialogContext) {
         return AlertDialog(
           title: Text(TrilingualService.instance.getUIText('PDF Details'), style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
           content: SingleChildScrollView(
@@ -210,13 +210,13 @@ class _QuestionPaperViewScreenState extends State<QuestionPaperViewScreen> with 
           ),
           actions: [
             TextButton(
-              onPressed: () => Navigator.pop(context),
+              onPressed: () => Navigator.pop(dialogContext),
               child: Text(TrilingualService.instance.getUIText('Cancel')),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[700], foregroundColor: Colors.white),
               onPressed: () async {
-                Navigator.pop(context);
+                Navigator.pop(dialogContext);
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText('Generating PDF...'))));
                 try {
                   if (isAnswerKey) {

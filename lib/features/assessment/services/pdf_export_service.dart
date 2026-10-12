@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shine_academy_naroda/core/engine/universal_pdf_engine.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import 'package:shine_academy_naroda/core/utils/pdf_viewer_util.dart';
 import 'package:shine_academy_naroda/core/engine/assessment_engine.dart';
 import 'package:shine_academy_naroda/foundation/theme/app_typography.dart';
 import '../widgets/paper_question_tile.dart';
@@ -26,8 +27,17 @@ class PdfExportService {
 
   static Future<void> _export(BuildContext context, String title, List<AssessmentQuestion> questions,
       {required bool showAnswers, String? schoolName, String? examTitle, String? timeAllowed, List<String>? instructions}) async {
+    // Callers often pass the context of a details dialog that closes right
+    // away, so keep the navigator now: the progress dialog must always close.
+    final navigator = Navigator.of(context, rootNavigator: true);
     final progress = ValueNotifier<String>(TrilingualService.instance.getUIText('Preparing pages...'));
-    _showProgress(context, progress);
+    var progressOpen = true;
+    void closeProgress() {
+      if (progressOpen && navigator.mounted) navigator.pop();
+      progressOpen = false;
+    }
+
+    _showProgress(navigator.context, progress);
     try {
       final items = _withSectionsIfMissing(questions);
       final widgets = <Widget>[
@@ -40,14 +50,17 @@ class PdfExportService {
         ),
         ...buildPaperTiles(items, showAnswers: showAnswers, isPdfMode: true),
       ];
-      await UniversalPdfEngine.generatePdfFromWidgets(
+      final bytes = await UniversalPdfEngine.generatePdfBytesFromWidgets(
         title: title,
         widgets: widgets,
         isAnswerKey: showAnswers,
         onProgress: (done, total) => progress.value = '${TrilingualService.instance.getUIText('Drawing page items')} $done / $total',
       );
+      closeProgress();
+      final prefix = showAnswers ? 'Answer_Key_' : 'Question_Paper_';
+      await PdfViewerUtil.openPdfBytes(bytes, '$prefix${title.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_')}.pdf');
     } finally {
-      if (context.mounted) Navigator.of(context, rootNavigator: true).pop();
+      closeProgress();
       progress.dispose();
     }
   }
