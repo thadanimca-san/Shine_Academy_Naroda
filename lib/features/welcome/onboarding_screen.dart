@@ -23,7 +23,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<String> _roles = ['Student', 'Teacher', 'Parent'];
   late List<String> _stages;
-  final List<String> _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
+  late List<String> _boards;
 
   @override
   void initState() {
@@ -35,18 +35,38 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final flavor = appFlavor ?? 'default';
     if (flavor == 'primary') {
       _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-4)'];
+      _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
     } else if (flavor == 'middle') {
-      _stages = ['Upper Primary (Class 5-8)'];
+      _stages = ['Class 5', 'Class 6', 'Class 7', 'Class 8'];
+      _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
     } else if (flavor == 'junior') {
       _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-8)'];
+      _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
     } else if (flavor == 'highschool') {
       _stages = ['Secondary (Class 9-10)'];
-    } else if (flavor == 'commerce' || flavor == 'achievers') {
-      _stages = ['Higher Secondary (Class 11-12)', 'Competitive (UPSC/JEE)'];
+      _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
+    } else if (flavor == 'commerce') {
+      _stages = ['Class 11 Commerce', 'Class 12 Commerce'];
+      _boards = ['GSEB (Gujarat Board)', 'CBSE'];
+    } else if (flavor == 'achievers') {
+      _stages = ['Class 11 Science', 'Class 12 Science', 'Competitive (NEET/JEE)'];
+      _boards = ['GSEB (Gujarat Board)', 'CBSE', 'Core Concepts (NCERT)'];
     } else if (flavor == 'skillup') {
-      _stages = ['Skill Up / Special'];
+      _stages = ['Spoken English & Fluency'];
+      _boards = ['Govind Sir Academy'];
+      _selectedBoard = 'Govind Sir Academy';
     } else {
-      _stages = ['Pre-School (Nursery-UKG)', 'Primary (Class 1-8)', 'Secondary (Class 9-10)', 'Higher Secondary (Class 11-12)', 'Competitive (UPSC/JEE)'];
+      _stages = [
+        'Pre-School (Nursery-UKG)',
+        'Primary (Class 1-8)',
+        'Secondary (Class 9-10)',
+        'Class 11 Commerce',
+        'Class 12 Commerce',
+        'Class 11 Science',
+        'Class 12 Science',
+        'Competitive (NEET/JEE/UPSC)',
+      ];
+      _boards = ['Core Concepts (NCERT)', 'GSEB (Gujarat Board)', 'CBSE'];
     }
   }
 
@@ -65,11 +85,67 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   Future<void> _finishOnboarding() async {
-    // Derive class string for simplicity
-    if (_selectedStage == 'Pre-School (Nursery-UKG)') _selectedClass = 'Nursery';
-    if (_selectedStage == 'Primary (Class 1-8)') _selectedClass = 'Class 3-6';
-    if (_selectedStage == 'Secondary (Class 9-10)') _selectedClass = 'Class 10';
-    if (_selectedStage == 'Higher Secondary (Class 11-12)') _selectedClass = 'Class 12 Commerce';
+    final flavor = appFlavor ?? 'default';
+
+    // Map the selected stage to normalized userClass and stage
+    if (_selectedStage == 'Class 11 Commerce') {
+      _selectedClass = 'Class 11 Commerce';
+      _selectedStage = 'Higher Secondary (Class 11)';
+    } else if (_selectedStage == 'Class 12 Commerce') {
+      _selectedClass = 'Class 12 Commerce';
+      _selectedStage = 'Higher Secondary (Class 12)';
+    } else if (_selectedStage == 'Class 11 Science') {
+      _selectedClass = 'Class 11 Science';
+      _selectedStage = 'Higher Secondary (Class 11)';
+    } else if (_selectedStage == 'Class 12 Science') {
+      _selectedClass = 'Class 12 Science';
+      _selectedStage = 'Higher Secondary (Class 12)';
+    } else if (_selectedStage.contains('Competitive') || _selectedStage.contains('NEET') || _selectedStage.contains('JEE')) {
+      _selectedClass = 'Competitive';
+      _selectedStage = 'Competitive';
+    } else if (_selectedStage == 'Pre-School (Nursery-UKG)') {
+      _selectedClass = 'Nursery';
+      _selectedStage = 'Pre-School';
+    } else if (_selectedStage == 'Primary (Class 1-4)') {
+      _selectedClass = 'Class 1-4';
+      _selectedStage = 'Primary';
+    } else if (['Class 5', 'Class 6', 'Class 7', 'Class 8'].contains(_selectedStage)) {
+      _selectedClass = _selectedStage;
+      _selectedStage = 'Primary';
+    } else if (_selectedStage == 'Upper Primary (Class 5-8)') {
+      _selectedClass = 'Class 5-8';
+      _selectedStage = 'Primary';
+    } else if (_selectedStage == 'Primary (Class 1-8)') {
+      _selectedClass = 'Class 3-6';
+      _selectedStage = 'Primary';
+    } else if (_selectedStage == 'Class 9' || _selectedStage == 'Class 10') {
+      _selectedClass = _selectedStage;
+      _selectedStage = 'Secondary (Class 9-10)';
+    } else if (_selectedStage == 'Secondary (Class 9-10)') {
+      _selectedClass = 'Class 10';
+      _selectedStage = 'Secondary (Class 9-10)';
+    } else if (_selectedStage == 'Spoken English & Fluency' || _selectedStage == 'Skill Up / Special' || flavor == 'skillup') {
+      _selectedClass = 'Spoken English';
+      _selectedStage = 'Skill Up';
+      if (_selectedBoard.isEmpty) _selectedBoard = 'Govind Sir Academy';
+    } else if (_selectedStage == 'Higher Secondary (Class 11-12)') {
+      if (flavor == 'commerce') {
+        _selectedClass = 'Class 12 Commerce';
+        _selectedStage = 'Higher Secondary (Class 12)';
+      } else if (flavor == 'achievers') {
+        _selectedClass = 'Class 12 Science';
+        _selectedStage = 'Higher Secondary (Class 12)';
+      } else {
+        _selectedClass = 'Class 12';
+        _selectedStage = 'Higher Secondary (Class 12)';
+      }
+    } else {
+      _selectedClass = _selectedStage;
+    }
+
+    if (_selectedBoard.isEmpty && _boards.isNotEmpty) {
+      _selectedBoard = _boards.first;
+    }
 
     await ProfileService.saveProfile(
       role: _selectedRole,

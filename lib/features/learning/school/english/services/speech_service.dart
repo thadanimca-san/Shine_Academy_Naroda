@@ -265,13 +265,19 @@ class SpeechService {
           }).toList();
 
           if (localVoices.isNotEmpty) {
-          // Google TTS uses 'end' and 'ene' for male en-IN voices
-          final maleVoices = localVoices.where((v) {
-            final name = (v['name']?.toString() ?? '').toLowerCase();
-            return name.contains('male') || name.contains('end-local') || name.contains('ene-local') || name.contains('end-network') || name.contains('ene-network');
-          }).toList();
+            // Google TTS uses 'end', 'ene', 'ahp' for male en-IN voices (prefer high-quality network voice)
+            final maleVoices = localVoices.where((v) {
+              final name = (v['name']?.toString() ?? '').toLowerCase();
+              return name.contains('male') || name.contains('end') || name.contains('ene') || name.contains('ahp');
+            }).toList();
 
-            final selectedVoice = maleVoices.isNotEmpty ? maleVoices.first : localVoices.first;
+            Map<Object?, Object?> selectedVoice;
+            if (maleVoices.isNotEmpty) {
+              final networkVoices = maleVoices.where((v) => (v['name']?.toString() ?? '').toLowerCase().contains('network')).toList();
+              selectedVoice = networkVoices.isNotEmpty ? networkVoices.first : maleVoices.first;
+            } else {
+              selectedVoice = localVoices.first;
+            }
             
             final voiceMap = {
               "name": selectedVoice['name']?.toString() ?? '',
@@ -309,13 +315,14 @@ class SpeechService {
       _log('setVolume error: $e');
     }
     try {
-      await _tts!.setSpeechRate(0.42);
+      await _tts!.setSpeechRate(0.45);
       _log('SpeechRate set to 0.45');
     } catch (e) {
       _log('setSpeechRate error: $e');
     }
     try {
-      await _tts!.setPitch(0.85);
+      // Natural studio pitch 1.0 — pristine male voice without robotic modulation
+      await _tts!.setPitch(1.0);
       _log('Pitch set to 1.0');
     } catch (e) {
       _log('setPitch error: $e');
@@ -408,7 +415,7 @@ class SpeechService {
     // ALWAYS reset speech rate to default (0.45) before standard speak
     // to prevent bleed-over from speakWithSettings
     try {
-      await _tts!.setSpeechRate(0.42);
+      await _tts!.setSpeechRate(0.45);
     } catch (e) {
       _log('setSpeechRate before speak failed: $e');
     }

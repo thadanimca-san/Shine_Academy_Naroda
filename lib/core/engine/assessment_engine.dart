@@ -227,9 +227,26 @@ class AssessmentEngine {
   ) async {
     List<CurriculumSubject> subjects = [];
     try {
-      final String jsonString = await rootBundle.loadString(
-        'app_core/curriculum/$curriculumId.json',
-      );
+      String? jsonString;
+      final candidates = [
+        curriculumId,
+        if (curriculumId.contains('class11_commerce')) 'gseb_class11',
+        if (curriculumId.contains('class11_commerce')) 'class11_commerce',
+        if (curriculumId.contains('class12_commerce')) 'gseb_class12_commerce',
+        if (curriculumId.contains('class11_science')) 'class11_science',
+        if (curriculumId.contains('class12_science')) 'class12_science',
+        if (curriculumId.startsWith('ncert_')) curriculumId.replaceFirst('ncert_', ''),
+        if (curriculumId.startsWith('gseb_')) curriculumId.replaceFirst('gseb_', ''),
+      ];
+
+      for (final cid in candidates) {
+        try {
+          jsonString = await rootBundle.loadString('app_core/curriculum/$cid.json');
+          break;
+        } catch (_) {}
+      }
+
+      if (jsonString == null) return [];
       final Map<String, dynamic> curriculumData = json.decode(jsonString);
 
       if (curriculumData['subjects'] != null) {

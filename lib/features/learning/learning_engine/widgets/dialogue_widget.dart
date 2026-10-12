@@ -168,6 +168,7 @@ class _DialogueWidgetState extends State<DialogueWidget> {
                     return Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        _buildSpeedChip(TTSSpeed.verySlow, 'Word by Word', spd),
                         _buildSpeedChip(TTSSpeed.slow,   'Slow',   spd),
                         _buildSpeedChip(TTSSpeed.medium, 'Medium', spd),
                       ],

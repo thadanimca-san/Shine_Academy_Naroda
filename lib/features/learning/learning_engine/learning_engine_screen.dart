@@ -8,8 +8,11 @@ import '../../../../core/engine/block_validator.dart';
 import '../../../../core/engine/block_registry.dart';
 import '../../../../core/engine/curriculum_database.dart';
 import '../../../../core/engine/local_content_manager.dart';
+import '../../../../core/services/activation_service.dart';
 import '../../../../foundation/theme/app_colors.dart';
+import '../../../../foundation/theme/app_typography.dart';
 import '../../../foundation/theme/brand_app_bar.dart';
+import '../../../shared/widgets/activation_dialog.dart';
 import '../ai_tutor/ai_tutor_screen.dart';
 import 'services/pdf_export_service.dart';
 import 'widgets/universal_block_wrapper.dart';
@@ -363,8 +366,75 @@ class _LearningEngineScreenState extends State<LearningEngineScreen> {
     );
   }
 
+  bool get _isSkillupLocked {
+    if ((appFlavor ?? 'default') != 'skillup') return false;
+    if (ActivationService.isActivated) return false;
+    final match = RegExp(r'govindsir_english_ch(\d+)').firstMatch(widget.moduleId);
+    if (match != null) {
+      final num = int.tryParse(match.group(1)!) ?? 1;
+      return num > 2;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (_isSkillupLocked) {
+      final scale = AppTypography.scaleFactor(context);
+      return Scaffold(
+        appBar: BrandAppBar(
+          title: TrilingualService.instance.getUIText('🔒 Premium Content'),
+        ),
+        body: Center(
+          child: Padding(
+            padding: EdgeInsets.all(24.0 * scale),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.lock_outline, size: 64 * scale, color: const Color(0xFFFF6F00)),
+                SizedBox(height: 16 * scale),
+                Text(
+                  TrilingualService.instance.getUIText('This chapter requires activation.'),
+                  style: GoogleFonts.poppins(
+                    fontSize: 20 * scale,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textPrimary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 8 * scale),
+                Text(
+                  TrilingualService.instance.getUIText(
+                    'Chapters 1 and 2 are fully free. Unlock all 63 Spoken English master chapters with your activation code.',
+                  ),
+                  style: GoogleFonts.inter(
+                    fontSize: 14 * scale,
+                    color: AppColors.textSecondary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 24 * scale),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 24 * scale, vertical: 14 * scale),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () => ActivationDialog.show(context, onActivated: () => setState(() {})),
+                  icon: const Icon(Icons.key, color: Colors.white),
+                  label: Text(
+                    TrilingualService.instance.getUIText('Enter Activation Code'),
+                    style: GoogleFonts.inter(fontSize: 15 * scale, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     if (_isLoading) {
       return const Scaffold(
         backgroundColor: AppColors.background,

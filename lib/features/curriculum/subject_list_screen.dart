@@ -28,11 +28,36 @@ class _SubjectListScreenState extends State<SubjectListScreen> {
 
   Future<void> _loadCurriculum() async {
     try {
-      final jsonString = await rootBundle.loadString('app_core/curriculum/${widget.curriculumId}.json');
-      setState(() {
-        _curriculumData = json.decode(jsonString);
-        _isLoading = false;
-      });
+      String? jsonString;
+      final candidates = [
+        widget.curriculumId,
+        if (widget.curriculumId.contains('class11_commerce')) 'gseb_class11',
+        if (widget.curriculumId.contains('class11_commerce')) 'class11_commerce',
+        if (widget.curriculumId.contains('class12_commerce')) 'gseb_class12_commerce',
+        if (widget.curriculumId.contains('class11_science')) 'class11_science',
+        if (widget.curriculumId.contains('class12_science')) 'class12_science',
+        if (widget.curriculumId.startsWith('ncert_')) widget.curriculumId.replaceFirst('ncert_', ''),
+        if (widget.curriculumId.startsWith('gseb_')) widget.curriculumId.replaceFirst('gseb_', ''),
+      ];
+
+      for (final cid in candidates) {
+        try {
+          jsonString = await rootBundle.loadString('app_core/curriculum/$cid.json');
+          break;
+        } catch (_) {}
+      }
+
+      if (jsonString != null) {
+        setState(() {
+          _curriculumData = json.decode(jsonString!);
+          _isLoading = false;
+        });
+      } else {
+        setState(() {
+          _error = 'Failed to load curriculum data.';
+          _isLoading = false;
+        });
+      }
     } catch (e) {
       setState(() {
         _error = 'Failed to load curriculum data.';
@@ -110,6 +135,10 @@ class _SubjectListScreenState extends State<SubjectListScreen> {
                   } else {
                     context.push('/learning/english_sim?grade=$gradeNum'); // assuming it accepts grade in the future
                   }
+                  return;
+                }
+                if (subject.containsKey('app_route') && subject['app_route'] != null && subject['app_route'].toString().isNotEmpty) {
+                  context.push(subject['app_route'].toString());
                   return;
                 }
                 // Navigate to chapter list, passing the curriculum ID and subject ID

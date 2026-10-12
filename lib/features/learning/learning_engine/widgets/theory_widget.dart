@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show appFlavor;
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/services/tts_service.dart';
@@ -85,7 +86,8 @@ class _TheoryWidgetState extends State<TheoryWidget> {
         widget.block['translation_gu']?.toString() ??
         '';
 
-    final bool hasGuideContent = phonetics.isNotEmpty || hindiMeaning.isNotEmpty || gujaratiMeaning.isNotEmpty;
+    final bool isSkillup = (appFlavor == 'skillup');
+    final bool hasGuideContent = isSkillup && (phonetics.isNotEmpty || hindiMeaning.isNotEmpty || gujaratiMeaning.isNotEmpty);
 
     return Container(
       margin: const EdgeInsets.only(bottom: 24),

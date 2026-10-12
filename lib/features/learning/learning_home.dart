@@ -190,6 +190,15 @@ class _LearningHomeState extends State<LearningHome> with TickerProviderStateMix
 
   @override
   Widget build(BuildContext context) {
+    final flavor = appFlavor ?? 'default';
+    if (flavor == 'skillup') {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: BrandAppBar(title: TrilingualService.instance.getUIText('Govind Sir English Academy')),
+        body: _buildClassTab('govindsir_english', fallback: _buildSimulations()),
+      );
+    }
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: const BrandAppBar(title: 'Curriculum Browser'),
@@ -278,7 +287,7 @@ class _LearningHomeState extends State<LearningHome> with TickerProviderStateMix
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.9,
+              childAspectRatio: 0.78,
             ),
             itemBuilder: (context, index) {
               final sub = subjects[index];
@@ -297,28 +306,43 @@ class _LearningHomeState extends State<LearningHome> with TickerProviderStateMix
                     context.push('/curriculum/$curriculumId/${sub['id']}/chapters');
                   }
                 },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: color.withValues(alpha: 0.1),
-                        shape: BoxShape.circle,
+                child: Center(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: color.withValues(alpha: 0.1),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(icon, color: color, size: 34),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            width: 140,
+                            child: Text(
+                              titleText,
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: GoogleFonts.inter(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.5,
+                                color: AppColors.textPrimary,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      child: Icon(icon, color: color, size: 40),
                     ),
-                    const SizedBox(height: 16),
-                    Text(
-                      titleText,
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.inter(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: AppColors.textPrimary,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               );
             },

@@ -47,14 +47,18 @@ class GlossedText extends StatelessWidget {
         int globalStart = -1;
         int globalEnd = -1;
         
-        final searchTarget = text.toLowerCase();
+        final cleanTarget = text.replaceAll(RegExp(r'(\*\*|\*|__|_|#)'), '').toLowerCase();
         final searchProgress = progress.text.toLowerCase().trim();
         
-        if (progress.text.isNotEmpty && searchTarget.contains(searchProgress)) {
-          int chunkOffsetInFull = searchTarget.indexOf(searchProgress);
-          if (chunkOffsetInFull != -1) {
+        if (progress.text.isNotEmpty && (cleanTarget == searchProgress || cleanTarget.contains(searchProgress) || searchProgress.contains(cleanTarget))) {
+          if (cleanTarget.contains(searchProgress)) {
+            int chunkOffsetInFull = cleanTarget.indexOf(searchProgress);
             globalStart = chunkOffsetInFull + progress.startOffset;
             globalEnd = chunkOffsetInFull + progress.endOffset;
+          } else {
+            int offsetInSpoken = searchProgress.indexOf(cleanTarget);
+            globalStart = progress.startOffset - offsetInSpoken;
+            globalEnd = progress.endOffset - offsetInSpoken;
           }
         }
         
@@ -62,8 +66,7 @@ class GlossedText extends StatelessWidget {
         int localStart = globalStart - paraOffset;
         int localEnd = globalEnd - paraOffset;
         
-        // If out of bounds of this paragraph, just render normal glosses
-        bool hasHighlight = localStart >= 0 && localEnd <= paragraph.length && localStart < localEnd;
+
 
         final spans = <InlineSpan>[];
         var remaining = paragraph;

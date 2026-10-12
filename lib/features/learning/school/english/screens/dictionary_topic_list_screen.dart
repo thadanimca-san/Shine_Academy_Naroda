@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../data/dictionary_topics.dart';
 import '../models/dictionary_word.dart';
@@ -7,6 +8,7 @@ import 'dictionary_search_screen.dart';
 import 'dictionary_words_screen.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../../../../foundation/theme/brand_app_bar.dart';
+import '../../../../../shared/widgets/activation_gate.dart';
 
 /// Grade picker for the Picture Dictionary. With 17 themes per grade across
 /// Class 7-10 (academic vocabulary plus Science and Social Studies), a flat
@@ -18,14 +20,59 @@ class DictionaryGradeListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isSkillup = (appFlavor == 'skillup');
     final grades = dictionaryTopicsByGrade.keys.toList();
     final totalWords = allDictionaryTopics.fold(0, (sum, t) => sum + (t.words.isNotEmpty ? t.words.length : (t.wordIds?.length ?? 0)));
+
+    final Map<String, Map<String, String>> skillupLevelMap = {
+      'Class 3': {
+        'title': 'Level 1: Daily Life & Home Essentials (दैनिक जीवन)',
+        'subtitle': 'Animals, Food, Body, Clothes, Home & Family',
+        'emoji': '🏡',
+      },
+      'Class 4': {
+        'title': 'Level 2: Living World, Nature & Travel (प्रकृति व यात्रा)',
+        'subtitle': 'Nature, Weather, Transport, Garden, Colors & Shapes',
+        'emoji': '🌿',
+      },
+      'Class 5': {
+        'title': 'Level 3: Workplaces, Society & Sports (कामकाज व समाज)',
+        'subtitle': 'Occupations, Feelings, Sports, Society & Living',
+        'emoji': '🏙️',
+      },
+      'Class 6': {
+        'title': 'Level 4: Science, Inventions & World Wonders (विज्ञान व दुनिया)',
+        'subtitle': 'Science, Tools, Glacier, Ecosystem & Technology',
+        'emoji': '🔬',
+      },
+      'Class 7': {
+        'title': 'Level 5: Academic Words & Context (शैक्षणिक शब्दावली)',
+        'subtitle': 'Essential academic concepts & social terms',
+        'emoji': '📚',
+      },
+      'Class 8': {
+        'title': 'Level 6: Idioms & Spoken Phrasal Verbs (मुहावरे व वाक्यांश)',
+        'subtitle': 'Common spoken idioms, expressions & daily phrases',
+        'emoji': '💬',
+      },
+      'Class 9': {
+        'title': 'Level 7: Synonyms & Antonyms (समानार्थी व विलोम शब्द)',
+        'subtitle': 'Word precision, vocabulary expansion & pairs',
+        'emoji': '🎯',
+      },
+      'Class 10': {
+        'title': 'Level 8: Professional & Elite Fluency (व्यावसायिक शब्दावली)',
+        'subtitle': 'Advanced communication & leadership vocabulary',
+        'emoji': '👑',
+      },
+    };
+
     return Scaffold(
       appBar: BrandAppBar(
-        title: TrilingualService.instance.getUIText('Picture Dictionary'),
+        title: TrilingualService.instance.getUIText('Visual Picture Dictionary'),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             tooltip: 'Search all words',
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const DictionarySearchScreen()),
@@ -57,9 +104,14 @@ class DictionaryGradeListScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(TrilingualService.instance.getUIText('Search all words'), style: TextStyle(fontWeight: FontWeight.w700, color: AppColors.tealDeep)),
-                        Text('Across every grade and theme · $totalWords words',
-                            style: TextStyle(fontSize: 12, color: AppColors.inkSoft)),
+                        Text(
+                          TrilingualService.instance.getUIText('Search all visual words (Instant)'),
+                          style: TextStyle(fontWeight: FontWeight.w700, color: AppColors.tealDeep),
+                        ),
+                        Text(
+                          'Instant visual search across $totalWords words (ant, glacier, butterfly...)',
+                          style: TextStyle(fontSize: 12, color: AppColors.inkSoft),
+                        ),
                       ],
                     ),
                   ),
@@ -71,23 +123,49 @@ class DictionaryGradeListScreen extends StatelessWidget {
           ...grades.map((grade) {
             final topics = dictionaryTopicsByGrade[grade]!;
             final wordCount = topics.fold(0, (sum, t) => sum + (t.words.isNotEmpty ? t.words.length : (t.wordIds?.length ?? 0)));
-            return Padding(
+
+            final String displayTitle = (isSkillup && skillupLevelMap.containsKey(grade))
+                ? skillupLevelMap[grade]!['title']!
+                : grade;
+            final String displaySubtitle = (isSkillup && skillupLevelMap.containsKey(grade))
+                ? '${topics.length} themes · $wordCount words (${skillupLevelMap[grade]!['subtitle']!})'
+                : '${topics.length} themes · $wordCount words';
+            final String displayEmoji = (isSkillup && skillupLevelMap.containsKey(grade))
+                ? skillupLevelMap[grade]!['emoji']!
+                : '📖';
+
+            final card = Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: Card(
                 child: ListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   leading: CircleAvatar(
                     backgroundColor: AppColors.saffronTint,
-                    child: Text(TrilingualService.instance.getUIText('📖'), style: TextStyle(fontSize: 20)),
+                    child: Text(displayEmoji, style: const TextStyle(fontSize: 20)),
                   ),
-                  title: Text(grade, style: Theme.of(context).textTheme.titleMedium),
-                  subtitle: Text('${topics.length} themes · $wordCount words'),
+                  title: Text(
+                    TrilingualService.instance.getUIText(displayTitle),
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  subtitle: Text(displaySubtitle),
                   trailing: Icon(Icons.chevron_right, color: AppColors.inkFaint),
                   onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => DictionaryTopicListScreen(grade: grade, topics: topics)),
+                    MaterialPageRoute(
+                      builder: (_) => DictionaryTopicListScreen(
+                        grade: isSkillup ? displayTitle : grade,
+                        topics: topics,
+                      ),
+                    ),
                   ),
                 ),
               ),
+            );
+
+            if (!isSkillup) return card;
+
+            return ActivationGate(
+              isFree: false,
+              child: card,
             );
           }),
         ],

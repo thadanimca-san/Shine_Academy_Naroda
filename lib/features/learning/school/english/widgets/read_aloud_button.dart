@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../core/services/tts_service.dart';
 import '../theme/app_theme.dart';
@@ -166,11 +165,11 @@ class _InlineSpeedSelector extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              _chip(TTSSpeed.verySlow, 'Very Slow', current),
+              _chip(TTSSpeed.verySlow, TrilingualService.instance.getUIText('Word by Word'), current),
               const SizedBox(width: 2),
-              _chip(TTSSpeed.slow,     'Slow',      current),
+              _chip(TTSSpeed.slow,     TrilingualService.instance.getUIText('Slow'),         current),
               const SizedBox(width: 2),
-              _chip(TTSSpeed.medium,   'Medium',    current),
+              _chip(TTSSpeed.medium,   TrilingualService.instance.getUIText('Medium'),       current),
             ],
           ),
         );

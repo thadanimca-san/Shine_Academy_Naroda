@@ -1,17 +1,19 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 import 'dart:convert';
-import "package:shine_academy_naroda/core/engine/local_content_manager.dart";
 import "dart:io";
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../foundation/theme/app_colors.dart';
+import '../../foundation/theme/app_typography.dart';
 import '../../foundation/theme/brand_app_bar.dart';
 import '../../foundation/theme/premium_card.dart';
 import '../../core/engine/assessment_engine.dart';
+import '../../core/services/activation_service.dart';
 import '../../core/services/gamification_service.dart';
+import '../../shared/widgets/activation_dialog.dart';
 import '../gamification/widgets/mast_hai_dialog.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../core/engine/content_repository.dart';
@@ -373,7 +375,7 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
       int coinsEarned = correctCount * 5; // 5 Coins per correct answer
       
       await GamificationService.instance.addCoins(coinsEarned);
-      bool leveledUp = await GamificationService.instance.addXp(xpEarned);
+      await GamificationService.instance.addXp(xpEarned);
       
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -418,8 +420,71 @@ class _ExamEngineScreenState extends State<ExamEngineScreen> {
     }
   }
 
+  bool get _isSkillupLocked {
+    if ((appFlavor ?? 'default') != 'skillup') return false;
+    if (ActivationService.isActivated) return false;
+    final match = RegExp(r'govindsir_english_ch(\d+)').firstMatch(widget.moduleId);
+    if (match != null) {
+      final num = int.tryParse(match.group(1)!) ?? 1;
+      return num > 2;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (_isSkillupLocked) {
+      final scale = AppTypography.scaleFactor(context);
+      return Scaffold(
+        appBar: BrandAppBar(title: TrilingualService.instance.getUIText('🔒 Premium Exam')),
+        body: Center(
+          child: Padding(
+            padding: EdgeInsets.all(24.0 * scale),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.lock_outline, size: 64 * scale, color: const Color(0xFFFF6F00)),
+                SizedBox(height: 16 * scale),
+                Text(
+                  TrilingualService.instance.getUIText('This exam requires activation.'),
+                  style: GoogleFonts.poppins(
+                    fontSize: 20 * scale,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textPrimary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 8 * scale),
+                Text(
+                  TrilingualService.instance.getUIText('Chapters 1 and 2 exams are fully free. Activate to access all chapter exams.'),
+                  style: GoogleFonts.inter(
+                    fontSize: 14 * scale,
+                    color: AppColors.textSecondary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 24 * scale),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 24 * scale, vertical: 14 * scale),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () => ActivationDialog.show(context, onActivated: () => setState(() {})),
+                  icon: const Icon(Icons.key, color: Colors.white),
+                  label: Text(
+                    TrilingualService.instance.getUIText('Enter Activation Code'),
+                    style: GoogleFonts.inter(fontSize: 15 * scale, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     if (_isLoading) return const Scaffold(body: Center(child: CircularProgressIndicator()));
     if (_error.isNotEmpty) return Scaffold(appBar: const BrandAppBar(title: 'Error'), body: Center(child: Text(_error)));
 

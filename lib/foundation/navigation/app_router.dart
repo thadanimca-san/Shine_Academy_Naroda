@@ -42,7 +42,10 @@ import "../../features/english_simulation_11to12/english_simulation_dashboard.da
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 // import '../../features/learning/school/social_science_simulation/social_science_main.dart' as sst_sim;
 // import '../../features/learning/school/sanskrit_simulation/sanskrit_main.dart' as sanskrit_sim;
-// import '../../features/learning/school/gujarati_simulation/gujarati_main.dart' as gujarati_sim;
+import '../../features/learning/school/english/screens/dictionary_topic_list_screen.dart';
+import '../../features/learning/school/english/screens/spoken_grammar_gym_screen.dart';
+import '../../features/learning/school/english/screens/reading_list_screen.dart';
+import '../../features/learning/school/english/screens/figures_of_speech_screen.dart';
 // import '../../features/learning/school/computer_simulation/computer_main.dart' as computer_sim;
 // import '../../features/learning/school/hindi_simulation/hindi_main.dart' as hindi_sim;
 
@@ -243,6 +246,22 @@ final router = GoRouter(
                 final grade = gradeStr != null ? int.tryParse(gradeStr) : null;
                 return ExitOverlay(child: english_sim.AppGate(preSelectedGrade: grade));
               }
+            ),
+            GoRoute(
+              path: 'english_dictionary', 
+              builder: (context, state) => ExitOverlay(child: const DictionaryGradeListScreen()),
+            ),
+            GoRoute(
+              path: 'english_grammar', 
+              builder: (context, state) => ExitOverlay(child: const SpokenGrammarGymScreen()),
+            ),
+            GoRoute(
+              path: 'english_reading', 
+              builder: (context, state) => ExitOverlay(child: const ReadingGradeListScreen()),
+            ),
+            GoRoute(
+              path: 'english_figures', 
+              builder: (context, state) => ExitOverlay(child: const FiguresOfSpeechListScreen()),
             ),
             GoRoute(
               path: 'stats', builder: (context, state) => ExitOverlay(child: stats.StartupGate())),

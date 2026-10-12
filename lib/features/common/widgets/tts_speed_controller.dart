@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../core/services/tts_service.dart';
 import '../../../foundation/theme/app_colors.dart';
 import '../../../core/services/trilingual_service.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 /// A compact speed selector row used wherever TTS is active.
 /// Provides three options: Very Slow | Slow | Medium (no Fast).

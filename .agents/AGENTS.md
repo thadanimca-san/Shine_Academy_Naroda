@@ -1,6 +1,15 @@
 # Shine Academy Naroda - Universal Content Standards
 
 =========================================================
+PERMANENT DIRECTIVE: STRICT TERRITORY — NEVER TOUCH CLASS 10 / HIGHSCHOOL FLAVOR
+=========================================================
+**CRITICAL DIRECTIVE (MANDATORY & ABSOLUTE):**
+- Claude AI is exclusively working on Class 10 subjects in the `highschool` flavor.
+- Antigravity / Gemini agents MUST NEVER touch, edit, translate, reformat, or alter ANY Class 10 chapter, curriculum, question file, or subject in CBSE or GSEB.
+- Antigravity / Gemini agents MUST ONLY work inside the assigned scope (`skillup` flavor).
+- Do not modify any file under `app_core/content/*/class10/`.
+
+=========================================================
 PERMANENT DIRECTIVE — NOTED BY USER ON 2026-09-05
 =========================================================
 **THIS IS NOT A SMALL PROJECT. EVERY EXERCISE QUESTION FROM EVERY TEXTBOOK CHAPTER

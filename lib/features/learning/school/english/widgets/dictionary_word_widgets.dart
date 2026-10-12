@@ -3,10 +3,73 @@ import 'package:flutter/material.dart';
 
 import '../services/speech_service.dart';
 import '../theme/app_theme.dart';
-import '../../../../dictionary/dictionary_popup.dart';
 import '../../../../../core/services/universal_dictionary_service.dart';
 import 'admin_edit_button.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+class DictionaryPhotoHelper {
+  static final Map<String, String> _localAssets = {
+    'ant': 'assets/images/ant.jpg',
+    'bear': 'assets/images/bear.jpg',
+    'bird': 'assets/images/bird.jpg',
+    'butterfly': 'assets/images/butterfly.jpg',
+    'cat': 'assets/images/cat.jpg',
+    'cow': 'assets/images/cow.jpg',
+    'dog': 'assets/images/dog.jpg',
+    'duck': 'assets/images/duck.jpg',
+    'elephant': 'assets/images/elephant.jpg',
+    'glacier': 'assets/images/glacier.jpg',
+    'goat': 'assets/images/goat.jpg',
+    'hen': 'assets/images/hen.jpg',
+    'horse': 'assets/images/horse.jpg',
+    'lion': 'assets/images/lion.jpg',
+    'monkey': 'assets/images/monkey.jpg',
+    'mouse': 'assets/images/mouse.jpg',
+    'parrot': 'assets/images/parrot.jpg',
+    'rabbit': 'assets/images/rabbit.jpg',
+    'tiger': 'assets/images/tiger.jpg',
+  };
+
+  static final Map<String, String> _curatedWebPhotos = {
+    'bear': 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=500&q=80',
+    'bird': 'https://images.unsplash.com/photo-1444464666168-49d633b86797?w=500&q=80',
+    'dog': 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=500&q=80',
+    'cat': 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80',
+    'horse': 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&q=80',
+    'lion': 'https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=500&q=80',
+    'duck': 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&q=80',
+    'frog': 'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?w=500&q=80',
+    'ladybird': 'https://images.unsplash.com/photo-1547407139-3c921a66005c?w=500&q=80',
+    'ladybug': 'https://images.unsplash.com/photo-1547407139-3c921a66005c?w=500&q=80',
+    'touch me not': 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&q=80',
+    'touch-me-not': 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&q=80',
+    'mimosa': 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&q=80',
+    'parrot': 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=500&q=80',
+    'peacock': 'https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?w=500&q=80',
+    'apple': 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500&q=80',
+    'mango': 'https://images.unsplash.com/photo-1553279768-865429fa0078?w=500&q=80',
+    'tree': 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=500&q=80',
+    'mountain': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80',
+    'train': 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=500&q=80',
+    'airplane': 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80',
+    'advocate': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&q=80',
+    'implication': 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&q=80',
+    'analogy': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80',
+    'consensus': 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80',
+    'mitigate': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80',
+    'holistic': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80',
+  };
+
+  static String? getPhoto(String term) {
+    final clean = term.trim().toLowerCase();
+    // 1. Strict exact match in local assets
+    if (_localAssets.containsKey(clean)) return _localAssets[clean];
+
+    // 2. Strict exact match in curated photos (never use substring contains which matches 'advocate' to 'cat')
+    if (_curatedWebPhotos.containsKey(clean)) return _curatedWebPhotos[clean];
+
+    return null;
+  }
+}
+
 /// Shared word-card tile used by both the per-topic dictionary browser and
 /// the global cross-grade search screen, so a word looks the same wherever
 /// it's found.
@@ -18,6 +81,36 @@ class DictionaryWordCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String termEn = ((word['term'] as Map?)?['english'] ?? '').toString();
+    final String? photoSource = (word['media'] != null && word['media']['imagePath'] != null && word['media']['imagePath'].toString().isNotEmpty)
+        ? word['media']['imagePath'].toString()
+        : DictionaryPhotoHelper.getPhoto(termEn);
+
+    Widget imageThumbnail;
+    if (photoSource != null && photoSource.isNotEmpty) {
+      if (photoSource.startsWith('assets/')) {
+        imageThumbnail = ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.asset(photoSource, width: 50, height: 50, fit: BoxFit.cover),
+        );
+      } else if (photoSource.startsWith('http')) {
+        imageThumbnail = ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.network(
+            photoSource,
+            width: 50,
+            height: 50,
+            fit: BoxFit.cover,
+            errorBuilder: (ctx, err, st) => _fallbackEmoji(),
+          ),
+        );
+      } else {
+        imageThumbnail = _fallbackEmoji();
+      }
+    } else {
+      imageThumbnail = _fallbackEmoji();
+    }
+
     return InkWell(
       borderRadius: BorderRadius.circular(12),
       onTap: () => showModalBottomSheet(
@@ -38,25 +131,14 @@ class DictionaryWordCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  width: 44,
-                  height: 44,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: AppColors.saffronTint,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: (word['media'] != null && word['media']['emoji'] != null)
-                      ? Text(word['media']['emoji'], style: TextStyle(fontSize: 22))
-                      : Icon(Icons.menu_book_outlined, color: AppColors.saffronDeep, size: 22),
-                ),
-                const SizedBox(width: 10),
+                imageThumbnail,
+                const SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(((word['term'] as Map?)?['english'] ?? ''),
+                      Text(termEn,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: AppColors.ink)),
@@ -79,19 +161,32 @@ class DictionaryWordCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-            Expanded(
-              child: Text(
-                word['definition'] != null && word['definition']['simple'] != null 
-                    ? (word['definition']['simple'] is Map ? word['definition']['simple']['en'] ?? '' : word['definition']['simple']) 
-                    : '',
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 12.5, color: AppColors.inkSoft),
-              ),
+            Text(
+              word['definition'] != null && word['definition']['simple'] != null 
+                  ? (word['definition']['simple'] is Map ? word['definition']['simple']['en'] ?? '' : word['definition']['simple']) 
+                  : '',
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 12.5, color: AppColors.inkSoft),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _fallbackEmoji() {
+    return Container(
+      width: 50,
+      height: 50,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: AppColors.saffronTint,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: (word['media'] != null && word['media']['emoji'] != null)
+          ? Text(word['media']['emoji'], style: const TextStyle(fontSize: 26))
+          : Icon(Icons.menu_book_outlined, color: AppColors.saffronDeep, size: 24),
     );
   }
 }
@@ -103,85 +198,80 @@ class DictionaryWordDetailSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectionArea(
-      contextMenuBuilder: (BuildContext context, SelectableRegionState selectableRegionState) {
-        final buttonItems = selectableRegionState.contextMenuButtonItems.toList();
-        final selectedText = selectableRegionState.textEditingValue.selection.textInside(selectableRegionState.textEditingValue.text);
-        
-        if (selectedText.trim().isNotEmpty) {
-          buttonItems.insert(0, ContextMenuButtonItem(
-            label: '📖 Dictionary',
-            onPressed: () {
-              selectableRegionState.hideToolbar();
-              UniversalDictionaryPopup.show(context, selectedText.trim());
-            },
-          ));
-        }
+    final String termEn = ((word['term'] as Map?)?['english'] ?? '').toString();
+    final String? photoSource = (word['media'] != null && word['media']['imagePath'] != null && word['media']['imagePath'].toString().isNotEmpty)
+        ? word['media']['imagePath'].toString()
+        : DictionaryPhotoHelper.getPhoto(termEn);
 
-        return AdaptiveTextSelectionToolbar.buttonItems(
-          anchors: selectableRegionState.contextMenuAnchors,
-          buttonItems: buttonItems,
+    Widget heroVisual;
+    if (photoSource != null && photoSource.isNotEmpty) {
+      if (photoSource.startsWith('assets/')) {
+        heroVisual = ClipRRect(
+          borderRadius: BorderRadius.circular(14),
+          child: Image.asset(photoSource, width: double.infinity, height: 160, fit: BoxFit.cover),
         );
-      },
+      } else if (photoSource.startsWith('http')) {
+        heroVisual = ClipRRect(
+          borderRadius: BorderRadius.circular(14),
+          child: Image.network(
+            photoSource,
+            width: double.infinity,
+            height: 160,
+            fit: BoxFit.cover,
+            errorBuilder: (ctx, err, st) => _fallbackHeroEmoji(),
+          ),
+        );
+      } else {
+        heroVisual = _fallbackHeroEmoji();
+      }
+    } else {
+      heroVisual = _fallbackHeroEmoji();
+    }
+
+    return SelectionArea(
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
           child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-          Center(
-            child: Container(
-              width: 88,
-              height: 88,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: AppColors.saffronTint,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: (word['media'] != null && word['media']['emoji'] != null)
-                  ? Text(word['media']['emoji'], style: TextStyle(fontSize: 44))
-                  : Icon(Icons.menu_book_outlined, color: AppColors.saffronDeep, size: 40),
-            ),
-          ),
-          if (word['media'] == null || word['media']['emoji'] == null) ...[
-            const SizedBox(height: 6),
-            Center(
-              child: Text(TrilingualService.instance.getUIText('No picture available for this word yet.'),
-                  style: TextStyle(fontSize: 11, color: AppColors.inkFaint, fontStyle: FontStyle.italic)),
-            ),
-          ],
-          const SizedBox(height: 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Text(((word['term'] as Map?)?['english'] ?? ''), style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppColors.ink)),
-              const SizedBox(width: 8),
-              Text(word['part_of_speech'] ?? 'noun', style: TextStyle(fontSize: 12, color: AppColors.inkFaint)),
-              const Spacer(),
-              FutureBuilder<String?>(
-                future: UniversalDictionaryService.instance.getSourceFileForTerm(word['id']?.toString() ?? ''),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData && snapshot.data != null) {
-                    return AdminEditButton(
-                      jsonPath: snapshot.data!,
-                      data: const {},
-                    );
-                  }
-                  return const SizedBox.shrink();
-                },
+              Center(child: heroVisual),
+              const SizedBox(height: 16),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Text(termEn,
+                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppColors.ink)),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(word['part_of_speech'] ?? 'noun', style: TextStyle(fontSize: 12, color: AppColors.inkFaint)),
+                  const SizedBox(width: 8),
+                  FutureBuilder<String?>(
+                    future: UniversalDictionaryService.instance.getSourceFileForTerm(word['id']?.toString() ?? ''),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData && snapshot.data != null) {
+                        return AdminEditButton(
+                          jsonPath: snapshot.data!,
+                          data: const {},
+                        );
+                      }
+                      return const SizedBox.shrink();
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.volume_up, color: AppColors.tealDeep),
+                    tooltip: 'Hear pronunciation',
+                    onPressed: () => SpeechService.instance.speak(termEn),
+                  ),
+                ],
               ),
-              IconButton(
-                icon: Icon(Icons.volume_up, color: AppColors.tealDeep),
-                tooltip: 'Hear pronunciation',
-                onPressed: () => SpeechService.instance.speak(((word['term'] as Map?)?['english'] ?? '')),
+              const SizedBox(height: 4),
+              Text(
+                '${(word['term'] as Map?)?['hindi'] ?? (word['term'] as Map?)?['hi'] ?? ''}  ·  ${(word['term'] as Map?)?['gujarati'] ?? (word['term'] as Map?)?['gu'] ?? ''}',
+                style: TextStyle(fontSize: 16, color: AppColors.tealDeep, fontWeight: FontWeight.w600),
               ),
-            ],
-          ),
-          Text(
-            '${(word['term'] as Map?)?['hindi'] ?? (word['term'] as Map?)?['hi'] ?? ''}  ·  ${(word['term'] as Map?)?['gujarati'] ?? (word['term'] as Map?)?['gu'] ?? ''}',
-            style: TextStyle(fontSize: 16, color: AppColors.tealDeep),
-          ),
           const SizedBox(height: 12),
           Text(word['definition'] != null && word['definition']['simple'] != null 
                     ? (word['definition']['simple'] is Map ? word['definition']['simple']['en'] ?? '' : word['definition']['simple']) 
@@ -223,5 +313,20 @@ class DictionaryWordDetailSheet extends StatelessWidget {
         ],
       ),
     )));
+  }
+
+  Widget _fallbackHeroEmoji() {
+    return Container(
+      width: 100,
+      height: 100,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: AppColors.saffronTint,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: (word['media'] != null && word['media']['emoji'] != null)
+          ? Text(word['media']['emoji'], style: const TextStyle(fontSize: 50))
+          : Icon(Icons.menu_book_outlined, color: AppColors.saffronDeep, size: 48),
+    );
   }
 }

@@ -232,9 +232,14 @@ class TrilingualService extends ChangeNotifier {
       'gu': 'રોકો',
     },
     'Very Slow': {
-      'en': 'Very Slow',
-      'hi': 'बहुत धीमा',
-      'gu': 'ખૂબ ધીમું',
+      'en': 'Word by Word',
+      'hi': 'शब्द दर शब्द',
+      'gu': 'શબ્દ દીઠ શબ્દ',
+    },
+    'Word by Word': {
+      'en': 'Word by Word',
+      'hi': 'शब्द दर शब्द',
+      'gu': 'શબ્દ દીઠ શબ્દ',
     },
     'Slow': {
       'en': 'Slow',
@@ -339,7 +344,7 @@ extension TrilingualTextStyle on TextStyle {
   /// Noto Sans Google Font if the active language is Hindi or Gujarati,
   /// ensuring they remain readable on large digital panels.
   TextStyle adaptToLanguage() {
-    double? newFontSize = this.fontSize;
+    double? newFontSize = fontSize;
     if (newFontSize != null) {
       if (PresentationService.isPresentationMode.value) {
         newFontSize = 27.0; // 25% smaller than original 36.0
@@ -349,16 +354,16 @@ extension TrilingualTextStyle on TextStyle {
     }
 
     if (TrilingualService.instance.activeViewLanguage == 'hi') {
-      return this.copyWith(
+      return copyWith(
         fontSize: newFontSize,
         fontFamily: 'NotoSansDevanagari',
       );
     } else if (TrilingualService.instance.activeViewLanguage == 'gu') {
-      return this.copyWith(
+      return copyWith(
         fontSize: newFontSize,
         fontFamily: 'NotoSansGujarati',
       );
     }
-    return this.copyWith(fontSize: newFontSize);
+    return copyWith(fontSize: newFontSize);
   }
 }

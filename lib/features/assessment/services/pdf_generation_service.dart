@@ -2,7 +2,6 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:flutter/material.dart' show BuildContext, showDialog, AlertDialog, CircularProgressIndicator, Row, Text, SizedBox, Navigator;
 import 'package:shine_academy_naroda/core/engine/universal_pdf_engine.dart';
-import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 
 class PdfGenerationService {

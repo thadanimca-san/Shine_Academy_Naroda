@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../../../foundation/theme/brand_app_bar.dart';
 import '../data/reading_topics.dart';
@@ -7,6 +8,7 @@ import '../models/reading_passage.dart';
 import '../theme/app_theme.dart';
 import 'reading_passage_screen.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
+import '../../../../../shared/widgets/activation_gate.dart';
 
 /// Grade picker for Reading. Each grade has its own small library of
 /// illustrated passages, so grade is chosen first, then its passages.
@@ -25,12 +27,12 @@ class ReadingGradeListScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final grade = grades[index];
           final library = readingLibraryByGrade[grade]!;
-          return Card(
+          final card = Card(
             child: ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               leading: CircleAvatar(
                 backgroundColor: AppColors.saffronTint,
-                child: Text(TrilingualService.instance.getUIText('📖'), style: TextStyle(fontSize: 18)),
+                child: Text(TrilingualService.instance.getUIText('📖'), style: const TextStyle(fontSize: 18)),
               ),
               title: Text(grade, style: Theme.of(context).textTheme.titleMedium),
               subtitle: Text('${library.passages.length} illustrated passages'),
@@ -39,6 +41,13 @@ class ReadingGradeListScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (_) => ReadingPassageListScreen(library: library)),
               ),
             ),
+          );
+
+          if ((appFlavor ?? 'default') != 'skillup') return card;
+
+          return ActivationGate(
+            isFree: false,
+            child: card,
           );
         },
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/dictionary_topics.dart';
 import '../theme/app_theme.dart';
 import '../widgets/dictionary_word_widgets.dart';
 import '../../../../../core/services/universal_dictionary_service.dart';
@@ -22,15 +23,12 @@ class _DictionarySearchScreenState extends State<DictionarySearchScreen> {
   @override
   void initState() {
     super.initState();
+    UniversalDictionaryService.instance.init();
     TrilingualService.instance.addListener(_onLanguageChanged);
   }
 
   void _onLanguageChanged() {
-    if (_matches.isNotEmpty) {
-      TrilingualService.instance.preTranslateBlocks(_matches, isDictionary: true).then((_) {
-        if (mounted) setState(() {});
-      });
-    }
+    if (mounted) setState(() {});
   }
 
   @override
@@ -52,8 +50,41 @@ class _DictionarySearchScreenState extends State<DictionarySearchScreen> {
     
     setState(() => _isSearching = true);
     
-    // Fetch terms matching query from the Universal Dictionary Service directly
-    final matches = await UniversalDictionaryService.instance.searchTerms(queryLower);
+    if (!UniversalDictionaryService.instance.isInitialized) {
+      await UniversalDictionaryService.instance.init();
+    }
+
+    List<Map<String, dynamic>> matches = [];
+    try {
+      matches = await UniversalDictionaryService.instance.searchTerms(queryLower);
+    } catch (_) {}
+
+    // In-memory words fallback and augment from allDictionaryTopics
+    final seenIds = <String>{for (final m in matches) m['id']?.toString() ?? ''};
+    for (final topic in allDictionaryTopics) {
+      for (final w in topic.words) {
+        final en = w.word.toLowerCase();
+        final hi = w.meaningHi.toLowerCase();
+        final gu = (w.meaningGu ?? '').toLowerCase();
+        if (en.contains(queryLower) || hi.contains(queryLower) || gu.contains(queryLower)) {
+          final id = 'DICT_${w.word.toUpperCase()}';
+          if (!seenIds.contains(id)) {
+            seenIds.add(id);
+            matches.add({
+              'id': id,
+              'term': {'english': w.word, 'hindi': w.meaningHi, 'gujarati': w.meaningGu ?? ''},
+              'definition': {'simple': {'en': w.meaningEn, 'hi': w.meaningHi, 'gu': w.meaningGu ?? ''}},
+              'examples': [
+                {'en': w.exampleEn, 'hi': w.exampleHi ?? '', 'gu': w.exampleGu ?? ''}
+              ],
+              'media': {'emoji': w.emoji, 'imagePath': w.imagePath},
+              'part_of_speech': w.partOfSpeech,
+              'category': w.category,
+            });
+          }
+        }
+      }
+    }
 
     matches.sort((a, b) {
       final lang = TrilingualService.instance.activeViewLanguage;
@@ -79,10 +110,7 @@ class _DictionarySearchScreenState extends State<DictionarySearchScreen> {
       return aText.compareTo(bText);
     });
 
-    // Limit to 50 matches to prevent rate limit bans from Google Translate
     final limitedMatches = matches.take(50).toList();
-    
-    await TrilingualService.instance.preTranslateBlocks(limitedMatches, isDictionary: true);
     
     if (mounted) {
       setState(() {

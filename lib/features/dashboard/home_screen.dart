@@ -11,6 +11,7 @@ import '../gamification/widgets/player_profile_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 import '../../core/services/tts_platform_service.dart';
+import '../../shared/widgets/activation_gate.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -75,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     
-    String greeting = "English Improver";
+    String greeting = flavor == 'skillup' ? "English Improver" : "Student";
     if (userProfile != null && userProfile!['role']!.isNotEmpty) {
       if (flavor == 'skillup') {
         greeting = "English Improver";
@@ -85,14 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
           greeting = "Pre-School Student";
         } else if (stageName.contains('Primary')) {
           greeting = "Primary Student";
-        } else if (stageName.contains('Higher Secondary')) {
+        } else if (stageName.contains('Higher Secondary') || stageName.contains('Class 11') || stageName.contains('Class 12')) {
           greeting = "Higher Secondary Student";
         } else if (stageName.contains('Secondary')) {
           greeting = "Secondary Student";
         } else if (stageName.contains('Competitive')) {
           greeting = "Competitive Aspirant";
         } else {
-          greeting = "English Improver";
+          greeting = "Student";
         }
       } else {
         greeting = "${userProfile!['role']}";
@@ -264,37 +265,49 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                       if (flavor == 'skillup') ...[
-                        // Abacus Card
+                        // Abacus Card (Locked until activation)
                         Expanded(
-                          child: _SpecialSkillCard(
-                            title: TrilingualService.instance.getUIText("Abacus"),
-                            subtitle: TrilingualService.instance.getUIText("Mental Maths\nLevel 1"),
-                            icon: Icons.grid_on,
-                            gradientColors: const [Color(0xFF6C3483), Color(0xFF9B59B6)],
-                            onTap: () => context.push('/curriculum/abacus_level1'),
+                          child: ActivationGate(
+                            isFree: false,
+                            onActivated: () => setState(() {}),
+                            child: _SpecialSkillCard(
+                              title: TrilingualService.instance.getUIText("Abacus"),
+                              subtitle: TrilingualService.instance.getUIText("Mental Maths\nLevel 1"),
+                              icon: Icons.grid_on,
+                              gradientColors: const [Color(0xFF6C3483), Color(0xFF9B59B6)],
+                              onTap: () => context.push('/curriculum/abacus_level1'),
+                            ),
                           ),
                         ),
                         const SizedBox(width: 12),
-                        // Vedic Maths Card
+                        // Vedic Maths Card (Locked until activation)
                         Expanded(
-                          child: _SpecialSkillCard(
-                            title: TrilingualService.instance.getUIText("Vedic Maths"),
-                            subtitle: TrilingualService.instance.getUIText("Ancient\nSutras"),
-                            icon: Icons.psychology,
-                            gradientColors: const [Color(0xFFE67E22), Color(0xFFF39C12)],
-                            onTap: () => context.push('/curriculum/vedic_maths_level1'),
+                          child: ActivationGate(
+                            isFree: false,
+                            onActivated: () => setState(() {}),
+                            child: _SpecialSkillCard(
+                              title: TrilingualService.instance.getUIText("Vedic Maths"),
+                              subtitle: TrilingualService.instance.getUIText("Ancient\nSutras"),
+                              icon: Icons.psychology,
+                              gradientColors: const [Color(0xFFE67E22), Color(0xFFF39C12)],
+                              onTap: () => context.push('/curriculum/vedic_maths_level1'),
+                            ),
                           ),
                         ),
                         const SizedBox(width: 12),
                       ],
                       // Tables Practice Card
                       Expanded(
-                        child: _SpecialSkillCard(
-                          title: TrilingualService.instance.getUIText("Tables Practice"),
-                          subtitle: TrilingualService.instance.getUIText("Speed\nTrainer"),
-                          icon: Icons.calculate,
-                          gradientColors: const [Color(0xFF3B82F6), Color(0xFF60A5FA)],
-                          onTap: () => context.push('/tools/mt_trainer'),
+                        child: ActivationGate(
+                          isFree: flavor != 'skillup',
+                          onActivated: () => setState(() {}),
+                          child: _SpecialSkillCard(
+                            title: TrilingualService.instance.getUIText("Tables Practice"),
+                            subtitle: TrilingualService.instance.getUIText("Speed\nTrainer"),
+                            icon: Icons.calculate,
+                            gradientColors: const [Color(0xFF3B82F6), Color(0xFF60A5FA)],
+                            onTap: () => context.push('/tools/mt_trainer'),
+                          ),
                         ),
                       ),
                     ],
@@ -436,16 +449,20 @@ class _HomeScreenState extends State<HomeScreen> {
     String stage = userProfile?['stage'] ?? '';
     Widget roleSpecificWidgets;
 
-    if (stage.contains('Higher Secondary')) {
-      final isCommerce = (userProfile?['class'] ?? '').toLowerCase().contains('commerce');
+    if (stage.contains('Higher Secondary') || stage.contains('Class 11') || stage.contains('Class 12') || flavor == 'commerce' || flavor == 'achievers') {
+      final isCommerce = flavor == 'commerce' || (userProfile?['class'] ?? '').toLowerCase().contains('commerce');
       final isClass11 = (userProfile?['class'] ?? '').toLowerCase().contains('11');
+      final userBoard = (userProfile?['board'] ?? '').toLowerCase();
+      final isCbse = userBoard.contains('cbse');
       
       Widget hsBanner;
       List<Widget> hsCards = [];
       
       if (isCommerce) {
         final title = isClass11 ? "Class 11 Commerce" : "Class 12 Commerce";
-        final route = isClass11 ? '/curriculum/gseb_class11' : '/curriculum/gseb_class12_commerce';
+        final route = isClass11
+            ? (isCbse ? '/curriculum/cbse_class11_commerce' : '/curriculum/gseb_class11')
+            : (isCbse ? '/curriculum/cbse_class12_commerce' : '/curriculum/gseb_class12_commerce');
 
         hsBanner = Card(
           elevation: 4,
@@ -477,7 +494,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(TrilingualService.instance.getUIText(title), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                         const SizedBox(height: 4),
-                        Text(TrilingualService.instance.getUIText("Complete Course (GSEB)"), style: GoogleFonts.inter(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                        Text(TrilingualService.instance.getUIText(isCbse ? "Complete Course (CBSE)" : "Complete Course (GSEB)"), style: GoogleFonts.inter(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
                       ],
                     ),
                   ),
@@ -506,12 +523,18 @@ class _HomeScreenState extends State<HomeScreen> {
         ];
       } else {
         // Science (NEET/JEE)
+        final scienceTitle = isClass11 ? "Class 11 Science" : "Class 12 Science";
+        final scienceSubtitle = isClass11 ? "Class 11 NEET & JEE Foundation" : "Class 12 NEET & JEE Prep";
+        final scienceRoute = isClass11
+            ? (isCbse ? '/curriculum/cbse_class11_science' : '/curriculum/class11_science')
+            : (isCbse ? '/curriculum/cbse_class12_science' : '/curriculum/class12_science');
+
         hsBanner = Card(
           elevation: 4,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           child: InkWell(
             borderRadius: BorderRadius.circular(16),
-            onTap: () => context.push('/learning/physics'),
+            onTap: () => context.push(scienceRoute),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
@@ -534,9 +557,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(TrilingualService.instance.getUIText("Class 11-12 Science"), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+                        Text(TrilingualService.instance.getUIText(scienceTitle), style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
                         const SizedBox(height: 4),
-                        Text(TrilingualService.instance.getUIText("NEET & JEE Foundation"), style: GoogleFonts.inter(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                        Text(TrilingualService.instance.getUIText(scienceSubtitle), style: GoogleFonts.inter(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
                       ],
                     ),
                   ),
@@ -605,14 +628,24 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
     } else if (flavor == 'skillup') {
-      // SkillUp / Spoken English Flow — NO Science simulations!
-      cards.add(buildCard("Spoken\nEnglish", Icons.record_voice_over, const Color(0xFFE91E63), '/curriculum/govindsir_english'));
+      // SkillUp / Spoken English Flow: Useful direct tool shortcuts (NO duplicate Spoken English card!)
+      // All Quick Access tools are gated behind activation — they show as faded watermark.
+      Widget buildGatedCard(String title, IconData icon, Color color, String route) {
+        final cardWidget = buildCard(title, icon, color, route);
+        return ActivationGate(
+          isFree: false,
+          onActivated: () => setState(() {}),
+          child: cardWidget,
+        );
+      }
+
+      cards.add(buildGatedCard("Picture\nDictionary", Icons.menu_book, const Color(0xFFFF6F00), '/learning/english_dictionary'));
       cards.add(const SizedBox(width: 16));
-      cards.add(buildCard("Speaking\nGame", Icons.sports_esports, Colors.deepPurple, '/assessment/game/govindsir_english_ch1'));
+      cards.add(buildGatedCard("Grammar\nGym", Icons.fitness_center, const Color(0xFF00897B), '/learning/english_grammar'));
       cards.add(const SizedBox(width: 16));
-      cards.add(buildCard("Word &\nPhonics Lab", Icons.menu_book, Colors.orange, '/dictionary'));
+      cards.add(buildGatedCard("Speaking\nGame", Icons.sports_esports, Colors.deepPurple, '/assessment/game/govindsir_english_ch1'));
       cards.add(const SizedBox(width: 16));
-      cards.add(buildCard("Practice\nDialogues", Icons.forum, Colors.teal, '/curriculum/govindsir_english'));
+      cards.add(buildGatedCard("Reading\nLounge", Icons.headphones, const Color(0xFF3949AB), '/learning/english_reading'));
       
       roleSpecificWidgets = SingleChildScrollView(
         scrollDirection: Axis.horizontal,

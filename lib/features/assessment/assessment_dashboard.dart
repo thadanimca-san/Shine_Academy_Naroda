@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/engine/assessment_engine.dart';
+import '../../../core/services/activation_service.dart';
+import '../../../foundation/theme/app_typography.dart';
 import '../../../foundation/theme/brand_app_bar.dart';
+import '../../shared/widgets/activation_dialog.dart';
+import '../../shared/widgets/activation_gate.dart';
 import 'question_selection_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
@@ -28,7 +32,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
   int blueprintSecC = 6;
   int blueprintSecD = 5;
 
-  final List<String> boards = ["Core Concepts", "GSEB", "CBSE"];
+  late List<String> boards;
   late List<String> classes;
 
   String _formatClassName(String rawClass) {
@@ -43,7 +47,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
   List<CurriculumSubject> availableSubjects = [];
   CurriculumSubject? selectedSubject;
   Set<String> selectedModuleIds = {};
-
+  String _selectedSkillupTrack = 'level1';
 
   @override
   void initState() {
@@ -55,25 +59,39 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
   void _initializeClassesByFlavor() {
     final flavor = appFlavor ?? 'default';
 
-    if (flavor == 'primary') {
+    if (flavor == 'skillup') {
+      boards = ["Govind Sir Academy"];
+      classes = ["govindsir_english"];
+      selectedClass = "govindsir_english";
+      selectedBoard = "Govind Sir Academy";
+    } else if (flavor == 'commerce') {
+      boards = ["GSEB", "CBSE"];
+      selectedBoard = "GSEB";
+      classes = ["class11_commerce", "class12_commerce"];
+      if (!classes.contains(selectedClass)) selectedClass = "class11_commerce";
+    } else if (flavor == 'achievers') {
+      boards = ["GSEB", "CBSE", "Core Concepts"];
+      selectedBoard = "GSEB";
+      classes = ["class11_science", "class12_science"];
+      if (!classes.contains(selectedClass)) selectedClass = "class11_science";
+    } else if (flavor == 'primary') {
+      boards = ["Core Concepts", "GSEB", "CBSE"];
       classes = ["class1", "class2", "class3", "class4"];
       if (!classes.contains(selectedClass)) selectedClass = "class4";
     } else if (flavor == 'middle') {
+      boards = ["Core Concepts", "GSEB", "CBSE"];
       classes = ["class5", "class6", "class7", "class8"];
       if (!classes.contains(selectedClass)) selectedClass = "class8";
     } else if (flavor == 'junior') {
+      boards = ["Core Concepts", "GSEB", "CBSE"];
       classes = ["class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8"];
       if (!classes.contains(selectedClass)) selectedClass = "class8";
     } else if (flavor == 'highschool') {
+      boards = ["Core Concepts", "GSEB", "CBSE"];
       classes = ["class9", "class10"];
       if (!classes.contains(selectedClass)) selectedClass = "class10";
-    } else if (flavor == 'commerce') {
-      classes = ["class11_commerce", "class12_commerce"];
-      if (!classes.contains(selectedClass)) selectedClass = "class12_commerce";
-    } else if (flavor == 'achievers') {
-      classes = ["class11_science", "class12_science"];
-      if (!classes.contains(selectedClass)) selectedClass = "class12_science";
     } else {
+      boards = ["Core Concepts", "GSEB", "CBSE"];
       classes = [
         "class1", "class2", "class3", "class4", "class5", "class6",
         "class7", "class8", "class9", "class10",
@@ -91,22 +109,71 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
       selectedModuleIds.clear();
     });
 
-    final boardPrefix = (selectedBoard == "Core Concepts" || selectedBoard == "NCERT") ? "ncert" : selectedBoard.toLowerCase();
-    final curriculumId = "${boardPrefix}_$selectedClass";
+    final flavor = appFlavor ?? 'default';
+    final curriculumId = flavor == 'skillup'
+        ? "govindsir_english"
+        : "${(selectedBoard == "Core Concepts" || selectedBoard == "NCERT") ? "ncert" : selectedBoard.toLowerCase()}_$selectedClass";
     final subjects = await AssessmentEngine.instance.fetchCurriculumSubjects(curriculumId);
     
     setState(() {
       availableSubjects = subjects;
       if (subjects.isNotEmpty) {
         selectedSubject = subjects.first;
-        // Select all chapters by default
-        selectedModuleIds.addAll(selectedSubject!.chapters.map((c) => c.moduleId));
+        if (flavor == 'skillup') {
+          _applySkillupTrack(_selectedSkillupTrack);
+        } else {
+          // Select all chapters by default
+          selectedModuleIds.addAll(selectedSubject!.chapters.map((c) => c.moduleId));
+        }
       }
       isLoadingCurriculum = false;
     });
   }
 
+  void _applySkillupTrack(String track) {
+    _selectedSkillupTrack = track;
+    selectedModuleIds.clear();
+    final bool isActivated = ActivationService.isActivated;
+
+    if (track == 'free' || (!isActivated && track == 'level1')) {
+      selectedModuleIds.add('govindsir_english_ch1');
+      selectedModuleIds.add('govindsir_english_ch2');
+    } else if (track == 'level1') {
+      for (int i = 1; i <= 20; i++) {
+        selectedModuleIds.add('govindsir_english_ch$i');
+      }
+    } else if (track == 'level2') {
+      for (int i = 21; i <= 40; i++) {
+        selectedModuleIds.add('govindsir_english_ch$i');
+      }
+    } else if (track == 'level3') {
+      for (int i = 41; i <= 63; i++) {
+        selectedModuleIds.add('govindsir_english_ch$i');
+      }
+    } else if (track == 'all') {
+      for (int i = 1; i <= 63; i++) {
+        selectedModuleIds.add('govindsir_english_ch$i');
+      }
+    }
+  }
+
   void _generatePaper() async {
+    final flavor = appFlavor ?? 'default';
+    if (flavor == 'skillup' && !ActivationService.isActivated) {
+      final hasLocked = selectedModuleIds.any((id) {
+        final match = RegExp(r'govindsir_english_ch(\d+)').firstMatch(id);
+        if (match != null) {
+          final num = int.tryParse(match.group(1)!) ?? 1;
+          return num > 2;
+        }
+        return false;
+      });
+      if (hasLocked) {
+        ActivationDialog.show(context, onActivated: () => setState(() {}));
+        return;
+      }
+    }
+
     if (selectedModuleIds.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(TrilingualService.instance.getUIText("Please select at least one chapter!"))));
       return;
@@ -134,45 +201,58 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
     }
 
     List<AssessmentQuestion> initialQuestions = [];
-    // Subjects with an official board blueprint get a paper in the exact board pattern.
-    final blueprintPaper = generationMode == 'preset' && selectedSubject != null
-        ? await AssessmentEngine.instance.generateFromBlueprint(selectedModuleIds.toList(), selectedSubject!.id)
-        : null;
-    if (blueprintPaper != null && blueprintPaper.items.isNotEmpty) {
-      initialQuestions = blueprintPaper.items;
-      if (!blueprintPaper.isComplete && mounted) {
-        final missing = blueprintPaper.shortfalls.map((s) => 'Section ${s.section}: ${s.found}/${s.wanted}').join(', ');
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          duration: const Duration(seconds: 8),
-          content: Text('${TrilingualService.instance.getUIText('Not enough questions yet for a full board paper')} '
-              '(${blueprintPaper.totalMarks}/${blueprintPaper.blueprint.totalMarks} marks). $missing'),
-        ));
-      }
-    } else if (generationMode == 'preset') {
-      initialQuestions = await AssessmentEngine.instance.generateBoardPatternPaper(
-        selectedModuleIds.toList(),
-        targetSecA: blueprintSecA,
-        targetSecB: blueprintSecB,
-        targetSecC: blueprintSecC,
-        targetSecD: blueprintSecD,
-      );
-      if (initialQuestions.isEmpty) {
-        // Fallback if board pattern gives nothing (e.g., no suitable types)
+
+    if (flavor == 'skillup') {
+      if (generationMode == 'preset') {
+        allAvailableQuestions.shuffle();
+        initialQuestions = allAvailableQuestions.take(questionCount).toList();
+      } else {
         initialQuestions = List.from(allAvailableQuestions);
       }
     } else {
-      initialQuestions = List.from(allAvailableQuestions);
+      // Subjects with an official board blueprint get a paper in the exact board pattern.
+      final blueprintPaper = generationMode == 'preset' && selectedSubject != null
+          ? await AssessmentEngine.instance.generateFromBlueprint(selectedModuleIds.toList(), selectedSubject!.id)
+          : null;
+      if (blueprintPaper != null && blueprintPaper.items.isNotEmpty) {
+        initialQuestions = blueprintPaper.items;
+        if (!blueprintPaper.isComplete && mounted) {
+          final missing = blueprintPaper.shortfalls.map((s) => 'Section ${s.section}: ${s.found}/${s.wanted}').join(', ');
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            duration: const Duration(seconds: 8),
+            content: Text('${TrilingualService.instance.getUIText('Not enough questions yet for a full board paper')} '
+                '(${blueprintPaper.totalMarks}/${blueprintPaper.blueprint.totalMarks} marks). $missing'),
+          ));
+        }
+      } else if (generationMode == 'preset') {
+        initialQuestions = await AssessmentEngine.instance.generateBoardPatternPaper(
+          selectedModuleIds.toList(),
+          targetSecA: blueprintSecA,
+          targetSecB: blueprintSecB,
+          targetSecC: blueprintSecC,
+          targetSecD: blueprintSecD,
+        );
+        if (initialQuestions.isEmpty) {
+          // Fallback if board pattern gives nothing (e.g., no suitable types)
+          initialQuestions = List.from(allAvailableQuestions);
+        }
+      } else {
+        initialQuestions = List.from(allAvailableQuestions);
+      }
     }
 
     setState(() => isGenerating = false);
     if (mounted) {
+      final screenTitle = (flavor == 'skillup')
+          ? "${selectedSubject?.title ?? 'Govind Sir Academy'} - English Fluency Test"
+          : "$selectedBoard ${_formatClassName(selectedClass)} - ${selectedSubject?.title ?? 'Test'}";
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => QuestionSelectionScreen(
             allQuestionsPool: allAvailableQuestions,
             initialSelectedQuestions: initialQuestions,
-            title: "$selectedBoard ${_formatClassName(selectedClass)} - ${selectedSubject?.title ?? 'Test'}",
+            title: screenTitle,
             isManualMode: generationMode == 'manual',
           ),
         ),
@@ -180,9 +260,213 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final leftColumn = Column(
+  Widget _buildSkillupLeftColumn() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          TrilingualService.instance.getUIText("1. Fluency Track & Test Setup"),
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue[800],
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          TrilingualService.instance.getUIText("Select your fluency stage or custom practice:"),
+          style: GoogleFonts.inter(
+            fontSize: 13,
+            color: Colors.grey[700],
+          ),
+        ),
+        const SizedBox(height: 16),
+        _buildSkillupTrackCard(
+          trackId: 'free',
+          title: TrilingualService.instance.getUIText("Free Trial: Lessons 1 & 2 (100% Free)"),
+          subtitle: TrilingualService.instance.getUIText("Why Learn English? & The Alphabet and Sounds"),
+          icon: Icons.check_circle_outline,
+          color: const Color(0xFF10B981),
+          isFree: true,
+        ),
+        _buildSkillupTrackCard(
+          trackId: 'level1',
+          title: TrilingualService.instance.getUIText("Level 1: Foundations (Lessons 1–20)"),
+          subtitle: TrilingualService.instance.getUIText("Magic of Courtesy, Helping Verbs, Basic Daily Phrases"),
+          icon: Icons.looks_one_rounded,
+          color: const Color(0xFF10B981),
+          isFree: false,
+        ),
+        _buildSkillupTrackCard(
+          trackId: 'level2',
+          title: TrilingualService.instance.getUIText("Level 2: Conversations (Lessons 21–40)"),
+          subtitle: TrilingualService.instance.getUIText("Tenses in Action, Social Dialogues, Common Idioms"),
+          icon: Icons.looks_two_rounded,
+          color: const Color(0xFFF59E0B),
+          isFree: false,
+        ),
+        _buildSkillupTrackCard(
+          trackId: 'level3',
+          title: TrilingualService.instance.getUIText("Level 3: Professional (Lessons 41–63)"),
+          subtitle: TrilingualService.instance.getUIText("Workplace Speaking, Public Eloquence, Complex Phrases"),
+          icon: Icons.looks_3_rounded,
+          color: const Color(0xFF6366F1),
+          isFree: false,
+        ),
+        _buildSkillupTrackCard(
+          trackId: 'all',
+          title: TrilingualService.instance.getUIText("Full Course Grand Mock (All 63 Lessons)"),
+          subtitle: TrilingualService.instance.getUIText("Comprehensive English test across all Govind Sir chapters"),
+          icon: Icons.military_tech_rounded,
+          color: const Color(0xFFD97706),
+          isFree: false,
+        ),
+        _buildSkillupTrackCard(
+          trackId: 'custom',
+          title: TrilingualService.instance.getUIText("Custom Practice (Pick Lessons)"),
+          subtitle: TrilingualService.instance.getUIText("Hand-pick any lessons from the right panel"),
+          icon: Icons.tune_rounded,
+          color: const Color(0xFF0284C7),
+          isFree: true,
+        ),
+        const SizedBox(height: 16),
+        DropdownButtonFormField<int>(
+          value: questionCount,
+          decoration: InputDecoration(
+            labelText: TrilingualService.instance.getUIText("Test Length"),
+            labelStyle: const TextStyle(fontSize: 14),
+            border: const OutlineInputBorder(),
+          ),
+          items: [
+            DropdownMenuItem(
+              value: 10,
+              child: Text(TrilingualService.instance.getUIText("10 Questions (Quick 10-Min Drill)")),
+            ),
+            DropdownMenuItem(
+              value: 20,
+              child: Text(TrilingualService.instance.getUIText("20 Questions (Standard Practice)")),
+            ),
+            DropdownMenuItem(
+              value: 30,
+              child: Text(TrilingualService.instance.getUIText("30 Questions (Thorough Test)")),
+            ),
+            DropdownMenuItem(
+              value: 50,
+              child: Text(TrilingualService.instance.getUIText("50 Questions (Comprehensive Mock)")),
+            ),
+          ],
+          onChanged: (val) {
+            if (val != null) setState(() => questionCount = val);
+          },
+        ),
+        const SizedBox(height: 16),
+        DropdownButtonFormField<String>(
+          value: generationMode,
+          decoration: InputDecoration(
+            labelText: TrilingualService.instance.getUIText("Test Mode"),
+            labelStyle: const TextStyle(fontSize: 14),
+            border: const OutlineInputBorder(),
+          ),
+          items: [
+            DropdownMenuItem(
+              value: 'preset',
+              child: Text(TrilingualService.instance.getUIText("Preset Test (Balanced Random)")),
+            ),
+            DropdownMenuItem(
+              value: 'manual',
+              child: Text(TrilingualService.instance.getUIText("Manual Selection (Hand-pick Questions)")),
+            ),
+          ],
+          onChanged: (val) {
+            if (val != null) setState(() => generationMode = val);
+          },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildSkillupTrackCard({
+    required String trackId,
+    required String title,
+    required String subtitle,
+    required IconData icon,
+    required Color color,
+    bool isFree = true,
+  }) {
+    final isSelected = _selectedSkillupTrack == trackId;
+    final cardWidget = InkWell(
+      onTap: () {
+        if (!isFree && !ActivationService.isActivated) {
+          ActivationDialog.show(context, onActivated: () => setState(() {}));
+          return;
+        }
+        setState(() {
+          _applySkillupTrack(trackId);
+        });
+      },
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: isSelected ? color.withValues(alpha: 0.08) : Colors.white,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: isSelected ? color : Colors.grey.shade300,
+            width: isSelected ? 2 : 1,
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.14),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(icon, color: color, size: 20),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.poppins(
+                      fontSize: 13 * AppTypography.scaleFactor(context),
+                      fontWeight: FontWeight.w600,
+                      color: isSelected ? color : Colors.black87,
+                    ),
+                  ),
+                  Text(
+                    subtitle,
+                    style: GoogleFonts.inter(
+                      fontSize: 11 * AppTypography.scaleFactor(context),
+                      color: Colors.grey.shade600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            if (isSelected)
+              Icon(Icons.check_circle, color: color, size: 20),
+          ],
+        ),
+      ),
+    );
+
+    if (isFree || ActivationService.isActivated) return cardWidget;
+
+    return ActivationGate(
+      isFree: false,
+      onActivated: () => setState(() {}),
+      child: cardWidget,
+    );
+  }
+
+  Widget _buildDefaultLeftColumn() {
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
@@ -292,12 +576,19 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
         ],
       ],
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final flavor = appFlavor ?? 'default';
+    final isSkillup = flavor == 'skillup';
+    final leftColumn = isSkillup ? _buildSkillupLeftColumn() : _buildDefaultLeftColumn();
 
     final rightColumn = Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          TrilingualService.instance.getUIText("2. Select Chapters"),
+          TrilingualService.instance.getUIText(isSkillup ? "2. Select Practice Lessons" : "2. Select Chapters"),
           style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -318,7 +609,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
           DropdownButtonFormField<CurriculumSubject>(
             value: selectedSubject,
             decoration: InputDecoration(
-              labelText: TrilingualService.instance.getUIText("Select Subject"),
+              labelText: TrilingualService.instance.getUIText(isSkillup ? "Select Practice Track" : "Select Subject"),
               labelStyle: const TextStyle(fontSize: 14),
               border: const OutlineInputBorder(),
             ),
@@ -331,7 +622,11 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
                 selectedSubject = val;
                 selectedModuleIds.clear();
                 if (val != null) {
-                  selectedModuleIds.addAll(val.chapters.map((c) => c.moduleId));
+                  if (isSkillup) {
+                    _applySkillupTrack(_selectedSkillupTrack);
+                  } else {
+                    selectedModuleIds.addAll(val.chapters.map((c) => c.moduleId));
+                  }
                 }
               });
             },
@@ -342,7 +637,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
             children: [
               Expanded(
                 child: Text(
-                  "${TrilingualService.instance.getUIText("Chapters")} (${selectedModuleIds.length}/${selectedSubject?.chapters.length ?? 0} selected)",
+                  "${TrilingualService.instance.getUIText(isSkillup ? "Lessons" : "Chapters")} (${selectedModuleIds.length}/${selectedSubject?.chapters.length ?? 0} selected)",
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
@@ -353,8 +648,13 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
                       selectedModuleIds.clear();
                     } else {
                       selectedModuleIds.clear();
-                      selectedModuleIds.addAll(
-                          selectedSubject!.chapters.map((c) => c.moduleId));
+                      if (isSkillup && !ActivationService.isActivated) {
+                        selectedModuleIds.add('govindsir_english_ch1');
+                        selectedModuleIds.add('govindsir_english_ch2');
+                      } else {
+                        selectedModuleIds.addAll(
+                            selectedSubject!.chapters.map((c) => c.moduleId));
+                      }
                     }
                   });
                 },
@@ -381,20 +681,33 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
                 itemCount: selectedSubject?.chapters.length ?? 0,
                 itemBuilder: (context, index) {
                   final chapter = selectedSubject!.chapters[index];
-                  return CheckboxListTile(
+                  final isChapterFree = !isSkillup || index <= 1 || ActivationService.isActivated;
+                  final scale = AppTypography.scaleFactor(context);
+
+                  final tile = CheckboxListTile(
                     title: Text(chapter.title,
-                        style: GoogleFonts.inter(fontSize: 14)),
+                        style: GoogleFonts.inter(fontSize: 14 * scale)),
                     value: selectedModuleIds.contains(chapter.moduleId),
-                    onChanged: (bool? val) {
-                      setState(() {
-                        if (val == true) {
-                          selectedModuleIds.add(chapter.moduleId);
-                        } else {
-                          selectedModuleIds.remove(chapter.moduleId);
-                        }
-                      });
-                    },
+                    onChanged: !isChapterFree
+                        ? null
+                        : (bool? val) {
+                            setState(() {
+                              if (val == true) {
+                                selectedModuleIds.add(chapter.moduleId);
+                              } else {
+                                selectedModuleIds.remove(chapter.moduleId);
+                              }
+                            });
+                          },
                     dense: true,
+                  );
+
+                  if (isChapterFree) return tile;
+
+                  return ActivationGate(
+                    isFree: false,
+                    onActivated: () => setState(() {}),
+                    child: tile,
                   );
                 },
               ),
@@ -407,7 +720,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
             : ElevatedButton.icon(
                 icon: const Icon(Icons.flash_on, color: Colors.white),
                 label: Text(
-                  TrilingualService.instance.getUIText("Generate Paper"),
+                  TrilingualService.instance.getUIText(isSkillup ? "Start Fluency Test" : "Generate Paper"),
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -429,7 +742,7 @@ class _AssessmentDashboardScreenState extends State<AssessmentDashboardScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: BrandAppBar(
-        title: TrilingualService.instance.getUIText("Advanced Paper Generator"),
+        title: TrilingualService.instance.getUIText(isSkillup ? "English Fluency Assessment" : "Advanced Paper Generator"),
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {

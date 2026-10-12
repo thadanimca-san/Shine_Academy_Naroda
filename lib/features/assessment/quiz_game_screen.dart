@@ -1,14 +1,17 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/engine/assessment_engine.dart';
 import '../../core/engine/block_registry.dart';
 import '../../core/engine/content_repository.dart';
+import '../../core/services/activation_service.dart';
 import '../../core/services/trilingual_service.dart';
 import '../../foundation/theme/app_colors.dart';
 import '../../foundation/theme/app_typography.dart';
+import '../../shared/widgets/activation_dialog.dart';
 import '../learning/learning_engine/widgets/game_quiz_card.dart';
 import 'widgets/paper_question_tile.dart';
 
@@ -105,8 +108,60 @@ class _QuizGameScreenState extends State<QuizGameScreen> {
         _currentAnswered = false;
       });
 
+  bool get _isSkillupLocked {
+    if ((appFlavor ?? 'default') != 'skillup') return false;
+    if (ActivationService.isActivated) return false;
+    final match = RegExp(r'govindsir_english_ch(\d+)').firstMatch(widget.moduleId);
+    if (match != null) {
+      final num = int.tryParse(match.group(1)!) ?? 1;
+      return num > 2;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (_isSkillupLocked) {
+      final scale = AppTypography.scaleFactor(context);
+      return Scaffold(
+        appBar: AppBar(title: Text(TrilingualService.instance.getUIText('🔒 Premium Quiz'))),
+        body: Center(
+          child: Padding(
+            padding: EdgeInsets.all(24.0 * scale),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.lock_outline, size: 64 * scale, color: const Color(0xFFFF6F00)),
+                SizedBox(height: 16 * scale),
+                Text(
+                  TrilingualService.instance.getUIText('This quiz requires activation.'),
+                  style: AppTypography.h3(context, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 8 * scale),
+                Text(
+                  TrilingualService.instance.getUIText('Chapters 1 and 2 quizzes are fully free. Activate to play all chapter quizzes.'),
+                  style: AppTypography.bodySmall(context),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 24 * scale),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 24 * scale, vertical: 12 * scale),
+                  ),
+                  onPressed: () => ActivationDialog.show(context, onActivated: () => setState(() {})),
+                  icon: const Icon(Icons.key, color: Colors.white),
+                  label: Text(TrilingualService.instance.getUIText('Enter Activation Code')),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     final ui = TrilingualService.instance.getUIText;
     return Scaffold(
       appBar: AppBar(

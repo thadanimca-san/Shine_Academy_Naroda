@@ -16,13 +16,6 @@ class TrilingualCardWidget extends StatefulWidget {
 class _TrilingualCardWidgetState extends State<TrilingualCardWidget> {
   bool _isPlaying = false;
 
-  double get _currentRate {
-    switch (TTSService.instance.currentSpeed.value) {
-      case TTSSpeed.verySlow: return 0.18;
-      case TTSSpeed.slow:     return 0.30;
-      case TTSSpeed.medium:   return 0.50;
-    }
-  }
 
   Future<void> _playAudio() async {
     final text = widget.data['data']['english'] ?? '';
@@ -110,7 +103,7 @@ class _TrilingualCardWidgetState extends State<TrilingualCardWidget> {
                               return Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  _buildSpeedChipTrilingual(TTSSpeed.verySlow, 'Very Slow', spd),
+                                  _buildSpeedChipTrilingual(TTSSpeed.verySlow, 'Word by Word', spd),
                                   _buildSpeedChipTrilingual(TTSSpeed.slow, 'Slow', spd),
                                   _buildSpeedChipTrilingual(TTSSpeed.medium, 'Medium', spd),
                                 ],

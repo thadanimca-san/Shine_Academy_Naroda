@@ -6,7 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/services/activation_service.dart';
 import '../../foundation/theme/app_colors.dart';
+import '../../foundation/theme/app_typography.dart';
 import '../../foundation/theme/brand_app_bar.dart';
+import '../../shared/widgets/activation_dialog.dart';
 import 'package:shine_academy_naroda/core/services/trilingual_service.dart';
 
 class ChapterListScreen extends StatefulWidget {
@@ -227,19 +229,154 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
           
           final effectiveIsAvailable = isAvailable && !isLocked;
 
+          // ── LOCKED CHAPTER ───────────────────────────────────────────
+          // For skillup flavor: locked chapters appear very faded (watermark preview)
+          // so the learner can see what's in the app, and tapping opens ActivationDialog.
+          // For other flavors: preserved original behavior without disturbance.
+          if (isLocked && isAvailable) {
+            final scale = AppTypography.scaleFactor(context);
+            final currentFlavor = appFlavor ?? 'default';
+
+            if (currentFlavor == 'skillup') {
+              return GestureDetector(
+                onTap: () {
+                  ActivationDialog.show(context, onActivated: () => setState(() {}));
+                },
+                child: Stack(
+                  children: [
+                    // Ghost card — very light opacity (watermark preview)
+                    Opacity(
+                      opacity: 0.18,
+                      child: IgnorePointer(
+                        child: Card(
+                          elevation: 0,
+                          color: Colors.white,
+                          margin: const EdgeInsets.only(bottom: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          child: ListTile(
+                            contentPadding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 12),
+                            leading: CircleAvatar(
+                              backgroundColor: color.withValues(alpha: 0.1),
+                              child: Text(
+                                '$chapterNum',
+                                style: TextStyle(color: color, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                if (showLevels)
+                                  Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 8 * scale, vertical: 2 * scale),
+                                    margin: const EdgeInsets.only(bottom: 4),
+                                    decoration: BoxDecoration(
+                                      color: _getLevelColor(chapterLevel).withValues(alpha: 0.1),
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Text(
+                                      TrilingualService.instance.getUIText(_getLevelBadgeLabel(chapterLevel)),
+                                      style: TextStyle(fontSize: 10 * scale, fontWeight: FontWeight.bold, color: _getLevelColor(chapterLevel)),
+                                    ),
+                                  ),
+                                Text(
+                                  chapter['title'],
+                                  style: GoogleFonts.inter(fontWeight: FontWeight.bold, color: AppColors.textPrimary),
+                                ),
+                              ],
+                            ),
+                            subtitle: Text(TrilingualService.instance.getUIText('Interactive content ready'), style: const TextStyle(color: Colors.green, fontSize: 12)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Small lock badge centered
+                    Positioned.fill(
+                      child: Center(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 12 * scale, vertical: 6 * scale),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withValues(alpha: 0.50),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.lock, color: Colors.white, size: 14 * scale),
+                              SizedBox(width: 5 * scale),
+                              Text(
+                                '🔒 Premium',
+                                style: GoogleFonts.inter(color: Colors.white, fontSize: 11 * scale, fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            } else {
+              // Other flavors: original locked card style
+              return Card(
+                elevation: 0,
+                color: Colors.orange.shade50,
+                margin: const EdgeInsets.only(bottom: 12),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: BorderSide(color: Colors.orange.shade200, width: 1)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ListTile(
+                      contentPadding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 4),
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.orange.withValues(alpha: 0.1),
+                        child: const Icon(Icons.lock, color: Colors.orange),
+                      ),
+                      title: Text(
+                        chapter['title'],
+                        style: GoogleFonts.inter(fontWeight: FontWeight.bold, color: AppColors.textPrimary),
+                      ),
+                      subtitle: Text(TrilingualService.instance.getUIText('Premium Content - Requires Activation'), style: TextStyle(color: Colors.orange.shade800, fontSize: 12 * scale, fontWeight: FontWeight.bold)),
+                      trailing: const Icon(Icons.lock, color: Colors.orange),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.orange,
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                            ),
+                            onPressed: () {
+                              context.push('/activate');
+                            },
+                            icon: const Icon(Icons.vpn_key, color: Colors.white, size: 20),
+                            label: Text(TrilingualService.instance.getUIText('Activate to Unlock'), style: const TextStyle(color: Colors.white)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }
+          }
+
+          // ── FREE / UNLOCKED CHAPTER ───────────────────────────────────
           return Card(
             elevation: isAvailable ? 2 : 0,
-            color: isAvailable ? (isLocked ? Colors.orange.shade50 : Colors.white) : Colors.grey.shade100,
+            color: isAvailable ? Colors.white : Colors.grey.shade100,
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12), side: isLocked ? BorderSide(color: Colors.orange.shade200, width: 1) : BorderSide.none),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ListTile(
                   contentPadding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 4),
                   leading: CircleAvatar(
-                    backgroundColor: isAvailable ? (isLocked ? Colors.orange.withValues(alpha: 0.1) : color.withValues(alpha: 0.1)) : Colors.grey.shade300,
-                    child: isLocked ? const Icon(Icons.lock, color: Colors.orange) : Text(
+                    backgroundColor: isAvailable ? color.withValues(alpha: 0.1) : Colors.grey.shade300,
+                    child: Text(
                       '$chapterNum',
                       style: TextStyle(
                         color: isAvailable ? color : Colors.grey,
@@ -277,34 +414,12 @@ class _ChapterListScreenState extends State<ChapterListScreen> {
                       ),
                     ],
                   ),
-                  subtitle: isLocked 
-                      ? Text(TrilingualService.instance.getUIText('Premium Content - Requires Activation'), style: TextStyle(color: Colors.orange.shade800, fontSize: 12, fontWeight: FontWeight.bold))
-                      : (isAvailable 
-                          ? Text(TrilingualService.instance.getUIText('Interactive content ready'), style: TextStyle(color: Colors.green, fontSize: 12))
-                          : Text(TrilingualService.instance.getUIText('Coming soon'), style: TextStyle(color: Colors.grey, fontSize: 12))),
-                  trailing: !isAvailable ? const Icon(Icons.hourglass_empty, color: Colors.grey) : (isLocked ? const Icon(Icons.lock, color: Colors.orange) : null),
+                  subtitle: isAvailable 
+                      ? Text(TrilingualService.instance.getUIText('Interactive content ready'), style: const TextStyle(color: Colors.green, fontSize: 12))
+                      : Text(TrilingualService.instance.getUIText('Coming soon'), style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                  trailing: !isAvailable ? const Icon(Icons.hourglass_empty, color: Colors.grey) : null,
                 ),
-                if (isLocked && isAvailable)
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange,
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                          ),
-                          onPressed: () {
-                            context.push('/activate');
-                          },
-                          icon: const Icon(Icons.vpn_key, color: Colors.white, size: 20),
-                          label: Text(TrilingualService.instance.getUIText('Activate to Unlock'), style: const TextStyle(color: Colors.white)),
-                        ),
-                      ],
-                    ),
-                  )
-                else if (effectiveIsAvailable)
+                if (effectiveIsAvailable)
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
                     child: Row(
